@@ -31,7 +31,7 @@
                 {
                     "type": "minecraft:loot_table",
                     "weight": 2,
-                    "name": "gm4_falling_stars:endermite_egg"
+                    "value": "gm4_falling_stars:endermite_egg"
                 }
             ]
         }

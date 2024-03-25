@@ -8,8 +8,42 @@
           "name": "minecraft:golden_chestplate",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/scuba_tank',gm4_scuba_gear:{item:\"tank\"},AttributeModifiers:[{AttributeName:\"generic.movement_speed\",Name:\"generic.movement_speed\",Amount:-.1,Operation:1,UUID:[I;0,911382,0,189444],Slot:\"chest\"},{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:4,Operation:0,UUID:[I;0,847530,0,778609],Slot:\"chest\"}]}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "generic.movement_speed",
+                    "slot": "chest",
+                    "uuid": [
+                      0,
+                      911382,
+                      0,
+                      189444
+                    ],
+                    "name": "generic.movement_speed",
+                    "amount": -0.1,
+                    "operation": "add_multiplied_base"
+                  },
+                  {
+                    "type": "generic.armor",
+                    "slot": "chest",
+                    "uuid": [
+                      0,
+                      847530,
+                      0,
+                      778609
+                    ],
+                    "name": "generic.armor",
+                    "amount": 4,
+                    "operation": "add_value"
+                  }
+                ],
+                "minecraft:custom_model_data": "item/scuba_tank"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_scuba_gear:{item:'tank'}}"
             },
             {
               "function": "minecraft:set_name",

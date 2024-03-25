@@ -4,7 +4,7 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "tag": "gm4_audere_shamir:netherite_tools"
+                "items": "#gm4_audere_shamir:netherite_tools"
             }
         }
     }

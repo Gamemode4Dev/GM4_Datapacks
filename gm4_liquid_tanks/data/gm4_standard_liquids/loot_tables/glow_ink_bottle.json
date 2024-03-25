@@ -9,8 +9,29 @@
                     "name": "potion",
                     "functions": [
                         {
-                            "function": "set_nbt",
-                            "tag": "{gm4_standard_liquids:{potion:\"glowing\"},CustomPotionEffects:[{Id:24,Amplifier:0b,Duration:1200},{Id:16,Amplifier:0b,Duration:1800}],CustomPotionColor:9828808,CustomModelData:'gm4_standard_liquids:item/glow_ink_bottle'}"
+                            "function": "set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "gm4_standard_liquids:item/glow_ink_bottle",
+                                "minecraft:potion_contents": {
+                                    "custom_color": 9828808,
+                                    "custom_effects": [
+                                        {
+                                            "id": "minecraft:glowing",
+                                            "amplifier": 0,
+                                            "duration": 1200
+                                        },
+                                        {
+                                            "id": "minecraft:night_vision",
+                                            "amplifier": 0,
+                                            "duration": 1800
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "function": "set_custom_data",
+                            "tag": "{gm4_standard_liquids:{potion:'glowing'}}"
                         },
                         {
                             "function": "set_name",

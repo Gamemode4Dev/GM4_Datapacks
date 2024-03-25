@@ -19,15 +19,17 @@
                                 "items": [
                                     "minecraft:shield"
                                 ],
-                                "enchantments": [
-                                    {
-                                        "enchantment": "minecraft:unbreaking",
-                                        "levels": {
-                                            "min": 1,
-                                            "max": 255
+                                "predicates": {
+                                    "minecraft:enchantments": [
+                                        {
+                                            "enchantment": "minecraft:unbreaking",
+                                            "levels": {
+                                                "min": 1,
+                                                "max": 255
+                                            }
                                         }
-                                    }
-                                ]
+                                    ]
+                                }
                             }
                         }
                     }
@@ -57,12 +59,14 @@
                             "items": [
                                 "minecraft:shield"
                             ],
-                            "enchantments": [
-                                {
-                                    "enchantment": "minecraft:unbreaking",
-                                    "levels": 1
-                                }
-                            ]
+                            "predicates": {
+                                "minecraft:enchantments": [
+                                  {
+                                      "enchantment": "minecraft:unbreaking",
+                                      "levels": 1
+                                  }
+                              ]
+                            }
                         }
                     }
                 }
@@ -91,12 +95,14 @@
                             "items": [
                                 "minecraft:shield"
                             ],
-                            "enchantments": [
-                                {
-                                    "enchantment": "minecraft:unbreaking",
-                                    "levels": 2
-                                }
-                            ]
+                            "predicates": {
+                                "minecraft:enchantments": [
+                                  {
+                                      "enchantment": "minecraft:unbreaking",
+                                      "levels": 2
+                                  }
+                              ]
+                            }
                         }
                     }
                 }
@@ -125,15 +131,17 @@
                             "items": [
                                 "minecraft:shield"
                             ],
-                            "enchantments": [
-                                {
-                                    "enchantment": "minecraft:unbreaking",
-                                    "levels": {
-                                        "min": 3,
-                                        "max": 255
+                            "predicates": {
+                                "minecraft:enchantments": [
+                                    {
+                                        "enchantment": "minecraft:unbreaking",
+                                        "levels": {
+                                            "min": 3,
+                                            "max": 255
+                                        }
                                     }
-                                }
-                            ]
+                                ]
+                            }
                         }
                     }
                 }

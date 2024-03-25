@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "zombie_head",
-      "nbt": "{CustomModelData:'gui/advancement/undead_players'}"
+      "id": "zombie_head",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/undead_players"
+      }
     },
     "title": {
       "translate": "advancement.gm4.undead_players.title",

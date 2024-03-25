@@ -5,11 +5,11 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_horse_armor.1",
@@ -20,18 +20,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_horse_armor_1'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_horse_armor_1"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_horse_armor.2.1",
@@ -48,18 +50,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_horse_armor_2'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_horse_armor_2"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_horse_armor.3.1",
@@ -76,18 +80,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_horse_armor_3'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_horse_armor_3"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_horse_armor.4",
@@ -98,18 +104,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_horse_armor_4'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_horse_armor_4"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_horse_armor.5",
@@ -120,8 +128,10 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_horse_armor_5'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_horse_armor_5"
+              }
             }
           ]
         }

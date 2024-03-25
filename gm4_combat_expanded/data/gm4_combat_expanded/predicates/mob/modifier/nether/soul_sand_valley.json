@@ -2,7 +2,7 @@
   {
     "condition": "minecraft:location_check",
     "predicate": {
-      "biome": "minecraft:soul_sand_valley"
+      "biomes": "minecraft:soul_sand_valley"
     }
   }
 ]

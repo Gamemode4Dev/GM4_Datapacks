@@ -10,7 +10,7 @@
                         "predicate": {
                             "equipment": {
                                 "mainhand": {
-                                    "tag": "gm4_ender_bolt_shamir:valid_tools",
+                                    "items": "#gm4_ender_bolt_shamir:valid_tools",
                                     "nbt": "{gm4_metallurgy:{active_shamir:\"ender_bolt\"}}"
                                 }
                             }

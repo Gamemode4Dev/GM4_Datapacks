@@ -9,8 +9,10 @@
           "name": "minecraft:coal_block",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'item/charcoal_block'}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/charcoal_block"
+              }
             },
             {
               "function": "set_name",

@@ -5,11 +5,11 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.1.1",
@@ -26,18 +26,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_tools_1'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_1"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.2.1",
@@ -54,18 +56,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_tools_2'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_2"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.3",
@@ -76,18 +80,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_tools_3'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_3"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.4.1",
@@ -104,18 +110,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_tools_4'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_4"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.5",
@@ -126,18 +134,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_tools_5'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_5"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.6.1",
@@ -154,18 +164,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_tools_6'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_6"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.7",
@@ -176,18 +188,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_tools_7'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_7"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.8.1",
@@ -204,18 +218,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_tools_8'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_8"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.9",
@@ -226,18 +242,20 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_tools_9'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_9"
+              }
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_tool.10.1",
@@ -254,8 +272,10 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_tools_10'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_10"
+              }
             }
           ]
         }

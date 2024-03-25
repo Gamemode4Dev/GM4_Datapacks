@@ -3,7 +3,7 @@
   "name": "Trapped Signs",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:oak_sign"
+    "id": "minecraft:oak_sign"
   },
   "criteria": {
     "obtain_sign": {

@@ -15,7 +15,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_scuba_gear:items/flippers",
+                    "value": "gm4_scuba_gear:items/flippers",
                     "functions": [
                         {
                             "function": "minecraft:set_count",

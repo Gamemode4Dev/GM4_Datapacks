@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_smelteries:items/smeltery",
+          "value": "gm4_smelteries:items/smeltery",
           "functions": [
             {
               "function": "minecraft:set_count",

@@ -1,8 +1,7 @@
 # @template gm4_dripleaf_filters:test_setup
 
-data merge block ~ ~1 ~1 {Items:[{id:"minecraft:iron_ingot",Count:1b}]}
-
+item replace block ~ ~1 ~1 container.0 with minecraft:iron_ingot
 summon item ~1.5 ~4 ~1.4 {Item:{id:"minecraft:iron_ingot",Count:10b}}
 
-await block ~ ~1 ~1 hopper{Items:[{id:"minecraft:iron_ingot",Count:11b}]}
-assert not block ~1 ~ ~1 hopper{Items:[{}]}
+await items block ~ ~1 ~1 container.* minecraft:iron_ingot[count=11]
+assert not items block ~1 ~ ~1 container.* *

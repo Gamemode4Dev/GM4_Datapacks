@@ -3,7 +3,7 @@
   "name": "Everstone",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:firework_star"
+    "id": "minecraft:firework_star"
   },
   "criteria": {
     "obtain_cobblestone_during_full_moon": {

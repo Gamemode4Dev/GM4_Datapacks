@@ -10,4 +10,4 @@ item replace block ~1 ~1 ~1 container.6 with flint
 item replace block ~1 ~1 ~1 container.7 with flint
 item replace block ~1 ~1 ~1 container.8 with flint
 
-await block ~1 ~1 ~1 dropper{Items:[{id:"minecraft:music_disc_13",Count:1b}]}
+await items block ~1 ~1 ~1 container.* minecraft:music_disc_13

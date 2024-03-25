@@ -1,7 +1,7 @@
 #@s = soul glass AEC
 #run from beacon_clock
 
-execute unless block ~ ~-1 ~ beacon{Primary:-1} run function gm4_soul_glass:effect/update_effects
+execute if data block ~ ~-1 ~ primary_effect run function gm4_soul_glass:effect/update_effects
 
 execute store result score @s gm4_sg_levels run data get block ~ ~-1 ~ Levels
 

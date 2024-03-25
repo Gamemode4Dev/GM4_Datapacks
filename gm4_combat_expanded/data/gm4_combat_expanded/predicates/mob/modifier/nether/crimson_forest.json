@@ -2,7 +2,7 @@
   {
     "condition": "minecraft:location_check",
     "predicate": {
-      "biome": "minecraft:crimson_forest"
+      "biomes": "minecraft:crimson_forest"
     }
   }
 ]

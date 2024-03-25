@@ -5,31 +5,31 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/splash/instant_damage"
+          "value": "gm4_zauber_cauldrons:items/potions/splash/instant_damage"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/splash/instant_health"
+          "value": "gm4_zauber_cauldrons:items/potions/splash/instant_health"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/splash/jump_boost"
+          "value": "gm4_zauber_cauldrons:items/potions/splash/jump_boost"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/splash/poison"
+          "value": "gm4_zauber_cauldrons:items/potions/splash/poison"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/splash/regeneration"
+          "value": "gm4_zauber_cauldrons:items/potions/splash/regeneration"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/splash/speed"
+          "value": "gm4_zauber_cauldrons:items/potions/splash/speed"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/splash/strength"
+          "value": "gm4_zauber_cauldrons:items/potions/splash/strength"
         }
       ]
     },

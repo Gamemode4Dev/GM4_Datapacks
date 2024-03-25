@@ -7,4 +7,4 @@ summon pig ~1.5 ~1 ~1.5 {Saddle:1b}
 dummy @s use entity @e[type=pig,distance=..4,limit=1]
 
 await block ~1 ~1 ~1 carrots[age=0]
-assert entity @s[nbt={Inventory:[{id:"minecraft:carrot"}]}]
+assert items entity @s container.* minecraft:carrot

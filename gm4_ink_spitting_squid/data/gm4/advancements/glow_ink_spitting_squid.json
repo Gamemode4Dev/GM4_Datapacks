@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:glow_ink_sac",
-      "nbt": "{CustomModelData:'gui/advancement/glow_ink_spitting_squid'}"
+      "id": "minecraft:glow_ink_sac",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/glow_ink_spitting_squid"
+      }
     },
     "title": {
       "translate": "advancement.gm4.glow_ink_spitting_squid.title",

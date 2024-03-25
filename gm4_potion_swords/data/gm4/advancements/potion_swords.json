@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "golden_sword",
-      "nbt": "{CustomModelData:'gui/advancement/potion_swords'}"
+      "id": "golden_sword",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/potion_swords"
+      }
     },
     "title": {
       "translate": "advancement.gm4.potion_swords.title",

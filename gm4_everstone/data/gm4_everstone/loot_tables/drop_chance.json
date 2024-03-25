@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_everstone:everstone",
+          "value": "gm4_everstone:everstone",
           "conditions": [
             {
               "condition": "minecraft:table_bonus",

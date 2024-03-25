@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "cauldron",
-      "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_create'}"
+      "id": "cauldron",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/zauber_cauldrons_create"
+      }
     },
     "title": {
       "translate": "advancement.gm4.zauber_cauldrons.creation.title",

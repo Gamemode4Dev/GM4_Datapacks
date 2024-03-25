@@ -27,15 +27,15 @@
                                     "attribute": "minecraft:horse.jump_strength",
                                     "name": "gm4_unstackable",
                                     "amount": 1,
-                                    "operation": "addition",
+                                    "operation": "add_value",
                                     "slot": "legs"
                                 }
                             ]
                         },
                         {
                             "function": "minecraft:set_lore",
-                            "lore": {{lore}},
-                            "replace": false
+                            "mode": "append",
+                            "lore": {{lore}}
                         }
                     ]
                 }

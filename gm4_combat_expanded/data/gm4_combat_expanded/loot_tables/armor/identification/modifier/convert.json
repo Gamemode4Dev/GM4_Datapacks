@@ -6,11 +6,11 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/base",
+          "value": "gm4_combat_expanded:armor/identification/base",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:convert}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_combat_expanded:{modifier:'convert'}}"
             }
           ]
         }
@@ -31,7 +31,7 @@
                 "score": "gm4_ce_data",
                 "scale": -1
               },
-              "operation": "addition",
+              "operation": "add_value",
               "slot": "chest"
             },
             {
@@ -46,7 +46,7 @@
                 "score": "gm4_ce_data",
                 "scale": 1
               },
-              "operation": "addition",
+              "operation": "add_value",
               "slot": "chest"
             }
           ]
@@ -72,12 +72,14 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "lore": [
             ""
           ]
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "lore": [
             {
               "translate": "item.gm4.combat_expanded.lore.equip",
@@ -89,6 +91,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [

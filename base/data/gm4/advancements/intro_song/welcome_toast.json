@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:command_block",
-      "nbt": "{CustomModelData:3420001}"
+      "id": "minecraft:command_block",
+      "components": {
+        "minecraft:custom_model_data": 3420001
+      }
     },
     "title": {
       "translate": "advancement.gm4.welcome_toast.title",

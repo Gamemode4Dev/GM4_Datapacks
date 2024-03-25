@@ -15,7 +15,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_relocators:items/relocator_empty",
+                    "value": "gm4_relocators:items/relocator_empty",
                     "functions": [
                         {
                             "function": "minecraft:set_count",

@@ -15,7 +15,7 @@
         "entries": [
           {
             "type": "minecraft:loot_table",
-            "name": "gm4_mountaineering:items/skis",
+            "value": "gm4_mountaineering:items/skis",
             "functions": [
               {
                 "function": "minecraft:set_count",

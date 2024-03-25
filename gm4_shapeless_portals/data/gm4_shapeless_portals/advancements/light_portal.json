@@ -48,7 +48,7 @@
             "condition": "minecraft:location_check",
             "predicate": {
               "block": {
-                "tag": "gm4_shapeless_portals:portal_block"
+                "blocks": "#gm4_shapeless_portals:portal_block"
               }
             }
           }

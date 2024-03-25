@@ -7,7 +7,7 @@
                 "offsetX": 1,
                 "predicate": {
                     "block": {
-                        "tag": "gm4_shapeless_portals:portal_block"
+                        "blocks": "#gm4_shapeless_portals:portal_block"
                     }
                 }
             },
@@ -16,7 +16,7 @@
                 "offsetX": 1,
                 "predicate": {
                     "block": {
-                        "tag": "gm4:air"
+                        "blocks": "#gm4:air"
                     }
                 }
             }
@@ -30,7 +30,7 @@
                 "offsetX": -1,
                 "predicate": {
                     "block": {
-                        "tag": "gm4_shapeless_portals:portal_block"
+                        "blocks": "#gm4_shapeless_portals:portal_block"
                     }
                 }
             },
@@ -39,7 +39,7 @@
                 "offsetX": -1,
                 "predicate": {
                     "block": {
-                        "tag": "gm4:air"
+                        "blocks": "#gm4:air"
                     }
                 }
             }
@@ -53,7 +53,7 @@
                 "offsetY": 1,
                 "predicate": {
                     "block": {
-                        "tag": "gm4_shapeless_portals:portal_block"
+                        "blocks": "#gm4_shapeless_portals:portal_block"
                     }
                 }
             },
@@ -62,7 +62,7 @@
                 "offsetY": 1,
                 "predicate": {
                     "block": {
-                        "tag": "gm4:air"
+                        "blocks": "#gm4:air"
                     }
                 }
             }
@@ -76,7 +76,7 @@
                 "offsetY": -1,
                 "predicate": {
                     "block": {
-                        "tag": "gm4_shapeless_portals:portal_block"
+                        "blocks": "#gm4_shapeless_portals:portal_block"
                     }
                 }
             },
@@ -85,7 +85,7 @@
                 "offsetY": -1,
                 "predicate": {
                     "block": {
-                        "tag": "gm4:air"
+                        "blocks": "#gm4:air"
                     }
                 }
             }

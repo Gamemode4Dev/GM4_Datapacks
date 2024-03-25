@@ -3,7 +3,7 @@
   "name": "Tunnel Bores",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:piston"
+    "id": "minecraft:piston"
   },
   "criteria": {
     "obtain_minecart": {

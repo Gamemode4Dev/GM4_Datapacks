@@ -1,11 +1,14 @@
 #@s = soul glass AEC
 #run from effects/check
 
-execute store result score @s gm4_sg_primary run data get block ~ ~-1 ~ Primary
-execute unless block ~ ~-1 ~ beacon{Secondary:-1} store result score @s gm4_sg_secondary run data get block ~ ~-1 ~ Secondary
+data modify storage gm4_soul_glass:temp effect set from block ~ ~-1 ~ primary_effect
+function gm4_soul_glass:effect/obtain_numeric_primary_id
 
-data modify block ~ ~-1 ~ Primary set value -1
-data modify block ~ ~-1 ~ Secondary set value -1
+data modify storage gm4_soul_glass:temp effect set from block ~ ~-1 ~ secondary_effect
+execute if data storage gm4_soul_glass:temp effect run function gm4_soul_glass:effect/obtain_numeric_secondary_id
+
+data remove block ~ ~-1 ~ primary_effect
+data remove block ~ ~-1 ~ secondary_effect
 
 playsound minecraft:entity.wither.spawn block @a[distance=..10] ~ ~ ~ .5 1.3
 particle minecraft:witch ~ ~-1 ~ 0.5 0.5 0.5 0 40 force

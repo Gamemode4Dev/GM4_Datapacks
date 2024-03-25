@@ -4,7 +4,7 @@
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {
-    "item": "minecraft:light_blue_concrete_powder"
+    "id": "minecraft:light_blue_concrete_powder"
   },
   "criteria": {
     "obtain_liquid_tank": {

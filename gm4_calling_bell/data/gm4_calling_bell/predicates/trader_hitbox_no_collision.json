@@ -3,7 +3,7 @@
     "condition": "minecraft:location_check",
     "predicate": {
       "block": {
-        "tag": "gm4:no_collision"
+        "blocks": "#gm4:no_collision"
       }
     }
   },
@@ -12,7 +12,7 @@
     "offsetY": 1,
     "predicate": {
       "block": {
-        "tag": "gm4:no_collision"
+        "blocks": "#gm4:no_collision"
       }
     }
   }

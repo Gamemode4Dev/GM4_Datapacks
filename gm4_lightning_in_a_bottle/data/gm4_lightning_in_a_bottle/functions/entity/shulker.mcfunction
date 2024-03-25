@@ -4,7 +4,7 @@
 # run from lightning/check
 
 setblock ~ ~ ~ air
-summon shulker ~ ~-.49 ~ {ActiveEffects:[{Id:10,Duration:20,Amplifier:10b,ShowParticles:0b}],Color:16,DeathLootTable:"gm4_lightning_in_a_bottle:entities/shulker"}
+summon shulker ~ ~-.49 ~ {active_effects:[{id:'minecraft:regeneration',duration:20,amplifier:10b,show_particles:0b}],Color:16,DeathLootTable:"gm4_lightning_in_a_bottle:entities/shulker"}
 
 advancement grant @a[distance=..5,gamemode=!spectator] only gm4:lightning_in_a_bottle_shulker
 

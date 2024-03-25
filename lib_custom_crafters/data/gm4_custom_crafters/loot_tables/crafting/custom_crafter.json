@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_custom_crafters:items/custom_crafter",
+          "value": "gm4_custom_crafters:items/custom_crafter",
           "functions": [
             {
               "function": "minecraft:set_count",

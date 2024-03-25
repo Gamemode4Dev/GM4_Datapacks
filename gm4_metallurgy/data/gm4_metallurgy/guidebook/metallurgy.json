@@ -3,7 +3,7 @@
   "name": "Metallurgy",
   "module_type": "base",
   "icon": {
-    "item": "minecraft:anvil"
+    "id": "minecraft:anvil"
   },
   "criteria": {
     "obtain_tnt": {

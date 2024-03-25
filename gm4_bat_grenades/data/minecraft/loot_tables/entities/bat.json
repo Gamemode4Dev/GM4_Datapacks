@@ -27,8 +27,10 @@
           "name": "minecraft:rabbit_hide",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'item/bat_leather'}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/bat_leather"
+              }
             },
             {
               "function": "set_name",
@@ -40,6 +42,7 @@
             },
             {
               "function": "set_lore",
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.bat_leather.1",

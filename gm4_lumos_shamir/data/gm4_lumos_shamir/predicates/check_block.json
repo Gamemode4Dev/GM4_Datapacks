@@ -6,7 +6,7 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"tag": "minecraft:trapdoors",
+					"blocks": "#minecraft:trapdoors",
 					"state": {
 						"half": "top",
 						"open": "false"
@@ -19,7 +19,7 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"tag": "gm4_lumos_shamir:torch_placeable"
+					"blocks": "#gm4_lumos_shamir:torch_placeable"
 				}
 			}
 		},
@@ -56,7 +56,7 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"tag": "minecraft:fence_gates",
+					"blocks": "#minecraft:fence_gates",
 					"state": {
 						"open": "false"
 					}
@@ -68,7 +68,7 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"tag": "minecraft:slabs",
+					"blocks": "#minecraft:slabs",
 					"state": {
 						"type": "top"
 					}
@@ -80,7 +80,7 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"tag": "minecraft:slabs",
+					"blocks": "#minecraft:slabs",
 					"state": {
 						"type": "double"
 					}
@@ -92,7 +92,7 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"tag": "minecraft:stairs",
+					"blocks": "#minecraft:stairs",
 					"state": {
 						"half": "top"
 					}

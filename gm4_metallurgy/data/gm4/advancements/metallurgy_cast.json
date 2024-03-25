@@ -1,8 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:player_head",
-      "nbt": "{CustomModelData:'gui/advancement/metallurgy_cast',SkullOwner:\"$gm4_metallurgy:band/aluminium\"}"
+      "id": "minecraft:player_head",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/metallurgy_cast",
+        "minecraft:profile": "$gm4_metallurgy:band/aluminium"
+      }
     },
     "title": {
       "translate": "advancement.gm4.metallurgy.cast.title",

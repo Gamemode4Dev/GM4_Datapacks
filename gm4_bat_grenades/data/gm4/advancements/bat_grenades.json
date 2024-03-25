@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "gunpowder",
-      "nbt": "{CustomModelData:'gui/advancement/bat_grenades'}"
+      "id": "gunpowder",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/bat_grenades"
+      }
     },
     "title": {
       "translate": "advancement.gm4.bat_grenades.title",

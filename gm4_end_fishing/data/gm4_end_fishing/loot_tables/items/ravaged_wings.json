@@ -8,8 +8,10 @@
           "name": "minecraft:elytra",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/ravaged_wings'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/ravaged_wings"
+              }
             },
             {
               "function": "minecraft:set_name",

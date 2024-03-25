@@ -3,7 +3,7 @@
   "name": "Potion Swords",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:golden_sword"
+    "id": "minecraft:golden_sword"
   },
   "criteria": {
     "obtain_potion": {

@@ -18,4 +18,4 @@ await entity @e[tag=gm4_smeltery] inside
 item replace block ~1 ~1 ~ container.0 with raw_iron
 item replace block ~1 ~1 ~ container.1 with coal
 
-await block ~1 ~1 ~ furnace{Items:[{Slot:2b,id:"minecraft:iron_ingot",Count:2b}]}
+await items block ~1 ~1 ~ container.2 minecraft:iron_ingot[count=2]

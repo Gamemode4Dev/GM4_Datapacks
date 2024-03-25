@@ -9,8 +9,10 @@
                     "name": "minecraft:tipped_arrow",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{Potion:'minecraft:strong_harming'}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:potion_contents": "minecraft:strong_harming"
+                            }
                         },
                         {
                             "function": "minecraft:set_count",
@@ -27,8 +29,10 @@
                     "name": "minecraft:tipped_arrow",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{Potion:'minecraft:long_poison'}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:potion_contents": "minecraft:long_poison"
+                            }
                         },
                         {
                             "function": "minecraft:set_count",
@@ -45,8 +49,10 @@
                     "name": "minecraft:tipped_arrow",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{Potion:'minecraft:long_weakness'}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:potion_contents": "minecraft:long_weakness"
+                            }
                         },
                         {
                             "function": "minecraft:set_count",
@@ -63,8 +69,10 @@
                     "name": "minecraft:tipped_arrow",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{Potion:'minecraft:long_slowness'}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:potion_contents": "minecraft:long_slowness"
+                            }
                         },
                         {
                             "function": "minecraft:set_count",

@@ -15,7 +15,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_tunnel_bores:items/piston_minecart",
+                    "value": "gm4_tunnel_bores:items/piston_minecart",
                     "functions": [
                         {
                             "function": "minecraft:set_count",

@@ -6,7 +6,7 @@ pipeline:
     extend: beet.yaml
     require: 
       - gm4.plugins.output
-      - gm4.plugins.player_heads
+      # - gm4.plugins.player_heads
       - gm4.plugins.resource_pack
       - beet.contrib.model_merging
       - beet.contrib.optifine

@@ -7,7 +7,7 @@ setblock ~1 ~2 ~1 birch_log
 setblock ~1 ~3 ~1 birch_log
 setblock ~1 ~4 ~2 birch_log
 
-give @s iron_axe{Damage:10,gm4_metallurgy:{has_shamir:1b,active_shamir:"arborenda"}}
+give @s minecraft:iron_axe[damage=10,custom_data={gm4_metallurgy:{has_shamir:1b,active_shamir:"arborenda"}}]
 
 dummy @s mine ~1 ~2 ~1
 
@@ -18,4 +18,4 @@ assert block ~1 ~2 ~1 air
 assert block ~1 ~3 ~1 air
 assert block ~1 ~4 ~2 air
 
-assert entity @s[nbt={SelectedItem:{tag:{Damage:13}}}]
+assert items entity @s weapon.mainhand *[damage=13]

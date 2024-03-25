@@ -3,7 +3,7 @@
   "name": "XP Storage",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:ender_chest"
+    "id": "minecraft:ender_chest"
   },
   "criteria": {
     "obtain_ender_chest": {

@@ -3,7 +3,7 @@
   "name": "Dangerous Dungeons",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:spawner"
+    "id": "minecraft:spawner"
   },
   "criteria": {
     "enter_badlands_dungeon": {

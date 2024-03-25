@@ -3,7 +3,7 @@
   "name": "Note Block Interface",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:note_block"
+    "id": "minecraft:note_block"
   },
   "criteria": {
     "tune_note_block": {

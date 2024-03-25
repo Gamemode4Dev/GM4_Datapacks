@@ -2,7 +2,7 @@
 # @dummy ~1.5 ~1 ~0.5
 # @timeout 150
 
-item replace entity @s weapon.mainhand with diamond_sword{gm4_metallurgy:{has_shamir:1b,active_shamir:"musical"}}
+item replace entity @s weapon.mainhand with diamond_sword[custom_data={gm4_metallurgy:{has_shamir:1b,active_shamir:"musical"}}]
 
 await delay 1s
 

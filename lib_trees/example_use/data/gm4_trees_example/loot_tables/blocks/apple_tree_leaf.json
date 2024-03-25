@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_trees_example:items/apple_tree_sapling",
+                    "value": "gm4_trees_example:items/apple_tree_sapling",
                     "conditions": [
                         {
                             "condition": "minecraft:random_chance",

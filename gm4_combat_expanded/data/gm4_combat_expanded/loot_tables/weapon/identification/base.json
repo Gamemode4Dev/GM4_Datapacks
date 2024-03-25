@@ -33,8 +33,10 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{HideFlags:2}"
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
             }
           ]
         }

@@ -4,7 +4,7 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "tag": "gm4_tinker_shamir:tinker_sword"
+                "items": "#gm4_tinker_shamir:tinker_sword"
             }
         }
     }

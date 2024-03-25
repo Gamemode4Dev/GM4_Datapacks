@@ -8,7 +8,7 @@
         "predicate": {
           "equipment": {
             "feet": {
-              "tag": "gm4_combat_expanded:armor",
+              "items": "#gm4_combat_expanded:armor",
               "nbt": "{gm4_combat_expanded:{modifier:11}}"
             }
           }
@@ -20,7 +20,7 @@
         "predicate": {
           "equipment": {
             "legs": {
-              "tag": "gm4_combat_expanded:armor",
+              "items": "#gm4_combat_expanded:armor",
               "nbt": "{gm4_combat_expanded:{modifier:11}}"
             }
           }
@@ -32,7 +32,7 @@
         "predicate": {
           "equipment": {
             "chest": {
-              "tag": "gm4_combat_expanded:armor",
+              "items": "#gm4_combat_expanded:armor",
               "nbt": "{gm4_combat_expanded:{modifier:11}}"
             }
           }
@@ -44,7 +44,7 @@
         "predicate": {
           "equipment": {
             "head": {
-              "tag": "gm4_combat_expanded:armor",
+              "items": "#gm4_combat_expanded:armor",
               "nbt": "{gm4_combat_expanded:{modifier:11}}"
             }
           }

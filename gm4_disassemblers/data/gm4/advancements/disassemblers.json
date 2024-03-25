@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "tnt",
-      "nbt": "{CustomModelData:'gui/advancement/disassemblers'}"
+      "id": "tnt",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/disassemblers"
+      }
     },
     "title": {
       "translate": "advancement.gm4.disassemblers.title",

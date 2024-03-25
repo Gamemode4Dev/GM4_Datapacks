@@ -5,7 +5,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "gm4:full_collision"
+					"blocks": "#gm4:full_collision"
 				}
 			}
 		},
@@ -13,7 +13,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "minecraft:slabs",
+					"blocks": "#minecraft:slabs",
 					"state": {
 						"type": "double"
 					}
@@ -24,7 +24,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "minecraft:stairs",
+					"blocks": "#minecraft:stairs",
 					"state": {
 						"facing": "west"
 					}
@@ -35,7 +35,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "minecraft:stairs",
+					"blocks": "#minecraft:stairs",
 					"state": {
 						"facing": "south",
 						"shape": "inner_right"
@@ -47,7 +47,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "minecraft:stairs",
+					"blocks": "#minecraft:stairs",
 					"state": {
 						"facing": "north",
 						"shape": "inner_left"
@@ -59,7 +59,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "minecraft:trapdoors",
+					"blocks": "#minecraft:trapdoors",
 					"state": {
 						"facing": "east",
 						"open": "true"
@@ -76,7 +76,7 @@
 						"minecraft:sticky_piston"
 					],
 					"state": {
-						"extended": false
+						"extended": "false"
 					}
 				}
 			}
@@ -90,7 +90,7 @@
 						"minecraft:sticky_piston"
 					],
 					"state": {
-						"extended": true,
+						"extended": "true",
 						"facing": "east"
 					}
 				}

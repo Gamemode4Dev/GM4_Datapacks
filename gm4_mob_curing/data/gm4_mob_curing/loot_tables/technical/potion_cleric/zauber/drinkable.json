@@ -5,31 +5,31 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/drinkable/instant_damage"
+          "value": "gm4_zauber_cauldrons:items/potions/drinkable/instant_damage"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/drinkable/instant_health"
+          "value": "gm4_zauber_cauldrons:items/potions/drinkable/instant_health"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/drinkable/jump_boost"
+          "value": "gm4_zauber_cauldrons:items/potions/drinkable/jump_boost"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/drinkable/poison"
+          "value": "gm4_zauber_cauldrons:items/potions/drinkable/poison"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/drinkable/regeneration"
+          "value": "gm4_zauber_cauldrons:items/potions/drinkable/regeneration"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/drinkable/speed"
+          "value": "gm4_zauber_cauldrons:items/potions/drinkable/speed"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/drinkable/strength"
+          "value": "gm4_zauber_cauldrons:items/potions/drinkable/strength"
         }
       ]
     },

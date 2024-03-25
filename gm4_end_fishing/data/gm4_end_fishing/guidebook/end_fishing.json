@@ -3,7 +3,7 @@
   "name": "End Fishing",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:fishing_rod"
+    "id": "minecraft:fishing_rod"
   },
   "criteria": {
     "enter_end_gateway": {

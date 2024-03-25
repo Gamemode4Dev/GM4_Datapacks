@@ -5,8 +5,10 @@
   "load_check": "mysterious_midnights",
   "base_module": "mysterious_midnights",
   "icon": {
-    "item": "minecraft:tipped_arrow",
-    "nbt": "{Potion:'minecraft:long_poison'}"
+    "id": "minecraft:tipped_arrow",
+    "components": {
+      "minecraft:potion_contents": "minecraft:long_poison"
+    }
   },
   "criteria": {
     "shot_by_tipped_skeleton": {

@@ -10,7 +10,7 @@
             "predicate": {
               "equipment": {
                 "offhand": {
-                  "tag": "gm4_crossbow_cartridges:valid_items"
+                  "items": "#gm4_crossbow_cartridges:valid_items"
                 }
               }
             }

@@ -7,7 +7,7 @@
           {
             "condition": "minecraft:match_tool",
             "predicate": {
-              "tag": "gm4_machines:minecarts",
+              "items": "#gm4_machines:minecarts",
               "nbt": "{gm4_machines:{}}"
             }
           },
@@ -15,7 +15,7 @@
             "condition": "minecraft:location_check",
             "predicate": {
               "block": {
-                "tag": "minecraft:rails"
+                "blocks": "#minecraft:rails"
               }
             }
           }

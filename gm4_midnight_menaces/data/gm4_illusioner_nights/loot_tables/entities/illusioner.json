@@ -42,8 +42,10 @@
                     "weight": 2,
                     "functions": [
                         {
-                            "function": "set_nbt",
-                            "tag": "{Potion:\"minecraft:long_invisibility\"}"
+                            "function": "set_components",
+                            "components": {
+                                "minecraft:potion_contents": "minecraft:long_invisibility"
+                            }
                         }
                     ]
                 },
@@ -53,8 +55,10 @@
                     "weight": 3,
                     "functions": [
                         {
-                            "function": "set_nbt",
-                            "tag": "{Potion:\"minecraft:long_night_vision\"}"
+                            "function": "set_components",
+                            "components": {
+                                "minecraft:potion_contents": "minecraft:long_night_vision"
+                            }
                         }
                     ]
                 },
@@ -64,8 +68,20 @@
                     "weight": 1,
                     "functions": [
                         {
-                            "function": "set_nbt",
-                            "tag": "{CustomPotionEffects:[{Duration:1200,Id:15,Amplifier:0b}],Potion: \"minecraft:mundane\",display:{Name:\"{\\\"text\\\":\\\"Lingering Potion of Blindness\\\",\\\"italic\\\":false}\"}}"
+                            "function": "set_components",
+                            "components": {
+                                "minecraft:custom_name": "{\"text\":\"Lingering Potion of Blindness\",\"italic\":false}",
+                                "minecraft:potion_contents": {
+                                    "potion": "minecraft:mundane",
+                                    "custom_effects": [
+                                        {
+                                            "duration": 1200,
+                                            "id": "minecraft:blindness",
+                                            "amplifier": 0
+                                        }
+                                    ]
+                                }
+                            }
                         }
                     ]
                 }

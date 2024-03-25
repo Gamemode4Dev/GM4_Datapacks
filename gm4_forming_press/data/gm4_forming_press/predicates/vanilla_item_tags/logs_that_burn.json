@@ -4,7 +4,7 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "tag": "minecraft:logs_that_burn"
+        "items": "#minecraft:logs_that_burn"
       }
     }
   }

@@ -1,8 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "paper",
-      "nbt": "{CustomModelData:'gui/advancement/book_binders_debind',Enchantments:[{id:\"minecraft:mending\",lvl:1}]}"
+      "id": "paper",
+      "components": {
+        "minecraft:enchantments": {
+          "minecraft:mending": 1
+        },
+        "minecraft:custom_model_data": "gui/advancement/book_binders_debind"
+      }
     },
     "title": {
       "translate": "advancement.gm4.book_binders_debind.title",

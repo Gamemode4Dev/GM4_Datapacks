@@ -1,8 +1,16 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:potion",
-      "nbt": "{CustomModelData:'gui/advancement/lightning_in_a_bottle_drink',CustomPotionColor:11985402,Enchantments:[{id:\"protection\",lvl:0}]}"
+      "id": "minecraft:potion",
+      "components": {
+        "minecraft:enchantments": {
+          "protection": 0
+        },
+        "minecraft:custom_model_data": "gui/advancement/lightning_in_a_bottle_drink",
+        "minecraft:potion_contents": {
+          "custom_color": 11985402
+        }
+      }
     },
     "title": {
       "translate": "advancement.gm4.lightning_in_a_bottle.lightning_drink.title",

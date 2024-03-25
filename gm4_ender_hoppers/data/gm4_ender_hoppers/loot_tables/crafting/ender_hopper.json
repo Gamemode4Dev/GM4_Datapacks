@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_ender_hoppers:items/ender_hopper",
+          "value": "gm4_ender_hoppers:items/ender_hopper",
           "functions": [
             {
               "function": "minecraft:set_count",

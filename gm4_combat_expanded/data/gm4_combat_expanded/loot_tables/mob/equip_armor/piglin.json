@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/material/golden/feet",
+          "value": "gm4_combat_expanded:armor/material/golden/feet",
           "conditions": [
             {
               "condition": "minecraft:value_check",
@@ -38,7 +38,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/material/golden/legs",
+          "value": "gm4_combat_expanded:armor/material/golden/legs",
           "conditions": [
             {
               "condition": "minecraft:value_check",
@@ -70,7 +70,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/material/golden/chest",
+          "value": "gm4_combat_expanded:armor/material/golden/chest",
           "conditions": [
             {
               "condition": "minecraft:value_check",
@@ -102,7 +102,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/material/golden/head",
+          "value": "gm4_combat_expanded:armor/material/golden/head",
           "conditions": [
             {
               "condition": "minecraft:value_check",

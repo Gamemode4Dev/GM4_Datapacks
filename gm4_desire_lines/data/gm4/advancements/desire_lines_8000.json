@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "oak_planks",
-      "nbt": "{CustomModelData:'gui/advancement/desire_lines_8000'}"
+      "id": "oak_planks",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/desire_lines_8000"
+      }
     },
     "title": {
       "translate": "advancement.gm4.desire_lines.walk_8000.title",

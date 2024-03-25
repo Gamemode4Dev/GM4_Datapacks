@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "name_tag",
-      "nbt": "{CustomModelData:'gui/advancement/holographic_tags'}"
+      "id": "name_tag",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/holographic_tags"
+      }
     },
     "title": {
       "translate": "advancement.gm4.holographic_tags.title",

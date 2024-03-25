@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_guidebook:guidebook",
+          "value": "gm4_guidebook:guidebook",
           "functions": [
             {
               "function": "minecraft:set_count",

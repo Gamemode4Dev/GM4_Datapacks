@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "saddle",
-      "nbt": "{CustomModelData:'gui/advancement/pig_tractors'}"
+      "id": "saddle",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/pig_tractors"
+      }
     },
     "title": {
       "translate": "advancement.gm4.pig_tractors.title",

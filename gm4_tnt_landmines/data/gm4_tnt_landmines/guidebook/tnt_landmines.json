@@ -3,7 +3,7 @@
   "name": "TNT Landmines",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:tnt"
+    "id": "minecraft:tnt"
   },
   "criteria": {
     "obtain_tnt": {

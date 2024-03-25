@@ -3,7 +3,7 @@
   "name": "Pig Tractors",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:iron_hoe"
+    "id": "minecraft:iron_hoe"
   },
   "criteria": {
     "ride_pig": {

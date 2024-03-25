@@ -1,7 +1,7 @@
 # @template gm4:test_platform
 # @dummy ~0.5 ~1 ~0.5
 
-give @s iron_sword{gm4_metallurgy:{has_shamir:1b,active_shamir:"ender_bolt"}}
+give @s iron_sword[custom_data={gm4_metallurgy:{has_shamir:1b,active_shamir:"ender_bolt"}}]
 
 await delay 1s
 

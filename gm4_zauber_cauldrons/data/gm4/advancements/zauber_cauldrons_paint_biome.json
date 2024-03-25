@@ -1,8 +1,10 @@
 {
     "display": {
         "icon": {
-            "item": "grass_block",
-            "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_paint_biome'}"
+            "id": "grass_block",
+            "components": {
+                "minecraft:custom_model_data": "gui/advancement/zauber_cauldrons_paint_biome"
+            }
         },
         "title": {
             "translate": "advancement.gm4.zauber_cauldrons.paint_biome.title",

@@ -15,7 +15,7 @@
             },
             {
               "function": "set_nbt",
-              "tag": "{custom_potion:\"resistance\",Potion:\"minecraft:mundane\",CustomPotionEffects:[{Id:11,Amplifier:0b,Duration:150}]}"
+              "tag": "{custom_potion:\"resistance\",Potion:\"minecraft:mundane\",custom_potion_effects:[{id:'minecraft:resistance',amplifier:0b,duration:150}]}"
             },
             {
               "function": "set_name",

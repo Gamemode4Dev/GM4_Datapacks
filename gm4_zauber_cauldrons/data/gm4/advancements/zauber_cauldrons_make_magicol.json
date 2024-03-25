@@ -1,8 +1,10 @@
 {
     "display": {
         "icon": {
-            "item": "clock",
-            "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_make_magicol'}"
+            "id": "clock",
+            "components": {
+                "minecraft:custom_model_data": "gui/advancement/zauber_cauldrons_make_magicol"
+            }
         },
         "title": {
             "translate": "advancement.gm4.zauber_cauldrons.make_magicol.title",

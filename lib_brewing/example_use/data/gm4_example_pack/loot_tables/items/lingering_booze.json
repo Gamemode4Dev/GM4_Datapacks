@@ -15,7 +15,7 @@
             },
             {
               "function": "set_nbt",
-              "tag": "{custom_potion:\"booze\",CustomPotionEffects:[{Id:2,Amplifier:0b,Duration:300},{Id:5,Amplifier:0b,Duration:300},{Id:9,Amplifier:1b,Duration:100},{Id:19,Amplifier:0b,Duration:100},{Id:22,Amplifier:1b,Duration:300}],CustomPotionColor:11236936}"
+              "tag": "{custom_potion:\"booze\",custom_potion_effects:[{id:'minecraft:slowness',amplifier:0b,duration:300},{id:'minecraft:strength',amplifier:0b,duration:300},{id:'minecraft:nausea',amplifier:1b,duration:100},{id:'minecraft:poison',amplifier:0b,duration:100},{id:'minecraft:absorption',amplifier:1b,duration:300}],CustomPotionColor:11236936}"
             },
             {
               "function": "set_name",

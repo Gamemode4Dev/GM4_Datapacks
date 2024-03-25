@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_block_compressors:items/block_compressor",
+          "value": "gm4_block_compressors:items/block_compressor",
           "functions": [
             {
               "function": "minecraft:set_count",

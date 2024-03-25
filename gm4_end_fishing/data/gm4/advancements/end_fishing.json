@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "fishing_rod",
-      "nbt": "{CustomModelData:'gui/advancement/end_fishing'}"
+      "id": "fishing_rod",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/end_fishing"
+      }
     },
     "title": {
       "translate": "advancement.gm4.end_fishing.title",

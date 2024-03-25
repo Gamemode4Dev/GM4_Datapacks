@@ -1,6 +1,6 @@
 {
   "condition": "minecraft:location_check",
   "predicate": {
-    "biome": "minecraft:bamboo_jungle"
+    "biomes": "minecraft:bamboo_jungle"
   }
 }

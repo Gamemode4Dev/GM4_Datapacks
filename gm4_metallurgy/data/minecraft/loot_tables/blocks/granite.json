@@ -35,7 +35,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_metallurgy:baryte_lump",
+              "value": "gm4_metallurgy:baryte_lump",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",

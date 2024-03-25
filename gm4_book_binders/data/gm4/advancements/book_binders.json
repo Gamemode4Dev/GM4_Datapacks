@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "lectern",
-      "nbt": "{CustomModelData:'gui/advancement/book_binders'}"
+      "id": "lectern",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/book_binders"
+      }
     },
     "title": {
       "translate": "advancement.gm4.book_binders.title",

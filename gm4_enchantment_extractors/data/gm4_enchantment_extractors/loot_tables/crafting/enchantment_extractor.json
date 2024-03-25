@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:items/enchantment_extractor",
+          "value": "gm4_enchantment_extractors:items/enchantment_extractor",
           "functions": [
             {
               "function": "minecraft:set_count",

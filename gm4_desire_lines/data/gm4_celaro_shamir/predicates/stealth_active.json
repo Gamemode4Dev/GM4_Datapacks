@@ -7,7 +7,7 @@
     },
     "location": {
       "block": {
-        "tag": "gm4_celaro_shamir:tall_plants"
+        "blocks": "#gm4_celaro_shamir:tall_plants"
       }
     }
   }

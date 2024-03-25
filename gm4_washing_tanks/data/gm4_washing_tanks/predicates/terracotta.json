@@ -4,7 +4,7 @@
   "predicate": {
     "equipment": {
       "offhand": {
-        "tag": "gm4_washing_tanks:terracotta"
+        "items": "#gm4_washing_tanks:terracotta"
       }
     }
   }

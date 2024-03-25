@@ -3,7 +3,7 @@
   "name": "Mob Curing",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:golden_apple"
+    "id": "minecraft:golden_apple"
   },
   "criteria": {
     "obtain_splash_potion": {

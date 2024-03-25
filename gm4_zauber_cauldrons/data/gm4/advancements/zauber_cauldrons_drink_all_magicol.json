@@ -1,8 +1,10 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:potion",
-            "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_drink_all_magicol'}"
+            "id": "minecraft:potion",
+            "components": {
+                "minecraft:custom_model_data": "gui/advancement/zauber_cauldrons_drink_all_magicol"
+            }
         },
         "title": {
             "translate": "advancement.gm4.zauber_cauldrons.drink_all_magicol.title",

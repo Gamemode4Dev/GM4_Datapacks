@@ -6,7 +6,7 @@ give @s item_frame
 execute at @s run tp @s ~ ~ ~ facing ~2 ~-1.5 ~1
 dummy @s use block ~2 ~1 ~1 west
 
-give @s splash_potion{Potion:"minecraft:invisibility"}
+give @s minecraft:splash_potion[potion_contents="minecraft:invisibility"]
 dummy @s use item
 
 await delay 5t

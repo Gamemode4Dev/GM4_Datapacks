@@ -3,7 +3,7 @@
   "name": "Speed Paths",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:dirt_path"
+    "id": "minecraft:dirt_path"
   },
   "criteria": {
     "stand_in_path": {

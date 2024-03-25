@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "brown_stained_glass",
-      "nbt": "{CustomModelData:'gui/advancement/soul_glass'}"
+      "id": "brown_stained_glass",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/soul_glass"
+      }
     },
     "title": {
       "translate": "advancement.gm4.soul_glass.title",

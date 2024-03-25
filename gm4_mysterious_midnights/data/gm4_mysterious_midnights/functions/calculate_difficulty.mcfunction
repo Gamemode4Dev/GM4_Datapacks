@@ -3,7 +3,8 @@
 # run from gm4_mysterious_midnights:start_midnight
 
 # generate random number from 0 to 15
-execute store result score difficulty gm4_mm_data run data get entity @e[limit=1,sort=random] UUID[0]
+execute store result storage gm4_mysterious_midnights:temp day int 1 run time query day
+function gm4_mysterious_midnights:roll_difficulty with storage gm4_mysterious_midnights:temp
 scoreboard players set 16 gm4_mm_data 16
 scoreboard players operation difficulty gm4_mm_data %= 16 gm4_mm_data
 

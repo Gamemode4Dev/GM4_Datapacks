@@ -3,7 +3,7 @@
   "name": "Phantom Scarecrows",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:skeleton_skull"
+    "id": "minecraft:skeleton_skull"
   },
   "criteria": {
     "obtain_skull": {

@@ -37,7 +37,7 @@ pipeline:
       - gm4.plugins.worker.store_project
       - gm4.plugins.worker.freeze_last_stored
       - gm4.plugins.manifest.update_patch
-      - gm4.plugins.player_heads
+      # - gm4.plugins.player_heads
       - gm4.plugins.resource_pack
       - beet.contrib.model_merging
       - beet.contrib.optifine

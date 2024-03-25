@@ -3,7 +3,7 @@
   "name": "Live Catch",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:cod"
+    "id": "minecraft:cod"
   },
   "criteria": {
     "use_fishing_rod": {

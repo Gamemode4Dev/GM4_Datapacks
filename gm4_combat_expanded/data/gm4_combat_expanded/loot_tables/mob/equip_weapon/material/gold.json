@@ -8,7 +8,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:weapon/pickaxe/gold",
+              "value": "gm4_combat_expanded:weapon/pickaxe/gold",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -25,7 +25,7 @@
               "children": [
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/axe/gold",
+                  "value": "gm4_combat_expanded:weapon/axe/gold",
                   "conditions": [
                     {
                       "condition": "minecraft:value_check",
@@ -48,7 +48,7 @@
                 },
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/shovel/gold",
+                  "value": "gm4_combat_expanded:weapon/shovel/gold",
                   "conditions": [
                     {
                       "condition": "minecraft:random_chance",
@@ -58,7 +58,7 @@
                 },
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/sword/gold"
+                  "value": "gm4_combat_expanded:weapon/sword/gold"
                 }
               ]
             }

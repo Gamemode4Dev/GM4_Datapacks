@@ -26,7 +26,7 @@ from beet.core.utils import TextComponent
 from PIL import Image, ImageDraw
 from pydantic.v1 import BaseModel
 
-from gm4.plugins.player_heads import Skin
+# from gm4.plugins.player_heads import Skin
 
 logger = logging.getLogger(__name__)
 
@@ -43,13 +43,18 @@ class Section(BaseModel):
   grants: list[str] = []
 
 
+class Icon(BaseModel):
+  id: str
+  components: Optional[dict[str, Any]]
+
+
 class Book(BaseModel):
   id: str
   name: str
   module_type: Literal["expansion", "base", "module"]
   load_check: Optional[str]
   base_module: Optional[str]
-  icon: dict[str, str]
+  icon: Icon
   criteria: dict[str, dict[Any, Any]]
   sections: list[Section]
   trigger_id: int = -1 # value set by triggers.json
@@ -160,7 +165,7 @@ def generate_files(ctx:Context, d: DataPack, overlay: bool = False):
       ctx.meta['gm4'].setdefault('model_data',[]).append({
         "template": "custom",
         "reference": f"{ctx.project_id}:guidebook_icon/{book.id}",
-        "item": book.icon.get('item','').removeprefix("minecraft:"),
+        "item": book.icon.id.removeprefix("minecraft:"),
       })
       ctx.assets[f"{ctx.project_id}:guidebook_icon/{book.id}"] = generate_toast_model(book, ctx)
 
@@ -792,7 +797,7 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
   # get item id, name, lore, and color
   entry: dict[Any, Any] = loot["pools"][0]["entries"][0]
   item_id: str = entry["name"]
-  tag: dict[Any, Any] = {}
+  # tag: dict[Any, Any] = {}
   name: TextComponent = ""
   lore: list[str] = []
   if "functions" in entry:
@@ -802,20 +807,20 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
       elif "set_lore" in function["function"]:
         for line in function["lore"]:
           lore.append(f'{json.dumps(line)}')
-      elif "set_nbt" in function["function"]:
-        tag: dict[Any, Any] = nbtlib.parse_nbt(function["tag"]) # type: ignore
+      # elif "set_nbt" in function["function"]:
+      #   tag: dict[Any, Any] = nbtlib.parse_nbt(function["tag"]) # type: ignore
 
   # color
-  if "player_head" in item_id and "$" in tag["SkullOwner"]:
-    skull_owner = tag["SkullOwner"].replace("$","")
-    if ":" not in skull_owner:
-      skull_owner = f"{ctx.project_id}:{skull_owner}" # NOTE gm4.utils will have an add_namespace helper function after the RP PR
-    skin = ctx.data[Skin][skull_owner]
+  # if "player_head" in item_id and "$" in tag["SkullOwner"]:
+  #   skull_owner = tag["SkullOwner"].replace("$","")
+  #   if ":" not in skull_owner:
+  #     skull_owner = f"{ctx.project_id}:{skull_owner}" # NOTE gm4.utils will have an add_namespace helper function after the RP PR
+  #   skin = ctx.data[Skin][skull_owner]
 
-    color = get_texture_color(skin)
+  #   color = get_texture_color(skin)
 
-  else:
-    color = get_texture_color(intuit_item_texture(item_id, ctx.inject(Vanilla)))
+  # else:
+  color = get_texture_color(intuit_item_texture(item_id, ctx.inject(Vanilla)))
 
   # create slot
   slot: dict[Any, Any] = {
@@ -1762,11 +1767,14 @@ Creates the advancement to show the toast
 def generate_display_advancement(book: Book, project_id: str) -> Advancement:
   module_name = book.name
   icon = book.icon
-  icon_nbt: nbtlib.Compound = nbtlib.parse_nbt(icon.get('nbt',"{}")) # type: ignore ; nbtlib missing stub file
-  icon_nbt.merge({"CustomModelData": nbtlib.String(f"{project_id}:guidebook_icon/{book.id}")}) # type: ignore
-  icon["nbt"] = nbtlib.serialize_tag(icon_nbt) # type: ignore
+  if icon.components is None:
+    icon.components = dict()
+  icon.components["minecraft:custom_model_data"] = f"{project_id}:guidebook_icon/{book.id}"
   display = {
-    "icon": icon, # taken from book dictionary
+    "icon": {
+      "id": icon.id,
+      "components": icon.components
+    },
     "title": [
       "",
       {

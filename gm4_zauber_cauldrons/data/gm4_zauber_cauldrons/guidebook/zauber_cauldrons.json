@@ -3,7 +3,7 @@
   "name": "Zauber Cauldrons",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:cauldron"
+    "id": "minecraft:cauldron"
   },
   "criteria": {
     "obtain_enchanted_book": {

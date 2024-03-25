@@ -9,7 +9,7 @@
           "nbt": "{FallFlying:0b}",
           "stepping_on": {
             "block": {
-              "tag": "gm4:no_collision"
+              "blocks": "#gm4:no_collision"
             }
           },
           "flags": {
@@ -43,7 +43,7 @@
                   "nbt": "{FallFlying:1b}",
                   "stepping_on": {
                     "block": {
-                      "tag": "gm4:no_collision"
+                      "blocks": "#gm4:no_collision"
                     }
                   }
                 }

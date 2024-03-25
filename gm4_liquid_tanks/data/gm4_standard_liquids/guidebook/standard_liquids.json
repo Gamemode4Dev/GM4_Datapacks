@@ -5,7 +5,7 @@
   "load_check": "liquid_tanks",
   "base_module": "liquid_tanks",
   "icon": {
-    "item": "minecraft:lava_bucket"
+    "id": "minecraft:lava_bucket"
   },
   "criteria": {
     "obtain_liquid_tank": {

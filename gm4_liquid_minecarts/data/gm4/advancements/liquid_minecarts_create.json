@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "hopper_minecart",
-      "nbt": "{CustomModelData:'gui/advancement/liquid_minecarts_create'}"
+      "id": "hopper_minecart",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/liquid_minecarts_create"
+      }
     },
     "title": {
       "translate": "advancement.gm4.liquid_minecarts.title",

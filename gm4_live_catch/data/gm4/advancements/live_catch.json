@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "pufferfish",
-      "nbt": "{CustomModelData:'gui/advancement/live_catch'}"
+      "id": "pufferfish",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/live_catch"
+      }
     },
     "title": {
       "translate": "advancement.gm4.live_catch.title",

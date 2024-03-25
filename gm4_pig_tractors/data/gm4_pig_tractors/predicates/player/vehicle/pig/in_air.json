@@ -7,7 +7,7 @@
         "type": "minecraft:pig",
         "location": {
           "block": {
-            "tag": "gm4_pig_tractors:replaceable"
+            "blocks": "#gm4_pig_tractors:replaceable"
           }
         }
       }

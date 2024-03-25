@@ -3,7 +3,7 @@
   "name": "Ink Spitting Squid",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:ink_sac"
+    "id": "minecraft:ink_sac"
   },
   "criteria": {
     "inked": {

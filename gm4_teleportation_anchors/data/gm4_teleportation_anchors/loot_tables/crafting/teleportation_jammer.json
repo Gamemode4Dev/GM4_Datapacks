@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_teleportation_anchors:items/teleportation_jammer",
+          "value": "gm4_teleportation_anchors:items/teleportation_jammer",
           "functions": [
             {
               "function": "minecraft:set_count",

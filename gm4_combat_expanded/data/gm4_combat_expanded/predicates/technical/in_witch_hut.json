@@ -1,6 +1,6 @@
 {
     "condition": "minecraft:location_check",
     "predicate": {
-        "structure": "minecraft:swamp_hut"
+        "structures": "minecraft:swamp_hut"
     }
 }

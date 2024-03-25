@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:apple",
-      "nbt": "{Enchantments:[{}]}"
+      "id": "minecraft:apple",
+      "components": {
+        "minecraft:enchantment_glint_override": true
+      }
     },
     "title": {
       "translate": "advancement.gm4.block_compressors.compressed_diet.title",

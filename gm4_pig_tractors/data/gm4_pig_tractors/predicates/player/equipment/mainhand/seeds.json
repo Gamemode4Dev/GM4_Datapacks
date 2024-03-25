@@ -4,7 +4,7 @@
     "predicate": {
         "equipment": {
             "mainhand": {
-                "tag": "gm4_pig_tractors:seeds"
+                "items": "#gm4_pig_tractors:seeds"
             }
         }
     }

@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_zauber_cauldrons:items/enchanted_prismarine_shard",
+                    "value": "gm4_zauber_cauldrons:items/enchanted_prismarine_shard",
                     "functions": [
                         {
                             "function": "minecraft:set_count",

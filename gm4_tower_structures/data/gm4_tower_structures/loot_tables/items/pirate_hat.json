@@ -12,8 +12,14 @@
                             "count": 1
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'item/pirate_hat',display:{color:4013373},HideFlags:64}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:dyed_color": {
+                                    "rgb": 4013373,
+                                    "show_in_tooltip": false
+                                },
+                                "minecraft:custom_model_data": "item/pirate_hat"
+                            }
                         },
                         {
                             "function": "minecraft:set_name",

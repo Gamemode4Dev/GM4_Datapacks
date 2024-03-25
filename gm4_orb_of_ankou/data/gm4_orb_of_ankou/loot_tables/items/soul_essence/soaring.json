@@ -10,6 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.pneuma_soaring",
@@ -29,8 +30,15 @@
               }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'pneuma/soaring',gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"soaring\"},stored_attributes:[{AttributeName:\"generic.max_health\",Name:\"generic.max_health\",Amount:-.2,Operation:1,UUID:[I;0,972157,0,324820],Slot:\"offhand\"}],stored_color:[9295344]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:custom_model_data": "pneuma/soaring"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'soaring'},stored_attributes:[{AttributeName:'generic.max_health',Name:'generic.max_health',Amount:-0.2d,Operation:1,UUID:[0,972157,0,324820],Slot:'offhand'}],stored_color:[9295344]}}"
             }
           ]
         }

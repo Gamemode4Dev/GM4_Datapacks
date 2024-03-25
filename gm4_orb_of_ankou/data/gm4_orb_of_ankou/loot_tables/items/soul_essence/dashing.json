@@ -10,6 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.pneuma_dashing",
@@ -29,8 +30,15 @@
               }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'pneuma/dashing',gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"dashing\"},stored_color:[14735149]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:custom_model_data": "pneuma/dashing"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'dashing'},stored_color:[14735149]}}"
             }
           ]
         }

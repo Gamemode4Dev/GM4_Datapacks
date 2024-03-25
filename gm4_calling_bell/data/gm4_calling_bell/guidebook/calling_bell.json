@@ -3,7 +3,7 @@
   "name": "Calling Bell",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:emerald"
+    "id": "minecraft:emerald"
   },
   "criteria": {
     "obtain_emerald": {

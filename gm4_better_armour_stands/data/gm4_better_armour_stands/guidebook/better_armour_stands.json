@@ -3,7 +3,7 @@
   "name": "Better Armour Stands",
   "module_type": "base",
   "icon": {
-    "item": "minecraft:writable_book"
+    "id": "minecraft:writable_book"
   },
   "criteria": {
     "place_armor_stand": {

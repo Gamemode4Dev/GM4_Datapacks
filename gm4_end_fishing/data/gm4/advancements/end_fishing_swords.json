@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "diamond_sword",
-      "nbt": "{CustomModelData:'gui/advancement/end_fishing_swords'}"
+      "id": "diamond_sword",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/end_fishing_swords"
+      }
     },
     "title": {
       "translate": "advancement.gm4.end_fishing_swords.title",
