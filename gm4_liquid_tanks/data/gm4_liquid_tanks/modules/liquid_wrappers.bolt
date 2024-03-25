@@ -22,6 +22,10 @@ def item_fill(input: str, output: str, value: int, reversable: bool = True):
         return dec_inner
     return dec_outer
 
+# function that generates no mcfunction
+def emptyfunc():
+    pass
+
 class Liquid:
     """Base class providing decorators and infrastructure for adding Liquid Tanks liquids"""
     id: str = None
@@ -35,6 +39,7 @@ class Liquid:
         for field in self._fields:
             if v:=input_args.get(field, None):
                 setattr(self, field, v)
+        self.generators = [] # functions that create mcfunction using bolt
 
     def __call__(self, cls):
         """instance acts as decorator for defining new class-structures"""
@@ -47,7 +52,24 @@ class Liquid:
             if v:=getattr(self, field, None):
                 setattr(DecoratedLiquid, field, v)
 
+        print(self.generators)
+        self.generators.clear()
+
         return DecoratedLiquid
+    
+    def init(self, fcn=emptyfunc):
+        @wraps(fcn)
+        def wrapped_fcn():
+            # function tank_init/milk:
+                # summon item_display ~ ~ ~
+            fcn()
+            pass
+
+        # give nicer info about this wrapped function if not used as decorator
+        wrapped_fcn.__qualname__ = "Liquid.init" if fcn is emptyfunc else fcn.__qualname__
+
+        self.generators.append(wrapped_fcn)
+        return wrapped_fcn
     
 liquid = Liquid() # common instance for most cases
     
@@ -78,6 +100,27 @@ if __name__ == "__main__":
         skullowner = 'skins/snow'
 
     print(PowderSnow.capacity)
+
+    ## Using methods to define behavior
+    @liquid
+    class MushroomSoup:
+        id = 'mushroom_soup'
+        capacity = 300
+        skullowner = 'skins/snow'
+
+        @liquid.init
+        def liquid_init():
+            # particle block ~ ~ ~ red_mushroom 1 0 force
+            pass
+
+    # or with no additional code
+    @liquid
+    class BeetrootSoup:
+        id = 'beetroot_soup'
+        capacity = 300
+        skullowner = 'skins/beetboi'
+
+        liquid_init = liquid.init()
 
 
     # @standard_unit('bucket', 3)
