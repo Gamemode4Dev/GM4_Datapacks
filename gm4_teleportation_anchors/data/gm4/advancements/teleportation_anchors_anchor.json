@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "minecraft:lodestone",
-      "nbt": "{CustomModelData:'gui/advancement/teleportation_anchor'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/teleportation_anchor"
+      }
     },
     "title": {
       "translate": "advancement.gm4.teleportation_anchors_anchor.title",

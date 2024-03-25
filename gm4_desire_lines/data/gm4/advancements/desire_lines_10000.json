@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "coarse_dirt",
-      "nbt": "{CustomModelData:'gui/advancement/desire_lines_10000'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/desire_lines_10000"
+      }
     },
     "title": {
       "translate": "advancement.gm4.desire_lines.walk_10000.title",

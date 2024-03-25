@@ -43,13 +43,18 @@ class Section(BaseModel):
   grants: list[str] = []
 
 
+class Icon(BaseModel):
+  id: str
+  components: Optional[dict[str, Any]]
+
+
 class Book(BaseModel):
   id: str
   name: str
   module_type: Literal["expansion", "base", "module"]
   load_check: Optional[str]
   base_module: Optional[str]
-  icon: dict[str, str]
+  icon: Icon
   criteria: dict[str, dict[Any, Any]]
   sections: list[Section]
   trigger_id: int = -1 # value set by triggers.json
@@ -160,7 +165,7 @@ def generate_files(ctx:Context, d: DataPack, overlay: bool = False):
       ctx.meta['gm4'].setdefault('model_data',[]).append({
         "template": "custom",
         "reference": f"{ctx.project_id}:guidebook_icon/{book.id}",
-        "item": book.icon.get('item','').removeprefix("minecraft:"),
+        "item": book.icon.id.removeprefix("minecraft:"),
       })
       ctx.assets[f"{ctx.project_id}:guidebook_icon/{book.id}"] = generate_toast_model(book, ctx)
 
@@ -1762,11 +1767,14 @@ Creates the advancement to show the toast
 def generate_display_advancement(book: Book, project_id: str) -> Advancement:
   module_name = book.name
   icon = book.icon
-  icon_nbt: nbtlib.Compound = nbtlib.parse_nbt(icon.get('nbt',"{}")) # type: ignore ; nbtlib missing stub file
-  icon_nbt.merge({"CustomModelData": nbtlib.String(f"{project_id}:guidebook_icon/{book.id}")}) # type: ignore
-  icon["nbt"] = nbtlib.serialize_tag(icon_nbt) # type: ignore
+  if icon.components is None:
+    icon.components = dict()
+  icon.components["minecraft:custom_model_data"] = f"{project_id}:guidebook_icon/{book.id}"
   display = {
-    "icon": icon, # taken from book dictionary
+    "icon": {
+      "id": icon.id,
+      "components": icon.components
+    },
     "title": [
       "",
       {

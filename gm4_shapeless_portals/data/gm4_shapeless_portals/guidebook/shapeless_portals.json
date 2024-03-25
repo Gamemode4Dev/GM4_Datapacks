@@ -3,7 +3,7 @@
   "name": "Shapeless Portals",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:crying_obsidian"
+    "id": "minecraft:crying_obsidian"
   },
   "criteria": {
     "light_portal": {

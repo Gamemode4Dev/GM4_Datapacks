@@ -2,7 +2,12 @@
   "display": {
     "icon": {
       "id": "bow",
-      "nbt": "{Enchantments:[{id:\"flame\",lvl:1}],CustomModelData:'gui/advancement/better_fire'}"
+      "components": {
+        "minecraft:enchantments": {
+          "flame": 1
+        },
+        "minecraft:custom_model_data": "gui/advancement/better_fire"
+      }
     },
     "title": {
       "translate": "advancement.gm4.better_fire.title",

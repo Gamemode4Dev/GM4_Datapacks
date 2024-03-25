@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "poppy",
-      "nbt": "{CustomModelData:'gui/advancement/sweethearts'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/sweethearts"
+      }
     },
     "title": {
       "translate": "advancement.gm4.sweethearts.title",

@@ -3,7 +3,7 @@
   "name": "Cozy Campfires",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:campfire"
+    "id": "minecraft:campfire"
   },
   "criteria": {
     "place_campfire": {

@@ -5,7 +5,7 @@
   "load_check": "midnight_menaces",
   "base_module": "mysterious_midnights",
   "icon": {
-    "item": "minecraft:ice"
+    "id": "minecraft:ice"
   },
   "criteria": {
     "fight_icy_stray": {

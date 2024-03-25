@@ -2,7 +2,10 @@
   "display": {
     "icon": {
       "id": "player_head",
-      "nbt": "{CustomModelData:'gui/advancement/heart_canisters_tier_1',SkullOwner:'$heart_canister_tier_1'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/heart_canisters_tier_1",
+        "minecraft:profile": "$heart_canister_tier_1"
+      }
     },
     "title": {
       "translate": "advancement.gm4.heart_canisters.tier_1.title",

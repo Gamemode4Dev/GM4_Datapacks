@@ -2,7 +2,9 @@
     "display": {
         "icon": {
             "id": "tropical_fish_bucket",
-            "nbt": "{CustomModelData:'gui/advancement/crossbow_cartridges_bucket'}"
+            "components": {
+                "minecraft:custom_model_data": "gui/advancement/crossbow_cartridges_bucket"
+            }
         },
         "title": {
             "translate": "advancement.gm4.crossbow_cartridges_fish.title",

@@ -3,7 +3,7 @@
   "name": "SCUBA Gear",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:horn_coral"
+    "id": "minecraft:horn_coral"
   },
   "criteria": {
     "obtain_scute": {

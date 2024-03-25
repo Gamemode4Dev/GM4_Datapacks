@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "poisonous_potato",
-      "nbt": "{CustomModelData:'gui/advancement/chairs_sit'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/chairs_sit"
+      }
     },
     "title": {
       "translate": "advancement.gm4.chairs.sit.title",

@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "nether_star",
-      "nbt": "{CustomModelData:'gui/advancement/orb_of_ankou_all_pneumas'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/orb_of_ankou_all_pneumas"
+      }
     },
     "title": {
       "translate": "advancement.gm4.orb_of_ankou.all_pneumas.title",

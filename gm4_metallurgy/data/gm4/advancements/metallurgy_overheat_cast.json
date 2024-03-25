@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "minecraft:lava_bucket",
-      "nbt": "{CustomModelData:'gui/advancement/metallurgy_overheat_cast'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/metallurgy_overheat_cast"
+      }
     },
     "title": {
       "translate": "advancement.gm4.metallurgy.overheat_cast.title",

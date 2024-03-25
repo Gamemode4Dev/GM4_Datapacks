@@ -3,7 +3,7 @@
   "name": "Orb of Ankou",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:flint_and_steel"
+    "id": "minecraft:flint_and_steel"
   },
   "criteria": {
     "obtain_soul_essence": {

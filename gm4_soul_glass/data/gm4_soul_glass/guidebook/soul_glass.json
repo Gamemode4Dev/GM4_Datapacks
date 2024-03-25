@@ -3,8 +3,10 @@
   "name": "Soul Glass",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:brown_stained_glass",
-    "nbt": "{Enchantments:[{id:\"minecraft:protection\",lvl:0s}]}"
+    "id": "minecraft:brown_stained_glass",
+    "components": {
+      "minecraft:enchantment_glint_override": true
+    }
   },
   "criteria": {
     "obtain_soul_sand": {

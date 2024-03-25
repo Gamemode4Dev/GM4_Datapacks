@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "pufferfish",
-      "nbt": "{CustomModelData:'gui/advancement/live_catch'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/live_catch"
+      }
     },
     "title": {
       "translate": "advancement.gm4.live_catch.title",

@@ -1,8 +1,7 @@
 {
   "display": {
     "icon": {
-      "id": "minecraft:chorus_fruit",
-      "nbt": "{}"
+      "id": "minecraft:chorus_fruit"
     },
     "title": {
       "translate": "advancement.gm4.combat_expanded.vorpal.title",

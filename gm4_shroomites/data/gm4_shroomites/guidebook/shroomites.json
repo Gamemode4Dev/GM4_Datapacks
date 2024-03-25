@@ -3,7 +3,7 @@
   "name": "Shroomites",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:mycelium"
+    "id": "minecraft:mycelium"
   },
   "criteria": {
     "step_on_mycelium": {

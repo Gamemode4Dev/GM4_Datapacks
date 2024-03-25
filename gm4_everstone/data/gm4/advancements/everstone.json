@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "firework_star",
-      "nbt": "{CustomModelData:'gui/advancement/everstones'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/everstones"
+      }
     },
     "title": {
       "translate": "advancement.gm4.everstone.title",

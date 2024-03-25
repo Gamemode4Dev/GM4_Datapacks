@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "iron_boots",
-      "nbt": "{CustomModelData:'gui/advancement/ski'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/ski"
+      }
     },
     "title": {
       "translate": "advancement.gm4.mountaineering.ski.title",

@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "piston",
-      "nbt": "{CustomModelData:'gui/advancement/tunnel_bores'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/tunnel_bores"
+      }
     },
     "title": {
       "translate": "advancement.gm4.tunnel_bores.title",

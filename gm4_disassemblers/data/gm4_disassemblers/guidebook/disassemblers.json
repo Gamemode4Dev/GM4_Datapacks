@@ -3,7 +3,7 @@
   "name": "Disassemblers",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:tnt"
+    "id": "minecraft:tnt"
   },
   "criteria": {
     "create_custom_crafter": {

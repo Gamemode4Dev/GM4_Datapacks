@@ -5,8 +5,10 @@
   "load_check": "midnight_menaces",
   "base_module": "mysterious_midnights",
   "icon": {
-    "item": "minecraft:lingering_potion",
-    "nbt": "{Potion:\"minecraft:long_invisibility\"}"
+    "id": "minecraft:lingering_potion",
+    "components": {
+      "minecraft:potion_contents": "minecraft:long_invisibility"
+    }
   },
   "criteria": {
     "fight_illusioner": {

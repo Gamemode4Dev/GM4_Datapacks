@@ -4,8 +4,10 @@
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {
-    "item": "minecraft:potion",
-    "nbt": "{Potion:\"minecraft:swiftness\"}"
+    "id": "minecraft:potion",
+    "components": {
+      "minecraft:potion_contents": "minecraft:swiftness"
+    }
   },
   "criteria": {
     "obtain_liquid_tank": {

@@ -5,7 +5,7 @@
   "load_check": "midnight_menaces",
   "base_module": "mysterious_midnights",
   "icon": {
-    "item": "minecraft:phantom_membrane"
+    "id": "minecraft:phantom_membrane"
   },
   "criteria": {
     "fight_enlarged_phantom": {

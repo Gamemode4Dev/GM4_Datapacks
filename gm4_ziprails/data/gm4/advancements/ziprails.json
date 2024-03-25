@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "minecraft:minecart",
-      "nbt": "{CustomModelData:'gui/advancement/ziprails'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/ziprails"
+      }
     },
     "title": {
       "translate": "advancement.gm4.ziprails.title",

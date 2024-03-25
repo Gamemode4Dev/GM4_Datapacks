@@ -3,7 +3,7 @@
   "name": "Forming Press",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:furnace"
+    "id": "minecraft:furnace"
   },
   "criteria": {
     "create_custom_crafter": {

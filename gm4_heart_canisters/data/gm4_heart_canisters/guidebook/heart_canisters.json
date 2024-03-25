@@ -3,8 +3,10 @@
   "name": "Heart Canisters",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:player_head",
-    "nbt": "{SkullOwner:'$heart_canister_tier_1'}"
+    "id": "minecraft:player_head",
+    "components": {
+      "minecraft:profile": "$heart_canister_tier_1"
+    }
   },
   "criteria": {
     "obtain_nether_star": {

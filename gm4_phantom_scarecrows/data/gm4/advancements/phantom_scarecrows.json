@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "minecraft:firework_rocket",
-      "nbt": "{CustomModelData:'gui/advancement/phantom_scarecrows'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/phantom_scarecrows"
+      }
     },
     "title": {
       "translate": "advancement.gm4.phantom_scarecrows.title",

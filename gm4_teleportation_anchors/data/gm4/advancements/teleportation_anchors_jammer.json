@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "minecraft:end_rod",
-      "nbt": "{CustomModelData:'gui/advancement/teleportation_jammer'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/teleportation_jammer"
+      }
     },
     "title": {
       "translate": "advancement.gm4.teleportation_anchors_jammer.title",

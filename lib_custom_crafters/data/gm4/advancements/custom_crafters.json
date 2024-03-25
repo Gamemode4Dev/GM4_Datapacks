@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "crafting_table",
-      "nbt": "{CustomModelData:'gui/advancement/custom_crafters'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/custom_crafters"
+      }
     },
     "title": {
       "translate": "advancement.gm4.custom_crafters.title",

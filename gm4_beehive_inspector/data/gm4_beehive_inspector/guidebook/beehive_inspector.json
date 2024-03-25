@@ -3,7 +3,7 @@
   "name": "Beehive Inspector",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:beehive"
+    "id": "minecraft:beehive"
   },
   "criteria": {
     "obtain_beehive": {

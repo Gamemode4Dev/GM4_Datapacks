@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "glass_bottle",
-      "nbt": "{CustomModelData:'gui/advancement/sunken_treasure'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/sunken_treasure"
+      }
     },
     "title": {
       "translate": "advancement.gm4.sunken_treasure.title",

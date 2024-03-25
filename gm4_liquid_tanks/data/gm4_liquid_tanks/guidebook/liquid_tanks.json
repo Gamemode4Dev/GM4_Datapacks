@@ -3,7 +3,7 @@
   "name": "Liquid Tanks",
   "module_type": "base",
   "icon": {
-    "item": "minecraft:glass"
+    "id": "minecraft:glass"
   },
   "criteria": {
     "open_custom_crafter": {

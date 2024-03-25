@@ -2,7 +2,9 @@
     "display": {
       "icon": {
         "id": "diamond_boots",
-        "nbt": "{CustomModelData:'gui/advancement/ski_fast'}"
+        "components": {
+          "minecraft:custom_model_data": "gui/advancement/ski_fast"
+        }
       },
       "title": {
         "translate": "advancement.gm4.mountaineering.ski_fast.title",

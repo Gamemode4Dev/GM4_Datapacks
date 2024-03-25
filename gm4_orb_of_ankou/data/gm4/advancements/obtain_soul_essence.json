@@ -2,7 +2,10 @@
   "display": {
     "icon": {
       "id": "black_dye",
-      "nbt": "{CustomModelData:'gui/advancement/orb_of_ankou_soul_essence',Enchantments:[{}]}"
+      "components": {
+        "minecraft:enchantment_glint_override": true,
+        "minecraft:custom_model_data": "gui/advancement/orb_of_ankou_soul_essence"
+      }
     },
     "title": {
       "translate": "advancement.gm4.orb_of_ankou.obtain_soul_essence.title",

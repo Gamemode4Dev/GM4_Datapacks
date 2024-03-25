@@ -4,7 +4,7 @@
   "module_type": "expansion",
   "base_module": "custom_crafters",
   "icon": {
-    "item": "minecraft:music_disc_11"
+    "id": "minecraft:music_disc_11"
   },
   "criteria": {
     "open_custom_crafter": {

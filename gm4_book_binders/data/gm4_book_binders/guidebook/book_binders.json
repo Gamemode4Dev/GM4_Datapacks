@@ -3,7 +3,7 @@
   "name": "Book Binders",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:enchanted_book"
+    "id": "minecraft:enchanted_book"
   },
   "criteria": {
     "obtain_enchanted_page": {

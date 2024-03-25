@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "enchanting_table",
-      "nbt": "{CustomModelData:'gui/advancement/enchantment_extractors'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/enchantment_extractors"
+      }
     },
     "title": {
       "translate": "advancement.gm4.enchantment_extractors.title",

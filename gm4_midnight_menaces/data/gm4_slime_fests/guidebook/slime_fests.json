@@ -5,7 +5,7 @@
   "load_check": "midnight_menaces",
   "base_module": "mysterious_midnights",
   "icon": {
-    "item": "minecraft:slime_ball"
+    "id": "minecraft:slime_ball"
   },
   "criteria": {
     "fight_slime": {

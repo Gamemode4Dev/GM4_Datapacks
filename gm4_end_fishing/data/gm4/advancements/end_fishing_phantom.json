@@ -2,7 +2,10 @@
   "display": {
     "icon": {
       "id": "elytra",
-      "nbt": "{CustomModelData:'gui/advancement/end_fishing_phantom',Damage:432}"
+      "components": {
+        "minecraft:damage": 432,
+        "minecraft:custom_model_data": "gui/advancement/end_fishing_phantom"
+      }
     },
     "title": {
       "translate": "advancement.gm4.end_fishing_phantom.title",

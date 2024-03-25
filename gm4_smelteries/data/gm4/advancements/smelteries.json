@@ -2,7 +2,9 @@
     "display": {
         "icon": {
             "id": "furnace",
-            "nbt": "{CustomModelData:'gui/advancement/smelteries'}"
+            "components": {
+                "minecraft:custom_model_data": "gui/advancement/smelteries"
+            }
         },
         "title": {
             "translate": "advancement.gm4.smelteries.title",

@@ -4,8 +4,12 @@
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {
-    "item": "minecraft:diamond_axe",
-    "nbt": "{Enchantments:[{id:\"minecraft:mending\",lvl:1s}]}"
+    "id": "minecraft:diamond_axe",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:mending": 1
+      }
+    }
   },
   "criteria": {
     "obtain_liquid_tank": {

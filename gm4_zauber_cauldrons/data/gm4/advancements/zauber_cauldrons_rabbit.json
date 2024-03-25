@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "rabbit_foot",
-      "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_rabbit'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/zauber_cauldrons_rabbit"
+      }
     },
     "title": {
       "translate": "advancement.gm4.zauber_cauldrons.rabbit.title",

@@ -3,7 +3,7 @@
   "name": "Sunken Treasure",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:golden_shovel"
+    "id": "minecraft:golden_shovel"
   },
   "criteria": {
     "obtain_fortune_shovel": {

@@ -3,7 +3,7 @@
   "name": "Undead Players",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:rotten_flesh"
+    "id": "minecraft:rotten_flesh"
   },
   "criteria": {
     "summon_undead_player": {

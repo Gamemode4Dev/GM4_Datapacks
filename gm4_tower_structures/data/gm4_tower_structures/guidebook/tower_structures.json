@@ -3,7 +3,7 @@
   "name": "Tower Structures",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:ladder"
+    "id": "minecraft:ladder"
   },
   "criteria": {
     "enter_badlands_tower": {

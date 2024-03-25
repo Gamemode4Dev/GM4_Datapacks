@@ -5,7 +5,7 @@
   "description": "Craft new items with a custom crafter!",
   "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters",
   "icon": {
-    "item": "minecraft:crafting_table"
+    "id": "minecraft:crafting_table"
   },
   "criteria": {
     "obtain_iron_ingot": {

@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "ladder",
-      "nbt": "{CustomModelData:'gui/advancement/rope_ladders'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/rope_ladders"
+      }
     },
     "title": {
       "translate": "advancement.gm4.rope_ladders.title",

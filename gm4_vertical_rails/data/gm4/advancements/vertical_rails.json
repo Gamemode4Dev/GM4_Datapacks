@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "ladder",
-      "nbt": "{CustomModelData:'gui/advancement/vertical_rails'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/vertical_rails"
+      }
     },
     "title": {
       "translate": "advancement.gm4.vertical_rails.title",

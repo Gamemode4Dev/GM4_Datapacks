@@ -3,7 +3,7 @@
   "name": "Dripleaf Launchers",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:big_dripleaf"
+    "id": "minecraft:big_dripleaf"
   },
   "criteria": {
     "obtain_dripleaf": {

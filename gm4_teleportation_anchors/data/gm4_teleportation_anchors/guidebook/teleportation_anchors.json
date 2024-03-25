@@ -3,7 +3,7 @@
   "name": "Teleportation Anchors",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:furnace"
+    "id": "minecraft:furnace"
   },
   "criteria": {
     "open_custom_crafter": {

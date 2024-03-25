@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "spawner",
-      "nbt": "{CustomModelData:'gui/advancement/spawner_minecarts'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/spawner_minecarts"
+      }
     },
     "title": {
       "translate": "advancement.gm4.spawner_minecarts.title",

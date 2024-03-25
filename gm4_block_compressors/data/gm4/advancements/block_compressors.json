@@ -2,7 +2,9 @@
   "display": {
     "icon": {
       "id": "piston",
-      "nbt": "{CustomModelData:'gui/advancement/block_compressors'}"
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/block_compressors"
+      }
     },
     "title": {
       "translate": "advancement.gm4.block_compressors.title",
