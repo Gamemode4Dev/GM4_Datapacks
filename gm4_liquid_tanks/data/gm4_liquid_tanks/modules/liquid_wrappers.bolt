@@ -122,6 +122,23 @@ if __name__ == "__main__":
 
         liquid_init = liquid.init()
 
+    # or even programatically?
+    @liquid
+    class RabbitStew:
+        id = 'rabbit_stew'
+        capacity = 300
+        skullowner = 'skins/bunnyface'
+
+    # @RabbitStew.init # I don't know if this is desirable or useful yet, so I'll leave it here for the time being
+    # def stew_init():
+    #     # summon killer_bunny
+    #     pass
+
+    ## using methods to define arbitrary item fills
+    # @liquid
+    # class Experience:
+    #     id = 
+
 
     # @standard_unit('bucket', 3)
     # def bucket():
