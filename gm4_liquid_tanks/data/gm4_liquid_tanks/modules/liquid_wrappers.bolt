@@ -1,0 +1,133 @@
+from functools import wraps
+
+from beet import Context
+
+
+# We're trying out a class-definition approach, rather than a class-instantiation one. 
+    # it might wind up feeling more natural within bolt
+def liquid(cls):
+    print("defining new basic liquid")
+    @wraps(cls)
+    class ThisLiquid(cls):
+        pass
+
+    return ThisLiquid
+
+def item_fill(input: str, output: str, value: int, reversable: bool = True):
+    def dec_outer(fn):
+        @wraps(fn)
+        @staticmethod
+        def dec_inner():
+            pass
+        return dec_inner
+    return dec_outer
+
+class Liquid:
+    """Base class providing decorators and infrastructure for adding Liquid Tanks liquids"""
+    id: str = None
+    capacity: int = None
+    skullowner: str = None
+    _fields = ['id', 'capacity', 'skullowner']
+
+    def __init__(self, *args, **kwargs):
+        # create instance attributes (named defined by _fields) based on constructor
+        input_args = dict(zip(self._fields, args)) | kwargs
+        for field in self._fields:
+            if v:=input_args.get(field, None):
+                setattr(self, field, v)
+
+    def __call__(self, cls):
+        """instance acts as decorator for defining new class-structures"""
+        @wraps(cls, updated=())
+        class DecoratedLiquid(cls, Liquid):
+            pass
+
+        # set unbound DecoratedLiquid class attributes
+        for field in self._fields:
+            if v:=getattr(self, field, None):
+                setattr(DecoratedLiquid, field, v)
+
+        return DecoratedLiquid
+    
+liquid = Liquid() # common instance for most cases
+    
+if __name__ == "__main__":
+
+    ## Defining a class
+
+    # by decorated class
+    @liquid
+    class Milk:
+        id = 'milk'
+        capacity = 300
+        skullowner = 'skins/milk'
+
+    print(Milk.id)
+    print(Milk.capacity)
+
+    # or by extended base decorator with partial bindings
+    bucketable = Liquid(None, 300, None)
+
+    print(bucketable.id)
+    print(bucketable.capacity)
+
+    @bucketable
+    class PowderSnow:
+        id = 'powder_snow'
+        capacity = 400
+        skullowner = 'skins/snow'
+
+    print(PowderSnow.capacity)
+
+
+    # @standard_unit('bucket', 3)
+    # def bucket():
+    #     #summon bat{CustomName:'Whoops there goes your bucket'}
+    #     pass
+
+    # bottle = standard_unit('bottle', 1)
+
+    # @liquid
+    # class Lava:
+    #     id = 'lava'
+    #     capacity = 100
+    #     skullowner = 'skins/lava'
+
+    #     @liquid_init
+    #     def lava_init():
+    #         #advancement grant @p gm4_standard_liquids:mini_volcano
+    #         pass
+
+    #     @item_fill('bucket', 'lava_bucket', 3, reversible=True)
+    #     def lava_bucket():
+    #         #advancement grant @p gm4_standard_liquids:shouldnt_that_iron_melt
+    #         pass
+
+    #     # reversible would automatically create the item_drain direction.
+    #         # what about additional commands in that direction? Do I dare use yield and generators?
+    #         # we generally assume anything that can be filled can also be drained, exceptions are usually for items destroyed by the drain
+    #         # like enchanted pages, beetroot and honey_blocks.
+
+    #     lava_bucket = item_drain('magma_block', 'air', 2, reversible=False)
+    #         # maybe like this if there are no additional commands to run?
+
+    #     @bottle('potion{gm4_standard_liquids:{id:"lava_bottle"}}') # acts as an `item_fill` decorator?
+    #     def lava_bottle():
+    #         #loot insert container.0 gm4_standard_liquids:lava_bottle
+    #         pass
+
+        # yea dealing with non-standard items is a real pain in the ass even with this system...
+        
+
+    # @Liquid()
+    # class Test2:
+    #     def my_2method(self):
+    #         print("my_2method")
+
+    # print(Lava)
+
+
+# "overloading" the decorator in this way seems... difficult to say the least. Maybe rx has some thoughts about how to do this better
+    # I *think* that it can be acomplished, but it would require like... delaying the mcfunction creation until we're sure the decorator isn't 
+    # going to be called to wrap a method. Is there like an exit phase? Or maybe at the end of the @liquid class wrapper we can run through all
+    # its liquid processors?
