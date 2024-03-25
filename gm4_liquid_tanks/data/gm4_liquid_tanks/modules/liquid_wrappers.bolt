@@ -1,4 +1,4 @@
-from functools import wraps
+from functools import wraps, partial
 
 from beet import Context
 
@@ -12,15 +12,6 @@ def liquid(cls):
         pass
 
     return ThisLiquid
-
-def item_fill(input: str, output: str, value: int, reversable: bool = True):
-    def dec_outer(fn):
-        @wraps(fn)
-        @staticmethod
-        def dec_inner():
-            pass
-        return dec_inner
-    return dec_outer
 
 # function that generates no mcfunction
 def emptyfunc():
@@ -70,6 +61,37 @@ class Liquid:
 
         self.generators.append(wrapped_fcn)
         return wrapped_fcn
+    
+
+    def _default_item_fill(id:str):
+        # data merge storage gm4_liquid_tanks:temp/tank {output:{id:"beetroot_soup"}}
+        pass
+    
+    
+    def item_fill(self, input: str, output: str, value: int, reversable: bool = True):
+        def dec_with_args(fcn, fcn_to_replace):
+            @wraps(fcn)
+            def wrapped_fcn():
+                # execute if item input run function output:
+                    # scoreboard players set $item_value gm4_lt_value -1
+                    # fcn()
+                    # data merge storage gm4_liquid_tanks:temp/tank {output:{id:"beetroot_soup"}}
+                    # function gm4_liquid_tanks:smart_item_fill
+                    # tag @s add gm4_lt_fill
+                pass
+
+            # give nicer info about this wrapped function if not used as decorator
+            wrapped_fcn.__qualname__ = "Liquid.item_fill" if isinstance(fcn, partial) else fcn.__qualname__
+
+            if fcn_to_replace in self.generators:
+                self.generators.remove(fcn_to_replace)
+            self.generators.append(wrapped_fcn)
+            return wrapped_fcn
+        
+        default_dec = dec_with_args(partial(self._default_item_fill, id=output), None)
+
+        return_dec = partial(dec_with_args, fcn_to_replace=default_dec)
+        return return_dec
     
 liquid = Liquid() # common instance for most cases
     
@@ -134,10 +156,35 @@ if __name__ == "__main__":
     #     # summon killer_bunny
     #     pass
 
-    ## using methods to define arbitrary item fills
-    # @liquid
-    # class Experience:
-    #     id = 
+    # using methods to define arbitrary item fills
+    @liquid
+    class Experience:
+        id = 'xp'
+        capacity = 1365
+        skullowner = 'skins/magic'
+
+        @liquid.item_fill('bottle', 'xp_bottle', 6)
+        def experience_bottle():
+            pass
+
+        magic_book = liquid.item_fill('book', 'enchanted_book', 3)
+
+        liquid.item_fill('paper', 'explorer_map', 100)
+
+    # or defining common units for shared use using partial
+    bottle = partial(liquid.item_fill, input='bottle', value=1)
+
+    @liquid
+    class Honey:
+        id = 'honey',
+        capacity = 400
+        skullowner = 'skins/beesbeesallthebees'
+
+        @bottle(output='honey_bottle')
+        def honey_bottle():
+            pass
+
+        bottle(output='dragons_breath')
 
 
     # @standard_unit('bucket', 3)
@@ -146,6 +193,7 @@ if __name__ == "__main__":
     #     pass
 
     # bottle = standard_unit('bottle', 1)
+    # bottle = partial(liquid.item_fill, input='bottle', value=3)
 
     # @liquid
     # class Lava:
