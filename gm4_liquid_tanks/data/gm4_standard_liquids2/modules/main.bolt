@@ -1,0 +1,11 @@
+from gm4_liquid_tanks:liquid_wrappers import liquid
+
+@liquid
+class Lava:
+    id = 'lava'
+    capacity = 300
+    skullowner = 'liquids/lava'
+
+    liquid.init()
+
+    liquid.item_fill('bucket', 'lava_bucket', 3)
