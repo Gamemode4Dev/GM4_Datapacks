@@ -44,6 +44,8 @@ class Liquid:
                 setattr(DecoratedLiquid, field, v)
 
         print(self.generators)
+        for fcn in self.generators:
+            fcn() # create the mcfunction resources
         self.generators.clear()
 
         return DecoratedLiquid
@@ -51,6 +53,7 @@ class Liquid:
     def init(self, fcn=emptyfunc):
         @wraps(fcn)
         def wrapped_fcn():
+            print(f"\ttank init {self.id}") # FIXME this pulls the instance variables that dont exist on @liquid. Need the clas attributes
             # function tank_init/milk:
                 # summon item_display ~ ~ ~
             fcn()
@@ -63,7 +66,7 @@ class Liquid:
         return wrapped_fcn
     
 
-    def _default_item_fill(id:str):
+    def _default_set_output(id:str):
         # data merge storage gm4_liquid_tanks:temp/tank {output:{id:"beetroot_soup"}}
         pass
     
@@ -72,6 +75,7 @@ class Liquid:
         def dec_with_args(fcn, fcn_to_replace):
             @wraps(fcn)
             def wrapped_fcn():
+                print(f"\tItem Fill {input}->{output}")
                 # execute if item input run function output:
                     # scoreboard players set $item_value gm4_lt_value -1
                     # fcn()
@@ -88,10 +92,44 @@ class Liquid:
             self.generators.append(wrapped_fcn)
             return wrapped_fcn
         
-        default_dec = dec_with_args(partial(self._default_item_fill, id=output), None)
+        # create reverse
+        if reversable:
+            self.item_drain(output, input, -value)
+        
+        default_dec = dec_with_args(partial(self._default_set_output, id=output), None)
 
         return_dec = partial(dec_with_args, fcn_to_replace=default_dec)
         return return_dec
+    
+
+    ## NOTE yea this is where it gets weird cause we want to overlap things *here*, not in fill
+    def item_drain(self, input: str, output: str, value: int):
+        def dec_with_args(fcn, fcn_to_replace):
+            @wraps(fcn)
+            def wrapped_fcn():
+                print(f"\tItem Drain {input}->{output}")
+                # execute if item input run function output:
+                    # scoreboard players set $item_value gm4_lt_value -1
+                    # fcn()
+                    # data merge storage gm4_liquid_tanks:temp/tank {output:{id:"beetroot_soup"}}
+                    # function gm4_liquid_tanks:smart_item_drain
+                    # tag @s add gm4_lt_fill
+                pass
+
+            # give nicer info about this wrapped function if not used as decorator
+            wrapped_fcn.__qualname__ = "Liquid.item_drain" if isinstance(fcn, partial) else fcn.__qualname__
+
+            if fcn_to_replace in self.generators:
+                self.generators.remove(fcn_to_replace)
+            self.generators.append(wrapped_fcn)
+            return wrapped_fcn
+        
+        default_dec = dec_with_args(partial(self._default_set_output, id=output), None)
+
+        return_dec = partial(dec_with_args, fcn_to_replace=default_dec)
+        return return_dec
+    
+    
     
 liquid = Liquid() # common instance for most cases
     
@@ -167,9 +205,9 @@ if __name__ == "__main__":
         def experience_bottle():
             pass
 
-        magic_book = liquid.item_fill('book', 'enchanted_book', 3)
+        magic_book = liquid.item_fill('book', 'enchanted_book', 3, False)
 
-        liquid.item_fill('paper', 'explorer_map', 100)
+        liquid.item_fill('paper', 'explorer_map', 100, False)
 
     # or defining common units for shared use using partial
     bottle = partial(liquid.item_fill, input='bottle', value=1)
@@ -185,6 +223,10 @@ if __name__ == "__main__":
             pass
 
         bottle(output='dragons_breath')
+
+        @liquid.item_drain(input='honey_block', output='air', value=4)
+        def honey_block():
+            pass
 
 
     # @standard_unit('bucket', 3)
