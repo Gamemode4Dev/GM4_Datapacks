@@ -1,5 +1,6 @@
 from gm4_liquid_tanks:liquid_wrappers import liquid
 
+bucket = liquid.standard_unit('bucket', 3)
 
 @liquid
 class Lava:
@@ -14,10 +15,18 @@ class Lava:
 @liquid
 class Water:
     id = 'water'
+    name = 'Water'
     capacity = 300
-    skullowner = 'liquids/water'
 
     liquid.init()
-
     liquid.item_fill('bucket', 'water_bucket', 3)
-    liquid.item_fill('glass_bottle', 'minecraft:potion[potion_contents={potion:"water"},name="Test"]', 1)
+    liquid.item_fill('glass_bottle', 'minecraft:potion[potion_contents={potion:"water"},name="Test"]', 1, reversable=False)
+
+@liquid
+class Milk:
+    id = 'milk'
+    name = 'Milk'
+    capacity = 300
+
+    liquid.init()
+    liquid.item_fill('bucket', 'milk_bucket', 4)

@@ -37,6 +37,7 @@ class Liquid:
             if input_args.get(field, None):
                 setattr(self, field, input_args.get(field, None))
         self.generators = [] # functions that create mcfunction using bolt
+        self.units = {} # reusable quantities shared amongst liquids
         self.struc = Liquid
         self.mc = ctx.inject(Mecha)
 
@@ -146,6 +147,12 @@ class Liquid:
         return_dec = partial(dec_with_args, fcn_to_replace=default_dec)
         return return_dec
     
+    def standard_unit(self, input: str, value: int, f_name: str = None):
+        if not f_name:
+            f_name = input
+        self.units.update({(input, value): f_name})
+        return partial(self.item_fill, input=input,value=value)
+    
 
     ## NOTE yea this is where it gets weird cause we want to overlap things *here*, not in fill
     def item_drain(self, input: str, output: str, value: int):
@@ -153,8 +160,12 @@ class Liquid:
             @wraps(fcn)
             def wrapped_fcn():
                 print(f"\tItem Drain {input}->{output}")
+                if isinstance(fcn, partial) and fcn.func is self._default_set_output: # there aren't extra commands to consider
+                    f_name = self.units.get((output, -value), input)
+                f_name = input
+
                 append function ~/../item_drain:
-                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function f'{~/}/{output}':
+                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function f'{~/}/{f_name}':
                         scoreboard players set $item_value gm4_lt_value value
                         fcn()
                         function gm4_liquid_tanks:smart_item_drain
