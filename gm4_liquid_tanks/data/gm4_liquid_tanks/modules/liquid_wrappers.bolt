@@ -5,6 +5,8 @@ from mecha import Mecha, AstItemStack
 
 from gm4.utils import add_namespace
 
+from gm4_auto_crafting.generate import unstackables, stackable_16 # NOTE future versions can pull the default component from 1.20.5 item.json
+
 
 # We're trying out a class-definition approach, rather than a class-instantiation one. 
     # it might wind up feeling more natural within bolt
@@ -24,8 +26,8 @@ class Liquid:
     """Base class providing decorators and infrastructure for adding Liquid Tanks liquids"""
     id: str = None
     capacity: int = None
-    skullowner: str = None
-    _fields = ['id', 'capacity', 'skullowner']
+    name: str = None
+    _fields = ['id', 'capacity', 'name']
 
 
     def __init__(self, *args, **kwargs):
@@ -60,15 +62,30 @@ class Liquid:
     def init(self, fcn=emptyfunc):
         @wraps(fcn)
         def wrapped_fcn():
-            print(f"\ttank init {self.id}") # FIXME this pulls the instance variables that dont exist on @liquid. Need the clas attributes
             function f'{~/../}/liquid_init/{self.struc.id}':
-                data merge block ~ ~ ~ {CustomName:f'{{"translate":"gm4.second","fallback":"%1$s","with":[{{"translate":"container.gm4.liquid_tank.{self.struc.id}","fallback":"Lava Tank"}},[{{"translate":"gui.gm4.liquid_tank","fallback":"","font":"gm4:container_gui","color":"white"}},{{"translate":"container.gm4.liquid_tank.lava","fallback":"Lava Tank","font":"gm4:default","color":"#404040"}}]]}}'}
-                summon armor_stand ~ ~-.95 ~ {CustomName:'"gm4_liquid_tank_display"',Tags:["gm4_no_edit","gm4_liquid_tank_display","smithed.entity","smithed.strict"],NoGravity:1,Marker:1,Invisible:1,Invulnerable:1,Small:1,Silent:1,DisabledSlots:4144959,HasVisualFire:1,ArmorItems:[{},{},{},{id:"player_head",Count:1b,tag:{SkullOwner:"$gm4_standard_liquids:liquids/lava"}}]}
+                append function_tag gm4_liquid_tanks:tank_init {"values": [(~/)]}
+                data merge block ~ ~ ~ {CustomName:f'{{"translate":"gm4.second","fallback":"%1$s","with":[{{"translate":"container.gm4.liquid_tank.{self.struc.id}","fallback":"{self.struc.name} Tank"}},[{{"translate":"gui.gm4.liquid_tank","fallback":"","font":"gm4:container_gui","color":"white"}},{{"translate":"container.gm4.liquid_tank.{self.struc.id}","fallback":"{self.struc.name} Tank","font":"gm4:default","color":"#404040"}}]]}}'}
+                summon armor_stand ~ ~-.95 ~:
+                    CustomName: '"gm4_liquid_tank_display"'
+                    Tags: ["gm4_no_edit","gm4_liquid_tank_display","smithed.entity","smithed.strict"]
+                    NoGravity: 1
+                    Marker: 1
+                    Invisible: 1
+                    Invulnerable: 1
+                    Small: 1
+                    Silent: 1
+                    DisabledSlots:4144959
+                    HasVisualFire: 1
+                    ArmorItems:[{},{},{},{id:"player_head",Count:1b,tag:{SkullOwner:"$gm4_standard_liquids:liquids/lava"}}]
                 data modify entity @s data.gm4_liquid_tanks.liquid_tag set value f"gm4_lt_{self.struc.id}"
-                scoreboard players set @s gm4_lt_max 300
+                scoreboard players set @s gm4_lt_max self.struc.capacity
                 tag @s add f'gm4_lt_{self.struc.id}'
                 tag @s remove gm4_lt_empty
                 fcn()
+            
+            append function ~/../remove_liquid_tags:
+                append function_tag gm4_liquid_tanks:remove_liquid_tags {"values": [(~/)]}
+                tag @s remove f'gm4_lt_{self.struc.id}'
             pass
 
         # give nicer info about this wrapped function if not used as decorator
@@ -94,14 +111,20 @@ class Liquid:
                 item_stack = self.mc.parse(output, using='item_stack')
                 item_id = self.mc.serialize(item_stack.identifier)
                 print(f"\tItem Fill {input}->{item_id}")
-                print(fcn)
+                ns_item_id = add_namespace(item_id, "minecraft")
+                if ns_item_id in unstackables:
+                    stack_limit = "1"
+                elif ns_item_id in stackable_16:
+                    stack_limit = "..16"
+                else:
+                    stack_limit = "..64" # FIXME this should remove that execute subcommand from the chain.. somehow
+
                 append function ~/../item_fill:
-                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function f'{~/}/{item_id}':
+                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if score $stack_size gm4_lt_value matches stack_limit if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function f'{~/}/{item_id}':
                         scoreboard players set $item_value gm4_lt_value value
                         fcn()
                         function gm4_liquid_tanks:smart_item_fill
                         tag @s add gm4_lt_fill
-                pass
 
             # give nicer info about this wrapped function if not used as decorator
             if isinstance(fcn, partial):
@@ -136,6 +159,9 @@ class Liquid:
                         fcn()
                         function gm4_liquid_tanks:smart_item_drain
                         tag @s add gm4_lt_fill
+                
+                append function ~/../tank_init:
+                    execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function f'{~/../}/liquid_init/{self.struc.id}'
                 pass
 
             # give nicer info about this wrapped function if not used as decorator

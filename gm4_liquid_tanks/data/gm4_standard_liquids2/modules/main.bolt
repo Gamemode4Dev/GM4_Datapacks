@@ -1,10 +1,11 @@
 from gm4_liquid_tanks:liquid_wrappers import liquid
 
+
 @liquid
 class Lava:
     id = 'lava'
+    name = 'Lava'
     capacity = 300
-    skullowner = 'liquids/lava'
 
     liquid.init()
 
