@@ -6,20 +6,18 @@
     "item": "minecraft:lead"
   },
   "criteria": {
-    "purchase_animal1": {
-      "trigger": "minecraft:villager_trade",
+    "interact_trader": {
+      "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "item": {
-          "nbt": "{gm4_balloon_animals:{animal:1b,trade:1b}}"
-        }
-      }
-    },
-    "purchase_animal2": {
-      "trigger": "minecraft:villager_trade",
-      "conditions": {
-        "item": {
-          "nbt": "{gm4_balloon_animals:{animal:2b,trade:2b}}"
-        }
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_balloon_animal_trader\"]}"
+            }
+          }
+        ]
       }
     }
   },
@@ -27,7 +25,11 @@
     {
       "name": "description",
       "enable": [],
-      "requirements": [],
+      "requirements": [
+        [
+          "interact_trader"
+        ]
+      ],
       "pages": [
         [
           {

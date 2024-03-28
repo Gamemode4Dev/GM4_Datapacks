@@ -1,6 +1,6 @@
 {
     "criteria": {
-      "animal1": {
+      "primary_animal": {
         "trigger": "minecraft:villager_trade",
         "conditions": {
           "item": {
@@ -8,7 +8,7 @@
           }
         }
       },
-      "animal2": {
+      "secondary_animal": {
         "trigger": "minecraft:villager_trade",
         "conditions": {
           "item": {
@@ -19,12 +19,11 @@
     },
     "requirements": [
       [
-        "animal1",
-        "animal2"
+        "primary_animal",
+        "secondary_animal"
       ]
     ],
     "rewards": {
       "function": "gm4_balloon_animals:purchased_animal"
     }
   }
-  
