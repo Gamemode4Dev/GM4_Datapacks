@@ -941,6 +941,10 @@
       "gm4_liquid_tanks:guidebook_icon/standard_liquids": 2,
       "gm4_metallurgy:shamir/infinitas": 100
     },
+    "lead": {
+      "gm4_balloon_animals:gui/advancement/balloon_animals": 1,
+      "gm4_balloon_animals:guidebook_icon/balloon_animals": 2
+    },
     "leather_boots": {
       "gm4_boots_of_ostara:item/boots_of_ostara": 1,
       "gm4_scuba_gear:item/flippers": 2,
