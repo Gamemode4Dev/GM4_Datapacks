@@ -2,19 +2,15 @@
   "type": "minecraft:generic",
   "pools": [
     {
-      "rolls": 5,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:stone"
-        }
-      ]
-    },
-    {
       "rolls": {
-        "type": "minecraft:binomial",
-        "n": 15,
-        "p": 0.3
+        "min": {
+          "min": 5,
+          "max": 10
+        },
+        "max": {
+          "min": 5,
+          "max": 20
+        }
       },
       "entries": [
         {
