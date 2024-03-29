@@ -1,30 +1,44 @@
 {
     "criteria": {
-        "trigger_advancement": {
+        "1_heart": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
                 "player": [
                     {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "equipment": {
-                                "mainhand": {
-                                    "tag": "gm4_combat_expanded:weapon",
-                                    "nbt": "{gm4_combat_expanded:{strike:giant}}"
-                                }
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": "this",
+                                "score": "gm4_ce_sword_hit_triggered"
+                            },
+                            "range": {
+                                "min": 1
                             }
                         }
+                    },
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "equipment": {
+                                        "mainhand": {
+                                            "tag": "gm4_combat_expanded:weapon",
+                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
                     }
-                ]
-            }
-        },
-        "1_heart": {
-            "trigger": "minecraft:player_hurt_entity",
-            "conditions": {
+                ],
                 "damage": {
                     "dealt": {
-                        "min": 2
+                        "min": 1
                     }
                 }
             }
@@ -32,9 +46,42 @@
         "2_heart": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": "this",
+                                "score": "gm4_ce_sword_hit_triggered"
+                            },
+                            "range": {
+                                "min": 1
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "equipment": {
+                                        "mainhand": {
+                                            "tag": "gm4_combat_expanded:weapon",
+                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
                 "damage": {
                     "dealt": {
-                        "min": 4
+                        "min": 3
                     }
                 }
             }
@@ -42,9 +89,42 @@
         "3_heart": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": "this",
+                                "score": "gm4_ce_sword_hit_triggered"
+                            },
+                            "range": {
+                                "min": 1
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "equipment": {
+                                        "mainhand": {
+                                            "tag": "gm4_combat_expanded:weapon",
+                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
                 "damage": {
                     "dealt": {
-                        "min": 6
+                        "min": 5
                     }
                 }
             }
@@ -52,9 +132,42 @@
         "4_heart": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": "this",
+                                "score": "gm4_ce_sword_hit_triggered"
+                            },
+                            "range": {
+                                "min": 1
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "equipment": {
+                                        "mainhand": {
+                                            "tag": "gm4_combat_expanded:weapon",
+                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
                 "damage": {
                     "dealt": {
-                        "min": 8
+                        "min": 7
                     }
                 }
             }
@@ -62,9 +175,42 @@
         "5_heart": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": "this",
+                                "score": "gm4_ce_sword_hit_triggered"
+                            },
+                            "range": {
+                                "min": 1
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "equipment": {
+                                        "mainhand": {
+                                            "tag": "gm4_combat_expanded:weapon",
+                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
                 "damage": {
                     "dealt": {
-                        "min": 10
+                        "min": 9
                     }
                 }
             }
@@ -72,9 +218,42 @@
         "6_heart": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": "this",
+                                "score": "gm4_ce_sword_hit_triggered"
+                            },
+                            "range": {
+                                "min": 1
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "equipment": {
+                                        "mainhand": {
+                                            "tag": "gm4_combat_expanded:weapon",
+                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
                 "damage": {
                     "dealt": {
-                        "min": 12
+                        "min": 11
                     }
                 }
             }
@@ -82,9 +261,42 @@
         "7_heart": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": "this",
+                                "score": "gm4_ce_sword_hit_triggered"
+                            },
+                            "range": {
+                                "min": 1
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "equipment": {
+                                        "mainhand": {
+                                            "tag": "gm4_combat_expanded:weapon",
+                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
                 "damage": {
                     "dealt": {
-                        "min": 14
+                        "min": 13
                     }
                 }
             }
@@ -92,9 +304,42 @@
         "8_heart": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": "this",
+                                "score": "gm4_ce_sword_hit_triggered"
+                            },
+                            "range": {
+                                "min": 1
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "equipment": {
+                                        "mainhand": {
+                                            "tag": "gm4_combat_expanded:weapon",
+                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
                 "damage": {
                     "dealt": {
-                        "min": 16
+                        "min": 15
                     }
                 }
             }
@@ -102,9 +347,42 @@
         "9_heart": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": "this",
+                                "score": "gm4_ce_sword_hit_triggered"
+                            },
+                            "range": {
+                                "min": 1
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "equipment": {
+                                        "mainhand": {
+                                            "tag": "gm4_combat_expanded:weapon",
+                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
                 "damage": {
                     "dealt": {
-                        "min": 18
+                        "min": 17
                     }
                 }
             }
@@ -112,18 +390,48 @@
         "10_heart": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": "this",
+                                "score": "gm4_ce_sword_hit_triggered"
+                            },
+                            "range": {
+                                "min": 1
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "equipment": {
+                                        "mainhand": {
+                                            "tag": "gm4_combat_expanded:weapon",
+                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
                 "damage": {
                     "dealt": {
-                        "min": 20
+                        "min": 19
                     }
                 }
             }
         }
     },
     "requirements": [
-        [
-            "trigger_advancement"
-        ],
         [
             "1_heart",
             "2_heart",

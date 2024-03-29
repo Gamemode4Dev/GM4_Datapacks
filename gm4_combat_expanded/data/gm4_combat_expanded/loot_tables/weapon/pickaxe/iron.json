@@ -9,17 +9,20 @@
           "name": "minecraft:iron_pickaxe",
           "functions": [
             {
-              "function": "minecraft:set_name",
+              "function": "minecraft:set_lore",
               "entity": "this",
-              "name": [
+              "lore": [
                 {
-                  "translate": "item.gm4.combat_expanded.name.unidentified",
-                  "fallback": "Unidentified %s",
+                  "translate": "item.gm4.combat_expanded.lore.unidentified",
+                  "fallback": "%s Unidentified Item - Drop to Identify",
                   "with": [
                     {
-                      "translate": "item.minecraft.iron_pickaxe"
+                      "text": "⚠",
+                      "color": "red",
+                      "italic": false
                     }
                   ],
+                  "color": "dark_red",
                   "italic": false
                 }
               ]
@@ -38,7 +41,7 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 1
+                  "scale": 0.1
                 },
                 "max": {
                   "type": "minecraft:score",
@@ -47,7 +50,7 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 2
+                  "scale": 0.2
                 }
               },
               "treasure": false,

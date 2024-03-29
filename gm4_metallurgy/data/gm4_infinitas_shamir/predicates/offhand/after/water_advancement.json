@@ -1,0 +1,34 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type_specific": {
+            "type": "player",
+            "advancements": {
+              "gm4_infinitas_shamir:water/place": {
+                "place_water_offhand": true
+              }
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type_specific": {
+            "type": "player",
+            "advancements": {
+              "gm4_infinitas_shamir:water/place": {
+                "use_on_cauldron_offhand": true
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+  

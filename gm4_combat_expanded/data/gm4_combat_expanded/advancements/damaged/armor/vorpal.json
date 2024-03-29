@@ -6,9 +6,20 @@
         "player": [
           {
             "condition": "minecraft:reference",
-            "name": "gm4_combat_expanded:modified_armor/wearing_vorpal"
+            "name": "gm4_combat_expanded:modified_armor/vorpal"
           }
-        ]
+        ],
+        "damage": {
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:bypasses_invulnerability",
+                "expected": false
+              }
+            ]
+          }
+        }
       }
     }
   },

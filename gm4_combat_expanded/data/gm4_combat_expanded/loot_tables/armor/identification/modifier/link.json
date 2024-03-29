@@ -1,0 +1,121 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "name": "gm4_combat_expanded:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.max_health",
+                  "name": "gm4_combat_expanded",
+                  "amount": 0,
+                  "operation": "addition",
+                  "slot": "chest"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_combat_expanded:temp"
+              },
+              "ops": [
+                {
+                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
+                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded\"}].Slot",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{gm4_combat_expanded:{modifier:76,active:0,link_id:0}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.link_2",
+              "fallback": "Rename to Link",
+              "color": "blue",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.link",
+              "fallback": "When Linked:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.link_3",
+              "fallback": "Lifelink",
+              "color": "dark_gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.link_description",
+                "fallback": "Share Health with others in the link",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "name": [
+            {
+              "translate": "item.gm4.combat_expanded.name.link",
+              "fallback": "Unlinked %s",
+              "with": [
+                {
+                  "nbt": "tag.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
+                }
+              ],
+              "italic": false,
+              "color": "light_purple"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

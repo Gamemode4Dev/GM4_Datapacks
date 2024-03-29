@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomPotionEffects:[{Id:20,Amplifier:0b,Duration:200}],CustomPotionColor:3484199,HideFlags:32}"
+              "tag": "{custom_potion_effects:[{id:\"minecraft:wither\",amplifier:0b,duration:200,show_particles:1b,show_icon:1b,ambient:0b}],CustomPotionColor:7561558,HideFlags:32}"
             },
             {
               "function": "minecraft:set_lore",
@@ -33,6 +33,13 @@
                 "translate": "item.gm4.combat_expanded.lore.wither_arrow",
                 "fallback": "Arrow of Wither",
                 "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 4
               }
             }
           ]

@@ -1,13 +1,14 @@
-# check if second_wind piece is off cooldown
-# @s = player wearing armor
+# check if armor should activate
+# @s = player being checked
 # at unspecified
-# run from armor/check_modifier/hp_check
+# run from armor/check_modifier/safety
 
-# get cooldown of piece
-execute store result score $cooldown gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.cooldown
+# activate armor if player is regenerating
+execute if score @s[tag=!gm4_ce_second_wind.active] gm4_ce_hurt matches 1.. run function gm4_combat_expanded:armor/modifier/type/second_wind/activate
 
-# check health if cooldown is ready
-execute if score $cooldown gm4_ce_data matches 0 if score @s gm4_ce_health <= $half_health gm4_ce_data run function gm4_combat_expanded:armor/modifier/type/second_wind/heal_store
+# translate damage taken to stored health if armor is active
+execute if score @s[tag=gm4_ce_second_wind.active] gm4_ce_hurt matches 1.. at @s run function gm4_combat_expanded:armor/modifier/type/second_wind/store
 
-# reduce cooldown if needed
-execute if score $cooldown gm4_ce_data matches 1.. store success score $change gm4_ce_data store result storage gm4_combat_expanded:temp tag.gm4_combat_expanded.cooldown int 1 run scoreboard players remove $cooldown gm4_ce_data 1
+# restore health when player is safe
+execute unless score @s[tag=gm4_ce_second_wind.active] gm4_ce_natural_regen_damage matches 1.. at @s run function gm4_combat_expanded:armor/modifier/type/second_wind/restore
+  

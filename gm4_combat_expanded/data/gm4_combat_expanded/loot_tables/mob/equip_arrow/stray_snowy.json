@@ -9,7 +9,7 @@
           "functions": [
             {
               "function": "minecraft:set_nbt",
-              "tag": "{CustomPotionEffects:[{Id:2,Amplifier:2b,Duration:600}],CustomPotionColor:5926017,HideFlags:32}"
+              "tag": "{custom_potion_effects:[{id:\"minecraft:slowness\",amplifier:2b,duration:600,show_particles:1b,show_icon:1b,ambient:0b}],CustomPotionColor:9154528,HideFlags:32}"
             },
             {
               "function": "minecraft:set_lore",
@@ -57,6 +57,13 @@
               "name": {
                 "translate": "item.minecraft.tipped_arrow.effect.slowness",
                 "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
               }
             }
           ]

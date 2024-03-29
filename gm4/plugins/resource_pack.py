@@ -661,7 +661,7 @@ class TranslationLinter(Reducer):
                     if transl_key in self.babelbox_lang and not self.backfill_enable:
                         yield set_location(Diagnostic("info", f"Fallback for {transl_key} does not match that provided in 'translations.csv'"), node)
                         
-                    elif self.backfill_enable and transl_key not in self.backfill_values and transl_key not in self.total_keys:
+                    elif self.backfill_enable and transl_key not in self.backfill_values and transl_key not in self.foreign_keys:
                         self.logger.info(f"Backfilling the fallback for {transl_key} into 'translations.csv'")
                         self.backfill_values[transl_key] = fallback
                 yield self.check_key(transl_key, node)
@@ -695,6 +695,7 @@ class TranslationLinter(Reducer):
                 set(self.ctx.cache["translations"].json["keys"]) |
                 {"%1$s%3427655$s", "%1$s%3427656$s"} # manual old keys
             )
+            self.foreign_keys = self.total_keys - self.local_keys
 
     @cache
     def get_guidebook_translations(self) -> set[str]:
@@ -719,7 +720,7 @@ class TranslationLinter(Reducer):
             babelbox_path = c
         else:
             if self.backfill_values:
-                self.logger.warn("Babelbox backwill was enabled but no 'translations.csv' file was found")
+                self.logger.warn("Babelbox backfill was enabled but no 'translations.csv' file was found")
             return # no file to update
         
         with open(babelbox_path, 'r', encoding='utf-8', newline='') as csvfile:

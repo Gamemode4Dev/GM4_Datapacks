@@ -1,23 +1,23 @@
 # process player
 # @s = online player
 # at unspecified
-# run from player/submain
+# run from clocks/player_submain
 
-# calculate difficulty for newly (re)spawned players
-execute if score @s gm4_ce_alivetime matches 1..16 run function gm4_combat_expanded:player/calculate_difficulty
+# process player deaths
+execute if score @s[scores={gm4_ce_deaths=1..}] gm4_ce_alivetime matches ..16 run function gm4_combat_expanded:player/process_death
 
-# calculate damage taken from guarding
-execute if entity @s[tag=gm4_ce_guardian,scores={gm4_ce_guard=10..}] run function gm4_combat_expanded:armor/modifier/type/guardian/damage_calc
+# also count player kills as kills
+scoreboard players operation @s gm4_ce_kill += @s gm4_ce_kill2
 
-# translate being hit / killing mobs to timers
-# translate hurt2 score to count absorbed damage as well
-scoreboard players operation @s gm4_ce_hurt += @s gm4_ce_hurt2
-scoreboard players set @s[scores={gm4_ce_hurt=1..}] gm4_ce_t_hurt 5
-scoreboard players set @s[scores={gm4_ce_kill=1..}] gm4_ce_t_kill 5
+# natural regen
+tag @s remove gm4_ce_sustain_active
+scoreboard players set @s[scores={gm4_ce_natural_regen_damage=2..,gm4_ce_kill=1..}] gm4_ce_natural_regen_damage 1
+execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm4_ce_hunger=18..},tag=!gm4_ce_pause_nat_regen,predicate=!gm4_combat_expanded:technical/poisoned] gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:player/regen/check
+tag @s remove gm4_ce_pause_nat_regen
 
 # check for archer armor
-tag @s remove gm4_ce_wearing_archer
-tag @s[predicate=gm4_combat_expanded:modified_armor/archer/wearing] add gm4_ce_wearing_archer
+tag @s[tag=gm4_ce_wearing_archer,predicate=!gm4_combat_expanded:modified_armor/archer] remove gm4_ce_wearing_archer
+execute if entity @s[tag=!gm4_ce_wearing_archer,predicate=gm4_combat_expanded:modified_armor/archer] run function gm4_combat_expanded:armor/modifier/type/archer/activate
 
 # remove husk sprint score if player didn't sprint for too long
 execute unless score @s gm4_ce_sprinting matches 1.. run scoreboard players add @s[scores={gm4_ce_t_sprinting=1..}] gm4_ce_sprinting_timeout 1
@@ -25,12 +25,22 @@ scoreboard players reset @s[scores={gm4_ce_sprinting_timeout=3..,gm4_ce_t_sprint
 
 # remove tags
 tag @s remove gm4_ce_beacon_active
+tag @s remove gm4_ce_linked
 execute if entity @s[tag=gm4_ce_immune_active] run function gm4_combat_expanded:armor/modifier/type/immune/clear_immunities
 
 # process armor
 execute if predicate gm4_combat_expanded:modified_armor/wearing run function gm4_combat_expanded:armor/process
 
 # shield players if they have stored shield
-execute if score @s gm4_ce_absorp matches 1.. run function gm4_combat_expanded:player/shield_player
+execute if score @s gm4_ce_absorp matches 1.. run function gm4_combat_expanded:player/shield/prep
 # heal players if they have stored health
 execute if score @s gm4_ce_healstore matches 1.. run function gm4_combat_expanded:player/heal/heal_calc
+
+# process player sleeping
+execute if score @s gm4_ce_sleep matches 1.. at @s run function gm4_combat_expanded:player/home/detect_sleep
+
+# remove second wind tag if armor is taken off
+tag @s[tag=gm4_ce_second_wind.active,predicate=!gm4_combat_expanded:modified_armor/second_wind] remove gm4_ce_second_wind.active
+
+# DEV: trigger for players with `gm4_ce_dev` tag
+execute if entity @s[tag=gm4_ce_dev] at @s as @e[type=#gm4_combat_expanded:modify,limit=1,sort=nearest] run function gm4_combat_expanded:debug/dont_run/dev 

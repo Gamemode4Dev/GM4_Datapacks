@@ -3,6 +3,7 @@
 # located at @s (center of the lectern)
 # run from gm4_guidebook:lecterns/section/tracking
 
+scoreboard players operation $original_page gm4_guide_pages = $page gm4_guide_pages
 execute store result score $page gm4_guide_pages run data get block ~ ~ ~ Page
 
 # different behavior based on TOC or normal

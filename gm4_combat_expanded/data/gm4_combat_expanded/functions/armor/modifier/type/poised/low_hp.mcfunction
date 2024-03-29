@@ -1,4 +1,4 @@
-# activate the positive modifiers on the armor piece
+# activate the negative modifiers on the armor piece
 # @s = player wearing the armor
 # at unspecified
 # run from functions in armor/modifier/type/poised/check

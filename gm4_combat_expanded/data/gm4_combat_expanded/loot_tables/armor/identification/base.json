@@ -21,11 +21,6 @@
                   "op": "replace"
                 },
                 {
-                  "source": "tag.display.Lore",
-                  "target": "display.Lore",
-                  "op": "replace"
-                },
-                {
                   "source": "tag.AttributeModifiers",
                   "target": "AttributeModifiers",
                   "op": "replace"

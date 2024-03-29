@@ -9,23 +9,32 @@
   {
     "condition": "minecraft:inverted",
     "term": {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "type": "minecraft:armor_stand"
-      }
-    }
-  },
-  {
-    "condition": "minecraft:inverted",
-    "term": {
-      "condition": "minecraft:entity_scores",
-      "entity": "this",
-      "scores": {
-        "gm4_ce_shielded_hit": {
-          "min": 1
+      "condition": "minecraft:all_of",
+      "terms": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type": "minecraft:armor_stand"
+          }
+        },
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type": "#gm4_combat_expanded:effect_immune"
+          }
+        },
+        {
+          "condition": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "gm4_ce_shielded_hit": {
+              "min": 1
+            }
+          }
         }
-      }
+      ]
     }
   }
 ]

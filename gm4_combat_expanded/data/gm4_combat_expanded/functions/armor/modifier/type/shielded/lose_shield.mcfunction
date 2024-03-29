@@ -1,8 +1,6 @@
 # remove player absorption when hit
 # @s = player wearing shielded armor being damaged
 # at @s
-# run from advancement damaged/armor/shielded
-
 advancement revoke @s only gm4_combat_expanded:damaged/armor/shielded
 
 effect clear @s absorption

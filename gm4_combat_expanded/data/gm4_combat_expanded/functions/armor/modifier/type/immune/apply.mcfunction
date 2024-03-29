@@ -1,7 +1,7 @@
 # clear effects depending on player tags from armor
-# @s = player wearing immune armour above 50% health
+# @s = player wearing immune armour below 50% health
 # at unspecified
-# run from tick
+advancement revoke @s only gm4_combat_expanded:effect_immunity
 
 # clear effects
 effect clear @s[tag=gm4_ce_immune_fatigue] mining_fatigue

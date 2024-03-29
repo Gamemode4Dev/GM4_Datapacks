@@ -1,44 +1,33 @@
 # calculate the difficulty (https://docs.google.com/spreadsheets/d/1jxvFvZS6KcPjp3G8Qbb9rOcZZ8ukyBdGHxTFlA4fysA/edit?usp=sharing)
 # @s = player not in spectator
 # at unspecified
-# run from slow_clock
-# run from player/process (if player has just (re)spawned)
+# run from slow_clock (every 5 min)
 
 # difficulty calculations
-# get amount of weeks player has been online (starting at 1, max 10)
-scoreboard players operation #days_total gm4_ce_difficult = @s gm4_ce_playtime
-scoreboard players operation #days_total gm4_ce_difficult /= #24000 gm4_ce_data
-scoreboard players add #days_total gm4_ce_difficult 1
-scoreboard players operation #days_total gm4_ce_difficult < #10 gm4_ce_data
-# get amount of days since last player death (starting at 1, max 10)
-scoreboard players operation #days_alive gm4_ce_difficult = @s gm4_ce_alivetime
-scoreboard players operation #days_alive gm4_ce_difficult /= #24000 gm4_ce_data
-scoreboard players add #days_alive gm4_ce_difficult 1
-scoreboard players operation #days_alive gm4_ce_difficult < #10 gm4_ce_data
-# set player difficulty
-scoreboard players operation @s gm4_ce_difficult = #days_alive gm4_ce_difficult
-scoreboard players operation @s gm4_ce_difficult *= #days_total gm4_ce_difficult
+# play_time increases by 1 every 5 minutes, up to 100
+execute unless score @s gm4_ce_play_time matches 100.. run scoreboard players add @s gm4_ce_play_time 1
+scoreboard players operation $playtime gm4_ce_data = @s gm4_ce_play_time
+
+# add death multiplier
+# remove death_mult from 100, then use that as the percentage of difficulty score to keep
+scoreboard players set $death_mult gm4_ce_data 100
+scoreboard players operation $death_mult gm4_ce_data -= @s gm4_ce_death_mult
+scoreboard players operation $playtime gm4_ce_data *= $death_mult gm4_ce_data
+scoreboard players operation $playtime gm4_ce_data /= #100 gm4_ce_data
+
+# reduce death multiplier
+# every 5 minutes since the last death is removed from death_mult
+scoreboard players operation @s[scores={gm4_ce_death_mult=1..}] gm4_ce_death_mult -= @s gm4_ce_since_last_death
+scoreboard players reset @s[scores={gm4_ce_death_mult=..0}] gm4_ce_death_mult
+scoreboard players add @s gm4_ce_since_last_death 1
+
 # get world difficulty
 execute store result score $worlddiff gm4_ce_data run difficulty
-# modify player difficulty (-0 for hard, -2 for normal, -4 for easy)
-execute if score $worlddiff gm4_ce_data matches 2 run scoreboard players remove @s gm4_ce_difficult 2
-execute if score $worlddiff gm4_ce_data matches 1 run scoreboard players remove @s gm4_ce_difficult 4
-# multiply by 10 to get decimal
-scoreboard players operation @s gm4_ce_difficult *= #10 gm4_ce_data
-# divide by 10 for hard, 13 for normal, 14 for easy 
-execute if score $worlddiff gm4_ce_data matches 3 run scoreboard players operation @s gm4_ce_difficult /= #10 gm4_ce_data
-execute if score $worlddiff gm4_ce_data matches 2 run scoreboard players operation @s gm4_ce_difficult /= #13 gm4_ce_data
-execute if score $worlddiff gm4_ce_data matches 1 run scoreboard players operation @s gm4_ce_difficult /= #14 gm4_ce_data
-# add 5 then divide by 10 to round to nearest integer
-scoreboard players add @s gm4_ce_difficult 5
-scoreboard players operation @s gm4_ce_difficult /= #10 gm4_ce_data
-# min of 0
-scoreboard players operation @s gm4_ce_difficult > #0 gm4_ce_data
+# modify difficulty (*0.5 hard, *0.4 normal, *0.3 easy / other)
+execute if score $worlddiff gm4_ce_data matches 3 run scoreboard players operation $playtime gm4_ce_data *= #50 gm4_ce_data
+execute if score $worlddiff gm4_ce_data matches 2 run scoreboard players operation $playtime gm4_ce_data *= #40 gm4_ce_data
+execute unless score $worlddiff gm4_ce_data matches 2..3 run scoreboard players operation $playtime gm4_ce_data *= #30 gm4_ce_data
+scoreboard players operation $playtime gm4_ce_data /= #100 gm4_ce_data
 
-# challenger armor
-execute if predicate gm4_combat_expanded:modified_armor/wearing_challenge run scoreboard players set @s gm4_ce_difficult 11
-# grant advancement
-advancement grant @s[scores={gm4_ce_difficult=11}] only gm4:combat_expanded_challenger
-
-# check advancement
-execute if score #days_alive gm4_ce_difficult matches 10.. run advancement grant @s only gm4:combat_expanded_survive
+# store difficulty in player score
+scoreboard players operation @s gm4_ce_difficult = $playtime gm4_ce_data

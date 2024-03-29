@@ -104,13 +104,14 @@ text.gm4.guidebook.zauber_cauldrons.luck_output_poison,"However, if a poisonous 
 text.gm4.guidebook.zauber_cauldrons.luck,"Luck can be granted to the nearest user by throwing lucky flowers, an enchanted prismarine shard, and short grass into a zauber cauldron."
 text.gm4.guidebook.zauber_cauldrons.section.extra_ingredients,Magic in a Bottle
 text.gm4.guidebook.zauber_cauldrons.extra_ingredients,"Any extra ingredients added to a Zauber recipe will leave the cauldron as Possessed Items, weaponless vexes."
-text.gm4.guidebook.zauber_cauldrons.bottling_vexes,"If a glass bottle is added to a recipe with extra ingredients, it will capture Possessed Items in groups of three, forming a Magic in a Bottle."
+text.gm4.guidebook.zauber_cauldrons.bottling_vexes,"If a glass bottle is added to a recipe with extra ingredients, it can instead capture multiples of 3 Possessed Items.\n\nSo if 4 possessed items would normally spawn, 3 would be contained and 1 would be free."
 text.gm4.guidebook.zauber_cauldrons.magic_in_a_bottle,"If a Magic in a Bottle is left on the ground, the bottle will break and release the vexes.\n\nA Magic in a Bottle stores the location it was created which is useful in creating wormholes."
 text.gm4.guidebook.zauber_cauldrons.bottled_vex_moon_phase,"Each Magic in a Bottle has a preferred moon phase.\n\nDuring this moon phase, the bottle doesn't break as quickly and will sparkle to players wearing full zauber armor."
 text.gm4.guidebook.zauber_cauldrons.section.magicol,Magicol
 text.gm4.guidebook.zauber_cauldrons.magicol_description,"Water inside a Cauldron can be converted into a liquid called Magicol.\n\nMagicol is useful for converting areas into colored, spawn-proof biomes."
 text.gm4.guidebook.zauber_cauldrons.magicol_creation,"Dropping Magic in a Bottle, an enchanted prismarine shard and a dye into a water-filled zauber cauldron will dye the liquid into magicol.\n\nThe level of the liquid is conserved through this process."
-text.gm4.guidebook.zauber_cauldrons.magicol_bottling,"During the preferred moon phase of the magic in a bottle used to create the Magicol, it can be bottled. This is done by dropping a splash or lingering water bottle and one piece of prismarine crystals, along with either a slime ball, magma cream, or snowball."
+text.gm4.guidebook.zauber_cauldrons.magicol_bottling,"Magicol can be bottled only during the preferred moon phase of the magic in a bottle used to create it."
+text.gm4.guidebook.zauber_cauldrons.magicol_bottling_1,"Magicol can be bottled by dropping a splash or lingering water bottle and one piece of prismarine crystals, along with either a slime ball, magma cream, or snowball."
 text.gm4.guidebook.zauber_cauldrons.downfall,"Magicol bottled with slime balls will be temperate with rain.\n\nWith magma cream they will be arid with no rain, and with snowballs they will be polar with snow."
 text.gm4.guidebook.zauber_cauldrons.magicol_potion_types,"Soulutions can be created as normal.\n\nLingering bottles of magicol will create permanent particles inside the biome.\n\nDrinkable bottles of magicol can be created, but have no effect."
 text.gm4.guidebook.zauber_cauldrons.bottled_magicol_usage,Throwing a magicol bottle will cause the splashed area to turn into a new biome.\n\nThese biomes are colored according to the magicol liquid and do not spawn any mobs.

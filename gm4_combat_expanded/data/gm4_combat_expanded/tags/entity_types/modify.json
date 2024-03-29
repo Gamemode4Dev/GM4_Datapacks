@@ -4,11 +4,9 @@
         "minecraft:cave_spider",
         "minecraft:creeper",
         "minecraft:drowned",
-        "minecraft:elder_guardian",
         "minecraft:enderman",
         "minecraft:endermite",
         "minecraft:evoker",
-        "minecraft:ghast",
         "minecraft:guardian",
         "minecraft:hoglin",
         "minecraft:husk",
@@ -17,14 +15,12 @@
         "minecraft:piglin",
         "minecraft:pillager",
         "minecraft:ravager",
-        "minecraft:shulker",
         "minecraft:silverfish",
         "minecraft:skeleton",
         "minecraft:slime",
         "minecraft:spider",
         "minecraft:stray",
         "minecraft:vindicator",
-        "minecraft:witch",
         "minecraft:wither_skeleton",
         "minecraft:zoglin",
         "minecraft:zombie",
@@ -32,3 +28,4 @@
         "minecraft:zombified_piglin"
     ]
 }
+

@@ -151,7 +151,7 @@ def create(ctx: Context):
 def update_patch(ctx: Context):
     """Checks the datapack files for changes from last build, and increments patch number"""
     yield
-    logger = logging.getLogger(__name__)
+    logger = parent_logger.getChild("update_patch")
 
     # load current manifest from cache
     this_manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
@@ -190,10 +190,10 @@ def update_patch(ctx: Context):
         if (this_ver != last_ver.replace(patch=None)) or (new_hash != old_hash): # changes were made, bump the patch
             if this_ver.minor > last_ver.minor or this_ver.major > last_ver.major: # type: ignore
                 this_ver.patch = 0
-                logger.info(f"Feature update for {ctx.project_id}, setting version to {this_ver}")
+                logger.info(f"Feature update for {ctx.project_id}, setting version to {this_ver}", extra={"gh_annotate_skip": True, "project_id": ctx.project_id})
             else:
                 this_ver.patch = last_ver.patch + 1 # type: ignore
-                logger.info(f"Updating {ctx.project_id} patch to {this_ver.patch}") # type: ignore
+                logger.info(f"Patch update for {ctx.project_id}, incrementing to {this_ver}", extra={"gh_annotate_skip": True, "project_id": ctx.project_id})
 
             pack.version = str(this_ver)
 

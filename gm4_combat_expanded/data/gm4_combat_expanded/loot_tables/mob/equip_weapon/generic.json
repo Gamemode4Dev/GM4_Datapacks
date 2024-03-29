@@ -13,20 +13,19 @@
                 {
                   "condition": "minecraft:value_check",
                   "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$difficulty"
-                    },
-                    "score": "gm4_ce_data"
+                    "type": "minecraft:binomial",
+                    "n": 1,
+                    "p": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ce_data",
+                      "scale": 0.0001
+                    }
                   },
-                  "range": {
-                    "min": 9
-                  }
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.01
+                  "range": 1
                 }
               ]
             },
@@ -37,20 +36,19 @@
                 {
                   "condition": "minecraft:value_check",
                   "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$difficulty"
-                    },
-                    "score": "gm4_ce_data"
+                    "type": "minecraft:binomial",
+                    "n": 1,
+                    "p": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ce_data",
+                      "scale": 0.0009
+                    }
                   },
-                  "range": {
-                    "min": 5
-                  }
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.09
+                  "range": 1
                 }
               ]
             },
@@ -61,20 +59,19 @@
                 {
                   "condition": "minecraft:value_check",
                   "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$difficulty"
-                    },
-                    "score": "gm4_ce_data"
+                    "type": "minecraft:binomial",
+                    "n": 1,
+                    "p": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ce_data",
+                      "scale": 0.00225
+                    }
                   },
-                  "range": {
-                    "min": 5
-                  }
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.225
+                  "range": 1
                 }
               ]
             },
@@ -85,20 +82,19 @@
                 {
                   "condition": "minecraft:value_check",
                   "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                      "type": "minecraft:fixed",
-                      "name": "$difficulty"
-                    },
-                    "score": "gm4_ce_data"
+                    "type": "minecraft:binomial",
+                    "n": 1,
+                    "p": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ce_data",
+                      "scale": 0.0045
+                    }
                   },
-                  "range": {
-                    "min": 3
-                  }
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.45
+                  "range": 1
                 }
               ]
             },
@@ -114,19 +110,18 @@
           "condition": "minecraft:value_check",
           "value": {
             "type": "minecraft:binomial",
-            "n": {
+            "n": 1,
+            "p": {
               "type": "minecraft:score",
               "target": {
                 "type": "minecraft:fixed",
                 "name": "$difficulty"
               },
-              "score": "gm4_ce_data"
-            },
-            "p": 0.05
+              "score": "gm4_ce_data",
+              "scale": 0.0033
+            }
           },
-          "range": {
-            "min": 1
-          }
+          "range": 1
         }
       ]
     }
