@@ -80,7 +80,7 @@ def beet_default(ctx: Context):
               "rolls": 1,
               "entries": [{
                 "type": "minecraft:loot_table",
-                "name": f"gm4_trapped_signs:items/{name}",
+                "value": f"gm4_trapped_signs:items/{name}",
                 "functions": [{
                   "function": "minecraft:set_count",
                   "count": 1

@@ -69,7 +69,7 @@ def generate_corripio(ctx: Context):
         "rolls": 1,
         "entries": [{
           "type": "minecraft:loot_table",
-          "name": f"gm4_orb_of_ankou:items/soul_essence/{essence}"
+          "value": f"gm4_orb_of_ankou:items/soul_essence/{essence}"
         }]
       }
       pool["conditions"] = [{

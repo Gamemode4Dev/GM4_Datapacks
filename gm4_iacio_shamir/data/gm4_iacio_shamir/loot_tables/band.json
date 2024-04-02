@@ -15,12 +15,8 @@
 							}
 						},
 						{
-							"function": "minecraft:custom_data",
-							"tag": {
-								"gm4_metallurgy": {
-									"stored_shamir": "iacio"
-								}
-							}
+							"function": "minecraft:set_custom_data",
+							"tag": "{gm4_metallurgy:{stored_shamir:'iacio'}}"
 						},
 						{
 							"function": "minecraft:set_lore",

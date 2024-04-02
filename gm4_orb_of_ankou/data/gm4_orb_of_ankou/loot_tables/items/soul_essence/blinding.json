@@ -37,18 +37,8 @@
               }
             },
             {
-              "function": "minecraft:custom_data",
-              "tag": {
-                "gm4_orb_of_ankou": {
-                  "item": "soul_essence",
-                  "stored_pneuma": {
-                    "id": "blinding"
-                  },
-                  "stored_color": [
-                    3809425
-                  ]
-                }
-              }
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'blinding'},stored_color:[3809425]}}"
             }
           ]
         }

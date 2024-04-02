@@ -13,7 +13,7 @@
                                 "minecraft:enchantment_glint_override": true,
                                 "minecraft:custom_model_data": "item/orb_of_ankou",
                                 "minecraft:hide_additional_tooltip": true,
-                                "minecraft:firework_exlosion": {
+                                "minecraft:firework_explosion": {
                                     "colors": [
                                         13092807
                                     ]

@@ -5,7 +5,7 @@
       "components": {
         "minecraft:enchantment_glint_override": true,
         "minecraft:custom_model_data": "gui/advancement/orb_of_ankou_max_orb",
-        "minecraft:firework_exlosion": {
+        "minecraft:firework_explosion": {
           "colors": [
             13092807
           ]
