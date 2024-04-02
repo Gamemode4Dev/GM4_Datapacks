@@ -27,7 +27,9 @@
             "items": [
               "minecraft:flint"
             ],
-            "nbt": "{gm4_orb_of_ankou:{item:\"soul_shard\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{item:\"soul_shard\"}}"
+            }
           }
         ]
       }

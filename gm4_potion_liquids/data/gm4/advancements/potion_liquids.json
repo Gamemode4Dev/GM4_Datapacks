@@ -25,7 +25,9 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "nbt": "{Potion:\"potion_liquids:floating\"}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_potion_liquids:'floating'}"
+          }
         }
       }
     }

@@ -36,7 +36,9 @@
             "items": [
               "minecraft:firework_star"
             ],
-            "nbt": "{gm4_everstone:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_everstone:1b}"
+            }
           }
         ]
       }

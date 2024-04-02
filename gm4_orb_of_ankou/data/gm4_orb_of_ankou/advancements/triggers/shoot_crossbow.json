@@ -4,7 +4,13 @@
       "trigger": "minecraft:shot_crossbow",
       "conditions": {
         "item": {
-          "nbt": "{ChargedProjectiles:[{id:\"minecraft:arrow\"}]}"
+          "components": {
+            "minecraft:charged_projectiles": [
+              {
+                "id": "minecraft:arrow"
+              }
+            ]
+          }
         }
       }
     }

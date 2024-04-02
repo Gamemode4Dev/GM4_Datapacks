@@ -24,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{item:\"ore\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{item:\"ore\"}}"
+            }
           }
         ]
       }

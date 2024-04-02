@@ -14,7 +14,7 @@
                                     "condition": "minecraft:entity_properties",
                                     "entity": "this",
                                     "predicate": {
-                                        "nbt": "{data:{gm4_brewing:{insert:{tag:{id:\"minecraft:potion\",custom_potion:\"resistance\"}}}}}"
+                                        "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{custom_potion:'resistance'}}}}}}"
                                     }
                                 }
                             ]
@@ -27,7 +27,7 @@
                                     "condition": "minecraft:entity_properties",
                                     "entity": "this",
                                     "predicate": {
-                                        "nbt": "{data:{gm4_brewing:{insert:{tag:{id:\"minecraft:potion\",custom_potion:\"booze\"}}}}}"
+                                        "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{custom_potion:'booze'}}}}}}"
                                     }
                                 }
                             ]

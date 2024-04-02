@@ -27,7 +27,9 @@
           "items": [
             "minecraft:apple"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -38,7 +40,9 @@
           "items": [
             "minecraft:bread"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -49,7 +53,9 @@
           "items": [
             "minecraft:porkchop"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -60,7 +66,9 @@
           "items": [
             "minecraft:cooked_porkchop"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -71,7 +79,9 @@
           "items": [
             "minecraft:golden_apple"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -82,7 +92,9 @@
           "items": [
             "minecraft:cod"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -93,7 +105,9 @@
           "items": [
             "minecraft:salmon"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -104,7 +118,9 @@
           "items": [
             "minecraft:tropical_fish"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -115,7 +131,9 @@
           "items": [
             "minecraft:pufferfish"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -126,7 +144,9 @@
           "items": [
             "minecraft:cooked_cod"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -137,7 +157,9 @@
           "items": [
             "minecraft:cooked_salmon"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -148,7 +170,9 @@
           "items": [
             "minecraft:cookie"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -159,7 +183,9 @@
           "items": [
             "minecraft:melon_slice"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -170,7 +196,9 @@
           "items": [
             "minecraft:beef"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -181,7 +209,9 @@
           "items": [
             "minecraft:cooked_beef"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -192,7 +222,9 @@
           "items": [
             "minecraft:chicken"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -203,7 +235,9 @@
           "items": [
             "minecraft:cooked_chicken"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -214,7 +248,9 @@
           "items": [
             "minecraft:rotten_flesh"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -225,7 +261,9 @@
           "items": [
             "minecraft:spider_eye"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -236,7 +274,9 @@
           "items": [
             "minecraft:carrot"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -247,7 +287,9 @@
           "items": [
             "minecraft:potato"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -258,7 +300,9 @@
           "items": [
             "minecraft:baked_potato"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -269,7 +313,9 @@
           "items": [
             "minecraft:poisonous_potato"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -280,7 +326,9 @@
           "items": [
             "minecraft:golden_carrot"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -291,7 +339,9 @@
           "items": [
             "minecraft:pumpkin_pie"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -302,7 +352,9 @@
           "items": [
             "minecraft:rabbit"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -313,7 +365,9 @@
           "items": [
             "minecraft:cooked_rabbit"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -324,7 +378,9 @@
           "items": [
             "minecraft:mutton"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -335,7 +391,9 @@
           "items": [
             "minecraft:cooked_mutton"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -346,7 +404,9 @@
           "items": [
             "minecraft:chorus_fruit"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -357,7 +417,9 @@
           "items": [
             "minecraft:beetroot"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -368,7 +430,9 @@
           "items": [
             "minecraft:dried_kelp"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -379,7 +443,9 @@
           "items": [
             "minecraft:sweet_berries"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     },
@@ -390,7 +456,9 @@
           "items": [
             "minecraft:honey_bottle"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:16}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:16}}"
+          }
         }
       }
     },
@@ -401,7 +469,9 @@
           "items": [
             "minecraft:glow_berries"
           ],
-          "nbt": "{gm4_block_compressors:{compression_level:64}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
         }
       }
     }

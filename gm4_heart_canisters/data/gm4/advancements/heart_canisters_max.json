@@ -29,14 +29,18 @@
               "minecraft:player_head"
             ],
             "count": 5,
-            "nbt": "{gm4_heart_canister_tier:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_heart_canister_tier:1b}"
+            }
           },
           {
             "items": [
               "minecraft:player_head"
             ],
             "count": 5,
-            "nbt": "{gm4_heart_canister_tier:2b}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_heart_canister_tier:2b}"
+            }
           }
         ]
       }

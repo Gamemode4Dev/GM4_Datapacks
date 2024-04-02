@@ -5,7 +5,9 @@
     "equipment": {
       "feet": {
         "items": "#gm4:boots",
-        "nbt": "{gm4_metallurgy:{active_shamir:\"celaro\"}}"
+        "predicates": {
+          "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:\"celaro\"}}"
+        }
       }
     }
   }

@@ -17,7 +17,13 @@
           }
         ],
         "item": {
-          "nbt": "{ChargedProjectiles:[{id:\"minecraft:spectral_arrow\"}]}"
+          "components": {
+            "minecraft:charged_projectiles": [
+              {
+                "id": "minecraft:spectral_arrow"
+              }
+            ]
+          }
         }
       }
     }

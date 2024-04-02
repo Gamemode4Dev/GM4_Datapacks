@@ -53,7 +53,9 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'forterra'}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'forterra'}}"
+                    }
                   }
                 }
               ]

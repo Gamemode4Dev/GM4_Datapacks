@@ -8,7 +8,9 @@
         "equipment": {
           "feet": {
             "items": "#gm4_combat_expanded:armor",
-            "nbt": "{gm4_combat_expanded:{}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_combat_expanded:{}}"
+            }
           }
         }
       }
@@ -20,7 +22,9 @@
         "equipment": {
           "legs": {
             "items": "#gm4_combat_expanded:armor",
-            "nbt": "{gm4_combat_expanded:{}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_combat_expanded:{}}"
+            }
           }
         }
       }
@@ -32,7 +36,9 @@
         "equipment": {
           "chest": {
             "items": "#gm4_combat_expanded:armor",
-            "nbt": "{gm4_combat_expanded:{}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_combat_expanded:{}}"
+            }
           }
         }
       }
@@ -44,7 +50,9 @@
         "equipment": {
           "head": {
             "items": "#gm4_combat_expanded:armor",
-            "nbt": "{gm4_combat_expanded:{}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_combat_expanded:{}}"
+            }
           }
         }
       }

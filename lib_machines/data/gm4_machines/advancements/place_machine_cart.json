@@ -8,7 +8,9 @@
             "condition": "minecraft:match_tool",
             "predicate": {
               "items": "#gm4_machines:minecarts",
-              "nbt": "{gm4_machines:{}}"
+              "predicates": {
+                "minecraft:custom_data": "{gm4_machines:{}}"
+              }
             }
           },
           {

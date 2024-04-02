@@ -10,7 +10,9 @@
             "items": [
               "minecraft:compass"
             ],
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'fulcio'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'fulcio'}}"
+            }
           }
         }
       }
@@ -24,7 +26,9 @@
             "items": [
               "minecraft:compass"
             ],
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'fulcio'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'fulcio'}}"
+            }
           }
         }
       }

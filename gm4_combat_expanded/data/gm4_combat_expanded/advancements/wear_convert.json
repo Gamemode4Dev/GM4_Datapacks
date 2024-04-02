@@ -12,7 +12,9 @@
                 "items": [
                     {
                         "items": "#gm4_combat_expanded:armor",
-                        "nbt": "{gm4_combat_expanded:{modifier:convert}}"
+                        "predicates": {
+                            "minecraft:custom_data": "{gm4_combat_expanded:{modifier:convert}}"
+                        }
                     }
                 ]
             }

@@ -32,7 +32,9 @@
                     "minecraft:tadpole_bucket",
                     "minecraft:tropical_fish_bucket"
                   ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                  "predicates": {
+                    "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                  }
                 }
               }
             }
@@ -137,7 +139,9 @@
                     "minecraft:tadpole_bucket",
                     "minecraft:tropical_fish_bucket"
                   ],
-                  "nbt": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                  "predicates": {
+                    "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                  }
                 }
               }
             }

@@ -28,7 +28,9 @@
                                     "equipment": {
                                         "mainhand": {
                                             "items": "#gm4_combat_expanded:weapon",
-                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                            "predicates": {
+                                                "minecraft:custom_data": "{gm4_combat_expanded:{strike:giant}}"
+                                            }
                                         }
                                     }
                                 }
@@ -71,7 +73,9 @@
                                     "equipment": {
                                         "mainhand": {
                                             "items": "#gm4_combat_expanded:weapon",
-                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                            "predicates": {
+                                                "minecraft:custom_data": "{gm4_combat_expanded:{strike:giant}}"
+                                            }
                                         }
                                     }
                                 }
@@ -114,7 +118,9 @@
                                     "equipment": {
                                         "mainhand": {
                                             "items": "#gm4_combat_expanded:weapon",
-                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                            "predicates": {
+                                                "minecraft:custom_data": "{gm4_combat_expanded:{strike:giant}}"
+                                            }
                                         }
                                     }
                                 }
@@ -157,7 +163,9 @@
                                     "equipment": {
                                         "mainhand": {
                                             "items": "#gm4_combat_expanded:weapon",
-                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                            "predicates": {
+                                                "minecraft:custom_data": "{gm4_combat_expanded:{strike:giant}}"
+                                            }
                                         }
                                     }
                                 }
@@ -200,7 +208,9 @@
                                     "equipment": {
                                         "mainhand": {
                                             "items": "#gm4_combat_expanded:weapon",
-                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                            "predicates": {
+                                                "minecraft:custom_data": "{gm4_combat_expanded:{strike:giant}}"
+                                            }
                                         }
                                     }
                                 }
@@ -243,7 +253,9 @@
                                     "equipment": {
                                         "mainhand": {
                                             "items": "#gm4_combat_expanded:weapon",
-                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                            "predicates": {
+                                                "minecraft:custom_data": "{gm4_combat_expanded:{strike:giant}}"
+                                            }
                                         }
                                     }
                                 }
@@ -286,7 +298,9 @@
                                     "equipment": {
                                         "mainhand": {
                                             "items": "#gm4_combat_expanded:weapon",
-                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                            "predicates": {
+                                                "minecraft:custom_data": "{gm4_combat_expanded:{strike:giant}}"
+                                            }
                                         }
                                     }
                                 }
@@ -329,7 +343,9 @@
                                     "equipment": {
                                         "mainhand": {
                                             "items": "#gm4_combat_expanded:weapon",
-                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                            "predicates": {
+                                                "minecraft:custom_data": "{gm4_combat_expanded:{strike:giant}}"
+                                            }
                                         }
                                     }
                                 }
@@ -372,7 +388,9 @@
                                     "equipment": {
                                         "mainhand": {
                                             "items": "#gm4_combat_expanded:weapon",
-                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                            "predicates": {
+                                                "minecraft:custom_data": "{gm4_combat_expanded:{strike:giant}}"
+                                            }
                                         }
                                     }
                                 }
@@ -415,7 +433,9 @@
                                     "equipment": {
                                         "mainhand": {
                                             "items": "#gm4_combat_expanded:weapon",
-                                            "nbt": "{gm4_combat_expanded:{strike:giant}}"
+                                            "predicates": {
+                                                "minecraft:custom_data": "{gm4_combat_expanded:{strike:giant}}"
+                                            }
                                         }
                                     }
                                 }

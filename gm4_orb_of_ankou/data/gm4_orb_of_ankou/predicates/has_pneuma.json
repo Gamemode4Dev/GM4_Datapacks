@@ -5,7 +5,9 @@
     "equipment": {
       "offhand": {
         "items": "#gm4_orb_of_ankou:pneuma_container",
-        "nbt": "{gm4_orb_of_ankou:{pneumas:[{}]}}"
+        "predicates": {
+          "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{}]}}"
+        }
       }
     }
   }

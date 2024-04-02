@@ -10,7 +10,9 @@
                             "items": [
                                 "minecraft:potion"
                             ],
-                            "nbt": "{gm4_standard_liquids:{potion:\"glowing\"}}"
+                            "predicates": {
+                              "minecraft:custom_data": "{gm4_standard_liquids:{potion:\"glowing\"}}"
+                            }
                         }
                     },
                     {

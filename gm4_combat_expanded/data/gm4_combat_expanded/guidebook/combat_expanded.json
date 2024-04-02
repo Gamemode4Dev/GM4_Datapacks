@@ -151,7 +151,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_combat_expanded:{identified:1}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_combat_expanded:{identified:1}}"
+            }
           }
         ]
       }

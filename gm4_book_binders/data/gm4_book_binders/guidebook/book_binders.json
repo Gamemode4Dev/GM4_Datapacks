@@ -14,7 +14,9 @@
             "items": [
               "minecraft:paper"
             ],
-            "nbt": "{gm4_book_binders:{item:\"enchanted_page\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_book_binders:{item:\"enchanted_page\"}}"
+            }
           }
         ]
       }

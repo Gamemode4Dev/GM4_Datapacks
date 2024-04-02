@@ -44,7 +44,13 @@
             "items": [
               "minecraft:enchanted_book"
             ],
-            "nbt": "{StoredEnchantments:[{id:\"minecraft:silk_touch\"}]}"
+            "predicates": {
+              "minecraft:stored_enchantments": [
+                {
+                  "enchantment": "minecraft:silk_touch"
+                }
+              ]
+            }
           }
         ]
       }
@@ -57,7 +63,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:\"relocator_empty\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"relocator_empty\"}}"
+            }
           }
         ]
       }
@@ -70,7 +78,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:\"relocator_full\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"relocator_full\"}}"
+            }
           }
         ]
       }

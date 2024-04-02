@@ -46,7 +46,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:'teleportation_jammer'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:'teleportation_jammer'}}"
+            }
           }
         ]
       }
@@ -59,7 +61,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:'teleportation_anchor'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:'teleportation_anchor'}}"
+            }
           }
         ]
       }

@@ -14,7 +14,9 @@
             "items": [
               "minecraft:black_dye"
             ],
-            "nbt": "{gm4_orb_of_ankou:{item:\"soul_essence\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{item:\"soul_essence\"}}"
+            }
           }
         ]
       }
@@ -46,7 +48,9 @@
             "items": [
               "minecraft:flint"
             ],
-            "nbt": "{gm4_orb_of_ankou:{item:\"soul_shard\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{item:\"soul_shard\"}}"
+            }
           }
         ]
       }
@@ -71,7 +75,9 @@
             "items": [
               "minecraft:firework_star"
             ],
-            "nbt": "{gm4_orb_of_ankou:{item:\"orb\"},Explosion:{Colors:[I;13092807]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{item:\"orb\"},Explosion:{Colors:[I;13092807]}}"
+            }
           }
         ]
       }
@@ -84,7 +90,9 @@
             "items": [
               "minecraft:firework_star"
             ],
-            "nbt": "{gm4_orb_of_ankou:{item:\"orb\",pneumas:[{}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{item:\"orb\",pneumas:[{}]}}"
+            }
           }
         ]
       }

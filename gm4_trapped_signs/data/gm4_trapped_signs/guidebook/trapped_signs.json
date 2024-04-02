@@ -34,7 +34,9 @@
         "items": [
           {
             "tag": "minecraft:signs",
-            "nbt": "{gm4_trapped_sign:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_trapped_sign:1b}"
+            }
           }
         ]
       }

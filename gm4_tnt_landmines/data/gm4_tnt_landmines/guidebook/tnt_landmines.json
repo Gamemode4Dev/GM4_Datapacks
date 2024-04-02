@@ -38,7 +38,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_tnt_landmines:{item:\"landmine\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_tnt_landmines:{item:\"landmine\"}}"
+            }
           }
         ]
       }

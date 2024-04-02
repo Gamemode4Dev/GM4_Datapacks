@@ -19,7 +19,9 @@
               "minecraft:potion",
               "minecraft:splash_potion"
             ],
-            "nbt": "{Potion:'minecraft:invisibility'}"
+            "components": {
+              "minecraft:potion_contents": "minecraft:invisibility"
+            }
           }
         ]
       }

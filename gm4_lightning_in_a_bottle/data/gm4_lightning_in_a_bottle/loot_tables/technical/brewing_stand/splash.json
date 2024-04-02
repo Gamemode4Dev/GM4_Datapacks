@@ -14,7 +14,7 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{data:{gm4_brewing:{insert:{tag:{Potion:\"gm4:lightning\",gm4_lightning_in_a_bottle:1b}}}}}"
+                    "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{gm4_lightning_in_a_bottle:1b}}}}}}"
                   }
                 }
               ]
@@ -25,7 +25,7 @@
       "functions": [
         {
           "function": "minecraft:set_custom_data",
-          "tag": "{gm4_custom_potion:1}"
+          "tag": "{gm4_custom_potion:1b}"
         }
       ]
     }
