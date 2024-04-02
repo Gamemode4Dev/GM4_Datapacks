@@ -52,7 +52,7 @@ loot table `MODULE_ID:technical/brewing_stand/splash`
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_custom_data",
           "tag": "{gm4_custom_potion:1b}"
         }
       ]

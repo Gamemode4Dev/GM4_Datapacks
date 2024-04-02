@@ -42,8 +42,15 @@ def beet_default(ctx: Context):
               "name": f"minecraft:{item}",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": f"{'{'}CustomModelData:'item/{name}',gm4_{'secret_' if secret else ''}trapped_sign:1b,HideFlags:1,Enchantments:[{'{'}id:'minecraft:protection',lvl:0s{'}'}]{'}'}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:enchantment_glint_override": True,
+                    "minecraft:custom_model_data": f"item/{name}",
+                  }
+                },
+                {
+                  "function": "minecraft:set_custom_data",
+                  "tag": f"{'{'}gm4_{'secret_' if secret else ''}trapped_sign:1b{'}'}"
                 },
                 {
                   "function": "minecraft:set_name",

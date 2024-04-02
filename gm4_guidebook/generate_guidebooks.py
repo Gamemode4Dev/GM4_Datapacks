@@ -26,7 +26,7 @@ from beet.core.utils import TextComponent
 from PIL import Image, ImageDraw
 from pydantic.v1 import BaseModel
 
-# from gm4.plugins.player_heads import Skin
+from gm4.plugins.player_heads import Skin
 
 logger = logging.getLogger(__name__)
 
@@ -797,7 +797,7 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
   # get item id, name, lore, and color
   entry: dict[Any, Any] = loot["pools"][0]["entries"][0]
   item_id: str = entry["name"]
-  # tag: dict[Any, Any] = {}
+  profile_name: str = ""
   name: TextComponent = ""
   lore: list[str] = []
   if "functions" in entry:
@@ -807,12 +807,14 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
       elif "set_lore" in function["function"]:
         for line in function["lore"]:
           lore.append(f'{json.dumps(line)}')
-      # elif "set_nbt" in function["function"]:
-      #   tag: dict[Any, Any] = nbtlib.parse_nbt(function["tag"]) # type: ignore
+      elif "set_components" in function["function"]:
+        for key, value in function["components"].items():
+          if "profile" in key:
+            profile_name = value if isinstance(value, str) else value.get("name", "")
 
   # color
-  # if "player_head" in item_id and "$" in tag["SkullOwner"]:
-  #   skull_owner = tag["SkullOwner"].replace("$","")
+  # if "player_head" in item_id and "$" in profile_name:
+  #   skull_owner = profile_name.replace("$","")
   #   if ":" not in skull_owner:
   #     skull_owner = f"{ctx.project_id}:{skull_owner}" # NOTE gm4.utils will have an add_namespace helper function after the RP PR
   #   skin = ctx.data[Skin][skull_owner]
@@ -1307,8 +1309,20 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
   # standard functions for every hand loot table
   functions:list[dict[Any, Any]] = [
     {
-      "function": "minecraft:set_nbt",
-      "tag": "{CustomModelData:'gm4_guidebook:item/guidebook',gm4_guidebook:{lectern:0b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:custom_model_data": "gm4_guidebook:item/guidebook",
+        "minecraft:written_book_content": {
+          "pages": [],
+          "title": "Gamemode 4 Guidebook",
+          "author": "Unknown",
+          "generation": 3
+        }
+      }
+    },
+    {
+      "function": "minecraft:set_custom_data",
+      "tag": f"{'{'}gm4_guidebook:{'{'}lectern:0b, trigger:{str(book.trigger_id)}{'}'}{'}'}"
     },
     {
       "function": "minecraft:set_name",
@@ -1334,8 +1348,20 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
   # standard functions for every lectern loot table
   functions_lectern:list[dict[Any, Any]] = [
     {
-    "function": "minecraft:set_nbt",
-    "tag": "{CustomModelData:'gm4_guidebook:item/guidebook',gm4_guidebook:{lectern:1b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:custom_model_data": "gm4_guidebook:item/guidebook",
+        "minecraft:written_book_content": {
+          "pages": [],
+          "title": "Gamemode 4 Guidebook",
+          "author": "Unknown",
+          "generation": 3
+        }
+      }
+    },
+    {
+      "function": "minecraft:set_custom_data",
+      "tag": f"{'{'}gm4_guidebook:{'{'}lectern:1b, trigger:{str(book.trigger_id)}{'}'}{'}'}"
     },
     {
       "function": "minecraft:set_name",

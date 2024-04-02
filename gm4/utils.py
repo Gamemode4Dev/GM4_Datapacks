@@ -142,6 +142,7 @@ class MapOption(GenericModel, Generic[T]):
 			value = [value]
 		return value # type: ignore
 
+# TODO 1.20.5: might not need this anymore
 class InvokeOnJsonNbt:
 	"""Extendable mixin to run MutatingReducer's rules on nbt within advancements, loot_tables ect..."""
 	def __init__(self, ctx: Context):

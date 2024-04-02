@@ -8,8 +8,27 @@
                     "name": "minecraft:player_head",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:\"item/crystal/{{effect}}\",HideFlags:2,gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/{{effect}}\",Properties:{textures:[{Value:\"$crystal/{{effect}}\"}]}}}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/crystal/{{effect}}",
+                                "minecraft:attribute_modifiers": {
+                                    "modifiers": [],
+                                    "show_in_tooltip": false
+                                },
+                                "minecraft:profile": {
+                                    "name": "[Drop to Fix Item] gm4_zauber_cauldrons:crystal/{{effect}}",
+                                    "properties": [
+                                        {
+                                            "name": "textures",
+                                            "value": "$crystal/{{effect}}"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"}}"
                         },
                         {
                             "function": "minecraft:set_name",
