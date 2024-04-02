@@ -12,18 +12,7 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_model_data": "item/poles",
-                                "minecraft:attribute_modifiers": {
-                                    "modifiers": [
-                                        {
-                                            "type": "minecraft:horse.jump_strength",
-                                            "name": "gm4_unstackable",
-                                            "amount": 1,
-                                            "operation": "add_value",
-                                            "slot": "legs"
-                                        }
-                                    ],
-                                    "show_in_tooltip": false
-                                }
+                                "minecraft:max_stack_size": 1
                             }
                         },
                         {
