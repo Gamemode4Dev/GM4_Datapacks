@@ -12,16 +12,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:custom_model_data": "item/smeltery",
-                "minecraft:profile": {
-                  "name": "gm4_smeltery",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$smeltery",
-                      "signature": "gm4_machine"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$smeltery"
               }
             },
             {

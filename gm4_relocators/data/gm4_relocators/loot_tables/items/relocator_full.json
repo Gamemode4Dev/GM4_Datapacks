@@ -12,15 +12,7 @@
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": "item/relocator_full",
-                "minecraft:profile": {
-                  "name": "gm4_relocator_full",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$relocator_full"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$relocator_full"
               }
             },
             {

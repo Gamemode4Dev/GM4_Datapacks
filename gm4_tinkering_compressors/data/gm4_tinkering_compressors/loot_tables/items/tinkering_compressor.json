@@ -12,16 +12,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:custom_model_data": "item/tinkering_compressor",
-                "minecraft:profile": {
-                  "name": "gm4_tinkering_compressor",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$tinkering_compressor",
-                      "signature": "gm4_machine"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$tinkering_compressor"
               }
             },
             {

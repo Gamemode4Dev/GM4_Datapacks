@@ -12,16 +12,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:custom_model_data": "block/block_compressor_full",
-                "minecraft:profile": {
-                  "name": "gm4_block_compressor",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$block_compressor",
-                      "signature": "gm4_machine"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$block_compressor"
               }
             },
             {

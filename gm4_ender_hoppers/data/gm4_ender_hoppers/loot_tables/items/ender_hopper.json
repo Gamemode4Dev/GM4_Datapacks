@@ -12,16 +12,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:custom_model_data": "item/ender_hopper",
-                "minecraft:profile": {
-                  "name": "gm4_ender_hopper",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$ender_hopper",
-                      "signature": "gm4_machine"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$ender_hopper"
               }
             },
             {

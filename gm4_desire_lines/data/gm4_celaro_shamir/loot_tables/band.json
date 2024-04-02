@@ -10,8 +10,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "shamir/celaro",
-                                "minecraft:profile": "[Drop to Fix Item] gm4_celaro_shamir:band/v1"
+                                "minecraft:custom_model_data": "shamir/celaro"
                             }
                         },
                         {

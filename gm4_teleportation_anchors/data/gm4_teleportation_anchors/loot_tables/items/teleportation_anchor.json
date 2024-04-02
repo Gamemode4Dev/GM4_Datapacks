@@ -12,16 +12,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:custom_model_data": "item/teleportation_anchor",
-                "minecraft:profile": {
-                  "name": "gm4_teleportation_anchor",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$teleportation_anchor",
-                      "signature": "gm4_machine"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$teleportation_anchor"
               }
             },
             {

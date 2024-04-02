@@ -538,6 +538,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
         self.registry.setdefault("items", {}).setdefault(item_id, {})[reference] = index
         self.logger.info(f"Issuing custom_model_data {index} for {item_id}")
 
+    #== Mecha Transformer Rules ==#
     @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='minecraft:custom_model_data'))
     def cmd_substitutions_nbt_json(self, node: AstJsonObjectEntry, **kwargs: Any):
         reference = node.value.evaluate()
@@ -548,7 +549,6 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             node = replace(node, value=AstJsonValue.from_value(index+self.cmd_prefix))
         return node
 
-    #== Mecha Transformer Rules ==#
     @rule(AstNbtCompoundEntry)
     def cmd_substitutions_nbt(self, node: AstNbtCompoundEntry, **kwargs: Any):
         if node.key.value == "minecraft:custom_model_data":

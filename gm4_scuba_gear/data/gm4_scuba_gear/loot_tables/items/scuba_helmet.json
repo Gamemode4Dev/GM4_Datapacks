@@ -39,15 +39,7 @@
                   }
                 ],
                 "minecraft:custom_model_data": "item/scuba_helmet",
-                "minecraft:profile": {
-                  "name": "[Drop to Fix Item] gm4_scuba_gear:scuba_helmet",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$scuba_helmet"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$scuba_helmet"
               }
             },
             {

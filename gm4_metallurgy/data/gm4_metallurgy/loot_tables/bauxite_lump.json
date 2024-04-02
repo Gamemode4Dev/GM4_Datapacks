@@ -42,15 +42,7 @@
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": "item/lump/bauxite",
-                "minecraft:profile": {
-                  "name": "[Drop to Fix Item] gm4_metallurgy:ore/aluminium/v0",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$ore/aluminium"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$ore/aluminium"
               }
             },
             {

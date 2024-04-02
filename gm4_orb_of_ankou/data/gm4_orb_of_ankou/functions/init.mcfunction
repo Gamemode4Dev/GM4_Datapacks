@@ -30,12 +30,6 @@ scoreboard objectives add gm4_oa_bow minecraft.used:minecraft.bow
 tag @a remove gm4_oa_in_nether
 execute in minecraft:the_nether run tag @a[x=0] add gm4_oa_in_nether
 
-# unregister old shamir
-data remove storage gm4_player_heads:register heads[{id:"gm4_corripio_shamir:band/v0"}]
-
-# register shamir with lib_player_heads
-execute unless data storage gm4_player_heads:register heads[{id:"gm4_corripio_shamir:band/v1"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_corripio_shamir:band/v1",name:"[Drop to Fix Item] gm4_corripio_shamir:band/v0",item:{gm4_metallurgy:{has_shamir:1b,stored_shamir:"corripio",metal:{type:"bismuth",amount:[12s],castable:1b},item:"obsidian_cast"},SkullOwner:"$gm4_metallurgy:band/bismuth",CustomModelData:"shamir/corripio",display:{Name:'{"italic":false,"translate":"item.gm4.metallurgy.obsidian_cast","fallback":"Obsidian Cast"}',Lore:['[{"translate":"item.gm4.metallurgy.bismuth.red","fallback":"Bi","italic":false,"color":"#F47989"},{"translate":"item.gm4.metallurgy.bismuth.orange","fallback":"sm","italic":false,"color":"#F5B478"},{"translate":"item.gm4.metallurgy.bismuth.yellow","fallback":"ut","italic":false,"color":"#F5DD79"},{"translate":"item.gm4.metallurgy.bismuth.green","fallback":"h ","italic":false,"color":"#78F4AE"},{"translate":"item.gm4.metallurgy.bismuth.blue","fallback":"Ba","italic":false,"color":"#79D6F5"},{"translate":"item.gm4.metallurgy.bismuth.purple","fallback":"nd","italic":false,"color":"#8378F5"},{"translate":"item.gm4.metallurgy.bismuth.magenta","fallback":"","italic":false,"color":"#D579F5"}]','{"italic":false,"color":"aqua","translate":"item.gm4.metallurgy.shamir","fallback":"Shamir"}','{"italic":false,"color":"gray","translate":"item.gm4.shamir.corripio","fallback":"Corripio"}']}}}
-
 execute unless score orb_of_ankou gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Orb of Ankou"}
 execute unless score orb_of_ankou gm4_earliest_version < orb_of_ankou gm4_modules run scoreboard players operation orb_of_ankou gm4_earliest_version = orb_of_ankou gm4_modules
 scoreboard players set orb_of_ankou gm4_modules 1

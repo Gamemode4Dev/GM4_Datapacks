@@ -12,16 +12,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:custom_model_data": "item/forming_press",
-                "minecraft:profile": {
-                  "name": "gm4_forming_press",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$forming_press",
-                      "signature": "gm4_machine"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$forming_press"
               }
             },
             {

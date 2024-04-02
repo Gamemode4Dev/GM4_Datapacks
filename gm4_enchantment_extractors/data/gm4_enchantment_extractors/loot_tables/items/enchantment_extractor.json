@@ -12,16 +12,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:custom_model_data": "item/enchantment_extractor",
-                "minecraft:profile": {
-                  "name": "gm4_enchantment_extractor",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$enchantment_extractor",
-                      "signature": "gm4_machine"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$enchantment_extractor"
               }
             },
             {

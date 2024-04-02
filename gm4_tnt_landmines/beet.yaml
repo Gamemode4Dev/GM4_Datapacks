@@ -11,7 +11,6 @@ resource_pack:
 pipeline:
   - gm4_tnt_landmines.landmine_model
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_player_heads
   - gm4.plugins.include.lib_custom_crafters
 
 meta:
@@ -19,7 +18,6 @@ meta:
     versioning:
       required:
         lib_custom_crafters: 3.0.0
-        lib_player_heads: 1.1.0
       schedule_loops: [main]
     model_data:
       - item: player_head

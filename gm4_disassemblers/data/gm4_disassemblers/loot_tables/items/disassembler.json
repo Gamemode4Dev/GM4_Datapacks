@@ -12,16 +12,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:custom_model_data": "item/disassembler",
-                "minecraft:profile": {
-                  "name": "gm4_disassembler",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$disassembler",
-                      "signature": "gm4_machine"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$disassembler"
               }
             },
             {

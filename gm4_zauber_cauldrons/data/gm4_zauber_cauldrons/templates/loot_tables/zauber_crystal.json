@@ -12,15 +12,7 @@
                             "components": {
                                 "minecraft:custom_model_data": "item/crystal/{{effect}}",
                                 "minecraft:max_stack_size": 1,
-                                "minecraft:profile": {
-                                    "name": "[Drop to Fix Item] gm4_zauber_cauldrons:crystal/{{effect}}",
-                                    "properties": [
-                                        {
-                                            "name": "textures",
-                                            "value": "$crystal/{{effect}}"
-                                        }
-                                    ]
-                                }
+                                "minecraft:profile": "$crystal/{{effect}}"
                             }
                         },
                         {

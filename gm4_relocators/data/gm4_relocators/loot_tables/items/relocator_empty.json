@@ -12,15 +12,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:custom_model_data": "item/relocator_empty",
-                "minecraft:profile": {
-                  "name": "gm4_relocator_empty",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$relocator_empty"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$relocator_empty"
               }
             },
             {

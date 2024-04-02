@@ -15,7 +15,7 @@ require:
   - gm4.plugins.resource_pack
   - gm4_guidebook.generate_guidebooks.load_page_data
   - gm4_guidebook.generate_guidebooks.load_custom_recipes
-  # - gm4.plugins.player_heads
+  - gm4.plugins.player_heads
   - beet.contrib.model_merging
   - beet.contrib.babelbox
 

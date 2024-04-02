@@ -10,8 +10,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "shamir/vigere",
-                                "minecraft:profile": "[Drop to Fix Item] gm4_vigere_shamir:band"
+                                "minecraft:custom_model_data": "shamir/vigere"
                             }
                         },
                         {

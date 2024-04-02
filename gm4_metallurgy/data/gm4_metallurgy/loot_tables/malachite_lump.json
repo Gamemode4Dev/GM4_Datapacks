@@ -42,15 +42,7 @@
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": 3420018,
-                "minecraft:profile": {
-                  "name": "[Drop to Fix Item] gm4_metallurgy:ore/copper/v0",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$ore/copper_RETIRED"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$ore/copper_RETIRED"
               }
             },
             {

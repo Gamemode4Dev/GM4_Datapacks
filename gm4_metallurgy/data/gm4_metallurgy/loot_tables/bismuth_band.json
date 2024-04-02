@@ -10,14 +10,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:profile": {
-                                    "properties": [
-                                        {
-                                            "name": "textures",
-                                            "value": "$band/bismuth"
-                                        }
-                                    ]
-                                }
+                                "minecraft:profile": "$band/bismuth"
                             }
                         },
                         {

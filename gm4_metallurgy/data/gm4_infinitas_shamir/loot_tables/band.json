@@ -10,8 +10,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "shamir/infinitas",
-                                "minecraft:profile": "[Drop to Fix Item] gm4_infinitas_shamir:band"
+                                "minecraft:custom_model_data": "shamir/infinitas"
                             }
                         },
                         {

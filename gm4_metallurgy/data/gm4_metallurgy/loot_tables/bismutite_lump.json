@@ -78,15 +78,7 @@
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": "item/lump/bismutite",
-                "minecraft:profile": {
-                  "name": "[Drop to Fix Item] gm4_metallurgy:ore/bismuth",
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "$ore/bismuth"
-                    }
-                  ]
-                }
+                "minecraft:profile": "$ore/bismuth"
               }
             },
             {

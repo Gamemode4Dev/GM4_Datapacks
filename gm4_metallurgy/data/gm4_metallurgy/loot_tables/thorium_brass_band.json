@@ -10,14 +10,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:profile": {
-                                    "properties": [
-                                        {
-                                            "name": "textures",
-                                            "value": "$band/thorium_brass_RETIRED"
-                                        }
-                                    ]
-                                }
+                                "minecraft:profile": "$band/thorium_brass_RETIRED"
                             }
                         },
                         {

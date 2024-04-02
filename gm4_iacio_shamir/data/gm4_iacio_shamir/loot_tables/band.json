@@ -10,8 +10,7 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:custom_model_data": "shamir/iacio",
-								"minecraft:profile": "[Drop to Fix Item] gm4_iacio_shamir:band/v0"
+								"minecraft:custom_model_data": "shamir/iacio"
 							}
 						},
 						{

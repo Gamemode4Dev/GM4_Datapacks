@@ -12,7 +12,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:custom_model_data": "item/auto_crafter",
-                "minecraft:profile": "gm4_auto_crafter"
+                "minecraft:profile": "$auto_crafter"
               }
             },
             {
