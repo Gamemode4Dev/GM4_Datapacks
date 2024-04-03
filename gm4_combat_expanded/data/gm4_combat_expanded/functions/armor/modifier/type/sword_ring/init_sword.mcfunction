@@ -3,7 +3,7 @@
 # at @s
 # run from armor/modifier/type/sword_ring/find_sword
 
-data merge entity @s {teleport_duration:2,Tags:["gm4_ce_sword_ring.current_sword","gm4_ce_sword_ring.sword"],transformation:{left_rotation:[0f,0.425f,0f,1f],right_rotation:[1f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]},item:{id:"minecraft:wooden_sword",Count:1b}}
+data merge entity @s {teleport_duration:2,Tags:["gm4_ce_sword_ring.current_sword","gm4_ce_sword_ring.sword"],transformation:{left_rotation:[0f,0.425f,0f,1f],right_rotation:[1f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]},item:{id:"minecraft:wooden_sword",count:1}}
 
 # set the scales 
 execute store result entity @s transformation.scale[0] float 0.003 run data get storage gm4_combat_expanded:temp sword_ring.scale 100

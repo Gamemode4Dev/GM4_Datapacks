@@ -29,7 +29,7 @@
                             },
                             "ops": [
                                 {
-                                    "source": "items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:\"minecraft:golden_{{piece}}\"}}}].tag",
+                                    "source": "items[{count:1,tag:{gm4_zauber_cauldrons:{item:\"minecraft:golden_{{piece}}\"}}}].tag",
                                     "target": "{}",
                                     "op": "merge"
                                 }

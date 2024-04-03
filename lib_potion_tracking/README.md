@@ -23,7 +23,7 @@ tag @s[tag=!gm4_potion,nbt={Item:{tag:{Potion:"minecraft:long_invisibility"}}}] 
 tag @s[tag=!gm4_potion,nbt={Item:{tag:{CustomPotionEffects:[{id:"minecraft:invisibility"}]}}}] add gm4_potion
 ```
 
-So if the potion was a splash potion of invisibility, the summoned marker will have the following nbt: `{data:{gm4_potion:{Item:{id:"minecraft:splash_potion",Count:1b,tag:{Potion:"minecraft:invisibility"}}}}}`
+So if the potion was a splash potion of invisibility, the summoned marker will have the following nbt: `{data:{gm4_potion:{Item:{id:"minecraft:splash_potion",count:1,tag:{Potion:"minecraft:invisibility"}}}}}`
 
 
 ### Executing When the Potion Lands

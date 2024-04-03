@@ -8,7 +8,7 @@ data modify storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_com
 data modify storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.old_tag set from storage gm4_block_compressors:temp/item_stack Item.tag.gm4_precompression_tag
 
 # set item count
-data modify storage gm4_block_compressors:temp/item_stack Item.Count set from storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.compression_level
+data modify storage gm4_block_compressors:temp/item_stack Item.count set from storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.compression_level
 
 # remove tag if it does not have gm4_block_compressors.old_tag
 execute unless data storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.old_tag run data remove storage gm4_block_compressors:temp/item_stack Item.tag

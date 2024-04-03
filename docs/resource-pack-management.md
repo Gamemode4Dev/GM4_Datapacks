@@ -42,7 +42,7 @@ model_data:
 ```
 ```mcfunction
 give @s rabbit_hide 1 {CustomModelData:'gm4_bat_grenades:item/bat_leather'}
-summon item ~ ~ ~ {Item:{id:"rabbit_hide",Count:1b,tag:{CustomModelData:"item/bat_leather"}}}
+summon item ~ ~ ~ {Item:{id:"rabbit_hide",count:1,tag:{CustomModelData:"item/bat_leather"}}}
 ```
 
 For full details about the `model_data` config see [`model_data` Config](#model_data-config)

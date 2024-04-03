@@ -20,7 +20,7 @@ This should be set to the maximum count of the input items. For example if you h
 `if score $stack_size gm4_crafting matches ..<number>`
 
 ### Check the Items
-This checks the `Items` block data (moved to storage for efficiency), which represents the recipe input. Note that `Count` should not be checked here, since multi-crafting is supported by setting the `stack_size`
+This checks the `Items` block data (moved to storage for efficiency), which represents the recipe input. Note that `count` should not be checked here, since multi-crafting is supported by setting the `stack_size`
 
 `if data storage gm4_custom_crafters:temp/crafter {Items:[<...>]}`
 

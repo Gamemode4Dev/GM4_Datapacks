@@ -8,10 +8,10 @@ data modify storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_com
 data remove storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.old_tag.gm4_block_compressors
 
 # add tag to indicate store compression size
-execute store result storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.compression_level int 1 run data get storage gm4_block_compressors:temp/item_stack Item.Count
+execute store result storage gm4_block_compressors:temp/item_stack Item.tag.gm4_block_compressors.compression_level int 1 run data get storage gm4_block_compressors:temp/item_stack Item.count
 
 # set count to 1 and add compressed item visuals 
-data merge storage gm4_block_compressors:temp/item_stack {Item:{Count:1b,tag:{HideFlags:1,Enchantments:[{id:"minecraft:protection",lvl:0s}]}}}
+data merge storage gm4_block_compressors:temp/item_stack {Item:{count:1,tag:{HideFlags:1,Enchantments:[{id:"minecraft:protection",lvl:0s}]}}}
 execute as 344d47-4-4-4-f04ce104d run loot replace entity @s weapon.offhand loot gm4_block_compressors:technical/compressed_lore
 execute as 344d47-4-4-4-f04ce104d run data modify storage gm4_block_compressors:temp/item_stack Item.tag.display.Lore append from entity @s HandItems[1].tag.display.Name
 data merge entity 344d47-4-4-4-f04ce104d {HandItems:[{},{}]}

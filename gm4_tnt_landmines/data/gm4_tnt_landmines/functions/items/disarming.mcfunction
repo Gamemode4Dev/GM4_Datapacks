@@ -8,7 +8,7 @@ playsound minecraft:entity.sheep.shear block @a[distance=..8] ~ ~1 ~ 0.6 0.3
 advancement grant @a[distance=..4,gamemode=!spectator] only gm4:tnt_landmines
 
 #return item
-summon item ~ ~1 ~ {Tags:["gm4_mine_checked","gm4_mine_new"],PickupDelay:30s,Motion:[0.0,0.4,0.0],Item:{id:":player_head",Count:1b,tag:{SkullOwner:"$landmine",gm4_tnt_landmines:{item:"landmine",block:"minecraft:tnt"},display:{Name:'{"italic":false,"translate":"item.gm4.tnt_landmine","fallback":"Landmine"}',Lore:['{"translate":"item.gm4.tnt_landmine.use","fallback":"Drop to use"}']}}}}
+summon item ~ ~1 ~ {Tags:["gm4_mine_checked","gm4_mine_new"],PickupDelay:30s,Motion:[0.0,0.4,0.0],Item:{id:":player_head",count:1,tag:{SkullOwner:"$landmine",gm4_tnt_landmines:{item:"landmine",block:"minecraft:tnt"},display:{Name:'{"italic":false,"translate":"item.gm4.tnt_landmine","fallback":"Landmine"}',Lore:['{"translate":"item.gm4.tnt_landmine.use","fallback":"Drop to use"}']}}}}
 data modify entity @e[type=item,tag=gm4_mine_new,distance=..1.2,limit=1,sort=nearest] Item set from entity @e[type=armor_stand,tag=gm4_tnt_mine,distance=..0.1,limit=1,sort=nearest] ArmorItems[0]
 tag @e[type=item,tag=gm4_mine_new,distance=..1.2,limit=1,sort=nearest] remove gm4_mine_new
 

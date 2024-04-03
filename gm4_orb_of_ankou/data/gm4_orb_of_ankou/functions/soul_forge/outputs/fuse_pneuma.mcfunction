@@ -2,7 +2,7 @@
 # run from soul_forge/outputs/check_fuse
 
 # summon item
-summon item ~ ~0.2 ~ {PickupDelay:40s,Glowing:1b,Item:{id:"minecraft:firework_star",Count:1b},Tags:["gm4_oa_unset"],Motion:[0.0,0.4,0.0]}
+summon item ~ ~0.2 ~ {PickupDelay:40s,Glowing:1b,Item:{id:"minecraft:firework_star",count:1},Tags:["gm4_oa_unset"],Motion:[0.0,0.4,0.0]}
 
 # restore data of stored orb
 data modify storage gm4_orb_of_ankou:temp Item set from storage gm4_orb_of_ankou:temp ArmorItems[3]

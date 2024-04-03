@@ -1,4 +1,4 @@
-#@s = not tipped skeletons with nbt={HandItems:[{id:"minecraft:bow",Count:1b},{}],PersistenceRequired:0b}
+#@s = not tipped skeletons with nbt={HandItems:[{id:"minecraft:bow",count:1},{}],PersistenceRequired:0b}
 #at @s
 #called by event
 

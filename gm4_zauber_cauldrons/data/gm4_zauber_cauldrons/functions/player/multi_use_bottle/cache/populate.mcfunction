@@ -3,7 +3,7 @@
 # run from player/multi_use_bottle/check_gamemode
 
 # save coordinates into id'd entity
-execute in overworld run summon item 29999998 1 7134 {Item:{id:"minecraft:potion",Count:1b},Tags:["gm4_zc_new_nbt_storage","gm4_zc_nbt_storage"],Age:5400,PickupDelay:32767}
+execute in overworld run summon item 29999998 1 7134 {Item:{id:"minecraft:potion",count:1},Tags:["gm4_zc_new_nbt_storage","gm4_zc_nbt_storage"],Age:5400,PickupDelay:32767}
 scoreboard players operation @e[type=item,tag=gm4_zc_new_nbt_storage,limit=1] gm4_zc_id = @s gm4_zc_id
 
 # read item data from hand into entity

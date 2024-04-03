@@ -3,7 +3,7 @@
 #run from binder/recipes/check_recipes
 
 # summon empty enchanted book
-summon item ~ ~-0.26 ~ {Tags:["gm4_empty_enchanted_book"],PickupDelay:0s,Item:{id:"minecraft:enchanted_book",Count:1b,tag:{StoredEnchantments:[]}}}
+summon item ~ ~-0.26 ~ {Tags:["gm4_empty_enchanted_book"],PickupDelay:0s,Item:{id:"minecraft:enchanted_book",count:1,tag:{StoredEnchantments:[]}}}
 
 # remove the leather
 data remove entity @s HandItems[0]
