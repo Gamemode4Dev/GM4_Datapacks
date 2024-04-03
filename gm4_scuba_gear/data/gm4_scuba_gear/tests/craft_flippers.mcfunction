@@ -1,7 +1,7 @@
 # @template gm4_custom_crafters:test_platform
 
-item replace block ~1 ~1 ~1 container.0 with scute
-item replace block ~1 ~1 ~1 container.2 with scute
+item replace block ~1 ~1 ~1 container.0 with turtle_scute
+item replace block ~1 ~1 ~1 container.2 with turtle_scute
 item replace block ~1 ~1 ~1 container.3 with rabbit_hide
 item replace block ~1 ~1 ~1 container.5 with rabbit_hide
 item replace block ~1 ~1 ~1 container.6 with rabbit_hide
