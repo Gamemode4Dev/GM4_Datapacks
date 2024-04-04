@@ -4,7 +4,7 @@
 # run from player/armor/apply_set_bonus
 
 # attribute
-attribute @s minecraft:generic.armor modifier add b29259d8-1ac4-4791-9552-b944910cd435 gm4_zauber_cauldrons.armor.set_bonus.armor_boost 1 add
+attribute @s minecraft:generic.armor modifier add b29259d8-1ac4-4791-9552-b944910cd435 gm4_zauber_cauldrons.armor.set_bonus.armor_boost 1 add_value
 
 # sounds and visuals
 # count for particles must be 0 for RGB

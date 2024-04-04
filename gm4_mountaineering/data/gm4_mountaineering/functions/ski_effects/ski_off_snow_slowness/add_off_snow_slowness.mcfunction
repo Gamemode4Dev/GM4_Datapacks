@@ -3,5 +3,5 @@
 # at @s
 # run from check_snowy_block
 
-attribute @s minecraft:generic.movement_speed modifier add bd5e1dd5-58e8-40fc-9028-cc0d390e7902 "gm4_mountaineering_off_snow_slowness" -0.2 multiply_base
+attribute @s minecraft:generic.movement_speed modifier add bd5e1dd5-58e8-40fc-9028-cc0d390e7902 "gm4_mountaineering_off_snow_slowness" -0.2 add_multiplied_base
 tag @s add gm4_mountaineering_ski_slowness

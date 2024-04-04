@@ -4,7 +4,7 @@
 # run from player/armor/apply_set_bonus
 
 # attribute
-attribute @s minecraft:generic.movement_speed modifier add 7a7ff3d6-8e01-4051-99fa-94c40b12fb9a gm4_zauber_cauldrons.armor.set_bonus.speed_boost 0.12 multiply_base
+attribute @s minecraft:generic.movement_speed modifier add 7a7ff3d6-8e01-4051-99fa-94c40b12fb9a gm4_zauber_cauldrons.armor.set_bonus.speed_boost 0.12 add_multiplied_base
 
 # sounds and visuals
 # count for particles must be 0 for RGB

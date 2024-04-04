@@ -5,17 +5,17 @@
 
 # | Biome Modifiers
 # snowy
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] generic.movement_speed modifier add 8b68cb8f-b3ac-489b-bb24-ed6cca2fcacf "gm4_ce_modifier_snowy" -0.15 multiply_base
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] generic.max_health modifier add 9e950abf-f1d2-407d-a886-749059c29325 "gm4_ce_modifier_snowy" 0.15 multiply_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] generic.movement_speed modifier add 8b68cb8f-b3ac-489b-bb24-ed6cca2fcacf "gm4_ce_modifier_snowy" -0.15 add_multiplied_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] generic.max_health modifier add 9e950abf-f1d2-407d-a886-749059c29325 "gm4_ce_modifier_snowy" 0.15 add_multiplied_base
 # mountainous
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.armor modifier add ba452899-be21-45b2-860c-c28947ba8c23 "gm4_ce_modifier_mountainous" 0.25 multiply_base
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.armor_toughness modifier add 899a6423-93ed-4293-bde3-d993a3c50d33 "gm4_ce_modifier_mountainous" 0.5 multiply_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.armor modifier add ba452899-be21-45b2-860c-c28947ba8c23 "gm4_ce_modifier_mountainous" 0.25 add_multiplied_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.armor_toughness modifier add 899a6423-93ed-4293-bde3-d993a3c50d33 "gm4_ce_modifier_mountainous" 0.5 add_multiplied_base
 # burned
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/burned] generic.movement_speed modifier add 00a0987e-646e-4c9e-911e-8b07ad12df20 "gm4_ce_modifier_burned" 0.1 multiply_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/burned] generic.movement_speed modifier add 00a0987e-646e-4c9e-911e-8b07ad12df20 "gm4_ce_modifier_burned" 0.1 add_multiplied_base
 # toxic
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/toxic] generic.attack_damage modifier add 0bb9ee29-b563-4cf7-b665-716391af0085 "gm4_ce_modifier_toxic" -0.25 multiply_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/toxic] generic.attack_damage modifier add 0bb9ee29-b563-4cf7-b665-716391af0085 "gm4_ce_modifier_toxic" -0.25 add_multiplied_base
 # deep
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/deep] generic.armor_toughness modifier add 5f5931f9-24d8-41ae-bab1-1468b5c8f35c "gm4_ce_modifier_deep" 0.6 multiply_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/deep] generic.armor_toughness modifier add 5f5931f9-24d8-41ae-bab1-1468b5c8f35c "gm4_ce_modifier_deep" 0.6 add_multiplied_base
 # dark
 execute if predicate gm4_combat_expanded:mob/modifier/dark run function gm4_combat_expanded:mob/init/modifier/special/dark_mob
 

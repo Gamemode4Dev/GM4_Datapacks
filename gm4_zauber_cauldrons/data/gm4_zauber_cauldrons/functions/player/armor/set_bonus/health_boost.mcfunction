@@ -4,7 +4,7 @@
 # run from player/armor/apply_set_bonus
 
 # attribute
-attribute @s minecraft:generic.max_health modifier add 591ea7a8-12f8-413f-80c9-9f80702c961b gm4_zauber_cauldrons.armor.set_bonus.health_boost 4 add
+attribute @s minecraft:generic.max_health modifier add 591ea7a8-12f8-413f-80c9-9f80702c961b gm4_zauber_cauldrons.armor.set_bonus.health_boost 4 add_value
 
 # sounds and visuals
 # count for particles must be 0 for RGB
