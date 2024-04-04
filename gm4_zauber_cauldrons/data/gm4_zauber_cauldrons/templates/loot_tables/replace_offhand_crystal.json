@@ -11,7 +11,7 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_model_data": "item/crystal/{{effect}}",
-                                "minecraft:hide_additional_tooltip": true,
+                                "minecraft:hide_additional_tooltip": {},
                                 "minecraft:firework_explosion": {
                                     "colors": [
                                         {{custom_potion_color}}

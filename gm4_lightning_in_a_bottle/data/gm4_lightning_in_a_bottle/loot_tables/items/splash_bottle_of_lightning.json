@@ -45,12 +45,12 @@
                   "potion": "gm4:lightning",
                   "custom_color": 11985402
                 },
-                "minecraft:hide_additional_tooltip": true
+                "minecraft:hide_additional_tooltip": {}
               }
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_lightning_in_a_bottle:1}"
+              "tag": "{gm4_lightning_in_a_bottle:1b}"
             }
           ]
         }

@@ -42,7 +42,6 @@
                 "minecraft:enchantment_glint_override": true,
                 "minecraft:custom_model_data": "item/lingering_lightning_in_a_bottle",
                 "minecraft:potion_contents": {
-                  "potion": "gm4:lightning",
                   "custom_color": 11985402,
                   "custom_effects": [
                     {
@@ -52,12 +51,12 @@
                     }
                   ]
                 },
-                "minecraft:hide_additional_tooltip": true
+                "minecraft:hide_additional_tooltip": {}
               }
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_lightning_in_a_bottle:1,Particle:'electric_spark',RadiusOnUse:0}"
+              "tag": "{gm4_lightning_in_a_bottle:1b,Particle:'electric_spark',RadiusOnUse:0}"
             }
           ]
         }

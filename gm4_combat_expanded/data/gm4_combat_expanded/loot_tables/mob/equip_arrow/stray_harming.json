@@ -24,7 +24,7 @@
                     }
                   ]
                 },
-                "minecraft:hide_additional_tooltip": true
+                "minecraft:hide_additional_tooltip": {}
               }
             },
             {

@@ -25,6 +25,10 @@
                             }
                         },
                         {
+                            "function": "set_custom_data",
+                            "tag": "{gm4_potion_liquids:{potion:'floating'}}"
+                        },
+                        {
                             "function": "set_name",
                             "name": {
                                 "translate": "item.gm4.splash_floating_potion",

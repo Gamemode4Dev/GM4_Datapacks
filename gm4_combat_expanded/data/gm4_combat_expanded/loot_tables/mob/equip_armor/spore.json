@@ -111,7 +111,7 @@
                   "name": "gm4_ce_modifier_flowering",
                   "amount": -0.25,
                   "operation": "add_multiplied_base",
-                  "id": [
+                  "uuid": [
                     -608223260,
                     18434400,
                     -1707170127,

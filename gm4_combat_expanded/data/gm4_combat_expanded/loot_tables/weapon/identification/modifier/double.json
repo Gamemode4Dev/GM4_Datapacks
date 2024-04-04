@@ -44,7 +44,7 @@
                   "attribute": "minecraft:generic.attack_damage",
                   "name": "gm4_ce_double_attack_damage",
                   "amount": 1,
-                  "operation": "multiply_total",
+                  "operation": "add_multiplied_total",
                   "slot": "mainhand"
                 },
                 {
