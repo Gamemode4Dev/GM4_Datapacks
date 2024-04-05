@@ -26,6 +26,7 @@ pipeline:
       - gm4.plugins.readme_generator.libraries
     meta:
       mecha:
+        commands: "https://raw.githubusercontent.com/misode/mcmeta/24w13a-summary/commands/data.json"
         formatting:
           layout: preserve
           nbt_compact: True
@@ -52,6 +53,7 @@ pipeline:
       - gm4.plugins.readme_generator
     meta:
       mecha:
+        commands: "https://raw.githubusercontent.com/misode/mcmeta/24w13a-summary/commands/data.json"
         formatting:
           layout: preserve
           nbt_compact: True
