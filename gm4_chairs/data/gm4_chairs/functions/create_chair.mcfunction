@@ -13,7 +13,7 @@ execute if block ~ ~ ~ #minecraft:stairs[facing=east] positioned ~ ~-10000 ~ as 
 execute if block ~ ~ ~ #minecraft:stairs[facing=west] positioned ~ ~-10000 ~ as @e[type=minecraft:pig,tag=gm4_chairs,distance=..0.4,limit=1] at @s run tp @s ~.05 ~10000 ~ -90 0
 
 # store saddle data in chair
-data modify entity @e[type=minecraft:pig,tag=gm4_chairs,distance=..0.4,limit=1] HandItems[0] set from entity @s Item
+item replace entity @e[type=minecraft:pig,tag=gm4_chairs,distance=..0.4,limit=1] weapon.mainhand from entity @s contents
 scoreboard players set @e[type=minecraft:pig,tag=gm4_chairs,distance=..0.4,limit=1] gm4_entity_version 1
 
 # place sound

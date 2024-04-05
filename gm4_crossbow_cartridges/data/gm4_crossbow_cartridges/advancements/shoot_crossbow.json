@@ -15,20 +15,11 @@
               }
             }
           }
-        ],
-        "item": {
-          "components": {
-            "minecraft:charged_projectiles": [
-              {
-                "id": "minecraft:spectral_arrow"
-              }
-            ]
-          }
-        }
+        ]
       }
     }
   },
   "rewards": {
-    "function": "gm4_crossbow_cartridges:shoot/spectral"
+    "function": "gm4_crossbow_cartridges:shoot/any_arrow"
   }
 }

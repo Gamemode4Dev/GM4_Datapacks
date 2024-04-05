@@ -7,13 +7,8 @@
         "items": [
           "minecraft:armor_stand"
         ],
-        "predicates": {
-          "minecraft:enchantments": [
-            {
-              "enchantment": "minecraft:protection",
-              "levels": 0
-            }
-          ]
+        "components": {
+          "minecraft:enchantment_glint_override": true
         }
       }
     }

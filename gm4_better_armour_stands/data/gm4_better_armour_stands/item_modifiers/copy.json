@@ -6,20 +6,6 @@
     }
   },
   {
-    "function": "minecraft:copy_nbt",
-    "source": {
-      "type": "minecraft:storage",
-      "source": "gm4_better_armour_stands:temp"
-    },
-    "ops": [
-      {
-        "source": "EntityTag",
-        "target": "EntityTag",
-        "op": "replace"
-      }
-    ]
-  },
-  {
     "function": "minecraft:set_lore",
     "mode": "replace_all",
     "entity": "this",
