@@ -24,4 +24,4 @@ scoreboard players operation $current_damage gm4_arb_data += $incoming_damage gm
 scoreboard players operation $current_damage gm4_arb_data < $max_damage gm4_arb_data
 
 execute store result storage gm4_arborenda_shamir:temp damage int 1 run scoreboard players get $current_damage gm4_arb_data
-item modify entity @s weapon.mainhand gm4_arborenda_shamir:set_damage
+function gm4_arborenda_shamir:player/set_damage with storage gm4_arborenda_shamir:temp

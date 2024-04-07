@@ -27,20 +27,6 @@
                             }
                         },
                         {
-                            "function": "minecraft:copy_nbt",
-                            "source": {
-                                "type": "minecraft:storage",
-                                "source": "gm4_mountaineering:temp"
-                            },
-                            "ops": [
-                                {
-                                    "source": "crampons_item.tag",
-                                    "target": "{}",
-                                    "op": "merge"
-                                }
-                            ]
-                        },
-                        {
                             "function": "minecraft:set_attributes",
                             "modifiers": [
                                 {

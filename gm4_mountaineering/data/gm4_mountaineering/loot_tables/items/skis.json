@@ -25,20 +25,6 @@
                                 "fallback": "Skis",
                                 "italic": false
                             }
-                        },
-                        {
-                            "function": "minecraft:copy_nbt",
-                            "source": {
-                                "type": "minecraft:storage",
-                                "source": "gm4_mountaineering:temp"
-                            },
-                            "ops": [
-                                {
-                                    "source": "ski_item.tag",
-                                    "target": "{}",
-                                    "op": "merge"
-                                }
-                            ]
                         }
                     ]
                 }
