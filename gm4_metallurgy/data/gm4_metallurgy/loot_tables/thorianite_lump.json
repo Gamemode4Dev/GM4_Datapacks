@@ -47,7 +47,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_metallurgy:{metal:{type:'thorium',amount:[1],castable:1},item:'ore'}}"
+              "tag": "{gm4_metallurgy:{metal:{type:'thorium',amount:[1s],castable:1b},item:'ore'}}"
             }
           ]
         }

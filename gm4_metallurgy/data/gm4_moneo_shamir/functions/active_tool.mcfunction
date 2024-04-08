@@ -4,8 +4,8 @@
 scoreboard players set $tool_current_damage gm4_ml_data 0
 scoreboard players set $tool_max_damage gm4_ml_data 0
 
-execute store result score $tool_current_damage gm4_ml_data run data get entity @s SelectedItem.tag.Damage
-execute store result score $tool_max_damage gm4_ml_data run data get entity @s SelectedItem.tag.MaxDurability
+execute store result score $tool_current_damage gm4_ml_data run data get entity @s SelectedItem.components."minecraft:damage"
+execute store result score $tool_max_damage gm4_ml_data run data get entity @s SelectedItem.components."minecraft:custom_data".MaxDurability
 
 # update newly upgraded netherite gear
 execute if score $tool_max_damage gm4_ml_data matches 1561 if predicate gm4_moneo_shamir:holding_netherite run function gm4_moneo_shamir:update_netherite

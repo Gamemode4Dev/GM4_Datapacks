@@ -15,7 +15,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": "{gm4_metallurgy:{has_shamir:1,metal:{type:'thorium',amount:[12],castable:1},item:'obsidian_cast'}}"
+                            "tag": "{gm4_metallurgy:{has_shamir:1b,metal:{type:'thorium',amount:[12s],castable:1b},item:'obsidian_cast'}}"
                         },
                         {
                             "function": "minecraft:set_name",
