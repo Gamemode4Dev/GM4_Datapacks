@@ -41,8 +41,8 @@ model_data:
     template: generated
 ```
 ```mcfunction
-give @s rabbit_hide 1 {CustomModelData:'gm4_bat_grenades:item/bat_leather'}
-summon item ~ ~ ~ {Item:{id:"rabbit_hide",count:1,tag:{CustomModelData:"item/bat_leather"}}}
+give @s rabbit_hide[custom_model_data="gm4_bat_grenades:item/bat_leather"]
+summon item ~ ~ ~ {Item:{id:"rabbit_hide",count:1,components:{"minecraft:custom_model_data":"item/bat_leather"}}}
 ```
 
 For full details about the `model_data` config see [`model_data` Config](#model_data-config)

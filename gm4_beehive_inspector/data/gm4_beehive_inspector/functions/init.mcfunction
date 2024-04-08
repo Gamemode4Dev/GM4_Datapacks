@@ -4,8 +4,4 @@ execute unless score beehive_inspector gm4_modules matches 1 run data modify sto
 execute unless score beehive_inspector gm4_earliest_version < beehive_inspector gm4_modules run scoreboard players operation beehive_inspector gm4_earliest_version = beehive_inspector gm4_modules
 scoreboard players set beehive_inspector gm4_modules 1
 
-schedule function gm4_beehive_inspector:main 1t
-
-
-
 #$moduleUpdateList
