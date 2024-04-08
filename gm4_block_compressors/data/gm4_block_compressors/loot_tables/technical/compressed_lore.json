@@ -16,7 +16,7 @@
                 "fallback": "Compressed ×%s",
                 "with": [
                   {
-                    "nbt": "Item.tag.gm4_block_compressors.compression_level",
+                    "nbt": "Item.components.'minecraft:custom_data'.gm4_block_compressors.compression_level",
                     "storage": "gm4_block_compressors:temp/item_stack"
                   }
                 ],

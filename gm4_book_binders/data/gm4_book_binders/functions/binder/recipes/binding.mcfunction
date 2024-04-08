@@ -2,6 +2,8 @@
 # at @s
 #run from gm4_book_binders:binder/recipes/leather
 
+# TODO 1.20.5: It's not trivial to loop over all enchantments, will need to explicitly list all enchantment IDs
+
 # reset fake players
 scoreboard players set enchantments_left gm4_binder_data 0
 

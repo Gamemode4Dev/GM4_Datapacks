@@ -10,8 +10,6 @@ pipeline:
 
 meta:
   gm4:
-    versioning: 
-      schedule_loops: [main]
     website:
       description: Adds a handy tooltip to Beehive items, telling you exactly how many bees and how much honey is stored inside! A beekeepers' dream!
       recommended: []
