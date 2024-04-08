@@ -3,7 +3,7 @@
 # called by midnight menaces base if this expansion was selected. pulsed every 0.8 seconds throughout the night.
 
 # resurrecting slimes
-execute as @e[type=minecraft:item,x=0,nbt={Item:{id:"minecraft:slime_ball"},OnGround:1b}] run function gm4_slime_fests:mark_slime_ball
+execute as @e[type=minecraft:item,x=0,nbt={OnGround:1b}] if items entity @s contents minecraft:slime_ball run function gm4_slime_fests:mark_slime_ball
 execute as @e[type=minecraft:item,scores={gm4_reslimify=8..}] at @s run function gm4_slime_fests:spawn_slime
 
 # slime takeover

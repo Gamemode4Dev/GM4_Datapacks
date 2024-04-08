@@ -7,7 +7,7 @@ particle minecraft:ash ~ ~1.5 ~ 0 0.3 0 0.001 40 force
 playsound minecraft:entity.tnt.primed block @a[distance=..8] ~ ~1 ~ 0.7 1.7
 
 # check if it's an invisible one
-execute if entity @s[nbt={Item:{tag:{gm4_tnt_landmines:{block:"minecraft:air"}}}}] run scoreboard players set invisible gm4_tnt_data 1
+execute if items entity @s contents *[custom_data~{gm4_tnt_landmines:{block:"minecraft:air"}}] run scoreboard players set invisible gm4_tnt_data 1
 
 # create initial landmine armor stand
 execute unless score invisible gm4_tnt_data matches 1 run summon armor_stand ~ ~ ~ {NoGravity:1b,Small:1b,Invisible:1b,Marker:1b,Invulnerable:1b,HasVisualFire:1,Tags:["gm4_tnt_mine_unset","gm4_no_edit","smithed.entity","smithed.strict"],DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:tnt",count:1}]}

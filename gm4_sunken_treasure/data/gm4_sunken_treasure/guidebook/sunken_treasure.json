@@ -11,14 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:diamond_shovel",
-              "minecraft:golden_shovel",
-              "minecraft:iron_shovel",
-              "minecraft:netherite_shovel",
-              "minecraft:stone_shovel",
-              "minecraft:wooden_shovel"
-            ],
+            "items": "#minecraft:shovels",
             "enchantments": [
               {
                 "enchantment": "minecraft:fortune"

@@ -19,8 +19,8 @@ scoreboard players set $loop gm4_rol_data 0
 execute anchored eyes run function gm4_rope_ladders:mechanics/break_floating_ladders/scan_column/loop
 
 # teleport all ladder items to top
-execute if score $rope_drop_mode gm4_rol_data matches 1 if score $rope_drop_direction gm4_rol_data matches 1 if block ~ ~2 ~-1 #gm4:replaceable run tp @e[type=item,distance=..64,nbt={Item:{id:"minecraft:ladder"},Age:0s}] ~ ~2 ~-1
-execute if score $rope_drop_mode gm4_rol_data matches 1 if score $rope_drop_direction gm4_rol_data matches 2 if block ~ ~2 ~1 #gm4:replaceable run tp @e[type=item,distance=..64,nbt={Item:{id:"minecraft:ladder"},Age:0s}] ~ ~2 ~1
-execute if score $rope_drop_mode gm4_rol_data matches 1 if score $rope_drop_direction gm4_rol_data matches 3 if block ~-1 ~2 ~ #gm4:replaceable run tp @e[type=item,distance=..64,nbt={Item:{id:"minecraft:ladder"},Age:0s}] ~-1 ~2 ~
-execute if score $rope_drop_mode gm4_rol_data matches 1 if score $rope_drop_direction gm4_rol_data matches 4 if block ~1 ~2 ~ #gm4:replaceable run tp @e[type=item,distance=..64,nbt={Item:{id:"minecraft:ladder"},Age:0s}] ~1 ~2 ~
-execute if score $rope_drop_mode gm4_rol_data matches 1 if score $rope_drop_direction gm4_rol_data matches 1..4 as @e[type=item,distance=..64,nbt={Item:{id:"minecraft:ladder"},Age:0s}] run data modify entity @s Motion set value []
+execute if score $rope_drop_mode gm4_rol_data matches 1 if score $rope_drop_direction gm4_rol_data matches 1 if block ~ ~2 ~-1 #gm4:replaceable run tp @e[type=item,distance=..64,predicate=gm4_rope_ladders:is_ladder_item,nbt={Age:0s}] ~ ~2 ~-1
+execute if score $rope_drop_mode gm4_rol_data matches 1 if score $rope_drop_direction gm4_rol_data matches 2 if block ~ ~2 ~1 #gm4:replaceable run tp @e[type=item,distance=..64,predicate=gm4_rope_ladders:is_ladder_item,nbt={Age:0s}] ~ ~2 ~1
+execute if score $rope_drop_mode gm4_rol_data matches 1 if score $rope_drop_direction gm4_rol_data matches 3 if block ~-1 ~2 ~ #gm4:replaceable run tp @e[type=item,distance=..64,predicate=gm4_rope_ladders:is_ladder_item,nbt={Age:0s}] ~-1 ~2 ~
+execute if score $rope_drop_mode gm4_rol_data matches 1 if score $rope_drop_direction gm4_rol_data matches 4 if block ~1 ~2 ~ #gm4:replaceable run tp @e[type=item,distance=..64,predicate=gm4_rope_ladders:is_ladder_item,nbt={Age:0s}] ~1 ~2 ~
+execute if score $rope_drop_mode gm4_rol_data matches 1 if score $rope_drop_direction gm4_rol_data matches 1..4 as @e[type=item,distance=..64,predicate=gm4_rope_ladders:is_ladder_item,nbt={Age:0s}] run data modify entity @s Motion set value []

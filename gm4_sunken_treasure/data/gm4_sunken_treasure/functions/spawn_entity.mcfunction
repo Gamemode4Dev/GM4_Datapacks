@@ -3,7 +3,7 @@
 # and from treasure_gravel
 # and from treasure sand
 
-data modify storage gm4_sunken_treasure:temp spawn set from entity @s Item.tag.gm4_sunken_treasure.spawn
+data modify storage gm4_sunken_treasure:temp spawn set from entity @s Item.components."minecraft:custom_data".gm4_sunken_treasure.spawn
 
 execute if data storage gm4_sunken_treasure:temp spawn{id:"minecraft:glow_squid"} run summon glow_squid
 execute if data storage gm4_sunken_treasure:temp spawn{id:"minecraft:squid"} run summon squid
