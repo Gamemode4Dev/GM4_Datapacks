@@ -10,8 +10,8 @@ There are 2 function tags to be used: one for placing machines (`#gm4_machines:p
 ### Placing Down Machines
 Machine blocks must be player heads with the following NBT data:
 
-```
-{SkullOwner:{Name:"BLOCK_IDENTIFIER",Properties:{textures:[{Signature:"gm4_machine"}]}}}
+```mcfunction
+{components:{"minecraft:custom_data":{gm4_machines:{id:"BLOCK_INDENTIFIER"}}}}
 ```
 
 When placing down a player head with this NBT, the function tag `#gm4_machines:place_down` will run. This will run `as` the player who placed the block and `at` the center of the block that was placed. The following command should be used to verify the specific machine placed:
