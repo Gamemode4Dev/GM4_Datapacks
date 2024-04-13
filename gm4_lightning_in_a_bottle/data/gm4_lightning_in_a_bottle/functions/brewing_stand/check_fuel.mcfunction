@@ -4,3 +4,4 @@
 
 execute store result score $fuel gm4_liab_data run data get block ~ ~ ~ Fuel
 execute if score $fuel gm4_liab_data matches 1.. run function gm4_lightning_in_a_bottle:brewing_stand/check_potions
+scoreboard players reset $fuel gm4_liab_data

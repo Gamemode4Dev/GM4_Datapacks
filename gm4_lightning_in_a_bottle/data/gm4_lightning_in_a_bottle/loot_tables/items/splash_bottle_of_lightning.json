@@ -42,7 +42,6 @@
                 "minecraft:enchantment_glint_override": true,
                 "minecraft:custom_model_data": "item/splash_lightning_in_a_bottle",
                 "minecraft:potion_contents": {
-                  "potion": "gm4:lightning",
                   "custom_color": 11985402
                 },
                 "minecraft:hide_additional_tooltip": {}
