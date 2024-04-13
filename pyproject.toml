@@ -7,7 +7,7 @@ authors = ["Gamemode 4 Contributors"]
 [tool.poetry.dependencies]
 python = "^3.10"
 beet = "0.104.1"
-mecha = { git = "https://github.com/misode/mecha.git", branch = "1.20.5-item-predicate" }
+mecha = "0.93.1"
 bolt = "^0.45.0"
 PyYAML = "^6.0"
 pydantic = "^2.6.1"
