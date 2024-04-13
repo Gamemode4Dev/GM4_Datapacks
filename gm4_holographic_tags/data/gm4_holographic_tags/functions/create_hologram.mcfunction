@@ -2,7 +2,7 @@
 # run from main
 
 summon area_effect_cloud ~ ~ ~ {CustomNameVisible:1,Particle:"block air",Age:-2147483647,Duration:2147483647,Tags:["gm4_hologram","smithed.entity","smithed.strict"]}
-data modify entity @e[type=area_effect_cloud,tag=gm4_hologram,limit=1,sort=nearest,distance=..0.1] CustomName set from entity @s Item.tag.display.Name
+data modify entity @e[type=area_effect_cloud,tag=gm4_hologram,limit=1,sort=nearest,distance=..0.1] CustomName set from entity @s Item.components."minecraft:custom_name"
 data modify entity @e[type=area_effect_cloud,tag=gm4_hologram,limit=1,sort=nearest,distance=..0.1] Rotation set from entity @s Rotation
 scoreboard players set @e[type=area_effect_cloud,tag=gm4_hologram,limit=1,sort=nearest,distance=..0.1] gm4_entity_version 1
 execute if block ^ ^ ^-0.75 #minecraft:wool as @e[type=area_effect_cloud,tag=gm4_hologram,limit=1,sort=nearest,distance=..0.1] run function gm4_holographic_tags:set_color
