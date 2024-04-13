@@ -18,7 +18,7 @@ data modify entity @s HandItems[1] set value {id:"minecraft:iron_ingot",count:1}
 playsound minecraft:entity.zombie.ambient hostile @a[distance=..5] ~ ~ ~ 0.2 2
 playsound minecraft:entity.witch.celebrate hostile @a[distance=..5] ~ ~ ~ 1 2
 playsound minecraft:block.chain.break hostile @a[distance=..5] ~ ~ ~ 2 2
-particle block minecraft:iron_block ~ ~ ~ 0 0 0 1 15 force
+particle minecraft:block{block_state:"minecraft:minecraft:iron_block"} ~ ~ ~ 0 0 0 1 15 force
 
 # mark full inventory with tag (to prevent continuous data checks)
 execute if score count gm4_menace_data matches 64.. run tag @s add gm4_goblin_iron_full

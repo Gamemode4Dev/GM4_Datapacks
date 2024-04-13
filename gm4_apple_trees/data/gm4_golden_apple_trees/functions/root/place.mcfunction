@@ -7,5 +7,5 @@
 setblock ~ ~ ~ gold_ore
 
 # visuals
-particle block gold_block ~ ~ ~ 0.7 0.7 0.7 0.02 15
+particle minecraft:block{block_state:"minecraft:gold_block"} ~ ~ ~ 0.7 0.7 0.7 0.02 15
 playsound minecraft:block.ancient_debris.place block @a[distance=..8] ~ ~ ~ 0.5 0.3

@@ -5,7 +5,7 @@
 
 # place tripwire
 execute unless block ~ ~ ~ minecraft:tripwire run function gm4_crossbow_cartridges:cables/place_tripwire
-particle dust 1 1 1 1 ~ ~ ~ .1 .1 .1 1 5 normal
+particle minecraft:dust{color:[1,1,1],scale:1} ~ ~ ~ .1 .1 .1 1 5 normal
 scoreboard players add @s gm4_cb_tw_length 1
 
 # kill arrow

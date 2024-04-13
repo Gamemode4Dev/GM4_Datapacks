@@ -9,5 +9,5 @@ execute store result score $dropped_item gm4_machine_data run kill @e[type=item,
 kill @s
 
 # drop item (unless broken in creative mode)
-particle block piston ~ ~ ~ .1 .25 .1 .05 30 normal @a
+particle minecraft:block{block_state:"minecraft:piston"} ~ ~ ~ .1 .25 .1 .05 30 normal @a
 execute if score $dropped_item gm4_machine_data matches 1 run loot spawn ~ ~ ~ loot gm4_forming_press:items/forming_press

@@ -9,5 +9,5 @@ execute store result score $dropped_item gm4_machine_data run kill @e[type=item,
 kill @s
 
 # drop item (unless broken in creative mode)
-particle block enchanting_table ~ ~ ~ .1 .25 .1 .05 30 normal @a
+particle minecraft:block{block_state:"minecraft:enchanting_table"} ~ ~ ~ .1 .25 .1 .05 30 normal @a
 execute if score $dropped_item gm4_machine_data matches 1 run loot spawn ~ ~ ~ loot gm4_enchantment_extractors:items/enchantment_extractor

@@ -12,5 +12,5 @@ kill @s
 
 
 # drop item (unless broken in creative mode)
-particle block glass ~ ~0.5 ~ .1 .25 .1 .05 30 normal @a
+particle minecraft:block{block_state:"minecraft:glass"} ~ ~0.5 ~ .1 .25 .1 .05 30 normal @a
 execute if score $dropped_item gm4_machine_data matches 1 run loot spawn ~ ~ ~ loot gm4_liquid_tanks:items/liquid_tank
