@@ -19,7 +19,7 @@ item modify entity @a[tag=gm4_bas_active,limit=1] weapon.offhand gm4_better_armo
 execute as @a[tag=gm4_bas_active,limit=1] run function gm4_better_armour_stands:pose/copy_entity_data with storage gm4_better_armour_stands:temp
 
 # display particles and play a sound to confirm
-particle item armor_stand ~ ~ ~ .2 1 .2 0 20
+particle minecraft:item{item:"minecraft:armor_stand"} ~ ~ ~ .2 1 .2 0 20
 playsound minecraft:block.wood.break player @a[distance=..6] ~ ~ ~ 0.5 1
 
 # reset storage

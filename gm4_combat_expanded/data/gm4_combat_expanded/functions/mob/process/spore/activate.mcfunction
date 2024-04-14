@@ -20,7 +20,7 @@ execute if score $spore_count gm4_ce_data matches 4.. align xz run summon zombie
 execute if entity @s[tag=gm4_ce_spore.cherry] run tag @e[type=zombie,tag=gm4_ce_spore_mob,distance=..1] add gm4_ce_spore_zombie.cherry
 
 # vfx
-particle block flowering_azalea_leaves ~ ~1 ~ 0.35 1 0.35 0.1 32
+particle minecraft:block{block_state:"minecraft:flowering_azalea_leaves"} ~ ~1 ~ 0.35 1 0.35 0.1 32
 playsound block.grass.break hostile @a ~ ~ ~ 0.6 0.6
 
 # remove spores

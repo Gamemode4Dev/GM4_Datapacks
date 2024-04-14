@@ -29,5 +29,5 @@ execute if score $giant_damage gm4_ce_data matches 2 as @e[distance=0.01..4.5,pr
 execute if score $giant_damage gm4_ce_data matches 1 as @e[distance=0.01..4.5,predicate=gm4_combat_expanded:technical/pvp_able,team=!gm4_ce_team_check,tag=!smithed.strict] run damage @s 2 player_attack by @p[tag=gm4_ce_target]
 tag @s remove gm4_ce_target
 
-particle block stone ~ ~ ~ 1 0.2 1 1 30
+particle minecraft:block{block_state:"minecraft:stone"} ~ ~ ~ 1 0.2 1 1 30
 playsound minecraft:entity.zombie.attack_wooden_door player @a ~ ~ ~ 0.7 0.25

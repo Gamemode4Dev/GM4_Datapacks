@@ -10,4 +10,4 @@ data remove entity @s HandItems[0]
 
 # sounds and visuals
 playsound minecraft:block.beehive.shear master @a ~ ~ ~ 0.4 0.1
-particle item enchanted_book ^-.15 ^1.05 ^.05 .1 .1 .1 .07 6
+particle minecraft:item{item:"minecraft:enchanted_book"} ^-.15 ^1.05 ^.05 .1 .1 .1 .07 6
