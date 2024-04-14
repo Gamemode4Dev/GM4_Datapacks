@@ -1,0 +1,16 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": ctx.meta['rare_start'],
+        "max": int(f"{len(ctx.meta['enumeration'])-1}")
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone"
+        }
+      ]
+    }
+  ]
+}
