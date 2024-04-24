@@ -15,7 +15,7 @@ await delay 1s
 dummy @s use block ~1 ~1 ~1 up
 
 await block ~1 ~1 ~1 air
-assert items entity @e[gm4_item,distance=..4] contents minecraft:player_head[custom_data~{gm4_machines:{id:"relocator_full"}}]
+assert items entity @e[type=item,distance=..4] contents minecraft:player_head[custom_data~{gm4_machines:{id:"relocator_full"}}]
 
 clear @s
 tp @e[type=item,distance=..4,limit=1] @s

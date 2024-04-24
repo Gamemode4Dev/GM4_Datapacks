@@ -9,7 +9,7 @@ dummy @s drop
 
 await items entity @e[type=item,dx=12,dy=2,dz=2,distance=3..5,nbt={OnGround:1b}] contents minecraft:iron_ingot
 
-item replace entity @s armor.chest with minecraft:iron_chestplate[custom_data~{gm4_metallurgy:{has_shamir:1b,active_shamir:"iacio"}}]
+item replace entity @s armor.chest with minecraft:iron_chestplate[custom_data={gm4_metallurgy:{has_shamir:1b,active_shamir:"iacio"}}]
 
 await delay 1t
 
