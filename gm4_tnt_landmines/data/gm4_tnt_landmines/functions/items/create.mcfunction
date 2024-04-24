@@ -16,8 +16,8 @@ scoreboard players set @e[type=armor_stand,tag=gm4_tnt_mine_unset,limit=1,distan
 
 # set helmet slot to block and set boots slot to tnt landmine item
 data modify entity @e[type=armor_stand,tag=gm4_tnt_mine_unset,limit=1,distance=..0.1] ArmorItems[0] set from entity @s Item
-execute unless score invisible gm4_tnt_data matches 1 run data modify entity @e[type=armor_stand,tag=gm4_tnt_mine_unset,limit=1,distance=..0.1] ArmorItems[3].id set from entity @s Item.tag.gm4_tnt_landmines.block
-execute unless score invisible gm4_tnt_data matches 1 run data modify entity @e[type=armor_stand,tag=gm4_tnt_mine_unset,limit=1,distance=..0.1] ArmorItems[3].tag.CustomModelData set from entity @s Item.tag.CustomModelData
+execute unless score invisible gm4_tnt_data matches 1 run data modify entity @e[type=armor_stand,tag=gm4_tnt_mine_unset,limit=1,distance=..0.1] ArmorItems[3].id set from entity @s Item.components."minecraft:custom_data".gm4_tnt_landmines.block
+execute unless score invisible gm4_tnt_data matches 1 run data modify entity @e[type=armor_stand,tag=gm4_tnt_mine_unset,limit=1,distance=..0.1] ArmorItems[3].components."minecraft:custom_model_data" set from entity @s Item.components."minecraft:custom_model_data"
 
 # set tags
 execute if score invisible gm4_tnt_data matches 1 run tag @e[type=armor_stand,distance=..0.1,limit=1,tag=gm4_tnt_mine_unset] add gm4_mine_invisible

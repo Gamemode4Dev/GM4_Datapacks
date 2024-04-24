@@ -5,7 +5,7 @@
 
 scoreboard players reset @s gm4_infinitas_success_check
 
-data modify storage gm4_infinitas_shamir:bucket fish_data set from entity @s SelectedItem.tag
+data modify storage gm4_infinitas_shamir:bucket fish_data set from entity @s SelectedItem.components
 
 execute if entity @s[advancements={gm4_infinitas_shamir:water/pickup_fish={pickup_fish_mainhand=true}}] run function gm4_infinitas_shamir:delayed_replace/fish/mainhand_check
 execute if entity @s[advancements={gm4_infinitas_shamir:water/pickup_fish={pickup_fish_offhand=true}}] run function gm4_infinitas_shamir:delayed_replace/fish/offhand_check
