@@ -2,6 +2,7 @@
 # @batch gm4_midnight
 # @beforebatch time set midnight
 # @afterbatch time set noon
+# @skyaccess
 
 summon enderman ~0.5 ~1 ~0.5
 
