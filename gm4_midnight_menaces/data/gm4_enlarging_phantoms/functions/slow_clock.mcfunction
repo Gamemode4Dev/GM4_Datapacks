@@ -3,7 +3,7 @@
 # called by event
 
 # summon potential spawn points
-summon minecraft:area_effect_cloud 29999998 1 7134 {CustomName:'"gm4_phantom_spawn_point"',Tags:["gm4_phantom_spawn_point"],Duration:1,Radius:0f,Particle:"block air"}
+summon minecraft:area_effect_cloud 29999998 1 7134 {CustomName:'"gm4_phantom_spawn_point"',Tags:["gm4_phantom_spawn_point"],Duration:1,Radius:0f,Particle:{type:"minecraft:block",block_state:"minecraft:air"}}
 
 # randomizer (average spawn rate: 1 every 40 seconds)
 execute store result score phantom_random_value gm4_menace_data run data get entity @e[type=area_effect_cloud,tag=gm4_phantom_spawn_point,limit=1] UUID[0]

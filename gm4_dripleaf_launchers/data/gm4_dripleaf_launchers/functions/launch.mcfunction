@@ -11,4 +11,5 @@ playsound minecraft:block.beehive.enter player @s ~ ~1 ~ 1 1.6 1
 execute align xyz run particle minecraft:block{block_state:"minecraft:big_dripleaf"} ~.5 ~.93751 ~.5 0.25 0.01 0.25 0 12
 
 # grant levitation for 4 ticks
-summon minecraft:area_effect_cloud ~ ~ ~ {Particle:"minecraft:block minecraft:air",ReapplicationDelay:0,Age:-1,Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:-0.5f,Duration:4,WaitTime:0,effects:[{id:'minecraft:levitation',amplifier:40b,duration:4,show_particles:0b,show_icon:0b,ambient:1b}]}
+# TODO 1.20.5: figure out why this does not apply the effect
+summon minecraft:area_effect_cloud ~ ~ ~ {Particle:{type:"minecraft:block",block_state:"minecraft:air"},ReapplicationDelay:0,Age:-1,Radius:0.5f,RadiusPerTick:0f,RadiusOnUse:-0.5f,Duration:4,WaitTime:0,effects:[{id:'minecraft:levitation',amplifier:40b,duration:4,show_particles:0b,show_icon:0b,ambient:1b}]}
