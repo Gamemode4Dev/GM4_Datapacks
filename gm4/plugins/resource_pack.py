@@ -580,6 +580,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     #== Non-mecha CMD filling ==#
     def process_optifine(self):
         """Handles string references in the .properties files of Optifine"""
+        # TODO 1.20.5: figure out how to do this
         pattern = re.compile(r"^nbt.CustomModelData=(?:regex:\()?(.+?)\)?$", re.MULTILINE)
         for name, propfile in self.ctx.assets[OptifineProperties].items():
             match = pattern.search(propfile.text)

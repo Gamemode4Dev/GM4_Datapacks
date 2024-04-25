@@ -47,7 +47,7 @@ function gm4_auto_crafting:auto_crafter/check_overflow/count_items
 scoreboard players operation $added_count gm4_ac_buffer = $overflow_check gm4_ac_buffer
 
 # move item from shulker box to output barrel
-execute store result score $inserted gm4_ac_buffer run loot insert ^ ^-1 ^-1 mine 29999998 1 7134 air{drop_contents:1b}
+execute store result score $inserted gm4_ac_buffer run loot insert ^ ^-1 ^-1 mine 29999998 1 7134 stick[custom_data={drop_contents:1b}]
 
 # count items in output after completing the craft
 data modify storage gm4_auto_crafting:temp output.check set from block ^ ^-1 ^-1 Items

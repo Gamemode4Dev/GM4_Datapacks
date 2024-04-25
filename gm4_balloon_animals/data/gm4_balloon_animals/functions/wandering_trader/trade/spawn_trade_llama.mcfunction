@@ -11,6 +11,6 @@ item modify entity @s horse.0 gm4_balloon_animals:set_lead_data
 data modify storage gm4_balloon_animals:temp name_json set from entity @s Items[0].components."minecraft:lore"[0]
 data modify storage gm4_balloon_animals:temp name_spliced set string storage gm4_balloon_animals:temp name_json 9 -17
 
-# Example Lead display nbt:
-# display.Name: {"text":"Cow","italic":false}
-# display.Lore[0]: {"text":"Abigail","color":"gray"}
+# Example Lead display components:
+# custom_name: {"text":"Cow","italic":false}
+# lore[0]: {"text":"Abigail","color":"gray"}

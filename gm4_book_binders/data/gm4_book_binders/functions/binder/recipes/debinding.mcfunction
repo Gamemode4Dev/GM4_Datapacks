@@ -8,7 +8,7 @@
 scoreboard players set enchantments_left gm4_binder_data 0
 
 # summon paper item (y offset to deposit items in hopper, but still make them pop out of a solid block)
-summon item ~ ~-0.26 ~ {Tags:["gm4_empty_enchanted_page"],PickupDelay:0s,Item:{id:"minecraft:paper",count:1,tag:{gm4_book_binders:{item:"enchanted_page"},CustomModelData:"item/enchanted_page",display:{Name:'{"translate":"item.gm4.enchanted_page","fallback":"Enchanted Page","italic":false}'},Enchantments:[]}}}
+summon item ~ ~-0.26 ~ {Tags:["gm4_empty_enchanted_page"],PickupDelay:0s,Item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_data":{gm4_book_binders:{item:"enchanted_page"}},"minecraft:custom_model-data":"item/enchanted_page","minecraft:custom_name":'{"translate":"item.gm4.enchanted_page","fallback":"Enchanted Page","italic":false}'}}}
 #append first enchant from book into paper
 data modify entity @e[type=item,tag=gm4_empty_enchanted_page,limit=1,sort=nearest,distance=..0.3] Item.tag.Enchantments append from entity @s HandItems[0].tag.StoredEnchantments[0]
 # delete enchantment from book
