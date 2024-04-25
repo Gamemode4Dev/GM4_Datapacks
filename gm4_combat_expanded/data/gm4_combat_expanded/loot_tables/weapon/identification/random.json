@@ -54,13 +54,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -105,13 +105,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -192,13 +192,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -273,13 +273,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -346,13 +346,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -433,13 +433,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -508,13 +508,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -599,13 +599,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -676,13 +676,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -757,13 +757,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -836,13 +836,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
