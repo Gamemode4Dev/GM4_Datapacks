@@ -6,7 +6,7 @@
 scoreboard players set @s gm4_zc_bottled_vex_escape_timer 3
 
 # load data from item
-data modify storage gm4_zauber_cauldrons:temp/cauldron/extra_items bottled_vex set from entity @s Item.tag.gm4_zauber_cauldrons
+data modify storage gm4_zauber_cauldrons:temp/cauldron/extra_items bottled_vex set from entity @s Item.components."minecraft:custom_data".gm4_zauber_cauldrons
 execute store result score @s gm4_zc_moon_phase run data get storage gm4_zauber_cauldrons:temp/cauldron/extra_items bottled_vex.preferred_moon_phase
 execute store result score @s gm4_zc_fullness run data get storage gm4_zauber_cauldrons:temp/cauldron/extra_items bottled_vex.vex_count
 

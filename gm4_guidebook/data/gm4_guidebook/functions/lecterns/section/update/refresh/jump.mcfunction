@@ -4,7 +4,7 @@
 # run from gm4_guidebook:lecterns/section/update/refresh/find_player
 
 # get guide score
-execute store result score $trigger gm4_guide run data get block ~ ~ ~ Book.tag.gm4_guidebook.trigger
+execute store result score $trigger gm4_guide run data get block ~ ~ ~ Book.components."minecraft:custom_data".gm4_guidebook.trigger
 
 # jump to section
 # execute if score $trigger gm4_guide matches 1 run loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/guidebook

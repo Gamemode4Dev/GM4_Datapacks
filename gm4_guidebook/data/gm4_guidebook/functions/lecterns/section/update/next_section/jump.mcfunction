@@ -4,7 +4,7 @@
 # run from gm4_guidebook:lecterns/section/update/next_section/find_player
 
 # get this trigger
-execute store result score $trigger gm4_guide_next run data get block ~ ~ ~ Book.tag.gm4_guidebook.trigger
+execute store result score $trigger gm4_guide_next run data get block ~ ~ ~ Book.components."minecraft:custom_data".gm4_guidebook.trigger
 
 # find section
 data modify storage gm4_guidebook:temp triggers set from storage gm4_guidebook:register trigger_order
@@ -26,5 +26,5 @@ execute positioned ~ ~-3000 ~ run kill @e[type=item,distance=..1,predicate=gm4_g
 # update page number
 execute if score $trigger gm4_guide matches 1 run data modify block ~ ~ ~ Page set value 1
 execute unless score $trigger gm4_guide matches 1 unless score $trigger gm4_guide = $trigger gm4_guide_next run data modify block ~ ~ ~ Page set value 5
-execute unless score $trigger gm4_guide matches 1 if score $trigger gm4_guide = $trigger gm4_guide_next store result score $pages gm4_guide run data get block ~ ~ ~ Book.tag.pages
+execute unless score $trigger gm4_guide matches 1 if score $trigger gm4_guide = $trigger gm4_guide_next store result score $pages gm4_guide run data get block ~ ~ ~ Book.components."minecraft:written_book_content".pages
 execute unless score $trigger gm4_guide matches 1 if score $trigger gm4_guide = $trigger gm4_guide_next store result block ~ ~ ~ Page int 1 run scoreboard players remove $pages gm4_guide 2

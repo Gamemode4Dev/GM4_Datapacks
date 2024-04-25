@@ -3,7 +3,7 @@
 # run from count_chorus
 
 # get bottled_vex nbt into blueprint
-data modify storage gm4_zauber_cauldrons:blueprint/item/wormhole gm4_zauber_cauldrons.cauldron_pos set from storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{tag:{gm4_zauber_cauldrons:{item:"bottled_vex"}}}].tag.gm4_zauber_cauldrons.cauldron_pos
+data modify storage gm4_zauber_cauldrons:blueprint/item/wormhole gm4_zauber_cauldrons.cauldron_pos set from storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:"bottled_vex"}}}}].components.gm4_zauber_cauldrons.cauldron_pos
 
 # kill remaining items
 execute align xyz run kill @e[type=item,dx=0,dy=0,dz=0]

@@ -6,7 +6,7 @@
         "lore": [
             [
                 {
-                    "nbt": "Item.tag.gm4_zauber_cauldrons.bottle.sips",
+                    "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.sips",
                     "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
                     "color": "gray",
                     "italic": false
@@ -17,7 +17,7 @@
                     "italic": false
                 },
                 {
-                    "nbt": "Item.tag.gm4_zauber_cauldrons.bottle.size",
+                    "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.size",
                     "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
                     "color": "gray",
                     "italic": false
@@ -57,7 +57,7 @@
         "lore": [
             [
                 {
-                    "nbt": "Item.tag.gm4_zauber_cauldrons.bottle.sips",
+                    "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.sips",
                     "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
                     "color": "gray",
                     "italic": false
@@ -68,7 +68,7 @@
                     "italic": false
                 },
                 {
-                    "nbt": "Item.tag.gm4_zauber_cauldrons.bottle.size",
+                    "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.size",
                     "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
                     "color": "gray",
                     "italic": false
@@ -109,7 +109,7 @@
         },
         "ops": [
             {
-                "source": "Item.tag.display.Lore[]",
+                "source": "Item.components.'minecraft:lore'[]",
                 "target": "display.Lore",
                 "op": "append"
             }

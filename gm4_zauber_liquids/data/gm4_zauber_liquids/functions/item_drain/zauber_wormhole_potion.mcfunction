@@ -2,10 +2,10 @@
 # @s = tank being processed
 
 # Non-Weighted Averages: (oldcoord+newcoord)/2
-execute store result score $math gm4_zl_warp_cx run data get storage gm4_liquid_tanks:temp/tank input_slot.tag.gm4_zauber_cauldrons.cauldron_pos.x
-execute store result score $math gm4_zl_warp_cy run data get storage gm4_liquid_tanks:temp/tank input_slot.tag.gm4_zauber_cauldrons.cauldron_pos.y
-execute store result score $math gm4_zl_warp_cz run data get storage gm4_liquid_tanks:temp/tank input_slot.tag.gm4_zauber_cauldrons.cauldron_pos.z
-execute store result score $math gm4_zl_warp_cd run data get storage gm4_liquid_tanks:temp/tank input_slot.tag.gm4_zauber_cauldrons.cauldron_pos.dimension
+execute store result score $math gm4_zl_warp_cx run data get storage gm4_liquid_tanks:temp/tank input_slot.components."minecraft:custom_data".gm4_zauber_cauldrons.cauldron_pos.x
+execute store result score $math gm4_zl_warp_cy run data get storage gm4_liquid_tanks:temp/tank input_slot.components."minecraft:custom_data".gm4_zauber_cauldrons.cauldron_pos.y
+execute store result score $math gm4_zl_warp_cz run data get storage gm4_liquid_tanks:temp/tank input_slot.components."minecraft:custom_data".gm4_zauber_cauldrons.cauldron_pos.z
+execute store result score $math gm4_zl_warp_cd run data get storage gm4_liquid_tanks:temp/tank input_slot.components."minecraft:custom_data".gm4_zauber_cauldrons.cauldron_pos.dimension
 # Double score for first one so the initail input is just the actual position
 execute if score @s gm4_lt_value matches 0 run scoreboard players operation $math gm4_zl_warp_cx += $math gm4_zl_warp_cx
 execute if score @s gm4_lt_value matches 0 run scoreboard players operation $math gm4_zl_warp_cy += $math gm4_zl_warp_cy
