@@ -3,4 +3,4 @@
 
 summon squid ~2 ~1 ~2
 
-await entity @s[nbt={active_effects:[{id:"minecraft:blindness",amplifier:0b},{id:"minecraft:nausea",amplifier:0b}]}]
+await entity @s[nbt={active_effects:[{id:"minecraft:blindness"},{id:"minecraft:nausea"}]}]

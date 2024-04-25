@@ -3,7 +3,8 @@
 # at @s
 # run from clocks/temp/totem
 
-particle ambient_entity_effect ~ ~1.2 ~ 0.1 0.1 0.1 0.05 12
+# TODO 1.20.5: lost random colors due to MC-270743
+particle entity_effect{color:[1.0,1.0,1.0,0.15]} ~ ~1.2 ~ 0.1 0.1 0.1 0.05 12
 tp @s ~ ~ ~ ~90 ~
 playsound minecraft:block.beacon.ambient block @a ~ ~ ~ 0.4 2
 playsound minecraft:block.beacon.ambient block @a ~ ~ ~ 0.8 0.6
