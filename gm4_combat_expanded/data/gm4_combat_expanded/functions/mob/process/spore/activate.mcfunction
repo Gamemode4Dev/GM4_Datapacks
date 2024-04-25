@@ -10,7 +10,7 @@ execute if score $spore_zombie_count gm4_ce_data > $mob_limit.spore_zombie gm4_c
 
 # get spores in stack and their generation
 execute store result score $spore_count gm4_ce_data run data get entity @s Item.count
-execute store result score $generation gm4_ce_data run data get entity @s Item.tag.gm4_ce_spore.generation
+execute store result score $generation gm4_ce_data run data get entity @s Item.components."minecraft:custom_data".gm4_ce_spore.generation
 
 # spawn up to 4 spore zombies
 execute align xz run summon zombie ~.5 ~ ~.5 {Tags:["gm4_ce_extra_mob","gm4_ce_spore_mob"]}

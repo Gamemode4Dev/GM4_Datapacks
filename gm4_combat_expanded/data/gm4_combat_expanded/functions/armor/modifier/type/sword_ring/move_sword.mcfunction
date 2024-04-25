@@ -7,7 +7,7 @@
 tp @s ~ ~ ~ facing ^-1 ^ ^
 
 # check if material still matches
-execute store result score $sword_material gm4_ce_data run data get storage gm4_combat_expanded:temp sword_ring.data[0].tag.gm4_combat_expanded.material
+execute store result score $sword_material gm4_ce_data run data get storage gm4_combat_expanded:temp sword_ring.data[0].components."minecraft:custom_data".gm4_combat_expanded.material
 execute unless score @s gm4_ce_data = $sword_material gm4_ce_data run function gm4_combat_expanded:armor/modifier/type/sword_ring/change_material
 
 # reset the scales 

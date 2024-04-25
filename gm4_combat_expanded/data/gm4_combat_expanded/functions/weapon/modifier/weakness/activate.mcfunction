@@ -4,8 +4,8 @@
 # run from weapon/check_modifier
 
 # get item levels
-execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level
-execute store result score $level2 gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level2
+execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level
+execute store result score $level2 gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level2
 
 # slow entities hit
 tag @s add gm4_ce_self

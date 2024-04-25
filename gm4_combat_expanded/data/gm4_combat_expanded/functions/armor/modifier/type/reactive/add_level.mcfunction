@@ -13,19 +13,19 @@ data remove block 29999998 1 7134 Items
 
 # add level of absorption to player total for each armor piece
 scoreboard players set $level gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded{modifier:reactive} store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded.level
+execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:reactive} store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:0b}].components."minecraft:custom_data".gm4_combat_expanded.level
 scoreboard players operation @s gm4_ce_absorp += $level gm4_ce_data
 
 scoreboard players set $level gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded{modifier:reactive} store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded.level
+execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:reactive} store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:1b}].components."minecraft:custom_data".gm4_combat_expanded.level
 scoreboard players operation @s gm4_ce_absorp += $level gm4_ce_data
 
 scoreboard players set $level gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded{modifier:reactive} store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded.level
+execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:reactive} store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:2b}].components."minecraft:custom_data".gm4_combat_expanded.level
 scoreboard players operation @s gm4_ce_absorp += $level gm4_ce_data
 
 scoreboard players set $level gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded{modifier:reactive} store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded.level
+execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:reactive} store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_combat_expanded.level
 scoreboard players operation @s gm4_ce_absorp += $level gm4_ce_data
 
 # cooldown

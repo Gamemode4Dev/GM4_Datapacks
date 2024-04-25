@@ -9,10 +9,10 @@ scoreboard players set @s gm4_ce_sword_hit_triggered 1
 
 # store weapon item to shulker box and put in storage
 item replace block 29999998 1 7134 container.0 from entity @s weapon.mainhand
-data modify storage gm4_combat_expanded:temp tag set from block 29999998 1 7134 Items[{Slot:0b}].tag
+data modify storage gm4_combat_expanded:temp components set from block 29999998 1 7134 Items[{Slot:0b}].components
 # get modifier and current sharpness from storage
-execute store result score $modifier gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.modifier
-execute store result score $current_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp tag.Enchantments[{id:"minecraft:sharpness"}].lvl
+execute store result score $modifier gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.modifier
+execute store result score $current_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:enchantments"."minecraft:sharpness"
 
 # TODO:TEMP update weapons with old modifier 100
 execute if score $modifier gm4_ce_data matches 100 run function gm4_combat_expanded:update/weapon_modifier
@@ -21,7 +21,7 @@ execute if score $modifier gm4_ce_data matches 100 run function gm4_combat_expan
 execute if score $modifier gm4_ce_data matches 101.. run function gm4_combat_expanded:weapon/check_modifier
 
 # check sharpness level
-execute store result score $stored_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.sharpness
+execute store result score $stored_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.sharpness
 execute unless score $stored_sharpness gm4_ce_data = $current_sharpness gm4_ce_data run function gm4_combat_expanded:weapon/update_sharpness
 
 # check netherite conversion
