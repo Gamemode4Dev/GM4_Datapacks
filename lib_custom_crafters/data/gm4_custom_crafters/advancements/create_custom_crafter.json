@@ -1,7 +1,7 @@
 {
   "criteria": {
     "use_crafting_table_on_dropper": {
-      "trigger": "minecraft:item_used_on_block",
+      "trigger": "minecraft:any_block_use",
       "conditions": {
         "player": [
           {
