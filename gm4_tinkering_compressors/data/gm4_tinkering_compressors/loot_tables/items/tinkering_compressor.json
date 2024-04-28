@@ -17,7 +17,7 @@
             },
             {
               "function": "set_custom_data",
-              "tag": "{gm4_machines:{id:'tinkering_compressor'},gm4_metallurgy:{has_shamir:1}}"
+              "tag": "{gm4_machines:{id:'tinkering_compressor'},gm4_metallurgy:{has_shamir:1b}}"
             },
             {
               "function": "set_name",

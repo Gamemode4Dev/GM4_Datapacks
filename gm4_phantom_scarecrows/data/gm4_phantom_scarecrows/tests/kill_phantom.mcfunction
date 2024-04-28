@@ -1,5 +1,6 @@
 # @template gm4:test_platform_large
 # @timeout 150
+# @skyaccess
 
 summon armor_stand ~4.5 ~1 ~2.5
 item replace entity @e[type=armor_stand,distance=..4] armor.chest with minecraft:iron_chestplate[enchantments={binding_curse:1}]
