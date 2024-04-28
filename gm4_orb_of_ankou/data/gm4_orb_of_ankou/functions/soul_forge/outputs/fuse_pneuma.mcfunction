@@ -13,7 +13,7 @@ data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:lore"[0] se
 data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:lore" append from storage gm4_orb_of_ankou:temp ArmorItems[2].components."minecraft:lore"[]
 data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:custom_data".gm4_orb_of_ankou.pneumas append from storage gm4_orb_of_ankou:temp ArmorItems[2].components."minecraft:custom_data".gm4_orb_of_ankou.pneumas[]
 # TODO 1.20.5: verify that this combines the enchantments correctly
-data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:enchantments" merge from storage gm4_orb_of_ankou:temp ArmorItems[2].components."minecraft:custom_data".gm4_orb_of_ankou.stored_enchantments
+data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:enchantments".levels merge from storage gm4_orb_of_ankou:temp ArmorItems[2].components."minecraft:custom_data".gm4_orb_of_ankou.stored_enchantments.levels
 data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:attribute_modifiers" append from storage gm4_orb_of_ankou:temp ArmorItems[2].components."minecraft:custom_data".gm4_orb_of_ankou.stored_attributes[]
 
 #custom color

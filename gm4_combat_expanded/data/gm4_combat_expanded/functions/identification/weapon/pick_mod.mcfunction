@@ -11,5 +11,5 @@ execute as @p run loot replace block 29999998 1 7134 container.1 loot gm4_combat
 data modify storage gm4_combat_expanded:temp components merge from block 29999998 1 7134 Items[{Slot:1b}].components
 
 # check sharpness level
-execute store result score $current_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:enchantments"."minecraft:sharpness"
+execute store result score $current_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:enchantments".levels."minecraft:sharpness"
 execute if score $current_sharpness gm4_ce_data matches 1.. run function gm4_combat_expanded:weapon/update_sharpness

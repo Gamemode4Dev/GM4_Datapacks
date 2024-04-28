@@ -11,7 +11,7 @@ await delay 1s
 
 setblock ~1 ~4 ~1 redstone_block
 
-await items entity @s[type=item,distance=..6] contents minecraft:obsidian
+await items entity @e[type=item,distance=..6] contents minecraft:obsidian
 
 # equip smooshed infinitas bucket
 execute as @e[type=item,distance=..6] if items entity @s contents minecraft:bucket run tag @s add gm4_test_infinitas_bucket
