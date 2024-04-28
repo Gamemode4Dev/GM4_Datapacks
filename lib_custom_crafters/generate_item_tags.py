@@ -14,7 +14,7 @@ def beet_default(ctx: Context):
       "predicate": {
         "equipment": {
           "mainhand": {
-            "tag": f"minecraft:{id}"
+            "items": f"#minecraft:{id}"
           }
         }
       }

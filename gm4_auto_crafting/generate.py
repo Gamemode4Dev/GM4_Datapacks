@@ -500,7 +500,7 @@ def generate_custom_item_tag(ctx: Context, data: TagData) -> str:
     ctx.data.functions[fn_name].append(f"execute if predicate {NAMESPACE}:custom_item_tags/{name} run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.{NAMESPACE}.{name} set value 1b")
 
     # create predicate file for the item tag check
-    json: Any = {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"mainhand":{"tag": f"{NAMESPACE}:{name}"}}}}
+    json: Any = {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"mainhand":{"items": f"#{NAMESPACE}:{name}"}}}}
     ctx.data[f"{NAMESPACE}:custom_item_tags/{name}"] = Predicate(json)
 
     # return the name of the item tag just created
