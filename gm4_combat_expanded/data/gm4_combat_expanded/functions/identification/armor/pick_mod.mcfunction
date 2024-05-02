@@ -20,9 +20,16 @@ data modify storage gm4_combat_expanded:temp new_components."minecraft:enchantme
 # set slots for attribute_modifiers
 execute if data storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_perm"}] run data modify storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_perm"}].slot set from storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"generic.armor"}].slot
 execute if data storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_perm_2"}] run data modify storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_perm_2"}].slot set from storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"generic.armor"}].slot
+execute if data storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded"}] run data modify storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded"}].slot set from storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"generic.armor"}].slot
+execute if data storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_2"}] run data modify storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_2"}].slot set from storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"generic.armor"}].slot
+execute if data storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_3"}] run data modify storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_3"}].slot set from storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"generic.armor"}].slot
+execute if data storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_4"}] run data modify storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_4"}].slot set from storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"generic.armor"}].slot
 # set levels from storages
-execute if data storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded.level run function gm4_combat_expanded:identification/set_value/level
+execute if data storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded.level run function gm4_combat_expanded:identification/set_value/armor/level
+execute if data storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded.level2 run function gm4_combat_expanded:identification/set_value/armor/level2
+execute if data storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded.level3 run function gm4_combat_expanded:identification/set_value/armor/level3
 
 # set components
 data modify storage gm4_combat_expanded:temp components merge from storage gm4_combat_expanded:temp new_components
 data remove storage gm4_combat_expanded:temp new_components
+

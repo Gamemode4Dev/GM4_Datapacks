@@ -30,25 +30,6 @@
             {
               "function": "minecraft:set_custom_data",
               "tag": "{gm4_combat_expanded:{modifier:37,active:0,deactivates_at:0}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_2\"}].Slot",
-                  "op": "replace"
-                }
-              ]
             }
           ]
         }

@@ -57,65 +57,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_combat_expanded:{modifier:44,active:0}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "damage",
-                  "target": "gm4_combat_expanded.level",
-                  "op": "replace"
-                },
-                {
-                  "source": "atkspeed",
-                  "target": "gm4_combat_expanded.level2",
-                  "op": "replace"
-                },
-                {
-                  "source": "speed",
-                  "target": "gm4_combat_expanded.level3",
-                  "op": "replace"
-                }
-              ]
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_2\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_3\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_4\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
-                  "op": "replace"
-                }
-              ]
+              "tag": "{gm4_combat_expanded:{modifier:44,active:0,level:'damage',level2:'atkspeed',level3:'speed'}}"
             }
           ]
         }

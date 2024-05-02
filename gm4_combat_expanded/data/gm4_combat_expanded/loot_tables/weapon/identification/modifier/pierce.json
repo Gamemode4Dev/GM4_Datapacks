@@ -59,21 +59,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_combat_expanded:{strike:1,modifier:112,damage_buffed:-1}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "random_value",
-                  "target": "gm4_combat_expanded.level",
-                  "op": "replace"
-                }
-              ]
+              "tag": "{gm4_combat_expanded:{strike:1,modifier:112,damage_buffed:-1,level:'random_value'}"
             }
           ]
         }

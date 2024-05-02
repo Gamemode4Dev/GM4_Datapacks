@@ -9,28 +9,14 @@
           "name": "minecraft:wooden_sword",
           "functions": [
             {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "tag.Damage",
-                  "target": "Damage",
-                  "op": "replace"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:damage": 0,
+                "minecraft:attribute_modifiers": {
+                  "modifiers": []
                 },
-                {
-                  "source": "tag.AttributeModifiers",
-                  "target": "AttributeModifiers",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.Enchantments",
-                  "target": "Enchantments",
-                  "op": "replace"
-                }
-              ]
+                "minecraft:enchantments": {}
+              }
             },
             {
               "function": "minecraft:toggle_tooltips",
