@@ -1,11 +1,13 @@
 {
   "carvers": {
-    "air": "#minecraft:air/in_biome/sparse_jungle",
-    "liquid": "#minecraft:liquid/in_biome/sparse_jungle"
+    "air": "#minecraft:air/in_biome/cherry_grove",
+    "liquid": "#minecraft:liquid/in_biome/cherry_grove"
   },
   "downfall": 0.8,
   "effects": {
     "fog_color": 12638463,
+    "foliage_color": 11983713,
+    "grass_color": 11983713,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -16,24 +18,24 @@
       "max_delay": 24000,
       "min_delay": 12000,
       "replace_current_music": false,
-      "sound": "minecraft:music.overworld.sparse_jungle"
+      "sound": "minecraft:music.overworld.cherry_grove"
     },
-    "sky_color": 7842047,
-    "water_color": 4159204,
-    "water_fog_color": 329011
+    "sky_color": 8103167,
+    "water_color": 6141935,
+    "water_fog_color": 6141935
   },
   "features": [
-    "#minecraft:raw_generation/in_biome/sparse_jungle",
-    "#minecraft:lakes/in_biome/sparse_jungle",
-    "#minecraft:local_modifications/in_biome/sparse_jungle",
-    "#minecraft:underground_structures/in_biome/sparse_jungle",
-    "#minecraft:surface_structures/in_biome/sparse_jungle",
-    "#minecraft:strongholds/in_biome/sparse_jungle",
-    "#minecraft:underground_ores/in_biome/sparse_jungle",
-    "#minecraft:underground_decoration/in_biome/sparse_jungle",
-    "#minecraft:fluid_springs/in_biome/sparse_jungle",
-    "#minecraft:vegetal_decoration/in_biome/sparse_jungle",
-    "#minecraft:top_layer_modification/in_biome/sparse_jungle"
+    "#minecraft:raw_generation/in_biome/cherry_grove",
+    "#minecraft:lakes/in_biome/cherry_grove",
+    "#minecraft:local_modifications/in_biome/cherry_grove",
+    "#minecraft:underground_structures/in_biome/cherry_grove",
+    "#minecraft:surface_structures/in_biome/cherry_grove",
+    "#minecraft:strongholds/in_biome/cherry_grove",
+    "#minecraft:underground_ores/in_biome/cherry_grove",
+    "#minecraft:underground_decoration/in_biome/cherry_grove",
+    "#minecraft:fluid_springs/in_biome/cherry_grove",
+    "#minecraft:vegetal_decoration/in_biome/cherry_grove",
+    "#minecraft:top_layer_modification/in_biome/cherry_grove"
   ],
   "has_precipitation": true,
   "spawn_costs": {},
@@ -49,40 +51,22 @@
     "axolotls": [],
     "creature": [
       {
+        "type": "minecraft:pig",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 1
+      },
+      {
+        "type": "minecraft:rabbit",
+        "maxCount": 6,
+        "minCount": 2,
+        "weight": 2
+      },
+      {
         "type": "minecraft:sheep",
         "maxCount": 4,
-        "minCount": 4,
-        "weight": 12
-      },
-      {
-        "type": "minecraft:pig",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:chicken",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:cow",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 8
-      },
-      {
-        "type": "minecraft:chicken",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:wolf",
-        "maxCount": 4,
         "minCount": 2,
-        "weight": 8
+        "weight": 2
       }
     ],
     "misc": [],
@@ -147,5 +131,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.95
+  "temperature": 0.5
 }
