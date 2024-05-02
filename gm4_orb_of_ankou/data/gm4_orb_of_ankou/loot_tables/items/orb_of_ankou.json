@@ -14,6 +14,7 @@
                                 "minecraft:custom_model_data": "item/orb_of_ankou",
                                 "minecraft:hide_additional_tooltip": {},
                                 "minecraft:firework_explosion": {
+                                    "shape": "small_ball",
                                     "colors": [
                                         13092807
                                     ]

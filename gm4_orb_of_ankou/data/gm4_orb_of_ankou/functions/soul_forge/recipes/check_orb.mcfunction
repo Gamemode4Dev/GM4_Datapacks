@@ -6,7 +6,7 @@
 execute as @e[type=armor_stand,tag=gm4_oa_selected_forge,limit=1] store success score has_orb gm4_oa_forge if entity @s[tag=gm4_oa_has_orb]
 
 # check pneuma count of orb
-execute store result score pneuma_count gm4_oa_forge run data get storage gm4_orb_of_ankou:temp Item.tag.gm4_orb_of_ankou.pneumas
+execute store result score pneuma_count gm4_oa_forge run data get storage gm4_orb_of_ankou:temp Item.components."minecraft:custom_data".gm4_orb_of_ankou.pneumas
 execute if score pneuma_count gm4_oa_forge matches 4.. run scoreboard players set has_orb gm4_oa_forge 1
 
 # store orb if it doesn't have one stored already, summon living orb if an orb is already stored in the forge or the orb already has 4 or more pneumas

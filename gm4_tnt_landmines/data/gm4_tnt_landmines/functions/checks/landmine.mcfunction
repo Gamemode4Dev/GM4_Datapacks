@@ -5,7 +5,7 @@
 execute as @s[tag=!gm4_tnt_armed] unless entity @e[type=area_effect_cloud,tag=gm4_mine_disarmed,distance=..0.2] run tag @s add gm4_tnt_armed
 
 #upgrading to terrain-safe
-execute if entity @s[tag=!gm4_no_damage] as @e[type=item,distance=..1.2,limit=1,nbt={OnGround:1b,Item:{id:"minecraft:gunpowder",count:1,tag:{gm4_tnt_landmines:{item:"upgrade"}}}}] run function gm4_tnt_landmines:items/upgrade
+execute if entity @s[tag=!gm4_no_damage] as @e[type=item,distance=..1.2,limit=1,nbt={OnGround:1b,Item:{id:"minecraft:gunpowder",count:1,components:{"minecraft:custom_data":{gm4_tnt_landmines:{item:"upgrade"}}}}}] run function gm4_tnt_landmines:items/upgrade
 
 #disarming
 execute as @e[type=item,distance=..1.2,sort=nearest,limit=1,nbt={OnGround:1b,Item:{id:"minecraft:shears"}}] run function gm4_tnt_landmines:items/disarming

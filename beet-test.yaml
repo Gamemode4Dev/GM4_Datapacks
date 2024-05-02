@@ -18,7 +18,6 @@ pipeline:
       - gm4.plugins.write_mcmeta
     meta:
       mecha:
-        commands: "https://raw.githubusercontent.com/misode/mcmeta/24w13a-summary/commands/data.json"
         formatting:
           layout: preserve
           nbt_compact: True

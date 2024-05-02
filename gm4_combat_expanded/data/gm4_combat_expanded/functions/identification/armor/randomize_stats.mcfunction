@@ -9,7 +9,7 @@ execute store result score $armor gm4_ce_data run loot spawn 29999998 1 7133 loo
 scoreboard players operation $armor- gm4_ce_data = $armor gm4_ce_data
 scoreboard players operation $armor- gm4_ce_data -= #4 gm4_ce_data
 # clamp $armor- to armor of piece
-execute store result score $armor_clamp gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".armor_clamp
+execute store result score $armor_clamp gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.armor_clamp
 scoreboard players operation $armor- gm4_ce_data > $armor_clamp gm4_ce_data
 # attack damage 0.5 - 2
 execute store result score $damage gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:randomizer/damage

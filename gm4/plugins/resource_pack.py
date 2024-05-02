@@ -33,6 +33,8 @@ from beet.core.utils import format_validation_error
 from mecha import (
     AstChildren,
     AstCommand,
+    AstItemComponent,
+    AstItemPredicateTestComponent,
     AstJson,
     AstJsonObject,
     AstJsonObjectEntry,
@@ -562,6 +564,18 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                     pass
         return node
 
+    @rule(AstItemComponent)
+    @rule(AstItemPredicateTestComponent)
+    def cmd_substitutions_component(self, node: AstItemComponent | AstItemPredicateTestComponent, **kwargs: Any):
+        if node.value and node.key.get_canonical_value() == "minecraft:custom_model_data":
+            reference = node.value.evaluate()
+            if isinstance(reference, str):
+                index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
+                if exc:
+                    yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
+                node = replace(node, value=AstNbtValue.from_value(index+self.cmd_prefix))
+        return node
+
     @rule(AstCommand, identifier="data:modify:storage:target:targetPath:set:value:value")
     @rule(AstCommand, identifier="data:modify:block:targetPos:targetPath:set:value:value")
     @rule(AstCommand, identifier="data:modify:entity:target:targetPath:set:value:value")
@@ -580,6 +594,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     #== Non-mecha CMD filling ==#
     def process_optifine(self):
         """Handles string references in the .properties files of Optifine"""
+        # TODO 1.20.5: figure out how to do this
         pattern = re.compile(r"^nbt.CustomModelData=(?:regex:\()?(.+?)\)?$", re.MULTILINE)
         for name, propfile in self.ctx.assets[OptifineProperties].items():
             match = pattern.search(propfile.text)

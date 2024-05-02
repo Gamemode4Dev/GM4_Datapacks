@@ -5,7 +5,7 @@
 
 # kill entities related to machine block
 execute positioned ~ ~-0.4 ~ run kill @e[type=armor_stand,tag=gm4_teleportation_anchor_stand,limit=1,distance=..0.01]
-execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..1,nbt={Age:0s,Item:{id:"minecraft:lodestone",count:1}},nbt=!{Item:{tag:{}}},limit=1,sort=nearest]
+execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..1,nbt={Age:0s,Item:{id:"minecraft:lodestone",count:1}},nbt=!{Item:{components:{}}},limit=1,sort=nearest]
 kill @s
 
 # drop item (unless broken in creative mode)

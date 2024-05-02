@@ -12,8 +12,8 @@ def beet_default(ctx: Context):
 	manifest_entry = {v.id:v for v in (manifest.modules|manifest.libraries).values()}.get(ctx.project_id, NoneAttribute())
 
 	# manually set as beet's `latest` is not available for 1.20.5 at this time.
-	ctx.data.pack_format = 36
-	ctx.assets.pack_format = 30
+	ctx.data.pack_format = 41
+	ctx.assets.pack_format = 32
 
 	for pack in ctx.packs:
 		pack.description = [

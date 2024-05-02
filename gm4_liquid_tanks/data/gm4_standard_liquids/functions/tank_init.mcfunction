@@ -3,7 +3,7 @@
 
 #water
 execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:water_bucket"}} run function gm4_standard_liquids:liquid_init/water
-execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",tag:{Potion:"minecraft:water"}}} run function gm4_standard_liquids:liquid_init/water
+execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",components:{"minecraft:potion_contents":{potion:"minecraft:water"}}}} run function gm4_standard_liquids:liquid_init/water
 
 #lava
 execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:lava_bucket"}} run function gm4_standard_liquids:liquid_init/lava
@@ -34,9 +34,9 @@ execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:po
 
 #ink
 execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:ink_sac"}} run function gm4_standard_liquids:liquid_init/ink
-execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",tag:{gm4_standard_liquids:{potion:"blindness"}}}} run function gm4_standard_liquids:liquid_init/ink
+execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",components:{"minecraft:custom_data":{gm4_standard_liquids:{potion:"blindness"}}}}} run function gm4_standard_liquids:liquid_init/ink
 
 
 #glow ink
 execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:glow_ink_sac"}} run function gm4_standard_liquids:liquid_init/glow_ink
-execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",tag:{gm4_standard_liquids:{potion:"glowing"}}}} run function gm4_standard_liquids:liquid_init/glow_ink
+execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",components:{"minecraft:custom_data":{gm4_standard_liquids:{potion:"glowing"}}}}} run function gm4_standard_liquids:liquid_init/glow_ink

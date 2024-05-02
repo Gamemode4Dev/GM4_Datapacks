@@ -12,9 +12,9 @@ execute if data storage gm4_orb_of_ankou:temp Item{id:"minecraft:blaze_powder"} 
 execute unless entity @s[tag=gm4_oa_checked_item] if data storage gm4_orb_of_ankou:temp Item{id:"minecraft:glowstone_dust"} run function gm4_orb_of_ankou:soul_forge/recipes/add_glowstone_dust
 execute unless entity @s[tag=gm4_oa_checked_item] if data storage gm4_orb_of_ankou:temp Item{id:"minecraft:ghast_tear"} run function gm4_orb_of_ankou:soul_forge/recipes/add_ghast_tear
 
-execute unless entity @s[tag=gm4_oa_checked_item] if data storage gm4_orb_of_ankou:temp Item{id:"minecraft:black_dye",tag:{gm4_orb_of_ankou:{item:"soul_essence"}}} run function gm4_orb_of_ankou:soul_forge/recipes/check_soul_essence
-execute unless entity @s[tag=gm4_oa_checked_item] if data storage gm4_orb_of_ankou:temp Item{id:"minecraft:flint",tag:{gm4_orb_of_ankou:{item:"soul_shard"}}} run function gm4_orb_of_ankou:soul_forge/recipes/check_shard
-execute unless entity @s[tag=gm4_oa_checked_item] if data storage gm4_orb_of_ankou:temp Item{id:"minecraft:firework_star",tag:{gm4_orb_of_ankou:{item:"orb"}}} run function gm4_orb_of_ankou:soul_forge/recipes/check_orb
+execute unless entity @s[tag=gm4_oa_checked_item] if data storage gm4_orb_of_ankou:temp Item{id:"minecraft:black_dye",components:{"minecraft:custom_data":{gm4_orb_of_ankou:{item:"soul_essence"}}}} run function gm4_orb_of_ankou:soul_forge/recipes/check_soul_essence
+execute unless entity @s[tag=gm4_oa_checked_item] if data storage gm4_orb_of_ankou:temp Item{id:"minecraft:flint",components:{"minecraft:custom_data":{gm4_orb_of_ankou:{item:"soul_shard"}}}} run function gm4_orb_of_ankou:soul_forge/recipes/check_shard
+execute unless entity @s[tag=gm4_oa_checked_item] if data storage gm4_orb_of_ankou:temp Item{id:"minecraft:firework_star",components:{"minecraft:custom_data":{gm4_orb_of_ankou:{item:"orb"}}}} run function gm4_orb_of_ankou:soul_forge/recipes/check_orb
 
 # apply data modify to armor stand
 data modify entity @e[type=armor_stand,tag=gm4_oa_selected_forge,limit=1] ArmorItems set from storage gm4_orb_of_ankou:temp ArmorItems

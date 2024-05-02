@@ -24,7 +24,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_guidebook:{lectern:1,trigger:1}}"
+              "tag": "{gm4_guidebook:{lectern:1b,trigger:1}}"
             },
             {
               "function": "minecraft:set_name",

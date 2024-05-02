@@ -6,8 +6,8 @@
 execute unless score @e[type=armor_stand,tag=gm4_oa_selected_forge,limit=1] gm4_oa_essence matches 1.. run function gm4_orb_of_ankou:soul_forge/recipes/add_first_soul_essence
 
 # check if the essence is the same as the one stored in the forge
-execute store success score invalid_essence gm4_oa_essence run data modify storage gm4_orb_of_ankou:temp ArmorItems[0].tag.gm4_orb_of_ankou.stored_pneuma set from storage gm4_orb_of_ankou:temp Item.tag.gm4_orb_of_ankou.stored_pneuma
-data modify storage gm4_orb_of_ankou:temp ArmorItems[0].tag set from storage gm4_orb_of_ankou:temp Item.tag
+execute store success score invalid_essence gm4_oa_essence run data modify storage gm4_orb_of_ankou:temp ArmorItems[0].components."minecraft:custom_data".gm4_orb_of_ankou.stored_pneuma set from storage gm4_orb_of_ankou:temp Item.components."minecraft:custom_data".gm4_orb_of_ankou.stored_pneuma
+data modify storage gm4_orb_of_ankou:temp ArmorItems[0].components set from storage gm4_orb_of_ankou:temp Item.components
 data modify storage gm4_orb_of_ankou:temp ArmorItems[1].count set value 1b
 
 # if same essence, add it to the forge storage

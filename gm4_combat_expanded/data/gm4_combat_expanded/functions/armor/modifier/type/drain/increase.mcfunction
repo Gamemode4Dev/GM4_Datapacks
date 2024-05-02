@@ -8,7 +8,7 @@ scoreboard players set $change gm4_ce_data 1
 
 # get data
 execute store result score $curr_level gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded"}].amount
-execute store result score $max_level gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".level
+execute store result score $max_level gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level
 scoreboard players operation $max_level gm4_ce_data *= #2 gm4_ce_data
 scoreboard players add $max_level gm4_ce_data 4
 

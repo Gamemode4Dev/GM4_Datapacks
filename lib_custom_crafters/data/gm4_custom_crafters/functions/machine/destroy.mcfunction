@@ -5,7 +5,7 @@
 
 # kill entities related to machine block
 execute positioned ~ ~0.5 ~ run kill @e[type=item_display,tag=gm4_custom_crafter_display,limit=1,distance=..0.01]
-execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..1,nbt={Item:{id:"minecraft:dropper",count:1,tag:{display:{}}}},limit=1,sort=nearest]
+execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..1,nbt={Item:{id:"minecraft:dropper",count:1,components:{}}},limit=1,sort=nearest]
 kill @s
 
 # drop item (unless broken in creative mode)

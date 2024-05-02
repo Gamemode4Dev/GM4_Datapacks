@@ -9,7 +9,7 @@ execute positioned ~ ~-3000 ~ run data modify block ~ ~3000 ~ Book.components se
 execute positioned ~ ~-3000 ~ run kill @e[type=item,distance=..1,predicate=gm4_guidebook:lectern_contents,limit=1]
 
 # store page count (minus 1)
-execute store result score @s gm4_guide_pages run data get block ~ ~ ~ Book.tag.pages
+execute store result score @s gm4_guide_pages run data get block ~ ~ ~ Book.components."minecraft:written_book_content".pages
 scoreboard players remove @s gm4_guide_pages 1
 
 # update page number

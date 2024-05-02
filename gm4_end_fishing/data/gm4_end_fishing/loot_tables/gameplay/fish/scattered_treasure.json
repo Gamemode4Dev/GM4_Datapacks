@@ -28,7 +28,7 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:the_end"
+                    "biomes": "minecraft:the_end"
                   }
                 }
               ]
@@ -48,25 +48,25 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_midlands"
+                    "biomes": "minecraft:end_midlands"
                   }
                 },
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_highlands"
+                    "biomes": "minecraft:end_highlands"
                   }
                 },
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:small_end_islands"
+                    "biomes": "minecraft:small_end_islands"
                   }
                 },
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_barrens"
+                    "biomes": "minecraft:end_barrens"
                   }
                 }
               ]
@@ -82,13 +82,13 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_midlands"
+                    "biomes": "minecraft:end_midlands"
                   }
                 },
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_highlands"
+                    "biomes": "minecraft:end_highlands"
                   }
                 }
               ]
@@ -106,13 +106,13 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_midlands"
+                    "biomes": "minecraft:end_midlands"
                   }
                 },
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_highlands"
+                    "biomes": "minecraft:end_highlands"
                   }
                 }
               ]
@@ -163,13 +163,13 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_midlands"
+                    "biomes": "minecraft:end_midlands"
                   }
                 },
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_highlands"
+                    "biomes": "minecraft:end_highlands"
                   }
                 }
               ]

@@ -3,7 +3,11 @@
   "entity": "this",
   "predicate": {
     "slots": {
-      "contents": {}
+      "contents": {
+        "count": {
+          "min": 1
+        }
+      }
     }
   }
 }

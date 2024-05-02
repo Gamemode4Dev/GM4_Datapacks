@@ -17,7 +17,7 @@ execute if score $current_sharpness gm4_ce_data matches 1.. run scoreboard playe
 scoreboard players operation $damage gm4_ce_data += $current_sharpness gm4_ce_data
 
 # if twofold add 0.5x sharpness damage to attributes to double it
-execute if score $modifier gm4_ce_data matches 5 store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_base_attack_damage"}].amount double 0.05 run scoreboard players get $current_sharpness gm4_ce_data
+execute if score $modifier gm4_ce_data matches 5 store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_double_sharpness"}].amount double 0.05 run scoreboard players get $current_sharpness gm4_ce_data
 
 # get digits seperate
 scoreboard players operation $damage_10 gm4_ce_data = $damage gm4_ce_data

@@ -1,5 +1,5 @@
 
-data merge entity @s {Silent:1b,HasVisualFire:1b,LifeTime:400,ShotAtAngle:1b,Motion:[0.0,-0.5,0.0],Tags:["gm4_ce_boss.small_fireball"],FireworksItem:{id:"firework_rocket",count:1,tag:{Fireworks:{Explosions:[{Type:4,Colors:[I;9570559]},{Type:4,Colors:[I;7014075]},{Type:4,Colors:[I;5637526]},{Type:4,Colors:[I;3998827]}]}}}}
+data merge entity @s {Silent:1b,HasVisualFire:1b,LifeTime:400,ShotAtAngle:1b,Motion:[0.0,-0.5,0.0],Tags:["gm4_ce_boss.small_fireball"],FireworksItem:{id:"firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"burst",colors:[I;9570559]},{shape:"burst",colors:[I;7014075]},{shape:"burst",colors:[I;5637526]},{shape:"burst",colors:[I;3998827]}]}}}}
 
 # get player pos
 execute positioned ^ ^ ^3 summon marker run function gm4_combat_expanded:boss/watchers/running/attack/fireball/get_target_pos

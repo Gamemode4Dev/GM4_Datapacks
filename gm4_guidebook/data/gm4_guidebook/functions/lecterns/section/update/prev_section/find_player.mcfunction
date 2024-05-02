@@ -12,7 +12,7 @@ tag @s remove gm4_guide_toc
 execute if score $trigger gm4_guide matches 1 run tag @s add gm4_guide_toc
 
 # store page count (minus 1) and update page number
-execute store result score @s gm4_guide_pages run data get block ~ ~ ~ Book.tag.pages
+execute store result score @s gm4_guide_pages run data get block ~ ~ ~ Book.components."minecraft:written_book_content".pages
 scoreboard players remove @s gm4_guide_pages 1
 
 # clean up

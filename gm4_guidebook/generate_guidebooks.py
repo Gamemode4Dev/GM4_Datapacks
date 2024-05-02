@@ -1371,20 +1371,20 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
         "italic": False
       }
     },
-    {
-      "function": "minecraft:copy_nbt",
-      "source": {
-        "type": "minecraft:storage",
-        "source": "gm4_guidebook:pages"
-      },
-      "ops": [
-        {
-          "source": "lectern_front_matter[]",
-          "target": "pages",
-          "op": "append"
-        }
-      ]
-    }
+    # {
+    #   "function": "minecraft:copy_nbt",
+    #   "source": {
+    #     "type": "minecraft:storage",
+    #     "source": "gm4_guidebook:pages"
+    #   },
+    #   "ops": [
+    #     {
+    #       "source": "lectern_front_matter[]",
+    #       "target": "pages",
+    #       "op": "append"
+    #     }
+    #   ]
+    # }
   ]
 
   # create conditions list for each section
@@ -1528,32 +1528,33 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
     if section.requirements and len(section.requirements) > 0:
       function["conditions"].append(unlock_condition)
       fallback_function["conditions"].append(lock_condition)
-      functions.append(function)
-      functions.append(fallback_function)
+      # functions.append(function)
+      # functions.append(fallback_function)
 
       function_lectern["conditions"].append(unlock_condition)
       fallback_function_lectern["conditions"].append(lock_condition)
-      functions_lectern.append(function_lectern)
-      functions_lectern.append(fallback_function_lectern)
+      # functions_lectern.append(function_lectern)
+      # functions_lectern.append(fallback_function_lectern)
     else:
-      functions.append(function)
-      functions_lectern.append(function_lectern)
+      pass
+      # functions.append(function)
+      # functions_lectern.append(function_lectern)
 
   # extra blank page for lecterns
-  functions_lectern.append({
-    "function": "minecraft:copy_nbt",
-    "source": {
-      "type": "minecraft:storage",
-      "source": "gm4_guidebook:pages"
-    },
-    "ops": [
-      {
-        "source": "blank",
-        "target": "pages",
-        "op": "append"
-      }
-    ]
-  })
+  # functions_lectern.append({
+  #   "function": "minecraft:copy_nbt",
+  #   "source": {
+  #     "type": "minecraft:storage",
+  #     "source": "gm4_guidebook:pages"
+  #   },
+  #   "ops": [
+  #     {
+  #       "source": "blank",
+  #       "target": "pages",
+  #       "op": "append"
+  #     }
+  #   ]
+  # })
 
   hand_loot = LootTable({
     "pools": [

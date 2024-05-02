@@ -2,7 +2,7 @@
 # run from player/crystal/process
 
 # move to storage
-data modify storage gm4_zauber_cauldrons:temp/player/equipment/offhand gm4_zauber_cauldrons set from entity @s Inventory[{Slot:-106b}].tag.gm4_zauber_cauldrons
+data modify storage gm4_zauber_cauldrons:temp/player/equipment/offhand gm4_zauber_cauldrons set from entity @s Inventory[{Slot:-106b}].components."minecraft:custom_data".gm4_zauber_cauldrons
 
 execute if data storage gm4_zauber_cauldrons:temp/player/equipment/offhand {gm4_zauber_cauldrons:{type:"instant_damage"}} run effect give @s instant_damage 1 1
 execute if data storage gm4_zauber_cauldrons:temp/player/equipment/offhand {gm4_zauber_cauldrons:{type:"instant_health"}} run function gm4_zauber_cauldrons:player/crystal/effect/instant_health

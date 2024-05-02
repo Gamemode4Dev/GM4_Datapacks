@@ -4,7 +4,7 @@
 # run from weapon/check_modifier
 
 # get item level
-execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".level
+execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level
 
 # find targets
 tag @s add gm4_ce_self

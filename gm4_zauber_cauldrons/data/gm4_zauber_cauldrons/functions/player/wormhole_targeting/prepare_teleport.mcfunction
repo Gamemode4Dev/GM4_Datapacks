@@ -10,8 +10,8 @@ advancement revoke @s only gm4_zauber_cauldrons:use/wormhole
 
 # detect main or offhand warp and prepare target coordinates in storage
 data remove storage gm4_zauber_cauldrons:temp/wormhole_targeting/destination cauldron_pos
-execute unless score $read_coordinates gm4_zc_data matches 1 if predicate gm4_zauber_cauldrons:player/equipment/wormhole/in_mainhand store success score $read_coordinates gm4_zc_data run data modify storage gm4_zauber_cauldrons:temp/wormhole_targeting/destination cauldron_pos set from entity @s SelectedItem.tag.gm4_zauber_cauldrons.cauldron_pos
-execute unless score $read_coordinates gm4_zc_data matches 1 if predicate gm4_zauber_cauldrons:player/equipment/wormhole/in_offhand run data modify storage gm4_zauber_cauldrons:temp/wormhole_targeting/destination cauldron_pos set from entity @s Inventory[{Slot:-106b}].tag.gm4_zauber_cauldrons.cauldron_pos
+execute unless score $read_coordinates gm4_zc_data matches 1 if predicate gm4_zauber_cauldrons:player/equipment/wormhole/in_mainhand store success score $read_coordinates gm4_zc_data run data modify storage gm4_zauber_cauldrons:temp/wormhole_targeting/destination cauldron_pos set from entity @s SelectedItem.components."minecraft:custom_data".gm4_zauber_cauldrons.cauldron_pos
+execute unless score $read_coordinates gm4_zc_data matches 1 if predicate gm4_zauber_cauldrons:player/equipment/wormhole/in_offhand run data modify storage gm4_zauber_cauldrons:temp/wormhole_targeting/destination cauldron_pos set from entity @s Inventory[{Slot:-106b}].components."minecraft:custom_data".gm4_zauber_cauldrons.cauldron_pos
 scoreboard players reset $read_coordinates gm4_zc_data
 
 # backwards compatibility with old wormholes from below v1.10

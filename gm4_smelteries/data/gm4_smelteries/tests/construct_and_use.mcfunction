@@ -1,6 +1,7 @@
 # @template gm4:test_platform
 # @dummy ~1.5 ~1 ~0.5
 # @timeout 300
+# @skyaccess
 
 loot give @s loot gm4_smelteries:items/smeltery
 dummy @s jump

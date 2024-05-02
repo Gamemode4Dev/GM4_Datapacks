@@ -25,11 +25,11 @@
 # remove first lore line
 # this line should hold sips/max line, and should be ignored as this line is dynamically generated 
 # and added by the item modifier gm4_zauber_cauldrons:soulution/update_sips
-data remove storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.tag.display.Lore[0]
+data remove storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.components."minecraft:lore"[0]
 
 # subtract one sip
 scoreboard players remove $remaining_sips gm4_zc_data 1
-execute store result storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.tag.gm4_zauber_cauldrons.bottle.sips int 1 run scoreboard players get $remaining_sips gm4_zc_data
+execute store result storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.components."minecraft:custom_data".gm4_zauber_cauldrons.bottle.sips int 1 run scoreboard players get $remaining_sips gm4_zc_data
 
 # set slot information to target slot 0 in the yellow shulker box
 data modify storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.Slot set value 0b

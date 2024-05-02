@@ -21,10 +21,10 @@ scoreboard players operation $single_rotation gm4_machine_data = $rotation gm4_m
 scoreboard players remove $single_rotation gm4_machine_data 2
 
 # find player heads in the specific region
-execute if score $rotation gm4_machine_data matches 3 store result score $player_head_count gm4_machine_data run clone ~-4 ~-4 ~-4 ~4 ~6 ~1 ~-4 ~-4 ~-4 filtered #gm4_machines-1.1:player_heads{SkullOwner:{Id:[I;739224026,-1192800770,-2115274619,-970102126]}} force
-execute if score $rotation gm4_machine_data matches 4 store result score $player_head_count gm4_machine_data run clone ~-1 ~-4 ~-4 ~4 ~6 ~4 ~-1 ~-4 ~-4 filtered #gm4_machines-1.1:player_heads{SkullOwner:{Id:[I;739224026,-1192800770,-2115274619,-970102126]}} force
-execute if score $rotation gm4_machine_data matches 5 store result score $player_head_count gm4_machine_data run clone ~-4 ~-4 ~-1 ~4 ~6 ~4 ~-4 ~-4 ~-1 filtered #gm4_machines-1.1:player_heads{SkullOwner:{Id:[I;739224026,-1192800770,-2115274619,-970102126]}} force
-execute if score $rotation gm4_machine_data matches 6 store result score $player_head_count gm4_machine_data run clone ~-4 ~-4 ~-4 ~1 ~6 ~4 ~-4 ~-4 ~-4 filtered #gm4_machines-1.1:player_heads{SkullOwner:{Id:[I;739224026,-1192800770,-2115274619,-970102126]}} force
+execute if score $rotation gm4_machine_data matches 3 store result score $player_head_count gm4_machine_data run clone ~-4 ~-4 ~-4 ~4 ~6 ~1 ~-4 ~-4 ~-4 filtered #gm4_machines-1.1:player_heads{profile:{id:[I;739224026,-1192800770,-2115274619,-970102126]}} force
+execute if score $rotation gm4_machine_data matches 4 store result score $player_head_count gm4_machine_data run clone ~-1 ~-4 ~-4 ~4 ~6 ~4 ~-1 ~-4 ~-4 filtered #gm4_machines-1.1:player_heads{profile:{id:[I;739224026,-1192800770,-2115274619,-970102126]}} force
+execute if score $rotation gm4_machine_data matches 5 store result score $player_head_count gm4_machine_data run clone ~-4 ~-4 ~-1 ~4 ~6 ~4 ~-4 ~-4 ~-1 filtered #gm4_machines-1.1:player_heads{profile:{id:[I;739224026,-1192800770,-2115274619,-970102126]}} force
+execute if score $rotation gm4_machine_data matches 6 store result score $player_head_count gm4_machine_data run clone ~-4 ~-4 ~-4 ~1 ~6 ~4 ~-4 ~-4 ~-4 filtered #gm4_machines-1.1:player_heads{profile:{id:[I;739224026,-1192800770,-2115274619,-970102126]}} force
 
 # replace player heads with the corresponding block
 scoreboard players set $layer_count gm4_machine_data 0
