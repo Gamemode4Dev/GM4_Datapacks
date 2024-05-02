@@ -41,6 +41,7 @@ from mecha import (
     AstJsonObjectKey,
     AstJsonValue,
     AstNbtCompoundEntry,
+    AstNbtCompoundKey,
     AstNbtPath,
     AstNbtPathKey,
     AstNbtValue,
@@ -540,9 +541,10 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
         self.registry.setdefault("items", {}).setdefault(item_id, {})[reference] = index
         self.logger.info(f"Issuing custom_model_data {index} for {item_id}")
 
+
     #== Mecha Transformer Rules ==#
-    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='minecraft:custom_model_data'))
-    def cmd_substitutions_nbt_json(self, node: AstJsonObjectEntry, **kwargs: Any):
+    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value="minecraft:custom_model_data"))
+    def json_substitutions(self, node: AstJsonObjectEntry, **kwargs: Any):
         reference = node.value.evaluate()
         if isinstance(reference, str):
             index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
@@ -551,17 +553,14 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             node = replace(node, value=AstJsonValue.from_value(index+self.cmd_prefix))
         return node
 
-    @rule(AstNbtCompoundEntry)
+    @rule(AstNbtCompoundEntry, key=AstNbtCompoundKey(value="minecraft:custom_model_data"))
     def cmd_substitutions_nbt(self, node: AstNbtCompoundEntry, **kwargs: Any):
-        if node.key.value == "minecraft:custom_model_data":
-            match node.value.evaluate():
-                case String(reference):
-                    index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
-                    if exc:
-                        yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
-                    node = replace(node, value=AstNbtValue.from_value(index+self.cmd_prefix))
-                case _:
-                    pass
+        reference = node.value.evaluate()
+        if isinstance(reference, str):
+            index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
+            if exc:
+                yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
+            node = replace(node, value=AstNbtValue.from_value(index+self.cmd_prefix))
         return node
 
     @rule(AstItemComponent)
@@ -579,7 +578,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     @rule(AstCommand, identifier="data:modify:storage:target:targetPath:set:value:value")
     @rule(AstCommand, identifier="data:modify:block:targetPos:targetPath:set:value:value")
     @rule(AstCommand, identifier="data:modify:entity:target:targetPath:set:value:value")
-    def cmd_subs_datamodify(self, node: AstCommand):
+    def cmd_substitutions_datamodify(self, node: AstCommand):
         ast_target, ast_target_path, ast_nbt = node.arguments
         match ast_target_path, ast_nbt.evaluate(): # type: ignore ; ast_nbt is AstNbtValue|AstNbtCompound, which do have .evaluate() methods
             case AstNbtPath(components=[*_, AstNbtPathKey(value="minecraft:custom_model_data")]), String(reference):

@@ -16,7 +16,9 @@ from mecha.ast import (
     AstJsonObject,
     AstJsonObjectEntry,
     AstJsonObjectKey,
+    AstNbtCompound,
     AstNbtCompoundEntry,
+    AstNbtCompoundKey,
 )
 from PIL.Image import Image
 
@@ -55,7 +57,7 @@ class SkinNbtTransformer(MutatingReducer, InvokeOnJsonNbt):
         super().__init__()
 
     @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='minecraft:profile'))
-    def skullowner_substitutions(self, node: AstNbtCompoundEntry, **kwargs: Any):
+    def json_substitutions(self, node: AstJsonObjectEntry, **kwargs: Any):
         reference = node.value.evaluate()
         if isinstance(reference, str) and reference.startswith("$"):
             skin_val, uuid, d = self.retrieve_texture(reference, **kwargs)
@@ -72,7 +74,24 @@ class SkinNbtTransformer(MutatingReducer, InvokeOnJsonNbt):
             }))
         return node
 
-    # TODO 1.20.5: substitute profile data in mcfunction files
+    @rule(AstNbtCompoundEntry, key=AstNbtCompoundKey(value='minecraft:profile'))
+    def cmd_substitutions_nbt(self, node: AstNbtCompoundEntry, **kwargs: Any):
+        reference = node.value.evaluate()
+        if isinstance(reference, str) and reference.startswith("$"):
+            skin_val, uuid, d = self.retrieve_texture(reference, **kwargs)
+            if d:
+                yield d
+            node = replace(node, value=AstNbtCompound.from_value({
+                "id": uuid,
+                "properties": [
+                    {
+                        "name": "textures",
+                        "value": skin_val,
+                    }
+                ]
+            }))
+        return node
+
 
     def retrieve_texture(self, skin_name: str, **kwargs: Any) -> tuple[str, list[int], Diagnostic|None]:
         skin_name = skin_name.lstrip("$")
