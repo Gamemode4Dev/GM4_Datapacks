@@ -67,6 +67,13 @@ jobs:
         env:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
+      - name: Remove non-modules for artifact
+        if: github.event_name == 'pull_request'
+        run: |
+          rm -r release/$VERSION/generated
+          rm release/$VERSION/lib_*
+          rm release/$VERSION/meta.json
+
       - name: Upload artifact
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
