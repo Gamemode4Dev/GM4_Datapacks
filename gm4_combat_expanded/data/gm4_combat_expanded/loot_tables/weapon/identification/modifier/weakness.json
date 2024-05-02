@@ -59,7 +59,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_combat_expanded:{strike:1,modifier:102,level:'random_value',level2:'random_value_2'}"
+              "tag": "{gm4_combat_expanded:{strike:1,modifier:102,level:'random_value',level2:'random_value_2'}}"
             }
           ]
         }

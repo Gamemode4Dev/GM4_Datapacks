@@ -8,10 +8,7 @@ execute store result storage gm4_combat_expanded:temp damage int 1 run scoreboar
 scoreboard players operation $sword_damage gm4_ce_data < $sword_durability gm4_ce_data
 
 # apply to correct piece of armor
-execute if score $sword_id gm4_ce_data matches 0 run item modify entity @p[tag=gm4_ce_target] armor.head gm4_combat_expanded:set_damage
-execute if score $sword_id gm4_ce_data matches 1 run item modify entity @p[tag=gm4_ce_target] armor.chest gm4_combat_expanded:set_damage
-execute if score $sword_id gm4_ce_data matches 2 run item modify entity @p[tag=gm4_ce_target] armor.legs gm4_combat_expanded:set_damage
-execute if score $sword_id gm4_ce_data matches 3 run item modify entity @p[tag=gm4_ce_target] armor.feet gm4_combat_expanded:set_damage
+execute as @p[tag=gm4_ce_target] run function gm4_combat_expanded:item_modify_eval/set_damage
 execute as @p[tag=gm4_ce_target] run function gm4_combat_expanded:armor/slot/silence_equip_sound
 
 # effect in case sword broke

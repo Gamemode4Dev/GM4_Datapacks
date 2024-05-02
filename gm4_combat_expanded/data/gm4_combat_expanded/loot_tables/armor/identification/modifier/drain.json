@@ -22,7 +22,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_combat_expanded:{modifier:35,level:'armor}}"
+              "tag": "{gm4_combat_expanded:{modifier:35,level:'armor'}}"
             }
           ]
         }

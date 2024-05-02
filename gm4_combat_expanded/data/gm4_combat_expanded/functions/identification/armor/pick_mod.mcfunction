@@ -28,9 +28,9 @@ execute if data storage gm4_combat_expanded:temp new_components."minecraft:attri
 execute if data storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_3"}] run data modify storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_3"}].slot set from storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"generic.armor"}].slot
 execute if data storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_4"}] run data modify storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_4"}].slot set from storage gm4_combat_expanded:temp new_components."minecraft:attribute_modifiers".modifiers[{name:"generic.armor"}].slot
 # set levels from storages
-execute if data storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded.level run function gm4_combat_expanded:identification/set_value/armor/level
-execute if data storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded.level2 run function gm4_combat_expanded:identification/set_value/armor/level2
-execute if data storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded.level3 run function gm4_combat_expanded:identification/set_value/armor/level3
+execute if data storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded.level run function gm4_combat_expanded:identification/armor/set_value/level
+execute if data storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded.level2 run function gm4_combat_expanded:identification/armor/set_value/level2
+execute if data storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded.level3 run function gm4_combat_expanded:identification/armor/set_value/level3
 
 # set components
 data modify storage gm4_combat_expanded:temp components merge from storage gm4_combat_expanded:temp new_components

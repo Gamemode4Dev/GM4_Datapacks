@@ -59,7 +59,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_combat_expanded:{strike:1,modifier:112,damage_buffed:-1,level:'random_value'}"
+              "tag": "{gm4_combat_expanded:{strike:1,modifier:112,damage_buffed:-1,level:'random_value'}}"
             }
           ]
         }
