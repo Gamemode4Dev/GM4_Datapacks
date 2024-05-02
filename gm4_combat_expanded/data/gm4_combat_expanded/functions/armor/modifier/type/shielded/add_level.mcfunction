@@ -3,5 +3,5 @@
 # at unspecified
 # run from armor/check_modifier/safety
 
-execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.level
+execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".level
 scoreboard players operation @s gm4_ce_absorp += $level gm4_ce_data

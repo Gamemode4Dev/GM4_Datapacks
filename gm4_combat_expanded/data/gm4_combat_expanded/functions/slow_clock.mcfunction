@@ -21,7 +21,8 @@ execute as @e[type=creeper,tag=gm4_ce_toxic_creeper] run function gm4_combat_exp
 # cloaked crepers
 effect give @e[type=creeper,tag=gm4_ce_cloaked_creeper] invisibility 33 0
 
-# cleanup totem displays (this is just in case a totem dies in an unexpected way)
+# cleanup totems
+execute as @e[type=armor_stand,tag=gm4_ce_totem] at @s unless entity @a[distance=..32,gamemode=!spectator] run function gm4_combat_expanded:armor/modifier/type/totem/remove
 execute as @e[type=block_display,tag=gm4_ce_totem_display] at @s unless entity @e[type=armor_stand,tag=gm4_ce_totem,distance=..5] run kill @s
 
 # cleanup beacon light markers

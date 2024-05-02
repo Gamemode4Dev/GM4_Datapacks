@@ -4,6 +4,7 @@
 # run from armor/modifier/type/archer/find_arrow
 
 # if not shot by the player do not double
+execute on origin unless entity @s[tag=gm4_ce_target] run say not by player
 execute on origin unless entity @s[tag=gm4_ce_target] run return 0
 
 # multishot support (spawns half as many arrows, so 1 per level)

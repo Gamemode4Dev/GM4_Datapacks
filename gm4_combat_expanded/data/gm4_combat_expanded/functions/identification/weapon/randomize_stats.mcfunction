@@ -22,7 +22,7 @@ scoreboard players operation $atkspeed- gm4_ce_data -= #7 gm4_ce_data
 execute store result score $random_value gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:randomizer/armor
 
 # calculate new damage in order to replace the attribute
-execute store result score $damage_stored gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.damage
+execute store result score $damage_stored gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".damage
 # base damage up
 scoreboard players operation $damage_up gm4_ce_data = $damage_stored gm4_ce_data
 scoreboard players operation $damage_up gm4_ce_data += $damage gm4_ce_data
@@ -53,7 +53,7 @@ scoreboard players operation $damage_low_01 gm4_ce_data = $damage_low gm4_ce_dat
 scoreboard players operation $damage_low_01 gm4_ce_data %= #10 gm4_ce_data
 
 # calculate new attack speed in order to replace the attribute
-execute store result score $atkspeed_stored gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.atkspeed
+execute store result score $atkspeed_stored gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".atkspeed
 # base atack speed up
 scoreboard players operation $atkspeed_up gm4_ce_data = $atkspeed_stored gm4_ce_data
 scoreboard players operation $atkspeed_up gm4_ce_data += $atkspeed gm4_ce_data

@@ -15,7 +15,7 @@ scoreboard players operation @s gm4_ce_sword_ring = $sword_id gm4_ce_data
 scoreboard players operation @s gm4_ce_id = $player_id gm4_ce_id
 
 # set material
-execute store result score $sword_material gm4_ce_data run data get storage gm4_combat_expanded:temp sword_ring.data[0].tag.gm4_combat_expanded.material
+execute store result score $sword_material gm4_ce_data run data get storage gm4_combat_expanded:temp sword_ring.data[0].components."minecraft:custom_data".gm4_combat_expanded.material
 execute if score $sword_material gm4_ce_data matches 2 run data modify entity @s item.id set value "stone_sword"
 execute if score $sword_material gm4_ce_data matches 3 run data modify entity @s item.id set value "iron_sword"
 execute if score $sword_material gm4_ce_data matches 4 run data modify entity @s item.id set value "golden_sword"

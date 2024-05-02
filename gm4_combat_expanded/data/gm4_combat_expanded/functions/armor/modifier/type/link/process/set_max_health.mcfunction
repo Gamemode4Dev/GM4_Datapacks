@@ -8,11 +8,11 @@ execute if score @s gm4_ce_link_slot matches 0 run item replace block 29999998 1
 execute if score @s gm4_ce_link_slot matches 1 run item replace block 29999998 1 7134 container.0 from entity @s armor.chest
 execute if score @s gm4_ce_link_slot matches 2 run item replace block 29999998 1 7134 container.0 from entity @s armor.legs
 execute if score @s gm4_ce_link_slot matches 3 run item replace block 29999998 1 7134 container.0 from entity @s armor.feet
-data modify storage gm4_combat_expanded:temp tag set from block 29999998 1 7134 Items[{Slot:0b}].tag
+data modify storage gm4_combat_expanded:temp components set from block 29999998 1 7134 Items[{Slot:0b}].components
 data remove block 29999998 1 7134 Items
 
 # set max health to calculated value
-execute store result storage gm4_combat_expanded:temp tag.AttributeModifiers[{Name:"gm4_combat_expanded"}].Amount int 1 run scoreboard players get $set_max_health gm4_ce_data
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded"}].amount int 1 run scoreboard players get $set_max_health gm4_ce_data
 
 # update linked armor piece
 execute if score @s gm4_ce_link_slot matches 0 run item modify entity @s armor.head gm4_combat_expanded:update

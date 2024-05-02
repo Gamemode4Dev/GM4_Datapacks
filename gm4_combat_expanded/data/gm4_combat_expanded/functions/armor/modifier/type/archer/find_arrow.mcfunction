@@ -18,21 +18,22 @@ data remove block 29999998 1 7134 Items
 scoreboard players set $storm_arrow_target gm4_ce_data -1
 
 scoreboard players set $add_storm_arrows gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded{modifier:archer} store result score $add_storm_arrows gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded.level 2
+execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:archer} store result score $add_storm_arrows gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:0b}].components."minecraft:custom_data".gm4_combat_expanded.level 2
 scoreboard players operation $storm_arrow_target gm4_ce_data += $add_storm_arrows gm4_ce_data
 
 scoreboard players set $add_storm_arrows gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded{modifier:archer} store result score $add_storm_arrows gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded.level 2
+execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:archer} store result score $add_storm_arrows gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:1b}].components."minecraft:custom_data".gm4_combat_expanded.level 2
 scoreboard players operation $storm_arrow_target gm4_ce_data += $add_storm_arrows gm4_ce_data
 
 scoreboard players set $add_storm_arrows gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded{modifier:archer} store result score $add_storm_arrows gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded.level 2
+execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:archer} store result score $add_storm_arrows gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:2b}].components."minecraft:custom_data".gm4_combat_expanded.level 2
 scoreboard players operation $storm_arrow_target gm4_ce_data += $add_storm_arrows gm4_ce_data
 
 scoreboard players set $add_storm_arrows gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded{modifier:archer} store result score $add_storm_arrows gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded.level 2
+execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:archer} store result score $add_storm_arrows gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_combat_expanded.level 2
 scoreboard players operation $storm_arrow_target gm4_ce_data += $add_storm_arrows gm4_ce_data
 
+tellraw @p {"score":{"name":"$storm_arrow_target","objective":"gm4_ce_data"}}
 # spawn arrows
 tag @s add gm4_ce_target
 scoreboard players set $storm_arrow_fired gm4_ce_data 0

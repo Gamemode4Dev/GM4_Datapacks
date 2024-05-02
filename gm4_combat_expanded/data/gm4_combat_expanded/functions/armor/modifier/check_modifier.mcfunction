@@ -4,7 +4,7 @@
 # run from functions in armor/slot/<SLOT>
 
 # store active information
-execute store result score $active gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.active
+execute store result score $active gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.active
 scoreboard players operation $modifier gm4_ce_data /= #100 gm4_ce_data
 
 # check activation requirements
