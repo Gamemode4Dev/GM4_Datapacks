@@ -34,34 +34,45 @@
         ]
     },
     {
-        "function": "minecraft:sequence",
-        "functions": [
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_model_data": "gm4_scuba_gear:item/flippers"
+        },
+        "conditions": [
             {
-                "function": "minecraft:set_components",
-                "components": {
-                    "minecraft:custom_model_data": "gm4_scuba_gear:item/flippers"
-                }
-            },
-            {
-                "function": "minecraft:set_name",
-                "name": {
-                    "translate": "item.gm4.flippers_of_ostara",
-                    "fallback": "Flippers of Ostara",
-                    "italic": false
-                }
-            }
-        ],
-        "conditions": {
-            "condition": "minecraft:value_check",
-            "value": {
-                "type": "minecraft:score",
-                "target": {
-                    "type": "minecraft:fixed",
-                    "name": "$boa_flippers"
+                "condition": "minecraft:value_check",
+                "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$boa_flippers"
+                    },
+                    "score": "gm4_crafting"
                 },
-                "score": "gm4_crafting"
-            },
-            "range": 1
-        }
+                "range": 1
+            }
+        ]
+    },
+    {
+        "function": "minecraft:set_name",
+        "name": {
+            "translate": "item.gm4.flippers_of_ostara",
+            "fallback": "Flippers of Ostara",
+            "italic": false
+        },
+        "conditions": [
+            {
+                "condition": "minecraft:value_check",
+                "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$boa_flippers"
+                    },
+                    "score": "gm4_crafting"
+                },
+                "range": 1
+            }
+        ]
     }
 ]
