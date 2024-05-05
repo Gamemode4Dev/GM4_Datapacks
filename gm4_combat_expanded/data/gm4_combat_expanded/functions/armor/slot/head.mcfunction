@@ -14,5 +14,5 @@ execute if predicate gm4_combat_expanded:technical/convert_netherite/head run fu
 execute if score $modifier gm4_ce_data matches 100.. run function gm4_combat_expanded:armor/modifier/check_modifier
 
 # make changes
-execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:item_modify_eval_head_update with storage gm4_combat_expanded:temp
+execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:item_modify_eval/head_update with storage gm4_combat_expanded:temp
 execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:armor/slot/silence_equip_sound

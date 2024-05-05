@@ -17,12 +17,7 @@
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "chest"
-                }
-              ]
-            },
-            {
-              "function": "minecraft:set_attributes",
-              "modifiers": [
+                },
                 {
                   "attribute": "minecraft:generic.attack_damage",
                   "name": "gm4_combat_expanded_2",
@@ -315,6 +310,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.poised",

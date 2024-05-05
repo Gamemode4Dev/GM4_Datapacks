@@ -5,6 +5,9 @@ version: 2.0.X
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_forceload
@@ -34,16 +37,8 @@ meta:
     model_data:
       - template: advancement
         broadcast:
-        - item: clock
-          reference: gui/advancement/combat_expanded_challenger
-        - item: iron_chestplate
-          reference: gui/advancement/combat_expanded_full_set
-        - item: shield
-          reference: gui/advancement/combat_expanded_guardian
         - item: leather_chestplate
           reference: gui/advancement/combat_expanded_identify
-        - item: clock
-          reference: gui/advancement/combat_expanded_survive
     translation_linter_ignores:
       - enchantment.level.14
       - enchantment.level.15

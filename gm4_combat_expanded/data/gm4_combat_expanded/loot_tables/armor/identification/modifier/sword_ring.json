@@ -77,6 +77,21 @@
           "lore": [
             [
               {
+                "translate": "item.gm4.combat_expanded.lore.sword_ring_description_4",
+                "fallback": "A sword rotates around you at attack range",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
                 "translate": "item.gm4.combat_expanded.lore.sword_ring_description",
                 "fallback": "Sword deals %s Damage, sneak to spin faster",
                 "with": [
@@ -244,6 +259,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.sword_ring",
@@ -259,6 +275,12 @@
               "color": "yellow"
             }
           ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:rarity": "uncommon"
+          }
         }
       ]
     }

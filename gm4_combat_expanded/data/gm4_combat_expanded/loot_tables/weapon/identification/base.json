@@ -17,12 +17,6 @@
                 },
                 "minecraft:enchantments": {}
               }
-            },
-            {
-              "function": "minecraft:toggle_tooltips",
-              "toggles": {
-                "minecraft:attribute_modifiers": false
-              }
             }
           ]
         }

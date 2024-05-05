@@ -8,10 +8,10 @@ function gm4_combat_expanded:player/calculate_hp
 execute unless score @s gm4_ce_health.current matches 1.. run return 0
 
 # check if armor has been given a new custom name
-execute store result score $name_len gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_name"
-execute if score $name_len gm4_ce_data matches ..55 run data modify storage gm4_combat_expanded:temp format_name_args.name set from storage gm4_combat_expanded:temp components."minecraft:custom_name"
-execute if score $name_len gm4_ce_data matches ..55 run function gm4_combat_expanded:armor/modifier/type/link/format_name with storage gm4_combat_expanded:temp format_name_args
-execute if score $name_len gm4_ce_data matches ..55 run data remove storage gm4_combat_expanded:temp format_name_args
+execute store success score $renamed gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_name"
+execute if score $renamed gm4_ce_data matches 1 run data modify storage gm4_combat_expanded:temp format_name_args.name set from storage gm4_combat_expanded:temp components."minecraft:custom_name"
+execute if score $renamed gm4_ce_data matches 1 run function gm4_combat_expanded:armor/modifier/type/link/format_name with storage gm4_combat_expanded:temp format_name_args
+execute if score $renamed gm4_ce_data matches 1 run data remove storage gm4_combat_expanded:temp format_name_args
 
 # if player is already in a link from a previous link piece skip this
 execute if score @s gm4_ce_link_id matches 1.. store success score $change gm4_ce_data run data modify storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded"}].amount set value 0

@@ -76,6 +76,7 @@ scoreboard objectives add gm4_ce_burning.level dummy
 scoreboard objectives add gm4_ce_burning.duration dummy
 scoreboard objectives add gm4_ce_armor armor
 scoreboard objectives add gm4_ce_horse.speed_level dummy
+scoreboard objectives add gm4_ce_husk_pieces dummy
 
 scoreboard objectives add gm4_ce_boss dummy
 scoreboard objectives add gm4_ce_boss.id dummy

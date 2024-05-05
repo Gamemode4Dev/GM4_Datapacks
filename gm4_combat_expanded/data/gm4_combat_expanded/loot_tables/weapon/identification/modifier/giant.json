@@ -54,6 +54,13 @@
                   },
                   "operation": "add_value",
                   "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:player.entity_interaction_range",
+                  "name": "gm4_ce_entity_interaction_range",
+                  "amount": 1,
+                  "operation": "add_value",
+                  "slot": "mainhand"
                 }
               ]
             },
@@ -313,6 +320,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.giant",

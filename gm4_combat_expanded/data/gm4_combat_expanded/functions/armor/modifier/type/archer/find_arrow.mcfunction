@@ -33,7 +33,6 @@ scoreboard players set $add_storm_arrows gm4_ce_data 0
 execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:archer} store result score $add_storm_arrows gm4_ce_data run data get storage gm4_combat_expanded:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_combat_expanded.level 2
 scoreboard players operation $storm_arrow_target gm4_ce_data += $add_storm_arrows gm4_ce_data
 
-tellraw @p {"score":{"name":"$storm_arrow_target","objective":"gm4_ce_data"}}
 # spawn arrows
 tag @s add gm4_ce_target
 scoreboard players set $storm_arrow_fired gm4_ce_data 0

@@ -15,7 +15,7 @@ data remove block 29999998 1 7134 Items
 scoreboard players set $change gm4_ce_data 0
 data modify storage gm4_combat_expanded:temp components set from storage gm4_combat_expanded:temp Items[{Slot:0b}].components
 execute if data storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded{modifier:convert} run function gm4_combat_expanded:armor/modifier/type/convert/calc_conversion
-execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:item_modify_eval_head_update with storage gm4_combat_expanded:temp
+execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:item_modify_eval/head_update with storage gm4_combat_expanded:temp
 execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:armor/slot/silence_equip_sound
 data remove storage gm4_combat_expanded:temp components
 
@@ -23,7 +23,7 @@ data remove storage gm4_combat_expanded:temp components
 scoreboard players set $change gm4_ce_data 0
 data modify storage gm4_combat_expanded:temp components set from storage gm4_combat_expanded:temp Items[{Slot:1b}].components
 execute if data storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded{modifier:convert} run function gm4_combat_expanded:armor/modifier/type/convert/calc_conversion
-execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:item_modify_eval_chest_update with storage gm4_combat_expanded:temp
+execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:item_modify_eval/chest_update with storage gm4_combat_expanded:temp
 execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:armor/slot/silence_equip_sound
 data remove storage gm4_combat_expanded:temp components
 
@@ -31,7 +31,7 @@ data remove storage gm4_combat_expanded:temp components
 scoreboard players set $change gm4_ce_data 0
 data modify storage gm4_combat_expanded:temp components set from storage gm4_combat_expanded:temp Items[{Slot:2b}].components
 execute if data storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded{modifier:convert} run function gm4_combat_expanded:armor/modifier/type/convert/calc_conversion
-execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:item_modify_eval_legs_update with storage gm4_combat_expanded:temp
+execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:item_modify_eval/legs_update with storage gm4_combat_expanded:temp
 execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:armor/slot/silence_equip_sound
 data remove storage gm4_combat_expanded:temp components
 
@@ -39,7 +39,7 @@ data remove storage gm4_combat_expanded:temp components
 scoreboard players set $change gm4_ce_data 0
 data modify storage gm4_combat_expanded:temp components set from storage gm4_combat_expanded:temp Items[{Slot:3b}].components
 execute if data storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded{modifier:convert} run function gm4_combat_expanded:armor/modifier/type/convert/calc_conversion
-execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:item_modify_eval_feet_update with storage gm4_combat_expanded:temp
+execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:item_modify_eval/feet_update with storage gm4_combat_expanded:temp
 execute if score $change gm4_ce_data matches 1 run function gm4_combat_expanded:armor/slot/silence_equip_sound
 data remove storage gm4_combat_expanded:temp components
 

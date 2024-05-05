@@ -53,6 +53,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.wild_magic",
@@ -68,6 +69,12 @@
               "color": "light_purple"
             }
           ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:rarity": "epic"
+          }
         }
       ]
     }

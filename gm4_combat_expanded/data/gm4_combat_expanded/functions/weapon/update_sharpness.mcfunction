@@ -31,12 +31,17 @@ loot replace block 29999998 1 7134 container.2 loot gm4_combat_expanded:technica
 
 # update lore with lib_lore
 data modify storage gm4_lore:temp Source set from storage gm4_combat_expanded:temp components."minecraft:lore"
-data modify storage gm4_lore:temp Target set value '{"translate":"item.modifiers.mainhand","italic":false,"color":"gray"}'
+data modify storage gm4_lore:temp Target set value '{"color":"gray","italic":false,"translate":"item.modifiers.mainhand"}'
 scoreboard players set $start gm4_lore 1
 function #gm4_lore:remove
 data modify storage gm4_lore:temp Input set from block 29999998 1 7134 Items[{Slot:2b}].components."minecraft:lore"
 function #gm4_lore:insert
 data modify storage gm4_combat_expanded:temp components."minecraft:lore" set from storage gm4_lore:temp Source
 
-# update item
-execute if entity @s[type=player] run function gm4_combat_expanded:item_modify_eval_mainhand_update with storage gm4_combat_expanded:temp
+# update item if held by player, otherwise the function that called this will handle it
+execute unless entity @s[type=player] run return 0
+data modify storage gm4_combat_expanded:temp sharpness.lore set from storage gm4_combat_expanded:temp components."minecraft:lore"
+function gm4_combat_expanded:item_modify_eval/sharpness_lore with storage gm4_combat_expanded:temp sharpness
+data remove storage gm4_combat_expanded:temp sharpness
+
+function gm4_combat_expanded:item_modify_eval/mainhand_update with storage gm4_combat_expanded:temp
