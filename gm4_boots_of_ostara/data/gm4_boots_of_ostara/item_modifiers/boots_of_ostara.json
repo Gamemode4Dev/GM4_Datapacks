@@ -19,7 +19,24 @@
             "translate": "item.gm4.boots_of_ostara",
             "fallback": "Boots of Ostara",
             "italic": false
-        }
+        },
+        "conditions": [
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "$boa_custom_name"
+                        },
+                        "score": "gm4_crafting"
+                    },
+                    "range": 1
+                }
+            }
+        ]
     },
     {
         "function": "minecraft:set_lore",

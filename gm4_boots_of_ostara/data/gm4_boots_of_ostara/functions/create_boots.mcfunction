@@ -3,6 +3,9 @@
 
 scoreboard players set $crafted gm4_crafting 1
 
+scoreboard players reset $boa_custom_name gm4_crafting
+execute store success score $boa_custom_name gm4_crafting if items block ~ ~ ~ container.4 *[custom_name]
+
 scoreboard players reset $boa_flippers gm4_crafting
 execute store success score $boa_flippers gm4_crafting if items block ~ ~ ~ container.4 *[custom_data~{gm4_scuba_gear:{item:"flippers"}}]
 
