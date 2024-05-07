@@ -78,6 +78,8 @@ meta:
       - translation: gui.gm4.custom_crafter
         container: dropper
         texture: gui/container/custom_crafter
+    smithed:
+      pack_id: gm4_lib_custom_crafters
     credits:
       Custom Crafters Creators:
         - Bloo
@@ -92,5 +94,3 @@ meta:
   babelbox:
       load: assets/translations.csv
       namespace: gm4_translations
-  smithed:
-    pack_id: gm4_lib_custom_crafters

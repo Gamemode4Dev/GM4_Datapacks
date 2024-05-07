@@ -22,8 +22,8 @@ meta:
         advancements:
           - place_machine_block
           - place_machine_cart
+    smithed:
+      pack_id: gm4_lib_machines
     credits:
       Machines Library Creator:
         - BluePsychoRanger
-  smithed:
-    pack_id: gm4_lib_machines

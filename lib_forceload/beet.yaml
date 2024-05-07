@@ -15,8 +15,8 @@ meta:
     versioning:
       extra_version_injections:
         advancements: [dimension_marking]
+    smithed:
+      pack_id: gm4_lib_forceload
     credits:
       Creator:
         - Misode
-  smithed:
-    pack_id: gm4_lib_forceload

@@ -19,8 +19,8 @@ meta:
           - resolve_algorithm/remove
           - resolve_algorithm/replace
           - resolve_algorithm/search
+    smithed:
+      pack_id: gm4_lib_lore
     credits:
       Creator:
         - BluePsychoRanger
-  smithed:
-    pack_id: gm4_lib_lore

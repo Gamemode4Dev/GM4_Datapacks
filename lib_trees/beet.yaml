@@ -19,9 +19,9 @@ meta:
       extra_version_injections:
         advancements:
           - place_sapling
+    smithed:
+      pack_id: gm4_lib_trees
     credits:
       Creator:
         - BluePsychoRanger
         - Bloo
-  smithed:
-    pack_id: gm4_lib_trees

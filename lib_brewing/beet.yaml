@@ -14,8 +14,8 @@ meta:
   gm4:
     versioning:
       schedule_loops: [main]
+    smithed:
+      pack_id: gm4_lib_brewing
     credits:
       Creator:
         - BluePsychoRanger
-  smithed:
-    pack_id: gm4_lib_brewing

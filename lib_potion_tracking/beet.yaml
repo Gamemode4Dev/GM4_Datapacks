@@ -18,8 +18,8 @@ meta:
         lib_forceload: 1.1.0
       extra_version_injections: 
         functions: [resolve_tick]
+    smithed:
+      pack_id: gm4_lib_potion_tracking
     credits:
       Creator:
         - BluePsychoRanger
-  smithed:
-    pack_id: gm4_lib_potion_tracking

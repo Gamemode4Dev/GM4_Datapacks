@@ -51,11 +51,5 @@ meta:
       - enchantment.level.17
   modrinth:
     project_id: zgxd3poi
-    minecraft:
-      - 1.20.3
-      - 1.20.4
   smithed:
     pack_id: gm4_combat_expanded
-    minecraft:
-      - 1.20.3
-      - 1.20.4

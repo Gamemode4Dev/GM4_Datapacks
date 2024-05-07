@@ -30,6 +30,10 @@ meta:
         - gm4_podzol_rooting_soil
       notes:
         - Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.
+    modrinth:
+      project_id: Afacz65w
+    smithed:
+      pack_id: gm4_apple_trees
     video: null
     wiki: https://wiki.gm4.co/wiki/Apple_Trees
     credits:
@@ -49,7 +53,3 @@ meta:
       - item: golden_apple
         reference: block/golden_apple_unripe
         model: gm4_golden_apple_trees:block/golden_apple_unripe
-  modrinth:
-    project_id: Afacz65w
-  smithed:
-    pack_id: gm4_apple_trees

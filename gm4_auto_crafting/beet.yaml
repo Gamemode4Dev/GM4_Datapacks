@@ -65,6 +65,12 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
+    modrinth:
+      project_id: WkDoUESw
+    smithed:
+      pack_id: gm4_auto_crafting
+    planetminecraft:
+      uid: 6097435
     video: null
     wiki: https://wiki.gm4.co/wiki/Custom_Crafters/Auto_Crafting
     credits:
@@ -74,9 +80,3 @@ meta:
         - Hozz
       Textures:
         - Kyrius
-  modrinth:
-    project_id: WkDoUESw
-  smithed:
-    pack_id: gm4_auto_crafting
-  planetminecraft:
-    uid: 6097435

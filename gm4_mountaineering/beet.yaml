@@ -38,12 +38,12 @@ meta:
       recommended: []
       notes:
         - Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.
+    modrinth:
+      project_id: Wq7Qfkuh
+    smithed:
+      pack_id: gm4_mountaineering
     video: null
     wiki: https://wiki.gm4.co/wiki/Mountaineering
     credits:
       Creator:
         - foodiebonus
-  modrinth:
-    project_id: Wq7Qfkuh
-  smithed:
-    pack_id: gm4_mountaineering

@@ -71,6 +71,8 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
+    planetminecraft: 
+      uid: 4344954
     video: https://www.youtube.com/watch?v=sdrTJYjL8C0
     wiki: https://wiki.gm4.co/wiki/Block_Compressors
     credits:
@@ -85,5 +87,3 @@ meta:
         - Kyrius
       Icon Design:
         - Sparks
-  planetminecraft: 
-    uid: 4344954

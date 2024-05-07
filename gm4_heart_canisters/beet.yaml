@@ -54,6 +54,8 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
+    planetminecraft: 
+      uid: 4331371
     video: https://www.youtube.com/watch?v=zjmL6rjoq0g
     wiki: https://wiki.gm4.co/wiki/Heart_Canisters
     credits:
@@ -68,5 +70,3 @@ meta:
         - Jonpot
       Icon Design:
         - Hozz
-  planetminecraft: 
-    uid: 4331371
