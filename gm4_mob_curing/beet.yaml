@@ -1,6 +1,6 @@
 id: gm4_mob_curing
 name: Mob Curing
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -16,7 +16,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_trades: 1.3.0
+        lib_trades: 1.4.0
       schedule_loops: [main]
     model_data:
       - item: potion

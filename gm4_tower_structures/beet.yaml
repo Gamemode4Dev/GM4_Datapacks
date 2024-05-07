@@ -1,6 +1,6 @@
 id: gm4_tower_structures
 name: Tower Structures
-version: 3.2.X
+version: 3.3.X
 
 data_pack:
   load: .
