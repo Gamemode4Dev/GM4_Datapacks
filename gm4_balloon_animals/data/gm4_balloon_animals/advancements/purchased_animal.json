@@ -5,7 +5,7 @@
         "conditions": {
           "item": {
             "predicate": {
-              "minecraft:custom_data": "{gm4_balloon_animals:{animal:1b,trade:1b}}"
+              "minecraft:custom_data": "{gm4_balloon_animals:{trade:1b}}"
             }
           }
         }
@@ -15,7 +15,7 @@
         "conditions": {
           "item": {
             "predicate": {
-              "minecraft:custom_data": "{gm4_balloon_animals:{animal:2b,trade:2b}}"
+              "minecraft:custom_data": "{gm4_balloon_animals:{trade:2b}}"
             }
           }
         }
