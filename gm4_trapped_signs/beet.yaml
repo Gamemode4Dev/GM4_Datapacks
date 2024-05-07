@@ -17,6 +17,7 @@ pipeline:
 
 meta:
   gm4:
+    minecraft: []
     versioning:
       required:
         lib_custom_crafters: 3.0.0

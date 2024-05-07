@@ -10,6 +10,7 @@ pipeline:
 
 meta:
   gm4:
+    minecraft: []
     versioning:
       required:
         gm4_liquid_tanks: 2.1.0
