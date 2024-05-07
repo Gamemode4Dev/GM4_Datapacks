@@ -26,7 +26,7 @@
       "conditions": {
         "item": {
           "predicates": {
-            "minecraft:custom_data": "{gm4_potion_liquids:'floating'}"
+            "minecraft:custom_data": "{gm4_potion_liquids:{potion:'floating'}}"
           }
         }
       }
