@@ -3,7 +3,7 @@
 # run from tinkering_compressors:main
 
 tag @s add gm4_compressor_processing
-execute positioned ~ ~0.9 ~ if entity @e[type=item,tag=!gm4_tc_locked,distance=..1] if items entity @s contents *[!custom_data~{gm4_compressed:{}}] positioned ~ ~-0.9 ~ run function gm4_tinkering_compressors:item
+execute positioned ~ ~0.9 ~ if entity @e[type=item,tag=!gm4_tc_locked,distance=..1] if items entity @e[type=item,tag=!gm4_tc_locked,distance=..1] contents *[!custom_data~{gm4_compressed:{}}] positioned ~ ~-0.9 ~ run function gm4_tinkering_compressors:item
 particle minecraft:dust{color:[0.624,0.769,0.671],scale:1} ~ ~0.9 ~ 0 0.15 0 0.01 15
 
 # simulate pressure plate
