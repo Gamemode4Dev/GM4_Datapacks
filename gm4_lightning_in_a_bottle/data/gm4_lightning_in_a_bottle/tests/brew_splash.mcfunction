@@ -7,7 +7,7 @@ dummy @s use block ~1 ~1 ~1
 
 await entity @e[type=marker,tag=gm4_brewing_stand,distance=..4]
 
-item replace block ~1 ~1 ~1 container.0 with minecraft:potion[custom_data={gm4_lightning_in_a_bottle:1b}]
+loot replace block ~1 ~1 ~1 container.0 loot gm4_lightning_in_a_bottle:items/bottle_of_lightning
 item replace block ~1 ~1 ~1 container.3 with minecraft:gunpowder
 item replace block ~1 ~1 ~1 container.4 with minecraft:blaze_powder
 
