@@ -9,7 +9,10 @@ summon item ~ ~-0.26 ~ {Tags:["gm4_empty_enchanted_book"],PickupDelay:0s,Item:{i
 item replace entity @s weapon.mainhand with minecraft:air
 
 # compose enchants
-function gm4_book_binders:binder/recipes/binding
+item replace entity @e[type=item,tag=gm4_empty_enchanted_book,distance=..0.3] contents from entity @s armor.feet
+
+# advancement
+advancement grant @a[distance=..3,gamemode=!spectator] only gm4:book_binders_bind
 
 # reset tags
 tag @s remove gm4_book_binder_with_page

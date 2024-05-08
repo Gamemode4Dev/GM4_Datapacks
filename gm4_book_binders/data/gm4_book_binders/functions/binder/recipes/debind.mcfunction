@@ -3,7 +3,11 @@
 #run from binder/recipes/check_recipes
 
 # transfer enchants onto pages
-function gm4_book_binders:binder/recipes/debinding
+data modify storage gm4_book_binders:temp stored_enchantments set from entity @s HandItems[0].components."minecraft:stored_enchantments".levels
+loot spawn ~ ~-0.26 ~ loot gm4_book_binders:debind_book
+
+# advancement
+advancement grant @a[distance=..3,gamemode=!spectator] only gm4:book_binders_debind
 
 # delete used up book
 data remove entity @s HandItems[0]
