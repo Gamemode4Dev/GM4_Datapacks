@@ -6,7 +6,7 @@
 tag @s add gm4_cb_use
 
 # replace arrow with tnt and copy data
-summon minecraft:tnt ~ ~ ~ {Tags:["gm4_cb_projectile"],Fuse:80s}
+summon minecraft:tnt ~ ~ ~ {Tags:["gm4_cb_projectile"],fuse:80s}
 execute as @e[type=minecraft:tnt,tag=gm4_cb_projectile,limit=1,distance=..1] run function gm4_crossbow_cartridges:projectile/arrow_motion
 
 # remove tnt from player
