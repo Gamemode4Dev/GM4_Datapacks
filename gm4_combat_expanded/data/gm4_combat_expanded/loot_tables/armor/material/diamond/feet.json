@@ -13,6 +13,7 @@
               "modifiers": [
                 {
                   "attribute": "generic.armor",
+                  "replace": false,
                   "name": "generic.armor",
                   "id": "845DB27C-C624-495F-8C9F-6020A9A58B6B",
                   "amount": 3,
@@ -21,6 +22,7 @@
                 },
                 {
                   "attribute": "generic.armor_toughness",
+                  "replace": false,
                   "name": "generic.armor_toughness",
                   "id": "845DB27C-C624-495F-8C9F-6020A9A58B6B",
                   "amount": 2,
@@ -29,6 +31,7 @@
                 },
                 {
                   "attribute": "generic.knockback_resistance",
+                  "replace": false,
                   "name": "generic.knockback_resistance",
                   "id": "0-1-438d-0-28d34",
                   "amount": 0,

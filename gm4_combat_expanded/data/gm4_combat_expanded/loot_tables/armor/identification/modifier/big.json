@@ -13,6 +13,7 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.scale",
+                  "replace": false,
                   "name": "gm4_ce_perm",
                   "amount": {
                     "type": "minecraft:score",
@@ -28,6 +29,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.step_height",
+                  "replace": false,
                   "name": "gm4_ce_perm_2",
                   "amount": {
                     "type": "minecraft:score",
@@ -43,6 +45,7 @@
                 },
                 {
                   "attribute": "minecraft:player.block_interaction_range",
+                  "replace": false,
                   "name": "gm4_ce_perm_3",
                   "amount": {
                     "type": "minecraft:score",
@@ -58,6 +61,7 @@
                 },
                 {
                   "attribute": "minecraft:player.entity_interaction_range",
+                  "replace": false,
                   "name": "gm4_ce_perm_4",
                   "amount": {
                     "type": "minecraft:score",
@@ -73,6 +77,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_knockback",
+                  "replace": false,
                   "name": "gm4_ce_perm_5",
                   "amount": {
                     "type": "minecraft:score",
@@ -88,6 +93,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "replace": false,
                   "name": "gm4_ce_perm_6",
                   "amount": {
                     "type": "minecraft:score",
@@ -103,6 +109,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.gravity",
+                  "replace": false,
                   "name": "gm4_ce_perm_7",
                   "amount": {
                     "type": "minecraft:score",
@@ -118,6 +125,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.jump_strength",
+                  "replace": false,
                   "name": "gm4_ce_perm_8",
                   "amount": {
                     "type": "minecraft:score",
@@ -133,6 +141,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.safe_fall_distance",
+                  "replace": false,
                   "name": "gm4_ce_perm_9",
                   "amount": {
                     "type": "minecraft:score",

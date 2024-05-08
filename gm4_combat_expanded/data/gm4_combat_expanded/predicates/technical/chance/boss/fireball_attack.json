@@ -8,7 +8,7 @@
           "condition": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
-            "nbt": "{Tags:[\"gm4_ce_boss.watcher.main\"]}"
+            "nbt": "{Tags:[\"gm4_ce_boss.watcher.secondary\"]}"
           }
         },
         {
@@ -24,7 +24,7 @@
           "condition": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
-            "nbt": "{Tags:[\"gm4_ce_boss.watcher.secondary\"]}"
+            "nbt": "{Tags:[\"gm4_ce_boss.watcher.main\"]}"
           }
         },
         {

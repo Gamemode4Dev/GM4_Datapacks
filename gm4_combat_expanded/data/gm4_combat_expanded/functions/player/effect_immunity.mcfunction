@@ -1,5 +1,5 @@
 # clear effects depending on player tags from armor
-# @s = player wearing immune armour below 50% health
+# @s = player with immunity
 # at unspecified
 advancement revoke @s only gm4_combat_expanded:effect_immunity
 
@@ -12,3 +12,7 @@ effect clear @s[tag=gm4_ce_immune_hunger] hunger
 effect clear @s[tag=gm4_ce_immune_blind] blindness
 effect clear @s[tag=gm4_ce_immune_nausea] nausea
 effect clear @s[tag=gm4_ce_immune_weakness] weakness
+
+effect clear @s[tag=gm4_ce_immune_levitation] levitation
+effect clear @s[tag=gm4_ce_immune_slow_falling] slow_falling
+effect clear @s[tag=gm4_ce_immune_slowness] slowness

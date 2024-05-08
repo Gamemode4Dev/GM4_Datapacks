@@ -13,6 +13,7 @@
               "modifiers": [
                 {
                   "attribute": "generic.knockback_resistance",
+                  "replace": false,
                   "name": "gm4_ce_perm",
                   "amount": 0.1,
                   "operation": "add_value",

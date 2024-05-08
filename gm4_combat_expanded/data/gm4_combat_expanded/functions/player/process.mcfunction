@@ -27,7 +27,7 @@ scoreboard players reset @s gm4_ce_husk_pieces
 # remove tags
 tag @s remove gm4_ce_beacon_active
 tag @s remove gm4_ce_linked
-execute if entity @s[tag=gm4_ce_immune_active] run function gm4_combat_expanded:armor/modifier/type/immune/clear_immunities
+execute if entity @s[tag=gm4_ce_immune_active] run function gm4_combat_expanded:player/clear_immunities
 
 # process armor
 execute if predicate gm4_combat_expanded:modified_armor/wearing run function gm4_combat_expanded:armor/process

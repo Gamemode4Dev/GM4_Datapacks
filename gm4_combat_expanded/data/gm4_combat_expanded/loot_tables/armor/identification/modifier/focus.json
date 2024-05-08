@@ -13,6 +13,7 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.attack_damage",
+                  "replace": false,
                   "name": "gm4_combat_expanded",
                   "amount": 0,
                   "operation": "add_value",
