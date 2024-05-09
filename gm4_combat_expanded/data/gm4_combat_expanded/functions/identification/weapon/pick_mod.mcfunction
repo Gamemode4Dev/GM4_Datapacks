@@ -13,10 +13,10 @@ data modify storage gm4_combat_expanded:temp new_components merge from block 299
 # fix components
 function gm4_combat_expanded:identification/weapon/fix_components
 
-# check sharpness level
-execute store result score $current_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:enchantments".levels."minecraft:sharpness"
-execute if score $current_sharpness gm4_ce_data matches 1.. run function gm4_combat_expanded:weapon/update_sharpness
-
 # set components
 data modify storage gm4_combat_expanded:temp components merge from storage gm4_combat_expanded:temp new_components
 data remove storage gm4_combat_expanded:temp new_components
+
+# check sharpness level
+execute store result score $current_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:enchantments".levels."minecraft:sharpness"
+execute if score $current_sharpness gm4_ce_data matches 1.. run function gm4_combat_expanded:weapon/update_sharpness

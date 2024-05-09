@@ -10,10 +10,10 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "generic.armor",
-                  "replace": false,
                   "name": "generic.armor",
                   "id": "D8499B04-0E66-4726-AB29-64469D734E0D",
                   "amount": 4,

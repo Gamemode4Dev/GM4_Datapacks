@@ -10,10 +10,10 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.gravity",
-                  "replace": false,
                   "name": "gm4_ce_perm",
                   "amount": -0.15,
                   "operation": "add_multiplied_base",
@@ -21,7 +21,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.fall_damage_multiplier",
-                  "replace": false,
                   "name": "gm4_ce_perm_2",
                   "amount": -0.15,
                   "operation": "add_multiplied_base",
@@ -29,7 +28,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.jump_strength",
-                  "replace": false,
                   "name": "gm4_ce_perm_3",
                   "amount": -0.075,
                   "operation": "add_multiplied_base",
@@ -37,7 +35,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.safe_fall_distance",
-                  "replace": false,
                   "name": "gm4_ce_perm_4",
                   "amount": -0.075,
                   "operation": "add_multiplied_base",
@@ -61,10 +58,10 @@
             },
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.gravity",
-                  "replace": false,
                   "name": "gm4_ce_perm",
                   "amount": -0.2,
                   "operation": "add_multiplied_base",
@@ -72,7 +69,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.fall_damage_multiplier",
-                  "replace": false,
                   "name": "gm4_ce_perm_2",
                   "amount": -0.2,
                   "operation": "add_multiplied_base",
@@ -80,7 +76,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.jump_strength",
-                  "replace": false,
                   "name": "gm4_ce_perm_3",
                   "amount": -0.1,
                   "operation": "add_multiplied_base",
@@ -88,7 +83,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.safe_fall_distance",
-                  "replace": false,
                   "name": "gm4_ce_perm_4",
                   "amount": -0.1,
                   "operation": "add_multiplied_base",
@@ -112,10 +106,10 @@
             },
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.gravity",
-                  "replace": false,
                   "name": "gm4_ce_perm",
                   "amount": -0.25,
                   "operation": "add_multiplied_base",
@@ -123,7 +117,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.fall_damage_multiplier",
-                  "replace": false,
                   "name": "gm4_ce_perm_2",
                   "amount": -0.25,
                   "operation": "add_multiplied_base",
@@ -131,7 +124,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.jump_strength",
-                  "replace": false,
                   "name": "gm4_ce_perm_3",
                   "amount": -0.125,
                   "operation": "add_multiplied_base",
@@ -139,7 +131,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.safe_fall_distance",
-                  "replace": false,
                   "name": "gm4_ce_perm_4",
                   "amount": -0.125,
                   "operation": "add_multiplied_base",
@@ -222,8 +213,7 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false
+              ]
             }
           ]
         }

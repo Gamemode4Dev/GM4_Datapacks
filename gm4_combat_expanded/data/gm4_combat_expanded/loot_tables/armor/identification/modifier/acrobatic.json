@@ -10,10 +10,10 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.fall_damage_multiplier",
-                  "replace": false,
                   "name": "gm4_combat_expanded",
                   "amount": 0,
                   "operation": "add_multiplied_base",
@@ -308,8 +308,7 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false
+              ]
             }
           ]
         }

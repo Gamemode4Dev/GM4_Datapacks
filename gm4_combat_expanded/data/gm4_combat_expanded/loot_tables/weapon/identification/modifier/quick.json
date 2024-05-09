@@ -10,10 +10,10 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.attack_damage",
-                  "replace": false,
                   "name": "gm4_ce_remove_hand_stats",
                   "amount": -1,
                   "operation": "add_value",
@@ -21,7 +21,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
-                  "replace": false,
                   "name": "gm4_ce_remove_hand_stats",
                   "amount": -4,
                   "operation": "add_value",
@@ -29,7 +28,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_damage",
-                  "replace": false,
                   "name": "gm4_ce_base_attack_damage",
                   "amount": {
                     "type": "minecraft:score",
@@ -45,7 +43,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
-                  "replace": false,
                   "name": "gm4_ce_base_attack_speed",
                   "amount": {
                     "type": "minecraft:score",
@@ -294,8 +291,7 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false
+              ]
             }
           ]
         }

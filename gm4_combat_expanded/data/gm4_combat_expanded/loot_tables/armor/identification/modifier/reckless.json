@@ -10,10 +10,10 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.attack_damage",
-                  "replace": false,
                   "name": "gm4_combat_expanded",
                   "amount": 0,
                   "operation": "add_value",
@@ -21,7 +21,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.armor",
-                  "replace": false,
                   "name": "gm4_combat_expanded_2",
                   "amount": 0,
                   "operation": "add_value",
@@ -144,9 +143,7 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false,
-              "color": "yellow"
+              ]
             }
           ]
         },

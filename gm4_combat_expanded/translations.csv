@@ -33,6 +33,7 @@ item.gm4.combat_expanded.lore.unsafe,When Under Attack:
 item.gm4.combat_expanded.lore.warp,Warp
 item.gm4.combat_expanded.lore.weakness_strike,Debilitating Strikes:
 item.gm4.combat_expanded.lore.wither_arrow,Arrow of Wither
+item.gm4.combat_expanded.name.acrobatic,Acrobatic %s
 item.gm4.combat_expanded.name.archer,Archery %s
 item.gm4.combat_expanded.name.beacon,Radiant %s
 item.gm4.combat_expanded.name.big,Goliaths %s
@@ -206,4 +207,3 @@ text.gm4.guidebook.combat_expanded.vorpal_location,Found in The End
 text.gm4.guidebook.combat_expanded.wild_magic_modifier,- Apply a random potion effect with random level and duration to wearer when damaged
 text.gm4.guidebook.combat_expanded.wild_magic_location,Found in Mushroom Fields
 text.gm4.guidebook.combat_expanded.link_location,Found in Deep Dark
-

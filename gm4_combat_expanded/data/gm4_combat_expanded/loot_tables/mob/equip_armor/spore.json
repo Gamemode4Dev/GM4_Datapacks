@@ -9,10 +9,10 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.max_health",
-                  "replace": false,
                   "name": "gm4_ce_spore_buff",
                   "amount": 16,
                   "operation": "add_value",
@@ -21,7 +21,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.armor",
-                  "replace": false,
                   "name": "gm4_ce_spore_buff",
                   "amount": 0.25,
                   "operation": "add_multiplied_base",
@@ -47,10 +46,10 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.max_health",
-                  "replace": false,
                   "name": "gm4_ce_spore_buff",
                   "amount": 8,
                   "operation": "add_value",
@@ -59,7 +58,6 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_damage",
-                  "replace": false,
                   "name": "gm4_ce_spore_buff",
                   "amount": -1.5,
                   "operation": "add_value",
