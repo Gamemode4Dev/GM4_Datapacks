@@ -2062,13 +2062,16 @@ def get_texture_color(texture: PngFile|None) -> str:
 
   # get average RGB values
   r, g, b = 0, 0, 0
-  for i in range(0, 12, 3):
+  n = 0
+  for i in range(0, min(12, len(palette)), 3): # type: ignore
     r += palette[i] # type: ignore ; PIL has 'Unknown' type on palette return
     g += palette[i+1] # type: ignore
     b += palette[i+2] # type: ignore
-  r /= 4 # type: ignore
-  g /= 4 # type: ignore
-  b /= 4 # type: ignore
+    n += 1
+  if n > 0:
+    r /= 4 # type: ignore
+    g /= 4 # type: ignore
+    b /= 4 # type: ignore
 
   # bump saturation and value to taste
   h, s, v = colorsys.rgb_to_hsv(r, g, b)# type: ignore

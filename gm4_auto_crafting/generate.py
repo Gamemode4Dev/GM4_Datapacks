@@ -405,10 +405,10 @@ def analyze_shaped_recipe(ctx: Context, recipe: dict[str, Any], name: str) -> Re
             # if the entire thing is full, just print the recipe for manual correction
             # if it gets here the last bottle/bucket will be voided
             if not found_match:
-                print("FULL: " + recipe["result"]["item"] + " -> " + last_output)
+                print("FULL: " + recipe["result"]["id"] + " -> " + last_output)
 
     # set the last slot to the recipe result
-    result_id = recipe["result"]["item"]
+    result_id = recipe["result"]["id"]
     result_count = recipe["result"].get("count", 1)
     result.append(RecipeResult(result_id, count=result_count))
     # return the new formatted recipe
@@ -451,7 +451,7 @@ def analyze_shapeless_recipe(ctx: Context, recipe: dict[str, Any], name: str) ->
     air_count = 8 - bucket_count - bottle_count
     result.append(RecipeResult("minecraft:air", rolls=air_count))
     # set the last slot to the recipe result
-    result_id = recipe["result"]["item"]
+    result_id = recipe["result"]["id"]
     result_count = recipe["result"].get("count", 1)
     result.append(RecipeResult(result_id, count=result_count))
     # return the new formatted recipe
