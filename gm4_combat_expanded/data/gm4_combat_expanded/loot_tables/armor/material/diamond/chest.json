@@ -23,7 +23,7 @@
                 {
                   "attribute": "generic.armor_toughness",
                   "name": "generic.armor_toughness",
-                  "id": "9F3D476D-C118-4544-8365-64846904B48E",
+                  "id": "9F3D476D-C118-4544-8365-64846904B484",
                   "amount": 2,
                   "operation": "add_value",
                   "slot": "chest"

@@ -23,7 +23,7 @@
                 {
                   "attribute": "generic.armor_toughness",
                   "name": "generic.armor_toughness",
-                  "id": "D8499B04-0E66-4726-AB29-64469D734E0D",
+                  "id": "D8499B04-0E66-4726-AB29-64469D734E04",
                   "amount": 2,
                   "operation": "add_value",
                   "slot": "legs"

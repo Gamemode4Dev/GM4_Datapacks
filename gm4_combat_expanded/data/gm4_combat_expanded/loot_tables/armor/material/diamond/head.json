@@ -23,7 +23,7 @@
                 {
                   "attribute": "generic.armor_toughness",
                   "name": "generic.armor_toughness",
-                  "id": "2AD3F246-FEE1-4E67-B886-69FD380BB150",
+                  "id": "2AD3F246-FEE1-4E67-B886-69FD380BB154",
                   "amount": 2,
                   "operation": "add_value",
                   "slot": "head"
