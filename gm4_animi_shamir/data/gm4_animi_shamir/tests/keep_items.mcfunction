@@ -1,5 +1,6 @@
 # @template gm4:test_tube
 # @dummy ~1 ~1 ~1
+# @optional
 
 give @s golden_leggings[custom_data={gm4_metallurgy:{active_shamir:"animi"}}]
 give @s wooden_sword
