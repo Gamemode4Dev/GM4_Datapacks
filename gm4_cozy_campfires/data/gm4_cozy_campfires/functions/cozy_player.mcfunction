@@ -1,8 +1,6 @@
 # @s = player near a campfire
 # run from gm4_cozy_campfires:cozy_campfire
 
-say cozy player
-
 # apply effect
 effect give @s absorption 720 1 true
 

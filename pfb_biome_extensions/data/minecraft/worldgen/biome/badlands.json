@@ -3,6 +3,7 @@
     "air": "#minecraft:air/in_biome/badlands",
     "liquid": "#minecraft:liquid/in_biome/badlands"
   },
+  "creature_spawn_probability": 0.03,
   "downfall": 0.0,
   "effects": {
     "fog_color": 12638463,
@@ -13,6 +14,12 @@
       "offset": 2.0,
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.badlands"
     },
     "sky_color": 7254527,
     "water_color": 4159204,
@@ -43,7 +50,14 @@
       }
     ],
     "axolotls": [],
-    "creature": [],
+    "creature": [
+      {
+        "type": "minecraft:armadillo",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 6
+      }
+    ],
     "misc": [],
     "monster": [
       {

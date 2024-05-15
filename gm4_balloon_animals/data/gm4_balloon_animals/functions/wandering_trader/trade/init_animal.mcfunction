@@ -9,7 +9,7 @@ effect give @s slow_falling infinite 0 true
 effect give @s resistance infinite 4 true
 
 data modify entity @s Age set value -2147483648
-data modify entity @s Leash.UUID set from storage gm4_balloon_animals:temp trader.uuid
+data modify entity @s leash.UUID set from storage gm4_balloon_animals:temp trader.uuid
 
 scoreboard players add $id gm4_balloon_animals_id 1
 scoreboard players operation @s gm4_balloon_animals_id = $id gm4_balloon_animals_id

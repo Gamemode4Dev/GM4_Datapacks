@@ -1,6 +1,6 @@
 id: gm4_trades
 name: Gamemode 4 Trades
-version: 1.3.X
+version: 1.4.X
 description: Allows other datapacks to easily add trades to Wandering Traders or to any Villager-like entity.
 
 data_pack:
@@ -17,8 +17,8 @@ meta:
       extra_version_injections:
         functions:
           - wandering_trader/resolve_modify_external
+    smithed:
+      pack_id: gm4_lib_trades
     credits:
       Creator:
         - Bloo
-  smithed:
-    pack_id: gm4_lib_trades

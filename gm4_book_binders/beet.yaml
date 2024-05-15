@@ -1,9 +1,12 @@
 id: gm4_book_binders
 name: Book Binders
-version: 1.2.X
+version: 1.3.X
 
 data_pack:
   load: .
+
+require:
+  - bolt
 
 resource_pack: 
   load: .

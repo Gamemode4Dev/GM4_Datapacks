@@ -1,6 +1,6 @@
 {
   "type": "minecraft:jigsaw",
-  "biomes": "#gm4_dangerous_dungeons:snowy",
+  "biomes": "#gm4_dangerous_dungeons:is_snowy",
   "step": "underground_structures",
   "spawn_overrides": {},
   "terrain_adaptation": "none",

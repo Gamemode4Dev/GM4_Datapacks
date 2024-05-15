@@ -1,6 +1,6 @@
 id: gm4_poses_pack
 name: Poses Pack
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -12,7 +12,7 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_better_armour_stands: 2.0.0
+        gm4_better_armour_stands: 2.3.0
     model_data:
       - item: armor_stand
         reference: gui/advancement/poses_pack

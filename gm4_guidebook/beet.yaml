@@ -1,6 +1,6 @@
 id: gm4_guidebook
 name: Guidebook
-version: 2.0.X
+version: 2.1.X
 
 data_pack:
   load: .
@@ -18,9 +18,10 @@ pipeline:
 
 meta:
   gm4:
+    minecraft: []
     versioning:
       required:
-        lib_forceload: 1.1.0
+        lib_forceload: 1.3.0
       schedule_loops: 
         - main
         - tick

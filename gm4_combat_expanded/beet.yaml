@@ -1,6 +1,6 @@
 id: gm4_combat_expanded
 name: Combat Expanded
-version: 2.0.X
+version: 2.1.X
 
 data_pack:
   load: .
@@ -15,10 +15,11 @@ pipeline:
 
 meta:
   gm4:
+    minecraft: []
     versioning:
       required:
-        lib_forceload: 1.1.0
-        lib_lore: 1.0.0
+        lib_forceload: 1.3.0
+        lib_lore: 1.1.0
       schedule_loops: 
         - tick
         - main
@@ -46,11 +47,5 @@ meta:
       - enchantment.level.17
   modrinth:
     project_id: zgxd3poi
-    minecraft:
-      - 1.20.3
-      - 1.20.4
   smithed:
     pack_id: gm4_combat_expanded
-    minecraft:
-      - 1.20.3
-      - 1.20.4

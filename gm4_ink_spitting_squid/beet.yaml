@@ -1,6 +1,6 @@
 id: gm4_ink_spitting_squid
 name: Ink Spitting Squid
-version: 1.3.X
+version: 1.4.X
 
 data_pack:
   load: .
@@ -23,6 +23,8 @@ meta:
       description: Improves the vanilla ink effect by adding Blindness. Glow Squid will give Night Vision when disturbed, which might come in handy if you're out of torches!
       recommended: []
       notes: []
+    planetminecraft:
+      uid: 4581763
     video: https://www.youtube.com/watch?v=68LMYEhueZ0
     wiki: https://wiki.gm4.co/wiki/Ink_Spitting_Squid
     credits:
@@ -32,5 +34,3 @@ meta:
         - BluePsychoRanger
       Icon Design:
         - Sparks
-  planetminecraft:
-    uid: 4581763

@@ -1,6 +1,6 @@
 id: gm4_crossbow_cartridges
 name: Crossbow Cartridges
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -14,6 +14,10 @@ meta:
       description: Shoot more than just arrows! Crossbow Cartridges allows your crossbow to fire a variety of projectiles; Shoot Pufferfish, Tripwires, Torches, and many more. Synergizes nicely with the Ziprails Module for easy Ziprail construction.
       recommended: []
       notes: []
+    modrinth:
+      project_id: E7M57BNU
+    smithed:
+      pack_id: gm4_crossbow_cartridges
     video: https://www.youtube.com/watch?v=XJiGvX7l-pI
     wiki: https://wiki.gm4.co/wiki/Crossbow_Cartridges
     credits:
@@ -29,7 +33,3 @@ meta:
       - item: tripwire_hook
         reference: gui/advancement/crossbow_cartridges_string
         template: advancement
-  modrinth:
-    project_id: E7M57BNU
-  smithed:
-    pack_id: gm4_crossbow_cartridges

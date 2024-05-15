@@ -1,5 +1,4 @@
 pipeline:
-  - gm4.plugins.list_modules
   - gm4.plugins.manifest.create
   - gm4.plugins.resource_pack.setup
   - broadcast: null
