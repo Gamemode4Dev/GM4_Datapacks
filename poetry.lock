@@ -351,13 +351,13 @@ files = [
 
 [[package]]
 name = "mecha"
-version = "0.94.1"
+version = "0.94.2"
 description = "A powerful Minecraft command library"
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "mecha-0.94.1-py3-none-any.whl", hash = "sha256:eb8b1a265f6ab598964bf5e4020cf421e563f4f0f6b3e6a9708a4303db9512f0"},
-    {file = "mecha-0.94.1.tar.gz", hash = "sha256:5ded080096ce9bef67a1ca56cac70ccc4f93ff3af362cc6e61b9c0120dc7752b"},
+    {file = "mecha-0.94.2-py3-none-any.whl", hash = "sha256:2e817a64c2daeb306b68a44c359851c5e5bfc6c34ccff8f936d849a96eac51c9"},
+    {file = "mecha-0.94.2.tar.gz", hash = "sha256:5afdc2f40282f45ea64128de6cb50b572a34ac7ddfb3468c92a1e5a6be38d86f"},
 ]
 
 [package.dependencies]
@@ -533,13 +533,13 @@ xmp = ["defusedxml"]
 
 [[package]]
 name = "platformdirs"
-version = "4.2.1"
+version = "4.2.2"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "platformdirs-4.2.1-py3-none-any.whl", hash = "sha256:17d5a1161b3fd67b390023cb2d3b026bbd40abde6fdb052dfbd3a29c3ba22ee1"},
-    {file = "platformdirs-4.2.1.tar.gz", hash = "sha256:031cd18d4ec63ec53e82dceaac0417d218a6863f7745dfcc9efe7793b7039bdf"},
+    {file = "platformdirs-4.2.2-py3-none-any.whl", hash = "sha256:2d7a1657e36a80ea911db832a8a6ece5ee53d8de21edd5cc5879af6530b1bfee"},
+    {file = "platformdirs-4.2.2.tar.gz", hash = "sha256:38b7b51f512eed9e84a22788b4bce1de17c0adb134d6becb09836e37d8654cd3"},
 ]
 
 [package.extras]
@@ -815,4 +815,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "f20aa51d75c4a1c6ee114c3acc17d47f3c0e83dff5bcae8bbdf93a39101c6ce1"
+content-hash = "e3bcd82072d807b4c78bbfb4af6885c4c0f6c076fad01cb532ac3503dff2d594"
