@@ -265,13 +265,13 @@ colors = ["colorama (>=0.4.6)"]
 
 [[package]]
 name = "jinja2"
-version = "3.1.3"
+version = "3.1.4"
 description = "A very fast and expressive template engine."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa"},
-    {file = "Jinja2-3.1.3.tar.gz", hash = "sha256:ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90"},
+    {file = "jinja2-3.1.4-py3-none-any.whl", hash = "sha256:bc5dd2abb727a5319567b7a813e6a2e7318c39f4f487cfe6c89c6f9c7d25197d"},
+    {file = "jinja2-3.1.4.tar.gz", hash = "sha256:4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"},
 ]
 
 [package.dependencies]
@@ -351,13 +351,13 @@ files = [
 
 [[package]]
 name = "mecha"
-version = "0.94.0"
+version = "0.94.2"
 description = "A powerful Minecraft command library"
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "mecha-0.94.0-py3-none-any.whl", hash = "sha256:955f4d3aa0adc72b6b79517b6dab3e0d05eac07026a8eefaeba1cfd208584272"},
-    {file = "mecha-0.94.0.tar.gz", hash = "sha256:8da3adab7548798228852c1f8c88b5751bd537baef5eeb1b247526b9c3411f34"},
+    {file = "mecha-0.94.2-py3-none-any.whl", hash = "sha256:2e817a64c2daeb306b68a44c359851c5e5bfc6c34ccff8f936d849a96eac51c9"},
+    {file = "mecha-0.94.2.tar.gz", hash = "sha256:5afdc2f40282f45ea64128de6cb50b572a34ac7ddfb3468c92a1e5a6be38d86f"},
 ]
 
 [package.dependencies]
@@ -533,13 +533,13 @@ xmp = ["defusedxml"]
 
 [[package]]
 name = "platformdirs"
-version = "4.2.1"
+version = "4.2.2"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "platformdirs-4.2.1-py3-none-any.whl", hash = "sha256:17d5a1161b3fd67b390023cb2d3b026bbd40abde6fdb052dfbd3a29c3ba22ee1"},
-    {file = "platformdirs-4.2.1.tar.gz", hash = "sha256:031cd18d4ec63ec53e82dceaac0417d218a6863f7745dfcc9efe7793b7039bdf"},
+    {file = "platformdirs-4.2.2-py3-none-any.whl", hash = "sha256:2d7a1657e36a80ea911db832a8a6ece5ee53d8de21edd5cc5879af6530b1bfee"},
+    {file = "platformdirs-4.2.2.tar.gz", hash = "sha256:38b7b51f512eed9e84a22788b4bce1de17c0adb134d6becb09836e37d8654cd3"},
 ]
 
 [package.extras]
@@ -815,4 +815,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "fc3e7a4ae3cb395077a156508fa28552204ca94096c6c058e364bc2ae7437db9"
+content-hash = "6d2e7352e4a83b8b838b798af880ab1f2a3461dfdd89d93740c6e2dbdf563ef1"
