@@ -3,7 +3,10 @@
 #run from gm4_book_binders:binder/recipes/check_recipes
 
 # transfer data from paper to foot storage
-data modify entity @s ArmorItems[0].components."minecraft:stored_enchantments" merge from entity @s HandItems[0].components."minecraft:enchantments"
+execute store success score $new_page gm4_binder_data run data modify entity @s ArmorItems[0].components."minecraft:stored_enchantments" merge from entity @s HandItems[0].components."minecraft:enchantments"
+
+# exit if page already exists -- duplicate enchantments would not be added but deleted anyway
+execute if score $new_page gm4_binder_data matches 0 run return 0
 
 # delete the held page item
 item replace entity @s weapon.mainhand with minecraft:air
