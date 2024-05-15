@@ -15,7 +15,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     concurrency:
       group: ${{ github.event_name != 'pull_request' && 'release' || format('pr-{0}', github.event.number) }}
     steps:
@@ -99,7 +99,7 @@ jobs:
           branch: release
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
