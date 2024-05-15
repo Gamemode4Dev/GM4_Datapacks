@@ -10,6 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.movement_speed",
@@ -22,35 +23,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_combat_expanded:{modifier:10,active:0}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "atkspeed",
-                  "target": "gm4_combat_expanded.level",
-                  "op": "replace"
-                }
-              ]
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded\"}].Slot",
-                  "op": "replace"
-                }
-              ]
+              "tag": "{gm4_combat_expanded:{modifier:10,active:0,level:'atkspeed'}}"
             }
           ]
         }
@@ -103,6 +76,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.scout",
@@ -113,8 +87,7 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false
+              ]
             }
           ]
         }

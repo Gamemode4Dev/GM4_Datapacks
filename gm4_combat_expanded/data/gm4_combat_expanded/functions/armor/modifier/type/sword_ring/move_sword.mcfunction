@@ -20,7 +20,7 @@ tag @s remove gm4_ce_sword_ring.current_sword
 tag @s remove gm4_ce_sword_ring.check_sword
 
 # keep this sword around until next tick
-tag @s add gm4_ce_sword_ring.keep_sword
+scoreboard players operation @s gm4_ce_keep_tick = $check.sword_ring gm4_ce_keep_tick
 
 # damage entities the sword contacts
 scoreboard players set $damage_dealt gm4_ce_data 0

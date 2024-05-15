@@ -10,6 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "generic.knockback_resistance",
@@ -23,20 +24,6 @@
             {
               "function": "minecraft:set_custom_data",
               "tag": "{gm4_combat_expanded:{modifier:'vorpal'}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
-                  "op": "replace"
-                }
-              ]
             }
           ]
         }
@@ -79,6 +66,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.vorpal",
@@ -89,11 +77,15 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false,
-              "color": "light_purple"
+              ]
             }
           ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:rarity": "epic"
+          }
         }
       ]
     }

@@ -5,6 +5,5 @@
 
 execute if entity @s[tag=gm4_ce_totem.speed] run effect give @a[distance=..18,gamemode=!spectator] speed 10 1 true
 execute unless entity @s[tag=gm4_ce_totem.speed] run tag @s add gm4_ce_totem.speed
-# TODO 1.20.5: lost random colors due to MC-270743
-particle entity_effect{color:[1.0,1.0,1.0,0.15]} ~ ~1.2 ~ 0.1 0.1 0.1 0.5 24
+particle entity_effect{color:[0.2,0.92,1.0,0.33]} ~ ~1.2 ~ 0.1 0.1 0.1 0.5 24
 tp @s ~ ~ ~ ~180 ~

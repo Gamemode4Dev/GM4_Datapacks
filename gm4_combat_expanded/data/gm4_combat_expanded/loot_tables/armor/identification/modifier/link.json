@@ -10,6 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.max_health",
@@ -17,20 +18,6 @@
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "chest"
-                }
-              ]
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded\"}].Slot",
-                  "op": "replace"
                 }
               ]
             },
@@ -104,6 +91,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.link",
@@ -114,11 +102,15 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false,
-              "color": "light_purple"
+              ]
             }
           ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:rarity": "epic"
+          }
         }
       ]
     }

@@ -13,6 +13,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.satiated",
@@ -23,11 +24,15 @@
                       "storage": "gm4_combat_expanded:temp",
                       "interpret": true
                     }
-              ],
-              "italic": false,
-              "color": "yellow"
+              ]
             }
           ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:rarity": "uncommon"
+          }
         }
       ]
     }

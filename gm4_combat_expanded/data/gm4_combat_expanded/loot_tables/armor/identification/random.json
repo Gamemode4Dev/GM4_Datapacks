@@ -9,6 +9,91 @@
             {
               "type": "minecraft:loot_table",
               "weight": 160,
+              "value": "gm4_combat_expanded:armor/identification/modifier/acrobatic",
+              "conditions": [
+                {
+                  "condition": "minecraft:any_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/burned"
+                    },
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/toxic"
+                    },
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/growth"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "weight": 10,
+              "value": "gm4_combat_expanded:armor/identification/modifier/acrobatic",
+              "conditions": [
+                {
+                  "condition": "minecraft:any_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/snowy"
+                    },
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/deep"
+                    },
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/reef"
+                    },
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/dark"
+                    },
+                    {
+                      "condition": "minecraft:any_of",
+                      "terms": [
+                        {
+                          "condition": "minecraft:location_check",
+                          "predicate": {
+                            "dimension": "minecraft:the_end"
+                          }
+                        },
+                        {
+                          "condition": "minecraft:location_check",
+                          "predicate": {
+                            "biomes": "minecraft:mushroom_fields"
+                          }
+                        },
+                        {
+                          "condition": "minecraft:location_check",
+                          "predicate": {
+                            "biomes": "minecraft:deep_dark"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "weight": 40,
+              "value": "gm4_combat_expanded:armor/identification/modifier/acrobatic"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "weight": 160,
               "value": "gm4_combat_expanded:armor/identification/modifier/archer",
               "conditions": [
                 {
@@ -257,19 +342,23 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "weight": 160,
-              "value": "gm4_combat_expanded:armor/identification/modifier/burn",
+              "weight": 32,
+              "value": "gm4_combat_expanded:armor/identification/modifier/big",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
                   "terms": [
                     {
                       "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/burned"
+                      "name": "gm4_combat_expanded:mob/modifier/mountainous"
                     },
                     {
                       "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/toxic"
+                      "name": "gm4_combat_expanded:mob/modifier/deep"
+                    },
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/reef"
                     },
                     {
                       "condition": "minecraft:location_check",
@@ -283,27 +372,15 @@
             },
             {
               "type": "minecraft:loot_table",
-              "weight": 10,
-              "value": "gm4_combat_expanded:armor/identification/modifier/burn",
+              "weight": 2,
+              "value": "gm4_combat_expanded:armor/identification/modifier/big",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
                   "terms": [
                     {
                       "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/snowy"
-                    },
-                    {
-                      "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/deep"
-                    },
-                    {
-                      "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/reef"
-                    },
-                    {
-                      "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/growth"
+                      "name": "gm4_combat_expanded:mob/modifier/flowering"
                     },
                     {
                       "condition": "minecraft:any_of",
@@ -334,8 +411,8 @@
             },
             {
               "type": "minecraft:loot_table",
-              "weight": 40,
-              "value": "gm4_combat_expanded:armor/identification/modifier/burn"
+              "weight": 8,
+              "value": "gm4_combat_expanded:armor/identification/modifier/big"
             }
           ]
         },
@@ -1501,85 +1578,6 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "weight": 160,
-              "value": "gm4_combat_expanded:armor/identification/modifier/sneak",
-              "conditions": [
-                {
-                  "condition": "minecraft:any_of",
-                  "terms": [
-                    {
-                      "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/toxic"
-                    },
-                    {
-                      "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/growth"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "weight": 10,
-              "value": "gm4_combat_expanded:armor/identification/modifier/sneak",
-              "conditions": [
-                {
-                  "condition": "minecraft:any_of",
-                  "terms": [
-                    {
-                      "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/snowy"
-                    },
-                    {
-                      "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/burned"
-                    },
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
-                        "dimension": "minecraft:the_nether"
-                      }
-                    },
-                    {
-                      "condition": "minecraft:any_of",
-                      "terms": [
-                        {
-                          "condition": "minecraft:location_check",
-                          "predicate": {
-                            "dimension": "minecraft:the_end"
-                          }
-                        },
-                        {
-                          "condition": "minecraft:location_check",
-                          "predicate": {
-                            "biomes": "minecraft:mushroom_fields"
-                          }
-                        },
-                        {
-                          "condition": "minecraft:location_check",
-                          "predicate": {
-                            "biomes": "minecraft:deep_dark"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "weight": 40,
-              "value": "gm4_combat_expanded:armor/identification/modifier/sneak"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:alternatives",
-          "children": [
-            {
-              "type": "minecraft:loot_table",
               "weight": 32,
               "value": "gm4_combat_expanded:armor/identification/modifier/soothe",
               "conditions": [
@@ -1900,6 +1898,77 @@
               "type": "minecraft:loot_table",
               "weight": 8,
               "value": "gm4_combat_expanded:armor/identification/modifier/sword_ring"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "weight": 32,
+              "value": "gm4_combat_expanded:armor/identification/modifier/tiny",
+              "conditions": [
+                {
+                  "condition": "minecraft:any_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/flowering"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "weight": 2,
+              "value": "gm4_combat_expanded:armor/identification/modifier/tiny",
+              "conditions": [
+                {
+                  "condition": "minecraft:any_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/mountainous"
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "dimension": "minecraft:the_nether"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:any_of",
+                      "terms": [
+                        {
+                          "condition": "minecraft:location_check",
+                          "predicate": {
+                            "dimension": "minecraft:the_end"
+                          }
+                        },
+                        {
+                          "condition": "minecraft:location_check",
+                          "predicate": {
+                            "biomes": "minecraft:mushroom_fields"
+                          }
+                        },
+                        {
+                          "condition": "minecraft:location_check",
+                          "predicate": {
+                            "biomes": "minecraft:deep_dark"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "weight": 8,
+              "value": "gm4_combat_expanded:armor/identification/modifier/tiny"
             }
           ]
         },
@@ -2235,6 +2304,85 @@
               "type": "minecraft:loot_table",
               "weight": 0,
               "value": "gm4_combat_expanded:armor/identification/modifier/vorpal"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "weight": 160,
+              "value": "gm4_combat_expanded:armor/identification/modifier/weightless",
+              "conditions": [
+                {
+                  "condition": "minecraft:any_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/mountainous"
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "dimension": "minecraft:the_nether"
+                      }
+                    },
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "weight": 10,
+              "value": "gm4_combat_expanded:armor/identification/modifier/weightless",
+              "conditions": [
+                {
+                  "condition": "minecraft:any_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/burned"
+                    },
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/toxic"
+                    },
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/dark"
+                    },
+                    {
+                      "condition": "minecraft:any_of",
+                      "terms": [
+                        {
+                          "condition": "minecraft:location_check",
+                          "predicate": {
+                            "dimension": "minecraft:the_end"
+                          }
+                        },
+                        {
+                          "condition": "minecraft:location_check",
+                          "predicate": {
+                            "biomes": "minecraft:mushroom_fields"
+                          }
+                        },
+                        {
+                          "condition": "minecraft:location_check",
+                          "predicate": {
+                            "biomes": "minecraft:deep_dark"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "weight": 40,
+              "value": "gm4_combat_expanded:armor/identification/modifier/weightless"
             }
           ]
         },

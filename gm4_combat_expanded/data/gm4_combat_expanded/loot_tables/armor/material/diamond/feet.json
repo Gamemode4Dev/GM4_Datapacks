@@ -10,6 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "generic.armor",
@@ -22,7 +23,7 @@
                 {
                   "attribute": "generic.armor_toughness",
                   "name": "generic.armor_toughness",
-                  "id": "845DB27C-C624-495F-8C9F-6020A9A58B6B",
+                  "id": "845DB27C-C624-495F-8C9F-6020A9A58B64",
                   "amount": 2,
                   "operation": "add_value",
                   "slot": "feet"

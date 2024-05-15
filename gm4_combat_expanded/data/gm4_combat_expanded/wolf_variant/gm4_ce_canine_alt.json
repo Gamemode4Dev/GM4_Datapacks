@@ -1,0 +1,6 @@
+{
+    "angry_texture": "gm4_combat_expanded:entity/wolf/gm4_ce_canine_alt_angry",
+    "biomes": "minecraft:mushroom_fields",
+    "tame_texture": "gm4_combat_expanded:entity/wolf/gm4_ce_canine_alt_tame",
+    "wild_texture": "gm4_combat_expanded:entity/wolf/gm4_ce_canine_alt"
+}

@@ -10,6 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.attack_damage",
@@ -59,21 +60,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_combat_expanded:{strike:1,modifier:105,damage_buffed:-1}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "random_value",
-                  "target": "gm4_combat_expanded.level",
-                  "op": "replace"
-                }
-              ]
+              "tag": "{gm4_combat_expanded:{strike:1,modifier:105,damage_buffed:-1,level:'random_value'}}"
             }
           ]
         }
@@ -430,6 +417,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.delay",
@@ -440,11 +428,15 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false,
-              "color": "yellow"
+              ]
             }
           ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:rarity": "uncommon"
+          }
         }
       ]
     }

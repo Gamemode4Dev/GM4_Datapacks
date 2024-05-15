@@ -9,7 +9,7 @@ execute store result storage gm4_combat_expanded:temp boss.running_id int 1 run 
 execute as @e[tag=gm4_ce_boss.watcher] if score @s gm4_ce_boss.id = $running_id gm4_ce_boss.id run kill @s
 
 # if main entity run extra stuff
-execute if entity @s[tag=gm4_ce_boss.watcer.main] run function gm4_combat_expanded:boss/watchers/defeated/kill_main
+execute if entity @s[tag=gm4_ce_boss.watcher.main] run function gm4_combat_expanded:boss/watchers/defeated/kill_main
 
 # spawn experience (enough for level 42 from main and secondary together)
 summon experience_orb ~.41 ~.48 ~.14 {Value:240,Motion:[0.18,0.05,-0.15]}

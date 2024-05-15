@@ -21,6 +21,7 @@
           "modifiers": [
             {
               "attribute": "minecraft:generic.max_health",
+              "replace": false,
               "name": "gm4_ce_perm",
               "amount": {
                 "type": "minecraft:score",
@@ -36,6 +37,7 @@
             },
             {
               "attribute": "minecraft:generic.armor",
+              "replace": false,
               "name": "gm4_ce_perm_2",
               "amount": {
                 "type": "minecraft:score",
@@ -48,25 +50,6 @@
               },
               "operation": "add_value",
               "slot": "chest"
-            }
-          ]
-        },
-        {
-          "function": "minecraft:copy_nbt",
-          "source": {
-            "type": "minecraft:storage",
-            "source": "gm4_combat_expanded:temp"
-          },
-          "ops": [
-            {
-              "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-              "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
-              "op": "replace"
-            },
-            {
-              "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-              "target": "AttributeModifiers[{Name:\"gm4_ce_perm_2\"}].Slot",
-              "op": "replace"
             }
           ]
         },
@@ -107,6 +90,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.convert",
@@ -117,8 +101,7 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false
+              ]
             }
           ]
         }

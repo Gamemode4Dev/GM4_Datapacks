@@ -10,21 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_combat_expanded:{modifier:11}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "armor",
-                  "target": "gm4_combat_expanded.level",
-                  "op": "replace"
-                }
-              ]
+              "tag": "{gm4_combat_expanded:{modifier:11,level:'armor'}}"
             }
           ]
         }
@@ -199,6 +185,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.shielded",
@@ -209,8 +196,7 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false
+              ]
             }
           ]
         }

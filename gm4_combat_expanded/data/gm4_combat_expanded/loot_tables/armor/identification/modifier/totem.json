@@ -10,21 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_combat_expanded:{modifier:34}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "level",
-                  "target": "gm4_combat_expanded.level",
-                  "op": "replace"
-                }
-              ]
+              "tag": "{gm4_combat_expanded:{modifier:34,level:'level'}}"
             }
           ]
         }
@@ -188,6 +174,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.totem",
@@ -198,11 +185,15 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false,
-              "color": "yellow"
+              ]
             }
           ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:rarity": "uncommon"
+          }
         }
       ]
     }

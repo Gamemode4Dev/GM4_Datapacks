@@ -11,8 +11,6 @@ execute as @e[type=item_display,tag=gm4_ce_sword_ring.check_sword,distance=..12]
 # check durability left on this armor
 execute store result score $sword_damage gm4_ce_data run data get storage gm4_combat_expanded:temp sword_ring.data[0].components."minecraft:damage"
 execute store result score $sword_durability gm4_ce_data run data get storage gm4_combat_expanded:temp sword_ring.data[0].components."minecraft:custom_data".gm4_combat_expanded.durability
-# TODO:TEMP update durability
-execute if score $sword_durability gm4_ce_data matches 0 run function gm4_combat_expanded:update/add_durability_data
 
 # if no sword exists yet spawn a new one
 execute if score $sword_damage gm4_ce_data < $sword_durability gm4_ce_data unless entity @e[type=item_display,tag=gm4_ce_sword_ring.current_sword,distance=..12] summon item_display run function gm4_combat_expanded:armor/modifier/type/sword_ring/init_sword

@@ -39,4 +39,4 @@ function #gm4_lore:insert
 data modify storage gm4_combat_expanded:temp components."minecraft:lore" set from storage gm4_lore:temp Source
 
 # update item
-item modify entity @s weapon.mainhand gm4_combat_expanded:update
+function gm4_combat_expanded:item_modify_eval/mainhand_update with storage gm4_combat_expanded:temp

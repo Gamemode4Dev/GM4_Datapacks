@@ -10,31 +10,12 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_combat_expanded:{modifier:74}}"
+              "tag": "{gm4_combat_expanded:{modifier:74,level:'armor',level2:'level'}}"
             }
           ]
         }
       ],
       "functions": [
-        {
-          "function": "minecraft:copy_nbt",
-          "source": {
-            "type": "minecraft:storage",
-            "source": "gm4_combat_expanded:temp"
-          },
-          "ops": [
-            {
-              "source": "armor",
-              "target": "gm4_combat_expanded.level",
-              "op": "replace"
-            },
-            {
-              "source": "level",
-              "target": "gm4_combat_expanded.level2",
-              "op": "replace"
-            }
-          ]
-        },
         {
           "function": "minecraft:set_lore",
           "mode": "append",
@@ -339,6 +320,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.horse",
@@ -349,8 +331,7 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false
+              ]
             }
           ]
         }

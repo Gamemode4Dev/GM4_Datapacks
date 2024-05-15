@@ -10,6 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.armor",
@@ -17,12 +18,7 @@
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "chest"
-                }
-              ]
-            },
-            {
-              "function": "minecraft:set_attributes",
-              "modifiers": [
+                },
                 {
                   "attribute": "minecraft:generic.attack_damage",
                   "name": "gm4_combat_expanded_2",
@@ -34,45 +30,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_combat_expanded:{modifier:49,active:0}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "armor",
-                  "target": "gm4_combat_expanded.level",
-                  "op": "replace"
-                },
-                {
-                  "source": "damage",
-                  "target": "gm4_combat_expanded.level2",
-                  "op": "replace"
-                }
-              ]
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_2\"}].Slot",
-                  "op": "replace"
-                }
-              ]
+              "tag": "{gm4_combat_expanded:{modifier:49,active:0,level:'armor',level2:'damage'}}"
             }
           ]
         }
@@ -353,6 +311,7 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.poised",
@@ -363,8 +322,7 @@
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false
+              ]
             }
           ]
         }
