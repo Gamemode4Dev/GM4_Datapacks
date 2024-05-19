@@ -20,7 +20,7 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "nbt": "{gm4_zauber_cauldrons:{bottle:{multi_use:1b,sips:1b}}}"
+          "nbt": "{gm4_zauber_cauldrons:{bottle:{multi_use:1b,sips:1}}}"
         }
       }
     }
