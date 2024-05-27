@@ -1,9 +1,0 @@
-key,en_us
-item.gm4.trapped_sign,Trapped %s
-item.gm4.trapped_sign.secret,Secret Trapped %s
-text.gm4.guidebook.module_desc.trapped_signs,"Craft trapped signs in a Custom Crafter which, when right-clicked, give off a redstone signal."
-text.gm4.guidebook.trapped_signs.description,"Trapped Signs can be used to activate redstone, similar to Trapped Chests.\n\nTrapped signs can be crafted in a Custom Crafter with some redstone components."
-text.gm4.guidebook.trapped_signs.crafting,The recipe for trapped signs can use any sign type:
-text.gm4.guidebook.shapeless,Recipe is shapeless
-text.gm4.guidebook.trapped_signs.setup,"Placing a trapped sign and writing some text on it will activate it.\n\nThe last line of the sign will become ""-x-"" for a normal trapped sign and empty for a secret trapped sign."
-text.gm4.guidebook.trapped_signs.usage,"Pressing on a trapped sign will activate adjacent redstone dust with a signal strength of 1 for 1 tick.\n\nIf the sign is on a wall, it will instead activate redstone duct adjacent to the block it's on."
