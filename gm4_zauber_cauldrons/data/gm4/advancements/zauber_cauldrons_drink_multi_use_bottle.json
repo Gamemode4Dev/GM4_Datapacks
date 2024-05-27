@@ -23,7 +23,7 @@
       "conditions": {
         "item": {
           "predicates": {
-            "minecraft:custom_data": "{gm4_zauber_cauldrons:{bottle:{multi_use:1b,sips:1b}}}"
+            "minecraft:custom_data": "{gm4_zauber_cauldrons:{bottle:{multi_use:1b,sips:1}}}"
           }
         }
       }
