@@ -3,11 +3,11 @@
   "name": "Smelteries",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:furnace"
+    "id": "minecraft:furnace"
   },
   "criteria": {
     "open_custom_crafter": {
-      "trigger": "minecraft:item_used_on_block",
+      "trigger": "minecraft:default_block_use",
       "conditions": {
         "location": [
           {
@@ -17,7 +17,7 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"}],\"text\":\" \"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}'}"
               }
             }
           }
@@ -49,7 +49,7 @@
       }
     },
     "open_smeltery": {
-      "trigger": "minecraft:item_used_on_block",
+      "trigger": "minecraft:default_block_use",
       "conditions": {
         "location": [
           {
@@ -59,7 +59,7 @@
                 "blocks": [
                   "minecraft:furnace"
                 ],
-                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.smeltery\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\"}],\"text\":\" \"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.smeltery\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}'}"
               }
             }
           }

@@ -7,7 +7,7 @@
       "predicate": {
         "stepping_on": {
           "block": {
-            "tag": "gm4:no_collision"
+            "blocks": "#gm4:no_collision"
           }
         }
       }

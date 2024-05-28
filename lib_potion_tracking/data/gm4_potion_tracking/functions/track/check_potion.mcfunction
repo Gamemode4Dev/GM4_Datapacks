@@ -3,7 +3,6 @@
 # located at world spawn
 # run from gm4_potion_tracking-1.0:potion
 
-
 # set storage to be used when the function tag below is called
 data modify storage gm4_potion_tracking:temp entity_data set from entity @s {}
 

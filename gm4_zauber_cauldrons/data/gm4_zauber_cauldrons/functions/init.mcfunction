@@ -24,15 +24,6 @@ scoreboard players set #256 gm4_zc_moon_phase 256
 team add gm4_hide_name
 team modify gm4_hide_name nametagVisibility never
 
-# register skulls
-execute unless data storage gm4_player_heads:register heads[{id:"gm4_zauber_cauldrons:crystal/instant_damage"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_zauber_cauldrons:crystal/instant_damage",name:'[Drop to Fix Item] gm4_zauber_cauldrons:crystal/instant_damage',loot_table:'gm4_zauber_cauldrons:items/crystals/instant_damage'}
-execute unless data storage gm4_player_heads:register heads[{id:"gm4_zauber_cauldrons:crystal/instant_health"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_zauber_cauldrons:crystal/instant_health",name:'[Drop to Fix Item] gm4_zauber_cauldrons:crystal/instant_health',loot_table:'gm4_zauber_cauldrons:items/crystals/instant_health'}
-execute unless data storage gm4_player_heads:register heads[{id:"gm4_zauber_cauldrons:crystal/jump_boost"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_zauber_cauldrons:crystal/jump_boost",name:'[Drop to Fix Item] gm4_zauber_cauldrons:crystal/jump_boost',loot_table:'gm4_zauber_cauldrons:items/crystals/jump_boost'}
-execute unless data storage gm4_player_heads:register heads[{id:"gm4_zauber_cauldrons:crystal/poison"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_zauber_cauldrons:crystal/poison",name:'[Drop to Fix Item] gm4_zauber_cauldrons:crystal/poison',loot_table:'gm4_zauber_cauldrons:items/crystals/poison'}
-execute unless data storage gm4_player_heads:register heads[{id:"gm4_zauber_cauldrons:crystal/regeneration"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_zauber_cauldrons:crystal/regeneration",name:'[Drop to Fix Item] gm4_zauber_cauldrons:crystal/regeneration',loot_table:'gm4_zauber_cauldrons:items/crystals/regeneration'}
-execute unless data storage gm4_player_heads:register heads[{id:"gm4_zauber_cauldrons:crystal/speed"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_zauber_cauldrons:crystal/speed",name:'[Drop to Fix Item] gm4_zauber_cauldrons:crystal/speed',loot_table:'gm4_zauber_cauldrons:items/crystals/speed'}
-execute unless data storage gm4_player_heads:register heads[{id:"gm4_zauber_cauldrons:crystal/strength"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_zauber_cauldrons:crystal/strength",name:'[Drop to Fix Item] gm4_zauber_cauldrons:crystal/strength',loot_table:'gm4_zauber_cauldrons:items/crystals/strength'}
-
 # module data version
 scoreboard players set $data_version gm4_zc_data 1
 
@@ -46,7 +37,5 @@ schedule function gm4_zauber_cauldrons:main 1t
 
 # start vex in a bottle release meachanism
 schedule function gm4_zauber_cauldrons:cauldron/extra_items/process_bottled_vex_items 2t
-
-
 
 #$moduleUpdateList

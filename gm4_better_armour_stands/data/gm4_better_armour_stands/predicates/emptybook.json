@@ -7,7 +7,11 @@
         "items": [
           "minecraft:writable_book"
         ],
-        "nbt": "{pages:[]}"
+        "components": {
+          "minecraft:writable_book_content": {
+            "pages": []
+          }
+        }
       }
     }
   }

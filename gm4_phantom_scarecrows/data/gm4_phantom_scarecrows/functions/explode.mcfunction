@@ -7,11 +7,11 @@ execute store result score color gm4_ps_time run data get entity @s UUID[0]
 scoreboard players operation color gm4_ps_time %= modulo gm4_ps_time
 
 #explosion
-execute if score color gm4_ps_time matches 0 run summon minecraft:firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Explosions:[{Type:0b,Flicker:1b,Trail:0b,Colors:[I;7211016],FadeColors:[I;3671815]}]}}}}
+execute if score color gm4_ps_time matches 0 run summon minecraft:firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:1b,has_trail:0b,colors:[I;7211016],fade_colors:[I;3671815]}]}}}}
 
-execute if score color gm4_ps_time matches 1 run summon minecraft:firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Explosions:[{Type:0b,Flicker:1b,Trail:0b,Colors:[I;4018687],FadeColors:[I;7382527]}]}}}}
+execute if score color gm4_ps_time matches 1 run summon minecraft:firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:1b,has_trail:0b,colors:[I;4018687],fade_colors:[I;7382527]}]}}}}
 
-execute if score color gm4_ps_time matches 2 run summon minecraft:firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Explosions:[{Type:0b,Flicker:1b,Trail:0b,Colors:[I;16773153],FadeColors:[I;15531886]}]}}}}
+execute if score color gm4_ps_time matches 2 run summon minecraft:firework_rocket ~ ~ ~ {Silent:1b,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:1b,has_trail:0b,colors:[I;16773153],fade_colors:[I;15531886]}]}}}}
 
 #advancement
 advancement grant @a[distance=..3,gamemode=!spectator] only gm4:phantom_scarecrows

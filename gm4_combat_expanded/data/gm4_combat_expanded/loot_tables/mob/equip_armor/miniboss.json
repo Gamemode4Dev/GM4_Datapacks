@@ -7,17 +7,17 @@
         {
           "type": "minecraft:loot_table",
           "weight": 15,
-          "name": "gm4_combat_expanded:armor/material/diamond/feet"
+          "value": "gm4_combat_expanded:armor/material/diamond/feet"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 55,
-          "name": "gm4_combat_expanded:armor/material/iron/feet"
+          "value": "gm4_combat_expanded:armor/material/iron/feet"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 30,
-          "name": "gm4_combat_expanded:armor/material/golden/feet"
+          "value": "gm4_combat_expanded:armor/material/golden/feet"
         }
       ]
     },
@@ -27,17 +27,17 @@
         {
           "type": "minecraft:loot_table",
           "weight": 15,
-          "name": "gm4_combat_expanded:armor/material/diamond/legs"
+          "value": "gm4_combat_expanded:armor/material/diamond/legs"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 55,
-          "name": "gm4_combat_expanded:armor/material/iron/legs"
+          "value": "gm4_combat_expanded:armor/material/iron/legs"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 30,
-          "name": "gm4_combat_expanded:armor/material/golden/legs"
+          "value": "gm4_combat_expanded:armor/material/golden/legs"
         }
       ]
     },
@@ -47,17 +47,17 @@
         {
           "type": "minecraft:loot_table",
           "weight": 15,
-          "name": "gm4_combat_expanded:armor/material/diamond/chest"
+          "value": "gm4_combat_expanded:armor/material/diamond/chest"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 55,
-          "name": "gm4_combat_expanded:armor/material/iron/chest"
+          "value": "gm4_combat_expanded:armor/material/iron/chest"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 30,
-          "name": "gm4_combat_expanded:armor/material/golden/chest"
+          "value": "gm4_combat_expanded:armor/material/golden/chest"
         }
       ]
     },
@@ -67,17 +67,17 @@
         {
           "type": "minecraft:loot_table",
           "weight": 15,
-          "name": "gm4_combat_expanded:armor/material/diamond/head"
+          "value": "gm4_combat_expanded:armor/material/diamond/head"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 55,
-          "name": "gm4_combat_expanded:armor/material/iron/head"
+          "value": "gm4_combat_expanded:armor/material/iron/head"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 30,
-          "name": "gm4_combat_expanded:armor/material/golden/head"
+          "value": "gm4_combat_expanded:armor/material/golden/head"
         }
       ],
       "conditions": [

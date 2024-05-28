@@ -10,26 +10,24 @@ for animal in ctx.meta['animals']:
         "name": "minecraft:lead",
         "functions": [
           {
-            "function": "minecraft:copy_nbt",
+            "function": "minecraft:copy_custom_data",
             "source": {
               "type": "minecraft:storage",
               "source": "gm4_balloon_animals:temp"
             },
             "ops": [
               {
-                "source": "{}",
-                "target": "{}",
-                "op": "replace"
+                "source": "gm4_balloon_animals",
+                "target": "gm4_balloon_animals",
+                "op": "merge"
               }
             ]
           },
           {
             "function": "minecraft:set_name",
             "entity": "this",
-            "name": {
-              "text": animal['type'],
-              "italic": False
-            }
+            "target": "item_name",
+            "name": animal['type']
           },
           {
             "function": "minecraft:set_lore",
@@ -39,7 +37,8 @@ for animal in ctx.meta['animals']:
                 "text": name,
                 "color": "gray"
               }
-            ]
+            ],
+            "mode": "replace_all"
           }
         ],
         "conditions": [

@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "rabbit_foot",
-      "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_rabbit'}"
+      "id": "rabbit_foot",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/zauber_cauldrons_rabbit"
+      }
     },
     "title": {
       "translate": "advancement.gm4.zauber_cauldrons.rabbit.title",

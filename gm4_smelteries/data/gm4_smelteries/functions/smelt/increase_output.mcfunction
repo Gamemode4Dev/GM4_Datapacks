@@ -3,8 +3,8 @@
 # located at a smeltery that finished smelting
 # run from smelt/modify_output
 
-execute store result score $output gm4_smelt_data run data get block ~ ~ ~ Items[{Slot:2b}].Count
-execute store result block ~ ~ ~ Items[{Slot:2b}].Count byte 1 if score $output gm4_smelt_data matches ..63 run scoreboard players add $output gm4_smelt_data 1
+execute store result score $output gm4_smelt_data run data get block ~ ~ ~ Items[{Slot:2b}].count
+execute store result block ~ ~ ~ Items[{Slot:2b}].count byte 1 if score $output gm4_smelt_data matches ..63 run scoreboard players add $output gm4_smelt_data 1
 
 particle large_smoke ~ ~ ~ 0.1 0 0.1 0.05 5 normal @a
 playsound block.redstone_torch.burnout block @a[distance=..8] ~ ~ ~ 0.8 2

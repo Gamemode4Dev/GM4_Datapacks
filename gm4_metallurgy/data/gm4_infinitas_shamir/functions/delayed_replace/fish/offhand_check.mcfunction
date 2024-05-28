@@ -10,4 +10,4 @@ execute unless score @s gm4_infinitas_success_check matches 1 store success scor
 execute unless score @s gm4_infinitas_success_check matches 1 store success score @s gm4_infinitas_success_check run item replace entity @s[predicate=gm4_infinitas_shamir:offhand/after/pickup/tadpole] weapon.offhand with tadpole_bucket
 execute unless score @s gm4_infinitas_success_check matches 1 store success score @s gm4_infinitas_success_check run item replace entity @s[predicate=gm4_infinitas_shamir:offhand/after/pickup/tropical_fish] weapon.offhand with tropical_fish_bucket
 
-execute if score @s gm4_infinitas_success_check matches 1 run item modify entity @s weapon.offhand gm4_infinitas_shamir:set_shamir_nbt
+execute if score @s gm4_infinitas_success_check matches 1 run item modify entity @s weapon.offhand gm4_infinitas_shamir:restore_shamir

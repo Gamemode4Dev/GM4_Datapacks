@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "birch_stairs",
-      "nbt": "{CustomModelData:'gui/advancement/chairs_creation'}"
+      "id": "birch_stairs",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/chairs_creation"
+      }
     },
     "title": {
       "translate": "advancement.gm4.chairs.creation.title",

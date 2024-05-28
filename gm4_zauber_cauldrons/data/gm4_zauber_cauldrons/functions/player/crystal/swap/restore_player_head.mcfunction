@@ -14,11 +14,11 @@ data modify storage gm4_zauber_cauldrons:temp/item/crystal Inventory set from en
 data remove storage gm4_zauber_cauldrons:temp/item/crystal Inventory[{Slot:-106b}]
 
 # get first potential crystal match and store its slot
-execute store success score $item gm4_zc_data run data modify storage gm4_zauber_cauldrons:temp/item/crystal Item set from storage gm4_zauber_cauldrons:temp/item/crystal Inventory[{id:"minecraft:firework_star",tag:{gm4_zauber_cauldrons:{item:"crystal"}}}]
+execute store success score $item gm4_zc_data run data modify storage gm4_zauber_cauldrons:temp/item/crystal Item set from storage gm4_zauber_cauldrons:temp/item/crystal Inventory[{id:"minecraft:firework_star",components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:"crystal"}}}}]
 execute if score $item gm4_zc_data matches 1.. store result score $slot gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/item/crystal Item.Slot
 
 # remove firework star specific data
-data remove storage gm4_zauber_cauldrons:temp/item/crystal Item.tag.Explosion
+data remove storage gm4_zauber_cauldrons:temp/item/crystal Item.components."minecraft:firework_explosion"
 
 # replace item
 execute if score $slot gm4_zc_data matches 0..8 run function gm4_zauber_cauldrons:player/crystal/swap/restore_player_head/hotbar

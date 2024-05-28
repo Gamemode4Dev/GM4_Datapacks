@@ -7,7 +7,9 @@
           "items": [
             "minecraft:potion"
           ],
-          "nbt": "{gm4_lightning_in_a_bottle:1b}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_lightning_in_a_bottle:1b}"
+          }
         }
       }
     }

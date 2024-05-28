@@ -1,4 +1,4 @@
-# @s = player holding a netherite audere tool that has the wrong Item.tag.gm4_audere_shamir.max_durability
+# @s = player holding a netherite audere tool that has the wrong gm4_audere_shamir.max_durability
 # run from active_tool
 
 # item modifier

@@ -5,11 +5,6 @@ execute unless score vigere_shamir gm4_modules matches 1 run data modify storage
 execute unless score vigere_shamir gm4_earliest_version < vigere_shamir gm4_modules run scoreboard players operation vigere_shamir gm4_earliest_version = vigere_shamir gm4_modules
 scoreboard players set vigere_shamir gm4_modules 1
 
-# register shamir with lib_player_heads
-execute unless data storage gm4_player_heads:register heads[{id:"gm4_vigere_shamir:band/v0"}] run data modify storage gm4_player_heads:register heads append value {id:"gm4_vigere_shamir:band/v0",name:"[Drop to Fix Item] gm4_vigere_shamir:band",item:{gm4_metallurgy:{has_shamir:1b,stored_shamir:"vigere",metal:{type:"barimium",amount:[12s],castable:1b},item:"obsidian_cast"},CustomModelData:"shamir/vigere",display:{Name:'{"italic":false,"translate":"item.gm4.metallurgy.obsidian_cast","fallback":"Obsidian Cast"}',Lore:['{"italic":false,"color":"#D18A8A","translate":"item.gm4.metallurgy.band","fallback":"Barimium Band","with":[{"translate":"item.gm4.metallurgy.barimium"}]}','{"italic":false,"color":"aqua","translate":"item.gm4.metallurgy.shamir","fallback":"Shamir"}','{"italic":false,"color":"gray","translate":"item.gm4.shamir.vigere","fallback":"Vigere"}']}}}
-
 schedule function gm4_vigere_shamir:main 1t
-
-
 
 #$moduleUpdateList

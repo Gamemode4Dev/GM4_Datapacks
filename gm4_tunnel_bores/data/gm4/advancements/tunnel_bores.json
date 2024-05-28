@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "piston",
-      "nbt": "{CustomModelData:'gui/advancement/tunnel_bores'}"
+      "id": "piston",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/tunnel_bores"
+      }
     },
     "title": {
       "translate": "advancement.gm4.tunnel_bores.title",
@@ -24,7 +26,9 @@
             "items": [
               "minecraft:furnace_minecart"
             ],
-            "nbt": "{gm4_machines:{id:\"tunnel_bore\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"tunnel_bore\"}}"
+            }
           }
         ]
       }

@@ -3,7 +3,7 @@
   "name": "Tinkering Compressors",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:iron_block"
+    "id": "minecraft:iron_block"
   },
   "criteria": {
     "obtain_tinker_shamir": {
@@ -14,13 +14,15 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:\"tinker\",item:\"obsidian_cast\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:\"tinker\",item:\"obsidian_cast\"}}"
+            }
           }
         ]
       }
     },
     "open_block_compressor": {
-      "trigger": "minecraft:item_used_on_block",
+      "trigger": "minecraft:default_block_use",
       "conditions": {
         "location": [
           {
@@ -30,7 +32,7 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.block_compressor\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\"}],\"text\":\" \"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.block_compressor\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.block_compressor\",\"fallback\":\"Compression Amount\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}'}"
               }
             }
           }
@@ -38,7 +40,7 @@
       }
     },
     "open_tinkering_compressor": {
-      "trigger": "minecraft:item_used_on_block",
+      "trigger": "minecraft:default_block_use",
       "conditions": {
         "location": [
           {
@@ -48,7 +50,7 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.tinkering_compressor\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\"}],\"text\":\" \"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.tinkering_compressor\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.tinkering_compressor\",\"fallback\":\"Tinker Amount\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}'}"
               }
             }
           }

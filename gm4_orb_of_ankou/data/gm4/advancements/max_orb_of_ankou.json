@@ -1,8 +1,17 @@
 {
   "display": {
     "icon": {
-      "item": "firework_star",
-      "nbt": "{Enchantments:[{}],Explosion:{Colors:[I;13092807]},CustomModelData:'gui/advancement/orb_of_ankou_max_orb'}"
+      "id": "firework_star",
+      "components": {
+        "minecraft:enchantment_glint_override": true,
+        "minecraft:custom_model_data": "gui/advancement/orb_of_ankou_max_orb",
+        "minecraft:firework_explosion": {
+          "shape": "small_ball",
+          "colors": [
+            13092807
+          ]
+        }
+      }
     },
     "title": {
       "translate": "advancement.gm4.orb_of_ankou.max_orb_of_ankou.title",

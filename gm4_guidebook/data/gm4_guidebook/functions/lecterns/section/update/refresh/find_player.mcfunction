@@ -8,7 +8,7 @@ scoreboard players operation $current gm4_guide_id = @s gm4_guide_id
 execute as @a[distance=..6] if score @s gm4_guide_id = $current gm4_guide_id run function gm4_guidebook:lecterns/section/update/refresh/jump
 
 # store page count (minus 1)
-execute store result score @s gm4_guide_pages run data get block ~ ~ ~ Book.tag.pages
+execute store result score @s gm4_guide_pages run data get block ~ ~ ~ Book.components."minecraft:written_book_content".pages
 scoreboard players remove @s gm4_guide_pages 1
 
 # clean up

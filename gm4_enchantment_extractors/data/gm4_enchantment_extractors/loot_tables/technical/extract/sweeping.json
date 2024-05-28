@@ -12,20 +12,26 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:3s,id:\"minecraft:sweeping\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:sweeping_edge": 3
+                    }
+                  }
                 }
               ],
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:sweeping",
-                        "levels": 3
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:sweeping_edge",
+                          "levels": 3
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -39,20 +45,26 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:2s,id:\"minecraft:sweeping\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:sweeping_edge": 2
+                    }
+                  }
                 }
               ],
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:sweeping",
-                        "levels": 2
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:sweeping_edge",
+                          "levels": 2
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -66,20 +78,26 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:1s,id:\"minecraft:sweeping\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:sweeping_edge": 1
+                    }
+                  }
                 }
               ],
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:sweeping",
-                        "levels": 1
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:sweeping_edge",
+                          "levels": 1
+                        }
+                      ]
+                    }
                   }
                 },
                 {

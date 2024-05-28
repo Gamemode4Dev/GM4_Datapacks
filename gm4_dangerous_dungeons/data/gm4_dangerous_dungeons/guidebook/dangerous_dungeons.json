@@ -3,7 +3,7 @@
   "name": "Dangerous Dungeons",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:spawner"
+    "id": "minecraft:spawner"
   },
   "criteria": {
     "enter_badlands_dungeon": {
@@ -18,7 +18,7 @@
                 "entity": "this",
                 "predicate": {
                   "location": {
-                    "structure": "gm4_dangerous_dungeons:badlands/upper"
+                    "structures": "gm4_dangerous_dungeons:badlands/upper"
                   }
                 }
               },
@@ -27,7 +27,7 @@
                 "entity": "this",
                 "predicate": {
                   "location": {
-                    "structure": "gm4_dangerous_dungeons:badlands/lower"
+                    "structures": "gm4_dangerous_dungeons:badlands/lower"
                   }
                 }
               }
@@ -45,7 +45,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_dangerous_dungeons:deep_slate"
+                "structures": "gm4_dangerous_dungeons:deep_slate"
               }
             }
           }
@@ -61,7 +61,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_dangerous_dungeons:desert"
+                "structures": "gm4_dangerous_dungeons:desert"
               }
             }
           }
@@ -77,7 +77,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_dangerous_dungeons:lush"
+                "structures": "gm4_dangerous_dungeons:lush"
               }
             }
           }
@@ -96,7 +96,7 @@
                 "entity": "this",
                 "predicate": {
                   "location": {
-                    "structure": "gm4_dangerous_dungeons:ocean/default"
+                    "structures": "gm4_dangerous_dungeons:ocean/default"
                   }
                 }
               },
@@ -105,7 +105,7 @@
                 "entity": "this",
                 "predicate": {
                   "location": {
-                    "structure": "gm4_dangerous_dungeons:ocean/surface"
+                    "structures": "gm4_dangerous_dungeons:ocean/surface"
                   }
                 }
               }
@@ -123,7 +123,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_dangerous_dungeons:snowy"
+                "structures": "gm4_dangerous_dungeons:snowy"
               }
             }
           }
@@ -142,7 +142,7 @@
                 "entity": "this",
                 "predicate": {
                   "location": {
-                    "structure": "gm4_dangerous_dungeons:stone/default"
+                    "structures": "gm4_dangerous_dungeons:stone/default"
                   }
                 }
               },
@@ -151,7 +151,7 @@
                 "entity": "this",
                 "predicate": {
                   "location": {
-                    "structure": "gm4_dangerous_dungeons:stone/ocean"
+                    "structures": "gm4_dangerous_dungeons:stone/ocean"
                   }
                 }
               }

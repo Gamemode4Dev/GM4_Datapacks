@@ -10,6 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.pneuma_pricking",
@@ -29,8 +30,15 @@
               }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'pneuma/pricking',gm4_orb_of_ankou:{item:\"soul_essence\",stored_pneuma:{id:\"pricking\"},stored_enchantments:[{id:\"minecraft:thorns\",lvl:5}],stored_color:[8375363]},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:custom_model_data": "pneuma/pricking"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'pricking'},stored_enchantments:[{id:'minecraft:thorns',lvl:5}],stored_color:[8375363]}}"
             }
           ]
         }

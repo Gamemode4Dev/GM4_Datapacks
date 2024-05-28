@@ -17,6 +17,7 @@
                         },
                         {
                             "function": "minecraft:set_lore",
+                            "mode": "append",
                             "lore": [
                                 {
                                     "translate": "item.gm4.endermite_egg.lore",
@@ -27,8 +28,14 @@
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'item/endermite_egg',gm4_endermite_egg:1b}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/endermite_egg"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_endermite_egg:1b}"
                         }
                     ]
                 }

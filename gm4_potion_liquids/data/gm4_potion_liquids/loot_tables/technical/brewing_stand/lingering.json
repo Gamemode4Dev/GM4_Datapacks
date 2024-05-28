@@ -8,13 +8,13 @@
                     "children": [
                         {
                             "type": "minecraft:loot_table",
-                            "name": "gm4_potion_liquids:lingering_floating_potion",
+                            "value": "gm4_potion_liquids:lingering_floating_potion",
                             "conditions": [
                                 {
                                     "condition": "minecraft:entity_properties",
                                     "entity": "this",
                                     "predicate": {
-                                        "nbt": "{data:{gm4_brewing:{insert:{tag:{Potion:\"potion_liquids:floating\"}}}}}"
+                                        "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{gm4_potion_liquids:{potion:'floating'}}}}}}}"
                                     }
                                 }
                             ]
@@ -24,7 +24,7 @@
             ],
             "functions": [
                 {
-                    "function": "minecraft:set_nbt",
+                    "function": "minecraft:set_custom_data",
                     "tag": "{gm4_custom_potion:1b}"
                 }
             ]

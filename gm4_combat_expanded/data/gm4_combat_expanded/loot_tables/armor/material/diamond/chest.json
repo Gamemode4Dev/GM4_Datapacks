@@ -10,21 +10,22 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
                   "id": "9F3D476D-C118-4544-8365-64846904B48E",
                   "amount": 8,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 },
                 {
                   "attribute": "generic.armor_toughness",
                   "name": "generic.armor_toughness",
-                  "id": "9F3D476D-C118-4544-8365-64846904B48E",
+                  "id": "9F3D476D-C118-4544-8365-64846904B484",
                   "amount": 2,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 },
                 {
@@ -32,13 +33,14 @@
                   "name": "generic.knockback_resistance",
                   "id": "0-1-438d-0-28d34",
                   "amount": 0,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 {
@@ -57,7 +59,7 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
+              "function": "minecraft:set_custom_data",
               "tag": "{gm4_combat_expanded:{durability:528,identified:0,armor_clamp:-8,slot:1,material:5,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_chestplate\"}'}}"
             },
             {

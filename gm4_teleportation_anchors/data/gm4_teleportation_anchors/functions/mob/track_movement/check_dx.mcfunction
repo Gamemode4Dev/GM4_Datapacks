@@ -14,7 +14,7 @@ execute if score difference gm4_ta_pos_x matches ..0 run scoreboard players oper
 
 # mark entity as teleported if they moved too far
 execute if entity @s[type=enderman] if score difference gm4_ta_pos_x matches 360.. run tag @s add gm4_ta_teleported
-execute if score difference gm4_ta_pos_x matches 360..510 run tag @s[type=enderman,nbt={ActiveEffects:[{Id:1,Amplifier:0b}]}] remove gm4_ta_teleported
-execute if score difference gm4_ta_pos_x matches 360..690 run tag @s[type=enderman,nbt={ActiveEffects:[{Id:1,Amplifier:1b}]}] remove gm4_ta_teleported
+execute if score difference gm4_ta_pos_x matches 360..510 run tag @s[type=enderman,predicate=gm4_teleportation_anchors:has_speed_1] remove gm4_ta_teleported
+execute if score difference gm4_ta_pos_x matches 360..690 run tag @s[type=enderman,predicate=gm4_teleportation_anchors:has_speed_2] remove gm4_ta_teleported
 
 execute if entity @s[type=shulker] if score difference gm4_ta_pos_x matches 90.. run tag @s add gm4_ta_teleported

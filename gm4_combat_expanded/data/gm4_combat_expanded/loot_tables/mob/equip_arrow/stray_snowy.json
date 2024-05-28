@@ -8,11 +8,27 @@
           "name": "minecraft:tipped_arrow",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{custom_potion_effects:[{id:\"minecraft:slowness\",amplifier:2b,duration:600,show_particles:1b,show_icon:1b,ambient:0b}],CustomPotionColor:9154528,HideFlags:32}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 9154528,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:slowness",
+                      "amplifier": 2,
+                      "duration": 600,
+                      "show_particles": true,
+                      "show_icon": true,
+                      "ambient": false
+                    }
+                  ]
+                },
+                "minecraft:hide_additional_tooltip": {}
+              }
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "lore": [
                 {
                   "translate": "potion.withDuration",

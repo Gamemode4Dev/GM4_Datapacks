@@ -1,8 +1,10 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:tripwire_hook",
-            "nbt": "{CustomModelData:'gui/advancement/crossbow_cartridges_string'}"
+            "id": "minecraft:tripwire_hook",
+            "components": {
+                "minecraft:custom_model_data": "gui/advancement/crossbow_cartridges_string"
+            }
         },
         "title": {
             "translate": "advancement.gm4.crossbow_cartridges_string.title",

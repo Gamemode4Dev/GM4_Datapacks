@@ -6,12 +6,12 @@
         {
           "type": "minecraft:loot_table",
           "weight": 3,
-          "name": "gm4_balloon_animals:technical/random/pick_common"
+          "value": "gm4_balloon_animals:technical/random/pick_common"
         },
         {
           "type": "minecraft:loot_table",
           "weight": 7,
-          "name": "gm4_balloon_animals:technical/random/pick_rare"
+          "value": "gm4_balloon_animals:technical/random/pick_rare"
         }
       ]
     }

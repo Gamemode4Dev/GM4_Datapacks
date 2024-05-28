@@ -12,7 +12,7 @@ execute if score $has_soul_fire_heatsource gm4_zc_data matches 1.. run data modi
 # called functions are generated via beet from templates
 # generated with the help of bolt
 for bottle_data in ctx.meta['potion_bottles']:
-    execute unless score $recipe_success gm4_zc_data matches 1.. if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:bottle_data['item_id']}}}] run function f"gm4_zauber_cauldrons:recipes/magicol/bottled/{bottle_data['bottle']}/select_color"
+    execute unless score $recipe_success gm4_zc_data matches 1.. if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{count:1,components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:bottle_data['item_id']}}}}] run function f"gm4_zauber_cauldrons:recipes/magicol/bottled/{bottle_data['bottle']}/select_color"
 
 # use water or powder snow and play sound once a recipe ran
 execute if score $current gm4_zc_moon_phase = $preferred gm4_zc_moon_phase if score $recipe_success gm4_zc_data matches 1 run function gm4_zauber_cauldrons:recipes/magicol/bottled/use_cauldron

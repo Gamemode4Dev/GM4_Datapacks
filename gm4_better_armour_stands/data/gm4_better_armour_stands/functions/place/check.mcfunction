@@ -8,4 +8,5 @@ advancement revoke @s only gm4_better_armour_stands:place
 execute positioned ^ ^ ^3 as @e[type=armor_stand,tag=,distance=..3] run function gm4_better_armour_stands:place/new
 
 # copy exact pose from copied armor_stand item to remove randomness
+# TODO 1.20.5: this doesn't seem to be necessary (anymore?)
 execute as @e[type=armor_stand,tag=gm4_bas_copy,distance=..6,limit=1] run function gm4_better_armour_stands:place/copy

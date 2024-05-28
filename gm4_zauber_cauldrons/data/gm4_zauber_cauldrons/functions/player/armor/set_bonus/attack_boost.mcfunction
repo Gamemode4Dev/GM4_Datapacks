@@ -4,16 +4,15 @@
 # run from player/armor/apply_set_bonus
 
 # attribute
-attribute @s minecraft:generic.attack_damage modifier add 81b8020f-c7f4-41d9-b99b-7a8d6b2d5a90 gm4_zauber_cauldrons.armor.set_bonus.attack_boost 1 add
+attribute @s minecraft:generic.attack_damage modifier add 81b8020f-c7f4-41d9-b99b-7a8d6b2d5a90 gm4_zauber_cauldrons.armor.set_bonus.attack_boost 1 add_value
 
 # sounds and visuals
-# count for particles must be 0 for RGB
-particle minecraft:entity_effect ~.3 ~.8 ~.3 0.988 0.773 0.000 1 0
-particle minecraft:entity_effect ~.3 ~.8 ~-.3 0.988 0.773 0.000 1 0
-particle minecraft:entity_effect ~-.3 ~.8 ~-.3 0.988 0.773 0.000 1 0
-particle minecraft:entity_effect ~-.3 ~.8 ~.3 0.988 0.773 0.000 1 0
-particle minecraft:entity_effect ^ ^1.2 ^0.1 0.988 0.773 0.000 1 0
-particle minecraft:entity_effect ^ ^1.2 ^-0.1 0.988 0.773 0.000 1 0
-particle minecraft:entity_effect ^0.1 ^1.2 ^ 0.988 0.773 0.000 1 0
-particle minecraft:entity_effect ^-0.1 ^1.2 ^ 0.988 0.773 0.000 1 0
+particle minecraft:entity_effect{color:[0.988,0.773,0.000,1.0]} ~.3 ~.8 ~.3 0 0 0 1 1
+particle minecraft:entity_effect{color:[0.988,0.773,0.000,1.0]} ~.3 ~.8 ~-.3 0 0 0 1 1
+particle minecraft:entity_effect{color:[0.988,0.773,0.000,1.0]} ~-.3 ~.8 ~-.3 0 0 0 1 1
+particle minecraft:entity_effect{color:[0.988,0.773,0.000,1.0]} ~-.3 ~.8 ~.3 0 0 0 1 1
+particle minecraft:entity_effect{color:[0.988,0.773,0.000,1.0]} ^ ^1.2 ^0.1 0 0 0 1 1
+particle minecraft:entity_effect{color:[0.988,0.773,0.000,1.0]} ^ ^1.2 ^-0.1 0 0 0 1 1
+particle minecraft:entity_effect{color:[0.988,0.773,0.000,1.0]} ^0.1 ^1.2 ^ 0 0 0 1 1
+particle minecraft:entity_effect{color:[0.988,0.773,0.000,1.0]} ^-0.1 ^1.2 ^ 0 0 0 1 1
 playsound minecraft:block.beacon.power_select player @a[distance=..4] ~ ~ ~ 0.2 1.6

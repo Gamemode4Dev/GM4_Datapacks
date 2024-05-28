@@ -12,20 +12,26 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:3s,id:\"minecraft:quick_charge\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:quick_charge": 3
+                    }
+                  }
                 }
               ],
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:quick_charge",
-                        "levels": 3
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:quick_charge",
+                          "levels": 3
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -39,20 +45,26 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:2s,id:\"minecraft:quick_charge\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:quick_charge": 2
+                    }
+                  }
                 }
               ],
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:quick_charge",
-                        "levels": 2
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:quick_charge",
+                          "levels": 2
+                        }
+                      ]
+                    }
                   }
                 },
                 {
@@ -66,20 +78,26 @@
               "name": "minecraft:enchanted_book",
               "functions": [
                 {
-                  "function": "minecraft:set_nbt",
-                  "tag": "{StoredEnchantments:[{lvl:1s,id:\"minecraft:quick_charge\"}]}"
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:quick_charge": 1
+                    }
+                  }
                 }
               ],
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:quick_charge",
-                        "levels": 1
-                      }
-                    ]
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:quick_charge",
+                          "levels": 1
+                        }
+                      ]
+                    }
                   }
                 },
                 {

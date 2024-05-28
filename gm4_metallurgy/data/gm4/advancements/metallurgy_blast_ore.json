@@ -1,8 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:player_head",
-      "nbt": "{CustomModelData:'gui/advancement/metallurgy_blast_ore',SkullOwner:\"$gm4_metallurgy:ore/aluminium\"}"
+      "id": "minecraft:player_head",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/metallurgy_blast_ore",
+        "minecraft:profile": "$gm4_metallurgy:ore/aluminium"
+      }
     },
     "title": {
       "translate": "advancement.gm4.metallurgy.blast_ore.title",
@@ -21,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{item:\"ore\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{item:\"ore\"}}"
+            }
           }
         ]
       }

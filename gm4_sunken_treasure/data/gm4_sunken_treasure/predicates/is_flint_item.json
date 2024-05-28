@@ -1,0 +1,11 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "slots": {
+      "contents": {
+        "items": "minecraft:flint"
+      }
+    }
+  }
+}

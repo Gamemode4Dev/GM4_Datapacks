@@ -5,31 +5,31 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/lingering/instant_damage"
+          "value": "gm4_zauber_cauldrons:items/potions/lingering/instant_damage"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/lingering/instant_health"
+          "value": "gm4_zauber_cauldrons:items/potions/lingering/instant_health"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/lingering/jump_boost"
+          "value": "gm4_zauber_cauldrons:items/potions/lingering/jump_boost"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/lingering/poison"
+          "value": "gm4_zauber_cauldrons:items/potions/lingering/poison"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/lingering/regeneration"
+          "value": "gm4_zauber_cauldrons:items/potions/lingering/regeneration"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/lingering/speed"
+          "value": "gm4_zauber_cauldrons:items/potions/lingering/speed"
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_zauber_cauldrons:items/potions/lingering/strength"
+          "value": "gm4_zauber_cauldrons:items/potions/lingering/strength"
         }
       ]
     },

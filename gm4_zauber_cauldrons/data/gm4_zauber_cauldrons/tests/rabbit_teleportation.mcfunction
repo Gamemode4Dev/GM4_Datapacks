@@ -8,7 +8,7 @@ setblock ~2 ~ ~1 netherrack
 setblock ~2 ~1 ~1 fire
 setblock ~2 ~2 ~1 water_cauldron[level=3]
 
-give @s enchanted_book{StoredEnchantments:[{id:"minecraft:protection",lvl:1s}]}
+give @s enchanted_book[stored_enchantments={protection:1}]
 execute at @s run tp @s ~ ~ ~ facing ~1 ~ ~
 await delay 1s
 execute at @s run tp @s ~ ~ ~ facing ~-1 ~ ~

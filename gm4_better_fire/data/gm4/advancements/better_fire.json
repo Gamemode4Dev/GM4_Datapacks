@@ -1,8 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "bow",
-      "nbt": "{Enchantments:[{id:\"flame\",lvl:1}],CustomModelData:'gui/advancement/better_fire'}"
+      "id": "bow",
+      "components": {
+        "minecraft:enchantments": {
+          "flame": 1
+        },
+        "minecraft:custom_model_data": "gui/advancement/better_fire"
+      }
     },
     "title": {
       "translate": "advancement.gm4.better_fire.title",
@@ -21,12 +26,14 @@
       "conditions": {
         "delta": -1,
         "item": {
-          "enchantments": [
-            {
-              "enchantment": "minecraft:flame",
-              "levels": 1
-            }
-          ],
+          "predicates": {
+            "minecraft:enchantments": [
+              {
+                "enchantment": "minecraft:flame",
+                "levels": 1
+              }
+            ]
+          },
           "items": [
             "minecraft:bow"
           ]

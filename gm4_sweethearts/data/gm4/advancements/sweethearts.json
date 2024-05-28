@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "poppy",
-      "nbt": "{CustomModelData:'gui/advancement/sweethearts'}"
+      "id": "poppy",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/sweethearts"
+      }
     },
     "title": {
       "translate": "advancement.gm4.sweethearts.title",

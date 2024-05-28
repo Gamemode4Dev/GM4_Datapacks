@@ -3,7 +3,7 @@
   "name": "Zauber Cauldrons",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:cauldron"
+    "id": "minecraft:cauldron"
   },
   "criteria": {
     "obtain_enchanted_book": {
@@ -81,7 +81,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_zauber_cauldrons:{bottle:{}}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_zauber_cauldrons:{bottle:{}}}"
+            }
           }
         ]
       }
@@ -106,7 +108,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_zauber_cauldrons:{item:'crystal'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:'crystal'}}"
+            }
           }
         ]
       }
@@ -116,7 +120,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_zauber_cauldrons:{}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_zauber_cauldrons:{}}"
+            }
           }
         ]
       }
@@ -129,7 +135,9 @@
             "items": [
               "minecraft:glass_bottle"
             ],
-            "nbt": "{gm4_zauber_cauldrons:{item:'bottled_vex'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:'bottled_vex'}}"
+            }
           }
         ]
       }
@@ -142,7 +150,9 @@
             "items": [
               "minecraft:potion"
             ],
-            "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\"}}"
+            }
           }
         ]
       }

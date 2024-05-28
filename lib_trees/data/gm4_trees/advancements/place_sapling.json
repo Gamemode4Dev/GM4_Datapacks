@@ -7,7 +7,9 @@
           {
             "condition": "minecraft:match_tool",
             "predicate": {
-              "nbt": "{gm4_trees:{item:{id:\"sapling\"}}}"
+              "predicates": {
+                "minecraft:custom_data": "{gm4_trees:{item:{id:\"sapling\"}}}"
+              }
             }
           }
         ]
@@ -20,7 +22,9 @@
           {
             "condition": "minecraft:match_tool",
             "predicate": {
-              "nbt": "{gm4_fruiting_trees:{item:{id:\"sapling\"}}}"
+              "predicates": {
+                "minecraft:custom_data": "{gm4_fruiting_trees:{item:{id:\"sapling\"}}}"
+              }
             }
           }
         ]

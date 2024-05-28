@@ -9,7 +9,7 @@ execute if score @s gm4_zc_fullness > $expected_item_amount gm4_zc_fullness run 
 execute align xyz as @e[type=item,dx=0,dy=0,dz=0] run data modify entity @s PickupDelay set value 0s
 
 # sounds and visuals
-particle entity_effect ~ ~.4 ~ .1 .1 .1 1 10
+particle minecraft:entity_effect{color:[0.1,0.1,0.1,1.0]} ~ ~.4 ~ 0 0 0 1 10
 playsound entity.player.levelup block @a[distance=..16] ~ ~ ~ 1 1.5
 
 # consume water

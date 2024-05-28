@@ -20,7 +20,7 @@ execute if block ~ ~ ~ player_wall_head[facing=east] run scoreboard players set 
 execute if block ~ ~ ~ player_wall_head[facing=south] run scoreboard players set $face_placement gm4_machine_data 5
 execute if block ~ ~ ~ player_wall_head[facing=west] run scoreboard players set $face_placement gm4_machine_data 6
 
-data modify storage gm4_machines:temp id set from block ~ ~ ~ SkullOwner.Name
+data modify storage gm4_machines:temp id set from block ~ ~ ~ components."minecraft:custom_data".gm4_machines.id
 
 scoreboard players set $placed_block gm4_machine_data 0
 scoreboard players remove $player_head_count gm4_machine_data 1

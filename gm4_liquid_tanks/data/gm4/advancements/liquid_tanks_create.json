@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "hopper",
-      "nbt": "{CustomModelData:'gui/advancement/liquid_tanks_create'}"
+      "id": "hopper",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/liquid_tanks_create"
+      }
     },
     "title": {
       "translate": "advancement.gm4.liquid_tanks.title",
@@ -24,7 +26,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:\"liquid_tank\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"liquid_tank\"}}"
+            }
           }
         ]
       }

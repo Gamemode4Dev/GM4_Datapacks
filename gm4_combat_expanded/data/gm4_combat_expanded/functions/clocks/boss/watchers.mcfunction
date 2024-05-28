@@ -2,7 +2,7 @@
 # @s = unspecified
 # at unspecified
 # schedule from main
-# schedule from boss/watcers/activation/spawn/head
+# schedule from boss/watchers/activation/spawn/head
 # schedule from here
 
 scoreboard players set $keep_tick.boss gm4_ce_keep_tick 0

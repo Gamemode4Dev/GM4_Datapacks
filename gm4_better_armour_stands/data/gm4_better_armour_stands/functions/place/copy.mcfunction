@@ -5,4 +5,4 @@
 tag @s remove gm4_bas_copy
 
 # copy exact pose from copied armor_stand item to remove randomness
-data modify entity @s Pose set from entity @p[predicate=gm4_better_armour_stands:holding/mainhand/armor_stand_copy] SelectedItem.tag.EntityTag.Pose
+data modify entity @s Pose set from entity @p[predicate=gm4_better_armour_stands:holding/mainhand/armor_stand_copy] SelectedItem.components."minecraft:entity_data".Pose

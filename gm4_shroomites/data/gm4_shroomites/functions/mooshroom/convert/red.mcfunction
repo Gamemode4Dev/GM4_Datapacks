@@ -12,7 +12,7 @@ execute as @e[type=mooshroom,limit=1,distance=0] run function gm4_shroomites:moo
 # particles and sound
 particle minecraft:mycelium ~ ~.8 ~ .4 .4 .4 0 50
 playsound minecraft:block.chorus_flower.grow hostile @a[distance=..10] ~ ~ ~ 0.625
-particle block red_mushroom_block ~ ~1 ~ .3 .3 .3 20 20
+particle minecraft:block{block_state:"minecraft:red_mushroom_block"} ~ ~1 ~ .3 .3 .3 20 20
 
 # add to age
 scoreboard players operation @s gm4_shroom_data += #conversion_cost gm4_shroom_data

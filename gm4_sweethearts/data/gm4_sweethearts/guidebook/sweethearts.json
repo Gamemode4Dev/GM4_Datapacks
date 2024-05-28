@@ -3,7 +3,7 @@
   "name": "Sweethearts",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:poppy"
+    "id": "minecraft:poppy"
   },
   "criteria": {
     "obtain_flower": {

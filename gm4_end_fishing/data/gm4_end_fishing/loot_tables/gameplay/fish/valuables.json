@@ -7,7 +7,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 10,
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/base"
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/base"
         },
         {
           "type": "minecraft:item",
@@ -18,13 +18,13 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_midlands"
+                    "biomes": "minecraft:end_midlands"
                   }
                 },
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_highlands"
+                    "biomes": "minecraft:end_highlands"
                   }
                 }
               ]
@@ -49,8 +49,8 @@
           "weight": 10,
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_end_fishing:{set_data:{type:\"entity\",id:\"end_phantom\"}}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{set_data:{type:'entity',id:'end_phantom'}}}"
             }
           ]
         },
@@ -63,7 +63,7 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:the_end"
+                    "biomes": "minecraft:the_end"
                   }
                 }
               ]
@@ -81,7 +81,7 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:the_end"
+                    "biomes": "minecraft:the_end"
                   }
                 }
               ]
@@ -92,6 +92,8 @@
         },
         {
           "type": "minecraft:loot_table",
+          "weight": 20,
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/base",
           "conditions": [
             {
               "condition": "minecraft:any_of",
@@ -99,20 +101,18 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_highlands"
+                    "biomes": "minecraft:end_highlands"
                   }
                 },
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_midlands"
+                    "biomes": "minecraft:end_midlands"
                   }
                 }
               ]
             }
-          ],
-          "weight": 20,
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/base"
+          ]
         },
         {
           "type": "minecraft:item",
@@ -123,13 +123,13 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:small_end_islands"
+                    "biomes": "minecraft:small_end_islands"
                   }
                 },
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_barrens"
+                    "biomes": "minecraft:end_barrens"
                   }
                 }
               ]
@@ -139,8 +139,8 @@
           "name": "minecraft:ender_pearl",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_end_fishing:{set_data:{type:\"entity\",id:\"end_phantom\"}}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{set_data:{type:'entity',id:'end_phantom'}}}"
             }
           ]
         }

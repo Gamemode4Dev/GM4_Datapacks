@@ -9,8 +9,15 @@
           "name": "minecraft:player_head",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'item/disassembler',gm4_machines:{id:\"disassembler\"},SkullOwner:{Name:\"gm4_disassembler\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$disassembler\"}]}}}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/disassembler",
+                "minecraft:profile": "$disassembler"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'disassembler'}}"
             },
             {
               "function": "set_name",

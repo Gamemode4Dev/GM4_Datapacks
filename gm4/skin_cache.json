@@ -959,47 +959,8 @@
     }
   },
   "nonnative_references": {
-    "gm4_animi_shamir": [
-      "gm4_metallurgy:band/curies_bismium"
-    ],
-    "gm4_desire_lines": [
-      "gm4_metallurgy:band/aluminium"
-    ],
-    "gm4_fulcio_shamir": [
-      "gm4_metallurgy:band/barimium"
-    ],
-    "gm4_iacio_shamir": [
-      "gm4_metallurgy:band/barium"
-    ],
-    "gm4_lumos_shamir": [
-      "gm4_metallurgy:band/curies_bismium"
-    ],
-    "gm4_orb_of_ankou": [
-      "gm4_metallurgy:band/bismuth"
-    ],
-    "gm4_percurro_shamir": [
-      "gm4_metallurgy:band/curies_bismium"
-    ],
     "gm4_tinkering_compressors": [
       "gm4_metallurgy:band/curies_bismium"
-    ],
-    "gm4_vecto_shamir": [
-      "gm4_metallurgy:band/bismuth"
-    ],
-    "gm4_weighted_armour": [
-      "gm4_metallurgy:band/aluminium"
-    ],
-    "gm4_zauber_liquids": [
-      "gm4_potion_liquids:liquids/harming",
-      "gm4_potion_liquids:liquids/healing",
-      "gm4_potion_liquids:liquids/leaping",
-      "gm4_potion_liquids:liquids/poison",
-      "gm4_potion_liquids:liquids/regeneration",
-      "gm4_potion_liquids:liquids/strength",
-      "gm4_potion_liquids:liquids/swiftness"
-    ],
-    "gm4_audere_shamir": [
-      "gm4_metallurgy:band/barium"
     ],
     "gm4_auto_crafting": [
       "gm4_custom_crafters:custom_crafter"

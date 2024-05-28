@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_sunken_treasure:gameplay/treasure_loot/sand"
+          "value": "gm4_sunken_treasure:gameplay/treasure_loot/sand"
         }
       ],
       "conditions": [
@@ -31,7 +31,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_sunken_treasure:gameplay/treasure_loot/sand"
+          "value": "gm4_sunken_treasure:gameplay/treasure_loot/sand"
         }
       ],
       "conditions": [
@@ -56,7 +56,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_sunken_treasure:gameplay/treasure_loot/sand"
+          "value": "gm4_sunken_treasure:gameplay/treasure_loot/sand"
         }
       ],
       "conditions": [

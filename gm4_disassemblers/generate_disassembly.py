@@ -129,7 +129,7 @@ def beet_default(ctx: Context):
   for item in ITEMS:
     caller["pools"][0]["entries"][0]["children"].append({
       "type": "minecraft:loot_table",
-      "name": f'gm4_disassemblers:disassembleables/{item}',
+      "value": f'gm4_disassemblers:disassembleables/{item}',
       "conditions": [{
         "condition": "match_tool",
         "predicate": {

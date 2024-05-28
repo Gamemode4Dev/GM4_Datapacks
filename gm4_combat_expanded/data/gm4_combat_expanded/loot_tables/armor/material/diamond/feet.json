@@ -10,21 +10,22 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
                   "id": "845DB27C-C624-495F-8C9F-6020A9A58B6B",
                   "amount": 3,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "feet"
                 },
                 {
                   "attribute": "generic.armor_toughness",
                   "name": "generic.armor_toughness",
-                  "id": "845DB27C-C624-495F-8C9F-6020A9A58B6B",
+                  "id": "845DB27C-C624-495F-8C9F-6020A9A58B64",
                   "amount": 2,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "feet"
                 },
                 {
@@ -32,13 +33,14 @@
                   "name": "generic.knockback_resistance",
                   "id": "0-1-438d-0-28d34",
                   "amount": 0,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "feet"
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 {
@@ -57,7 +59,7 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
+              "function": "minecraft:set_custom_data",
               "tag": "{gm4_combat_expanded:{durability:429,identified:0,armor_clamp:-3,slot:3,material:5,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_boots\"}'}}"
             },
             {

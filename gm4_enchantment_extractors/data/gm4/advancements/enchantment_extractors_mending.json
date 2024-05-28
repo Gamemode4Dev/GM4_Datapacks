@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "enchanted_book",
-      "nbt": "{CustomModelData:'gui/advancement/enchantment_extractors_mending'}"
+      "id": "enchanted_book",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/enchantment_extractors_mending"
+      }
     },
     "frame": "goal",
     "title": {

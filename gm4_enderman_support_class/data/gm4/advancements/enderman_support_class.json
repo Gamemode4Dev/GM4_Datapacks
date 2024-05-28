@@ -1,8 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "player_head",
-      "nbt": "{CustomModelData:'gui/advancement/enderman_support_class',SkullOwner:\"MHF_Enderman\"}"
+      "id": "player_head",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/enderman_support_class",
+        "minecraft:profile": "MHF_Enderman"
+      }
     },
     "title": {
       "translate": "advancement.gm4.enderman_support_class.title",

@@ -42,7 +42,9 @@ def generate_corripio(ctx: Context):
               } for tag in ["gm4_oa_ignore", "smithed.entity"]],
             ],
             "killing_blow": { "source_entity": { "equipment": { "mainhand": {
-              "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'corripio'}}"
+              "predicates": {
+                "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'corripio'}}"
+              }
             } } } }
           }
         }
@@ -69,7 +71,7 @@ def generate_corripio(ctx: Context):
         "rolls": 1,
         "entries": [{
           "type": "minecraft:loot_table",
-          "name": f"gm4_orb_of_ankou:items/soul_essence/{essence}"
+          "value": f"gm4_orb_of_ankou:items/soul_essence/{essence}"
         }]
       }
       pool["conditions"] = [{

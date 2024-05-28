@@ -14,7 +14,7 @@ execute at @e[type=armor_stand,tag=gm4_ef_reeled_in] run summon marker ~ ~ ~ {Ta
 execute as @e[type=marker,tag=gm4_ef_loot] at @s run function gm4_end_fishing:reel_in/set_marker_pos
 execute if entity @s[tag=gm4_ef_durability_main] at @e[type=marker,tag=gm4_ef_loot] run loot spawn ^ ^ ^1 fish gm4_end_fishing:gameplay/fishing ~ ~ ~ mainhand
 execute if entity @s[tag=gm4_ef_durability_off] at @e[type=marker,tag=gm4_ef_loot] run loot spawn ^ ^ ^1 fish gm4_end_fishing:gameplay/fishing ~ ~ ~ offhand
-execute as @e[type=item,nbt={Item:{tag:{gm4_end_fishing:{set_data:{type:"entity"}}}}}] run function gm4_end_fishing:reel_in/summon_entity
+execute as @e[type=item] if items entity @s contents *[custom_data~{gm4_end_fishing:{set_data:{type:"entity"}}}] run function gm4_end_fishing:reel_in/summon_entity
 
 summon minecraft:experience_orb ~ ~ ~ {Tags:["gm4_ef_set_orb"]}
 execute store result score $value gm4_ef_data run data get entity @e[type=experience_orb,tag=gm4_ef_set_orb,limit=1] UUID[0]

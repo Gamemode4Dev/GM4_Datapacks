@@ -8,8 +8,22 @@
                     "name": "minecraft:firework_star",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{HideFlags:33,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],Explosion:{Colors:[I;13092807]},CustomModelData:'item/orb_of_ankou',gm4_orb_of_ankou:{item:\"orb\"}}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:custom_model_data": "item/orb_of_ankou",
+                                "minecraft:hide_additional_tooltip": {},
+                                "minecraft:firework_explosion": {
+                                    "shape": "small_ball",
+                                    "colors": [
+                                        13092807
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_orb_of_ankou:{item:'orb'}}"
                         },
                         {
                             "function": "minecraft:set_name",
@@ -22,6 +36,7 @@
                         },
                         {
                             "function": "minecraft:set_lore",
+                            "mode": "append",
                             "lore": [
                                 [
                                     {
@@ -30,8 +45,7 @@
                                         "color": "gray"
                                     }
                                 ]
-                            ],
-                            "replace": false
+                            ]
                         }
                     ]
                 }

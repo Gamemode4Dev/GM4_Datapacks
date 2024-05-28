@@ -7,7 +7,9 @@
       "predicate": {
         "equipment": {
           "head": {
-            "nbt": "{gm4_combat_expanded:{netherite:1}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_combat_expanded:{netherite:1}}"
+            }
           }
         }
       }

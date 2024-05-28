@@ -10,6 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 {
@@ -28,7 +29,7 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
+              "function": "minecraft:set_custom_data",
               "tag": "{gm4_combat_expanded:{identified:0,damage:60,atkspeed:16,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_sword\"}'}}"
             },
             {

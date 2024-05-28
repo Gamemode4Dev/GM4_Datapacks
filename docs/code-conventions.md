@@ -44,7 +44,7 @@ All functions should start with a header comment that consists of:
 Inline comments should be placed to partition code into logical sections and `#` should be followed by a space, e.g.
 ```mcfunction
 # spawns items and kills player
-summon Item ~ ~ ~ {Item:{id:"minecraft:bone",Count:1b}}
+summon Item ~ ~ ~ {Item:{id:"minecraft:bone",count:1}}
 kill @s
 ```
 

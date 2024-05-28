@@ -5,7 +5,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "gm4_crossbow_cartridges:torch_placeable_top"
+					"blocks": "#gm4_crossbow_cartridges:torch_placeable_top"
 				}
 			}
 		},
@@ -13,7 +13,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "minecraft:slabs",
+					"blocks": "#minecraft:slabs",
 					"state": {
 						"type": "top"
 					}
@@ -24,7 +24,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "minecraft:slabs",
+					"blocks": "#minecraft:slabs",
 					"state": {
 						"type": "double"
 					}
@@ -35,7 +35,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "minecraft:stairs",
+					"blocks": "#minecraft:stairs",
 					"state": {
 						"half": "top"
 					}
@@ -46,7 +46,7 @@
 			"condition": "minecraft:location_check",
 			"predicate": {
 				"block": {
-					"tag": "minecraft:trapdoors",
+					"blocks": "#minecraft:trapdoors",
 					"state": {
 						"half": "top",
 						"open": "false"
@@ -85,7 +85,7 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"tag": "minecraft:walls"
+					"blocks": "#minecraft:walls"
 				}
 			}
 		},
@@ -94,7 +94,7 @@
 			"offsetY": -1,
 			"predicate": {
 				"block": {
-					"tag": "minecraft:fences"
+					"blocks": "#minecraft:fences"
 				}
 			}
 		},

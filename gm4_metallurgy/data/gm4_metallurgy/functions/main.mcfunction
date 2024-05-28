@@ -1,5 +1,5 @@
 # give radiation poisoning
-effect give @a[gamemode=!spectator,gamemode=!creative,nbt={Inventory:[{id:"minecraft:player_head",tag:{gm4_metallurgy:{metal:{type:"thorium"},item:"ore"}}}]}] minecraft:mining_fatigue 2 1
+effect give @a[gamemode=!spectator,gamemode=!creative,predicate=gm4_metallurgy:carries_thorium] minecraft:mining_fatigue 2 1
 
 # manage moulds
 execute as @e[type=armor_stand,tag=gm4_sand_ring] at @s positioned ~ ~1.23 ~ run function gm4_metallurgy:casting/sustain_mould
@@ -21,6 +21,6 @@ scoreboard players reset $tool_current_damage gm4_ml_data
 execute as @a run function gm4_metallurgy:player
 
 execute as @e[scores={gm4_bolt_time=-40..}] at @s run function gm4_ender_bolt_shamir:infection/active
-execute as @e[type=trident,nbt={inGround:1b,Trident:{tag:{gm4_metallurgy:{active_shamir:"ender_bolt"}}}}] at @s run function gm4_ender_bolt_shamir:infection/symptoms
+execute as @e[type=trident,predicate=gm4_metallurgy:is_ender_bolt_trident,nbt={inGround:1b}] at @s run function gm4_ender_bolt_shamir:infection/symptoms
 
 schedule function gm4_metallurgy:main 16t

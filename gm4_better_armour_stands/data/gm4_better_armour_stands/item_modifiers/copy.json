@@ -1,24 +1,13 @@
 [
   {
-    "function": "minecraft:set_nbt",
-    "tag": "{Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
-  },
-  {
-    "function": "minecraft:copy_nbt",
-    "source": {
-      "type": "minecraft:storage",
-      "source": "gm4_better_armour_stands:temp"
-    },
-    "ops": [
-      {
-        "source": "EntityTag",
-        "target": "EntityTag",
-        "op": "replace"
-      }
-    ]
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:enchantment_glint_override": true
+    }
   },
   {
     "function": "minecraft:set_lore",
+    "mode": "replace_all",
     "entity": "this",
     "lore": [
       [
@@ -34,11 +23,11 @@
           ]
         }
       ]
-    ],
-    "replace": true
+    ]
   },
   {
     "function": "minecraft:set_lore",
+    "mode": "append",
     "entity": "this",
     "lore": [
       [
@@ -54,11 +43,11 @@
           "italic": false
         }
       ]
-    ],
-    "replace": false
+    ]
   },
   {
     "function": "minecraft:set_lore",
+    "mode": "append",
     "entity": "this",
     "lore": [
       [
@@ -75,7 +64,6 @@
         }
       ]
     ],
-    "replace": false,
     "conditions": [
       {
         "condition": "minecraft:entity_properties",
@@ -88,6 +76,7 @@
   },
   {
     "function": "minecraft:set_lore",
+    "mode": "append",
     "entity": "this",
     "lore": [
       [
@@ -104,7 +93,6 @@
         }
       ]
     ],
-    "replace": false,
     "conditions": [
       {
         "condition": "minecraft:entity_properties",
@@ -117,6 +105,7 @@
   },
   {
     "function": "minecraft:set_lore",
+    "mode": "append",
     "entity": "this",
     "lore": [
       [
@@ -133,7 +122,6 @@
         }
       ]
     ],
-    "replace": false,
     "conditions": [
       {
         "condition": "minecraft:entity_properties",
@@ -146,6 +134,7 @@
   },
   {
     "function": "minecraft:set_lore",
+    "mode": "append",
     "entity": "this",
     "lore": [
       [
@@ -162,7 +151,6 @@
         }
       ]
     ],
-    "replace": false,
     "conditions": [
       {
         "condition": "minecraft:entity_properties",

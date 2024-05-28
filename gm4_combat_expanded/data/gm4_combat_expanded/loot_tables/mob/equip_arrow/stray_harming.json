@@ -8,11 +8,28 @@
           "name": "minecraft:tipped_arrow",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{custom_potion_effects:[{id:\"minecraft:slowness\",amplifier:0b,duration:600,show_particles:1b,show_icon:1b,ambient:0b}],Potion:\"minecraft:harming\",HideFlags:32,CustomPotionColor:11101546}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:harming",
+                  "custom_color": 11101546,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:slowness",
+                      "amplifier": 0,
+                      "duration": 600,
+                      "show_particles": true,
+                      "show_icon": true,
+                      "ambient": false
+                    }
+                  ]
+                },
+                "minecraft:hide_additional_tooltip": {}
+              }
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "lore": [
                 {
                   "translate": "potion.withDuration",

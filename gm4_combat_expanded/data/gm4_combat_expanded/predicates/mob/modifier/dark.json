@@ -7,14 +7,14 @@
         {
           "condition": "minecraft:location_check",
           "predicate": {
-            "biome": "minecraft:lush_caves"
+            "biomes": "minecraft:lush_caves"
           }
         },
         {
           "condition": "minecraft:location_check",
           "predicate": {
             "block": {
-              "tag": "gm4:water"
+              "blocks": "#gm4:water"
             }
           }
         }

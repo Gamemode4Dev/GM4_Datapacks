@@ -10,19 +10,21 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
                   "id": "D8499B04-0E66-4726-AB29-64469D734E0D",
                   "amount": 4,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "legs"
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 {
@@ -41,7 +43,7 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
+              "function": "minecraft:set_custom_data",
               "tag": "{gm4_combat_expanded:{durability:225,identified:0,armor_clamp:-4,slot:2,material:2,name:'{\"italic\":false,\"translate\":\"item.minecraft.chainmail_leggings\"}'}}"
             },
             {

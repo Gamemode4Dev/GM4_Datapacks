@@ -4,7 +4,7 @@
 
 execute positioned ~3.5 ~1 ~2.5 run dummy PercurroVictim spawn
 execute at @s run tp @s ~ ~ ~ facing entity PercurroVictim
-item replace entity @s weapon.mainhand with iron_sword{gm4_metallurgy:{has_shamir:1b,active_shamir:"percurro"}}
+item replace entity @s weapon.mainhand with iron_sword[custom_data={gm4_metallurgy:{has_shamir:1b,active_shamir:"percurro"}}]
 await delay 3s
 dummy @s attack PercurroVictim
 

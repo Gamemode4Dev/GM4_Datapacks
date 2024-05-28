@@ -6,7 +6,7 @@
     "offsetZ": 0,
     "predicate": {
       "block": {
-        "tag": "gm4:no_collision"
+        "blocks": "#gm4:no_collision"
       }
     }
   },

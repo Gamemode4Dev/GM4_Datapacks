@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "nether_star",
-      "nbt": "{CustomModelData:'gui/advancement/orb_of_ankou_all_pneumas'}"
+      "id": "nether_star",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/orb_of_ankou_all_pneumas"
+      }
     },
     "title": {
       "translate": "advancement.gm4.orb_of_ankou.all_pneumas.title",
@@ -22,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"aggressive\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"aggressive\"}]}}"
+            }
           }
         ]
       }
@@ -32,7 +36,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"agile\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"agile\"}]}}"
+            }
           }
         ]
       }
@@ -42,7 +48,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"anchoring\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"anchoring\"}]}}"
+            }
           }
         ]
       }
@@ -52,7 +60,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"bargaining\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"bargaining\"}]}}"
+            }
           }
         ]
       }
@@ -62,7 +72,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"bashing\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"bashing\"}]}}"
+            }
           }
         ]
       }
@@ -72,7 +84,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"blasting\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"blasting\"}]}}"
+            }
           }
         ]
       }
@@ -82,7 +96,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"blinding\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"blinding\"}]}}"
+            }
           }
         ]
       }
@@ -92,7 +108,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"bounding\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"bounding\"}]}}"
+            }
           }
         ]
       }
@@ -102,7 +120,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"bubbly\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"bubbly\"}]}}"
+            }
           }
         ]
       }
@@ -112,7 +132,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"conjuring\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"conjuring\"}]}}"
+            }
           }
         ]
       }
@@ -122,7 +144,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"depriving\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"depriving\"}]}}"
+            }
           }
         ]
       }
@@ -132,7 +156,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"draining\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"draining\"}]}}"
+            }
           }
         ]
       }
@@ -142,7 +168,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"enduring\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"enduring\"}]}}"
+            }
           }
         ]
       }
@@ -152,7 +180,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"expeditious\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"expeditious\"}]}}"
+            }
           }
         ]
       }
@@ -162,7 +192,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"feathery\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"feathery\"}]}}"
+            }
           }
         ]
       }
@@ -172,7 +204,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"gazing\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"gazing\"}]}}"
+            }
           }
         ]
       }
@@ -182,7 +216,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"gliding\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"gliding\"}]}}"
+            }
           }
         ]
       }
@@ -192,7 +228,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"hawkeye\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"hawkeye\"}]}}"
+            }
           }
         ]
       }
@@ -202,7 +240,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"incombustible\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"incombustible\"}]}}"
+            }
           }
         ]
       }
@@ -212,7 +252,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"lifeless\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"lifeless\"}]}}"
+            }
           }
         ]
       }
@@ -222,7 +264,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"neutralizing\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"neutralizing\"}]}}"
+            }
           }
         ]
       }
@@ -232,7 +276,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"phasing\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"phasing\"}]}}"
+            }
           }
         ]
       }
@@ -242,7 +288,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"pricking\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"pricking\"}]}}"
+            }
           }
         ]
       }
@@ -252,7 +300,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"retreating\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"retreating\"}]}}"
+            }
           }
         ]
       }
@@ -262,7 +312,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"rushing\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"rushing\"}]}}"
+            }
           }
         ]
       }
@@ -272,7 +324,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"scaling\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"scaling\"}]}}"
+            }
           }
         ]
       }
@@ -282,7 +336,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"soaring\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"soaring\"}]}}"
+            }
           }
         ]
       }
@@ -292,7 +348,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"synergetic\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"synergetic\"}]}}"
+            }
           }
         ]
       }
@@ -302,7 +360,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"vanishing\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"vanishing\"}]}}"
+            }
           }
         ]
       }
@@ -312,7 +372,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"venomous\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"venomous\"}]}}"
+            }
           }
         ]
       }
@@ -322,7 +384,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"volatile\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"volatile\"}]}}"
+            }
           }
         ]
       }
@@ -332,7 +396,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"withering\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"withering\"}]}}"
+            }
           }
         ]
       }
@@ -342,7 +408,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"freezing\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"freezing\"}]}}"
+            }
           }
         ]
       }
@@ -352,7 +420,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"striding\"}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"striding\"}]}}"
+            }
           }
         ]
       }

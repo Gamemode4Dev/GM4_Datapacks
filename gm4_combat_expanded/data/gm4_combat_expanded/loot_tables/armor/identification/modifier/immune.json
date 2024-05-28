@@ -6,30 +6,11 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/base",
+          "value": "gm4_combat_expanded:armor/identification/base",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:51}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "armor",
-                  "target": "gm4_combat_expanded.level",
-                  "op": "replace"
-                },
-                {
-                  "source": "level",
-                  "target": "gm4_combat_expanded.level2",
-                  "op": "replace"
-                }
-              ]
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_combat_expanded:{modifier:51,level:'armor',level2:'level'}}"
             }
           ]
         }
@@ -37,12 +18,14 @@
       "functions": [
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "lore": [
             ""
           ]
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "lore": [
             {
               "translate": "item.gm4.combat_expanded.lore.low_hp",
@@ -54,6 +37,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -87,6 +71,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -120,6 +105,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -153,6 +139,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -186,6 +173,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -219,6 +207,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -252,6 +241,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -286,21 +276,26 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.immune",
               "fallback": "Vigorous %s",
               "with": [
                 {
-                  "nbt": "tag.gm4_combat_expanded.name",
+                  "nbt": "components.'minecraft:custom_data'.gm4_combat_expanded.name",
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false,
-              "color": "yellow"
+              ]
             }
           ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:rarity": "uncommon"
+          }
         }
       ]
     }

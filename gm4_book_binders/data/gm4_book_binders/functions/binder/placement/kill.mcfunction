@@ -3,18 +3,18 @@
 # run from gm4_book_binders:binder/placement/disable
 
 # check for the existence of an hand item
-scoreboard players reset has_hand_item gm4_binder_data
-execute store success score has_hand_item gm4_binder_data if entity @s[nbt={HandItems:[{Count:1b}]}]
+scoreboard players reset $has_hand_item gm4_binder_data
+execute store success score $has_hand_item gm4_binder_data if entity @s[nbt={HandItems:[{count:1}]}]
 
 # drop hand items if necessary
-execute if score has_hand_item gm4_binder_data matches 1.. run function gm4_book_binders:binder/placement/drop_hand_item
+execute if score $has_hand_item gm4_binder_data matches 1.. run function gm4_book_binders:binder/placement/drop_hand_item
 
 # check for the existence of an hand item
-scoreboard players reset has_stored_item gm4_binder_data
-execute store success score has_stored_item gm4_binder_data unless entity @s[nbt={ArmorItems:[{tag:{StoredEnchantments:[]}}]}]
+scoreboard players reset $has_stored_item gm4_binder_data
+execute store success score $has_stored_item gm4_binder_data unless items entity @s armor.* *[stored_enchantments={levels:{}}]
 
 # drop internally stored pages if necessary
-execute if score has_stored_item gm4_binder_data matches 1.. run function gm4_book_binders:binder/placement/drop_stored_item
+execute if score $has_stored_item gm4_binder_data matches 1.. run function gm4_book_binders:binder/placement/drop_stored_item
 
 # kill armor stand
 kill @s

@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "chorus_fruit",
-      "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_wormhole'}"
+      "id": "chorus_fruit",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/zauber_cauldrons_wormhole"
+      }
     },
     "title": {
       "translate": "advancement.gm4.zauber_cauldrons.wormhole.title",
@@ -20,7 +22,9 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "nbt": "{gm4_zauber_cauldrons:{item:\"wormhole_bottle\"}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"wormhole_bottle\"}}"
+          }
         }
       }
     }

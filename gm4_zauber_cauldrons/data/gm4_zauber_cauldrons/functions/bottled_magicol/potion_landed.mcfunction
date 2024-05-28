@@ -10,7 +10,7 @@ data modify storage gm4_zauber_cauldrons:temp/item/bottled_magicol Item set from
 # called functions are generated via beet from templates
 # generated with the help of bolt
 for color_data in ctx.meta['magicol_colors']:
-    execute unless score $selected_color gm4_zc_data matches 1.. if data storage gm4_zauber_cauldrons:temp/item/bottled_magicol Item.tag.gm4_zauber_cauldrons{color:color_data['color']} run function f"gm4_zauber_cauldrons:bottled_magicol/{color_data['color']}/select_weather_modifier"
+    execute unless score $selected_color gm4_zc_data matches 1.. if data storage gm4_zauber_cauldrons:temp/item/bottled_magicol Item.components."minecraft:custom_data".gm4_zauber_cauldrons{color:color_data['color']} run function f"gm4_zauber_cauldrons:bottled_magicol/{color_data['color']}/select_weather_modifier"
 
 # reset storage and fake players
 data remove storage gm4_zauber_cauldrons:temp/item/bottled_magicol Item

@@ -3,7 +3,7 @@
   "name": "Rope Ladders",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:ladder"
+    "id": "minecraft:ladder"
   },
   "criteria": {
     "place_ladder": {

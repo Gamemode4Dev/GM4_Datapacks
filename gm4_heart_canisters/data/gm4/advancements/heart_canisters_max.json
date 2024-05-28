@@ -1,8 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "player_head",
-      "nbt": "{CustomModelData:'gui/advancement/heart_canisters_max',SkullOwner:'$heart_canister_tier_2'}"
+      "id": "player_head",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/heart_canisters_max",
+        "minecraft:profile": "$heart_canister_tier_2"
+      }
     },
     "frame": "goal",
     "title": {
@@ -26,14 +29,18 @@
               "minecraft:player_head"
             ],
             "count": 5,
-            "nbt": "{gm4_heart_canister_tier:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_heart_canister_tier:1b}"
+            }
           },
           {
             "items": [
               "minecraft:player_head"
             ],
             "count": 5,
-            "nbt": "{gm4_heart_canister_tier:2b}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_heart_canister_tier:2b}"
+            }
           }
         ]
       }

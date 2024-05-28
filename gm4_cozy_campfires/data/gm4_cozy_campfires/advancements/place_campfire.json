@@ -8,7 +8,7 @@
             "condition": "minecraft:location_check",
             "predicate": {
               "block": {
-                "tag": "minecraft:campfires"
+                "blocks": "#minecraft:campfires"
               }
             }
           }

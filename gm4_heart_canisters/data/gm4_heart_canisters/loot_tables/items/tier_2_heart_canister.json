@@ -8,8 +8,15 @@
                     "name": "minecraft:player_head",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'item/heart_canister_tier_2',gm4_heart_canister:1b,gm4_heart_canister_tier:2b,SkullOwner:'$heart_canister_tier_2'}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/heart_canister_tier_2",
+                                "minecraft:profile": "$heart_canister_tier_2"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_heart_canister:1b,gm4_heart_canister_tier:2b}"
                         },
                         {
                             "function": "minecraft:set_name",
@@ -21,6 +28,7 @@
                         },
                         {
                             "function": "minecraft:set_lore",
+                            "mode": "append",
                             "lore": [
                                 {
                                     "translate": "item.gm4.heart_canister.lore.tier",
@@ -31,8 +39,7 @@
                                     "italic": false,
                                     "color": "gray"
                                 }
-                            ],
-                            "replace": false
+                            ]
                         }
                     ]
                 }

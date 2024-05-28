@@ -7,7 +7,9 @@
         "items": [
           "minecraft:iron_boots"
         ],
-        "nbt": "{gm4_mountaineering:{item:\"skis\"}}"
+        "predicates": {
+          "minecraft:custom_data": "{gm4_mountaineering:{item:\"skis\"}}"
+        }
       }
     }
   }

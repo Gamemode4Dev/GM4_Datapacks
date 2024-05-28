@@ -5,7 +5,7 @@
   "load_check": "liquid_tanks",
   "base_module": "liquid_tanks",
   "icon": {
-    "item": "minecraft:lava_bucket"
+    "id": "minecraft:lava_bucket"
   },
   "criteria": {
     "obtain_liquid_tank": {
@@ -16,7 +16,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:\"liquid_tank\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"liquid_tank\"}}"
+            }
           }
         ]
       }

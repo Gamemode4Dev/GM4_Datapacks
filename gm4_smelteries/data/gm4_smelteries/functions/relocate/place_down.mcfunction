@@ -8,5 +8,5 @@ execute if block ~ ~ ~ command_block[facing=north] run setblock ~ ~ ~ hopper[fac
 execute if block ~ ~ ~ command_block[facing=down] run setblock ~ ~ ~ hopper[facing=down]
 
 data merge block ~ ~ ~ {CustomName:'{"translate":"container.gm4.smeltery","fallback":"Smeltery"}'}
-summon armor_stand ~ ~-.4 ~ {Silent:1b,Small:1,NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,DisabledSlots:2039552,Tags:["gm4_smeltery","gm4_no_edit","gm4_machine"],Rotation:[45f,0f],HasVisualFire:1,CustomName:'"gm4_smeltery"',ArmorItems:[{},{},{},{id:"minecraft:gray_stained_glass",Count:1,tag:{CustomModelData:3420001}}],HandItems:[{},{id:"minecraft:stone_button",Count:1b,tag:{CustomModelData:3420005}}],Pose:{LeftArm:[0f, 0f, 0f]}}
+summon armor_stand ~ ~-.4 ~ {Silent:1b,Small:1,NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,DisabledSlots:2039552,Tags:["gm4_smeltery","gm4_no_edit","gm4_machine"],Rotation:[45f,0f],HasVisualFire:1,CustomName:'"gm4_smeltery"',ArmorItems:[{},{},{},{id:"minecraft:gray_stained_glass",count:1,components:{"minecraft:custom_model_data":3420001}}],HandItems:[{},{id:"minecraft:stone_button",count:1,components:{"minecraft:custom_model_data":3420005}}],Pose:{LeftArm:[0f, 0f, 0f]}}
 playsound block.anvil.use block @a[distance=..4] ~ ~ ~ 1 0.8 1

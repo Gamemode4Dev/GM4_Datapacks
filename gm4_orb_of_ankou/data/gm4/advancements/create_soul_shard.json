@@ -1,8 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "flint",
-      "nbt": "{CustomModelData:'gui/advancement/orb_of_ankou_soul_shard',Enchantments:[{}]}"
+      "id": "flint",
+      "components": {
+        "minecraft:enchantment_glint_override": true,
+        "minecraft:custom_model_data": "gui/advancement/orb_of_ankou_soul_shard"
+      }
     },
     "title": {
       "translate": "advancement.gm4.orb_of_ankou.obtain_soul_shard.title",
@@ -24,7 +27,9 @@
             "items": [
               "minecraft:flint"
             ],
-            "nbt": "{gm4_orb_of_ankou:{item:\"soul_shard\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{item:\"soul_shard\"}}"
+            }
           }
         ]
       }

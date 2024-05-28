@@ -7,7 +7,9 @@
       "predicate": {
         "equipment": {
           "feet": {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'defuse'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'defuse'}}"
+            }
           }
         }
       }
@@ -18,7 +20,9 @@
       "predicate": {
         "equipment": {
           "legs": {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'defuse'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'defuse'}}"
+            }
           }
         }
       }
@@ -29,7 +33,9 @@
       "predicate": {
         "equipment": {
           "chest": {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'defuse'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'defuse'}}"
+            }
           }
         }
       }
@@ -40,7 +46,9 @@
       "predicate": {
         "equipment": {
           "head": {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'defuse'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'defuse'}}"
+            }
           }
         }
       }

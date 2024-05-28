@@ -35,7 +35,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_metallurgy:thorianite_lump",
+              "value": "gm4_metallurgy:thorianite_lump",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",

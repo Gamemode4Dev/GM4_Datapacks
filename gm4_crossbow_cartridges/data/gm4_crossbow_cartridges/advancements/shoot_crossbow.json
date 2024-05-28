@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "crossbow_arrow": {
+      "trigger": "minecraft:shot_crossbow",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "offhand": {
+                  "items": "#gm4_crossbow_cartridges:valid_items"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_crossbow_cartridges:shoot/any_arrow"
+  }
+}

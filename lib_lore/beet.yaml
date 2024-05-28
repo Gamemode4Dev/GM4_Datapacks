@@ -1,6 +1,6 @@
 id: gm4_lore
 name: Gamemode 4 Lore
-version: 1.0.X
+version: 1.1.X
 description: Allows other datapacks to easily search, remove, insert, and replace lines of lore on items.
 
 data_pack:
@@ -19,8 +19,8 @@ meta:
           - resolve_algorithm/remove
           - resolve_algorithm/replace
           - resolve_algorithm/search
+    smithed:
+      pack_id: gm4_lib_lore
     credits:
       Creator:
         - BluePsychoRanger
-  smithed:
-    pack_id: gm4_lib_lore

@@ -3,7 +3,7 @@
   "name": "Holographic Tags",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:name_tag"
+    "id": "minecraft:name_tag"
   },
   "criteria": {
     "obtain_name_tag": {

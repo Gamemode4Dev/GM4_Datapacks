@@ -4,8 +4,12 @@
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {
-    "item": "minecraft:potion",
-    "nbt": "{CustomPotionColor:8587123}"
+    "id": "minecraft:potion",
+    "components": {
+      "minecraft:potion_contents": {
+        "custom_color": 8587123
+      }
+    }
   },
   "criteria": {
     "obtain_zauber_potion_after_liquid_tank": {
@@ -13,7 +17,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_zauber_cauldrons:{bottle:{}}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_zauber_cauldrons:{bottle:{}}}"
+            }
           }
         ],
         "player": [

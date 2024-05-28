@@ -4,7 +4,9 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "nbt": "{gm4_zauber_cauldrons:{item:\"wormhole_bottle\"}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"wormhole_bottle\"}}"
+          }
         }
       }
     }

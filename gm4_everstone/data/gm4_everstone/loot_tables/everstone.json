@@ -12,8 +12,15 @@
               "count": 1
             },
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'item/everstone',gm4_everstone:1b,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+              "function": "set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:custom_model_data": "item/everstone"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_everstone:1b}"
             },
             {
               "function": "set_name",

@@ -13,7 +13,9 @@
                   "items": [
                     "minecraft:writable_book"
                   ],
-                  "nbt": "{gm4_bas_ignore:1b}"
+                  "predicates": {
+                    "minecraft:custom_data": "{gm4_bas_ignore:1b}"
+                  }
                 }
               }
             }

@@ -1,8 +1,14 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:potion",
-      "nbt": "{CustomModelData:'gui/advancement/mob_curing',CustomPotionColor:16262179,Enchantments:[{id:\"protection\",lvl:0}]}"
+      "id": "minecraft:potion",
+      "components": {
+        "minecraft:enchantment_glint_override": true,
+        "minecraft:custom_model_data": "gui/advancement/mob_curing",
+        "minecraft:potion_contents": {
+          "custom_color": 16262179
+        }
+      }
     },
     "title": {
       "translate": "advancement.gm4.mob_curing.title",

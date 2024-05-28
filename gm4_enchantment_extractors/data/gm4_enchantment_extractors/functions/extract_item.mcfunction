@@ -6,12 +6,11 @@
 data modify entity @s HandItems[0] set from storage gm4_enchantment_extractors:temp current_item
 
 # check if mending already in extractor
-data modify storage gm4_enchantment_extractors:temp block_items set from block ~ ~ ~ Items
-execute store result score $existing_mending gm4_ench_data if data storage gm4_enchantment_extractors:temp block_items[{tag:{StoredEnchantments:[{id:"minecraft:mending"}]}}]
+execute store result score $existing_mending gm4_ench_data if items block ~ ~ ~ container.* *[stored_enchantments~[{enchantment:"minecraft:mending"}]]
 
 # if cursed extract only the curse
-execute if data storage gm4_enchantment_extractors:temp current_item.tag.Enchantments[{id:"minecraft:vanishing_curse"}] run function gm4_enchantment_extractors:extract_vanishing
-execute if data storage gm4_enchantment_extractors:temp current_item.tag.Enchantments[{id:"minecraft:binding_curse"}] run function gm4_enchantment_extractors:extract_binding
+execute if data storage gm4_enchantment_extractors:temp current_item.components."minecraft:enchantments".levels."minecraft:vanishing_curse" run function gm4_enchantment_extractors:extract_vanishing
+execute if data storage gm4_enchantment_extractors:temp current_item.components."minecraft:enchantments".levels."minecraft:binding_curse" run function gm4_enchantment_extractors:extract_binding
 
 # extract
 execute unless score $curse_extracted gm4_ench_data matches 1 store result score $added_books gm4_ench_data run loot insert ~ ~ ~ fish gm4_enchantment_extractors:technical/extract/check ~ ~ ~ mainhand
@@ -26,16 +25,14 @@ execute unless score $added_books gm4_ench_data matches 1.. run function gm4_enc
 
 # update block inventory
 scoreboard players operation $slot_count gm4_ench_data += $added_books gm4_ench_data
-data remove storage gm4_enchantment_extractors:temp current_item.tag.Enchantments
+data remove storage gm4_enchantment_extractors:temp current_item.components."minecraft:enchantments"
 data modify block ~ ~ ~ Items append from storage gm4_enchantment_extractors:temp current_item
 
 # grant mending advancement
-data modify storage gm4_enchantment_extractors:temp block_items set from block ~ ~ ~ Items
-execute unless score $existing_mending gm4_ench_data matches 1.. if data storage gm4_enchantment_extractors:temp block_items[{tag:{StoredEnchantments:[{id:"minecraft:mending"}]}}] unless data storage gm4_enchantment_extractors:temp block_items[{tag:{StoredEnchantments:[{id:"minecraft:mending"},{id:"minecraft:vanishing_curse"}]}}] run advancement grant @a[distance=..5] only gm4:enchantment_extractors_mending
+execute unless score $existing_mending gm4_ench_data matches 1.. if items block ~ ~ ~ container.* *[stored_enchantments~[{enchantment:"minecraft:mending"}]] unless items block ~ ~ ~ container.* *[stored_enchantments~[{enchantment:"minecraft:mending"},{enchantment:"minecraft:vanishing_curse"}]] run advancement grant @a[distance=..5] only gm4:enchantment_extractors_mending
 
 # clean up
 data remove entity @s HandItems[0]
-data remove storage gm4_enchantment_extractors:temp block_items
 scoreboard players reset $existing_mending gm4_ench_data
 scoreboard players reset $curse_extracted gm4_ench_data
 scoreboard players reset $added_books gm4_ench_data

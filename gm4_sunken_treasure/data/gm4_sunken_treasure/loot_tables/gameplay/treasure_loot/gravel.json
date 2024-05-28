@@ -89,8 +89,10 @@
               }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/waders'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/waders"
+              }
             }
           ]
         },
@@ -200,8 +202,13 @@
           "name": "minecraft:chest",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/shipwreck_supply',BlockEntityTag:{LootTable:\"minecraft:chests/shipwreck_supply\"}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/shipwreck_supply",
+                "minecraft:container_loot": {
+                  "loot_table": "minecraft:chests/shipwreck_supply"
+                }
+              }
             },
             {
               "function": "minecraft:set_name",
@@ -219,8 +226,13 @@
           "name": "minecraft:chest",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/shipwreck_treasure',BlockEntityTag:{LootTable:\"minecraft:chests/shipwreck_treasure\"}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/shipwreck_treasure",
+                "minecraft:container_loot": {
+                  "loot_table": "minecraft:chests/shipwreck_treasure"
+                }
+              }
             },
             {
               "function": "minecraft:set_name",
@@ -238,8 +250,13 @@
           "name": "minecraft:chest",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/treasure_chest',BlockEntityTag:{LootTable:\"gm4_sunken_treasure:chests/treasure_chest\"}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/treasure_chest",
+                "minecraft:container_loot": {
+                  "loot_table": "gm4_sunken_treasure:chests/treasure_chest"
+                }
+              }
             },
             {
               "function": "minecraft:set_name",
@@ -257,8 +274,8 @@
           "name": "minecraft:prismarine_shard",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_sunken_treasure:{spawn:{id:\"minecraft:guardian\"}}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_sunken_treasure:{spawn:{id:'minecraft:guardian'}}}"
             }
           ]
         },
@@ -268,8 +285,8 @@
           "name": "minecraft:glow_ink_sac",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_sunken_treasure:{spawn:{id:\"minecraft:glow_squid\"}}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_sunken_treasure:{spawn:{id:'minecraft:glow_squid'}}}"
             }
           ],
           "conditions": [
@@ -291,8 +308,8 @@
           "name": "minecraft:ink_sac",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_sunken_treasure:{spawn:{id:\"minecraft:squid\"}}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_sunken_treasure:{spawn:{id:'minecraft:squid'}}}"
             }
           ],
           "conditions": [
@@ -311,7 +328,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 40,
-          "name": "gm4_sunken_treasure:gameplay/treasure_loot/audrey_bottle"
+          "value": "gm4_sunken_treasure:gameplay/treasure_loot/audrey_bottle"
         },
         {
           "type": "minecraft:item",
@@ -345,7 +362,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 4,
-          "name": "gm4_scuba_gear:items/scuba_helmet",
+          "value": "gm4_scuba_gear:items/scuba_helmet",
           "conditions": [
             {
               "condition": "minecraft:value_check",
@@ -366,7 +383,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 3,
-          "name": "gm4_scuba_gear:items/scuba_tank",
+          "value": "gm4_scuba_gear:items/scuba_tank",
           "conditions": [
             {
               "condition": "minecraft:value_check",

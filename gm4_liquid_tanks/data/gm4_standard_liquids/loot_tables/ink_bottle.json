@@ -9,8 +9,24 @@
                     "name": "potion",
                     "functions": [
                         {
-                            "function": "set_nbt",
-                            "tag": "{gm4_standard_liquids:{potion:\"blindness\"},CustomPotionEffects:[{Id:15,Amplifier:0b,Duration:2400}],CustomPotionColor:68378,CustomModelData:'gm4_standard_liquids:item/ink_bottle'}"
+                            "function": "set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "gm4_standard_liquids:item/ink_bottle",
+                                "minecraft:potion_contents": {
+                                    "custom_color": 68378,
+                                    "custom_effects": [
+                                        {
+                                            "id": "minecraft:blindness",
+                                            "amplifier": 0,
+                                            "duration": 2400
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "function": "set_custom_data",
+                            "tag": "{gm4_standard_liquids:{potion:'blindness'}}"
                         },
                         {
                             "function": "set_name",

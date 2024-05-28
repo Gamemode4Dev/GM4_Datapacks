@@ -5,7 +5,7 @@
   "load_check": "metallurgy",
   "base_module": "metallurgy",
   "icon": {
-    "item": "minecraft:anvil"
+    "id": "minecraft:anvil"
   },
   "criteria": {
     "obtain_ender_bolt_shamir": {
@@ -13,7 +13,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'ender_bolt'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'ender_bolt'}}"
+            }
           }
         ]
       }
@@ -23,7 +25,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'ender_bolt'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'ender_bolt'}}"
+            }
           }
         ]
       }

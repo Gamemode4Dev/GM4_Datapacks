@@ -7,4 +7,4 @@
 function gm4_zauber_cauldrons:soulution/use_sip
 
 # spawn potion item
-loot spawn ~ ~ ~ mine 29999998 1 7134 minecraft:air{drop_contents:1b}
+loot spawn ~ ~ ~ mine 29999998 1 7134 minecraft:stick[custom_data={drop_contents:1b}]

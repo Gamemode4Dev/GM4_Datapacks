@@ -3,20 +3,14 @@
 
 scoreboard players set $crafted gm4_crafting 1
 
-# Merge item data into the temporary storage. If the item has custom name, CustomModelData, or similar
-# properties that the user might not want to lose, they will override the normal Boots of Ostara tags,
-# although the functionality of the boots will remain as that relies on the gm4_boots_of_ostara tag.
-data modify storage gm4_boots_of_ostara:temp Item set from storage gm4_custom_crafters:temp/crafter Items[2]
+scoreboard players reset $boa_custom_name gm4_crafting
+execute store success score $boa_custom_name gm4_crafting if items block ~ ~ ~ container.4 *[custom_name]
 
-execute if data storage gm4_boots_of_ostara:temp Item.tag.display{Name:'{"italic":false,"translate":"item.gm4.flippers","fallback":"Flippers"}'} run function gm4_boots_of_ostara:flippers_merge
-
-# In case the item has a shamir or other existing lore, the Boots of Ostara lore is placed before
-# existing lines of lore instead of completely replacing the lore tag.
-data modify storage gm4_boots_of_ostara:temp Item.tag.display.Lore prepend value '{"translate":"item.gm4.boots_of_ostara.lore","fallback":"Brings abundance beneath you!","color":"dark_gray","italic":true}'
-
-# place the boots in the custom crafter
-loot replace block ~ ~ ~ container.0 loot gm4_boots_of_ostara:crafting/boots_of_ostara
-
-# clean up
-data remove storage gm4_boots_of_ostara:temp Item
 scoreboard players reset $boa_flippers gm4_crafting
+execute store success score $boa_flippers gm4_crafting if items block ~ ~ ~ container.4 *[custom_data~{gm4_scuba_gear:{item:"flippers"}}]
+
+item modify block ~ ~ ~ container.4 gm4_boots_of_ostara:boots_of_ostara
+item replace block ~ ~ ~ container.1 with minecraft:air
+item replace block ~ ~ ~ container.3 with minecraft:air
+item replace block ~ ~ ~ container.5 with minecraft:air
+item replace block ~ ~ ~ container.7 with minecraft:bucket

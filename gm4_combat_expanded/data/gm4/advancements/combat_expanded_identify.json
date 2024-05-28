@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:leather_chestplate",
-      "nbt": "{CustomModelData:'gui/advancement/combat_expanded_identify'}"
+      "id": "minecraft:leather_chestplate",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/combat_expanded_identify"
+      }
     },
     "title": {
       "translate": "advancement.gm4.combat_expanded.identify.title",
@@ -22,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_combat_expanded:{}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_combat_expanded:{}}"
+            }
           }
         ]
       }

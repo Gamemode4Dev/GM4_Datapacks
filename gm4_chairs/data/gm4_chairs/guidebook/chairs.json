@@ -3,7 +3,7 @@
   "name": "Chairs",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:saddle"
+    "id": "minecraft:saddle"
   },
   "criteria": {
     "obtain_saddle": {

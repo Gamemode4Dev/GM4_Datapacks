@@ -3,8 +3,8 @@
 # run from main
 
 data modify storage gm4_audere_shamir:temp/player/tool SelectedItem set from entity @s SelectedItem
-execute store result score $tool_current_damage gm4_ml_data run data get storage gm4_audere_shamir:temp/player/tool SelectedItem.tag.Damage
-execute store result score $tool_max_damage gm4_ml_data run data get storage gm4_audere_shamir:temp/player/tool SelectedItem.tag.gm4_audere_shamir.max_durability
+execute store result score $tool_current_damage gm4_ml_data run data get storage gm4_audere_shamir:temp/player/tool SelectedItem.components."minecraft:damage"
+execute store result score $tool_max_damage gm4_ml_data run data get storage gm4_audere_shamir:temp/player/tool SelectedItem.components."minecraft:custom_data".gm4_audere_shamir.max_durability
 
 # update newly upgraded netherite gear
 execute if score $tool_max_damage gm4_ml_data matches 1561 if predicate gm4_audere_shamir:holding_netherite run function gm4_audere_shamir:update_netherite

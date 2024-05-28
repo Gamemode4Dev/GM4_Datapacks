@@ -1,5 +1,5 @@
 # prepare for item smooshing
-execute if score found_item_on_anvil gm4_ml_data matches 1 as @e[type=item,tag=gm4_ml_on_anvil] at @s if block ~ ~ ~ minecraft:moving_piston align xyz if entity @e[type=item,dx=0,nbt=!{Item:{tag:{gm4_metallurgy:{has_shamir:1b}}}}] run function gm4_metallurgy:smooshing/prepare_transfer
+execute if score found_item_on_anvil gm4_ml_data matches 1 as @e[type=item,tag=gm4_ml_on_anvil] at @s if block ~ ~ ~ minecraft:moving_piston align xyz if entity @e[type=item,dx=0,predicate=gm4_metallurgy:smooshing/valid_item] run function gm4_metallurgy:smooshing/prepare_transfer
 
 
 # TODO: Disabling this functionality until someone updates the code

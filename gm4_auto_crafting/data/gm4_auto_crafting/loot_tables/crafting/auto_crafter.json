@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_auto_crafting:items/auto_crafter",
+          "value": "gm4_auto_crafting:items/auto_crafter",
           "functions": [
             {
               "function": "minecraft:set_count",

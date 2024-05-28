@@ -15,5 +15,4 @@ scoreboard players reset $found_tall_grass gm4_spawner_data
 
 # visuals and sounds
 playsound entity.turtle.egg_break block @a[distance=..8] ~ ~ ~ 0.3 1.4
-particle block seagrass ~ ~.2 ~ 0 0 0 0 7
-
+particle minecraft:block{block_state:"minecraft:seagrass"} ~ ~.2 ~ 0 0 0 0 7

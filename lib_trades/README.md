@@ -61,16 +61,16 @@ For each trade option a `trader_llama` entity must be spawned, the following NBT
 The tag `gm4_trade_option` is mandatory and is used by the library to identify available trade options. If the llama has to be targeted again after being spawned in (e.g. for populating its inventory using `/loot` or `/item replace`), the addition of a temporary tag is recommended.
 
 The `trader_llama` holds all information about the trade within its own NBT, following a special format:
-- `Items[{Slot:2b}]` || `horse.0`: Contents of the `sell` tag of the trade option.
-- `Items[{Slot:3b}]` || `horse.1`: Contents of the `buy` tag of the trade option.
-- `Items[{Slot:4b}]` || `horse.2`: Contents of the `buyB` tag of the trade option.
-- `DecorItem.tag.gm4_trades.options`: Trade option meta NBT, e.g. `maxUses`, `rewardXp`. All vanilla trade option meta tags are supported. Any custom tags inserted here are ignored, but not deleted.<br>
+- `Items[{Slot:0b}]` || `horse.0`: Contents of the `sell` tag of the trade option.
+- `Items[{Slot:1b}]` || `horse.1`: Contents of the `buy` tag of the trade option.
+- `Items[{Slot:2b}]` || `horse.2`: Contents of the `buyB` tag of the trade option.
+- `body_armor_item.components."minecraft:custom_data".gm4_trades.options`: Trade option meta NBT, e.g. `maxUses`, `rewardXp`. All vanilla trade option meta tags are supported. Any custom tags inserted here are ignored, but not deleted.<br>
 
 These slots can, but don't have to, be filled explicitly in the summon command and may therefore be populated by loot tables using `/loot`, allowing the use of powerful loot table tools for trade generation.
 
-The item contained in `Items[{Slot:0b}]` (known within NBT as `DecorItem`) has two special tags that are used to store trade option meta NBT:
-- `DecorItem.tag.gm4_trades.options` holds vanilla metadata, as explained above.
-- `DecorItem.tag.gm4_trades.pool` holds a string known as the trade option's "trade pool name". This should be a namespaced string, which identifies multiple trade options that should be shown as one trade option on the Wandering Trader. Trade options with an omitted `pool` tag are considered to be in an unnamed trade pool each and are always displayed as their own, standalone trade option in the Wandering Trader.
+The item in `body_armor_item` has two special tags that are used to store trade option meta NBT:
+- `body_armor_item.components."minecraft:custom_data".gm4_trades.options` holds vanilla metadata, as explained above.
+- `body_armor_item.components."minecraft:custom_data".gm4_trades.pool` holds a string known as the trade option's "trade pool name". This should be a namespaced string, which identifies multiple trade options that should be shown as one trade option on the Wandering Trader. Trade options with an omitted `pool` tag are considered to be in an unnamed trade pool each and are always displayed as their own, standalone trade option in the Wandering Trader.
 
 Not summoning a `trader_llama` for a trade option will result in the trade option being omitted.
 

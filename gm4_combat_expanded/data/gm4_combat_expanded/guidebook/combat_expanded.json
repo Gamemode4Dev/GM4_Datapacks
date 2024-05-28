@@ -3,7 +3,7 @@
   "name": "Combat Expanded",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:netherite_sword"
+    "id": "minecraft:netherite_sword"
   },
   "criteria": {
     "kill_hostile": {
@@ -151,7 +151,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_combat_expanded:{identified:1}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_combat_expanded:{identified:1}}"
+            }
           }
         ]
       }

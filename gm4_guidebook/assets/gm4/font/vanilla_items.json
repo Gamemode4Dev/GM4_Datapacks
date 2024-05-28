@@ -3296,7 +3296,7 @@
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/scute.png",
+            "file": "minecraft:item/turtle_scute.png",
             "ascent": -32768,
             "height": -16,
             "chars": [
@@ -7309,7 +7309,7 @@
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/scute.png",
+            "file": "minecraft:item/turtle_scute.png",
             "ascent": 8,
             "height": 16,
             "chars": [

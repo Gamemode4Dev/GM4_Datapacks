@@ -8,8 +8,20 @@
                     "name": "minecraft:potion",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'item/wormhole_in_a_bottle',gm4_zauber_cauldrons:{item:\"wormhole_bottle\",bottle:{multi_use:0b}},Potion:\"minecraft:thick\",CustomPotionColor:8587123,Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:33}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:custom_model_data": "item/wormhole_in_a_bottle",
+                                "minecraft:potion_contents": {
+                                    "potion": "minecraft:thick",
+                                    "custom_color": 8587123
+                                },
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_zauber_cauldrons:{item:'wormhole_bottle',bottle:{multi_use:0b}}}"
                         },
                         {
                             "function": "minecraft:set_name",
@@ -86,6 +98,7 @@
                         },
                         {
                             "function": "minecraft:set_lore",
+                            "mode": "append",
                             "entity": "this",
                             "lore": [
                                 [
@@ -119,7 +132,6 @@
                                     }
                                 ]
                             ],
-                            "replace": false,
                             "conditions": [
                                 {
                                     "condition": "minecraft:value_check",

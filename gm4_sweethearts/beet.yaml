@@ -1,6 +1,6 @@
 id: gm4_sweethearts
 name: Sweethearts
-version: 1.3.X
+version: 1.4.X
 
 data_pack:
   load: .
@@ -20,6 +20,8 @@ meta:
       description: Transfer your health to another player using flowers.
       recommended: []
       notes: []
+    planetminecraft: 
+      uid: 5484554
     video: https://www.youtube.com/watch?v=mcopNZzY2dA
     wiki: https://wiki.gm4.co/wiki/Sweethearts
     credits:
@@ -30,5 +32,3 @@ meta:
         - Thanathor
       Icon Design:
         - DuckJr
-  planetminecraft: 
-    uid: 5484554

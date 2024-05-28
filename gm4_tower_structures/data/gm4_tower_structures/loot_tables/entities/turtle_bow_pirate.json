@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_tower_structures:entities/skeleton"
+                    "value": "gm4_tower_structures:entities/skeleton"
                 }
             ]
         },
@@ -14,11 +14,11 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_tower_structures:items/pirate_hat"
+                    "value": "gm4_tower_structures:items/pirate_hat"
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_tower_structures:items/pirate_bow"
+                    "value": "gm4_tower_structures:items/pirate_bow"
                 }
             ],
             "functions": [

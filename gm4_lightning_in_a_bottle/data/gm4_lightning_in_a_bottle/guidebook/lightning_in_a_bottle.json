@@ -3,7 +3,7 @@
   "name": "Lightning in a Bottle",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:lightning_rod"
+    "id": "minecraft:lightning_rod"
   },
   "criteria": {
     "lightning_strike": {
@@ -36,10 +36,10 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:potion"
-            ],
-            "potion": "minecraft:thick"
+            "items": "minecraft:potion",
+            "predicates": {
+              "minecraft:potion_contents": "minecraft:thick"
+            }
           }
         ]
       }
@@ -54,7 +54,9 @@
               "minecraft:splash_potion",
               "minecraft:lingering_potion"
             ],
-            "nbt": "{gm4_lightning_in_a_bottle:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_lightning_in_a_bottle:1b}"
+            }
           }
         ]
       }
