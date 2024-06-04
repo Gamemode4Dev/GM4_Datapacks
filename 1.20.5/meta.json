@@ -1,5 +1,5 @@
 {
-  "last_commit": "1c73b58a59ba83a91a7e331cf01d29d24986dfdf",
+  "last_commit": "8846e97896b7640d2f78cbfcac2e22eca9158f8d",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1874,11 +1874,8 @@
       ],
       "description": "Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man.",
       "recommends": [],
-      "minecraft": [
-        "1.20.5",
-        "1.20.6"
-      ],
-      "hidden": false,
+      "minecraft": [],
+      "hidden": true,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
