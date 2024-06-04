@@ -19,6 +19,7 @@ pipeline:
 
 meta:
   gm4:
+    minecraft: []
     versioning:
       required:
         gm4_metallurgy: 1.3.0
