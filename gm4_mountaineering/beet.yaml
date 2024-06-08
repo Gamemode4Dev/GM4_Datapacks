@@ -1,6 +1,6 @@
 id: gm4_mountaineering
 name: Mountaineering
-version: 1.1.X
+version: 1.2.X
 
 data_pack:
   load: .
@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.0.0
+        lib_custom_crafters: 3.1.0
       schedule_loops:
         - main
         - fast_main
@@ -38,12 +38,12 @@ meta:
       recommended: []
       notes:
         - Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.
+    modrinth:
+      project_id: Wq7Qfkuh
+    smithed:
+      pack_id: gm4_mountaineering
     video: null
     wiki: https://wiki.gm4.co/wiki/Mountaineering
     credits:
       Creator:
         - foodiebonus
-  modrinth:
-    project_id: Wq7Qfkuh
-  smithed:
-    pack_id: gm4_mountaineering

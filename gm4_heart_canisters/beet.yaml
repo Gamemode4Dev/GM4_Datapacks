@@ -1,6 +1,6 @@
 id: gm4_heart_canisters
 name: Heart Canisters
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -10,15 +10,13 @@ resource_pack:
 
 pipeline:
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_player_heads
   - gm4.plugins.include.lib_custom_crafters
 
 meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.0.0
-        lib_player_heads: 1.1.0
+        lib_custom_crafters: 3.1.0
       schedule_loops: [main]
     model_data:
       - item: player_head
@@ -56,6 +54,8 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
+    planetminecraft: 
+      uid: 4331371
     video: https://www.youtube.com/watch?v=zjmL6rjoq0g
     wiki: https://wiki.gm4.co/wiki/Heart_Canisters
     credits:
@@ -70,5 +70,3 @@ meta:
         - Jonpot
       Icon Design:
         - Hozz
-  planetminecraft: 
-    uid: 4331371

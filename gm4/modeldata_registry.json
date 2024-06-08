@@ -207,8 +207,6 @@
       "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_wormhole": 1
     },
     "clock": {
-      "gm4_combat_expanded:gui/advancement/combat_expanded_survive": 1,
-      "gm4_combat_expanded:gui/advancement/combat_expanded_challenger": 2,
       "gm4_mysterious_midnights:guidebook_icon/mysterious_midnights": 3,
       "gm4_animi_shamir:shamir/animi": 124,
       "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_make_magicol": 300
@@ -782,7 +780,6 @@
     },
     "iron_chestplate": {
       "gm4_weighted_armour:guidebook_icon/weighted_armour": 1,
-      "gm4_combat_expanded:gui/advancement/combat_expanded_full_set": 3,
       "gm4_end_fishing:item/end_city_armor_1": 10,
       "gm4_end_fishing:item/end_city_armor_2": 11,
       "gm4_end_fishing:item/end_city_armor_3": 12,
@@ -1441,7 +1438,6 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "shield": {
-      "gm4_combat_expanded:gui/advancement/combat_expanded_guardian": 3,
       "gm4_vigere_shamir:shamir/vigere": 119,
       "gm4_animi_shamir:shamir/animi": 124
     },

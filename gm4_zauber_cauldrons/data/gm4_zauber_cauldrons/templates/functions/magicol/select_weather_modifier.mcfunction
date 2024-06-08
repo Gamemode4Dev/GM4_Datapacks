@@ -8,4 +8,4 @@
 # called functions are generated via beet from templates
 # generated with the help of bolt
 for modifier_data in ctx.meta['weather_modifiers']:
-    execute unless score $recipe_success gm4_zc_data matches 1.. if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{Count:1b,tag:{gm4_zauber_cauldrons:{item:modifier_data['item_id']}}}] run function f"gm4_zauber_cauldrons:recipes/magicol/bottled/{{bottle}}/{{color}}/{modifier_data['modifier']}"
+    execute unless score $recipe_success gm4_zc_data matches 1.. if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{count:1,components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:modifier_data['item_id']}}}}] run function f"gm4_zauber_cauldrons:recipes/magicol/bottled/{{bottle}}/{{color}}/{modifier_data['modifier']}"

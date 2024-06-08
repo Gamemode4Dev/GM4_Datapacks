@@ -1,8 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "potion",
-      "nbt": "{CustomModelData:'gui/advancement/potion_liquids',CustomPotionColor:13631487}"
+      "id": "potion",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/potion_liquids",
+        "minecraft:potion_contents": {
+          "custom_color": 13631487
+        }
+      }
     },
     "title": {
       "translate": "advancement.gm4.potion_liquids.title",
@@ -20,7 +25,9 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "nbt": "{Potion:\"potion_liquids:floating\"}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_potion_liquids:{potion:'floating'}}"
+          }
         }
       }
     }

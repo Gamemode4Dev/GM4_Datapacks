@@ -9,7 +9,7 @@
           "name": "minecraft:stone_button",
           "functions": [
             {
-              "function": "set_nbt",
+              "function": "set_custom_data",
               "tag": "{gm4_auto_crafting_temp:1b}"
             }
           ]

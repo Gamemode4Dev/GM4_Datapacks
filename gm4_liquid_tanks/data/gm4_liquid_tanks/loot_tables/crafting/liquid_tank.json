@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_liquid_tanks:items/liquid_tank",
+          "value": "gm4_liquid_tanks:items/liquid_tank",
           "functions": [
             {
               "function": "minecraft:set_count",

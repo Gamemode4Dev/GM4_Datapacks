@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "hopper_minecart",
-      "nbt": "{CustomModelData:'gui/advancement/liquid_minecarts_create'}"
+      "id": "hopper_minecart",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/liquid_minecarts_create"
+      }
     },
     "title": {
       "translate": "advancement.gm4.liquid_minecarts.title",
@@ -24,7 +26,9 @@
             "items": [
               "minecraft:hopper_minecart"
             ],
-            "nbt": "{gm4_machines:{id:\"liquid_minecart\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"liquid_minecart\"}}"
+            }
           }
         ]
       }

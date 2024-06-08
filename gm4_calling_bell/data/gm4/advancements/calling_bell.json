@@ -1,8 +1,10 @@
 {
     "display": {
       "icon": {
-        "item": "emerald",
-        "nbt": "{CustomModelData:'gui/advancement/calling_bell'}"
+        "id": "emerald",
+        "components": {
+          "minecraft:custom_model_data": "gui/advancement/calling_bell"
+        }
       },
       "title": {
         "translate": "advancement.gm4.calling_bell.title",

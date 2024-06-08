@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "armor_stand",
-      "nbt": "{CustomModelData:'gui/advancement/better_armour_stands'}"
+      "id": "armor_stand",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/better_armour_stands"
+      }
     },
     "title": {
       "translate": "advancement.gm4.better_armour_stands.title",

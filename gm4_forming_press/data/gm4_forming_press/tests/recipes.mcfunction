@@ -1,5 +1,13 @@
 # @template gm4_forming_press:test_platform
 
-data merge block ~1 ~1 ~1 {Items:[{Slot:0b,id:"minecraft:chorus_fruit",Count:2b},{Slot:1b,id:"minecraft:chorus_fruit",Count:2b},{Slot:2b,id:"minecraft:chorus_fruit",Count:2b},{Slot:3b,id:"minecraft:chorus_fruit",Count:2b},{Slot:4b,id:"minecraft:clay_ball",Count:2b},{Slot:5b,id:"minecraft:chorus_fruit",Count:2b},{Slot:6b,id:"minecraft:chorus_fruit",Count:2b},{Slot:7b,id:"minecraft:chorus_fruit",Count:2b},{Slot:8b,id:"minecraft:chorus_fruit",Count:2b}]}
+item replace block ~1 ~1 ~1 container.0 with minecraft:chorus_fruit 2
+item replace block ~1 ~1 ~1 container.1 with minecraft:chorus_fruit 2
+item replace block ~1 ~1 ~1 container.2 with minecraft:chorus_fruit 2
+item replace block ~1 ~1 ~1 container.3 with minecraft:chorus_fruit 2
+item replace block ~1 ~1 ~1 container.4 with minecraft:clay_ball 2
+item replace block ~1 ~1 ~1 container.5 with minecraft:chorus_fruit 2
+item replace block ~1 ~1 ~1 container.6 with minecraft:chorus_fruit 2
+item replace block ~1 ~1 ~1 container.7 with minecraft:chorus_fruit 2
+item replace block ~1 ~1 ~1 container.8 with minecraft:chorus_fruit 2
 
-await block ~1 ~1 ~1 dropper{Items:[{id:"minecraft:purpur_block",Count:32b}]}
+await items block ~1 ~1 ~1 container.* minecraft:purpur_block[count=32]

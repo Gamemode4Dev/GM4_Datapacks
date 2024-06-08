@@ -6,10 +6,11 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/base",
+          "value": "gm4_combat_expanded:armor/identification/base",
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.movement_speed",
@@ -23,28 +24,14 @@
                     "score": "gm4_ce_data",
                     "scale": 0.01
                   },
-                  "operation": "multiply_base",
+                  "operation": "add_multiplied_base",
                   "slot": "chest"
                 }
               ]
             },
             {
-              "function": "minecraft:set_nbt",
+              "function": "minecraft:set_custom_data",
               "tag": "{gm4_combat_expanded:{modifier:75}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
-                  "op": "replace"
-                }
-              ]
             }
           ]
         }
@@ -52,12 +39,14 @@
       "functions": [
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "lore": [
             ""
           ]
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "lore": [
             {
               "translate": "item.gm4.combat_expanded.lore.equip",
@@ -69,6 +58,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -91,6 +81,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -109,20 +100,35 @@
           ]
         },
         {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.husk_description_2",
+                "fallback": "+1 level per extra piece",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.husk",
               "fallback": "Dashing %s",
               "with": [
                 {
-                  "nbt": "tag.gm4_combat_expanded.name",
+                  "nbt": "components.'minecraft:custom_data'.gm4_combat_expanded.name",
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false
+              ]
             }
           ]
         }

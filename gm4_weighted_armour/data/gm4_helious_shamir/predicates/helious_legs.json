@@ -1,0 +1,13 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "legs": {
+        "predicates": {
+          "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:'helious'}}"
+        }
+      }
+    }
+  }
+}

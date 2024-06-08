@@ -10,7 +10,9 @@
               "items": [
                 "minecraft:player_head"
               ],
-              "nbt": "{SkullOwner:{Properties:{textures:[{Signature:\"gm4_machine\"}]}}}"
+              "predicates": {
+                "minecraft:custom_data": "{gm4_machines:{}}"
+              }
             }
           }
         ]

@@ -1,8 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "elytra",
-      "nbt": "{CustomModelData:'gui/advancement/orb_of_ankou_soaring_pneuma',Enchantments:[{}]}"
+      "id": "elytra",
+      "components": {
+        "minecraft:enchantment_glint_override": true,
+        "minecraft:custom_model_data": "gui/advancement/orb_of_ankou_soaring_pneuma"
+      }
     },
     "title": {
       "translate": "advancement.gm4.orb_of_ankou.soaring.title",
@@ -22,8 +25,10 @@
       "conditions": {
         "items": [
           {
-            "tag": "gm4_orb_of_ankou:pneuma_container",
-            "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"soaring\"}]}}"
+            "items": "#gm4_orb_of_ankou:pneuma_container",
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"soaring\"}]}}"
+            }
           }
         ]
       }

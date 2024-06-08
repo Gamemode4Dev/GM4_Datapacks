@@ -8,7 +8,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:weapon/pickaxe/diamond",
+              "value": "gm4_combat_expanded:weapon/pickaxe/diamond",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -25,7 +25,7 @@
               "children": [
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/axe/diamond",
+                  "value": "gm4_combat_expanded:weapon/axe/diamond",
                   "conditions": [
                     {
                       "condition": "minecraft:value_check",
@@ -48,7 +48,7 @@
                 },
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/shovel/diamond",
+                  "value": "gm4_combat_expanded:weapon/shovel/diamond",
                   "conditions": [
                     {
                       "condition": "minecraft:random_chance",
@@ -58,7 +58,7 @@
                 },
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/sword/diamond"
+                  "value": "gm4_combat_expanded:weapon/sword/diamond"
                 }
               ]
             }

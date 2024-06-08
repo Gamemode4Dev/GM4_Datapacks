@@ -1,8 +1,6 @@
 # @s = teleportation jammer
 # run from main
 
-#execute unless block ~ ~ ~ dropper run function gm4_teleportation_anchors:blocks/jammer/destroy
-
 tag @s remove gm4_ta_wired
 execute if block ~ ~1 ~ end_rod[facing=up] run function gm4_teleportation_anchors:blocks/jammer/check_fuel
 

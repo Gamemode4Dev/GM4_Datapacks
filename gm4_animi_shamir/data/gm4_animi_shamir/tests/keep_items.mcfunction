@@ -1,12 +1,13 @@
 # @template gm4:test_tube
 # @dummy ~1 ~1 ~1
+# @optional
 
-give @s golden_leggings{gm4_metallurgy:{active_shamir:"animi"}}
+give @s golden_leggings[custom_data={gm4_metallurgy:{active_shamir:"animi"}}]
 give @s wooden_sword
 kill @s
 
-await entity @e[type=item,distance=..3,nbt={Item:{id:"minecraft:wooden_sword",Count:1b}}]
-assert not entity @e[type=item,distance=..3,nbt={Item:{id:"minecraft:golden_leggings",Count:1b}}]
+assert items entity @e[type=item,distance=..3] contents wooden_sword
+assert not items entity @e[type=item,distance=..3] contents golden_leggings
 
 await delay 1s
 
@@ -17,4 +18,4 @@ await delay 1s
 
 dummy @s respawn
 
-await entity @p[nbt={Inventory:[{id:"minecraft:golden_leggings",Count:1b,tag:{gm4_metallurgy:{active_shamir:"animi"}}}]}]
+await items entity @p container.* golden_leggings[custom_data~{gm4_metallurgy:{active_shamir:"animi"}}]

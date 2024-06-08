@@ -2,7 +2,7 @@
 # @s = processing tank
 
 # merge count from input and set to tank
-data modify storage gm4_liquid_tanks:temp/tank output.Count set from storage gm4_liquid_tanks:temp/tank input_slot.Count
+data modify storage gm4_liquid_tanks:temp/tank output.count set from storage gm4_liquid_tanks:temp/tank input_slot.count
 data modify block ~ ~ ~ Items[{Slot:0b}] set from storage gm4_liquid_tanks:temp/tank output
 
 # apply value delta

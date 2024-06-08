@@ -7,7 +7,9 @@
         "items": [
           "minecraft:chainmail_boots"
         ],
-        "nbt": "{gm4_mountaineering:{item:\"crampons\"}}"
+        "predicates": {
+          "minecraft:custom_data": "{gm4_mountaineering:{item:\"crampons\"}}"
+        }
       }
     }
   }

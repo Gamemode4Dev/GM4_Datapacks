@@ -63,7 +63,7 @@ execute if entity @s[tag=SAPLING_ID_TAG] run function ...
 That should run a function that replaces the normal item with the custom sapling item:
 ```mcfunction
 # any sapling type can be used (as long as it matches the custom item)
-kill @e[type=item,nbt={Age:0s,Item:{id:"minecraft:oak_sapling",Count:1b}},nbt=!{Item:{tag:{}}},limit=1,dx=0]
+kill @e[type=item,nbt={Age:0s,Item:{id:"minecraft:oak_sapling",count:1}},nbt=!{Item:{components:{}}},limit=1,dx=0]
 loot spawn ~ ~ ~ loot gm4_trees_example:items/apple_tree_sapling
 ```
 

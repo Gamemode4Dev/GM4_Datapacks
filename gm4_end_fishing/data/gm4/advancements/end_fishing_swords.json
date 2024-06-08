@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "diamond_sword",
-      "nbt": "{CustomModelData:'gui/advancement/end_fishing_swords'}"
+      "id": "diamond_sword",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/end_fishing_swords"
+      }
     },
     "title": {
       "translate": "advancement.gm4.end_fishing_swords.title",
@@ -21,7 +23,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:1b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:1b}}"
+            }
           }
         ]
       }
@@ -31,7 +35,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:2b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:2b}}"
+            }
           }
         ]
       }
@@ -41,7 +47,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:3b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:3b}}"
+            }
           }
         ]
       }
@@ -51,7 +59,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:4b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:4b}}"
+            }
           }
         ]
       }
@@ -61,7 +71,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:5b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:5b}}"
+            }
           }
         ]
       }
@@ -71,7 +83,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:6b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:6b}}"
+            }
           }
         ]
       }
@@ -81,7 +95,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:7b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:7b}}"
+            }
           }
         ]
       }
@@ -91,7 +107,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:8b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:8b}}"
+            }
           }
         ]
       }
@@ -101,7 +119,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:9b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:9b}}"
+            }
           }
         ]
       }
@@ -111,7 +131,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:10b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:10b}}"
+            }
           }
         ]
       }
@@ -121,7 +143,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:11b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:11b}}"
+            }
           }
         ]
       }
@@ -131,7 +155,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:12b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:12b}}"
+            }
           }
         ]
       }
@@ -141,7 +167,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:13b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:13b}}"
+            }
           }
         ]
       }
@@ -151,7 +179,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:14b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:14b}}"
+            }
           }
         ]
       }
@@ -161,7 +191,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:15b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:15b}}"
+            }
           }
         ]
       }
@@ -171,7 +203,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:16b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:16b}}"
+            }
           }
         ]
       }
@@ -181,7 +215,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:17b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:17b}}"
+            }
           }
         ]
       }
@@ -191,7 +227,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:18b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:18b}}"
+            }
           }
         ]
       }
@@ -201,7 +239,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:19b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:19b}}"
+            }
           }
         ]
       }
@@ -211,7 +251,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_end_fishing:{end_city_sword:20b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_end_fishing:{end_city_sword:20b}}"
+            }
           }
         ]
       }

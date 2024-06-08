@@ -1,7 +1,7 @@
 # @s = player who reeled in the armor stand w/ fishing rod in offhand
 # run from durability/check
 
-execute store result score $unbreaking_lvl gm4_ef_data run data get entity @s Inventory[{Slot:-106b}].tag.Enchantments[{id:"minecraft:unbreaking"}].lvl
+execute store result score $unbreaking_lvl gm4_ef_data run data get entity @s Inventory[{Slot:-106b}].components."minecraft:enchantments".levels."minecraft:unbreaking"
 function gm4_end_fishing:durability/calc_damage
 item modify entity @s[gamemode=!creative] weapon.offhand gm4_end_fishing:prepare_rod
 item modify entity @s[gamemode=!creative] weapon.offhand gm4_end_fishing:apply_damage

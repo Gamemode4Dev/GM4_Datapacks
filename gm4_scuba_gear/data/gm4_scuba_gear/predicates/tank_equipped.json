@@ -7,13 +7,17 @@
         "items": [
           "minecraft:player_head"
         ],
-        "nbt": "{gm4_scuba_gear:{item:\"helmet\"}}"
+        "predicates": {
+          "minecraft:custom_data": "{gm4_scuba_gear:{item:\"helmet\"}}"
+        }
       },
       "chest": {
         "items": [
           "minecraft:golden_chestplate"
         ],
-        "nbt": "{gm4_scuba_gear:{item:\"tank\"}}"
+        "predicates": {
+          "minecraft:custom_data": "{gm4_scuba_gear:{item:\"tank\"}}"
+        }
       }
     }
   }

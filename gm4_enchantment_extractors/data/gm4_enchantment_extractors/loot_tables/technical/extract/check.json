@@ -6,16 +6,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/protection",
+          "value": "gm4_enchantment_extractors:technical/extract/protection",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:protection"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:protection"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -27,16 +29,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/fire_protection",
+          "value": "gm4_enchantment_extractors:technical/extract/fire_protection",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:fire_protection"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:fire_protection"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -48,16 +52,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/blast_protection",
+          "value": "gm4_enchantment_extractors:technical/extract/blast_protection",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:blast_protection"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:blast_protection"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -69,16 +75,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/projectile_protection",
+          "value": "gm4_enchantment_extractors:technical/extract/projectile_protection",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:projectile_protection"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:projectile_protection"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -90,16 +98,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/feather_falling",
+          "value": "gm4_enchantment_extractors:technical/extract/feather_falling",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:feather_falling"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:feather_falling"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -111,16 +121,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/respiration",
+          "value": "gm4_enchantment_extractors:technical/extract/respiration",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:respiration"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:respiration"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -132,16 +144,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/aqua_affinity",
+          "value": "gm4_enchantment_extractors:technical/extract/aqua_affinity",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:aqua_affinity"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:aqua_affinity"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -153,16 +167,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/thorns",
+          "value": "gm4_enchantment_extractors:technical/extract/thorns",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:thorns"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:thorns"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -174,16 +190,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/depth_strider",
+          "value": "gm4_enchantment_extractors:technical/extract/depth_strider",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:depth_strider"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:depth_strider"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -195,16 +213,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/frost_walker",
+          "value": "gm4_enchantment_extractors:technical/extract/frost_walker",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:frost_walker"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:frost_walker"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -216,16 +236,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/soul_speed",
+          "value": "gm4_enchantment_extractors:technical/extract/soul_speed",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:soul_speed"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:soul_speed"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -237,16 +259,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/binding_curse",
+          "value": "gm4_enchantment_extractors:technical/extract/binding_curse",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:binding_curse"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:binding_curse"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -258,16 +282,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/sharpness",
+          "value": "gm4_enchantment_extractors:technical/extract/sharpness",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:sharpness"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:sharpness"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -279,16 +305,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/smite",
+          "value": "gm4_enchantment_extractors:technical/extract/smite",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:smite"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:smite"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -300,16 +328,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/bane_of_arthropods",
+          "value": "gm4_enchantment_extractors:technical/extract/bane_of_arthropods",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:bane_of_arthropods"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:bane_of_arthropods"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -321,16 +351,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/knockback",
+          "value": "gm4_enchantment_extractors:technical/extract/knockback",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:knockback"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:knockback"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -342,16 +374,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/fire_aspect",
+          "value": "gm4_enchantment_extractors:technical/extract/fire_aspect",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:fire_aspect"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:fire_aspect"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -363,16 +397,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/looting",
+          "value": "gm4_enchantment_extractors:technical/extract/looting",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:looting"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:looting"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -384,16 +420,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/sweeping",
+          "value": "gm4_enchantment_extractors:technical/extract/sweeping",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:sweeping"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:sweeping_edge"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -405,16 +443,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/efficiency",
+          "value": "gm4_enchantment_extractors:technical/extract/efficiency",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:efficiency"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:efficiency"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -426,16 +466,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/silk_touch",
+          "value": "gm4_enchantment_extractors:technical/extract/silk_touch",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:silk_touch"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:silk_touch"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -447,16 +489,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/fortune",
+          "value": "gm4_enchantment_extractors:technical/extract/fortune",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:fortune"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:fortune"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -468,16 +512,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/power",
+          "value": "gm4_enchantment_extractors:technical/extract/power",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:power"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:power"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -489,16 +535,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/punch",
+          "value": "gm4_enchantment_extractors:technical/extract/punch",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:punch"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:punch"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -510,16 +558,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/flame",
+          "value": "gm4_enchantment_extractors:technical/extract/flame",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:flame"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:flame"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -531,16 +581,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/infinity",
+          "value": "gm4_enchantment_extractors:technical/extract/infinity",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:infinity"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:infinity"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -552,16 +604,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/luck_of_the_sea",
+          "value": "gm4_enchantment_extractors:technical/extract/luck_of_the_sea",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:luck_of_the_sea"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:luck_of_the_sea"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -573,16 +627,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/lure",
+          "value": "gm4_enchantment_extractors:technical/extract/lure",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:lure"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:lure"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -594,16 +650,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/impaling",
+          "value": "gm4_enchantment_extractors:technical/extract/impaling",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:impaling"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:impaling"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -615,16 +673,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/riptide",
+          "value": "gm4_enchantment_extractors:technical/extract/riptide",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:riptide"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:riptide"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -636,16 +696,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/loyalty",
+          "value": "gm4_enchantment_extractors:technical/extract/loyalty",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:loyalty"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:loyalty"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -657,16 +719,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/channeling",
+          "value": "gm4_enchantment_extractors:technical/extract/channeling",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:channeling"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:channeling"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -678,16 +742,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/piercing",
+          "value": "gm4_enchantment_extractors:technical/extract/piercing",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:piercing"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:piercing"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -699,16 +765,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/multishot",
+          "value": "gm4_enchantment_extractors:technical/extract/multishot",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:multishot"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:multishot"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -720,16 +788,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/quick_charge",
+          "value": "gm4_enchantment_extractors:technical/extract/quick_charge",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:quick_charge"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:quick_charge"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -741,16 +811,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/unbreaking",
+          "value": "gm4_enchantment_extractors:technical/extract/unbreaking",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:unbreaking"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:unbreaking"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -762,16 +834,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/vanishing_curse",
+          "value": "gm4_enchantment_extractors:technical/extract/vanishing_curse",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:vanishing_curse"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:vanishing_curse"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -783,16 +857,18 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_enchantment_extractors:technical/extract/mending",
+          "value": "gm4_enchantment_extractors:technical/extract/mending",
           "conditions": [
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:mending"
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantment": "minecraft:mending"
+                    }
+                  ]
+                }
               }
             }
           ]

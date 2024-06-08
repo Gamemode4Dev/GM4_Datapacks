@@ -4,9 +4,9 @@
 # run from mob/init/mob_type
 
 # base stat nerf
-attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -3 add
-attribute @s generic.attack_damage modifier add 3182427e-beb4-4f9a-9f39-674baf1d5ee4 "gm4_ce_base_damage_nerf" -1 add
-attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd7173297b "gm4_ce_base_speed_nerf" -0.05 multiply_base
+attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -3 add_value
+attribute @s generic.attack_damage modifier add 3182427e-beb4-4f9a-9f39-674baf1d5ee4 "gm4_ce_base_damage_nerf" -1 add_value
+attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd7173297b "gm4_ce_base_speed_nerf" -0.05 add_multiplied_base
 
 # max stat buffs
 scoreboard players set $mob_health gm4_ce_data 15
@@ -38,7 +38,7 @@ execute if entity @s[tag=gm4_ce_spore_zombie] run function gm4_combat_expanded:m
 # toxic
 tag @s[predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_weakness_attacks
 # deep
-attribute @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/deep] generic.movement_speed modifier add 34e4955b-8f75-4292-89e9-7a1639499717 "gm4_ce_modifier_deep" 0.2 multiply_base
+attribute @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/deep] generic.movement_speed modifier add 34e4955b-8f75-4292-89e9-7a1639499717 "gm4_ce_modifier_deep" 0.2 add_multiplied_base
 # reef
 execute if entity @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/reef] run function gm4_combat_expanded:mob/init/modifier/special/reef_drowned
 # growth
@@ -57,7 +57,7 @@ execute if entity @s[type=zombie,tag=gm4_ce_miniboss] run function gm4_combat_ex
 execute if entity @s[type=husk,tag=gm4_ce_miniboss] run function gm4_combat_expanded:mob/init/modifier/special/husk_miniboss
 execute if entity @s[type=drowned,tag=gm4_ce_miniboss] run function gm4_combat_expanded:mob/init/modifier/special/drowned_miniboss
 # baby zombie (zombie leader is never a baby)
-execute if score $modifier_picked gm4_ce_data matches 0 if data entity @s {IsBaby:1b} store success score $modifier_picked gm4_ce_data run attribute @s generic.max_health modifier add 13d37911-bc7f-4f94-9187-1668ac21bfb1 "gm4_ce_baby_zombie" -0.6 multiply_base
+execute if score $modifier_picked gm4_ce_data matches 0 if data entity @s {IsBaby:1b} store success score $modifier_picked gm4_ce_data run attribute @s generic.max_health modifier add 13d37911-bc7f-4f94-9187-1668ac21bfb1 "gm4_ce_baby_zombie" -0.6 add_multiplied_base
 # sprinter
 execute if score $modifier_picked gm4_ce_data matches 0 if predicate gm4_combat_expanded:technical/chance/zombie_sprinter store success score $modifier_picked gm4_ce_data run effect give @s speed infinite 0
 # shielded
@@ -65,7 +65,7 @@ execute if score $modifier_picked gm4_ce_data matches 0 if predicate gm4_combat_
 # dual wield
 execute if score $modifier_picked gm4_ce_data matches 0 if predicate gm4_combat_expanded:technical/chance/zombie_dual_wield run function gm4_combat_expanded:mob/init/modifier/special/zombie_dual_wield
 # solid (KB resist)
-execute if score $modifier_picked gm4_ce_data matches 0 if predicate gm4_combat_expanded:technical/chance/zombie_solid store success score $modifier_picked gm4_ce_data run attribute @s generic.knockback_resistance modifier add 35504df6-ec60-4229-8063-a2440d56f68c "gm4_ce_solid_zombie" 0.45 add
+execute if score $modifier_picked gm4_ce_data matches 0 if predicate gm4_combat_expanded:technical/chance/zombie_solid store success score $modifier_picked gm4_ce_data run attribute @s generic.knockback_resistance modifier add 35504df6-ec60-4229-8063-a2440d56f68c "gm4_ce_solid_zombie" 0.45 add_value
 
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep

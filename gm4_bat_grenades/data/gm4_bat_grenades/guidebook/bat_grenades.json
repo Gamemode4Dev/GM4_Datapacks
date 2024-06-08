@@ -3,7 +3,7 @@
   "name": "Bat Grenades",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:gunpowder"
+    "id": "minecraft:gunpowder"
   },
   "criteria": {
     "hurt_by_exploding_bat": {

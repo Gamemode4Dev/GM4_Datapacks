@@ -9,7 +9,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 32,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/delay",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/delay",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -29,7 +29,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 2,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/delay",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/delay",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -54,13 +54,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -72,58 +72,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 8,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/delay"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:alternatives",
-          "children": [
-            {
-              "type": "minecraft:loot_table",
-              "weight": 40,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/double",
-              "conditions": [
-                {
-                  "condition": "minecraft:any_of",
-                  "terms": [
-                    {
-                      "condition": "minecraft:location_check",
-                      "predicate": {
-                        "dimension": "minecraft:the_nether"
-                      }
-                    },
-                    {
-                      "condition": "minecraft:any_of",
-                      "terms": [
-                        {
-                          "condition": "minecraft:location_check",
-                          "predicate": {
-                            "dimension": "minecraft:the_end"
-                          }
-                        },
-                        {
-                          "condition": "minecraft:location_check",
-                          "predicate": {
-                            "biome": "minecraft:mushroom_fields"
-                          }
-                        },
-                        {
-                          "condition": "minecraft:location_check",
-                          "predicate": {
-                            "biome": "minecraft:deep_dark"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "weight": 10,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/double"
+              "value": "gm4_combat_expanded:weapon/identification/modifier/delay"
             }
           ]
         },
@@ -133,7 +82,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 160,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/fire",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/fire",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -159,7 +108,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 10,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/fire",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/fire",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -192,13 +141,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -210,7 +159,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 40,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/fire"
+              "value": "gm4_combat_expanded:weapon/identification/modifier/fire"
             }
           ]
         },
@@ -220,7 +169,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 160,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/giant",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/giant",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -244,7 +193,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 10,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/giant",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/giant",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -273,13 +222,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -291,7 +240,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 40,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/giant"
+              "value": "gm4_combat_expanded:weapon/identification/modifier/giant"
             }
           ]
         },
@@ -301,7 +250,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 160,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/heavy",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/heavy",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -321,7 +270,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 10,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/heavy",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/heavy",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -346,13 +295,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -364,7 +313,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 40,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/heavy"
+              "value": "gm4_combat_expanded:weapon/identification/modifier/heavy"
             }
           ]
         },
@@ -374,7 +323,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 32,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/lightning",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/lightning",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -398,7 +347,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 2,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/lightning",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/lightning",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -433,13 +382,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -451,7 +400,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 8,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/lightning"
+              "value": "gm4_combat_expanded:weapon/identification/modifier/lightning"
             }
           ]
         },
@@ -461,7 +410,82 @@
             {
               "type": "minecraft:loot_table",
               "weight": 160,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/pierce",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/long",
+              "conditions": [
+                {
+                  "condition": "minecraft:any_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/mountainous"
+                    },
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/growth"
+                    },
+                    {
+                      "condition": "minecraft:location_check",
+                      "predicate": {
+                        "dimension": "minecraft:the_nether"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "weight": 10,
+              "value": "gm4_combat_expanded:weapon/identification/modifier/long",
+              "conditions": [
+                {
+                  "condition": "minecraft:any_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:reference",
+                      "name": "gm4_combat_expanded:mob/modifier/dark"
+                    },
+                    {
+                      "condition": "minecraft:any_of",
+                      "terms": [
+                        {
+                          "condition": "minecraft:location_check",
+                          "predicate": {
+                            "dimension": "minecraft:the_end"
+                          }
+                        },
+                        {
+                          "condition": "minecraft:location_check",
+                          "predicate": {
+                            "biomes": "minecraft:mushroom_fields"
+                          }
+                        },
+                        {
+                          "condition": "minecraft:location_check",
+                          "predicate": {
+                            "biomes": "minecraft:deep_dark"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "weight": 40,
+              "value": "gm4_combat_expanded:weapon/identification/modifier/long"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "weight": 160,
+              "value": "gm4_combat_expanded:weapon/identification/modifier/pierce",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -481,7 +505,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 10,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/pierce",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/pierce",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -508,13 +532,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -526,7 +550,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 40,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/pierce"
+              "value": "gm4_combat_expanded:weapon/identification/modifier/pierce"
             }
           ]
         },
@@ -536,7 +560,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 160,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/poison",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/poison",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -560,7 +584,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 10,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/poison",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/poison",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -599,13 +623,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -617,7 +641,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 40,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/poison"
+              "value": "gm4_combat_expanded:weapon/identification/modifier/poison"
             }
           ]
         },
@@ -627,7 +651,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 160,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/quick",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/quick",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -647,7 +671,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 10,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/quick",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/quick",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -676,13 +700,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -694,7 +718,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 40,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/quick"
+              "value": "gm4_combat_expanded:weapon/identification/modifier/quick"
             }
           ]
         },
@@ -704,7 +728,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 32,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/swift",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/swift",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -724,7 +748,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 2,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/swift",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/swift",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -757,13 +781,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -775,7 +799,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 8,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/swift"
+              "value": "gm4_combat_expanded:weapon/identification/modifier/swift"
             }
           ]
         },
@@ -785,7 +809,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 160,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/weakness",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/weakness",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -805,7 +829,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 10,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/weakness",
+              "value": "gm4_combat_expanded:weapon/identification/modifier/weakness",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -836,13 +860,13 @@
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:mushroom_fields"
+                            "biomes": "minecraft:mushroom_fields"
                           }
                         },
                         {
                           "condition": "minecraft:location_check",
                           "predicate": {
-                            "biome": "minecraft:deep_dark"
+                            "biomes": "minecraft:deep_dark"
                           }
                         }
                       ]
@@ -854,7 +878,7 @@
             {
               "type": "minecraft:loot_table",
               "weight": 40,
-              "name": "gm4_combat_expanded:weapon/identification/modifier/weakness"
+              "value": "gm4_combat_expanded:weapon/identification/modifier/weakness"
             }
           ]
         }

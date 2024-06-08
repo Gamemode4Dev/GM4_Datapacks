@@ -15,4 +15,4 @@ execute as @e[type=armor_stand,tag=gm4_relocator_fill,limit=1,sort=nearest,dista
 
 # return relocator
 loot spawn ~ ~.3 ~ loot gm4_relocators:items/relocator_empty
-data merge entity @e[type=item,distance=..1,nbt={Age:0s,Item:{tag:{gm4_relocator:1b}}},limit=1] {PickupDelay:0}
+data merge entity @e[type=item,distance=..1,nbt={Age:0s,Item:{components:{"minecraft:custom_data":{gm4_relocator:1b}}}},limit=1] {PickupDelay:0}

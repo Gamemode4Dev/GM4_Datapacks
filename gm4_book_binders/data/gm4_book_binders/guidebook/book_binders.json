@@ -3,7 +3,7 @@
   "name": "Book Binders",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:enchanted_book"
+    "id": "minecraft:enchanted_book"
   },
   "criteria": {
     "obtain_enchanted_page": {
@@ -14,7 +14,9 @@
             "items": [
               "minecraft:paper"
             ],
-            "nbt": "{gm4_book_binders:{item:\"enchanted_page\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_book_binders:{item:\"enchanted_page\"}}"
+            }
           }
         ]
       }

@@ -8,8 +8,18 @@
                     "name": "{{bottle_item_id}}",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"{{effect}}\",bottle:{multi_use:0}},HideFlags:32,CustomPotionColor:{{custom_potion_color}},custom_potion_effects:{{custom_potion_effects}}}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:potion_contents": {
+                                  "custom_color": {{custom_potion_color}},
+                                  "custom_effects": {{custom_potion_effects}}
+                                },
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"{{effect}}\",bottle:{multi_use:0b}}}"
                         },
                         {
                             "function": "minecraft:set_name",
@@ -70,8 +80,10 @@
                             ]
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:\"item/soulution_potion/{{effect}}\"}",
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/soulution_potion/{{effect}}"
+                            },
                             "conditions": [
                                 {
                                     "condition": "minecraft:value_check",
@@ -89,6 +101,7 @@
                         },
                         {
                             "function": "minecraft:set_lore",
+                            "mode": "append",
                             "entity": "this",
                             "lore": [
                                 [
@@ -122,7 +135,6 @@
                                     }
                                 ]
                             ],
-                            "replace": false,
                             "conditions": [
                                 {
                                     "condition": "minecraft:value_check",
@@ -140,8 +152,8 @@
                         },
                         {
                             "function": "minecraft:set_lore",
-                            "lore": {{lore}},
-                            "replace": false
+                            "mode": "append",
+                            "lore": {{lore}}
                         }
                     ]
                 }

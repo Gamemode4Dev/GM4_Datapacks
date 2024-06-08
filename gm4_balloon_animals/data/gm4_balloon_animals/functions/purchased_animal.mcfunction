@@ -16,8 +16,7 @@ execute unless score $trade_success gm4_balloon_animals_data matches 1 run give 
 # clean up
 advancement revoke @s only gm4_balloon_animals:purchased_animal
 
-clear @s lead{gm4_balloon_animals:{animal:1b,trade:1b}}
-clear @s lead{gm4_balloon_animals:{animal:2b,trade:2b}}
+clear @s lead[custom_data~{gm4_balloon_animals:{trade:1b}}|custom_data~{gm4_balloon_animals:{trade:2b}}]
 
 scoreboard players reset $trade_applicable gm4_balloon_animals_data
 scoreboard players reset $trade_count gm4_balloon_animals_data

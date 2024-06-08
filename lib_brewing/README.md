@@ -5,7 +5,7 @@ lib_brewing is a mcfunction library that allows other datapacks to replace custo
 ### Splash and Lingering Conversions
 This library automatically catches splash and lingering potion conversions to allow datapacks to properly replace those potions. This means whenever a potion is brewed into a splash potion using gunpowder, a set of functions will be run to replace the Uncraftable Splash Potion with a custom splash potion. Similarly, whenever a splash potion is brewed into a lingering potion using dragon's breath, a set of functions will be run to replace the Uncraftable Lingering Potion with a custom lingering potion.
 
-Each brewing stand has a marker to track these changes. When splash and lingering potions are created, each potion is checked by calling the `#gm4_brewing:insert/splash` or `#gm4_brewing:insert/lingering` function tags (once per potion, so if there are 3 potions in the brewing stand, that function tag gets called for each potion). The full item nbt for each potion is saved into the nbt of the marker in `data.gm4_brewing.insert.tag.<ITEM_NBT>`. For example if the brewing stand has the nbt `{Items:[{Slot:0b,id:"minecraft:potion",Count:1b,tag:{my_custom_potion:1b}}]}`, the marker would have the nbt `{data:{gm4_brewing:{insert:{Slot:0b,id:"minecraft:potion",Count:1b,tag:{my_custom_potion:1b}}}}}` when it's checking the first potion. This is how you should check for your custom potions
+Each brewing stand has a marker to track these changes. When splash and lingering potions are created, each potion is checked by calling the `#gm4_brewing:insert/splash` or `#gm4_brewing:insert/lingering` function tags (once per potion, so if there are 3 potions in the brewing stand, that function tag gets called for each potion). The full item components for each potion is saved into the nbt of the marker in `data.gm4_brewing.insert.components.<ITEM_COMPONENTS>`. For example if the brewing stand has the nbt `{Items:[{Slot:0b,id:"minecraft:potion",count:1,components:{'minecraft:custom_data':{my_custom_potion:1b}}}]}`, the marker would have the nbt `{data:{gm4_brewing:{insert:{Slot:0b,id:"minecraft:potion",count:1,components:{'minecraft:custom_data':{my_custom_potion:1b}}}}}}` when it's checking the first potion. This is how you should check for your custom potions
 
 To utilize this function, two functions tags, two functions, and two loot tables should be created. Below are the files for splash potions, and can be copied for lingering potions by replacing all instances of `splash` with `lingering`
 
@@ -29,7 +29,7 @@ loot table `MODULE_ID:technical/brewing_stand/splash`
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{data:{gm4_brewing:{insert:{tag:{INDICATION NBT FOR POTION 1}}}}"
+                    "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{INDICATION NBT FOR POTION 1}}}}}"
                   }
                 }
               ]
@@ -42,7 +42,7 @@ loot table `MODULE_ID:technical/brewing_stand/splash`
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{data:{gm4_brewing:{insert:{tag:{INDICATION NBT FOR POTION 2}}}}"
+                    "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{INDICATION NBT FOR POTION 2}}}}}"
                   }
                 }
               ]
@@ -52,7 +52,7 @@ loot table `MODULE_ID:technical/brewing_stand/splash`
       ],
       "functions": [
         {
-          "function": "minecraft:set_nbt",
+          "function": "minecraft:set_custom_data",
           "tag": "{gm4_custom_potion:1b}"
         }
       ]

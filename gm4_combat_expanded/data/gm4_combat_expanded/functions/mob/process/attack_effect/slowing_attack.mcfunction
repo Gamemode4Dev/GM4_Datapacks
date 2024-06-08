@@ -3,4 +3,4 @@
 # at unspecified
 advancement revoke @s only gm4_combat_expanded:damaged/mob/slowing
 
-effect give @s slowness 15 0
+effect give @s[tag=!gm4_ce_immune_slowness] slowness 15 0

@@ -7,7 +7,9 @@
         "items": [
           "minecraft:potion"
         ],
-        "nbt": "{gm4_zauber_cauldrons:{bottle:{multi_use:1b}}}"
+        "predicates": {
+          "minecraft:custom_data": "{gm4_zauber_cauldrons:{bottle:{multi_use:1b}}}"
+        }
       }
     }
   }

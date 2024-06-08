@@ -5,11 +5,11 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.1",
@@ -20,18 +20,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_1',gm4_end_fishing:{end_city_sword:1b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_1"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:1b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.2.1",
@@ -48,18 +54,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_2',gm4_end_fishing:{end_city_sword:2b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_2"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:2b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.3",
@@ -70,18 +82,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_3',gm4_end_fishing:{end_city_sword:3b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_3"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:3b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.4",
@@ -92,18 +110,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_4',gm4_end_fishing:{end_city_sword:4b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_4"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:4b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.5",
@@ -114,18 +138,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_5',gm4_end_fishing:{end_city_sword:5b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_5"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:5b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.6",
@@ -136,18 +166,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_6',gm4_end_fishing:{end_city_sword:6b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_6"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:6b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.7.1",
@@ -164,18 +200,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_7',gm4_end_fishing:{end_city_sword:7b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_7"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:7b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.8",
@@ -186,18 +228,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_8',gm4_end_fishing:{end_city_sword:8b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_8"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:8b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.9",
@@ -208,18 +256,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_9',gm4_end_fishing:{end_city_sword:9b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_9"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:9b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.10",
@@ -230,18 +284,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_10',gm4_end_fishing:{end_city_sword:10b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_10"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:10b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.11",
@@ -252,18 +312,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_11',gm4_end_fishing:{end_city_sword:11b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_11"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:11b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.12.1",
@@ -280,18 +346,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_12',gm4_end_fishing:{end_city_sword:12b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_12"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:12b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.13",
@@ -302,18 +374,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_13',gm4_end_fishing:{end_city_sword:13b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_13"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:13b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.14.1",
@@ -330,18 +408,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_14',gm4_end_fishing:{end_city_sword:14b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_14"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:14b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.15",
@@ -352,18 +436,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_15',gm4_end_fishing:{end_city_sword:15b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_15"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:15b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.16",
@@ -374,18 +464,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_16',gm4_end_fishing:{end_city_sword:16b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_16"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:16b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.17.1",
@@ -402,18 +498,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_17',gm4_end_fishing:{end_city_sword:17b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_17"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:17b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.18",
@@ -424,18 +526,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_18',gm4_end_fishing:{end_city_sword:18b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_18"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:18b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.19",
@@ -446,18 +554,24 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_19',gm4_end_fishing:{end_city_sword:19b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_19"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:19b}}"
             }
           ]
         },
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/type",
           "functions": [
             {
               "function": "minecraft:set_lore",
-              "replace": false,
+              "mode": "append",
               "lore": [
                 {
                   "translate": "text.gm4.end_city_sword.20",
@@ -468,8 +582,14 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/end_city_swords_20',gm4_end_fishing:{end_city_sword:20b}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_swords_20"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{end_city_sword:20b}}"
             }
           ]
         }

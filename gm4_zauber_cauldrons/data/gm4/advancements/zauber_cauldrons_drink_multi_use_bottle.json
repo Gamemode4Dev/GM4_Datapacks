@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "glass_bottle",
-      "nbt": "{CustomModelData:'gui/advancement/zauber_cauldron_drink_multi_use_bottle'}"
+      "id": "glass_bottle",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/zauber_cauldron_drink_multi_use_bottle"
+      }
     },
     "title": {
       "translate": "advancement.gm4.zauber_cauldrons.drink_multi_use_bottle.title",
@@ -20,7 +22,9 @@
       "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
-          "nbt": "{gm4_zauber_cauldrons:{bottle:{multi_use:1b,sips:1b}}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_zauber_cauldrons:{bottle:{multi_use:1b,sips:1}}}"
+          }
         }
       }
     }

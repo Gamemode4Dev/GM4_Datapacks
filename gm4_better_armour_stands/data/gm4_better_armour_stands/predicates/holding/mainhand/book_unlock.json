@@ -7,7 +7,13 @@
         "items": [
           "minecraft:writable_book"
         ],
-        "nbt": "{pages:[\"unlock\"]}"
+        "components": {
+          "minecraft:writable_book_content": {
+            "pages": [
+              "unlock"
+            ]
+          }
+        }
       }
     }
   }

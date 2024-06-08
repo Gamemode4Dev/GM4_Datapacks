@@ -1,6 +1,6 @@
 id: gm4_brewing
 name: Gamemode 4 Brewing
-version: 1.1.X
+version: 1.2.X
 description: Allows datapacks to replace custom potions with splash and lingering potions when brewed in a brewing stand.
 
 data_pack:
@@ -14,8 +14,8 @@ meta:
   gm4:
     versioning:
       schedule_loops: [main]
+    smithed:
+      pack_id: gm4_lib_brewing
     credits:
       Creator:
         - BluePsychoRanger
-  smithed:
-    pack_id: gm4_lib_brewing

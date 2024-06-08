@@ -16,11 +16,14 @@
               }
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/charred_arrowhead'}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/charred_arrowhead"
+              }
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 {

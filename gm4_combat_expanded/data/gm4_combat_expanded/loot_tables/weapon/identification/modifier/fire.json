@@ -6,23 +6,24 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:weapon/identification/base",
+          "value": "gm4_combat_expanded:weapon/identification/base",
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.attack_damage",
                   "name": "gm4_ce_remove_hand_stats",
                   "amount": -1,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "mainhand"
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
                   "name": "gm4_ce_remove_hand_atk_speed",
                   "amount": -4,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "mainhand"
                 },
                 {
@@ -37,7 +38,7 @@
                     "score": "gm4_ce_data",
                     "scale": 0.1
                   },
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "mainhand"
                 },
                 {
@@ -52,13 +53,13 @@
                     "score": "gm4_ce_data",
                     "scale": 0.1
                   },
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "mainhand"
                 }
               ]
             },
             {
-              "function": "minecraft:set_nbt",
+              "function": "minecraft:set_custom_data",
               "tag": "{gm4_combat_expanded:{strike:1,modifier:3,damage_buffed:-1}}"
             }
           ]
@@ -67,12 +68,14 @@
       "functions": [
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "lore": [
             ""
           ]
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             {
@@ -84,6 +87,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -137,6 +141,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -178,6 +183,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -231,6 +237,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -273,18 +280,18 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.fire",
               "fallback": "Flaming %s",
               "with": [
                 {
-                  "nbt": "tag.gm4_combat_expanded.name",
+                  "nbt": "components.'minecraft:custom_data'.gm4_combat_expanded.name",
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false
+              ]
             }
           ]
         },

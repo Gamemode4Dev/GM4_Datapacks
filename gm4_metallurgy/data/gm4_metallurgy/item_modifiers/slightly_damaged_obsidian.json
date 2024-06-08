@@ -1,0 +1,21 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:custom_model_data": "item/slightly_damaged_obsidian",
+      "!minecraft:custom_name": {},
+      "!minecraft:profile": {}
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "mode": "replace_all",
+    "lore": [
+      {
+        "translate": "item.gm4.slightly_damaged_obsidian",
+        "fallback": "Slightly Damaged Obsidian",
+        "color": "dark_gray"
+      }
+    ]
+  }
+]

@@ -9,8 +9,14 @@
           "name": "minecraft:hopper_minecart",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'item/liquid_minecart',gm4_machines:{id:\"liquid_minecart\"}}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/liquid_minecart"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'liquid_minecart'}}"
             },
             {
               "function": "set_name",

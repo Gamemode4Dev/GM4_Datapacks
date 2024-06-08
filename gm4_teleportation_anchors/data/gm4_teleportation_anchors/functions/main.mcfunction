@@ -20,5 +20,5 @@ execute as @e[type=marker,tag=gm4_teleportation_jammer] at @s run function gm4_t
 # teleportation anchors
 execute as @e[type=marker,tag=gm4_teleportation_anchor] at @s run function gm4_teleportation_anchors:blocks/anchor/process
 ## deal with jammed player
-execute at @a[scores={gm4_ta_cooldown=1..}] run particle minecraft:block chorus_plant ~ ~0.5 ~ 0 0 0 0 3 force
+execute at @a[scores={gm4_ta_cooldown=1..}] run particle minecraft:block{block_state:"minecraft:chorus_plant"} ~ ~0.5 ~ 0 0 0 0 3 force
 scoreboard players remove @a[scores={gm4_ta_cooldown=1..}] gm4_ta_cooldown 1

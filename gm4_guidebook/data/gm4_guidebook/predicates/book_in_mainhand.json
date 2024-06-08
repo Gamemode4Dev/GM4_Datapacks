@@ -7,7 +7,9 @@
         "items": [
           "minecraft:written_book"
         ],
-        "nbt": "{gm4_guidebook:{}}"
+        "predicates": {
+          "minecraft:custom_data": "{gm4_guidebook:{}}"
+        }
       }
     }
   }

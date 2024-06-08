@@ -19,7 +19,7 @@
           "offsetZ": 0,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -33,7 +33,7 @@
           "offsetZ": 0,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -47,7 +47,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -61,7 +61,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -75,7 +75,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -89,7 +89,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -103,7 +103,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -117,7 +117,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -131,7 +131,7 @@
           "offsetZ": 0,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -145,7 +145,7 @@
           "offsetZ": 0,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -159,7 +159,7 @@
           "offsetZ": 0,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -173,7 +173,7 @@
           "offsetZ": 2,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -187,7 +187,7 @@
           "offsetZ": -2,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -201,7 +201,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -215,7 +215,7 @@
           "offsetZ": 1,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -229,7 +229,7 @@
           "offsetZ": 2,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -243,7 +243,7 @@
           "offsetZ": -2,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -257,7 +257,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -271,7 +271,7 @@
           "offsetZ": -1,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -285,7 +285,7 @@
           "offsetZ": 2,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -299,7 +299,7 @@
           "offsetZ": -2,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -313,7 +313,7 @@
           "offsetZ": 2,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -327,7 +327,7 @@
           "offsetZ": 2,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -341,7 +341,7 @@
           "offsetZ": -2,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }
@@ -355,7 +355,7 @@
           "offsetZ": -2,
           "predicate": {
             "block": {
-              "tag": "gm4_teleportation_anchors:jammer_base_blocks"
+              "blocks": "#gm4_teleportation_anchors:jammer_base_blocks"
             }
           }
         }

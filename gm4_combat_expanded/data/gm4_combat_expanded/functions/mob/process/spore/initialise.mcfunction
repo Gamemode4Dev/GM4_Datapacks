@@ -5,4 +5,4 @@
 
 tag @s add gm4_ce_spore
 data merge entity @s {Age:-32768,PickupDelay:32767,Health:4f}
-tag @s[nbt={Item:{id:"minecraft:cherry_leaves"}}] add gm4_ce_spore.cherry
+execute if items entity @s contents minecraft:cherry_leaves run tag @s add gm4_ce_spore.cherry

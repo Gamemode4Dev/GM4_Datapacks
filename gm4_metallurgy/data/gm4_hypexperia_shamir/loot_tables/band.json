@@ -5,15 +5,21 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_metallurgy:bismuth_band",
+                    "value": "gm4_metallurgy:bismuth_band",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'shamir/hypexperia',SkullOwner:{Name:\"[Drop to Fix Item] gm4_hypexperia_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"hypexperia\"}}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "shamir/hypexperia"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_metallurgy:{stored_shamir:'hypexperia'}}"
                         },
                         {
                             "function": "minecraft:set_lore",
-                            "replace": false,
+                            "mode": "append",
                             "lore": [
                                 {
                                     "translate": "item.gm4.shamir.hypexperia",

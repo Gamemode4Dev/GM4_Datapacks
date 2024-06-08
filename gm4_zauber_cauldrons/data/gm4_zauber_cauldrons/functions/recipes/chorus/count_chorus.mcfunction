@@ -12,8 +12,8 @@ scoreboard players set $expected_item_amount gm4_zc_fullness 4
 execute if score $has_soul_fire_heatsource gm4_zc_data matches 1.. run data modify storage gm4_zauber_cauldrons:blueprint/item/multi_sip gm4_zauber_cauldrons.bottle set value {sips:9,size:9,multi_use:1b}
 
 # read count from chorus fruit stacks
-execute store result score $raw_chorus_fullness gm4_zc_chorus run data get storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{tag:{gm4_zauber_cauldrons:{item:"minecraft:chorus_fruit"}}}].Count 1
-execute store result score $popped_chorus_fullness gm4_zc_chorus run data get storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{tag:{gm4_zauber_cauldrons:{item:"minecraft:popped_chorus_fruit"}}}].Count 1
+execute store result score $raw_chorus_fullness gm4_zc_chorus run data get storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:"minecraft:chorus_fruit"}}}}].count 1
+execute store result score $popped_chorus_fullness gm4_zc_chorus run data get storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:"minecraft:popped_chorus_fruit"}}}}].count 1
 
 # cancel recipe if one of the ingredients is missing
 execute if score $raw_chorus_fullness gm4_zc_chorus matches 0 run scoreboard players set $cancel_recipe gm4_zc_data 2

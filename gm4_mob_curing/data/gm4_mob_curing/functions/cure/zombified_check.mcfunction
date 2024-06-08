@@ -3,5 +3,5 @@
 # at @s
 # run from main
 
-execute if entity @s[nbt={ActiveEffects:[{Id:18}]}] run function gm4_mob_curing:cure/zombified_piglin
-execute if entity @s[nbt={ActiveEffects:[{Id:1}]}] run function gm4_mob_curing:cure/zombified_pig
+execute if entity @s[nbt={active_effects:[{id:'minecraft:weakness'}]}] run function gm4_mob_curing:cure/zombified_piglin
+execute if entity @s[nbt={active_effects:[{id:'minecraft:speed'}]}] run function gm4_mob_curing:cure/zombified_pig

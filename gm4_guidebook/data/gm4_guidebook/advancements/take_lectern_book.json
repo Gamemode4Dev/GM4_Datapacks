@@ -9,7 +9,9 @@
               "minecraft:written_book"
             ],
             "count": 1,
-            "nbt": "{gm4_guidebook:{lectern:1b}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_guidebook:{lectern:1b}}"
+            }
           }
         ]
       }

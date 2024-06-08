@@ -9,8 +9,15 @@
           "name": "minecraft:player_head",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'item/forming_press',gm4_machines:{id:\"forming_press\"},SkullOwner:{Name:\"gm4_forming_press\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$forming_press\"}]}}}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/forming_press",
+                "minecraft:profile": "$forming_press"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'forming_press'}}"
             },
             {
               "function": "set_name",

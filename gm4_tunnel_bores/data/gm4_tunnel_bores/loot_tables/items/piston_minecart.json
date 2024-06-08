@@ -8,8 +8,14 @@
                     "name": "minecraft:furnace_minecart",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'item/piston_minecart',gm4_machines:{id:\"tunnel_bore\"}}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/piston_minecart"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_machines:{id:'tunnel_bore'}}"
                         },
                         {
                             "function": "minecraft:set_name",

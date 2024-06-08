@@ -3,8 +3,8 @@
 # called by spawn_slime
 
 # remove 1 from count of slimeball stack
-execute store result score count gm4_reslimify run data get entity @s Item.Count 0.99
-execute store result entity @s Item.Count byte 1 run scoreboard players get count gm4_reslimify
+execute store result score count gm4_reslimify run data get entity @s Item.count 0.99
+execute store result entity @s Item.count byte 1 run scoreboard players get count gm4_reslimify
 # Spigot fix
 execute if score count gm4_reslimify matches 0 run kill @s
 

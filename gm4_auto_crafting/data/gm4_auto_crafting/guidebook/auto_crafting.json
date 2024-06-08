@@ -3,7 +3,7 @@
   "name": "Auto Crafting",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:copper_block"
+    "id": "minecraft:copper_block"
   },
   "criteria": {
     "obtain_copper_ingot": {
@@ -26,7 +26,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:\"custom_crafter\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"custom_crafter\"}}"
+            }
           }
         ]
       }
@@ -39,13 +41,15 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:\"auto_crafter\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"auto_crafter\"}}"
+            }
           }
         ]
       }
     },
     "open_auto_crafter": {
-      "trigger": "minecraft:item_used_on_block",
+      "trigger": "minecraft:default_block_use",
       "conditions": {
         "location": [
           {
@@ -55,7 +59,7 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.auto_crafter\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\"}],\"text\":\" \"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.auto_crafter\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.auto_crafter\",\"fallback\":\"Set Recipe Shape\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}'}"
               }
             }
           }

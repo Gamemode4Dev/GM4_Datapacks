@@ -10,19 +10,21 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
                   "id": "845DB27C-C624-495F-8C9F-6020A9A58B6B",
                   "amount": 1,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "feet"
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 {
@@ -41,7 +43,7 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
+              "function": "minecraft:set_custom_data",
               "tag": "{gm4_combat_expanded:{durability:65,identified:0,armor_clamp:-1,slot:3,material:1,name:'{\"italic\":false,\"translate\":\"item.minecraft.leather_boots\"}'}}"
             },
             {

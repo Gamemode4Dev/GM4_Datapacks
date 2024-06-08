@@ -3,11 +3,11 @@
   "name": "Teleportation Anchors",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:furnace"
+    "id": "minecraft:furnace"
   },
   "criteria": {
     "open_custom_crafter": {
-      "trigger": "minecraft:item_used_on_block",
+      "trigger": "minecraft:default_block_use",
       "conditions": {
         "location": [
           {
@@ -17,7 +17,7 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"}],\"text\":\" \"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}'}"
               }
             }
           }
@@ -46,7 +46,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:'teleportation_jammer'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:'teleportation_jammer'}}"
+            }
           }
         ]
       }
@@ -59,13 +61,15 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:'teleportation_anchor'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:'teleportation_anchor'}}"
+            }
           }
         ]
       }
     },
     "open_teleportation_jammer": {
-      "trigger": "minecraft:item_used_on_block",
+      "trigger": "minecraft:default_block_use",
       "conditions": {
         "location": [
           {
@@ -75,7 +79,7 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.teleportation_jammer\",\"fallback\":\"Teleportation Jammer\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.teleportation_jammer\",\"fallback\":\"Teleportation Jammer\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.teleportation_jammer\",\"fallback\":\"Teleportation Jammer\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.teleportation_jammer\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.teleportation_jammer\",\"fallback\":\"Teleportation Jammer\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.teleportation_jammer\",\"fallback\":\"Teleportation Jammer\"}],\"text\":\" \"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.teleportation_jammer\",\"fallback\":\"Teleportation Jammer\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.teleportation_jammer\",\"fallback\":\"Teleportation Jammer\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.teleportation_jammer\",\"fallback\":\"Teleportation Jammer\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.teleportation_jammer\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.teleportation_jammer\",\"fallback\":\"Teleportation Jammer\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.teleportation_jammer\",\"fallback\":\"Teleportation Jammer\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}'}"
               }
             }
           }

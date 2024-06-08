@@ -1,8 +1,10 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:potion",
-            "nbt": "{CustomModelData:'gui/advancement/zauber_cauldrons_drink_all_magicol'}"
+            "id": "minecraft:potion",
+            "components": {
+                "minecraft:custom_model_data": "gui/advancement/zauber_cauldrons_drink_all_magicol"
+            }
         },
         "title": {
             "translate": "advancement.gm4.zauber_cauldrons.drink_all_magicol.title",
@@ -22,7 +24,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"white\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"white\"}}"
+                    }
                 }
             }
         },
@@ -30,7 +34,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"light_gray\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"light_gray\"}}"
+                    }
                 }
             }
         },
@@ -38,7 +44,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"gray\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"gray\"}}"
+                    }
                 }
             }
         },
@@ -46,7 +54,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"black\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"black\"}}"
+                    }
                 }
             }
         },
@@ -54,7 +64,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"brown\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"brown\"}}"
+                    }
                 }
             }
         },
@@ -62,7 +74,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"red\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"red\"}}"
+                    }
                 }
             }
         },
@@ -70,7 +84,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"orange\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"orange\"}}"
+                    }
                 }
             }
         },
@@ -78,7 +94,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"yellow\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"yellow\"}}"
+                    }
                 }
             }
         },
@@ -86,7 +104,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"lime\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"lime\"}}"
+                    }
                 }
             }
         },
@@ -94,7 +114,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"green\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"green\"}}"
+                    }
                 }
             }
         },
@@ -102,7 +124,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"cyan\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"cyan\"}}"
+                    }
                 }
             }
         },
@@ -110,7 +134,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"light_blue\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"light_blue\"}}"
+                    }
                 }
             }
         },
@@ -118,7 +144,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"blue\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"blue\"}}"
+                    }
                 }
             }
         },
@@ -126,7 +154,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"purple\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"purple\"}}"
+                    }
                 }
             }
         },
@@ -134,7 +164,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"magenta\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"magenta\"}}"
+                    }
                 }
             }
         },
@@ -142,7 +174,9 @@
             "trigger": "minecraft:consume_item",
             "conditions": {
                 "item": {
-                    "nbt": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"pink\"}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"pink\"}}"
+                    }
                 }
             }
         }

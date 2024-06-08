@@ -7,8 +7,7 @@
         "items": [
           "minecraft:beehive",
           "minecraft:bee_nest"
-        ],
-        "nbt": "{BlockEntityTag:{Bees:[{}]}}"
+        ]
       }
     }
   }

@@ -9,4 +9,4 @@ execute if block ~ ~ ~ minecraft:chipped_anvil run function gm4_metallurgy:smoos
 execute if block ~ ~ ~ minecraft:anvil run function gm4_metallurgy:smooshing/anvil/degrade/anvil
 
 # particles
-particle minecraft:block minecraft:anvil ~0.5 ~1 ~0.5 0.2 0 0.2 0 5
+particle minecraft:block{block_state:"minecraft:anvil"} ~0.5 ~1 ~0.5 0.2 0 0.2 0 5

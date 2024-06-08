@@ -208,7 +208,7 @@
                     "max": 64
                   }
                 },
-                "biome": "minecraft:windswept_hills"
+                "biomes": "minecraft:windswept_hills"
               }
             }
           ]

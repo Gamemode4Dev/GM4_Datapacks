@@ -9,8 +9,15 @@
           "name": "minecraft:player_head",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'item/enchantment_extractor',gm4_machines:{id:\"enchantment_extractor\"},SkullOwner:{Name:\"gm4_enchantment_extractor\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$enchantment_extractor\"}]}}}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/enchantment_extractor",
+                "minecraft:profile": "$enchantment_extractor"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'enchantment_extractor'}}"
             },
             {
               "function": "set_name",

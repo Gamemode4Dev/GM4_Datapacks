@@ -26,7 +26,7 @@ execute if score @s gm4_bas_mode matches 1.. run scoreboard players operation @e
 tag @e[type=marker,tag=gm4_bas_new,distance=..2,limit=2] remove gm4_bas_new
 
 # optional checks
-execute if data storage gm4_better_armour_stands:temp {pages:["pose mirror"]} run tag @s add gm4_bas_mirror
+execute if data storage gm4_better_armour_stands:temp {pages:[{raw:"pose mirror"}]} run tag @s add gm4_bas_mirror
 execute if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:sneaking] run tag @s add gm4_bas_alt
 
 # start tracking clock

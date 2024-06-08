@@ -8,8 +8,14 @@
                     "name": "minecraft:player_head",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{gm4_metallurgy:{has_shamir:1b,metal:{type:\"barimium\",amount:[9s,3s],castable:1b},item:\"obsidian_cast\"},SkullOwner:\"$band/barimium\"}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:profile": "$band/barimium"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_metallurgy:{has_shamir:1b,metal:{type:'barimium',amount:[9s,3s],castable:1b},item:'obsidian_cast'}}"
                         },
                         {
                             "function": "minecraft:set_name",
@@ -21,6 +27,7 @@
                         },
                         {
                             "function": "minecraft:set_lore",
+                            "mode": "append",
                             "lore": [
                                 {
                                     "translate": "item.gm4.metallurgy.band",

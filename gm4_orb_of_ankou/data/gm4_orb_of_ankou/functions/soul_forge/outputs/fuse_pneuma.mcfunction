@@ -2,22 +2,23 @@
 # run from soul_forge/outputs/check_fuse
 
 # summon item
-summon item ~ ~0.2 ~ {PickupDelay:40s,Glowing:1b,Item:{id:"minecraft:firework_star",Count:1b},Tags:["gm4_oa_unset"],Motion:[0.0,0.4,0.0]}
+summon item ~ ~0.2 ~ {PickupDelay:40s,Glowing:1b,Item:{id:"minecraft:firework_star",count:1},Tags:["gm4_oa_unset"],Motion:[0.0,0.4,0.0]}
 
 # restore data of stored orb
 data modify storage gm4_orb_of_ankou:temp Item set from storage gm4_orb_of_ankou:temp ArmorItems[3]
 
 # set data of soul shard into orb of ankou
-data modify storage gm4_orb_of_ankou:temp Item.tag.display.Lore[0] set value '{"translate":"text.gm4.orb_of_ankou.pneumas","fallback":"Pneumas:","italic":false,"color":"light_purple"}'
+data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:lore"[0] set value '{"translate":"text.gm4.orb_of_ankou.pneumas","fallback":"Pneumas:","italic":false,"color":"light_purple"}'
 
-data modify storage gm4_orb_of_ankou:temp Item.tag.display.Lore append from storage gm4_orb_of_ankou:temp ArmorItems[2].tag.display.Lore[]
-data modify storage gm4_orb_of_ankou:temp Item.tag.gm4_orb_of_ankou.pneumas append from storage gm4_orb_of_ankou:temp ArmorItems[2].tag.gm4_orb_of_ankou.pneumas[]
-data modify storage gm4_orb_of_ankou:temp Item.tag.Enchantments append from storage gm4_orb_of_ankou:temp ArmorItems[2].tag.gm4_orb_of_ankou.stored_enchantments[]
-data modify storage gm4_orb_of_ankou:temp Item.tag.AttributeModifiers append from storage gm4_orb_of_ankou:temp ArmorItems[2].tag.gm4_orb_of_ankou.stored_attributes[]
+data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:lore" append from storage gm4_orb_of_ankou:temp ArmorItems[2].components."minecraft:lore"[]
+data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:custom_data".gm4_orb_of_ankou.pneumas append from storage gm4_orb_of_ankou:temp ArmorItems[2].components."minecraft:custom_data".gm4_orb_of_ankou.pneumas[]
+# TODO 1.20.5: verify that this combines the enchantments correctly
+data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:enchantments".levels merge from storage gm4_orb_of_ankou:temp ArmorItems[2].components."minecraft:custom_data".gm4_orb_of_ankou.stored_enchantments.levels
+data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:attribute_modifiers" append from storage gm4_orb_of_ankou:temp ArmorItems[2].components."minecraft:custom_data".gm4_orb_of_ankou.stored_attributes[]
 
 #custom color
-execute if score pneuma_count gm4_oa_forge matches 0 run data merge storage gm4_orb_of_ankou:temp {Item:{tag:{Explosion:{Colors:[I;]}}}}
-data modify storage gm4_orb_of_ankou:temp Item.tag.Explosion.Colors append from storage gm4_orb_of_ankou:temp ArmorItems[2].tag.gm4_orb_of_ankou.stored_color[]
+execute if score pneuma_count gm4_oa_forge matches 0 run data merge storage gm4_orb_of_ankou:temp {Item:{components:{"minecraft:firework_explosion":{shape:"small_ball",colors:[I;]}}}}
+data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:firework_explosion".colors append from storage gm4_orb_of_ankou:temp ArmorItems[2].components."minecraft:custom_data".gm4_orb_of_ankou.stored_color[]
 
 data modify entity @e[type=item,tag=gm4_oa_unset,limit=1] Item set from storage gm4_orb_of_ankou:temp Item
 data remove storage gm4_orb_of_ankou:temp Item

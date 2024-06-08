@@ -11,7 +11,7 @@
 					}
 				},
 				"block": {
-					"tag": "gm4:replaceable"
+					"blocks": "#gm4:replaceable"
 				}
 			}
 		},

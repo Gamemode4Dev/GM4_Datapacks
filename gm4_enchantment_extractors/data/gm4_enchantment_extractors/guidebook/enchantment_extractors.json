@@ -3,11 +3,11 @@
   "name": "Enchantment Extractors",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:enchanting_table"
+    "id": "minecraft:enchanting_table"
   },
   "criteria": {
     "open_custom_crafter": {
-      "trigger": "minecraft:item_used_on_block",
+      "trigger": "minecraft:default_block_use",
       "conditions": {
         "location": [
           {
@@ -17,7 +17,7 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"}],\"text\":\" \"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}'}"
               }
             }
           }
@@ -44,13 +44,15 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:\"enchantment_extractor\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"enchantment_extractor\"}}"
+            }
           }
         ]
       }
     },
     "open_enchantment_extractor": {
-      "trigger": "minecraft:item_used_on_block",
+      "trigger": "minecraft:default_block_use",
       "conditions": {
         "location": [
           {
@@ -60,7 +62,7 @@
                 "blocks": [
                   "minecraft:dropper"
                 ],
-                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\"},{\"font\":\"gm4:half_invert\",\"extra\":[{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\"},{\"font\":\"gm4:offscreen\",\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\"},{\"color\":\"white\",\"font\":\"gm4:container_gui\",\"translate\":\"gui.gm4.enchantment_extractor\",\"fallback\":\"\"},{\"font\":\"gm4:half_invert\",\"text\":\" \"},{\"font\":\"gm4:half_invert\",\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\"},{\"color\":\"#404040\",\"font\":\"gm4:default\",\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\"}],\"text\":\" \"}]}'}"
+                "nbt": "{CustomName:'{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.enchantment_extractor\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}'}"
               }
             }
           }

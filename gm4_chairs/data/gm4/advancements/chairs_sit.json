@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "poisonous_potato",
-      "nbt": "{CustomModelData:'gui/advancement/chairs_sit'}"
+      "id": "poisonous_potato",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/chairs_sit"
+      }
     },
     "title": {
       "translate": "advancement.gm4.chairs.sit.title",

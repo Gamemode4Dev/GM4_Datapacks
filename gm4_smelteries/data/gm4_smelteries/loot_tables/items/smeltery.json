@@ -9,8 +9,15 @@
           "name": "minecraft:player_head",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'item/smeltery',gm4_machines:{id:\"smeltery\"},SkullOwner:{Name:\"gm4_smeltery\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$smeltery\"}]}}}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/smeltery",
+                "minecraft:profile": "$smeltery"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'smeltery'}}"
             },
             {
               "function": "set_name",

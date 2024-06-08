@@ -9,8 +9,15 @@
           "name": "minecraft:player_head",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'item/ender_hopper',gm4_machines:{id:\"ender_hopper\"},SkullOwner:{Name:\"gm4_ender_hopper\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$ender_hopper\"}]}}}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/ender_hopper",
+                "minecraft:profile": "$ender_hopper"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'ender_hopper'}}"
             },
             {
               "function": "set_name",

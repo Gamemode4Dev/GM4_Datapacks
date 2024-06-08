@@ -3,7 +3,7 @@
   "name": "Apple Trees",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:apple"
+    "id": "minecraft:apple"
   },
   "criteria": {
     "obtain_apple_sapling": {
@@ -14,7 +14,9 @@
             "items": [
               "minecraft:oak_sapling"
             ],
-            "nbt": "{gm4_trees:{item:{type:\"apple\"}}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_trees:{item:{type:\"apple\"}}}"
+            }
           }
         ]
       }

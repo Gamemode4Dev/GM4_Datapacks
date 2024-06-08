@@ -6,7 +6,7 @@ scoreboard players add @s gm4_ta_fuel 600
 
 # remove 1 chorus fruit from the dropper
 data modify storage gm4_teleportation_anchors:data Items[] set from block ~ ~ ~ Items[{id:"minecraft:chorus_fruit"}]
-execute store result storage gm4_teleportation_anchors:data Items[0].Count byte 1 run data get storage gm4_teleportation_anchors:data Items[0].Count 0.99
+execute store result storage gm4_teleportation_anchors:data Items[0].count byte 1 run data get storage gm4_teleportation_anchors:data Items[0].count 0.99
 
-execute store result score count gm4_et_data run data get storage gm4_teleportation_anchors:data Items[0].Count
+execute store result score count gm4_et_data run data get storage gm4_teleportation_anchors:data Items[0].count
 data modify block ~ ~ ~ Items append from storage gm4_teleportation_anchors:data Items[0]

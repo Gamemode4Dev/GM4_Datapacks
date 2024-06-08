@@ -12,7 +12,7 @@ scoreboard players operation $repair gm4_lt_util < #mt_max_repair gm4_lt_util
 
 # subtract $repair from Damage
 scoreboard players operation $damage gm4_lt_util -= $repair gm4_lt_util
-execute store result block ~ ~ ~ Items[0].tag.Damage int 1 run scoreboard players get $damage gm4_lt_util
+execute store result block ~ ~ ~ Items[0].components."minecraft:damage" int 1 run scoreboard players get $damage gm4_lt_util
 
 # convert repair cost to xp_points (rounded up) and add to value
 scoreboard players remove $repair gm4_lt_util 1

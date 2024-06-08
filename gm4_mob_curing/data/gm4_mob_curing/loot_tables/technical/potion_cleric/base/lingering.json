@@ -174,7 +174,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 3,
-          "name": "gm4_lightning_in_a_bottle:items/lingering_bottle_of_lightning",
+          "value": "gm4_lightning_in_a_bottle:items/lingering_bottle_of_lightning",
           "conditions": [
             {
               "condition": "minecraft:value_check",
@@ -193,7 +193,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 3,
-          "name": "gm4_potion_liquids:lingering_floating_potion",
+          "value": "gm4_potion_liquids:lingering_floating_potion",
           "conditions": [
             {
               "condition": "minecraft:value_check",

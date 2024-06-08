@@ -1,0 +1,48 @@
+[
+    {
+      "function": "minecraft:filtered",
+      "item_filter": {
+        "items": "minecraft:lingering_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:thick"
+          }
+        }
+      },
+      "modifier": {
+        "function": "minecraft:reference",
+        "name": "gm4_lightning_in_a_bottle:lingering_bottle_of_lightning"
+      }
+    },
+    {
+      "function": "minecraft:filtered",
+      "item_filter": {
+        "items": "minecraft:splash_potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:thick"
+          }
+        }
+      },
+      "modifier": {
+        "function": "minecraft:reference",
+        "name": "gm4_lightning_in_a_bottle:splash_bottle_of_lightning"
+      }
+    },
+    {
+      "function": "minecraft:filtered",
+      "item_filter": {
+        "items": "minecraft:potion",
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:thick"
+          }
+        }
+      },
+      "modifier": {
+        "function": "minecraft:reference",
+        "name": "gm4_lightning_in_a_bottle:bottle_of_lightning"
+      }
+    }
+  ]
+  

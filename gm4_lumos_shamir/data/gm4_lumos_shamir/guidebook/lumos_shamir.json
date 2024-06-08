@@ -4,7 +4,7 @@
   "module_type": "expansion",
   "base_module": "metallurgy",
   "icon": {
-    "item": "minecraft:anvil"
+    "id": "minecraft:anvil"
   },
   "criteria": {
     "obtain_lumos_shamir": {
@@ -12,7 +12,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'lumos'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'lumos'}}"
+            }
           }
         ]
       }
@@ -22,7 +24,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'lumos'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'lumos'}}"
+            }
           }
         ]
       }

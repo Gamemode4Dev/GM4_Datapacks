@@ -11,7 +11,9 @@
           {
             "condition": "minecraft:match_tool",
             "predicate": {
-              "nbt": "{gm4_relocation_data:{}}"
+              "predicates": {
+                "minecraft:custom_data": "{gm4_relocation_data:{}}"
+              }
             }
           }
         ]
@@ -28,7 +30,9 @@
           {
             "condition": "minecraft:match_tool",
             "predicate": {
-              "nbt": "{gm4_relocation_data:{}}"
+              "predicates": {
+                "minecraft:custom_data": "{gm4_relocation_data:{}}"
+              }
             }
           }
         ]

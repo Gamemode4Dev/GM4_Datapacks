@@ -4,7 +4,7 @@
 # run from armor/check_modifier/equip
 
 # get armor slot and player id
-execute store result score $slot gm4_ce_data run data get storage gm4_combat_expanded:temp tag.gm4_combat_expanded.slot
+execute store result score $slot gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.slot
 scoreboard players operation $curr_id gm4_ce_id = @s gm4_ce_id
 
 # mark 1 matching wolf as checked

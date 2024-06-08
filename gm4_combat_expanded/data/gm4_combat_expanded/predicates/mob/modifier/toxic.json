@@ -7,32 +7,14 @@
     }
   },
   {
-    "condition": "minecraft:any_of",
-    "terms": [
-      {
-        "condition": "minecraft:location_check",
-        "predicate": {
-          "biome": "minecraft:swamp"
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "predicate": {
-          "biome": "minecraft:mangrove_swamp"
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "predicate": {
-          "biome": "minecraft:jungle"
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "predicate": {
-          "biome": "minecraft:bamboo_jungle"
-        }
-      }
-    ]
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biomes": [
+        "minecraft:swamp",
+        "minecraft:mangrove_swamp",
+        "minecraft:jungle",
+        "minecraft:bamboo_jungle"
+      ]
+    }
   }
 ]

@@ -11,10 +11,10 @@ data modify storage gm4_combat_expanded:temp Items set from block 29999998 1 713
 data remove block 29999998 1 7134 Items
 
 scoreboard players set $spark_pieces gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded{modifier:spark} run scoreboard players add $spark_pieces gm4_ce_data 1
-execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded{modifier:spark} run scoreboard players add $spark_pieces gm4_ce_data 1
-execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded{modifier:spark} run scoreboard players add $spark_pieces gm4_ce_data 1
-execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded{modifier:spark} run scoreboard players add $spark_pieces gm4_ce_data 1
+execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:spark} run scoreboard players add $spark_pieces gm4_ce_data 1
+execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:spark} run scoreboard players add $spark_pieces gm4_ce_data 1
+execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:spark} run scoreboard players add $spark_pieces gm4_ce_data 1
+execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:spark} run scoreboard players add $spark_pieces gm4_ce_data 1
 
 tag @s add gm4_ce_self
 execute on attacker run scoreboard players operation @s[tag=!gm4_ce_self] gm4_ce_lightning_charge += $spark_pieces gm4_ce_data

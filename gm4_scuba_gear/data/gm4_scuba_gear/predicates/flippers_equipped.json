@@ -7,7 +7,9 @@
         "items": [
           "minecraft:leather_boots"
         ],
-        "nbt": "{gm4_scuba_gear:{item:\"flippers\"}}"
+        "predicates": {
+          "minecraft:custom_data": "{gm4_scuba_gear:{item:\"flippers\"}}"
+        }
       }
     }
   }

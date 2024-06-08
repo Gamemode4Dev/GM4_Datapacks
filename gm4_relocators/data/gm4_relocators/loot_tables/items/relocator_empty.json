@@ -9,8 +9,15 @@
           "name": "minecraft:player_head",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'item/relocator_empty',gm4_machines:{id:\"relocator_empty\"},SkullOwner:{Name:\"gm4_relocator_empty\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$relocator_empty\"}]}}}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/relocator_empty",
+                "minecraft:profile": "$relocator_empty"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'relocator_empty'}}"
             },
             {
               "function": "set_name",

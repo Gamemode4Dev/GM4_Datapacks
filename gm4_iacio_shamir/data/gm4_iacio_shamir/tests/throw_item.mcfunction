@@ -3,19 +3,18 @@
 
 execute at @s run tp @s ~ ~ ~ 270 0
 
-give @s iron_ingot
+item replace entity @s weapon.mainhand with minecraft:iron_ingot
 await delay 1t
 dummy @s drop
 
-await entity @e[type=item,dx=12,dy=2,dz=2,distance=3..5,nbt={OnGround:1b,Item:{id:"minecraft:iron_ingot"}}]
+await items entity @e[type=item,dx=12,dy=2,dz=2,distance=3..5,nbt={OnGround:1b}] contents minecraft:iron_ingot
 
-give @s iron_chestplate{gm4_metallurgy:{has_shamir:1b,active_shamir:"iacio"}}
-dummy @s use item
+item replace entity @s armor.chest with minecraft:iron_chestplate[custom_data={gm4_metallurgy:{has_shamir:1b,active_shamir:"iacio"}}]
 
 await delay 1t
 
-give @s gold_ingot
+item replace entity @s weapon.mainhand with minecraft:gold_ingot
 await delay 1t
 dummy @s drop
 
-await entity @e[type=item,dx=12,dy=2,dz=2,distance=6..,nbt={OnGround:1b,Item:{id:"minecraft:gold_ingot"}}]
+await items entity @e[type=item,dx=12,dy=2,dz=2,distance=6..,nbt={OnGround:1b}] contents minecraft:gold_ingot

@@ -5,7 +5,8 @@
 
 # create array of all enchantments with levels
 scoreboard players set $enchantments_max gm4_bookshelf_inspector_data 4
-data modify storage gm4_bookshelf_inspector:temp enchantments set from storage gm4_bookshelf_inspector:temp book_data.tag.StoredEnchantments
+data modify storage gm4_bookshelf_inspector:temp levels set from storage gm4_bookshelf_inspector:temp book_data.components."minecraft:stored_enchantments".levels
+function gm4_bookshelf_inspector:process_display/spawn/components_to_list
 data modify storage gm4_bookshelf_inspector:store enchantment_list set value []
 function gm4_bookshelf_inspector:process_display/spawn/process_enchantments
 
@@ -14,3 +15,4 @@ data modify storage gm4_bookshelf_inspector:temp text append value '{"nbt":"ench
 
 # cleanup
 data remove storage gm4_bookshelf_inspector:temp enchantments
+data remove storage gm4_bookshelf_inspector:temp levels

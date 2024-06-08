@@ -6,8 +6,8 @@
 data modify storage gm4_tinker_shamir:temp/player/inventory Inventory set from entity @s Inventory
 
 # check for compacting operations
-execute if data storage gm4_tinker_shamir:temp/player/inventory Inventory[{id:"minecraft:melon_slice",Count:64b}] run function gm4_tinker_shamir:compact/melon_slice
-execute unless score $success gm4_ml_data matches 1.. if data storage gm4_tinker_shamir:temp/player/inventory Inventory[{id:"minecraft:wheat",Count:64b}] run function gm4_tinker_shamir:compact/wheat
+execute if data storage gm4_tinker_shamir:temp/player/inventory Inventory[{id:"minecraft:melon_slice",count:64}] run function gm4_tinker_shamir:compact/melon_slice
+execute unless score $success gm4_ml_data matches 1.. if data storage gm4_tinker_shamir:temp/player/inventory Inventory[{id:"minecraft:wheat",count:64}] run function gm4_tinker_shamir:compact/wheat
 
 # clear storage
 data remove storage gm4_tinker_shamir:temp/player/inventory Inventory

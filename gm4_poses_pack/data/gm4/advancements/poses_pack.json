@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "armor_stand",
-      "nbt": "{CustomModelData:'gui/advancement/poses_pack'}"
+      "id": "armor_stand",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/poses_pack"
+      }
     },
     "title": {
       "translate": "advancement.gm4.poses_pack.title",

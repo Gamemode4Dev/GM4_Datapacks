@@ -1,6 +1,6 @@
 id: gm4_ziprails
 name: Ziprails
-version: 1.3.X
+version: 1.4.X
 
 data_pack:
   load: .
@@ -21,6 +21,12 @@ meta:
       recommended:
         - gm4_vertical_rails
       notes: []
+    modrinth:
+      project_id: EpgLRkLf
+    smithed:
+      pack_id: gm4_ziprails
+    planetminecraft: 
+      uid: 4298467
     video: https://www.youtube.com/watch?v=QA7a5q2kVcg
     wiki: https://wiki.gm4.co/wiki/Ziprails
     credits:
@@ -30,9 +36,3 @@ meta:
         - Bloo
       Icon Design:
         - DuckJr
-  modrinth:
-    project_id: EpgLRkLf
-  smithed:
-    pack_id: gm4_ziprails
-  planetminecraft: 
-    uid: 4298467

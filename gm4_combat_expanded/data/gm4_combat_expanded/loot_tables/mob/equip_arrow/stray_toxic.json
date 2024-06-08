@@ -8,11 +8,43 @@
           "name": "minecraft:tipped_arrow",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{custom_potion_effects:[{id:\"minecraft:weakness\",amplifier:0b,duration:100,show_particles:1b,show_icon:1b,ambient:0b},{id:\"minecraft:poison\",amplifier:1b,duration:100,show_particles:1b,show_icon:1b,ambient:0b},{id:\"minecraft:slowness\",amplifier:0b,duration:600,show_particles:1b,show_icon:1b,ambient:0b}],CustomPotionColor:8889187,HideFlags:32}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 8889187,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:weakness",
+                      "amplifier": 0,
+                      "duration": 100,
+                      "show_particles": true,
+                      "show_icon": true,
+                      "ambient": false
+                    },
+                    {
+                      "id": "minecraft:poison",
+                      "amplifier": 1,
+                      "duration": 100,
+                      "show_particles": true,
+                      "show_icon": true,
+                      "ambient": false
+                    },
+                    {
+                      "id": "minecraft:slowness",
+                      "amplifier": 0,
+                      "duration": 600,
+                      "show_particles": true,
+                      "show_icon": true,
+                      "ambient": false
+                    }
+                  ]
+                },
+                "minecraft:hide_additional_tooltip": {}
+              }
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "lore": [
                 {
                   "translate": "potion.withDuration",

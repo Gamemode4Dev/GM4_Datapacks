@@ -1,9 +1,12 @@
 id: gm4_bookshelf_inspector
 name: Bookshelf Inspector
-version: 1.1.X
+version: 1.2.X
 
 data_pack:
   load: .
+
+require:
+  - bolt
 
 pipeline:
   - gm4.plugins.extend.module
@@ -15,14 +18,13 @@ meta:
     website:
       description: See what's in your Chiseled Bookshelves without having to take all the books out!
       recommended: []
-      notes: 
-      - Requires version 1.20.2+
+      notes: []
+    modrinth:
+      project_id: hI6pAf86
+    smithed:
+      pack_id: gm4_bookshelf_inspector
     video: null
     wiki: https://wiki.gm4.co/wiki/Bookshelf_Inspector
     credits:
       Creator:
         - Thanathor
-  modrinth:
-    project_id: hI6pAf86
-  smithed:
-    pack_id: gm4_bookshelf_inspector

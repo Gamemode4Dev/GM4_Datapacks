@@ -11,7 +11,7 @@
               "minecraft:grass_block"
             ],
             "state": {
-              "snowy": true
+              "snowy": "true"
             }
           }
         }
@@ -23,7 +23,7 @@
       "predicate": {
         "stepping_on": {
           "block": {
-            "tag": "gm4_mountaineering:snowy_blocks"
+            "blocks": "#gm4_mountaineering:snowy_blocks"
           }
         }
       }

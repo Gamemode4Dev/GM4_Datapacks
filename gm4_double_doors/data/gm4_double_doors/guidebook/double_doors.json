@@ -3,7 +3,7 @@
   "name": "Double Doors",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:acacia_door"
+    "id": "minecraft:acacia_door"
   },
   "criteria": {
     "obtain_door": {

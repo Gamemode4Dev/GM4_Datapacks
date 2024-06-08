@@ -11,10 +11,10 @@ data modify storage gm4_combat_expanded:temp Items set from block 29999998 1 713
 data remove block 29999998 1 7134 Items
 
 scoreboard players set $burn_pieces gm4_ce_data 0
-execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].tag.gm4_combat_expanded{modifier:36} run scoreboard players add $burn_pieces gm4_ce_data 1
-execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].tag.gm4_combat_expanded{modifier:36} run scoreboard players add $burn_pieces gm4_ce_data 1
-execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].tag.gm4_combat_expanded{modifier:36} run scoreboard players add $burn_pieces gm4_ce_data 1
-execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].tag.gm4_combat_expanded{modifier:36} run scoreboard players add $burn_pieces gm4_ce_data 1
+execute if data storage gm4_combat_expanded:temp Items[{Slot:0b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:36} run scoreboard players add $burn_pieces gm4_ce_data 1
+execute if data storage gm4_combat_expanded:temp Items[{Slot:1b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:36} run scoreboard players add $burn_pieces gm4_ce_data 1
+execute if data storage gm4_combat_expanded:temp Items[{Slot:2b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:36} run scoreboard players add $burn_pieces gm4_ce_data 1
+execute if data storage gm4_combat_expanded:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_combat_expanded{modifier:36} run scoreboard players add $burn_pieces gm4_ce_data 1
 
 scoreboard players operation @s gm4_ce_burning.level += $burn_pieces gm4_ce_data
 scoreboard players set @s[scores={gm4_ce_burning.level=9..}] gm4_ce_burning.level 8

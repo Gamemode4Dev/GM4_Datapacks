@@ -3,7 +3,7 @@
 # run from book/ray_arms
 
 # get book data
-data modify storage gm4_better_armour_stands:temp pages set from entity @a[tag=gm4_bas_active,limit=1] SelectedItem.tag.pages
+data modify storage gm4_better_armour_stands:temp pages set from entity @a[tag=gm4_bas_active,limit=1] SelectedItem.components."minecraft:writable_book_content".pages
 
 # apply to armor_stand
 function #gm4_better_armour_stands:apply_book

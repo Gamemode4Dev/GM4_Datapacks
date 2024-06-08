@@ -19,6 +19,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -38,8 +39,15 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_metallurgy:{metal:{type:\"thorium\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:'item/lump/thorianite',SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/thorium/v0\",Properties:{textures:[{Value:\"$ore/thorium\"}]}}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/lump/thorianite",
+                "minecraft:profile": "$ore/thorium"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_metallurgy:{metal:{type:'thorium',amount:[1s],castable:1b},item:'ore'}}"
             }
           ]
         }

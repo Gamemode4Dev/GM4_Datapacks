@@ -9,8 +9,15 @@
                     "name": "minecraft:stick",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'item/poles',gm4_mountaineering:{item:\"poles\"},HideFlags:2}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/poles",
+                                "minecraft:max_stack_size": 1
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_mountaineering:{item:'poles'}}"
                         },
                         {
                             "function": "minecraft:set_name",
@@ -19,18 +26,6 @@
                                 "fallback": "Ski Pole",
                                 "italic": false
                             }
-                        },
-                        {
-                            "function": "minecraft:set_attributes",
-                            "modifiers": [
-                                {
-                                    "attribute": "minecraft:horse.jump_strength",
-                                    "name": "gm4_unstackable",
-                                    "amount": 1,
-                                    "operation": "addition",
-                                    "slot": "legs"
-                                }
-                            ]
                         }
                     ]
                 }

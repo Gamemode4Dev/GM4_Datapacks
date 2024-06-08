@@ -3,7 +3,7 @@
   "name": "Tunnel Bores",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:piston"
+    "id": "minecraft:piston"
   },
   "criteria": {
     "obtain_minecart": {
@@ -38,7 +38,9 @@
             "items": [
               "minecraft:furnace_minecart"
             ],
-            "nbt": "{gm4_machines:{id:\"tunnel_bore\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"tunnel_bore\"}}"
+            }
           }
         ]
       }

@@ -7,12 +7,9 @@
         "items": [
           "minecraft:armor_stand"
         ],
-        "enchantments": [
-          {
-            "enchantment": "minecraft:protection",
-            "levels": 0
-          }
-        ]
+        "components": {
+          "minecraft:enchantment_glint_override": true
+        }
       }
     }
   }

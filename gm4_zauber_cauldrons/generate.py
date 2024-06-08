@@ -3,6 +3,7 @@ from pathlib import Path
 from itertools import product
 from gm4.utils import CSV, CSVCell
 import json
+import nbtlib # type: ignore
 
 from beet import Context, Model, subproject
 
@@ -172,7 +173,7 @@ def generate_potion_recipes(ctx: Context, potion_effects: CSV, potion_bottles: C
                     "effect": effect_data['effect'],
                     "effect_translate_name": effect_data['effect_translate_name'],
                     "custom_potion_color": effect_data['custom_potion_color'].to_color_code(CSVCell.DEC),
-                    "custom_potion_effects": effect_data['custom_potion_effects'],
+                    "custom_potion_effects": json.dumps(nbtlib.parse_nbt(effect_data['custom_potion_effects']).unpack(json=True)), # type: ignore
                     "bottle_item_id": bottle_data['item_id'],
                     "bottle": bottle_data['bottle'],
                     "soulution_translate_fallback": bottle_data["soulution_translate_fallback_prefix"] + effect_data['soulution_translate_fallback'],

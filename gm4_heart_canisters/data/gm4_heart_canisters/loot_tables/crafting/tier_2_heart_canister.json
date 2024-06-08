@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_heart_canisters:items/tier_2_heart_canister",
+          "value": "gm4_heart_canisters:items/tier_2_heart_canister",
           "functions": [
             {
               "function": "minecraft:set_count",

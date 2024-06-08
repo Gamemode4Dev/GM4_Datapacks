@@ -1,6 +1,6 @@
 id: gm4_enderman_support_class
 name: Enderman Support Class
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -21,6 +21,8 @@ meta:
       recommended:
         - gm4_bat_grenades
       notes: []
+    planetminecraft:
+      uid: 4297148
     video: https://www.youtube.com/watch?v=2hWZ4OKUaqI
     wiki: https://wiki.gm4.co/wiki/Enderman_Support_Class
     credits:
@@ -28,5 +30,3 @@ meta:
         - Sparks
       Icon Design:
         - DuckJr
-  planetminecraft:
-    uid: 4297148

@@ -6,37 +6,38 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/base",
+          "value": "gm4_combat_expanded:armor/identification/base",
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.attack_damage",
                   "name": "gm4_combat_expanded",
                   "amount": 0,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
                   "name": "gm4_combat_expanded_2",
                   "amount": 0,
-                  "operation": "multiply_base",
+                  "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.movement_speed",
                   "name": "gm4_combat_expanded_3",
                   "amount": 0,
-                  "operation": "multiply_base",
+                  "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.knockback_resistance",
                   "name": "gm4_combat_expanded_4",
                   "amount": 0,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 },
                 {
@@ -50,72 +51,14 @@
                     },
                     "score": "gm4_ce_data"
                   },
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 }
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:44,active:0}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "damage",
-                  "target": "gm4_combat_expanded.level",
-                  "op": "replace"
-                },
-                {
-                  "source": "atkspeed",
-                  "target": "gm4_combat_expanded.level2",
-                  "op": "replace"
-                },
-                {
-                  "source": "speed",
-                  "target": "gm4_combat_expanded.level3",
-                  "op": "replace"
-                }
-              ]
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_2\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_3\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_4\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
-                  "op": "replace"
-                }
-              ]
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_combat_expanded:{modifier:44,active:0,level:'damage',level2:'atkspeed',level3:'speed'}}"
             }
           ]
         }
@@ -123,12 +66,14 @@
       "functions": [
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "lore": [
             ""
           ]
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "lore": [
             {
               "translate": "item.gm4.combat_expanded.lore.low_hp",
@@ -140,6 +85,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -192,6 +138,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -232,6 +179,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -256,6 +204,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -280,6 +229,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -302,18 +252,18 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.berserk",
               "fallback": "Berserkers %s",
               "with": [
                 {
-                  "nbt": "tag.gm4_combat_expanded.name",
+                  "nbt": "components.'minecraft:custom_data'.gm4_combat_expanded.name",
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false
+              ]
             }
           ]
         }

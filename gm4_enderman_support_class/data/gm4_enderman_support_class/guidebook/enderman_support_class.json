@@ -3,8 +3,10 @@
   "name": "Enderman Support Class",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:player_head",
-    "nbt": "{SkullOwner:\"MHF_Enderman\"}"
+    "id": "minecraft:player_head",
+    "components": {
+      "minecraft:profile": "MHF_Enderman"
+    }
   },
   "criteria": {
     "encounter_enderman": {

@@ -6,10 +6,11 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_combat_expanded:armor/identification/base",
+          "value": "gm4_combat_expanded:armor/identification/base",
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.armor",
@@ -22,66 +23,28 @@
                     },
                     "score": "gm4_ce_data"
                   },
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
                   "name": "gm4_combat_expanded",
                   "amount": 0,
-                  "operation": "multiply_base",
+                  "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.movement_speed",
                   "name": "gm4_combat_expanded_2",
                   "amount": 0,
-                  "operation": "multiply_base",
+                  "operation": "add_multiplied_base",
                   "slot": "chest"
                 }
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_combat_expanded:{modifier:78,stored_armor:-1}}"
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_ce_perm\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded\"}].Slot",
-                  "op": "replace"
-                },
-                {
-                  "source": "tag.AttributeModifiers[{Name:\"generic.armor\"}].Slot",
-                  "target": "AttributeModifiers[{Name:\"gm4_combat_expanded_2\"}].Slot",
-                  "op": "replace"
-                }
-              ]
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_combat_expanded:temp"
-              },
-              "ops": [
-                {
-                  "source": "damage",
-                  "target": "gm4_combat_expanded.level",
-                  "op": "replace"
-                }
-              ]
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_combat_expanded:{modifier:78,stored_armor:-1,level:'damage'}}"
             }
           ]
         }
@@ -89,12 +52,14 @@
       "functions": [
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "lore": [
             ""
           ]
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "lore": [
             {
               "translate": "item.gm4.combat_expanded.lore.equip",
@@ -106,6 +71,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -150,6 +116,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -194,6 +161,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -238,6 +206,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -282,6 +251,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -326,6 +296,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -370,6 +341,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -414,6 +386,7 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
@@ -459,18 +432,18 @@
         {
           "function": "minecraft:set_name",
           "entity": "this",
+          "target": "item_name",
           "name": [
             {
               "translate": "item.gm4.combat_expanded.name.unburden",
               "fallback": "Lightweight %s",
               "with": [
                 {
-                  "nbt": "tag.gm4_combat_expanded.name",
+                  "nbt": "components.'minecraft:custom_data'.gm4_combat_expanded.name",
                   "storage": "gm4_combat_expanded:temp",
                   "interpret": true
                 }
-              ],
-              "italic": false
+              ]
             }
           ]
         }

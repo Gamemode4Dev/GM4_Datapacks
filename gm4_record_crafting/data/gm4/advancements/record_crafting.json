@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "music_disc_13",
-      "nbt": "{CustomModelData:'gui/advancement/record_crafting'}"
+      "id": "music_disc_13",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/record_crafting"
+      }
     },
     "title": {
       "translate": "advancement.gm4.record_crafting.title",

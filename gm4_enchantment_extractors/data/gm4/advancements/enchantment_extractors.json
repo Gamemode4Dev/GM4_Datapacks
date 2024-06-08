@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "enchanting_table",
-      "nbt": "{CustomModelData:'gui/advancement/enchantment_extractors'}"
+      "id": "enchanting_table",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/enchantment_extractors"
+      }
     },
     "title": {
       "translate": "advancement.gm4.enchantment_extractors.title",
@@ -24,7 +26,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:\"enchantment_extractor\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"enchantment_extractor\"}}"
+            }
           }
         ]
       }

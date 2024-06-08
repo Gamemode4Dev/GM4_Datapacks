@@ -3,7 +3,7 @@
   "name": "Mountaineering",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:chainmail_boots"
+    "id": "minecraft:chainmail_boots"
   },
   "criteria": {
     "obtain_iron_ingot": {
@@ -26,7 +26,9 @@
             "items": [
               "minecraft:chainmail_boots"
             ],
-            "nbt": "{gm4_mountaineering:{item:\"crampons\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_mountaineering:{item:\"crampons\"}}"
+            }
           }
         ]
       }
@@ -39,7 +41,9 @@
             "items": [
               "minecraft:iron_boots"
             ],
-            "nbt": "{gm4_mountaineering:{item:\"skis\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_mountaineering:{item:\"skis\"}}"
+            }
           }
         ]
       }
@@ -52,7 +56,9 @@
             "items": [
               "minecraft:stick"
             ],
-            "nbt": "{gm4_mountaineering:{item:\"poles\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_mountaineering:{item:\"poles\"}}"
+            }
           }
         ]
       }

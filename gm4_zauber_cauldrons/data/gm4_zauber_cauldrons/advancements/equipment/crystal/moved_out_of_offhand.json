@@ -9,7 +9,9 @@
                         "items": [
                             "minecraft:firework_star"
                         ],
-                        "nbt": "{gm4_zauber_cauldrons:{item:\"crystal\"}}"
+                        "predicates": {
+                          "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"crystal\"}}"
+                        }
                     }
                 ]
             }

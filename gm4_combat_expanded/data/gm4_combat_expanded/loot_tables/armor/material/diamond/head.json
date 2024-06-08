@@ -10,21 +10,22 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
                   "id": "2AD3F246-FEE1-4E67-B886-69FD380BB150",
                   "amount": 3,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "head"
                 },
                 {
                   "attribute": "generic.armor_toughness",
                   "name": "generic.armor_toughness",
-                  "id": "2AD3F246-FEE1-4E67-B886-69FD380BB150",
+                  "id": "2AD3F246-FEE1-4E67-B886-69FD380BB154",
                   "amount": 2,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "head"
                 },
                 {
@@ -32,13 +33,14 @@
                   "name": "generic.knockback_resistance",
                   "id": "0-1-438d-0-28d34",
                   "amount": 0,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "head"
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 {
@@ -57,7 +59,7 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
+              "function": "minecraft:set_custom_data",
               "tag": "{gm4_combat_expanded:{durability:363,identified:0,armor_clamp:-3,slot:0,material:5,name:'{\"italic\":false,\"translate\":\"item.minecraft.diamond_helmet\"}'}}"
             },
             {

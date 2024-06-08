@@ -10,19 +10,21 @@
           "functions": [
             {
               "function": "minecraft:set_attributes",
+              "replace": false,
               "modifiers": [
                 {
                   "attribute": "generic.armor",
                   "name": "generic.armor",
                   "id": "2AD3F246-FEE1-4E67-B886-69FD380BB150",
                   "amount": 2,
-                  "operation": "addition",
+                  "operation": "add_value",
                   "slot": "head"
                 }
               ]
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 {
@@ -41,7 +43,7 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
+              "function": "minecraft:set_custom_data",
               "tag": "{gm4_combat_expanded:{durability:165,identified:0,armor_clamp:-2,slot:0,material:3,name:'{\"italic\":false,\"translate\":\"item.minecraft.iron_helmet\"}'}}"
             },
             {

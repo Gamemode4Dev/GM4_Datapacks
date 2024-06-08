@@ -4,7 +4,7 @@
   "module_type": "expansion",
   "base_module": "liquid_tanks",
   "icon": {
-    "item": "minecraft:leather_leggings"
+    "id": "minecraft:leather_leggings"
   },
   "criteria": {
     "obtain_liquid_tank": {
@@ -15,7 +15,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:\"liquid_tank\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"liquid_tank\"}}"
+            }
           }
         ]
       }
