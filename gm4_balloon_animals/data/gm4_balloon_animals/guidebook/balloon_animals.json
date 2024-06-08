@@ -3,7 +3,7 @@
   "name": "Balloon Animals",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:lead"
+    "id": "minecraft:lead"
   },
   "criteria": {
     "interact_trader": {

@@ -33,9 +33,15 @@ from beet.core.utils import format_validation_error
 from mecha import (
     AstChildren,
     AstCommand,
+    AstItemComponent,
+    AstItemPredicateTestComponent,
     AstJson,
     AstJsonObject,
+    AstJsonObjectEntry,
+    AstJsonObjectKey,
+    AstJsonValue,
     AstNbtCompoundEntry,
+    AstNbtCompoundKey,
     AstNbtPath,
     AstNbtPathKey,
     AstNbtValue,
@@ -408,7 +414,7 @@ def link_resource_pack(ctx: Context):
     lm.data_pack = dp_dir # restore the DP link
 
 class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
-    """Service Object handling CustomModelData and generated item models"""
+    """Service Object handling custom_model_data and generated item models"""
 
     def __init__(self, ctx: Context):
         self.ctx = ctx
@@ -444,7 +450,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                     reg = item_registry.setdefault(item_id, {})
                     used_idxs = {k: reg[k] for k in reg.keys() - {m.reference}}.values()
                     if i in used_idxs:
-                        self.logger.warning(f"Failed to share existing CustomModelData for '{m.reference}' to '{item_id}'. A new value will be assigned for this reference; existing items may lose their texture!")
+                        self.logger.warning(f"Failed to share existing custom_model_data for '{m.reference}' to '{item_id}'. A new value will be assigned for this reference; existing items may lose their texture!")
                         conflicts = True
                 if not conflicts: # existing CMD is available to apply to any new items
                     for item_id in [e for e in m.item.entries() if m.reference not in item_registry.get(e, {})]:
@@ -459,11 +465,11 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
         for item_id, reg in item_registry.items():
             for ref in list(reg.keys()):
                 if ref.startswith(self.ctx.project_id) and ref not in all_refs and self.ctx.project_id != 'gm4':
-                    self.logger.info(f"Removing undefined CustomModelData from {item_id} registry: '{ref}'")
+                    self.logger.info(f"Removing undefined custom_model_data from {item_id} registry: '{ref}'")
                     del reg[ref]
 
     def generate_model_overrides(self):
-        """Generates item model overrides in the 'minecraft' namespace, adding predicates for CustomModelData"""
+        """Generates item model overrides in the 'minecraft' namespace, adding predicates for custom_model_data"""
         vanilla = self.ctx.inject(Vanilla)
         vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
         # group models by item id
@@ -522,40 +528,60 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             raise RuntimeError("Ran out of CMD values to assign!")
         
         i = min(available_indices)
-        self.logger.info(f"Issuing new CustomModelData for '{reference}': {i}")
+        self.logger.info(f"Issuing new custom_model_data for '{reference}': {i}")
         for item_id in item_ids:
             self.set_index(item_id, i, reference)
     
     def set_index(self, item_id: str, index: int, reference: str):
         """sets the given cmd index on the item"""
         if os.getenv("GITHUB_ACTIONS"):
-            self.logger.error(f"Model-Data cache is outdated. Github Actions cannot issue CustomModelData. Run the build locally and commit changes to modeldata_registry.json")
+            self.logger.error(f"Model-Data cache is outdated. Github Actions cannot issue custom_model_data. Run the build locally and commit changes to modeldata_registry.json")
             sys.exit(1) # stop the build and mark the github action as failed
 
         self.registry.setdefault("items", {}).setdefault(item_id, {})[reference] = index
-        self.logger.info(f"Issuing CustomModelData {index} for {item_id}")
+        self.logger.info(f"Issuing custom_model_data {index} for {item_id}")
+
 
     #== Mecha Transformer Rules ==#
-    @rule(AstNbtCompoundEntry)
-    def cmd_substitutions(self, node: AstNbtCompoundEntry, **kwargs: Any):
-        if node.key.value == "CustomModelData":
-            match node.value.evaluate():
-                case String(reference):
-                    index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
-                    if exc:
-                        yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
-                    node = replace(node, value=AstNbtValue.from_value(index+self.cmd_prefix))
-                case _:
-                    pass
+    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value="minecraft:custom_model_data"))
+    def json_substitutions(self, node: AstJsonObjectEntry, **kwargs: Any):
+        reference = node.value.evaluate()
+        if isinstance(reference, str):
+            index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
+            if exc:
+                yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
+            node = replace(node, value=AstJsonValue.from_value(index+self.cmd_prefix))
+        return node
+
+    @rule(AstNbtCompoundEntry, key=AstNbtCompoundKey(value="minecraft:custom_model_data"))
+    def cmd_substitutions_nbt(self, node: AstNbtCompoundEntry, **kwargs: Any):
+        reference = node.value.evaluate()
+        if isinstance(reference, str):
+            index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
+            if exc:
+                yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
+            node = replace(node, value=AstNbtValue.from_value(index+self.cmd_prefix))
+        return node
+
+    @rule(AstItemComponent)
+    @rule(AstItemPredicateTestComponent)
+    def cmd_substitutions_component(self, node: AstItemComponent | AstItemPredicateTestComponent, **kwargs: Any):
+        if node.value and node.key.get_canonical_value() == "minecraft:custom_model_data":
+            reference = node.value.evaluate()
+            if isinstance(reference, str):
+                index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
+                if exc:
+                    yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
+                node = replace(node, value=AstNbtValue.from_value(index+self.cmd_prefix))
         return node
 
     @rule(AstCommand, identifier="data:modify:storage:target:targetPath:set:value:value")
     @rule(AstCommand, identifier="data:modify:block:targetPos:targetPath:set:value:value")
     @rule(AstCommand, identifier="data:modify:entity:target:targetPath:set:value:value")
-    def cmd_subs_datamodify(self, node: AstCommand):
+    def cmd_substitutions_datamodify(self, node: AstCommand):
         ast_target, ast_target_path, ast_nbt = node.arguments
         match ast_target_path, ast_nbt.evaluate(): # type: ignore ; ast_nbt is AstNbtValue|AstNbtCompound, which do have .evaluate() methods
-            case AstNbtPath(components=[*_, AstNbtPathKey(value="CustomModelData")]), String(reference):
+            case AstNbtPath(components=[*_, AstNbtPathKey(value="minecraft:custom_model_data")]), String(reference):
                 index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
                 if exc:
                     d = Diagnostic("error", str(exc))
@@ -567,6 +593,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     #== Non-mecha CMD filling ==#
     def process_optifine(self):
         """Handles string references in the .properties files of Optifine"""
+        # TODO 1.20.5: figure out how to do this
         pattern = re.compile(r"^nbt.CustomModelData=(?:regex:\()?(.+?)\)?$", re.MULTILINE)
         for name, propfile in self.ctx.assets[OptifineProperties].items():
             match = pattern.search(propfile.text)

@@ -11,4 +11,4 @@ execute align xyz positioned ~.5 ~.5 ~.5 unless entity @e[type=marker,tag=gm4_sh
 execute align xyz positioned ~.5 ~.5 ~.5 run scoreboard players set @e[type=marker,tag=gm4_shroomite_shroom,distance=..0.1] gm4_entity_version 1
 
 # particles
-particle minecraft:block brown_mushroom ~ ~ ~ 0.1 0.1 0.1 1 10
+particle minecraft:block{block_state:"minecraft:brown_mushroom"} ~ ~ ~ 0.1 0.1 0.1 1 10

@@ -76,6 +76,7 @@ scoreboard objectives add gm4_ce_burning.level dummy
 scoreboard objectives add gm4_ce_burning.duration dummy
 scoreboard objectives add gm4_ce_armor armor
 scoreboard objectives add gm4_ce_horse.speed_level dummy
+scoreboard objectives add gm4_ce_husk_pieces dummy
 
 scoreboard objectives add gm4_ce_boss dummy
 scoreboard objectives add gm4_ce_boss.id dummy
@@ -88,7 +89,6 @@ scoreboard objectives add gm4_ce_boss.last_attack dummy
 scoreboard objectives add gm4_ce_boss.secondary_id dummy
 
 scoreboard objectives add gm4_ce_keep_tick dummy
-scoreboard players reset * gm4_ce_keep_tick
 
 # mob caps
 execute unless score $mob_limit.husk_army gm4_ce_data matches -2147483648..2147483647 run scoreboard players set $mob_limit.husk_army gm4_ce_data 128

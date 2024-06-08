@@ -3,7 +3,7 @@
   "name": "Podzol Rooting Soil",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:spruce_sapling"
+    "id": "minecraft:spruce_sapling"
   },
   "criteria": {
     "obtain_sapling": {

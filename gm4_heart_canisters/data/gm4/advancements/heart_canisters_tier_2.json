@@ -1,8 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "player_head",
-      "nbt": "{CustomModelData:'gui/advancement/heart_canisters_tier_2',SkullOwner:'$heart_canister_tier_2'}"
+      "id": "player_head",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/heart_canisters_tier_2",
+        "minecraft:profile": "$heart_canister_tier_2"
+      }
     },
     "title": {
       "translate": "advancement.gm4.heart_canisters.tier_2.title",
@@ -24,7 +27,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_heart_canister_tier:2b}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_heart_canister_tier:2b}"
+            }
           }
         ]
       }

@@ -9,8 +9,15 @@
           "name": "minecraft:player_head",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'gm4_custom_crafters:item/custom_crafter',gm4_machines:{id:\"custom_crafter\"},SkullOwner:{Name:\"gm4_custom_crafter\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$gm4_custom_crafters:custom_crafter\"}]}}}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "gm4_custom_crafters:item/custom_crafter",
+                "minecraft:profile": "$gm4_custom_crafters:custom_crafter"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_machines:{id:'custom_crafter'}}"
             },
             {
               "function": "set_name",

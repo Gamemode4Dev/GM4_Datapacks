@@ -1,8 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "player_head",
-      "nbt": "{CustomModelData:'gui/advancement/tinkering_compressors',SkullOwner:\"$gm4_metallurgy:band/curies_bismium\"}"
+      "id": "player_head",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/tinkering_compressors",
+        "minecraft:profile": "$gm4_metallurgy:band/curies_bismium"
+      }
     },
     "title": {
       "translate": "advancement.gm4.tinkering_compressors.title",
@@ -24,7 +27,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_machines:{id:\"tinkering_compressor\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"tinkering_compressor\"}}"
+            }
           }
         ]
       }

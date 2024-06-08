@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_liquid_minecarts:items/liquid_minecart",
+          "value": "gm4_liquid_minecarts:items/liquid_minecart",
           "functions": [
             {
               "function": "minecraft:set_count",

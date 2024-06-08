@@ -3,7 +3,7 @@
   "name": "Orb of Ankou",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:flint_and_steel"
+    "id": "minecraft:flint_and_steel"
   },
   "criteria": {
     "obtain_soul_essence": {
@@ -14,7 +14,9 @@
             "items": [
               "minecraft:black_dye"
             ],
-            "nbt": "{gm4_orb_of_ankou:{item:\"soul_essence\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{item:\"soul_essence\"}}"
+            }
           }
         ]
       }
@@ -46,7 +48,9 @@
             "items": [
               "minecraft:flint"
             ],
-            "nbt": "{gm4_orb_of_ankou:{item:\"soul_shard\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{item:\"soul_shard\"}}"
+            }
           }
         ]
       }
@@ -71,7 +75,17 @@
             "items": [
               "minecraft:firework_star"
             ],
-            "nbt": "{gm4_orb_of_ankou:{item:\"orb\"},Explosion:{Colors:[I;13092807]}}"
+            "components": {
+              "minecraft:firework_explosion": {
+                "shape": "small_ball",
+                "colors": [
+                  13092807
+                ]
+              }
+            },
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{item:\"orb\"}}"
+            }
           }
         ]
       }
@@ -84,7 +98,9 @@
             "items": [
               "minecraft:firework_star"
             ],
-            "nbt": "{gm4_orb_of_ankou:{item:\"orb\",pneumas:[{}]}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{item:\"orb\",pneumas:[{}]}}"
+            }
           }
         ]
       }

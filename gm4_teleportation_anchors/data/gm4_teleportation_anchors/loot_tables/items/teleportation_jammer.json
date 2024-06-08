@@ -9,8 +9,15 @@
           "name": "minecraft:player_head",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'item/teleportation_jammer',gm4_machines:{id:\"teleportation_jammer\"},SkullOwner:{Name:\"gm4_teleportation_jammer\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$teleportation_jammer\"}]}}}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/teleportation_jammer",
+                "minecraft:profile": "$teleportation_jammer"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'teleportation_jammer'}}"
             },
             {
               "function": "set_name",

@@ -21,9 +21,12 @@ scoreboard players operation @s gm4_ce_boss.health -= $health_change gm4_ce_boss
 scoreboard players operation @s gm4_ce_boss.health -= $twin_health_change gm4_ce_boss
 
 # trigger next phases if health drops below threshold
-execute if score @s[scores={gm4_ce_boss.phase=1}] gm4_ce_boss.health matches ..450 run scoreboard players set @s gm4_ce_boss.phase 2
-execute if score @s[scores={gm4_ce_boss.phase=2}] gm4_ce_boss.health matches ..300 run scoreboard players set @s gm4_ce_boss.phase 3
-execute if score @s[scores={gm4_ce_boss.phase=3}] gm4_ce_boss.health matches ..150 run scoreboard players set @s gm4_ce_boss.phase 4
+execute if score @s[tag=!gm4_ce_boss.watcher.has_twin,scores={gm4_ce_boss.phase=1}] gm4_ce_boss.health matches ..225 run scoreboard players set @s gm4_ce_boss.phase 2
+execute if score @s[tag=!gm4_ce_boss.watcher.has_twin,scores={gm4_ce_boss.phase=2}] gm4_ce_boss.health matches ..150 run scoreboard players set @s gm4_ce_boss.phase 3
+execute if score @s[tag=!gm4_ce_boss.watcher.has_twin,scores={gm4_ce_boss.phase=3}] gm4_ce_boss.health matches ..75 run scoreboard players set @s gm4_ce_boss.phase 4
+execute if score @s[tag=gm4_ce_boss.watcher.has_twin,scores={gm4_ce_boss.phase=1}] gm4_ce_boss.health matches ..450 run scoreboard players set @s gm4_ce_boss.phase 2
+execute if score @s[tag=gm4_ce_boss.watcher.has_twin,scores={gm4_ce_boss.phase=2}] gm4_ce_boss.health matches ..300 run scoreboard players set @s gm4_ce_boss.phase 3
+execute if score @s[tag=gm4_ce_boss.watcher.has_twin,scores={gm4_ce_boss.phase=3}] gm4_ce_boss.health matches ..150 run scoreboard players set @s gm4_ce_boss.phase 4
 
 # kill boss if health drops below 0
 execute if score @s gm4_ce_boss.health matches ..0 run function gm4_combat_expanded:boss/watchers/defeated/kill

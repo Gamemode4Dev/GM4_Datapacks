@@ -7,7 +7,9 @@
       "predicate": {
         "equipment": {
           "mainhand": {
-            "nbt": "{gm4_bas_ignore:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_bas_ignore:1b}"
+            }
           }
         }
       }
@@ -18,7 +20,11 @@
       "predicate": {
         "equipment": {
           "mainhand": {
-            "nbt": "{pages:[]}"
+            "components": {
+              "minecraft:writable_book_content": {
+                "pages": []
+              }
+            }
           }
         }
       }

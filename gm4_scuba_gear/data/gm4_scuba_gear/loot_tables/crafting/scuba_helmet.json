@@ -15,7 +15,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "gm4_scuba_gear:items/scuba_helmet",
+                    "value": "gm4_scuba_gear:items/scuba_helmet",
                     "functions": [
                         {
                             "function": "minecraft:set_count",

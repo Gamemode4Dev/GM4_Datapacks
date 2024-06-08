@@ -10,8 +10,10 @@
                         "predicate": {
                             "equipment": {
                                 "mainhand": {
-                                    "tag": "gm4_ender_bolt_shamir:valid_tools",
-                                    "nbt": "{gm4_metallurgy:{active_shamir:\"ender_bolt\"}}"
+                                    "items": "#gm4_ender_bolt_shamir:valid_items",
+                                    "predicates": {
+                                      "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:\"ender_bolt\"}}"
+                                    }
                                 }
                             }
                         }

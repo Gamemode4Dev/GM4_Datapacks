@@ -3,7 +3,7 @@
   "name": "SCUBA Gear",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:horn_coral"
+    "id": "minecraft:horn_coral"
   },
   "criteria": {
     "obtain_scute": {
@@ -12,7 +12,7 @@
         "items": [
           {
             "items": [
-              "minecraft:scute"
+              "minecraft:turtle_scute"
             ]
           }
         ]
@@ -23,10 +23,10 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:potion"
-            ],
-            "potion": "minecraft:water_breathing"
+            "items": "minecraft:potion",
+            "predicates": {
+              "minecraft:potion_contents": "minecraft:water_breathing"
+            }
           }
         ]
       }
@@ -51,7 +51,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_scuba_gear:{item:\"helmet\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_scuba_gear:{item:\"helmet\"}}"
+            }
           }
         ]
       }
@@ -64,7 +66,9 @@
             "items": [
               "minecraft:golden_chestplate"
             ],
-            "nbt": "{gm4_scuba_gear:{item:\"tank\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_scuba_gear:{item:\"tank\"}}"
+            }
           }
         ]
       }
@@ -77,7 +81,9 @@
             "items": [
               "minecraft:leather_boots"
             ],
-            "nbt": "{gm4_scuba_gear:{item:\"flippers\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_scuba_gear:{item:\"flippers\"}}"
+            }
           }
         ]
       }

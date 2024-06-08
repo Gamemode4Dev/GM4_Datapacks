@@ -7,7 +7,7 @@ data modify storage gm4_balloon_animals:temp temp_source append from storage gm4
 data remove storage gm4_balloon_animals:temp trades[0]
 
 # if current trade is a balloon animal trade, check if it is the one we are looking for
-execute store success score $trade_applicable gm4_balloon_animals_data if data storage gm4_balloon_animals:temp temp_source[-1].sell.tag.gm4_balloon_animals.trade
+execute store success score $trade_applicable gm4_balloon_animals_data if data storage gm4_balloon_animals:temp temp_source[-1].sell.components."minecraft:custom_data".gm4_balloon_animals.trade
 execute if score $trade_applicable gm4_balloon_animals_data matches 1 run function gm4_balloon_animals:purchase/trader/check_trade
 
 # if any remaining trades, continue looping

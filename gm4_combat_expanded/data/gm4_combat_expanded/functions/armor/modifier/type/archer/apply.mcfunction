@@ -7,8 +7,8 @@
 execute on origin unless entity @s[tag=gm4_ce_target] run return 0
 
 # multishot support (spawns half as many arrows, so 1 per level)
-execute if score $storm_arrow_fired gm4_ce_data matches 0 run scoreboard players operation $storm_arrow_target gm4_ce_data /= #2 gm4_ce_data
-scoreboard players set $storm_arrow_fired gm4_ce_data 1
+scoreboard players add $storm_arrow_fired gm4_ce_data 1
+execute if score $storm_arrow_fired gm4_ce_data matches 2 run scoreboard players operation $storm_arrow_target gm4_ce_data /= #2 gm4_ce_data
 
 tag @s add gm4_ce_archer_arrow
 data modify storage gm4_combat_expanded:temp archer_arrow set from entity @s {}

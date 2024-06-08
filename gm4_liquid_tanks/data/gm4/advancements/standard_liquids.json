@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "experience_bottle",
-      "nbt": "{CustomModelData:'standard_liquids:gui/advancement/standard_liquids'}"
+      "id": "experience_bottle",
+      "components": {
+        "minecraft:custom_model_data": "standard_liquids:gui/advancement/standard_liquids"
+      }
     },
     "title": {
       "translate": "advancement.gm4.standard_liquids.title",

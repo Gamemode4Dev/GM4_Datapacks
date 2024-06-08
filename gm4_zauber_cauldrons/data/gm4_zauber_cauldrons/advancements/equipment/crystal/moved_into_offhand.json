@@ -13,7 +13,9 @@
                                     "items": [
                                         "minecraft:player_head"
                                     ],
-                                    "nbt": "{gm4_zauber_cauldrons:{item:\"crystal\"}}"
+                                    "predicates": {
+                                      "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"crystal\"}}"
+                                    }
                                 }
                             }
                         }
@@ -24,7 +26,9 @@
                         "items": [
                             "minecraft:player_head"
                         ],
-                        "nbt": "{gm4_zauber_cauldrons:{item:\"crystal\"}}"
+                        "predicates": {
+                          "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"crystal\"}}"
+                        }
                     }
                 ]
             }

@@ -8,7 +8,7 @@ data modify storage gm4_auto_crafting:temp buffer_item set from block ^ ^1 ^-1 I
 data modify storage gm4_auto_crafting:temp Item set from storage gm4_auto_crafting:temp buffer_item
 
 # fill up next available slot
-data modify storage gm4_auto_crafting:temp buffer_item.Count set value 1b
+data modify storage gm4_auto_crafting:temp buffer_item.count set value 1b
 execute store result storage gm4_auto_crafting:temp buffer_item.Slot byte 1 run scoreboard players add @s gm4_ac_buffer 9
 data modify entity @s data.gm4_auto_crafting.buffer append from storage gm4_auto_crafting:temp buffer_item
 
@@ -18,9 +18,9 @@ scoreboard players remove @s gm4_ac_buffer 8
 execute if score @s gm4_ac_buffer >= @s gm4_ac_slot_count run tag @s add gm4_ac_full
 
 # remove item from the input barrel
-execute store result score $count gm4_ac_buffer run data get storage gm4_auto_crafting:temp Item.Count 0.99
+execute store result score $count gm4_ac_buffer run data get storage gm4_auto_crafting:temp Item.count 0.99
 execute if score $count gm4_ac_buffer matches 0 run data remove block ^ ^1 ^-1 Items[0]
-execute if score $count gm4_ac_buffer matches 1.. store result block ^ ^1 ^-1 Items[0].Count byte 1 run scoreboard players get $count gm4_ac_buffer
+execute if score $count gm4_ac_buffer matches 1.. store result block ^ ^1 ^-1 Items[0].count byte 1 run scoreboard players get $count gm4_ac_buffer
 
 # clean up
 data remove storage gm4_auto_crafting:temp buffer_item

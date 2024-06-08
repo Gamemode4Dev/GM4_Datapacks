@@ -5,7 +5,7 @@
   "load_check": "orb_of_ankou",
   "base_module": "metallurgy",
   "icon": {
-    "item": "minecraft:anvil"
+    "id": "minecraft:anvil"
   },
   "criteria": {
     "obtain_corripio_shamir": {
@@ -13,7 +13,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'corripio'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'corripio'}}"
+            }
           }
         ]
       }
@@ -23,7 +25,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'corripio'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'corripio'}}"
+            }
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
     "condition": "minecraft:location_check",
     "predicate": {
-        "structure": "bastion_remnant"
+        "structures": "bastion_remnant"
     }
 }

@@ -4,7 +4,7 @@ This document explains Gamemode 4's Resource Pack management tools, which use cu
 ## Table of Contents
 * [Getting Started](#getting-started)
     * [Building the Resource Pack](#building-the-resource-pack)
-* [CustomModelData](#custommodeldata)
+* [Custom Model Data](#custom-model-data)
 * [Language Support](#language-support)
 * [Model Templates](#model-templates)
 * [Model Transforms](#model-transforms)
@@ -12,7 +12,7 @@ This document explains Gamemode 4's Resource Pack management tools, which use cu
     * [`model_data` Config](#model_data-config)
     * [`gui_fonts` Config](#gui_fonts-config)
     * [`translation_linter_ignores` Config](#translation_linter_ignores-config)
-    * [CustomModelData allocations](#custommodeldata-allocations)
+    * [Custom Model Data Allocations](#custom-model-data-allocations)
     * [Extending `TemplateOptions`](#extending-templateoptions)
     * [Extending `TransformOptions`](#extending-transformoptions)
     * [Extending `ContainerGuiOptions`](#extending-containerguioptions)
@@ -31,8 +31,8 @@ When building a single or list of modules with `beet dev`, a combined resource p
 
 Since Gamemode 4 publishes a single resource pack that contains textures for all our modules combined, building a complete copy of the resource pack locally requires building every module. Since this often takes a while, developers are encouraged to only build the packs they are currently working on to save time.
 
-## CustomModelData
-String references can be used instead of hard-to-remember integers when dealing with CustomModelData. After configuring the CustomModelData values your data pack will use a mecha plugin will auto-assign the unique integer values and substitute them into the data pack output by the beet build process. 
+## Custom Model Data
+String references can be used instead of hard-to-remember integers when dealing with custom model data. After configuring the custom model data values your data pack will use a mecha plugin will auto-assign the unique integer values and substitute them into the data pack output by the beet build process. 
 
 ```yaml
 model_data:
@@ -41,8 +41,8 @@ model_data:
     template: generated
 ```
 ```mcfunction
-give @s rabbit_hide 1 {CustomModelData:'gm4_bat_grenades:item/bat_leather'}
-summon item ~ ~ ~ {Item:{id:"rabbit_hide",Count:1b,tag:{CustomModelData:"item/bat_leather"}}}
+give @s rabbit_hide[custom_model_data="gm4_bat_grenades:item/bat_leather"]
+summon item ~ ~ ~ {Item:{id:"rabbit_hide",count:1,components:{"minecraft:custom_model_data":"item/bat_leather"}}}
 ```
 
 For full details about the `model_data` config see [`model_data` Config](#model_data-config)
@@ -153,12 +153,12 @@ Accepts the required parameters `origin`, `scale`, and the optional parameters `
 The following sections of this guide describes more advanced features of the resource pack plugin, that may be required for developers wishing to add additional templates or interact with special fonts.
 
 ### `model_data` Config
-All CustomModelData and model template config information is stored either in `meta.gm4.model_data` field of `beet.yaml`, or in the `model_data` field of the separate config file `assets/model_data.yaml`. This is a list of compounds, each of which accepts the following fields: 
+All custom model data and model template config information is stored either in `meta.gm4.model_data` field of `beet.yaml`, or in the `model_data` field of the separate config file `assets/model_data.yaml`. This is a list of compounds, each of which accepts the following fields: 
 
-- `item`: (required) item name, or list of item names this CustomModelData will be applied to.
+- `item`: (required) item name, or list of item names this custom model data will be applied to.
 - `reference`: (required) the unique string reference to be used in source files e.g. item/bat_leather. If no namespace is specified, the module's namespace will be assumed.
 It is recommended to format references according to the type of item it applies to. e.g. `item/...`, `block/...`, `gui/...` ect, and especially recommended to use the model/texture file path where possible.
-- `model`: (optional) the model file(s) to display on items with this CustomModelData. If not specified, will default to the same value as `reference`.
+- `model`: (optional) the model file(s) to display on items with this custom model data. If not specified, will default to the same value as `reference`.
 Accepts a string or list of strings, one for each item present in item. May be formatted as a dictionary mapping items to models e.g.
 ```yaml
 item: [apple, potato]
@@ -224,11 +224,11 @@ gui_fonts:
 ### `translation_linter_ignores` Config
 Individual translation keys can be excluded from the mecha linting process by adding them to the `meta.gm4.translation_linter_ignores` config in `beet.yaml`. This should only be used in unusual situations where translations are being used in other ways than displaying text. 
 
-### CustomModelData allocations
-Sometimes it is desirable to put all the CustomModelData integer values near each-other for organizational purposes. There is a manual config available in the `modeldata_registry.json` file, which lets sets up additional ranges for a module (or glob of modules) that can be auto assigned by the resource pack plugin.
+### Custom Model Data Allocations
+Sometimes it is desirable to put all the custom model data integer values near each-other for organizational purposes. There is a manual config available in the `modeldata_registry.json` file, which lets sets up additional ranges for a module (or glob of modules) that can be auto assigned by the resource pack plugin.
 
 ```json
-"gm4_orb_of_ankou": [
+    "gm4_orb_of_ankou": [
       200,
       299
     ],

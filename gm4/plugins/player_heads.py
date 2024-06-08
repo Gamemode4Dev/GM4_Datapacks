@@ -7,23 +7,20 @@ import sys
 import time
 from dataclasses import replace
 from io import BytesIO
-from typing import Any, Callable, ClassVar, Generator
+from typing import Any, Callable, ClassVar
 
 import requests
 from beet import Context, FileDeserialize, JsonFile, PngFile
 from mecha import Diagnostic, Mecha, MutatingReducer, rule
 from mecha.ast import (
-    AstChildren,
-    AstCommand,
+    AstJsonObject,
+    AstJsonObjectEntry,
+    AstJsonObjectKey,
     AstNbtCompound,
     AstNbtCompoundEntry,
-    AstNbtPath,
-    AstNbtPathKey,
-    AstResourceLocation,
+    AstNbtCompoundKey,
 )
-from nbtlib import IntArray # type: ignore
 from PIL.Image import Image
-from tokenstream import set_location
 
 from gm4.utils import InvokeOnJsonNbt
 
@@ -59,74 +56,43 @@ class SkinNbtTransformer(MutatingReducer, InvokeOnJsonNbt):
         self.used_textures: list[str] = []
         super().__init__()
 
-    @rule(AstNbtCompoundEntry)
-    def skullowner_substitutions(self, node: AstNbtCompoundEntry, **kwargs: Any) -> Generator[Diagnostic, None, AstNbtCompoundEntry]:
-        if node.key.value == "SkullOwner":
-            match node.value.evaluate():
-                case val if "$" in val:
-                    skin_val, uuid, d = self.retrieve_texture(val, **kwargs)
-                    if d:
-                        yield d
-                    node = replace(node, value=AstNbtCompound.from_value({
-                        "Id": IntArray(uuid),
-                        "Properties": {
-                            "textures":[{
-                                "Value": skin_val
-                            }]
-                        }
-                    }))
-                case {"Value": str(val), **rest} if "$" in val:
-                    skin_val, uuid, d = self.retrieve_texture(val, **kwargs)
-                    if d:
-                        yield d
-                    node = replace(node, value=AstNbtCompound.from_value(
-                        ({"Name": n} if (n:=rest.get("Name")) else {}) |
-                        {"Id": IntArray(uuid),
-                         "Properties": {
-                            "textures":[
-                                {"Value": skin_val} |
-                                ({"Signature": s} if (s:=rest.get("Signature")) else {})]
-                            }
-                        }
-                    ))
-                case {"Properties": {"textures": [{"Value": str(val), **tex_rest}]}, **root_rest} if "$" in val:
-                    skin_val, uuid, d = self.retrieve_texture(val, **kwargs)
-                    if d:
-                        yield d
-                    node = replace(node, value=AstNbtCompound.from_value(
-                        ({"Name": n} if (n:=root_rest.get("Name")) else {}) |
-                        {"Id": IntArray(uuid),
-                         "Properties": {
-                            "textures":[
-                                {"Value": skin_val} | 
-                                ({"Signature": s} if (s:=tex_rest.get("Signature")) else {})]
-                            }
-                        }
-                    ))
-                case _:
-                    if "$" in node.value.evaluate().snbt():
-                        yield Diagnostic("warn", f"Unhandled SkullOwner substitution. Format failed to match known schemas.", 
-                                            filename=kwargs.get("filename"), file=kwargs.get("file"))
+    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='minecraft:profile'))
+    def json_substitutions(self, node: AstJsonObjectEntry, **kwargs: Any):
+        reference = node.value.evaluate()
+        if isinstance(reference, str) and reference.startswith("$"):
+            skin_val, uuid, d = self.retrieve_texture(reference, **kwargs)
+            if d:
+                yield d
+            node = replace(node, value=AstJsonObject.from_value({
+                "id": uuid,
+                "properties": [
+                    {
+                        "name": "textures",
+                        "value": skin_val,
+                    }
+                ]
+            }))
         return node
-    
-    @rule(AstCommand, identifier="data:modify:storage:target:targetPath:append:value:value")
-    def lib_player_heads_skullowner_subs(self, node: AstCommand) -> Generator[Diagnostic, None, AstCommand]:
-        """Captures skin texture data in lib_player_heads setup"""
-        ast_storage, ast_storage_path, ast_nbt = node.arguments
-        if isinstance(ast_storage, AstResourceLocation) and isinstance(ast_storage_path, AstNbtPath) and isinstance(ast_nbt, AstNbtCompound) and isinstance(path_key:=ast_storage_path.components[0], AstNbtPathKey):
-            if ast_storage.get_value() == "gm4_player_heads:register" and path_key.value == "heads":
-                nbt: dict[str, Any] = ast_nbt.evaluate()
-                match nbt:
-                    case {"value": str(value)} if "$" in value:
-                        skin_val, _, d = self.retrieve_texture(value)
-                        if d:
-                            erroring_subnode = next(i for i in ast_nbt.entries if i.key.value == "value")
-                            yield set_location(d, erroring_subnode)
-                        node = replace(node, arguments=AstChildren((ast_storage, ast_storage_path, AstNbtCompound.from_value(nbt|{"value": skin_val}))))
-                    case _:
-                        pass
+
+    @rule(AstNbtCompoundEntry, key=AstNbtCompoundKey(value='minecraft:profile'))
+    def cmd_substitutions_nbt(self, node: AstNbtCompoundEntry, **kwargs: Any):
+        reference = node.value.evaluate()
+        if isinstance(reference, str) and reference.startswith("$"):
+            skin_val, uuid, d = self.retrieve_texture(reference, **kwargs)
+            if d:
+                yield d
+            node = replace(node, value=AstNbtCompound.from_value({
+                "id": uuid,
+                "properties": [
+                    {
+                        "name": "textures",
+                        "value": skin_val,
+                    }
+                ]
+            }))
         return node
-    
+
+
     def retrieve_texture(self, skin_name: str, **kwargs: Any) -> tuple[str, list[int], Diagnostic|None]:
         skin_name = skin_name.lstrip("$")
         if ":" not in skin_name:

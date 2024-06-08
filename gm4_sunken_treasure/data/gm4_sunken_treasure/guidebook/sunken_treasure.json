@@ -3,7 +3,7 @@
   "name": "Sunken Treasure",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:golden_shovel"
+    "id": "minecraft:golden_shovel"
   },
   "criteria": {
     "obtain_fortune_shovel": {
@@ -11,14 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:diamond_shovel",
-              "minecraft:golden_shovel",
-              "minecraft:iron_shovel",
-              "minecraft:netherite_shovel",
-              "minecraft:stone_shovel",
-              "minecraft:wooden_shovel"
-            ],
+            "items": "#minecraft:shovels",
             "enchantments": [
               {
                 "enchantment": "minecraft:fortune"

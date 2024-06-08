@@ -3,5 +3,5 @@
 # at @s
 # run from function tag #gm4_potion_tracking:potion_landed
 
-execute if data storage gm4_potion_tracking:temp entity_data.Item.tag{gm4_zauber_cauldrons:{bottle:{multi_use:1b}}} run function gm4_zauber_cauldrons:soulution/potion_landed
-execute if data storage gm4_potion_tracking:temp entity_data.Item.tag{gm4_zauber_cauldrons:{item:"bottled_magicol"}} run function gm4_zauber_cauldrons:bottled_magicol/potion_landed
+execute if data storage gm4_potion_tracking:temp entity_data.Item.components."minecraft:custom_data"{gm4_zauber_cauldrons:{bottle:{multi_use:1b}}} run function gm4_zauber_cauldrons:soulution/potion_landed
+execute if data storage gm4_potion_tracking:temp entity_data.Item.components."minecraft:custom_data"{gm4_zauber_cauldrons:{item:"bottled_magicol"}} run function gm4_zauber_cauldrons:bottled_magicol/potion_landed

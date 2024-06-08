@@ -8,8 +8,15 @@
                     "name": "minecraft:glass_bottle",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'item/magic_in_a_bottle',gm4_zauber_cauldrons:{item:\"bottled_vex\"},Enchantments:[{id:\"minecraft:protection\",lvl:0s}],HideFlags:1}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:custom_model_data": "item/magic_in_a_bottle"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_zauber_cauldrons:{item:'bottled_vex'}}"
                         },
                         {
                             "function": "minecraft:copy_nbt",

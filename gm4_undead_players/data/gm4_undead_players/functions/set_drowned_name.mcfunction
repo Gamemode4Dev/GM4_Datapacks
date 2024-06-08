@@ -3,7 +3,7 @@
 
 # Generate name for entity ("Drowned <Name>") based on the contents of the name attribute.
 loot replace entity @s armor.head loot gm4_undead_players:drowned_name
-data modify storage gm4_undead_players:temp drowned_data.CustomName set from entity @s ArmorItems[3].tag.display.Name
+data modify storage gm4_undead_players:temp drowned_data.CustomName set from entity @s ArmorItems[3].components."minecraft:custom_name"
 
 # Copy player name attribute to the drowned (just in case it is needed for future update).
 data modify entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Modifiers append from storage gm4_undead_players:temp name_attribute

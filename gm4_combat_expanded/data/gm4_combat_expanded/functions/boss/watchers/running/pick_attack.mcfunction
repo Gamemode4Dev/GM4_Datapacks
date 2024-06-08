@@ -6,7 +6,7 @@
 ## SLAM
 # Watcher charges an attack over a medium duration, then explodes the ground below with a lingering damage cloud (dragon fireball)
 # Slam deals 14 magic damage in a vertical column down from its location
-# Players hit are affected by darkness, slowness, mining fatigue V, weakness II and -6 armor for 10 seconds
+# Players hit are affected by darkness, slowness, mining fatigue V and -6 armor for 10 seconds
 # Phase 1: unlock attack
 # Phase 2: -
 # Phase 3: attack charges faster, act faster after the attack
@@ -29,7 +29,7 @@ execute unless score @s[tag=gm4_ce_boss.watcher.main,scores={gm4_ce_boss.attack_
 
 ## SUMMON MINIONS
 # Watcher spawns a minion around it to attack players (mobs spawned from secondary count as belonging to the main Watcher)
-# Minion attacks reduce players armor by 2 for 10 seconds
+# Zombies have a difficulty of 85 and Skeletons 65, used for armor spawns - these mobs do not get modifiers
 # Phase 1: unlock attack
 # Phase 2: spawn 2 (75%) or 4 (25%) minions instead
 # Phase 3: can spawn skeletons (40%), minions are spawned faster
@@ -43,13 +43,13 @@ execute unless score @s[scores={gm4_ce_boss.attack_id=0}] gm4_ce_boss.last_attac
 
 ## AURA
 # Watcher starts spinning, then deals constant damage around it and knocking players back
-# Damage ramps up from 2 to 8 wither damage, and ends with a burst of 10 damage
+# Damage ramps up from 3 to 10 wither damage
 # Player within range have darkness applied
 # Phase 1: -
 # Phase 2: unlock attack
 # Phase 3: -
-# Phase 4: attack spins up faster, final burst damage increased to 18
-# Trigger: players are found closeby (25% main, 100% secondary)
+# Phase 4: attack spins up faster
+# Trigger: players are found closeby (100% main, 25% secondary)
 execute unless score @s[scores={gm4_ce_boss.attack_id=0,gm4_ce_boss.phase=2..}] gm4_ce_boss.last_attack matches 7 if entity @p[gamemode=!spectator,gamemode=!creative,distance=..5.25] positioned ~-5.5 ~-1.5 ~-5.5 if entity @p[gamemode=!spectator,gamemode=!creative,dx=10,dy=2,dz=10] if predicate gm4_combat_expanded:technical/chance/boss/aura_attack run scoreboard players set @s gm4_ce_boss.attack_id 7
 
 ## FIREBALL
@@ -58,12 +58,12 @@ execute unless score @s[scores={gm4_ce_boss.attack_id=0,gm4_ce_boss.phase=2..}] 
 # Phase 2: follows the small fireballs with a large one that explodes
 # Phase 3: fireworks come out faster, fireball is bigger
 # Phase 4: immediatly warp away after firing the fireball
-# Trigger: players are a middle distance from the Watcher (80% main, 35% secondary)
+# Trigger: players are a middle distance from the Watcher (35% main, 80% secondary)
 execute unless score @s[scores={gm4_ce_boss.attack_id=0}] gm4_ce_boss.last_attack matches 2 if entity @p[gamemode=!spectator,gamemode=!creative,distance=8..20] if predicate gm4_combat_expanded:technical/chance/boss/fireball_attack run scoreboard players set @s gm4_ce_boss.attack_id 2
 
 ## WARP
 # Watcher charges for a time, then warps away to a different location nearby a player
-# Can warp low or high up, main can warp far away, secondary can warp close by
+# Can warp low or high up, main can warp close by, secondary can warp far away
 # Phase 1: unlock attack
 # Phase 2: charge time is shorter
 # Phase 3: act faster after the warp

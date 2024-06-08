@@ -11,10 +11,11 @@ give @s lightning_rod
 execute at @s run tp @s ~ ~ ~ facing ~ ~-0.5 ~1
 dummy @s use block ~1 ~2 ~1
 
-data merge block ~1 ~1 ~1 {Items:[{Slot:0b,id:"minecraft:potion",Count:1b,tag:{Potion:"minecraft:thick"}},{Slot:4b,id:"minecraft:blaze_powder",Count:1b}]}
+item replace block ~1 ~1 ~1 container.0 with minecraft:potion[potion_contents="minecraft:thick"]
+item replace block ~1 ~1 ~1 container.4 with minecraft:blaze_powder
 
 await delay 1s
 
 summon lightning_bolt ~1.5 ~3 ~1.5
 
-await block ~1 ~1 ~1 brewing_stand{Items:[{Slot:0b,id:"minecraft:potion",Count:1b,tag:{gm4_lightning_in_a_bottle:1b,Potion:"gm4:lightning"}}]}
+await items block ~1 ~1 ~1 container.0 minecraft:potion[count=1,custom_data~{gm4_lightning_in_a_bottle:1b}]

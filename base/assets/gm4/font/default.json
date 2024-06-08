@@ -1,18 +1,8 @@
 {
     "providers": [
         {
-            "type": "space",
-            "advances": {
-                " ": 4,
-                "\u200c": 0
-            }
-        },
-        {
-            "type": "ttf",
-            "file": "gm4:minecraft.ttf",
-            "shift": [0,-0.5],
-            "size": 13,
-            "oversample": 7
+            "type": "reference",
+            "id": "minecraft:default"
         }
     ]
 }

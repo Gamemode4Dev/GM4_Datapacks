@@ -8,7 +8,9 @@
           "items": [
             "minecraft:stick"
           ],
-          "nbt": "{gm4_mountaineering:{item:\"poles\"}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_mountaineering:{item:\"poles\"}}"
+          }
         }
       }
     }
@@ -22,7 +24,9 @@
           "items": [
             "minecraft:stick"
           ],
-          "nbt": "{gm4_mountaineering:{item:\"poles\"}}"
+          "predicates": {
+            "minecraft:custom_data": "{gm4_mountaineering:{item:\"poles\"}}"
+          }
         }
       }
     }

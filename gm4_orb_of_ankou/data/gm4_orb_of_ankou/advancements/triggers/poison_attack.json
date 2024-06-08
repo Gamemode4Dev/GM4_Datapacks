@@ -7,8 +7,10 @@
           "source_entity": {
             "equipment": {
               "offhand": {
-                "tag": "gm4_orb_of_ankou:pneuma_container",
-                "nbt": "{gm4_orb_of_ankou:{pneumas:[{id:\"venomous\"}]}}"
+                "items": "#gm4_orb_of_ankou:pneuma_container",
+                "predicates": {
+                  "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{id:\"venomous\"}]}}"
+                }
               }
             }
           },

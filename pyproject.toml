@@ -6,9 +6,9 @@ authors = ["Gamemode 4 Contributors"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-beet = "0.104.1"
-mecha = "^0.87.0"
-bolt = "^0.45.0"
+beet = "0.107.0"
+mecha = "0.94.2"
+bolt = "^0.48.0"
 PyYAML = "^6.0"
 pydantic = "^2.6.1"
 requests = "^2.28.1"

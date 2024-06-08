@@ -3,7 +3,7 @@
   "name": "Better Fire",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:flint_and_steel"
+    "id": "minecraft:flint_and_steel"
   },
   "criteria": {
     "obtain_flint_and_steel": {

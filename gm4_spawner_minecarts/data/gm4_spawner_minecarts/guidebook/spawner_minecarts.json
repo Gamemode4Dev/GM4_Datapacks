@@ -3,7 +3,7 @@
   "name": "Spawner Minecarts",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:spawner"
+    "id": "minecraft:spawner"
   },
   "criteria": {
     "obtain_piston": {

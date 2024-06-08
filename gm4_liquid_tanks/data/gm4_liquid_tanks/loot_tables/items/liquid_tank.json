@@ -9,8 +9,15 @@
           "name": "minecraft:player_head",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'item/liquid_tank',gm4_machines:{id:\"liquid_tank\"},SkullOwner:{Name:\"gm4_liquid_tank\",Id:[I;506554253,2099987480,-1876292803,1704690390],Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$liquid_tank\"}]}}}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/liquid_tank",
+                "minecraft:profile": "$liquid_tank"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'liquid_tank'}}"
             },
             {
               "function": "set_name",

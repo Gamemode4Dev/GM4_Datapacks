@@ -1,8 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "leather_boots",
-      "nbt": "{display:{color:3705899},CustomModelData:'gui/advancement/boots_of_ostara'}"
+      "id": "leather_boots",
+      "components": {
+        "minecraft:dyed_color": 3705899,
+        "minecraft:custom_model_data": "gui/advancement/boots_of_ostara"
+      }
     },
     "title": {
       "translate": "advancement.gm4.boots_of_ostara.title",
@@ -24,7 +27,9 @@
             "items": [
               "minecraft:leather_boots"
             ],
-            "nbt": "{gm4_boots_of_ostara:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_boots_of_ostara:1b}"
+            }
           }
         ]
       }

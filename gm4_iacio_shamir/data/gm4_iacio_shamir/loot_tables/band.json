@@ -5,15 +5,21 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"name": "gm4_metallurgy:barium_band",
+					"value": "gm4_metallurgy:barium_band",
 					"functions": [
 						{
-							"function": "minecraft:set_nbt",
-							"tag": "{CustomModelData:'shamir/iacio',SkullOwner:{Name:\"[Drop to Fix Item] gm4_iacio_shamir:band/v0\"},gm4_metallurgy:{stored_shamir:\"iacio\"}}"
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_model_data": "shamir/iacio"
+							}
+						},
+						{
+							"function": "minecraft:set_custom_data",
+							"tag": "{gm4_metallurgy:{stored_shamir:'iacio'}}"
 						},
 						{
 							"function": "minecraft:set_lore",
-							"replace": false,
+							"mode": "append",
 							"lore": [
 								{
 									"translate": "item.gm4.shamir.iacio",

@@ -1,6 +1,6 @@
 id: gm4_undead_players
 name: Undead Players
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_player_death: 1.0.0
+        lib_player_death: 1.1.0
       schedule_loops: [main]
     model_data:
       - item: zombie_head
@@ -24,6 +24,10 @@ meta:
       recommended: []
       notes:
         - Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.
+    modrinth:
+      project_id: jx6D06Q4
+    planetminecraft:
+      uid: 4294228
     video: https://www.youtube.com/watch?v=dD8nChP8t9A
     wiki: https://wiki.gm4.co/wiki/Undead_Players
     credits:
@@ -33,7 +37,3 @@ meta:
         - SunderB
       Icon Design:
         - Hozz
-  modrinth: 
-    project_id: jx6D06Q4
-  planetminecraft:
-    uid: 4294228

@@ -8,8 +8,10 @@
       },
       "equipment": {
         "feet": {
-          "tag": "gm4:boots",
-          "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'vecto'}}"
+          "items": "#gm4:boots",
+          "predicates": {
+            "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'vecto'}}"
+          }
         }
       }
     }
@@ -21,7 +23,7 @@
         "condition": "minecraft:location_check",
         "predicate": {
           "block": {
-            "tag": "minecraft:rails"
+            "blocks": "#minecraft:rails"
           }
         }
       },
@@ -32,7 +34,7 @@
         "offsetZ": 0,
         "predicate": {
           "block": {
-            "tag": "minecraft:ice"
+            "blocks": "#minecraft:ice"
           }
         }
       },
@@ -43,7 +45,7 @@
         "offsetZ": 0,
         "predicate": {
           "fluid": {
-            "tag": "minecraft:water"
+            "fluids": "#minecraft:water"
           }
         }
       }
@@ -55,7 +57,7 @@
       "condition": "minecraft:location_check",
       "predicate": {
         "fluid": {
-          "tag": "minecraft:water"
+          "fluids": "#minecraft:water"
         }
       }
     }

@@ -10,6 +10,6 @@ execute if score @s gm4_ce_damage_cap matches ..-1 run function gm4_combat_expan
 
 # get world difficulty and remove the damage bonus from hard difficulty if needed (only done at the end as minecraft does not consider the damage bonus an attribute)
 execute store result score $worlddiff gm4_ce_data run difficulty
-execute if score $worlddiff gm4_ce_data matches 3 run attribute @s generic.attack_damage modifier add 660ddab9-8195-40c6-b769-010d4cd8467d "gm4_ce_remove_hard_diff_bonus" -0.333334 multiply
+execute if score $worlddiff gm4_ce_data matches 3 run attribute @s generic.attack_damage modifier add 660ddab9-8195-40c6-b769-010d4cd8467d "gm4_ce_remove_hard_diff_bonus" -0.333334 add_multiplied_total
 
 tag @s remove gm4_ce_check_damage_cap

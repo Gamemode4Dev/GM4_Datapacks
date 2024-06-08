@@ -3,8 +3,10 @@
   "name": "Boots of Ostara",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:leather_boots",
-    "nbt": "{display:{color:3705899}}"
+    "id": "minecraft:leather_boots",
+    "components": {
+      "minecraft:dyed_color": 3705899
+    }
   },
   "criteria": {
     "obtain_leather_boots": {
@@ -39,7 +41,9 @@
             "items": [
               "minecraft:leather_boots"
             ],
-            "nbt": "{gm4_boots_of_ostara:1b}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_boots_of_ostara:1b}"
+            }
           }
         ]
       }

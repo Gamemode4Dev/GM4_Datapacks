@@ -1,6 +1,6 @@
 id: gm4_shapeless_portals
 name: Shapeless Portals
-version: 1.0.X
+version: 1.1.X
 
 data_pack:
   load: .
@@ -16,6 +16,10 @@ meta:
       description: Say goodbye to your boring old rectangular portals!
       recommended: []
       notes: []
+    modrinth:
+      project_id: eq7hf4YU
+    smithed:
+      pack_id: gm4_shapeless_portals
     video: null
     wiki: https://wiki.gm4.co/wiki/Shapeless_Portals
     credits:
@@ -23,7 +27,3 @@ meta:
         - Thanathor
       Icon Design:
         - Hozz
-  modrinth:
-    project_id: eq7hf4YU
-  smithed:
-    pack_id: gm4_shapeless_portals

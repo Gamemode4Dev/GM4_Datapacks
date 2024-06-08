@@ -8,6 +8,13 @@ dummy @s use block ~1 ~ ~1
 assert block ~1 ~1 ~1 dropper
 assert entity @e[tag=gm4_disassembler,distance=..3]
 
-data merge block ~1 ~1 ~1 {Items:[{id:"minecraft:iron_chestplate",Count:1b}]}
+item replace block ~1 ~1 ~1 container.0 with minecraft:iron_chestplate
 
-await block ~1 ~1 ~1 dropper{Items:[{Slot:0b,id:"minecraft:iron_ingot",Count:1b},{Slot:2b,id:"minecraft:iron_ingot",Count:1b},{Slot:3b,id:"minecraft:iron_ingot",Count:1b},{Slot:4b,id:"minecraft:iron_ingot",Count:1b},{Slot:5b,id:"minecraft:iron_ingot",Count:1b},{Slot:6b,id:"minecraft:iron_ingot",Count:1b},{Slot:7b,id:"minecraft:iron_ingot",Count:1b},{Slot:8b,id:"minecraft:iron_ingot",Count:1b}]}
+await items block ~1 ~1 ~1 container.0 minecraft:iron_ingot[count=1]
+assert items block ~1 ~1 ~1 container.2 minecraft:iron_ingot[count=1]
+assert items block ~1 ~1 ~1 container.3 minecraft:iron_ingot[count=1]
+assert items block ~1 ~1 ~1 container.4 minecraft:iron_ingot[count=1]
+assert items block ~1 ~1 ~1 container.5 minecraft:iron_ingot[count=1]
+assert items block ~1 ~1 ~1 container.6 minecraft:iron_ingot[count=1]
+assert items block ~1 ~1 ~1 container.7 minecraft:iron_ingot[count=1]
+assert items block ~1 ~1 ~1 container.8 minecraft:iron_ingot[count=1]

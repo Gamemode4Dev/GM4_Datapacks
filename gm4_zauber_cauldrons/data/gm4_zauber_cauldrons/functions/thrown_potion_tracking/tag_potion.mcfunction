@@ -3,5 +3,5 @@
 # at @s
 # run from function tag #gm4_potion_tracking:tag_potion
 
-tag @s[tag=!gm4_potion,nbt={Item:{tag:{gm4_zauber_cauldrons:{bottle:{multi_use:1b}}}}}] add gm4_potion
-tag @s[tag=!gm4_potion,nbt={Item:{tag:{gm4_zauber_cauldrons:{item:"bottled_magicol"}}}}] add gm4_potion
+execute if items entity @s[tag=!gm4_potion] contents *[custom_data~{gm4_zauber_cauldrons:{bottle:{multi_use:1b}}}] run tag @s add gm4_potion
+execute if items entity @s[tag=!gm4_potion] contents *[custom_data~{gm4_zauber_cauldrons:{item:"bottled_magicol"}}] run tag @s add gm4_potion

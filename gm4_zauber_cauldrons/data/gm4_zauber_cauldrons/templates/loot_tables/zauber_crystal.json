@@ -8,8 +8,16 @@
                     "name": "minecraft:player_head",
                     "functions": [
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:\"item/crystal/{{effect}}\",HideFlags:2,gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"},SkullOwner:{Name:\"[Drop to Fix Item] gm4_zauber_cauldrons:crystal/{{effect}}\",Properties:{textures:[{Value:\"$crystal/{{effect}}\"}]}}}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/crystal/{{effect}}",
+                                "minecraft:max_stack_size": 1,
+                                "minecraft:profile": "$crystal/{{effect}}"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"}}"
                         },
                         {
                             "function": "minecraft:set_name",
@@ -21,21 +29,9 @@
                             }
                         },
                         {
-                            "function": "minecraft:set_attributes",
-                            "modifiers": [
-                                {
-                                    "attribute": "minecraft:horse.jump_strength",
-                                    "name": "gm4_unstackable",
-                                    "amount": 1,
-                                    "operation": "addition",
-                                    "slot": "legs"
-                                }
-                            ]
-                        },
-                        {
                             "function": "minecraft:set_lore",
-                            "lore": {{lore}},
-                            "replace": false
+                            "mode": "append",
+                            "lore": {{lore}}
                         }
                     ]
                 }

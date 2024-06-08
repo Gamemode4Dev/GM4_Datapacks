@@ -7,15 +7,15 @@ on:
   workflow_dispatch:
 
 env:
-  VERSION: '1.20'
+  VERSION: '1.20.5'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
-  TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.20.4/0.15.3/0.11.2/server/jar
-  TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/JMCwDuki/fabric-api-0.92.0%2B1.20.4.jar
-  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/18smpIeE/packtest-1.6-mc1.20.4.jar
+  TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.20.6/0.15.10/1.0.1/server/jar
+  TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/kAQqRNrK/fabric-api-0.97.8%2B1.20.6.jar
+  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/UnZw9eUD/packtest-1.7-mc1.20.5.jar
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     concurrency:
       group: ${{ github.event_name != 'pull_request' && 'release' || format('pr-{0}', github.event.number) }}
     steps:
@@ -67,6 +67,13 @@ jobs:
         env:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
+      - name: Remove non-modules for artifact
+        if: github.event_name == 'pull_request'
+        run: |
+          rm -r release/$VERSION/generated
+          rm release/$VERSION/lib_*
+          rm release/$VERSION/meta.json
+
       - name: Upload artifact
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
@@ -92,7 +99,7 @@ jobs:
           branch: release
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
@@ -126,7 +133,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
 
       - name: Download server files
         run: |
@@ -138,6 +145,9 @@ jobs:
       - name: Copy packs to world
         run: |
           mkdir -p world/datapacks
+          rm out/gm4_guidebook.zip
+          rm out/gm4_zauber_cauldrons.zip
+          rm out/gm4_zauber_liquids.zip
           cp out/gm4_*.zip world/datapacks
 
       - name: Run test server

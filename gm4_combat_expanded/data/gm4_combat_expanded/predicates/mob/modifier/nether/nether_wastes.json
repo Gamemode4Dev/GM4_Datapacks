@@ -2,7 +2,7 @@
   {
     "condition": "minecraft:location_check",
     "predicate": {
-      "biome": "minecraft:nether_wastes"
+      "biomes": "minecraft:nether_wastes"
     }
   }
 ]

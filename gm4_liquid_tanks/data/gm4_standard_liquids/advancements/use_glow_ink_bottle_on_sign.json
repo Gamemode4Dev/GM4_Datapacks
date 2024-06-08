@@ -1,7 +1,7 @@
 {
     "criteria": {
         "requirement": {
-            "trigger": "minecraft:item_used_on_block",
+            "trigger": "minecraft:any_block_use",
             "conditions": {
                 "location": [
                     {
@@ -10,14 +10,16 @@
                             "items": [
                                 "minecraft:potion"
                             ],
-                            "nbt": "{gm4_standard_liquids:{potion:\"glowing\"}}"
+                            "predicates": {
+                              "minecraft:custom_data": "{gm4_standard_liquids:{potion:\"glowing\"}}"
+                            }
                         }
                     },
                     {
                         "condition": "minecraft:location_check",
                         "predicate": {
                             "block": {
-                                "tag": "minecraft:all_signs"
+                                "blocks": "#minecraft:all_signs"
                             }
                         }
                     }

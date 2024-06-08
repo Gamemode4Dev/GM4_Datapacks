@@ -10,6 +10,7 @@ enchantment.level.16,XVI
 enchantment.level.17,XVII
 item.gm4.combat_expanded.lore.archer,Arrow Storm
 item.gm4.combat_expanded.lore.beacon,Beacon
+item.gm4.combat_expanded.lore.big,Giant Growth
 item.gm4.combat_expanded.lore.canine,Good Boi
 item.gm4.combat_expanded.lore.delay_strike,Reverberating Strikes:
 item.gm4.combat_expanded.lore.delay,Echo
@@ -26,13 +27,16 @@ item.gm4.combat_expanded.lore.poison_strike,Noxious Strikes:
 item.gm4.combat_expanded.lore.regen,Regenerate
 item.gm4.combat_expanded.lore.safe,When Not Under Attack:
 item.gm4.combat_expanded.lore.soothe,Heal Pulse
+item.gm4.combat_expanded.lore.tiny,Minituarize
 item.gm4.combat_expanded.lore.totem,%s Totem
 item.gm4.combat_expanded.lore.unsafe,When Under Attack:
 item.gm4.combat_expanded.lore.warp,Warp
 item.gm4.combat_expanded.lore.weakness_strike,Debilitating Strikes:
 item.gm4.combat_expanded.lore.wither_arrow,Arrow of Wither
+item.gm4.combat_expanded.name.acrobatic,Acrobatic %s
 item.gm4.combat_expanded.name.archer,Archery %s
 item.gm4.combat_expanded.name.beacon,Radiant %s
+item.gm4.combat_expanded.name.big,Goliaths %s
 item.gm4.combat_expanded.name.canine,Canine %s
 item.gm4.combat_expanded.name.delay,Resonating %s
 item.gm4.combat_expanded.name.fire,Flaming %s
@@ -43,6 +47,7 @@ item.gm4.combat_expanded.name.horse,Equestrian %s
 item.gm4.combat_expanded.name.husk,Dashing %s
 item.gm4.combat_expanded.name.immune,Vigorous %s
 item.gm4.combat_expanded.name.link,Unlinked %s
+item.gm4.combat_expanded.name.long,Long %s
 item.gm4.combat_expanded.name.poised,Fluxed %s
 item.gm4.combat_expanded.name.poison,Venomous %s
 item.gm4.combat_expanded.name.quick,Light %s
@@ -53,10 +58,12 @@ item.gm4.combat_expanded.name.second_wind,Rejuvenating %s
 item.gm4.combat_expanded.name.shielded,Shielded %s
 item.gm4.combat_expanded.name.sneak,Sly %s
 item.gm4.combat_expanded.name.soothe,Soothing %s
+item.gm4.combat_expanded.name.tiny,Shrinking %s
 item.gm4.combat_expanded.name.totem,Totemic %s
 item.gm4.combat_expanded.name.toxic,Coated %s
 item.gm4.combat_expanded.name.vamp,Vampiric %s
 item.gm4.combat_expanded.name.vorpal,Vorpal %s
+item.gm4.combat_expanded.name.weightless,Weightless %s
 item.gm4.combat_expanded.name.weakness,Crippling %s
 text.gm4.guidebook.module_desc.combat_expanded,Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
 text.gm4.guidebook.combat_expanded.description,"Mobs get stronger over time, based on each adventurer.\n\nMobs will spawn with higher health, damage, movement speed and with better armour and weapons."
@@ -132,6 +139,7 @@ item.gm4.combat_expanded.name.burn,Burning %s
 item.gm4.combat_expanded.lore.canine_description,A loyal friend to fight by your side
 item.gm4.combat_expanded.lore.canine_description_2,Command to sit to lose aggro
 item.gm4.combat_expanded.lore.canine_description_3,Feed to strengthen
+item.gm4.combat_expanded.lore.weightless,Reduced %s
 item.gm4.combat_expanded.lore.convert,Convert Armor to Health
 item.gm4.combat_expanded.name.convert,Hearty %s
 item.gm4.combat_expanded.lore.drain,%s (Max %s)
@@ -140,6 +148,7 @@ item.gm4.combat_expanded.lore.focus,%s Aura
 item.gm4.combat_expanded.name.focus,Focused %s
 item.gm4.combat_expanded.lore.horse_description,%s stacks like Enchantments (2x %s = %s)
 item.gm4.combat_expanded.lore.husk_description,Stacks up to level %s
+item.gm4.combat_expanded.lore.husk_description_2,+1 level per extra piece
 item.gm4.combat_expanded.lore.link_2,Rename to Link
 item.gm4.combat_expanded.lore.link,When Linked:
 item.gm4.combat_expanded.lore.link_3,Lifelink
@@ -162,6 +171,7 @@ item.gm4.combat_expanded.lore.sword_ring,Floating Sword
 item.gm4.combat_expanded.lore.sword_ring_description,"Sword deals %s Damage, sneak to spin faster"
 item.gm4.combat_expanded.lore.sword_ring_description_2,Damage applies effects from mainhand
 item.gm4.combat_expanded.lore.sword_ring_description_3,Dealing damage reduces armor durability
+item.gm4.combat_expanded.lore.sword_ring_description_4,A sword rotates around you at attack range
 item.gm4.combat_expanded.name.sword_ring,Psychic %s
 item.gm4.combat_expanded.lore.unburden,%s per missing %s
 item.gm4.combat_expanded.name.unburden,Lightweight %s
@@ -197,4 +207,3 @@ text.gm4.guidebook.combat_expanded.vorpal_location,Found in The End
 text.gm4.guidebook.combat_expanded.wild_magic_modifier,- Apply a random potion effect with random level and duration to wearer when damaged
 text.gm4.guidebook.combat_expanded.wild_magic_location,Found in Mushroom Fields
 text.gm4.guidebook.combat_expanded.link_location,Found in Deep Dark
-

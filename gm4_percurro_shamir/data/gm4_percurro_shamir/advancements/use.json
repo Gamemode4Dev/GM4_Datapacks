@@ -8,7 +8,13 @@
       "conditions": {
         "damage": {
           "source_entity": {
-            "nbt": "{SelectedItem:{tag:{gm4_metallurgy:{active_shamir:\"percurro\"}}}}"
+            "equipment": {
+              "mainhand": {
+                "predicates": {
+                  "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:'percurro'}}"
+                }
+              }
+            }
           }
         }
       }

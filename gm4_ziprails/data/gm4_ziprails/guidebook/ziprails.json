@@ -3,7 +3,7 @@
   "name": "Ziprails",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:minecart"
+    "id": "minecraft:minecart"
   },
   "criteria": {
     "obtain_minecart": {

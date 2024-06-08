@@ -38,7 +38,7 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_highlands"
+                    "biomes": "minecraft:end_highlands"
                   }
                 }
               ]
@@ -56,7 +56,7 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:the_end"
+                    "biomes": "minecraft:the_end"
                   }
                 }
               ]
@@ -74,13 +74,13 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_midlands"
+                    "biomes": "minecraft:end_midlands"
                   }
                 },
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_highlands"
+                    "biomes": "minecraft:end_highlands"
                   }
                 }
               ]
@@ -98,7 +98,7 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_highlands"
+                    "biomes": "minecraft:end_highlands"
                   }
                 }
               ]
@@ -113,8 +113,8 @@
           "weight": 10,
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_end_fishing:{set_data:{type:\"entity\",id:\"endermite\"}}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{set_data:{type:'entity',id:'endermite'}}}"
             }
           ]
         },
@@ -127,13 +127,13 @@
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:end_barrens"
+                    "biomes": "minecraft:end_barrens"
                   }
                 },
                 {
                   "condition": "minecraft:location_check",
                   "predicate": {
-                    "biome": "minecraft:small_end_islands"
+                    "biomes": "minecraft:small_end_islands"
                   }
                 }
               ]
@@ -143,8 +143,8 @@
           "weight": 10,
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_end_fishing:{set_data:{type:\"entity\",id:\"endermite\"}}}"
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{set_data:{type:'entity',id:'endermite'}}}"
             }
           ]
         }

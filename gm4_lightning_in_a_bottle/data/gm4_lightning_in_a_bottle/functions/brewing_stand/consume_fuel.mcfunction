@@ -13,8 +13,3 @@ scoreboard players add $fuel_cost gm4_liab_data 1
 # subtract fuel cost from Fuel and set to block's Fuel
 scoreboard players operation $fuel gm4_liab_data -= $fuel_cost gm4_liab_data
 execute store result block ~ ~ ~ Fuel int 1 run scoreboard players get $fuel gm4_liab_data
-
-
-# clean up
-scoreboard players reset $fuel gm4_liab_data
-data remove storage gm4_lightning_in_a_bottle:temp/brewing_stand Fuel

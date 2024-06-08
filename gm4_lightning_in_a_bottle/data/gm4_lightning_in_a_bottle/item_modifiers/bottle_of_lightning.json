@@ -1,0 +1,46 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "name": {
+      "translate": "item.gm4.bottle.effect.lightning",
+      "fallback": "Bottle of Lightning",
+      "color": "white",
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "mode": "append",
+    "lore": [
+      {
+        "translate": "potion.withAmplifier",
+        "with": [
+          {
+            "translate": "effect.gm4.lightning_in_a_bottle.lightning",
+            "fallback": "Lightning",
+            "color": "red",
+            "italic": false
+          },
+          {
+            "translate": "potion.potency.0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:enchantment_glint_override": true,
+      "minecraft:custom_model_data": "item/lightning_in_a_bottle",
+      "minecraft:potion_contents": {
+        "custom_color": 11985402
+      },
+      "minecraft:hide_additional_tooltip": {}
+    }
+  },
+  {
+    "function": "minecraft:set_custom_data",
+    "tag": "{gm4_lightning_in_a_bottle:1b}"
+  }
+]

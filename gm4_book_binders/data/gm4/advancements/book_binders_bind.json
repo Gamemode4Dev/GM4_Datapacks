@@ -1,8 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "enchanted_book",
-      "nbt": "{CustomModelData:'gui/advancement/book_binders_bind',Enchantments:[{id:\"minecraft:mending\",lvl:1}]}"
+      "id": "enchanted_book",
+      "components": {
+        "minecraft:enchantments": {
+          "minecraft:mending": 1
+        },
+        "minecraft:custom_model_data": "gui/advancement/book_binders_bind"
+      }
     },
     "title": {
       "translate": "advancement.gm4.book_binders_bind.title",

@@ -1,6 +1,6 @@
 id: gm4_orb_of_ankou
 name: Orb of Ankou
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -19,10 +19,11 @@ pipeline:
 
 meta:
   gm4:
+    minecraft: []
     versioning:
       required:
-        gm4_metallurgy: 1.2.0
-        lib_custom_crafters: 3.0.0
+        gm4_metallurgy: 1.3.0
+        lib_custom_crafters: 3.1.0
       schedule_loops:
         - main
         - tick

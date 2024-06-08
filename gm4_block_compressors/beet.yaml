@@ -1,6 +1,6 @@
 id: gm4_block_compressors
 name: Block Compressors
-version: 1.3.X
+version: 1.4.X
 
 data_pack:
   load: .
@@ -18,8 +18,8 @@ meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.0.0
-        lib_machines: 1.1.0
+        lib_custom_crafters: 3.1.0
+        lib_machines: 1.2.0
       schedule_loops: [main]
     model_data:
       - item: purpur_block
@@ -71,6 +71,8 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
+    planetminecraft: 
+      uid: 4344954
     video: https://www.youtube.com/watch?v=sdrTJYjL8C0
     wiki: https://wiki.gm4.co/wiki/Block_Compressors
     credits:
@@ -85,5 +87,3 @@ meta:
         - Kyrius
       Icon Design:
         - Sparks
-  planetminecraft: 
-    uid: 4344954

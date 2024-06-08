@@ -9,8 +9,15 @@
           "name": "minecraft:player_head",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/relocator_full',gm4_machines:{id:\"relocator_full\"},SkullOwner:{Name:\"gm4_relocator_full\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$relocator_full\"}]}}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/relocator_full",
+                "minecraft:profile": "$relocator_full"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_machines:{id:'relocator_full'}}"
             },
             {
               "function": "minecraft:set_name",
@@ -23,7 +30,7 @@
               ]
             },
             {
-              "function": "minecraft:copy_nbt",
+              "function": "minecraft:copy_custom_data",
               "source": {
                 "type": "minecraft:storage",
                 "source": "gm4_relocators:temp"
@@ -37,18 +44,16 @@
               ]
             },
             {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_relocators:temp"
-              },
-              "ops": [
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
                 {
-                  "source": "lore",
-                  "target": "display.Lore",
-                  "op": "append"
+                  "nbt": "lore",
+                  "storage": "gm4_relocators:temp",
+                  "interpret": true
                 }
-              ]
+              ],
+              "mode": "append"
             }
           ]
         }

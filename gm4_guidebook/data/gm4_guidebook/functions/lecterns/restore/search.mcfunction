@@ -9,9 +9,9 @@ advancement revoke @s only gm4_guidebook:take_lectern_book
 # get item data
 scoreboard players set $slot gm4_guide -1
 data modify storage gm4_guidebook:temp Inventory set from entity @s Inventory
-execute store success score $item gm4_guide run data modify storage gm4_guidebook:temp Item set from storage gm4_guidebook:temp Inventory[{tag:{gm4_guidebook:{lectern:1b}}}]
+execute store success score $item gm4_guide run data modify storage gm4_guidebook:temp Item set from storage gm4_guidebook:temp Inventory[{components:{"minecraft:custom_data":{gm4_guidebook:{lectern:1b}}}}]
 execute if score $item gm4_guide matches 1.. store result score $slot gm4_guide run data get storage gm4_guidebook:temp Item.Slot
-execute unless score $slot gm4_guide matches -1 store result score $count gm4_guide run data get storage gm4_guidebook:temp Item.Count
+execute unless score $slot gm4_guide matches -1 store result score $count gm4_guide run data get storage gm4_guidebook:temp Item.count
 
 # replace item
 execute if score $slot gm4_guide matches 0..8 run function gm4_guidebook:lecterns/restore/hotbar

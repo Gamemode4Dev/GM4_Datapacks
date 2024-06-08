@@ -19,6 +19,7 @@
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
               "lore": [
                 [
@@ -38,8 +39,15 @@
               ]
             },
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{gm4_metallurgy:{metal:{type:\"copper\",amount:[1s],castable:1b},item:\"ore\"},CustomModelData:3420018,SkullOwner:{Name:\"[Drop to Fix Item] gm4_metallurgy:ore/copper/v0\",Properties:{textures:[{Value:\"$ore/copper_RETIRED\"}]}}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": 3420018,
+                "minecraft:profile": "$ore/copper_RETIRED"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_metallurgy:{metal:{type:'copper',amount:[1s],castable:1b},item:'ore'}}"
             }
           ]
         }

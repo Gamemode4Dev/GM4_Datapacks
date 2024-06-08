@@ -17,7 +17,7 @@ execute if entity @s[scores={gm4_ml_ore_bi=6,gm4_ml_ore_al=0,gm4_ml_ore_ba=0,gm4
 
 
 # apply broken band if all other bands fail
-execute if score $band_applied gm4_ml_data matches 0 run summon item ~ ~ ~ {Item:{id:"minecraft:player_head",Count:1b,tag:{CustomModelData:"item/mundane_band",SkullOwner:{Name:"[Drop to Fix Item] gm4_metallurgy:band/mundane/v0",Properties:{textures:[{Value:"$band/mundane"}]}},display:{Name:'{"italic":false,"translate":"item.gm4.metallurgy.obsidian_cast","fallback":"Obsidian Cast"}',Lore:['{"italic":false,"color":"gray","translate":"item.gm4.metallurgy.mundane_band","fallback":"Mundane Band"}']}}}}
+execute if score $band_applied gm4_ml_data matches 0 run summon item ~ ~ ~ {Item:{id:"minecraft:player_head",count:1,components:{"minecraft:custom_model_data":"item/mundane_band","minecraft:profile":"$band/mundane","minecraft:custom_name":'{"italic":false,"translate":"item.gm4.metallurgy.obsidian_cast","fallback":"Obsidian Cast"}',"minecraft:lore":['{"italic":false,"color":"gray","translate":"item.gm4.metallurgy.mundane_band","fallback":"Mundane Band"}']}}}
 
 # spawn xp if band was applied
 execute if score $band_applied gm4_ml_data matches 1 if entity @p[distance=..4,gamemode=!spectator] run summon experience_orb ~ ~ ~ {Value:37s}

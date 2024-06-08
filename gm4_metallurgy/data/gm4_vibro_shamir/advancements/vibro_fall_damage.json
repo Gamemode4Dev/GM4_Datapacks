@@ -24,8 +24,10 @@
               },
               "equipment": {
                 "feet": {
-                  "tag": "gm4:boots",
-                  "nbt": "{gm4_metallurgy:{active_shamir:'vibro'}}"
+                  "items": "#gm4:boots",
+                  "predicates": {
+                    "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:'vibro'}}"
+                  }
                 }
               }
             }

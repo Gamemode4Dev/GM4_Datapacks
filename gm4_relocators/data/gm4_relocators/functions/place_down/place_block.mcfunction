@@ -4,7 +4,7 @@
 # run from gm4_relocators:machine/verify_place_down
 
 # get data from item
-data modify storage gm4_relocators:temp gm4_relocation set from entity @s SelectedItem.tag.gm4_relocation
+data modify storage gm4_relocators:temp gm4_relocation set from entity @s SelectedItem.components."minecraft:custom_data".gm4_relocation
 
 # place block (with respective block state)
 setblock ~ ~ ~ air

@@ -1,0 +1,37 @@
+{
+  "function": "minecraft:set_lore",
+  "entity": "this",
+  "mode": "append",
+  "lore": [
+    [
+      {
+        "translate": "text.gm4.beehive_inspector.bees",
+        "fallback": "Bees",
+        "color": "gray",
+        "italic": false
+      },
+      ": ",
+      {
+        "score": {
+          "objective": "gm4_beehive_insp",
+          "name": "$bees"
+        },
+        "color": "gray"
+      }
+    ],
+    [
+      {
+        "translate": "text.gm4.beehive_inspector.honey",
+        "fallback": "Honey",
+        "color": "gray",
+        "italic": false
+      },
+      ": ",
+      {
+        "nbt": "Item.components.'minecraft:block_state'.honey_level",
+        "entity": "@s",
+        "color": "gray"
+      }
+    ]
+  ]
+}

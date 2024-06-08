@@ -15,8 +15,6 @@ scoreboard players set $keep_tick.burn gm4_ce_keep_tick 1
 scoreboard players remove @s gm4_ce_burning.duration 1
 execute store success score $full_burn gm4_ce_data if score @s gm4_ce_burning.level matches 8..
 
-##TODO: scale with 1.5x attack range (1.20.5)
-
 # particles
 execute positioned ~ ~.9 ~ summon marker at @s run function gm4_combat_expanded:armor/modifier/type/burn/particles
 execute unless score $full_burn gm4_ce_data matches 1 run playsound minecraft:block.fire.ambient player @s ~ ~ ~ 0.5 1

@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_ender_hoppers:items/ender_hopper_minecart"
+          "value": "gm4_ender_hoppers:items/ender_hopper_minecart"
         }
       ]
     }

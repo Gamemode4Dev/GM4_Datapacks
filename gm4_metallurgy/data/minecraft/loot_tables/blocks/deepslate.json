@@ -14,14 +14,16 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantment": "minecraft:silk_touch",
+                          "levels": {
+                            "min": 1
+                          }
                         }
-                      }
-                    ]
+                      ]
+                    }
                   }
                 }
               ],
@@ -29,12 +31,14 @@
             },
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_forterra_shamir:deepslate",
+              "value": "gm4_forterra_shamir:deepslate",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'forterra'}}"
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'forterra'}}"
+                    }
                   }
                 }
               ]

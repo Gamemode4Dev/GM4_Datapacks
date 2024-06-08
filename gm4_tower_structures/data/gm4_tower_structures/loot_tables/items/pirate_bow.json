@@ -12,8 +12,10 @@
                             "count": 1
                         },
                         {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:'item/pirate_bow'}"
+                            "function": "minecraft:set_components",
+                            "components": {
+                              "minecraft:custom_model_data": "item/pirate_bow"
+                            }
                         },
                         {
                             "function": "minecraft:set_name",

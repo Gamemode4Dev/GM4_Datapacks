@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "minecraft:entities/cave_spider"
+          "value": "minecraft:entities/cave_spider"
         }
       ]
     }

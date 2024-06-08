@@ -7,58 +7,34 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "minecraft:yellow_shulker_box",
           "functions": [
             {
-              "function": "minecraft:copy_name",
-              "source": "block_entity"
-            },
-            {
-              "function": "minecraft:copy_nbt",
+              "function": "minecraft:copy_components",
               "source": "block_entity",
-              "ops": [
-                {
-                  "source": "Lock",
-                  "target": "BlockEntityTag.Lock",
-                  "op": "replace"
-                },
-                {
-                  "source": "LootTable",
-                  "target": "BlockEntityTag.LootTable",
-                  "op": "replace"
-                },
-                {
-                  "source": "LootTableSeed",
-                  "target": "BlockEntityTag.LootTableSeed",
-                  "op": "replace"
-                }
-              ]
-            },
-            {
-              "function": "minecraft:set_contents",
-              "type": "minecraft:shulker_box",
-              "entries": [
-                {
-                  "type": "minecraft:dynamic",
-                  "name": "minecraft:contents"
-                }
+              "include": [
+                "minecraft:custom_name",
+                "minecraft:container",
+                "minecraft:lock",
+                "minecraft:container_loot"
               ]
             }
-          ],
-          "name": "minecraft:yellow_shulker_box",
-          "conditions": [
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "items": [
-                    "minecraft:air"
-                  ],
-                  "nbt": "{drop_contents:1b}"
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "predicates": {
+                "minecraft:custom_data": {
+                  "drop_contents": 1
                 }
               }
             }
-          ]
+          }
         }
       ]
     },
@@ -68,44 +44,22 @@
       "entries": [
         {
           "type": "minecraft:dynamic",
-          "name": "minecraft:contents",
-          "conditions": [
-            {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "items": [
-                  "minecraft:air"
-                ],
-                "nbt": "{drop_contents:1b}"
+          "name": "minecraft:contents"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "predicates": {
+              "minecraft:custom_data": {
+                "drop_contents": 1
               }
             }
-          ]
+          }
         }
       ]
     }
   ],
-  "random_sequence": "minecraft:blocks/yellow_shulker_box",
-  "__smithed__": {
-    "rules": [
-      {
-        "type": "smithed:append",
-        "target": "pools[0].conditions",
-        "source": {
-          "type": "smithed:reference",
-          "path": "pools[0].conditions[0]"
-        }
-      },
-      {
-        "type": "smithed:append",
-        "target": "pools",
-        "source": {
-          "type": "smithed:reference",
-          "path": "pools[1]"
-        }
-      }
-    ],
-    "priority": {
-      "default": 0
-    }
-  }
+  "random_sequence": "minecraft:blocks/yellow_shulker_box"
 }

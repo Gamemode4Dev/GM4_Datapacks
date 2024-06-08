@@ -1,8 +1,10 @@
 {
     "display": {
         "icon": {
-            "item": "furnace",
-            "nbt": "{CustomModelData:'gui/advancement/smelteries'}"
+            "id": "furnace",
+            "components": {
+                "minecraft:custom_model_data": "gui/advancement/smelteries"
+            }
         },
         "title": {
             "translate": "advancement.gm4.smelteries.title",
@@ -24,7 +26,9 @@
                         "items": [
                             "minecraft:player_head"
                         ],
-                        "nbt": "{gm4_machines:{id:\"smeltery\"}}"
+                        "predicates": {
+                          "minecraft:custom_data": "{gm4_machines:{id:\"smeltery\"}}"
+                        }
                     }
                 ]
             }

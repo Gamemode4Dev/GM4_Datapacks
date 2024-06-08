@@ -3,8 +3,10 @@
   "name": "Display Frames",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:splash_potion",
-    "nbt": "{Potion:'minecraft:invisibility'}"
+    "id": "minecraft:splash_potion",
+    "components": {
+      "minecraft:potion_contents": "minecraft:invisibility"
+    }
   },
   "criteria": {
     "obtain_invisibility_potion": {
@@ -17,7 +19,9 @@
               "minecraft:potion",
               "minecraft:splash_potion"
             ],
-            "nbt": "{Potion:'minecraft:invisibility'}"
+            "components": {
+              "minecraft:potion_contents": "minecraft:invisibility"
+            }
           }
         ]
       }

@@ -10,7 +10,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_scuba_gear:{item:\"helmet\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_scuba_gear:{item:\"helmet\"}}"
+            }
           }
         }
       }
@@ -24,7 +26,9 @@
             "items": [
               "minecraft:golden_chestplate"
             ],
-            "nbt": "{gm4_scuba_gear:{item:\"tank\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_scuba_gear:{item:\"tank\"}}"
+            }
           }
         }
       }
@@ -38,7 +42,9 @@
             "items": [
               "minecraft:leather_boots"
             ],
-            "nbt": "{gm4_scuba_gear:{item:\"flippers\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_scuba_gear:{item:\"flippers\"}}"
+            }
           }
         }
       }

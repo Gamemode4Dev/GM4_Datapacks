@@ -1,7 +1,7 @@
 # @template gm4_liquid_tanks:test_setup
 # @dummy ~ ~1 ~
 
-data merge block ~1 ~3 ~1 {Items:[{Slot:0b,id:"minecraft:experience_bottle",Count:10b}]}
+item replace block ~1 ~3 ~1 container.0 with minecraft:experience_bottle 10
 execute at @s run tp @s ~1 ~1 ~1
 
 await entity @s[level=6]

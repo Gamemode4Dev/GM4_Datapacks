@@ -14,7 +14,8 @@ execute unless loaded ~ ~ ~ run return -1
 # if liquid id is magicol, display particles
 # generated with the help of bolt
 for color_data in ctx.meta['magicol_colors']:
-    execute unless score $displayed_magicol_particle gm4_zc_data matches 1.. store success score $displayed_magicol_particle gm4_zc_data if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients liquid{id:"magicol",magicol:{color:color_data['color']}} unless entity @e[type=area_effect_cloud,dx=0,limit=1] run summon area_effect_cloud ~.5 ~.75 ~.5 {CustomName:'"gm4_zc_magicol_particle"',Tags:["gm4_zc_magicol_particle"],Particle:"entity_effect",Radius:0.1f,Duration:10,Color:int(color_data['potion_color'].to_color_code('dec'))}
+    # TODO 1.20.5: figure out how this particle looked in 1.20.4
+    execute unless score $displayed_magicol_particle gm4_zc_data matches 1.. store success score $displayed_magicol_particle gm4_zc_data if data storage gm4_zauber_cauldrons:temp/cauldron/ingredients liquid{id:"magicol",magicol:{color:color_data['color']}} unless entity @e[type=area_effect_cloud,dx=0,limit=1] run summon area_effect_cloud ~.5 ~.75 ~.5 {CustomName:'"gm4_zc_magicol_particle"',Tags:["gm4_zc_magicol_particle"],Particle:{type:"minecraft:entity_effect",color:[1.0,1.0,1.0,1.0]},Radius:0.1f,Duration:10,Color:int(color_data['potion_color'].to_color_code('dec'))}
 
 # set flag
 scoreboard players set $displayed_liquid_particle gm4_zc_data 1

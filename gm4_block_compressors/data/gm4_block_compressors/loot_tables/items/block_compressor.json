@@ -9,8 +9,15 @@
           "name": "minecraft:player_head",
           "functions": [
             {
-              "function": "set_nbt",
-              "tag": "{CustomModelData:'block/block_compressor_full',gm4_machines:{id:\"block_compressor\"},SkullOwner:{Name:\"gm4_block_compressor\",Properties:{textures:[{Signature:\"gm4_machine\",Value:\"$block_compressor\"}]}}}"
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "block/block_compressor_full",
+                "minecraft:profile": "$block_compressor"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'block_compressor'}}"
             },
             {
               "function": "set_name",

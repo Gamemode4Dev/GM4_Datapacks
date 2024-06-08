@@ -2,6 +2,9 @@ import json
 import logging
 import os
 import shutil
+import re
+import glob
+from collections import defaultdict
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 from typing import Any
@@ -34,8 +37,30 @@ pass_project = click.make_pass_decorator(Project) # type: ignore
 def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: bool, reload: bool, link: str | None, clean: bool, log: int | str):
 	"""Build or watch modules for development."""
 
-	modules = tuple(m if m.startswith("gm4_") else f"gm4_{m}" for m in modules)
-	if len(modules) == 0:
+	module_folders = sorted(glob.glob("gm4_*"))
+	module_aliases: defaultdict[str, list[str]] = defaultdict(list)
+	for full_id in module_folders:
+		alias = "".join(p[0] for p in full_id.removeprefix("gm4_").split("_"))
+		module_aliases[alias].append(full_id)
+
+	selected_modules: list[str] = []
+	for m in modules:
+		alias = re.sub("\\d+$", "", m)
+		if alias in module_aliases:
+			if len(module_aliases[alias]) > 1:
+				index = re.sub("^[a-z]+", "", m)
+				if index.isdecimal() and 1 <= int(index) <= len(module_aliases):
+					m = module_aliases[alias][int(index) - 1]
+				else:
+					click.echo(f"[GM4] Alias {alias} is ambiguous, add a number suffix ({', '.join(f'{i+1}: {a}' for i, a in enumerate(module_aliases[alias]))})")
+					return
+			else:
+				m = module_aliases[alias][0]
+		if not m.startswith("gm4_"):
+			m = f"gm4_{m}"
+		selected_modules.append(m)
+
+	if len(selected_modules) == 0:
 		click.echo("[GM4] You need at least one module")
 		return
 
@@ -43,7 +68,7 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: b
 		click.echo(f"[GM4] Cleaning output folder...")
 		shutil.rmtree("out", ignore_errors=True)
 
-	click.echo(f"[GM4] Building modules: {', '.join(modules)}")
+	click.echo(f"[GM4] Building {len(selected_modules)} module{'' if len(selected_modules) == 1 else 's'}: {', '.join(selected_modules)}")
 
 	logger = logging.getLogger()
 	logger.setLevel(log)
@@ -53,7 +78,7 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: b
 
 	# command-determined config options
 	broadcast_config: dict[str, Any] = next((p for p in config["pipeline"] if isinstance(p, dict))) # type: ignore
-	broadcast_config["broadcast"] = modules
+	broadcast_config["broadcast"] = selected_modules
 	if reload:
 		broadcast_config["require"].insert(0, "beet.contrib.livereload")
 

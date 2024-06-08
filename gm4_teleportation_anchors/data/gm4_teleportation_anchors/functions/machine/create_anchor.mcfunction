@@ -7,7 +7,7 @@
 setblock ~ ~ ~ lodestone
 
 # summon display armor stand and marker entity
-summon armor_stand ~ ~-0.4 ~ {Small:1,NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,DisabledSlots:2039552,Tags:["gm4_no_edit","gm4_teleportation_anchor_stand","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],HasVisualFire:1,CustomName:'"gm4_teleportation_anchor_stand"',ArmorItems:[{},{},{},{id:"end_portal_frame",Count:1b,tag:{CustomModelData:"block/teleportation_anchor"}}],Rotation:[0.0f,0.0f]}
+summon armor_stand ~ ~-0.4 ~ {Small:1,NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,DisabledSlots:2039552,Tags:["gm4_no_edit","gm4_teleportation_anchor_stand","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],HasVisualFire:1,CustomName:'"gm4_teleportation_anchor_stand"',ArmorItems:[{},{},{},{id:"end_portal_frame",count:1,components:{"minecraft:custom_model_data":"block/teleportation_anchor"}}],Rotation:[0.0f,0.0f]}
 summon marker ~ ~ ~ {Tags:["gm4_teleportation_anchor","gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:'"gm4_teleportation_anchor"',Rotation:[0.0f,0.0f]}
 
 # mark block as placed

@@ -1,6 +1,6 @@
 id: gm4_potion_swords
 name: Potion Swords
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -20,6 +20,8 @@ meta:
       description: As if getting stabbed isn't enough... support your friends, terrify your enemies, make gold great again using Golden Swords and potions!
       recommended: []
       notes: []
+    planetminecraft:
+      uid: 4578144
     video: https://www.youtube.com/watch?v=9xI3CQ1z5cg
     wiki: https://wiki.gm4.co/wiki/Potion_Swords
     credits:
@@ -30,5 +32,3 @@ meta:
         - SpecialBuilder32
       Icon Design:
         - DuckJr
-  planetminecraft:
-    uid: 4578144

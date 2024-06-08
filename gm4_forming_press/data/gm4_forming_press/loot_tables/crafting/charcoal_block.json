@@ -15,7 +15,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4_forming_press:items/charcoal_block",
+          "value": "gm4_forming_press:items/charcoal_block",
           "functions": [
             {
               "function": "minecraft:set_count",

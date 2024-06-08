@@ -11,7 +11,7 @@ scoreboard players operation $running_id gm4_ce_boss.id = @s gm4_ce_boss.id
 
 # process linked twin first
 scoreboard players operation $phase gm4_ce_boss = @s gm4_ce_boss.phase
-execute if entity @s[tag=gm4_ce_boss.watcher.main] as @e[type=shulker,tag=gm4_ce_boss.watcher.secondary] if score @s gm4_ce_boss.secondary_id = $running_id gm4_ce_boss.id at @s run function gm4_combat_expanded:boss/watchers/tick_twin
+execute if entity @s[tag=gm4_ce_boss.watcher.has_twin] as @e[type=shulker,tag=gm4_ce_boss.watcher.secondary] if score @s gm4_ce_boss.secondary_id = $running_id gm4_ce_boss.id at @s run function gm4_combat_expanded:boss/watchers/tick_twin
 
 # regain id and put in storage
 execute store result storage gm4_combat_expanded:temp boss.running_id int 1 run scoreboard players operation $running_id gm4_ce_boss.id = @s gm4_ce_boss.id

@@ -5,10 +5,11 @@
 
 # spawn saddle item
 loot spawn ~ ~ ~ loot gm4_chairs:drop_saddle
+execute if items entity @s weapon.mainhand minecraft:saddle run item replace entity @e[type=minecraft:item,distance=..1,limit=1,sort=nearest] contents from entity @s weapon.mainhand
 tag @e[type=minecraft:item,distance=..1,limit=1,sort=nearest] add gm4_chairs_ignore
 
 # dismount if sitting on chair
-execute align xyz positioned ~.5 ~ ~.5 as @a[predicate=gm4_chairs:sitting_in_chair,distance=..0.5] at @s align y run tp @s ~ ~1 ~
+execute on passengers at @s align y run tp @s ~ ~1 ~
 
 # increase health to avoid visible death cloud
 attribute @s minecraft:generic.max_health base set 5

@@ -8,8 +8,43 @@
           "name": "minecraft:player_head",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomModelData:'item/scuba_helmet',gm4_scuba_gear:{item:\"helmet\"},AttributeModifiers:[{AttributeName:\"generic.armor\",Name:\"generic.armor\",Amount:2,Operation:0,UUID:[I;0,190244,0,554768],Slot:\"head\"},{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:-.5,Operation:0,UUID:[I;0,193195,0,454101],Slot:\"head\"}],SkullOwner:{Name:\"[Drop to Fix Item] gm4_scuba_gear:scuba_helmet\",Properties:{textures:[{Value:\"$scuba_helmet\"}]}}}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:attribute_modifiers": [
+                  {
+                    "type": "generic.armor",
+                    "slot": "head",
+                    "uuid": [
+                      0,
+                      190244,
+                      0,
+                      554768
+                    ],
+                    "name": "generic.armor",
+                    "amount": 2,
+                    "operation": "add_value"
+                  },
+                  {
+                    "type": "generic.attack_speed",
+                    "slot": "head",
+                    "uuid": [
+                      0,
+                      193195,
+                      0,
+                      454101
+                    ],
+                    "name": "generic.attack_speed",
+                    "amount": -0.5,
+                    "operation": "add_value"
+                  }
+                ],
+                "minecraft:custom_model_data": "item/scuba_helmet",
+                "minecraft:profile": "$scuba_helmet"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_scuba_gear:{item:'helmet'}}"
             },
             {
               "function": "minecraft:set_name",

@@ -8,8 +8,10 @@
                 "predicate": {
                     "equipment": {
                         "feet": {
-                            "tag": "gm4_combat_expanded:armor",
-                            "nbt": "{gm4_combat_expanded:{modifier:74}}"
+                            "items": "#gm4_combat_expanded:armor",
+                            "predicates": {
+                                "minecraft:custom_data": "{gm4_combat_expanded:{modifier:74}}"
+                            }
                         }
                     }
                 }
@@ -20,8 +22,10 @@
                 "predicate": {
                     "equipment": {
                         "legs": {
-                            "tag": "gm4_combat_expanded:armor",
-                            "nbt": "{gm4_combat_expanded:{modifier:74}}"
+                            "items": "#gm4_combat_expanded:armor",
+                            "predicates": {
+                                "minecraft:custom_data": "{gm4_combat_expanded:{modifier:74}}"
+                            }
                         }
                     }
                 }
@@ -32,8 +36,10 @@
                 "predicate": {
                     "equipment": {
                         "chest": {
-                            "tag": "gm4_combat_expanded:armor",
-                            "nbt": "{gm4_combat_expanded:{modifier:74}}"
+                            "items": "#gm4_combat_expanded:armor",
+                            "predicates": {
+                                "minecraft:custom_data": "{gm4_combat_expanded:{modifier:74}}"
+                            }
                         }
                     }
                 }
@@ -44,8 +50,10 @@
                 "predicate": {
                     "equipment": {
                         "head": {
-                            "tag": "gm4_combat_expanded:armor",
-                            "nbt": "{gm4_combat_expanded:{modifier:74}}"
+                            "items": "#gm4_combat_expanded:armor",
+                            "predicates": {
+                                "minecraft:custom_data": "{gm4_combat_expanded:{modifier:74}}"
+                            }
                         }
                     }
                 }

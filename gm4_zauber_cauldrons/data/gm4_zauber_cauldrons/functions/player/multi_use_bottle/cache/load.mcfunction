@@ -9,7 +9,7 @@ scoreboard players operation $requested_id gm4_zc_id = @s gm4_zc_id
 execute as @e[type=item,tag=gm4_zc_nbt_storage] if score @s gm4_zc_id = $requested_id gm4_zc_id run function gm4_zauber_cauldrons:player/multi_use_bottle/cache/dump
 
 # abort execution if one or less sips are remaining
-execute store result score $remaining_sips gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.tag.gm4_zauber_cauldrons.bottle.sips
+execute store result score $remaining_sips gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.components."minecraft:custom_data".gm4_zauber_cauldrons.bottle.sips
 execute if score $remaining_sips gm4_zc_data matches 2.. run function gm4_zauber_cauldrons:player/multi_use_bottle/modify_bottle
 
 # revoke advancement

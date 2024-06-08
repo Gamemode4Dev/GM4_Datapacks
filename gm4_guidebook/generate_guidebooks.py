@@ -43,13 +43,18 @@ class Section(BaseModel):
   grants: list[str] = []
 
 
+class Icon(BaseModel):
+  id: str
+  components: Optional[dict[str, Any]]
+
+
 class Book(BaseModel):
   id: str
   name: str
   module_type: Literal["expansion", "base", "module"]
   load_check: Optional[str]
   base_module: Optional[str]
-  icon: dict[str, str]
+  icon: Icon
   criteria: dict[str, dict[Any, Any]]
   sections: list[Section]
   trigger_id: int = -1 # value set by triggers.json
@@ -160,7 +165,7 @@ def generate_files(ctx:Context, d: DataPack, overlay: bool = False):
       ctx.meta['gm4'].setdefault('model_data',[]).append({
         "template": "custom",
         "reference": f"{ctx.project_id}:guidebook_icon/{book.id}",
-        "item": book.icon.get('item','').removeprefix("minecraft:"),
+        "item": book.icon.id.removeprefix("minecraft:"),
       })
       ctx.assets[f"{ctx.project_id}:guidebook_icon/{book.id}"] = generate_toast_model(book, ctx)
 
@@ -792,7 +797,7 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
   # get item id, name, lore, and color
   entry: dict[Any, Any] = loot["pools"][0]["entries"][0]
   item_id: str = entry["name"]
-  tag: dict[Any, Any] = {}
+  profile_name: str = ""
   name: TextComponent = ""
   lore: list[str] = []
   if "functions" in entry:
@@ -802,20 +807,22 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
       elif "set_lore" in function["function"]:
         for line in function["lore"]:
           lore.append(f'{json.dumps(line)}')
-      elif "set_nbt" in function["function"]:
-        tag: dict[Any, Any] = nbtlib.parse_nbt(function["tag"]) # type: ignore
+      elif "set_components" in function["function"]:
+        for key, value in function["components"].items():
+          if "profile" in key:
+            profile_name = value if isinstance(value, str) else value.get("name", "")
 
   # color
-  if "player_head" in item_id and "$" in tag["SkullOwner"]:
-    skull_owner = tag["SkullOwner"].replace("$","")
-    if ":" not in skull_owner:
-      skull_owner = f"{ctx.project_id}:{skull_owner}" # NOTE gm4.utils will have an add_namespace helper function after the RP PR
-    skin = ctx.data[Skin][skull_owner]
+  # if "player_head" in item_id and "$" in profile_name:
+  #   skull_owner = profile_name.replace("$","")
+  #   if ":" not in skull_owner:
+  #     skull_owner = f"{ctx.project_id}:{skull_owner}" # NOTE gm4.utils will have an add_namespace helper function after the RP PR
+  #   skin = ctx.data[Skin][skull_owner]
 
-    color = get_texture_color(skin)
+  #   color = get_texture_color(skin)
 
-  else:
-    color = get_texture_color(intuit_item_texture(item_id, ctx.inject(Vanilla)))
+  # else:
+  color = get_texture_color(intuit_item_texture(item_id, ctx.inject(Vanilla)))
 
   # create slot
   slot: dict[Any, Any] = {
@@ -1302,8 +1309,20 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
   # standard functions for every hand loot table
   functions:list[dict[Any, Any]] = [
     {
-      "function": "minecraft:set_nbt",
-      "tag": "{CustomModelData:'gm4_guidebook:item/guidebook',gm4_guidebook:{lectern:0b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:custom_model_data": "gm4_guidebook:item/guidebook",
+        "minecraft:written_book_content": {
+          "pages": [],
+          "title": "Gamemode 4 Guidebook",
+          "author": "Unknown",
+          "generation": 3
+        }
+      }
+    },
+    {
+      "function": "minecraft:set_custom_data",
+      "tag": f"{'{'}gm4_guidebook:{'{'}lectern:0b, trigger:{str(book.trigger_id)}{'}'}{'}'}"
     },
     {
       "function": "minecraft:set_name",
@@ -1329,8 +1348,20 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
   # standard functions for every lectern loot table
   functions_lectern:list[dict[Any, Any]] = [
     {
-    "function": "minecraft:set_nbt",
-    "tag": "{CustomModelData:'gm4_guidebook:item/guidebook',gm4_guidebook:{lectern:1b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:custom_model_data": "gm4_guidebook:item/guidebook",
+        "minecraft:written_book_content": {
+          "pages": [],
+          "title": "Gamemode 4 Guidebook",
+          "author": "Unknown",
+          "generation": 3
+        }
+      }
+    },
+    {
+      "function": "minecraft:set_custom_data",
+      "tag": f"{'{'}gm4_guidebook:{'{'}lectern:1b, trigger:{str(book.trigger_id)}{'}'}{'}'}"
     },
     {
       "function": "minecraft:set_name",
@@ -1340,20 +1371,20 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
         "italic": False
       }
     },
-    {
-      "function": "minecraft:copy_nbt",
-      "source": {
-        "type": "minecraft:storage",
-        "source": "gm4_guidebook:pages"
-      },
-      "ops": [
-        {
-          "source": "lectern_front_matter[]",
-          "target": "pages",
-          "op": "append"
-        }
-      ]
-    }
+    # {
+    #   "function": "minecraft:copy_nbt",
+    #   "source": {
+    #     "type": "minecraft:storage",
+    #     "source": "gm4_guidebook:pages"
+    #   },
+    #   "ops": [
+    #     {
+    #       "source": "lectern_front_matter[]",
+    #       "target": "pages",
+    #       "op": "append"
+    #     }
+    #   ]
+    # }
   ]
 
   # create conditions list for each section
@@ -1497,32 +1528,33 @@ def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], lis
     if section.requirements and len(section.requirements) > 0:
       function["conditions"].append(unlock_condition)
       fallback_function["conditions"].append(lock_condition)
-      functions.append(function)
-      functions.append(fallback_function)
+      # functions.append(function)
+      # functions.append(fallback_function)
 
       function_lectern["conditions"].append(unlock_condition)
       fallback_function_lectern["conditions"].append(lock_condition)
-      functions_lectern.append(function_lectern)
-      functions_lectern.append(fallback_function_lectern)
+      # functions_lectern.append(function_lectern)
+      # functions_lectern.append(fallback_function_lectern)
     else:
-      functions.append(function)
-      functions_lectern.append(function_lectern)
+      pass
+      # functions.append(function)
+      # functions_lectern.append(function_lectern)
 
   # extra blank page for lecterns
-  functions_lectern.append({
-    "function": "minecraft:copy_nbt",
-    "source": {
-      "type": "minecraft:storage",
-      "source": "gm4_guidebook:pages"
-    },
-    "ops": [
-      {
-        "source": "blank",
-        "target": "pages",
-        "op": "append"
-      }
-    ]
-  })
+  # functions_lectern.append({
+  #   "function": "minecraft:copy_nbt",
+  #   "source": {
+  #     "type": "minecraft:storage",
+  #     "source": "gm4_guidebook:pages"
+  #   },
+  #   "ops": [
+  #     {
+  #       "source": "blank",
+  #       "target": "pages",
+  #       "op": "append"
+  #     }
+  #   ]
+  # })
 
   hand_loot = LootTable({
     "pools": [
@@ -1762,11 +1794,14 @@ Creates the advancement to show the toast
 def generate_display_advancement(book: Book, project_id: str) -> Advancement:
   module_name = book.name
   icon = book.icon
-  icon_nbt: nbtlib.Compound = nbtlib.parse_nbt(icon.get('nbt',"{}")) # type: ignore ; nbtlib missing stub file
-  icon_nbt.merge({"CustomModelData": nbtlib.String(f"{project_id}:guidebook_icon/{book.id}")}) # type: ignore
-  icon["nbt"] = nbtlib.serialize_tag(icon_nbt) # type: ignore
+  if icon.components is None:
+    icon.components = dict()
+  icon.components["minecraft:custom_model_data"] = f"{project_id}:guidebook_icon/{book.id}"
   display = {
-    "icon": icon, # taken from book dictionary
+    "icon": {
+      "id": icon.id,
+      "components": icon.components
+    },
     "title": [
       "",
       {
@@ -2027,13 +2062,16 @@ def get_texture_color(texture: PngFile|None) -> str:
 
   # get average RGB values
   r, g, b = 0, 0, 0
-  for i in range(0, 12, 3):
+  n = 0
+  for i in range(0, min(12, len(palette)), 3): # type: ignore
     r += palette[i] # type: ignore ; PIL has 'Unknown' type on palette return
     g += palette[i+1] # type: ignore
     b += palette[i+2] # type: ignore
-  r /= 4 # type: ignore
-  g /= 4 # type: ignore
-  b /= 4 # type: ignore
+    n += 1
+  if n > 0:
+    r /= 4 # type: ignore
+    g /= 4 # type: ignore
+    b /= 4 # type: ignore
 
   # bump saturation and value to taste
   h, s, v = colorsys.rgb_to_hsv(r, g, b)# type: ignore

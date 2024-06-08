@@ -1,14 +1,9 @@
 id: gm4_liquid_minecarts
 name: Liquid Minecarts
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 26
-        max_inclusive: 26
-      directory: overlay_26
 
 resource_pack:
   load: .
@@ -21,8 +16,8 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_liquid_tanks: 2.1.0
-        lib_machines: 1.1.0
+        gm4_liquid_tanks: 2.2.0
+        lib_machines: 1.2.0
       schedule_loops: [main]
     model_data:
       - item: hopper_minecart
