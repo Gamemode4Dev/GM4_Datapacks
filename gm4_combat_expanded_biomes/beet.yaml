@@ -1,6 +1,6 @@
-id: gm4_ce_base
-name: Combat Expanded
-version: 3.0.X
+id: gm4_ce_biomes
+name: Combat Expanded - Biomes
+version: 2.1.X
 
 data_pack:
   load: .

@@ -1,6 +1,6 @@
-id: gm4_ce_base
+id: gm4_combat_expanded
 name: Combat Expanded
-version: 3.0.X
+version: 2.1.X
 
 data_pack:
   load: .
