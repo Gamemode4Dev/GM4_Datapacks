@@ -24,8 +24,8 @@ scoreboard players operation $active gm4_ce_data += @s gm4_ce_kill
 execute store result storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.active int 1 run scoreboard players operation $active gm4_ce_data < $armor_level gm4_ce_data
 
 # update modifiers
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded"}].amount float 0.5 run scoreboard players get $active gm4_ce_data
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_2"}].amount float -1 run scoreboard players get $active gm4_ce_data
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic"}].amount float 0.5 run scoreboard players get $active gm4_ce_data
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic_2"}].amount float -1 run scoreboard players get $active gm4_ce_data
 
 # sound
 execute at @s run playsound minecraft:entity.vex.ambient player @s ~ ~ ~ 0.8 1.6

@@ -18,5 +18,5 @@ execute if score $level gm4_ce_data matches 4 run scoreboard players set $level 
 scoreboard players set $missing_armor gm4_ce_data 20
 scoreboard players operation $missing_armor gm4_ce_data -= @s gm4_ce_armor
 scoreboard players operation $level gm4_ce_data *= $missing_armor gm4_ce_data
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded"}].amount float 0.0001 run scoreboard players get $level gm4_ce_data
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_2"}].amount float 0.0001 run scoreboard players get $level gm4_ce_data
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic"}].amount float 0.0001 run scoreboard players get $level gm4_ce_data
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic_2"}].amount float 0.0001 run scoreboard players get $level gm4_ce_data

@@ -14,7 +14,7 @@ execute if score $renamed gm4_ce_data matches 1 run function gm4_combat_expanded
 execute if score $renamed gm4_ce_data matches 1 run data remove storage gm4_combat_expanded:temp format_name_args
 
 # if player is already in a link from a previous link piece skip this
-execute if score @s gm4_ce_link_id matches 1.. store success score $change gm4_ce_data run data modify storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded"}].amount set value 0
+execute if score @s gm4_ce_link_id matches 1.. store success score $change gm4_ce_data run data modify storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic"}].amount set value 0
 execute if score @s gm4_ce_link_id matches 1.. run return 0
 
 # loop through links to find the one this player belongs to
@@ -34,7 +34,7 @@ tag @s[gamemode=!creative] add gm4_ce_linked
 
 # get max health of this player -max health change from linked piece
 function gm4_combat_expanded:player/calculate_hp
-execute store result score @s gm4_ce_link_max_health run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded"}].amount -1
+execute store result score @s gm4_ce_link_max_health run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic"}].amount -1
 scoreboard players operation @s gm4_ce_link_max_health += @s gm4_ce_health.max
 
 # store slot this players linked armor is in

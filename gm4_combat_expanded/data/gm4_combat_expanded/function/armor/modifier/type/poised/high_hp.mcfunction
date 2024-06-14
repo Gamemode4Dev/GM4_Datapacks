@@ -8,5 +8,5 @@ scoreboard players set $change gm4_ce_data 1
 data modify storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.active set value 1
 
 # modify attributes
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded"}].amount float -1 run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level
-data modify storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_combat_expanded_2"}].amount set from storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level2
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic"}].amount float -1 run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level
+data modify storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic_2"}].amount set from storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level2
