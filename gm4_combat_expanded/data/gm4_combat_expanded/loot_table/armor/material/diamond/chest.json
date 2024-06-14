@@ -14,24 +14,21 @@
               "modifiers": [
                 {
                   "attribute": "generic.armor",
-                  "name": "generic.armor",
-                  "id": "9F3D476D-C118-4544-8365-64846904B48E",
+                  "id": "minecraft:armor.chestplate",
                   "amount": 8,
                   "operation": "add_value",
                   "slot": "chest"
                 },
                 {
                   "attribute": "generic.armor_toughness",
-                  "name": "generic.armor_toughness",
-                  "id": "9F3D476D-C118-4544-8365-64846904B484",
+                  "id": "gm4_combat_expanded:armor_toughness.chestplate",
                   "amount": 2,
                   "operation": "add_value",
                   "slot": "chest"
                 },
                 {
                   "attribute": "generic.knockback_resistance",
-                  "name": "generic.knockback_resistance",
-                  "id": "0-1-438d-0-28d34",
+                  "id": "gm4_combat_expanded:knockback_resistance",
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "chest"

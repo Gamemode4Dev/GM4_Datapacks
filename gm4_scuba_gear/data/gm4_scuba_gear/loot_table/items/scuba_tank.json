@@ -13,27 +13,15 @@
                 "minecraft:attribute_modifiers": [
                   {
                     "type": "generic.movement_speed",
+                    "id": "gm4_scuba_gear:tank_movement_speed",
                     "slot": "chest",
-                    "uuid": [
-                      0,
-                      911382,
-                      0,
-                      189444
-                    ],
-                    "name": "generic.movement_speed",
                     "amount": -0.1,
                     "operation": "add_multiplied_base"
                   },
                   {
                     "type": "generic.armor",
                     "slot": "chest",
-                    "uuid": [
-                      0,
-                      847530,
-                      0,
-                      778609
-                    ],
-                    "name": "generic.armor",
+                    "id": "gm4_scuba_gear:tank_armor",
                     "amount": 4,
                     "operation": "add_value"
                   }

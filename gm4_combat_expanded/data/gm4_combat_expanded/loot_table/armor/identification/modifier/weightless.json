@@ -14,28 +14,28 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.gravity",
-                  "name": "gm4_ce_perm",
+                  "id": "gm4_combat_expanded:permanent",
                   "amount": -0.15,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.fall_damage_multiplier",
-                  "name": "gm4_ce_perm_2",
+                  "id": "gm4_combat_expanded:permanent_2",
                   "amount": -0.15,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.jump_strength",
-                  "name": "gm4_ce_perm_3",
+                  "id": "gm4_combat_expanded:permanent_3",
                   "amount": -0.075,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.safe_fall_distance",
-                  "name": "gm4_ce_perm_4",
+                  "id": "gm4_combat_expanded:permanent_4",
                   "amount": -0.075,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
@@ -62,28 +62,28 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.gravity",
-                  "name": "gm4_ce_perm",
+                  "id": "gm4_combat_expanded:permanent",
                   "amount": -0.2,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.fall_damage_multiplier",
-                  "name": "gm4_ce_perm_2",
+                  "id": "gm4_combat_expanded:permanent_2",
                   "amount": -0.2,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.jump_strength",
-                  "name": "gm4_ce_perm_3",
+                  "id": "gm4_combat_expanded:permanent_3",
                   "amount": -0.1,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.safe_fall_distance",
-                  "name": "gm4_ce_perm_4",
+                  "id": "gm4_combat_expanded:permanent_4",
                   "amount": -0.1,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
@@ -110,28 +110,28 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.gravity",
-                  "name": "gm4_ce_perm",
+                  "id": "gm4_combat_expanded:permanent",
                   "amount": -0.25,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.fall_damage_multiplier",
-                  "name": "gm4_ce_perm_2",
+                  "id": "gm4_combat_expanded:permanent_2",
                   "amount": -0.25,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.jump_strength",
-                  "name": "gm4_ce_perm_3",
+                  "id": "gm4_combat_expanded:permanent_3",
                   "amount": -0.125,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.safe_fall_distance",
-                  "name": "gm4_ce_perm_4",
+                  "id": "gm4_combat_expanded:permanent_4",
                   "amount": -0.125,
                   "operation": "add_multiplied_base",
                   "slot": "chest"

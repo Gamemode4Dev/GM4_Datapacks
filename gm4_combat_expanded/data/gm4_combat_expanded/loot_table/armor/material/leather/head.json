@@ -14,8 +14,7 @@
               "modifiers": [
                 {
                   "attribute": "generic.armor",
-                  "name": "generic.armor",
-                  "id": "2AD3F246-FEE1-4E67-B886-69FD380BB150",
+                  "id": "minecraft:armor.helmet",
                   "amount": 1,
                   "operation": "add_value",
                   "slot": "head"

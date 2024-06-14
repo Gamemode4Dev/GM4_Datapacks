@@ -14,7 +14,7 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.scale",
-                  "name": "gm4_ce_perm",
+                  "id": "gm4_combat_expanded:permanent",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -29,7 +29,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.step_height",
-                  "name": "gm4_ce_perm_2",
+                  "id": "gm4_combat_expanded:permanent_2",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -44,7 +44,7 @@
                 },
                 {
                   "attribute": "minecraft:player.block_interaction_range",
-                  "name": "gm4_ce_perm_3",
+                  "id": "gm4_combat_expanded:permanent_3",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -59,7 +59,7 @@
                 },
                 {
                   "attribute": "minecraft:player.entity_interaction_range",
-                  "name": "gm4_ce_perm_4",
+                  "id": "gm4_combat_expanded:permanent_4",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -74,7 +74,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_knockback",
-                  "name": "gm4_ce_perm_5",
+                  "id": "gm4_combat_expanded:permanent_5",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -89,7 +89,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.fall_damage_multiplier",
-                  "name": "gm4_ce_perm_6",
+                  "id": "gm4_combat_expanded:permanent_6",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -104,7 +104,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.gravity",
-                  "name": "gm4_ce_perm_7",
+                  "id": "gm4_combat_expanded:permanent_7",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -119,7 +119,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.jump_strength",
-                  "name": "gm4_ce_perm_8",
+                  "id": "gm4_combat_expanded:permanent_8",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -134,7 +134,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.safe_fall_distance",
-                  "name": "gm4_ce_perm_9",
+                  "id": "gm4_combat_expanded:permanent_9",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {

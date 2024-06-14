@@ -17,27 +17,15 @@
                 "minecraft:attribute_modifiers": [
                   {
                     "type": "generic.armor",
+                    "id": "gm4_scuba_gear:flippers_armor",
                     "slot": "feet",
-                    "uuid": [
-                      0,
-                      881952,
-                      0,
-                      167143
-                    ],
-                    "name": "generic.armor",
                     "amount": 1,
                     "operation": "add_value"
                   },
                   {
                     "type": "generic.movement_speed",
+                    "id": "gm4_scuba_gear:flippers_movement_speed",
                     "slot": "feet",
-                    "uuid": [
-                      0,
-                      579389,
-                      0,
-                      942428
-                    ],
-                    "name": "generic.movement_speed",
                     "amount": -0.4,
                     "operation": "add_multiplied_base"
                   }

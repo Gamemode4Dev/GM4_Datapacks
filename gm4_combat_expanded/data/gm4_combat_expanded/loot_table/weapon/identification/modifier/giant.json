@@ -14,21 +14,21 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.attack_damage",
-                  "name": "gm4_ce_remove_hand_stats",
+                  "id": "gm4_combat_expanded:giant_reset_attack_damage",
                   "amount": -1,
                   "operation": "add_value",
                   "slot": "mainhand"
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
-                  "name": "gm4_ce_remove_hand_stats",
+                  "id": "gm4_combat_expanded:giant_reset_attack_speed",
                   "amount": -4,
                   "operation": "add_value",
                   "slot": "mainhand"
                 },
                 {
                   "attribute": "minecraft:generic.attack_damage",
-                  "name": "gm4_ce_base_attack_damage",
+                  "id": "gm4_combat_expanded:giant_base_attack_damage",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -43,7 +43,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
-                  "name": "gm4_ce_base_attack_speed",
+                  "id": "gm4_combat_expanded:giant_base_attack_speed",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -58,7 +58,7 @@
                 },
                 {
                   "attribute": "minecraft:player.entity_interaction_range",
-                  "name": "gm4_ce_entity_interaction_range",
+                  "id": "gm4_combat_expanded:giant_entity_interaction_range",
                   "amount": 1,
                   "operation": "add_value",
                   "slot": "mainhand"

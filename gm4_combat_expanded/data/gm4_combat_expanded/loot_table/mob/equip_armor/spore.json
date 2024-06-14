@@ -13,18 +13,16 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.max_health",
-                  "name": "gm4_ce_spore_buff",
+                  "id": "gm4_combat_expanded:spore_max_health",
                   "amount": 16,
                   "operation": "add_value",
-                  "id": "2208037b-2b0a-454d-a175-1095fe7e2a4e",
                   "slot": "head"
                 },
                 {
                   "attribute": "minecraft:generic.armor",
-                  "name": "gm4_ce_spore_buff",
+                  "id": "gm4_combat_expanded:spore_armor",
                   "amount": 0.25,
                   "operation": "add_multiplied_base",
-                  "id": "4675df42-eb98-4a66-8bf8-cdbd7c972687",
                   "slot": "head"
                 }
               ]
@@ -50,18 +48,16 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.max_health",
-                  "name": "gm4_ce_spore_buff",
+                  "id": "gm4_combat_expanded:spore_max_health_2",
                   "amount": 8,
                   "operation": "add_value",
-                  "id": "fd63b6b5-f31b-4b71-b7e3-b97e5a029224",
                   "slot": "head"
                 },
                 {
                   "attribute": "minecraft:generic.attack_damage",
-                  "name": "gm4_ce_spore_buff",
+                  "id": "gm4_combat_expanded:spore_armor_2",
                   "amount": -1.5,
                   "operation": "add_value",
-                  "id": "2273e3bf-d73b-40a1-bf4a-a61833b457dd",
                   "slot": "head"
                 }
               ]
@@ -110,15 +106,9 @@
               "modifiers": [
                 {
                   "type": "minecraft:generic.max_health",
-                  "name": "gm4_ce_modifier_flowering",
+                  "id": "gm4_combat_expanded:modifier_flowering",
                   "amount": -0.25,
                   "operation": "add_multiplied_base",
-                  "uuid": [
-                    -608223260,
-                    18434400,
-                    -1707170127,
-                    1153690226
-                  ],
                   "slot": "head"
                 }
               ],

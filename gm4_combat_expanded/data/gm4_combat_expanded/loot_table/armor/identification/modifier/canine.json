@@ -14,7 +14,7 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.attack_speed",
-                  "name": "gm4_ce_perm",
+                  "id": "gm4_combat_expanded:permanent",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {

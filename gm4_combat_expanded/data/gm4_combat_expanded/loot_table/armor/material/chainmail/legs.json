@@ -14,8 +14,7 @@
               "modifiers": [
                 {
                   "attribute": "generic.armor",
-                  "name": "generic.armor",
-                  "id": "D8499B04-0E66-4726-AB29-64469D734E0D",
+                  "id": "minecraft:armor.leggings",
                   "amount": 4,
                   "operation": "add_value",
                   "slot": "legs"

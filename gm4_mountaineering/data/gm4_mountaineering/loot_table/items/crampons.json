@@ -31,14 +31,14 @@
                             "modifiers": [
                                 {
                                     "attribute": "minecraft:generic.movement_speed",
-                                    "name": "gm4_mountaineering_crampon_slowness",
+                                    "id": "gm4_mountaineering:crampon_slowness",
                                     "amount": -0.2,
                                     "operation": "add_multiplied_base",
                                     "slot": "feet"
                                 },
                                 {
                                     "attribute": "minecraft:generic.armor",
-                                    "name": "gm4_mountaineering_crampon_armor",
+                                    "id": "gm4_mountaineering:crampon_armor",
                                     "amount": 1,
                                     "operation": "add_value",
                                     "slot": "feet"

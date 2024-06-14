@@ -14,8 +14,7 @@
               "modifiers": [
                 {
                   "attribute": "generic.armor",
-                  "name": "generic.armor",
-                  "id": "9F3D476D-C118-4544-8365-64846904B48E",
+                  "id": "minecraft:armor.chestplate",
                   "amount": 3,
                   "operation": "add_value",
                   "slot": "chest"

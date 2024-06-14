@@ -14,7 +14,7 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.attack_damage",
-                  "name": "gm4_combat_expanded",
+                  "id": "gm4_combat_expanded:dynamic",
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "chest"

@@ -18,11 +18,11 @@
       "functions": [
         {
           "function": "minecraft:set_attributes",
+          "replace": false,
           "modifiers": [
             {
               "attribute": "minecraft:generic.max_health",
-              "replace": false,
-              "name": "gm4_ce_perm",
+              "id": "gm4_combat_expanded:permanent",
               "amount": {
                 "type": "minecraft:score",
                 "target": {
@@ -37,8 +37,7 @@
             },
             {
               "attribute": "minecraft:generic.armor",
-              "replace": false,
-              "name": "gm4_ce_perm_2",
+              "id": "gm4_combat_expanded:permanent_2",
               "amount": {
                 "type": "minecraft:score",
                 "target": {

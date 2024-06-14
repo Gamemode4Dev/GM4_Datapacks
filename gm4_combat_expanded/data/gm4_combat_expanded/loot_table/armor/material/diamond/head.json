@@ -14,24 +14,21 @@
               "modifiers": [
                 {
                   "attribute": "generic.armor",
-                  "name": "generic.armor",
-                  "id": "2AD3F246-FEE1-4E67-B886-69FD380BB150",
+                  "id": "minecraft:armor.helmet",
                   "amount": 3,
                   "operation": "add_value",
                   "slot": "head"
                 },
                 {
                   "attribute": "generic.armor_toughness",
-                  "name": "generic.armor_toughness",
-                  "id": "2AD3F246-FEE1-4E67-B886-69FD380BB154",
+                  "id": "gm4_combat_expanded:armor_toughness.helmet",
                   "amount": 2,
                   "operation": "add_value",
                   "slot": "head"
                 },
                 {
                   "attribute": "generic.knockback_resistance",
-                  "name": "generic.knockback_resistance",
-                  "id": "0-1-438d-0-28d34",
+                  "id": "gm4_combat_expanded:knockback_resistance",
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "head"

@@ -14,24 +14,21 @@
               "modifiers": [
                 {
                   "attribute": "generic.armor",
-                  "name": "generic.armor",
-                  "id": "845DB27C-C624-495F-8C9F-6020A9A58B6B",
+                  "id": "minecraft:armor.boots",
                   "amount": 3,
                   "operation": "add_value",
                   "slot": "feet"
                 },
                 {
                   "attribute": "generic.armor_toughness",
-                  "name": "generic.armor_toughness",
-                  "id": "845DB27C-C624-495F-8C9F-6020A9A58B64",
+                  "id": "gm4_combat_expanded:armor_toughness.boots",
                   "amount": 2,
                   "operation": "add_value",
                   "slot": "feet"
                 },
                 {
                   "attribute": "generic.knockback_resistance",
-                  "name": "generic.knockback_resistance",
-                  "id": "0-1-438d-0-28d34",
+                  "id": "gm4_combat_expanded:knockback_resistance",
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "feet"

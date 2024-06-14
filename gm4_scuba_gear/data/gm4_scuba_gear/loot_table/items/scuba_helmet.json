@@ -13,27 +13,15 @@
                 "minecraft:attribute_modifiers": [
                   {
                     "type": "generic.armor",
+                    "id": "gm4_scuba_gear:helmet_armor",
                     "slot": "head",
-                    "uuid": [
-                      0,
-                      190244,
-                      0,
-                      554768
-                    ],
-                    "name": "generic.armor",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
                     "type": "generic.attack_speed",
+                    "id": "gm4_scuba_gear:helmet_attack_speed",
                     "slot": "head",
-                    "uuid": [
-                      0,
-                      193195,
-                      0,
-                      454101
-                    ],
-                    "name": "generic.attack_speed",
                     "amount": -0.5,
                     "operation": "add_value"
                   }

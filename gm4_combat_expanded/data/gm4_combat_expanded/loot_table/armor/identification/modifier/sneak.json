@@ -14,14 +14,14 @@
               "modifiers": [
                 {
                   "attribute": "minecraft:generic.attack_speed",
-                  "name": "gm4_combat_expanded",
+                  "id": "gm4_combat_expanded:dynamic",
                   "amount": 0,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
                   "attribute": "minecraft:generic.movement_speed",
-                  "name": "gm4_combat_expanded_2",
+                  "id": "gm4_combat_expanded:dynamic_2",
                   "amount": 0,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
