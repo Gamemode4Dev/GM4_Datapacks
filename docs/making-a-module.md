@@ -153,7 +153,7 @@ This plugin also has infrastructure to auto-generate most parts of the resource 
 Each Gamemode 4 module must include guidebook pages to aid in the explaination and progression of the module. Details on how to add a section to the guidebook can be found in [`gm4_guidebook/CONTRIBUTING.md`](https://github.com/Gamemode4Dev/GM4_Datapacks/blob/master/gm4_guidebook/CONTRIBUTING.md).
 
 ### Tests
-Automated tests for modules should be added in the `data/gm4_module_id/tests` folder. The tests will automatically run in GitHub Actions when you submit a PR. For local development and for the full documentation, see the [PackTest](https://github.com/misode/packtest) project.
+Automated tests for modules should be added in the `data/gm4_module_id/test` folder. The tests will automatically run in GitHub Actions when you submit a PR. For local development and for the full documentation, see the [PackTest](https://github.com/misode/packtest) project.
 
 ## Submitting a pull request
 At any point when you feel the module is ready to recieve feedback or testing, you can create a pull request. You can still make changes afterwards.

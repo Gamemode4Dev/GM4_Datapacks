@@ -51,7 +51,7 @@ ITEMS = {
 def beet_default(ctx: Context):
   """Creates a loot table for dropping the 9 result items when disassembling an item."""
   vanilla = ctx.inject(Vanilla)
-  recipes = vanilla.data.recipes
+  recipes = vanilla.data.recipe
 
   for item, durability in ITEMS.items():
     recipe = recipes[f"minecraft:{item}"].data

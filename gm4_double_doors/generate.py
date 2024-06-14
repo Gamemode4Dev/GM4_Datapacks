@@ -61,9 +61,9 @@ def beet_default(ctx: Context):
             "data_pack": {
                 "load": [
                     {
-                        f"data/gm4_double_doors/advancements/{wood}": "data/gm4_double_doors/templates/advancements",
-                        f"data/gm4_double_doors/functions/{wood}": "data/gm4_double_doors/templates/functions",
-                        f"data/gm4_double_doors/structures/{wood}": "data/gm4_double_doors/templates/structures",
+                        f"data/gm4_double_doors/advancement/{wood}": "data/gm4_double_doors/templates/advancements",
+                        f"data/gm4_double_doors/function/{wood}": "data/gm4_double_doors/templates/functions",
+                        f"data/gm4_double_doors/structure/{wood}": "data/gm4_double_doors/templates/structures",
                     }
                 ],
                 "render": {

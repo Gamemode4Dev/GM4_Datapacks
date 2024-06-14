@@ -263,7 +263,7 @@ def write_credits(ctx: Context):
 
 def write_updates(ctx: Context):
 	"""Writes the module update commands to this module's init function."""
-	init = ctx.data.functions.get(f"{ctx.project_id}:init", None)
+	init = ctx.data.function.get(f"{ctx.project_id}:init", None)
 	if init is None:
 		return
 
