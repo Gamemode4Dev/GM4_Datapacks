@@ -28,6 +28,6 @@ execute if score size gm4_menace_data matches 7.. run tag @e[type=minecraft:slim
 data merge entity @e[type=minecraft:slime,tag=gm4_merged_slime,tag=gm4_giant_slime,limit=1] {DeathLootTable:"gm4_slime_fests:entities/giant_slime"}
 
 # apply health and attack damage to new merged slime
-execute store result entity @e[type=minecraft:slime,tag=gm4_merged_slime,limit=1] Attributes[{Name:"minecraft:generic.max_health"}].Base double 1 run scoreboard players get health gm4_menace_data
+execute store result entity @e[type=minecraft:slime,tag=gm4_merged_slime,limit=1] attributes[{id:"minecraft:generic.max_health"}].base double 1 run scoreboard players get health gm4_menace_data
 execute store result entity @e[type=minecraft:slime,tag=gm4_merged_slime,limit=1] Health float 1 run scoreboard players get health gm4_menace_data
-execute store result entity @e[type=minecraft:slime,tag=gm4_merged_slime,limit=1] Attributes[{Name:"minecraft:generic.attack_damage"}].Base double 1 run scoreboard players get health gm4_menace_data
+execute store result entity @e[type=minecraft:slime,tag=gm4_merged_slime,limit=1] attributes[{id:"minecraft:generic.attack_damage"}].base double 1 run scoreboard players get health gm4_menace_data

@@ -1,5 +1,5 @@
 
-data merge entity @s {DeathLootTable:"gm4_combat_expanded:boss/skeleton_minion",CustomName:'{"text":"Amethyst Skeleton"}',CanPickUpLoot:0b,Health:13f,CanBreakDoors:0b,Tags:["gm4_ce_processed","gm4_ce_boss.watcher","gm4_ce_boss.watcher.minion"],ArmorItems:[{},{},{},{id:"minecraft:budding_amethyst",count:1,components:{"minecraft:enchantments":{"minecraft:blast_protection":20}}}],ArmorDropChances:[0.085F,0.085F,0.085F,-327.670F],Attributes:[{Name:"generic.max_health",Base:13},{Name:"generic.movement_speed",Base:0.215},{Name:"generic.armor",Base:8},{Name:"generic.armor_toughness",Base:2},{Name:"generic.max_absorption",Base:0}]}
+data merge entity @s {DeathLootTable:"gm4_combat_expanded:boss/skeleton_minion",CustomName:'{"text":"Amethyst Skeleton"}',CanPickUpLoot:0b,Health:13f,CanBreakDoors:0b,Tags:["gm4_ce_processed","gm4_ce_boss.watcher","gm4_ce_boss.watcher.minion"],ArmorItems:[{},{},{},{id:"minecraft:budding_amethyst",count:1,components:{"minecraft:enchantments":{"minecraft:blast_protection":20}}}],ArmorDropChances:[0.085F,0.085F,0.085F,-327.670F],attributes:[{id:"generic.max_health",base:13},{id:"generic.movement_speed",base:0.215},{id:"generic.armor",base:8},{id:"generic.armor_toughness",base:2},{id:"generic.max_absorption",base:0}]}
 scoreboard players operation @s gm4_ce_boss.id = $mob_id gm4_ce_boss.id
 
 # set CE gear

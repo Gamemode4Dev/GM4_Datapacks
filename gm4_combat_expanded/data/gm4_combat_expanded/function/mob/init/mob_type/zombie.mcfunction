@@ -51,8 +51,8 @@ data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDrop
 # only allow one of the following modifiers
 scoreboard players set $modifier_picked gm4_ce_data 0
 # replace "Zombie leaders" with minibosses
-execute if data entity @s[type=!zombie_villager] Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}] run function gm4_combat_expanded:mob/init/modifier/special/zombie_leader
-execute if data entity @s[type=zombie_villager] Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}] run data remove entity @s Attributes[{Name:"minecraft:generic.max_health"}].Modifiers[{Name:"Leader zombie bonus"}]
+execute if data entity @s[type=!zombie_villager] attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] run function gm4_combat_expanded:mob/init/modifier/special/zombie_leader
+execute if data entity @s[type=zombie_villager] attributes[{Name:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] run data remove entity @s attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}]
 execute if entity @s[type=zombie,tag=gm4_ce_miniboss] run function gm4_combat_expanded:mob/init/modifier/special/zombie_miniboss
 execute if entity @s[type=husk,tag=gm4_ce_miniboss] run function gm4_combat_expanded:mob/init/modifier/special/husk_miniboss
 execute if entity @s[type=drowned,tag=gm4_ce_miniboss] run function gm4_combat_expanded:mob/init/modifier/special/drowned_miniboss
