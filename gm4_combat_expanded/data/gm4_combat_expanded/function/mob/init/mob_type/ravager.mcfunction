@@ -4,9 +4,9 @@
 # run from mob/init/mob_type
 
 # base stat nerf
-attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -20 add_value
-attribute @s generic.attack_damage modifier add 3182427e-beb4-4f9a-9f39-674baf1d5ee4 "gm4_ce_base_damage_buff" 3 add_value
-attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd7173297b "gm4_ce_base_speed_nerf" -0.1 add_multiplied_base
+attribute @s generic.max_health modifier add minecraft:e94edf94-a98a-4dcc-bb23-2b59890663fd -20 add_value
+attribute @s generic.attack_damage modifier add minecraft:3182427e-beb4-4f9a-9f39-674baf1d5ee4 3 add_value
+attribute @s generic.movement_speed modifier add minecraft:811e516b-a6b2-40e4-b56e-0ffd7173297b -0.1 add_multiplied_base
 
 # max stat buffs
 scoreboard players set $mob_health gm4_ce_data 70

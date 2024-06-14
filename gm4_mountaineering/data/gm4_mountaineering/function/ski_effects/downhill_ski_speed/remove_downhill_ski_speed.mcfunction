@@ -4,5 +4,5 @@
 # run from check_downhill_ski_speed
 
 scoreboard players set @s gm4_mountaineering_ski_downhill 0
-attribute @s minecraft:generic.movement_speed modifier remove 42a046eb-1425-4efe-831b-f891d8ede18f
+attribute @s minecraft:generic.movement_speed modifier remove minecraft:42a046eb-1425-4efe-831b-f891d8ede18f
 tag @s remove gm4_mountaineering_skiing_downhill

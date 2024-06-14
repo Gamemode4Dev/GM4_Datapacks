@@ -4,8 +4,8 @@
 # run from mob/init/mob_type
 
 # base stat nerf
-attribute @s generic.max_health modifier add e94edf94-a98a-4dcc-bb23-2b59890663fd "gm4_ce_base_health_nerf" -2 add_value
-attribute @s generic.movement_speed modifier add 811e516b-a6b2-40e4-b56e-0ffd7173297b "gm4_ce_base_speed_nerf" -0.04 add_multiplied_base
+attribute @s generic.max_health modifier add minecraft:e94edf94-a98a-4dcc-bb23-2b59890663fd -2 add_value
+attribute @s generic.movement_speed modifier add minecraft:811e516b-a6b2-40e4-b56e-0ffd7173297b -0.04 add_multiplied_base
 
 # max stat buffs
 scoreboard players set $mob_health gm4_ce_data 16
@@ -17,7 +17,7 @@ scoreboard players set $mob_toughness gm4_ce_data 12
 scoreboard players set @s gm4_ce_damage_cap 140
 
 # knockback resistance
-attribute @s generic.knockback_resistance modifier add 4e46c16d-ba22-495c-bbca-613c97176918 "gm4_ce_base_kb_resist" 0.666 add_value
+attribute @s generic.knockback_resistance modifier add minecraft:4e46c16d-ba22-495c-bbca-613c97176918 0.666 add_value
 
 # set armor
 loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/wither_skeleton
