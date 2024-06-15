@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:infinity",
+                          "enchantments": "minecraft:infinity",
                           "levels": 1
                         }
                       ]

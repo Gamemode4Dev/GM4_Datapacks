@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:sweeping_edge",
+                          "enchantments": "minecraft:sweeping_edge",
                           "levels": 3
                         }
                       ]
@@ -60,7 +60,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:sweeping_edge",
+                          "enchantments": "minecraft:sweeping_edge",
                           "levels": 2
                         }
                       ]
@@ -93,7 +93,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:sweeping_edge",
+                          "enchantments": "minecraft:sweeping_edge",
                           "levels": 1
                         }
                       ]

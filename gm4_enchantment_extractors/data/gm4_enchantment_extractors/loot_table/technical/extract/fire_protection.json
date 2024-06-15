@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:fire_protection",
+                          "enchantments": "minecraft:fire_protection",
                           "levels": 4
                         }
                       ]
@@ -60,7 +60,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:fire_protection",
+                          "enchantments": "minecraft:fire_protection",
                           "levels": 3
                         }
                       ]
@@ -93,7 +93,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:fire_protection",
+                          "enchantments": "minecraft:fire_protection",
                           "levels": 2
                         }
                       ]
@@ -126,7 +126,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:fire_protection",
+                          "enchantments": "minecraft:fire_protection",
                           "levels": 1
                         }
                       ]

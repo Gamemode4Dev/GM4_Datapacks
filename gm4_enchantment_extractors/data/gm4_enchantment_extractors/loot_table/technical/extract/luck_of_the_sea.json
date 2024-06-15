@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:luck_of_the_sea",
+                          "enchantments": "minecraft:luck_of_the_sea",
                           "levels": 3
                         }
                       ]
@@ -60,7 +60,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:luck_of_the_sea",
+                          "enchantments": "minecraft:luck_of_the_sea",
                           "levels": 2
                         }
                       ]
@@ -93,7 +93,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:luck_of_the_sea",
+                          "enchantments": "minecraft:luck_of_the_sea",
                           "levels": 1
                         }
                       ]

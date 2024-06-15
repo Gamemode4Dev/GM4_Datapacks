@@ -14,7 +14,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:protection"
+                      "enchantments": "minecraft:protection"
                     }
                   ]
                 }
@@ -37,7 +37,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:fire_protection"
+                      "enchantments": "minecraft:fire_protection"
                     }
                   ]
                 }
@@ -60,7 +60,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:blast_protection"
+                      "enchantments": "minecraft:blast_protection"
                     }
                   ]
                 }
@@ -83,7 +83,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:projectile_protection"
+                      "enchantments": "minecraft:projectile_protection"
                     }
                   ]
                 }
@@ -106,7 +106,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:feather_falling"
+                      "enchantments": "minecraft:feather_falling"
                     }
                   ]
                 }
@@ -129,7 +129,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:respiration"
+                      "enchantments": "minecraft:respiration"
                     }
                   ]
                 }
@@ -152,7 +152,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:aqua_affinity"
+                      "enchantments": "minecraft:aqua_affinity"
                     }
                   ]
                 }
@@ -175,7 +175,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:thorns"
+                      "enchantments": "minecraft:thorns"
                     }
                   ]
                 }
@@ -198,7 +198,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:depth_strider"
+                      "enchantments": "minecraft:depth_strider"
                     }
                   ]
                 }
@@ -221,7 +221,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:frost_walker"
+                      "enchantments": "minecraft:frost_walker"
                     }
                   ]
                 }
@@ -244,7 +244,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:soul_speed"
+                      "enchantments": "minecraft:soul_speed"
                     }
                   ]
                 }
@@ -267,7 +267,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:binding_curse"
+                      "enchantments": "minecraft:binding_curse"
                     }
                   ]
                 }
@@ -290,7 +290,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:sharpness"
+                      "enchantments": "minecraft:sharpness"
                     }
                   ]
                 }
@@ -313,7 +313,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:smite"
+                      "enchantments": "minecraft:smite"
                     }
                   ]
                 }
@@ -336,7 +336,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:bane_of_arthropods"
+                      "enchantments": "minecraft:bane_of_arthropods"
                     }
                   ]
                 }
@@ -359,7 +359,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:knockback"
+                      "enchantments": "minecraft:knockback"
                     }
                   ]
                 }
@@ -382,7 +382,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:fire_aspect"
+                      "enchantments": "minecraft:fire_aspect"
                     }
                   ]
                 }
@@ -405,7 +405,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:looting"
+                      "enchantments": "minecraft:looting"
                     }
                   ]
                 }
@@ -428,7 +428,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:sweeping_edge"
+                      "enchantments": "minecraft:sweeping_edge"
                     }
                   ]
                 }
@@ -451,7 +451,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:efficiency"
+                      "enchantments": "minecraft:efficiency"
                     }
                   ]
                 }
@@ -474,7 +474,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:silk_touch"
+                      "enchantments": "minecraft:silk_touch"
                     }
                   ]
                 }
@@ -497,7 +497,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:fortune"
+                      "enchantments": "minecraft:fortune"
                     }
                   ]
                 }
@@ -520,7 +520,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:power"
+                      "enchantments": "minecraft:power"
                     }
                   ]
                 }
@@ -543,7 +543,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:punch"
+                      "enchantments": "minecraft:punch"
                     }
                   ]
                 }
@@ -566,7 +566,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:flame"
+                      "enchantments": "minecraft:flame"
                     }
                   ]
                 }
@@ -589,7 +589,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:infinity"
+                      "enchantments": "minecraft:infinity"
                     }
                   ]
                 }
@@ -612,7 +612,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:luck_of_the_sea"
+                      "enchantments": "minecraft:luck_of_the_sea"
                     }
                   ]
                 }
@@ -635,7 +635,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:lure"
+                      "enchantments": "minecraft:lure"
                     }
                   ]
                 }
@@ -658,7 +658,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:impaling"
+                      "enchantments": "minecraft:impaling"
                     }
                   ]
                 }
@@ -681,7 +681,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:riptide"
+                      "enchantments": "minecraft:riptide"
                     }
                   ]
                 }
@@ -704,7 +704,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:loyalty"
+                      "enchantments": "minecraft:loyalty"
                     }
                   ]
                 }
@@ -727,7 +727,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:channeling"
+                      "enchantments": "minecraft:channeling"
                     }
                   ]
                 }
@@ -750,7 +750,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:piercing"
+                      "enchantments": "minecraft:piercing"
                     }
                   ]
                 }
@@ -773,7 +773,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:multishot"
+                      "enchantments": "minecraft:multishot"
                     }
                   ]
                 }
@@ -796,7 +796,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:quick_charge"
+                      "enchantments": "minecraft:quick_charge"
                     }
                   ]
                 }
@@ -819,7 +819,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:unbreaking"
+                      "enchantments": "minecraft:unbreaking"
                     }
                   ]
                 }
@@ -842,7 +842,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:vanishing_curse"
+                      "enchantments": "minecraft:vanishing_curse"
                     }
                   ]
                 }
@@ -865,7 +865,7 @@
                 "predicates": {
                   "minecraft:enchantments": [
                     {
-                      "enchantment": "minecraft:mending"
+                      "enchantments": "minecraft:mending"
                     }
                   ]
                 }

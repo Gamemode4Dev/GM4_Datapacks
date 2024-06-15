@@ -28,7 +28,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:piercing",
+                          "enchantments": "minecraft:piercing",
                           "levels": 4
                         }
                       ]
@@ -61,7 +61,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:piercing",
+                          "enchantments": "minecraft:piercing",
                           "levels": 4
                         }
                       ]
@@ -94,7 +94,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:piercing",
+                          "enchantments": "minecraft:piercing",
                           "levels": 3
                         }
                       ]
@@ -127,7 +127,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:piercing",
+                          "enchantments": "minecraft:piercing",
                           "levels": 2
                         }
                       ]
@@ -160,7 +160,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:piercing",
+                          "enchantments": "minecraft:piercing",
                           "levels": 1
                         }
                       ]

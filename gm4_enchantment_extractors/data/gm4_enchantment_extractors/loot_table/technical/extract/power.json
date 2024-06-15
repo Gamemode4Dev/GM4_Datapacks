@@ -28,7 +28,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:power",
+                          "enchantments": "minecraft:power",
                           "levels": 5
                         }
                       ]
@@ -61,7 +61,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:power",
+                          "enchantments": "minecraft:power",
                           "levels": 5
                         }
                       ]
@@ -94,7 +94,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:power",
+                          "enchantments": "minecraft:power",
                           "levels": 4
                         }
                       ]
@@ -127,7 +127,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:power",
+                          "enchantments": "minecraft:power",
                           "levels": 3
                         }
                       ]
@@ -160,7 +160,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:power",
+                          "enchantments": "minecraft:power",
                           "levels": 2
                         }
                       ]
@@ -193,7 +193,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:power",
+                          "enchantments": "minecraft:power",
                           "levels": 1
                         }
                       ]

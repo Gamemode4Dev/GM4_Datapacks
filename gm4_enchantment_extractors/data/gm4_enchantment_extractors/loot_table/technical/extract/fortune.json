@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:fortune",
+                          "enchantments": "minecraft:fortune",
                           "levels": 3
                         }
                       ]
@@ -60,7 +60,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:fortune",
+                          "enchantments": "minecraft:fortune",
                           "levels": 2
                         }
                       ]
@@ -93,7 +93,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:fortune",
+                          "enchantments": "minecraft:fortune",
                           "levels": 1
                         }
                       ]

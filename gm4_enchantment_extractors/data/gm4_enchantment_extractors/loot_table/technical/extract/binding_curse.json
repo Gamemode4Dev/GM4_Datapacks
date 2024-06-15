@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:binding_curse",
+                          "enchantments": "minecraft:binding_curse",
                           "levels": 1
                         }
                       ]

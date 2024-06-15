@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:lure",
+                          "enchantments": "minecraft:lure",
                           "levels": 3
                         }
                       ]
@@ -60,7 +60,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:lure",
+                          "enchantments": "minecraft:lure",
                           "levels": 2
                         }
                       ]
@@ -93,7 +93,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:lure",
+                          "enchantments": "minecraft:lure",
                           "levels": 1
                         }
                       ]

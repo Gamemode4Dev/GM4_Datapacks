@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:impaling",
+                          "enchantments": "minecraft:impaling",
                           "levels": 5
                         }
                       ]
@@ -60,7 +60,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:impaling",
+                          "enchantments": "minecraft:impaling",
                           "levels": 4
                         }
                       ]
@@ -93,7 +93,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:impaling",
+                          "enchantments": "minecraft:impaling",
                           "levels": 3
                         }
                       ]
@@ -126,7 +126,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:impaling",
+                          "enchantments": "minecraft:impaling",
                           "levels": 2
                         }
                       ]
@@ -159,7 +159,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:impaling",
+                          "enchantments": "minecraft:impaling",
                           "levels": 1
                         }
                       ]

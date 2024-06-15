@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:feather_falling",
+                          "enchantments": "minecraft:feather_falling",
                           "levels": 4
                         }
                       ]
@@ -60,7 +60,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:feather_falling",
+                          "enchantments": "minecraft:feather_falling",
                           "levels": 3
                         }
                       ]
@@ -93,7 +93,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:feather_falling",
+                          "enchantments": "minecraft:feather_falling",
                           "levels": 2
                         }
                       ]
@@ -126,7 +126,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:feather_falling",
+                          "enchantments": "minecraft:feather_falling",
                           "levels": 1
                         }
                       ]

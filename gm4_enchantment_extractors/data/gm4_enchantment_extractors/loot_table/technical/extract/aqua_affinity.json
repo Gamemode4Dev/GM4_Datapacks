@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:aqua_affinity",
+                          "enchantments": "minecraft:aqua_affinity",
                           "levels": 1
                         }
                       ]

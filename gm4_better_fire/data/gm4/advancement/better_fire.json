@@ -29,7 +29,7 @@
           "predicates": {
             "minecraft:enchantments": [
               {
-                "enchantment": "minecraft:flame",
+                "enchantments": "minecraft:flame",
                 "levels": 1
               }
             ]

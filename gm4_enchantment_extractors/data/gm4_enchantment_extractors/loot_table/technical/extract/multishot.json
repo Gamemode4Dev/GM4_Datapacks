@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:multishot",
+                          "enchantments": "minecraft:multishot",
                           "levels": 1
                         }
                       ]

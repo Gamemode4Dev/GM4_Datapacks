@@ -22,7 +22,7 @@
                                 "predicates": {
                                     "minecraft:enchantments": [
                                         {
-                                            "enchantment": "minecraft:unbreaking",
+                                            "enchantments": "minecraft:unbreaking",
                                             "levels": {
                                                 "min": 1,
                                                 "max": 255
@@ -62,7 +62,7 @@
                             "predicates": {
                                 "minecraft:enchantments": [
                                   {
-                                      "enchantment": "minecraft:unbreaking",
+                                      "enchantments": "minecraft:unbreaking",
                                       "levels": 1
                                   }
                               ]
@@ -98,7 +98,7 @@
                             "predicates": {
                                 "minecraft:enchantments": [
                                   {
-                                      "enchantment": "minecraft:unbreaking",
+                                      "enchantments": "minecraft:unbreaking",
                                       "levels": 2
                                   }
                               ]
@@ -134,7 +134,7 @@
                             "predicates": {
                                 "minecraft:enchantments": [
                                     {
-                                        "enchantment": "minecraft:unbreaking",
+                                        "enchantments": "minecraft:unbreaking",
                                         "levels": {
                                             "min": 3,
                                             "max": 255

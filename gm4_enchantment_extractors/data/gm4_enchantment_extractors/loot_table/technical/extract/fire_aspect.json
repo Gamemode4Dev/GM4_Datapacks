@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:fire_aspect",
+                          "enchantments": "minecraft:fire_aspect",
                           "levels": 2
                         }
                       ]
@@ -60,7 +60,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:fire_aspect",
+                          "enchantments": "minecraft:fire_aspect",
                           "levels": 1
                         }
                       ]

@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:frost_walker",
+                          "enchantments": "minecraft:frost_walker",
                           "levels": 2
                         }
                       ]
@@ -60,7 +60,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:frost_walker",
+                          "enchantments": "minecraft:frost_walker",
                           "levels": 1
                         }
                       ]

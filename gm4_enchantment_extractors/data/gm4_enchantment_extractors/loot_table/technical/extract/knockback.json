@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:knockback",
+                          "enchantments": "minecraft:knockback",
                           "levels": 2
                         }
                       ]
@@ -60,7 +60,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:knockback",
+                          "enchantments": "minecraft:knockback",
                           "levels": 1
                         }
                       ]

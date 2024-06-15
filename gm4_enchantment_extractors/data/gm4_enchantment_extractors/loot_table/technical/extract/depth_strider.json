@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:depth_strider",
+                          "enchantments": "minecraft:depth_strider",
                           "levels": 3
                         }
                       ]
@@ -60,7 +60,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:depth_strider",
+                          "enchantments": "minecraft:depth_strider",
                           "levels": 2
                         }
                       ]
@@ -93,7 +93,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:depth_strider",
+                          "enchantments": "minecraft:depth_strider",
                           "levels": 1
                         }
                       ]

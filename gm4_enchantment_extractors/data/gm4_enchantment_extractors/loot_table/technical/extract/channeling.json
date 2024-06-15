@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:channeling",
+                          "enchantments": "minecraft:channeling",
                           "levels": 1
                         }
                       ]

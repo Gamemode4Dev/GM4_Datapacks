@@ -34,7 +34,7 @@
           {
             "enchantments": [
               {
-                "enchantment": "minecraft:mending"
+                "enchantments": "minecraft:mending"
               }
             ]
           }

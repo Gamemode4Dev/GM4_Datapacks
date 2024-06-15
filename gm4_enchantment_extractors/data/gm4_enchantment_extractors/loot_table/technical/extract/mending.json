@@ -28,7 +28,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:mending",
+                          "enchantments": "minecraft:mending",
                           "levels": 1
                         }
                       ]
@@ -61,7 +61,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:mending",
+                          "enchantments": "minecraft:mending",
                           "levels": 1
                         }
                       ]

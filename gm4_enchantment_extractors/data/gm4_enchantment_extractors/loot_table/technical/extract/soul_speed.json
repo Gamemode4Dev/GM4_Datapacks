@@ -27,7 +27,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:soul_speed",
+                          "enchantments": "minecraft:soul_speed",
                           "levels": 3
                         }
                       ]
@@ -60,7 +60,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:soul_speed",
+                          "enchantments": "minecraft:soul_speed",
                           "levels": 2
                         }
                       ]
@@ -93,7 +93,7 @@
                     "predicates": {
                       "minecraft:enchantments": [
                         {
-                          "enchantment": "minecraft:soul_speed",
+                          "enchantments": "minecraft:soul_speed",
                           "levels": 1
                         }
                       ]
