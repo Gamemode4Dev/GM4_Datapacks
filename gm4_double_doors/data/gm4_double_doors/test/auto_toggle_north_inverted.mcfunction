@@ -1,4 +1,4 @@
-# @template gm4_double_doors:tests/valid_door_north_inverted
+# @template gm4_double_doors:test/valid_door_north_inverted
 # @dummy
 
 # position dummy and make it face the right way
