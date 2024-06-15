@@ -110,7 +110,7 @@
                   "scale": 0.25
                 }
               },
-              "treasure": false,
+              "options": "#minecraft:non_treasure",
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
