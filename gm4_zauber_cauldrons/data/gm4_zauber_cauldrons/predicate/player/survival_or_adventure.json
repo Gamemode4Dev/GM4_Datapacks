@@ -1,25 +1,13 @@
 {
-  "condition": "minecraft:any_of",
-  "terms": [
-    {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "type_specific": {
-          "type": "player",
-          "gamemode": "adventure"
-        }
-      }
-    },
-    {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "type_specific": {
-          "type": "player",
-          "gamemode": "survival"
-        }
-      }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "type_specific": {
+      "type": "player",
+      "gamemode": [
+        "survival",
+        "adventure"
+      ]
     }
-  ]
+  }
 }

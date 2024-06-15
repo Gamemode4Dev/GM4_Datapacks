@@ -12,7 +12,9 @@
               "predicate": {
                 "type_specific": {
                   "type": "player",
-                  "gamemode": "spectator"
+                  "gamemode": [
+                    "spectator"
+                  ]
                 }
               }
             }

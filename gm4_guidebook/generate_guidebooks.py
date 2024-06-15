@@ -1705,7 +1705,9 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
         "predicate": {
           "type_specific": {
             "type": "player",
-            "gamemode": "spectator"
+            "gamemode": [
+              "spectator"
+            ]
           }
         }
       }
