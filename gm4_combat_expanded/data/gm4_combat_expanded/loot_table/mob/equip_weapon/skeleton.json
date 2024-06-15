@@ -53,7 +53,7 @@
                 },
                 {
                   "function": "minecraft:enchant_randomly",
-                  "enchantments": [
+                  "options": [
                     "minecraft:punch"
                   ],
                   "conditions": [
@@ -82,7 +82,7 @@
                 },
                 {
                   "function": "minecraft:enchant_randomly",
-                  "enchantments": [
+                  "options": [
                     "minecraft:flame"
                   ],
                   "conditions": [

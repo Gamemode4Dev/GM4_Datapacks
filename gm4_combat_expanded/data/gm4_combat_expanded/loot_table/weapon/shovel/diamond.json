@@ -64,7 +64,7 @@
             },
             {
               "function": "minecraft:enchant_randomly",
-              "enchantments": [
+              "options": [
                 "minecraft:knockback"
               ],
               "conditions": [
@@ -93,7 +93,7 @@
             },
             {
               "function": "minecraft:enchant_randomly",
-              "enchantments": [
+              "options": [
                 "minecraft:fire_aspect"
               ],
               "conditions": [

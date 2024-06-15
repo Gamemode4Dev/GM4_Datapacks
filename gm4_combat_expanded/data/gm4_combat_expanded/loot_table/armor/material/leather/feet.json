@@ -47,7 +47,7 @@
             },
             {
               "function": "minecraft:enchant_randomly",
-              "enchantments": [
+              "options": [
                 "minecraft:depth_strider"
               ],
               "conditions": [
@@ -76,7 +76,7 @@
             },
             {
               "function": "minecraft:enchant_randomly",
-              "enchantments": [
+              "options": [
                 "minecraft:projectile_protection"
               ],
               "conditions": [
