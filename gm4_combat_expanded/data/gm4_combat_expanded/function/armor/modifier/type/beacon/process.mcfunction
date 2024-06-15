@@ -25,7 +25,7 @@ tp @s ~ ~2.5 ~ 0 0
 # place new beacon light
 execute if block ~ ~-1 ~ light run summon marker ~ ~-1 ~ {Tags:["gm4_ce_beacon.store_light"],CustomName:'{"text":"gm4_ce_beacon_marker"}'}
 execute at @s run fill ~ ~-1 ~ ~ ~-1 ~ light[waterlogged=true,level=9] replace water[level=0]
-execute at @s run fill ~ ~-1 ~ ~ ~-1 ~ light[level=14] replace #gm4:air
+execute at @s run fill ~ ~-1 ~ ~ ~-1 ~ light[level=14] replace #minecraft:air
 
 # tags
 tag @s remove gm4_ce_beacon.process

@@ -6,7 +6,7 @@
     "offsetZ": 0,
     "predicate": {
       "block": {
-        "blocks": "#gm4:air"
+        "blocks": "#minecraft:air"
       }
     }
   },

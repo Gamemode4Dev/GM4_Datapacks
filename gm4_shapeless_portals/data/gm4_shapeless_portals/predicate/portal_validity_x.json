@@ -16,7 +16,7 @@
                 "offsetX": 1,
                 "predicate": {
                     "block": {
-                        "blocks": "#gm4:air"
+                        "blocks": "#minecraft:air"
                     }
                 }
             }
@@ -39,7 +39,7 @@
                 "offsetX": -1,
                 "predicate": {
                     "block": {
-                        "blocks": "#gm4:air"
+                        "blocks": "#minecraft:air"
                     }
                 }
             }
@@ -62,7 +62,7 @@
                 "offsetY": 1,
                 "predicate": {
                     "block": {
-                        "blocks": "#gm4:air"
+                        "blocks": "#minecraft:air"
                     }
                 }
             }
@@ -85,7 +85,7 @@
                 "offsetY": -1,
                 "predicate": {
                     "block": {
-                        "blocks": "#gm4:air"
+                        "blocks": "#minecraft:air"
                     }
                 }
             }
