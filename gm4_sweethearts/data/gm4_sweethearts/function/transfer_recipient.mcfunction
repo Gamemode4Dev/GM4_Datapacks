@@ -5,7 +5,7 @@
 tag @s add gm4_sh_recipient
 
 # run donor transfer
-execute as @p[tag=gm4_sh_donor,distance=..3] at @s run function gm4_sweethearts:transfer_donor 
+execute as @p[tag=gm4_sh_donor,distance=..3] at @s run function gm4_sweethearts:transfer_donor
 
 # calculate amount of max_health to remove to get to current health
 execute store result score $remove_health gm4_sh_data run attribute @s minecraft:generic.max_health get

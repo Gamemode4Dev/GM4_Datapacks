@@ -14,3 +14,4 @@ __pycache__/
 ### Beet ###
 out/
 release/
+.beet_cache/

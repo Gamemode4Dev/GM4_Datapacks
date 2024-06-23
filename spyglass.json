@@ -1,0 +1,10 @@
+{
+  "env": {
+    "exclude": [
+      "@gitignore",
+      ".vscode/",
+      ".github/",
+      "test/"
+    ]
+  }
+}
