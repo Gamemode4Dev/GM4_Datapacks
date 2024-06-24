@@ -10,8 +10,9 @@ execute store result storage gm4_combat_expanded:temp components."minecraft:cust
 # check if text should be light green
 execute store result score $damage_buffed gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.damage_buffed
 
+## TODO
 # get weapon damage and added damage from sharpness (0.5 * level + 0.5)
-execute store result score $damage gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_base_attack_damage"}].amount 10
+execute store result score $damage gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:base_attack_damage"}].amount 10
 scoreboard players operation $current_sharpness gm4_ce_data *= #5 gm4_ce_data
 execute if score $current_sharpness gm4_ce_data matches 1.. run scoreboard players add $current_sharpness gm4_ce_data 5
 scoreboard players operation $damage gm4_ce_data += $current_sharpness gm4_ce_data

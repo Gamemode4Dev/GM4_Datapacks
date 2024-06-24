@@ -8,9 +8,9 @@ data modify storage gm4_combat_expanded:temp components."minecraft:custom_data".
 data modify storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.material set value 6
 
 # add stats from netherite
-execute store result score $armor gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"generic.armor_toughness"}].amount 10
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"generic.armor_toughness"}].amount double 0.1 run scoreboard players add $armor gm4_ce_data 10
-data modify storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"generic.knockback_resistance"}].amount set value 0.1d
+execute store result score $armor gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"minecraft:generic.armor_toughness"}].amount 10
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"minecraft:generic.armor_toughness"}].amount double 0.1 run scoreboard players add $armor gm4_ce_data 10
+data modify storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"minecraft:generic.knockback_resistance"}].amount set value 0.1d
 
 # set durability from netherite
 execute store result score $slot gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.slot
