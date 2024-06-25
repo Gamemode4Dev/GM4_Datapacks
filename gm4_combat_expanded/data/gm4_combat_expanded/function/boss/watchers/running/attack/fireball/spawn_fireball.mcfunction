@@ -1,8 +1,8 @@
 
 playsound block.amethyst_block.break hostile @a[distance=..32] ~ ~ ~ 1.5 0.7 1
 
-data merge entity @s {ExplosionPower:2b,Tags:["gm4_ce_boss.fireball"],power:[0.0,-0.05,0.0],Item:{id:"minecraft:budding_amethyst",count:1}}
-summon dragon_fireball ~ ~ ~ {Tags:["gm4_ce_boss.fireball","gm4_ce_boss.watcher.dragon_fireball"],power:[0.0,-2.0,0.0]}
+data merge entity @s {ExplosionPower:2b,Tags:["gm4_ce_boss.fireball"],acceleration_power:-0.05,Item:{id:"minecraft:budding_amethyst",count:1}}
+summon dragon_fireball ~ ~ ~ {Tags:["gm4_ce_boss.fireball","gm4_ce_boss.watcher.dragon_fireball"],acceleration_power:-2.0}
 ride @e[type=dragon_fireball,tag=gm4_ce_boss.watcher.dragon_fireball,distance=..0.1,limit=1] mount @s
 
 # get player pos

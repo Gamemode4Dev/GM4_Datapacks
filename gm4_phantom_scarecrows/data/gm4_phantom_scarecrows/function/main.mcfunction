@@ -1,5 +1,5 @@
 #creation
-execute as @e[type=armor_stand,tag=!smithed.entity,tag=!gm4_phantom_scarecrow] if items entity @s armor.chest *[enchantments~[{enchantment:"minecraft:binding_curse"}]|enchantments~[{enchantment:"minecraft:vanishing_curse"}]] if items entity @s armor.head #gm4_phantom_scarecrows:skulls run function gm4_phantom_scarecrows:create
+execute as @e[type=armor_stand,tag=!smithed.entity,tag=!gm4_phantom_scarecrow] if items entity @s armor.chest *[enchantments~[{enchantments:"minecraft:binding_curse"}]|enchantments~[{enchantments:"minecraft:vanishing_curse"}]] if items entity @s armor.head #gm4_phantom_scarecrows:skulls run function gm4_phantom_scarecrows:create
 execute as @e[type=armor_stand,tag=gm4_phantom_scarecrow,tag=!smithed.entity] run function gm4_phantom_scarecrows:upgrade_path/smithed_compat
 
 #launch cooldown

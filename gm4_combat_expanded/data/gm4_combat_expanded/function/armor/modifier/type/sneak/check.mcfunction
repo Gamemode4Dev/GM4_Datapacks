@@ -11,5 +11,5 @@ execute if score $active gm4_ce_data matches 1 if score @s gm4_ce_natural_regen_
 execute if score $active gm4_ce_data matches 1 unless predicate gm4_combat_expanded:technical/crouching run function gm4_combat_expanded:armor/modifier/type/sneak/attack_speed
 
 # check if player is sneaking while undamaged to grant invis
-execute if score $active gm4_ce_data matches 0 unless score @s[predicate=gm4_combat_expanded:technical/crouching] gm4_ce_t_hurt matches 1.. run function gm4_combat_expanded:armor/modifier/type/sneak/active
+execute if score $active gm4_ce_data matches 0 unless score @s[predicate=gm4_combat_expanded:technical/crouching] gm4_ce_hurt matches 1.. run function gm4_combat_expanded:armor/modifier/type/sneak/active
 execute if score $active gm4_ce_data matches 1 run effect give @s invisibility 2 0 true

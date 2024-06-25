@@ -4,7 +4,7 @@
 # run from armor/type/canine/wolf_interact_check
 
 # spawn item with the data
-summon item ~ ~ ~ {Tags:["gm4_ce_dropped_wolf_armor"],Item:{id:"wolf_armor",Count:1b}}
+summon item ~ ~ ~ {Tags:["gm4_ce_dropped_wolf_armor"],Item:{id:"wolf_armor",count:1}}
 item replace entity @e[type=item,tag=gm4_ce_dropped_wolf_armor,limit=1,sort=nearest,distance=..1] contents from entity @s armor.body
 
 # remove armor from wolf

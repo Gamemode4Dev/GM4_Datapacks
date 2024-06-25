@@ -328,7 +328,6 @@
         },
         {
           "function": "minecraft:set_name",
-          "mode": "append",
           "entity": "this",
           "name": [
             {
