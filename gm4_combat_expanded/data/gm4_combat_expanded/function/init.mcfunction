@@ -78,6 +78,9 @@ scoreboard objectives add gm4_ce_armor armor
 scoreboard objectives add gm4_ce_horse.speed_level dummy
 scoreboard objectives add gm4_ce_husk_pieces dummy
 
+scoreboard objectives add gm4_ce_damage_resisted minecraft.custom:minecraft.damage_resisted
+scoreboard objectives add gm4_ce_armor_reduced dummy
+
 scoreboard objectives add gm4_ce_boss dummy
 scoreboard objectives add gm4_ce_boss.id dummy
 scoreboard objectives add gm4_ce_boss.tick_delay dummy

@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "damaged_while_armored": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:value_check",
+                        "value": {
+                            "type": "minecraft:score",
+                            "target": "this",
+                            "score": "gm4_ce_armor"
+                        },
+                        "range": {
+                            "min": 1
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_combat_expanded:player/armored/damaged"
+    }
+}
