@@ -4,5 +4,5 @@
 # run from armor/type/heal/context
 
 # revert max health
-attribute @s minecraft:generic.max_health modifier remove minecraft:8a3726c1-9a5c-4b10-86ba-b72a2540eeb2
+attribute @s minecraft:generic.max_health modifier remove gm4_combat_expanded:remove_health
 tag @s remove gm4_ce_healed

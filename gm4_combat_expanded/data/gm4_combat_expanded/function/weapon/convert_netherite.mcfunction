@@ -7,8 +7,8 @@
 data modify storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.netherite set value 1
 
 # add damage from netherite
-execute store result score $damage gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_base_attack_damage"}].amount 10
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_base_attack_damage"}].amount double 0.1 run scoreboard players add $damage gm4_ce_data 10
+execute store result score $damage gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:base_attack_damage"}].amount 10
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:base_attack_damage"}].amount double 0.1 run scoreboard players add $damage gm4_ce_data 10
 
 # add sharpness damage for lore
 execute store result score $sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:enchantments".levels."minecraft:sharpness"

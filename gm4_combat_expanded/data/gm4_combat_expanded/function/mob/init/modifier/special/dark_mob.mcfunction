@@ -3,6 +3,6 @@
 # at @s
 # run from mob/init/stat/prep
 
-attribute @s generic.max_health modifier add minecraft:57c2eda2-b31d-4220-89ba-0a38ed00ab91 0.15 add_multiplied_base
-attribute @s generic.armor modifier add minecraft:93b69c69-f865-4b3a-8e2b-306da32c33de 0.25 add_multiplied_base
-attribute @s generic.movement_speed modifier add minecraft:c5b329f2-71c5-4a02-9538-15b04fb94f5c 0.05 add_multiplied_base
+attribute @s generic.max_health modifier add gm4_combat_expanded:stat_change.dark_generic 0.15 add_multiplied_base
+attribute @s generic.armor modifier add gm4_combat_expanded:stat_change.dark_generic 0.25 add_multiplied_base
+attribute @s generic.movement_speed modifier add gm4_combat_expanded:stat_change.dark_generic 0.05 add_multiplied_base

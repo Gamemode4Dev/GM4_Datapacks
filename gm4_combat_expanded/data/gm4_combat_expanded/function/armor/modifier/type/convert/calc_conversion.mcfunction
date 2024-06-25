@@ -13,10 +13,10 @@ data remove storage gm4_combat_expanded:temp check_modifier
 execute if score $armor_total gm4_ce_data matches 0 run return 0
 
 # get current armor negation
-execute store result score $armor_negation gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_perm_2"}].amount -1
+execute store result score $armor_negation gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:permanent_2"}].amount -1
 
 # modify to give 0 armor and convert it to health
 scoreboard players set $change gm4_ce_data 1
 scoreboard players operation $armor_negation gm4_ce_data += $armor_total gm4_ce_data
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_perm_2"}].amount int -1 run scoreboard players get $armor_negation gm4_ce_data
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_perm"}].amount int 1 run scoreboard players get $armor_negation gm4_ce_data
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:permanent_2"}].amount int -1 run scoreboard players get $armor_negation gm4_ce_data
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:permanent"}].amount int 1 run scoreboard players get $armor_negation gm4_ce_data

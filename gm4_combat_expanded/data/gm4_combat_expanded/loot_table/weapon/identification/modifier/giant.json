@@ -28,7 +28,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_damage",
-                  "id": "gm4_combat_expanded:giant_base_attack_damage",
+                  "id": "gm4_combat_expanded:base_attack_damage",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {
@@ -43,7 +43,7 @@
                 },
                 {
                   "attribute": "minecraft:generic.attack_speed",
-                  "id": "gm4_combat_expanded:giant_base_attack_speed",
+                  "id": "gm4_combat_expanded:base_attack_speed",
                   "amount": {
                     "type": "minecraft:score",
                     "target": {

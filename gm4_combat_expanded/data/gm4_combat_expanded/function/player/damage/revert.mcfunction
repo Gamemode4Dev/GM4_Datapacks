@@ -4,5 +4,5 @@
 # run from player/damage/context
 
 # revert max health
-attribute @s minecraft:generic.max_health modifier remove minecraft:e5e51e08-7ef8-4f88-82d2-1b5e104d5e4b
+attribute @s minecraft:generic.max_health modifier remove gm4_combat_expanded:remove_health
 tag @s remove gm4_ce_damaged

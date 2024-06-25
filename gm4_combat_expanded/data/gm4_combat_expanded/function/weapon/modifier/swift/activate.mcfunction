@@ -8,7 +8,7 @@ execute store result score $curr_time gm4_ce_data run time query gametime
 
 # get item level, x100 because x10 lead to rounding errors
 execute store result score $curr_level gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic"}].amount 100
-execute store result score $base_level gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{name:"gm4_ce_base_attack_speed"}].amount 100
+execute store result score $base_level gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:base_attack_speed"}].amount 100
 
 execute store result score $level gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level 10
 scoreboard players operation $curr_level gm4_ce_data += $level gm4_ce_data
