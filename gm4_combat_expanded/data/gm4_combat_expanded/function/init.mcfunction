@@ -53,7 +53,7 @@ scoreboard objectives add gm4_ce_generation dummy
 scoreboard objectives add gm4_ce_swimming minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add gm4_ce_used_bow minecraft.used:minecraft.bow
 scoreboard objectives add gm4_ce_used_crossbow minecraft.used:minecraft.crossbow
-scoreboard objectives add gm4_ce_natural_regen_damage dummy
+scoreboard objectives add gm4_ce_combat_regen_timer dummy
 scoreboard objectives add gm4_ce_death_mult dummy
 scoreboard objectives add gm4_ce_second_wind dummy
 scoreboard objectives add gm4_ce_link_id dummy
@@ -78,8 +78,13 @@ scoreboard objectives add gm4_ce_armor armor
 scoreboard objectives add gm4_ce_horse.speed_level dummy
 scoreboard objectives add gm4_ce_husk_pieces dummy
 
+scoreboard objectives add gm4_ce_damage_taken minecraft.custom:minecraft.damage_taken
+scoreboard objectives add gm4_ce_damage_absorbed minecraft.custom:minecraft.damage_absorbed
 scoreboard objectives add gm4_ce_damage_resisted minecraft.custom:minecraft.damage_resisted
 scoreboard objectives add gm4_ce_armor_reduced dummy
+scoreboard objectives add gm4_ce_armor_reduction_timer dummy
+scoreboard objectives add gm4_ce_fast_regen_health dummy
+scoreboard objectives add gm4_ce_fast_regen_timer dummy
 
 scoreboard objectives add gm4_ce_boss dummy
 scoreboard objectives add gm4_ce_boss.id dummy

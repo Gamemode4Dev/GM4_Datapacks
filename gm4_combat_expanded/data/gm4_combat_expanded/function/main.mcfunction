@@ -33,4 +33,6 @@ execute unless score $keep_tick.boss gm4_ce_keep_tick matches 1 if entity @e[typ
 # player submain
 schedule function gm4_combat_expanded:clocks/player_submain 8t
 # sustain armor double speed regen
-execute if score $natural_regen gm4_ce_data matches 0 as @a[tag=gm4_ce_sustain_active] unless score @s[scores={gm4_ce_hunger=18..},predicate=!gm4_combat_expanded:technical/poisoned] gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:armor/modifier/type/sustain/extra_regen
+execute if score $natural_regen gm4_ce_data matches 0 as @a[gamemode=!spectator,tag=gm4_ce_sustain_active] unless score @s[scores={gm4_ce_hunger=18..}] gm4_ce_combat_regen_timer matches 1.. run function gm4_combat_expanded:armor/modifier/type/sustain/extra_regen
+# armor regens every 8 ticks
+execute as @a[gamemode=!spectator,tag=gm4_ce_armor_reduced,scores={gm4_ce_armor_reduction_timer=0}] run function gm4_combat_expanded:player/health/regain_armor

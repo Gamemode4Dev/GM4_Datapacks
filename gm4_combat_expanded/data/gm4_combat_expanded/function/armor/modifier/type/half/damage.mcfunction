@@ -5,4 +5,4 @@
 
 scoreboard players operation $health_change gm4_ce_data = @s gm4_ce_health.current
 scoreboard players operation $health_change gm4_ce_data -= @s gm4_ce_health.max_half
-execute if score $health_change gm4_ce_data matches 1.. run function gm4_combat_expanded:player/damage/activate
+execute if score $health_change gm4_ce_data matches 1.. run function gm4_combat_expanded:player/health/damage/activate

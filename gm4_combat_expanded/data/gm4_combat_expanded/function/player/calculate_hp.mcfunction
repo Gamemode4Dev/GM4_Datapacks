@@ -5,7 +5,7 @@
 # run from armor/modifier/type/hp_check
 # run from armor/modifier/type/link/process/damage_taken
 # run from armor/modifier/type/link/general
-# run from player/heal/heal_calc
+# run from player/health/heal/heal_calc
 # run from player/regen/check
 # run from weapon/modifier/delay/explode_player
 

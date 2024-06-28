@@ -7,7 +7,7 @@
 function gm4_combat_expanded:player/calculate_hp
 
 # calculate heal
-function gm4_combat_expanded:player/heal/activate
+function gm4_combat_expanded:player/health/heal/activate
 
 # heal player
 effect give @s minecraft:instant_health 1 10 true

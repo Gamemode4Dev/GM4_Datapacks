@@ -9,11 +9,10 @@ execute if score @s[scores={gm4_ce_deaths=1..}] gm4_ce_alivetime matches ..16 ru
 # also count player kills as kills
 scoreboard players operation @s gm4_ce_kill += @s gm4_ce_kill2
 
-# natural regen
+# natural regen & armor
 tag @s remove gm4_ce_sustain_active
-scoreboard players set @s[scores={gm4_ce_natural_regen_damage=4..,gm4_ce_kill=1..}] gm4_ce_natural_regen_damage 3
-execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm4_ce_hunger=18..},tag=!gm4_ce_pause_nat_regen,predicate=!gm4_combat_expanded:technical/poisoned] gm4_ce_natural_regen_damage matches 1.. run function gm4_combat_expanded:player/regen/check
-tag @s remove gm4_ce_pause_nat_regen
+execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm4_ce_hunger=18..}] gm4_ce_combat_regen_timer matches 1.. run function gm4_combat_expanded:player/health/regen_combat_health
+execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm4_ce_hunger=18..,gm4_ce_fast_regen_health=1..}] gm4_ce_fast_regen_timer matches 1.. run function gm4_combat_expanded:player/health/regen_fast_health
 
 # check for archer armor
 tag @s[tag=gm4_ce_wearing_archer,predicate=!gm4_combat_expanded:modified_armor/archer] remove gm4_ce_wearing_archer
@@ -35,7 +34,7 @@ execute if predicate gm4_combat_expanded:modified_armor/wearing run function gm4
 # shield players if they have stored shield
 execute if score @s gm4_ce_absorp matches 1.. run function gm4_combat_expanded:player/shield/prep
 # heal players if they have stored health
-execute if score @s gm4_ce_healstore matches 1.. run function gm4_combat_expanded:player/heal/heal_calc
+execute if score @s gm4_ce_healstore matches 1.. run function gm4_combat_expanded:player/health/heal/heal_calc
 
 # process player sleeping
 execute if score @s gm4_ce_sleep matches 1.. at @s run function gm4_combat_expanded:player/home/detect_sleep
@@ -46,6 +45,8 @@ tag @s[tag=gm4_ce_second_wind.active,predicate=!gm4_combat_expanded:modified_arm
 # if player has armor use new damage calculation
 scoreboard players reset @s gm4_ce_damage_resisted
 effect give @s[scores={gm4_ce_armor=1..}] resistance 2 255 true
+scoreboard players remove @s[scores={gm4_ce_armor_reduction_timer=1..}] gm4_ce_armor_reduction_timer 1
+execute if score @s[tag=gm4_ce_armor_reduced] gm4_ce_armor_reduction_timer matches 0 run function gm4_combat_expanded:player/health/regain_armor
 
 # DEV: trigger for players with `gm4_ce_dev` tag
 execute if entity @s[tag=gm4_ce_dev] at @s as @e[type=#gm4_combat_expanded:modify,limit=1,sort=nearest] run function gm4_combat_expanded:debug/dont_run/dev

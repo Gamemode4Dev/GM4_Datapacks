@@ -1,0 +1,119 @@
+{
+  "criteria": {
+    "armor_piercing_combat_damage": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "taken": {
+            "min": 1
+          },
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:bypasses_armor",
+                "expected": true
+              },
+              {
+                "id": "gm4_combat_expanded:combat",
+                "expected": true
+              },
+              {
+                "id": "gm4_combat_expanded:ignore",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    "armor_piercing": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "taken": {
+            "min": 1
+          },
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:bypasses_armor",
+                "expected": true
+              },
+              {
+                "id": "gm4_combat_expanded:combat",
+                "expected": false
+              },
+              {
+                "id": "gm4_combat_expanded:ignore",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    "combat_damage": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "taken": {
+            "min": 1
+          },
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:bypasses_armor",
+                "expected": false
+              },
+              {
+                "id": "gm4_combat_expanded:combat",
+                "expected": true
+              },
+              {
+                "id": "gm4_combat_expanded:ignore",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    "none": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "taken": {
+            "min": 1
+          },
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:bypasses_armor",
+                "expected": false
+              },
+              {
+                "id": "gm4_combat_expanded:combat",
+                "expected": false
+              },
+              {
+                "id": "gm4_combat_expanded:ignore",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "armor_piercing_combat_damage",
+      "armor_piercing",
+      "combat_damage",
+      "none"
+    ]
+  ],
+  "rewards": {
+    "function": "gm4_combat_expanded:player/health/damaged"
+  }
+}
