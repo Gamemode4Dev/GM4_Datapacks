@@ -785,7 +785,7 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
   else:
     item = f"minecraft.{item}"
 
-  loot = ctx.data.loot_tables[loottable].data
+  loot = ctx.data.loot_table[loottable].data
 
   if len(loot["pools"]) > 1:
     raise ValueError("Loot table has multiple pools")
@@ -1705,7 +1705,9 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
         "predicate": {
           "type_specific": {
             "type": "player",
-            "gamemode": "spectator"
+            "gamemode": [
+              "spectator"
+            ]
           }
         }
       }

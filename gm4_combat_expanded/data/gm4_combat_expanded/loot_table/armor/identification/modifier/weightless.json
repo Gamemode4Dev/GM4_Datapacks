@@ -1,0 +1,223 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_combat_expanded:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "replace": false,
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.gravity",
+                  "id": "gm4_combat_expanded:permanent",
+                  "amount": -0.15,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "id": "gm4_combat_expanded:permanent_2",
+                  "amount": -0.15,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.jump_strength",
+                  "id": "gm4_combat_expanded:permanent_3",
+                  "amount": -0.075,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.safe_fall_distance",
+                  "id": "gm4_combat_expanded:permanent_4",
+                  "amount": -0.075,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$armor"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 1
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "replace": false,
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.gravity",
+                  "id": "gm4_combat_expanded:permanent",
+                  "amount": -0.2,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "id": "gm4_combat_expanded:permanent_2",
+                  "amount": -0.2,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.jump_strength",
+                  "id": "gm4_combat_expanded:permanent_3",
+                  "amount": -0.1,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.safe_fall_distance",
+                  "id": "gm4_combat_expanded:permanent_4",
+                  "amount": -0.1,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$armor"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 2
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "replace": false,
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.gravity",
+                  "id": "gm4_combat_expanded:permanent",
+                  "amount": -0.25,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "id": "gm4_combat_expanded:permanent_2",
+                  "amount": -0.25,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.jump_strength",
+                  "id": "gm4_combat_expanded:permanent_3",
+                  "amount": -0.125,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.safe_fall_distance",
+                  "id": "gm4_combat_expanded:permanent_4",
+                  "amount": -0.125,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$armor"
+                    },
+                    "score": "gm4_ce_data"
+                  },
+                  "range": 3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_combat_expanded:{modifier:'weightless'}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.equip",
+              "fallback": "When Equipped:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.weightless",
+                "fallback": "Reduced %s",
+                "with": [
+                  {
+                    "translate": "attribute.name.generic.gravity"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.combat_expanded.name.weightless",
+              "fallback": "Weightless %s",
+              "with": [
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

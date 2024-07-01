@@ -1,0 +1,461 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_combat_expanded:weapon/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "replace": false,
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "id": "gm4_combat_expanded:pierce_reset_attack_damage",
+                  "amount": -1,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "id": "gm4_combat_expanded:pierce_reset_attack_speed",
+                  "amount": -4,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "id": "gm4_combat_expanded:base_attack_damage",
+                  "amount": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$damage_down"
+                    },
+                    "score": "gm4_ce_data",
+                    "scale": 0.1
+                  },
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "id": "gm4_combat_expanded:base_attack_speed",
+                  "amount": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$atkspeed_stored"
+                    },
+                    "score": "gm4_ce_data",
+                    "scale": 0.1
+                  },
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_combat_expanded:{strike:1,modifier:112,damage_buffed:-1,level:'random_value'}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.pierce_strike",
+              "fallback": "Breaking Strikes:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "potion.withDuration",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.take.0",
+                    "with": [
+                      {
+                        "text": "2"
+                      },
+                      {
+                        "translate": "attribute.name.generic.armor"
+                      }
+                    ]
+                  },
+                  "0:10"
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$random_value"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 1
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "potion.withDuration",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.take.0",
+                    "with": [
+                      {
+                        "text": "4"
+                      },
+                      {
+                        "translate": "attribute.name.generic.armor"
+                      }
+                    ]
+                  },
+                  "0:10"
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$random_value"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 2
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "potion.withDuration",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.take.0",
+                    "with": [
+                      {
+                        "text": "6"
+                      },
+                      {
+                        "translate": "attribute.name.generic.armor"
+                      }
+                    ]
+                  },
+                  "0:10"
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$random_value"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 3
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.pierce",
+                "fallback": "Effect can Stack",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "item.modifiers.mainhand",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              " ",
+              {
+                "translate": "attribute.modifier.equals.0",
+                "with": [
+                  [
+                    {
+                      "score": {
+                        "name": "$damage_down_10",
+                        "objective": "gm4_ce_data"
+                      },
+                      "color": "red",
+                      "italic": false
+                    },
+                    ".",
+                    {
+                      "score": {
+                        "name": "$damage_down_01",
+                        "objective": "gm4_ce_data"
+                      }
+                    }
+                  ],
+                  {
+                    "translate": "attribute.name.generic.attack_damage"
+                  }
+                ],
+                "color": "dark_green",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$damage_down_01"
+                  },
+                  "score": "gm4_ce_data"
+                },
+                "range": 0
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              " ",
+              {
+                "translate": "attribute.modifier.equals.0",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$damage_down_10",
+                      "objective": "gm4_ce_data"
+                    },
+                    "color": "red",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.name.generic.attack_damage"
+                  }
+                ],
+                "color": "dark_green",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage_down_01"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 0
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              " ",
+              {
+                "translate": "attribute.modifier.equals.0",
+                "with": [
+                  [
+                    {
+                      "score": {
+                        "name": "$atkspeed_stored_10",
+                        "objective": "gm4_ce_data"
+                      },
+                      "color": "dark_green",
+                      "italic": false
+                    },
+                    ".",
+                    {
+                      "score": {
+                        "name": "$atkspeed_stored_01",
+                        "objective": "gm4_ce_data"
+                      }
+                    }
+                  ],
+                  {
+                    "translate": "attribute.name.generic.attack_speed"
+                  }
+                ],
+                "color": "dark_green",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$atkspeed_stored_01"
+                  },
+                  "score": "gm4_ce_data"
+                },
+                "range": 0
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              " ",
+              {
+                "translate": "attribute.modifier.equals.0",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$atkspeed_stored_10",
+                      "objective": "gm4_ce_data"
+                    },
+                    "color": "dark_green",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.name.generic.attack_speed"
+                  }
+                ],
+                "color": "dark_green",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$atkspeed_stored_01"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 0
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.combat_expanded.name.pierce",
+              "fallback": "Piercing %s",
+              "with": [
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

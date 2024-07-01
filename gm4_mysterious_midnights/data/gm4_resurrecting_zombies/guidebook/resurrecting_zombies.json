@@ -17,7 +17,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:zombie",
-              "nbt": "{DeathLootTable:\"minecraft:empty\",Attributes:[{Name:\"minecraft:generic.attack_damage\",Base:10.0d}]}"
+              "nbt": "{DeathLootTable:\"minecraft:empty\",attributes:[{id:\"minecraft:generic.attack_damage\",base:10.0d}]}"
             }
           }
         ]

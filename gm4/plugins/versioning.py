@@ -73,7 +73,7 @@ def modules(ctx: Context, opts: VersioningConfig):
         namespaced_function = f"{ctx.project_id}:{function}" if ":" not in function else function
         lines.append(f"execute unless score {ctx.project_id} load.status matches {module_ver.major} run schedule clear {namespaced_function}")
 
-    ctx.data.functions[f"{ctx.project_id}:load"] = Function(lines)
+    ctx.data.function[f"{ctx.project_id}:load"] = Function(lines)
 
     # load.json tag
     ctx.data.function_tags["load:load"] = FunctionTag({
@@ -84,7 +84,7 @@ def modules(ctx: Context, opts: VersioningConfig):
 
     # inject module load success checks (load.status 1..) into technical and display advancements
         # advancements get score checks injected into every criteria
-    versioned_advancements(ctx, Version("X.X.X"), [a for a in ctx.data.advancements.keys() if not a=="gm4:root"], False)
+    versioned_advancements(ctx, Version("X.X.X"), [a for a in ctx.data.advancement.keys() if not a=="gm4:root"], False)
 
 @configurable("gm4.versioning", validator=VersioningConfig)
 def libraries(ctx: Context, opts: VersioningConfig):
@@ -120,7 +120,7 @@ def libraries(ctx: Context, opts: VersioningConfig):
     lines.append(dep_check_line + f"{ctx.project_id}_minor load.status {lib_ver.minor}")
     lines.append(dep_check_line + f"{ctx.project_id} load.status {lib_ver.major}")
 
-    ctx.data.functions[f"{ctx.project_id}:enumerate"] = Function(lines)
+    ctx.data.function[f"{ctx.project_id}:enumerate"] = Function(lines)
 
     # resolve_load.mcfunction
     lines = [f"execute if score {ctx.project_id} load.status matches {lib_ver.major} if score {ctx.project_id}_minor load.status matches {lib_ver.minor} run function {ctx.project_id}:load"]
@@ -129,7 +129,7 @@ def libraries(ctx: Context, opts: VersioningConfig):
         lines.append(f"execute unless score {ctx.project_id} load.status matches {lib_ver.major} run schedule clear {ctx.project_id}:{func}")
         lines.append(f"execute unless score {ctx.project_id}_minor load.status matches {lib_ver.minor} run schedule clear {ctx.project_id}:{func}")
         
-    ctx.data.functions[f"{ctx.project_id}:resolve_load"] = Function(lines)
+    ctx.data.function[f"{ctx.project_id}:resolve_load"] = Function(lines)
 
     # load/tags {{ lib name }}.json
     ctx.data.function_tags[f"load:{ctx.project_id}"] = FunctionTag({
@@ -175,7 +175,7 @@ def libraries(ctx: Context, opts: VersioningConfig):
     ))
 
         # stamp version number and module bring packaged into into load.mcfunction
-    handle = ctx.data.functions[f"{ctx.project_id}:load"]
+    handle = ctx.data.function[f"{ctx.project_id}:load"]
     handle.append([
         "\n",
         f"data modify storage gm4:log versions append value {{id:\"{ctx.project_id}\",module:\"{ctx.project_id.replace('gm4', 'lib')}\",version:\"{ctx.project_version}\",from:\"{ctx.cache['currently_building'].json.get('name', 'standalone')}\"}}"
@@ -199,15 +199,15 @@ def base(ctx: Context, opts: VersioningConfig):
         f"execute unless score gm4 load.status matches {ver.major}.. run scoreboard players set gm4_minor load.status {ver.minor}",
         f"execute unless score gm4 load.status matches {ver.major}.. run scoreboard players set gm4 load.status {ver.major}"
     ]
-    ctx.data.functions[f"gm4:enumerate"] = Function(lines)
+    ctx.data.function[f"gm4:enumerate"] = Function(lines)
 
     # resolve_load.mcfunction
     lines = f"execute if score gm4 load.status matches {ver.major} if score gm4_minor load.status matches {ver.minor} run function gm4:load"
-    ctx.data.functions[f"gm4:resolve_load"] = Function(lines)
+    ctx.data.function[f"gm4:resolve_load"] = Function(lines)
     
     # resolve_post_load.mcfunction
     lines = f"execute if score gm4 load.status matches {ver.major} if score gm4_minor load.status matches {ver.minor} run function gm4:post_load"
-    ctx.data.functions[f"gm4:resolve_post_load"] = Function(lines)
+    ctx.data.function[f"gm4:resolve_post_load"] = Function(lines)
 
     versioned_advancements(ctx, ver, opts.extra_version_injections.advancements, strict=True) #type:ignore
     
@@ -266,9 +266,9 @@ def versioned_advancements(ctx: Context, ver: Version, targets: list[str], stric
 
     for entry in targets:
         if ":" in entry:
-            handle = ctx.data.advancements[entry]
+            handle = ctx.data.advancement[entry]
         else:
-            handle = ctx.data.advancements[f"{ctx.project_id}:{entry}"]
+            handle = ctx.data.advancement[f"{ctx.project_id}:{entry}"]
         for criteria in handle.data["criteria"].values():
             player_conditions = criteria.setdefault("conditions", {}).setdefault("player", [])
             if type(player_conditions) is dict:

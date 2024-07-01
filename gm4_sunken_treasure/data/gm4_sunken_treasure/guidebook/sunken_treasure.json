@@ -14,7 +14,7 @@
             "items": "#minecraft:shovels",
             "enchantments": [
               {
-                "enchantment": "minecraft:fortune"
+                "enchantments": "minecraft:fortune"
               }
             ]
           }

@@ -44,21 +44,21 @@
                             "modifiers": [
                                 {
                                     "attribute": "minecraft:generic.armor_toughness",
-                                    "name": "generic.armor_toughness",
+                                    "id": "gm4_zauber_cauldrons:armor_toughness_{{slot}}",
                                     "amount": 3,
                                     "operation": "add_value",
                                     "slot": "{{slot}}"
                                 },
                                 {
                                     "attribute": "minecraft:generic.armor",
-                                    "name": "generic.armor",
+                                    "id": "gm4_zauber_cauldrons:armor_{{slot}}",
                                     "amount": {{armor_value}},
                                     "operation": "add_value",
                                     "slot": "{{slot}}"
                                 },
                                 {
                                     "attribute": "{{flavor_attribute}}",
-                                    "name": "gm4_zauber_cauldrons.armor.{{flavor}}",
+                                    "id": "gm4_zauber_cauldrons:armor_{{flavor}}_{{slot}}",
                                     "amount": {{flavor_amount}},
                                     "operation": "{{flavor_operation}}",
                                     "slot": "{{slot}}"

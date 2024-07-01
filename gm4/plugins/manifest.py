@@ -20,7 +20,7 @@ from gm4.utils import Version, run
 
 parent_logger = logging.getLogger("gm4.manifest")
 
-SUPPORTED_GAME_VERSIONS = ["1.20.5", "1.20.6"]
+SUPPORTED_GAME_VERSIONS = ["1.21"]
 
 # config models for beet.yaml metas
 CreditsModel = dict[str, list[str]]
@@ -144,7 +144,7 @@ def create(ctx: Context):
 	ctx.cache["gm4_manifest"].json = manifest.dict()
 
 	# Read in the previous manifest, if found
-	version = os.getenv("VERSION", "1.20.5")
+	version = os.getenv("VERSION", "1.21")
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
 
@@ -214,7 +214,7 @@ def update_patch(ctx: Context):
 
 def write_meta(ctx: Context):
 	"""Write the updated meta.json file."""
-	version = os.getenv("VERSION", "1.20.5")
+	version = os.getenv("VERSION", "1.21")
 	release_dir = Path('release') / version
 	os.makedirs(release_dir, exist_ok=True)
 
@@ -263,7 +263,7 @@ def write_credits(ctx: Context):
 
 def write_updates(ctx: Context):
 	"""Writes the module update commands to this module's init function."""
-	init = ctx.data.functions.get(f"{ctx.project_id}:init", None)
+	init = ctx.data.function.get(f"{ctx.project_id}:init", None)
 	if init is None:
 		return
 

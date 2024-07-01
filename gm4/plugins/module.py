@@ -8,8 +8,8 @@ def default_pack_icon(ctx: Context):
 
 def gm4_root_advancement(ctx: Context):
     """Adds the root display advancement gm4:root, if the module has any display advancements"""
-    if len(ctx.data["gm4"].advancements.keys()) > 0:
-        ctx.data.advancements["gm4:root"] = Advancement(
+    if len(ctx.data["gm4"].advancement.keys()) > 0:
+        ctx.data.advancement["gm4:root"] = Advancement(
             {
                 "display": {
                     "icon": {

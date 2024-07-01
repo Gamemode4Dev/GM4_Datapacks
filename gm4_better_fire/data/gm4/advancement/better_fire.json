@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "id": "bow",
+      "components": {
+        "minecraft:enchantments": {
+          "flame": 1
+        },
+        "minecraft:custom_model_data": "gui/advancement/better_fire"
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.better_fire.title",
+      "fallback": "Flint 'n Stick"
+    },
+    "description": {
+      "translate": "advancement.gm4.better_fire.description",
+      "fallback": "Fire a Flame Bow",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "gm4_better_fire_shoot_fire_arrow": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "delta": -1,
+        "item": {
+          "predicates": {
+            "minecraft:enchantments": [
+              {
+                "enchantments": "minecraft:flame",
+                "levels": 1
+              }
+            ]
+          },
+          "items": [
+            "minecraft:bow"
+          ]
+        }
+      }
+    }
+  }
+}

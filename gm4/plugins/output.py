@@ -20,7 +20,7 @@ USER_AGENT = "Gamemode4Dev/GM4_Datapacks/release-pipeline (gamemode4official@gma
 def beet_default(ctx: Context):
 	"""Saves the datapack to the ./out folder in it's exit phase.
 	 	Should be first in pipeline to properly wrap all other plugins cleanup phases"""
-	version = os.getenv("VERSION", "1.20.5")
+	version = os.getenv("VERSION", "1.21")
 	out_dir = Path("out")
 
 	yield # wait for exit phase, after other plugins cleanup
@@ -32,7 +32,7 @@ def beet_default(ctx: Context):
 
 def resource_pack(ctx: Context):
 	"""Saves the resourcepack to the ./out folder."""
-	version = os.getenv("VERSION", "1.20.5")
+	version = os.getenv("VERSION", "1.21")
 	out_dir = Path("out")
 
 	ctx.assets.save(
@@ -42,7 +42,7 @@ def resource_pack(ctx: Context):
 
 def release_resource_pack(ctx: Context):
 	"""Saves the resourcepack to the ./out folder."""
-	version = os.getenv("VERSION", "1.20.5")
+	version = os.getenv("VERSION", "1.21")
 	release_dir = Path("release") / version
 
 	yield
@@ -81,7 +81,7 @@ def release(ctx: Context):
 	`BEET_SMITHED_TOKEN` environment variable is set, will try to publish a
 	new version to Smithed if it doesn't already exist.
 	"""
-	version_dir = os.getenv("VERSION", "1.20.5")
+	version_dir = os.getenv("VERSION", "1.21")
 	release_dir = Path("release") / version_dir
 
 	corrected_project_id = stem if (stem:=ctx.directory.stem).startswith("lib") else ctx.project_id
@@ -197,7 +197,7 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
 	"""Attempts to publish pack to smithed"""
 	auth_token = os.getenv(SMITHED_AUTH_KEY, None)
 	logger = parent_logger.getChild(f"smithed.{ctx.project_id}")
-	mc_version_dir = os.getenv("VERSION", "1.20.5")
+	mc_version_dir = os.getenv("VERSION", "1.21")
 	manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
 	project_id = stem if (stem:=ctx.directory.stem).startswith("lib") else ctx.project_id
 
@@ -297,7 +297,7 @@ def clear_release(ctx: Context):
 	1. Deleted modules no longer stick around in the current version
 	2. Changes to the build system (such as renamed files/folders) are properly reflected
 	"""
-	version = os.getenv("VERSION", "1.20.5")
+	version = os.getenv("VERSION", "1.21")
 	release_dir = Path("release") / version
 	shutil.rmtree(release_dir, ignore_errors=True)
 	os.makedirs(release_dir, exist_ok=True)
