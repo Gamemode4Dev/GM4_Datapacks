@@ -77,6 +77,7 @@ scoreboard objectives add gm4_ce_burning.duration dummy
 scoreboard objectives add gm4_ce_armor armor
 scoreboard objectives add gm4_ce_horse.speed_level dummy
 scoreboard objectives add gm4_ce_husk_pieces dummy
+scoreboard objectives add gm4_ce_absorp_reduced_timer dummy
 
 scoreboard objectives add gm4_ce_damage_taken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_ce_damage_absorbed minecraft.custom:minecraft.damage_absorbed
@@ -128,8 +129,11 @@ scoreboard players set #40 gm4_ce_data 40
 scoreboard players set #50 gm4_ce_data 50
 scoreboard players set #64 gm4_ce_data 64
 scoreboard players set #75 gm4_ce_data 75
+scoreboard players set #80 gm4_ce_data 80
 scoreboard players set #100 gm4_ce_data 100
+scoreboard players set #125 gm4_ce_data 125
 scoreboard players set #1000 gm4_ce_data 1000
+scoreboard players set #1875 gm4_ce_data 1875
 scoreboard players set #6000 gm4_ce_data 6000
 
 # start clocks

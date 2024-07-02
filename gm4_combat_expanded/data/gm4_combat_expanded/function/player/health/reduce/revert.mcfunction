@@ -1,7 +1,7 @@
 # code taken from sweethearts
 # @s = player to revert max health
 # at unspecified
-# run from player/health/damage/context
+# run from player/health/reduce/context
 
 # revert max health
 attribute @s minecraft:generic.max_health modifier remove gm4_combat_expanded:remove_health
