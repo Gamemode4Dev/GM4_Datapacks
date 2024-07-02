@@ -1,6 +1,6 @@
 id: gm4_lightning_in_a_bottle
 name: Lightning in a Bottle
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -17,8 +17,8 @@ meta:
   gm4:
     versioning:
       required:
-        lib_potion_tracking: 1.1.0
-        lib_brewing: 1.1.0
+        lib_potion_tracking: 1.2.0
+        lib_brewing: 1.2.0
       schedule_loops:
         - main
         - brewing_stand/texture_connector/process

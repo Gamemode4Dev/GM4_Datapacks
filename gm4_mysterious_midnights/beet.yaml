@@ -1,6 +1,6 @@
 id: gm4_mysterious_midnights
 name: Mysterious Midnights
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_forceload: 1.3.0
+        lib_forceload: 1.4.0
       schedule_loops: [main]
     model_data:
       - item: end_stone

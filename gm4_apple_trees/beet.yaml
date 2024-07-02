@@ -1,6 +1,6 @@
 id: gm4_apple_trees
 name: Apple Trees
-version: 2.3.X
+version: 2.4.X
 
 data_pack:
   load: .
@@ -17,8 +17,8 @@ meta:
   gm4:
     versioning:
       required:
-        lib_trades: 1.4.0
-        lib_trees: 1.1.0
+        lib_trades: 1.5.0
+        lib_trees: 1.2.0
       schedule_loops:
         - main
         - slow_clock
