@@ -1,5 +1,5 @@
 {
-  "last_commit": "59a90f67bfd7923edc8d5cd6f11a92775933805a",
+  "last_commit": "26034bc34ec1a143d9986c50017b3a6800581711",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2642,8 +2642,8 @@
     {
       "id": "gm4_tunnel_bores",
       "name": "Tunnel Bores",
-      "version": "1.5.0",
-      "hash": "b2bcb68ddb56e92b5fc046d18c12036ed6ca85c9",
+      "version": "1.5.1",
+      "hash": "c6ab9291aee7b2279e57c455b2bad54076714afa",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tunnel_Bores",
       "credits": {
