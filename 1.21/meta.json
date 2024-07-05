@@ -1,5 +1,5 @@
 {
-  "last_commit": "26034bc34ec1a143d9986c50017b3a6800581711",
+  "last_commit": "bb2bc7005c1aa6676b19855aad018cf1141825d4",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -552,8 +552,8 @@
     {
       "id": "gm4_combat_expanded",
       "name": "Combat Expanded",
-      "version": "2.2.0",
-      "hash": "e3edbb7fa3ef8707ea3f5fe9d1a77925331c9cb7",
+      "version": "2.2.1",
+      "hash": "4a6c3b3c3f577a9a67b7283653698272b832d1c3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Combat_Expanded",
       "credits": {
