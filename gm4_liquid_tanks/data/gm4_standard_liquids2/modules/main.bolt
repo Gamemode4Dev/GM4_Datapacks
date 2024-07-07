@@ -9,3 +9,14 @@ class Lava:
     liquid.init()
 
     liquid.item_fill('bucket', 'lava_bucket', 3)
+
+@liquid
+class Water:
+    id = 'water'
+    capacity = 300
+    skullowner = 'liquids/water'
+
+    liquid.init()
+
+    liquid.item_fill('bucket', 'water_bucket', 3)
+    liquid.item_fill('glass_bottle', 'minecraft:potion[potion_contents={potion:"water"},name="Test"]', 1)

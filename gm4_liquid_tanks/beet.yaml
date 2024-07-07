@@ -18,6 +18,9 @@ pipeline:
   - gm4.plugins.include.lib_custom_crafters
 
 meta:
+  bolt:
+    entrypoint:
+      - gm4_standard_liquids2:main
   gm4:
     versioning:
       required:
