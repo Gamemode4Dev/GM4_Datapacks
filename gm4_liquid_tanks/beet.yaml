@@ -12,6 +12,7 @@ require:
   - bolt
 
 pipeline:
+  - override_formatting
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
   - gm4.plugins.include.lib_custom_crafters
