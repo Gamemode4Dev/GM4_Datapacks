@@ -21,6 +21,6 @@ scoreboard players operation $enchant.protection gm4_ce_data /= #100 gm4_ce_data
 scoreboard players operation $damage_health gm4_ce_data -= $enchant.protection gm4_ce_data
 
 # check if specific protection enchants would apply
-execute if entity @s[advancements={gm4_combat_expanded:damaged/damaged={is_fire=true}}] run function gm4_combat_expanded:player/health/damaged/fire_protection
-execute if entity @s[advancements={gm4_combat_expanded:damaged/damaged={is_explosion=true}}] run function gm4_combat_expanded:player/health/damaged/blast_protection
-execute if entity @s[advancements={gm4_combat_expanded:damaged/damaged={is_projectile=true}}] run function gm4_combat_expanded:player/health/damaged/projectile_protection
+execute if entity @s[advancements={gm4_combat_expanded:damaged/detect={is_fire=true}}] run function gm4_combat_expanded:player/health/damaged/fire_protection
+execute if entity @s[advancements={gm4_combat_expanded:damaged/detect={is_explosion=true}}] run function gm4_combat_expanded:player/health/damaged/blast_protection
+execute if entity @s[advancements={gm4_combat_expanded:damaged/detect={is_projectile=true}}] run function gm4_combat_expanded:player/health/damaged/projectile_protection

@@ -160,12 +160,6 @@
       "is_explosion",
       "is_projectile",
       "catch_other"
-    ],
-    [
-      "catch_other"
     ]
-  ],
-  "rewards": {
-    "function": "gm4_combat_expanded:player/health/damaged/run"
-  }
+  ]
 }

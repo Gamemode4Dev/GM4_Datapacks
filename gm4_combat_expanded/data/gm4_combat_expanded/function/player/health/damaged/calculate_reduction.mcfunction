@@ -7,7 +7,7 @@ execute store result score $armor_toughness gm4_ce_data run attribute @s generic
 execute if score $armor_toughness gm4_ce_data matches 1.. if score @s gm4_ce_armor matches 1.. run function gm4_combat_expanded:player/health/damaged/armor_toughness
 
 # enchantments
-execute if entity @s[advancements={gm4_combat_expanded:damaged/damaged={bypasses_enchantments=false}}] run function gm4_combat_expanded:player/health/damaged/enchantments
+execute if entity @s[advancements={gm4_combat_expanded:damaged/detect={bypasses_enchantments=false}}] run function gm4_combat_expanded:player/health/damaged/enchantments
 
 # resistance effect (uses highest level besides the one used for this module)
 execute store success score $resistance_damage_reduction gm4_ce_data if data entity @s active_effects[{id:"minecraft:resistance"}].hidden_effect.duration
@@ -27,7 +27,7 @@ scoreboard players operation $damage_health gm4_ce_data > #1 gm4_ce_data
 scoreboard players operation $damage_armor gm4_ce_data = $damage_health gm4_ce_data
 scoreboard players operation $damage_armor gm4_ce_data < @s gm4_ce_armor
 # if damage pierces armor apply only to health
-execute if entity @s[advancements={gm4_combat_expanded:damaged/damaged={armor_piercing=true}}] run scoreboard players set $damage_armor gm4_ce_data 0
+execute if entity @s[advancements={gm4_combat_expanded:damaged/detect={armor_piercing=true}}] run scoreboard players set $damage_armor gm4_ce_data 0
 # any leftover damage is applied to the players health
 scoreboard players operation $damage_health gm4_ce_data -= $damage_armor gm4_ce_data
 
