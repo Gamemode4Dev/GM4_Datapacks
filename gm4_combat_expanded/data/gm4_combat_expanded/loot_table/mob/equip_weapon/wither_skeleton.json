@@ -31,8 +31,8 @@
               ]
             },
             {
-              "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:weapon/sword/stone"
+              "type": "minecraft:item",
+              "name": "stone_sword"
             }
           ]
         }

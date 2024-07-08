@@ -9,7 +9,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:armor/material/iron/feet",
+              "value": "gm4_combat_expanded:mob/equip_armor/material/iron/feet",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -19,7 +19,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:armor/material/chainmail/feet",
+              "value": "gm4_combat_expanded:mob/equip_armor/material/chainmail/feet",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -29,7 +29,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:armor/material/chainmail/feet",
+              "value": "gm4_combat_expanded:mob/equip_armor/material/chainmail/feet",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -72,7 +72,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:armor/material/iron/legs",
+              "value": "gm4_combat_expanded:mob/equip_armor/material/iron/legs",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -82,7 +82,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:armor/material/chainmail/legs",
+              "value": "gm4_combat_expanded:mob/equip_armor/material/chainmail/legs",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -92,7 +92,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:armor/material/chainmail/legs",
+              "value": "gm4_combat_expanded:mob/equip_armor/material/chainmail/legs",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -135,7 +135,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:armor/material/iron/chest",
+              "value": "gm4_combat_expanded:mob/equip_armor/material/iron/chest",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -145,7 +145,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:armor/material/chainmail/chest",
+              "value": "gm4_combat_expanded:mob/equip_armor/material/chainmail/chest",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -155,7 +155,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:armor/material/chainmail/chest",
+              "value": "gm4_combat_expanded:mob/equip_armor/material/chainmail/chest",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -198,7 +198,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:armor/material/iron/head",
+              "value": "gm4_combat_expanded:mob/equip_armor/material/iron/head",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -208,7 +208,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:armor/material/chainmail/head",
+              "value": "gm4_combat_expanded:mob/equip_armor/material/chainmail/head",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -218,7 +218,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:armor/material/chainmail/head",
+              "value": "gm4_combat_expanded:mob/equip_armor/material/chainmail/head",
               "conditions": [
                 {
                   "condition": "minecraft:reference",

@@ -12,19 +12,8 @@ item replace entity @e[type=#gm4_combat_expanded:zombie_types,tag=gm4_ce_spore_z
 # phantoms drown under water
 execute as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water run damage @s 2 drown
 
-# | Armor
-# process canine set wolves
-execute as @e[type=wolf,tag=gm4_ce_wolf] run function gm4_combat_expanded:armor/modifier/type/canine/wolf_process
-# sword_ring
-execute unless score $keep_tick.sword_ring gm4_ce_keep_tick matches 1 if entity @a[predicate=gm4_combat_expanded:modified_armor/sword_ring,gamemode=!spectator] run schedule function gm4_combat_expanded:clocks/temp/sword_ring 1t
-# beacon
-execute unless score $keep_tick.beacon gm4_ce_keep_tick matches 1 if entity @a[predicate=gm4_combat_expanded:modified_armor/beacon,gamemode=!spectator] run schedule function gm4_combat_expanded:clocks/temp/beacon 1t
-# burn
-execute unless score $keep_tick.burn gm4_ce_keep_tick matches 1 if entity @a[scores={gm4_ce_burning.duration=1..}] run schedule function gm4_combat_expanded:clocks/temp/burn 1t
-
-# | Weapons
-# pierce
-execute as @e[type=!#gm4_combat_expanded:effect_immune,scores={gm4_ce_pierce_timer=1..}] at @s run function gm4_combat_expanded:weapon/modifier/pierce/tick_down
+# | Armor Expanded (expansion pack, run from here to keep in sync)
+execute if score armor_expanded gm4_modules matches 1 run function gm4_armor_expanded:call/main
 
 # | Boss
 execute unless score $keep_tick.boss gm4_ce_keep_tick matches 1 if entity @e[type=shulker,tag=gm4_ce_boss.watcher] run schedule function gm4_combat_expanded:clocks/boss/watchers 1t

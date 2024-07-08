@@ -12,4 +12,4 @@ execute if entity @s[tag=gm4_ce_processed] on vehicle run scoreboard players set
 execute if score $mounted gm4_ce_data matches 1 run tag @s remove gm4_ce_processed
 
 # initiate unless mob is from spawner
-execute unless entity @s[tag=gm4_ce_processed] run function gm4_combat_expanded:mob/init/initiate
+execute unless entity @s[tag=gm4_ce_processed] run function gm4_combat_expanded:mob/init/calc_difficulty_base

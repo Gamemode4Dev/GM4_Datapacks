@@ -5,109 +5,94 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:alternatives",
-          "children": [
+          "type": "minecraft:item",
+          "name": "minecraft:bow",
+          "functions": [
             {
-              "type": "minecraft:loot_table",
-              "value": "gm4_combat_expanded:mob/equip_weapon/generic",
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 0.05
+                },
+                "max": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 0.2
+                }
+              },
+              "options": "#minecraft:non_treasure",
               "conditions": [
                 {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_combat_expanded:mob/modifier/growth"
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.15
                 }
               ]
             },
             {
-              "type": "minecraft:item",
-              "name": "minecraft:bow",
-              "functions": [
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:punch"
+              ],
+              "conditions": [
                 {
-                  "function": "minecraft:enchant_with_levels",
-                  "levels": {
-                    "min": {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/modifier/mountainous"
+                },
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:binomial",
+                    "n": 1,
+                    "p": {
                       "type": "minecraft:score",
                       "target": {
                         "type": "minecraft:fixed",
                         "name": "$difficulty"
                       },
                       "score": "gm4_ce_data",
-                      "scale": 0.05
-                    },
-                    "max": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$difficulty"
-                      },
-                      "score": "gm4_ce_data",
-                      "scale": 0.2
+                      "scale": 0.0035
                     }
                   },
-                  "options": "#minecraft:non_treasure",
-                  "conditions": [
-                    {
-                      "condition": "minecraft:random_chance",
-                      "chance": 0.15
-                    }
-                  ]
+                  "range": 1
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:flame"
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/modifier/burned"
                 },
                 {
-                  "function": "minecraft:enchant_randomly",
-                  "options": [
-                    "minecraft:punch"
-                  ],
-                  "conditions": [
-                    {
-                      "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/mountainous"
-                    },
-                    {
-                      "condition": "minecraft:value_check",
-                      "value": {
-                        "type": "minecraft:binomial",
-                        "n": 1,
-                        "p": {
-                          "type": "minecraft:score",
-                          "target": {
-                            "type": "minecraft:fixed",
-                            "name": "$difficulty"
-                          },
-                          "score": "gm4_ce_data",
-                          "scale": 0.0035
-                        }
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:binomial",
+                    "n": 1,
+                    "p": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
                       },
-                      "range": 1
+                      "score": "gm4_ce_data",
+                      "scale": 0.0045
                     }
-                  ]
-                },
-                {
-                  "function": "minecraft:enchant_randomly",
-                  "options": [
-                    "minecraft:flame"
-                  ],
-                  "conditions": [
-                    {
-                      "condition": "minecraft:reference",
-                      "name": "gm4_combat_expanded:mob/modifier/burned"
-                    },
-                    {
-                      "condition": "minecraft:value_check",
-                      "value": {
-                        "type": "minecraft:binomial",
-                        "n": 1,
-                        "p": {
-                          "type": "minecraft:score",
-                          "target": {
-                            "type": "minecraft:fixed",
-                            "name": "$difficulty"
-                          },
-                          "score": "gm4_ce_data",
-                          "scale": 0.0045
-                        }
-                      },
-                      "range": 1
-                    }
-                  ]
+                  },
+                  "range": 1
                 }
               ]
             }

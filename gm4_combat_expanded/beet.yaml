@@ -1,6 +1,6 @@
 id: gm4_combat_expanded
 name: Combat Expanded
-version: 2.1.X
+version: 3.0.X
 
 data_pack:
   load: .
@@ -34,11 +34,6 @@ meta:
         - Thanathor
       Icon Design:
         - Hozz
-    model_data:
-      - template: advancement
-        broadcast:
-        - item: leather_chestplate
-          reference: gui/advancement/combat_expanded_identify
     translation_linter_ignores:
       - enchantment.level.14
       - enchantment.level.15

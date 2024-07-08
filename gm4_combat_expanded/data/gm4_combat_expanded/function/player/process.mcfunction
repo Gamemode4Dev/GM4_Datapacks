@@ -3,9 +3,6 @@
 # at unspecified
 # run from clocks/player_submain
 
-# process player deaths
-execute if score @s[scores={gm4_ce_deaths=1..}] gm4_ce_alivetime matches ..16 run function gm4_combat_expanded:player/process_death
-
 # also count player kills as kills
 scoreboard players operation @s gm4_ce_kill += @s gm4_ce_kill2
 
@@ -14,33 +11,14 @@ tag @s remove gm4_ce_sustain_active
 execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm4_ce_hunger=18..}] gm4_ce_combat_regen_timer matches 1.. run function gm4_combat_expanded:player/health/regen_combat_health
 execute if score $natural_regen gm4_ce_data matches 0 unless score @s[scores={gm4_ce_hunger=18..,gm4_ce_fast_regen_health=1..}] gm4_ce_fast_regen_timer matches 1.. run function gm4_combat_expanded:player/health/regen_fast_health
 
-# check for archer armor
-tag @s[tag=gm4_ce_wearing_archer,predicate=!gm4_combat_expanded:modified_armor/archer] remove gm4_ce_wearing_archer
-execute if entity @s[tag=!gm4_ce_wearing_archer,predicate=gm4_combat_expanded:modified_armor/archer] run function gm4_combat_expanded:armor/modifier/type/archer/activate
+# | Armor Expanded (expansion pack, run from here to keep in sync)
+execute if score armor_expanded gm4_modules matches 1 run function gm4_armor_expanded:call/process_player
 
-# remove husk sprint score if player didn't sprint for too long
-execute unless score @s gm4_ce_sprinting matches 1.. run scoreboard players add @s[scores={gm4_ce_t_sprinting=1..}] gm4_ce_sprinting_timeout 1
-scoreboard players reset @s[scores={gm4_ce_sprinting_timeout=3..,gm4_ce_t_sprinting=1..}] gm4_ce_t_sprinting
-scoreboard players reset @s gm4_ce_husk_pieces
-
-# remove tags
-tag @s remove gm4_ce_beacon_active
-tag @s remove gm4_ce_linked
-execute if entity @s[tag=gm4_ce_immune_active] run function gm4_combat_expanded:player/clear_immunities
-
-# process armor
-execute if predicate gm4_combat_expanded:modified_armor/wearing run function gm4_combat_expanded:armor/process
-
-# shield players if they have stored shield
-execute if score @s gm4_ce_absorp matches 1.. run function gm4_combat_expanded:player/shield/prep
 # heal players if they have stored health
 execute if score @s gm4_ce_healstore matches 1.. run function gm4_combat_expanded:player/health/heal/heal_calc
 
 # process player sleeping
 execute if score @s gm4_ce_sleep matches 1.. at @s run function gm4_combat_expanded:player/home/detect_sleep
-
-# remove second wind tag if armor is taken off
-tag @s[tag=gm4_ce_second_wind.active,predicate=!gm4_combat_expanded:modified_armor/second_wind] remove gm4_ce_second_wind.active
 
 # if player has armor use new damage calculation
 scoreboard players reset @s gm4_ce_damage_resisted
