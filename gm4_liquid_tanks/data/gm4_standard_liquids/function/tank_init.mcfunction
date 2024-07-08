@@ -2,8 +2,8 @@
 #run from liquid_tanks:item_process
 
 #water
-execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:water_bucket"}} run function gm4_standard_liquids:liquid_init/water
-execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",components:{"minecraft:potion_contents":{potion:"minecraft:water"}}}} run function gm4_standard_liquids:liquid_init/water
+execute if items block ~ ~ ~ container.0 minecraft:water_bucket run function gm4_standard_liquids:liquid_init/water
+execute if items block ~ ~ ~ container.0 minecraft:potion[minecraft:potion_contents={potion:"minecraft:water"}] run function gm4_standard_liquids:liquid_init/water
 
 #lava
 execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:lava_bucket"}} run function gm4_standard_liquids:liquid_init/lava

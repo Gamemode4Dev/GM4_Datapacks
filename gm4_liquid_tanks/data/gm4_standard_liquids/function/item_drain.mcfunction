@@ -2,8 +2,8 @@
 #run from liquid_tanks:item_process
 
 #water
-execute if entity @s[tag=gm4_lt_water] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:water_bucket"}} run function gm4_standard_liquids:item_drain/bucket
-execute if entity @s[tag=gm4_lt_water] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:potion",components:{"minecraft:potion_contents":{potion:"minecraft:water"}}}} run function gm4_standard_liquids:item_drain/bottle
+execute if entity @s[tag=gm4_lt_water] if items block ~ ~ ~ container.0 minecraft:water_bucket run function gm4_standard_liquids:item_drain/bucket
+execute if entity @s[tag=gm4_lt_water] if items block ~ ~ ~ container.0 minecraft:potion[minecraft:potion_contents={potion:"minecraft:water"}] run function gm4_standard_liquids:item_drain/bottle
 
 #lava
 execute if entity @s[tag=gm4_lt_lava] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:lava_bucket"}} run function gm4_standard_liquids:item_drain/bucket
