@@ -3,6 +3,7 @@ import hashlib
 import json
 import logging
 import os
+import sys
 from gzip import GzipFile
 from io import BytesIO
 from pathlib import Path
@@ -152,7 +153,11 @@ def create(ctx: Context):
 		ctx.cache["previous_manifest"].json = json.loads(manifest_file.read_text())
 	else:
 		if not ctx.meta.get("gm4_dev"):
-			logger.warn("No existing meta.json manifest file was located")
+			if os.getenv("MASTER_BUILD"): # gh actions is building - forgetting to add a meta.json breaks things
+				logger.error("No existing meta.json manifest file was located. Build was cancelled to avoid faulty releases.")
+				sys.exit(1) # quit the build and mark the github action as failed
+			else:
+				logger.warn("No existing meta.json manifest file was located")
 		ctx.cache["previous_manifest"].json = ManifestFileModel(last_commit="",modules=[],libraries={},contributors=[]).dict()
 
 	

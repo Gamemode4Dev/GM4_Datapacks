@@ -60,6 +60,7 @@ jobs:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+          MASTER_BUILD: true
 
       - name: Build all modules for pull request
         if: github.event_name == 'pull_request'
