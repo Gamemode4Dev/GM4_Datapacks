@@ -11,6 +11,8 @@ execute as @e[type=item,tag=gm4_ce_spore] at @s run function gm4_combat_expanded
 item replace entity @e[type=#gm4_combat_expanded:zombie_types,tag=gm4_ce_spore_zombie,predicate=gm4_combat_expanded:technical/on_fire] armor.head with air
 # phantoms drown under water
 execute as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water run damage @s 2 drown
+# elites
+execute as @e[type=#gm4_combat_expanded:elite_types,tag=gm4_ce_elite.process] at @s run function gm4_combat_expanded:mob/process/elite/check_type
 
 # | Armor Expanded (expansion pack, run from here to keep in sync)
 execute if score armor_expanded gm4_modules matches 1 run function gm4_armor_expanded:call/main

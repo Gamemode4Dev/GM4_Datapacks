@@ -1,4 +1,4 @@
-# weaken players hit with poison attack
+# poison players hit with poison attack
 # @s = player that was hit
 # at unspecified
 advancement revoke @s only gm4_combat_expanded:damaged/mob/poison

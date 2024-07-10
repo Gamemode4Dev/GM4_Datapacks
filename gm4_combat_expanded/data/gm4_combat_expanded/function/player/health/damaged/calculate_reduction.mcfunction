@@ -27,7 +27,7 @@ scoreboard players operation $damage_health gm4_ce_data > #1 gm4_ce_data
 scoreboard players operation $damage_armor gm4_ce_data = $damage_health gm4_ce_data
 scoreboard players operation $damage_armor gm4_ce_data < @s gm4_ce_armor
 # if damage pierces armor apply only to health
-execute if entity @s[advancements={gm4_combat_expanded:damaged/detect={armor_piercing=true}}] run scoreboard players set $damage_armor gm4_ce_data 0
+execute unless entity @s[advancements={gm4_combat_expanded:damaged/detect={armor_piercing=false,armor_piercing_mob=false}}] run scoreboard players set $damage_armor gm4_ce_data 0
 # any leftover damage is applied to the players health
 scoreboard players operation $damage_health gm4_ce_data -= $damage_armor gm4_ce_data
 

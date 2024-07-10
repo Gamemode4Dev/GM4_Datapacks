@@ -4,9 +4,6 @@
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "damage": {
-          "taken": {
-            "min": 1
-          },
           "type": {
             "tags": [
               {
@@ -26,9 +23,6 @@
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "damage": {
-          "taken": {
-            "min": 1
-          },
           "type": {
             "tags": [
               {
@@ -44,13 +38,22 @@
         }
       }
     },
+    "armor_piercing_mob": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "source_entity": {
+              "nbt": "{Tags:[\"gm4_ce_armor_pierce_attack\"]}"
+            }
+          }
+        }
+      }
+    },
     "bypasses_enchantments": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "damage": {
-          "taken": {
-            "min": 1
-          },
           "type": {
             "tags": [
               {
@@ -70,9 +73,6 @@
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "damage": {
-          "taken": {
-            "min": 1
-          },
           "type": {
             "tags": [
               {
@@ -92,9 +92,6 @@
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "damage": {
-          "taken": {
-            "min": 1
-          },
           "type": {
             "tags": [
               {
@@ -114,9 +111,6 @@
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "damage": {
-          "taken": {
-            "min": 1
-          },
           "type": {
             "tags": [
               {
@@ -136,9 +130,6 @@
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "damage": {
-          "taken": {
-            "min": 1
-          },
           "type": {
             "tags": [
               {
@@ -155,6 +146,7 @@
     [
       "combat_damage",
       "armor_piercing",
+      "armor_piercing_mob",
       "bypasses_enchantments",
       "is_fire",
       "is_explosion",

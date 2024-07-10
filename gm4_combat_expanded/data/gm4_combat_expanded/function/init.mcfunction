@@ -30,6 +30,7 @@ scoreboard objectives add gm4_ce_since_last_death dummy
 scoreboard objectives add gm4_ce_alivetime minecraft.custom:minecraft.time_since_death
 scoreboard objectives add gm4_ce_deaths minecraft.custom:minecraft.deaths
 scoreboard objectives add gm4_ce_data dummy
+scoreboard objectives add gm4_ce_timer dummy
 scoreboard objectives add gm4_ce_health.current dummy
 scoreboard objectives add gm4_ce_health.max dummy
 scoreboard objectives add gm4_ce_health.max_half dummy
@@ -78,6 +79,7 @@ scoreboard objectives add gm4_ce_armor armor
 scoreboard objectives add gm4_ce_horse.speed_level dummy
 scoreboard objectives add gm4_ce_husk_pieces dummy
 scoreboard objectives add gm4_ce_absorp_reduced_timer dummy
+scoreboard objectives add gm4_ce_frozen_time dummy
 
 scoreboard objectives add gm4_ce_damage_taken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_ce_damage_absorbed minecraft.custom:minecraft.damage_absorbed
@@ -115,6 +117,7 @@ scoreboard players set #4 gm4_ce_data 4
 scoreboard players set #5 gm4_ce_data 5
 scoreboard players set #7 gm4_ce_data 7
 scoreboard players set #8 gm4_ce_data 8
+scoreboard players set #9 gm4_ce_data 9
 scoreboard players set #10 gm4_ce_data 10
 scoreboard players set #11 gm4_ce_data 11
 scoreboard players set #13 gm4_ce_data 13
