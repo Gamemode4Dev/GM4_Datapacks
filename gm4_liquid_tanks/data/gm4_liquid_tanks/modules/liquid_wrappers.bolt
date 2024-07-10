@@ -63,7 +63,7 @@ class Liquid:
     def init(self, fcn=emptyfunc):
         @wraps(fcn)
         def wrapped_fcn():
-            function f'{~/../}/liquid_init/{self.struc.id}':
+            function ~/../liquid_init/{self.struc.id}:
                 append function_tag gm4_liquid_tanks:tank_init {"values": [(~/)]}
                 data merge block ~ ~ ~ {CustomName:f'{{"translate":"gm4.second","fallback":"%1$s","with":[{{"translate":"container.gm4.liquid_tank.{self.struc.id}","fallback":"{self.struc.name} Tank"}},[{{"translate":"gui.gm4.liquid_tank","fallback":"","font":"gm4:container_gui","color":"white"}},{{"translate":"container.gm4.liquid_tank.{self.struc.id}","fallback":"{self.struc.name} Tank","font":"gm4:default","color":"#404040"}}]]}}'}
                 summon armor_stand ~ ~-.95 ~:
@@ -104,24 +104,24 @@ class Liquid:
         pass
     
     
-    def item_fill(self, input: str, output: str, value: int, reversable: bool = True):
+    def item_fill(self, input: str, output: str, value: int, reversable: bool = True, ignore_standard_units: bool = False):
         def dec_with_args(fcn, fcn_to_replace):
             @wraps(fcn)
             def wrapped_fcn():
                 # item = self.mc.parse(output, type=AstItemStack) # FIXME no parser asscioated?
-                item_stack = self.mc.parse(output, using='item_stack')
-                item_id = self.mc.serialize(item_stack.identifier)
-                print(f"\tItem Fill {input}->{item_id}")
-                ns_item_id = add_namespace(item_id, "minecraft")
-                if ns_item_id in unstackables:
+                output_ast = self.mc.parse(output, using='item_stack')
+                output_id = self.mc.serialize(output_ast.identifier).removeprefix('minecraft:')
+                print(f"\tItem Fill {input}->{output_id}")
+                ns_output = add_namespace(output_id, "minecraft")
+                if ns_output in unstackables:
                     stack_limit = "1"
-                elif ns_item_id in stackable_16:
+                elif ns_output in stackable_16:
                     stack_limit = "..16"
                 else:
                     stack_limit = "..64" # FIXME this should remove that execute subcommand from the chain.. somehow
 
                 append function ~/../item_fill:
-                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if score $stack_size gm4_lt_value matches stack_limit if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function f'{~/}/{item_id}':
+                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if score $stack_size gm4_lt_value matches stack_limit if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function ~/{output_id}:
                         scoreboard players set $item_value gm4_lt_value value
                         fcn()
                         function gm4_liquid_tanks:smart_item_fill
@@ -147,22 +147,25 @@ class Liquid:
         return_dec = partial(dec_with_args, fcn_to_replace=default_dec)
         return return_dec
     
-    def standard_unit(self, input: str, value: int, f_name: str = None):
-        if not f_name:
-            f_name = input
-        self.units.update({(input, value): f_name})
-        return partial(self.item_fill, input=input,value=value)
+    def standard_unit(self, item: str, value: int, f_name: str = None):
+        if not f_name: # mcfunction name
+            f_name = item
+        self.units.update({(item, value): f_name})
+        # let unit act as an 'item_fill' decorator with input already set
+        def dispatch(output: str):
+            return partial(self.item_fill, input=item, value=value)(output=output)
+        return dispatch
     
 
-    ## NOTE yea this is where it gets weird cause we want to overlap things *here*, not in fill
     def item_drain(self, input: str, output: str, value: int):
         def dec_with_args(fcn, fcn_to_replace):
             @wraps(fcn)
             def wrapped_fcn():
                 print(f"\tItem Drain {input}->{output}")
-                if isinstance(fcn, partial) and fcn.func is self._default_set_output: # there aren't extra commands to consider
-                    f_name = self.units.get((output, -value), input)
-                f_name = input
+                # if isinstance(fcn, partial) and fcn.func is self._default_set_output: # there aren't extra commands to consider
+                f_name = self.units.get((output, -value), input)
+                # f_name = input
+                print(f"reusing {f_name}")
 
                 append function ~/../item_drain:
                     execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function f'{~/}/{f_name}':
@@ -172,7 +175,7 @@ class Liquid:
                         tag @s add gm4_lt_fill
                 
                 append function ~/../tank_init:
-                    execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function f'{~/../}/liquid_init/{self.struc.id}'
+                    execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function ~/../liquid_init/{self.struc.id}
                 pass
 
             # give nicer info about this wrapped function if not used as decorator

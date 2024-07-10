@@ -10,7 +10,7 @@ class Lava:
 
     liquid.init()
 
-    liquid.item_fill('bucket', 'lava_bucket', 3)
+    bucket('lava_bucket') # item_fill on a standard unit
 
 @liquid
 class Water:
@@ -19,7 +19,7 @@ class Water:
     capacity = 300
 
     liquid.init()
-    liquid.item_fill('bucket', 'water_bucket', 3)
+    bucket('water_bucket')
     liquid.item_fill('glass_bottle', 'minecraft:potion[potion_contents={potion:"water"},name="Test"]', 1, reversable=False)
 
 @liquid
