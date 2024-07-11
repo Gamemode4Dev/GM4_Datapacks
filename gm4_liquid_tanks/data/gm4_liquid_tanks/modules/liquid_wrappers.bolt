@@ -121,8 +121,9 @@ class Liquid:
                     stack_limit = "..64" # FIXME this should remove that execute subcommand from the chain.. somehow
 
                 append function ~/../item_fill:
-                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if score $stack_size gm4_lt_value matches stack_limit if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function ~/{output_id}:
+                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if score $stack_size gm4_lt_value matches stack_limit if items block ~ ~ ~ container.0 input run function ~/{output_id}:
                         scoreboard players set $item_value gm4_lt_value value
+                        item replace entity 344d47-4-4-4-f04ce104d weapon.mainhand with output
                         fcn()
                         function gm4_liquid_tanks:smart_item_fill
                         tag @s add gm4_lt_fill
@@ -168,14 +169,15 @@ class Liquid:
                 print(f"reusing {f_name}")
 
                 append function ~/../item_drain:
-                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function f'{~/}/{f_name}':
+                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if items block ~ ~ ~ container.0 input run function f'{~/}/{f_name}':
                         scoreboard players set $item_value gm4_lt_value value
+                        item replace entity 344d47-4-4-4-f04ce104d weapon.mainhand with input
                         fcn()
                         function gm4_liquid_tanks:smart_item_drain
                         tag @s add gm4_lt_fill
                 
                 append function ~/../tank_init:
-                    execute if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:add_namespace(input, "minecraft")}} run function ~/../liquid_init/{self.struc.id}
+                    execute if items block ~ ~ ~ container.0 input run function ~/../liquid_init/{self.struc.id}
                 pass
 
             # give nicer info about this wrapped function if not used as decorator
