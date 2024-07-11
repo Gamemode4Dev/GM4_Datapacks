@@ -64,7 +64,7 @@ class Liquid:
         @wraps(fcn)
         def wrapped_fcn():
             function ~/../liquid_init/{self.struc.id}:
-                append function_tag gm4_liquid_tanks:tank_init {"values": [(~/)]}
+                # append function_tag gm4_liquid_tanks:tank_init {"values": [(~/)]} # FIXME this line is for... what?
                 data merge block ~ ~ ~ {CustomName:f'{{"translate":"gm4.second","fallback":"%1$s","with":[{{"translate":"container.gm4.liquid_tank.{self.struc.id}","fallback":"{self.struc.name} Tank"}},[{{"translate":"gui.gm4.liquid_tank","fallback":"","font":"gm4:container_gui","color":"white"}},{{"translate":"container.gm4.liquid_tank.{self.struc.id}","fallback":"{self.struc.name} Tank","font":"gm4:default","color":"#404040"}}]]}}'}
                 summon armor_stand ~ ~-.95 ~:
                     CustomName: '"gm4_liquid_tank_display"'

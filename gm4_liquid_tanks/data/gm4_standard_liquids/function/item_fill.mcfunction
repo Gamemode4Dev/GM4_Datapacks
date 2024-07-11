@@ -3,6 +3,7 @@
 
 #buckets
 execute if entity @s[tag=gm4_lt_water] if score $stack_size gm4_lt_value matches 1 if items block ~ ~ ~ container.0 bucket run function gm4_standard_liquids:item_fill/water_bucket
+return fail
 
 execute if entity @s[tag=gm4_lt_lava] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:bucket"}} run function gm4_standard_liquids:item_fill/lava_bucket
 execute if entity @s[tag=gm4_lt_milk] if score $stack_size gm4_lt_value matches 1 if data storage gm4_liquid_tanks:temp/tank {input_slot:{id:"minecraft:bucket"}} run function gm4_standard_liquids:item_fill/milk_bucket
