@@ -22,11 +22,13 @@ class Water:
     bucket('water_bucket')
     liquid.item_fill('glass_bottle', 'minecraft:potion[potion_contents={potion:"water"},name="Test"]', 1, reversable=False)
 
-@liquid
-class Milk:
+# @liquid
+# class Milk:
     id = 'milk'
     name = 'Milk'
     capacity = 300
 
     liquid.init()
-    liquid.item_fill('bucket', 'milk_bucket', 4)
+    @liquid.item_fill('bucket', 'milk_bucket', 4)
+    def special_milk():
+        loot replace entity gm4_forceload weapon.mainhand loot gm4:items/blue_milk
