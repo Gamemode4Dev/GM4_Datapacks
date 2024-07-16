@@ -1,4 +1,5 @@
 from functools import wraps, partial
+import re
 
 from beet import Context
 from mecha import Mecha, AstItemStack
@@ -38,6 +39,7 @@ class Liquid:
                 setattr(self, field, input_args.get(field, None))
         self.generators = [] # functions that create mcfunction using bolt
         self.units = {} # reusable quantities shared amongst liquids
+        self.naming_schemes = NamingSchemes() # stores which function names are taken and generates new ones
         self.struc = Liquid
         self.mc = ctx.inject(Mecha)
 
@@ -113,6 +115,8 @@ class Liquid:
                 output_id = self.mc.serialize(output_ast.identifier).removeprefix('minecraft:')
                 print(f"\tItem Fill {input}->{output_id}")
                 ns_output = add_namespace(output_id, "minecraft")
+
+                # retrieve max allowable stack size
                 if ns_output in unstackables:
                     stack_limit = "1"
                 elif ns_output in stackable_16:
@@ -120,8 +124,11 @@ class Liquid:
                 else:
                     stack_limit = "..64" # FIXME this should remove that execute subcommand from the chain.. somehow
 
+                # retrieve name for generated function
+                func_name = self.naming_schemes.retrieve_and_register(input, output, ~/../item_fill)
+
                 append function ~/../item_fill:
-                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if score $stack_size gm4_lt_value matches stack_limit if items block ~ ~ ~ container.0 input run function ~/{output_id}:
+                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if score $stack_size gm4_lt_value matches stack_limit if items block ~ ~ ~ container.0 input run function ~/{func_name}:
                         scoreboard players set $item_value gm4_lt_value value
                         fcn() # runs _default_set_output unless alternative is supplied
                         function gm4_liquid_tanks:smart_item_fill
@@ -163,12 +170,18 @@ class Liquid:
             def wrapped_fcn():
                 print(f"\tItem Drain {input}->{output}")
                 # if isinstance(fcn, partial) and fcn.func is self._default_set_output: # there aren't extra commands to consider
-                f_name = self.units.get((output, -value), input)
-                # f_name = input
-                print(f"reusing {f_name}")
+
+                # see if we can reuse a standard unit
+                func_name = self.units.get((output, -value), None)
+                if func_name:
+                    self.naming_schemes.register(func_name, ~/../item_drain)
+
+                # if not, retrive the name for the generated function
+                if not func_name:
+                    func_name = self.naming_schemes.retrieve_and_register(input, output, ~/../item_drain)
 
                 append function ~/../item_drain:
-                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if items block ~ ~ ~ container.0 input run function f'{~/}/{f_name}':
+                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if items block ~ ~ ~ container.0 input run function ~/{func_name}:
                         scoreboard players set $item_value gm4_lt_value value
                         fcn() # runs _default_set_output unless alternative is supplied
                         function gm4_liquid_tanks:smart_item_drain
@@ -194,7 +207,49 @@ class Liquid:
         return_dec = partial(dec_with_args, fcn_to_replace=default_dec)
         return return_dec
     
+class NamingSchemes():
+    """Helper class for controlling how item_drain/ and item_fill/ functions are named"""
+    used_names: dict[str, set[str]] = {}
+
+    def __init__(self):
+        self.schemes = [
+            self.potion,
+            self.output_name,
+            self.input_name,
+            self.combined_name
+            ]
+
+    def retrieve_and_register(self, input: str, output: str, location: str) -> str:
+        local_used_names = self.used_names.setdefault(location, set())
+        for scheme in self.schemes:
+            func_name = scheme(input, output)
+            if func_name and func_name not in local_used_names:
+                local_used_names.add(func_name)
+                return func_name
+        return "NULL" # FIXME error logging from bolt? How to
     
+    def register(self, func_name: str, location: str):
+        local_used_names = self.used_names.setdefault(location, set())
+        local_used_names.add(func_name)
+
+    @staticmethod
+    def output_name(input_name: str, output_name: str) -> str:
+        return output_name.split('[', 1)[0].removeprefix('minecraft:')
+    
+    @staticmethod
+    def input_name(input_name: str, output_name: str) -> str:
+        return input_name.split('[', 1)[0].removeprefix('minecraft:')
+    
+    @staticmethod
+    def combined_name(input_name: str, output_name: str) -> str:
+        return f"{input_name.split('[', 1)[0].removeprefix('minecraft:')}_{output_name.split('[', 1)[0].removeprefix('minecraft:')}"
+
+    @staticmethod
+    def potion(input_name: str, output_name: str) -> str | bool:
+        m = re.match(r'.+?potion_contents=\{potion:\"(.+)\"\}', output_name)
+        if m:
+            return f"{m.group(1)}_potion"
+        return False
     
 liquid = Liquid() # common instance for most cases
     
