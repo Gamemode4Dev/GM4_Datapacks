@@ -89,6 +89,11 @@ class Liquid:
             append function ~/../remove_liquid_tags:
                 append function_tag gm4_liquid_tanks:remove_liquid_tags {"values": [(~/)]}
                 tag @s remove f'gm4_lt_{self.struc.id}'
+            
+            # add function-tag hooks
+            append function_tag gm4_liquid_tanks:tank_init {"values": [(~/../tank_init)]}
+            append function_tag gm4_liquid_tanks:item_fill {"values": [(~/../item_fill)]}
+            append function_tag gm4_liquid_tanks:item_drain {"values": [(~/../item_drain)]}
             pass
 
         # give nicer info about this wrapped function if not used as decorator
@@ -129,7 +134,7 @@ class Liquid:
 
                 append function ~/../item_fill:
                     execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if score $stack_size gm4_lt_value matches stack_limit if items block ~ ~ ~ container.0 input run function ~/{func_name}:
-                        scoreboard players set $item_value gm4_lt_value value
+                        scoreboard players set $item_value gm4_lt_value (-value)
                         fcn() # runs _default_set_output unless alternative is supplied
                         function gm4_liquid_tanks:smart_item_fill
                         tag @s add gm4_lt_fill
@@ -147,7 +152,7 @@ class Liquid:
         
         # create reverse
         if reversable:
-            self.item_drain(output, input, -value)
+            self.item_drain(output, input, value)
         
         default_dec = dec_with_args(partial(self._default_set_output, item=output), None)
 

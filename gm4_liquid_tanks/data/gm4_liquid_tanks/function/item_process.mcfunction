@@ -12,6 +12,3 @@ execute unless entity @s[tag=gm4_lt_fill] run function #gm4_liquid_tanks:item_dr
 
 #item fill
 execute unless entity @s[tag=gm4_lt_drain] run function #gm4_liquid_tanks:item_fill
-
-#storage cleanup
-data remove storage gm4_liquid_tanks:temp/tank output
