@@ -116,9 +116,11 @@ class Liquid:
             @wraps(fcn)
             def wrapped_fcn():
                 # item = self.mc.parse(output, type=AstItemStack) # FIXME no parser asscioated?
-                output_ast = self.mc.parse(output, using='item_stack')
-                output_id = self.mc.serialize(output_ast.identifier).removeprefix('minecraft:')
-                print(f"\tItem Fill {input}->{output_id}")
+                # output_ast = self.mc.parse(output, using='item_stack')
+                # output_id = self.mc.serialize(output_ast.identifier).removeprefix('minecraft:')
+                # print(f"\tItem Fill {input}->{output_id}")
+                # ns_output = add_namespace(output_id, "minecraft")
+                output_id = output.split('[', 1)[0].removeprefix('minecraft:')
                 ns_output = add_namespace(output_id, "minecraft")
 
                 # retrieve max allowable stack size
