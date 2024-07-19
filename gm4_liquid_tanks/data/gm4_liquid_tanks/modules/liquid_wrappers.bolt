@@ -190,7 +190,6 @@ class Liquid:
                         scoreboard players set $item_value gm4_lt_value value
                         fcn() # runs _default_set_output unless alternative is supplied
                         function gm4_liquid_tanks:smart_item_drain
-                        tag @s add gm4_lt_fill
                 
                 append function ~/../tank_init:
                     execute if items block ~ ~ ~ container.0 input run function ~/../liquid_init/{self.struc.id}
