@@ -122,6 +122,7 @@ class Liquid:
                 # ns_output = add_namespace(output_id, "minecraft")
                 output_id = output.split('[', 1)[0].removeprefix('minecraft:')
                 ns_output = add_namespace(output_id, "minecraft")
+                print(f"\tItem Fill {input}->{output_id}")
 
                 # retrieve max allowable stack size
                 if ns_output in unstackables:
@@ -132,7 +133,11 @@ class Liquid:
                     stack_limit = "..64" # FIXME this should remove that execute subcommand from the chain.. somehow
 
                 # retrieve name for generated function
-                func_name = self.naming_schemes.retrieve_and_register(input, output, ~/../item_fill)
+                if not isinstance(fcn, partial): # not Liquid._default_set_output:
+                    func_name = fcn.__name__
+                    self.naming_schemes.register(func_name, ~/../item_fill)
+                else:
+                    func_name = self.naming_schemes.retrieve_and_register(input, output, ~/../item_fill)
 
                 append function ~/../item_fill:
                     execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if score $stack_size gm4_lt_value matches stack_limit if items block ~ ~ ~ container.0 input run function ~/{func_name}:
@@ -179,8 +184,9 @@ class Liquid:
                 # if isinstance(fcn, partial) and fcn.func is self._default_set_output: # there aren't extra commands to consider
 
                 # see if we can reuse a standard unit
-                func_name = self.units.get((output, -value), None)
+                func_name = self.units.get((output, value), None)
                 if func_name:
+                    print(f"registering funcname {func_name}")
                     self.naming_schemes.register(func_name, ~/../item_drain)
 
                 # if not, retrive the name for the generated function
@@ -220,6 +226,7 @@ class NamingSchemes():
     def __init__(self):
         self.schemes = [
             self.potion,
+            self.not_air,
             self.output_name,
             self.input_name,
             self.combined_name
@@ -255,6 +262,12 @@ class NamingSchemes():
         m = re.match(r'.+?potion_contents=\{potion:\"(.+)\"\}', output_name)
         if m:
             return f"{m.group(1)}_potion"
+        return False
+    
+    @staticmethod
+    def not_air(input_name: str, output_name: str) -> str | bool:
+        if output_name == "air": 
+            return input_name # always name a clear item operation after what is being cleared
         return False
     
 liquid = Liquid() # common instance for most cases

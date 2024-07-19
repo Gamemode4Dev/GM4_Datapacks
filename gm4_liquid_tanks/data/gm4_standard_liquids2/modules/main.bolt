@@ -90,6 +90,8 @@ class Experience:
     liquid.item_drain('enchanted_book', 'book', 7)
     liquid.item_drain('paper[custom_data~{gm4_book_binders:{item:"enchanted_page"}}]', 'paper', 5)
 
+    #TODO I could add a custom naming rule here - more as an example than necessary - for enchanted_page
+
 @liquid
 class Ink:
     id = 'ink'
