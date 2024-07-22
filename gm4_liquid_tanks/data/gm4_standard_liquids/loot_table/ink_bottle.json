@@ -34,7 +34,8 @@
                                 "translate": "item.gm4.ink_bottle",
                                 "fallback": "Ink Bottle",
                                 "italic": false
-                            }
+                            },
+                            "target": "item_name"
                         }
                     ]
                 }
