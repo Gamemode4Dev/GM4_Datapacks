@@ -68,18 +68,21 @@ class Liquid:
             function ~/../liquid_init/{self.struc.id}:
                 # append function_tag gm4_liquid_tanks:tank_init {"values": [(~/)]} # FIXME this line is for... what?
                 data merge block ~ ~ ~ {CustomName:f'{{"translate":"gm4.second","fallback":"%1$s","with":[{{"translate":"container.gm4.liquid_tank.{self.struc.id}","fallback":"{self.struc.name} Tank"}},[{{"translate":"gui.gm4.liquid_tank","fallback":"","font":"gm4:container_gui","color":"white"}},{{"translate":"container.gm4.liquid_tank.{self.struc.id}","fallback":"{self.struc.name} Tank","font":"gm4:default","color":"#404040"}}]]}}'}
-                summon armor_stand ~ ~-.95 ~:
-                    CustomName: '"gm4_liquid_tank_display"'
-                    Tags: ["gm4_no_edit","gm4_liquid_tank_display","smithed.entity","smithed.strict"]
-                    NoGravity: 1
-                    Marker: 1
-                    Invisible: 1
-                    Invulnerable: 1
-                    Small: 1
-                    Silent: 1
-                    DisabledSlots:4144959
-                    HasVisualFire: 1
-                    ArmorItems:[{},{},{},{id:"player_head",Count:1b,tag:{SkullOwner:"$gm4_standard_liquids:liquids/lava"}}]
+                summon item_display ~ ~ ~:
+                    CustomName: '"gm4_liquid_tank_liquid_display"'
+                    Tags: ["gm4_liquid_tank_liquid_display","smithed.entity","smithed.strict"]
+                    item: 
+                        id: player_head
+                        count:1b
+                        components:{
+                            "minecraft:profile": f"$gm4_standard_liquids:liquids/{self.struc.id}"
+                        }
+                    transformation:
+                        left_rotation: [0f,0f,0f,1f]
+                        right_rotation: [0f,0f,0f,1f]
+                        translation: [0f,0.2185f,0f]
+                        scale: [0.83, 0.83, 0.83]
+                    item_display: head
                 data modify entity @s data.gm4_liquid_tanks.liquid_tag set value f"gm4_lt_{self.struc.id}"
                 scoreboard players set @s gm4_lt_max self.struc.capacity
                 tag @s add f'gm4_lt_{self.struc.id}'
@@ -198,6 +201,7 @@ class Liquid:
                         scoreboard players set $item_value gm4_lt_value value
                         fcn() # runs _default_set_output unless alternative is supplied
                         function gm4_liquid_tanks:smart_item_drain
+                        tag @s add gm4_lt_drain
                 
                 append function ~/../tank_init:
                     execute if items block ~ ~ ~ container.0 input run function ~/../liquid_init/{self.struc.id}
