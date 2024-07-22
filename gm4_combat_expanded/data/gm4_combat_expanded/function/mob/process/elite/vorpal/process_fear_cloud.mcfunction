@@ -1,0 +1,25 @@
+
+# particles
+particle dust{color:[0.000,0.000,0.000],scale:1} ^ ^ ^0.0125 0.1666 0.1666 0.1666 0.666 2 normal
+
+scoreboard players add @s gm4_ce_timer 1
+
+# track towards closest player
+execute facing entity @p[gamemode=!spectator] eyes positioned ^ ^ ^25 rotated as @s positioned ^ ^ ^25 facing entity @s eyes facing ^ ^ ^-1 positioned as @s run tp @s ~ ~ ~ ~ ~
+tp @s[scores={gm4_ce_timer=6..60}] ^ ^ ^0.225
+tp @s[scores={gm4_ce_timer=61..90}] ^ ^ ^0.250
+tp @s[scores={gm4_ce_timer=91..120}] ^ ^ ^0.300
+tp @s[scores={gm4_ce_timer=121..140}] ^ ^ ^0.400
+tp @s[scores={gm4_ce_timer=141..160}] ^ ^ ^0.550
+tp @s[scores={gm4_ce_timer=161..}] ^ ^ ^0.750
+
+# hit players
+scoreboard players set $player_hit gm4_ce_data 0
+execute positioned ~-.15 ~-.15 ~-.15 as @a[dx=0,dy=0,dz=0] positioned ~-0.55 ~-0.55 ~-0.55 if entity @s[dx=0,dy=0,dz=0] run function gm4_combat_expanded:mob/process/elite/vorpal/fear_hit
+execute if score $player_hit gm4_ce_data matches 1 run return run kill @s
+
+# timer ran out
+execute if score @s gm4_ce_timer matches 240.. run return run kill @s
+
+# keep running if entity is still around
+scoreboard players set $keep_tick.elite_death_vorpal gm4_ce_keep_tick 1

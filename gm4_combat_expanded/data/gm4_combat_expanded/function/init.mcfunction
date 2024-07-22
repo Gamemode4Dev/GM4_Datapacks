@@ -107,6 +107,20 @@ execute unless score $mob_limit.spore_zombie gm4_ce_data matches -2147483648..21
 execute unless score $mob_limit.boss_minions_per_player gm4_ce_data matches -2147483648..2147483647 run scoreboard players set $mob_limit.boss_minions_per_player gm4_ce_data 3
 execute unless score $mob_limit.phantom gm4_ce_data matches -2147483648..2147483647 run scoreboard players set $mob_limit.phantom gm4_ce_data 48
 
+# elite teams
+team add gm4_ce_elite.glacial
+team modify gm4_ce_elite.glacial prefix {"text":"Glacial "}
+team add gm4_ce_elite.mending
+team modify gm4_ce_elite.mending prefix {"text":"Slate "}
+team add gm4_ce_elite.blazing
+team modify gm4_ce_elite.blazing prefix {"text":"Blazing "}
+team add gm4_ce_elite.zephyr
+team modify gm4_ce_elite.zephyr prefix {"text":"Zephyr "}
+team add gm4_ce_elite.gargantuan
+team modify gm4_ce_elite.gargantuan prefix {"text":"Gargantuan "}
+team add gm4_ce_elite.vorpal
+team modify gm4_ce_elite.vorpal prefix {"text":"Vorpal "}
+
 # constants
 scoreboard players set #-1 gm4_ce_data -1
 scoreboard players set #0 gm4_ce_data 0
