@@ -80,6 +80,8 @@ scoreboard objectives add gm4_ce_horse.speed_level dummy
 scoreboard objectives add gm4_ce_husk_pieces dummy
 scoreboard objectives add gm4_ce_absorp_reduced_timer dummy
 scoreboard objectives add gm4_ce_frozen_time dummy
+scoreboard objectives add gm4_ce_arrow_fire_delay dummy
+scoreboard objectives add gm4_ce_arrow_fire_delay_left dummy
 
 scoreboard objectives add gm4_ce_damage_taken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_ce_damage_absorbed minecraft.custom:minecraft.damage_absorbed
@@ -120,6 +122,10 @@ team add gm4_ce_elite.gargantuan
 team modify gm4_ce_elite.gargantuan prefix {"text":"Gargantuan "}
 team add gm4_ce_elite.vorpal
 team modify gm4_ce_elite.vorpal prefix {"text":"Vorpal "}
+team add gm4_ce_elite.splitting
+team modify gm4_ce_elite.splitting prefix {"text":"Splitting "}
+team add gm4_ce_elite.split
+team modify gm4_ce_elite.split prefix {"text":"Split "}
 
 # constants
 scoreboard players set #-1 gm4_ce_data -1

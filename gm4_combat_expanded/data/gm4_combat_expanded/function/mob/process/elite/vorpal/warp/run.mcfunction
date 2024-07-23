@@ -1,7 +1,7 @@
 
-# teleport up to 4 blocks away
+# teleport up to 12 blocks away
 tag @s add gm4_ce_target
-execute positioned ~-2 ~ ~-2 summon marker run function gm4_combat_expanded:mob/process/elite/vorpal/warp/spawn_marker
+execute positioned ~-6 ~ ~-6 summon marker run function gm4_combat_expanded:mob/process/elite/vorpal/warp/spawn_marker
 tag @s remove gm4_ce_target
 
 playsound minecraft:entity.enderman.teleport hostile @a ~ ~ ~ 1 0.75

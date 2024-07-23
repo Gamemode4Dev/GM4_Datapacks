@@ -49,7 +49,7 @@ loot replace entity @s armor.head loot gm4_combat_expanded:mob/equip_armor/gener
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/skeleton
 
 # elites
-execute if predicate gm4_combat_expanded:technical/chance/skeleton_elite_chance run function gm4_combat_expanded:mob/init/elite/pick_skeleton
+execute if predicate gm4_combat_expanded:technical/chance/skeleton_elite_chance run function gm4_combat_expanded:mob/init/elite/pick_type
 
 # drop rate for custom arrows
 execute if score $arrow gm4_ce_data matches 1 run data modify entity @s HandDropChances[1] set value 0.25F

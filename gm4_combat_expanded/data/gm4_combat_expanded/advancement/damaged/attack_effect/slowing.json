@@ -3,6 +3,18 @@
     "requirement": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"gm4_ce_frozen\"]}"
+              }
+            }
+          }
+        ],
         "damage": {
           "blocked": false,
           "source_entity": {

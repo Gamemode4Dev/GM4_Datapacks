@@ -1,6 +1,10 @@
 
 scoreboard players operation $damage_health gm4_ce_data = @s gm4_ce_damage_resisted
 
+# don't run if this resistance level is not due to armor
+execute store result score $resistance_level gm4_ce_data run data get entity @s active_effects[{id:"minecraft:resistance"}].amplifier
+execute unless score $resistance_level gm4_ce_data matches -1 run return 0
+
 # | Reduce damage taken based on
 # armor toughness (only if player still has armor)
 execute store result score $armor_toughness gm4_ce_data run attribute @s generic.armor_toughness get

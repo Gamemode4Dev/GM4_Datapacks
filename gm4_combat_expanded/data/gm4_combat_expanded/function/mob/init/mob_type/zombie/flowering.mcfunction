@@ -13,3 +13,7 @@ execute store result entity @s ArmorItems[3].components."minecraft:custom_data".
 # let generation determine dropchance of spore
 scoreboard players set $spore_dropchange gm4_ce_data 11
 execute store result entity @s ArmorDropChances[3] float 0.1 run scoreboard players operation $spore_dropchange gm4_ce_data -= @s gm4_ce_generation
+
+# remove any possible elite triggers
+data remove entity @s attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}]
+data modify entity @s IsBaby set value 0b

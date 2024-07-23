@@ -1,4 +1,5 @@
 
+attribute @s generic.follow_range modifier remove gm4_combat_expanded:elite_buff.giant.charging
 attribute @s generic.movement_speed modifier remove gm4_combat_expanded:elite_buff.giant.charging
 playsound minecraft:entity.zombie.attack_wooden_door hostile @a ~ ~ ~ 1.25 0
 

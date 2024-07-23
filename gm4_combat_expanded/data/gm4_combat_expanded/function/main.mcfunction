@@ -13,6 +13,8 @@ item replace entity @e[type=#gm4_combat_expanded:zombie_types,tag=gm4_ce_spore_z
 execute as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water run damage @s 2 drown
 # elites
 execute as @e[type=#gm4_combat_expanded:elite_types,tag=gm4_ce_elite.process] at @s run function gm4_combat_expanded:mob/process/elite/check_type
+# tick down skeleton arrow fire delay
+execute as @e[type=skeleton,scores={gm4_ce_arrow_fire_delay_left=1..}] run function gm4_combat_expanded:mob/process/arrow/tick_fire_delay
 
 # | Armor Expanded (expansion pack, run from here to keep in sync)
 execute if score armor_expanded gm4_modules matches 1 run function gm4_armor_expanded:call/main

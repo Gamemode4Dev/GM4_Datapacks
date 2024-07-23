@@ -43,5 +43,5 @@ execute if entity @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/ree
 execute if entity @s[type=!zombie_villager,tag=!gm4_ce_spore_zombie,predicate=gm4_combat_expanded:mob/modifier/growth] run function gm4_combat_expanded:mob/init/mob_type/zombie/growth
 
 # elites
-execute if data entity @s attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] run function gm4_combat_expanded:mob/init/elite/pick_zombie
-execute if data entity @s {IsBaby:1b} run function gm4_combat_expanded:mob/init/elite/pick_zombie
+execute if data entity @s attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] run function gm4_combat_expanded:mob/init/elite/pick_type
+execute if data entity @s {IsBaby:1b} run function gm4_combat_expanded:mob/init/elite/pick_type

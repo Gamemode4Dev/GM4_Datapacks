@@ -4,7 +4,7 @@ tag @s add gm4_ce_slowing_attacks
 tag @s add gm4_ce_elite.glacial
 
 tag @s add gm4_ce_elite.on_death
-summon marker ~ ~ ~ {Tags:["gm4_ce_elite_death_marker","gm4_ce_elite.glacial"]}
+summon marker ~ ~ ~ {CustomName:'{"text":"GM4 CE death marker - glacial"}',Tags:["gm4_ce_elite_death_marker","gm4_ce_elite.glacial"]}
 ride @e[type=marker,tag=gm4_ce_elite_death_marker,limit=1,sort=nearest] mount @s
 
 attribute @s generic.max_health modifier add gm4_combat_expanded:elite_buff.frost 2.5 add_multiplied_total
