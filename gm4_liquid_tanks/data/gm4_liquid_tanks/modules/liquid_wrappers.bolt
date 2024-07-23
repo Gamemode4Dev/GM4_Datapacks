@@ -201,10 +201,13 @@ class Liquid:
                 if not func_name:
                     func_name = self.naming_schemes.retrieve_and_register(input, output, ~/../item_drain)
 
+                # transform any supplied mcfunction into generator
+                genfcn = self._multiple_mcfunction(fcn)
+
                 append function ~/../item_drain:
                     execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if items block ~ ~ ~ container.0 input run function ~/{func_name}:
                         scoreboard players set $item_value gm4_lt_value value
-                        fcn() # runs _default_set_output unless alternative is supplied
+                        next(genfcn) # runs _default_set_output unless alternative is supplied
                         function gm4_liquid_tanks:smart_item_drain
                         tag @s add gm4_lt_drain
                 
@@ -232,7 +235,7 @@ class Liquid:
     def _multiple_mcfunction(fcn):
         """Ensures the given function operates as a generator, allowing for multiple chunks of returned mcfunction"""
         if isgeneratorfunction(fcn):
-            def accept_stopiteration():
+            def accept_stopiteration(): # bolt does not have try/except yet, so this is an alternate implementation
                 fcninst = fcn()
                 while True:
                     yield next(fcninst, None)
