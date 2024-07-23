@@ -86,7 +86,10 @@ class Experience:
     capacity = 1395
 
     liquid.init()
-    liquid.item_fill('glass_bottle', 'experience_bottle', 9)
+    @liquid.item_fill('glass_bottle', 'experience_bottle', 9)
+    def experience_bottle():
+        yield
+        execute if score $smart_success gm4_lt_value matches 1 run advancement grant @a[distance=..4,gamemode=!spectator] only gm4:standard_liquids
     liquid.item_drain('enchanted_book', 'book', 7)
     liquid.item_drain('paper[custom_data~{gm4_book_binders:{item:"enchanted_page"}}]', 'paper', 5)
 
