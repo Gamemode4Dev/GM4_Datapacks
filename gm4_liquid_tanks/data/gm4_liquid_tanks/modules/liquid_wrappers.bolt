@@ -10,16 +10,6 @@ from gm4.utils import add_namespace
 from gm4_auto_crafting.generate import unstackables, stackable_16 # NOTE future versions can pull the default component from 1.20.5 item.json
 
 
-# We're trying out a class-definition approach, rather than a class-instantiation one. 
-    # it might wind up feeling more natural within bolt
-def liquid(cls):
-    print("defining new basic liquid")
-    @wraps(cls)
-    class ThisLiquid(cls):
-        pass
-
-    return ThisLiquid
-
 # function that generates no mcfunction
 def emptyfunc():
     pass
@@ -55,7 +45,6 @@ class Liquid:
             if getattr(self, field, None):
                 setattr(DecoratedLiquid, field, getattr(self, field, None))
 
-        print(self.generators)
         self.struc = DecoratedLiquid # link access to class variables through `self`
         for fcn in self.generators:
             fcn() # create the mcfunction resources
@@ -119,14 +108,8 @@ class Liquid:
         def dec_with_args(fcn, fcn_to_replace):
             @wraps(fcn)
             def wrapped_fcn():
-                # item = self.mc.parse(output, type=AstItemStack) # FIXME no parser asscioated?
-                # output_ast = self.mc.parse(output, using='item_stack')
-                # output_id = self.mc.serialize(output_ast.identifier).removeprefix('minecraft:')
-                # print(f"\tItem Fill {input}->{output_id}")
-                # ns_output = add_namespace(output_id, "minecraft")
                 output_id = output.split('[', 1)[0].removeprefix('minecraft:')
                 ns_output = add_namespace(output_id, "minecraft")
-                print(f"\tItem Fill {input}->{output_id}")
 
                 # retrieve max allowable stack size
                 if ns_output in unstackables:
@@ -188,13 +171,9 @@ class Liquid:
         def dec_with_args(fcn, fcn_to_replace):
             @wraps(fcn)
             def wrapped_fcn():
-                print(f"\tItem Drain {input}->{output}")
-                # if isinstance(fcn, partial) and fcn.func is self._default_set_output: # there aren't extra commands to consider
-
                 # see if we can reuse a standard unit
                 func_name = self.units.get((output, value), None)
                 if func_name:
-                    print(f"registering funcname {func_name}")
                     self.naming_schemes.register(func_name, ~/../item_drain)
 
                 # if not, retrive the name for the generated function
@@ -299,152 +278,3 @@ class NamingSchemes():
         return False
     
 liquid = Liquid() # common instance for most cases
-    
-if __name__ == "__main__":
-
-    ## Defining a class
-
-    # by decorated class
-    @liquid
-    class Milk:
-        id = 'milk'
-        capacity = 300
-        skullowner = 'skins/milk'
-
-    print(Milk.id)
-    print(Milk.capacity)
-
-    # or by extended base decorator with partial bindings
-    bucketable = Liquid(None, 300, None)
-
-    print(bucketable.id)
-    print(bucketable.capacity)
-
-    @bucketable
-    class PowderSnow:
-        id = 'powder_snow'
-        capacity = 400
-        skullowner = 'skins/snow'
-
-    print(PowderSnow.capacity)
-
-    ## Using methods to define behavior
-    @liquid
-    class MushroomSoup:
-        id = 'mushroom_soup'
-        capacity = 300
-        skullowner = 'skins/snow'
-
-        @liquid.init
-        def liquid_init():
-            # particle block ~ ~ ~ red_mushroom 1 0 force
-            pass
-
-    # or with no additional code
-    @liquid
-    class BeetrootSoup:
-        id = 'beetroot_soup'
-        capacity = 300
-        skullowner = 'skins/beetboi'
-
-        liquid_init = liquid.init()
-
-    # or even programatically?
-    @liquid
-    class RabbitStew:
-        id = 'rabbit_stew'
-        capacity = 300
-        skullowner = 'skins/bunnyface'
-
-    # @RabbitStew.init # I don't know if this is desirable or useful yet, so I'll leave it here for the time being
-    # def stew_init():
-    #     # summon killer_bunny
-    #     pass
-
-    # using methods to define arbitrary item fills
-    @liquid
-    class Experience:
-        id = 'xp'
-        capacity = 1365
-        skullowner = 'skins/magic'
-
-        @liquid.item_fill('bottle', 'xp_bottle', 6)
-        def experience_bottle():
-            pass
-
-        magic_book = liquid.item_fill('book', 'enchanted_book', 3, False)
-
-        liquid.item_fill('paper', 'explorer_map', 100, False)
-
-    # or defining common units for shared use using partial
-    bottle = partial(liquid.item_fill, input='bottle', value=1)
-
-    @liquid
-    class Honey:
-        id = 'honey'
-        capacity = 400
-        skullowner = 'skins/beesbeesallthebees'
-
-        @bottle(output='honey_bottle')
-        def honey_bottle():
-            pass
-
-        bottle(output='dragons_breath')
-
-        @liquid.item_drain(input='honey_block', output='air', value=4)
-        def honey_block():
-            pass
-
-
-    # @standard_unit('bucket', 3)
-    # def bucket():
-    #     #summon bat{CustomName:'Whoops there goes your bucket'}
-    #     pass
-
-    # bottle = standard_unit('bottle', 1)
-    # bottle = partial(liquid.item_fill, input='bottle', value=3)
-
-    # @liquid
-    # class Lava:
-    #     id = 'lava'
-    #     capacity = 100
-    #     skullowner = 'skins/lava'
-
-    #     @liquid_init
-    #     def lava_init():
-    #         #advancement grant @p gm4_standard_liquids:mini_volcano
-    #         pass
-
-    #     @item_fill('bucket', 'lava_bucket', 3, reversible=True)
-    #     def lava_bucket():
-    #         #advancement grant @p gm4_standard_liquids:shouldnt_that_iron_melt
-    #         pass
-
-    #     # reversible would automatically create the item_drain direction.
-    #         # what about additional commands in that direction? Do I dare use yield and generators?
-    #         # we generally assume anything that can be filled can also be drained, exceptions are usually for items destroyed by the drain
-    #         # like enchanted pages, beetroot and honey_blocks.
-
-    #     lava_bucket = item_drain('magma_block', 'air', 2, reversible=False)
-    #         # maybe like this if there are no additional commands to run?
-
-    #     @bottle('potion{gm4_standard_liquids:{id:"lava_bottle"}}') # acts as an `item_fill` decorator?
-    #     def lava_bottle():
-    #         #loot insert container.0 gm4_standard_liquids:lava_bottle
-    #         pass
-
-        # yea dealing with non-standard items is a real pain in the ass even with this system...
-        
-
-    # @Liquid()
-    # class Test2:
-    #     def my_2method(self):
-    #         print("my_2method")
-
-    # print(Lava)
-
-
-# "overloading" the decorator in this way seems... difficult to say the least. Maybe rx has some thoughts about how to do this better
-    # I *think* that it can be acomplished, but it would require like... delaying the mcfunction creation until we're sure the decorator isn't 
-    # going to be called to wrap a method. Is there like an exit phase? Or maybe at the end of the @liquid class wrapper we can run through all
-    # its liquid processors?
