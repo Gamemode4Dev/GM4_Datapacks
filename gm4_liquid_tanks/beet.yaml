@@ -20,7 +20,7 @@ pipeline:
 meta:
   bolt:
     entrypoint:
-      - gm4_standard_liquids2:main
+      - gm4_standard_liquids:main
   gm4:
     versioning:
       required:
