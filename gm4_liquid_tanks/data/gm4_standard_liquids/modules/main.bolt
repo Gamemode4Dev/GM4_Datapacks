@@ -83,11 +83,12 @@ class Honey:
 class Experience:
     id = 'experience'
     name = 'Experience'
-    capacity = 1395
+    capacity = 5345
 
     liquid.init()
     @liquid.item_fill('glass_bottle', 'experience_bottle', 9)
     def experience_bottle():
+        item replace entity 344d47-4-4-4-f04ce104d weapon.mainhand with minecraft:experience_bottle
         yield
         execute if score $smart_success gm4_lt_value matches 1 run advancement grant @a[distance=..4,gamemode=!spectator] only gm4:standard_liquids
     liquid.item_drain('enchanted_book', 'book', 7)

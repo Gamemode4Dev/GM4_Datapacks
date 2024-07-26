@@ -10,8 +10,8 @@ execute if score @e[type=marker,tag=gm4_liquid_tank,distance=..0.1,limit=1] gm4_
 #actual max of 400
 execute if score @e[type=marker,tag=gm4_liquid_tank,distance=..0.1,limit=1] gm4_lt_max matches 400 run function gm4_standard_liquids:level_report/400
 
-#max 1395 (xp)
-execute if score @e[type=marker,tag=gm4_liquid_tank,distance=..0.1,limit=1] gm4_lt_max matches 1395 run function gm4_standard_liquids:level_report/experience
+#max 5345 (xp)
+execute if score @e[type=marker,tag=gm4_liquid_tank,distance=..0.1,limit=1] gm4_lt_max matches 5345 run function gm4_standard_liquids:level_report/experience
 
 
 #linking of util tanks to adjacent blocks
