@@ -5,10 +5,10 @@
 
 # zombie, zombie_villager, husk, drowned
 execute if entity @s[type=#gm4_combat_expanded:zombie_types] run function gm4_combat_expanded:mob/init/mob_type/zombie/base
-execute if entity @s[type=skeleton] run function gm4_combat_expanded:mob/init/mob_type/skeleton/skeleton
+# skeleton, bogged, stray
+execute if entity @s[type=#gm4_combat_expanded:skeleton_types] run function gm4_combat_expanded:mob/init/mob_type/skeleton/skeleton
 execute if entity @s[type=spider] run function gm4_combat_expanded:mob/init/mob_type/spider/spider
 execute if entity @s[type=creeper] run function gm4_combat_expanded:mob/init/mob_type/creeper/base
-execute if entity @s[type=stray] run function gm4_combat_expanded:mob/init/mob_type/skeleton/skeleton
 execute if entity @s[type=cave_spider] run function gm4_combat_expanded:mob/init/mob_type/spider/cave_spider
 execute if entity @s[type=slime] run function gm4_combat_expanded:mob/init/mob_type/slime/base
 execute if entity @s[type=magma_cube] run function gm4_combat_expanded:mob/init/mob_type/slime/base
