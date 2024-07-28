@@ -4,11 +4,10 @@
 # run from mob/init/mob_type
 
 # base stat nerf
-attribute @s generic.max_health modifier add gm4_combat_expanded:stat_change.base_nerf -8 add_value
 attribute @s generic.attack_damage modifier add gm4_combat_expanded:stat_change.base_nerf -3 add_value
 
 # max stat buffs
-scoreboard players set $mob_health gm4_ce_data 13
+scoreboard players set $mob_health gm4_ce_data 0
 scoreboard players set $mob_damage gm4_ce_data 45
 scoreboard players set $mob_speed gm4_ce_data 0
 scoreboard players set $mob_armor gm4_ce_data 20

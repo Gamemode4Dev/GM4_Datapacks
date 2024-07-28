@@ -18,6 +18,6 @@ execute if score @s gm4_ce_timer matches 3 run playsound minecraft:entity.breeze
 execute if score @s gm4_ce_timer matches 4 run playsound minecraft:entity.breeze.idle_air hostile @a ~ ~ ~ 1 0.65
 
 execute if score @s gm4_ce_timer matches 5 run function gm4_combat_expanded:mob/process/elite/zephyr/activate
-execute if score @s[type=skeleton] gm4_ce_timer matches 6..10 run function gm4_combat_expanded:mob/process/elite/zephyr/arrow_burst
+execute if score @s[type=#gm4_combat_expanded:skeleton_types] gm4_ce_timer matches 6..10 run function gm4_combat_expanded:mob/process/elite/zephyr/skeleton/arrow_burst
 
 scoreboard players reset @s[scores={gm4_ce_timer=14..},tag=!gm4_ce_charging_attack] gm4_ce_timer

@@ -1,5 +1,7 @@
 {
     "values": [
+        "minecraft:blaze",
+        "minecraft:breeze",
         "minecraft:cave_spider",
         "minecraft:drowned",
         "minecraft:elder_guardian",

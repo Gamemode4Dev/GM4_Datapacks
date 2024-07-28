@@ -8,7 +8,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_armor_expanded:armor/material/golden/head",
+              "value": "gm4_combat_expanded_armor:armor/material/golden/head",
               "conditions": [
                 {
                   "condition": "minecraft:value_check",
@@ -16,7 +16,7 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "armor_expanded"
+                      "name": "combat_expanded_armor"
                     },
                     "score": "gm4_modules"
                   },

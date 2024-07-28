@@ -7,9 +7,9 @@ attribute @s generic.max_health modifier add gm4_combat_expanded:split_entity -0
 attribute @s generic.scale modifier add gm4_combat_expanded:split_entity -0.5 add_multiplied_total
 attribute @s generic.step_height modifier add gm4_combat_expanded:split_entity -0.5 add_multiplied_total
 attribute @s generic.movement_speed modifier add gm4_combat_expanded:split_entity 0.33 add_multiplied_total
-attribute @s[type=skeleton] generic.follow_range modifier add gm4_combat_expanded:split_entity -0.66 add_multiplied_total
+attribute @s[type=#gm4_combat_expanded:skeleton_types] generic.follow_range modifier add gm4_combat_expanded:split_entity -0.66 add_multiplied_total
 
-scoreboard players set @s[type=skeleton] gm4_ce_arrow_fire_delay 3
+scoreboard players set @s[type=#gm4_combat_expanded:skeleton_types] gm4_ce_arrow_fire_delay 3
 
 data modify entity @s Motion set from storage gm4_combat_expanded:temp set.motion
 

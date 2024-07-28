@@ -82,6 +82,7 @@ scoreboard objectives add gm4_ce_absorp_reduced_timer dummy
 scoreboard objectives add gm4_ce_frozen_time dummy
 scoreboard objectives add gm4_ce_arrow_fire_delay dummy
 scoreboard objectives add gm4_ce_arrow_fire_delay_left dummy
+scoreboard objectives add gm4_ce_tier dummy
 
 scoreboard objectives add gm4_ce_damage_taken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_ce_damage_absorbed minecraft.custom:minecraft.damage_absorbed

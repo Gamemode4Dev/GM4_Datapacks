@@ -14,10 +14,10 @@ execute as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water 
 # elites
 execute as @e[type=#gm4_combat_expanded:elite_types,tag=gm4_ce_elite.process] at @s run function gm4_combat_expanded:mob/process/elite/check_type
 # tick down skeleton arrow fire delay
-execute as @e[type=skeleton,scores={gm4_ce_arrow_fire_delay_left=1..}] run function gm4_combat_expanded:mob/process/arrow/tick_fire_delay
+execute as @e[type=#gm4_combat_expanded:skeleton_types,scores={gm4_ce_arrow_fire_delay_left=1..}] run function gm4_combat_expanded:mob/process/arrow/tick_fire_delay
 
 # | Armor Expanded (expansion pack, run from here to keep in sync)
-execute if score armor_expanded gm4_modules matches 1 run function gm4_armor_expanded:call/main
+execute if score combat_expanded_armor gm4_modules matches 1 run function gm4_combat_expanded_armor:call/main
 
 # | Boss
 execute unless score $keep_tick.boss gm4_ce_keep_tick matches 1 if entity @e[type=shulker,tag=gm4_ce_boss.watcher] run schedule function gm4_combat_expanded:clocks/boss/watchers 1t

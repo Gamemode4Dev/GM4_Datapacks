@@ -1,0 +1,112 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              " ",
+              {
+                "translate": "attribute.modifier.equals.0",
+                "with": [
+                  [
+                    {
+                      "score": {
+                        "name": "$atkspeed_10",
+                        "objective": "gm4_ce_data"
+                      },
+                      "color": "blue",
+                      "italic": false
+                    },
+                    ".",
+                    {
+                      "score": {
+                        "name": "$atkspeed_01",
+                        "objective": "gm4_ce_data"
+                      }
+                    }
+                  ],
+                  {
+                    "translate": "attribute.name.generic.attack_speed"
+                  }
+                ],
+                "color": "dark_green",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$atkspeed_01"
+                  },
+                  "score": "gm4_ce_data"
+                },
+                "range": 0
+              }
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              " ",
+              {
+                "translate": "attribute.modifier.equals.0",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$atkspeed_10",
+                      "objective": "gm4_ce_data"
+                    },
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.name.generic.attack_speed"
+                  }
+                ],
+                "color": "dark_green",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$atkspeed_01"
+                },
+                "score": "gm4_ce_data"
+              },
+              "range": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

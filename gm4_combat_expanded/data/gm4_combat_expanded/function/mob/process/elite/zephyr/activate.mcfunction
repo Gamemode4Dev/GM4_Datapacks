@@ -3,7 +3,7 @@ execute anchored eyes positioned ^ ^-1.15 ^ run particle gust_emitter_small ~ ~ 
 playsound minecraft:entity.breeze.wind_burst hostile @a ~ ~ ~ 1 0
 
 # skeletons shoot arrows instead of speed burst
-execute if entity @s[type=skeleton] run return run function gm4_combat_expanded:mob/process/elite/zephyr/skeleton/start
+execute if entity @s[type=#gm4_combat_expanded:skeleton_types] run return run function gm4_combat_expanded:mob/process/elite/zephyr/skeleton/start
 
 summon breeze_wind_charge ~ ~ ~ {Motion:[0.0,-5.0,0.0]}
 attribute @s generic.movement_speed modifier remove gm4_combat_expanded:elite_buff.speed.charging

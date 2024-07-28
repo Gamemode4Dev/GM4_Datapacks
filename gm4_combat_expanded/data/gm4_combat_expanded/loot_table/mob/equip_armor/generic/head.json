@@ -9,7 +9,7 @@
                     "children": [
                         {
                             "type": "minecraft:loot_table",
-                            "value": "gm4_combat_expanded:armor/material/special/turtle_helmet",
+                            "value": "gm4_combat_expanded:mob/equip_armor/material/special/turtle_helmet",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -19,7 +19,7 @@
                         },
                         {
                             "type": "minecraft:loot_table",
-                            "value": "gm4_combat_expanded:armor/material/diamond/head",
+                            "value": "gm4_combat_expanded:mob/equip_armor/material/diamond/head",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -29,7 +29,7 @@
                         },
                         {
                             "type": "minecraft:loot_table",
-                            "value": "gm4_combat_expanded:armor/material/golden/head",
+                            "value": "gm4_combat_expanded:mob/equip_armor/material/golden/head",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -39,7 +39,7 @@
                         },
                         {
                             "type": "minecraft:loot_table",
-                            "value": "gm4_combat_expanded:armor/material/iron/head",
+                            "value": "gm4_combat_expanded:mob/equip_armor/material/iron/head",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -49,7 +49,7 @@
                         },
                         {
                             "type": "minecraft:loot_table",
-                            "value": "gm4_combat_expanded:armor/material/chainmail/head",
+                            "value": "gm4_combat_expanded:mob/equip_armor/material/chainmail/head",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -59,7 +59,7 @@
                         },
                         {
                             "type": "minecraft:loot_table",
-                            "value": "gm4_combat_expanded:armor/material/leather/head"
+                            "value": "gm4_combat_expanded:mob/equip_armor/material/leather/head"
                         }
                     ],
                     "conditions": [

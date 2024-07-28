@@ -18,7 +18,7 @@ scoreboard players set @s gm4_ce_damage_cap 75
 
 # | Difficulty Modifiers
 # harming arrow
-execute if entity @s[type=skeleton] store success score $arrow gm4_ce_data run loot replace entity @s[predicate=gm4_combat_expanded:technical/chance/skeleton_harming_arrow,predicate=!gm4_combat_expanded:mob/modifier/growth] weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/skeleton_harming
+execute if entity @s[type=!stray] store success score $arrow gm4_ce_data run loot replace entity @s[predicate=gm4_combat_expanded:technical/chance/skeleton_harming_arrow,predicate=!gm4_combat_expanded:mob/modifier/growth] weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/skeleton_harming
 execute if entity @s[type=stray] store success score $arrow gm4_ce_data run loot replace entity @s[predicate=gm4_combat_expanded:technical/chance/skeleton_harming_arrow,predicate=!gm4_combat_expanded:mob/modifier/growth] weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/stray_harming
 
 # | Biome Modifiers
@@ -30,7 +30,7 @@ execute if score $phantoms gm4_ce_data matches 0 if score $nearby_home_bed gm4_c
 # flowering
 execute if predicate gm4_combat_expanded:technical/chance/replace_flowering_skeleton run function gm4_combat_expanded:mob/init/mob_type/skeleton/flowering
 # toxic
-execute if entity @s[type=skeleton,predicate=gm4_combat_expanded:mob/modifier/toxic,predicate=!gm4_combat_expanded:mob/modifier/growth] store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/skeleton_toxic
+execute if entity @s[type=!stray,predicate=gm4_combat_expanded:mob/modifier/toxic,predicate=!gm4_combat_expanded:mob/modifier/growth] store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/skeleton_toxic
 execute if entity @s[type=stray,predicate=gm4_combat_expanded:mob/modifier/toxic,predicate=!gm4_combat_expanded:mob/modifier/growth] store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/stray_toxic
 # growth
 execute if predicate gm4_combat_expanded:mob/modifier/growth run function gm4_combat_expanded:mob/init/mob_type/skeleton/growth

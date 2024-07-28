@@ -1,0 +1,26 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:leather_boots"
+                    },
+                    {
+                        "items": "minecraft:leather_leggings"
+                    },
+                    {
+                        "items": "minecraft:leather_chestplate"
+                    },
+                    {
+                        "items": "minecraft:leather_helmet"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_combat_expanded:player/reach_tier/leather"
+    }
+}

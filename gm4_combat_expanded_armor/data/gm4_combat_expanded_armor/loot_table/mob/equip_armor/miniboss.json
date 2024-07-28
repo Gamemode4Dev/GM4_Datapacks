@@ -1,0 +1,94 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 15,
+          "value": "gm4_combat_expanded_armor:armor/material/diamond/feet"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 55,
+          "value": "gm4_combat_expanded_armor:armor/material/iron/feet"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 30,
+          "value": "gm4_combat_expanded_armor:armor/material/golden/feet"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 15,
+          "value": "gm4_combat_expanded_armor:armor/material/diamond/legs"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 55,
+          "value": "gm4_combat_expanded_armor:armor/material/iron/legs"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 30,
+          "value": "gm4_combat_expanded_armor:armor/material/golden/legs"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 15,
+          "value": "gm4_combat_expanded_armor:armor/material/diamond/chest"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 55,
+          "value": "gm4_combat_expanded_armor:armor/material/iron/chest"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 30,
+          "value": "gm4_combat_expanded_armor:armor/material/golden/chest"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 15,
+          "value": "gm4_combat_expanded_armor:armor/material/diamond/head"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 55,
+          "value": "gm4_combat_expanded_armor:armor/material/iron/head"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 30,
+          "value": "gm4_combat_expanded_armor:armor/material/golden/head"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:reference",
+            "name": "gm4_combat_expanded_armor:mob/modifier/flowering"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -7,5 +7,5 @@
 tag @s add gm4_ce_arrow_checked
 
 scoreboard players set $damage_reduction gm4_ce_data 0
-execute on origin if entity @s[type=skeleton] run function gm4_combat_expanded:mob/process/arrow/run
+execute on origin if entity @s[type=#gm4_combat_expanded:skeleton_types] run function gm4_combat_expanded:mob/process/arrow/run
 execute if score $damage_reduction gm4_ce_data matches 1 run data modify entity @s damage set value 0.5d

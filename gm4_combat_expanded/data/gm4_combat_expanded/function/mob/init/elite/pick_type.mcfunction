@@ -3,8 +3,8 @@
 execute if entity @s[type=zombie_villager] run return run data remove entity @s attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}]
 
 # remove unwanted stats from zombie elites
-data remove entity @s[type=!skeleton] attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}]
-data modify entity @s[type=!skeleton] IsBaby set value 0b
+data remove entity @s[type=!#gm4_combat_expanded:skeleton_types] attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}]
+data modify entity @s[type=!#gm4_combat_expanded:skeleton_types] IsBaby set value 0b
 
 # don't allow entities from splits to be elites
 execute if entity @s[tag=gm4_ce_split_entity] run return 0
