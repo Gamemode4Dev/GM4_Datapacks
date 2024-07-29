@@ -2,24 +2,6 @@ execute unless score combat_expanded gm4_modules matches 1 run data modify stora
 execute unless score combat_expanded gm4_earliest_version < combat_expanded gm4_modules run scoreboard players operation combat_expanded gm4_earliest_version = combat_expanded gm4_modules
 scoreboard players set combat_expanded gm4_modules 1
 
-# disable natural regeneration
-execute unless score $natural_regen gm4_ce_data matches -1 store result score $natural_regen gm4_ce_data run gamerule naturalRegeneration
-execute unless score $natural_regen_disabled gm4_ce_data matches 1 run gamerule naturalRegeneration false
-execute unless score $natural_regen_disabled gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'{"text":"[INFO] Combat Expanded changed gamerule naturalRegeneration to false"}'}
-execute unless score $natural_regen_disabled gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'[{"text":"[INFO] Combat Expanded: To disable Combat Expanded\'s natural regeneration: "},{"text":"click here","color":"red","clickEvent":{"action":"suggest_command","value":"/scoreboard players set $natural_regeneration gm4_ce_data -1"}}]'}
-execute if score $natural_regen_disabled gm4_ce_data matches 1 if score $natural_regen gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'[{"text":"[WARN]","color":"red"},{"text":" Combat Expanded requires naturalRegeneration to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule naturalRegeneration false"}}]'}
-scoreboard players set $natural_regen_disabled gm4_ce_data 1
-
-# disable natural phantom spawning
-execute store result score $phantoms gm4_ce_data run gamerule doInsomnia
-execute unless score $phantoms_disabled gm4_ce_data matches 1 run gamerule doInsomnia false
-execute unless score $phantoms_disabled gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'{"text":"[INFO] Combat Expanded changed gamerule doInsomnia to false"}'}
-execute if score $phantoms_disabled gm4_ce_data matches 1 if score $phantoms gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'[{"text":"[WARN]","color":"red"},{"text":" Combat Expanded requires doInsomnia to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule doInsomnia false"}}]'}
-scoreboard players set $phantoms_disabled gm4_ce_data 1
-
-# reset all links
-data modify storage gm4_combat_expanded:data active_links set value [{id:-1,name:{"translate":"item.gm4.combat_expanded.name.link","fallback":"Unlinked %s","with":[{"translate":"item.minecraft.iron_chestplate","italic":false}],"italic":false,"color":"light_purple"}}]
-
 # scoreboards
 scoreboard objectives add gm4_ce_id dummy
 scoreboard objectives add gm4_ce_difficult dummy {"text":"GM4 Combat Expanded: Difficulty"}
@@ -83,6 +65,7 @@ scoreboard objectives add gm4_ce_frozen_time dummy
 scoreboard objectives add gm4_ce_arrow_fire_delay dummy
 scoreboard objectives add gm4_ce_arrow_fire_delay_left dummy
 scoreboard objectives add gm4_ce_tier dummy
+scoreboard objectives add gm4_ce_last_slept_night dummy
 
 scoreboard objectives add gm4_ce_damage_taken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_ce_damage_absorbed minecraft.custom:minecraft.damage_absorbed
@@ -103,6 +86,24 @@ scoreboard objectives add gm4_ce_boss.last_attack dummy
 scoreboard objectives add gm4_ce_boss.secondary_id dummy
 
 scoreboard objectives add gm4_ce_keep_tick dummy
+
+# disable natural regeneration
+execute unless score $natural_regen gm4_ce_data matches -1 store result score $natural_regen gm4_ce_data run gamerule naturalRegeneration
+execute unless score $natural_regen_disabled gm4_ce_data matches 1 run gamerule naturalRegeneration false
+execute unless score $natural_regen_disabled gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'{"text":"[INFO] Combat Expanded changed gamerule naturalRegeneration to false"}'}
+execute unless score $natural_regen_disabled gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'[{"text":"[INFO] Combat Expanded: To disable Combat Expanded\'s natural regeneration: "},{"text":"click here","color":"red","clickEvent":{"action":"suggest_command","value":"/scoreboard players set $natural_regeneration gm4_ce_data -1"}}]'}
+execute if score $natural_regen_disabled gm4_ce_data matches 1 if score $natural_regen gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'[{"text":"[WARN]","color":"red"},{"text":" Combat Expanded requires naturalRegeneration to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule naturalRegeneration false"}}]'}
+scoreboard players set $natural_regen_disabled gm4_ce_data 1
+
+# disable natural phantom spawning
+execute store result score $phantoms gm4_ce_data run gamerule doInsomnia
+execute unless score $phantoms_disabled gm4_ce_data matches 1 run gamerule doInsomnia false
+execute unless score $phantoms_disabled gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'{"text":"[INFO] Combat Expanded changed gamerule doInsomnia to false"}'}
+execute if score $phantoms_disabled gm4_ce_data matches 1 if score $phantoms gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'[{"text":"[WARN]","color":"red"},{"text":" Combat Expanded requires doInsomnia to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule doInsomnia false"}}]'}
+scoreboard players set $phantoms_disabled gm4_ce_data 1
+
+# reset all links
+data modify storage gm4_combat_expanded:data active_links set value [{id:-1,name:{"translate":"item.gm4.combat_expanded.name.link","fallback":"Unlinked %s","with":[{"translate":"item.minecraft.iron_chestplate","italic":false}],"italic":false,"color":"light_purple"}}]
 
 # mob caps
 execute unless score $mob_limit.husk_army gm4_ce_data matches -2147483648..2147483647 run scoreboard players set $mob_limit.husk_army gm4_ce_data 128

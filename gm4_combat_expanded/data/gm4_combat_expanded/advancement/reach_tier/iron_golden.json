@@ -1,0 +1,99 @@
+{
+    "criteria": {
+        "iron_helmet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:iron_helmet"
+                    }
+                ]
+            }
+        },
+        "iron_chestplate": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:iron_chestplate"
+                    }
+                ]
+            }
+        },
+        "iron_leggings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:iron_leggings"
+                    }
+                ]
+            }
+        },
+        "iron_boots": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:iron_boots"
+                    }
+                ]
+            }
+        },
+        "golden_helmet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:golden_helmet"
+                    }
+                ]
+            }
+        },
+        "golden_chestplate": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:golden_chestplate"
+                    }
+                ]
+            }
+        },
+        "golden_leggings": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:golden_leggings"
+                    }
+                ]
+            }
+        },
+        "golden_boots": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:golden_boots"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "iron_helmet",
+            "iron_chestplate",
+            "iron_leggings",
+            "iron_boots",
+            "golden_helmet",
+            "golden_chestplate",
+            "golden_leggings",
+            "golden_boots"
+        ]
+    ],
+    "rewards": {
+        "function": "gm4_combat_expanded:player/reach_tier/iron_golden"
+    }
+}

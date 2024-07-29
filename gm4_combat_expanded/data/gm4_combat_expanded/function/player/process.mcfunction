@@ -11,7 +11,7 @@ tag @s remove gm4_ce_sustain_active
 execute if score $natural_regen gm4_ce_data matches 0 unless score @s[tag=!gm4_ce_frozen,scores={gm4_ce_hunger=18..}] gm4_ce_combat_regen_timer matches 1.. run function gm4_combat_expanded:player/health/regen_combat_health
 execute if score $natural_regen gm4_ce_data matches 0 unless score @s[tag=!gm4_ce_frozen,scores={gm4_ce_hunger=18..,gm4_ce_fast_regen_health=1..}] gm4_ce_fast_regen_timer matches 1.. run function gm4_combat_expanded:player/health/regen_fast_health
 
-# | Armor Expanded (expansion pack, run from here to keep in sync)
+# | Combat Expanded Armor (expansion pack, run from here to keep in sync)
 execute if score combat_expanded_armor gm4_modules matches 1 run function gm4_combat_expanded_armor:call/process_player
 
 # heal players if they have stored health

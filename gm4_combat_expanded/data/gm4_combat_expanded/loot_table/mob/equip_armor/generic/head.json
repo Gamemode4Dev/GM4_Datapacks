@@ -24,6 +24,20 @@
                                 {
                                     "condition": "minecraft:reference",
                                     "name": "gm4_combat_expanded:mob/material_check/diamond"
+                                },
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$armor_tier"
+                                        },
+                                        "score": "gm4_ce_data"
+                                    },
+                                    "range": {
+                                        "min": 2
+                                    }
                                 }
                             ]
                         },
@@ -34,6 +48,20 @@
                                 {
                                     "condition": "minecraft:reference",
                                     "name": "gm4_combat_expanded:mob/material_check/golden"
+                                },
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$armor_tier"
+                                        },
+                                        "score": "gm4_ce_data"
+                                    },
+                                    "range": {
+                                        "min": 1
+                                    }
                                 }
                             ]
                         },
@@ -44,6 +72,20 @@
                                 {
                                     "condition": "minecraft:reference",
                                     "name": "gm4_combat_expanded:mob/material_check/iron"
+                                },
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$armor_tier"
+                                        },
+                                        "score": "gm4_ce_data"
+                                    },
+                                    "range": {
+                                        "min": 1
+                                    }
                                 }
                             ]
                         },

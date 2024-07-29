@@ -1,4 +1,4 @@
-# Armor Expanded<!--$headerTitle--><!--$pmc:delete-->
+# Combat Expanded - Armor<!--$headerTitle--><!--$pmc:delete-->
 
 Use special armor modifiers to defend against mobs that grow ever stronger!<!--$pmc:headerSize-->
 

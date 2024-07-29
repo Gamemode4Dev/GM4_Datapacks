@@ -13,8 +13,8 @@ execute if entity @s[advancements={gm4_combat_expanded:damaged/detect={combat_da
 
 # out-of-combat damage regenerates rapidly (every 1.6 seconds)
 scoreboard players operation @s gm4_ce_damage_taken += @s gm4_ce_damage_absorbed
-scoreboard players operation @s gm4_ce_damage_taken += $damage_health gm4_ce_data
 scoreboard players operation @s gm4_ce_damage_taken /= #10 gm4_ce_data
+scoreboard players operation @s gm4_ce_damage_taken += $damage_health gm4_ce_data
 execute if entity @s[advancements={gm4_combat_expanded:damaged/detect={combat_damage=false}}] run scoreboard players operation @s gm4_ce_fast_regen_health += @s gm4_ce_damage_taken
 scoreboard players reset @s gm4_ce_damage_taken
 scoreboard players reset @s gm4_ce_damage_absorbed

@@ -6,7 +6,7 @@
 # check natural regeneation
 execute unless score $natural_regen gm4_ce_data matches -1 store result score $natural_regen gm4_ce_data run gamerule naturalRegeneration
 
-# | Armor Expanded (expansion pack, run from here to keep in sync)
+# | Combat Expanded Armor (expansion pack, run from here to keep in sync)
 execute if score combat_expanded_armor gm4_modules matches 1 run function gm4_combat_expanded_armor:call/player_submain
 
 # process players

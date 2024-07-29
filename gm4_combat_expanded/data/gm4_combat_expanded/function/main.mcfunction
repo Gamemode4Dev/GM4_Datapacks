@@ -16,7 +16,7 @@ execute as @e[type=#gm4_combat_expanded:elite_types,tag=gm4_ce_elite.process] at
 # tick down skeleton arrow fire delay
 execute as @e[type=#gm4_combat_expanded:skeleton_types,scores={gm4_ce_arrow_fire_delay_left=1..}] run function gm4_combat_expanded:mob/process/arrow/tick_fire_delay
 
-# | Armor Expanded (expansion pack, run from here to keep in sync)
+# | Combat Expanded Armor (expansion pack, run from here to keep in sync)
 execute if score combat_expanded_armor gm4_modules matches 1 run function gm4_combat_expanded_armor:call/main
 
 # | Boss

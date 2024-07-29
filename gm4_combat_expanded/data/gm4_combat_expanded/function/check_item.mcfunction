@@ -10,7 +10,7 @@ scoreboard players set $item_processed gm4_ce_data 0
 # check for spores
 execute if items entity @s contents *[custom_data~{gm4_ce_spore:{}}] run function gm4_combat_expanded:mob/process/spore/initialise
 
-# Armor Expanded - check here to not need two tick functions, but only run if expansion is actually installed
+# Combat Expanded Armor - check here to not need two tick functions, but only run if expansion is actually installed
 execute unless score combat_expanded_armor gm4_modules matches 1 run return 0
 
 # check for unidentified items

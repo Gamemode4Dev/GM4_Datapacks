@@ -1,4 +1,4 @@
-execute unless score combat_expanded_armor gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Armor Expanded"}
+execute unless score combat_expanded_armor gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Combat Expanded - Armor"}
 execute unless score combat_expanded_armor gm4_earliest_version < combat_expanded_armor gm4_modules run scoreboard players operation combat_expanded_armor gm4_earliest_version = combat_expanded_armor gm4_modules
 scoreboard players set combat_expanded_armor gm4_modules 1
 
@@ -7,7 +7,6 @@ data modify storage gm4_combat_expanded_armor:data active_links set value [{id:-
 
 # scoreboards
 scoreboard objectives add gm4_ce_id dummy
-scoreboard objectives add gm4_ce_difficult dummy {"text":"GM4 Armor Expanded: Difficulty"}
 scoreboard objectives add gm4_ce_difficult.mob dummy
 scoreboard objectives add gm4_ce_play_time dummy
 scoreboard objectives add gm4_ce_death_mult dummy
@@ -107,7 +106,6 @@ scoreboard players set #6000 gm4_ce_data 6000
 
 # start clocks
 schedule function gm4_combat_expanded_armor:tick 1t
-schedule function gm4_combat_expanded_armor:main 2t
 schedule function gm4_combat_expanded_armor:slow_clock 3t
 
 #$moduleUpdateList

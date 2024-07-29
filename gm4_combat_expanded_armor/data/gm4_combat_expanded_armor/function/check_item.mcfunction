@@ -1,4 +1,4 @@
-# check items on ground for Armor Expanded items
+# check items on ground for Combat Expanded Armor items
 # @s = item
 # at unspecified
 # run from tick

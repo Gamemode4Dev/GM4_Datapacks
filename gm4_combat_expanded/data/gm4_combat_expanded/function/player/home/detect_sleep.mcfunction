@@ -18,3 +18,11 @@ execute as @e[type=marker,tag=gm4_ce_bed] if score @s gm4_ce_id = $id gm4_ce_dat
 
 # spawn a new bed marker if there wasn't one found
 execute summon marker run function gm4_combat_expanded:player/home/init_bed
+
+# turn all lost health of this player to fast regen health (once per night)
+execute store result score $current_night gm4_ce_data run time query day
+execute if score @s gm4_ce_last_slept_night = $current_night gm4_ce_data run return 0
+scoreboard players operation @s gm4_ce_last_slept_night = $current_night gm4_ce_data
+function gm4_combat_expanded:player/calculate_hp
+scoreboard players operation @s gm4_ce_fast_regen_health = @s gm4_ce_health.max
+scoreboard players operation @s gm4_ce_fast_regen_health -= @s gm4_ce_health.current

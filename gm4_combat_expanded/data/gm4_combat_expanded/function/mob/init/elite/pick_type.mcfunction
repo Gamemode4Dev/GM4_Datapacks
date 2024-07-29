@@ -6,11 +6,14 @@ execute if entity @s[type=zombie_villager] run return run data remove entity @s 
 data remove entity @s[type=!#gm4_combat_expanded:skeleton_types] attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}]
 data modify entity @s[type=!#gm4_combat_expanded:skeleton_types] IsBaby set value 0b
 
+# don't allow elites to be jockeys
+execute on vehicle run kill @s
+
 # don't allow entities from splits to be elites
 execute if entity @s[tag=gm4_ce_split_entity] run return 0
 
 # pick a random elite
-#execute store result score $elite_pick gm4_ce_data run random value 1..100
+execute store result score $elite_pick gm4_ce_data run random value 1..100
 
 # GLACIAL 35% 
 # 3.5x health, 45% KB resist
