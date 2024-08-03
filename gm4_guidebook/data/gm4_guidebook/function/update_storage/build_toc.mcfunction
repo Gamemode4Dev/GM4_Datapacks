@@ -1,7 +1,7 @@
 # builds the stored table of contents
 # @s = none
 # located at world spawn
-# run from gm4_guidebook:update_storage/alphabetical_sort/go
+# run from gm4_guidebook:update_storage/setup_markers
 
 # get all module data
 data merge storage gm4_guidebook:temp {modules:[],expansions:[]}
