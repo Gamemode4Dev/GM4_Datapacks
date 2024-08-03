@@ -28,8 +28,14 @@
     "type": "special",
     "function": "gm4_boots_of_ostara:create_boots",
     "guidebook": {
-      "type": "loot_table",
-      "name": "gm4_boots_of_ostara:items/boots_of_ostara",
+      "type": "item",
+      "name": "leather_boots",
+      "components": {
+        "minecraft:custom_name": "{\"translate\": \"item.gm4.boots_of_ostara\",\"fallback\": \"Boots of Ostara\",\"italic\":false}",
+        "minecraft:lore": [
+            "{\"translate\": \"item.gm4.boots_of_ostara.lore\",\"fallback\": \"Brings abundance beneath you!\",\"color\": \"dark_gray\",\"italic\": true}"
+        ]
+      },
       "count": 1
     }
   }

@@ -13,11 +13,11 @@
       "P": [
         {
           "item": "minecraft:potion",
-          "nbt": "{Potion:'minecraft:water_breathing'}"
+          "components": {"minecraft:potion_contents":{"potion":"minecraft:water_breathing"}}
         },
         {
           "item": "minecraft:potion",
-          "nbt": "{Potion:'minecraft:long_water_breathing'}"
+          "components": {"minecraft:potion_contents":{"potion":"minecraft:long_water_breathing"}}
         }
       ],
       "S": {
