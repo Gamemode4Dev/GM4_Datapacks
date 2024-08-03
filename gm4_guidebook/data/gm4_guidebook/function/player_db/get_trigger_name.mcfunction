@@ -4,4 +4,5 @@
 # run from gm4_guidebook:hand/update
 # and from gm4_guidebook:lectern/update
 
-$data modify storage gm4_guidebook:temp book.name set from storage gm4_guidebook:register trigger_map.$(trigger)
+$data modify storage gm4_guidebook:temp book.name set from storage gm4_guidebook:register trigger_map.$(trigger).name
+$data modify storage gm4_guidebook:temp book.load set from storage gm4_guidebook:register trigger_map.$(trigger).load

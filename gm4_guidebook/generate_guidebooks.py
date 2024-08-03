@@ -1720,7 +1720,7 @@ def generate_setup_storage_function(book: Book, ctx: Context, overlay: bool = Fa
 
   # write each command to be placed in the function
   short_circuit = f"execute unless score {book.load_check} load.status matches 1.. run return 0"
-  trigger_map = f"data modify storage gm4_guidebook:register trigger_map.{book.trigger_id} set value \"{book.id}\""
+  trigger_map = f"data modify storage gm4_guidebook:register trigger_map.{book.trigger_id} set value {'{'}name:\"{book.id}\",load:\"{book.load_check}\"{'}'}"
   page_storage = f"data modify storage gm4_guidebook:register pages.{book.id} set value {json.dumps(storage, ensure_ascii=False)}"
   
   return Function([

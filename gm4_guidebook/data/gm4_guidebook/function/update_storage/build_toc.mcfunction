@@ -21,7 +21,7 @@ function gm4_guidebook:update_storage/build_page
 
 # build lectern toc pages
 scoreboard players operation $click gm4_guide_pages = $front_matter gm4_guide_pages
-scoreboard players add $click gm4_guide_pages 2
+execute store result storage gm4_guidebook:temp click int 1 run scoreboard players add $click gm4_guide_pages 2
 function gm4_guidebook:update_storage/lectern/build_page
 data modify storage gm4_guidebook:register lectern_toc append from storage gm4_guidebook:temp toc_back[]
 
@@ -36,5 +36,6 @@ data remove storage gm4_guidebook:temp expansions
 data remove storage gm4_guidebook:temp toc_back
 data remove storage gm4_guidebook:temp lectern_pages
 data remove storage gm4_guidebook:temp prev_trigger_order
+data remove storage gm4_guidebook:temp click
 scoreboard players reset $trigger gm4_guide
 kill @e[type=marker,tag=gm4_guide]
