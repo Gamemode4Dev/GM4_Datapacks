@@ -1,5 +1,5 @@
 #@s = player above experience tank at center of tank
-#run from standard_liquids:util/experience/deposit_one_level
+#run from standard_liquids:util/experience/deposit_levels
 
 # calculate points to remove one level
 execute store result score $points gm4_lt_util run experience query @s points
@@ -42,4 +42,3 @@ execute if score @s gm4_lt_value matches 1..4 run scoreboard players set @s gm4_
 execute if score @s gm4_lt_value matches 5..10 run scoreboard players set @s gm4_lt_util 12
 execute if score @s gm4_lt_value matches 11..18 run scoreboard players set @s gm4_lt_util 8
 execute if score @s gm4_lt_value matches 19.. run scoreboard players set @s gm4_lt_util 4
-# TODO accelerate
