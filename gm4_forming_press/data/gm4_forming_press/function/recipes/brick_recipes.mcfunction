@@ -33,3 +33,6 @@ execute if score $crafted gm4_crafting matches 0 store success score $crafted gm
 
 # purpur block
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if score $stack_size gm4_crafting matches ..4 if data storage gm4_forming_press:temp/crafter {Items:[{Slot:0b,id:"minecraft:chorus_fruit"},{Slot:1b,id:"minecraft:chorus_fruit"},{Slot:2b,id:"minecraft:chorus_fruit"},{Slot:3b,id:"minecraft:chorus_fruit"},{Slot:4b,id:"minecraft:clay_ball"},{Slot:5b,id:"minecraft:chorus_fruit"},{Slot:6b,id:"minecraft:chorus_fruit"},{Slot:7b,id:"minecraft:chorus_fruit"},{Slot:8b,id:"minecraft:chorus_fruit"}]} run loot replace block ~ ~ ~ container.0 loot gm4_forming_press:crafting/purpur_block
+
+# tuff bricks
+execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if score $stack_size gm4_crafting matches ..4 if data storage gm4_forming_press:temp/crafter {Items:[{Slot:0b,id:"minecraft:tuff"},{Slot:1b,id:"minecraft:tuff"},{Slot:2b,id:"minecraft:tuff"},{Slot:3b,id:"minecraft:tuff"},{Slot:4b,id:"minecraft:clay_ball"},{Slot:5b,id:"minecraft:tuff"},{Slot:6b,id:"minecraft:tuff"},{Slot:7b,id:"minecraft:tuff"},{Slot:8b,id:"minecraft:tuff"}]} run loot replace block ~ ~ ~ container.0 loot gm4_forming_press:crafting/tuff_bricks
