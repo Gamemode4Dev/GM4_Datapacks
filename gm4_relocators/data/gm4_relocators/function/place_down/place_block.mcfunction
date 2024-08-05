@@ -15,6 +15,7 @@ function #gm4_relocators:place_down/place_block
 execute if block ~ ~ ~ air if data storage gm4_relocators:temp gm4_relocation.block_state{id:"dropper"} run function gm4_relocators:place_down/place_block/dropper
 execute if block ~ ~ ~ air if data storage gm4_relocators:temp gm4_relocation.block_state{id:"hopper"} run function gm4_relocators:place_down/place_block/hopper
 execute if block ~ ~ ~ air if data storage gm4_relocators:temp gm4_relocation.block_state{id:"chest"} run function gm4_relocators:place_down/place_block/chest
+execute if block ~ ~ ~ air if data storage gm4_relocators:temp gm4_relocation.block_state{id:"crafter"} run function gm4_relocators:place_down/place_block/crafter
 execute if block ~ ~ ~ air if data storage gm4_relocators:temp gm4_relocation.block_state{id:"barrel"} run function gm4_relocators:place_down/place_block/barrel
 execute if block ~ ~ ~ air if data storage gm4_relocators:temp gm4_relocation.block_state{id:"dispenser"} run function gm4_relocators:place_down/place_block/dispenser
 execute if block ~ ~ ~ air if data storage gm4_relocators:temp gm4_relocation.block_state{id:"furnace"} run function gm4_relocators:place_down/place_block/furnace
