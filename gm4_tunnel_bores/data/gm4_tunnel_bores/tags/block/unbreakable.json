@@ -45,6 +45,9 @@
     "minecraft:crying_obsidian",
     "minecraft:respawn_anchor",
     "minecraft:lodestone",
-    "minecraft:reinforced_deepslate"
+    "minecraft:reinforced_deepslate",
+    "minecraft:crafter",
+    "minecraft:trial_spawner",
+    "minecraft:vault"
   ]
 }
