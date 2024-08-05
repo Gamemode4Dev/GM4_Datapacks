@@ -11,4 +11,4 @@ execute if score $page gm4_guide_pages matches 3..4 run function gm4_guidebook:l
 # if 2, refresh
 execute if score $page gm4_guide_pages matches 2 run function gm4_guidebook:lecterns/section/update/refresh/find_player
 # if 1, jump to TOC
-execute if score $page gm4_guide_pages matches 1 run function gm4_guidebook:lecterns/section/update/toc/jump
+execute if score $page gm4_guide_pages matches 1 run function gm4_guidebook:lecterns/section/update/toc/jump with storage gm4_guidebook:register

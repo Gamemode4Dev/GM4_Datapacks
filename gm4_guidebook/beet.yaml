@@ -1,6 +1,6 @@
 id: gm4_guidebook
 name: Guidebook
-version: 2.2.X
+version: 3.0.X
 
 data_pack:
   load: .
@@ -25,6 +25,7 @@ meta:
       schedule_loops: 
         - main
         - tick
+        - lecterns/section/tracking
     model_data:
       - item: written_book
         reference: item/guidebook

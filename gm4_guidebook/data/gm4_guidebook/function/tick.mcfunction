@@ -11,7 +11,7 @@ execute as @a[scores={gm4_guide_prev=1..}] run function gm4_guidebook:hand/prev_
 execute as @a[scores={gm4_guide_next=1..}] run function gm4_guidebook:hand/next_section/search
 
 # jump to section
-execute as @a[scores={gm4_guide=1..},predicate=gm4_guidebook:holding_book] run function gm4_guidebook:hand/update
+execute as @a[scores={gm4_guide=1..},predicate=gm4_guidebook:holding_book] run function gm4_guidebook:hand/update with storage gm4_guidebook:register
 
 # reset triggers
 scoreboard players reset @a gm4_guide_prev

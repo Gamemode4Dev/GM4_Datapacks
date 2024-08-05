@@ -32,20 +32,6 @@
                 "fallback": "Gamemode 4 Guidebook",
                 "italic": false
               }
-            },
-            {
-              "function": "minecraft:copy_nbt",
-              "source": {
-                "type": "minecraft:storage",
-                "source": "gm4_guidebook:register"
-              },
-              "ops": [
-                {
-                  "source": "table_of_contents[]",
-                  "target": "pages",
-                  "op": "append"
-                }
-              ]
             }
           ]
         }
