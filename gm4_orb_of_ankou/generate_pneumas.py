@@ -103,7 +103,7 @@ def generate_pneuma_predicates(ctx: Context):
         "equipment": {
           "offhand": {
             "items": "#gm4_orb_of_ankou:pneuma_container",
-            "components": {
+            "predicates": {
               "minecraft:custom_data": custom_data
             }
           }
