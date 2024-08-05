@@ -11,9 +11,10 @@ execute store result score $existing_mending gm4_ench_data if items block ~ ~ ~ 
 # if cursed extract only the curse
 execute if data storage gm4_enchantment_extractors:temp current_item.components."minecraft:enchantments".levels."minecraft:vanishing_curse" run function gm4_enchantment_extractors:extract_vanishing
 execute if data storage gm4_enchantment_extractors:temp current_item.components."minecraft:enchantments".levels."minecraft:binding_curse" run function gm4_enchantment_extractors:extract_binding
+function #gm4_enchantment_extractors:extract_curse
 
 # extract
-execute unless score $curse_extracted gm4_ench_data matches 1 store result score $added_books gm4_ench_data run loot insert ~ ~ ~ fish gm4_enchantment_extractors:technical/extract/check ~ ~ ~ mainhand
+execute unless score $curse_extracted gm4_ench_data matches 1 store result score $added_books gm4_ench_data run function #gm4_enchantment_extractors:extract_enchantment
 
 # visuals
 playsound block.enchantment_table.use block @a[distance=..5] ~ ~ ~ 1 0.8
@@ -25,7 +26,9 @@ execute unless score $added_books gm4_ench_data matches 1.. run function gm4_enc
 
 # update block inventory
 scoreboard players operation $slot_count gm4_ench_data += $added_books gm4_ench_data
+function #gm4_enchantment_extractors:save_enchantment
 data remove storage gm4_enchantment_extractors:temp current_item.components."minecraft:enchantments"
+function #gm4_enchantment_extractors:restore_enchantment
 data modify block ~ ~ ~ Items append from storage gm4_enchantment_extractors:temp current_item
 
 # grant mending advancement
