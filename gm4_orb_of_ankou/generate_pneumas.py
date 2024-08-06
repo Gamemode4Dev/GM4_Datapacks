@@ -5,7 +5,7 @@ from typing import Any
 SUPPORTED_LOOTING = 10
 
 entities = {}
-pneumas = []
+pneumas:list[str] = []
 updated_csv = [['-Run beet to update columns 4-9'],[],['.Mob','.Soul Essence','Base','L I','L II','L III','.','K/E (L III)','K/S (L III)']]
 
 def beet_default(ctx: Context):
@@ -95,15 +95,17 @@ def generate_pneuma_predicates(ctx: Context):
   pneuma: Any = ""
   for pneuma in pneumas:
     # Predicate to check if a player has a certain pneuma equipped
-    nbt = "{gm4_orb_of_ankou:{pneumas:[{id:'"+ pneuma + "'}]}}"
+    custom_data = "{gm4_orb_of_ankou:{pneumas:[{id:'"+ pneuma + "'}]}}"
     ctx.data[f"gm4_orb_of_ankou:pneuma_equipped/{pneuma}"] = Predicate({
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
         "equipment": {
           "offhand": {
-            "tag": "gm4_orb_of_ankou:pneuma_container",
-            "nbt": nbt
+            "items": "#gm4_orb_of_ankou:pneuma_container",
+            "predicates": {
+              "minecraft:custom_data": custom_data
+            }
           }
         }
       }
