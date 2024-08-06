@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "indirect_hit": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "blocked": true,
+          "source_entity": {
+            "nbt": "{Tags:[\"gm4_mu_shield_break_attack\"]}"
+          }
+        }
+      }
+    },
+    "direct_hit": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "blocked": true,
+          "type": {
+            "direct_entity": {
+              "nbt": "{Tags:[\"gm4_mu_shield_break_attack\"]}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "indirect_hit",
+      "direct_hit"
+    ]
+  ],
+  "rewards": {
+    "function": "gm4_monsters_unbound:mob/process/attack_effect/shield_break_attack"
+  }
+}

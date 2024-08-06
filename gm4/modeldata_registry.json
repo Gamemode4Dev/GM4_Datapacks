@@ -956,7 +956,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "leather_chestplate": {
-      "gm4_combat_expanded_armor:gui/advancement/combat_expanded_armor_identify": 1,
+      "gm4_augmented_armor:gui/advancement/augmented_armor_identify": 1,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_iacio_shamir:shamir/iacio": 122,
@@ -1165,7 +1165,6 @@
     },
     "netherite_sword": {
       "gm4_combat_expanded:guidebook_icon/combat_expanded": 1,
-      "gm4_combat_expanded_armor:guidebook_icon/combat_expanded_armor": 2,
       "gm4_end_fishing:item/end_city_swords_1": 10,
       "gm4_end_fishing:item/end_city_swords_2": 11,
       "gm4_end_fishing:item/end_city_swords_3": 12,
