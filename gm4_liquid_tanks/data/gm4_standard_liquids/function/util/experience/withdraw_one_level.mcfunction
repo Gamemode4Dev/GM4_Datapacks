@@ -1,4 +1,4 @@
-#@s = player above experience tank at center of tank
+#@s = player below experience tank at center of tank
 #run from standard_liquids:util/experience/deposit_levels
 
 # calculate points to add one level
@@ -29,6 +29,13 @@ execute as @e[type=marker,tag=gm4_liquid_tank,limit=1,distance=..0.5] unless sco
 
 # vfx
 execute unless score $level_calc gm4_lt_util matches 0 playsound minecraft:entity.experience_orb.pickup block @s
+from itertools import product, count
+c = count(0)
+for offset in product([0, -0.05, 0.05], repeat=2):
+    if 0 not in offset:
+        continue
+    dx, dz = offset
+    execute unless score $level_calc gm4_lt_util matches 0 run summon experience_orb ~dx ~-0.6 ~dz {Age:(5994-next(c)),Value:0}
 function #gm4_liquid_tanks:level_report_check
 
 # reset accelerating clock
