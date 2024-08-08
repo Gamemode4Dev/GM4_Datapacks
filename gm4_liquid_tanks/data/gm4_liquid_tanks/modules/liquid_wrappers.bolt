@@ -56,7 +56,6 @@ class Liquid:
         @wraps(fcn)
         def wrapped_fcn():
             function ~/../liquid_init/{self.struc.id}:
-                # append function_tag gm4_liquid_tanks:tank_init {"values": [(~/)]} # FIXME this line is for... what?
                 data merge block ~ ~ ~ {CustomName:f'{{"translate":"gm4.second","fallback":"%1$s","with":[{{"translate":"container.gm4.liquid_tank.{self.struc.id}","fallback":"{self.struc.name} Tank"}},[{{"translate":"gui.gm4.liquid_tank","fallback":"","font":"gm4:container_gui","color":"white"}},{{"translate":"container.gm4.liquid_tank.{self.struc.id}","fallback":"{self.struc.name} Tank","font":"gm4:default","color":"#404040"}}]]}}'}
                 summon item_display ~ ~ ~:
                     CustomName: '"gm4_liquid_tank_liquid_display"'
@@ -65,7 +64,7 @@ class Liquid:
                         id: player_head
                         count:1b
                         components:{
-                            "minecraft:profile": f"$gm4_standard_liquids:liquids/{self.struc.id}"
+                            "minecraft:profile": f"${(~/).split(':')[0]}:liquids/{self.struc.id}"
                         }
                     transformation:
                         left_rotation: [0f,0f,0f,1f]
@@ -87,7 +86,8 @@ class Liquid:
             append function_tag gm4_liquid_tanks:tank_init {"values": [(~/../tank_init)]}
             append function_tag gm4_liquid_tanks:item_fill {"values": [(~/../item_fill)]}
             append function_tag gm4_liquid_tanks:item_drain {"values": [(~/../item_drain)]}
-            pass
+            append function_tag gm4_liquid_tanks:util_below {"values": [(~/../util_below)]}
+            # append function_tag gm4_liquid_tanks:util_above {"values": [(~/../util_above)]}
 
         # give nicer info about this wrapped function if not used as decorator
         if fcn:
@@ -192,7 +192,6 @@ class Liquid:
                 
                 append function ~/../tank_init:
                     execute if items block ~ ~ ~ container.0 input run function ~/../liquid_init/{self.struc.id}
-                pass
 
             # give nicer info about this wrapped function if not used as decorator
             if isinstance(fcn, partial):
@@ -209,6 +208,31 @@ class Liquid:
 
         return_dec = partial(dec_with_args, fcn_to_replace=default_dec)
         return return_dec
+    
+    def util_below(self, fcn=emptyfunc):
+        # util below must always be used as a decorator - there is no "standard" interface
+            # util is designed to work alongside existing functions (and not entirely in bolt)
+        @wraps(fcn)
+        def wrapped_fcn():
+            # function header if needed
+            if "tag @s add gm4_processing_tank" not in ctx.data.function[~/../util_below].lines:
+                prepend function ~/../util_below:
+                    tag @s add gm4_processing_tank
+            if "tag @s remove gm4_processing_tank" in ctx.data.function[~/../util_below].lines:
+                ctx.data.function[~/../util_below].lines.remove("tag @s remove gm4_processing_tank")
+                # TODO FIXME removal of this tag at the end?
+                # TODO cache this check?
+                # NOTE could move the entire existance of this tag to the base module
+
+            # add commands
+            append function ~/../util_below:
+                execute if score @s[tag=f'gm4_lt_{self.struc.id}'] gm4_lt_value matches 1.. expand:
+                    fcn()
+                tag @s remove gm4_processing_tank
+
+        self.generators.append(wrapped_fcn)
+        return wrapped_fcn
+        
     
     @staticmethod
     def _multiple_mcfunction(fcn):
