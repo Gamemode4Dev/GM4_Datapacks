@@ -37,7 +37,7 @@ scoreboard objectives add gm4_aa_generation dummy
 scoreboard objectives add gm4_aa_swimming minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add gm4_aa_used_bow minecraft.used:minecraft.bow
 scoreboard objectives add gm4_aa_used_crossbow minecraft.used:minecraft.crossbow
-scoreboard objectives add gm4_aa_combat_regen_timer dummy
+scoreboard objectives add gm4_ce_combat_regen_timer dummy
 scoreboard objectives add gm4_aa_death_mult dummy
 scoreboard objectives add gm4_aa_second_wind dummy
 scoreboard objectives add gm4_aa_link_id dummy

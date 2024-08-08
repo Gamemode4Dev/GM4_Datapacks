@@ -23,7 +23,7 @@ meta:
       schedule_loops: 
         - slow_clock
     website:
-      description: Use special armor modifiers to defend against mobs that grow ever stronger.
+      description: Use special armor augments to defend against mobs that grow ever stronger.
       recommended:
         - gm4_monsters_unbound
         - gm4_metallurgy

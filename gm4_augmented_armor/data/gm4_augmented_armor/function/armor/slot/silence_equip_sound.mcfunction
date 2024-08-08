@@ -2,7 +2,7 @@
 # @s = player that is having their armor nbt change
 # at unspecified
 # run from any armor/slot/<SLOT>
-# run from armor/modifier/type/link/process/set_max_health
+# run from armor/augment/type/link/process/set_max_health
 
 stopsound @s player item.armor.equip_chain
 stopsound @s player item.armor.equip_diamond

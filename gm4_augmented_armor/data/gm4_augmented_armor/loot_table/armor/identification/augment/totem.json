@@ -1,0 +1,201 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_augmented_armor:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_augmented_armor:{augment:34,level:'level'}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.killing",
+              "fallback": "When Killing:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.totem",
+                "fallback": "%s Totem",
+                "with": [
+                  {
+                    "translate": "effect.minecraft.regeneration"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 5
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.totem",
+                "fallback": "%s Totem",
+                "with": [
+                  {
+                    "translate": "effect.minecraft.resistance"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 10
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.totem",
+                "fallback": "%s Totem",
+                "with": [
+                  {
+                    "translate": "effect.minecraft.speed"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 15
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.totem",
+                "fallback": "%s Totem",
+                "with": [
+                  {
+                    "translate": "effect.minecraft.strength"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$damage"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 20
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.augmented_armor.name.totem",
+              "fallback": "Totemic %s",
+              "with": [
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",
+                  "storage": "gm4_augmented_armor:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:rarity": "uncommon"
+          }
+        }
+      ]
+    }
+  ]
+}

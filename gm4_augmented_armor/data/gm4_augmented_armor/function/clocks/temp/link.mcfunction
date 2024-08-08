@@ -1,7 +1,7 @@
 # use this tick clock only when needed
 # @s = unspecified
 # at unspecified
-# schedule from amor/modifier/type/link/check
+# schedule from amor/augment/type/link/check
 # schedule from here
 
 scoreboard players set $keep_tick.link gm4_aa_keep_tick 0
@@ -17,7 +17,7 @@ data modify storage gm4_augmented_armor:temp rebuild_links append from storage g
 data remove storage gm4_augmented_armor:temp run_links[0]
 
 # process active links
-execute if data storage gm4_augmented_armor:temp run_links[0] run function gm4_augmented_armor:armor/modifier/type/link/process/loop_links
+execute if data storage gm4_augmented_armor:temp run_links[0] run function gm4_augmented_armor:armor/augment/type/link/process/loop_links
 
 # put any still active links back
 data modify storage gm4_augmented_armor:data active_links set from storage gm4_augmented_armor:temp rebuild_links

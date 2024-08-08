@@ -1,5 +1,5 @@
 # store armor information in storage and process them
-# @s = player wearing armor with modifiers
+# @s = player wearing armor with augments
 # at unspecified
 # run from player/process
 

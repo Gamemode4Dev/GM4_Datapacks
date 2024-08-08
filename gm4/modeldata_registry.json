@@ -1165,6 +1165,7 @@
     },
     "netherite_sword": {
       "gm4_combat_expanded:guidebook_icon/combat_expanded": 1,
+      "gm4_survival_refightalized:guidebook_icon/survival_refightalized": 2,
       "gm4_end_fishing:item/end_city_swords_1": 10,
       "gm4_end_fishing:item/end_city_swords_2": 11,
       "gm4_end_fishing:item/end_city_swords_3": 12,

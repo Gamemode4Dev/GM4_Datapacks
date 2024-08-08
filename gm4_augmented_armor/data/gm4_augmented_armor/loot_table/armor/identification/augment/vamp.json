@@ -1,0 +1,94 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_augmented_armor:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "replace": false,
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "id": "gm4_augmented_armor:permanent",
+                  "amount": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$armor-"
+                    },
+                    "score": "gm4_aa_data"
+                  },
+                  "operation": "add_value",
+                  "slot": "chest"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_augmented_armor:{augment:32}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.killing",
+              "fallback": "When Killing:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.regen",
+                "fallback": "Regenerate",
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.augmented_armor.name.vamp",
+              "fallback": "Vampiric %s",
+              "with": [
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",
+                  "storage": "gm4_augmented_armor:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -18,7 +18,7 @@ execute as @a[gamemode=!spectator] run function gm4_augmented_armor:player/proce
 tag @a[tag=!gm4_aa_linked] remove gm4_aa_was_linked
 
 # apply horse speed effect
-execute as @a on vehicle if score @s gm4_aa_horse.speed_level matches 1.. run function gm4_augmented_armor:armor/modifier/type/horse/apply_effect
+execute as @a on vehicle if score @s gm4_aa_horse.speed_level matches 1.. run function gm4_augmented_armor:armor/augment/type/horse/apply_effect
 
 # timers
 scoreboard players remove @a[scores={gm4_aa_t_shield=1..}] gm4_aa_t_shield 1

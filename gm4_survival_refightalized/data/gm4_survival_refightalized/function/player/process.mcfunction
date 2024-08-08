@@ -5,8 +5,8 @@
 
 # natural regen & armor
 tag @s remove gm4_sr_sustain_active
-execute if score $natural_regen gm4_sr_data matches 0 unless score @s[tag=!gm4_sr_frozen,scores={gm4_sr_hunger=18..}] gm4_sr_combat_regen_timer matches 1.. run function gm4_survival_refightalized:player/health/regen_combat_health
-execute if score $natural_regen gm4_sr_data matches 0 unless score @s[tag=!gm4_sr_frozen,scores={gm4_sr_hunger=18..,gm4_sr_fast_regen_health=1..}] gm4_sr_fast_regen_timer matches 1.. run function gm4_survival_refightalized:player/health/regen_fast_health
+execute if score $natural_regen gm4_sr_data matches 0 unless score @s[tag=!gm4_sr_frozen,scores={gm4_sr_hunger=7..}] gm4_sr_combat_regen_timer matches 1.. run function gm4_survival_refightalized:player/health/regen_combat_health
+execute if score $natural_regen gm4_sr_data matches 0 unless score @s[tag=!gm4_sr_frozen,scores={gm4_sr_fast_regen_health=1..}] gm4_sr_fast_regen_timer matches 1.. run function gm4_survival_refightalized:player/health/regen_fast_health
 
 # heal players if they have stored health
 execute if score @s gm4_sr_healstore matches 1.. run function gm4_survival_refightalized:player/health/heal/heal_calc

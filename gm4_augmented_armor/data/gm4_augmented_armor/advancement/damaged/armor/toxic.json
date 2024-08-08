@@ -32,6 +32,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_augmented_armor:armor/modifier/type/toxic/activate"
+    "function": "gm4_augmented_armor:armor/augment/type/toxic/activate"
   }
 }

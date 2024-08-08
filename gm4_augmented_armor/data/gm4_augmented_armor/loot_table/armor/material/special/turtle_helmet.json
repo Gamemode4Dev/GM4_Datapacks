@@ -53,7 +53,7 @@
               "conditions": [
             {
               "condition": "minecraft:reference",
-              "name": "gm4_augmented_armor:mob/modifier/growth"
+              "name": "gm4_augmented_armor:mob/augment/growth"
             },
             {
               "condition": "minecraft:value_check",

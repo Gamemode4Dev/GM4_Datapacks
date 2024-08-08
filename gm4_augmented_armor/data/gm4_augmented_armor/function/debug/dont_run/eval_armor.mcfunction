@@ -2,7 +2,7 @@ execute unless data entity @s SelectedItem.components."minecraft:custom_data".gm
 data modify storage gm4_augmented_armor:temp components set from entity @s SelectedItem.components
 
 function gm4_augmented_armor:identification/randomize_stats
-$loot replace block 29999998 1 7134 container.4 loot gm4_augmented_armor:armor/identification/modifier/$(id)
+$loot replace block 29999998 1 7134 container.4 loot gm4_augmented_armor:armor/identification/augment/$(id)
 data modify storage gm4_augmented_armor:temp new_components set from block 29999998 1 7134 Items[{Slot:4b}].components
 
 function gm4_augmented_armor:identification/fix_components

@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_augmented_armor:armor/modifier/type/canine/wolf_interact_check"
+    "function": "gm4_augmented_armor:armor/augment/type/canine/wolf_interact_check"
   }
 }

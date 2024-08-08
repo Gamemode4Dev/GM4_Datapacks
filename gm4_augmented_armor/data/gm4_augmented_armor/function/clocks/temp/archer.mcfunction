@@ -2,12 +2,12 @@
 # @s = unspecified
 # at unspecified
 # schedule from main
-# schedule from armor/modifier/type/archer/activate
+# schedule from armor/augment/type/archer/activate
 # schedule from here
 
 # archer
 execute as @a[tag=gm4_aa_wearing_archer] run scoreboard players operation @s gm4_aa_used_bow += @s gm4_aa_used_crossbow
-execute as @a[tag=gm4_aa_wearing_archer,scores={gm4_aa_used_bow=1..}] at @s run function gm4_augmented_armor:armor/modifier/type/archer/find_arrow
+execute as @a[tag=gm4_aa_wearing_archer,scores={gm4_aa_used_bow=1..}] at @s run function gm4_augmented_armor:armor/augment/type/archer/find_arrow
 scoreboard players reset @a gm4_aa_used_bow
 scoreboard players reset @a gm4_aa_used_crossbow
 

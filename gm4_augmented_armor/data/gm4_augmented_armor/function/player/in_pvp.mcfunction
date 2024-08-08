@@ -1,4 +1,4 @@
-# add a timer for this player to be in pvp so they can be hit with certain modifiers
+# add a timer for this player to be in pvp so they can be hit with certain augments
 # @s = player damaging or being damaged by a player
 # at @s
 advancement revoke @s only gm4_augmented_armor:damaged/in_pvp

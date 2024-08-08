@@ -7,7 +7,7 @@
 scoreboard players set $keep_tick.beacon gm4_aa_keep_tick 0
 
 scoreboard players add $check.beacon gm4_aa_keep_tick 1
-execute as @a[predicate=gm4_augmented_armor:modified_armor/beacon,gamemode=!spectator] at @s run function gm4_augmented_armor:armor/modifier/type/beacon/prep
-execute as @e[type=block_display,tag=gm4_aa_beacon] unless score @s gm4_aa_keep_tick = $check.beacon gm4_aa_keep_tick at @s run function gm4_augmented_armor:armor/modifier/type/beacon/remove
+execute as @a[predicate=gm4_augmented_armor:modified_armor/beacon,gamemode=!spectator] at @s run function gm4_augmented_armor:armor/augment/type/beacon/prep
+execute as @e[type=block_display,tag=gm4_aa_beacon] unless score @s gm4_aa_keep_tick = $check.beacon gm4_aa_keep_tick at @s run function gm4_augmented_armor:armor/augment/type/beacon/remove
 
 execute if score $keep_tick.beacon gm4_aa_keep_tick matches 1 run schedule function gm4_augmented_armor:clocks/temp/beacon 1t
