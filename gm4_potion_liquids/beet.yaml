@@ -5,11 +5,19 @@ version: 1.8.X
 data_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
+  - gm4_liquid_tanks.override_formatting
+  - gm4_liquid_tanks.bolt_liquid_wrappers
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_brewing
 
 meta:
+  bolt:
+    entrypoint: 
+      - gm4_potion_liquids:main
   gm4:
     versioning:
       required:

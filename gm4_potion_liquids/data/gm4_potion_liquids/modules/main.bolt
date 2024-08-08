@@ -1,0 +1,25 @@
+from gm4_liquid_tanks:liquid_wrappers import Liquid
+
+potion_liquid = Liquid(capacity=300)
+bottle = potion_liquid.standard_unit('glass_bottle', 1)
+
+@potion_liquid
+class HealthPotion:
+    id = "healing"
+    name = "Healing"
+
+    potion_liquid.init()
+    bottle('minecraft:potion[potion_contents={potion:"healing"}]')
+    potion_liquid.item_drain('minecraft:potion[potion_contents={potion:"healing"}]', "bottle", 3)
+
+    @potion_liquid.util_below
+    def dispense_potion():
+        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+            unless entity @s[gamemode=spectator]
+            if entity @s[nbt=!{active_effects:[{id:'minecraft:instant_health'}]}]
+            run function gm4_potion_liquids:util/healing:
+                effect give @s night_vision 180 0
+                scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
+                playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
+
+# print(ctx.data.function["gm4_potion_liquids:util_below"].text.splitlines())
