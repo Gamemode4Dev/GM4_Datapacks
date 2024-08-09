@@ -1,0 +1,46 @@
+id: gm4_survival_refightalized
+name: Survival Refightalized
+version: 3.0.X
+
+data_pack:
+  load: .
+
+resource_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_forceload
+  - gm4.plugins.include.lib_lore
+
+meta:
+  gm4:
+    versioning:
+      required:
+        lib_forceload: 1.3.0
+        lib_lore: 1.1.0
+      schedule_loops: 
+        - tick
+        - main
+        - slow_clock
+    website:
+      description: Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
+      recommended:
+        - gm4_monsters_unbound
+        - gm4_augmented_armor
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Survival_Refightalized
+    credits:
+      Creator:
+        - Thanathor
+      Icon Design:
+        - Hozz
+    translation_linter_ignores:
+      - enchantment.level.14
+      - enchantment.level.15
+      - enchantment.level.16
+      - enchantment.level.17
+  modrinth:
+    project_id: zgxd3poi
+  smithed:
+    pack_id: gm4_survival_refightalized

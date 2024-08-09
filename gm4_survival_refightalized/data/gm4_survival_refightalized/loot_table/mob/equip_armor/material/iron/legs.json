@@ -1,0 +1,38 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_augmented_armor:armor/material/iron/legs",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "augmented_armor"
+                    },
+                    "score": "gm4_modules"
+                  },
+                  "range": {
+                    "min": 1
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:iron_leggings"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

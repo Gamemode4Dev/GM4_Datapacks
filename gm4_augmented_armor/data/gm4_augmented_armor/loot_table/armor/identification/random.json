@@ -1,0 +1,82 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:stone",
+              "functions": [
+                {
+                  "function": "minecraft:set_name",
+                  "name": "link"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biomes": "minecraft:deep_dark"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:stone",
+              "functions": [
+                {
+                  "function": "minecraft:set_name",
+                  "name": "vorpal"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "dimension": "minecraft:the_end"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:stone",
+              "functions": [
+                {
+                  "function": "minecraft:set_name",
+                  "name": "wild_magic"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biomes": "minecraft:mushroom_fields"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_augmented_armor:armor/identification/common",
+              "conditions": [
+                {
+                  "condition": "random_chance",
+                  "chance": 0.6
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_augmented_armor:armor/identification/rare"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

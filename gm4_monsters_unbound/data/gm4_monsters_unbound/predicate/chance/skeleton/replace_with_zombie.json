@@ -1,0 +1,10 @@
+[
+  {
+    "condition": "minecraft:random_chance",
+    "chance": 0.85
+  },
+  {
+    "condition": "minecraft:reference",
+    "name": "gm4_monsters_unbound:biome/flowering"
+  }
+]

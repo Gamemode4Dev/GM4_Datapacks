@@ -1,0 +1,48 @@
+# prepare identifying item
+# @s = unidentified item
+# at @s
+# run from check_item
+
+# put data in storage
+data modify storage gm4_augmented_armor:temp components set from entity @s Item.components
+# get material and slot of this armor
+execute store result score $material gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.material
+execute store result score $set_slot gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.slot
+
+# pick a random augment
+loot replace block 29999998 1 7134 container.0 loot gm4_augmented_armor:armor/identification/random
+data modify storage gm4_augmented_armor:temp augment.pick set from block 29999998 1 7134 Items[{Slot:0b}].components
+
+# get component data for this augment
+function gm4_augmented_armor:identification/get_components with storage gm4_augmented_armor:temp augment
+data modify storage gm4_augmented_armor:temp new_components set from block 29999998 1 7134 Items[{Slot:0b}].components
+
+# merge components from item
+data modify storage gm4_augmented_armor:temp new_components."minecraft:damage" merge from storage gm4_augmented_armor:temp components."minecraft:damage"
+data modify storage gm4_augmented_armor:temp new_components."minecraft:attribute_modifiers".modifiers append from storage gm4_augmented_armor:temp components."minecraft:attribute_modifiers".modifiers[]
+data modify storage gm4_augmented_armor:temp new_components."minecraft:enchantments" merge from storage gm4_augmented_armor:temp components."minecraft:enchantments"
+
+# get slot to use for attribute_modifiers
+execute if score $set_slot gm4_aa_data matches 0 run data modify storage gm4_augmented_armor:temp augment.slot set value "head"
+execute if score $set_slot gm4_aa_data matches 1 run data modify storage gm4_augmented_armor:temp augment.slot set value "chest"
+execute if score $set_slot gm4_aa_data matches 2 run data modify storage gm4_augmented_armor:temp augment.slot set value "legs"
+execute if score $set_slot gm4_aa_data matches 3 run data modify storage gm4_augmented_armor:temp augment.slot set value "feet"
+# apply slots to attribute_modifiers
+function gm4_augmented_armor:identification/set_attribute_modifiers with storage gm4_augmented_armor:temp augment
+
+# merge components into item
+data modify storage gm4_augmented_armor:temp components merge from storage gm4_augmented_armor:temp new_components
+
+# mark as identified
+data modify storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.identified set value 1
+
+# remove durability damage taken
+data modify storage gm4_augmented_armor:temp components."minecraft:damage" set value 0
+
+# update item
+data modify entity @s Item.components set from storage gm4_augmented_armor:temp components
+
+# cleanup
+data remove block 29999998 1 7134 Items
+data remove storage gm4_augmented_armor:temp augment
+data remove storage gm4_augmented_armor:temp new_components

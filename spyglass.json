@@ -1,6 +1,5 @@
 {
   "env": {
-    "gameVersion": "1.21",
     "exclude": [
       "@gitignore",
       ".vscode/",
