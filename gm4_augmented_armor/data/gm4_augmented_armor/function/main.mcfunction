@@ -13,4 +13,4 @@ execute unless score $keep_tick.beacon gm4_aa_keep_tick matches 1 if entity @a[p
 
 # | Players
 # sustain armor double speed regen
-execute if score $natural_regen gm4_aa_data matches 0 as @a[gamemode=!spectator,tag=gm4_aa_sustain_active] unless score @s[scores={gm4_aa_hunger=18..}] gm4_ce_combat_regen_timer matches 1.. run function gm4_augmented_armor:armor/augment/type/sustain/extra_regen
+execute if score $natural_regen gm4_aa_data matches 0 as @a[gamemode=!spectator,tag=gm4_aa_sustain_active] unless score @s[scores={gm4_aa_hunger=18..}] gm4_aa_in_combat_timer matches 1.. run function gm4_augmented_armor:armor/augment/type/sustain/extra_regen

@@ -10,5 +10,5 @@ execute if score @s[tag=!gm4_aa_second_wind.active] gm4_aa_hurt matches 1.. run 
 execute if score @s[tag=gm4_aa_second_wind.active] gm4_aa_hurt matches 1.. at @s run function gm4_augmented_armor:armor/augment/type/second_wind/store
 
 # restore health when player is safe
-execute unless score @s[tag=gm4_aa_second_wind.active] gm4_ce_combat_regen_timer matches 1.. at @s run function gm4_augmented_armor:armor/augment/type/second_wind/restore
+execute unless score @s[tag=gm4_aa_second_wind.active] gm4_aa_in_combat_timer matches 1.. at @s run function gm4_augmented_armor:armor/augment/type/second_wind/restore
   

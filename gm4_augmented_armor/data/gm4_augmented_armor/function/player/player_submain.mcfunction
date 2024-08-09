@@ -21,6 +21,7 @@ tag @a[tag=!gm4_aa_linked] remove gm4_aa_was_linked
 execute as @a on vehicle if score @s gm4_aa_horse.speed_level matches 1.. run function gm4_augmented_armor:armor/augment/type/horse/apply_effect
 
 # timers
+scoreboard players remove @a[scores={gm4_aa_in_combat_timer=1..}] gm4_aa_in_combat_timer 1
 scoreboard players remove @a[scores={gm4_aa_t_shield=1..}] gm4_aa_t_shield 1
 scoreboard players remove @a[scores={gm4_aa_t_wolf=1..}] gm4_aa_t_wolf 1
 scoreboard players remove @a[scores={gm4_aa_t_soothe=1..}] gm4_aa_t_soothe 1

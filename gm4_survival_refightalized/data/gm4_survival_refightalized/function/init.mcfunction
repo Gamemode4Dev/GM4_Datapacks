@@ -12,7 +12,6 @@ scoreboard objectives add gm4_sr_health.max dummy
 scoreboard objectives add gm4_sr_health.max_half dummy
 scoreboard objectives add gm4_sr_healstore dummy
 scoreboard objectives add gm4_sr_hunger food
-scoreboard objectives add gm4_sr_shielded_hit minecraft.used:minecraft.shield
 scoreboard objectives add gm4_sr_combat_regen_timer dummy
 scoreboard objectives add gm4_sr_sleep custom:sleep_in_bed
 scoreboard objectives add gm4_sr_damage_cap dummy

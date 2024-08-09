@@ -37,7 +37,6 @@ scoreboard objectives add gm4_aa_generation dummy
 scoreboard objectives add gm4_aa_swimming minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add gm4_aa_used_bow minecraft.used:minecraft.bow
 scoreboard objectives add gm4_aa_used_crossbow minecraft.used:minecraft.crossbow
-scoreboard objectives add gm4_ce_combat_regen_timer dummy
 scoreboard objectives add gm4_aa_death_mult dummy
 scoreboard objectives add gm4_aa_second_wind dummy
 scoreboard objectives add gm4_aa_link_id dummy
@@ -62,6 +61,7 @@ scoreboard objectives add gm4_aa_armor armor
 scoreboard objectives add gm4_aa_horse.speed_level dummy
 scoreboard objectives add gm4_aa_husk_pieces dummy
 scoreboard objectives add gm4_aa_absorp_reduced_timer dummy
+scoreboard objectives add gm4_aa_in_combat_timer dummy
 
 scoreboard objectives add gm4_aa_damage_taken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_aa_damage_absorbed minecraft.custom:minecraft.damage_absorbed
