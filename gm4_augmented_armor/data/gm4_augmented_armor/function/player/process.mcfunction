@@ -13,7 +13,7 @@ scoreboard players reset @s[scores={gm4_aa_sprinting_timeout=3..,gm4_aa_t_sprint
 scoreboard players reset @s gm4_aa_husk_pieces
 
 # remove tags
-tag @s remove gm4_aa_beacon_active
+tag @s remove gm4_aa_radiant_active
 tag @s remove gm4_aa_linked
 execute if entity @s[tag=gm4_aa_immune_active] run function gm4_augmented_armor:player/clear_immunities
 

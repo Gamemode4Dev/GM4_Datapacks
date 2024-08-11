@@ -9,9 +9,9 @@ data modify storage gm4_augmented_armor:temp components set from entity @s Item.
 execute store result score $material gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.material
 execute store result score $set_slot gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.slot
 
-# pick a random augment
+# pick a random augment, unless one was already set
 loot replace block 29999998 1 7134 container.0 loot gm4_augmented_armor:armor/identification/random
-data modify storage gm4_augmented_armor:temp augment.pick set from block 29999998 1 7134 Items[{Slot:0b}].components
+execute unless data storage gm4_augmented_armor:temp augment.pick run data modify storage gm4_augmented_armor:temp augment.pick set from block 29999998 1 7134 Items[{Slot:0b}].components."minecraft:custom_data".gm4_augmented_armor.set_augment
 
 # get component data for this augment
 function gm4_augmented_armor:identification/get_components with storage gm4_augmented_armor:temp augment

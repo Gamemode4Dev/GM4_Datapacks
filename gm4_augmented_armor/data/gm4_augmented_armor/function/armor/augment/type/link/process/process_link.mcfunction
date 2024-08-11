@@ -20,7 +20,7 @@ execute as @a[tag=gm4_aa_link.process,tag=gm4_aa_was_linked] run function gm4_au
 scoreboard players operation $link_health gm4_aa_data < $link_max_health gm4_aa_data
 
 # any new player will keep the link health below theirs so link never heals a player
-execute as @a[tag=gm4_aa_link.process,tag=!gm4_aa_was_linked] run scoreboard players operation $link_health gm4_aa_data < @s gm4_aa_health.current
+execute as @a[tag=gm4_aa_link.process,tag=!gm4_aa_was_linked] run scoreboard players operation $link_health gm4_aa_data < @s gm4_sr_health.current
 tag @a[tag=gm4_aa_link.process,tag=!gm4_aa_was_linked] add gm4_aa_was_linked
 
 # process health set or death

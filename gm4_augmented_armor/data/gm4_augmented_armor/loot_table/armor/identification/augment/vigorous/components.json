@@ -11,6 +11,20 @@
             {
               "function": "minecraft:set_custom_data",
               "tag": "{gm4_augmented_armor:{augment:{name:vigorous,id:51}}}"
+            },
+            {
+              "function": "minecraft:copy_custom_data",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_augmented_armor:temp"
+              },
+              "ops": [
+                {
+                  "source": "augment.levels",
+                  "target": "gm4_augmented_armor.levels",
+                  "op": "replace"
+                }
+              ]
             }
           ]
         }

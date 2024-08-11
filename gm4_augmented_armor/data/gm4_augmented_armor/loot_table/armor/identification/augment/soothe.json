@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{augment:43,active:0,level:'armor',level2:'speed'}}"
+              "tag": "{gm4_augmented_armor:{augment:43,active:0,level:'armor',level_2:'speed'}}"
             }
           ]
         }

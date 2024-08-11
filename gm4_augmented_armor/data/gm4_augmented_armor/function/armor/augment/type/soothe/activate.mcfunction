@@ -34,8 +34,8 @@ data modify storage gm4_augmented_armor:temp components."minecraft:lore" set fro
 # update recharge text
 data modify storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.recharge set value 0
 scoreboard players set $max_charge gm4_aa_data 35
-execute store result score $level2 gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.levels[1]
-execute store result storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.max_charge int 1 run scoreboard players operation $max_charge gm4_aa_data -= $level2 gm4_aa_data
+execute store result score $level_2 gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.levels[1]
+execute store result storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.max_charge int 1 run scoreboard players operation $max_charge gm4_aa_data -= $level_2 gm4_aa_data
 function gm4_augmented_armor:armor/augment/type/soothe/recharge_text with storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor
 
 # set cooldown

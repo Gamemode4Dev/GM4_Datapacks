@@ -58,7 +58,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{augment:44,active:0,level:'damage',level2:'atkspeed',level3:'speed'}}"
+              "tag": "{gm4_augmented_armor:{augment:44,active:0,level:'damage',level_2:'atkspeed',level_3:'speed'}}"
             }
           ]
         }

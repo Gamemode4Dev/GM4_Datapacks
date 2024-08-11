@@ -1,0 +1,113 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_augmented_armor:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_augmented_armor:{augment:{name:radiant,id:0}}}"
+            },
+            {
+              "function": "minecraft:copy_custom_data",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_augmented_armor:temp"
+              },
+              "ops": [
+                {
+                  "source": "augment.levels",
+                  "target": "gm4_augmented_armor.levels",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.augment",
+              "fallback": "%s Augment:",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.radiant",
+                  "fallback": "Radiant"
+                }
+              ],
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.radiant",
+                "fallback": "A floating light follows you",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.radiant_2",
+                "fallback": "Sneak to make the light glow",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.augmented_armor.name",
+              "fallback": "%s %s",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.radiant",
+                  "fallback": "Radiant"
+                },
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",
+                  "storage": "gm4_augmented_armor:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -8,8 +8,8 @@
           "name": "minecraft:stone",
           "functions": [
             {
-              "function": "minecraft:set_name",
-              "name": "acrobatic"
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_augmented_armor:{set_augment:vigorous}}"
             }
           ]
         }

@@ -30,7 +30,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{augment:21,level2:'damage'}}"
+              "tag": "{gm4_augmented_armor:{augment:21,level_2:'damage'}}"
             }
           ]
         }

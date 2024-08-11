@@ -14,4 +14,5 @@ execute as @e[type=#gm4_monsters_unbound:elite_types,tag=gm4_mu_elite.process] a
 execute as @e[type=#gm4_survival_refightalized:skeleton_types,scores={gm4_mu_arrow_fire_delay_left=1..}] run function gm4_monsters_unbound:mob/process/arrow/tick_fire_delay
 
 # Restart boss clock if it stopped
-execute unless score $keep_tick.boss gm4_mu_keep_tick matches 1 if entity @e[type=shulker,tag=gm4_mu_boss.watcher] run schedule function gm4_monsters_unbound:clocks/boss/watchers 1t
+#execute unless score $keep_tick.boss.watcher gm4_mu_keep_tick matches 1 if entity @e[type=shulker,tag=gm4_mu_boss.watcher] run schedule function gm4_monsters_unbound:clocks/boss/watchers 1t
+#execute unless score $keep_tick.boss.weaver gm4_mu_keep_tick matches 1 if entity @e[type=spider,tag=gm4_mu_boss.weaver] run schedule function gm4_monsters_unbound:clocks/boss/weaver 1t

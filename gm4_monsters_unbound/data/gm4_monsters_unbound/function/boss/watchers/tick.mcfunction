@@ -4,7 +4,7 @@
 # run from clocks/boss/watchers
 
 # keep boss clock active
-scoreboard players set $keep_tick.boss gm4_mu_keep_tick 1
+scoreboard players set $keep_tick.boss.watcher gm4_mu_keep_tick 1
 
 # grab id
 scoreboard players operation $running_id gm4_mu_boss.id = @s gm4_mu_boss.id
@@ -25,11 +25,8 @@ scoreboard players reset $twin_health_change gm4_mu_boss
 # update health bar
 function gm4_monsters_unbound:boss/watchers/running/health/bossbar with storage gm4_monsters_unbound:temp boss
 
-# don't process if boss just died
-execute if score @s gm4_mu_boss.health matches ..0 run return 0
-
 # only fully process when the boss needs to act again
 scoreboard players remove @s gm4_mu_boss.tick_delay 1
-execute unless score @s gm4_mu_boss.tick_delay matches 1.. run function gm4_monsters_unbound:boss/watchers/running/process
+execute unless score @s[scores={gm4_mu_boss.health=1..}] gm4_mu_boss.tick_delay matches 1.. run function gm4_monsters_unbound:boss/watchers/running/process
 
 data remove storage gm4_monsters_unbound:temp boss

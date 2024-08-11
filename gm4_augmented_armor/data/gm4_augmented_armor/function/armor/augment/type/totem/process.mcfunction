@@ -4,8 +4,8 @@
 # run from clocks/temp/totem
 
 tp @s ~ ~ ~ ~90 ~
-playsound minecraft:block.beacon.ambient block @a ~ ~ ~ 0.4 2
-playsound minecraft:block.beacon.ambient block @a ~ ~ ~ 0.8 0.6
+playsound minecraft:block.radiant.ambient block @a ~ ~ ~ 0.4 2
+playsound minecraft:block.radiant.ambient block @a ~ ~ ~ 0.8 0.6
 
 execute if entity @s[tag=gm4_aa_totem.regeneration] run effect give @a[distance=..18,gamemode=!spectator] regeneration 7 0 true
 execute if entity @s[tag=gm4_aa_totem.resistance] run effect give @a[distance=..18,gamemode=!spectator] resistance 7 0 true

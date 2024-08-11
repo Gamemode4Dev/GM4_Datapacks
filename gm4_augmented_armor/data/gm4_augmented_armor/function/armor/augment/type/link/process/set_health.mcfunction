@@ -7,7 +7,7 @@
 tag @s remove gm4_aa_link.process
 
 # calculate how health needs to change for this link
-scoreboard players operation $damage_health gm4_aa_data = @s gm4_aa_health.current
+scoreboard players operation $damage_health gm4_aa_data = @s gm4_sr_health.current
 scoreboard players operation $damage_health gm4_aa_data -= $link_health gm4_aa_data
 scoreboard players operation @s gm4_aa_healstore -= $damage_health gm4_aa_data
 

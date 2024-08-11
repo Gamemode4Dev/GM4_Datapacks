@@ -10,7 +10,7 @@
             "feet": {
               "items": "#gm4_survival_refightalized:armor",
               "predicates": {
-                "minecraft:custom_data": "{gm4_augmented_armor:{augment:beacon}}"
+                "minecraft:custom_data": "{gm4_augmented_armor:{augment:{name:radiant}}}"
               }
             }
           }
@@ -24,7 +24,7 @@
             "legs": {
               "items": "#gm4_survival_refightalized:armor",
               "predicates": {
-                "minecraft:custom_data": "{gm4_augmented_armor:{augment:beacon}}"
+                "minecraft:custom_data": "{gm4_augmented_armor:{augment:{name:radiant}}}"
               }
             }
           }
@@ -38,7 +38,7 @@
             "chest": {
               "items": "#gm4_survival_refightalized:armor",
               "predicates": {
-                "minecraft:custom_data": "{gm4_augmented_armor:{augment:beacon}}"
+                "minecraft:custom_data": "{gm4_augmented_armor:{augment:{name:radiant}}}"
               }
             }
           }
@@ -52,7 +52,7 @@
             "head": {
               "items": "#gm4_survival_refightalized:armor",
               "predicates": {
-                "minecraft:custom_data": "{gm4_augmented_armor:{augment:beacon}}"
+                "minecraft:custom_data": "{gm4_augmented_armor:{augment:{name:radiant}}}"
               }
             }
           }
