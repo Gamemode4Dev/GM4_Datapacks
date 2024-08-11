@@ -3,6 +3,20 @@ from gm4_liquid_tanks:liquid_wrappers import Liquid
 potion_liquid = Liquid(capacity=300)
 bottle = potion_liquid.standard_unit('glass_bottle', 1)
 
+# load in vanilla potion definitions
+from csv import DictReader
+with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
+    potion_def_reader = DictReader(csvfile)
+
+from beet import JsonFile
+effect_colors = JsonFile(source_path="gm4_potion_liquids/effect_colors.json").data
+
+# TODO loop through potion definitions, creating and modifying classes as needed
+# then pass them through the liquid decorator (which generates resources) as the final step
+
+class_defs = []
+
+
 @potion_liquid
 class HealthPotion:
     id = "healing"
