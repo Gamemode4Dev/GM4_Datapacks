@@ -267,7 +267,7 @@ def beet_default(ctx: Context):
 
     recipes: list[RecipeData] = []
 
-    for id, recipe in vanilla.data.recipe.items():
+    for id, recipe in vanilla.data.recipes.items():
         name = id.split(':')[1]
         contents = recipe.data
         if contents["type"] == "minecraft:crafting_shaped":
@@ -490,14 +490,14 @@ def generate_custom_item_tag(ctx: Context, data: TagData) -> str:
 
     # write the function that checks the predicates
     fn_name = f"{NAMESPACE}:check_item_tags"
-    if fn_name not in ctx.data.function:
-        ctx.data.function[fn_name] = Function([
+    if fn_name not in ctx.data.functions:
+        ctx.data.functions[fn_name] = Function([
             "# checks each slot for item tags",
             "# @s = crafter armor stand\n# located at the center of the block",
             "# run from gm4_custom_crafters-3.0:process_input/check_item_tags via #gm4_custom_crafters:custom_item_checks",
             "",
         ])
-    ctx.data.function[fn_name].append(f"execute if predicate {NAMESPACE}:custom_item_tags/{name} run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.{NAMESPACE}.{name} set value 1b")
+    ctx.data.functions[fn_name].append(f"execute if predicate {NAMESPACE}:custom_item_tags/{name} run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.{NAMESPACE}.{name} set value 1b")
 
     # create predicate file for the item tag check
     json: Any = {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"mainhand":{"items": f"#{NAMESPACE}:{name}"}}}}
@@ -560,7 +560,7 @@ def generate_trees(ctx: Context, recipes: list[RecipeData]) -> None:
         # if this slot_count has recipes that use tags, then create a function that doesn't check total_length
         if recipes_using_tags:
             path_uses_tags = f"{path}/uses_tags"
-            ctx.data.function[f"{NAMESPACE}:{path}/search"].append(f"execute if score $crafted gm4_crafting matches 0 run function {NAMESPACE}:{path_uses_tags}")
+            ctx.data.functions[f"{NAMESPACE}:{path}/search"].append(f"execute if score $crafted gm4_crafting matches 0 run function {NAMESPACE}:{path_uses_tags}")
             generate_recipe_function(ctx, recipes_using_tags, path_uses_tags)
 
     # create a search tree based on the slot_count

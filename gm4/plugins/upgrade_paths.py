@@ -22,7 +22,7 @@ def beet_default(ctx: Context, opts: UpgradePathsConfig):
     score_holder = ctx.project_id.removeprefix('gm4_')
     newest_version_with_upgrades = 0.0
     for ns, direc in map(lambda a: a.split(':'), upgrade_paths_dirs):
-        upgrade_paths_tree = ctx.data[ns].function.generate_tree(direc)
+        upgrade_paths_tree = ctx.data[ns].functions.generate_tree(direc)
         if upgrade_paths_tree:
             newest_version_with_upgrades = max(newest_version_with_upgrades, max(map(float, upgrade_paths_tree.keys())))
         for path in upgrade_paths_tree.keys():
@@ -42,6 +42,6 @@ def lib(ctx: Context):
     if ver.patch is None:
         ver.patch = 0 #  when beet-dev is run, pipeline has no patch number record, but dev builds should still allow int conversion
     ver_int = ver.int_rep()
-    ctx.data.function[f'{ctx.project_id}:load'].append(f'execute unless score {score_holder} gm4_earliest_version matches ..{ver_int} run scoreboard players set {score_holder} gm4_earliest_version {ver_int}')
+    ctx.data.functions[f'{ctx.project_id}:load'].append(f'execute unless score {score_holder} gm4_earliest_version matches ..{ver_int} run scoreboard players set {score_holder} gm4_earliest_version {ver_int}')
 
     beet_default(ctx)

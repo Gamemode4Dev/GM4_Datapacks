@@ -18,6 +18,7 @@ from beet import (
     LootTable,
     Model,
     NamespaceContainer,
+    NamespaceFileScope,
     PngFile,
     Texture,
 )
@@ -63,14 +64,14 @@ class Book(BaseModel):
 
 class GuidebookPages(JsonFileBase[Book]):
   """defines a custom beet filetype for guidebook pages"""
-  scope: ClassVar[tuple[str, ...]] = ("guidebook",)
+  scope: ClassVar[NamespaceFileScope] = ("guidebook",)
   extension: ClassVar[str] = ".json"
   data: ClassVar[FileDeserialize[Book]] = FileDeserialize()
   model = Book # tell beet to parse this file using the Book data model
 
 class CustomCrafterRecipe(JsonFile):
   """defines a custom beet filetype for CC recipes"""
-  scope: ClassVar[tuple[str, ...]] = ("gm4_recipes",)
+  scope: ClassVar[NamespaceFileScope] = ("gm4_recipes",)
   extension: ClassVar[str] = ".json"
 
   # NOTE in the future, this can be moved to wherever we auto-generate CC recipes from
@@ -785,7 +786,7 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
   else:
     item = f"minecraft.{item}"
 
-  loot = ctx.data.loot_table[loottable].data
+  loot = ctx.data.loot_tables[loottable].data
 
   if len(loot["pools"]) > 1:
     raise ValueError("Loot table has multiple pools")
@@ -1840,7 +1841,7 @@ def generate_display_advancement(book: Book, project_id: str) -> Advancement:
 """
 Creates the function that is granted when a section is unlocked
 """
-def generate_reward_function(section: Section, book_id: str, book_name: str, desc: str) -> Function:
+def generate_reward_function(section: Section, book_id: str, book_name: str, desc: Optional[str]) -> Function:
   # check if any module needs to be loaded
   if section.enable and len(section.enable) > 0:
     start = "execute"

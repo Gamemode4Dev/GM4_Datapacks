@@ -1,5 +1,5 @@
-from beet import Context, TextFile
-from typing import ClassVar, Tuple
+from beet import Context, TextFile, NamespaceFileScope
+from typing import ClassVar
 from mecha import Mecha
 
 
@@ -10,15 +10,15 @@ def load_tests(ctx: Context):
 class TestFile(TextFile):
     """Class representing an test function."""
 
-    scope: ClassVar[Tuple[str, ...]] = ("test",)
+    scope: ClassVar[NamespaceFileScope] = ("test",)
     extension: ClassVar[str] = ".mcfunction"
 
 
 def strip_tests(ctx: Context):
-    for structure in ctx.data.structure.match("*:test_*", "*:test/*"):
-        del ctx.data.structure[structure]
-    for predicate in ctx.data.predicate.match("*:test_*", "*:test/*"):
-        del ctx.data.predicate[predicate]
+    for structure in ctx.data.structures.match("*:test_*", "*:test/*"):
+        del ctx.data.structures[structure]
+    for predicate in ctx.data.predicates.match("*:test_*", "*:test/*"):
+        del ctx.data.predicates[predicate]
 
 
 def skip_mecha_lint(ctx: Context):
