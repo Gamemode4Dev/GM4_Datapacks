@@ -1,5 +1,5 @@
 {
-  "last_commit": "f470035e69b989012be7c8ca2c63a77b45e0bfa7",
+  "last_commit": "7beccb7f1fa4f61a8e40b4731d370822a1cbdaf7",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1854,8 +1854,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.7.2",
-      "hash": "7724a31d1e7c37a0674e7eb3eae88a6039c14f08",
+      "version": "1.7.3",
+      "hash": "2fae26647f7dfc43f5242e49615df974d4f9f7dd",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -1871,8 +1871,11 @@
       ],
       "description": "Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man.",
       "recommends": [],
-      "minecraft": [],
-      "hidden": true,
+      "minecraft": [
+        "1.21",
+        "1.21.1"
+      ],
+      "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
