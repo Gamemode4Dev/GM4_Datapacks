@@ -1,5 +1,5 @@
 {
-  "last_commit": "0ce44807d210cdfab7b0db309cb5127990b2eede",
+  "last_commit": "f994a3c5739589afd718219a9a08d004bb20144d",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2191,8 +2191,8 @@
     {
       "id": "gm4_relocators",
       "name": "Relocators",
-      "version": "2.4.2",
-      "hash": "677baa0c1fd0feeddab692aafe10de70ac42e6ef",
+      "version": "2.4.3",
+      "hash": "db38059559c09f4a4a0d075c842226eaafafa466",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Relocators",
       "credits": {
