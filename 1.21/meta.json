@@ -1,11 +1,11 @@
 {
-  "last_commit": "a0eb9a11c62323230d032ed8871d80effc3d5c0e",
+  "last_commit": "738cf073c5fbb28b7623348ead908732418c863b",
   "modules": [
     {
       "id": "gm4_animi_shamir",
       "name": "Animi Shamir",
-      "version": "1.4.1",
-      "hash": "ab7be97cebbd74557c26fda65ab302cd3ef76d03",
+      "version": "1.4.2",
+      "hash": "11428ae57dde1f55dbb14ee4baa3b4f247df05be",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Animi_Shamir",
       "credits": {
@@ -1628,8 +1628,8 @@
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.6.1",
-      "hash": "9d0a129420103ff29cda5732ed62aa1703771231",
+      "version": "1.6.2",
+      "hash": "fc36b98087c4042298eddcf973b332010aaf4214",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -1921,8 +1921,8 @@
     {
       "id": "gm4_percurro_shamir",
       "name": "Percurro Shamir",
-      "version": "1.4.0",
-      "hash": "538f2454af963a1a32359d2aa3d26269a9252ddc",
+      "version": "1.4.1",
+      "hash": "197270ce0ad4a798f0111514cd9631026ac376e7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Percurro_Shamir",
       "credits": {
