@@ -1,39 +1,84 @@
 from gm4_liquid_tanks:liquid_wrappers import Liquid
 
 potion_liquid = Liquid(capacity=300)
-bottle = potion_liquid.standard_unit('glass_bottle', 1)
+base_potion = potion_liquid.standard_unit('glass_bottle', 1)
+long_potion = potion_liquid.standard_unit('glass_bottle', 3)
 
-# load in vanilla potion definitions
-from csv import DictReader
-with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
-    potion_def_reader = DictReader(csvfile)
 
 from beet import JsonFile
 effect_colors = JsonFile(source_path="gm4_potion_liquids/effect_colors.json").data
 
-# TODO loop through potion definitions, creating and modifying classes as needed
-# then pass them through the liquid decorator (which generates resources) as the final step
+class_defs = {}
 
-class_defs = []
+from csv import DictReader
+with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
+    potion_def_reader = DictReader(csvfile)
+    for row in potion_def_reader:
+        if row["potion_id"] in ("awkward", "mundane", "thick", "water"):
+            continue # skip this potion type for now # FIXME
+        
+        class_key = (row["effect_id"], row["effect_amplifier"])
+        # setup new liquid type if necessary and add to the dict
+        if class_key not in class_defs:
+            # @potion_liquid # we execute the class decorator later after setting up all the bolt stuff
+            class PotionLiquidClass:
+                id = row["potion_id"].removeprefix("long_")
+                name = "TODO NAME LOOKUP" # TODO
+
+                potion_liquid.init()
+
+            class_defs[class_key] = PotionLiquidClass
+        this_potion_class = class_defs[class_key]
+
+        # add this potion to the liquid type
+        if row["potion_id"].startswith("long"):
+            this_potion_unit = long_potion
+        else:
+            this_potion_unit = base_potion
+        setattr(this_potion_class, row["potion_id"], this_potion_unit(f"minecraft:potion[potion_contents={{potion:\"{row['potion_id']}\"}}]"))
+
+        # add this potion's util_below feature
+        if not row["potion_id"].startswith("long"):
+            def dispense_potion():
+                inline_predicate = {
+                    "condition":"minecraft:entity_properties",
+                    "entity":"this",
+                    "predicate":{
+                        "effects":{
+                            row["effect_id"]:{}
+                        }
+                    }
+                }
+                execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+                    unless entity @s[gamemode=spectator]
+                    if predicate inline_predicate
+                    run function gm4_potion_liquids:util/healing:
+                    effect give @s night_vision 180 0
+                    scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
+                    playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
+
+# apply the liquid tanks decorator wrapper
+for liquid_class in class_defs.values():
+    potion_liquid(liquid_class)
 
 
-@potion_liquid
-class HealthPotion:
-    id = "healing"
-    name = "Healing"
+# @potion_liquid
+# class HealthPotion:
+#     id = "healing"
+#     name = "Healing"
 
-    potion_liquid.init()
-    bottle('minecraft:potion[potion_contents={potion:"healing"}]')
-    potion_liquid.item_drain('minecraft:potion[potion_contents={potion:"healing"}]', "bottle", 3)
+#     potion_liquid.init()
+#     bottle('minecraft:potion[potion_contents={potion:"healing"}]')
+#     potion_liquid.item_drain('minecraft:potion[potion_contents={potion:"healing"}]', "bottle", 3)
 
-    @potion_liquid.util_below
-    def dispense_potion():
-        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
-            unless entity @s[gamemode=spectator]
-            if entity @s[nbt=!{active_effects:[{id:'minecraft:instant_health'}]}]
-            run function gm4_potion_liquids:util/healing:
-                effect give @s night_vision 180 0
-                scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
-                playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
+#     @potion_liquid.util_below
+#     def dispense_potion():
+#         execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+#             unless entity @s[gamemode=spectator]
+#             if entity @s[nbt=!{active_effects:[{id:'minecraft:instant_health'}]}]
+#             run function gm4_potion_liquids:util/healing:
+#                 effect give @s night_vision 180 0
+#                 scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
+#                 playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
 
 # print(ctx.data.function["gm4_potion_liquids:util_below"].text.splitlines())
