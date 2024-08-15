@@ -1,9 +1,8 @@
 from gm4_liquid_tanks:liquid_wrappers import Liquid
 
 potion_liquid = Liquid(capacity=300)
-base_potion = potion_liquid.standard_unit('glass_bottle', 1)
-long_potion = potion_liquid.standard_unit('glass_bottle', 3)
-
+base_potion = potion_liquid.standard_unit('glass_bottle', 1, f_name="base_potion")
+long_potion = potion_liquid.standard_unit('glass_bottle', 3, f_name="long_potion")
 
 from beet import JsonFile
 effect_colors = JsonFile(source_path="gm4_potion_liquids/effect_colors.json").data
