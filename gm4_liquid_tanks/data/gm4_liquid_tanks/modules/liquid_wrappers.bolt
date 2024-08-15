@@ -215,11 +215,11 @@ class Liquid:
         @wraps(fcn)
         def wrapped_fcn():
             # function header if needed
-            if "tag @s add gm4_processing_tank" not in ctx.data.function[~/../util_below].lines:
+            if "tag @s add gm4_processing_tank" not in ctx.data.functions[~/../util_below].lines:
                 prepend function ~/../util_below:
                     tag @s add gm4_processing_tank
-            if "tag @s remove gm4_processing_tank" in ctx.data.function[~/../util_below].lines:
-                ctx.data.function[~/../util_below].lines.remove("tag @s remove gm4_processing_tank")
+            if "tag @s remove gm4_processing_tank" in ctx.data.functions[~/../util_below].lines:
+                ctx.data.functions[~/../util_below].lines.remove("tag @s remove gm4_processing_tank")
                 # TODO FIXME removal of this tag at the end?
                 # TODO cache this check?
                 # NOTE could move the entire existance of this tag to the base module
