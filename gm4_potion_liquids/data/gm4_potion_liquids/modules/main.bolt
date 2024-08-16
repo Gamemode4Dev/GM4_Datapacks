@@ -24,17 +24,22 @@ with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
                 id = row["potion_id"].removeprefix("long_")
                 name = "TODO NAME LOOKUP" # TODO
 
-                potion_liquid.init()
+                _generators = []
+            potion_liquid.struc = PotionLiquidClass # programatically going around the decorators is odd,
+                                                    # so we manually set this here so the handler 
+                                                    # knows the right classdef to put mcfunction into
+            potion_liquid.init()
 
             class_defs[class_key] = PotionLiquidClass
         this_potion_class = class_defs[class_key]
+        potion_liquid.struc = this_potion_class
 
         # add this potion to the liquid type
         if row["potion_id"].startswith("long"):
             this_potion_unit = long_potion
         else:
             this_potion_unit = base_potion
-        setattr(this_potion_class, row["potion_id"], this_potion_unit(f"minecraft:potion[potion_contents={{potion:\"{row['potion_id']}\"}}]"))
+        this_potion_unit(f"minecraft:potion[potion_contents={{potion:\"{row['potion_id']}\"}}]")
 
         # add this potion's util_below feature
         if not row["potion_id"].startswith("long"):

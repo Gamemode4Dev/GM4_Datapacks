@@ -20,6 +20,7 @@ class Liquid:
     capacity: int = None
     name: str = None
     _fields = ['id', 'capacity', 'name']
+    _generators = [] # functions that create mcfunction using bolt
 
 
     def __init__(self, *args, **kwargs):
@@ -28,7 +29,6 @@ class Liquid:
         for field in self._fields:
             if input_args.get(field, None):
                 setattr(self, field, input_args.get(field, None))
-        self.generators = [] # functions that create mcfunction using bolt
         self.units = {} # reusable quantities shared amongst liquids
         self.naming_schemes = NamingSchemes() # stores which function names are taken and generates new ones
         self.struc = Liquid
@@ -46,9 +46,9 @@ class Liquid:
                 setattr(DecoratedLiquid, field, getattr(self, field, None))
 
         self.struc = DecoratedLiquid # link access to class variables through `self`
-        for fcn in self.generators:
-            fcn() # create the mcfunction resources
-        self.generators.clear()
+        for fcn in DecoratedLiquid._generators:
+            fcn() # create the mcfunction 
+        DecoratedLiquid._generators.clear()
 
         return DecoratedLiquid
     
@@ -95,7 +95,7 @@ class Liquid:
         else:
              wrapped_fcn.__qualname__ = fcn.__qualname__
 
-        self.generators.append(wrapped_fcn)
+        self.struc._generators.append(wrapped_fcn)
         return wrapped_fcn
     
     @staticmethod
@@ -143,9 +143,9 @@ class Liquid:
             else:
                 wrapped_fcn.__qualname__ = fcn.__qualname__
 
-            if fcn_to_replace in self.generators:
-                self.generators.remove(fcn_to_replace)
-            self.generators.append(wrapped_fcn)
+            if fcn_to_replace in self.struc._generators:
+                self.struc._generators.remove(fcn_to_replace)
+            self.struc._generators.append(wrapped_fcn)
             return wrapped_fcn
         
         # create reverse
@@ -199,9 +199,9 @@ class Liquid:
             else:
                 wrapped_fcn.__qualname__ = fcn.__qualname__
 
-            if fcn_to_replace in self.generators:
-                self.generators.remove(fcn_to_replace)
-            self.generators.append(wrapped_fcn)
+            if fcn_to_replace in self.struc._generators:
+                self.struc._generators.remove(fcn_to_replace)
+            self.struc._generators.append(wrapped_fcn)
             return wrapped_fcn
         
         default_dec = dec_with_args(partial(self._default_set_output, item=output), None)
@@ -230,7 +230,7 @@ class Liquid:
                     fcn()
                 tag @s remove gm4_processing_tank
 
-        self.generators.append(wrapped_fcn)
+        self.struc._generators.append(wrapped_fcn)
         return wrapped_fcn
         
     
