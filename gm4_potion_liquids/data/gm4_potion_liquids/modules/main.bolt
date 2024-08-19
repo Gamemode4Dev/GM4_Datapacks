@@ -13,8 +13,9 @@ from csv import DictReader
 with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
     potion_def_reader = DictReader(csvfile)
     for row in potion_def_reader:
-        if row["potion_id"] in ("awkward", "mundane", "thick", "water"):
+        if row["potion_id"] in ("awkward", "mundane", "thick", "water")+("weaving", "wind_charged", "oozing", "infested"):
             continue # skip this potion type for now # FIXME
+            # FIXME reapply the new effect that dont have skins
         
         class_key = (row["effect_id"], row["effect_amplifier"])
         # setup new liquid type if necessary and add to the dict
@@ -25,6 +26,9 @@ with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
                 name = "TODO NAME LOOKUP" # TODO
 
                 _generators = []
+            if row["potion_id"].startswith("strong"):
+                PotionLiquidClass.skin = row["potion_id"].removeprefix("strong_")
+
             potion_liquid.struc = PotionLiquidClass # programatically going around the decorators is odd,
                                                     # so we manually set this here so the handler 
                                                     # knows the right classdef to put mcfunction into
@@ -53,13 +57,16 @@ with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
                         }
                     }
                 }
+                m, s = row["effect_duration"].split(":")
+                duration = int(m)*60 + int(s)
                 execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
                     unless entity @s[gamemode=spectator]
                     if predicate inline_predicate
-                    run function gm4_potion_liquids:util/healing:
-                    effect give @s night_vision 180 0
-                    scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
-                    playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
+                    run function f"gm4_potion_liquids:util/dispense/{row["effect_id"]}":
+                        effect give @s night_vision duration (int(row["effect_amplifier"])-1)
+                        scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
+                        playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
+            # potion_liquid.util_below(dispense_potion) # FIXME #NEXT this breaks the util_below wrapper somehow?
 
 # apply the liquid tanks decorator wrapper
 for liquid_class in class_defs.values():
