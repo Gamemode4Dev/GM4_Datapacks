@@ -6,7 +6,7 @@
 # summon new mob
 summon minecraft:skeleton ~ ~ ~ {Tags:[gm4_es_new_mob]}
 
-# move mob to exact location of new mob
+# move mob to exact location of old mob
 tp @e[type=skeleton,tag=gm4_es_new_mob,limit=1,distance=..0.01] @s
 tag @s add gm4_es_old_mob
 execute on vehicle run ride @e[type=skeleton,tag=gm4_es_new_mob,limit=1,distance=..0.01] mount @s
