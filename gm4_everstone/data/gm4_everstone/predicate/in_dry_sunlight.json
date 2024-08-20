@@ -2,11 +2,7 @@
   {
     "condition": "minecraft:location_check",
     "predicate": {
-      "biomes": [
-        "minecraft:desert",
-        "minecraft:badlands",
-        "minecraft:eroded_badlands"
-      ]
+      "biomes": "#gm4_everstone:dries_zombies"
     }
   },
   {
