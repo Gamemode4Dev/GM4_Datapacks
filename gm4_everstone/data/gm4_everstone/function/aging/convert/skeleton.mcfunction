@@ -1,4 +1,4 @@
-# converts stray into skeleton
+# converts stray or bogged into skeleton
 # @s = stray that reached the max age
 # located at @s
 # run from aging/update_age/stray
@@ -10,7 +10,7 @@ summon minecraft:skeleton ~ ~ ~ {Tags:[gm4_es_new_mob]}
 tp @e[type=skeleton,tag=gm4_es_new_mob,limit=1,distance=..0.01] @s
 tag @s add gm4_es_old_mob
 execute on vehicle run ride @e[type=skeleton,tag=gm4_es_new_mob,limit=1,distance=..0.01] mount @s
-execute on vehicle run ride @e[type=stray,tag=gm4_es_old_mob,limit=1,distance=..0.01] dismount
+execute on vehicle run ride @e[tag=gm4_es_old_mob,limit=1,distance=..0.01] dismount
 
 # transfer old nbt to new mob
 effect give @s nausea 1 2

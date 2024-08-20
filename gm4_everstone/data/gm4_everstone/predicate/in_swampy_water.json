@@ -1,0 +1,9 @@
+{
+  "condition": "minecraft:location_check",
+  "predicate": {
+    "biomes": "#gm4_everstone:bogs_skeletons",
+    "fluid": {
+      "fluids": "#minecraft:water"
+    }
+  }
+}
