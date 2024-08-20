@@ -6,6 +6,12 @@
 # summon new mob
 summon minecraft:husk ~ ~ ~ {Tags:[gm4_es_new_mob]}
 
+# move mob to exact location of new mob
+tp @e[type=husk,tag=gm4_es_new_mob,limit=1,distance=..0.01] @s
+tag @s add gm4_es_old_mob
+execute on vehicle run ride @e[type=husk,tag=gm4_es_new_mob,limit=1,distance=..0.01] mount @s
+execute on vehicle run ride @e[type=zombie,tag=gm4_es_old_mob,limit=1,distance=..0.01] dismount
+
 # transfer old nbt to new mob
 effect give @s nausea 1 2
 data merge entity @s {Tags:[]}
