@@ -1,16 +1,6 @@
 ## SOUL FORGE ##
 
-# check if player is in the nether
-execute store result score nether_player gm4_oa_forge if entity @a[gamemode=!spectator,tag=gm4_oa_in_nether,limit=1]
-
-# mark soul altars as loaded if a player is nearby
-execute if score nether_player gm4_oa_forge matches 1.. store result score loaded_forge gm4_oa_forge at @e[type=armor_stand,tag=gm4_soul_forge] if entity @a[gamemode=!spectator,distance=..8,limit=1]
-
-# destroy soul forge
-execute as @e[type=armor_stand,tag=gm4_soul_forge] at @s unless block ~ ~ ~ soul_fire run function gm4_orb_of_ankou:soul_forge/destroy
-
-# soul forge visuals
-execute as @e[type=armor_stand,tag=gm4_soul_forge] at @s if predicate gm4_orb_of_ankou:has_multiblock run function gm4_orb_of_ankou:soul_forge/process
+execute in the_nether run function gm4_orb_of_ankou:nether_main
 
 
 ## PNEUMA STUFF ##
