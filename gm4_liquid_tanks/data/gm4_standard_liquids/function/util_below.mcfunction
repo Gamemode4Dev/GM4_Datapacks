@@ -28,4 +28,4 @@ execute if score $schedule_withdraw_exp gm4_lt_util matches 2.. run schedule cle
 execute if entity @s[tag=gm4_lt_experience] positioned ~0.5 ~-1 ~0.5 if entity @a[distance=..0.5,gamemode=!spectator] run scoreboard players set $schedule_withdraw_exp gm4_lt_util 1
 execute if entity @s[tag=gm4_lt_experience] positioned ~0.5 ~-1 ~0.5 if entity @a[distance=..0.5,gamemode=!spectator] run schedule function gm4_standard_liquids:util/experience/scheduled_withdraw 1t
 
-tag @s remove gm4_processing_tank
+# tag @s remove gm4_processing_tank # this line is now added by main.bolt

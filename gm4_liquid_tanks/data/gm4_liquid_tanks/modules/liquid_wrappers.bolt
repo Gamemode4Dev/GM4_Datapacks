@@ -4,6 +4,7 @@ from inspect import isgeneratorfunction
 
 from beet import Context
 from mecha import Mecha, AstItemStack
+from bolt.contrib.defer import Defer
 
 from gm4.utils import add_namespace
 
@@ -34,6 +35,8 @@ class Liquid:
         self.naming_schemes = NamingSchemes() # stores which function names are taken and generates new ones
         self.struc = Liquid
         self.mc = ctx.inject(Mecha)
+        self.defer = ctx.inject(Defer)
+        self.completed_generation = {}
 
     def __call__(self, cls):
         """instance acts as decorator for defining new class-structures"""
@@ -220,30 +223,26 @@ class Liquid:
         @wraps(fcn)
         def wrapped_fcn():
             # function header if needed
-            print("wrapping util below")
             if ~/../util_below not in ctx.data.functions or "tag @s add gm4_processing_tank" not in ctx.data.functions[~/../util_below].lines:
-                print("prepending tag add")
                 prepend function ~/../util_below:
                     tag @s add gm4_processing_tank
-            # print(ctx.data.functions[~/../util_below].content)
-            print(ctx.data.functions[~/../util_below].lines)
-            ctx.data.functions[~/../util_below].lines.remove("tag @s remove gm4_processing_tank")
-            print(ctx.data.functions[~/../util_below].lines)
-            # print(ctx.data.functions[~/../util_below].text)
-            if "tag @s remove gm4_processing_tank" in ctx.data.functions[~/../util_below].lines:
-                ctx.data.functions[~/../util_below].lines.remove("tag @s remove gm4_processing_tank")
-                # TODO FIXME removal of this tag at the end?
-                # TODO cache this check?
-                # NOTE could move the entire existance of this tag to the base module
+                
+            # NOTE the function tail (tag remove processing_tank) cannot be removed easily by bolt, 
+            # so modules using both these wrappers and normal files will need to leave that line omitted
 
             # add commands
             append function ~/../util_below:
                 execute if score @s[tag=f'gm4_lt_{self.struc.id}'] gm4_lt_value matches 1.. expand:
                     fcn()
-                tag @s remove gm4_processing_tank
 
         self.struc._generators.append(wrapped_fcn)
+        self.defer(self._end_util_below)
         return wrapped_fcn
+    
+    @staticmethod
+    def _end_util_below():
+        append function ~/../util_below:
+            tag @s remove gm4_processing_tank
         
     
     @staticmethod

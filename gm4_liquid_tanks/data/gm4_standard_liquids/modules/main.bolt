@@ -125,4 +125,9 @@ class GlowInk:
         loot replace entity 344d47-4-4-4-f04ce104d weapon.mainhand loot gm4_standard_liquids:glow_ink_bottle
     
     liquid.item_fill('item_frame', 'glow_item_frame', 1, reversable=False)
+
+    @liquid.util_below
+    def dispense_ink():
+        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{active_effects:[{id:'minecraft:glowing'}]}] run function gm4_standard_liquids:util/liquid_dispensing/glow_ink
+    
     
