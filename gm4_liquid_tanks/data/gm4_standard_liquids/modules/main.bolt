@@ -107,6 +107,10 @@ class Ink:
     @bottle('minecraft:potion[custom_data~{gm4_standard_liquids:{potion:"blindness"}}]')
     def ink_bottle():
         loot replace entity 344d47-4-4-4-f04ce104d weapon.mainhand loot gm4_standard_liquids:ink_bottle
+
+    @liquid.util_below
+    def dispense_ink():
+        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{active_effects:[{id:'minecraft:blindness'}]}] run function gm4_standard_liquids:util/liquid_dispensing/ink
     
 @liquid
 class GlowInk:

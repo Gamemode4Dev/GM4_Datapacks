@@ -220,9 +220,16 @@ class Liquid:
         @wraps(fcn)
         def wrapped_fcn():
             # function header if needed
-            if "tag @s add gm4_processing_tank" not in ctx.data.functions[~/../util_below].lines:
+            print("wrapping util below")
+            if ~/../util_below not in ctx.data.functions or "tag @s add gm4_processing_tank" not in ctx.data.functions[~/../util_below].lines:
+                print("prepending tag add")
                 prepend function ~/../util_below:
                     tag @s add gm4_processing_tank
+            # print(ctx.data.functions[~/../util_below].content)
+            print(ctx.data.functions[~/../util_below].lines)
+            ctx.data.functions[~/../util_below].lines.remove("tag @s remove gm4_processing_tank")
+            print(ctx.data.functions[~/../util_below].lines)
+            # print(ctx.data.functions[~/../util_below].text)
             if "tag @s remove gm4_processing_tank" in ctx.data.functions[~/../util_below].lines:
                 ctx.data.functions[~/../util_below].lines.remove("tag @s remove gm4_processing_tank")
                 # TODO FIXME removal of this tag at the end?

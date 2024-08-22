@@ -66,7 +66,7 @@ with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
                         effect give @s night_vision duration (int(row["effect_amplifier"])-1)
                         scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
                         playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
-            # potion_liquid.util_below(dispense_potion) # FIXME #NEXT this breaks the util_below wrapper somehow?
+            potion_liquid.util_below(dispense_potion) # FIXME #NEXT this breaks the util_below wrapper somehow?
 
 # apply the liquid tanks decorator wrapper
 for liquid_class in class_defs.values():
