@@ -106,25 +106,16 @@
                     ],
                     "conditions": [
                         {
-                            "condition": "minecraft:value_check",
-                            "value": {
-                                "type": "minecraft:binomial",
-                                "n": 1,
-                                "p": {
-                                    "type": "minecraft:score",
-                                    "target": {
-                                        "type": "minecraft:fixed",
-                                        "name": "$difficulty"
-                                    },
-                                    "score": "gm4_sr_data",
-                                    "scale": 0.05
-                                }
-                            },
-                            "range": 1
-                        },
-                        {
                             "condition": "minecraft:random_chance",
-                            "chance": 0.33
+                            "chance": {
+                                "type": "minecraft:score",
+                                "target": {
+                                    "type": "minecraft:fixed",
+                                    "name": "$armor_chance"
+                                },
+                                "score": "gm4_sr_data",
+                                "scale": 0.05
+                            }
                         }
                     ]
                 }

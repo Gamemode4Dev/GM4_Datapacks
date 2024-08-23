@@ -32,9 +32,6 @@ function #gm4_survival_refightalized:init_mob
 # remove the damage bonus from hard difficulty if needed
 execute if score $worlddiff gm4_sr_data matches 3 run attribute @s generic.attack_damage modifier add gm4_survival_refightalized:stat_change.hard_difficulty_offset -0.333334 add_multiplied_total
 
-# for slimes set the size
-execute if entity @s[tag=gm4_sr_set_slime_size] run function gm4_survival_refightalized:mob/init/set_slime_size
-
 # set modifiers
 execute unless score $replaced_mob gm4_sr_data matches 1 run function gm4_survival_refightalized:mob/init/stat/prep
 scoreboard players reset $replaced_mob gm4_sr_data

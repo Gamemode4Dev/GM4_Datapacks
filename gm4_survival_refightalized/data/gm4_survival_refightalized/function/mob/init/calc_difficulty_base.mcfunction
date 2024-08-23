@@ -14,17 +14,26 @@ execute unless score $worlddiff gm4_sr_data matches 2..3 run scoreboard players 
 
 # not underground + raining +10
 execute if predicate gm4_survival_refightalized:technical/raining run scoreboard players add $difficulty_base gm4_sr_data 10
-# not underground + thundering (will also add the raining modifier) +25
-execute if predicate gm4_survival_refightalized:technical/thundering run scoreboard players add $difficulty_base gm4_sr_data 25
+# not underground + thundering (will also add the raining modifier) +15
+execute if predicate gm4_survival_refightalized:technical/thundering run scoreboard players add $difficulty_base gm4_sr_data 15
 # night & not underground biome 0-20 based on moon phase
 scoreboard players operation $moon_diff_add gm4_sr_data = $moon gm4_sr_data
 scoreboard players operation $moon_diff_add gm4_sr_data *= #5 gm4_sr_data
 execute unless predicate gm4_survival_refightalized:mob/underground if predicate gm4_survival_refightalized:technical/night_time run scoreboard players operation $difficulty_base gm4_sr_data += $moon_diff_add gm4_sr_data
 
-# underground +0-80 based on y level (reaching max at y=-62)
-execute store result score $y_diff_add gm4_sr_data run data get entity @s Pos[1] -1.13
-scoreboard players add $y_diff_add gm4_sr_data 10
-scoreboard players operation $y_diff_add gm4_sr_data < #80 gm4_sr_data
+# grab entity y pos, cap between -50 and 50, then offset if needed
+execute store result score $y gm4_sr_data run data get entity @s Pos[1]
+scoreboard players operation $y gm4_sr_data > #-50 gm4_sr_data
+scoreboard players operation $y gm4_sr_data < #50 gm4_sr_data
+scoreboard players operation $y gm4_sr_data += $y_offset gm4_sr_data
+
+# underground quadratic increase +0-80 based on y level
+scoreboard players set $y_diff_add gm4_sr_data 100
+scoreboard players operation $y_diff_add gm4_sr_data -= $y gm4_sr_data
+scoreboard players operation $y_diff_add gm4_sr_data *= $y_diff_add gm4_sr_data
+scoreboard players remove $y_diff_add gm4_sr_data 2500
+scoreboard players operation $y_diff_add gm4_sr_data *= #4 gm4_sr_data
+scoreboard players operation $y_diff_add gm4_sr_data /= #1000 gm4_sr_data
 execute if predicate gm4_survival_refightalized:mob/underground if score $y_diff_add gm4_sr_data matches 1.. run scoreboard players operation $difficulty_base gm4_sr_data += $y_diff_add gm4_sr_data
 
 # the rest of this function will also run for any additional spawns

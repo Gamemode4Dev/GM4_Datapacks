@@ -3,9 +3,10 @@
 # at @s
 # run from mob/init/mob_type
 
-# starting stats (easy/normal/hard)
-# health: 20
-# damage: 6
+# Stat Block (normal/hard diff)
+# health: 4 - 16
+# damage: 2.5 - 5
+# speed: 100%
 
 # base stat nerf
 attribute @s generic.max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -16 add_value

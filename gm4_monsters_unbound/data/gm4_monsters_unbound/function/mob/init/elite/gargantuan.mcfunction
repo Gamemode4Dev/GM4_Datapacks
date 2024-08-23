@@ -1,6 +1,4 @@
 
-tag @s add gm4_mu_elite
-tag @s add gm4_mu_shield_break_attack
 tag @s add gm4_mu_elite.gargantuan
 tag @s add gm4_mu_elite.process
 
@@ -17,7 +15,7 @@ attribute @s generic.movement_speed modifier add gm4_monsters_unbound:elite_buff
 enchant @s[type=#gm4_survival_refightalized:skeleton_types] punch 2
 enchant @s[type=#gm4_survival_refightalized:skeleton_types] power 1
 
-scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_mu_arrow_fire_delay 4
+scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_arrow_fire_delay 7
 
 item replace entity @s armor.head with cobblestone[minecraft:enchantments={"projectile_protection":4}] 1 
 data modify entity @s ArmorDropChances[3] set value -327.670F

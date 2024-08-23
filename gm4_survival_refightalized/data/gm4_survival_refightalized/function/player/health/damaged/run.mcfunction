@@ -3,6 +3,9 @@
 # at @s
 # run from tick
 
+# disable shield if damage was blocked, don't run the rest of this function
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={blocked_by_shield=true}}] run return run function gm4_survival_refightalized:player/health/damaged/shield_blocked
+
 # calculate damage if player has armor
 execute if score @s gm4_sr_damage_resisted matches 1.. run function gm4_survival_refightalized:player/health/damaged/calculate_reduction
 scoreboard players set @s gm4_sr_armor_reduction_timer 5
@@ -19,9 +22,6 @@ scoreboard players operation @s gm4_sr_fast_regen_health += @s gm4_sr_damage_tak
 scoreboard players reset @s gm4_sr_damage_taken
 scoreboard players reset @s gm4_sr_damage_absorbed
 scoreboard players set @s gm4_sr_fast_regen_timer 2
-
-# if combat damage was taken remove all fast regen health
-scoreboard players set @s[advancements={gm4_survival_refightalized:damaged={combat_damage=true}}] gm4_sr_fast_regen_health 0
 
 # function call
 function #gm4_survival_refightalized:damaged

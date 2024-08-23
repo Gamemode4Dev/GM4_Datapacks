@@ -3,12 +3,13 @@
 # at @s
 # run from mob/init/mob_type
 
-# starting stats (easy/normal/hard)
-# health: 20
-# damage: 2
+# Stat Block (normal/hard diff)
+# health: 6 - 22
+# damage: 2 - 5.5 (cap 7)
+# speed: 75 - 105%
 
 # base stat nerf
-attribute @s generic.max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -8 add_value
+attribute @s generic.max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -14 add_value
 attribute @s generic.movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.25 add_multiplied_base
 
 # max stat buffs
@@ -19,7 +20,12 @@ scoreboard players set $mob_speed gm4_sr_data 30
 scoreboard players set @s gm4_sr_damage_cap 70
 tag @s add gm4_sr_check_damage_cap
 
+# reduce arrow damage
+execute store result score @s gm4_sr_arrow_damage_change run random value -8..-4
+scoreboard players set @s gm4_sr_arrow_fire_delay 3
+
 # set armor
+execute store result score $armor_chance gm4_sr_data run random value 0..15
 loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/equip_armor/generic/feet
 loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/equip_armor/generic/legs
 loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/equip_armor/generic/chest

@@ -1,7 +1,9 @@
 
-# arrow deals half damage and will disable shields
+# don't process this arrow
+tag @s add gm4_sr_arrow_checked
+
+# arrow deals half damage
 data modify entity @s damage set value 1
-tag @s add gm4_mu_shield_break_attack
 
 # get player pos
 execute positioned ^ ^ ^10 summon marker run function gm4_monsters_unbound:mob/process/elite/zephyr/skeleton/get_target_pos

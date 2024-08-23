@@ -1,5 +1,0 @@
-
-tag @s add gm4_mu_boss.watcher.minion_exploding
-attribute @s generic.movement_speed modifier add gm4_monsters_unbound:freeze_minion -100 add_multiplied_total
-attribute @s generic.attack_damage modifier add gm4_monsters_unbound:freeze_minion -100 add_multiplied_total
-playsound minecraft:entity.allay.death hostile @a ~ ~ ~ 1 2

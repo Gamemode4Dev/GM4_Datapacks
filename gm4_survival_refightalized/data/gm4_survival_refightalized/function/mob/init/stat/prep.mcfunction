@@ -3,8 +3,6 @@
 # at @s
 # run from mob/init/mob_type
 
-# remove bonus health if witch spawned in witch hut
-execute if entity @s[type=witch,predicate=gm4_survival_refightalized:technical/in_witch_hut] run scoreboard players set $mob_health gm4_sr_data 0
 # remove bonus health if enderman spawned in end
 execute if entity @s[type=enderman] if dimension the_end run scoreboard players set $mob_health gm4_sr_data 0
 # remove bonus damage if weapon is held

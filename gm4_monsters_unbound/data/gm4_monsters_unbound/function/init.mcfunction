@@ -8,8 +8,6 @@ scoreboard objectives add gm4_mu_timer dummy
 scoreboard objectives add gm4_mu_healstore dummy
 scoreboard objectives add gm4_mu_generation dummy
 scoreboard objectives add gm4_mu_frozen_time dummy
-scoreboard objectives add gm4_mu_arrow_fire_delay dummy
-scoreboard objectives add gm4_mu_arrow_fire_delay_left dummy
 scoreboard objectives add gm4_mu_keep_tick dummy
 
 scoreboard objectives add gm4_mu_boss dummy

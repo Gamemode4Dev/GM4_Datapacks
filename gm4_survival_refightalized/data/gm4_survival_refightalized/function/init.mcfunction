@@ -26,6 +26,9 @@ scoreboard objectives add gm4_sr_armor_reduced dummy
 scoreboard objectives add gm4_sr_armor_reduction_timer dummy
 scoreboard objectives add gm4_sr_fast_regen_health dummy
 scoreboard objectives add gm4_sr_fast_regen_timer dummy
+scoreboard objectives add gm4_sr_arrow_fire_delay dummy
+scoreboard objectives add gm4_sr_arrow_fire_delay_left dummy
+scoreboard objectives add gm4_sr_arrow_damage_change dummy
 
 # disable natural regeneration
 execute unless score $natural_regen gm4_sr_data matches -1 store result score $natural_regen gm4_sr_data run gamerule naturalRegeneration
@@ -36,14 +39,20 @@ execute if score $natural_regen_disabled gm4_sr_data matches 1 if score $natural
 scoreboard players set $natural_regen_disabled gm4_sr_data 1
 
 # constants
+scoreboard players set #-50 gm4_sr_data -50
 scoreboard players set #0 gm4_sr_data 0
 scoreboard players set #1 gm4_sr_data 1
 scoreboard players set #2 gm4_sr_data 2
+scoreboard players set #4 gm4_sr_data 4
 scoreboard players set #5 gm4_sr_data 5
 scoreboard players set #8 gm4_sr_data 8
 scoreboard players set #10 gm4_sr_data 10
-scoreboard players set #80 gm4_sr_data 80
+scoreboard players set #50 gm4_sr_data 50
 scoreboard players set #100 gm4_sr_data 100
+scoreboard players set #1000 gm4_sr_data 1000
+
+# y offset, can be added to y of altered mobs if 0 is not the center of the world
+scoreboard players add $y_offset gm4_sr_data 0
 
 # start clocks
 schedule function gm4_survival_refightalized:tick 1t

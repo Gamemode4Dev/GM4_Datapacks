@@ -6,7 +6,7 @@ tag @s add gm4_mu_elite
 execute if entity @s[type=zombie_villager] run return 0
 
 # don't allow elites to be jockeys
-execute on vehicle run kill @s
+ride @s dismount
 
 # don't allow entities from splits to be elites
 execute if entity @s[tag=gm4_mu_split_entity] run return 0

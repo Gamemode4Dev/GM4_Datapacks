@@ -4,6 +4,7 @@ scoreboard players operation @s gm4_mu_boss.id = $mob_id gm4_mu_boss.id
 
 # set CE gear
 scoreboard players set $difficulty gm4_mu_data 85
+scoreboard players set $armor_chance gm4_sr_data 15
 loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/equip_armor/generic/feet
 loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/equip_armor/generic/legs
 loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/equip_armor/generic/chest

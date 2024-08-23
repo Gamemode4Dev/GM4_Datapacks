@@ -13,3 +13,6 @@ scoreboard players operation @s gm4_sr_last_slept_night = $current_night gm4_sr_
 function gm4_survival_refightalized:player/calculate_hp
 scoreboard players operation @s gm4_sr_fast_regen_health = @s gm4_sr_health.max
 scoreboard players operation @s gm4_sr_fast_regen_health -= @s gm4_sr_health.current
+
+# make this player fast regen health faster until it runs out
+tag @s add gm4_sr_fast_regen_quick

@@ -1,5 +1,4 @@
 
-tag @s add gm4_mu_elite
 tag @s add gm4_mu_elite.process
 tag @s add gm4_mu_elite.mending
 
