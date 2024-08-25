@@ -5,7 +5,7 @@
 
 # | Biome Modifiers
 # snowy
-execute if predicate gm4_monsters_unbound:biome/snowy run function gm4_monsters_unbound:mob/init/mob_type/creeper/snowy
+execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_monsters_unbound:biome/snowy] run function gm4_monsters_unbound:mob/init/mob_type/creeper/snowy
 # mountainous
 attribute @s[predicate=gm4_monsters_unbound:biome/mountainous] generic.knockback_resistance modifier add gm4_monsters_unbound:stat_change.mountainous 0.4 add_value
 # burned

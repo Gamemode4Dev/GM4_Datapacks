@@ -1,20 +1,20 @@
 {
     "description": {
-        "translate": "enchantment.minecraft.protection"
+        "translate": "enchantment.minecraft.projectile_protection"
     },
     "exclusive_set": "#minecraft:exclusive_set/armor",
     "supported_items": "#minecraft:enchantable/armor",
-    "weight": 10,
+    "weight": 5,
     "max_level": 4,
     "min_cost": {
-        "base": 1,
-        "per_level_above_first": 11
+        "base": 3,
+        "per_level_above_first": 6
     },
     "max_cost": {
-        "base": 12,
-        "per_level_above_first": 11
+        "base": 9,
+        "per_level_above_first": 6
     },
-    "anvil_cost": 1,
+    "anvil_cost": 2,
     "slots": [
         "armor"
     ],
@@ -25,14 +25,18 @@
                     "type": "minecraft:add",
                     "value": {
                         "type": "minecraft:linear",
-                        "base": 0.25,
-                        "per_level_above_first": 0.25
+                        "base": 1,
+                        "per_level_above_first": 1
                     }
                 },
                 "requirements": {
                     "condition": "minecraft:damage_source_properties",
                     "predicate": {
                         "tags": [
+                            {
+                                "id": "minecraft:is_projectile",
+                                "expected": true
+                            },
                             {
                                 "id": "minecraft:bypasses_invulnerability",
                                 "expected": false

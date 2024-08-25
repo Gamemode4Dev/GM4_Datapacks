@@ -122,6 +122,7 @@
         },
         {
           "function": "minecraft:set_name",
+          "target": "item_name",
           "name": {
             "text": "Zombie Spore",
             "italic": false

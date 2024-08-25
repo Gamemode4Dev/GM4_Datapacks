@@ -47,6 +47,7 @@ scoreboard players set #4 gm4_sr_data 4
 scoreboard players set #5 gm4_sr_data 5
 scoreboard players set #8 gm4_sr_data 8
 scoreboard players set #10 gm4_sr_data 10
+scoreboard players set #25 gm4_sr_data 25
 scoreboard players set #50 gm4_sr_data 50
 scoreboard players set #100 gm4_sr_data 100
 scoreboard players set #1000 gm4_sr_data 1000

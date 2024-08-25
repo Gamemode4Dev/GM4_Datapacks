@@ -11,6 +11,3 @@ execute if entity @s[type=spider] run return run function gm4_monsters_unbound:m
 execute if entity @s[type=creeper] run return run function gm4_monsters_unbound:mob/init/mob_type/creeper/base
 execute if entity @s[type=cave_spider] run return run function gm4_monsters_unbound:mob/init/mob_type/spider/cave_spider
 execute if entity @s[type=enderman] run return run function gm4_monsters_unbound:mob/init/mob_type/enderman/base
-execute if entity @s[type=phantom] run return run function gm4_monsters_unbound:mob/init/mob_type/phantom/base
-execute if entity @s[type=piglin] run return run function gm4_monsters_unbound:mob/init/mob_type/piglin/base
-execute if entity @s[type=zombified_piglin] run return run function gm4_monsters_unbound:mob/init/mob_type/zombified_piglin/base

@@ -11,4 +11,4 @@ summon silverfish ~-0.15 ~ ~-0.15
 tp @s ~ ~-2050 ~
 kill @s
 scoreboard players set $mob_extras gm4_sr_data 1
-scoreboard players set $replaced_mob gm4_sr_data 1
+scoreboard players set $removed_mob gm4_sr_data 1

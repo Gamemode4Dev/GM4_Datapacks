@@ -47,17 +47,6 @@
         ]
       }
     },
-    "enter_deep": {
-      "trigger": "minecraft:location",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_survival_refightalized:mob/modifier/deep"
-          }
-        ]
-      }
-    },
     "enter_flowering": {
       "trigger": "minecraft:location",
       "conditions": {
@@ -286,55 +275,6 @@
                     "\n- ",
                     {
                       "translate": "biome.minecraft.eroded_badlands"
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        ]
-      ]
-    },
-    {
-      "name": "deep_modifier",
-      "enable": [],
-      "requirements": [
-        [
-          "kill_hostile"
-        ],
-        [
-          "enter_deep"
-        ]
-      ],
-      "pages": [
-        [
-          "\n",
-          {
-            "translate": "text.gm4.guidebook.survival_refightalized.deep_modifier",
-            "fallback": "Mobs spawned in %s are tougher to kill.\n\nDrowned are faster as well.",
-            "with": [
-              {
-                "translate": "text.gm4.guidebook.survival_refightalized.deep",
-                "fallback": "deep oceans",
-                "color": "blue",
-                "hoverEvent": {
-                  "action": "show_text",
-                  "contents": [
-                    "- ",
-                    {
-                      "translate": "biome.minecraft.deep_lukewarm_ocean"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.deep_ocean"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.deep_cold_ocean"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.deep_frozen_ocean"
                     }
                   ]
                 }

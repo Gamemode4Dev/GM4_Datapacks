@@ -17,3 +17,4 @@ execute store result entity @s ArmorDropChances[3] float 0.1 run scoreboard play
 # remove any possible elite triggers
 data remove entity @s attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}]
 data modify entity @s IsBaby set value 0b
+tag @s remove gm4_sr_was_leader_or_baby

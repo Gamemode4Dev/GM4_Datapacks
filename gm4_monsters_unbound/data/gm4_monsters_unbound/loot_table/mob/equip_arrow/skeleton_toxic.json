@@ -108,6 +108,7 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.minecraft.tipped_arrow.effect.poison",
                 "italic": false

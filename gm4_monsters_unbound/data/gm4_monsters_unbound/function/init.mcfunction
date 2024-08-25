@@ -53,6 +53,7 @@ team add gm4_mu_elite.split
 team modify gm4_mu_elite.split prefix {"text":"Split "}
 
 # constants
+scoreboard players set #2 gm4_mu_data 2
 scoreboard players set #4 gm4_mu_data 4
 
 # start clocks

@@ -33,8 +33,8 @@ function #gm4_survival_refightalized:init_mob
 execute if score $worlddiff gm4_sr_data matches 3 run attribute @s generic.attack_damage modifier add gm4_survival_refightalized:stat_change.hard_difficulty_offset -0.333334 add_multiplied_total
 
 # set modifiers
-execute unless score $replaced_mob gm4_sr_data matches 1 run function gm4_survival_refightalized:mob/init/stat/prep
-scoreboard players reset $replaced_mob gm4_sr_data
+execute unless score $removed_mob gm4_sr_data matches 1 run function gm4_survival_refightalized:mob/init/stat/prep
+scoreboard players reset $removed_mob gm4_sr_data
 
 # heal to max health
 effect give @s[type=#gm4_survival_refightalized:undead] instant_damage 1 20 true
@@ -44,5 +44,5 @@ effect give @s[type=!#gm4_survival_refightalized:undead] instant_health 1 20 tru
 tag @s add gm4_sr_processed
 
 # process any spawned mobs
-execute if score $mob_extras gm4_sr_data matches 1.. unless entity @s[tag=gm4_sr_extra_mob] as @e[tag=gm4_sr_extra_mob] at @s run function gm4_survival_refightalized:mob/init/initiate
+execute if score $mob_extras gm4_sr_data matches 1.. unless entity @s[tag=gm4_sr_extra_mob] as @e[type=#gm4_survival_refightalized:modify,tag=gm4_sr_extra_mob] at @s run function gm4_survival_refightalized:mob/init/initiate
 tag @s remove gm4_sr_extra_mob

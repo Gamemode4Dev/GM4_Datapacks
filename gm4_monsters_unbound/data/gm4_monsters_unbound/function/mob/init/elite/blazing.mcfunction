@@ -7,7 +7,8 @@ attribute @s generic.attack_damage modifier add gm4_monsters_unbound:elite_buff.
 attribute @s generic.movement_speed modifier add gm4_monsters_unbound:elite_buff.fire -0.45 add_multiplied_total
 attribute @s generic.burning_time modifier add gm4_monsters_unbound:elite_buff.fire -1 add_multiplied_total
 
-item replace entity @s weapon.mainhand with blaze_rod[enchantments={fire_aspect:2}]
+enchant @s[type=#gm4_survival_refightalized:skeleton_types] flame 2
+item replace entity @s[type=!#gm4_survival_refightalized:skeleton_types] weapon.mainhand with blaze_rod[enchantments={fire_aspect:2}]
 data modify entity @s HandDropChances[0] set value -327.670F
 
 item replace entity @s armor.head with magma_block

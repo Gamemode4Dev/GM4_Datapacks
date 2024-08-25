@@ -15,7 +15,6 @@ execute if score @s gm4_sr_healstore matches 1.. run function gm4_survival_refig
 execute if score @s gm4_sr_sleep matches 1.. at @s run function gm4_survival_refightalized:player/detect_sleep
 
 # if player has armor use new damage calculation
-scoreboard players reset @s gm4_sr_damage_resisted
 effect give @s[scores={gm4_sr_armor=1..}] resistance 2 255 true
 scoreboard players remove @s[scores={gm4_sr_armor_reduction_timer=1..}] gm4_sr_armor_reduction_timer 1
 execute if score @s[tag=gm4_sr_armor_reduced] gm4_sr_armor_reduction_timer matches 0 run function gm4_survival_refightalized:player/health/regain_armor

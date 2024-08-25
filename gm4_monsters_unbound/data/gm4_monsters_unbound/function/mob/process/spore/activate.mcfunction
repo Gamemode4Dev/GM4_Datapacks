@@ -13,10 +13,10 @@ execute store result score $spore_count gm4_mu_data run data get entity @s Item.
 execute store result score $generation gm4_mu_data run data get entity @s Item.components."minecraft:custom_data".gm4_mu_spore.generation
 
 # spawn up to 4 spore zombies
-execute align xz run summon zombie ~.5 ~ ~.5 {Tags:["gm4_mu_extra_mob","gm4_mu_spore_mob"]}
-execute if score $spore_count gm4_mu_data matches 2.. align xz run summon zombie ~.51 ~ ~.47 {Tags:["gm4_mu_extra_mob","gm4_mu_spore_mob"]}
-execute if score $spore_count gm4_mu_data matches 3.. align xz run summon zombie ~.54 ~ ~.52 {Tags:["gm4_mu_extra_mob","gm4_mu_spore_mob"]}
-execute if score $spore_count gm4_mu_data matches 4.. align xz run summon zombie ~0.47 ~ ~.54 {Tags:["gm4_mu_extra_mob","gm4_mu_spore_mob"]}
+execute align xz run summon zombie ~.5 ~ ~.5 {Tags:["gm4_sr_extra_mob","gm4_mu_spore_mob"]}
+execute if score $spore_count gm4_mu_data matches 2.. align xz run summon zombie ~.51 ~ ~.47 {Tags:["gm4_sr_extra_mob","gm4_mu_spore_mob"]}
+execute if score $spore_count gm4_mu_data matches 3.. align xz run summon zombie ~.54 ~ ~.52 {Tags:["gm4_sr_extra_mob","gm4_mu_spore_mob"]}
+execute if score $spore_count gm4_mu_data matches 4.. align xz run summon zombie ~0.47 ~ ~.54 {Tags:["gm4_sr_extra_mob","gm4_mu_spore_mob"]}
 execute if entity @s[tag=gm4_mu_spore.cherry] run tag @e[type=zombie,tag=gm4_mu_spore_mob,distance=..1] add gm4_mu_spore_zombie.cherry
 
 # vfx
