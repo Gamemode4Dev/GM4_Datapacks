@@ -2,7 +2,7 @@
 
 See the contents of your bee's nests!<!--$pmc:headerSize-->
 
-<img src="images/beehive_inspector.webp" alt="Double Doors Example" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
+<img src="images/beehive_inspector.webp" alt="Beehive Inspector in action, by collecting a beehive and look at it in a players inventory" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
 ### Features
 - Displays the count of bees and level of honey in both nests and hives
