@@ -2,7 +2,6 @@
 
 Build a multi-block structure to double the output of your ore!<!--$pmc:headerSize-->
 
-
 <img src="images/creating_smeltery.gif" alt="Creating a Smeltery, block by block." height="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
 ### Features:
