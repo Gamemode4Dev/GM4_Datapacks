@@ -6,4 +6,4 @@ Connect your places with paths and get a speed buff for doing so!<!--$pmc:header
 
 ### Features:
 - When walking on a path, the player is given a 20% speed boost.
-- Speed from the path stacks
+- Speed from the path stacks with other sources
