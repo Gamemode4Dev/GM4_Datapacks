@@ -1,4 +1,4 @@
-# SHroomites <!--$headerTitle--><!--$pmc:delete-->
+# Shroomites <!--$headerTitle--><!--$pmc:delete-->
 
 Mycelium has always been a bit weird, which explains why it has always been locked up on an island.<!--$pmc:headerSize-->
 
