@@ -23,7 +23,11 @@ class Liquid:
     skin: str = None # defaults to value of `id` if not otherwise set
     _fields = ['id', 'capacity', 'name']
     _generators = [] # functions that create mcfunction using bolt
-    _singleton_util_below = 0 # classvar for util_below cleanup defers
+    _defer_counters = {
+        '_singleton_util_below_tail': 0,
+        '_singleton_util_below_head': 0
+    } # classvar for util_below cleanup defers
+   
 
 
     def __init__(self, *args, **kwargs):
@@ -224,8 +228,13 @@ class Liquid:
         def wrapped_fcn():
             # function header if needed
             if ~/../util_below not in ctx.data.functions or "tag @s add gm4_processing_tank" not in ctx.data.functions[~/../util_below].lines:
-                prepend function ~/../util_below:
-                    tag @s add gm4_processing_tank
+                Liquid._defer_counters['_singleton_util_below_head'] += 1
+                @self.defer
+                def _end_util_below():
+                    Liquid._defer_counters['_singleton_util_below_head'] -= 1
+                    if Liquid._defer_counters['_singleton_util_below_head'] <= 0: # only emit the commands if this is the last section of util_below
+                        prepend function ~/../util_below:
+                            tag @s add gm4_processing_tank
                 
             # NOTE the function tail (tag remove processing_tank) cannot be removed easily by bolt, 
             # so modules using both these wrappers and normal files will need to leave that line omitted
@@ -234,19 +243,16 @@ class Liquid:
             append function ~/../util_below:
                 execute if score @s[tag=f'gm4_lt_{self.struc.id}'] gm4_lt_value matches 1.. expand:
                     fcn()
-                self.defer(self._end_util_below) # tag @s remove gm4_processing_tank - on last run
+                @self.defer
+                def _end_util_below():
+                    Liquid._defer_counters['_singleton_util_below_tail'] -= 1
+                    if Liquid._defer_counters['_singleton_util_below_tail'] <= 0: # only emit the commands if this is the last section of util_below
+                        append function ~/../util_below:
+                            tag @s remove gm4_processing_tank
 
         self.struc._generators.append(wrapped_fcn)
-        Liquid._singleton_util_below += 1
-        return wrapped_fcn
-    
-    @staticmethod
-    def _end_util_below():
-        Liquid._singleton_util_below -= 1
-        if Liquid._singleton_util_below <= 0: # only emit the commands if this is the last section of util_below
-            append function ~/../util_below:
-                tag @s remove gm4_processing_tank
-        
+        Liquid._defer_counters['_singleton_util_below_tail'] += 1
+        return wrapped_fcn        
     
     @staticmethod
     def _multiple_mcfunction(fcn):
