@@ -23,6 +23,7 @@ class Liquid:
     skin: str = None # defaults to value of `id` if not otherwise set
     _fields = ['id', 'capacity', 'name']
     _generators = [] # functions that create mcfunction using bolt
+    _singleton_util_below = 0 # classvar for util_below cleanup defers
 
 
     def __init__(self, *args, **kwargs):
@@ -36,7 +37,6 @@ class Liquid:
         self.struc = Liquid
         self.mc = ctx.inject(Mecha)
         self.defer = ctx.inject(Defer)
-        self.completed_generation = {}
 
     def __call__(self, cls):
         """instance acts as decorator for defining new class-structures"""
@@ -234,15 +234,18 @@ class Liquid:
             append function ~/../util_below:
                 execute if score @s[tag=f'gm4_lt_{self.struc.id}'] gm4_lt_value matches 1.. expand:
                     fcn()
+                self.defer(self._end_util_below) # tag @s remove gm4_processing_tank - on last run
 
         self.struc._generators.append(wrapped_fcn)
-        self.defer(self._end_util_below)
+        Liquid._singleton_util_below += 1
         return wrapped_fcn
     
     @staticmethod
     def _end_util_below():
-        append function ~/../util_below:
-            tag @s remove gm4_processing_tank
+        Liquid._singleton_util_below -= 1
+        if Liquid._singleton_util_below <= 0: # only emit the commands if this is the last section of util_below
+            append function ~/../util_below:
+                tag @s remove gm4_processing_tank
         
     
     @staticmethod
