@@ -25,7 +25,7 @@ with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
             # @potion_liquid # we execute the class decorator later after setting up all the bolt stuff
             class PotionLiquidClass:
                 id = row["potion_id"].removeprefix("long_")
-                name = "TODO NAME LOOKUP" # TODO
+                name = row["potion_id"].removeprefix("long_").replace("_"," ").title()+" Potion"
 
                 _generators = []
             if row["potion_id"].startswith("strong"):
