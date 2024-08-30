@@ -15,7 +15,7 @@ from csv import DictReader
 with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
     potion_def_reader = DictReader(csvfile)
     for row in potion_def_reader:
-        if row["potion_id"] in ("awkward", "mundane", "thick", "water")+("weaving", "wind_charged", "oozing", "infested")+("turtle_master", "strong_turtle_master"):
+        if row["potion_id"] in ("awkward", "mundane", "thick", "water")+("weaving", "wind_charged", "oozing", "infested"):
             continue # skip this potion type for now # FIXME
             # FIXME reapply the new effect that dont have skins
         
@@ -50,25 +50,30 @@ with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
         # add this potion's util_below feature
         if not row["potion_id"].startswith("long"):
             def dispense_potion(row):
+                effects = row["effect_id"].split("+")
+                amplifiers = map(int, row["effect_amplifier"].split("+"))
                 inline_predicate = {
                     "condition":"minecraft:entity_properties",
                     "entity":"this",
                     "predicate":{
-                        "effects":{
-                            row["effect_id"]:{}
-                        }
+                        "effects":{}
+                        # {   e:{} for e in effects  } # dict comprehension not supported by bolt
                     }
                 }
+                for e in effects:
+                    inline_predicate["predicate"]["effects"][e] = {}
+
                 m, s = row["effect_duration"].split(":")
                 duration = int(m)*60 + round(float(s))
                 execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
                     unless entity @s[gamemode=spectator]
                     if predicate inline_predicate
                     run function f"gm4_potion_liquids:util/dispense/{row["potion_id"]}":
-                        effect give @s row["effect_id"] duration (int(row["effect_amplifier"])-1)
+                        for e, a in zip(effects, amplifiers):
+                            effect give @s e duration (a-1)
                         scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
                         playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
-            potion_liquid.util_below(partial(dispense_potion, row)) # FIXME #NEXT this breaks the util_below wrapper somehow?
+            potion_liquid.util_below(partial(dispense_potion, row))
 
 # apply the liquid tanks decorator wrapper
 for liquid_class in class_defs.values():
