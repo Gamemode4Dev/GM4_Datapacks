@@ -38,6 +38,7 @@ execute if score $natural_regen_disabled gm4_sr_data matches 1 if score $natural
 scoreboard players set $natural_regen_disabled gm4_sr_data 1
 
 # constants
+scoreboard players set #-128 gm4_sr_data -128
 scoreboard players set #-50 gm4_sr_data -50
 scoreboard players set #0 gm4_sr_data 0
 scoreboard players set #1 gm4_sr_data 1
@@ -51,9 +52,7 @@ scoreboard players set #50 gm4_sr_data 50
 scoreboard players set #80 gm4_sr_data 80
 scoreboard players set #100 gm4_sr_data 100
 scoreboard players set #1000 gm4_sr_data 1000
-
-# y offset, can be added to y of altered mobs if 0 is not the center of the world
-scoreboard players add $y_offset gm4_sr_data 0
+scoreboard players set #1024 gm4_sr_data 1024
 
 # start clocks
 schedule function gm4_survival_refightalized:tick 1t
