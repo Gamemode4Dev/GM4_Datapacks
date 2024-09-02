@@ -1,3 +1,8 @@
+# show a particle ring for gargantuan elite ground slam
+# @s = gargantuan elite
+# at @s
+# run from mob/process/elite/gargantuan/process
+# run from here
 
 particle block{block_state:"chest"} ^ ^0.2 ^7 0.15 0.15 0.15 0.5 2
 particle block{block_state:"chest"} ^ ^0.4 ^7 0.15 0.15 0.15 0.5 2

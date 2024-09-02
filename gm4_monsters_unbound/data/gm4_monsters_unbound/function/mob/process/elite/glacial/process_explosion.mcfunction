@@ -1,3 +1,7 @@
+# process the glacial bomb
+# @s = glacial elite death marker
+# at @s
+# run from clocks/elite/glacial_death
 
 # before show warning
 particle dust{color:[0.725,0.910,0.918],scale:3} ~ ~ ~ 0.04 0.04 0.04 0 4 normal

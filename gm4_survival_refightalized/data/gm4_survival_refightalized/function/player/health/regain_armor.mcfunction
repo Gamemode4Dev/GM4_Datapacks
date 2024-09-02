@@ -1,3 +1,8 @@
+# regain 1 armor for this player
+# @s = player with reduced armor
+# at unspecified
+# run from main
+# run from player/process
 
 scoreboard players remove @s[scores={gm4_sr_armor_reduced=1..}] gm4_sr_armor_reduced 1
 

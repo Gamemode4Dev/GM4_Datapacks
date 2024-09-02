@@ -1,3 +1,7 @@
+# activate charged attack
+# @s = zephyr elite
+# at @s
+# run from mob/process/elite/zephyr/process
 
 execute anchored eyes positioned ^ ^-1.15 ^ run particle gust_emitter_small ~ ~ ~ 0 0 0 1 1 normal
 playsound minecraft:entity.breeze.wind_burst hostile @a ~ ~ ~ 1 0

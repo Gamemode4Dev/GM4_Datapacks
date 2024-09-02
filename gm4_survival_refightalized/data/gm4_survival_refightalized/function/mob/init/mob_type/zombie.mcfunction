@@ -1,5 +1,5 @@
-# calculate modifiers for newly spawned zombie / zombie villager
-# @s = zombie (villager)
+# calculate modifiers for newly spawned zombie / zombie villager / husk / drowned
+# @s = zombie / zombie villager / husk / drowned
 # at @s
 # run from mob/init/mob_type
 
@@ -23,10 +23,13 @@ tag @s add gm4_sr_check_damage_cap
 
 # set armor
 execute store result score $armor_chance gm4_sr_data run random value 0..15
-loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/equip_armor/generic/feet
-loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/equip_armor/generic/legs
-loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/equip_armor/generic/chest
-loot replace entity @s armor.head loot gm4_survival_refightalized:mob/equip_armor/generic/head
+loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/generic/feet
+loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/generic/legs
+loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/generic/chest
+loot replace entity @s armor.head loot gm4_survival_refightalized:mob/generic/head
+
+# add fire delay to drowned for tridents
+scoreboard players set @s[type=drowned] gm4_sr_proj_fire_delay 10
 
 # remove leader and baby zombies
 scoreboard players set $removed_bonus gm4_sr_data 0

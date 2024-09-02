@@ -1,0 +1,170 @@
+{
+  "id": "survival_refightalized",
+  "name": "Survival Refightalized",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:netherite_sword"
+  },
+  "criteria": {
+    "equip_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "feet": {
+                      "items": "#gm4_survival_refightalized:armor"
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "legs": {
+                      "items": "#gm4_survival_refightalized:armor"
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "chest": {
+                      "items": "#gm4_survival_refightalized:armor"
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "head": {
+                      "items": "#gm4_survival_refightalized:armor"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_shield": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": "minecraft:shield"
+          }
+        ]
+      }
+    },
+    "kill_hostile": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "minecraft:adventure/kill_a_mob": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_underground": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_survival_refightalized:mob/underground"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.survival_refightalized.description",
+            "fallback": "Health Regeneration",
+            "bold": true
+          },
+          {
+            "translate": "text.gm4.guidebook.survival_refightalized.description",
+            "fallback": "Damage is split in combat and non-combat damage.\nCombat damage regenerates every 60 seconds, while non-combat damage regenerates rapidly when out of combat.\nSleeping converts all combat damage to non-combat damage, once per night."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_hostile"
+        ],
+        [
+          "enter_underground"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.survival_refightalized.description",
+            "fallback": "Mobs are stronger based on their environment, such as being outside during a thunderstorm or full moon, or being deep underground.\n\nCertain mobs have additional effects, such as Skeletons firing slower, and Phantoms drowning underwater."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "equip_armor"
+        ],
+        [
+          "obtain_shield"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.survival_refightalized.description",
+            "fallback": "Armor no longer reduces damage taken, instead serving as a second health bar. Armor regenerates rapidly out of combat.\nArmor Toughness reduces armor damage taken from high damage attacks, up to 25%.\nProtection reduces all damage by 1% per level, or 4% for Fire, Blast or Projectile Protection.\nShields will go on cooldown after blocking damage."
+          }
+        ]
+      ]
+    }
+  ]
+}

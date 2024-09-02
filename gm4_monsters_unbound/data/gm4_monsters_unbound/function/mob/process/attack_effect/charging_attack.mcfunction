@@ -1,4 +1,4 @@
-# damage players hit by fire attacks
+# damage players hit by charging attacks
 # @s = player that was hit
 # at unspecified
 advancement revoke @s only gm4_monsters_unbound:damaged/attack_effect/charging
@@ -7,4 +7,4 @@ execute as @e[type=#gm4_monsters_unbound:elite_types,tag=gm4_mu_charging_attack,
 
 effect give @s slowness 1 3 true
 effect give @s nausea 4 0 false
-function gm4_monsters_unbound:effect/shield_break/apply
+summon breeze_wind_charge ~ ~ ~ {Motion:[0.0d,-1.0d,0.0d]}

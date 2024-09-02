@@ -1,3 +1,8 @@
+# reapply resistance effects that the player had besides the one from this module
+# @s = damaged player
+# at @s
+# run from player/health/damaged/resistance_remove
+# run from here
 
 # reapply
 $execute unless score $duration gm4_sr_data matches 0..19 run effect give @s resistance $(duration_set) $(amplifier) $(show_icon)

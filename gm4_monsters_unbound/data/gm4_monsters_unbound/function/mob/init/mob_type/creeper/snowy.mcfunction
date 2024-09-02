@@ -1,8 +1,7 @@
-# replace creeper with a zombie/stray
+# replace creeper with a snowy trap or zombie/stray
 # @s = creeper
 # at @s
 # run from mob/init/mob_type/creeper/base
-
 
 tp @s ~ ~-2050 ~
 kill @s

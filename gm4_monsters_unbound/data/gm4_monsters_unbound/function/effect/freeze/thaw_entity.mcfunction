@@ -1,3 +1,7 @@
+# thaw entity
+# @s = entity with freeze effect
+# at @s
+# run from effect/freeze/tick
 
 attribute @s generic.movement_speed modifier remove gm4_monsters_unbound:frozen
 attribute @s generic.follow_range modifier remove gm4_monsters_unbound:frozen

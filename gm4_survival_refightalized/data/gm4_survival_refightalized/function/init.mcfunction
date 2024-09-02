@@ -3,13 +3,12 @@ execute unless score survival_refightalized gm4_earliest_version < survival_refi
 scoreboard players set survival_refightalized gm4_modules 1
 
 # scoreboards
-scoreboard objectives add gm4_sr_id dummy
 scoreboard objectives add gm4_sr_mob_difficulty dummy
 scoreboard objectives add gm4_sr_data dummy
 scoreboard objectives add gm4_sr_timer dummy
 scoreboard objectives add gm4_sr_health.current dummy
 scoreboard objectives add gm4_sr_health.max dummy
-scoreboard objectives add gm4_sr_health.max_half dummy
+scoreboard objectives add gm4_sr_health.percentage dummy
 scoreboard objectives add gm4_sr_healstore dummy
 scoreboard objectives add gm4_sr_hunger food
 scoreboard objectives add gm4_sr_combat_regen_timer dummy
@@ -26,9 +25,9 @@ scoreboard objectives add gm4_sr_armor_reduced dummy
 scoreboard objectives add gm4_sr_armor_reduction_timer dummy
 scoreboard objectives add gm4_sr_fast_regen_health dummy
 scoreboard objectives add gm4_sr_fast_regen_timer dummy
-scoreboard objectives add gm4_sr_arrow_fire_delay dummy
-scoreboard objectives add gm4_sr_arrow_fire_delay_left dummy
-scoreboard objectives add gm4_sr_arrow_damage_change dummy
+scoreboard objectives add gm4_sr_proj_fire_delay dummy
+scoreboard objectives add gm4_sr_proj_fire_delay_left dummy
+scoreboard objectives add gm4_sr_proj_damage_change dummy
 
 # disable natural regeneration
 execute unless score $natural_regen gm4_sr_data matches -1 store result score $natural_regen gm4_sr_data run gamerule naturalRegeneration
@@ -49,6 +48,7 @@ scoreboard players set #8 gm4_sr_data 8
 scoreboard players set #10 gm4_sr_data 10
 scoreboard players set #25 gm4_sr_data 25
 scoreboard players set #50 gm4_sr_data 50
+scoreboard players set #80 gm4_sr_data 80
 scoreboard players set #100 gm4_sr_data 100
 scoreboard players set #1000 gm4_sr_data 1000
 

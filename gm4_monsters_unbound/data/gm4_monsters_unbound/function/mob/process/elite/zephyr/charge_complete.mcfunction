@@ -1,3 +1,7 @@
+# charge is complete
+# @s = zephyr elite
+# at @s
+# run from mob/process/attack_effect/charging_attack
 
 attribute @s generic.movement_speed modifier remove gm4_monsters_unbound:elite_buff.speed.charged
 attribute @s generic.attack_damage modifier remove gm4_monsters_unbound:elite_buff.speed.charged

@@ -1,3 +1,7 @@
+# apply freeze from Chill slow
+# @s = entity with 7 stacks of Chill
+# at @s
+# run from mob/process/attack_effect/slowing_attack
 
 effect clear @s slowness
 scoreboard players set $freeze_seconds gm4_mu_data 3

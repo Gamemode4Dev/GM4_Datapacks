@@ -1,7 +1,7 @@
 {
     "values": [
         "#gm4_survival_refightalized:skeleton_types",
-        "minecraft:player",
-        "minecraft:wither_skeleton"
+        "minecraft:drowned",
+        "minecraft:player"
     ]
 }

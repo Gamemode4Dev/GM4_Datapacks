@@ -1,3 +1,8 @@
+# show stats of the closest modified mob
+# @s = modified mob
+# at player with gm4_sr_dev tag
+# run from player/player_submain
+
 execute store result score $dev.difficulty gm4_sr_data run scoreboard players get @s gm4_sr_mob_difficulty
 execute store result score $dev.health_max gm4_sr_data run attribute @s generic.max_health get 1
 execute store result score $dev.health_curr gm4_sr_data run data get entity @s Health

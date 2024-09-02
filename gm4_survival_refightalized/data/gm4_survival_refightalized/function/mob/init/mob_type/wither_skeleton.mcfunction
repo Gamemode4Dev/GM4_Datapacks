@@ -25,16 +25,16 @@ tag @s add gm4_sr_check_damage_cap
 attribute @s generic.knockback_resistance modifier add gm4_survival_refightalized:stat_change.kb_resist 0.666 add_value
 
 # set armor
-loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/equip_armor/wither_skeleton/feet
-loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/equip_armor/wither_skeleton/legs
-loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/equip_armor/wither_skeleton/chest
-loot replace entity @s armor.head loot gm4_survival_refightalized:mob/equip_armor/wither_skeleton/head
+loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/wither_skeleton/feet
+loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/wither_skeleton/legs
+loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/wither_skeleton/chest
+loot replace entity @s armor.head loot gm4_survival_refightalized:mob/wither_skeleton/head
 # set weapon
-loot replace entity @s weapon.mainhand loot gm4_survival_refightalized:mob/equip_weapon/wither_skeleton
+loot replace entity @s weapon.mainhand loot gm4_survival_refightalized:mob/wither_skeleton/weapon
 
 # withering arrow if a bow is held
-execute if data entity @s HandItems[{id:"minecraft:bow"}] run loot replace entity @s weapon.offhand loot gm4_survival_refightalized:mob/equip_arrow/withering
+execute if data entity @s HandItems[{id:"minecraft:bow"}] run loot replace entity @s weapon.offhand loot gm4_survival_refightalized:mob/wither_skeleton/arrow
 
 # shoot arrows slower and weaker
-scoreboard players set @s gm4_sr_arrow_fire_delay 4
-execute store result score @s gm4_sr_arrow_damage_change run random value -12..-8
+scoreboard players set @s gm4_sr_proj_fire_delay 4
+execute store result score @s gm4_sr_proj_damage_change run random value -12..-8

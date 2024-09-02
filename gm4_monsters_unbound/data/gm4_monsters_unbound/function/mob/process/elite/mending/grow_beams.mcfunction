@@ -1,3 +1,7 @@
+# grow this healing beam to shoot to the healed mob
+# @s = block display
+# at @s
+# run from mob/process/elite/mending/trigger
 
 data merge entity @s {interpolation_duration:3,start_interpolation:-1,transformation:{translation:[-0.03125f,-0.03125f,0f]}}
 data modify entity @s transformation.scale[0] set value 0.0625f

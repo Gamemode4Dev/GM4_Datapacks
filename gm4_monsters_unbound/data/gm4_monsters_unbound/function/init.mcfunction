@@ -8,6 +8,7 @@ scoreboard objectives add gm4_mu_timer dummy
 scoreboard objectives add gm4_mu_healstore dummy
 scoreboard objectives add gm4_mu_generation dummy
 scoreboard objectives add gm4_mu_frozen_time dummy
+scoreboard objectives add gm4_mu_feared_time dummy
 scoreboard objectives add gm4_mu_keep_tick dummy
 
 scoreboard objectives add gm4_mu_boss dummy
@@ -51,6 +52,10 @@ team add gm4_mu_elite.splitting
 team modify gm4_mu_elite.splitting prefix {"text":"Splitting "}
 team add gm4_mu_elite.split
 team modify gm4_mu_elite.split prefix {"text":"Split "}
+team add gm4_mu_elite.volatile
+team modify gm4_mu_elite.volatile prefix {"text":"Volatile "}
+team add gm4_mu_elite.pearlescent
+team modify gm4_mu_elite.pearlescent prefix {"text":"Pearlescent "}
 
 # constants
 scoreboard players set #2 gm4_mu_data 2

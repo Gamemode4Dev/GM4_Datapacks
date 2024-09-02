@@ -1,5 +1,5 @@
-# check items on ground for Survival Refightalized items
-# @s = item
+# check shot arrows
+# @s = arrow
 # at unspecified
 # run from tick
 

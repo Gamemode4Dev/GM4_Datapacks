@@ -1,6 +1,6 @@
 id: gm4_survival_refightalized
 name: Survival Refightalized
-version: 3.0.X
+version: 1.0.X
 
 data_pack:
   load: .
@@ -40,7 +40,3 @@ meta:
       - enchantment.level.15
       - enchantment.level.16
       - enchantment.level.17
-  modrinth:
-    project_id: zgxd3poi
-  smithed:
-    pack_id: gm4_survival_refightalized

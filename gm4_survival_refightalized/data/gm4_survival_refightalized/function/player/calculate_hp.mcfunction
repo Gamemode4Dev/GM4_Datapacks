@@ -1,20 +1,15 @@
-# calculate the red health of player calling this function and store in scoreboard gm4_sr_health.current
-# $max_health and $half_health in gm4_sr_data temporaraly store max and half of max health
+# calculate the red health of player calling this function and store in scoreboards
 # @s = player to calculate health from
 # at unspecified
-# run from armor/modifier/type/hp_check
-# run from armor/modifier/type/link/process/damage_taken
-# run from armor/modifier/type/link/general
+# run from player/health/detect_sleep
+# run from player/health/regen_combat_health
+# run from player/health/regen_fast_health
 # run from player/health/heal/heal_calc
-# run from player/regen/check
-# run from weapon/modifier/delay/explode_player
+# run from player/health/reduce/activate
+# called from expansion modules to get player health stats
 
 # get max health
 execute store result score @s gm4_sr_health.max run attribute @s minecraft:generic.max_health get
-
-# calculate half of max health
-scoreboard players operation @s gm4_sr_health.max_half = @s gm4_sr_health.max
-scoreboard players operation @s gm4_sr_health.max_half /= #2 gm4_sr_data
 
 # calculate current health (only red hearts)
 # Health stores as float, but minecraft displays as int rounded up, this
@@ -22,3 +17,9 @@ scoreboard players operation @s gm4_sr_health.max_half /= #2 gm4_sr_data
 execute store result score @s gm4_sr_health.current run data get entity @s Health 10
 scoreboard players add @s gm4_sr_health.current 9
 scoreboard players operation @s gm4_sr_health.current /= #10 gm4_sr_data
+
+# calculate percentage of max health
+# this uses the rounded values displayed to the player
+scoreboard players operation @s gm4_sr_health.percentage = @s gm4_sr_health.current
+scoreboard players operation @s gm4_sr_health.percentage *= #100 gm4_sr_data
+scoreboard players operation @s gm4_sr_health.percentage /= @s gm4_sr_health.max

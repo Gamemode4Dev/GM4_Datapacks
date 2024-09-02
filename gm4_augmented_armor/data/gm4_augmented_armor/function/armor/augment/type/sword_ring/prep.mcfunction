@@ -31,8 +31,8 @@ scoreboard players remove @s[scores={gm4_aa_sword_ring.deg=360..}] gm4_aa_sword_
 execute store result storage gm4_augmented_armor:temp sword_ring.deg int 1 run scoreboard players get @s gm4_aa_sword_ring.deg
 
 # get all swords that match this players id
-scoreboard players operation $player_id gm4_sr_id = @s gm4_sr_id
-execute as @e[type=item_display,tag=gm4_aa_sword_ring.sword,distance=..12] if score @s gm4_sr_id = $player_id gm4_sr_id run tag @s add gm4_aa_sword_ring.check_sword
+scoreboard players operation $player_id gm4_aa_id = @s gm4_aa_id
+execute as @e[type=item_display,tag=gm4_aa_sword_ring.sword,distance=..12] if score @s gm4_aa_id = $player_id gm4_aa_id run tag @s add gm4_aa_sword_ring.check_sword
 
 # find location for the first sword
 function gm4_augmented_armor:armor/augment/type/sword_ring/eval_deg with storage gm4_augmented_armor:temp sword_ring

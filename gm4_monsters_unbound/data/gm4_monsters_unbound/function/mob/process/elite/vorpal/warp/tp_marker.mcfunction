@@ -1,7 +1,8 @@
-# code taken from Orb of Ankou - expeditious
-# @s = vorpal marker
+# get random teleport location
+# @s = marker
 # at @s
-# run from armor/type/vorpal/randomize
+# run from clocks/elite/vorpal/warp/randomize
+# run from here
 
 execute at @s if score $randomX gm4_mu_data matches 8.. run tp @s ~8 ~ ~
 execute if score $randomX gm4_mu_data matches 8.. run scoreboard players remove $randomX gm4_mu_data 8

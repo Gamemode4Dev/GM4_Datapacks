@@ -1,3 +1,7 @@
+# thaw player
+# @s = player with freeze effect
+# at @s
+# run from effect/freeze/tick
 
 attribute @s generic.movement_speed modifier remove gm4_monsters_unbound:frozen
 attribute @s generic.attack_speed modifier remove gm4_monsters_unbound:frozen

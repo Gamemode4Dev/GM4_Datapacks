@@ -1,3 +1,8 @@
+# check LOS to this undead
+# @s = undead near mending elite
+# at @s
+# run from mob/process/elite/mending/process
+# run from here
 
 tag @s remove gm4_mu_target
 

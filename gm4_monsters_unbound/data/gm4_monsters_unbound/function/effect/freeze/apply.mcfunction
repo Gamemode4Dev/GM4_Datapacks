@@ -1,3 +1,8 @@
+# apply freeze to this entity
+# @s = entity to freeze
+# at @s
+# run from effect/freeze/apply_from_slow
+# run from mob/process/elite/glacial/explode
 
 # don't freeze spectators
 execute if entity @s[gamemode=spectator] run return 0
@@ -16,4 +21,4 @@ execute if entity @s[type=!player] run function gm4_monsters_unbound:effect/free
 # apply freeze
 scoreboard players operation @s gm4_mu_frozen_time += $add_freeze_time gm4_mu_data
 tag @s add gm4_mu_frozen
-execute unless score $keep_tick.frozen_entity gm4_mu_keep_tick matches 1 run schedule function gm4_monsters_unbound:clocks/temp/frozen_entity 5t
+execute unless score $keep_tick.frozen_entity gm4_mu_keep_tick matches 1 run schedule function gm4_monsters_unbound:clocks/effect/freeze 5t

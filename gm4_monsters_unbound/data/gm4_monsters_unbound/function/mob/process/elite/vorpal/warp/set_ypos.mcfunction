@@ -1,7 +1,7 @@
-# code taken from Orb of Ankou - expeditious
-# @s = vorpal marker
+# get random teleport location
+# @s = marker
 # at @s
-# run from ---
+# run from clocks/elite/vorpal/warp/tp_marker
 
 execute at @s run tp @s ~ ~-1 ~
 scoreboard players add $set_y gm4_mu_data 1

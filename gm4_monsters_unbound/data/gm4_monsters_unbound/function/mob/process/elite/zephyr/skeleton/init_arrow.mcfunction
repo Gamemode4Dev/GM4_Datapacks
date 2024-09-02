@@ -1,9 +1,13 @@
+# init arrow burst arrow
+# @s = arrow
+# at @s
+# run from mob/process/elite/zephyr/skeleton/arrow_burst
 
 # don't process this arrow
 tag @s add gm4_sr_arrow_checked
 
 # arrow deals half damage
-data modify entity @s damage set value 1
+data modify entity @s damage set value 0.5
 
 # get player pos
 execute positioned ^ ^ ^10 summon marker run function gm4_monsters_unbound:mob/process/elite/zephyr/skeleton/get_target_pos

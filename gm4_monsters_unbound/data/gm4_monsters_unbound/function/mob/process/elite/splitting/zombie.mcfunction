@@ -1,3 +1,7 @@
+# split splitting elite on death
+# @s = item
+# at @s
+# run from mob/process/elite/on_death/run
 
 data modify storage gm4_monsters_unbound:temp set.motion set value [0.23,0.33,0.22]
 execute summon zombie run function gm4_monsters_unbound:mob/process/elite/splitting/init_entity

@@ -1,3 +1,7 @@
+# teleport the elite randomly
+# @s = vorpal elite
+# at @s
+# run from clocks/elite/on_hit/check_mob
 
 # teleport up to 12 blocks away
 tag @s add gm4_mu_target

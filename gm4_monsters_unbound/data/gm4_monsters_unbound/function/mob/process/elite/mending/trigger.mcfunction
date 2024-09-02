@@ -1,3 +1,7 @@
+# heal this undead
+# @s = undead near mending elite
+# at @s
+# run from mob/process/elite/mending/check_los_raycast
 
 effect give @s instant_damage 1 2 false
 effect give @s resistance 1 1 false

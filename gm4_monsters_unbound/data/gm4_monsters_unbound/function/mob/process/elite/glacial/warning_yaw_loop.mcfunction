@@ -1,3 +1,8 @@
+# show warning particles
+# @s = glacial elite death marker
+# at @s
+# run from mob/process/elite/glacial/process_explosion
+# run from here
 
 scoreboard players set $frost_ring_pitch gm4_mu_data 80
 execute if score $frost_ring_yaw gm4_mu_data < @s gm4_mu_data run function gm4_monsters_unbound:mob/process/elite/glacial/warning_pitch_loop_big

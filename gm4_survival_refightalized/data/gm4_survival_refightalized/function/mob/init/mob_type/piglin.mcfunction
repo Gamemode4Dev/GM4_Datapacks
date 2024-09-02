@@ -21,7 +21,7 @@ scoreboard players set @s gm4_sr_damage_cap 70
 tag @s add gm4_sr_check_damage_cap
 
 # set armor
-loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/equip_armor/piglin/feet
-loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/equip_armor/piglin/legs
-loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/equip_armor/piglin/chest
-loot replace entity @s armor.head loot gm4_survival_refightalized:mob/equip_armor/piglin/head
+loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/piglin/feet
+loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/piglin/legs
+loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/piglin/chest
+loot replace entity @s armor.head loot gm4_survival_refightalized:mob/piglin/head

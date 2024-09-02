@@ -1,4 +1,4 @@
-# stop regen when player gets damaged by something other than a fall
+# stop regen when player gets damaged
 # @s = damaged player
 # at @s
 # run from tick

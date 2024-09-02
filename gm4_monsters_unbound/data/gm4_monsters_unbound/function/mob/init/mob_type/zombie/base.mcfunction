@@ -1,10 +1,11 @@
 # calculate modifiers for newly spawned zombie / zombie villager
-# @s = zombie (villager)
+# @s = zombie types
 # at @s
 # run from mob/init/mob_type
 
 # | Biome Modifiers
 # snowy
+execute if predicate gm4_monsters_unbound:biome/snowy run function gm4_monsters_unbound:mob/init/mob_type/zombie/snowy
 tag @s[predicate=gm4_monsters_unbound:biome/snowy] add gm4_mu_slowing_attack
 # mountainous
 execute if predicate gm4_monsters_unbound:biome/mountainous run function gm4_monsters_unbound:mob/init/mob_type/zombie/mountainous
@@ -15,10 +16,14 @@ execute if predicate gm4_monsters_unbound:biome/flowering run tag @s[tag=!gm4_sr
 execute if entity @s[tag=gm4_mu_spore_zombie] run function gm4_monsters_unbound:mob/init/mob_type/zombie/flowering
 # toxic
 tag @s[predicate=gm4_monsters_unbound:biome/toxic] add gm4_mu_weakness_attack
+effect give @s[predicate=gm4_monsters_unbound:biome/toxic] infested infinite 0
 # reef
 execute if entity @s[type=drowned,predicate=gm4_monsters_unbound:biome/reef] run function gm4_monsters_unbound:mob/init/mob_type/zombie/reef_drowned
 # growth
 execute if entity @s[type=!zombie_villager,tag=!gm4_mu_spore_zombie,predicate=gm4_monsters_unbound:biome/growth] run function gm4_monsters_unbound:mob/init/mob_type/zombie/growth
 
+# underground
+execute if predicate gm4_survival_refightalized:mob/underground if predicate {condition:"minecraft:random_chance",chance:0.5} run function gm4_monsters_unbound:mob/init/mob_type/zombie/underground/pick
+
 # elites
-execute if entity @s[tag=gm4_sr_was_leader_or_baby] run function gm4_monsters_unbound:mob/init/elite/pick_type
+execute if entity @s[tag=gm4_sr_was_leader_or_baby] run function gm4_monsters_unbound:mob/init/elite/pick

@@ -1,3 +1,7 @@
+# explode the flare
+# @s = flare block_display
+# at @s
+# run from mob/process/elite/blazing/process_flare
 
 particle flame ~ ~ ~ 0.01 0.01 0.01 0.1 32
 particle flame ~ ~ ~ 0.075 0.075 0.075 0.025 12

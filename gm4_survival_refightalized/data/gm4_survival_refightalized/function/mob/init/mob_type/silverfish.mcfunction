@@ -1,5 +1,5 @@
-# calculate modifiers for newly spawned creeper
-# @s = creeper
+# calculate modifiers for newly spawned silverfish
+# @s = silverfish
 # at @s
 # run from mob/init/mob_type
 

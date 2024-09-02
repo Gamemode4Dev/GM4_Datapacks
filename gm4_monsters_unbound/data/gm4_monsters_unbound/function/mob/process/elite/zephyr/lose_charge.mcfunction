@@ -1,3 +1,7 @@
+# remove charge if target is lost
+# @s = zephyr elite
+# at @s
+# run from mob/process/elite/zephyr/process
 
 attribute @s generic.movement_speed modifier remove gm4_monsters_unbound:elite_buff.speed.charging
 attribute @s generic.movement_speed modifier remove gm4_monsters_unbound:elite_buff.speed.charged

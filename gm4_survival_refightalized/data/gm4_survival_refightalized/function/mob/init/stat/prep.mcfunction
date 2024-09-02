@@ -10,11 +10,11 @@ execute if predicate gm4_survival_refightalized:mob/has_weapon run scoreboard pl
 
 # randomise stats - set values between 0 and current value based on:
 # HEALTH = 0.5*score + BINOMDIST(n=0.5*score,p=0.5)
-execute if score $mob_health gm4_sr_data matches 1.. store result score $mob_health gm4_sr_data run loot spawn 29999998 1 7133 loot gm4_survival_refightalized:mob/randomize_stats/health
+execute if score $mob_health gm4_sr_data matches 1.. store result score $mob_health gm4_sr_data run loot spawn 29999998 1 7133 loot gm4_survival_refightalized:randomize_stats/health
 # DAMAGE = 0.15*score + RANDOM(0 - 0.35*score) + BINOMDIST(n=0.5*score,p=0.5)
-execute if score $mob_damage gm4_sr_data matches 1.. store result score $mob_damage gm4_sr_data run loot spawn 29999998 1 7133 loot gm4_survival_refightalized:mob/randomize_stats/damage
+execute if score $mob_damage gm4_sr_data matches 1.. store result score $mob_damage gm4_sr_data run loot spawn 29999998 1 7133 loot gm4_survival_refightalized:randomize_stats/damage
 # SPEED = RANDOM(0 - 0.5*score) + BINOMDIST(n=0.5*score,p=0.5)
-execute if score $mob_speed gm4_sr_data matches 1.. store result score $mob_speed gm4_sr_data run loot spawn 29999998 1 7133 loot gm4_survival_refightalized:mob/randomize_stats/speed
+execute if score $mob_speed gm4_sr_data matches 1.. store result score $mob_speed gm4_sr_data run loot spawn 29999998 1 7133 loot gm4_survival_refightalized:randomize_stats/speed
 
 # store modifiers modified by difficulty
 execute store result storage gm4_survival_refightalized:temp picked_stat.health float 0.01 run scoreboard players operation $mob_health gm4_sr_data *= $difficulty gm4_sr_data

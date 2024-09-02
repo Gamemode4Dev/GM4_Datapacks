@@ -1,3 +1,7 @@
+# apply freeze to this player
+# @s = player to freeze
+# at @s
+# run from effect/freeze/apply
 
 # apply attributes
 attribute @s generic.movement_speed modifier add gm4_monsters_unbound:frozen -1 add_multiplied_total

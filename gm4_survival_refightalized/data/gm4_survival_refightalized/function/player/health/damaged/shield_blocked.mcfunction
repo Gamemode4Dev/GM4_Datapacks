@@ -1,4 +1,9 @@
+# disable shield if it blocked damage
+# @s = damaged player
+# at @s
+# run from player/health/damaged/run
 
+# dev damage log
 tellraw @s[tag=gm4_sr_dev] {"text":"Damage blocked by shield"}
 
 # disable shield

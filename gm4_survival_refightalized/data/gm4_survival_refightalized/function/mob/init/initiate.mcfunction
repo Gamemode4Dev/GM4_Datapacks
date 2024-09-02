@@ -1,7 +1,8 @@
 # initiate newly spawned mobs (mobs without any tags)
 # @s = mobs that can be buffed
 # at @s
-# run from mob/init/calc_difficulty_base
+# run from mob/init/calc_difficulty_else
+# run from mob/init/calc_difficulty_overworld
 
 scoreboard players operation $difficulty gm4_sr_data = $difficulty_base gm4_sr_data
 

@@ -1,3 +1,7 @@
+# check if this entity is a valid target to be healed
+# @s = undead near mending elite
+# at @s
+# run from mob/process/elite/mending/process
 
 execute store result score $curr_health gm4_mu_data run data get entity @s Health 10
 execute store result score $max_health gm4_mu_data run attribute @s generic.max_health get 10

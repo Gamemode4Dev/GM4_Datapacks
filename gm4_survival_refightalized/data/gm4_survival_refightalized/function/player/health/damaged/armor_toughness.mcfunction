@@ -1,3 +1,7 @@
+# reduce damage with armor toughness
+# @s = damaged player
+# at @s
+# run from player/health/damaged/calculate_reduction
 
 # Formula:
 # Damage reduction percentage = (damage * armor_toughness * 50) / ( damage * armor_toughness + 3500 )
@@ -24,4 +28,5 @@ scoreboard players operation $armor_toughness_effect gm4_sr_data /= #100 gm4_sr_
 # reduce damage taken
 scoreboard players operation $damage_health gm4_sr_data -= $armor_toughness_effect gm4_sr_data
 
+# dev damage log
 tellraw @s[tag=gm4_sr_dev] [{"text":"Armor Toughness: ","color":"gray"},{"text":"-","color":"white"},{"score":{"name":"$armor_toughness_effect","objective":"gm4_sr_data"},"color":"white"},{"text":" = ","color":"gray"},{"score":{"name":"$damage_health","objective":"gm4_sr_data"},"color":"white"}]

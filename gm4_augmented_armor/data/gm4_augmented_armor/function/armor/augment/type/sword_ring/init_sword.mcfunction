@@ -12,7 +12,7 @@ execute store result entity @s transformation.scale[2] float 0.003 run data get 
 
 # set scores
 scoreboard players operation @s gm4_aa_sword_ring = $sword_id gm4_aa_data
-scoreboard players operation @s gm4_sr_id = $player_id gm4_sr_id
+scoreboard players operation @s gm4_aa_id = $player_id gm4_aa_id
 
 # set material
 execute store result score $sword_material gm4_aa_data run data get storage gm4_augmented_armor:temp sword_ring.data[0].components."minecraft:custom_data".gm4_augmented_armor.material

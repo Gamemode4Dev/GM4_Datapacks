@@ -1,4 +1,7 @@
-
+# tick freeze effect for this entity
+# @s = entity with freeze effect
+# at @s
+# run from clocks/effect/freeze
 
 scoreboard players remove @s gm4_mu_frozen_time 1
 execute if score @s[type=player] gm4_mu_frozen_time matches ..0 run return run function gm4_monsters_unbound:effect/freeze/thaw_player

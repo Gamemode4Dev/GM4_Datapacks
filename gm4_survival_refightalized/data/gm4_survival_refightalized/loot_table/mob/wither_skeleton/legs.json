@@ -1,0 +1,55 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_survival_refightalized:armor/iron/legs",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_survival_refightalized:mob/material_check/iron"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_survival_refightalized:armor/chainmail/legs",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_survival_refightalized:mob/material_check/chainmail"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_survival_refightalized:armor/chainmail/legs",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_survival_refightalized:mob/material_check/chainmail"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "minecraft:empty"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.666
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

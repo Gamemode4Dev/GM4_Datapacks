@@ -1,3 +1,8 @@
+# shoot many arrows
+# @s = zephyr elite
+# at @s
+# run from mob/process/elite/zephyr/process
+# run from clocks/elite/zephyr_process
 
 scoreboard players add @s gm4_mu_data 1
 

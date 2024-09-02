@@ -17,4 +17,4 @@ summon block_display ~ ~2.5 ~ {teleport_duration:2,Tags:["gm4_aa_beacon","gm4_aa
 execute if score $color gm4_aa_data matches 2 as @e[type=block_display,tag=gm4_aa_beacon.process,distance=..4] on passengers run data modify entity @s block_state.Name set value "minecraft:pearlescent_froglight"
 execute if score $color gm4_aa_data matches 3 as @e[type=block_display,tag=gm4_aa_beacon.process,distance=..4] on passengers run data modify entity @s block_state.Name set value "minecraft:ochre_froglight"
 
-scoreboard players operation @e[type=block_display,tag=gm4_aa_beacon.process,distance=..4] gm4_sr_id = $player_id gm4_sr_id 
+scoreboard players operation @e[type=block_display,tag=gm4_aa_beacon.process,distance=..4] gm4_aa_id = $player_id gm4_aa_id 

@@ -1,11 +1,9 @@
-# replace skeleton / stray with 3 zombies
-# @s = skeleton / stray
+# replace skeleton with zombie
+# @s = skeleton
 # at @s
-# run from mob/init/mob_type/skeleton/skeleton
+# run from mob/init/mob_type/skeleton/base
 
 summon zombie ~.1 ~ ~ {Tags:["gm4_sr_extra_mob"]}
-execute unless predicate gm4_monsters_unbound:biome/lush_caves run summon zombie ~ ~ ~.1 {Tags:["gm4_sr_extra_mob"]}
-execute unless predicate gm4_monsters_unbound:biome/lush_caves run summon zombie ~-.1 ~ ~-.1 {Tags:["gm4_sr_extra_mob"]}
 scoreboard players set $mob_extras gm4_sr_data 1
 tp @s ~ ~-2050 ~
 kill @s

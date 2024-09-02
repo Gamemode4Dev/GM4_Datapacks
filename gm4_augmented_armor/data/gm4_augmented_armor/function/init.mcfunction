@@ -6,6 +6,7 @@ scoreboard players set augmented_armor gm4_modules 1
 data modify storage gm4_augmented_armor:data active_links set value [{id:-1,name:{"translate":"item.gm4.augmented_armor.name.link","fallback":"Unlinked %s","with":[{"translate":"item.minecraft.iron_chestplate","italic":false}],"italic":false,"color":"light_purple"}}]
 
 # scoreboards
+scoreboard objectives add gm4_aa_id dummy
 scoreboard objectives add gm4_aa_difficult.mob dummy
 scoreboard objectives add gm4_aa_play_time dummy
 scoreboard objectives add gm4_aa_death_mult dummy
@@ -13,9 +14,6 @@ scoreboard objectives add gm4_aa_since_last_death dummy
 scoreboard objectives add gm4_aa_alivetime minecraft.custom:minecraft.time_since_death
 scoreboard objectives add gm4_aa_deaths minecraft.custom:minecraft.deaths
 scoreboard objectives add gm4_aa_data dummy
-scoreboard objectives add gm4_sr_health.current dummy
-scoreboard objectives add gm4_sr_health.max dummy
-scoreboard objectives add gm4_sr_health.max_half dummy
 scoreboard objectives add gm4_aa_hurt minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_aa_kill minecraft.custom:minecraft.mob_kills
 scoreboard objectives add gm4_aa_kill2 minecraft.custom:minecraft.player_kills

@@ -7,7 +7,7 @@
 # snowy
 execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_monsters_unbound:biome/snowy] run function gm4_monsters_unbound:mob/init/mob_type/creeper/snowy
 # mountainous
-attribute @s[predicate=gm4_monsters_unbound:biome/mountainous] generic.knockback_resistance modifier add gm4_monsters_unbound:stat_change.mountainous 0.4 add_value
+execute if predicate {condition:"minecraft:all_of",terms:[{condition:"minecraft:random_chance",chance:0.30},{condition:"minecraft:reference",name:"gm4_monsters_unbound:biome/mountainous"}]} run function gm4_monsters_unbound:mob/init/mob_type/creeper/mountainous
 # burned
 execute if predicate gm4_monsters_unbound:biome/burned store result entity @s Fuse int 0.75 run data get entity @s Fuse
 # flowering 

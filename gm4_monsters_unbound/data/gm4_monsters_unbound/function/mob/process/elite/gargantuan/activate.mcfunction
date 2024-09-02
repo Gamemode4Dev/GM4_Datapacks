@@ -1,3 +1,7 @@
+# activate gargantuan elite ground slam
+# @s = gargantuan elite
+# at @s
+# run from mob/process/elite/check_type
 
 attribute @s generic.follow_range modifier remove gm4_monsters_unbound:elite_buff.giant.charging
 attribute @s generic.movement_speed modifier remove gm4_monsters_unbound:elite_buff.giant.charging

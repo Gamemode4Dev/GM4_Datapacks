@@ -1,4 +1,4 @@
-# summon 3 extra cave spiders
+# summon 3 cave spiders
 # @s = spider
 # at @s
 # run from mob/init/mob_type/spider/spider

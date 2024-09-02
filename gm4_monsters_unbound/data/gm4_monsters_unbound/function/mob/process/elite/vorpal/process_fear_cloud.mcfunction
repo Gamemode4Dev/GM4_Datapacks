@@ -1,3 +1,7 @@
+# process fear cloud skull
+# @s = block_display
+# at @s
+# run from clocks/elite/vorpal_death
 
 # particles
 particle dust{color:[0.000,0.000,0.000],scale:1} ^ ^ ^0.0125 0.2666 0.2666 0.2666 0.666 4 normal

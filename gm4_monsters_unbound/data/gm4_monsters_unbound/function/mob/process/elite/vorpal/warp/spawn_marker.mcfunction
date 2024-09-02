@@ -1,3 +1,7 @@
+# get random teleport location
+# @s = marker
+# at @s
+# run from clocks/elite/vorpal/warp/run
 
 execute store result score $y_pos gm4_mu_data run data get entity @s Pos[1]
 scoreboard players set $warp_attempt gm4_mu_data 0
