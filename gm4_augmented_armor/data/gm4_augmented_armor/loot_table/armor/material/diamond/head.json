@@ -21,14 +21,14 @@
                 },
                 {
                   "attribute": "generic.armor_toughness",
-                  "id": "gm4_augmented_armor:armor_toughness.helmet",
+                  "id": "minecraft:armor.helmet",
                   "amount": 2,
                   "operation": "add_value",
                   "slot": "head"
                 },
                 {
                   "attribute": "generic.knockback_resistance",
-                  "id": "gm4_augmented_armor:knockback_resistance",
+                  "id": "minecraft:armor.helmet",
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "head"

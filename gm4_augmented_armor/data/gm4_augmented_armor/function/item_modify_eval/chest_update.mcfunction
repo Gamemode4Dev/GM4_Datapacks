@@ -6,3 +6,4 @@
 # run from armor/slot/chest
 
 $item modify entity @s armor.chest {function:"minecraft:set_components",components:$(components)}
+function gm4_augmented_armor:armor/slot/silence_equip_sound

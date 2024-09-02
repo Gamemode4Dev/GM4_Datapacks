@@ -6,3 +6,4 @@
 # run from armor/slot/legs
 
 $item modify entity @s armor.legs {function:"minecraft:set_components",components:$(components)}
+function gm4_augmented_armor:armor/slot/silence_equip_sound

@@ -21,14 +21,14 @@
                 },
                 {
                   "attribute": "generic.armor_toughness",
-                  "id": "gm4_augmented_armor:armor_toughness.chestplate",
+                  "id": "minecraft:armor.chestplate",
                   "amount": 2,
                   "operation": "add_value",
                   "slot": "chest"
                 },
                 {
                   "attribute": "generic.knockback_resistance",
-                  "id": "gm4_augmented_armor:knockback_resistance",
+                  "id": "minecraft:armor.chestplate",
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "chest"

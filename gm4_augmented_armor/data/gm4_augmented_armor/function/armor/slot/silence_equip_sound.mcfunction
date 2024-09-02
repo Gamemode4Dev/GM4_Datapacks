@@ -1,7 +1,10 @@
 # stop the equip sound from playing when armor changes
 # @s = player that is having their armor nbt change
 # at unspecified
-# run from any armor/slot/<SLOT>
+# run from item_modify_eval/chest_update
+# run from item_modify_eval/feet_update
+# run from item_modify_eval/head_update
+# run from item_modify_eval/legs_update
 # run from armor/augment/type/link/process/set_max_health
 
 stopsound @s player item.armor.equip_chain
