@@ -4,7 +4,7 @@
 # run from player/health/damaged/run
 
 # dev damage log
-tellraw @s[tag=gm4_sr_dev] [{"text":"-- Damage Log --\n"},{"text":"Damage Taken: ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_damage_resisted"},"color":"white"}]
+tellraw @s[tag=gm4_sr_dev] [{"text":"-- Damage Log --\n"},{"text":"Damage Taken (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_damage_resisted"},"color":"white"}]
 
 # transfer damage resistance to damage to health score
 scoreboard players operation $damage_health gm4_sr_data = @s gm4_sr_damage_resisted
@@ -34,17 +34,18 @@ execute if score $armor_toughness gm4_sr_data matches 1.. if score @s gm4_sr_arm
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={bypasses_enchantments=false}}] run function gm4_survival_refightalized:player/health/damaged/enchantments
 
 # 3. resistance effect (uses highest level besides the one used for this module)
+scoreboard players operation $resistance_damage_reduction_percentage gm4_sr_data = $resistance_damage_reduction gm4_sr_data
 scoreboard players operation $resistance_damage_reduction gm4_sr_data *= $damage_health gm4_sr_data
 scoreboard players operation $resistance_damage_reduction gm4_sr_data /= #100 gm4_sr_data
 scoreboard players operation $damage_health gm4_sr_data -= $resistance_damage_reduction gm4_sr_data
-execute if score $resistance_damage_reduction gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"Resistance: ","color":"gray"},{"text":"-","color":"white"},{"score":{"name":"$resistance_damage_reduction","objective":"gm4_sr_data"},"color":"white"},{"text":" = "},{"score":{"name":"$damage_health","objective":"gm4_sr_data"},"color":"white"}]
+execute if score $resistance_damage_reduction gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"Resistance: ","color":"gray"},{"text":"-","color":"white"},{"score":{"name":"$resistance_damage_reduction","objective":"gm4_sr_data"},"color":"white"},{"text":" = "},{"score":{"name":"$damage_health","objective":"gm4_sr_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$resistance_damage_reduction_percentage","objective":"gm4_sr_data"},"color":"dark_gray"},{"text":"%)","color":"dark_gray"}]
 
 # | Convert to scores
 # add 5 and divide by 10 to round to half-hearts, make sure at least 1 damage is dealt
 scoreboard players add $damage_health gm4_sr_data 5
 scoreboard players operation $damage_health gm4_sr_data /= #10 gm4_sr_data
 scoreboard players operation $damage_health gm4_sr_data > #1 gm4_sr_data
-tellraw @s[tag=gm4_sr_dev] [{"text":"Total Damage: ","color":"gray"},{"score":{"name":"$damage_health","objective":"gm4_sr_data"},"color":"white"}]
+tellraw @s[tag=gm4_sr_dev] [{"text":"Damage Taken: ","color":"gray"},{"score":{"name":"$damage_health","objective":"gm4_sr_data"},"color":"white"}]
 # damage armor first, unless damage pierces armor
 scoreboard players operation $damage_armor gm4_sr_data = $damage_health gm4_sr_data
 execute unless entity @s[advancements={gm4_survival_refightalized:damaged={armor_piercing=false,armor_piercing_mob=false}}] run scoreboard players set $damage_armor gm4_sr_data 0
@@ -52,7 +53,7 @@ execute unless entity @s[advancements={gm4_survival_refightalized:damaged={armor
 execute if score $damage_armor gm4_sr_data >= @s gm4_sr_armor run function gm4_survival_refightalized:player/health/damaged/resistance_remove
 # any leftover damage is applied to the players health
 scoreboard players operation $damage_health gm4_sr_data -= $damage_armor gm4_sr_data
-tellraw @s[tag=gm4_sr_dev] [{"text":"  > Armor: ","color":"gray"},{"score":{"name":"$damage_armor","objective":"gm4_sr_data"},"color":"white"}]
+execute if score $damage_armor gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"  > Armor: ","color":"gray"},{"score":{"name":"$damage_armor","objective":"gm4_sr_data"},"color":"white"}]
 
 # | Damage the player
 # armor

@@ -6,6 +6,9 @@
 # disable shield if damage was blocked, don't run the rest of this function
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={blocked_by_shield=true}}] run return run function gm4_survival_refightalized:player/health/damaged/shield_blocked
 
+# function call
+function #gm4_survival_refightalized:damaged
+
 # calculate damage if player has armor
 execute if score @s gm4_sr_damage_resisted matches 1.. run function gm4_survival_refightalized:player/health/damaged/calculate_reduction
 scoreboard players set @s gm4_sr_armor_reduction_timer 5
@@ -21,9 +24,6 @@ scoreboard players operation @s[advancements={gm4_survival_refightalized:damaged
 scoreboard players reset @s gm4_sr_damage_taken
 scoreboard players reset @s gm4_sr_damage_absorbed
 scoreboard players set @s gm4_sr_fast_regen_timer 2
-
-# function call
-function #gm4_survival_refightalized:damaged
 
 # revoke advancement
 advancement revoke @s only gm4_survival_refightalized:damaged

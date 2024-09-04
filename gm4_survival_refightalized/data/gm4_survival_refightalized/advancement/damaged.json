@@ -107,6 +107,25 @@
         }
       }
     },
+    "is_fall": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:is_fall",
+                "expected": true
+              },
+              {
+                "id": "gm4_survival_refightalized:ignore",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    },
     "is_projectile": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
@@ -169,6 +188,7 @@
       "armor_piercing_mob",
       "bypasses_enchantments",
       "is_fire",
+      "is_fall",
       "is_explosion",
       "is_projectile",
       "blocked_by_shield",
