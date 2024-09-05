@@ -1,11 +1,11 @@
 id: gm4_auto_crafting
 name: Auto Crafting
-version: 1.3.X
+version: 1.4.X
 
 data_pack:
   load: 
     - .
-    - data/gm4_custom_crafters/loot_tables/items/custom_crafter.json: ../lib_custom_crafters/data/gm4_custom_crafters/loot_tables/items/custom_crafter.json
+    - data/gm4_custom_crafters/loot_table/items/custom_crafter.json: ../lib_custom_crafters/data/gm4_custom_crafters/loot_table/items/custom_crafter.json
 
 resource_pack:
   load: .
@@ -20,8 +20,8 @@ meta:
   gm4:
     versioning:
       required:
-        lib_machines: 1.2.0
-        lib_custom_crafters: 3.1.0
+        lib_machines: 1.3.0
+        lib_custom_crafters: 3.2.0
       schedule_loops:
         - main
         - tick

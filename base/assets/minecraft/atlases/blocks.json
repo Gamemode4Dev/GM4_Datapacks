@@ -9,6 +9,34 @@
             "type": "directory",
             "source": "entity",
             "prefix": "entity/"
+        },
+        {
+            "type": "filter",
+            "pattern":{
+                "namespace": "^((?!gm4).)*$",
+                "path": "gui"
+            }
+        },
+        {
+            "type": "filter",
+            "pattern": {
+                "namespace": "gm4_*",
+                "path": "gui/container"
+            }
+        },
+        {
+            "type": "filter",
+            "pattern": {
+                "namespace": "minecraft",
+                "path": "entity/fishing_hook"
+            }
+        },
+        {
+            "type": "filter",
+            "pattern": {
+                "namespace": "gm4_guidebook",
+                "path": "gui/"
+            }
         }
     ]
 }

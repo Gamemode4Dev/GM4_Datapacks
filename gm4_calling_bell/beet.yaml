@@ -1,6 +1,6 @@
 id: gm4_calling_bell
 name: Calling Bell
-version: 1.3.X
+version: 1.4.X
 
 data_pack:
   load: .
@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_trades: 1.4.0
+        lib_trades: 1.5.0
       schedule_loops:
         - tick
         - day_clock

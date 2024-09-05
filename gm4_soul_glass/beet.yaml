@@ -1,6 +1,6 @@
 id: gm4_soul_glass
 name: Soul Glass
-version: 1.3.X
+version: 1.4.X
 
 data_pack:
   load: .
@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_machines: 1.2.0
+        lib_machines: 1.3.0
       schedule_loops: 
         - main
         - beacon_clock

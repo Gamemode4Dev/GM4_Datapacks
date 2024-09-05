@@ -1,6 +1,6 @@
 id: gm4_ender_hoppers
 name: Ender Hoppers
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -17,8 +17,8 @@ meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.1.0
-        lib_machines: 1.2.0
+        lib_custom_crafters: 3.2.0
+        lib_machines: 1.3.0
       schedule_loops: [main]
     model_data:
       - item: hopper_minecart

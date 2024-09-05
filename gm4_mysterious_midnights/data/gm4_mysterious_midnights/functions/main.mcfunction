@@ -1,3 +1,0 @@
-execute unless score night_active gm4_mm_data matches 1 if predicate gm4_mysterious_midnights:is_full_moon_night run function gm4_mysterious_midnights:start_midnight 
-
-schedule function gm4_mysterious_midnights:main 60s

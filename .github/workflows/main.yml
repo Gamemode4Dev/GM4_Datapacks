@@ -7,11 +7,11 @@ on:
   workflow_dispatch:
 
 env:
-  VERSION: '1.20.5'
+  VERSION: '1.21'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
-  TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.20.6/0.15.10/1.0.1/server/jar
-  TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/kAQqRNrK/fabric-api-0.97.8%2B1.20.6.jar
-  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/UnZw9eUD/packtest-1.7-mc1.20.5.jar
+  TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.21/0.15.11/1.0.1/server/jar
+  TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/HXzEJYgV/fabric-api-0.100.1%2B1.21.jar
+  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/sQSunYHv/packtest-1.8-beta3-mc1.21.jar
 
 jobs:
   build:
@@ -60,6 +60,7 @@ jobs:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+          MASTER_BUILD: true
 
       - name: Build all modules for pull request
         if: github.event_name == 'pull_request'

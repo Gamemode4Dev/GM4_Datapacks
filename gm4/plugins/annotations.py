@@ -100,9 +100,11 @@ class SummaryHandler(logging.handlers.BufferingHandler):
 
             # init row
             if module_id not in summary_entries:
+                last_version_num = last_versions.get(module_id, '?.?.?')
+                this_version_num = this_versions.get(("gm4_resource_pack" if module_id=="resource_pack" else module_id), '?.?.?')
                 summary_entries[module_id] = {
                     "name": module_id,
-                    "ver_update": f"{last_versions.get(module_id, '?.?.?')} → {this_versions.get(module_id, '?.?.?')}",
+                    "ver_update": f"{last_version_num} → {this_version_num}",
                     "logs": [] # list of tuples ("smithed", log_message)
                 }
             

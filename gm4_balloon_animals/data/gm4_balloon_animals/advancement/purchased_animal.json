@@ -1,0 +1,33 @@
+{
+    "criteria": {
+      "primary_animal": {
+        "trigger": "minecraft:villager_trade",
+        "conditions": {
+          "item": {
+            "predicates": {
+              "minecraft:custom_data": "{gm4_balloon_animals:{trade:1b}}"
+            }
+          }
+        }
+      },
+      "secondary_animal": {
+        "trigger": "minecraft:villager_trade",
+        "conditions": {
+          "item": {
+            "predicates": {
+              "minecraft:custom_data": "{gm4_balloon_animals:{trade:2b}}"
+            }
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "primary_animal",
+        "secondary_animal"
+      ]
+    ],
+    "rewards": {
+      "function": "gm4_balloon_animals:purchased_animal"
+    }
+  }

@@ -1,6 +1,6 @@
 id: gm4_metallurgy
 name: Metallurgy
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -17,7 +17,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_lore: 1.1.0
+        lib_lore: 1.2.0
       schedule_loops:
         - main
         - tick

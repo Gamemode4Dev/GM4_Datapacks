@@ -1,0 +1,133 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cherry_leaves",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "replace": false,
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.max_health",
+                  "id": "gm4_combat_expanded:spore_max_health",
+                  "amount": 16,
+                  "operation": "add_value",
+                  "slot": "head"
+                },
+                {
+                  "attribute": "minecraft:generic.armor",
+                  "id": "gm4_combat_expanded:spore_armor",
+                  "amount": 0.25,
+                  "operation": "add_multiplied_base",
+                  "slot": "head"
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"gm4_ce_spore_zombie.cherry\"]}"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:azalea_leaves",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "replace": false,
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.max_health",
+                  "id": "gm4_combat_expanded:spore_max_health_2",
+                  "amount": 8,
+                  "operation": "add_value",
+                  "slot": "head"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "id": "gm4_combat_expanded:spore_armor_2",
+                  "amount": -1.5,
+                  "operation": "add_value",
+                  "slot": "head"
+                }
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.66
+            },
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{Tags:[\"gm4_ce_spore_zombie.cherry\"]}"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:flowering_azalea_leaves",
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{Tags:[\"gm4_ce_spore_zombie.cherry\"]}"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:custom_model_data": 3420001,
+            "minecraft:attribute_modifiers": {
+              "modifiers": [
+                {
+                  "type": "minecraft:generic.max_health",
+                  "id": "gm4_combat_expanded:modifier_flowering",
+                  "amount": -0.25,
+                  "operation": "add_multiplied_base",
+                  "slot": "head"
+                }
+              ],
+              "show_in_tooltip": false
+            }
+          }
+        },
+        {
+          "function": "minecraft:set_custom_data",
+          "tag": "{gm4_ce_spore:{generation:0}}"
+        },
+        {
+          "function": "minecraft:set_name",
+          "name": {
+            "text": "Zombie Spore",
+            "italic": false
+          }
+        }
+      ]
+    }
+  ]
+}
