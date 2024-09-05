@@ -20,7 +20,7 @@ class Liquid:
     id: str = None
     capacity: int = None
     name: str = None
-    skin: str = None # defaults to value of `id` if not otherwise set
+    skin: str = None # defaults to value of `liquids/id` if not otherwise set
     _fields = ['id', 'capacity', 'name']
     _generators = [] # functions that create mcfunction using bolt
     _defer_counters = {
@@ -55,7 +55,7 @@ class Liquid:
 
         # use the skin file of "id" if not otherwise specified.
         if not DecoratedLiquid.skin:
-            DecoratedLiquid.skin = DecoratedLiquid.id
+            DecoratedLiquid.skin = "liquids/"+DecoratedLiquid.id
 
         self.struc = DecoratedLiquid # link access to class variables through `self`
         for fcn in DecoratedLiquid._generators:
@@ -76,7 +76,7 @@ class Liquid:
                         id: player_head
                         count:1b
                         components:{
-                            "minecraft:profile": f"${(~/).split(':')[0]}:liquids/{self.struc.skin}"
+                            "minecraft:profile": f"${(~/).split(':')[0]}:{self.struc.skin}"
                         }
                     transformation:
                         left_rotation: [0f,0f,0f,1f]
