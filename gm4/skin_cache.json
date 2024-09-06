@@ -1000,6 +1000,39 @@
       "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODJiYTI0NDYzY2FjYTc5MjAzNGVkMGNhNzc4YTUwM2M1OWU1ZTg4YjU2ODBhMTIxM2UxNmIwZmFhZWE5YzMwOSd9fX0=",
       "hash": "8d5ed9cbae9e0fc0191d9c140e33adfdd2905ace",
       "parent_module": "gm4_potion_liquids"
+    },
+    "gm4_potion_liquids:liquids/awkward": {
+      "uuid": [
+        594379978,
+        -2079439988,
+        -2142727791,
+        2046532997
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjc2ZTI2ZmRmZGU4YmY5ZjY0MWM0YjdlZDViNmY3NjNhZmFiZDM5OGIzZjc5MjRhOTViYzA4YjM4N2FhM2MxJ319fQ==",
+      "hash": "4a3fbe092f343e239311835b44cadd819686e558",
+      "parent_module": "gm4_potion_liquids"
+    },
+    "gm4_potion_liquids:liquids/mundane": {
+      "uuid": [
+        594379978,
+        -2079439988,
+        -2142727791,
+        2046532997
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjc2ZTI2ZmRmZGU4YmY5ZjY0MWM0YjdlZDViNmY3NjNhZmFiZDM5OGIzZjc5MjRhOTViYzA4YjM4N2FhM2MxJ319fQ==",
+      "hash": "4a3fbe092f343e239311835b44cadd819686e558",
+      "parent_module": "gm4_potion_liquids"
+    },
+    "gm4_potion_liquids:liquids/thick": {
+      "uuid": [
+        594379978,
+        -2079439988,
+        -2142727791,
+        2046532997
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjc2ZTI2ZmRmZGU4YmY5ZjY0MWM0YjdlZDViNmY3NjNhZmFiZDM5OGIzZjc5MjRhOTViYzA4YjM4N2FhM2MxJ319fQ==",
+      "hash": "4a3fbe092f343e239311835b44cadd819686e558",
+      "parent_module": "gm4_potion_liquids"
     }
   },
   "nonnative_references": {
