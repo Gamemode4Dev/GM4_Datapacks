@@ -20,7 +20,7 @@ from csv import DictReader
 with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
     potion_def_reader = DictReader(csvfile)
     for row in potion_def_reader:
-        if row["potion_id"] in ("awkward", "mundane", "thick", "water")+("weaving", "wind_charged", "oozing", "infested"):
+        if row["potion_id"] in ("awkward", "mundane", "thick", "water"):
             continue # skip this potion type for now # FIXME
             # FIXME reapply the new effect that dont have skins
         
