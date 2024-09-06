@@ -73,7 +73,7 @@ with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
                 duration = int(m)*60 + round(float(s))
                 execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
                     unless entity @s[gamemode=spectator]
-                    if predicate inline_predicate
+                    unless predicate inline_predicate
                     run function f"gm4_potion_liquids:util/dispense/{row["potion_id"]}":
                         for e, a in zip(effects, amplifiers):
                             effect give @s e duration (a-1)
@@ -101,23 +101,28 @@ for liquid_class in class_defs.values():
     potion_liquid(liquid_class)
 
 
-# @potion_liquid
-# class HealthPotion:
-#     id = "healing"
-#     name = "Healing"
+# Potions added by this module
+potion_liquid.struc = Liquid # return decorator to normal operation
+@potion_liquid
+class FloatingPotion:
+    id = "floating"
+    name = "Floating Potion"
 
-#     potion_liquid.init()
-#     bottle('minecraft:potion[potion_contents={potion:"healing"}]')
-#     potion_liquid.item_drain('minecraft:potion[potion_contents={potion:"healing"}]', "bottle", 3)
+    potion_liquid.init()
+    @base_potion("minecraft:potion[custom_data~{gm4_potion_liquids:{potion:'floating'}}]")
+    def floating_potion():
+        loot replace entity 344d47-4-4-4-f04ce104d weapon.mainhand loot gm4_potion_liquids:floating_potion
 
-#     @potion_liquid.util_below
-#     def dispense_potion():
-#         execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
-#             unless entity @s[gamemode=spectator]
-#             if entity @s[nbt=!{active_effects:[{id:'minecraft:instant_health'}]}]
-#             run function gm4_potion_liquids:util/healing:
-#                 effect give @s night_vision 180 0
-#                 scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
-#                 playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
-
-# print(ctx.data.function["gm4_potion_liquids:util_below"].text.splitlines())
+    @potion_liquid.util_below
+    def dispense_float_potion():
+        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+            unless entity @s[gamemode=spectator]
+            unless predicate {
+                    "condition":"minecraft:entity_properties",
+                    "entity":"this",
+                    "predicate":{"effects":{"levitation":{}}}
+                }
+            run function gm4_potion_liquids:util/dispense/floating:
+                effect give @s levitation 45 2
+                scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
+                playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
