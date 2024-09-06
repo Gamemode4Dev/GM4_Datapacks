@@ -1,5 +1,8 @@
 from gm4_liquid_tanks:liquid_wrappers import Liquid
 from functools import partial
+from gm4.plugins.player_heads import Skin
+import numpy as np
+from PIL import Image, ImageChops, ImageColor
 
 potion_liquid = Liquid(capacity=300)
 base_potion = potion_liquid.standard_unit('glass_bottle', 1, f_name="base_potion")
@@ -10,6 +13,8 @@ from beet import JsonFile
 effect_colors = JsonFile(source_path="gm4_potion_liquids/effect_colors.json").data
 
 class_defs = {}
+
+untinted_skin = Skin(source_path="gm4_potion_liquids/untint_skin.png")
 
 from csv import DictReader
 with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
@@ -29,7 +34,7 @@ with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
 
                 _generators = []
             if row["potion_id"].startswith("strong"):
-                PotionLiquidClass.skin = row["potion_id"].removeprefix("strong_")
+                PotionLiquidClass.skin = "liquids/"+row["potion_id"].removeprefix("strong_")
 
             potion_liquid.struc = PotionLiquidClass # programatically going around the decorators is odd,
                                                     # so we manually set this here so the handler 
@@ -74,6 +79,21 @@ with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
                         scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
                         playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
             potion_liquid.util_below(partial(dispense_potion, row))
+        
+        # create this potion's skin texture if needed
+        skin_id = this_potion_class.id.removeprefix("strong_").removeprefix("long_")
+        if skin_id not in ctx.data["gm4_potion_liquids"][Skin].generate_tree()["liquids"]:
+            # compute the potion color for any mixed potions (a weighted average of their colors)
+            tint_colors = np.empty(shape=(3,0))
+            for effect_id in row["effect_id"].split("+"):
+                rgb = np.array(ImageColor.getrgb(effect_colors[effect_id][0])).reshape((-1,1))
+                tint_colors = np.append(tint_colors, rgb, axis=1)
+            tint_weights = list(map(int, row["effect_amplifier"].split("+")))
+            tint_color = tuple(map(int, np.average(tint_colors, weights=tint_weights, axis=1)))
+            # print('#%02x%02x%02x' % tint_color)
+
+            tint_image = Image.new("RGBA", untinted_skin.image.size, tint_color)
+            ctx.data[f"gm4_potion_liquids:liquids/{skin_id}"] = Skin(ImageChops.multiply(tint_image, untinted_skin.image))
 
 # apply the liquid tanks decorator wrapper
 for liquid_class in class_defs.values():
