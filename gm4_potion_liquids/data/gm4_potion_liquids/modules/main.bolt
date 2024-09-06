@@ -70,7 +70,7 @@ with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
                     inline_predicate["predicate"]["effects"][e] = {}
 
                 m, s = row["effect_duration"].split(":")
-                duration = int(m)*60 + round(float(s))
+                duration = max(int(m)*60 + round(float(s)), 1)
                 execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
                     unless entity @s[gamemode=spectator]
                     unless predicate inline_predicate
