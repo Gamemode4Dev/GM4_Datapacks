@@ -113,7 +113,6 @@ class Liquid:
     @staticmethod
     def _default_set_output(item:str):
         item replace entity 344d47-4-4-4-f04ce104d weapon.mainhand with item
-        pass
     
     
     def item_fill(self, input: str, output: str, value: int, reversable: bool = True, ignore_standard_units: bool = False):

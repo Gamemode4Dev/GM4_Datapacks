@@ -15,8 +15,11 @@ class BottledLightning:
 
     @liquid.util_below
     def lightning_strike():
-        execute unless entity @s[predicate=gm4_lightning_in_a_bottle:on_fire] run function gm4_lightning_in_a_bottle:liquid_tanks/util/lightning:
-            execute at @s run summon lightning_bolt ~ ~ ~
-            scoreboard players remove @e[type=armor_stand,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
-            playsound entity.firework_rocket.twinkle block @a[distance=..8] ~ ~ ~ 2 1.5
-            advancement grant @s only gm4:lightning_in_a_bottle_drink
+        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+            unless entity @s[gamemode=spectator]
+            unless entity @s[predicate=gm4_lightning_in_a_bottle:on_fire]
+            run function gm4_lightning_in_a_bottle:liquid_tanks/util/lightning:
+                execute at @s run summon lightning_bolt ~ ~ ~
+                scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
+                playsound entity.firework_rocket.twinkle block @a[distance=..8] ~ ~ ~ 2 1.5
+                advancement grant @s only gm4:lightning_in_a_bottle_drink
