@@ -7,7 +7,7 @@
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={blocked_by_shield=true}}] run return run function gm4_survival_refightalized:player/health/damaged/shield_blocked
 
 # function call
-function #gm4_survival_refightalized:damaged
+function #gm4_survival_refightalized:pre_damage
 
 # calculate damage if player has armor
 execute if score @s gm4_sr_damage_resisted matches 1.. run function gm4_survival_refightalized:player/health/damaged/calculate_reduction
@@ -18,12 +18,16 @@ scoreboard players set @s gm4_sr_combat_regen_timer 75
 
 # out-of-combat damage regenerates rapidly (every 1.6 seconds)
 scoreboard players operation @s gm4_sr_damage_taken += @s gm4_sr_damage_absorbed
+scoreboard players add @s gm4_sr_damage_taken 5
 scoreboard players operation @s gm4_sr_damage_taken /= #10 gm4_sr_data
 scoreboard players operation @s gm4_sr_damage_taken += $damage_health gm4_sr_data
 scoreboard players operation @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] gm4_sr_fast_regen_health += @s gm4_sr_damage_taken
 scoreboard players reset @s gm4_sr_damage_taken
 scoreboard players reset @s gm4_sr_damage_absorbed
 scoreboard players set @s gm4_sr_fast_regen_timer 2
+
+# function call
+function #gm4_survival_refightalized:post_damage
 
 # revoke advancement
 advancement revoke @s only gm4_survival_refightalized:damaged

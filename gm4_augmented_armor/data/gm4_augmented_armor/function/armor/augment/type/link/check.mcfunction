@@ -4,7 +4,7 @@
 # run from armor/augment/check_augment/equip
 
 # first ensure this player is actually alive, otherwise do not allow them into the link
-function gm4_survival_refightalized:player/calculate_hp
+function gm4_survival_refightalized:player/health/calculate_hp
 execute unless score @s gm4_sr_health.current matches 1.. run return 0
 
 # check if armor has been given a new custom name
@@ -36,7 +36,7 @@ execute if score @s gm4_aa_link_id matches 0 run function gm4_augmented_armor:ar
 tag @s[gamemode=!creative] add gm4_aa_linked
 
 # get max health of this player -max health change from linked piece
-function gm4_survival_refightalized:player/calculate_hp
+function gm4_survival_refightalized:player/health/calculate_hp
 execute if score $slot gm4_aa_data matches 0 store result score @s gm4_aa_link_max_health run data get storage gm4_augmented_armor:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_augmented_armor:head.dynamic"}].amount -1
 execute if score $slot gm4_aa_data matches 1 store result score @s gm4_aa_link_max_health run data get storage gm4_augmented_armor:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_augmented_armor:chest.dynamic"}].amount -1
 execute if score $slot gm4_aa_data matches 2 store result score @s gm4_aa_link_max_health run data get storage gm4_augmented_armor:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_augmented_armor:legs.dynamic"}].amount -1

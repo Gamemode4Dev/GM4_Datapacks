@@ -2,6 +2,23 @@
     "condition": "minecraft:any_of",
     "terms": [
         {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type": "#gm4_augmented_armor:hostile"
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type": "#gm4_augmented_armor:neutral",
+                "targeted_entity": {
+                    "type": "minecraft:player"
+                }
+            }
+        },
+        {
             "condition": "minecraft:value_check",
             "value": {
                 "type": "minecraft:score",
@@ -10,28 +27,6 @@
             },
             "range": {
                 "min": 1
-            }
-        },
-        {
-            "condition": "minecraft:inverted",
-            "term": {
-                "condition": "minecraft:any_of",
-                "terms": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "type": "#gm4_augmented_armor:effect_immune"
-                        }
-                    },
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "type": "minecraft:player"
-                        }
-                    }
-                ]
             }
         }
     ]

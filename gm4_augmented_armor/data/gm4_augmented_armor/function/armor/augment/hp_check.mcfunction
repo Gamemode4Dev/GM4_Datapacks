@@ -3,7 +3,7 @@
 # at unspecified
 # run from armor/augment/check_augment
 
-function gm4_survival_refightalized:player/calculate_hp
+function gm4_survival_refightalized:player/health/calculate_hp
 
 # low hp
 execute if score $augment gm4_aa_data matches 43 run function gm4_augmented_armor:armor/augment/type/soothe/check

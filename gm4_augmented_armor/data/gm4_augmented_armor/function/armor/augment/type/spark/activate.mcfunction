@@ -1,7 +1,7 @@
 # actiavate spark armor on wearer getting hit
 # @s = player wearing armor
 # at @s
-advancement revoke @s only gm4_augmented_armor:damaged/armor/spark
+advancement revoke @s only gm4_augmented_armor:damage_taken/augment/spark
 
 item replace block 29999998 1 7134 container.0 from entity @s armor.head
 item replace block 29999998 1 7134 container.1 from entity @s armor.chest

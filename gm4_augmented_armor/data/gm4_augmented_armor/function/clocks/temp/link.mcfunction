@@ -6,7 +6,7 @@
 
 scoreboard players set $keep_tick.link gm4_aa_keep_tick 0
 # calculate hp for all players in this link
-execute as @a[tag=gm4_aa_linked] run function gm4_survival_refightalized:player/calculate_hp
+execute as @a[tag=gm4_aa_linked] run function gm4_survival_refightalized:player/health/calculate_hp
 
 # get links into storage
 data modify storage gm4_augmented_armor:temp run_links set from storage gm4_augmented_armor:data active_links

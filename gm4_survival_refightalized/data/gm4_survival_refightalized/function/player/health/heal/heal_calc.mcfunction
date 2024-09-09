@@ -4,7 +4,7 @@
 # run from player/process
 # run from armor/modifier/type/link/process/set_health
 
-function gm4_survival_refightalized:player/calculate_hp
+function gm4_survival_refightalized:player/health/calculate_hp
 
 # calculate heal
 function gm4_survival_refightalized:player/health/heal/activate

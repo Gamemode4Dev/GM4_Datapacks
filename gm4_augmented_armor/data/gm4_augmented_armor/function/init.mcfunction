@@ -60,6 +60,13 @@ scoreboard objectives add gm4_aa_husk_pieces dummy
 scoreboard objectives add gm4_aa_absorp_reduced_timer dummy
 scoreboard objectives add gm4_aa_in_combat_timer dummy
 
+scoreboard objectives add gm4_aa_augment.totemic.strength_effect dummy
+scoreboard objectives add gm4_aa_augment.gleaming.burning dummy
+scoreboard objectives add gm4_aa_augment.gleaming.frost dummy
+scoreboard objectives add gm4_aa_augment.gleaming.luminous dummy
+scoreboard objectives add gm4_aa_augment.gleaming.timer dummy
+scoreboard objectives add gm4_aa_augment.gleaming.particle dummy
+
 scoreboard objectives add gm4_aa_damage_taken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add gm4_aa_damage_absorbed minecraft.custom:minecraft.damage_absorbed
 scoreboard objectives add gm4_aa_damage_resisted minecraft.custom:minecraft.damage_resisted

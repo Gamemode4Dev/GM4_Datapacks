@@ -4,7 +4,7 @@
 # run from player/process
 
 # check if player can actually receive health
-function gm4_survival_refightalized:player/calculate_hp
+function gm4_survival_refightalized:player/health/calculate_hp
 execute unless score @s gm4_sr_health.current < @s gm4_sr_health.max run return run scoreboard players set @s gm4_sr_fast_regen_health 0
 
 # add health, and a short delay before healing more

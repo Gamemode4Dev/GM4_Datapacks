@@ -13,8 +13,9 @@ damage @s 0.01 freeze
 # set timer
 scoreboard players operation $add_freeze_time gm4_mu_data = $freeze_seconds gm4_mu_data
 scoreboard players operation $add_freeze_time gm4_mu_data *= #4 gm4_mu_data
+scoreboard players reset $freeze_seconds gm4_mu_data
 
-# set attributes based on entity type, for players allow altering of freeze time
+# set attributes based on entity type
 execute if entity @s[type=player] run function gm4_monsters_unbound:effect/freeze/apply_player
 execute if entity @s[type=!player] run function gm4_monsters_unbound:effect/freeze/apply_entity
 

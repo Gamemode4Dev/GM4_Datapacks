@@ -3,7 +3,7 @@
 # at unspecified
 # run from player/health/damaged/calculate_reduction
 
-function gm4_survival_refightalized:player/calculate_hp
+function gm4_survival_refightalized:player/health/calculate_hp
 
 # calculate max health to get player to new health
 scoreboard players operation $remove_health gm4_sr_data = @s gm4_sr_health.max

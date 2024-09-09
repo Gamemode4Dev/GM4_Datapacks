@@ -1,0 +1,315 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_augmented_armor:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_augmented_armor:{augment:{name:gleaming,id:0}}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.augment",
+              "fallback": "%s Augment:",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.gleaming",
+                  "fallback": "Gleaming"
+                }
+              ],
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.gleaming",
+                "fallback": "When damaged or dealing damage create",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.gleaming_2",
+                "fallback": "a %s aura around you",
+                "with": [
+                  {
+                    "translate": "item.gm4.augmented_armor.lore.gleaming_burning",
+                    "fallback": "0.3 damage fire",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 1
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.gleaming_2",
+                "fallback": "a %s aura around you",
+                "with": [
+                  {
+                    "translate": "item.gm4.augmented_armor.lore.gleaming_frost",
+                    "fallback": "0.1 damage slowing frost",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 2
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.gleaming_2",
+                "fallback": "a %s aura around you",
+                "with": [
+                  {
+                    "translate": "item.gm4.augmented_armor.lore.gleaming_light",
+                    "fallback": "0.2 damage knockback luminous",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 3
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.gleaming_3",
+                "fallback": "damage stacks 10 times, %s at 10 stacks",
+                "with": [
+                  {
+                    "translate": "item.gm4.augmented_armor.lore.gleaming_burning_2",
+                    "fallback": "burn",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 1
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.gleaming_3",
+                "fallback": "damage stacks 10 times, %s at 10 stacks",
+                "with": [
+                  {
+                    "translate": "item.gm4.augmented_armor.lore.gleaming_frost_2",
+                    "fallback": "freeze",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 2
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.gleaming_3",
+                "fallback": "damage stacks 10 times, %s at 10 stacks",
+                "with": [
+                  {
+                    "translate": "item.gm4.augmented_armor.lore.gleaming_light_2",
+                    "fallback": "double damage and glow",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 3
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.gleaming_4",
+                "fallback": "Aura radius scales with size",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.augmented_armor.name",
+              "fallback": "%s %s",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.gleaming",
+                  "fallback": "Gleaming"
+                },
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",
+                  "storage": "gm4_augmented_armor:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

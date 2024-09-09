@@ -38,8 +38,8 @@ execute unless score $removed_mob gm4_sr_data matches 1 run function gm4_surviva
 scoreboard players reset $removed_mob gm4_sr_data
 
 # heal to max health
-effect give @s[type=#gm4_survival_refightalized:undead] instant_damage 1 20 true
-effect give @s[type=!#gm4_survival_refightalized:undead] instant_health 1 20 true
+effect give @s[type=#minecraft:undead] instant_damage 1 20 true
+effect give @s[type=!#minecraft:undead] instant_health 1 20 true
 
 # mark mob as initiated
 tag @s add gm4_sr_processed

@@ -1,7 +1,7 @@
 # add absorption to player that got hit (red health hits only)
 # @s = player wearing armor
 # at @s
-advancement revoke @s only gm4_augmented_armor:damaged/armor/reactive
+advancement revoke @s only gm4_augmented_armor:damage_taken/augment/reactive
 
 # store armor for checking
 item replace block 29999998 1 7134 container.0 from entity @s armor.head

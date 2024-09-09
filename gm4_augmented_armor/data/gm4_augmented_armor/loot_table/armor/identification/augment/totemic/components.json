@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{augment:{name:totemic,id:34}}}"
+              "tag": "{gm4_augmented_armor:{augment:{name:totemic,id:103}}}"
             }
           ]
         }
@@ -42,313 +42,411 @@
           ]
         },
         {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.totemic",
-                "fallback": "On kill spawn a %s Totem",
-                "with": [
-                  {
-                    "translate": "item.gm4.augmented_armor.lore.totemic_heal",
-                    "fallback": "Healing",
-                    "color": "blue",
-                    "italic": false
-                  }
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
+          "function": "minecraft:sequence",
+          "functions": [
             {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 1
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.totemic",
-                "fallback": "On kill spawn a %s Totem",
-                "with": [
-                  {
-                    "translate": "item.gm4.augmented_armor.lore.totemic_haste",
-                    "fallback": "Haste",
-                    "color": "blue",
-                    "italic": false
-                  }
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 2
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.totemic",
-                "fallback": "On kill spawn a %s Totem",
-                "with": [
-                  {
-                    "translate": "item.gm4.augmented_armor.lore.totemic_freeze",
-                    "fallback": "Freezing",
-                    "color": "blue",
-                    "italic": false
-                  }
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 3
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.totemic",
-                "fallback": "On kill spawn a %s Totem",
-                "with": [
-                  {
-                    "translate": "item.gm4.augmented_armor.lore.totemic_strength",
-                    "fallback": "Strength",
-                    "color": "blue",
-                    "italic": false
-                  }
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 4
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.totemic_heal_2",
-                "fallback": "Restore 2 health to most damaged player",
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 1
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "potion.withDuration",
-                "with": [
-                  {
-                    "translate": "item.gm4.augmented_armor.lore.totemic_haste_2",
-                    "fallback": "Grant 10% %s and %s to all players",
-                    "with": [
-                      {
-                        "translate": "attribute.name.generic.movement_speed"
-                      },
-                      {
-                        "translate": "attribute.name.generic.attack_speed"
-                      }
-                    ]
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "item.gm4.augmented_armor.lore.totemic",
+                  "fallback": "On kill spawn a %s Totem",
+                  "with": [
+                    {
+                      "translate": "item.gm4.augmented_armor.lore.totemic_heal",
+                      "fallback": "Healing",
+                      "color": "blue",
+                      "italic": false
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
                   },
-                  "0:04"
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
+                  "range": 1
+                }
+              ]
+            },
             {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 2
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "potion.withDuration",
-                "with": [
-                  {
-                    "translate": "item.gm4.augmented_armor.lore.totemic_freeze_2",
-                    "fallback": "Freeze the closest mob"
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "item.gm4.augmented_armor.lore.totemic_heal_2",
+                  "fallback": "Restores 1 health to most damaged",
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
                   },
-                  "0:04"
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
+                  "range": 1
+                }
+              ]
+            },
             {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 3
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "potion.withDuration",
-                "with": [
-                  {
-                    "translate": "item.gm4.augmented_armor.lore.totemic_strength_2",
-                    "fallback": "Grant 1 %s to all players",
-                    "with": [
-                      {
-                        "translate": "attribute.name.generic.attack_damage"
-                      }
-                    ]
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "item.gm4.augmented_armor.lore.totemic_heal_3",
+                  "fallback": "player in line of sight",
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
                   },
-                  "0:04"
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 4
+                  "range": 1
+                }
+              ]
             }
           ]
         },
         {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.totemic_2",
-                "fallback": "Kills charge the totem",
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
+          "function": "minecraft:sequence",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "item.gm4.augmented_armor.lore.totemic",
+                  "fallback": "On kill spawn a %s Totem",
+                  "with": [
+                    {
+                      "translate": "item.gm4.augmented_armor.lore.totemic_haste",
+                      "fallback": "Haste",
+                      "color": "blue",
+                      "italic": false
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
+                  },
+                  "range": 2
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "item.gm4.augmented_armor.lore.totemic_haste_2",
+                  "fallback": "Grants 20%s %s, %s",
+                  "with": [
+                    {
+                      "text": "%"
+                    },
+                    {
+                      "translate": "attribute.name.generic.movement_speed"
+                    },
+                    {
+                      "translate": "attribute.name.generic.attack_speed"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
+                  },
+                  "range": 2
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "item.gm4.augmented_armor.lore.totemic_haste_3",
+                  "fallback": "and %s to all players",
+                  "with": [
+                    {
+                      "translate": "attribute.name.player.block_break_speed"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
+                  },
+                  "range": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:sequence",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "item.gm4.augmented_armor.lore.totemic",
+                  "fallback": "On kill spawn a %s Totem",
+                  "with": [
+                    {
+                      "translate": "item.gm4.augmented_armor.lore.totemic_freeze",
+                      "fallback": "Freezing",
+                      "color": "blue",
+                      "italic": false
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
+                  },
+                  "range": 3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "item.gm4.augmented_armor.lore.totemic_freeze_2",
+                  "fallback": "Freeze the closest non-frozen",
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
+                  },
+                  "range": 3
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "potion.withDuration",
+                  "with": [
+                    {
+                      "translate": "item.gm4.augmented_armor.lore.totemic_freeze_3",
+                      "fallback": "mob in line of sight"
+                    },
+                    "0:03"
+                  ],
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
+                  },
+                  "range": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:sequence",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "item.gm4.augmented_armor.lore.totemic",
+                  "fallback": "On kill spawn a %s Totem",
+                  "with": [
+                    {
+                      "translate": "item.gm4.augmented_armor.lore.totemic_strength",
+                      "fallback": "Strength",
+                      "color": "blue",
+                      "italic": false
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
+                  },
+                  "range": 4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "item.gm4.augmented_armor.lore.totemic_strength_2",
+                  "fallback": "Grants 1 %s to players in range,",
+                  "with": [
+                    {
+                      "translate": "attribute.name.generic.attack_damage"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
+                  },
+                  "range": 4
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "item.gm4.augmented_armor.lore.totemic_strength_3",
+                  "fallback": "stacking 4 times. Mobs in range glow",
+                  "with": [
+                    {
+                      "translate": "attribute.name.generic.attack_damage"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
+                  },
+                  "range": 4
+                }
+              ]
+            }
           ]
         },
         {

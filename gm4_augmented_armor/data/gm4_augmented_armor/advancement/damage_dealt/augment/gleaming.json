@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "damage": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"gm4_aa_augment_damager\"]}"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_augmented_armor:modified_armor/gleaming"
+          }
+        ],
+        "damage": {
+          "blocked": false,
+          "type": {}
+        },
+        "entity": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_augmented_armor:technical/pvp_able"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_augmented_armor:armor/augment/type/gleaming/damage_dealt"
+  }
+}

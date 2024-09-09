@@ -3,6 +3,9 @@
 # at unspecified
 # run from player/player_submain
 
+# add player & mob kills together
+scoreboard players operation @s gm4_aa_kill += @s gm4_aa_kill2
+
 # check for archer armor
 tag @s[tag=gm4_aa_wearing_archer,predicate=!gm4_augmented_armor:modified_armor/archer] remove gm4_aa_wearing_archer
 execute if entity @s[tag=!gm4_aa_wearing_archer,predicate=gm4_augmented_armor:modified_armor/archer] run function gm4_augmented_armor:armor/augment/type/archer/activate

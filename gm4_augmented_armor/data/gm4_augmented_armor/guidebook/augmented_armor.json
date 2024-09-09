@@ -883,14 +883,14 @@
           },
           "\n- ",
           {
-            "translate": "item.gm4.survival_refightalized.name.beacon",
+            "translate": "item.gm4.survival_refightalized.name.radiant",
             "fallback": "Radiant %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "text.gm4.guidebook.survival_refightalized.beacon_modifier",
+                  "translate": "text.gm4.guidebook.survival_refightalized.radiant_modifier",
                   "fallback": "- A floating light follows the wearer\n- Crouching will apply glowing and a light pulse"
                 },
                 "\n",
