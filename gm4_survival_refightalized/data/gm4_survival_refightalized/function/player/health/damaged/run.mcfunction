@@ -9,6 +9,9 @@ execute if entity @s[advancements={gm4_survival_refightalized:damaged={blocked_b
 # function call
 function #gm4_survival_refightalized:pre_damage
 
+# cave spider poison reduction
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={cave_spider=true}}] run function gm4_survival_refightalized:player/health/damaged/cave_spider_poison_reduction
+
 # calculate damage if player has armor
 execute if score @s gm4_sr_damage_resisted matches 1.. run function gm4_survival_refightalized:player/health/damaged/calculate_reduction
 scoreboard players set @s gm4_sr_armor_reduction_timer 5

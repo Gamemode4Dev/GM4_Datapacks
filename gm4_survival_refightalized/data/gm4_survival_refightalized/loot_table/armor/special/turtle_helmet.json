@@ -16,9 +16,9 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "augmented_armor"
+                      "name": "gm4_augmented_armor"
                     },
-                    "score": "gm4_modules"
+                    "score": "load.status"
                   },
                   "range": {
                     "min": 1

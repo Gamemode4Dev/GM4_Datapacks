@@ -6,9 +6,7 @@
 tag @s add gm4_mu_elite.gargantuan
 tag @s add gm4_mu_elite.process
 
-attribute @s[type=!#gm4_survival_refightalized:skeleton_types] generic.max_health modifier add gm4_monsters_unbound:elite_buff.giant 5.5 add_multiplied_total
-attribute @s[type=#gm4_survival_refightalized:skeleton_types] generic.max_health modifier add gm4_monsters_unbound:elite_buff.giant 3.5 add_multiplied_total
-
+attribute @s generic.max_health modifier add gm4_monsters_unbound:elite_buff.giant 5.5 add_multiplied_total
 attribute @s generic.scale modifier add gm4_monsters_unbound:elite_buff.giant 0.5 add_multiplied_total
 attribute @s generic.gravity modifier add gm4_monsters_unbound:elite_buff.giant 0.5 add_multiplied_total
 attribute @s generic.jump_strength modifier add gm4_monsters_unbound:elite_buff.giant 0.5 add_multiplied_total

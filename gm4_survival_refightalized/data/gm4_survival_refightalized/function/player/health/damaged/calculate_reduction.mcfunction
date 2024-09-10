@@ -10,8 +10,8 @@ tellraw @s[tag=gm4_sr_dev] [{"text":"-- Damage Log --\n"},{"text":"Damage Taken 
 scoreboard players operation $damage_health gm4_sr_data = @s gm4_sr_damage_resisted
 scoreboard players reset @s gm4_sr_damage_resisted
 
-# grab active effects to check for resistance later
-data modify storage gm4_survival_refightalized:temp active_effects set from entity @s active_effects
+# grab active effects to check for resistance later - can be skipped if this was already done for cave spider poison reduction
+execute unless data storage gm4_survival_refightalized:temp active_effects run data modify storage gm4_survival_refightalized:temp active_effects set from entity @s active_effects
 
 # don't run if this resistance level is not due to armor (as the player will already have taken the damage)
 # this should generally not run, and is mostly here as a fail-safe
@@ -81,5 +81,3 @@ data remove storage gm4_survival_refightalized:temp set
 # red hearts
 execute if score $damage_health gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"  > Health: ","color":"gray"},{"score":{"name":"$damage_health","objective":"gm4_sr_data"},"color":"white"}]
 execute if score $damage_health gm4_sr_data matches 1.. run function gm4_survival_refightalized:player/health/reduce/activate
-
-data remove storage gm4_survival_refightalized:temp active_effects

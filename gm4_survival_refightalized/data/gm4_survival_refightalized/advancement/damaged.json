@@ -165,6 +165,24 @@
         }
       }
     },
+    "cave_spider": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "type": "minecraft:cave_spider"
+          },
+          "type": {
+            "tags": [
+              {
+                "id": "gm4_survival_refightalized:ignore",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    },
     "catch_other": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
@@ -192,6 +210,7 @@
       "is_explosion",
       "is_projectile",
       "blocked_by_shield",
+      "cave_spider",
       "catch_other"
     ]
   ]
