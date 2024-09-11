@@ -3,8 +3,7 @@
   "name": "Vertical Rails",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:ladder",
-    "nbt": "{CustomModelData:3420002}"
+    "id": "minecraft:ladder"
   },
   "criteria": {
     "obtain_ladder": {

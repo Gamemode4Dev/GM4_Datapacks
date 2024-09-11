@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "items": "#gm4_audere_shamir:valid_items",
+        "predicates": {
+          "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'audere'}}"
+        }
+      }
+    }
+  }
+}

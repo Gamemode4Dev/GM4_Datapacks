@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "id": "lead",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/balloon_animals"
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.balloon_animals.title",
+      "fallback": "Party Animals"
+    },
+    "description": {
+      "translate": "advancement.gm4.balloon_animals.description",
+      "fallback": "Buy a Balloon Animal from a Wandering Trader",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "balloon_animals": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

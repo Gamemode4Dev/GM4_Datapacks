@@ -1,0 +1,285 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "lore": [
+                {
+                  "translate": "text.gm4.end_city_tool.1.1",
+                  "fallback": "It's been said only those",
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "text.gm4.end_city_tool.1.2",
+                  "fallback": "who are worthy can wield this tool.",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_1"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "lore": [
+                {
+                  "translate": "text.gm4.end_city_tool.2.1",
+                  "fallback": "Once there was a man named",
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "text.gm4.end_city_tool.2.2",
+                  "fallback": "Tubal-cain who made this tool.",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_2"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "lore": [
+                {
+                  "translate": "text.gm4.end_city_tool.3",
+                  "fallback": "If found, please return to Hephaestus.",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_3"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "lore": [
+                {
+                  "translate": "text.gm4.end_city_tool.4.1",
+                  "fallback": "This is actually a really hard",
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "text.gm4.end_city_tool.4.2",
+                  "fallback": "piece of bread. Don't tell anyone.",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_4"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "lore": [
+                {
+                  "translate": "text.gm4.end_city_tool.5",
+                  "fallback": "Found in the Valley of the Fallen Kings",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_5"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "lore": [
+                {
+                  "translate": "text.gm4.end_city_tool.6.1",
+                  "fallback": "Throw it. Maybe it'll come back!",
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "text.gm4.end_city_tool.6.2",
+                  "fallback": "No, it's not a hammer, sadly.",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "lore": [
+                {
+                  "translate": "text.gm4.end_city_tool.7",
+                  "fallback": "Thunk, Thunk, Thunk!",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_7"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "lore": [
+                {
+                  "translate": "text.gm4.end_city_tool.8.1",
+                  "fallback": "Forged by the Leader of",
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "text.gm4.end_city_tool.8.2",
+                  "fallback": "the Endermen Rebellion",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_8"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "lore": [
+                {
+                  "translate": "text.gm4.end_city_tool.9",
+                  "fallback": "It's not a very good shield.",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_9"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/type",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "lore": [
+                {
+                  "translate": "text.gm4.end_city_tool.10.1",
+                  "fallback": "Where'd you find this? It's been",
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "translate": "text.gm4.end_city_tool.10.2",
+                  "fallback": "floating in the end for over a decade!",
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/end_city_tools_10"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

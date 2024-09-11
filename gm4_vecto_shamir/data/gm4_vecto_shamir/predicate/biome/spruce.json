@@ -1,0 +1,18 @@
+{
+  "condition": "minecraft:location_check",
+  "predicate": {
+    "biomes": [
+      "minecraft:taiga",
+      "minecraft:snowy_taiga",
+      "minecraft:snowy_plains",
+      "minecraft:snowy_beach",
+      "minecraft:snowy_slopes",
+      "minecraft:old_growth_pine_taiga",
+      "minecraft:old_growth_spruce_taiga",
+      "minecraft:windswept_forest",
+      "minecraft:windswept_hills",
+      "minecraft:windswept_gravelly_hills",
+      "minecraft:grove"
+    ]
+  }
+}

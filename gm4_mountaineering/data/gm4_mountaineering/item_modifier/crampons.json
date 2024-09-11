@@ -1,0 +1,39 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:custom_model_data": "item/crampons"
+    }
+  },
+  {
+    "function": "minecraft:set_custom_data",
+    "tag": "{gm4_mountaineering:{item:'crampons'}}"
+  },
+  {
+    "function": "minecraft:set_name",
+    "name": {
+      "translate": "item.gm4.crampons",
+      "fallback": "Crampons",
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.movement_speed",
+        "id": "gm4_mountaineering:crampon_slowness",
+        "amount": -0.2,
+        "operation": "add_multiplied_base",
+        "slot": "feet"
+      },
+      {
+        "attribute": "minecraft:generic.armor",
+        "id": "gm4_mountaineering:crampon_armor",
+        "amount": 1,
+        "operation": "add_value",
+        "slot": "feet"
+      }
+    ]
+  }
+]

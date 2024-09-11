@@ -1,0 +1,257 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:armor/material/iron/feet",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/material_check/iron"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:armor/material/chainmail/feet",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/material_check/chainmail"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:armor/material/chainmail/feet",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/material_check/chainmail"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "minecraft:empty"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:binomial",
+                "n": 1,
+                "p": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 0.01
+                }
+              },
+              "range": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:armor/material/iron/legs",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/material_check/iron"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:armor/material/chainmail/legs",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/material_check/chainmail"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:armor/material/chainmail/legs",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/material_check/chainmail"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "minecraft:empty"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:binomial",
+                "n": 1,
+                "p": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 0.01
+                }
+              },
+              "range": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:armor/material/iron/chest",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/material_check/iron"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:armor/material/chainmail/chest",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/material_check/chainmail"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:armor/material/chainmail/chest",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/material_check/chainmail"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "minecraft:empty"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:binomial",
+                "n": 1,
+                "p": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 0.01
+                }
+              },
+              "range": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:armor/material/iron/head",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/material_check/iron"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:armor/material/chainmail/head",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/material_check/chainmail"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:armor/material/chainmail/head",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/material_check/chainmail"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "minecraft:empty"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:binomial",
+                "n": 1,
+                "p": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "$difficulty"
+                  },
+                  "score": "gm4_ce_data",
+                  "scale": 0.01
+                }
+              },
+              "range": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

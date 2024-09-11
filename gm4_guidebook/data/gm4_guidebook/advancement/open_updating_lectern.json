@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:default_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:lectern"
+                ],
+                "nbt": "{Book:{components:{'minecraft:custom_data':{gm4_guidebook:{lectern:1b}}}}}",
+                "state": {
+                  "has_book": "true"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_guidebook:lecterns/replace/find_lectern"
+  }
+}

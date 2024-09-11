@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "id": "ladder",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/vertical_rails"
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.vertical_rails.title",
+      "fallback": "Up, Up and Away!"
+    },
+    "description": {
+      "translate": "advancement.gm4.vertical_rails.description",
+      "fallback": "Ride a minecart going up a vertical rail",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "ride_vertical_rail": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

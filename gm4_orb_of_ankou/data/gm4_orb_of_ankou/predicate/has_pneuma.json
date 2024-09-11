@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "offhand": {
+        "items": "#gm4_orb_of_ankou:pneuma_container",
+        "predicates": {
+          "minecraft:custom_data": "{gm4_orb_of_ankou:{pneumas:[{}]}}"
+        }
+      }
+    }
+  }
+}

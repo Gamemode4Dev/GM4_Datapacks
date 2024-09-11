@@ -1,21 +1,29 @@
 id: gm4_custom_crafters
 name: Gamemode 4 Custom Crafters
-version: 3.1.X
+version: 3.3.X
+description: A dropper-based custom crafter for custom item crafting purposes.
 
 data_pack:
   load: 
     data: data
 
+resource_pack:
+  load:
+    assets: assets
+
 require:
+  - gm4.plugins.resource_pack
   - gm4_guidebook.generate_guidebooks.load_page_data
   - gm4_guidebook.generate_guidebooks.load_custom_recipes
   - gm4.plugins.player_heads
+  - beet.contrib.model_merging
+  - beet.contrib.babelbox
 
 pipeline:
   - lib_custom_crafters.generate_item_tags
   - gm4.plugins.module.gm4_root_advancement
   - gm4_guidebook.generate_guidebooks
-  - gm4.plugins.player_heads.process_json_files
+  - gm4.plugins.resource_pack.build
   - mecha
   - gm4.plugins.extend.library
   - gm4.plugins.include.lib_machines
@@ -25,8 +33,8 @@ meta:
   gm4:
     versioning:
       required: 
-        lib_machines: 1.1.0
-        lib_forceload: 1.2.0
+        lib_machines: 1.3.0
+        lib_forceload: 1.4.0
       schedule_loops: [main]
       extra_version_injections:
         functions: 
@@ -36,16 +44,53 @@ meta:
           - machine/verify_place_down
         advancements: 
           - create_custom_crafter
+    model_data:
+      - item: player_head
+        reference: item/custom_crafter
+        model: block/custom_crafter
+      - item: crafting_table
+        template: legacy_machine_block
+        broadcast:
+          - reference: block/custom_crafter
+            textures:
+              bottom: block/custom_crafter_bottom
+              top: block/custom_crafter_top_out
+              front: block/custom_crafter_side
+              side: block/custom_crafter_side
+          - reference: block/custom_crafter_side
+            textures:
+              bottom: block/custom_crafter_bottom
+              top: block/custom_crafter_top
+              front: block/custom_crafter_front
+              side: block/custom_crafter_side
+          - reference: block/custom_crafter_down
+            textures:
+              bottom: block/custom_crafter_bottom_front
+              top: block/custom_crafter_top
+              front: block/custom_crafter_side
+              side: block/custom_crafter_side
+      - item: crafting_table
+        reference: gui/advancement/custom_crafters
+        template: 
+          name: advancement
+          forward: block/custom_crafter
+    gui_fonts:
+      - translation: gui.gm4.custom_crafter
+        container: dropper
+        texture: gui/container/custom_crafter
+    smithed:
+      pack_id: gm4_lib_custom_crafters
     credits:
       Custom Crafters Creators:
         - Bloo
         - Sparks
         - SpecialBuilder32
       Textures by:
-        - kyrkis
+        - Kyrius
   mecha:
     layout: preserve
     nbt_compact: True
     cmd_compact: True
-  smithed:
-    pack_id: gm4_lib_custom_crafters
+  babelbox:
+      load: assets/translations.csv
+      namespace: gm4_translations

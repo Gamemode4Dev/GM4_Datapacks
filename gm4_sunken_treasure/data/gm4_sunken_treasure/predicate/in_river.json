@@ -1,0 +1,9 @@
+{
+  "condition": "minecraft:location_check",
+  "predicate": {
+    "biomes": [
+      "minecraft:frozen_river",
+      "minecraft:river"
+    ]
+  }
+}

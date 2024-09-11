@@ -1,0 +1,95 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:dyed_color": {
+                "rgb": 3705899,
+                "show_in_tooltip": false
+            },
+            "minecraft:custom_model_data": "item/boots_of_ostara"
+        }
+    },
+    {
+        "function": "minecraft:set_custom_data",
+        "tag": "{gm4_boots_of_ostara:1b}"
+    },
+    {
+        "function": "minecraft:set_name",
+        "name": {
+            "translate": "item.gm4.boots_of_ostara",
+            "fallback": "Boots of Ostara",
+            "italic": false
+        },
+        "conditions": [
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "$boa_custom_name"
+                        },
+                        "score": "gm4_crafting"
+                    },
+                    "range": 1
+                }
+            }
+        ]
+    },
+    {
+        "function": "minecraft:set_lore",
+        "mode": "insert",
+        "lore": [
+            {
+                "translate": "item.gm4.boots_of_ostara.lore",
+                "fallback": "Brings abundance beneath you!",
+                "color": "dark_gray",
+                "italic": true
+            }
+        ]
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_model_data": "gm4_scuba_gear:item/flippers"
+        },
+        "conditions": [
+            {
+                "condition": "minecraft:value_check",
+                "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$boa_flippers"
+                    },
+                    "score": "gm4_crafting"
+                },
+                "range": 1
+            }
+        ]
+    },
+    {
+        "function": "minecraft:set_name",
+        "name": {
+            "translate": "item.gm4.flippers_of_ostara",
+            "fallback": "Flippers of Ostara",
+            "italic": false
+        },
+        "conditions": [
+            {
+                "condition": "minecraft:value_check",
+                "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$boa_flippers"
+                    },
+                    "score": "gm4_crafting"
+                },
+                "range": 1
+            }
+        ]
+    }
+]

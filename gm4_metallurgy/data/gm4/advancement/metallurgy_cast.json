@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:player_head",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/metallurgy_cast",
+        "minecraft:profile": "$gm4_metallurgy:band/aluminium"
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.metallurgy.cast.title",
+      "fallback": "Firebender"
+    },
+    "description": {
+      "translate": "advancement.gm4.metallurgy.cast.description",
+      "fallback": "Create a mould and add some metal.",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:metallurgy_blast_ore",
+  "criteria": {
+    "metallurgy_cast": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

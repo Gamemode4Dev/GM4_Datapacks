@@ -7,12 +7,15 @@ on:
   workflow_dispatch:
 
 env:
-  VERSION: '1.20'
+  VERSION: '1.21'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
+  TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.21/0.15.11/1.0.1/server/jar
+  TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/HXzEJYgV/fabric-api-0.100.1%2B1.21.jar
+  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/sQSunYHv/packtest-1.8-beta3-mc1.21.jar
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     concurrency:
       group: ${{ github.event_name != 'pull_request' && 'release' || format('pr-{0}', github.event.number) }}
     steps:
@@ -29,8 +32,8 @@ jobs:
         if: github.event_name == 'pull_request'
         run: git fetch origin ${{ github.base_ref }}
 
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v2
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -41,7 +44,7 @@ jobs:
 
       - name: Setup cache
         id: cached-poetry-dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
@@ -57,6 +60,7 @@ jobs:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+          MASTER_BUILD: true
 
       - name: Build all modules for pull request
         if: github.event_name == 'pull_request'
@@ -64,9 +68,16 @@ jobs:
         env:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
+      - name: Remove non-modules for artifact
+        if: github.event_name == 'pull_request'
+        run: |
+          rm -r release/$VERSION/generated
+          rm release/$VERSION/lib_*
+          rm release/$VERSION/meta.json
+
       - name: Upload artifact
         if: github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: 'Modules for pull request #${{ github.event.number }}'
           path: ${{ github.workspace }}/release/${{ env.VERSION }}/
@@ -82,8 +93,72 @@ jobs:
 
       - name: Push release
         if: github.event_name != 'pull_request'
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@v0.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           directory: release
           branch: release
+
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1.2.1
+        with:
+          virtualenvs-in-project: true
+
+      - name: Setup cache
+        id: cached-poetry-dependencies
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: poetry install
+
+      - name: Build all modules for tests
+        run: poetry run beet -p beet-test.yaml -l ${{ env.LOG_LEVEL }} build
+        env:
+          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Download server files
+        run: |
+          curl -o server.jar $TEST_FABRIC_SERVER
+          mkdir mods
+          curl -o mods/fabric-api.jar $TEST_FABRIC_API
+          curl -o mods/packtest.jar $TEST_PACKTEST
+
+      - name: Copy packs to world
+        run: |
+          mkdir -p world/datapacks
+          rm out/gm4_guidebook.zip
+          rm out/gm4_zauber_cauldrons.zip
+          rm out/gm4_zauber_liquids.zip
+          cp out/gm4_*.zip world/datapacks
+
+      - name: Run test server
+        id: run-tests
+        run: |
+          java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
+
+      - name: Upload test world
+        if: ${{ failure() && steps.run-tests.conclusion == 'failure' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: 'Test world for ${{ github.sha }}'
+          path: ${{ github.workspace }}/world/

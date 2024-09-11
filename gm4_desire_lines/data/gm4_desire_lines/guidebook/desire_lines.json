@@ -3,8 +3,7 @@
   "name": "Desire Lines",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:coarse_dirt",
-    "nbt": "{CustomModelData:3420002}"
+    "id": "minecraft:coarse_dirt"
   },
   "criteria": {
     "eroded_land": {

@@ -1,0 +1,57 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "translate": "item.gm4.metallurgy.baryte_lump",
+                "fallback": "Baryte Lump",
+                "italic": false,
+                "color": "white"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                [
+                  {
+                    "translate": "text.gm4.metallurgy.contains",
+                    "fallback": "Contains ",
+                    "italic": false,
+                    "color": "gray"
+                  },
+                  {
+                    "translate": "text.gm4.metallurgy.barium",
+                    "fallback": "Barium",
+                    "italic": false,
+                    "color": "#F0EAD6"
+                  }
+                ]
+              ]
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/lump/baryte",
+                "minecraft:profile": "$ore/barium"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_metallurgy:{metal:{type:'barium',amount:[1s],castable:1b},item:'ore'}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

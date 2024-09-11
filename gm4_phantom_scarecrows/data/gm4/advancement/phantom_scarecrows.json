@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:firework_rocket",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/phantom_scarecrows"
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.phantom_scarecrows.title",
+      "fallback": "Not so smart defenses"
+    },
+    "description": {
+      "translate": "advancement.gm4.phantom_scarecrows.description",
+      "fallback": "Get hit by a Phantom Scarecrow",
+      "color": "gray"
+    },
+    "hidden": true
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "phantom_scarecrows_hurt": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

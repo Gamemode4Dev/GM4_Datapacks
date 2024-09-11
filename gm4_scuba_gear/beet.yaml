@@ -1,21 +1,22 @@
 id: gm4_scuba_gear
 name: SCUBA Gear
-version: 1.3.X
+version: 1.5.X
 
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_player_heads
   - gm4.plugins.include.lib_custom_crafters
 
 meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.0.0
-        lib_player_heads: 1.1.0
+        lib_custom_crafters: 3.2.0
       schedule_loops: [main]
     website:
       description: Ease ocean exploration with craftable scuba gear!
@@ -31,3 +32,18 @@ meta:
         - BluePsychoRanger
       Icon Design:
         - DuckJr
+    model_data:
+      - item: leather_boots
+        reference: item/flippers
+        template: generated_overlay
+      - item: golden_chestplate
+        reference: item/scuba_tank
+        template: generated
+      - item: player_head
+        reference: item/scuba_helmet
+        template: generated
+      - item: player_head
+        reference: gui/advancement/scuba_gear
+        template:
+          name: advancement
+          forward: item/scuba_helmet

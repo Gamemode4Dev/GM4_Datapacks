@@ -1,0 +1,82 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:alternatives",
+                    "children": [
+                        {
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_combat_expanded:armor/material/diamond/legs",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "gm4_combat_expanded:mob/material_check/diamond"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_combat_expanded:armor/material/golden/legs",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "gm4_combat_expanded:mob/material_check/golden"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_combat_expanded:armor/material/iron/legs",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "gm4_combat_expanded:mob/material_check/iron"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_combat_expanded:armor/material/chainmail/legs",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "gm4_combat_expanded:mob/material_check/chainmail"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_combat_expanded:armor/material/leather/legs"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:value_check",
+                            "value": {
+                                "type": "minecraft:binomial",
+                                "n": 1,
+                                "p": {
+                                    "type": "minecraft:score",
+                                    "target": {
+                                        "type": "minecraft:fixed",
+                                        "name": "$difficulty"
+                                    },
+                                    "score": "gm4_ce_data",
+                                    "scale": 0.05
+                                }
+                            },
+                            "range": 1
+                        },
+                        {
+                            "condition": "minecraft:random_chance",
+                            "chance": 0.33
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

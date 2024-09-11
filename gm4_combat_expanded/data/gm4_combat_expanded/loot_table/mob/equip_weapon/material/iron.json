@@ -1,0 +1,70 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4_combat_expanded:weapon/pickaxe/iron",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_combat_expanded:mob/modifier/dark"
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "type": "minecraft:alternatives",
+              "children": [
+                {
+                  "type": "minecraft:loot_table",
+                  "value": "gm4_combat_expanded:weapon/axe/iron",
+                  "conditions": [
+                    {
+                      "condition": "minecraft:value_check",
+                      "value": {
+                        "type": "minecraft:binomial",
+                        "n": 1,
+                        "p": {
+                          "type": "minecraft:score",
+                          "target": {
+                            "type": "minecraft:fixed",
+                            "name": "$difficulty"
+                          },
+                          "score": "gm4_ce_data",
+                          "scale": 0.0025
+                        }
+                      },
+                      "range": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:loot_table",
+                  "value": "gm4_combat_expanded:weapon/shovel/iron",
+                  "conditions": [
+                    {
+                      "condition": "minecraft:random_chance",
+                      "chance": 0.33
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:loot_table",
+                  "value": "gm4_combat_expanded:weapon/sword/iron"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

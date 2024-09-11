@@ -1,11 +1,20 @@
-version: 1.4.0
+version: 1.6.0
 id: gm4
 
 data_pack:
   load: 
     data: data
 
+resource_pack: 
+  load:
+    assets: assets
+
+require:
+  - gm4.plugins.resource_pack
+
 pipeline:
+  - beet.contrib.babelbox
+  - gm4.plugins.resource_pack.build
   - gm4.plugins.versioning.base
 
 meta:
@@ -14,3 +23,10 @@ meta:
       extra_version_injections:
         advancements:
           - 'gm4:intro_song/play_song'
+    model_data:
+      - item: command_block
+        reference: gm4:gui/advancement/root
+        template: generated
+  babelbox:
+    load: assets/translations.csv
+    namespace: gm4_translations

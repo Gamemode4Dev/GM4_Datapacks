@@ -1,0 +1,8 @@
+key,en_us
+advancement.gm4.ink_spitting_squid.title,Natural Defenses
+advancement.gm4.ink_spitting_squid.description,Get blinded by an underwater squid
+advancement.gm4.glow_ink_spitting_squid.title,"The Light, It Burns!"
+advancement.gm4.glow_ink_spitting_squid.description,Glow due to an underwater glow squid
+text.gm4.guidebook.module_desc.ink_spitting_squid,"Improves the vanilla ink effect by adding Blindness. Glow Squid will give Night Vision when disturbed, which might come in handy if you're out of torches!"
+text.gm4.guidebook.ink_spitting_squid.normal_squid,"Swimming underwater near a squid will cause it to ink the diver.\n\nWhen affected by squid ink, blindness and nausea effects occur."
+text.gm4.guidebook.ink_spitting_squid.glow_squid,"When glow squids ink, they have the opposite effect from squids.\n\nThose inked with glow ink are affected by night vision and glowing."

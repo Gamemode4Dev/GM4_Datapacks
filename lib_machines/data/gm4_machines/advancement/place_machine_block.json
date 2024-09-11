@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "placed_machine_block": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:player_head"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{gm4_machines:{}}"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_machines:place_down/place_machine_block"
+  }
+}

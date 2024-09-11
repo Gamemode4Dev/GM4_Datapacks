@@ -1,0 +1,26 @@
+[
+  {
+    "function": "minecraft:set_item",
+    "item": "minecraft:obsidian"
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:custom_model_data": "gm4_metallurgy:item/slightly_damaged_obsidian",
+      "!minecraft:custom_name": {},
+      "!minecraft:custom_data": {},
+      "!minecraft:profile": {}
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "mode": "append",
+    "lore": [
+      {
+        "translate": "item.gm4.slightly_damaged_obsidian",
+        "fallback": "Slightly Damaged Obsidian",
+        "color": "dark_gray"
+      }
+    ]
+  }
+]

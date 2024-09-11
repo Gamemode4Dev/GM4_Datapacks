@@ -3,8 +3,7 @@
   "name": "Tower Structures",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:ladder",
-    "nbt": "{CustomModelData:3420003}"
+    "id": "minecraft:ladder"
   },
   "criteria": {
     "enter_badlands_tower": {
@@ -16,7 +15,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:badlands"
+                "structures": "gm4_tower_structures:badlands"
               }
             }
           }
@@ -32,7 +31,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:default"
+                "structures": "gm4_tower_structures:default"
               }
             }
           }
@@ -48,7 +47,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:desert"
+                "structures": "gm4_tower_structures:desert"
               }
             }
           }
@@ -64,7 +63,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:snowy"
+                "structures": "gm4_tower_structures:snowy"
               }
             }
           }
@@ -80,7 +79,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:ocean/large_ship"
+                "structures": "gm4_tower_structures:ocean/large_ship"
               }
             }
           }
@@ -96,7 +95,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:ocean/medium_ship"
+                "structures": "gm4_tower_structures:ocean/medium_ship"
               }
             }
           }
@@ -112,7 +111,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:ocean/raft"
+                "structures": "gm4_tower_structures:ocean/raft"
               }
             }
           }
@@ -128,7 +127,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:ocean/small_ship"
+                "structures": "gm4_tower_structures:ocean/small_ship"
               }
             }
           }
@@ -144,7 +143,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:segmented/cold_frozen"
+                "structures": "gm4_tower_structures:segmented/cold_frozen"
               }
             }
           }
@@ -160,7 +159,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:segmented/frozen"
+                "structures": "gm4_tower_structures:segmented/frozen"
               }
             }
           }
@@ -176,7 +175,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:segmented/hot"
+                "structures": "gm4_tower_structures:segmented/hot"
               }
             }
           }
@@ -192,7 +191,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:segmented/hot_warm"
+                "structures": "gm4_tower_structures:segmented/hot_warm"
               }
             }
           }
@@ -208,7 +207,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "structure": "gm4_tower_structures:segmented/warm_cold"
+                "structures": "gm4_tower_structures:segmented/warm_cold"
               }
             }
           }
@@ -249,7 +248,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.tower_structures.description",
+            "translate": "text.gm4.guidebook.tower_structures.description.types",
             "fallback": "Stone towers can be found in most biomes.\n\nThe Badlands, Desert, and Snowy biomes have special towers that match the terrain.\n\nOcean dungeons and ships can be found at sea."
           }
         ]

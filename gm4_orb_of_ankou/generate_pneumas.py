@@ -5,7 +5,7 @@ from typing import Any
 SUPPORTED_LOOTING = 10
 
 entities = {}
-pneumas = []
+pneumas:list[str] = []
 updated_csv = [['-Run beet to update columns 4-9'],[],['.Mob','.Soul Essence','Base','L I','L II','L III','.','K/E (L III)','K/S (L III)']]
 
 def beet_default(ctx: Context):
@@ -42,7 +42,9 @@ def generate_corripio(ctx: Context):
               } for tag in ["gm4_oa_ignore", "smithed.entity"]],
             ],
             "killing_blow": { "source_entity": { "equipment": { "mainhand": {
-              "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'corripio'}}"
+              "predicates": {
+                "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'corripio'}}"
+              }
             } } } }
           }
         }
@@ -69,7 +71,7 @@ def generate_corripio(ctx: Context):
         "rolls": 1,
         "entries": [{
           "type": "minecraft:loot_table",
-          "name": f"gm4_orb_of_ankou:items/soul_essence/{essence}"
+          "value": f"gm4_orb_of_ankou:items/soul_essence/{essence}"
         }]
       }
       pool["conditions"] = [{
@@ -93,15 +95,17 @@ def generate_pneuma_predicates(ctx: Context):
   pneuma: Any = ""
   for pneuma in pneumas:
     # Predicate to check if a player has a certain pneuma equipped
-    nbt = "{gm4_orb_of_ankou:{pneumas:[{id:'"+ pneuma + "'}]}}"
+    custom_data = "{gm4_orb_of_ankou:{pneumas:[{id:'"+ pneuma + "'}]}}"
     ctx.data[f"gm4_orb_of_ankou:pneuma_equipped/{pneuma}"] = Predicate({
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
         "equipment": {
           "offhand": {
-            "tag": "gm4_orb_of_ankou:pneuma_container",
-            "nbt": nbt
+            "items": "#gm4_orb_of_ankou:pneuma_container",
+            "predicates": {
+              "minecraft:custom_data": custom_data
+            }
           }
         }
       }
@@ -138,7 +142,7 @@ def read_csv():
       updated_csv.append(entry)
 
   # update calculated info
-  with open('gm4_orb_of_ankou/soul_essence.csv', mode ='w') as file:
+  with open('gm4_orb_of_ankou/soul_essence.csv', mode ='w', newline='') as file:
     csv_file = csv.writer(file)
 
     # skip first two rows

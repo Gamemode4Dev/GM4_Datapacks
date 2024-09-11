@@ -1,0 +1,12 @@
+key,en_us
+text.gm4.guidebook.discovered_page,Check your guidebook!
+text.gm4.guidebook.discovered,%1$s has discovered a guidebook page from %2$s
+text.gm4.guidebook.jump_to_section,Jump to Section
+text.gm4.guidebook.next,Go to the next module
+text.gm4.guidebook.open_wiki,Open the wiki page for this module
+text.gm4.guidebook.prev,Go to the previous module
+text.gm4.guidebook.refresh,Refresh section
+text.gm4.guidebook.return_to_toc,Return to the table of contents
+text.gm4.guidebook.table_of_contents,Table of Contents
+text.gm4.guidebook.title,Gamemode 4 Guidebook
+text.gm4.guidebook.undiscovered,Undiscovered

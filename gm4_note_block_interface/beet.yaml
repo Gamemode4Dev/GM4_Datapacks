@@ -1,6 +1,6 @@
 id: gm4_note_block_interface
 name: Note Block Interface
-version: 1.2.X
+version: 1.4.X
 
 data_pack:
   load: .
@@ -16,6 +16,10 @@ meta:
       description: Adds a neat interface to improve your musical skills!
       recommended: []
       notes: []
+    smithed:
+      pack_id: gm4_note_block_interface
+    planetminecraft: 
+      uid: 4308978
     video: https://www.youtube.com/watch?v=Kqrdy-8-sb8
     wiki: https://wiki.gm4.co/wiki/Note_Block_Interface
     credits:
@@ -25,7 +29,3 @@ meta:
         - Denniss
       Icon Design:
         - DuckJr
-  smithed:
-    pack_id: gm4_note_block_interface
-  planetminecraft: 
-    uid: 4308978

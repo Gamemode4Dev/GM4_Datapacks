@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:tripwire_hook",
+            "components": {
+                "minecraft:custom_model_data": "gui/advancement/crossbow_cartridges_string"
+            }
+        },
+        "title": {
+            "translate": "advancement.gm4.crossbow_cartridges_string.title",
+            "fallback": "Almost a Grappling Hook"
+        },
+        "description": {
+            "translate": "advancement.gm4.crossbow_cartridges_string.description",
+            "fallback": "Create a 40-block long tripwire circuit using a crossbow",
+            "color": "gray"
+        }
+    },
+    "parent": "gm4:crossbow_cartridges_bucket",
+    "criteria": {
+        "shoot_fish": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

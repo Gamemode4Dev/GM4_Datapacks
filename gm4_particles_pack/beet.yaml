@@ -1,6 +1,6 @@
 id: gm4_particles_pack
 name: Particles Pack
-version: 1.4.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -18,7 +18,7 @@ meta:
         - gm4_poses_pack
       notes: []
     required:
-      gm4_better_armour_stands: 1.2.0
+      gm4_better_armour_stands: 1.4.0
     video: https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=238s
     wiki: https://wiki.gm4.co/wiki/Particles_Pack
     credits:

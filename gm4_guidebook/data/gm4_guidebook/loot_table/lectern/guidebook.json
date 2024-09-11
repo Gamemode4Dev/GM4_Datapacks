@@ -1,0 +1,70 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "gm4_guidebook:item/guidebook",
+                "minecraft:written_book_content": {
+                  "pages": [
+                    "[\"\",{\"translate\":\"gui.gm4.guidebook.page.toc\",\"fallback\":\"\",\"color\":\"white\",\"font\":\"gm4:guidebook\"}]",
+                    "[\"\",{\"translate\":\"gui.gm4.guidebook.page.intro\",\"fallback\": \"\",\"color\": \"white\",\"font\": \"gm4:guidebook\"},{\"translate\":\"text.gm4.guidebook.introduction\",\"fallback\":\"Introduction\",\"underlined\":true},{\"text\":\"\n\n\"},{\"translate\":\"text.gm4.guidebook.letter\",\"fallback\":\"This is a world unlike others. It appears that certain things work...differently to say the least.\n\nThis book will document discoveries regarding these new mechanics.\"},{\"text\":\"\n\n> \",\"color\":\"#4AA0C7\"},{\"translate\":\"text.gm4.guidebook.refresh_findings\",\"fallback\":\"Refresh Findings\",\"color\":\"#4AA0C7\",\"hoverEvent\":{\"action\":\"show_text\",\"contents\":[{\"translate\":\"text.gm4.guidebook.refresh_toc\",\"fallback\":\"Refresh Table of Contents\",\"color\":\"gold\"}]},\"clickEvent\":{\"action\":\"change_page\",\"value\":\"1\"}}]"
+                  ],
+                  "title": "Gamemode 4 Guidebook",
+                  "author": "Unknown",
+                  "generation": 3
+                }
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_guidebook:{lectern:1b,trigger:1}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "text.gm4.guidebook.title",
+                "fallback": "Gamemode 4 Guidebook",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_guidebook:register"
+              },
+              "ops": [
+                {
+                  "source": "lectern_toc[]",
+                  "target": "pages",
+                  "op": "append"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_nbt",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_guidebook:register"
+              },
+              "ops": [
+                {
+                  "source": "toc_back[]",
+                  "target": "pages",
+                  "op": "append"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

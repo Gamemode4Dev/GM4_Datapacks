@@ -1,0 +1,63 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/relocator_full",
+                "minecraft:profile": "$relocator_full"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_machines:{id:'relocator_full'}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": [
+                {
+                  "translate": "item.gm4.relocator",
+                  "fallback": "Relocator",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:copy_custom_data",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_relocators:temp"
+              },
+              "ops": [
+                {
+                  "source": "gm4_relocation",
+                  "target": "gm4_relocation",
+                  "op": "replace"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "nbt": "lore",
+                  "storage": "gm4_relocators:temp",
+                  "interpret": true
+                }
+              ],
+              "mode": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

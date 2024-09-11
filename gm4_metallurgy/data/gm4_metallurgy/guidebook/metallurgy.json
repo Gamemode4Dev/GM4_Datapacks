@@ -3,8 +3,7 @@
   "name": "Metallurgy",
   "module_type": "base",
   "icon": {
-    "item": "minecraft:anvil",
-    "nbt": "{CustomModelData:3420001}"
+    "id": "minecraft:anvil"
   },
   "criteria": {
     "obtain_tnt": {
@@ -39,7 +38,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_metallurgy:{item:\"ore\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{item:\"ore\"}}"
+            }
           }
         ]
       }
@@ -52,7 +53,9 @@
             "items": [
               "minecraft:player_head"
             ],
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,item:\"obsidian_cast\"}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,item:\"obsidian_cast\"}}"
+            }
           }
         ]
       }

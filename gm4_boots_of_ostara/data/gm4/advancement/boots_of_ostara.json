@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "leather_boots",
+      "components": {
+        "minecraft:dyed_color": 3705899,
+        "minecraft:custom_model_data": "gui/advancement/boots_of_ostara"
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.boots_of_ostara.title",
+      "fallback": "Green Feet"
+    },
+    "description": {
+      "translate": "advancement.gm4.boots_of_ostara.description",
+      "fallback": "Wear the Boots of Ostara",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:custom_crafters",
+  "criteria": {
+    "boots_of_ostara": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:leather_boots"
+            ],
+            "predicates": {
+              "minecraft:custom_data": "{gm4_boots_of_ostara:1b}"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

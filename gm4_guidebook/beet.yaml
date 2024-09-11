@@ -1,26 +1,44 @@
 id: gm4_guidebook
 name: Guidebook
-version: 2.0.X
+version: 2.2.X
 
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+  
 require:
   - bolt
 
 pipeline:
-  - mecha
+  - legacy_item_sheet
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_forceload
 
 meta:
   gm4:
+    minecraft: []
     versioning:
       required:
-        lib_forceload: 1.1.0
+        lib_forceload: 1.4.0
       schedule_loops: 
         - main
         - tick
+    model_data:
+      - item: written_book
+        reference: item/guidebook
+        template: generated
+    translation_linter_ignores:
+      - text.gm4.guidebook.discovered_page
+      - text.gm4.guidebook.discovered
+      - text.gm4.guidebook.next
+      - text.gm4.guidebook.open_wiki
+      - text.gm4.guidebook.prev
+      - text.gm4.guidebook.refresh
+      - text.gm4.guidebook.return_to_toc
+      - text.gm4.guidebook.table_of_contents
+      - text.gm4.guidebook.undiscovered
     website:
       description: Adds a dynamic guidebook to discover the mechanics of Gamemode 4! This provides a wiki-like experience in-game!
       recommended:

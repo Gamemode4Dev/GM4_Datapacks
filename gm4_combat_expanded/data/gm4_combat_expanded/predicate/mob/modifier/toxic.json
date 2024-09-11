@@ -1,0 +1,20 @@
+[
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:reference",
+      "name": "gm4_combat_expanded:mob/modifier/dark"
+    }
+  },
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biomes": [
+        "minecraft:swamp",
+        "minecraft:mangrove_swamp",
+        "minecraft:jungle",
+        "minecraft:bamboo_jungle"
+      ]
+    }
+  }
+]

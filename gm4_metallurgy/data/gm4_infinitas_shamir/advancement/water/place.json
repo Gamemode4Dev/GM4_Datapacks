@@ -1,0 +1,233 @@
+{
+  "criteria": {
+    "place_water_mainhand": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": [
+                    "creative"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:water_bucket",
+                    "minecraft:axolotl_bucket",
+                    "minecraft:cod_bucket",
+                    "minecraft:pufferfish_bucket",
+                    "minecraft:salmon_bucket",
+                    "minecraft:tadpole_bucket",
+                    "minecraft:tropical_fish_bucket"
+                  ],
+                  "predicates": {
+                    "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "block": {
+                    "blocks": [
+                      "minecraft:flower_pot",
+                      "minecraft:water"
+                    ]
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "block": {
+                    "blocks": "#gm4:waterloggable"
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "dimension": "minecraft:the_nether"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "use_on_cauldron_mainhand": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}",
+              "equipment": {
+                "mainhand": {
+                  "items": [
+                    "minecraft:bucket"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:water_cauldron"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "place_water_offhand": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type_specific": {
+                  "type": "player",
+                  "gamemode": [
+                    "creative"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "offhand": {
+                  "items": [
+                    "minecraft:water_bucket",
+                    "minecraft:axolotl_bucket",
+                    "minecraft:cod_bucket",
+                    "minecraft:pufferfish_bucket",
+                    "minecraft:salmon_bucket",
+                    "minecraft:tadpole_bucket",
+                    "minecraft:tropical_fish_bucket"
+                  ],
+                  "predicates": {
+                    "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "block": {
+                    "blocks": [
+                      "minecraft:flower_pot",
+                      "minecraft:water"
+                    ]
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "block": {
+                    "blocks": "#gm4:waterloggable"
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:location_check",
+                "predicate": {
+                  "dimension": "minecraft:the_nether"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "use_on_cauldron_offhand": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}",
+              "equipment": {
+                "offhand": {
+                  "items": [
+                    "minecraft:bucket"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:water_cauldron"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "place_water_mainhand",
+      "use_on_cauldron_mainhand",
+      "place_water_offhand",
+      "use_on_cauldron_offhand"
+    ]
+  ],
+  "rewards": {
+    "function": "gm4_infinitas_shamir:water/place"
+  }
+}

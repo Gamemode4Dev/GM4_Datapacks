@@ -2,7 +2,9 @@
   "id": "mysterious_midnights",
   "name": "Mysterious Midnights",
   "module_type": "base",
-  "icon": {},
+  "icon": {
+    "id": "minecraft:clock"
+  },
   "criteria": {},
   "sections": [
     {

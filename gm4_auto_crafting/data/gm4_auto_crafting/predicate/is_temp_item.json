@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "slots": {
+      "contents": {
+        "count": 1,
+        "predicates": {
+          "minecraft:custom_data": "{gm4_auto_crafting_temp:1b}"
+        }
+      }
+    }
+  }
+}

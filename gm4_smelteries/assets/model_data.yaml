@@ -1,0 +1,68 @@
+model_data:
+  - item: player_head
+    reference: item/smeltery
+    model: block/smeltery_unlit
+  - item: iron_block
+    template: block
+    broadcast:
+      - reference: block/smeltery_unlit
+        textures: 
+          top: block/smeltery_top
+          front: block/smeltery_front
+          side: block/smeltery_side
+          bottom: block/smeltery_bottom
+      - reference: block/smeltery_lit
+        textures: 
+          top: block/smeltery_top
+          front: block/smeltery_front_lit
+          side: block/smeltery_side
+          bottom: block/smeltery_bottom
+    transforms:
+      - name: item_display
+        origin: [0.5, 1, 0.5]
+        scale: [0.438, 0.438, 0.438]
+        translation: [0, 0.1, 0]
+  - item: chorus_flower
+    template: smelteries:ore_display
+    reference: block/ore_display/chorus_fruit
+  - item: copper_ore
+    template: smelteries:ore_display
+    reference: block/ore_display/copper_ore
+  - item: deepslate_copper_ore
+    template: smelteries:ore_display
+    reference: block/ore_display/deepslate_copper_ore
+  - item: deepslate_gold_ore
+    template: smelteries:ore_display
+    reference: block/ore_display/deepslate_gold_ore
+  - item: deepslate_iron_ore
+    template: smelteries:ore_display
+    reference: block/ore_display/deepslate_iron_ore
+  - item: gold_ore
+    template: smelteries:ore_display
+    reference: block/ore_display/gold_ore
+  - item: iron_ore
+    template: smelteries:ore_display
+    reference: block/ore_display/iron_ore
+  - item: nether_gold_ore
+    template: smelteries:ore_display
+    reference: block/ore_display/nether_gold_ore
+  - item: raw_copper_block
+    template: smelteries:ore_display
+    reference: block/ore_display/raw_copper
+  - item: raw_gold_block
+    template: smelteries:ore_display
+    reference: block/ore_display/raw_gold
+  - item: raw_iron_block
+    template: smelteries:ore_display
+    reference: block/ore_display/raw_iron
+  - item: red_sand
+    template: smelteries:ore_display
+    reference: block/ore_display/red_sand
+  - item: sand
+    template: smelteries:ore_display
+    reference: block/ore_display/sand
+  - item: furnace
+    reference: gui/advancement/smelteries
+    template:
+      name: advancement
+      forward: block/smeltery_unlit

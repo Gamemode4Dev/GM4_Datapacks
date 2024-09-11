@@ -1,8 +1,11 @@
 id: gm4_better_fire
 name: Better Fire
-version: 1.3.X
+version: 1.5.X
 
 data_pack:
+  load: .
+
+resource_pack: 
   load: .
 
 pipeline:
@@ -28,3 +31,12 @@ meta:
         - SpecialBuilder32
       Icon Design:
         - Sparks
+    model_data:
+      - item: flint
+        reference: item/charred_arrowhead
+        template: generated
+      - item: bow
+        reference: gui/advancement/better_fire
+        template:
+          name: advancement
+          forward: minecraft:item/bow

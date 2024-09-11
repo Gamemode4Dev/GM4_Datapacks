@@ -1,6 +1,6 @@
 id: gm4_pig_tractors
 name: Pig Tractors
-version: 1.5.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -14,6 +14,10 @@ meta:
       description: Ride pigs through fields to quickly harvest and plant crops! Who knows, maybe you will even dig up some useful things in the process.
       recommended: []
       notes: []
+    model_data:
+      - item: saddle
+        reference: gui/advancement/pig_tractors
+        template: advancement
     video: https://www.youtube.com/watch?v=7i0WFHUfBXs
     wiki: https://wiki.gm4.co/wiki/Pig_Tractors
     credits:

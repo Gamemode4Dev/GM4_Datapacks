@@ -1,0 +1,28 @@
+[
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:reference",
+      "name": "gm4_combat_expanded:mob/modifier/dark"
+    }
+  },
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biomes": [
+        "minecraft:snowy_slopes",
+        "minecraft:jagged_peaks",
+        "minecraft:frozen_peaks",
+        "minecraft:windswept_hills",
+        "minecraft:windswept_gravelly_hills",
+        "minecraft:windswept_forest",
+        "minecraft:stony_shore",
+        "minecraft:meadow",
+        "minecraft:stony_peaks",
+        "minecraft:windswept_savanna",
+        "minecraft:eroded_badlands",
+        "minecraft:cherry_grove"
+      ]
+    }
+  }
+]

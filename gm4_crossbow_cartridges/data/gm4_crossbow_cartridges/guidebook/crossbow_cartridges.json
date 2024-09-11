@@ -3,8 +3,7 @@
   "name": "Crossbow Cartridges",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:crossbow",
-    "nbt": "{CustomModelData:3420005}"
+    "id": "minecraft:crossbow"
   },
   "criteria": {
     "shot_crossbow": {
@@ -43,7 +42,7 @@
             "translate": "block.minecraft.tnt",
             "hoverEvent": {
               "action": "show_item",
-              "value": "{id:\"minecraft:tnt\",Count:1b}"
+              "value": "{id:\"minecraft:tnt\",count:1}"
             }
           },
           {
@@ -53,7 +52,7 @@
             "translate": "item.minecraft.fire_charge",
             "hoverEvent": {
               "action": "show_item",
-              "value": "{id:\"minecraft:fire_charge\",Count:1b}"
+              "value": "{id:\"minecraft:fire_charge\",count:1}"
             }
           },
           {
@@ -122,7 +121,7 @@
             "translate": "item.minecraft.string",
             "hoverEvent": {
               "action": "show_item",
-              "value": "{id:\"minecraft:string\",Count:1b}"
+              "value": "{id:\"minecraft:string\",count:1}"
             }
           },
           {

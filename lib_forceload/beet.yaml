@@ -1,6 +1,7 @@
 id: gm4_forceload
 name: Gamemode 4 Forceload
-version: 1.2.X
+version: 1.4.X
+description: lib_forceload is a mcfunction library adding a forceloaded chunk with common utlities.
 
 data_pack:
   load: 
@@ -14,8 +15,8 @@ meta:
     versioning:
       extra_version_injections:
         advancements: [dimension_marking]
+    smithed:
+      pack_id: gm4_lib_forceload
     credits:
       Creator:
         - Misode
-  smithed:
-    pack_id: gm4_lib_forceload

@@ -1,0 +1,33 @@
+[
+  {
+    "condition": "minecraft:any_of",
+    "terms": [
+      {
+        "condition": "minecraft:inverted",
+        "term": {
+          "condition": "minecraft:reference",
+          "name": "gm4_combat_expanded:mob/modifier/dark"
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "predicate": {
+          "fluid": {
+            "fluids": "#minecraft:water"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biomes": [
+        "minecraft:deep_lukewarm_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_cold_ocean",
+        "minecraft:deep_frozen_ocean"
+      ]
+    }
+  }
+]

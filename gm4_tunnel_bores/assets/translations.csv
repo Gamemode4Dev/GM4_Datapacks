@@ -1,0 +1,11 @@
+key,en_us
+item.gm4.minecart.bore,Minecart with Piston
+advancement.gm4.tunnel_bores.title,"Isn't It ""Groundbreaking""?"
+advancement.gm4.tunnel_bores.description,Obtain a Minecart with Piston
+text.gm4.guidebook.module_desc.tunnel_bores,"Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3\u2a093 tunnels, and even lay rails behind themselves."
+text.gm4.guidebook.tunnel_bores.description,"Tunnel Bores can be crafted to aid in excavation. Piston Minecarts will break blocks and place rails, moving forward.\n\nThey can be crafted in a Custom Crafter."
+text.gm4.guidebook.tunnel_bores.crafting,Tunnel bores can be crafted as follows:
+text.gm4.guidebook.shapeless,Recipe is shapeless
+text.gm4.guidebook.tunnel_bores.start_up,"Piston Minecarts are upgraded furnace minecarts and require coal as fuel. To start the bore, use a piece of coal on the bore.\n\nPiston Minecarts will mine piston-movable blocks in a 3x3 area centered at the block above it."
+text.gm4.guidebook.tunnel_bores.supply,These tunnel bores can place rails on solid blocks in front of it.\n\nChest Minecarts can be attached to supply the Piston Minecart with rails and coal.
+text.gm4.guidebook.tunnel_bores.mining,"Tunnel bores will continuously mine blocks when it hits a breakable block, but will always try to mine and refuel when on a powered activator rail.\n\nThis makes it possible to keep a stationary bore."

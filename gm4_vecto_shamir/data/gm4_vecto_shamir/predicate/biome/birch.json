@@ -1,0 +1,9 @@
+{
+  "condition": "minecraft:location_check",
+  "predicate": {
+    "biomes": [
+      "minecraft:birch_forest",
+      "minecraft:old_growth_birch_forest"
+    ]
+  }
+}

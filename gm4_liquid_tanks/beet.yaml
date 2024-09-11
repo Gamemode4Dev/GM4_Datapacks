@@ -1,8 +1,11 @@
 id: gm4_liquid_tanks
 name: Liquid Tanks
-version: 2.4.X
+version: 2.6.X
 
 data_pack:
+  load: .
+
+resource_pack:
   load: .
 
 pipeline:
@@ -14,9 +17,45 @@ meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.0.0
-        lib_machines: 1.1.0
+        lib_custom_crafters: 3.2.0
+        lib_machines: 1.3.0
       schedule_loops: [main]
+    model_data:
+      - item: player_head
+        reference: item/liquid_tank
+        model: item/liquid_tank_full
+      - item: glass
+        template: custom
+        broadcast:
+          - reference: block/liquid_tank
+          - reference: block/liquid_tank_side
+            model: block/liquid_tank
+        transforms:
+          - name: item_display
+            origin: [0.5,0.9,0.5]
+            scale: [0.438,0.438,0.438]
+            translation: [0,0,0]
+            display: head
+      - item: honey_block
+        reference: block/cast_honey_block
+        template: vanilla
+      - item: potion
+        template: vanilla
+        broadcast:
+          - reference: gm4_standard_liquids:item/ink_bottle
+          - reference: gm4_standard_liquids:item/glow_ink_bottle
+      - item: hopper
+        reference: gui/advancement/liquid_tanks_create
+        template: 
+          name: advancement
+          forward: item/liquid_tank_full
+      - item: experience_bottle
+        reference: standard_liquids:gui/advancement/standard_liquids
+        template: advancement
+    gui_fonts:
+      - translation: gui.gm4.liquid_tank
+        container: hopper
+        texture: gui/container/liquid_tank
     website:
       description: Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!
       recommended:
@@ -37,6 +76,6 @@ meta:
         - BluePsychoRanger
       Textures by:
         - Vilder50
-        - kyrkis
+        - Kyrius
       Icon Design:
         - DuckJr

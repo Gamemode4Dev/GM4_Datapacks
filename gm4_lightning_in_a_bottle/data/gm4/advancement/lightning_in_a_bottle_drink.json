@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:potion",
+      "components": {
+        "minecraft:enchantments": {
+          "protection": 0
+        },
+        "minecraft:custom_model_data": "gui/advancement/lightning_in_a_bottle_drink",
+        "minecraft:potion_contents": {
+          "custom_color": 11985402
+        }
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.lightning_in_a_bottle.lightning_drink.title",
+      "fallback": "Shocking!"
+    },
+    "description": {
+      "translate": "advancement.gm4.lightning_in_a_bottle.lightning_drink.description",
+      "fallback": "Drink a Bottle of Lightning",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

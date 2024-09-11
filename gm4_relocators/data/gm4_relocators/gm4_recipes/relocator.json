@@ -19,11 +19,19 @@
       "B": [
         {
           "item": "minecraft:enchanted_book",
-          "nbt": "{StoredEnchantments:[{id:'minecraft:silk_touch'}]}"
+          "components": {
+            "minecraft:stored_enchantments": {
+              "minecraft:silk_touch": 1
+            }
+          }
         },
         {
           "item": "minecraft:paper",
-          "nbt": "{Enchantments:[{id:'minecraft:silk_touch'}]}"
+          "components": {
+            "minecraft:enchantments": {
+              "minecraft:silk_touch": 1
+            }
+          }
         }
       ]
     }

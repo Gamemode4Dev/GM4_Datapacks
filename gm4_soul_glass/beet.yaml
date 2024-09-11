@@ -1,6 +1,6 @@
 id: gm4_soul_glass
 name: Soul Glass
-version: 1.2.X
+version: 1.4.X
 
 data_pack:
   load: .
@@ -13,10 +13,17 @@ meta:
   gm4:
     versioning:
       required:
-        lib_machines: 1.1.0
+        lib_machines: 1.3.0
       schedule_loops: 
         - main
         - beacon_clock
+    model_data:
+      - item: brown_stained_glass
+        reference: item/soul_glass
+        template: vanilla
+      - item: brown_stained_glass
+        reference: gui/advancement/soul_glass
+        template: advancement
     website:
       description: Reverse the effects of beacons with corrupting glass! But be careful, a poison Beacon may sound great at first, but is incredibly painful in pratice.
       recommended: []

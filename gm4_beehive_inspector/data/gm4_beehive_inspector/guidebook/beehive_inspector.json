@@ -3,8 +3,7 @@
   "name": "Beehive Inspector",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:beehive",
-    "nbt": "{CustomModelData:3420001}"
+    "id": "minecraft:beehive"
   },
   "criteria": {
     "obtain_beehive": {

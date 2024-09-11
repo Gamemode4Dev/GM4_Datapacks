@@ -8,26 +8,26 @@
                     "children": [
                         {
                             "type": "minecraft:loot_table",
-                            "name": "gm4_example_pack:items/lingering_resistance_potion",
+                            "value": "gm4_example_pack:items/lingering_resistance_potion",
                             "conditions": [
                                 {
                                     "condition": "minecraft:entity_properties",
                                     "entity": "this",
                                     "predicate": {
-                                        "nbt": "{data:{gm4_brewing:{insert:{tag:{id:\"minecraft:splash_potion\",custom_potion:\"resistance\"}}}}}"
+                                        "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{custom_potion:'resistance'}}}}}}"
                                     }
                                 }
                             ]
                         },
                         {
                             "type": "minecraft:loot_table",
-                            "name": "gm4_example_pack:items/lingering_booze",
+                            "value": "gm4_example_pack:items/lingering_booze",
                             "conditions": [
                                 {
                                     "condition": "minecraft:entity_properties",
                                     "entity": "this",
                                     "predicate": {
-                                        "nbt": "{data:{gm4_brewing:{insert:{tag:{id:\"minecraft:splash_potion\",custom_potion:\"booze\"}}}}}"
+                                        "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{custom_potion:'booze'}}}}}}"
                                     }
                                 }
                             ]

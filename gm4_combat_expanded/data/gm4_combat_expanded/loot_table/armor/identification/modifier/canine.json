@@ -1,0 +1,152 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_combat_expanded:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "replace": false,
+              "modifiers": [
+                {
+                  "attribute": "minecraft:generic.attack_speed",
+                  "id": "gm4_combat_expanded:permanent",
+                  "amount": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$atkspeed-"
+                    },
+                    "score": "gm4_ce_data",
+                    "scale": 0.01
+                  },
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_combat_expanded:{modifier:71}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.equip",
+              "fallback": "When Equipped:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.plus.0",
+                "with": [
+                  "1",
+                  {
+                    "translate": "item.gm4.combat_expanded.lore.canine",
+                    "fallback": "Good Boi"
+                  }
+                ],
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.canine_description",
+                "fallback": "A loyal friend to fight by your side",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.canine_description_2",
+                "fallback": "Command to sit to lose aggro",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.canine_description_3",
+                "fallback": "Feed to strengthen",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.combat_expanded.name.canine",
+              "fallback": "Canine %s",
+              "with": [
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_components",
+          "components": {
+            "minecraft:rarity": "uncommon"
+          }
+        }
+      ]
+    }
+  ]
+}

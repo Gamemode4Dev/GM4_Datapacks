@@ -1,0 +1,38 @@
+{
+  "type": "block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/disassembler",
+                "minecraft:profile": "$disassembler"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'disassembler'}}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "translate": "block.gm4.disassembler",
+                  "fallback": "Disassembler",
+                  "color": "white",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

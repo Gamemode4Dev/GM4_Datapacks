@@ -1,0 +1,589 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:apple",
+      "components": {
+        "minecraft:enchantment_glint_override": true
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.block_compressors.compressed_diet.title",
+      "fallback": "A Compressed Diet"
+    },
+    "description": {
+      "translate": "advancement.gm4.block_compressors.compressed_diet.description",
+      "fallback": "Eat too much of everything. This can't be good for you...",
+      "color": "gray"
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "parent": "gm4:block_compressors",
+  "criteria": {
+    "apple": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:apple"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "bread": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:bread"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "porkchop": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:porkchop"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "cooked_porkchop": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cooked_porkchop"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "golden_apple": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:golden_apple"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "cod": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cod"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "salmon": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:salmon"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "tropical_fish": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:tropical_fish"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "pufferfish": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:pufferfish"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "cooked_cod": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cooked_cod"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "cooked_salmon": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cooked_salmon"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "cookie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cookie"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "melon_slice": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:melon_slice"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "beef": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:beef"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "cooked_beef": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cooked_beef"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "chicken": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:chicken"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "cooked_chicken": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cooked_chicken"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "rotten_flesh": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:rotten_flesh"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "spider_eye": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:spider_eye"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "carrot": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:carrot"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "potato": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:potato"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "baked_potato": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:baked_potato"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "poisonous_potato": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:poisonous_potato"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "golden_carrot": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:golden_carrot"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "pumpkin_pie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:pumpkin_pie"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "rabbit": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:rabbit"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "cooked_rabbit": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cooked_rabbit"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "mutton": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:mutton"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "cooked_mutton": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:cooked_mutton"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "chorus_fruit": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:chorus_fruit"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "beetroot": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:beetroot"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "dried_kelp": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:dried_kelp"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "sweet_berries": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:sweet_berries"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    },
+    "honey_bottle": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:honey_bottle"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:16}}"
+          }
+        }
+      }
+    },
+    "glow_berries": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:glow_berries"
+          ],
+          "predicates": {
+            "minecraft:custom_data": "{gm4_block_compressors:{compression_level:64}}"
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "apple"
+    ],
+    [
+      "bread"
+    ],
+    [
+      "porkchop"
+    ],
+    [
+      "cooked_porkchop"
+    ],
+    [
+      "golden_apple"
+    ],
+    [
+      "cod"
+    ],
+    [
+      "salmon"
+    ],
+    [
+      "tropical_fish"
+    ],
+    [
+      "pufferfish"
+    ],
+    [
+      "cooked_cod"
+    ],
+    [
+      "cooked_salmon"
+    ],
+    [
+      "cookie"
+    ],
+    [
+      "melon_slice"
+    ],
+    [
+      "beef"
+    ],
+    [
+      "cooked_beef"
+    ],
+    [
+      "chicken"
+    ],
+    [
+      "cooked_chicken"
+    ],
+    [
+      "rotten_flesh"
+    ],
+    [
+      "spider_eye"
+    ],
+    [
+      "carrot"
+    ],
+    [
+      "potato"
+    ],
+    [
+      "baked_potato"
+    ],
+    [
+      "poisonous_potato"
+    ],
+    [
+      "golden_carrot"
+    ],
+    [
+      "pumpkin_pie"
+    ],
+    [
+      "rabbit"
+    ],
+    [
+      "cooked_rabbit"
+    ],
+    [
+      "mutton"
+    ],
+    [
+      "cooked_mutton"
+    ],
+    [
+      "chorus_fruit"
+    ],
+    [
+      "beetroot"
+    ],
+    [
+      "dried_kelp"
+    ],
+    [
+      "sweet_berries"
+    ],
+    [
+      "honey_bottle"
+    ],
+    [
+      "glow_berries"
+    ]
+  ],
+  "rewards": {
+    "experience": 500
+  }
+}

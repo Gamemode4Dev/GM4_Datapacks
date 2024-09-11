@@ -1,8 +1,11 @@
 id: gm4_teleportation_anchors
 name: Teleportation Anchors
-version: 1.3.X
+version: 1.5.X
 
 data_pack:
+  load: .
+
+resource_pack:
   load: .
 
 pipeline:
@@ -14,11 +17,43 @@ meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.0.0
-        lib_machines: 1.1.0
+        lib_custom_crafters: 3.2.0
+        lib_machines: 1.3.0
       schedule_loops:
         - main
         - tick
+    model_data:
+      - item: player_head
+        reference: item/teleportation_anchor
+        model: block/teleportation_anchor
+      - item: end_portal_frame
+        reference: block/teleportation_anchor
+        template: legacy_machine_block
+        textures:
+          top: block/teleportation_anchor_top
+          side: block/teleportation_anchor_side
+          front: block/teleportation_anchor_side
+          bottom: block/teleportation_anchor_bottom
+      - item: player_head
+        reference: item/teleportation_jammer
+        model: block/teleportation_jammer
+      - item: purpur_pillar
+        reference: block/teleportation_jammer
+        template: custom
+      - item: end_rod
+        reference: gui/advancement/teleportation_jammer
+        template:
+          name: advancement
+          forward: block/teleportation_jammer
+      - item: lodestone
+        reference: gui/advancement/teleportation_anchor
+        template:
+          name: advancement
+          forward: block/teleportation_anchor
+    gui_fonts:
+      - translation: gui.gm4.teleportation_jammer
+        container: dropper
+        texture: gui/container/teleportation_jammer
     website:
       description: Suppress and control chorus-based teleportation!
       recommended:

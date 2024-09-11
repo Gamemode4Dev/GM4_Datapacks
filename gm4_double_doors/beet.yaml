@@ -1,6 +1,6 @@
 id: gm4_double_doors
 name: Double Doors
-version: 1.0.X
+version: 1.2.X
 
 data_pack:
   load: .
@@ -20,6 +20,10 @@ meta:
       description: Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blacks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.
       recommended: []
       notes: []
+    modrinth:
+      project_id: Vx4zJ1Np
+    smithed:
+      pack_id: gm4_double_doors
     video: null
     wiki: https://wiki.gm4.co/wiki/Double_Doors
     credits:
@@ -27,7 +31,3 @@ meta:
         - Bloo
       Icon Design:
         - venomousbirds
-  modrinth:
-    project_id: Vx4zJ1Np
-  smithed:
-    pack_id: gm4_double_doors

@@ -1,0 +1,7 @@
+{
+  "function": "minecraft:set_components",
+  "components": {
+    "minecraft:custom_model_data": "block/mould/cool_metal",
+    "minecraft:profile": "$mould/cool_metal"
+  }
+}

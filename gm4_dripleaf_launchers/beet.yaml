@@ -1,6 +1,6 @@
 id: gm4_dripleaf_launchers
 name: Dripleaf Launchers
-version: 1.1.X
+version: 1.3.X
 
 data_pack:
   load: .
@@ -18,12 +18,12 @@ meta:
       description: Start your own Dripleaf Space Program!
       recommended: []
       notes: []
+    modrinth:
+      project_id: kUn3Z6gZ
+    smithed:
+      pack_id: gm4_dripleaf_launchers
     video: null
     wiki: https://wiki.gm4.co/wiki/Dripleaf_Launchers
     credits:
       Creator:
         - Thanathor
-  modrinth:
-    project_id: kUn3Z6gZ
-  smithed:
-    pack_id: gm4_dripleaf_launchers

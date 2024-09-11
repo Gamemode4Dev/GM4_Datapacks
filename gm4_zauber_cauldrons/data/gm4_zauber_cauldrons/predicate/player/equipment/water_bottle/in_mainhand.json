@@ -1,0 +1,16 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "mainhand": {
+                "items": [
+                    "minecraft:potion"
+                ],
+                "predicates": {
+                    "minecraft:potion_contents": "minecraft:water"
+                }
+            }
+        }
+    }
+}

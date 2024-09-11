@@ -1,0 +1,38 @@
+{
+  "type": "block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/liquid_tank",
+                "minecraft:profile": "$liquid_tank"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'liquid_tank'}}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "translate": "block.gm4.liquid_tank",
+                  "fallback": "Liquid Tank",
+                  "color": "white",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+
+execute if data storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded{level2:"random_value"} run return run data modify storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded.level2 set from storage gm4_combat_expanded:temp random_value
+execute if data storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded{level2:"random_value_2"} run return run data modify storage gm4_combat_expanded:temp new_components."minecraft:custom_data".gm4_combat_expanded.level2 set from storage gm4_combat_expanded:temp random_value_2

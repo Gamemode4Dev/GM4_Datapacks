@@ -3,8 +3,9 @@ from pathlib import Path
 from itertools import product
 from gm4.utils import CSV, CSVCell
 import json
+import nbtlib # type: ignore
 
-from beet import Context, subproject
+from beet import Context, Model, subproject
 
 def read_json(path: Path) -> Any:
     """
@@ -68,15 +69,19 @@ def generate_armor_recipes(ctx: Context, armor_flavors: CSV, armor_pieces: CSV):
     """
     # create a loot tables and functions for each zauber armor piece + flavor combination
     for flavor_data in armor_flavors:
+        armor_items: list[str] = []
+        armor_models: dict[str, str] = {}
         for piece_data in armor_pieces:
+            armor_items.append(item:=f"golden_{piece_data['piece']}")
+            armor_models.update({item: (tex_model:=f"item/zauber_armor/{flavor_data['flavor']}/{piece_data['piece']}")})
 
             subproject_config = {
                 "data_pack": {
                     "load": [
                         {
-                            f"data/gm4_zauber_cauldrons/functions/recipes/armor/{piece_data['piece']}/select_flavor.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/armor/select_flavor.mcfunction",
-                            f"data/gm4_zauber_cauldrons/functions/recipes/armor/{piece_data['piece']}/{flavor_data['flavor']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/armor/craft_piece.mcfunction",
-                            f"data/gm4_zauber_cauldrons/loot_tables/items/armor/{piece_data['piece']}/{flavor_data['flavor']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_armor.json"
+                            f"data/gm4_zauber_cauldrons/function/recipes/armor/{piece_data['piece']}/select_flavor.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/armor/select_flavor.mcfunction",
+                            f"data/gm4_zauber_cauldrons/function/recipes/armor/{piece_data['piece']}/{flavor_data['flavor']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/armor/craft_piece.mcfunction",
+                            f"data/gm4_zauber_cauldrons/loot_table/items/armor/{piece_data['piece']}/{flavor_data['flavor']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_armor.json"
                         }
                     ],
                     "render": {
@@ -86,7 +91,6 @@ def generate_armor_recipes(ctx: Context, armor_flavors: CSV, armor_pieces: CSV):
                 },
                 "meta": {
                     "armor_value": piece_data['armor'],
-                    "custom_model_data": flavor_data['custom_model_data'],
                     "flavor": flavor_data['flavor'],
                     "flavor_amount": flavor_data['amount'],
                     "flavor_attribute": flavor_data['attribute'],
@@ -99,6 +103,20 @@ def generate_armor_recipes(ctx: Context, armor_flavors: CSV, armor_pieces: CSV):
 
             ctx.require(subproject(subproject_config))
 
+            ctx.generate(tex_model, Model({
+                "parent": "minecraft:item/generated",
+                "textures": {
+                    "layer0": f"gm4_zauber_cauldrons:{tex_model}"
+                }
+            }))
+
+        ctx.meta["gm4"].setdefault("model_data", []).append({
+            "item": armor_items,
+            "reference": f"item/zauber_armor/{flavor_data['flavor']}",
+            "model": armor_models,
+            "template": "custom",
+        })
+
 
 def generate_crystal_recipes(ctx: Context, crystal_effects: CSV, crystal_lores: Dict[str, Any], potion_effects: CSV):
     """
@@ -110,9 +128,9 @@ def generate_crystal_recipes(ctx: Context, crystal_effects: CSV, crystal_lores: 
             "data_pack": {
                 "load": [
                     {
-                        f"data/gm4_zauber_cauldrons/functions/recipes/crystals/effects/{effect_data['effect']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/crystals/craft_crystal.mcfunction",
-                        f"data/gm4_zauber_cauldrons/loot_tables/items/crystals/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_crystal.json",
-                        f"data/gm4_zauber_cauldrons/loot_tables/technical/replace_offhand_crystal/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/replace_offhand_crystal.json"
+                        f"data/gm4_zauber_cauldrons/function/recipes/crystals/effects/{effect_data['effect']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/crystals/craft_crystal.mcfunction",
+                        f"data/gm4_zauber_cauldrons/loot_table/items/crystals/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_crystal.json",
+                        f"data/gm4_zauber_cauldrons/loot_table/technical/replace_offhand_crystal/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/replace_offhand_crystal.json"
                     }
                 ],
                 "render": {
@@ -122,7 +140,6 @@ def generate_crystal_recipes(ctx: Context, crystal_effects: CSV, crystal_lores: 
             },
             "meta": {
                 "effect": effect_data['effect'],
-                "custom_model_data": effect_data['custom_model_data'],
                 "custom_potion_color": potion_effects.find_row(value=effect_data['effect'], by_column='effect')['custom_potion_color'].to_color_code(CSVCell.DEC),
                 "translate_fallback": effect_data['translate_fallback'],
                 "lore": json.dumps(crystal_lores[effect_data['effect']])
@@ -135,37 +152,43 @@ def generate_potion_recipes(ctx: Context, potion_effects: CSV, potion_bottles: C
     """
     Generates the function tree and loot tables for zauber potions and soulutions.
     """
-    for bottle_data, effect_data in product(potion_bottles, potion_effects):
+    for effect_data in potion_effects:
+        for bottle_data in potion_bottles:
 
-        subproject_config = {
-            "data_pack": {
-                "load": [
-                    {
-                        f"data/gm4_zauber_cauldrons/functions/recipes/potions/{bottle_data['bottle']}/select_effect.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/potions/select_effect.mcfunction",
-                        f"data/gm4_zauber_cauldrons/functions/recipes/potions/{bottle_data['bottle']}/{effect_data['effect']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/potions/craft_potion.mcfunction",
-                        f"data/gm4_zauber_cauldrons/loot_tables/items/potions/{bottle_data['bottle']}/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_potion.json"
+            subproject_config = {
+                "data_pack": {
+                    "load": [
+                        {
+                            f"data/gm4_zauber_cauldrons/function/recipes/potions/{bottle_data['bottle']}/select_effect.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/potions/select_effect.mcfunction",
+                            f"data/gm4_zauber_cauldrons/function/recipes/potions/{bottle_data['bottle']}/{effect_data['effect']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/potions/craft_potion.mcfunction",
+                            f"data/gm4_zauber_cauldrons/loot_table/items/potions/{bottle_data['bottle']}/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_potion.json"
+                        }
+                    ],
+                    "render": {
+                        "functions": "*",
+                        "loot_tables": "*"
                     }
-                ],
-                "render": {
-                    "functions": "*",
-                    "loot_tables": "*"
+                },
+                "meta": {
+                    "effect": effect_data['effect'],
+                    "effect_translate_name": effect_data['effect_translate_name'],
+                    "custom_potion_color": effect_data['custom_potion_color'].to_color_code(CSVCell.DEC),
+                    "custom_potion_effects": json.dumps(nbtlib.parse_nbt(effect_data['custom_potion_effects']).unpack(json=True)), # type: ignore
+                    "bottle_item_id": bottle_data['item_id'],
+                    "bottle": bottle_data['bottle'],
+                    "soulution_translate_fallback": bottle_data["soulution_translate_fallback_prefix"] + effect_data['soulution_translate_fallback'],
+                    "sips_translate_name": bottle_data['sips_translate_name'],
+                    "sips_translate_fallback": bottle_data['sips_translate_fallback'],
+                    "lore": json.dumps(potion_lores[effect_data['effect']])
                 }
-            },
-            "meta": {
-                "effect": effect_data['effect'],
-                "effect_translate_name": effect_data['effect_translate_name'],
-                "custom_potion_color": effect_data['custom_potion_color'].to_color_code(CSVCell.DEC),
-                "custom_potion_effects": effect_data['custom_potion_effects'],
-                "bottle_item_id": bottle_data['item_id'],
-                "bottle": bottle_data['bottle'],
-                "soulution_custom_model_data": effect_data['soulution_custom_model_data'],
-                "soulution_translate_fallback": effect_data['soulution_translate_fallback'],
-                "sips_translate_name": bottle_data['sips_translate_name'],
-                "sips_translate_fallback": bottle_data['sips_translate_fallback'],
-                "lore": json.dumps(potion_lores[effect_data['effect']])
             }
-        }
-        ctx.require(subproject(subproject_config))
+            ctx.require(subproject(subproject_config))
+
+        ctx.meta["gm4"]["model_data"].append({
+            "item": ["potion", "splash_potion", "lingering_potion"],
+            "reference": f"item/soulution_potion/{effect_data['effect']}",
+            "template": "vanilla"
+        })
 
 
 def generate_magicol_recipes(ctx: Context, weather_modifiers: CSV, magicol_colors: CSV, potion_bottles: CSV):
@@ -178,11 +201,11 @@ def generate_magicol_recipes(ctx: Context, weather_modifiers: CSV, magicol_color
             "data_pack": {
                 "load": [
                     {
-                        f"data/gm4_zauber_cauldrons/functions/recipes/magicol/{color_data['color']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/craft_liquid_magicol.mcfunction",
-                        f"data/gm4_zauber_cauldrons/functions/recipes/magicol/bottled/{bottle_data['bottle']}/select_color.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/select_color.mcfunction",
-                        f"data/gm4_zauber_cauldrons/functions/recipes/magicol/bottled/{bottle_data['bottle']}/{color_data['color']}/select_weather_modifier.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/select_weather_modifier.mcfunction",
-                        f"data/gm4_zauber_cauldrons/functions/recipes/magicol/bottled/{bottle_data['bottle']}/{color_data['color']}/{modifier_data['modifier']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/craft_bottled_magicol.mcfunction",
-                        f"data/gm4_zauber_cauldrons/loot_tables/items/bottled_magicol/{bottle_data['bottle']}/{color_data['color']}/{modifier_data['modifier']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/bottled_magicol.json"
+                        f"data/gm4_zauber_cauldrons/function/recipes/magicol/{color_data['color']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/craft_liquid_magicol.mcfunction",
+                        f"data/gm4_zauber_cauldrons/function/recipes/magicol/bottled/{bottle_data['bottle']}/select_color.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/select_color.mcfunction",
+                        f"data/gm4_zauber_cauldrons/function/recipes/magicol/bottled/{bottle_data['bottle']}/{color_data['color']}/select_weather_modifier.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/select_weather_modifier.mcfunction",
+                        f"data/gm4_zauber_cauldrons/function/recipes/magicol/bottled/{bottle_data['bottle']}/{color_data['color']}/{modifier_data['modifier']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/craft_bottled_magicol.mcfunction",
+                        f"data/gm4_zauber_cauldrons/loot_table/items/bottled_magicol/{bottle_data['bottle']}/{color_data['color']}/{modifier_data['modifier']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/bottled_magicol.json"
                     }
                 ],
                 "render": {
@@ -193,9 +216,6 @@ def generate_magicol_recipes(ctx: Context, weather_modifiers: CSV, magicol_color
             "meta": {
                 "color": color_data['color'],
                 "potion_color": color_data['potion_color'].to_color_code(CSVCell.DEC),
-                "liquid_custom_model_data": color_data['liquid_custom_model_data'],
-                "bottle_custom_model_data": modifier_data['bottle_custom_model_data'],
-                "soulution_bottle_custom_model_data": modifier_data['soulution_bottle_custom_model_data'],
                 "bottle": bottle_data['bottle'],
                 "bottle_item_id": bottle_data['item_id'],
                 "weather_modifier": modifier_data['modifier'],
@@ -209,6 +229,13 @@ def generate_magicol_recipes(ctx: Context, weather_modifiers: CSV, magicol_color
             }
         }
         ctx.require(subproject(subproject_config))
+
+    for color_data in magicol_colors:
+        ctx.meta["gm4"]["model_data"].append({
+            "item": f"{color_data['color']}_concrete_powder",
+            "reference": f"block/liquid_magicol/{color_data['color']}",
+            "template": "vanilla"
+        })
 
 
 def generate_zauber_biomes(ctx: Context, weather_modifiers: CSV, magicol_colors: CSV, potion_bottles: CSV, flower_types: CSV):
@@ -234,8 +261,8 @@ def generate_zauber_biomes(ctx: Context, weather_modifiers: CSV, magicol_colors:
             "data_pack": {
                 "load": [
                     {
-                        f"data/gm4_zauber_cauldrons/functions/bottled_magicol/{color_data['color']}/select_weather_modifier.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/bottled_magicol/select_weather_modifier.mcfunction",
-                        f"data/gm4_zauber_cauldrons/functions/bottled_magicol/{color_data['color']}/{modifier_data['modifier']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/bottled_magicol/color_biome.mcfunction",
+                        f"data/gm4_zauber_cauldrons/function/bottled_magicol/{color_data['color']}/select_weather_modifier.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/bottled_magicol/select_weather_modifier.mcfunction",
+                        f"data/gm4_zauber_cauldrons/function/bottled_magicol/{color_data['color']}/{modifier_data['modifier']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/bottled_magicol/color_biome.mcfunction",
                         f"data/gm4_zauber_cauldrons/worldgen/biome/{adjective}{modifier_data['modifier']}_{color_data['color']}_verzauberte_plains.json": "data/gm4_zauber_cauldrons/templates/worldgen/biome/verzauberte_plains.json"
                     }
                 ],

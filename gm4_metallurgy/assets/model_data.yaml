@@ -1,0 +1,105 @@
+model_data:
+  - item: player_head
+    template: generated
+    broadcast:
+      - textures: item/band/mundane_band
+        reference: item/mundane_band
+      - reference: item/lump/baryte
+      - reference: item/lump/bauxite
+      - reference: item/lump/bismutite
+      - reference: item/lump/thorianite
+  - item: player_head
+    template: vanilla
+    broadcast:
+      - reference: block/mould/cool_empty
+      - reference: block/mould/hot_empty
+      - reference: block/mould/cool_metal
+      - reference: block/mould/hot_metal
+  - item: obsidian
+    reference: item/slightly_damaged_obsidian
+    template: vanilla
+  - reference: shamir/defuse
+    item: armor
+    template: 
+      name: shamir
+      metal: aluminium
+      textures_path: item/shamir/aluminium
+  - reference: shamir/moneo
+    item: [tools, elytra, shears]
+    template: 
+      name: shamir
+      metal: aluminium
+      textures_path: item/shamir/aluminium
+  - reference: shamir/arborenda
+    item: axes
+    template: 
+      name: shamir
+      metal: barium
+      textures_path: item/shamir/barium
+  - reference: shamir/sensus
+    item: compass
+    template: 
+      name: shamir
+      metal: barium
+      textures_path: item/shamir/barium
+  - reference: shamir/gemini
+    item: hoes
+    template: 
+      name: shamir
+      metal: barimium
+      textures_path: item/shamir/barimium
+  - reference: shamir/musical
+    item: [swords, trident]
+    template: 
+      name: shamir
+      metal: barimium
+      textures_path: item/shamir/barimium
+  - reference: shamir/forterra
+    item: pickaxes
+    template: 
+      name: shamir
+      metal: bismuth
+      textures_path: item/shamir/bismuth
+  - reference: shamir/hypexperia
+    item: [swords, pickaxes, axes, shovels, fishing_rod]
+    template: 
+      name: shamir
+      metal: bismuth
+      textures_path: item/shamir/bismuth
+  - reference: shamir/vibro
+    item: boots
+    template: 
+      name: shamir
+      metal: thorium
+      textures_path: item/shamir/thorium
+  - reference: shamir/ender_bolt
+    item: [swords, trident]
+    template: 
+      name: shamir
+      metal: thorium
+      textures_path: item/shamir/thorium
+  - reference: shamir/infinitas
+    item: buckets
+    template: 
+      name: shamir
+      metal: curies_bismium
+      textures_path: item/shamir/curies_bismium
+  - reference: shamir/tinker
+    item: [pickaxes, shovels, hoes, swords]
+    template: 
+      name: shamir
+      metal: curies_bismium
+      textures_path: item/shamir/curies_bismium
+  - item: lava_bucket
+    reference: gui/advancement/metallurgy_overheat_cast
+    template: advancement
+  - item: player_head
+    reference: gui/advancement/metallurgy_blast_ore
+    template:
+      name: advancement
+      forward: item/lump/bauxite
+  - item: player_head
+    reference: gui/advancement/metallurgy_cast
+    template:
+      name: advancement
+      forward: shamir/defuse/band

@@ -1,8 +1,11 @@
 id: gm4_mob_curing
 name: Mob Curing
-version: 1.5.X
+version: 1.7.X
 
 data_pack:
+  load: .
+
+resource_pack:
   load: .
 
 pipeline:
@@ -13,8 +16,12 @@ meta:
   gm4:
     versioning:
       required:
-        lib_trades: 1.3.0
+        lib_trades: 1.5.0
       schedule_loops: [main]
+    model_data:
+      - item: potion
+        reference: gui/advancement/mob_curing
+        template: advancement
     website:
       description: Revert mooshrooms, pigmen and witches back to their previous forms.
       recommended:

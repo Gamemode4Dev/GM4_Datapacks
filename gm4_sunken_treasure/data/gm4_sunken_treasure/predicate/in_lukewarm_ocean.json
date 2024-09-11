@@ -1,0 +1,9 @@
+{
+  "condition": "minecraft:location_check",
+  "predicate": {
+    "biomes": [
+      "minecraft:deep_lukewarm_ocean",
+      "minecraft:lukewarm_ocean"
+    ]
+  }
+}

@@ -5,8 +5,7 @@
   "load_check": "metallurgy",
   "base_module": "metallurgy",
   "icon": {
-    "item": "minecraft:anvil",
-    "nbt": "{CustomModelData:3420108}"
+    "id": "minecraft:anvil"
   },
   "criteria": {
     "obtain_musical_shamir": {
@@ -14,7 +13,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'musical'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,stored_shamir:'musical'}}"
+            }
           }
         ]
       }
@@ -24,7 +25,9 @@
       "conditions": {
         "items": [
           {
-            "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'musical'}}"
+            "predicates": {
+              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'musical'}}"
+            }
           }
         ]
       }

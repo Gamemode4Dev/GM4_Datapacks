@@ -1,0 +1,46 @@
+{
+  "id": "balloon_animals",
+  "name": "Balloon Animals",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:lead"
+  },
+  "criteria": {
+    "interact_trader": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_balloon_animal_trader\"]}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "interact_trader"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.balloon_animals.description",
+            "fallback": "Balloon Animals introduces animal trades to some wandering traders."
+          }
+        ]
+      ]
+    }
+  ]
+}

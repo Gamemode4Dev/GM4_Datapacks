@@ -1,0 +1,11 @@
+{
+    "providers": [
+        {
+            "type": "space",
+            "advances": {
+                "\uf824": 5,
+                "\uf808": -8
+            }
+        }
+    ]
+}

@@ -3,8 +3,7 @@
   "name": "Rope Ladders",
   "module_type": "module",
   "icon": {
-    "item": "minecraft:ladder",
-    "nbt": "{CustomModelData:3420002}"
+    "id": "minecraft:ladder"
   },
   "criteria": {
     "place_ladder": {

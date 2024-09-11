@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "feet": {
+        "items": "#gm4:boots",
+        "predicates": {
+          "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:\"celaro\"}}"
+        }
+      }
+    }
+  }
+}

@@ -5,8 +5,7 @@
   "load_check": "mysterious_midnights",
   "base_module": "mysterious_midnights",
   "icon": {
-    "item": "minecraft:rotten_flesh",
-    "nbt": "{CustomModelData:3420002}"
+    "id": "minecraft:rotten_flesh"
   },
   "criteria": {
     "fight_resurrected_zombie": {
@@ -18,7 +17,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:zombie",
-              "nbt": "{DeathLootTable:\"minecraft:empty\",Attributes:[{Name:\"minecraft:generic.attack_damage\",Base:10.0d}]}"
+              "nbt": "{DeathLootTable:\"minecraft:empty\",attributes:[{id:\"minecraft:generic.attack_damage\",base:10.0d}]}"
             }
           }
         ]

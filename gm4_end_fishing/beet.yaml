@@ -1,22 +1,56 @@
 id: gm4_end_fishing
 name: End Fishing
-version: 1.3.X
+version: 1.5.X
 
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
+  - register_model_data
+  - generate_optifine
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_player_heads
 
 meta:
   gm4:
     versioning:
-      required:
-        lib_player_heads: 1.1.0
       schedule_loops:
         - main
         - tick
+    model_data:
+      # swords, armor, and tools are registered by plugin
+      - template: generated
+        item: player_head
+        reference: item/enderpuff
+      - item: elytra
+        reference: item/captains_wings
+        model:
+          - predicate: {broken: 0}
+            model: item/elytra/captains_wings
+          - predicate: {broken: 1}
+            model: item/elytra/broken_captains_wings
+      - item: elytra
+        reference: item/ravaged_wings
+        model:
+          - predicate: {broken: 0}
+            model: item/elytra/ravaged_wings
+          - predicate: {broken: 1}
+            model: item/elytra/broken_ravaged_wings
+      - item: fishing_rod
+        reference: gui/advancement/end_fishing
+        template: advancement
+      - item: diamond_sword
+        reference: gui/advancement/end_fishing_swords
+        template:
+          name: advancement
+          forward: item/swords/diamond_sword_12
+      - item: elytra
+        reference: gui/advancement/end_fishing_phantom
+        template:
+          name: advancement
+          forward: item/elytra/broken_ravaged_wings
     website:
       description: Catch rare loot by fishing in the end void! The void holds many riches, from End City loot and Elytra to weapons that once belonged to explorers time forgot, collect them all!
       recommended:

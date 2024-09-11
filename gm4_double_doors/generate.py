@@ -7,16 +7,17 @@ import logging
 from beet import Context, Structure, TextFile, subproject
 from beet.contrib.vanilla import Vanilla
 from nbtlib import parse_nbt
+from gm4.plugins.manifest import repro_structure_to_bytes
 
 logger = logging.getLogger(__name__)
 
 class StringStructure(TextFile):
     """Create class that loads .snbt files into the beet project"""
-    scope: ClassVar[tuple[str, ...]] = ("structures",)
+    scope: ClassVar[tuple[str, ...]] = ("structure",)
     extension: ClassVar[str] = ".snbt"
 
     def serialize_to_structure(self) -> Structure:
-        return Structure(parse_nbt(self.text))
+        return Structure(parse_nbt(self.text), serializer=repro_structure_to_bytes)
 
 
 def register_snbt_files(ctx: Context):
@@ -60,15 +61,15 @@ def beet_default(ctx: Context):
             "data_pack": {
                 "load": [
                     {
-                        f"data/gm4_double_doors/advancements/{wood}": "data/gm4_double_doors/templates/advancements",
-                        f"data/gm4_double_doors/functions/{wood}": "data/gm4_double_doors/templates/functions",
-                        f"data/gm4_double_doors/structures/{wood}": "data/gm4_double_doors/templates/structures",
+                        f"data/gm4_double_doors/advancement/{wood}": "data/gm4_double_doors/templates/advancement",
+                        f"data/gm4_double_doors/function/{wood}": "data/gm4_double_doors/templates/function",
+                        f"data/gm4_double_doors/structure/{wood}": "data/gm4_double_doors/templates/structure",
                     }
                 ],
                 "render": {
-                    "advancements": "*",
-                    "functions": "*",
-                    "string_structures": "*"  # renders all mounted files of the StringStructure container
+                    "advancement": "*",
+                    "function": "*",
+                    "string_structure": "*"  # renders all mounted files of the StringStructure container
                 }
             },
             "meta": {

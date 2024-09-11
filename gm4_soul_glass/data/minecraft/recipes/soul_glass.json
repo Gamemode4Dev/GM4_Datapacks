@@ -1,9 +1,0 @@
-{
-   "type": "minecraft:blasting",
-   "ingredient": {
-      "item": "minecraft:soul_sand"
-   },
-   "result": "minecraft:brown_stained_glass",
-   "experience": 1.0,
-   "cookingtime": 800
-}

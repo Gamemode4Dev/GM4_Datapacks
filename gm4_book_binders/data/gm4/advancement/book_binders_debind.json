@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "paper",
+      "components": {
+        "minecraft:enchantments": {
+          "minecraft:mending": 1
+        },
+        "minecraft:custom_model_data": "gui/advancement/book_binders_debind"
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.book_binders_debind.title",
+      "fallback": "Tearing Up!"
+    },
+    "description": {
+      "translate": "advancement.gm4.book_binders_debind.description",
+      "fallback": "Get your first enchanted page",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:book_binders",
+  "criteria": {
+    "gm4_book_binders_debind": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

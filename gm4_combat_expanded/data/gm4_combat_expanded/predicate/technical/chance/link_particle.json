@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:value_check",
+  "value": {
+    "type": "minecraft:binomial",
+    "n": 1,
+    "p": {
+      "type": "minecraft:score",
+      "target": "this",
+      "score": "gm4_ce_data",
+      "scale": 0.05
+    }
+  },
+  "range": 1
+}

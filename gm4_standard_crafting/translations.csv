@@ -1,0 +1,9 @@
+key,en_us
+text.gm4.guidebook.module_desc.standard_crafting,A crafting recipe pack that adds some nifty new recipes to the game.
+text.gm4.guidebook.standard_crafting.recipes,The custom crafter can be used to perform some simple crafting operations.\n\nThe following recipes have been added.
+text.gm4.guidebook.standard_crafting.stair_decraft,Stairs can be reverted to their base block
+text.gm4.guidebook.standard_crafting.slab_decraft,Slabs can be reverted to their base block
+text.gm4.guidebook.standard_crafting.sandstone_decraft,Any sandstone can be converted into sand
+text.gm4.guidebook.standard_crafting.red_sandstone_decraft,Any red sandstone can be converted into red sand
+text.gm4.guidebook.standard_crafting.string_craft,Any wool can be ripped into string
+text.gm4.guidebook.standard_crafting.horse_armor,"Diamond, iron, and golden armor can be crafted"

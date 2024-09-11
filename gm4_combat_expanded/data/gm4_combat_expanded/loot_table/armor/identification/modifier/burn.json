@@ -1,0 +1,151 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_combat_expanded:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_combat_expanded:{modifier:36}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.killing",
+              "fallback": "When Killing:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "potion.withDuration",
+              "with": [
+                {
+                  "translate": "item.gm4.combat_expanded.lore.burn",
+                  "fallback": "Burning Aura"
+                },
+                "0:10"
+              ],
+              "color": "blue",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.unsafe",
+              "fallback": "When Under Attack:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "potion.withDuration",
+              "with": [
+                {
+                  "translate": "item.gm4.combat_expanded.lore.burn",
+                  "fallback": "Burning Aura"
+                },
+                "0:10"
+              ],
+              "color": "blue",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.burn_description",
+                "fallback": "Stacks 8 times, 0.25 damage per stack",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.burn_description_2",
+                "fallback": "At full stacks gain %s",
+                "with": [
+                    {
+                        "translate": "effect.minecraft.fire_resistance"
+                    }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.combat_expanded.name.burn",
+              "fallback": "Burning %s",
+              "with": [
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
