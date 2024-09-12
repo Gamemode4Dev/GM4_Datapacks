@@ -1,4 +1,4 @@
-craft_item_1_id,craft_item_1_count,craft_item_2_id,craft_item_2_count,craft_result_count,technical_id,display_name,cmd,block_id,length,depth,height,sittable,dyable,wall_only,ceiling_only,table,scale,diag,custom
-iron_ingot,3,candle,3,1,iron_3_candle_holder_1,Iron Candelabra,3420240,light[level=13],1,1,1,0,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
-gold_ingot,3,candle,3,1,gold_3_candle_holder_1,Golden Candelabra,3420250,light[level=13],1,1,1,0,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
-gold_ingot,8,air,0,1,gold_skull_1,Golden Skull,3420251,light[level=0],1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,TRUE,FALSE
+craft_item_1_id,craft_item_1_count,craft_item_2_id,craft_item_2_count,craft_result_count,technical_id,display_name,block_id,length,depth,height,sittable,dyable,wall_only,ceiling_only,table,scale,diag,custom
+iron_ingot,3,candle,3,1,iron.3_candelabra_1,Iron Candelabra,light[level=13],1,1,1,0,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+gold_ingot,3,candle,3,1,gold.3_candelabra_1,Golden Candelabra,light[level=13],1,1,1,0,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+gold_ingot,8,air,0,1,gold.skull_1,Golden Skull,light[level=0],1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,TRUE,FALSE

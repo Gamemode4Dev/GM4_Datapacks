@@ -1,6 +1,6 @@
-craft_item_1_id,craft_item_1_count,craft_item_2_id,craft_item_2_count,craft_result_count,technical_id,display_name,cmd,block_id,length,depth,height,sittable,dyable,wall_only,ceiling_only,table,scale,diag,custom
-stone_bricks,8,tadpole_bucket,1,1,statues_frog,Stone Frog Statue,3420230,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
-stone_bricks,8,bee_nest,1,1,statues_bee,Stone Bee Statue,3420231,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
-stone_bricks,8,pufferfish_bucket,1,1,statues_pufferfish,Stone Pufferfish Statue,3420232,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
-stone_bricks,8,axolotl_bucket,1,1,statues_axolotl,Stone Axolotl Statue,3420233,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
-stone_bricks,8,jukebox,1,1,statues_allay,Stone Allay Statue,3420234,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+craft_item_1_id,craft_item_1_count,craft_item_2_id,craft_item_2_count,craft_result_count,technical_id,display_name,block_id,length,depth,height,sittable,dyable,wall_only,ceiling_only,table,scale,diag,custom
+stone_bricks,8,tadpole_bucket,1,1,statues.frog,Stone Frog Statue,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,bee_nest,1,1,statues.bee,Stone Bee Statue,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,pufferfish_bucket,1,1,statues.pufferfish,Stone Pufferfish Statue,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,axolotl_bucket,1,1,statues.axolotl,Stone Axolotl Statue,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,jukebox,1,1,statues.allay,Stone Allay Statue,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE

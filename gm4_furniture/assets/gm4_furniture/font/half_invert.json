@@ -1,0 +1,18 @@
+{
+    "providers": [
+        {
+            "type": "space",
+            "advances": {
+                " ": -2,
+                "\u200c": 0
+            }
+        },
+        {
+            "type": "ttf",
+            "file": "gm4_furniture:minecraft.ttf",
+            "shift": [0, -32768],
+            "size": -6.5,
+            "oversample": 1.0
+        }
+    ]
+}

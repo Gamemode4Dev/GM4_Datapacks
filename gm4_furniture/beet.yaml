@@ -1,8 +1,11 @@
 id: gm4_furniture
 name: Furniture
-version: 1.0.X
+version: 1.1.X
 
 data_pack:
+  load: .
+
+resource_pack:
   load: .
 
 pipeline:
@@ -20,6 +23,10 @@ meta:
       schedule_loops:
         - main
         - slow_clock
+    gui_fonts:
+      - translation: gui.gm4.furniture_station
+        container: furniture_station
+        texture: gui/container/furniture_station
     website:
       description: Furniture!
       recommended: []
