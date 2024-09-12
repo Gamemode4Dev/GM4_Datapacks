@@ -23,42 +23,8 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "item",
-          "name": "minecraft:rabbit_hide",
-          "functions": [
-            {
-              "function": "set_components",
-              "components": {
-                "minecraft:custom_model_data": "item/bat_leather"
-              }
-            },
-            {
-              "function": "set_name",
-              "name": {
-                "translate": "item.gm4.bat_leather",
-                "fallback": "Bat Leather",
-                "italic": false
-              }
-            },
-            {
-              "function": "set_lore",
-              "mode": "append",
-              "lore": [
-                {
-                  "translate": "text.gm4.bat_leather.1",
-                  "fallback": "Would make for a very strange,",
-                  "italic": true,
-                  "color": "dark_gray"
-                },
-                {
-                  "translate": "text.gm4.bat_leather.2",
-                  "fallback": "very tiny jacket",
-                  "italic": true,
-                  "color": "dark_gray"
-                }
-              ]
-            }
-          ],
+          "type": "minecraft:loot_table",
+          "value": "gm4_bat_grenades:bat_leather",
           "weight": 1
         },
         {
