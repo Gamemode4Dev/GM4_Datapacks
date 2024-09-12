@@ -17,3 +17,4 @@ Camel,minecraft:camel,TRUE,init_animal,"Camelot,Camille,Cammy,Caramel,Eden,Jacch
 Goat,minecraft:goat,TRUE,init_animal,"Bill,Billy,Djali,Gertrude,Gideon,Joe,Joey,Kid,Phil,Philoctetes,Valentino"
 Ocelot,minecraft:ocelot,TRUE,init_animal,"Catnip,Clawhauser,Dinah,Felicia,Figaro,Hissy,Jagular,Lucifer,Tallulah"
 Turtle,minecraft:turtle,TRUE,add_turtle_egg,
+Armadillo,minecraft:armadillo,TRUE,init_animal,"Armstrong,Arnold,Bandit,Carachupa,Chad,Hank,Pangie,Phillip,Rolly,Sheldon"
