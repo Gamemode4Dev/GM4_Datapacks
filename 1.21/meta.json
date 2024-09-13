@@ -1,5 +1,5 @@
 {
-  "last_commit": "c26c2e9e0cd4cb8c1281c512b57348a227f70762",
+  "last_commit": "667dad57d69b9c5fb64a7d5229085a2fcb83ffba",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -943,8 +943,8 @@
     {
       "id": "gm4_enchantment_extractors",
       "name": "Enchantment Extractors",
-      "version": "2.4.4",
-      "hash": "ac00a750b1dce167b534a9fe2be94ef569613da1",
+      "version": "2.4.5",
+      "hash": "abfa4f1d015fe30dc8963057a4ecfb34db9ac024",
       "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
       "wiki_link": "https://wiki.gm4.co/wiki/Enchantment_Extractors",
       "credits": {
