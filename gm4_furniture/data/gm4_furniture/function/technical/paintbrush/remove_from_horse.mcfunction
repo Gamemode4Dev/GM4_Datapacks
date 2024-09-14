@@ -3,7 +3,6 @@
 # at unspecified
 # run from main
 
-data modify storage gm4_furniture:temp paintbrush_data set from entity @s ArmorItems[2].components
-loot spawn ~ ~1.6 ~ loot gm4_furniture:technical/drop_horse_paintbrush
-item replace entity @s horse.armor with air
-data remove storage gm4_furniture:temp paintbrush_data
+loot spawn ~ ~1.6 ~ loot gm4_furniture:items/paintbrush
+execute positioned ~ ~1.6 ~ run data modify entity @n[type=item,nbt={Item:{components:{"minecraft:custom_data":{gm4_furniture:paintbrush}}}},distance=..1] Item.components set from entity @s body_armor_item.components
+item replace entity @s armor.body with air

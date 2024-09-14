@@ -66,7 +66,7 @@ def generate_trade_data(ctx, furniture_set, set_name):
     # iterate over the rows in the spreadsheet and add the trade data for each furniture to the storage
     new_trades_list = []
     for row in furniture_set:
-        new_trades_list.append("data modify storage gm4_furniture:temp new_trades." + set_name + ".trades append value {cost:[{id:" + row['craft_item_1_id'] + ",Count:" + row['craft_item_1_count'] + "b},{id:" + row['craft_item_2_id'] + ",Count:" + row['craft_item_2_count'] + "b}],result:{furniture_id:\"" + set_name + "/" + row['technical_id'] + "\",Count:" + row['craft_result_count'] + "}}")
+        new_trades_list.append("data modify storage gm4_furniture:temp new_trades." + set_name + ".trades append value {cost:[{id:" + row['craft_item_1_id'] + ",count:" + row['craft_item_1_count'] + "b},{id:" + row['craft_item_2_id'] + ",count:" + row['craft_item_2_count'] + "b}],result:{furniture_id:\"" + set_name + "/" + row['technical_id'] + "\",count:" + row['craft_result_count'] + "}}")
     new_trades_list = '\n'.join(new_trades_list)
 
     # add command to append the main furniture_station storage with the newly created new_trades

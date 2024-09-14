@@ -4,5 +4,5 @@
 # run from technical/paintbrush/used_on_horse
 
 item replace entity @p[tag=gm4_furniture_target] weapon.mainhand with air
-item replace entity @p[tag=gm4_furniture_target] weapon.mainhand from entity @s horse.armor
-item replace entity @s horse.armor with air
+item replace entity @p[tag=gm4_furniture_target] weapon.mainhand from entity @s armor.body
+item replace entity @s armor.body with air

@@ -8,6 +8,12 @@
           "name": "minecraft:leather_horse_armor",
           "functions": [
             {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "minecraft:attribute_modifiers": false
+              }
+            },
+            {
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": "item/furniture/paintbrush"
@@ -27,6 +33,35 @@
                 "color": "white",
                 "italic": false
               }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "keybind": "key.use",
+                  "extra": [
+                    {
+                      "translate": "item.gm4_furniture.paintbrush.description_1",
+                      "fallback": " to paint furniture"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                },
+                {
+                  "keybind": "key.attack",
+                  "extra": [
+                    {
+                      "translate": "item.gm4_furniture.paintbrush.description_2",
+                      "fallback": " furniture to pick color"
+                    }
+                  ],
+                  "color": "dark_gray",
+                  "italic": true
+                }
+              ],
+              "mode": "append"
             }
           ]
         }

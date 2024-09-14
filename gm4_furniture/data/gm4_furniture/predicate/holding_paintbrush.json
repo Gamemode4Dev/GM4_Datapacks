@@ -7,7 +7,9 @@
                 "items": [
                     "minecraft:leather_horse_armor"
                 ],
-                "nbt": "{gm4_furniture:paintbrush}"
+                "components": {
+                  "minecraft:custom_data": "{gm4_furniture:paintbrush}"
+                }
             }
         }
     }
