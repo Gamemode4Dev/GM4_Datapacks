@@ -65,5 +65,3 @@ scoreboard players set #4 gm4_mu_data 4
 schedule function gm4_monsters_unbound:tick 1t
 schedule function gm4_monsters_unbound:main 1t
 schedule function gm4_monsters_unbound:slow_clock 1t
-
-#$moduleUpdateList

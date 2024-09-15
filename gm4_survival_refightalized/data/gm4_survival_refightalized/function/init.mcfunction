@@ -58,5 +58,3 @@ scoreboard players set #1024 gm4_sr_data 1024
 schedule function gm4_survival_refightalized:tick 1t
 schedule function gm4_survival_refightalized:main 2t
 schedule function gm4_survival_refightalized:slow_clock 3t
-
-#$moduleUpdateList

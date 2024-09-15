@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{augment:{name:vigorous,id:51}}}"
+              "tag": "{gm4_augmented_armor:{augment:{name:vigorous,id:102}}}"
             }
           ]
         }

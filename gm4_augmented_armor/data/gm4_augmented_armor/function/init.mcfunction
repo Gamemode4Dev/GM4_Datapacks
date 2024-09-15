@@ -111,5 +111,3 @@ scoreboard players set #6000 gm4_aa_data 6000
 # start clocks
 schedule function gm4_augmented_armor:tick 1t
 schedule function gm4_augmented_armor:slow_clock 1t
-
-#$moduleUpdateList

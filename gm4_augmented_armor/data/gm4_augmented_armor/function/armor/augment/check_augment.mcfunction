@@ -9,5 +9,6 @@ execute store result score $active gm4_aa_data run data get storage gm4_augmente
 function gm4_survival_refightalized:player/health/calculate_hp
 
 execute if score $augment gm4_aa_data matches 101 run function gm4_augmented_armor:armor/augment/type/acrobatic/check
-execute if score $augment gm4_aa_data matches 102 run function gm4_augmented_armor:armor/augment/type/immune/get_immunities
+execute if score $augment gm4_aa_data matches 102 run function gm4_augmented_armor:armor/augment/type/vigorous/get_immunities
 execute if score $augment gm4_aa_data matches 103 if score @s gm4_aa_kill matches 1.. at @s run function gm4_augmented_armor:armor/augment/type/totem/activate
+execute if score $augment gm4_aa_data matches 104 run function gm4_augmented_armor:armor/augment/type/gleaming/process
