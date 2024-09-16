@@ -4,7 +4,7 @@ Shoot more than just arrows! Crossbow Cartridges allows your crossbow to fire a 
 
 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_crossbow_cartridges/images/crossbow_cartridges.webp" alt="Crossbow Cartridges Example" width="350"/>  <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
-### Features:
+### Features
 - Hold new projectiles in your offhand to shoot them from your crossbow
 - Shoot fish buckets, splash potions, tnt, fire charges, torches and string!
 - Adds two new crossbow advancements

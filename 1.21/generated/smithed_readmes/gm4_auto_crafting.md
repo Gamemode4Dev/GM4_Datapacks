@@ -1,6 +1,6 @@
-# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Auto Crafting by Gamemode 4 <!--$pmc:delete-->
+# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Auto Crafting by Gamemode 4<!--$pmc:delete-->
 
-Excited for the new 1.21 crafter block? Want to start making the cake factory of your dreams right now? Try out Gamemode 4's take on auto-crafting, available right now for 1.19 and 1.20!<!--$pmc:headerSize-->
+Try out Gamemode 4's take on auto-crafting!<!--$pmc:headerSize-->
 
 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_auto_crafting/images/auto_crafter.webp" alt="Auto Crafter at work" width="350"/>  <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 

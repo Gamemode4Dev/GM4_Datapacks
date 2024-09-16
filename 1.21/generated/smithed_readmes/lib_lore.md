@@ -1,5 +1,5 @@
 # lib_lore
-lib_lore is a mcfunction library that allows other datapacks to easily search, remove, insert, and replace lines of lore on items.
+lib_lore is a mcfunction library that allows other data packs to easily search, remove, insert, and replace lines of lore on items.
 
 ## How to use
 There are 4 operations that can be applied. Each operation uses data storage and scoreboards as inputs and outputs.
@@ -119,4 +119,4 @@ Please note that the `example_pack` must be started by calling `#load:load`, as 
 - These operations are technically not limited to lore, but can also be used for any type of list.
 
 ## License
-This library, and the contents of the `lib_lore` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.
+This library, and the contents of the `lib_lore` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_data packs), is licensed under the MIT License.

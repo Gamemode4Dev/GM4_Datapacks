@@ -1,10 +1,10 @@
 # <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Apple Trees by Gamemode 4<!--$pmc:delete-->
 
-Apples don't grow on oak trees, silly Mojang! This datapack adds actual apple trees. Find them in forests or buy a sapling from a Wandering Trader.
+Apples don't grow on oak trees, silly Mojang! This data pack adds actual apple trees. Find them in forests or buy a sapling from a Wandering Trader.
 
 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_apple_trees/images/apple_tree.png" alt="Apple Tree in a Forest" width="500"/> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
-### Features:
+### Features
 - Apple trees naturally generate in Forests
     - Pick fully grown apples, or wait for them to fall on their own
     - Apples regrow every three 3 days

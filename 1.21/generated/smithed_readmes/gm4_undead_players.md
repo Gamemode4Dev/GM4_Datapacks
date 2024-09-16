@@ -1,6 +1,6 @@
 # <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Undead Players by Gamemode 4
 
-Ever wonder what happens to your player's body after you die? Well wonder no longer. This modular datapack reanimates your fallen-corpse as a zombie. <!--$pmc:headerSize-->
+Ever wonder what happens to your player's body after you die? Well wonder no longer. This modular data pack reanimates your fallen-corpse as a zombie. <!--$pmc:headerSize-->
 
 ### Features
 - Players summon a zombie at their location upon death.

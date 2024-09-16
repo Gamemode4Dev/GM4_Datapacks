@@ -2,7 +2,7 @@
 lib_trees is a mcfunction library that facilites the creation of custom trees. This library handles many of the functions required for growing custom trees from saplings: sapling placement and breaking, tree growth via saplings, and sapling drops from specific leaves.
 
 ## Example Pack
-The example datapack has everything required to use this library (except for full lantern load implementation). This document will refer to the example pack for specific details.
+The example data pack has everything required to use this library (except for full lantern load implementation). This document will refer to the example pack for specific details.
 
 ## Generating Trees with Worldgen
 This library does not handle generation of trees via worldgen, but information of how to generate trees to be used in conjunction of this library will be outlined below.
@@ -10,7 +10,7 @@ This library does not handle generation of trees via worldgen, but information o
 Trees will need to be defined using custom structures. It is technically possible to use configured features (how normal trees generate), but the sapling drops become more complex. This will only outline the process using structures. Refer to the `worldgen`, `tags`, and `structures` folder of the example pack to set up custom structures.
 
 ### Leaf Markers
-The most important thing for custom trees to be usable with this datapack is to add leaf markers to your trees. Leaf markers must be created with the `gm4_tree_leaf` tag and an additional identifier tag:
+The most important thing for custom trees to be usable with this data pack is to add leaf markers to your trees. Leaf markers must be created with the `gm4_tree_leaf` tag and an additional identifier tag:
 ```mcfunction
 summon marker ~ ~ ~ {Tags:["gm4_tree_leaf","LEAF_IDENTIFIER_TAG"]}
 ```
@@ -26,7 +26,7 @@ Markers can be placed in a few ways; this document will outline the 3 most reaso
 
 ## Custom Saplings
 ### Leaf Drops
-When a leaf marker is no longer in a leaf block, it will run the `#gm4_trees:destroy_leaf` function tag at the location of the leaf marker. The function tag should call a verification function to check if the marker was a custom marker from your datapack:
+When a leaf marker is no longer in a leaf block, it will run the `#gm4_trees:destroy_leaf` function tag at the location of the leaf marker. The function tag should call a verification function to check if the marker was a custom marker from your data pack:
 ```mcfunction
 execute if entity @s[tag=LEAF_IDENTIFIER_TAG] run function ...
 ```
@@ -43,7 +43,7 @@ Custom sapling items need some specific data so this library knows it's a custom
 give @s oak_sapling{gm4_trees:{item:{id:"sapling",type:"IDENTIFIER"}}}
 ```
 
-When these custom saplings are placed, the library will find the placed sapling and run the `#gm4_trees:initialize_sapling` function tag at the location of the sapling. The function tag should call a verification function to check if the sapling was a custom sapling from your datapack:
+When these custom saplings are placed, the library will find the placed sapling and run the `#gm4_trees:initialize_sapling` function tag at the location of the sapling. The function tag should call a verification function to check if the sapling was a custom sapling from your data pack:
 ```mcfunction
 execute if data storage gm4_trees:temp sapling{type:"IDENTIFIER"} run function ...
 ```
@@ -56,7 +56,7 @@ scoreboard players set @e[type=marker,tag=SAPLING_ID_TAG,distance=..0.1] gm4_sap
 ```
 
 ### Breaking Saplings
-When a custom sapling is broken, the `#gm4_trees:destroy_sapling` function tag is run from the sapling marker. The function tag should call a verification function to check if the sapling marker was a custom sapling from your datapack:
+When a custom sapling is broken, the `#gm4_trees:destroy_sapling` function tag is run from the sapling marker. The function tag should call a verification function to check if the sapling marker was a custom sapling from your data pack:
 ```mcfunction
 execute if entity @s[tag=SAPLING_ID_TAG] run function ...
 ```
@@ -68,7 +68,7 @@ loot spawn ~ ~ ~ loot gm4_trees_example:items/apple_tree_sapling
 ```
 
 ### Growing Saplings
-Custom saplings can be grown like vanilla saplings. The growth is based on the block state of the sapling, so bonemeal can be used like normal. When the age reaches the sapling marker's `gm4_sap_growth` score, it will generate a tree. When this happens, the `#gm4_trees:generate_tree` function tag will run at the location of the sapling marker. The function tag should call a verification function to check if the sapling was a custom sapling from your datapack:
+Custom saplings can be grown like vanilla saplings. The growth is based on the block state of the sapling, so bonemeal can be used like normal. When the age reaches the sapling marker's `gm4_sap_growth` score, it will generate a tree. When this happens, the `#gm4_trees:generate_tree` function tag will run at the location of the sapling marker. The function tag should call a verification function to check if the sapling was a custom sapling from your data pack:
 ```mcfunction
 execute if entity @s[tag=SAPLING_ID_TAG] run function ...
 ```
@@ -80,4 +80,4 @@ kill @s
 ```
 
 ## License
-This library, and the contents of the `lib_trees` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.
+This library, and the contents of the `lib_trees` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_data packs), is licensed under the MIT License.

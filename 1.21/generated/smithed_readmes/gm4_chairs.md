@@ -1,6 +1,6 @@
-# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Chairs by Gamemode 4 <!--$pmc:delete-->
+# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Chairs by Gamemode 4<!--$pmc:delete-->
 
-Since the dawn of Minecraft, stairs have been used as chairs in every house you've ever built. With this simple datapack, players can actually sit on stairs by throwing a saddle on them. <!--$pmc:headerSize-->
+Since the dawn of Minecraft, stairs have been used as chairs in every house you've ever built. With this simple data pack, players can actually sit on stairs by throwing a saddle on them. <!--$pmc:headerSize-->
 
 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_chairs/images/chairs_creation_example.webp" alt="Chairs Creation Example" width="350"/>  <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 

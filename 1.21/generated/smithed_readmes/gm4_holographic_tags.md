@@ -7,7 +7,7 @@ Decorate your builds with floating text boxes, anywhere you want! This data pack
 ### Features
 - Place a named Name Tag in an Item Frame to create a floating text box
 - Place an Item Frame in the same spot to remove it again
-- Use a dyed Wool block to customize the color of the floating text
+- Use a dyed Wool block to customize the colour of the floating text
 
 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_holographic_tags/images/all_colors.png" alt="Colors of the floating text based on wool type" width="350"/>  <!--$pmc:delete-->
 

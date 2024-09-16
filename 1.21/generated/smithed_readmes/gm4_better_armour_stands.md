@@ -1,12 +1,12 @@
-# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Better Armour Stands by Gamemode 4 <!--$pmc:delete-->
+# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Better Armour Stands by Gamemode 4<!--$pmc:delete-->
 
 Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands. <!--$pmc:headerSize-->
 
 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_better_armour_stands/images/better_armour_stands.webp" alt="Better Armour Stands Example" width="350"/>  <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
-### Features:
-- All armor stands have arms by default
-- Write commands into a Book and Quill to control your armor stands
+### Features
+- All armour stands have arms by default
+- Write commands into a Book and Quill to control your armour stands
     - [Click Here](https://wiki.gm4.co/wiki/Better_Armour_Stands#Codes) to see a full list of codes
 - Copy and Paste poses
 - Make custom statues
@@ -26,8 +26,8 @@ Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your
 |`unlock`   |enable interactions                            |
 |`pose`     |select and move body parts                     |
 |`default`  |restore the default pose                       |
-|`copy`     |copies pose to armor stand in offhand          |
-|`paste`    |pastes pose from armor stand in offhand        |
+|`copy`     |copies pose to armour stand in offhand          |
+|`paste`    |pastes pose from armour stand in offhand        |
 |`equip`    |transfer player offhand to selected body part  |
 <!--$pmc:endTable-->
 

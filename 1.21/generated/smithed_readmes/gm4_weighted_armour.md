@@ -1,11 +1,12 @@
 # <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Weighted Armour by Gamemode 4<!--$pmc:delete-->
 
-A great way to add some variety to your UHC tournaments, or just some spice for everyday monster fighting. Weighted armour slows the player down depending on their armor points. Players now have the tactical choice between speed and protection. <!--$pmc:headerSize-->
+A great way to add some variety to your UHC tournaments, or just some spice for everyday monster fighting. Weighted armour slows the player down depending on their armour points. Players now have the tactical choice between speed and protection. <!--$pmc:headerSize-->
 
-### Features:
-- Slowness levels increase with armor points.
-- Full leather armor causes no slowness, while full diamond armor causes slowness III.
+### Features
+- Slowness levels increase with armour points.
+- Full leather armour causes no slowness, while full diamond armour causes slowness III.
 - Players should consider what level of protection they need for different activities, and have a few different outfits to wear accordingly
+- When used together with [Metallurgy](https://gm4.co/modules/metallurgy)<!--$dynamicLink:gm4_metallurgy--> data pack, the Helious shamir can be used to counteract the weight of armour.
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=rVRSXTGQPbg)
