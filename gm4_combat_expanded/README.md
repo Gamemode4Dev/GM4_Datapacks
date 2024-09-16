@@ -4,7 +4,7 @@ Use special weapon and armor modifiers to defend against mobs that grow ever str
 
 <img src="images/combat_expanded.png" alt="Spore Zombies in Lush Caves" height="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
-### Features:
+### Features
 - The longer you stay alive the stronger mobs will become.
 - Different biomes grant special buffs to mobs that spawn in them, creating bigger Slimes or Spore Zombies that keep regrowing!
 - Weaker Phantoms that take damage if they try to fly into water, as they deserve.

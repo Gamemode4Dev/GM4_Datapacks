@@ -1,10 +1,10 @@
-# Better Armour Stands <!--$headerTitle--> <!--$pmc:delete-->
+# Better Armour Stands<!--$headerTitle--><!--$pmc:delete-->
 
 Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands. <!--$pmc:headerSize-->
 
 <img src="images/better_armour_stands.webp" alt="Better Armour Stands Example" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
-### Features:
+### Features
 - All armor stands have arms by default
 - Write commands into a Book and Quill to control your armor stands
     - [Click Here](https://wiki.gm4.co/wiki/Better_Armour_Stands#Codes) to see a full list of codes

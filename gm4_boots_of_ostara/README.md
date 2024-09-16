@@ -1,4 +1,4 @@
-# Boots of Ostara <!--$headerTitle--><!--$pmc:delete-->
+# Boots of Ostara<!--$headerTitle--><!--$pmc:delete-->
 
 Make grass appear beneath your feet!<!--$pmc:headerSize-->
 

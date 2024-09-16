@@ -2,7 +2,7 @@
 
 Full moons gain a element of surprise with random events.<!--$pmc:headerSize-->
 
-### Features:
+### Features
 - Every full moon, there is a chance of a random event bing triggered.
 - When triggered, all players will hear a wolf howl sound.
 - This adds 6 more events to the base datapack called "Mysterious Midnights"

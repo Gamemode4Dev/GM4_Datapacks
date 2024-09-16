@@ -2,7 +2,7 @@
 
 Allows you store compactly store your potions in a Liquid Tank.<!--$pmc:headerSize-->
 
-### Features:
+### Features
 - Allows potions in a Liquid Tank and interactions from using the tank
 - An unextended potion will fill 1/3 a bucket. An extended potion will fill 1 bucket.
 - Allows the "Milking" of Shulkers for floating and Witches for a variety of potions.

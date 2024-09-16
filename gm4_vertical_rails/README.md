@@ -4,6 +4,6 @@ Turn ladders into vertical railways for your minecarts! This simple datapack is 
 
 ![Note Block Interface Example](images/vertical_rails.webp)<!--$localAssetToURL--><!--$modrinth:replaceWithVideo--><!--$pmc:delete-->
 
-### Features:
+### Features
 - Minecarts inside ladders automatically travel upwards until the reach the top, where they continue on regular rails.
 - Adds a custom advancement for your first ride up a wall

@@ -1,4 +1,4 @@
-# Block Compressors <!--$headerTitle--><!--$pmc:delete-->
+# Block Compressors<!--$headerTitle--><!--$pmc:delete-->
 
 Store even more blocks in a single slot by squishing them within an inch of their cubic-self.<!--$pmc:headerSize-->
 

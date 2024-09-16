@@ -2,6 +2,6 @@
 
 Allow your saplings to... plant themselves!<!--$pmc:headerSize-->
 
-### Features:
+### Features
 - Any sapling now will auto-plant when on Podzol
 - Can be used to improve tree farm automation

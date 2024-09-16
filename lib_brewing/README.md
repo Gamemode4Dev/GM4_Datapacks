@@ -70,7 +70,7 @@ function `MODULE_ID:brewing_stand/splash`
 
 loot spawn ~ ~ ~ loot MODULE_ID:technical/brewing_stand/splash
 # uncomment this line to completely clear the potion VV
-# execute if <...> run scoreboard players set $insert gm4_brewing_data -1
+# execute if<...> run scoreboard players set $insert gm4_brewing_data -1
 ```
 
 3. Add your function to the library API call that runs when the library catches a splash potion conversion:

@@ -5,7 +5,7 @@ than regular rail lines. <!--$pmc:headerSize-->
 
 ![Ziprails Example](images/ziprails_example.webp) <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
-### Features:
+### Features
 - All minecart types can grab onto a "ziprail" by riding under the tripwire hook at one end.
 - Minecarts will travel down a ziprail until it reaches the other end, much like a gondola or cable-car
 - Adds a custom advancement for your first ride in the sky

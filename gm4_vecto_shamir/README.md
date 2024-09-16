@@ -2,7 +2,7 @@
 
 Summon a Boat or Minecart out of thin air when in need, no more wasting an inventory slot!<!--$pmc:headerSize-->
 
-### Features:
+### Features
 - Sneak ontop of water, ice or rails to spawn a temporary boat/minecart.
 - The mode of transport disappears once the summoning player moves away from it.
 - Boats spawned reflect the biome it spawns in.

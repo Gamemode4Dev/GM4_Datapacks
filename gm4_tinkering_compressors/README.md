@@ -2,7 +2,7 @@
 
 Automatically compress stacks of items into their block form.<!--$pmc:headerSize-->
 
-### Features:
+### Features
 - Takes items in and out of their block form if it exists
 - Adds a block to automate the process in storage systems
 - Makes usage of the "Block Compressors" and "Metallurgy" datapack

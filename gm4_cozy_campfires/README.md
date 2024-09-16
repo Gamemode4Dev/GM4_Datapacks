@@ -1,4 +1,4 @@
-# Cozy Campfires <!--$headerTitle--><!--$pmc:delete-->
+# Cozy Campfires<!--$headerTitle--><!--$pmc:delete-->
 
 Campfires now can heal... as well as harm.<!--$pmc:headerSize-->
 

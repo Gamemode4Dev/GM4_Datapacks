@@ -2,7 +2,7 @@
 
 Harness the power of lighting, whenever you feel like it!<!--$pmc:headerSize-->
 
-### Features:
+### Features
 - Allows the capturing of lightning during a storm by getting a lighting strike to hit a brewing stand
 - Throwing the bottle spawns lightning upon making contact with a block
 - Certain blocks can now become animated, eg Purpur Blocks turn into Shulkers.

@@ -2,7 +2,7 @@
 
 Fill your world with beautiful particles by attaching them to armour stands.<!--$pmc:headerSize-->
 
-### Features:
+### Features
 - Allows a variety of particles such as bubble, cloud and drip
 - Each armour stand can only have one particle
 - When a particle is applied, the armour stand will become invisible. Holding a book and quill will highlight any nearby invisible armour stands.

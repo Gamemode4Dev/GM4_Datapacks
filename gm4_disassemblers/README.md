@@ -2,7 +2,7 @@
 
 Break apart tools and armor for their materials.<!--$pmc:headerSize-->
 
-### Features:
+### Features
 - Place items inside the disassembler block to get back their materials
 - Works on leather, iron, gold tiers, shears and flint & steal.
 - The more damaged an item, the less of the base material is returned

@@ -1,4 +1,4 @@
-# Auto Crafting <!--$headerTitle--> <!--$pmc:delete-->
+# Auto Crafting <!--$headerTitle--><!--$pmc:delete-->
 
 Excited for the new 1.21 crafter block? Want to start making the cake factory of your dreams right now? Try out Gamemode 4's take on auto-crafting, available right now for 1.19 and 1.20!<!--$pmc:headerSize-->
 

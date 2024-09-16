@@ -2,7 +2,7 @@
 
 Ever found yourself envious of certain monsters abilities?  Orb of Ankou allows you to gain some of those abilities.<!--$pmc:headerSize-->
 
-### Features:
+### Features
 - Integrates with the Metallurgy Shamir system to allow the play to collect "Soul Essence" from mobs
 - Adds certain qualities to mobs (such as Aggressive, Agile, Anchoring) and allows their soul to be harvested to collect each essence
 - Apon collecting enough of an essence type, the player can convert it into a Shard to channel the ability, which are then activated upon a certain condition.
