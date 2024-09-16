@@ -5,8 +5,8 @@ Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your
 <img src="images/better_armour_stands.webp" alt="Better Armour Stands Example" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
 ### Features
-- All armor stands have arms by default
-- Write commands into a Book and Quill to control your armor stands
+- All armour stands have arms by default
+- Write commands into a Book and Quill to control your armour stands
     - [Click Here](https://wiki.gm4.co/wiki/Better_Armour_Stands#Codes) to see a full list of codes
 - Copy and Paste poses
 - Make custom statues
@@ -26,8 +26,8 @@ Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your
 |`unlock`   |enable interactions                            |
 |`pose`     |select and move body parts                     |
 |`default`  |restore the default pose                       |
-|`copy`     |copies pose to armor stand in offhand          |
-|`paste`    |pastes pose from armor stand in offhand        |
+|`copy`     |copies pose to armour stand in offhand          |
+|`paste`    |pastes pose from armour stand in offhand        |
 |`equip`    |transfer player offhand to selected body part  |
 <!--$pmc:endTable-->
 

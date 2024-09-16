@@ -1,6 +1,6 @@
 # Book Binders<!--$headerTitle--><!--$pmc:delete-->
 
-Storing enchantments is a hassle, but with this datapack it is now an breeze!<!--$pmc:headerSize-->
+Storing enchantments is a hassle, but with this data pack it is now an breeze!<!--$pmc:headerSize-->
 
 ### Features
 - Adds new functionality to the lectern

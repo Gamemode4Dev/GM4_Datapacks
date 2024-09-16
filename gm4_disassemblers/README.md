@@ -1,6 +1,6 @@
 # Disassemblers<!--$headerTitle--><!--$pmc:delete-->
 
-Break apart tools and armor for their materials.<!--$pmc:headerSize-->
+Break apart tools and armour for their materials.<!--$pmc:headerSize-->
 
 ### Features
 - Place items inside the disassembler block to get back their materials
@@ -9,7 +9,7 @@ Break apart tools and armor for their materials.<!--$pmc:headerSize-->
 - Can be added to mob farms like Zombified Piglin farms to process their dropped tools
 
 ### Configuration
-If you also want to allow diamond armor and tools to be disassembled, run the following command:
+If you also want to allow diamond armour and tools to be disassembled, run the following command:
 ```
 /scoreboard players set disassemble_diamonds gm4_disassembler 1
 ```

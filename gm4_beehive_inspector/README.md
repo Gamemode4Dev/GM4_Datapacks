@@ -7,4 +7,4 @@ See the contents of your bee's nests!<!--$pmc:headerSize-->
 ### Features
 - Displays the count of bees and level of honey in both nests and hives
 - This data is viewable via the lore-tag on any nest/hive
-- Beehives still have to be collected with silk-touch to not break - as is standard in the base game
+- Beehives still have to be collected with Silk Touch to not break - as is standard in the base game
