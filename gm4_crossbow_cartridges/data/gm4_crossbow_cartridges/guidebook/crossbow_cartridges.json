@@ -59,6 +59,16 @@
             "text": "\n- "
           },
           {
+            "translate": "item.wind_charge.name",
+            "hoverEvent": {
+              "action": "show_item",
+              "value": "{id:\"minecraft:wind_charge\",count:1}"
+            }
+          },
+          {
+            "text": "\n- "
+          },
+          {
             "translate": "item.minecraft.potion",
             "hoverEvent": {
               "action": "show_text",

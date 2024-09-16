@@ -20,6 +20,9 @@ execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:items/pot
 # fireball
 execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/fire_charge] run function gm4_crossbow_cartridges:projectile/fireball
 
+# wind charge
+execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/wind_charge] run function gm4_crossbow_cartridges:projectile/wind_charge
+
 # tnt
 execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/tnt] run function gm4_crossbow_cartridges:projectile/tnt
 
