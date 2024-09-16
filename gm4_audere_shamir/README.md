@@ -5,4 +5,4 @@ Play the risky game and nearly break your tools! The lower your durability, the 
 ### Features
 - Get up to Haste 4 when your durability is really low
 - Works across all tool types and all tool tiers (Wood to Netherrite)
-- Builds on Gamemode 4's comprehensive and fun take on enchantments with the Metallurgy system.
+- Builds on Gamemode 4's comprehensive and fun take on enchantments with the [Metallurgy]($dynamicLink:gm4_metallurgy) system.

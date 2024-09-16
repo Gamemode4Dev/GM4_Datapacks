@@ -3,7 +3,7 @@
 Adds recipes for more efficient conversion<!--$pmc:headerSize-->
 
 ### Features:
-- Adds specific block to access more efficient recipes
+- Adds a new crafter block to access more efficient recipes
 - Adds Clay + Netherrack to Nether Brick recipe
 - Allows Netherrack + Bucket to Lava Bucket recipe
 
