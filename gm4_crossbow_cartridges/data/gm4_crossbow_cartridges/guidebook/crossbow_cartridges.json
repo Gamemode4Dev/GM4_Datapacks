@@ -59,7 +59,7 @@
             "text": "\n- "
           },
           {
-            "translate": "item.wind_charge.name",
+            "translate": "item.minecraft.wind_charge",
             "hoverEvent": {
               "action": "show_item",
               "value": "{id:\"minecraft:wind_charge\",count:1}"
