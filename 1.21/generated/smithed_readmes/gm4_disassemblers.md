@@ -2,6 +2,8 @@
 
 Break apart tools and armour for their materials.<!--$pmc:headerSize-->
 
+<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_disassemblers/images/disassembler_gui.png" alt="Damaged Iron Leggings are disassembled into 5 Iron Ingots" width="350"/>  <!--$pmc:delete-->
+
 ### Features
 - Place items inside the disassembler block to get back their materials
 - Works on leather, iron, gold tiers, shears and flint & steal.
