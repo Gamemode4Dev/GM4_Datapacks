@@ -17,6 +17,8 @@ meta:
       recommended:
         - gm4_poses_pack
       notes: []
+    modrinth:
+      project_id: hqLgWYiS
     required:
       gm4_better_armour_stands: 1.4.0
     video: https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=238s
