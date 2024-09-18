@@ -14,6 +14,8 @@ meta:
       description: Ride pigs through fields to quickly harvest and plant crops! Who knows, maybe you will even dig up some useful things in the process.
       recommended: []
       notes: []
+    modrinth:
+      project_id: 8lN3MtcQ
     model_data:
       - item: saddle
         reference: gui/advancement/pig_tractors

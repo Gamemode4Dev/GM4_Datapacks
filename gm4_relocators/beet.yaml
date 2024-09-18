@@ -42,6 +42,8 @@ meta:
         - gm4_smelteries
         - gm4_tinkering_compressors
       notes: []
+    modrinth:
+      project_id: FdwwppEn
     video: null
     wiki: https://wiki.gm4.co/wiki/Relocators
     credits:
