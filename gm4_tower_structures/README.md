@@ -1,6 +1,6 @@
 # Tower Structures<!--$headerTitle--><!--$pmc:delete-->
 
-A custom terrain expansion pack that adds four new tower structures to the world. <!--$pmc:headerSize-->
+A custom terrain expansion pack that adds new tower structures to the world. <!--$pmc:headerSize-->
 
 ### Features
 - Towers can spawn in Desert, Ocean, Badlands and Snowy biomes
