@@ -4,7 +4,7 @@
         "trigger": "minecraft:villager_trade",
         "conditions": {
           "item": {
-            "predicate": {
+            "predicates": {
               "minecraft:custom_data": "{gm4_balloon_animals:{trade:1b}}"
             }
           }
@@ -14,7 +14,7 @@
         "trigger": "minecraft:villager_trade",
         "conditions": {
           "item": {
-            "predicate": {
+            "predicates": {
               "minecraft:custom_data": "{gm4_balloon_animals:{trade:2b}}"
             }
           }
