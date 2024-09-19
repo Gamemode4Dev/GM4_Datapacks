@@ -23,6 +23,8 @@ meta:
       recommended:
         - gm4_standard_crafting
       notes: []
+    modrinth:
+      project_id: B0clnMBy
     video: https://www.youtube.com/watch?v=_GekIoefncg
     wiki: https://wiki.gm4.co/wiki/Record_Crafting
     credits:

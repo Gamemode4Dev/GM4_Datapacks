@@ -54,6 +54,8 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
+    modrinth:
+      project_id: EjJQ5tiv
     planetminecraft: 
       uid: 4331371
     video: https://www.youtube.com/watch?v=zjmL6rjoq0g
