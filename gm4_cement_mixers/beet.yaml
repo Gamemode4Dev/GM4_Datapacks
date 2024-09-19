@@ -17,6 +17,8 @@ meta:
       description: Allows Liquid Tanks to convert Concrete Powder items into Concrete, at the cost of ⅓ of a Bucket of Water per Concrete Powder.
       recommended: []
       notes: []
+    modrinth:
+      project_id: blBLRC4i
     video: https://www.youtube.com/watch?v=qa9lcbii1BE
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Cement_Mixers
     credits:

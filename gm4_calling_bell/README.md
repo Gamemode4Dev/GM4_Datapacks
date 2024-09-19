@@ -1,4 +1,4 @@
-# Calling Bell  <!--$headerTitle--><!--$pmc:delete-->
+# Calling Bell <!--$headerTitle--><!--$pmc:delete-->
 
 Those pesky Wandering Traders never deign to stop by your house? Let them know you've got emeralds to sell by ringing a bell, and one will appear before your eyes with their.. er.. useful trades.
 

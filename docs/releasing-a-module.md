@@ -42,11 +42,12 @@ For example:
 ```yaml
 # ...
 meta:
+  gm4:
   # ...
-  modrinth:
-    project_id: AzpWemXn
-  smithed:
-    pack_id: gm4_holographic_tags
+    modrinth:
+      project_id: AzpWemXn
+    smithed:
+      pack_id: gm4_holographic_tags
 ```
 
 ## Finishing the release

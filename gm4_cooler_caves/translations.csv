@@ -1,5 +1,5 @@
 key,en_us
-text.gm4.guidebook.module_desc.cooler_caves,A custom terrain expansion pack that makes biome specific caves and mineshafts
+text.gm4.guidebook.module_desc.cooler_caves,A custom terrain expansion pack that makes biome specific caves
 text.gm4.guidebook.cooler_caves.description,The world has modified block compositions.\n\nSome biomes have different blocks compared to normal worlds.
 text.gm4.guidebook.cooler_caves.desert_and_snow,"In the desert, sandstone and gravel generate instead of stone and gravel.\n\nIn snowy biomes, snow, ice, and white concrete powder can be found in caves."
 text.gm4.guidebook.cooler_caves.badlands,"Terracotta layers extend throughout the entire underground in badland biomes. Gravel cannot be found, but red sand patches takes their place."

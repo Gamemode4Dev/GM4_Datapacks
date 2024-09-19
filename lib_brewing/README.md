@@ -1,9 +1,9 @@
 # lib_brewing
-lib_brewing is a mcfunction library that allows other datapacks to replace custom potions with splash and lingering potions when brewed in a brewing stand. This is used to prevent the `Uncraftable Splash Potion` and `Uncraftable Lingering Potion` items from being obtainable.
+lib_brewing is a mcfunction library that allows other data packs to replace custom potions with splash and lingering potions when brewed in a brewing stand. This is used to prevent the `Uncraftable Splash Potion` and `Uncraftable Lingering Potion` items from being obtainable.
 
 ## Uses
 ### Splash and Lingering Conversions
-This library automatically catches splash and lingering potion conversions to allow datapacks to properly replace those potions. This means whenever a potion is brewed into a splash potion using gunpowder, a set of functions will be run to replace the Uncraftable Splash Potion with a custom splash potion. Similarly, whenever a splash potion is brewed into a lingering potion using dragon's breath, a set of functions will be run to replace the Uncraftable Lingering Potion with a custom lingering potion.
+This library automatically catches splash and lingering potion conversions to allow data packs to properly replace those potions. This means whenever a potion is brewed into a splash potion using gunpowder, a set of functions will be run to replace the Uncraftable Splash Potion with a custom splash potion. Similarly, whenever a splash potion is brewed into a lingering potion using dragon's breath, a set of functions will be run to replace the Uncraftable Lingering Potion with a custom lingering potion.
 
 Each brewing stand has a marker to track these changes. When splash and lingering potions are created, each potion is checked by calling the `#gm4_brewing:insert/splash` or `#gm4_brewing:insert/lingering` function tags (once per potion, so if there are 3 potions in the brewing stand, that function tag gets called for each potion). The full item components for each potion is saved into the nbt of the marker in `data.gm4_brewing.insert.components.<ITEM_COMPONENTS>`. For example if the brewing stand has the nbt `{Items:[{Slot:0b,id:"minecraft:potion",count:1,components:{'minecraft:custom_data':{my_custom_potion:1b}}}]}`, the marker would have the nbt `{data:{gm4_brewing:{insert:{Slot:0b,id:"minecraft:potion",count:1,components:{'minecraft:custom_data':{my_custom_potion:1b}}}}}}` when it's checking the first potion. This is how you should check for your custom potions
 
@@ -70,7 +70,7 @@ function `MODULE_ID:brewing_stand/splash`
 
 loot spawn ~ ~ ~ loot MODULE_ID:technical/brewing_stand/splash
 # uncomment this line to completely clear the potion VV
-# execute if <...> run scoreboard players set $insert gm4_brewing_data -1
+# execute if<...> run scoreboard players set $insert gm4_brewing_data -1
 ```
 
 3. Add your function to the library API call that runs when the library catches a splash potion conversion:
@@ -107,4 +107,4 @@ execute if entity @s[nbt={data:{gm4_brewing:{previous_items:[{Slot:3b,id:"minecr
 
 
 ## License
-This library, and the contents of the `lib_brewing` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.
+This library, and the contents of the `lib_brewing` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_data packs), is licensed under the MIT License.

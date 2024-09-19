@@ -81,6 +81,8 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
+    modrinth:
+      project_id: eoRo8GBL
     video: https://www.youtube.com/watch?v=DT4PPHC23iM
     wiki: https://wiki.gm4.co/wiki/Enchantment_Extractors
     credits:

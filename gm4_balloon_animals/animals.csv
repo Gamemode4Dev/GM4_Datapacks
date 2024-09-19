@@ -16,4 +16,5 @@ Panda,minecraft:panda,TRUE,init_animal,"Chen,Dopey,Dumpling,Helen,Kai,Lily,Mei,P
 Camel,minecraft:camel,TRUE,init_animal,"Camelot,Camille,Cammy,Caramel,Eden,Jacchus,Kennedy,Mirage,Sarah"
 Goat,minecraft:goat,TRUE,init_animal,"Bill,Billy,Djali,Gertrude,Gideon,Joe,Joey,Kid,Phil,Philoctetes,Valentino"
 Ocelot,minecraft:ocelot,TRUE,init_animal,"Catnip,Clawhauser,Dinah,Felicia,Figaro,Hissy,Jagular,Lucifer,Tallulah"
+Armadillo,minecraft:armadillo,TRUE,init_animal,"Annette,Dave,Dharma,Lari,Mighty,Poly,Roly,Tuk-tuk"
 Turtle,minecraft:turtle,TRUE,add_turtle_egg,
