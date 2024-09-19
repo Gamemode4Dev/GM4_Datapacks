@@ -1,5 +1,5 @@
 {
-  "last_commit": "0c13fd8b3638d1a2ab7b96296a4e02c189b54d2b",
+  "last_commit": "a32af7d0c40ba71d71f0ef5ad444f8609d4ac94d",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -104,8 +104,8 @@
     {
       "id": "gm4_auto_crafting",
       "name": "Auto Crafting",
-      "version": "1.4.6",
-      "hash": "fd8e94e305146c7e9f3268827a52f5e8c3c87be2",
+      "version": "1.4.7",
+      "hash": "ea9c3bdc19d11ca86d472b7a4d6902eaac93dd4c",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters/Auto_Crafting",
       "credits": {
@@ -317,8 +317,8 @@
     {
       "id": "gm4_block_compressors",
       "name": "Block Compressors",
-      "version": "1.5.6",
-      "hash": "c87c93e41d4c2186f42fbb7a23c53b1a10baa6e3",
+      "version": "1.5.7",
+      "hash": "15a358400d355d951ea1d24f8c1657b6f16f0bb7",
       "video_link": "https://www.youtube.com/watch?v=sdrTJYjL8C0",
       "wiki_link": "https://wiki.gm4.co/wiki/Block_Compressors",
       "credits": {
@@ -431,8 +431,8 @@
     {
       "id": "gm4_boots_of_ostara",
       "name": "Boots of Ostara",
-      "version": "1.7.7",
-      "hash": "dff9a2ee5f33d0e74866ffeeee1436743c100fbc",
+      "version": "1.7.8",
+      "hash": "eaaa7934277908df36313a2494216b167e4dff56",
       "video_link": "https://www.youtube.com/watch?v=H4UGM6_wGCE",
       "wiki_link": "https://wiki.gm4.co/wiki/Boots_of_Ostara",
       "credits": {
@@ -527,7 +527,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "blBLRC4i",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -767,8 +767,8 @@
     {
       "id": "gm4_disassemblers",
       "name": "Disassemblers",
-      "version": "2.4.7",
-      "hash": "e2ac49e9d16897bf80e1d48e2142402fdc02d6b7",
+      "version": "2.4.8",
+      "hash": "a2ff062889d96908c4a066375646d80eecaeccf3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Disassemblers",
       "credits": {
@@ -819,8 +819,8 @@
     {
       "id": "gm4_display_frames",
       "name": "Display Frames",
-      "version": "1.5.5",
-      "hash": "107c88ea83adeb716d364e8fd7db00d376d26a78",
+      "version": "1.5.6",
+      "hash": "e9bb5456a2b2838ae7e62856e6bdcfc03fcd69e0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Display_Frames",
       "credits": {
@@ -943,8 +943,8 @@
     {
       "id": "gm4_enchantment_extractors",
       "name": "Enchantment Extractors",
-      "version": "2.4.7",
-      "hash": "a63d57a29be27a59f726425b58dbbcb77d1a8793",
+      "version": "2.4.8",
+      "hash": "ff0af20fd7f76557291abc9afcaeb013fd374e36",
       "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
       "wiki_link": "https://wiki.gm4.co/wiki/Enchantment_Extractors",
       "credits": {
@@ -989,7 +989,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "eoRo8GBL",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1021,15 +1021,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "BbEwao9o",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_ender_hoppers",
       "name": "Ender Hoppers",
-      "version": "1.7.6",
-      "hash": "0c277ac4746c3fc8606b6b823ab1cb6d49c7f5a6",
+      "version": "1.7.7",
+      "hash": "727dd7827bec140568e82cc2025154cc570e2825",
       "video_link": "https://www.youtube.com/watch?v=wrwg4BDgEGU",
       "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
       "credits": {
@@ -1073,7 +1073,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "dB4zrtK8",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1105,7 +1105,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "Dhlwu1G6",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1138,15 +1138,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "4XVj9LBh",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_forming_press",
       "name": "Forming Press",
-      "version": "1.5.7",
-      "hash": "e72dda243d11bd8bdb45e40ba4435821698d3a77",
+      "version": "1.5.8",
+      "hash": "15ad7472a6631a50ea658d6a9202e20d1a7b5941",
       "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
       "wiki_link": "https://wiki.gm4.co/wiki/Forming_Press",
       "credits": {
@@ -1191,7 +1191,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "LGXxY3vu",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1224,7 +1224,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "N09PsTgz",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1258,8 +1258,8 @@
     {
       "id": "gm4_heart_canisters",
       "name": "Heart Canisters",
-      "version": "1.7.6",
-      "hash": "3829c114008dfdaa381a5e4013d323e9f8907910",
+      "version": "1.7.7",
+      "hash": "92fd8be6a78e494f5457f9a5ecd38ab44bfac1e6",
       "video_link": "https://www.youtube.com/watch?v=zjmL6rjoq0g",
       "wiki_link": "https://wiki.gm4.co/wiki/Heart_Canisters",
       "credits": {
@@ -1305,7 +1305,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "EjJQ5tiv",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1370,7 +1370,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "DTk79ZcR",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1403,15 +1403,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "ljOfYHJv",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_lightning_in_a_bottle",
       "name": "Lightning in a Bottle",
-      "version": "1.7.5",
-      "hash": "0cf37df4d3efdbcd341fddf5cfaa84b094e0cf5b",
+      "version": "1.7.6",
+      "hash": "98499e7ba5cd59fc5712e411355713a5d848dd5b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
       "credits": {
@@ -1440,15 +1440,15 @@
       "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "GVqJxowR",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_liquid_minecarts",
       "name": "Liquid Minecarts",
-      "version": "1.6.5",
-      "hash": "ea1aec9a33761625ca3df2a0d8d31024d3b33409",
+      "version": "1.6.6",
+      "hash": "ff5ade7101ec83e7d712c8ce7a767f10c7d0227b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts",
       "credits": {
@@ -1478,15 +1478,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "Ymtg3OOc",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_liquid_tanks",
       "name": "Liquid Tanks",
-      "version": "2.6.6",
-      "hash": "06c0c66018795a8f93731caa4a115595d5e6d0d2",
+      "version": "2.6.7",
+      "hash": "cc45582c1aca6df5fae267312f576b8f3170b2e5",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
       "credits": {
@@ -1523,7 +1523,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "h4BcuD3C",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1553,7 +1553,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "uSXn7pVW",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1589,7 +1589,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "vYbLApXc",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1621,15 +1621,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "DPYixL7Y",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.6.4",
-      "hash": "8c1f003fdd656b43cec7688a416ff08c36b23a47",
+      "version": "1.6.5",
+      "hash": "f089b1781c70671be96c5efcfe2436a7fc7bd1bb",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -1686,7 +1686,7 @@
         "shamir"
       ],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "raWyrHxi",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1718,7 +1718,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "9aTlLrlw",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1751,15 +1751,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "F06LrkeC",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_mountaineering",
       "name": "Mountaineering",
-      "version": "1.3.6",
-      "hash": "15537923a59d112e6d87e8df3c467d4e9ae68446",
+      "version": "1.3.7",
+      "hash": "97a714e416bd7d208072b07d2c9c793373e460c9",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mountaineering",
       "credits": {
@@ -1814,7 +1814,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "9skST20d",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1847,15 +1847,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "ikXgoCNB",
       "smithed_link": "gm4_note_block_interface",
       "pmc_link": null
     },
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.7.7",
-      "hash": "ff302e5b4dca95feaec98aaa9dde69f5a4fcd8c1",
+      "version": "1.7.8",
+      "hash": "615274bf6e4d187fa74e08f2a2c41c2b47a8bc1a",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -1879,15 +1879,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "rRP5afZM",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_particles_pack",
       "name": "Particles Pack",
-      "version": "1.6.2",
-      "hash": "731ef879d45c566cf7cf1c1f74c4871d0dd0021a",
+      "version": "1.6.3",
+      "hash": "94da5dc3942c628309f757d693a37ab876ad0d2e",
       "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=238s",
       "wiki_link": "https://wiki.gm4.co/wiki/Particles_Pack",
       "credits": {
@@ -1901,7 +1901,9 @@
           "DuckJr"
         ]
       },
-      "requires": [],
+      "requires": [
+        "gm4_better_armour_stands"
+      ],
       "description": "Fireflies to flames, add some pezazz to your projects! Allows you to turn Armour Stands into particle sources that you control!",
       "recommends": [
         "gm4_poses_pack"
@@ -1914,7 +1916,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "hqLgWYiS",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1946,7 +1948,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "MrSTch8u",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -1979,7 +1981,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "OQYrrgEP",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2009,7 +2011,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "8lN3MtcQ",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2039,7 +2041,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "keFbZ5iO",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2077,7 +2079,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "vE5iK9HJ",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2115,15 +2117,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "Z08l0oKH",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_potion_swords",
       "name": "Potion Swords",
-      "version": "1.6.2",
-      "hash": "8b152e3aca0d58deb26398f40a8cfdf9b44a4781",
+      "version": "1.6.3",
+      "hash": "6c4960399cbba97d558e6b4e6906f9d83512d36d",
       "video_link": "https://www.youtube.com/watch?v=9xI3CQ1z5cg",
       "wiki_link": "https://wiki.gm4.co/wiki/Potion_Swords",
       "credits": {
@@ -2149,15 +2151,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "ZmYNpwdj",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_record_crafting",
       "name": "Record Crafting",
-      "version": "1.4.6",
-      "hash": "46d4225cfadd03f5e4eaeca4b2b3f7a19bdce24b",
+      "version": "1.4.7",
+      "hash": "e523e8e77045afe91c36c078a11a117d1491e104",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "wiki_link": "https://wiki.gm4.co/wiki/Record_Crafting",
       "credits": {
@@ -2184,15 +2186,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "B0clnMBy",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_relocators",
       "name": "Relocators",
-      "version": "2.4.7",
-      "hash": "1c4c1668f63c410833118e12e301e9bdc9dec750",
+      "version": "2.4.8",
+      "hash": "e5b65c09e8f9a697447a3bcaa90334a41d1543e5",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Relocators",
       "credits": {
@@ -2227,7 +2229,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "FdwwppEn",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2264,8 +2266,8 @@
     {
       "id": "gm4_scuba_gear",
       "name": "SCUBA Gear",
-      "version": "1.5.6",
-      "hash": "62a793df70f0a32bb80e6be4de693f5f2c05ec65",
+      "version": "1.5.7",
+      "hash": "674b3f58af85fb6608642f1f5163d1240a2159cd",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/SCUBA_Gear",
       "credits": {
@@ -2292,7 +2294,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "6AVYWZgD",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2354,15 +2356,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "7Rcai2W4",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_smelteries",
       "name": "Smelteries",
-      "version": "1.7.6",
-      "hash": "43ea9f05a02c442b2edb9dee12c53b69152e3e08",
+      "version": "1.7.7",
+      "hash": "8683e6353d78654817ea9a4bdc1dd4c60d0c8e30",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/smelteries",
       "credits": {
@@ -2396,15 +2398,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "AHj8RSHk",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_soul_glass",
       "name": "Soul Glass",
-      "version": "1.4.5",
-      "hash": "c6d16fb88bed4835531bf7d7dc1b92a6e756c9ea",
+      "version": "1.4.6",
+      "hash": "43efb245705d6fd919c8f9f9987a611a4fe1226f",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Soul_Glass",
       "credits": {
@@ -2428,7 +2430,7 @@
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "Hi8fkYoI",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2460,7 +2462,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "j4qeIaSW",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2494,15 +2496,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "vRH8BKZ7",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_standard_crafting",
       "name": "Standard Crafting",
-      "version": "1.5.6",
-      "hash": "a61bdbaa515bc12a874e046d3de0190be0bb8e98",
+      "version": "1.5.7",
+      "hash": "1cae9adc1ab766bdc6095ac42a254ebb1f91658f",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
       "credits": {
@@ -2527,7 +2529,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "KIxK9MA7",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2565,7 +2567,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "drjgVlzU",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2599,15 +2601,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "z33oiJCd",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_teleportation_anchors",
       "name": "Teleportation Anchors",
-      "version": "1.5.6",
-      "hash": "56d057952064a3e9a752a9eb7d54c6609ee72e43",
+      "version": "1.5.7",
+      "hash": "29aea2e8a049901ae875a8d85fcc342294e07faa",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Teleportation_Anchors",
       "credits": {
@@ -2633,15 +2635,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "CQkaELVA",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_tinkering_compressors",
       "name": "Tinkering Compressors",
-      "version": "1.5.5",
-      "hash": "f0c401fb1d2cd6c2feb322b755d2f4f7c4edb77b",
+      "version": "1.5.6",
+      "hash": "dbbe8429a56aa5eae6ece177ff19f380ca342662",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tinkering_Compressors",
       "credits": {
@@ -2675,15 +2677,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "EnojYUEm",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_tower_structures",
       "name": "Tower Structures",
-      "version": "3.4.2",
-      "hash": "45457c8f531d74c6c4b17b1ab935180bdf4eace1",
+      "version": "3.4.3",
+      "hash": "62903bdad322cf8624b04a802813c825f6254e1f",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Tower_Structures",
       "credits": {
@@ -2698,7 +2700,7 @@
         ]
       },
       "requires": [],
-      "description": "A custom terrain expansion pack that adds four new tower structures to the world.",
+      "description": "A custom terrain expansion pack that adds new tower structures to the world.",
       "recommends": [
         "gm4_dangerous_dungeons",
         "gm4_cooler_caves"
@@ -2711,15 +2713,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "FvGL10DQ",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_tunnel_bores",
       "name": "Tunnel Bores",
-      "version": "1.5.8",
-      "hash": "36e14a0ecae736a658290bec160a25198bf3dd01",
+      "version": "1.5.9",
+      "hash": "a3035311cbd9a3da70292fb09f7ac9539f3a0920",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tunnel_Bores",
       "credits": {
@@ -2748,7 +2750,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "L32wQVcn",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2813,7 +2815,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "wwe9xfEp",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2881,7 +2883,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "9QdXJeGc",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2914,7 +2916,7 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "ipiZnkaE",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -2979,15 +2981,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "jIY8HJPO",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_zauber_cauldrons",
       "name": "Zauber Cauldrons",
-      "version": "1.12.5",
-      "hash": "79c5a215db27f693ae9d7e71f965b9abd4ea70d0",
+      "version": "1.12.6",
+      "hash": "a2799e4df33e16984e2ec3882fceb8f7cf1d0d9b",
       "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
       "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
       "credits": {
@@ -3097,8 +3099,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.3.6",
-      "hash": "2906d5a34ae05565aeeab758f50f00e1db87d99e",
+      "version": "1.3.7",
+      "hash": "8cebc8c5c7ba4591c30be10c8519ab1677f82e3f",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3163,8 +3165,8 @@
     "lib_custom_crafters": {
       "id": "gm4_custom_crafters",
       "name": "Gamemode 4 Custom Crafters",
-      "version": "3.3.4",
-      "hash": "55060e80f975eb3701aefcfa8041a4ba510645e6",
+      "version": "3.3.5",
+      "hash": "f301dc1b1433105cbe7c5a37cfbe790e7292261b",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3249,8 +3251,8 @@
     "lib_machines": {
       "id": "gm4_machines",
       "name": "Gamemode 4 Machines",
-      "version": "1.3.4",
-      "hash": "cc85d9b8eda49b84378af651774c31353017765e",
+      "version": "1.3.5",
+      "hash": "f2f92423da100202d8f8a29711a078753ad86f73",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3303,8 +3305,8 @@
     "lib_potion_tracking": {
       "id": "gm4_potion_tracking",
       "name": "Gamemode 4 Potion Tracking",
-      "version": "1.2.4",
-      "hash": "e0d37194e79b40ac5209ef3c5d5b494f7e02caf8",
+      "version": "1.2.5",
+      "hash": "defd30103f761941202faec0b88fac6495933e0a",
       "video_link": "",
       "wiki_link": "",
       "credits": {

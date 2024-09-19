@@ -1,6 +1,6 @@
 # <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Tower Structures by Gamemode 4<!--$pmc:delete-->
 
-A custom terrain expansion pack that adds four new tower structures to the world. <!--$pmc:headerSize-->
+A custom terrain expansion pack that adds new tower structures to the world. <!--$pmc:headerSize-->
 
 ### Features
 - Towers can spawn in Desert, Ocean, Badlands and Snowy biomes

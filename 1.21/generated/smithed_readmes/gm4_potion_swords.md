@@ -5,7 +5,7 @@ Cover your blade in the power of a potion and use it when you attack.<!--$pmc:he
 ### Features
 - When attacking with a golden sword, certain potions from your offhand will apply to the mob
 - The potion is never consumed when attacking a mob
-- Attacking a skeleton while holding  will cause the skeleton to convert to a Wither Skeleton, but not drop any loot.
+- Attacking a skeleton while holding a Poison Potion will cause the skeleton to convert to a Wither Skeleton, but not drop any loot.
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=9xI3CQ1z5cg)
