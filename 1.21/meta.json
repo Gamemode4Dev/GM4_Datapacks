@@ -1,5 +1,5 @@
 {
-  "last_commit": "b4a59062591910f9dc198f10694a96ab25fc9de3",
+  "last_commit": "1feb72006789b52a78e421f4580a27fc7abd5339",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -854,8 +854,8 @@
     {
       "id": "gm4_double_doors",
       "name": "Double Doors",
-      "version": "1.2.2",
-      "hash": "31d204b9dfafcf0d1da762dce2ecb2601f61ff60",
+      "version": "1.2.3",
+      "hash": "0589911b66ce5b29bf7adaf1e06f8b05adce882e",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Double_Doors",
       "credits": {
@@ -867,7 +867,7 @@
         ]
       },
       "requires": [],
-      "description": "Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blacks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.",
+      "description": "Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blocks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.",
       "recommends": [],
       "minecraft": [
         "1.21",
@@ -3099,8 +3099,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.3.7",
-      "hash": "8cebc8c5c7ba4591c30be10c8519ab1677f82e3f",
+      "version": "1.3.8",
+      "hash": "96c37299551f22d36cec6232602f56ae9331bee4",
       "video_link": "",
       "wiki_link": "",
       "credits": {
