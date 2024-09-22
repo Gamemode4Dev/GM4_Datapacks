@@ -51,11 +51,11 @@
               "lore": [
                 {
                   "translate": "item.gm4.augmented_armor.lore.totemic",
-                  "fallback": "On kill spawn a %s Totem",
+                  "fallback": "On kill spawn a %s",
                   "with": [
                     {
                       "translate": "item.gm4.augmented_armor.lore.totemic_heal",
-                      "fallback": "Healing",
+                      "fallback": "Healing Totem",
                       "color": "blue",
                       "italic": false
                     }
@@ -145,11 +145,11 @@
               "lore": [
                 {
                   "translate": "item.gm4.augmented_armor.lore.totemic",
-                  "fallback": "On kill spawn a %s Totem",
+                  "fallback": "On kill spawn a %s",
                   "with": [
                     {
                       "translate": "item.gm4.augmented_armor.lore.totemic_haste",
-                      "fallback": "Haste",
+                      "fallback": "Haste Totem",
                       "color": "blue",
                       "italic": false
                     }
@@ -239,6 +239,33 @@
                   "range": 2
                 }
               ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "entity": "this",
+              "lore": [
+                {
+                  "translate": "item.gm4.augmented_armor.lore.totemic_haste_4",
+                  "fallback": "in line of sight",
+                  "color": "dark_gray",
+                  "italic": false
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data"
+                  },
+                  "range": 2
+                }
+              ]
             }
           ]
         },
@@ -252,11 +279,11 @@
               "lore": [
                 {
                   "translate": "item.gm4.augmented_armor.lore.totemic",
-                  "fallback": "On kill spawn a %s Totem",
+                  "fallback": "On kill spawn a %s",
                   "with": [
                     {
                       "translate": "item.gm4.augmented_armor.lore.totemic_freeze",
-                      "fallback": "Freezing",
+                      "fallback": "Freezing Totem",
                       "color": "blue",
                       "italic": false
                     }
@@ -317,7 +344,7 @@
                   "with": [
                     {
                       "translate": "item.gm4.augmented_armor.lore.totemic_freeze_3",
-                      "fallback": "mob in line of sight"
+                      "fallback": "entity in line of sight"
                     },
                     "0:03"
                   ],
@@ -343,6 +370,35 @@
           ]
         },
         {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.player_chilled",
+                "fallback": "Players are Chilled instead",
+                "color": "dark_gray",
+                "italic": true
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 3
+            }
+          ]
+        },
+        {
           "function": "minecraft:sequence",
           "functions": [
             {
@@ -352,11 +408,11 @@
               "lore": [
                 {
                   "translate": "item.gm4.augmented_armor.lore.totemic",
-                  "fallback": "On kill spawn a %s Totem",
+                  "fallback": "On kill spawn a %s",
                   "with": [
                     {
                       "translate": "item.gm4.augmented_armor.lore.totemic_strength",
-                      "fallback": "Strength",
+                      "fallback": "Strength Totem",
                       "color": "blue",
                       "italic": false
                     }

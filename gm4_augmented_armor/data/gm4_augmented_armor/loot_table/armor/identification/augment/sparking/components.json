@@ -101,7 +101,7 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.sparking_2",
+                "translate": "item.gm4.augmented_armor.lore.sparking_2s",
                 "fallback": "apply %s stacks of static",
                 "with": [
                   {

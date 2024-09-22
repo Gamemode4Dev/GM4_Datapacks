@@ -48,7 +48,7 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.reactive",
+                "translate": "item.gm4.augmented_armor.lore.frostburst",
                 "fallback": "When %s breaks release an explosion",
                 "with": [
                   {
@@ -68,9 +68,12 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.reactive",
+                "translate": "item.gm4.augmented_armor.lore.frostburst_2",
                 "fallback": "freezing mobs within %s",
                 "with": [
+                  {
+                    "translate": "attribute.name.player.entity_interaction_range"
+                  },
                   {
                     "translate": "potion.withDuration",
                     "with": [
@@ -102,23 +105,75 @@
           "lore": [
             [
               {
-                "translate": "attribute.modifier.take.2",
+                "translate": "item.gm4.augmented_armor.lore.frostburst_3",
+                "fallback": "for %s second",
                 "with": [
                   {
                     "score": {
-                      "name": "$level_2",
+                      "name": "$level_1",
                       "objective": "gm4_aa_data"
-                    }
-                  },
-                  {
-                    "translate": "attribute.gm4.augmented_armor.armor_recharge",
-                    "fallback": "Armor Recharge Rate"
+                    },
+                    "color": "blue"
                   }
                 ],
-                "color": "red",
+                "color": "dark_gray",
                 "italic": false
               }
             ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 1
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.frostburst_3s",
+                "fallback": "for %s seconds",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$level_1",
+                      "objective": "gm4_aa_data"
+                    },
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": {
+                "min": 2
+              }
+            }
           ]
         },
         {

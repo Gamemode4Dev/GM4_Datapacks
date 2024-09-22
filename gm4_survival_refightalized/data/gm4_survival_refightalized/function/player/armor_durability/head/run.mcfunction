@@ -1,4 +1,7 @@
 
+# if unbreakable don't run
+execute if data storage gm4_survival_refightalized:temp Items[{Slot:0b}].components."minecraft:unbreakable" run return 0
+
 # calculate incoming damage based on unbreaking
 execute store result score $unbreaking_level gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:0b}].components."minecraft:enchantments".levels."minecraft:unbreaking"
 scoreboard players add $unbreaking_level gm4_sr_data 1
