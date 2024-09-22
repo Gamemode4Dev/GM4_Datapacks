@@ -5,14 +5,14 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "type": "#gm4_augmented_armor:hostile"
+                "type": "#gm4:hostile"
             }
         },
         {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "type": "#gm4_augmented_armor:neutral",
+                "type": "#gm4:neutral",
                 "targeted_entity": {
                     "type": "minecraft:player"
                 }

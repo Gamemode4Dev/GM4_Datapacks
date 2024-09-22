@@ -1,7 +1,7 @@
 {
     "values": [
-        "#gm4_augmented_armor:nonliving",
-        "#gm4_augmented_armor:neutral_passive",
+        "#gm4:non_living",
+        "#gm4:neutral_passive",
         "minecraft:armor_stand"
     ]
 }
