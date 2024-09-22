@@ -1,5 +1,5 @@
 {
-  "last_commit": "1feb72006789b52a78e421f4580a27fc7abd5339",
+  "last_commit": "bb04ccc7466ee928f840c3836d23a7a76c31d368",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1785,8 +1785,8 @@
     {
       "id": "gm4_mysterious_midnights",
       "name": "Mysterious Midnights",
-      "version": "1.6.5",
-      "hash": "808755f2eb475d0a1b30570bcec5b6fbc34ea8ea",
+      "version": "1.6.6",
+      "hash": "4e8704aa1f9ca266fe34da10a740b3892c041ff4",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights",
       "credits": {
@@ -1802,7 +1802,7 @@
         ]
       },
       "requires": [],
-      "description": "Full moons gain a element of surprise with Myserious Midnights! This module adds random events during full moons. You might encounter falling stars, or Skeletons wielding poisonous arrows! So you better listen for that howl...",
+      "description": "Full moons gain an element of surprise with Mysterious Midnights! You might encounter falling stars, or Skeletons wielding poisonous arrows during full moons! So you better listen for that howl...",
       "recommends": [
         "gm4_midnight_menaces"
       ],
