@@ -3,25 +3,27 @@
 # at unspecified
 # run from player/player_submain
 
-# add player & mob kills together
-scoreboard players operation @s gm4_aa_kill += @s gm4_aa_kill2
+# add player kills and mob kills together
+scoreboard players operation @s gm4_aa_stat.kills += @s gm4_aa_stat.kills_add
+# add red heart and absorption damage together
+scoreboard players operation @s gm4_aa_stat.damage_dealt += @s gm4_aa_stat.damage_dealt_add
 
 # check for archer armor
 tag @s[tag=gm4_aa_wearing_archer,predicate=!gm4_augmented_armor:modified_armor/archer] remove gm4_aa_wearing_archer
 execute if entity @s[tag=!gm4_aa_wearing_archer,predicate=gm4_augmented_armor:modified_armor/archer] run function gm4_augmented_armor:armor/augment/type/archer/activate
 
 # remove husk sprint score if player didn't sprint for too long
-execute unless score @s gm4_aa_sprinting matches 1.. run scoreboard players add @s[scores={gm4_aa_t_sprinting=1..}] gm4_aa_sprinting_timeout 1
-scoreboard players reset @s[scores={gm4_aa_sprinting_timeout=3..,gm4_aa_t_sprinting=1..}] gm4_aa_t_sprinting
-scoreboard players reset @s gm4_aa_husk_pieces
+execute unless score @s gm4_aa_stat.sprint_one_cm matches 1.. run scoreboard players add @s[scores={gm4_aa_augment.dashing.timer=1..}] gm4_aa_augment.dashing.timeout 1
+scoreboard players reset @s[scores={gm4_aa_augment.dashing.timeout=3..,gm4_aa_augment.dashing.timer=1..}] gm4_aa_augment.dashing.timer
+scoreboard players reset @s gm4_aa_augment.dashing.pieces_equipped
 
 # remove tags
 tag @s remove gm4_aa_radiant_active
 tag @s remove gm4_aa_linked
 execute if entity @s[tag=gm4_aa_immune_active] run function gm4_augmented_armor:player/clear_immunities
 
-# process armor
-execute if predicate gm4_augmented_armor:modified_armor/wearing run function gm4_augmented_armor:armor/process
+# process armor augments
+execute if predicate gm4_augmented_armor:modified_armor/generic_wearing at @s run function gm4_augmented_armor:armor/trigger/clocked
 
 # remove second wind tag if armor is taken off
-tag @s[tag=gm4_aa_second_wind.active,predicate=!gm4_augmented_armor:modified_armor/second_wind] remove gm4_aa_second_wind.active
+tag @s[tag=gm4_aa_augment.rejuvenating.stored_health.active,predicate=!gm4_augmented_armor:modified_armor/second_wind] remove gm4_aa_augment.rejuvenating.stored_health.active

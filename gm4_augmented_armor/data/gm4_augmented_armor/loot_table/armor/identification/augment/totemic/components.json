@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{augment:{name:totemic,id:103}}}"
+              "tag": "{gm4_augmented_armor:{augment:{name:totemic,id:6,triggers:{clocked:1,damage_dealt:0,damage_taken:0}}}}"
             }
           ]
         }
@@ -180,11 +180,8 @@
               "lore": [
                 {
                   "translate": "item.gm4.augmented_armor.lore.totemic_haste_2",
-                  "fallback": "Grants 20%s %s, %s",
+                  "fallback": "Grants 20%% %s, %s",
                   "with": [
-                    {
-                      "text": "%"
-                    },
                     {
                       "translate": "attribute.name.generic.movement_speed"
                     },

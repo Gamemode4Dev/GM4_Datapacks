@@ -23,7 +23,7 @@
             "value": {
                 "type": "minecraft:score",
                 "target": "this",
-                "score": "gm4_aa_pvp_timer"
+                "score": "gm4_aa_in_pvp"
             },
             "range": {
                 "min": 1

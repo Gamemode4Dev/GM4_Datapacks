@@ -23,7 +23,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{augment:{name:acrobatic,id:101}}}"
+              "tag": "{gm4_augmented_armor:{augment:{name:acrobatic,id:4,triggers:{clocked:1,damage_dealt:0,damage_taken:1}}}}"
             }
           ]
         }

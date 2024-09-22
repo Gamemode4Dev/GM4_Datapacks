@@ -1,13 +1,24 @@
 # check if armor should activate
 # @s = player being checked
 # at unspecified
-# run from armor/check_augment/safety
+# run from armor/augment/clocked
 
-# get immunities if player is safe
-execute unless score @s gm4_aa_in_combat_timer matches 1.. run function gm4_augmented_armor:armor/augment/type/acrobatic/get_immunities
+# activate inactive armor if player is out of combat
+execute unless score @s gm4_aa_in_combat matches 1.. if score $active gm4_aa_data matches 0 run function gm4_augmented_armor:armor/augment/type/acrobatic/activate
 
-# activate armor if player is regenerating again
-execute unless score @s gm4_aa_in_combat_timer matches 1.. if score $active gm4_aa_data matches 0 run function gm4_augmented_armor:armor/augment/type/acrobatic/activate
+# get immunities
+# get levels
+execute store result score $level gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.levels[0]
 
-# otherwise deactivate armor
-execute if score @s gm4_aa_in_combat_timer matches 1.. if score $active gm4_aa_data matches 1 run function gm4_augmented_armor:armor/augment/type/acrobatic/deactivate
+# get effects to become immune to
+execute if score $level gm4_aa_data matches 1 run tag @s add gm4_aa_immune_levitation
+execute if score $level gm4_aa_data matches 2 run tag @s add gm4_aa_immune_slow_falling
+execute if score $level gm4_aa_data matches 3 run tag @s add gm4_aa_immune_slowness
+
+# remove effects if they were present
+execute if score $level gm4_aa_data matches 1 run effect clear @s levitation
+execute if score $level gm4_aa_data matches 2 run effect clear @s slow_falling
+execute if score $level gm4_aa_data matches 3 run effect clear @s slowness
+
+# tag for effect removal
+tag @s add gm4_aa_immune_active

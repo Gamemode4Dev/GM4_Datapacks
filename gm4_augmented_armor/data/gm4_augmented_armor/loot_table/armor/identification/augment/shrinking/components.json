@@ -136,7 +136,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{augment:{name:shrinking,id:3}}}"
+              "tag": "{gm4_augmented_armor:{augment:{name:shrinking,id:3,triggers:{clocked:0,damage_dealt:0,damage_taken:0}}}}"
             }
           ]
         }
@@ -176,11 +176,136 @@
             [
               {
                 "translate": "item.gm4.augmented_armor.lore.shrinking",
-                "fallback": "Decreased player size",
+                "fallback": "%s decreased player size",
+                "with": [
+                  {
+                    "text": "3%",
+                    "color": "blue"
+                  }
+                ],
                 "color": "dark_gray",
                 "italic": false
               }
             ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 1
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.shrinking",
+                "fallback": "%s decreased player size",
+                "with": [
+                  {
+                    "text": "6%",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 2
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.shrinking",
+                "fallback": "%s decreased player size",
+                "with": [
+                  {
+                    "text": "9%",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 3
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.shrinking",
+                "fallback": "%s decreased player size",
+                "with": [
+                  {
+                    "text": "12%",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 4
+            }
           ]
         },
         {

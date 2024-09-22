@@ -23,3 +23,4 @@ effect give @s minecraft:instant_health 1 10 true
 # prepare reverting
 tag @s add gm4_sr_damaged
 schedule function gm4_survival_refightalized:player/health/reduce/context 2t
+scoreboard players reset $damage_health gm4_sr_data

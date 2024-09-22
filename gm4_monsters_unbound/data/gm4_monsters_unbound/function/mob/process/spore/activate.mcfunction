@@ -5,8 +5,8 @@
 
 # check for mob cap
 execute at @p[gamemode=!spectator] store result score $spore_zombie_count gm4_mu_data if entity @e[type=#gm4_survival_refightalized:zombie_types,tag=gm4_mu_spore_mob,distance=..32]
-execute if score $spore_zombie_count gm4_mu_data > $mob_limit.spore_zombie gm4_mu_data run kill @s
-execute if score $spore_zombie_count gm4_mu_data > $mob_limit.spore_zombie gm4_mu_data run return 0
+execute if score $spore_zombie_count gm4_mu_data > $mob_limit.spore_zombie gm4_sr_config run kill @s
+execute if score $spore_zombie_count gm4_mu_data > $mob_limit.spore_zombie gm4_sr_config run return 0
 
 # get spores in stack and their generation
 execute store result score $spore_count gm4_mu_data run data get entity @s Item.count

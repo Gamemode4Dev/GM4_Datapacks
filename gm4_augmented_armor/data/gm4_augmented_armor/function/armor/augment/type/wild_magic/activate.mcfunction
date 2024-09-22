@@ -1,7 +1,7 @@
 # activate wild_magic armor when player is damaged
 # @s = player wearing armor
 # at @s
-advancement revoke @s only gm4_augmented_armor:damage_taken/augment/wild_magic
+advancement revoke @s only gm4_augmented_armor:trigger_augment/damage_taken/wild_magic
 
 # Pick Effect
 execute store result score $wild_magic.id gm4_aa_data run random value 1..100

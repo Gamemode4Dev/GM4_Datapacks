@@ -12,7 +12,7 @@ execute if entity @s[tag=gm4_mu_elite] run function gm4_monsters_unbound:mob/ini
 execute if entity @s[type=stray,predicate=gm4_monsters_unbound:biome/snowy,predicate=!gm4_monsters_unbound:biome/growth] run loot replace entity @s weapon.offhand loot gm4_monsters_unbound:mob/equip_arrow/stray_snowy
 # mountainous
 execute if predicate gm4_monsters_unbound:biome/mountainous positioned ~ ~35 ~ store result score $phantom_count gm4_mu_data if entity @e[type=phantom,distance=..32]
-execute if score $phantoms gm4_mu_data matches 0 if score $phantom_count gm4_mu_data < $mob_limit.phantom gm4_mu_data if predicate gm4_monsters_unbound:chance/spawn_phantom run function gm4_monsters_unbound:mob/init/mob_type/zombie/spawn_phantoms
+execute if score $spawn_phantoms gm4_sr_config matches 1 if score $phantom_count gm4_mu_data < $mob_limit.phantom gm4_sr_config if predicate gm4_monsters_unbound:chance/spawn_phantom run function gm4_monsters_unbound:mob/init/mob_type/zombie/spawn_phantoms
 # flowering
 execute if predicate {condition:"minecraft:all_of",terms:[{condition:"minecraft:random_chance",chance:0.85},{condition:"minecraft:reference",name:"gm4_monsters_unbound:biome/flowering"}]} run function gm4_monsters_unbound:mob/init/mob_type/skeleton/flowering
 # toxic

@@ -39,4 +39,4 @@ execute store result storage gm4_augmented_armor:temp components."minecraft:cust
 function gm4_augmented_armor:armor/augment/type/soothe/recharge_text with storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor
 
 # set cooldown
-scoreboard players set @s gm4_aa_t_soothe 2
+scoreboard players set @s gm4_aa_augment.soothe.timer 2

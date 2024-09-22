@@ -1,7 +1,7 @@
 # deactivate the augments on the armor piece
 # @s = player wearing the armor
 # at unspecified
-# run from functions in armor/augment/type/acrobatic/check
+# run from functions in armor/augment/damage_taken
 
 # mark for change and set to inactive
 scoreboard players set $change gm4_aa_data 1

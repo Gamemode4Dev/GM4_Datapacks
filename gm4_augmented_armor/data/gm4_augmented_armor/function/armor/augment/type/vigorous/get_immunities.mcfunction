@@ -1,7 +1,7 @@
 # grant immunity tags to player depending on the armor worn
 # @s = player wearing immune armour below 50% health
 # at unspecified
-# run from armor/augment/check_augment/hp_check
+# run from armor/augment/clocked
 
 # get levels
 execute store result score $level gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.levels[0]

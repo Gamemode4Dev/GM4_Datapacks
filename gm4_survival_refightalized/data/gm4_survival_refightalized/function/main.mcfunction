@@ -11,7 +11,8 @@ schedule function gm4_survival_refightalized:mob/init/stat/check_damage_cap_sche
 execute as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water run damage @s 2 drown
 
 # restore armor here as well as in player submain to make it happen every 8 ticks
-execute as @a[gamemode=!spectator,tag=gm4_sr_armor_reduced,scores={gm4_sr_armor_reduction_timer=0}] run function gm4_survival_refightalized:player/health/regain_armor
+scoreboard players remove @a[scores={gm4_sr_armor_reduction_timer=1..}] gm4_sr_armor_reduction_timer 10
+execute as @a[gamemode=!spectator,tag=gm4_sr_armor_reduced,scores={gm4_sr_armor_reduction_timer=..0}] run function gm4_survival_refightalized:player/health/regain_armor
 
 # tick down skeleton arrow fire delay
 execute as @e[type=#gm4_survival_refightalized:can_fire_arrows,scores={gm4_sr_proj_fire_delay_left=1..}] run function gm4_survival_refightalized:mob/process/arrow/tick_fire_delay

@@ -4,5 +4,5 @@
 # run from armor/check_augment/killing
 
 # store healing, 2x to make it 1 heart per kill
-scoreboard players operation @s gm4_aa_healstore += @s gm4_aa_kill
-scoreboard players operation @s gm4_aa_healstore += @s gm4_aa_kill
+scoreboard players operation @s gm4_sr_healstore += @s gm4_aa_stat.kills
+scoreboard players operation @s gm4_sr_healstore += @s gm4_aa_stat.kills

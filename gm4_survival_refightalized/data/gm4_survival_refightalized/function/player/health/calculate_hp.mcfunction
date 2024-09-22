@@ -23,3 +23,9 @@ scoreboard players operation @s gm4_sr_health.current /= #10 gm4_sr_data
 scoreboard players operation @s gm4_sr_health.percentage = @s gm4_sr_health.current
 scoreboard players operation @s gm4_sr_health.percentage *= #100 gm4_sr_data
 scoreboard players operation @s gm4_sr_health.percentage /= @s gm4_sr_health.max
+
+# calculate absorption health same as red hearts
+execute store result score @s gm4_sr_health.absorption_max run attribute @s generic.max_absorption get
+execute store result score @s gm4_sr_health.absorption run data get entity @s AbsorptionAmount 10
+scoreboard players add @s gm4_sr_health.absorption 9
+scoreboard players operation @s gm4_sr_health.absorption /= #10 gm4_sr_data

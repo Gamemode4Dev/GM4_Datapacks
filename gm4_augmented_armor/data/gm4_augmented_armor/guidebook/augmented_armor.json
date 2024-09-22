@@ -971,14 +971,14 @@
           },
           "\n- ",
           {
-            "translate": "item.gm4.survival_refightalized.name.sword_ring",
+            "translate": "item.gm4.survival_refightalized.name.psychic",
             "fallback": "Psychic %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "text.gm4.guidebook.survival_refightalized.sword_ring_modifier",
+                  "translate": "text.gm4.guidebook.survival_refightalized.psychic_modifier",
                   "fallback": "- Spawns a floating sword to circle around the wearer\n- Lower attack speed when equipped"
                 },
                 "\n",
@@ -1065,14 +1065,14 @@
           },
           "\n- ",
           {
-            "translate": "item.gm4.survival_refightalized.name.spark",
+            "translate": "item.gm4.survival_refightalized.name.sparking",
             "fallback": "Sparking %s",
             "with": [""],
             "hoverEvent": {
               "action": "show_text",
               "contents": [
                 {
-                  "translate": "text.gm4.guidebook.survival_refightalized.spark_modifier",
+                  "translate": "text.gm4.guidebook.survival_refightalized.sparking_modifier",
                   "fallback": "- Apply a lightning charge to attacker.\n- 7+ charges cause a lightning strike"
                 },
                 "\n",
