@@ -16,6 +16,8 @@ meta:
       description: Adds a neat interface to improve your musical skills!
       recommended: []
       notes: []
+    modrinth:
+      project_id: ikXgoCNB
     smithed:
       pack_id: gm4_note_block_interface
     planetminecraft: 

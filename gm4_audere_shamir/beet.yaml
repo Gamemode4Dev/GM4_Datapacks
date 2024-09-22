@@ -29,6 +29,8 @@ meta:
       description: Adds the shamir 'Audere' to Metallurgy. Gain Haste with low durability tools.
       recommended: []
       notes: []
+    modrinth:
+      project_id: 2rSIqoh7
     video: null
     wiki: https://wiki.gm4.co/wiki/Metallurgy/Audere_Shamir
     credits:

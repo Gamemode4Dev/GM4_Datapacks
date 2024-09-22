@@ -431,7 +431,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     def resolve_config(self):
         if (p:=self.ctx.directory/"assets/model_data.yaml").exists():
             addtl_config = YamlFile(source_path=p).data.get("model_data")
-            self.ctx.meta["gm4"]["model_data"].extend(addtl_config)
+            self.ctx.meta["gm4"].setdefault("model_data",[]).extend(addtl_config)
         self._opts = self.ctx.validate("gm4", validator=ResourcePackOptions).process_inheritance()
         self._opts.add_namespace(self.ctx.project_id)
         self._opts.template_mutations()
@@ -494,7 +494,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
 
                 for pred in merge_overrides:
                     if not pred.get("model") and not isinstance(m, str):
-                        self.logger.warn(f"Manually specified model predicate has no 'model' field, and is malformed:\n\t{pred}")
+                        self.logger.warning(f"Manually specified model predicate has no 'model' field, and is malformed:\n\t{pred}")
                     vanilla_overrides.append({
                         "predicate": {
                             "custom_model_data": self.cmd_prefix+self.retrieve_index(model.reference)[0],
@@ -551,6 +551,21 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             if exc:
                 yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
             node = replace(node, value=AstJsonValue.from_value(index+self.cmd_prefix))
+        return node
+    
+    @rule(AstJsonObject)
+    def json_substitutions_item_modifier(self, node: AstJsonObjectEntry, **kwargs: Any):
+        match node.evaluate(): # type: ignore , node has evaluate method
+            case {"function": "minecraft:set_custom_model_data", "value": str(reference)}:
+                index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
+                if exc:
+                    yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
+                node = replace(node, entries=AstChildren([
+                    replace(child, value=AstJsonValue.from_value(index+self.cmd_prefix))  # type: ignore , child is AstJsonValue
+                    if child.key==AstJsonObjectKey(value="value") # type: ignore , child is AstJsonValue
+                    else child
+                    for child in node.entries # type: ignore , child is AstJsonValue
+                ])) # type: ignore
         return node
 
     @rule(AstNbtCompoundEntry, key=AstNbtCompoundKey(value="minecraft:custom_model_data"))
@@ -734,7 +749,7 @@ class TranslationLinter(Reducer):
     def warn_unused_translations(self):
         for key in self.ctx.assets.languages.get("gm4_translations:en_us", Language()).data:
             if key not in self.used_keys and key not in self.ignored_keys and key in self.local_keys:
-                self.logger.warn(f"Translation '{key}' is defined but not used")
+                self.logger.warning(f"Translation '{key}' is defined but not used")
 
     def apply_babelbox_backfill(self):
         """Takes found out-of-date fallbacks and saves them to the translations.csv table"""
@@ -747,14 +762,14 @@ class TranslationLinter(Reducer):
             babelbox_path = c
         else:
             if self.backfill_values:
-                self.logger.warn("Babelbox backfill was enabled but no 'translations.csv' file was found")
+                self.logger.warning("Babelbox backfill was enabled but no 'translations.csv' file was found")
             return # no file to update
         
         with open(babelbox_path, 'r', encoding='utf-8', newline='') as csvfile:
             reader = csv.DictReader(csvfile)
             fieldnames = reader.fieldnames
             if not fieldnames:
-                self.logger.warn("Babelbox backfill failed - fieldnames could not be automatically detected")
+                self.logger.warning("Babelbox backfill failed - fieldnames could not be automatically detected")
                 return
             translations = list([row for row in reader])
 
@@ -968,8 +983,8 @@ class CenteredContainerGui(ContainerGuiOptions):
             }
         ]
 
-class RightAlignContainerGui(ContainerGuiOptions):
-    container = "_right_align"
+class LeftAlignContainerGui(ContainerGuiOptions):
+    container = "_left_align"
 
     def process(self, config: GuiFont, counter_cache: Cache) -> tuple[str, list[dict[str, Any]]]:
         u1 = self.next_unicode(counter_cache)
@@ -991,7 +1006,7 @@ class RightAlignContainerGui(ContainerGuiOptions):
             },
         ]
 
-class HopperContainerGui(RightAlignContainerGui, ContainerGuiOptions):
+class HopperContainerGui(LeftAlignContainerGui, ContainerGuiOptions):
     container = "hopper"
 
 class DropperContainerGui(CenteredContainerGui, ContainerGuiOptions):

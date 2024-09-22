@@ -20,6 +20,8 @@ meta:
       description: Transfer your health to another player using flowers.
       recommended: []
       notes: []
+    modrinth:
+      project_id: z33oiJCd
     planetminecraft: 
       uid: 5484554
     video: https://www.youtube.com/watch?v=mcopNZzY2dA

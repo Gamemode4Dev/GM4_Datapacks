@@ -60,6 +60,8 @@ meta:
       recommended:
         - gm4_relocators
       notes: []
+    modrinth:
+      project_id: EnojYUEm
     video: null
     wiki: https://wiki.gm4.co/wiki/Tinkering_Compressors
     credits:

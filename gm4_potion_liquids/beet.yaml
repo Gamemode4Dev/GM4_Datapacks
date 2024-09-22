@@ -23,6 +23,8 @@ meta:
       description: Adds the ability to store potions in Liquid Tanks! You can also use a potion by walking beneath a potion-filled Liquid Tank.
       recommended: []
       notes: []
+    modrinth:
+      project_id: Z08l0oKH
     video: https://www.youtube.com/watch?v=qa9lcbii1BE
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids
     credits:

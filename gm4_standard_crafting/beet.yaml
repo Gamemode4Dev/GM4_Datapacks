@@ -19,6 +19,8 @@ meta:
       description: A crafting recipe pack that adds some nifty new recipes to the game.
       recommended: []
       notes: []
+    modrinth:
+      project_id: KIxK9MA7
     video: https://www.youtube.com/watch?v=_GekIoefncg
     wiki: https://wiki.gm4.co/wiki/Standard_Crafting
     credits:

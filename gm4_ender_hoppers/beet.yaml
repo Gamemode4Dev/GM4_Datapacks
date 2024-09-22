@@ -64,6 +64,8 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
+    modrinth:
+      project_id: dB4zrtK8
     video: https://www.youtube.com/watch?v=wrwg4BDgEGU
     wiki: https://wiki.gm4.co/wiki/Ender_Hoppers
     credits:

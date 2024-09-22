@@ -1,0 +1,10 @@
+{
+    "values": [
+        "minecraft:cave_spider",
+        "minecraft:drowned",
+        "minecraft:enderman",
+        "minecraft:piglin",
+        "minecraft:spider",
+        "minecraft:zombified_piglin"
+    ]
+}

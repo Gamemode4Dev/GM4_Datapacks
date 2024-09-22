@@ -29,6 +29,8 @@ meta:
       description: Adds the shamir 'Lumos' to Metallurgy. It places torches when it is dark.
       recommended: []
       notes: []
+    modrinth:
+      project_id: vYbLApXc
     video: null
     wiki: https://wiki.gm4.co/wiki/Metallurgy/Lumos_Shamir
     credits:

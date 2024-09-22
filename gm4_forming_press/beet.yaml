@@ -76,6 +76,8 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
+    modrinth:
+      project_id: LGXxY3vu
     video: https://www.youtube.com/watch?v=ibtS4zAvglQ
     wiki: https://wiki.gm4.co/wiki/Forming_Press
     credits:

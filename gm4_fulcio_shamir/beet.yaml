@@ -31,6 +31,8 @@ meta:
       description: Adds the shamir 'Fulcio' to Metallurgy. It allows you to place blocks in mid-air! This also enables you to choose the orientation of blocks like logs without needing a supporting block.
       recommended: []
       notes: []
+    modrinth:
+      project_id: N09PsTgz
     video: null
     wiki: https://wiki.gm4.co/wiki/Metallurgy/Fulcio_Shamir
     credits:
