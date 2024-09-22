@@ -1,7 +1,7 @@
 # Double Doors<!--$headerTitle--><!--$pmc:delete-->
 
 Tired of clicking twice to open a double door?
-Annoyed by the fact that doors are only two blacks tall?
+Annoyed by the fact that doors are only two blocks tall?
 Pressure Plates just don't cut it for closing doors behind you?
 This data pack **automatically opens adjacent doors**, making double doors fully functional! Additionally, bottom **trapdoors** of matching wood type placed above a door **are opened alongside** the door when it is opened by a player. And maybe best of all, **doors close automatically** behind you! <!--$pmc:headerSize-->
 
