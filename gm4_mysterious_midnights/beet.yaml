@@ -20,7 +20,7 @@ meta:
         reference: item/endermite_egg
         template: vanilla
     website:
-      description: Full moons gain a element of surprise with Myserious Midnights! This module adds random events during full moons. You might encounter falling stars, or Skeletons wielding poisonous arrows! So you better listen for that howl...
+      description: Full moons gain an element of surprise with Mysterious Midnights! You might encounter falling stars, or Skeletons wielding poisonous arrows during full moons! So you better listen for that howl...
       recommended:
         - gm4_midnight_menaces
       notes: []
