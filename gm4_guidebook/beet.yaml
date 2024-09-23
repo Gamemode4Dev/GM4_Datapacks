@@ -40,6 +40,7 @@ meta:
       - text.gm4.guidebook.return_to_toc
       - text.gm4.guidebook.table_of_contents
       - text.gm4.guidebook.undiscovered
+      - text.gm4.guidebook.jump_to_section
     website:
       description: Adds a dynamic guidebook to discover the mechanics of Gamemode 4! This provides a wiki-like experience in-game!
       recommended:
