@@ -3,5 +3,4 @@
 # located at @s
 # run from advancement gm4_guidebook:first_join
 
-# if the scoreboard is set to 1, give the player a book
-loot give @s loot gm4_guidebook:items/guidebook
+function gm4_guidebook:get_book/player with storage gm4_guidebook:register
