@@ -20,6 +20,9 @@ scoreboard players remove @e[type=marker,tag=gm4_guide_lectern,distance=..0.5,li
 tag @e[type=marker,tag=gm4_guide_lectern,distance=..0.5,limit=1] remove gm4_guide_toc
 execute if score $trigger gm4_guide matches 1 run tag @e[type=marker,tag=gm4_guide_lectern,distance=..0.5,limit=1] add gm4_guide_toc
 
+# start tracking
+function gm4_guidebook:lecterns/section/track
+
 # update page number
 execute if score $trigger gm4_guide matches 1 run data modify block ~ ~ ~ Page set value 1
 execute unless score $trigger gm4_guide matches 1 run data modify block ~ ~ ~ Page set value 5

@@ -1,7 +1,9 @@
 # replaces the lectern with a new book
 # @s = player that last opened the lectern
 # at the lectern
-# run from gm4_guidebook:tick
+# run from gm4_guidebook:lecterns/replace/update
+# run from gm4_guidebook:lecterns/section/update/*/jump
+# run from gm4_guidebook:lecterns/section/toc/jump
 
 # replace book
 ## short-circuit if it's the table of contents
