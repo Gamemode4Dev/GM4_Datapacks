@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "WMW",
+    "MWM",
+    "WMW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:wheat"
+    },
+    "M": {
+      "item": "minecraft:mud"
+    }
+  },
+  "result": {
+    "id": "minecraft:packed_mud",
+    "count": 8
+  }
+}

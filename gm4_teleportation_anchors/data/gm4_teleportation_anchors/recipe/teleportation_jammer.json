@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " P ",
+    "OEO",
+    "CeC"
+  ],
+  "key": {
+    "P": [
+      {
+        "item": "minecraft:purpur_block"
+      },
+      {
+        "item": "minecraft:purpur_pillar"
+      }
+    ],
+    "O": {
+      "item": "minecraft:crying_obsidian"
+    },
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "e": {
+      "item": "minecraft:end_crystal"
+    }
+  },
+  "result": {
+    "id": "minecraft:player_head",
+    "components": {
+      "minecraft:custom_model_data": "item/teleportation_jammer",
+      "minecraft:profile": "$teleportation_jammer",
+      "minecraft:custom_data": "{gm4_machines:{id:'teleportation_jammer'}}",
+      "minecraft:custom_name": "{\"translate\":\"block.gm4.teleportation_jammer\",\"fallback\":\"Teleportation Jammer\",\"color\":\"white\",\"italic\":false}"
+    }
+  }
+}

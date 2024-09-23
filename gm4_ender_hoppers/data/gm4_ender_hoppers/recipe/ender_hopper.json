@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "E",
+    "R",
+    "H"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "R": {
+      "item": "minecraft:respawn_anchor"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "result": {
+    "id": "minecraft:player_head",
+    "components": {
+      "minecraft:custom_model_data": "item/ender_hopper",
+      "minecraft:profile": "$ender_hopper",
+      "minecraft:custom_data": "{gm4_machines:{id:'ender_hopper'}}",
+      "minecraft:custom_name": "{\"translate\":\"block.gm4.ender_hopper\",\"fallback\":\"Ender Hopper\",\"color\":\"white\",\"italic\":false}"
+    }
+  }
+}
