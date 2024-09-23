@@ -1,7 +1,7 @@
-# replace hotswapper item with hotswapper box
-# @s = player who moved the item from the offhand to the inventory
-# at @s
-# run from gm4_hotswap_hotbars:swap/restore_box
+# restores the guidebook to normal form
+# @s = player who has moved a lectern book into their inventory
+# located at @s
+# run from gm4_guidebook:lecterns/restore/search
 
 execute if score $slot gm4_guide matches 27 run loot replace entity @s inventory.18 1 loot gm4_guidebook:technical/guidebook_with_count
 execute if score $slot gm4_guide matches 28 run loot replace entity @s inventory.19 1 loot gm4_guidebook:technical/guidebook_with_count
