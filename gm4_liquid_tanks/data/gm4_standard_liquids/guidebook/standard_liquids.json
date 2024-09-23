@@ -4,6 +4,7 @@
   "module_type": "expansion",
   "load_check": "liquid_tanks",
   "base_module": "liquid_tanks",
+  "wiki_link": "https://wiki.gm4.co/Liquid_Tanks/Standard_Liquids",
   "icon": {
     "id": "minecraft:lava_bucket"
   },

@@ -4,6 +4,7 @@
   "module_type": "expansion",
   "load_check": "mysterious_midnights",
   "base_module": "mysterious_midnights",
+  "wiki_link": "https://wiki.gm4.co/Mysterious_Midnights/Falling_Stars",
   "icon": {
     "id": "minecraft:end_stone"
   },

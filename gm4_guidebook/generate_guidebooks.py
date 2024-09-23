@@ -134,7 +134,7 @@ def generate_files(ctx:Context, d: DataPack, overlay: bool = False):
 
     # get wiki link
     if not book.wiki_link:
-      book.wiki_link = ctx.meta['gm4']['wiki'] if "wiki" in ctx.meta["gm4"] else ""
+      book.wiki_link = ctx.meta['gm4']['wiki'] if "wiki" in ctx.meta["gm4"] else "https://wiki.gm4.co"
 
     # add functions to datapack
     d[f"gm4_guidebook:{book.id}/add_toc_line"] = generate_add_toc_line_function(book, overlay)
