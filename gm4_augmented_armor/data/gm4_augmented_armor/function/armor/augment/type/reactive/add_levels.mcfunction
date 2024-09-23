@@ -1,7 +1,7 @@
 # add absorption to player that got hit (red health hits only)
 # @s = player wearing armor
 # at @s
-# run from armor/augment/damage_taken
+# run from armor/trigger/armor_break
 
 # store armor items to storage
 item replace block 29999998 1 7134 container.0 from entity @s armor.head

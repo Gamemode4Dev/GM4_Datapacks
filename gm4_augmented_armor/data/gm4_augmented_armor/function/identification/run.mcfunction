@@ -23,12 +23,13 @@ data modify storage gm4_augmented_armor:temp new_components."minecraft:attribute
 data modify storage gm4_augmented_armor:temp new_components."minecraft:enchantments" merge from storage gm4_augmented_armor:temp components."minecraft:enchantments"
 
 # get slot to use for attribute_modifiers
-execute if score $set_slot gm4_aa_data matches 0 run data modify storage gm4_augmented_armor:temp augment.slot set value "head"
-execute if score $set_slot gm4_aa_data matches 1 run data modify storage gm4_augmented_armor:temp augment.slot set value "chest"
-execute if score $set_slot gm4_aa_data matches 2 run data modify storage gm4_augmented_armor:temp augment.slot set value "legs"
-execute if score $set_slot gm4_aa_data matches 3 run data modify storage gm4_augmented_armor:temp augment.slot set value "feet"
-# apply slots to attribute_modifiers
-function gm4_augmented_armor:identification/set_attribute_modifiers with storage gm4_augmented_armor:temp augment
+execute if score $set_slot gm4_aa_data matches 0 run function gm4_augmented_armor:identification/set_attribute/modifiers_head
+execute if score $set_slot gm4_aa_data matches 1 run function gm4_augmented_armor:identification/set_attribute/modifiers_chest
+execute if score $set_slot gm4_aa_data matches 2 run function gm4_augmented_armor:identification/set_attribute/modifiers_legs
+execute if score $set_slot gm4_aa_data matches 3 run function gm4_augmented_armor:identification/set_attribute/modifiers_feet
+# apply levels to custom attributes
+execute if data storage gm4_augmented_armor:temp new_components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.armor_recharge run function gm4_augmented_armor:identification/set_attribute/armor_recharge
+execute if data storage gm4_augmented_armor:temp new_components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.regen_speed run function gm4_augmented_armor:identification/set_attribute/regen_speed
 
 # merge components into item
 data modify storage gm4_augmented_armor:temp components merge from storage gm4_augmented_armor:temp new_components

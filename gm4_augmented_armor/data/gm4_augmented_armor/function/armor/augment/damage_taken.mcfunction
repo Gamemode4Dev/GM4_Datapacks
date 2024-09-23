@@ -10,4 +10,4 @@ execute store result score $augment gm4_aa_data run data get storage gm4_augment
 # run based on augment id
 execute if score $augment gm4_aa_data matches 4 if score $active gm4_aa_data matches 1 if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=true}}] run function gm4_augmented_armor:armor/augment/type/acrobatic/deactivate
 execute if score $augment gm4_aa_data matches 8 run function gm4_augmented_armor:armor/augment/type/sparking/damage_taken
-execute if score $augment gm4_aa_data matches 10 if score $damage_total gm4_sr_data > @s gm4_sr_armor run function gm4_augmented_armor:armor/augment/type/reactive/add_level
+execute if score $augment gm4_aa_data matches 11 if score @s gm4_sr_armor matches 1.. run function gm4_augmented_armor:armor/augment/type/plated/reduce_damage

@@ -3,8 +3,7 @@
 # at @s
 # run from player/health/damaged/run
 
-# dev damage log
-tellraw @s[tag=gm4_sr_dev] [{"text":"-- Damage Log --\n"},{"text":"Damage Taken (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_damage_resisted"},"color":"white"}]
+tellraw @s[tag=gm4_sr_dev] [{"text":"Damage Taken (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_damage_resisted"},"color":"white"}]
 
 # transfer damage resistance to damage to health score
 scoreboard players operation $damage_total gm4_sr_data = @s gm4_sr_damage_resisted
@@ -44,4 +43,4 @@ execute if score $resistance_damage_reduction gm4_sr_data matches 1.. run tellra
 scoreboard players add $damage_total gm4_sr_data 5
 scoreboard players operation $damage_total gm4_sr_data /= #10 gm4_sr_data
 scoreboard players operation $damage_total gm4_sr_data > #1 gm4_sr_data
-tellraw @s[tag=gm4_sr_dev] [{"text":"Damage Taken: ","color":"gray"},{"score":{"name":"$damage_health","objective":"gm4_sr_data"},"color":"white"}]
+tellraw @s[tag=gm4_sr_dev] [{"text":"Damage Taken: ","color":"gray"},{"score":{"name":"$damage_total","objective":"gm4_sr_data"},"color":"white"}]

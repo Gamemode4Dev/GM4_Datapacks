@@ -10,48 +10,12 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{custom_attribute:{regen_speed:'level_1'},augment:{name:hearty,id:9,triggers:{clocked:0,damage_dealt:0,damage_taken:0}}}}"
+              "tag": "{gm4_augmented_armor:{custom_attribute:{armor_recharge:'level_2'},augment:{name:plated,id:12,triggers:{clocked:0,damage_dealt:0,damage_taken:1}}}}"
             }
           ]
         }
       ],
       "functions": [
-        {
-          "function": "minecraft:set_attributes",
-          "replace": false,
-          "modifiers": [
-            {
-              "attribute": "minecraft:generic.max_health",
-              "id": "gm4_augmented_armor:permanent",
-              "amount": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$armor_clamp"
-                },
-                "score": "gm4_aa_data",
-                "scale": -1
-              },
-              "operation": "add_value",
-              "slot": "chest"
-            },
-            {
-              "attribute": "minecraft:generic.armor",
-              "id": "gm4_augmented_armor:permanent_2",
-              "amount": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$armor_clamp"
-                },
-                "score": "gm4_aa_data",
-                "scale": 1
-              },
-              "operation": "add_value",
-              "slot": "chest"
-            }
-          ]
-        },
         {
           "function": "minecraft:set_lore",
           "mode": "append",
@@ -68,8 +32,8 @@
               "fallback": "%s Augment:",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.hearty",
-                  "fallback": "Hearty"
+                  "translate": "item.gm4.augmented_armor.augment.plated",
+                  "fallback": "Plated"
                 }
               ],
               "color": "gray",
@@ -84,14 +48,18 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.hearty",
-                "fallback": "Convert %s to %s",
+                "translate": "item.gm4.augmented_armor.lore.plated",
+                "fallback": "Damage to %s is reduced by %s,",
                 "with": [
                   {
                     "translate": "attribute.name.generic.armor"
                   },
                   {
-                    "translate": "attribute.name.generic.max_health"
+                    "score": {
+                      "name": "$level_1",
+                      "objective": "gm4_aa_data"
+                    },
+                    "color": "blue"
                   }
                 ],
                 "color": "dark_gray",
@@ -107,20 +75,35 @@
           "lore": [
             [
               {
-                "translate": "attribute.modifier.plus.2",
+                "translate": "item.gm4.augmented_armor.lore.plated_2",
+                "fallback": "down to a minimum of 1",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.equals.2",
                 "with": [
                   {
                     "score": {
-                      "name": "$level_1",
+                      "name": "$level_2",
                       "objective": "gm4_aa_data"
                     }
                   },
                   {
-                    "translate": "attribute.gm4.augmented_armor.regen_speed",
-                    "fallback": "Regeneration Speed"
+                    "translate": "attribute.gm4.augmented_armor.armor_recharge",
+                    "fallback": "Armor Recharge Rate"
                   }
                 ],
-                "color": "blue",
+                "color": "red",
                 "italic": false
               }
             ]
@@ -136,8 +119,8 @@
               "fallback": "%s %s",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.hearty",
-                  "fallback": "Hearty"
+                  "translate": "item.gm4.augmented_armor.augment.frostburst",
+                  "fallback": "Frost Burst"
                 },
                 {
                   "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",

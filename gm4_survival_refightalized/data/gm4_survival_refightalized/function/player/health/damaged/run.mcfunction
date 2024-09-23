@@ -16,18 +16,13 @@ execute if entity @s[advancements={gm4_survival_refightalized:damaged={blocked_b
 # cave spider poison reduction
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={cave_spider=true}}] run function gm4_survival_refightalized:player/health/damaged/cave_spider_poison_reduction
 
+# dev damage log
+tellraw @s[tag=gm4_sr_dev] {"text":"-- Damage Log --"}
+execute unless score @s gm4_sr_damage_resisted matches 1.. run tellraw @s[tag=gm4_sr_dev] {"text":"No Armor, damage applied","color":"gray"}
+tellraw @s[tag=gm4_sr_dev,advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] {"text":"Non-Combat Damage","color":"dark_gray","italic":true}
+
 # calculate damage if player has armor
 execute if score @s gm4_sr_damage_resisted matches 1.. run function gm4_survival_refightalized:player/health/damaged/calculate_reduction
-
-# out-of-combat damage regenerates rapidly (every 1.6 seconds)
-scoreboard players operation @s gm4_sr_damage_taken += @s gm4_sr_damage_absorbed
-scoreboard players add @s gm4_sr_damage_taken 5
-scoreboard players operation @s gm4_sr_damage_taken /= #10 gm4_sr_data
-scoreboard players operation @s gm4_sr_damage_taken += $damage_health gm4_sr_data
-scoreboard players operation @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] gm4_sr_fast_regen_health += @s gm4_sr_damage_taken
-scoreboard players reset @s gm4_sr_damage_taken
-scoreboard players reset @s gm4_sr_damage_absorbed
-scoreboard players set @s gm4_sr_fast_regen_timer 2
 
 # set combat regeneration timers, allow to be altered by function call
 scoreboard players operation $set gm4_sr_armor_reduction_timer = $armor_recharge_timer gm4_sr_config
@@ -50,6 +45,16 @@ execute if score @s gm4_sr_damage_resisted matches 1.. run function gm4_survival
 
 # apply durability damage to armor unless it was armor piercing damage
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={armor_piercing=false,armor_piercing_mob=false}}] run function gm4_survival_refightalized:player/armor_durability/check
+
+# out-of-combat damage regenerates rapidly (every 1.6 seconds)
+scoreboard players operation @s gm4_sr_damage_taken += @s gm4_sr_damage_absorbed
+scoreboard players add @s gm4_sr_damage_taken 5
+scoreboard players operation @s gm4_sr_damage_taken /= #10 gm4_sr_data
+scoreboard players operation @s gm4_sr_damage_taken += $damage_health gm4_sr_data
+scoreboard players operation @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] gm4_sr_fast_regen_health += @s gm4_sr_damage_taken
+scoreboard players reset @s gm4_sr_damage_taken
+scoreboard players reset @s gm4_sr_damage_absorbed
+scoreboard players set @s gm4_sr_fast_regen_timer 2
 
 # cleanup
 scoreboard players reset @s gm4_sr_damage_resisted
