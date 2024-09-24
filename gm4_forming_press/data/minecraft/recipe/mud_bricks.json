@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "mud_bricks",
+  "key": {
+    "#": {
+      "item": "minecraft:packed_mud"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:mud_bricks"
+  },
+  "__smithed__": {
+    "rules": [
+      {
+        "type": "replace",
+        "target": "group",
+        "source": {
+          "type": "reference",
+          "path": "group"
+        }
+      }
+    ]
+  }
+}

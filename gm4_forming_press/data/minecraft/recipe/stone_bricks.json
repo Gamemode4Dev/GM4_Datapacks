@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "stone_bricks",
+  "key": {
+    "#": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "id": "minecraft:stone_bricks"
+  },
+  "__smithed__": {
+    "rules": [
+      {
+        "type": "replace",
+        "target": "group",
+        "source": {
+          "type": "reference",
+          "path": "group"
+        }
+      }
+    ]
+  }
+}

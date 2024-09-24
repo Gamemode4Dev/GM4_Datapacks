@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "group": "stone_bricks",
   "pattern": [
     "CCC",
     "CcC",
