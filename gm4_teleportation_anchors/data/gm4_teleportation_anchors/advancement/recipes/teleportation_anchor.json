@@ -1,0 +1,50 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "gm4_teleportation_anchors:teleportation_anchor"
+      }
+    },
+    "has_materials": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:end_stone_bricks",
+              "minecraft:lodestone",
+              "minecraft:ender_eye"
+            ]
+          }
+        ]
+      }
+    },
+    "has_jammer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:player_head",
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:'teleportation_jammer'}}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_materials",
+      "has_jammer"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gm4_teleportation_anchors:teleportation_anchor"
+    ]
+  }
+}
