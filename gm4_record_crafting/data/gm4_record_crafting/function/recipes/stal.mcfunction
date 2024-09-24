@@ -5,5 +5,5 @@ scoreboard players set $crafted gm4_crafting 1
 # place disc
 loot replace block ~ ~ ~ container.0 loot gm4_record_crafting:crafting/stal
 
-# set flags
-tag @a[distance=..4,gamemode=!spectator] add gm4_crafted_record_stal
+# grant advancement criteria
+advancement grant @a[distance=..4,gamemode=!spectator] only gm4:record_crafting craft_music_disc_stal
