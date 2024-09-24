@@ -1889,10 +1889,14 @@ def generate_toast_model(book: Book, ctx: Context) -> Model:
   ctx.assets[f"{ctx.project_id}:gui/guidebook/{book.id}"] = Texture(img)
 
   # create model for new texture
+  layer = "layer0" # some items will tint layer0, so we special case those here.
+  if book.icon.id.removeprefix("minecraft:") in ("leather_helmet", "leather_chestplate", "leather_leggings", "leather_boots", "leather_horse_armor", "potion", "splash_potion", "lingering_potion", "tipped_arrow"):
+    layer = "layer1"
+
   return Model({
     "parent": "builtin/generated",
     "textures":{
-      "layer0": f"{ctx.project_id}:gui/guidebook/{book.id}"
+      layer: f"{ctx.project_id}:gui/guidebook/{book.id}"
     },
     "display":{
       "gui":{
