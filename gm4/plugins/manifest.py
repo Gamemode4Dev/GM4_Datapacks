@@ -21,7 +21,7 @@ from gm4.utils import Version, run
 
 parent_logger = logging.getLogger("gm4.manifest")
 
-SUPPORTED_GAME_VERSIONS = ["1.21"]
+SUPPORTED_GAME_VERSIONS = ["1.21", "1.21.1"]
 
 # config models for beet.yaml metas
 CreditsModel = dict[str, list[str]]
@@ -268,7 +268,7 @@ def write_credits(ctx: Context):
 
 def write_updates(ctx: Context):
 	"""Writes the module update commands to this module's init function."""
-	init = ctx.data.function.get(f"{ctx.project_id}:init", None)
+	init = ctx.data.functions.get(f"{ctx.project_id}:init", None)
 	if init is None:
 		return
 

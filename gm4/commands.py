@@ -33,8 +33,9 @@ pass_project = click.make_pass_decorator(Project) # type: ignore
 @click.option("-r", "--reload", is_flag=True, help="Enable live data pack reloading.")
 @click.option("-l", "--link", metavar="WORLD", help="Link the project before watching.")
 @click.option("-c", "--clean", is_flag=True, help="Clean the output folder.")
-@click.option("--log", default="INFO", type=str, help="Set the logger level")
-def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: bool, reload: bool, link: str | None, clean: bool, log: int | str):
+@click.option("--log", default="INFO", type=str, help="Set the logger level.")
+@click.option("-nl", "--no-lint", is_flag=True, help="Skips the mecha linting step.")
+def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: bool, reload: bool, link: str | None, clean: bool, log: int | str, no_lint: bool):
 	"""Build or watch modules for development."""
 
 	module_folders = sorted(glob.glob("gm4_*"))
@@ -79,6 +80,8 @@ def dev(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: b
 	# command-determined config options
 	broadcast_config: dict[str, Any] = next((p for p in config["pipeline"] if isinstance(p, dict))) # type: ignore
 	broadcast_config["broadcast"] = selected_modules
+	if no_lint:
+		broadcast_config["require"].insert(0, "gm4.plugins.test.skip_mecha_lint")
 	if reload:
 		broadcast_config["require"].insert(0, "beet.contrib.livereload")
 

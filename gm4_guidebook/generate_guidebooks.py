@@ -18,6 +18,7 @@ from beet import (
     LootTable,
     Model,
     NamespaceContainer,
+    NamespaceFileScope,
     PngFile,
     Texture,
 )
@@ -88,14 +89,14 @@ class Book(BaseModel):
 
 class GuidebookPages(JsonFileBase[Book]):
   """defines a custom beet filetype for guidebook pages"""
-  scope: ClassVar[tuple[str, ...]] = ("guidebook",)
+  scope: ClassVar[NamespaceFileScope] = ("guidebook",)
   extension: ClassVar[str] = ".json"
   data: ClassVar[FileDeserialize[Book]] = FileDeserialize()
   model = Book # tell beet to parse this file using the Book data model
 
 class CustomCrafterRecipe(JsonFile):
   """defines a custom beet filetype for CC recipes"""
-  scope: ClassVar[tuple[str, ...]] = ("gm4_recipes",)
+  scope: ClassVar[NamespaceFileScope] = ("gm4_recipes",)
   extension: ClassVar[str] = ".json"
 
   # NOTE in the future, this can be moved to wherever we auto-generate CC recipes from
@@ -806,8 +807,8 @@ def loottable_to_display(loottable: str, data: dict[Any,Any], ctx: Context) -> t
     item = f"gm4.{item}"
   else:
     item = f"minecraft.{item}"
-      
-  loot = ctx.data.loot_table[loottable].data
+
+  loot = ctx.data.loot_tables[loottable].data
 
   if len(loot["pools"]) > 1:
     raise ValueError("Loot table has multiple pools")

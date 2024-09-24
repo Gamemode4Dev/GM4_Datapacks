@@ -10,7 +10,7 @@ from io import BytesIO
 from typing import Any, Callable, ClassVar
 
 import requests
-from beet import Context, FileDeserialize, JsonFile, PngFile
+from beet import Context, FileDeserialize, JsonFile, PngFile, NamespaceFileScope
 from mecha import Diagnostic, Mecha, MutatingReducer, rule
 from mecha.ast import (
     AstJsonObject,
@@ -43,7 +43,7 @@ def beet_default(ctx: Context):
 
 class Skin(PngFile):
     """Class representing a skin texture file."""
-    scope: ClassVar[tuple[str, ...]] = ("skins",)
+    scope: ClassVar[NamespaceFileScope] = ("skins",)
     extension: ClassVar[str] = ".png"
     image: ClassVar[FileDeserialize[Image]] = FileDeserialize() # purely here to solve type-warnings on PIL images
     
@@ -135,7 +135,7 @@ class SkinNbtTransformer(MutatingReducer, InvokeOnJsonNbt):
         token = self.ctx.inject(MineskinAuthManager).token
 
         buf = BytesIO()
-        skin.image.save(buf, format="PNG")
+        skin.image.save(buf, format="PNG") # type: ignore
         res = requests.post(   
             url='https://api.mineskin.org/generate/upload',
             data={"name":"GM4_Skin", "visibility":0},

@@ -19,7 +19,6 @@ pipeline:
 
 meta:
   gm4:
-    minecraft: []
     versioning:
       required:
         gm4_metallurgy: 1.4.0
@@ -31,6 +30,8 @@ meta:
       description: Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man.
       recommended: []
       notes: []
+    modrinth:
+      project_id: rRP5afZM
     video: null
     wiki: https://wiki.gm4.co/wiki/Orb_of_Ankou
     credits:
