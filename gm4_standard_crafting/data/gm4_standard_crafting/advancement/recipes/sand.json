@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "gm4_standard_crafting:sand"
+      }
+    },
+    "has_materials": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sandstone",
+              "minecraft:chiseled_sandstone",
+              "minecraft:cut_sandstone",
+              "minecraft:smooth_sandstone"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_materials"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gm4_standard_crafting:sand"
+    ]
+  }
+}
