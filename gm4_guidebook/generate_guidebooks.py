@@ -33,6 +33,31 @@ logger = logging.getLogger(__name__)
 # TODO:
 # merge some functions to reduce fuction call overhead
 
+DEFAULT_COLORS = {
+  "minecraft:leather_boots": 10511680,
+  "minecraft:leather_chestplate": 10511680,
+  "minecraft:leather_helmet": 10511680,
+  "minecraft:leather_leggings": 10511680
+}
+
+DEFAULT_OVERLAY_COLORS = {
+  "empty": 0
+}
+
+IS_DYED = [
+  "minecraft:leather_boots",
+  "minecraft:leather_chestplate",
+  "minecraft:leather_helmet",
+  "minecraft:leather_leggings"
+]
+
+OVERLAY_DYED = [
+  "minecraft:firework_star",
+  "minecraft:filled_map_markings",
+  "minecraft:potion",
+  "minecraft:spawn_egg",
+  "minecraft:tipped_arrow_head"
+]
 
 class Section(BaseModel):
   name: str
@@ -775,13 +800,13 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
 """
 Reads a loot table (custom item) and creates a JSON text component to display the item in the guidebook
 """
-def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, TextComponent]:
+def loottable_to_display(loottable: str, data: dict[Any,Any], ctx: Context) -> tuple[TextComponent, TextComponent]:
   item = loottable.split(":")[1].split("/")[-1]
   if "gm4" in loottable:	
     item = f"gm4.{item}"
   else:
     item = f"minecraft.{item}"
-
+      
   loot = ctx.data.loot_table[loottable].data
 
   if len(loot["pools"]) > 1:
@@ -796,6 +821,8 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
   item_id: str = entry["name"]
   profile_name: str = ""
   name: TextComponent = ""
+  display_color = data["guidebook"]["display_color"] if (item_id in IS_DYED and "guidebook" in data and "display_color" in data["guidebook"]) else DEFAULT_COLORS[item_id] if item_id in DEFAULT_COLORS else 16777215 # white
+  overlay_color = data["guidebook"]["overlay_color"] if (item_id in OVERLAY_DYED and "guidebook" in data and "overlay_color" in data["guidebook"]) else DEFAULT_OVERLAY_COLORS[item_id] if item_id in DEFAULT_OVERLAY_COLORS else 16777215 # white
   lore: list[str] = []
   if "functions" in entry:
     for function in entry["functions"]:
@@ -830,12 +857,20 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
         "text": " ☒ ",
         "color": color
       },
-      {
-        "translate": f"gui.gm4.guidebook.crafting.display.{item}",
-        "fallback": " ☒ ",
-        "color": "white",
-        "font": "gm4:guidebook"
-      }
+      [
+        {
+          "translate": f"gui.gm4.guidebook.crafting.display.{item}",
+          "fallback": " ☒ ",
+          "color": f"#{format(display_color, 'x')}",
+          "font": "gm4:guidebook"
+        },
+        {
+          "translate": f"gui.gm4.guidebook.crafting.display.overlay.{item}",
+          "fallback": "",
+          "color": f"#{format(overlay_color, 'x')}",
+          "font": "gm4:guidebook"
+        }
+      ]
     ],
     "hoverEvent": {
       "action": "show_item",
@@ -927,13 +962,19 @@ def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextCompo
   else:
     # show filled slot (colored with a hover event)
     if "display" in ingredient and "loot_table" in ingredient["display"]["type"]:
-      return loottable_to_display(ingredient["display"]["name"], ctx)
+      return loottable_to_display(ingredient["display"]["name"], ingredient, ctx)
     else:
       if "display" in ingredient and "item" in ingredient["display"]["type"]:
         item = ingredient["display"]["name"]
       else:
         item = ingredient["id"]
       color = get_texture_color(intuit_item_texture(item, vanilla))
+      display_color = ingredient["guidebook"]["display_color"] if (item in IS_DYED and "guidebook" in ingredient and "display_color" in ingredient["guidebook"]) else ingredient["components"]["minecraft:dyed_color"]["rgb"] if (item in IS_DYED and "components" in ingredient and "minecraft:dyed_color" in ingredient["components"]) else DEFAULT_COLORS[item] if item in DEFAULT_COLORS else 16777215 # white
+      overlay_color = ingredient["guidebook"]["overlay_color"] if (item in OVERLAY_DYED and "guidebook" in ingredient and "overlay_color" in ingredient["guidebook"]) else ingredient["components"]["minecraft:dyed_color"]["rgb"] if (item in OVERLAY_DYED and"components" in ingredient and "minecraft:dyed_color" in ingredient["components"]) else DEFAULT_OVERLAY_COLORS[item] if item in DEFAULT_OVERLAY_COLORS else 16777215 # white
+      if "image" in ingredient:
+        image = ingredient["image"]
+      else:
+        image = item
       slot: dict[Any, Any] = {
         "translate": "gm4.second",
         "fallback": "%1$s",
@@ -942,12 +983,20 @@ def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextCompo
             "text": " ☒ ",
             "color": color
           },
-          {
-            "translate": f"gui.gm4.guidebook.crafting.display.{item.replace(':','.')}",
-            "fallback": " ☒ ",
-            "color": "white",
-            "font": "gm4:guidebook"
-          }
+          [
+            {
+              "translate": f"gui.gm4.guidebook.crafting.display.{image.replace(':','.')}",
+              "fallback": " ☒ ",
+              "color": f"#{format(display_color, 'x')}",
+              "font": "gm4:guidebook"
+            },
+            {
+              "translate": f"gui.gm4.guidebook.crafting.display.overlay.{image.replace(':','.')}",
+              "fallback": "",
+              "color": f"#{format(overlay_color, 'x')}",
+              "font": "gm4:guidebook"
+            }
+          ]
         ],
         "hoverEvent": {
           "action": "show_item",
@@ -1044,6 +1093,8 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
             ingr = r["input"]["key"][ingredient]
           
           if "guidebook" in ingr:
+            item["guidebook"] = ingr["guidebook"]
+          if "guidebook" in ingr and "type" in ingr["guidebook"]:
             item["display"] = ingr["guidebook"]
           else:
             if "tag" in ingr:
@@ -1087,9 +1138,13 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
         if isinstance(ingredient, list):
           item["id"] = ingredient[0]["item"] # type: ignore
           if "guidebook" in ingredient[0]:
-            item["display"] = ingredient[0]["guidebook"] # type: ignore
+            if "type" in ingredient[0]["guidebook"]:
+              item["display"] = ingredient[0]["guidebook"]
+            item["guidebook"] = ingredient[0]["guidebook"]
         else:
           if "guidebook" in ingredient:
+            item["guidebook"] = ingredient["guidebook"]
+          if "guidebook" in ingredient and "type" in ingredient["guidebook"]:
             item["display"] = ingredient["guidebook"]
           else:
             item["id"] = ingredient["item"]
@@ -1132,7 +1187,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
     res["id"] = res["name"]
     result, result_under = item_to_display(res, ctx)
   else:
-    result, result_under = loottable_to_display(res["name"], ctx)
+    result, result_under = loottable_to_display(res["name"], res, ctx)
   
   # show count
   res_count = ""
