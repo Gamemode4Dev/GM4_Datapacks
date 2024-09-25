@@ -13,7 +13,12 @@ data remove block 29999998 1 7134 Items
 
 # process armor
 # runs for any augment so we can check for things like netherite upgrading
+scoreboard players set $trigger.clocked gm4_aa_data 1
 execute if data storage gm4_augmented_armor:temp Items[{Slot:0b}].components."minecraft:custom_data".gm4_augmented_armor run function gm4_augmented_armor:armor/slot/head
 execute if data storage gm4_augmented_armor:temp Items[{Slot:1b}].components."minecraft:custom_data".gm4_augmented_armor run function gm4_augmented_armor:armor/slot/chest
 execute if data storage gm4_augmented_armor:temp Items[{Slot:2b}].components."minecraft:custom_data".gm4_augmented_armor run function gm4_augmented_armor:armor/slot/legs
 execute if data storage gm4_augmented_armor:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_augmented_armor run function gm4_augmented_armor:armor/slot/feet
+scoreboard players set $trigger.clocked gm4_aa_data 0
+
+# cleanup
+data remove storage gm4_augmented_armor:temp Items

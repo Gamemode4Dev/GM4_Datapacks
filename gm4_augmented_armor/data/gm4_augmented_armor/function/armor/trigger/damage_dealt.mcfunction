@@ -19,3 +19,6 @@ execute if data storage gm4_augmented_armor:temp Items[{Slot:1b}].components."mi
 execute if data storage gm4_augmented_armor:temp Items[{Slot:2b}].components."minecraft:custom_data".gm4_augmented_armor.augment.triggers{damage_dealt:1} run function gm4_augmented_armor:armor/slot/legs
 execute if data storage gm4_augmented_armor:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_augmented_armor.augment.triggers{damage_dealt:1} run function gm4_augmented_armor:armor/slot/feet
 scoreboard players set $trigger.damage_dealt gm4_aa_data 0
+
+# cleanup
+data remove storage gm4_augmented_armor:temp Items

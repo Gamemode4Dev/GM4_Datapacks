@@ -38,3 +38,6 @@ tag @s add gm4_aa_target
 scoreboard players set $storm_arrow_fired gm4_aa_data 0
 execute anchored eyes positioned ^ ^ ^2 as @e[type=#gm4_augmented_armor:arrow,tag=!gm4_aa_archer_arrow,distance=..2.5,limit=3,sort=nearest] at @s run function gm4_augmented_armor:armor/augment/type/archer/apply
 tag @s remove gm4_aa_target
+
+# cleanup
+data remove storage gm4_augmented_armor:temp Items

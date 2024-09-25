@@ -9,7 +9,6 @@ tag @s add gm4_aa_target
 execute store result score $player_creative gm4_aa_data if entity @s[gamemode=creative]
 
 # grab armor data
-data modify block 29999998 1 7134 Items set value []
 item replace block 29999998 1 7134 container.0 from entity @s armor.head
 item replace block 29999998 1 7134 container.1 from entity @s armor.chest
 item replace block 29999998 1 7134 container.2 from entity @s armor.legs
@@ -40,3 +39,4 @@ function gm4_augmented_armor:armor/augment/type/psychic/eval_deg with storage gm
 # cleanup
 tag @s remove gm4_aa_target
 data remove storage gm4_augmented_armor:temp psychic
+data remove storage gm4_augmented_armor:temp Items

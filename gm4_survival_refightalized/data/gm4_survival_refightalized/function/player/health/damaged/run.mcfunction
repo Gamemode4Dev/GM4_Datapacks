@@ -18,8 +18,8 @@ execute if entity @s[advancements={gm4_survival_refightalized:damaged={cave_spid
 
 # dev damage log
 tellraw @s[tag=gm4_sr_dev] {"text":"-- Damage Log --"}
-execute unless score @s gm4_sr_damage_resisted matches 1.. run tellraw @s[tag=gm4_sr_dev] {"text":"No Armor, damage applied","color":"gray"}
 tellraw @s[tag=gm4_sr_dev,advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] {"text":"Non-Combat Damage","color":"dark_gray","italic":true}
+execute unless score @s gm4_sr_damage_resisted matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"No Armor - Damage: ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_damage_taken"},"color":"white"}]
 
 # calculate damage if player has armor
 execute if score @s gm4_sr_damage_resisted matches 1.. run function gm4_survival_refightalized:player/health/damaged/calculate_reduction

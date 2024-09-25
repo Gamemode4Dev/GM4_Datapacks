@@ -55,10 +55,7 @@
                     "translate": "attribute.name.generic.armor"
                   },
                   {
-                    "score": {
-                      "name": "$level_1",
-                      "objective": "gm4_aa_data"
-                    },
+                    "text": "0.5",
                     "color": "blue"
                   }
                 ],
@@ -66,6 +63,172 @@
                 "italic": false
               }
             ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 1
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.plated",
+                "fallback": "Damage to %s is reduced by %s,",
+                "with": [
+                  {
+                    "translate": "attribute.name.generic.armor"
+                  },
+                  {
+                    "text": "1.0",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 2
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.plated",
+                "fallback": "Damage to %s is reduced by %s,",
+                "with": [
+                  {
+                    "translate": "attribute.name.generic.armor"
+                  },
+                  {
+                    "text": "1.5",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 3
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.plated",
+                "fallback": "Damage to %s is reduced by %s,",
+                "with": [
+                  {
+                    "translate": "attribute.name.generic.armor"
+                  },
+                  {
+                    "text": "2.0",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 4
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.plated",
+                "fallback": "Damage to %s is reduced by %s,",
+                "with": [
+                  {
+                    "translate": "attribute.name.generic.armor"
+                  },
+                  {
+                    "text": "2.5",
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 5
+            }
           ]
         },
         {
@@ -119,8 +282,8 @@
               "fallback": "%s %s",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.frostburst",
-                  "fallback": "Frost Burst"
+                  "translate": "item.gm4.augmented_armor.augment.plated",
+                  "fallback": "Plated"
                 },
                 {
                   "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",

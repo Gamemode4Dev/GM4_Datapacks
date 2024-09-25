@@ -47,3 +47,4 @@ data modify entity @s Item.components set from storage gm4_augmented_armor:temp 
 data remove block 29999998 1 7134 Items
 data remove storage gm4_augmented_armor:temp augment
 data remove storage gm4_augmented_armor:temp new_components
+data remove storage gm4_augmented_armor:temp components

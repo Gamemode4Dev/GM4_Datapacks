@@ -23,3 +23,6 @@ execute if score @s gm4_aa_augment.link.slot matches 1 run function gm4_augmente
 execute if score @s gm4_aa_augment.link.slot matches 2 run function gm4_augmented_armor:item_modify_eval/legs_update with storage gm4_augmented_armor:temp
 execute if score @s gm4_aa_augment.link.slot matches 3 run function gm4_augmented_armor:item_modify_eval/feet_update with storage gm4_augmented_armor:temp
 function gm4_augmented_armor:armor/silence_equip_sound
+
+# cleanup
+data remove storage gm4_augmented_armor:temp components

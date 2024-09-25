@@ -16,7 +16,6 @@ data remove block 29999998 1 7134 Items
 # 4% per level of Fire / Blast / Projectile Protection
 
 scoreboard players set $enchant.damage_reduction gm4_sr_data 0
-tellraw @s[tag=gm4_sr_dev] {"text":"Enchantments:","color":"gray"}
 
 # generic protection enchantment
 execute store result score $enchant.protection gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:0b}].components."minecraft:enchantments".levels."minecraft:protection" 1
@@ -27,6 +26,7 @@ scoreboard players operation $enchant.protection gm4_sr_data += $enchant.protect
 execute store result score $enchant.protection.add gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:3b}].components."minecraft:enchantments".levels."minecraft:protection" 1
 scoreboard players operation $enchant.protection gm4_sr_data += $enchant.protection.add gm4_sr_data
 
+execute if score $enchant.damage_reduction gm4_sr_data matches 0 if score $enchant.protection gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] {"text":"Enchantments:","color":"gray"}
 scoreboard players operation $enchant.damage_reduction gm4_sr_data += $enchant.protection gm4_sr_data
 execute if score $enchant.protection gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":" > Protection: ","color":"gray"},{"score":{"name":"$enchant.protection","objective":"gm4_sr_data"},"color":"white"},{"text":"%","color":"white"}]
 
@@ -42,8 +42,11 @@ execute if entity @s[advancements={gm4_survival_refightalized:damaged={is_fall=t
 
 scoreboard players operation $enchant.damage_reduction gm4_sr_data < #80 gm4_sr_data
 scoreboard players operation $enchant.damage_reduction_percentage gm4_sr_data = $enchant.damage_reduction gm4_sr_data
-scoreboard players operation $enchant.damage_reduction gm4_sr_data *= $damage_health gm4_sr_data
+scoreboard players operation $enchant.damage_reduction gm4_sr_data *= $damage_total gm4_sr_data
 scoreboard players operation $enchant.damage_reduction gm4_sr_data /= #100 gm4_sr_data
-scoreboard players operation $damage_health gm4_sr_data -= $enchant.damage_reduction gm4_sr_data
+scoreboard players operation $damage_total gm4_sr_data -= $enchant.damage_reduction gm4_sr_data
 
-execute if score $enchant.damage_reduction gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":" >> Total: ","color":"gray"},{"text":"-","color":"white"},{"score":{"name":"$enchant.damage_reduction","objective":"gm4_sr_data"},"color":"white"},{"text":" = ","color":"gray"},{"score":{"name":"$damage_health","objective":"gm4_sr_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$enchant.damage_reduction_percentage","objective":"gm4_sr_data"},"color":"dark_gray"},{"text":"%)","color":"dark_gray"}]
+execute if score $enchant.damage_reduction gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":" >> Total: ","color":"gray"},{"text":"-","color":"white"},{"score":{"name":"$enchant.damage_reduction","objective":"gm4_sr_data"},"color":"white"},{"text":" = ","color":"gray"},{"score":{"name":"$damage_total","objective":"gm4_sr_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$enchant.damage_reduction_percentage","objective":"gm4_sr_data"},"color":"dark_gray"},{"text":"%)","color":"dark_gray"}]
+
+# cleanup
+data remove storage gm4_survival_refightalized:temp Items

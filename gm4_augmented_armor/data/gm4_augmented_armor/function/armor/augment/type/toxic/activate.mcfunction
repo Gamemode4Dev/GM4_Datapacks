@@ -57,3 +57,6 @@ execute if score $level.instant_health gm4_aa_data matches 2 on attacker run eff
 execute if score $level.instant_health gm4_aa_data matches 3 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self] instant_health 1 2
 execute if score $level.instant_health gm4_aa_data matches 4 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self] instant_health 1 3
 tag @s remove gm4_aa_self
+
+# cleanup
+data remove storage gm4_augmented_armor:temp Items

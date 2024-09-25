@@ -45,3 +45,6 @@ data remove storage gm4_augmented_armor:temp components
 
 # revoke advancement at the end to not trigger from changes made
 advancement revoke @s only gm4_augmented_armor:augment/wear_hearty
+
+# cleanup
+data remove storage gm4_augmented_armor:temp Items

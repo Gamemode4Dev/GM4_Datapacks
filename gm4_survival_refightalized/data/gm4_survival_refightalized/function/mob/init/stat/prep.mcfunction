@@ -23,6 +23,7 @@ execute store result storage gm4_survival_refightalized:temp picked_stat.speed f
 
 # evaluate stats and add modifiers to mob
 function gm4_survival_refightalized:mob/init/stat/eval with storage gm4_survival_refightalized:temp picked_stat
+data remove storage gm4_survival_refightalized:temp picked_stat
 
 # TODO: remove (spigot bug)
 execute positioned 29999998 1 7133 run kill @e[type=item,distance=..2]

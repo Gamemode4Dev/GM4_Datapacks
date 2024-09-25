@@ -38,3 +38,6 @@ execute store result storage gm4_augmented_armor:temp effect.range float 0.1 run
 function gm4_augmented_armor:armor/augment/type/frostburst/eval_explosion with storage gm4_augmented_armor:temp effect
 data remove storage gm4_augmented_armor:temp effect
 tag @s remove gm4_aa_augment_damager
+
+# cleanup
+data remove storage gm4_augmented_armor:temp Items

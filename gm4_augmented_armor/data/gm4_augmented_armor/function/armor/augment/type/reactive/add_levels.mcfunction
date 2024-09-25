@@ -65,3 +65,6 @@ scoreboard players operation @s gm4_sr_health.absorption = @s gm4_sr_health.abso
 
 # dev log
 tellraw @s[tag=gm4_sr_dev] [{"text":" - Reactive Absorption: +","color":"gray"},{"score":{"name":"$reactive.add_absorption","objective":"gm4_aa_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$actual_absorption_hearts","objective":"gm4_aa_data"},"color":"dark_gray"},{"text":")","color":"dark_gray"}]
+
+# cleanup
+data remove storage gm4_augmented_armor:temp Items

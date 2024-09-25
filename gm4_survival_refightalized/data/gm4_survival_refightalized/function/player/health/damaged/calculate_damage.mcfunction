@@ -1,4 +1,11 @@
 
+# | Convert to integer
+# add 5 and divide by 10 to round to half-hearts, make sure at least 1 damage is dealt
+scoreboard players add $damage_total gm4_sr_data 5
+scoreboard players operation $damage_total gm4_sr_data /= #10 gm4_sr_data
+scoreboard players operation $damage_total gm4_sr_data > #1 gm4_sr_data
+tellraw @s[tag=gm4_sr_dev] [{"text":"Damage Taken: ","color":"gray"},{"score":{"name":"$damage_total","objective":"gm4_sr_data"},"color":"white"}]
+
 # | Armor
 scoreboard players operation $damage_armor gm4_sr_data += $damage_total gm4_sr_data
 # if damage pierces armor no effect

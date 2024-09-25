@@ -36,11 +36,4 @@ scoreboard players operation $resistance_damage_reduction_percentage gm4_sr_data
 scoreboard players operation $resistance_damage_reduction gm4_sr_data *= $damage_total gm4_sr_data
 scoreboard players operation $resistance_damage_reduction gm4_sr_data /= #100 gm4_sr_data
 scoreboard players operation $damage_total gm4_sr_data -= $resistance_damage_reduction gm4_sr_data
-execute if score $resistance_damage_reduction gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"Resistance: ","color":"gray"},{"text":"-","color":"white"},{"score":{"name":"$resistance_damage_reduction","objective":"gm4_sr_data"},"color":"white"},{"text":" = "},{"score":{"name":"$damage_health","objective":"gm4_sr_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$resistance_damage_reduction_percentage","objective":"gm4_sr_data"},"color":"dark_gray"},{"text":"%)","color":"dark_gray"}]
-
-# | Convert to scores
-# add 5 and divide by 10 to round to half-hearts, make sure at least 1 damage is dealt
-scoreboard players add $damage_total gm4_sr_data 5
-scoreboard players operation $damage_total gm4_sr_data /= #10 gm4_sr_data
-scoreboard players operation $damage_total gm4_sr_data > #1 gm4_sr_data
-tellraw @s[tag=gm4_sr_dev] [{"text":"Damage Taken: ","color":"gray"},{"score":{"name":"$damage_total","objective":"gm4_sr_data"},"color":"white"}]
+execute if score $resistance_damage_reduction gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"Resistance: ","color":"gray"},{"text":"-","color":"white"},{"score":{"name":"$resistance_damage_reduction","objective":"gm4_sr_data"},"color":"white"},{"text":" = "},{"score":{"name":"$damage_total","objective":"gm4_sr_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$resistance_damage_reduction_percentage","objective":"gm4_sr_data"},"color":"dark_gray"},{"text":"%)","color":"dark_gray"}]

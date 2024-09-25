@@ -22,3 +22,5 @@ scoreboard players set $trigger.damage_taken gm4_aa_data 0
 # apply absorption
 execute if score $reactive.add_absorption gm4_aa_data matches 1.. run function gm4_augmented_armor:armor/augment/type/reactive/add_absorption
 
+# cleanup
+data remove storage gm4_augmented_armor:temp Items
