@@ -1,5 +1,6 @@
 {
   "condition": "minecraft:location_check",
+  "offsetY": 1,
   "predicate": {
     "biomes": "#gm4_everstone:bogs_skeletons",
     "fluid": {
