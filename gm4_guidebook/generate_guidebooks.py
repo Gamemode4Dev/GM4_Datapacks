@@ -49,7 +49,9 @@ IS_DYED = [
   "minecraft:leather_boots",
   "minecraft:leather_chestplate",
   "minecraft:leather_helmet",
-  "minecraft:leather_leggings"
+  "minecraft:leather_leggings",
+  "minecraft:leather_horse_armor",
+  "minecraft:wolf_armor"
 ]
 
 OVERLAY_DYED = [
@@ -57,7 +59,7 @@ OVERLAY_DYED = [
   "minecraft:filled_map_markings",
   "minecraft:potion",
   "minecraft:spawn_egg",
-  "minecraft:tipped_arrow_head"
+  "minecraft:tipped_arrow" # note: the texture file is tipped_arrow_head
 ]
 
 class Section(BaseModel):
@@ -1893,10 +1895,17 @@ def generate_toast_model(book: Book, ctx: Context) -> Model:
     "layer0": f"{ctx.project_id}:gui/guidebook/{book.id}"
   }
    # some items will tint layer0, so we special case those here.
-  if book.icon.id.removeprefix("minecraft:") in ("leather_helmet", "leather_chestplate", "leather_leggings", "leather_boots", "leather_horse_armor", "potion", "splash_potion", "lingering_potion", "tipped_arrow"):
+  if book.icon.id in IS_DYED:
     textures = {
       "layer0": "gm4:item/empty",
       "layer1": f"{ctx.project_id}:gui/guidebook/{book.id}"
+    }
+   # some items will tint layer1, so we special case those here.
+  if book.icon.id in OVERLAY_DYED:
+    textures = {
+      "layer0": "gm4:item/empty",
+      "layer1": "gm4:item/empty",
+      "layer2": f"{ctx.project_id}:gui/guidebook/{book.id}"
     }
 
   return Model({
