@@ -1,0 +1,8 @@
+{
+    "sources": [
+        {
+            "type": "single",
+            "resource": "gm4_guidebook:font_magic/blank"
+        }
+    ]
+}

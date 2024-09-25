@@ -1895,7 +1895,7 @@ def generate_toast_model(book: Book, ctx: Context) -> Model:
    # some items will tint layer0, so we special case those here.
   if book.icon.id.removeprefix("minecraft:") in ("leather_helmet", "leather_chestplate", "leather_leggings", "leather_boots", "leather_horse_armor", "potion", "splash_potion", "lingering_potion", "tipped_arrow"):
     textures = {
-      "layer0": "gm4_guidebook:gui/font_magic/blank",
+      "layer0": "gm4_guidebook:font_magic/blank",
       "layer1": f"{ctx.project_id}:gui/guidebook/{book.id}"
     }
 
