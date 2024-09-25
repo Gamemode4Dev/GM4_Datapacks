@@ -32,10 +32,33 @@ def beet_default(ctx: Context):
 
             recipe_path = f"gm4_standard_crafting:{dir}/{item.removeprefix('minecraft:')}"
 
+            output_recipe = recipes.get(output) # type: ignore
+            if output_recipe is None:
+                group: str = output.removeprefix('minecraft:') # type: ignore
+            elif "group" in output_recipe.data:
+                group: str = output_recipe.data["group"]
+            else:
+                group: str = output.removeprefix('minecraft:') # type: ignore
+                output_recipe.data["group"] = group
+                output_recipe.data["__smithed__"] = {
+                    "rules": [
+                        {
+                            "type": "replace",
+                            "target": "group",
+                            "source": {
+                                "type": "reference",
+                                "path": "group"
+                            }
+                        }
+                    ]
+                }
+                ctx.data[output] = Recipe(output_recipe.data)
+
+
             ctx.data[recipe_path] = Recipe({
                 "type": "minecraft:crafting_shaped",
                 "category": "building",
-                "group": output.removeprefix('minecraft:'), # type: ignore
+                "group": group, #type: ignore
                 "pattern": shape,
                 "key": {
                     "#": {
