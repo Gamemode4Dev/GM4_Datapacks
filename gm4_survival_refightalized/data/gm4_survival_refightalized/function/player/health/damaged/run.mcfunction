@@ -19,7 +19,7 @@ execute if entity @s[advancements={gm4_survival_refightalized:damaged={cave_spid
 # dev damage log
 tellraw @s[tag=gm4_sr_dev] {"text":"-- Damage Log --"}
 tellraw @s[tag=gm4_sr_dev,advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] {"text":"Non-Combat Damage","color":"dark_gray","italic":true}
-execute unless score @s gm4_sr_damage_resisted matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"No Armor - Damage: ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_damage_taken"},"color":"white"}]
+execute unless score @s gm4_sr_damage_resisted matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"No Armor - Damage (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_damage_taken"},"color":"white"}]
 
 # calculate damage if player has armor
 execute if score @s gm4_sr_damage_resisted matches 1.. run function gm4_survival_refightalized:player/health/damaged/calculate_reduction
@@ -32,20 +32,18 @@ scoreboard players operation $set gm4_sr_combat_regen_timer = $combat_regen_time
 # called after damage is calculated but before it is applied (unless there was no armor, then it is applied before)
 function #gm4_survival_refightalized:damage_taken
 
-# apply armor recharge timer, halved if damage was non-combat
-execute if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] run scoreboard players operation $set gm4_sr_armor_reduction_timer /= #2 gm4_sr_data
-scoreboard players operation @s gm4_sr_armor_reduction_timer > $set gm4_sr_armor_reduction_timer
-
-# apply health regeneration timer, max 50 if damage was non-combat
-execute if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] run scoreboard players operation $set gm4_sr_combat_regen_timer < #50 gm4_sr_data
-scoreboard players operation @s gm4_sr_combat_regen_timer > $set gm4_sr_combat_regen_timer
-
 # divide the damage taken between armor, absorption and health
 execute if score @s gm4_sr_damage_resisted matches 1.. run function gm4_survival_refightalized:player/health/damaged/calculate_damage
 
+# apply armor recharge timer, halved if damage was non-combat, 0 if damage did not apply to armor
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] run scoreboard players operation $set gm4_sr_armor_reduction_timer /= #2 gm4_sr_data
+execute if score $damage_armor gm4_sr_data matches 1.. run scoreboard players operation @s gm4_sr_armor_reduction_timer > $set gm4_sr_armor_reduction_timer
 # apply durability damage to armor unless it was armor piercing damage
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={armor_piercing=false,armor_piercing_mob=false}}] run function gm4_survival_refightalized:player/armor_durability/check
 
+# apply health regeneration timer, max 50 if damage was non-combat, 0 if damage did not apply to health
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] run scoreboard players operation $set gm4_sr_combat_regen_timer < #50 gm4_sr_data
+execute if score $damage_health gm4_sr_data matches 1.. run scoreboard players operation @s gm4_sr_combat_regen_timer > $set gm4_sr_combat_regen_timer
 # out-of-combat damage regenerates rapidly (every 1.6 seconds)
 scoreboard players operation @s gm4_sr_damage_taken += @s gm4_sr_damage_absorbed
 scoreboard players add @s gm4_sr_damage_taken 5

@@ -1,7 +1,7 @@
 
 # get level and mark as ready
 execute store result score $level gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.levels[0]
-data modify storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.active set value 0
+data modify storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.augment.active set value 0
 execute at @s run playsound minecraft:block.conduit.activate player @s ~ ~ ~ 0.6 2
 
 # use lib_lore to remove the rechrage text

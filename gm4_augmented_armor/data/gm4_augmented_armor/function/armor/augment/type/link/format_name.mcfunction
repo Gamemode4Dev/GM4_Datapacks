@@ -9,7 +9,7 @@ scoreboard players set $change gm4_aa_data 1
 
 # armors active tag is used to track if armor was renamed before, if so no need to do so again
 execute if score $active gm4_aa_data matches 1 run return 0
-data modify storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.active set value 1
+data modify storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.augment.active set value 1
 
 # use lib_lore to remove the 'Rename to Link' text and brighten the 'Lifelink' text
 data modify storage gm4_lore:temp Source set from storage gm4_augmented_armor:temp components."minecraft:lore"

@@ -19,7 +19,7 @@
                     "type": "minecraft:score",
                     "target": {
                       "type": "minecraft:fixed",
-                      "name": "$atkspeed-"
+                      "name": "$level_1"
                     },
                     "score": "gm4_aa_data",
                     "scale": 0.01
@@ -31,7 +31,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{augment:71}}"
+              "tag": "{gm4_augmented_armor:{augment:{active:0,name:canine,id:17,triggers:{clocked:1,damage_dealt:0,damage_taken:0}}}}"
             }
           ]
         }
@@ -49,8 +49,14 @@
           "mode": "append",
           "lore": [
             {
-              "translate": "item.gm4.augmented_armor.lore.equip",
-              "fallback": "When Equipped:",
+              "translate": "item.gm4.augmented_armor.lore.augment",
+              "fallback": "%s Augment:",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.canine",
+                  "fallback": "Canine"
+                }
+              ],
               "color": "gray",
               "italic": false
             }
@@ -63,29 +69,8 @@
           "lore": [
             [
               {
-                "translate": "attribute.modifier.plus.0",
-                "with": [
-                  "1",
-                  {
-                    "translate": "item.gm4.augmented_armor.lore.canine",
-                    "fallback": "Good Boi"
-                  }
-                ],
-                "color": "blue",
-                "italic": false
-              }
-            ]
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.canine_description",
-                "fallback": "A loyal friend to fight by your side",
+                "translate": "item.gm4.augmented_armor.lore.canine",
+                "fallback": "Spawn a wolf to fight by your side",
                 "color": "dark_gray",
                 "italic": false
               }
@@ -99,7 +84,7 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.canine_description_2",
+                "translate": "item.gm4.augmented_armor.lore.canine_2",
                 "fallback": "Command to sit to lose aggro",
                 "color": "dark_gray",
                 "italic": false
@@ -114,7 +99,7 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.canine_description_3",
+                "translate": "item.gm4.augmented_armor.lore.canine_3",
                 "fallback": "Feed to strengthen",
                 "color": "dark_gray",
                 "italic": false
@@ -128,9 +113,13 @@
           "target": "item_name",
           "name": [
             {
-              "translate": "item.gm4.augmented_armor.name.canine",
-              "fallback": "Canine %s",
+              "translate": "item.gm4.augmented_armor.name",
+              "fallback": "%s %s",
               "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.canine",
+                  "fallback": "Canine"
+                },
                 {
                   "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",
                   "storage": "gm4_augmented_armor:temp",

@@ -1,7 +1,7 @@
 # check for interactions with canine wolves
 # @s = player that interacted with a canine wolf
 # at @s
-advancement revoke @s only gm4_augmented_armor:interact_canine
+advancement revoke @s only gm4_augmented_armor:augment/canine_interact
 
 # give power to wolves that were fed
 execute as @e[type=wolf,tag=gm4_aa_wolf,nbt={InLove:600}] run function gm4_augmented_armor:armor/augment/type/canine/wolf_fed_power

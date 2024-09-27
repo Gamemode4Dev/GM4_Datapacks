@@ -44,7 +44,7 @@ execute if score $change gm4_aa_data matches 1 run function gm4_augmented_armor:
 data remove storage gm4_augmented_armor:temp components
 
 # revoke advancement at the end to not trigger from changes made
-advancement revoke @s only gm4_augmented_armor:augment/wear_hearty
+advancement revoke @s only gm4_augmented_armor:augment/hearty_wear
 
 # cleanup
 data remove storage gm4_augmented_armor:temp Items

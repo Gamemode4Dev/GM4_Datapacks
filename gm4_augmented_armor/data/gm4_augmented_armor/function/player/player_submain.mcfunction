@@ -22,6 +22,7 @@ scoreboard players remove @a[scores={gm4_aa_in_combat=1..}] gm4_aa_in_combat 1
 scoreboard players remove @a[scores={gm4_aa_augment.canine.timer=1..}] gm4_aa_augment.canine.timer 1
 scoreboard players remove @a[scores={gm4_aa_augment.soothe.timer=1..}] gm4_aa_augment.soothe.timer 1
 scoreboard players remove @a[scores={gm4_aa_augment.gleaming.timer=1..}] gm4_aa_augment.gleaming.timer 1
+scoreboard players remove @a[scores={gm4_aa_augment.berserkers.timer=1..}] gm4_aa_augment.berserkers.timer 1
 scoreboard players remove @a[scores={gm4_aa_in_pvp=1..}] gm4_aa_in_pvp 1
 
 # reset scoreboards

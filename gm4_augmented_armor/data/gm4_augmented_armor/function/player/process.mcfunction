@@ -8,10 +8,6 @@ scoreboard players operation @s gm4_aa_stat.kills += @s gm4_aa_stat.kills_add
 # add red heart and absorption damage together
 scoreboard players operation @s gm4_aa_stat.damage_dealt += @s gm4_aa_stat.damage_dealt_add
 
-# check for archer armor
-tag @s[tag=gm4_aa_wearing_archer,predicate=!gm4_augmented_armor:modified_armor/archer] remove gm4_aa_wearing_archer
-execute if entity @s[tag=!gm4_aa_wearing_archer,predicate=gm4_augmented_armor:modified_armor/archer] run function gm4_augmented_armor:armor/augment/type/archer/activate
-
 # remove husk sprint score if player didn't sprint for too long
 execute unless score @s gm4_aa_stat.sprint_one_cm matches 1.. run scoreboard players add @s[scores={gm4_aa_augment.dashing.timer=1..}] gm4_aa_augment.dashing.timeout 1
 scoreboard players reset @s[scores={gm4_aa_augment.dashing.timeout=3..,gm4_aa_augment.dashing.timer=1..}] gm4_aa_augment.dashing.timer

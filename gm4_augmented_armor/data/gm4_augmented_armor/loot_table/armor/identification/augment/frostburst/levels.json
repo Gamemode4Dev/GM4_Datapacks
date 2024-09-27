@@ -39,8 +39,8 @@
               "name": "GM4 Augmented Armor - 2"
             },
             {
-              "function": "minecraft:set_count",
-              "count": 5
+              "function": "set_custom_data",
+              "tag": "{gm4_augmented_armor:{multiplier:-5}}"
             }
           ]
         }

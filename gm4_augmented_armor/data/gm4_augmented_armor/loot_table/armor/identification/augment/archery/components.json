@@ -1,0 +1,139 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_augmented_armor:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_augmented_armor:{custom_attribute:{arrow_damage:'level_1'},augment:{active:0,name:archery,id:16,triggers:{clocked:0,damage_dealt:0,damage_taken:0}}}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.augment",
+              "fallback": "%s Augment:",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.archery",
+                  "fallback": "Archery"
+                }
+              ],
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.archery",
+                "fallback": "Shoot %s arrows when firing",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$level_2",
+                      "objective": "gm4_aa_data"
+                    },
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.archery_2",
+                "fallback": "%s arrows shoot half the amount",
+                "with": [
+                  {
+                    "translate": "enchantment.minecraft.multishot"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.equals.1",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$level_1",
+                      "objective": "gm4_aa_data"
+                    }
+                  },
+                  {
+                    "translate": "attribute.gm4.augmented_armor.arrow_damage",
+                    "fallback": "Arrow Damage"
+                  }
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.augmented_armor.name",
+              "fallback": "%s %s",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.archery",
+                  "fallback": "Archery"
+                },
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",
+                  "storage": "gm4_augmented_armor:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

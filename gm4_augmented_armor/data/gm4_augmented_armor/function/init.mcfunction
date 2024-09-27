@@ -45,6 +45,7 @@ scoreboard objectives add gm4_aa_augment.sparking.static_stacks dummy
 scoreboard objectives add gm4_aa_augment.sparking.timer dummy
 scoreboard objectives add gm4_aa_augment.sparking.deg dummy
 scoreboard objectives add gm4_aa_augment.sparking.striking_timer dummy
+scoreboard objectives add gm4_aa_augment.berserkers.timer dummy
 
 # constants
 scoreboard players set #-1 gm4_aa_data -1

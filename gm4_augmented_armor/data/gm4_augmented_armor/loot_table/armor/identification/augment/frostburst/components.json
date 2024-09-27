@@ -183,7 +183,7 @@
           "lore": [
             [
               {
-                "translate": "attribute.modifier.take.2",
+                "translate": "attribute.modifier.equals.2",
                 "with": [
                   {
                     "score": {

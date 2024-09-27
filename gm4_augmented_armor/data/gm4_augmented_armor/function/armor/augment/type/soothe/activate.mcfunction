@@ -5,7 +5,7 @@
 
 # mark for change and set to active
 scoreboard players set $change gm4_aa_data 1
-data modify storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.active set value 1
+data modify storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.augment.active set value 1
 
 # healing pulse effects
 execute store result score $level gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.levels[0]

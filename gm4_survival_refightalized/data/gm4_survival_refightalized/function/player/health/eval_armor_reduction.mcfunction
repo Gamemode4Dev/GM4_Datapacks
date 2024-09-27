@@ -7,4 +7,3 @@
 attribute @s generic.armor modifier remove gm4_survival_refightalized:armor_reduced
 $attribute @s generic.armor modifier add gm4_survival_refightalized:armor_reduced -$(armor_reduction) add_value
 tag @s add gm4_sr_armor_reduced
-scoreboard players reset $damage_armor gm4_sr_data

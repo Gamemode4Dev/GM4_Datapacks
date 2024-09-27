@@ -5,4 +5,4 @@
 
 data remove entity @s AngryAt
 data modify entity @s AngerTime set value 0
-data modify entity @s Sitting set value 0
+data modify entity @s Sitting set value 0b
