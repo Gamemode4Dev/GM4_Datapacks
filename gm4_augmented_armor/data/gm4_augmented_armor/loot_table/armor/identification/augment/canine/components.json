@@ -100,8 +100,33 @@
             [
               {
                 "translate": "item.gm4.augmented_armor.lore.canine_3",
-                "fallback": "Feed to strengthen",
+                "fallback": "Feed to strengthen for 60 seconds",
                 "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.equals.1",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$level_1",
+                      "objective": "gm4_aa_data"
+                    }
+                  },
+                  {
+                    "translate": "attribute.name.generic.attack_speed"
+                  }
+                ],
+                "color": "red",
                 "italic": false
               }
             ]
