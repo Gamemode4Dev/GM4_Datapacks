@@ -31,7 +31,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{augment:{active:0,name:canine,id:17,triggers:{clocked:1,damage_dealt:0,damage_taken:0}}}}"
+              "tag": "{gm4_augmented_armor:{augment:{cooldown:0,name:canine,id:17,triggers:{clocked:1,damage_dealt:0,damage_taken:0}}}}"
             }
           ]
         }
@@ -70,7 +70,34 @@
             [
               {
                 "translate": "item.gm4.augmented_armor.lore.canine",
-                "fallback": "Spawn a wolf to fight by your side",
+                "fallback": "Spawn a %s, %s %s",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.equals.0",
+                    "with": [
+                      "4",
+                      {
+                        "translate": "attribute.name.generic.attack_damage"
+                      }
+                    ],
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.modifier.equals.0",
+                    "with": [
+                      "40",
+                      {
+                        "translate": "attribute.name.generic.max_health"
+                      }
+                    ],
+                    "color": "dark_gray",
+                    "italic": false
+                  },
+                  {
+                    "translate": "entity.minecraft.wolf"
+                  }
+                ],
                 "color": "dark_gray",
                 "italic": false
               }
@@ -101,6 +128,21 @@
               {
                 "translate": "item.gm4.augmented_armor.lore.canine_3",
                 "fallback": "Feed to strengthen for 60 seconds",
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.canine_4",
+                "fallback": "Respawns after 30 seconds on death",
                 "color": "dark_gray",
                 "italic": false
               }

@@ -37,6 +37,7 @@ scoreboard objectives add gm4_aa_augment.gleaming.timer_full dummy
 scoreboard objectives add gm4_aa_augment.gleaming.reach dummy
 scoreboard objectives add gm4_aa_augment.soothe.timer dummy
 scoreboard objectives add gm4_aa_augment.canine.timer dummy
+scoreboard objectives add gm4_aa_augment.canine.slot dummy
 scoreboard objectives add gm4_aa_augment.dashing.timer dummy
 scoreboard objectives add gm4_aa_augment.dashing.timeout dummy
 scoreboard objectives add gm4_aa_augment.dashing.pieces_equipped dummy

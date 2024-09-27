@@ -10,12 +10,48 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{custom_attribute:{arrow_damage:'level_1'},augment:{active:0,name:archery,id:18,triggers:{clocked:0,damage_dealt:0,damage_taken:0}}}}"
+              "tag": "{gm4_augmented_armor:{augment:{name:rejuvenating,id:19,triggers:{clocked:0,damage_dealt:0,damage_taken:0}}}}"
             }
           ]
         }
       ],
       "functions": [
+        {
+          "function": "minecraft:set_attributes",
+          "replace": false,
+          "modifiers": [
+            {
+              "attribute": "minecraft:generic.max_health",
+              "id": "gm4_augmented_armor:permanent",
+              "amount": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor_clamp"
+                },
+                "score": "gm4_aa_data",
+                "scale": -1
+              },
+              "operation": "add_value",
+              "slot": "chest"
+            },
+            {
+              "attribute": "minecraft:generic.armor",
+              "id": "gm4_augmented_armor:permanent_2",
+              "amount": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$armor_clamp"
+                },
+                "score": "gm4_aa_data",
+                "scale": 1
+              },
+              "operation": "add_value",
+              "slot": "chest"
+            }
+          ]
+        },
         {
           "function": "minecraft:set_lore",
           "mode": "append",
@@ -32,8 +68,8 @@
               "fallback": "%s Augment:",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.archery",
-                  "fallback": "Archery"
+                  "translate": "item.gm4.augmented_armor.augment.hearty",
+                  "fallback": "Hearty"
                 }
               ],
               "color": "gray",
@@ -48,15 +84,14 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.archery",
-                "fallback": "Shoot %s arrows when firing",
+                "translate": "item.gm4.augmented_armor.lore.hearty",
+                "fallback": "Convert %s to %s",
                 "with": [
                   {
-                    "score": {
-                      "name": "$level_2",
-                      "objective": "gm4_aa_data"
-                    },
-                    "color": "blue"
+                    "translate": "attribute.name.generic.armor"
+                  },
+                  {
+                    "translate": "attribute.name.generic.max_health"
                   }
                 ],
                 "color": "dark_gray",
@@ -72,27 +107,7 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.archery_2",
-                "fallback": "%s arrows shoot half the amount",
-                "with": [
-                  {
-                    "translate": "enchantment.minecraft.multishot"
-                  }
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "attribute.modifier.equals.1",
+                "translate": "attribute.modifier.plus.1",
                 "with": [
                   {
                     "score": {
@@ -101,11 +116,11 @@
                     }
                   },
                   {
-                    "translate": "attribute.gm4.augmented_armor.arrow_damage",
-                    "fallback": "Arrow Damage"
+                    "translate": "attribute.gm4.augmented_armor.regen_speed",
+                    "fallback": "Regeneration Speed"
                   }
                 ],
-                "color": "red",
+                "color": "blue",
                 "italic": false
               }
             ]
@@ -121,8 +136,8 @@
               "fallback": "%s %s",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.archery",
-                  "fallback": "Archery"
+                  "translate": "item.gm4.augmented_armor.augment.hearty",
+                  "fallback": "Hearty"
                 },
                 {
                   "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",
