@@ -1,0 +1,157 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_augmented_armor:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_augmented_armor:{custom_attribute:{arrow_damage:'level_2'},augment:{name:hawkeye,id:21,triggers:{clocked:0,damage_dealt:0,damage_taken:0}}}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.augment",
+              "fallback": "%s Augment:",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.hawkeye",
+                  "fallback": "Hawkeye"
+                }
+              ],
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.hawkeye",
+                "fallback": "Shot arrows gain %s per second,",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.equals.1",
+                    "with": [
+                      "20",
+                      {
+                        "translate": "attribute.gm4.augmented_armor.arrow_damage",
+                        "fallback": "Arrow Damage"
+                      }
+                    ]
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.hawkeye_2",
+                "fallback": "up to an additional %s",
+                "with": [
+                  [
+                    {
+                      "translate": "attribute.modifier.equals.1",
+                      "with": [
+                        {
+                          "score": {
+                            "name": "$level_1",
+                            "objective": "gm4_aa_data"
+                          }
+                        },
+                        {
+                          "translate": "attribute.gm4.augmented_armor.arrow_damage",
+                          "fallback": "Arrow Damage"
+                        }
+                      ],
+                      "color": "blue"
+                    }
+                  ]
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.equals.1",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$level_2",
+                      "objective": "gm4_aa_data"
+                    }
+                  },
+                  {
+                    "translate": "attribute.gm4.augmented_armor.arrow_damage",
+                    "fallback": "Arrow Damage"
+                  }
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.augmented_armor.name",
+              "fallback": "%s %s",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.hawkeye",
+                  "fallback": "Hawkeye"
+                },
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",
+                  "storage": "gm4_augmented_armor:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -31,6 +31,7 @@ execute if score $set_slot gm4_aa_data matches 3 run function gm4_augmented_armo
 execute if data storage gm4_augmented_armor:temp new_components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.armor_recharge run function gm4_augmented_armor:identification/set_attribute/armor_recharge
 execute if data storage gm4_augmented_armor:temp new_components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.regen_speed run function gm4_augmented_armor:identification/set_attribute/regen_speed
 execute if data storage gm4_augmented_armor:temp new_components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.arrow_damage run function gm4_augmented_armor:identification/set_attribute/arrow_damage
+execute if data storage gm4_augmented_armor:temp new_components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.arrow_speed run function gm4_augmented_armor:identification/set_attribute/arrow_speed
 
 # merge components into item
 data modify storage gm4_augmented_armor:temp components merge from storage gm4_augmented_armor:temp new_components

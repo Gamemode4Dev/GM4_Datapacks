@@ -6,15 +6,15 @@
 # slightly adjust arrow motion
 data modify storage gm4_augmented_armor:temp archery_arrow.Motion_adj set value [0.0d,0.0d,0.0d] 
 
-execute store result score $mot_adjust gm4_aa_data run random value -32..32
+execute store result score $mot_adjust gm4_aa_data run random value -48..48
 execute store result score $mot gm4_aa_data run data get storage gm4_augmented_armor:temp archery_arrow.Motion[0] 100
 execute store result storage gm4_augmented_armor:temp archery_arrow.Motion_adj[0] double 0.01 run scoreboard players operation $mot gm4_aa_data += $mot_adjust gm4_aa_data
 
-execute store result score $mot_adjust gm4_aa_data run random value -10..10
+execute store result score $mot_adjust gm4_aa_data run random value -18..18
 execute store result score $mot gm4_aa_data run data get storage gm4_augmented_armor:temp archery_arrow.Motion[1] 100
 execute store result storage gm4_augmented_armor:temp archery_arrow.Motion_adj[1] double 0.01 run scoreboard players operation $mot gm4_aa_data += $mot_adjust gm4_aa_data
 
-execute store result score $mot_adjust gm4_aa_data run random value -32..32
+execute store result score $mot_adjust gm4_aa_data run random value -48..48
 execute store result score $mot gm4_aa_data run data get storage gm4_augmented_armor:temp archery_arrow.Motion[2] 100
 execute store result storage gm4_augmented_armor:temp archery_arrow.Motion_adj[2] double 0.01 run scoreboard players operation $mot gm4_aa_data += $mot_adjust gm4_aa_data
 
@@ -31,3 +31,6 @@ data modify entity @s item.components set from storage gm4_augmented_armor:temp 
 
 tag @s add gm4_aa_archery_arrow
 tag @s add gm4_sr_arrow_checked
+
+# apply buffs if needed
+execute if score $apply.blastshot gm4_aa_data matches 1 run function gm4_augmented_armor:armor/augment/type/blastshot/prime

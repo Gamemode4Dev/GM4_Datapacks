@@ -7,7 +7,7 @@ scoreboard players operation $damage gm4_aa_data *= $level gm4_aa_data
 scoreboard players operation $damage gm4_aa_data /= #100 gm4_aa_data
 
 # if marker was just spawned add damage to it instead (to stack multiple pieces together)
-execute if score @s gm4_aa_augment.gleaming.timer = @s gm4_aa_augment.gleaming.timer_full as @n[type=marker,tag=gm4_aa_gleaming.marker,distance=..0.01] if score @s gm4_aa_augment.gleaming.timer = @s gm4_aa_augment.gleaming.timer_full run scoreboard players operation @s gm4_aa_augment.gleaming.damage += $damage gm4_aa_data
+execute if score @s gm4_aa_augment.gleaming.timer = @s gm4_aa_augment.gleaming.timer_full as @n[type=marker,tag=gm4_aa_process_marker.gleaming,distance=..0.01] if score @s gm4_aa_augment.gleaming.timer = @s gm4_aa_augment.gleaming.timer_full run scoreboard players operation @s gm4_aa_augment.gleaming.damage += $damage gm4_aa_data
 execute if score @s gm4_aa_augment.gleaming.timer matches 1.. run return 0
 
 # attack reach = 150% of player attack range
