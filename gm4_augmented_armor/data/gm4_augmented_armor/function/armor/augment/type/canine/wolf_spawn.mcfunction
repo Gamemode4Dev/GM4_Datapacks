@@ -18,3 +18,6 @@ execute summon wolf run function gm4_augmented_armor:armor/augment/type/canine/w
 # playsound with cooldown
 execute unless score @s gm4_aa_augment.canine.timer matches 1.. run playsound minecraft:entity.wolf.whine neutral @s ~ ~ ~ 0.6 0.8
 scoreboard players set @s gm4_aa_augment.canine.timer 1
+
+# cleanup
+data remove storage gm4_augmented_armor:temp uuid

@@ -4,3 +4,6 @@ schedule function gm4_augmented_armor:tick 1t
 execute as @e[type=item,tag=!gm4_aa_item_checked] run function gm4_augmented_armor:check_item
 
 execute as @e[type=marker,tag=gm4_aa_process_marker.tick] run function gm4_augmented_armor:clocks/process_markers_tick
+
+# training dummy
+execute as @e[type=zombie,tag=gm4_aa_training_dummy] run function gm4_augmented_armor:training_dummy/process

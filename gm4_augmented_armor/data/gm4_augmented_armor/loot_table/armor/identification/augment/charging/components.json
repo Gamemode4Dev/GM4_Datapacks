@@ -13,9 +13,31 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "attribute": "minecraft:generic.attack_speed",
                   "id": "gm4_augmented_armor:dynamic",
                   "amount": 0,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "id": "gm4_augmented_armor:dynamic_2",
+                  "amount": 0,
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                },
+                {
+                  "attribute": "minecraft:generic.attack_damage",
+                  "id": "gm4_augmented_armor:permanent",
+                  "amount": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_2"
+                    },
+                    "score": "gm4_aa_data",
+                    "scale": 0.01
+                  },
                   "operation": "add_multiplied_total",
                   "slot": "chest"
                 }
@@ -23,7 +45,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{augment:{name:acrobatic,id:4,triggers:{clocked:1,damage_dealt:0,damage_taken:1}}}}"
+              "tag": "{gm4_augmented_armor:{augment:{name:charging,id:22,triggers:{clocked:0,damage_dealt:1,damage_taken:0}}}}"
             }
           ]
         }
@@ -45,8 +67,8 @@
               "fallback": "%s Augment:",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.acrobatic",
-                  "fallback": "Acrobatic"
+                  "translate": "item.gm4.augmented_armor.augment.charging",
+                  "fallback": "Charging"
                 }
               ],
               "color": "gray",
@@ -61,31 +83,22 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.immunity",
-                "fallback": "%s Immunity",
+                "translate": "attribute.modifier.equals.2",
                 "with": [
                   {
-                    "translate": "effect.minecraft.levitation"
+                    "score": {
+                      "name": "$level_2",
+                      "objective": "gm4_aa_data"
+                    }
+                  },
+                  {
+                    "translate": "attribute.name.generic.attack_damage"
                   }
                 ],
-                "color": "blue",
+                "color": "red",
                 "italic": false
               }
             ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 1
-            }
           ]
         },
         {
@@ -95,92 +108,70 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.immunity",
-                "fallback": "%s Immunity",
+                "translate": "item.gm4.augmented_armor.lore.charging",
+                "fallback": "Gain %s on attack,",
                 "with": [
                   {
-                    "translate": "effect.minecraft.slow_falling"
-                  }
-                ],
-                "color": "blue",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 2
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.immunity",
-                "fallback": "%s Immunity",
-                "with": [
-                  {
-                    "translate": "effect.minecraft.slowness"
-                  }
-                ],
-                "color": "blue",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 3
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.acrobatic",
-                "fallback": "%s out of combat",
-                "with": [
-                  {
-                    "translate": "attribute.modifier.take.2",
+                    "translate": "attribute.modifier.equals.1",
                     "with": [
                       {
                         "score": {
-                          "name": "$level_2",
+                          "name": "$level_1",
                           "objective": "gm4_aa_data"
                         }
                       },
                       {
-                        "translate": "attribute.name.generic.fall_damage_multiplier"
+                        "translate": "attribute.name.generic.attack_speed"
                       }
                     ],
                     "color": "blue",
                     "italic": false
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.charging_2",
+                "fallback": "if %s exceeds 4 instead gain",
+                "with": [
+                  {
+                    "translate": "attribute.name.generic.attack_speed"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.charging_3",
+                "fallback": "%s on the next attack losing all charge",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.equals.1",
+                    "with": [
+                      "100",
+                      {
+                        "translate": "attribute.name.generic.attack_damage"
+                      }
+                    ]
                   }
                 ],
                 "color": "dark_gray",
@@ -199,8 +190,8 @@
               "fallback": "%s %s",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.acrobatic",
-                  "fallback": "Acrobatic"
+                  "translate": "item.gm4.augmented_armor.augment.charging",
+                  "fallback": "Charging"
                 },
                 {
                   "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",

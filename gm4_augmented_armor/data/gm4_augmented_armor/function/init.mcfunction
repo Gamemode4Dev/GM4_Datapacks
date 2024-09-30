@@ -50,6 +50,10 @@ scoreboard objectives add gm4_aa_augment.berserkers.timer dummy
 scoreboard objectives add gm4_aa_augment.hawkeye.max_damage dummy
 scoreboard objectives add gm4_aa_augment.hawkeye.count dummy
 
+scoreboard objectives add gm4_aa_training_dummy.dps dummy
+scoreboard objectives add gm4_aa_training_dummy.total_damage dummy
+scoreboard objectives add gm4_aa_training_dummy.timer dummy
+
 # constants
 scoreboard players set #-1 gm4_aa_data -1
 scoreboard players set #0 gm4_aa_data 0

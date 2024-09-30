@@ -1,4 +1,4 @@
-# damage player from garfantuan ground slam
+# damage player from gargantuan ground slam
 # @s = player that got hit
 # at @s
 # run from mob/process/elite/gargantuan/activate

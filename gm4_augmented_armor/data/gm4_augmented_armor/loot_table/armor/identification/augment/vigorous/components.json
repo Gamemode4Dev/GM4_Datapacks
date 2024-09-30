@@ -48,7 +48,7 @@
           "lore": [
             [
               {
-                "translate": "attribute.gm4.augmented_armor.lore.immunity",
+                "translate": "item.gm4.augmented_armor.lore.immunity",
                 "fallback": "%s Immunity",
                 "with": [
                   {
@@ -99,7 +99,7 @@
           "lore": [
             [
               {
-                "translate": "attribute.gm4.augmented_armor.lore.immunity",
+                "translate": "item.gm4.augmented_armor.lore.immunity",
                 "fallback": "%s Immunity",
                 "with": [
                   {
@@ -150,7 +150,7 @@
           "lore": [
             [
               {
-                "translate": "attribute.gm4.augmented_armor.lore.immunity",
+                "translate": "item.gm4.augmented_armor.lore.immunity",
                 "fallback": "%s Immunity",
                 "with": [
                   {
@@ -201,7 +201,7 @@
           "lore": [
             [
               {
-                "translate": "attribute.gm4.augmented_armor.lore.immunity",
+                "translate": "item.gm4.augmented_armor.lore.immunity",
                 "fallback": "%s Immunity",
                 "with": [
                   {
@@ -252,7 +252,7 @@
           "lore": [
             [
               {
-                "translate": "attribute.gm4.augmented_armor.lore.immunity",
+                "translate": "item.gm4.augmented_armor.lore.immunity",
                 "fallback": "%s Immunity",
                 "with": [
                   {
@@ -303,7 +303,7 @@
           "lore": [
             [
               {
-                "translate": "attribute.gm4.augmented_armor.lore.immunity",
+                "translate": "item.gm4.augmented_armor.lore.immunity",
                 "fallback": "%s Immunity",
                 "with": [
                   {
@@ -354,7 +354,7 @@
           "lore": [
             [
               {
-                "translate": "attribute.gm4.augmented_armor.lore.immunity",
+                "translate": "item.gm4.augmented_armor.lore.immunity",
                 "fallback": "%s Immunity",
                 "with": [
                   {

@@ -4,6 +4,10 @@
 advancement revoke @s only gm4_augmented_armor:damage_dealt
 # run from player/in_pvp
 
+# | Prep for augments
+# store attack speed
+execute store result score $attribute.attack_speed gm4_aa_data run attribute @s generic.attack_speed get 10
+
 # store armor items to storage
 item replace block 29999998 1 7134 container.0 from entity @s armor.head
 item replace block 29999998 1 7134 container.1 from entity @s armor.chest
@@ -19,6 +23,9 @@ execute if data storage gm4_augmented_armor:temp Items[{Slot:1b}].components."mi
 execute if data storage gm4_augmented_armor:temp Items[{Slot:2b}].components."minecraft:custom_data".gm4_augmented_armor.augment.triggers{damage_dealt:1} run function gm4_augmented_armor:armor/slot/legs
 execute if data storage gm4_augmented_armor:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_augmented_armor.augment.triggers{damage_dealt:1} run function gm4_augmented_armor:armor/slot/feet
 scoreboard players set $trigger.damage_dealt gm4_aa_data 0
+
+# Giantsbane
+execute if score $augment.giantsbane_damage gm4_aa_data matches 1.. run function gm4_augmented_armor:armor/augment/type/giantsbane/activate
 
 # cleanup
 data remove storage gm4_augmented_armor:temp Items
