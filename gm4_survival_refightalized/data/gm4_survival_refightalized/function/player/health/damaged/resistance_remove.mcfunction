@@ -3,9 +3,6 @@
 # at @s
 # run from player/health/damaged/calculate_reduction
 
-# cap damage taken to the amount of armor remaining
-scoreboard players operation $damage_armor gm4_sr_data < @s gm4_sr_armor
-
 # clear resistance to remove the immunite from armor
 effect clear @s resistance
 

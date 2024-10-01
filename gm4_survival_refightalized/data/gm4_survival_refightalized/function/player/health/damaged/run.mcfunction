@@ -10,14 +10,16 @@ scoreboard players set $damage_absorption gm4_sr_data 0
 scoreboard players set $damage_health gm4_sr_data 0
 scoreboard players set $damage_total gm4_sr_data 0
 
+# dev damage log
+tellraw @s[tag=gm4_sr_dev] {"text":"-- Damage Log --"}
+
 # disable shield if damage was blocked, don't run the rest of this function
-execute if entity @s[advancements={gm4_survival_refightalized:damaged={blocked_by_shield=true}}] run return run function gm4_survival_refightalized:player/health/damaged/shield_blocked
+execute unless score @s[scores={gm4_sr_shield.timer=1..2,gm4_sr_shield.use_ticks=1..}] gm4_sr_damage_taken matches 1.. unless score @s gm4_sr_damage_absorbed matches 1.. run return run function gm4_survival_refightalized:player/health/damaged/shield_blocked
 
 # cave spider poison reduction
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={cave_spider=true}}] run function gm4_survival_refightalized:player/health/damaged/cave_spider_poison_reduction
 
 # dev damage log
-tellraw @s[tag=gm4_sr_dev] {"text":"-- Damage Log --"}
 tellraw @s[tag=gm4_sr_dev,advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] {"text":"Non-Combat Damage","color":"dark_gray","italic":true}
 execute unless score @s gm4_sr_damage_resisted matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"No Armor - Damage (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_damage_taken"},"color":"white"}]
 

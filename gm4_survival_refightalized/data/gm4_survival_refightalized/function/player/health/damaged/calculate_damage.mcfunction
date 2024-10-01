@@ -10,10 +10,10 @@ tellraw @s[tag=gm4_sr_dev] [{"text":"Damage Taken: ","color":"gray"},{"score":{"
 scoreboard players operation $damage_armor gm4_sr_data += $damage_total gm4_sr_data
 # if damage pierces armor no effect
 execute unless entity @s[advancements={gm4_survival_refightalized:damaged={armor_piercing=false,armor_piercing_mob=false}}] run scoreboard players set $damage_armor gm4_sr_data 0
-# calc the reduction in armor that should be applied
-execute store result storage gm4_survival_refightalized:temp set.armor_reduction int 1 run scoreboard players operation @s gm4_sr_armor_reduced += $damage_armor gm4_sr_data
 # if armor is reduced to 0 play sound and remove resistance effect on player
 execute if score $damage_armor gm4_sr_data >= @s gm4_sr_armor run function gm4_survival_refightalized:player/health/damaged/armor_break
+# calc the reduction in armor that should be applied
+execute store result storage gm4_survival_refightalized:temp set.armor_reduction int 1 run scoreboard players operation @s gm4_sr_armor_reduced += $damage_armor gm4_sr_data
 # any leftover damage is applied to the players absorption and health
 scoreboard players operation $damage_left gm4_sr_data = $damage_total gm4_sr_data
 scoreboard players operation $damage_left gm4_sr_data -= $damage_armor gm4_sr_data

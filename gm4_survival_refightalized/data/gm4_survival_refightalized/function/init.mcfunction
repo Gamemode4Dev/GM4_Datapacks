@@ -32,6 +32,9 @@ scoreboard objectives add gm4_sr_proj_fire_delay dummy
 scoreboard objectives add gm4_sr_proj_fire_delay_left dummy
 scoreboard objectives add gm4_sr_proj_damage_change dummy
 
+scoreboard objectives add gm4_sr_shield.use_ticks dummy
+scoreboard objectives add gm4_sr_shield.timer dummy
+
 # configs
 execute unless score $natural_regen gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $natural_regen gm4_sr_config 1
 execute unless score $combat_regen_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $combat_regen_timer gm4_sr_config 750
@@ -54,6 +57,7 @@ scoreboard players set #4 gm4_sr_data 4
 scoreboard players set #5 gm4_sr_data 5
 scoreboard players set #8 gm4_sr_data 8
 scoreboard players set #10 gm4_sr_data 10
+scoreboard players set #20 gm4_sr_data 20
 scoreboard players set #25 gm4_sr_data 25
 scoreboard players set #50 gm4_sr_data 50
 scoreboard players set #80 gm4_sr_data 80

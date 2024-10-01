@@ -5,3 +5,7 @@ execute as @a[advancements={gm4_survival_refightalized:damaged=true}] at @s run 
 
 # check for projectiles
 execute as @e[type=#gm4_survival_refightalized:arrow,tag=!gm4_sr_arrow_checked,tag=!smithed.strict,tag=!smithed.entity] run function gm4_survival_refightalized:check_arrow
+
+# shield parry
+execute as @a[scores={gm4_sr_shield.timer=1}] run function gm4_survival_refightalized:player/shield/remove_using
+scoreboard players remove @a[scores={gm4_sr_shield.timer=1..}] gm4_sr_shield.timer 1

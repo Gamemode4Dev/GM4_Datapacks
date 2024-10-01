@@ -145,26 +145,6 @@
         }
       }
     },
-    "blocked_by_shield": {
-      "trigger": "minecraft:entity_hurt_player",
-      "conditions": {
-        "damage": {
-          "blocked": true,
-          "type": {
-            "tags": [
-              {
-                "id": "minecraft:bypasses_shield",
-                "expected": false
-              },
-              {
-                "id": "gm4_survival_refightalized:ignore",
-                "expected": false
-              }
-            ]
-          }
-        }
-      }
-    },
     "cave_spider": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
@@ -209,7 +189,6 @@
       "is_fall",
       "is_explosion",
       "is_projectile",
-      "blocked_by_shield",
       "cave_spider",
       "catch_other"
     ]
