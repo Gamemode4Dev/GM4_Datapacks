@@ -42,15 +42,15 @@ execute if score $level gm4_aa_data matches 3 run scoreboard players add $level.
 
 # grant effect
 tag @s add gm4_aa_self
-execute if score $level.poison gm4_aa_data matches 1 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_immune_poison] poison 6 0
-execute if score $level.poison gm4_aa_data matches 2 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_immune_poison] poison 6 1
-execute if score $level.poison gm4_aa_data matches 3 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_immune_poison] poison 6 2
-execute if score $level.poison gm4_aa_data matches 4 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_immune_poison] poison 6 3
+execute if score $level.poison gm4_aa_data matches 1 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_effect_immunity.poison] poison 6 0
+execute if score $level.poison gm4_aa_data matches 2 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_effect_immunity.poison] poison 6 1
+execute if score $level.poison gm4_aa_data matches 3 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_effect_immunity.poison] poison 6 2
+execute if score $level.poison gm4_aa_data matches 4 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_effect_immunity.poison] poison 6 3
 
-execute if score $level.weakness gm4_aa_data matches 1 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_immune_weakness] weakness 10 0
-execute if score $level.weakness gm4_aa_data matches 2 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_immune_weakness] weakness 10 1
-execute if score $level.weakness gm4_aa_data matches 3 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_immune_weakness] weakness 10 2
-execute if score $level.weakness gm4_aa_data matches 4 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_immune_weakness] weakness 10 3
+execute if score $level.weakness gm4_aa_data matches 1 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_effect_immunity.weakness] weakness 10 0
+execute if score $level.weakness gm4_aa_data matches 2 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_effect_immunity.weakness] weakness 10 1
+execute if score $level.weakness gm4_aa_data matches 3 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_effect_immunity.weakness] weakness 10 2
+execute if score $level.weakness gm4_aa_data matches 4 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self,tag=!gm4_aa_effect_immunity.weakness] weakness 10 3
 
 execute if score $level.instant_health gm4_aa_data matches 1 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self] instant_health 1 0
 execute if score $level.instant_health gm4_aa_data matches 2 on attacker run effect give @s[tag=!smithed.strict,tag=!gm4_aa_self] instant_health 1 1

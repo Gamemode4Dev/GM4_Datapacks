@@ -31,8 +31,8 @@ scoreboard players set $add_regen_speed gm4_aa_data 0
 execute store result score $add_regen_speed gm4_aa_data run data get storage gm4_augmented_armor:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.regen_speed
 scoreboard players operation $regen_speed gm4_aa_data += $add_regen_speed gm4_aa_data
 
-# cap regen speed reduction at -99%, otherwise the formula breaks
-execute if score $regen_speed gm4_aa_data matches ..-100 run scoreboard players set $regen_speed gm4_aa_data -99
+# cap regen speed reduction at -80%
+execute if score $regen_speed gm4_aa_data matches ..-81 run scoreboard players set $regen_speed gm4_aa_data -80
 execute unless score $regen_speed gm4_aa_data matches 0 run function gm4_augmented_armor:player/combat_regeneration/timer_reduction
 
 # cleanup

@@ -3,7 +3,9 @@
 # at unspecified
 # run from player/health/damaged/calculate_reduction
 
+# calc hp and remove the healstore to get the actual current health
 function gm4_survival_refightalized:player/health/calculate_hp
+scoreboard players operation @s gm4_sr_health.current -= @s gm4_sr_healstore
 
 # calculate max health to get player to new health
 scoreboard players operation $remove_health gm4_sr_data = @s gm4_sr_health.max

@@ -5,6 +5,9 @@
 
 tellraw @s[tag=gm4_sr_dev] [{"text":"Damage Taken (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_damage_resisted"},"color":"white"}]
 
+# advancement
+advancement grant @s only gm4:survival_refightalized_armor_damage
+
 # transfer damage resistance to damage to health score
 scoreboard players operation $damage_total gm4_sr_data = @s gm4_sr_damage_resisted
 

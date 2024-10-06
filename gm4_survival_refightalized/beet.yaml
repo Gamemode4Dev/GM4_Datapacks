@@ -35,8 +35,3 @@ meta:
         - Thanathor
       Icon Design:
         - Hozz
-    translation_linter_ignores:
-      - enchantment.level.14
-      - enchantment.level.15
-      - enchantment.level.16
-      - enchantment.level.17

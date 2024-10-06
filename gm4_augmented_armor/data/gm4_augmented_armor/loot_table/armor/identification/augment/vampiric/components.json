@@ -1,0 +1,119 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_augmented_armor:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_augmented_armor:{custom_attribute:{regen_speed:'level_1'},augment:{name:vampiric,id:26,triggers:{clocked:1,damage_dealt:0,damage_taken:0}}}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.augment",
+              "fallback": "%s Augment:",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.vampiric",
+                  "fallback": "Vampiric"
+                }
+              ],
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.vampiric",
+              "fallback": "Regenerate %s on kill",
+              "with": [
+                {
+                  "translate": "attribute.modifier.equals.1",
+                  "with": [
+                    "10",
+                    {
+                      "translate": "attribute.name.generic.max_health"
+                    }
+                  ]
+                }
+              ],
+              "color": "dark_gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "attribute.modifier.equals.1",
+                "with": [
+                  {
+                    "score": {
+                      "name": "$level_1",
+                      "objective": "gm4_aa_data"
+                    }
+                  },
+                  {
+                    "translate": "attribute.gm4.augmented_armor.regen_speed",
+                    "fallback": "Regeneration Speed"
+                  }
+                ],
+                "color": "red",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.augmented_armor.name",
+              "fallback": "%s %s",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.vampiric",
+                  "fallback": "Vampiric"
+                },
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",
+                  "storage": "gm4_augmented_armor:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -14,9 +14,11 @@ execute store result score @s gm4_sr_health.max run attribute @s minecraft:gener
 # calculate current health (only red hearts)
 # Health stores as float, but minecraft displays as int rounded up, this
 # mimics that so the value always matches what the player sees
+# add healstore as that will be added to health this tick and should be counted
 execute store result score @s gm4_sr_health.current run data get entity @s Health 10
 scoreboard players add @s gm4_sr_health.current 9
 scoreboard players operation @s gm4_sr_health.current /= #10 gm4_sr_data
+scoreboard players operation @s gm4_sr_health.current += @s gm4_sr_healstore
 
 # calculate percentage of max health
 # this uses the rounded values displayed to the player

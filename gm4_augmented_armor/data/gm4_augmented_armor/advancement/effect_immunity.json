@@ -8,7 +8,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_aa_immune_fatigue\"]}"
+              "nbt": "{Tags:[\"gm4_aa_effect_immunity.mining_fatigue\"]}"
             }
           }
         ],
@@ -25,7 +25,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_aa_immune_wither\"]}"
+              "nbt": "{Tags:[\"gm4_aa_effect_immunity.wither\"]}"
             }
           }
         ],
@@ -42,7 +42,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_aa_immune_poison\"]}"
+              "nbt": "{Tags:[\"gm4_aa_effect_immunity.poison\"]}"
             }
           }
         ],
@@ -59,7 +59,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_aa_immune_hunger\"]}"
+              "nbt": "{Tags:[\"gm4_aa_effect_immunity.hunger\"]}"
             }
           }
         ],
@@ -76,7 +76,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_aa_immune_blind\"]}"
+              "nbt": "{Tags:[\"gm4_aa_effect_immunity.blind\"]}"
             }
           }
         ],
@@ -93,7 +93,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_aa_immune_nausea\"]}"
+              "nbt": "{Tags:[\"gm4_aa_effect_immunity.nausea\"]}"
             }
           }
         ],
@@ -110,7 +110,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_aa_immune_weakness\"]}"
+              "nbt": "{Tags:[\"gm4_aa_effect_immunity.weakness\"]}"
             }
           }
         ],
@@ -127,7 +127,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_aa_immune_levitation\"]}"
+              "nbt": "{Tags:[\"gm4_aa_effect_immunity.levitation\"]}"
             }
           }
         ],
@@ -144,7 +144,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_aa_immune_slow_falling\"]}"
+              "nbt": "{Tags:[\"gm4_aa_effect_immunity.slow_falling\"]}"
             }
           }
         ],
@@ -161,7 +161,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_aa_immune_slowness\"]}"
+              "nbt": "{Tags:[\"gm4_aa_effect_immunity.slowness\"]}"
             }
           }
         ],

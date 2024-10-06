@@ -14,7 +14,7 @@
     },
     "frame": "task"
   },
-  "parent": "gm4:root",
+  "parent": "gm4:survival_refightalized_armor_damage",
   "criteria": {
     "kill_elite": {
       "trigger": "minecraft:player_killed_entity",

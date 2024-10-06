@@ -34,13 +34,3 @@ meta:
         - Thanathor
       Icon Design:
         - Hozz
-    model_data:
-      - template: advancement
-        broadcast:
-        - item: leather_chestplate
-          reference: gui/advancement/augmented_armor_identify
-    translation_linter_ignores:
-      - enchantment.level.14
-      - enchantment.level.15
-      - enchantment.level.16
-      - enchantment.level.17

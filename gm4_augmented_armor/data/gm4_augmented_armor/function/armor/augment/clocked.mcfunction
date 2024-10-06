@@ -15,3 +15,6 @@ execute if score $augment gm4_aa_data matches 7 if score @s gm4_aa_stat.damage_d
 execute if score $augment gm4_aa_data matches 14 run function gm4_augmented_armor:armor/augment/type/berserkers/check
 execute if score $augment gm4_aa_data matches 15 run function gm4_augmented_armor:armor/augment/type/gutsy/check
 execute if score $augment gm4_aa_data matches 17 run function gm4_augmented_armor:armor/augment/type/canine/check
+execute if score $augment gm4_aa_data matches 24 run function gm4_augmented_armor:armor/augment/type/raging/check
+execute if score $augment gm4_aa_data matches 25 run function gm4_augmented_armor:armor/augment/type/sustaining/check
+execute if score $augment gm4_aa_data matches 26 if score @s gm4_aa_stat.kills matches 1.. run function gm4_augmented_armor:armor/augment/type/vampiric/activate

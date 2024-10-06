@@ -11,9 +11,9 @@ execute unless score @s gm4_aa_in_combat matches 1.. if score $active gm4_aa_dat
 execute store result score $level gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.levels[0]
 
 # get effects to become immune to
-execute if score $level gm4_aa_data matches 1 run tag @s add gm4_aa_immune_levitation
-execute if score $level gm4_aa_data matches 2 run tag @s add gm4_aa_immune_slow_falling
-execute if score $level gm4_aa_data matches 3 run tag @s add gm4_aa_immune_slowness
+execute if score $level gm4_aa_data matches 1 run tag @s add gm4_aa_effect_immunity.levitation
+execute if score $level gm4_aa_data matches 2 run tag @s add gm4_aa_effect_immunity.slow_falling
+execute if score $level gm4_aa_data matches 3 run tag @s add gm4_aa_effect_immunity.slowness
 
 # remove effects if they were present
 execute if score $level gm4_aa_data matches 1 run effect clear @s levitation
@@ -21,4 +21,4 @@ execute if score $level gm4_aa_data matches 2 run effect clear @s slow_falling
 execute if score $level gm4_aa_data matches 3 run effect clear @s slowness
 
 # tag for effect removal
-tag @s add gm4_aa_immune_active
+tag @s add gm4_aa_effect_immunity.active

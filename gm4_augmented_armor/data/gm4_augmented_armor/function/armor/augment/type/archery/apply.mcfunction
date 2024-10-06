@@ -6,6 +6,7 @@
 tag @s add gm4_aa_archery_arrow
 
 execute store success score $apply.blastshot gm4_aa_data if entity @s[tag=gm4_aa_blastshot_arrow]
+execute store success score $apply.hawkeye gm4_aa_data if entity @s[tag=gm4_aa_hawkeye_arrow]
 
 data modify storage gm4_augmented_armor:temp archery_arrow set from entity @s {}
 
