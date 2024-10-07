@@ -1,5 +1,5 @@
 {
-  "last_commit": "503ed93cdd0466a147f8289c7a48bf39f7c0b8d4",
+  "last_commit": "1bba3f39d5b08c253175570bb2a137a997e4893f",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -152,8 +152,8 @@
     {
       "id": "gm4_balloon_animals",
       "name": "Balloon Animals",
-      "version": "1.2.4",
-      "hash": "110cff4ce29b6178381fc687ddfa72ebb475c9ce",
+      "version": "1.2.5",
+      "hash": "9e727702b3f3e207596895be20299e0fdae93a0d",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Balloon_Animals",
       "credits": {
