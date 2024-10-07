@@ -14,6 +14,7 @@ tag @s remove gm4_pneuma_draining
 tag @s remove gm4_pneuma_expeditious
 tag @s remove gm4_pneuma_feathery
 tag @s remove gm4_pneuma_feigning
+tag @s remove gm4_pneuma_freezing
 tag @s remove gm4_pneuma_gazing
 tag @s remove gm4_pneuma_gliding
 tag @s remove gm4_pneuma_hawkeye
@@ -29,6 +30,7 @@ tag @s remove gm4_pneuma_sniffing
 tag @s remove gm4_pneuma_soaring
 tag @s remove gm4_pneuma_striding
 tag @s remove gm4_pneuma_synergetic
+tag @s remove gm4_pneuma_tranquilizing
 tag @s remove gm4_pneuma_vanishing
 tag @s remove gm4_pneuma_volatile
 tag @s remove gm4_pneuma_withering
