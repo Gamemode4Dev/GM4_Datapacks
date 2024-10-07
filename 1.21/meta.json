@@ -1,5 +1,5 @@
 {
-  "last_commit": "1bba3f39d5b08c253175570bb2a137a997e4893f",
+  "last_commit": "182356c4fe242650839634f3a4091645c4785a01",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1112,8 +1112,8 @@
     {
       "id": "gm4_everstone",
       "name": "Everstone",
-      "version": "1.4.3",
-      "hash": "487bf50b4c4a910353f7046523f3ff30a5113fb4",
+      "version": "1.4.4",
+      "hash": "4bc37cd8a586156f6b6344138556fd58f34203fb",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Everstone",
       "credits": {
