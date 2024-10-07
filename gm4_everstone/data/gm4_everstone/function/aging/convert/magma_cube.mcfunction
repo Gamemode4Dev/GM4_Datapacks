@@ -6,6 +6,13 @@
 # summon new mob
 summon minecraft:magma_cube ~ ~ ~ {Tags:[gm4_es_new_mob]}
 
+# move mob to exact location of old mob
+tp @e[type=magma_cube,tag=gm4_es_new_mob,limit=1,distance=..0.01] @s
+tag @s add gm4_es_old_mob
+execute on vehicle run ride @e[type=magma_cube,tag=gm4_es_new_mob,limit=1,distance=..0.01] mount @s
+execute on vehicle run ride @e[type=slime,tag=gm4_es_old_mob,limit=1,distance=..0.01] dismount
+execute on passengers run ride @s dismount
+
 # transfer old nbt to new mob
 effect give @s nausea 1 2
 data merge entity @s {Tags:[]}
