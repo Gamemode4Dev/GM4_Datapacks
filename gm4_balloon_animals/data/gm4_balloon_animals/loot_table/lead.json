@@ -1,6 +1,6 @@
 entries = []
 for animal in ctx.meta['animals']:
-  if animal['function'] != "init_animal":
+  if animal['function'] not in ["init_animal", "init_wolf"]:
     continue
   
   for name in map(str.strip, animal['names'].split(',')):

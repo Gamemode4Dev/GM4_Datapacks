@@ -4,7 +4,7 @@ Pig,minecraft:pig,FALSE,init_animal,"Bacon,Betty,Hamm,Hoagie,Piglet,Pua,Pumbaa,S
 Sheep,minecraft:sheep,FALSE,init_animal,"Baabra,Bellwether,Blackie,Doug,Gruff,Lamb,Lambie,Sheera,Woolensworth,Woolter"
 Horse,minecraft:horse,FALSE,init_animal,"Achilles,Buck,Bullseye,Galahad,Khan,Lancelot,Major,Maximus,Pearl,Shadow"
 Rabbit,minecraft:rabbit,FALSE,init_animal,"Berry,Bouncy,Bushy,Clover,Houdini,Jack,Judy,March,Nibbles,Oswald,Roger,Squirt,Thumper"
-Wolf,minecraft:wolf,FALSE,init_animal,"Beast,Bolt,Briar,Bruno,Buddy,Duke,Fenrir,Maugrim,Wolfie,Wolfsbane"
+Wolf,minecraft:wolf,FALSE,init_wolf,"Beast,Bolt,Briar,Bruno,Buddy,Duke,Fenrir,Maugrim,Wolfie,Wolfsbane"
 Llama,minecraft:llama,FALSE,init_animal,"Andes,Carl,Carlos,Flower,Kuzco,Paul,Roxy,Ruby,Wendy"
 Frog,minecraft:frog,FALSE,init_animal,"Carlos,Croaker,Croaky,Flizard,Frankie,Frogini,Garko,Kermit,Naveen,Ribbiton,Sylvia,Stumpy,Tiana,Toadie"
 Bee,minecraft:bee,FALSE,add_bee_nest,
