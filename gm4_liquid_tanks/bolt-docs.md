@@ -85,7 +85,7 @@ bottle('honey_bottle')
 Standard units take an optional `f_name` string parameter that allows the actual function name to be defined, which may prevent collisions when more than one standard unit uses the same item type. 
 
 ## Naming Schemes
-By default, function files are names according to a preset number of schemes, usually by the item name or potion type if available. Additioinal schemes can be registered to the wrapper via its `schemes` attribute. This functionality is not used yet in the codebase, so please refer to the source code for mode details. 
+By default, function files are names according to a preset number of schemes, usually by the item name or potion type if available. Additioinal schemes can be registered to the wrapper via its `schemes` attribute. This functionality is not used yet in the codebase, so please refer to the source code for more details. 
 
 ## Partially Bound Liquid Defaults
 Liquids with commonly repeated properties (mainly liquid value) can be made with a new instance of the "Liquid" object, replacing the usage of the included `liquid` instance. 

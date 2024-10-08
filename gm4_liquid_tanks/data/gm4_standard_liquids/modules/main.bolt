@@ -143,7 +143,7 @@ for lvl, numeral_lvl in zip((0,1,2,3,4), ("I", "II", "III", "IV", "V")):
     @liquid
     class OminousBottle:
         id = f'ominous_bottle_{lvl}'
-        name = 'Ominous'
+        name = f'Ominous {numeral_lvl}'
         capacity = 300
         skin = 'liquids/ominous_bottle'
 
@@ -157,7 +157,7 @@ for lvl, numeral_lvl in zip((0,1,2,3,4), ("I", "II", "III", "IV", "V")):
                 unless entity @s[gamemode=spectator]
                 if entity @s[nbt=!{active_effects:[{id:'minecraft:bad_omen'}]}]
                 run function f"gm4_standard_liquids:util/liquid_dispensing/ominous_bottle_{lvl}":
-                    effect give @s bad_omen 120000 (0+lvl)
+                    effect give @s bad_omen 6000 (0+lvl)
                     scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
                     playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
 
