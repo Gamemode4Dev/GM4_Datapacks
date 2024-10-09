@@ -3,5 +3,8 @@ execute unless score ender_hoppers gm4_earliest_version < ender_hoppers gm4_modu
 scoreboard players set ender_hoppers gm4_modules 1
 
 schedule function gm4_ender_hoppers:main 1t
+schedule function gm4_ender_hoppers:tick 1t
+
+
 
 #$moduleUpdateList

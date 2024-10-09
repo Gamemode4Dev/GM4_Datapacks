@@ -1,0 +1,39 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wooden_hoe",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:damage": 0,
+                "minecraft:attribute_modifiers": {
+                  "modifiers": []
+                },
+                "minecraft:enchantments": {}
+              }
+            },
+            {
+              "function": "minecraft:copy_custom_data",
+              "source": {
+                "type": "minecraft:storage",
+                "source": "gm4_augmented_armor:temp"
+              },
+              "ops": [
+                {
+                  "source": "augment.levels",
+                  "target": "gm4_augmented_armor.levels",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
