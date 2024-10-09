@@ -17,7 +17,7 @@ scoreboard players set $mob_health gm4_sr_data 16
 scoreboard players set $mob_damage gm4_sr_data 20
 scoreboard players set $mob_speed gm4_sr_data 35
 # max damage mob is allowed to deal in one hit (to deal with weapons)
-scoreboard players set @s gm4_sr_damage_cap 70
+scoreboard players set @s gm4_sr_mob.damage_cap 70
 tag @s add gm4_sr_check_damage_cap
 
 # set armor

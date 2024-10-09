@@ -12,7 +12,7 @@ attribute @s generic.movement_speed modifier add gm4_monsters_unbound:elite_buff
 attribute @s generic.burning_time modifier add gm4_monsters_unbound:elite_buff.fire -1 add_multiplied_total
 
 enchant @s[type=#gm4_survival_refightalized:skeleton_types] flame 2
-scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_proj_damage_change -18
+scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_arrow.damage_change -18
 item replace entity @s[type=!#gm4_survival_refightalized:skeleton_types] weapon.mainhand with blaze_rod[enchantments={fire_aspect:2}]
 data modify entity @s HandDropChances[0] set value -327.670F
 

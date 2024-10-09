@@ -18,7 +18,7 @@ scoreboard players set $mob_health gm4_sr_data 10
 scoreboard players set $mob_damage gm4_sr_data 20
 scoreboard players set $mob_speed gm4_sr_data 25
 # max damage mob is allowed to deal in one hit (to deal with weapons)
-scoreboard players set @s gm4_sr_damage_cap 85
+scoreboard players set @s gm4_sr_mob.damage_cap 85
 tag @s add gm4_sr_check_damage_cap
 
 # knockback resistance
@@ -36,5 +36,5 @@ loot replace entity @s weapon.mainhand loot gm4_survival_refightalized:mob/withe
 execute if data entity @s HandItems[{id:"minecraft:bow"}] run loot replace entity @s weapon.offhand loot gm4_survival_refightalized:mob/wither_skeleton/arrow
 
 # shoot arrows slower and weaker
-scoreboard players set @s gm4_sr_proj_fire_delay 4
-execute store result score @s gm4_sr_proj_damage_change run random value -12..-8
+scoreboard players set @s gm4_sr_arrow.fire_delay 4
+execute store result score @s gm4_sr_arrow.damage_change run random value -12..-8

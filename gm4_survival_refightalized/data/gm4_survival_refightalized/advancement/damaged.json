@@ -44,7 +44,7 @@
         "damage": {
           "type": {
             "source_entity": {
-              "nbt": "{Tags:[\"gm4_sr_armor_pierce_attack\"]}"
+              "nbt": "{Tags:[\"gm4_sr_stat.armor_pierce_attack\"]}"
             }
           }
         }

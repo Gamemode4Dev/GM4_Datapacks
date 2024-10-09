@@ -14,4 +14,4 @@ execute if predicate {condition:"minecraft:random_chance",chance:0.45} if entity
 
 execute if predicate {condition:"minecraft:random_chance",chance:0.33} run item replace entity @s[tag=!gm4_sr_extra_mob] weapon.mainhand with trident
 
-scoreboard players set @s gm4_sr_proj_fire_delay 0
+scoreboard players set @s gm4_sr_arrow.fire_delay 0

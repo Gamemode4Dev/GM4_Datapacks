@@ -18,7 +18,7 @@ scoreboard players set $mob_health gm4_sr_data 16
 scoreboard players set $mob_damage gm4_sr_data 35
 scoreboard players set $mob_speed gm4_sr_data 35
 # max damage mob is allowed to deal in one hit (to deal with weapons)
-scoreboard players set @s gm4_sr_damage_cap 80
+scoreboard players set @s gm4_sr_mob.damage_cap 80
 tag @s add gm4_sr_check_damage_cap
 
 # set armor
@@ -29,7 +29,7 @@ loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/generic/c
 loot replace entity @s armor.head loot gm4_survival_refightalized:mob/generic/head
 
 # add fire delay to drowned for tridents
-scoreboard players set @s[type=drowned] gm4_sr_proj_fire_delay 10
+scoreboard players set @s[type=drowned] gm4_sr_arrow.fire_delay 10
 
 # remove leader and baby zombies
 scoreboard players set $removed_bonus gm4_sr_data 0

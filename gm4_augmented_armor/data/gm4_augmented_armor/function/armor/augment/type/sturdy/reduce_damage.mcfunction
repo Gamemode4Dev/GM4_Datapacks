@@ -5,7 +5,7 @@
 
 # calculate damage reduction % x10
 execute store result score $level gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.levels[0] 10
-scoreboard players operation $level gm4_aa_data *= @s gm4_sr_armor
+scoreboard players operation $level gm4_aa_data *= @s gm4_sr_stat.armor
 scoreboard players operation $level gm4_aa_data /= #20 gm4_aa_data
 
 # calculate damage reduction

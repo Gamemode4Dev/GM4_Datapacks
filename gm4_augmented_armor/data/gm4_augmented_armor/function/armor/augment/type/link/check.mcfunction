@@ -5,7 +5,7 @@
 
 # first ensure this player is actually alive, otherwise do not allow them into the link
 function gm4_survival_refightalized:player/health/calculate_hp
-execute unless score @s gm4_sr_health.current matches 1.. run return 0
+execute unless score @s gm4_sr_stat.current_health matches 1.. run return 0
 
 # check if armor has been given a new custom name
 execute store success score $renamed gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_name"
@@ -41,7 +41,7 @@ execute if score $slot gm4_aa_data matches 0 store result score @s gm4_aa_augmen
 execute if score $slot gm4_aa_data matches 1 store result score @s gm4_aa_augment.link.max_health run data get storage gm4_augmented_armor:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_augmented_armor:chest.dynamic"}].amount -1
 execute if score $slot gm4_aa_data matches 2 store result score @s gm4_aa_augment.link.max_health run data get storage gm4_augmented_armor:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_augmented_armor:legs.dynamic"}].amount -1
 execute if score $slot gm4_aa_data matches 3 store result score @s gm4_aa_augment.link.max_health run data get storage gm4_augmented_armor:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_augmented_armor:feet.dynamic"}].amount -1
-scoreboard players operation @s gm4_aa_augment.link.max_health += @s gm4_sr_health.max
+scoreboard players operation @s gm4_aa_augment.link.max_health += @s gm4_sr_stat.max_health
 
 # store slot this players linked armor is in
 execute store result score $slot gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.slot

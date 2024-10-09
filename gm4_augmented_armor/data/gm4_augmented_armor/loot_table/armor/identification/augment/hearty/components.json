@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{custom_attribute:{regen_speed:'level_1'},augment:{name:hearty,id:9,triggers:{clocked:0,damage_dealt:0,damage_taken:0}}}}"
+              "tag": "{gm4_augmented_armor:{custom_attribute:{regen_speed:{value:'level_1'}},augment:{name:hearty,id:9,triggers:{clocked:0,damage_dealt:0,damage_taken:0}}}}"
             }
           ]
         }

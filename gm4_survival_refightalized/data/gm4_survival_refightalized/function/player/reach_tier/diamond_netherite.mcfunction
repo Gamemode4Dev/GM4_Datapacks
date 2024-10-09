@@ -3,4 +3,4 @@
 # at unspecified
 # run from advancement reach_tier/diamond_netherite
 
-scoreboard players operation @s gm4_sr_tier > #2 gm4_sr_data
+scoreboard players operation @s gm4_sr_armor.tier > #2 gm4_sr_data

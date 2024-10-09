@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{custom_attribute:{regen_speed:'level_1'},augment:{name:vampiric,id:26,triggers:{clocked:1,damage_dealt:0,damage_taken:0}}}}"
+              "tag": "{gm4_augmented_armor:{custom_attribute:{regen_speed:{value:'level_1'}},augment:{name:vampiric,id:26,triggers:{clocked:1,damage_dealt:0,damage_taken:0}}}}"
             }
           ]
         }
@@ -53,7 +53,7 @@
                 {
                   "translate": "attribute.modifier.equals.1",
                   "with": [
-                    "10",
+                    "5",
                     {
                       "translate": "attribute.name.generic.max_health"
                     }

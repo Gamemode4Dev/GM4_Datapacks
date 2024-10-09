@@ -16,8 +16,8 @@ scoreboard players operation $curr_health_percent_lost gm4_mu_data -= $curr_heal
 execute if score $curr_health_percent_lost gm4_mu_data matches 50.. run effect give @s[type=!#gm4_survival_refightalized:skeleton_types] resistance infinite 0 true
 execute if score $curr_health_percent_lost gm4_mu_data matches 75.. run effect give @s[type=!#gm4_survival_refightalized:skeleton_types] resistance infinite 1 true
 
-execute if score $curr_health_percent_lost gm4_mu_data matches 50.. run scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_proj_fire_delay 4
-execute if score $curr_health_percent_lost gm4_mu_data matches 75.. run scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_proj_fire_delay 6
+execute if score $curr_health_percent_lost gm4_mu_data matches 50.. run scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_arrow.fire_delay 4
+execute if score $curr_health_percent_lost gm4_mu_data matches 75.. run scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_arrow.fire_delay 6
 
 execute store result storage gm4_monsters_unbound:temp set.speed float 0.015 run scoreboard players get $curr_health_percent_lost gm4_mu_data
 execute store result storage gm4_monsters_unbound:temp set.damage float 0.005 run scoreboard players get $curr_health_percent_lost gm4_mu_data

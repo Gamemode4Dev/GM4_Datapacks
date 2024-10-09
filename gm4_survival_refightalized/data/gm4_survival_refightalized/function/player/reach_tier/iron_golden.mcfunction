@@ -3,4 +3,4 @@
 # at unspecified
 # run from advancement reach_tier/iron_golden
 
-scoreboard players operation @s gm4_sr_tier > #1 gm4_sr_data
+scoreboard players operation @s gm4_sr_armor.tier > #1 gm4_sr_data

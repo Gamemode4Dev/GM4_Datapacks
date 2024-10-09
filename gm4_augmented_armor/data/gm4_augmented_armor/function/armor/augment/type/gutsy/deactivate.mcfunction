@@ -14,4 +14,4 @@ execute if score $slot gm4_aa_data matches 2 run data modify storage gm4_augment
 execute if score $slot gm4_aa_data matches 3 run data modify storage gm4_augmented_armor:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_augmented_armor:feet.dynamic"}].amount set value 0
 
 # modify custom attribute
-data modify storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.arrow_damage set value 0
+data modify storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.arrow_damage.value set value 0

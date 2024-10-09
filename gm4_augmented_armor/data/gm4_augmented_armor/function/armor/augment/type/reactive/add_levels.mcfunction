@@ -35,7 +35,7 @@ execute if data storage gm4_augmented_armor:temp Items[{Slot:3b}].components."mi
 scoreboard players operation $total_level gm4_aa_data += $level gm4_aa_data
 
 # get total percentage of max health that should be added as absorption
-scoreboard players operation $reactive.add_absorption gm4_aa_data = @s gm4_sr_health.max
+scoreboard players operation $reactive.add_absorption gm4_aa_data = @s gm4_sr_stat.max_health
 scoreboard players operation $reactive.add_absorption gm4_aa_data *= $total_level gm4_aa_data
 scoreboard players operation $reactive.add_absorption gm4_aa_data /= #100 gm4_aa_data
 
@@ -60,8 +60,8 @@ function gm4_augmented_armor:armor/augment/type/reactive/eval_absorption with st
 data remove storage gm4_augmented_armor:temp absorption
 
 # recalc absorption health
-scoreboard players operation @s gm4_sr_health.absorption_max = $actual_absorption_hearts gm4_aa_data
-scoreboard players operation @s gm4_sr_health.absorption = @s gm4_sr_health.absorption_max
+scoreboard players operation @s gm4_sr_stat.max_absorption = $actual_absorption_hearts gm4_aa_data
+scoreboard players operation @s gm4_sr_stat.current_absorption = @s gm4_sr_stat.max_absorption
 
 # dev log
 tellraw @s[tag=gm4_sr_dev] [{"text":" - Reactive Absorption: +","color":"gray"},{"score":{"name":"$reactive.add_absorption","objective":"gm4_aa_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$actual_absorption_hearts","objective":"gm4_aa_data"},"color":"dark_gray"},{"text":")","color":"dark_gray"}]

@@ -20,5 +20,9 @@ execute if data storage gm4_augmented_armor:temp Items[{Slot:2b}].components."mi
 execute if data storage gm4_augmented_armor:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_augmented_armor run function gm4_augmented_armor:armor/slot/feet
 scoreboard players set $trigger.clocked gm4_aa_data 0
 
+# check for custom attributes
+execute if items entity @s armor.* #gm4_survival_refightalized:armor[custom_data~{gm4_augmented_armor:{custom_attribute:{armor_recharge:{}}}}] run function gm4_augmented_armor:armor/custom_attribute/armor_recharge_rate
+execute if items entity @s armor.* #gm4_survival_refightalized:armor[custom_data~{gm4_augmented_armor:{custom_attribute:{regen_speed:{}}}}] run function gm4_augmented_armor:armor/custom_attribute/regeneration_speed
+
 # cleanup
 data remove storage gm4_augmented_armor:temp Items

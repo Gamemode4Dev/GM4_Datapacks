@@ -12,3 +12,4 @@ execute unless score $keep_tick.psychic gm4_aa_keep_tick matches 1 if entity @a[
 execute unless score $keep_tick.radiant gm4_aa_keep_tick matches 1 if entity @a[predicate=gm4_augmented_armor:modified_armor/augment/radiant,gamemode=!spectator] run function gm4_augmented_armor:clocks/temp/radiant
 # totem
 execute unless score $keep_tick.totemic gm4_aa_keep_tick matches 1 if entity @e[type=armor_stand,tag=gm4_aa_totem] run function gm4_augmented_armor:clocks/temp/totemic
+

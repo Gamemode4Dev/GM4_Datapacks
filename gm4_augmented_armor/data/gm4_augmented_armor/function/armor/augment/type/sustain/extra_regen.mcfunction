@@ -5,4 +5,4 @@
 
 # need to run heal_calc here to make sure the regen happens now
 function gm4_survival_refightalized:player/health/regen_combat_health
-execute if score @s gm4_sr_healstore matches 1.. run function gm4_survival_refightalized:player/health/heal/heal_calc
+execute if score @s gm4_sr_health.restoration matches 1.. run function gm4_survival_refightalized:player/health/heal/heal_calc

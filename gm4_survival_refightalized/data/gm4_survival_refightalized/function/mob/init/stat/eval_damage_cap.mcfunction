@@ -4,4 +4,4 @@
 # run from mob/init/modifier/check_damage_cap
 
 $attribute @s generic.attack_damage modifier add gm4_survival_refightalized:stat_change.damage_cap_reduction $(damage_capped) add_value
-tag @s add gm4_sr_damage_capped
+tag @s add gm4_sr_mob.damage_capped

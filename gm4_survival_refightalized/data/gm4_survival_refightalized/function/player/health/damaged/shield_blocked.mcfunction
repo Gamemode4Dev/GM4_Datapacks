@@ -18,4 +18,4 @@ tag @s remove gm4_sr_target
 tellraw @s[tag=gm4_sr_dev] {"text":"Damage blocked by shield","color":"dark_gray"}
 
 # cleanup
-scoreboard players reset @s gm4_sr_damage_resisted
+scoreboard players reset @s gm4_sr_stat.damage_resisted

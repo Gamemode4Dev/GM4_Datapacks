@@ -4,4 +4,4 @@ function gm4_survival_refightalized:player/health/damaged/resistance_remove
 function #gm4_survival_refightalized:armor_break
 
 # cap damage taken to the amount of armor remaining
-scoreboard players operation $damage_armor gm4_sr_data < @s gm4_sr_armor
+scoreboard players operation $damage_armor gm4_sr_data < @s gm4_sr_stat.armor

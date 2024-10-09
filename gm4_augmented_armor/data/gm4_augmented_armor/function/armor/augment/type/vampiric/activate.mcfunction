@@ -5,10 +5,12 @@
 
 function gm4_survival_refightalized:player/health/calculate_hp
 
-# healing is 10% of max health, rounded
-scoreboard players operation $healing gm4_aa_data = @s gm4_sr_health.max
-scoreboard players add $healing gm4_aa_data 5
-scoreboard players operation $healing gm4_aa_data /= #10 gm4_aa_data
+# healing is 5% of max health per kill, rounded
+scoreboard players operation $healing gm4_aa_data = @s gm4_sr_stat.max_health
+scoreboard players operation $healing gm4_aa_data *= #5 gm4_aa_data
+scoreboard players operation $healing gm4_aa_data *= @s gm4_aa_stat.kills
+scoreboard players add $healing gm4_aa_data 50
+scoreboard players operation $healing gm4_aa_data /= #100 gm4_aa_data
 
 # store healing
-scoreboard players operation @s gm4_sr_healstore += $healing gm4_aa_data
+scoreboard players operation @s gm4_sr_health.restoration += $healing gm4_aa_data

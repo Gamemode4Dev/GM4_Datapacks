@@ -18,5 +18,5 @@ data modify entity @s ArmorDropChances[3] set value -327.670F
 
 team join gm4_mu_elite.zephyr
 
-scoreboard players set @s gm4_sr_proj_fire_delay 0
-scoreboard players set @s gm4_sr_proj_damage_change -15
+scoreboard players set @s gm4_sr_arrow.fire_delay 0
+scoreboard players set @s gm4_sr_arrow.damage_change -15

@@ -20,7 +20,7 @@ scoreboard players operation $target_absorption_hearts gm4_aa_data -= $actual_ab
 scoreboard players operation $damage_absorption gm4_sr_data += $target_absorption_hearts gm4_aa_data
 
 # if player was not going to be damaged make sure they are
-execute unless score @s gm4_sr_damage_resisted matches 1.. run scoreboard players set @s gm4_sr_damage_resisted 1
+execute unless score @s gm4_sr_stat.damage_resisted matches 1.. run scoreboard players set @s gm4_sr_stat.damage_resisted 1
 
 # apply absorption level
 execute store result storage gm4_augmented_armor:temp absorption.level int 1 run scoreboard players remove $apply_absorption_level gm4_aa_data 1

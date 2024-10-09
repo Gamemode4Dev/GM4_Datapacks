@@ -12,6 +12,6 @@ attribute @s generic.attack_damage modifier add gm4_monsters_unbound:elite_buff.
 loot replace entity @s armor.head loot gm4_monsters_unbound:elite/vorpal
 data modify entity @s ArmorDropChances[3] set value 1F
 
-scoreboard players add @s gm4_sr_proj_damage_change 5
+scoreboard players add @s gm4_sr_arrow.damage_change 5
 
 team join gm4_mu_elite.vorpal

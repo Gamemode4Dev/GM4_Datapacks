@@ -18,11 +18,7 @@ scoreboard players operation @s gm4_aa_stat.damage_dealt += @s gm4_aa_stat.damag
 execute if entity @s[tag=gm4_aa_effect_immunity.active] run function gm4_augmented_armor:player/clear_immunities
 
 # process armor augments
-execute if predicate gm4_augmented_armor:modified_armor/generic_wearing at @s run function gm4_augmented_armor:armor/trigger/clocked
-
-# update regeneration if score for them is set
-execute if score $update.combat_regeneration gm4_aa_data matches 1 run function gm4_augmented_armor:player/combat_regeneration/update
-execute if score $update.armor_regeneration gm4_aa_data matches 1 run function gm4_augmented_armor:player/armor_regeneration/update
+execute if items entity @s armor.* #gm4_survival_refightalized:armor[custom_data~{gm4_augmented_armor:{}}] at @s run function gm4_augmented_armor:armor/trigger/clocked
 
 # remove second wind tag if armor is taken off
 ##tag @s[tag=gm4_aa_augment.rejuvenating.stored_health.active,predicate=!gm4_augmented_armor:modified_armor/second_wind] remove gm4_aa_augment.rejuvenating.stored_health.active

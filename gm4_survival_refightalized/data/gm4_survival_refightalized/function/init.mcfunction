@@ -3,42 +3,50 @@ execute unless score survival_refightalized gm4_earliest_version < survival_refi
 scoreboard players set survival_refightalized gm4_modules 1
 
 # scoreboards
-scoreboard objectives add gm4_sr_config dummy
-scoreboard objectives add gm4_sr_mob_difficulty dummy
 scoreboard objectives add gm4_sr_data dummy
-scoreboard objectives add gm4_sr_timer dummy
-scoreboard objectives add gm4_sr_health.current dummy
-scoreboard objectives add gm4_sr_health.max dummy
-scoreboard objectives add gm4_sr_health.percentage dummy
-scoreboard objectives add gm4_sr_health.absorption dummy
-scoreboard objectives add gm4_sr_health.absorption_max dummy
-scoreboard objectives add gm4_sr_healstore dummy
-scoreboard objectives add gm4_sr_hunger food
-scoreboard objectives add gm4_sr_combat_regen_timer dummy
-scoreboard objectives add gm4_sr_sleep custom:sleep_in_bed
-scoreboard objectives add gm4_sr_damage_cap dummy
-scoreboard objectives add gm4_sr_armor armor
-scoreboard objectives add gm4_sr_absorp_reduced_timer dummy
-scoreboard objectives add gm4_sr_tier dummy
-scoreboard objectives add gm4_sr_last_slept_night dummy
-scoreboard objectives add gm4_sr_damage_taken minecraft.custom:minecraft.damage_taken
-scoreboard objectives add gm4_sr_damage_absorbed minecraft.custom:minecraft.damage_absorbed
-scoreboard objectives add gm4_sr_damage_resisted minecraft.custom:minecraft.damage_resisted
-scoreboard objectives add gm4_sr_armor_reduced dummy
-scoreboard objectives add gm4_sr_armor_reduction_timer dummy
-scoreboard objectives add gm4_sr_fast_regen_health dummy
-scoreboard objectives add gm4_sr_fast_regen_timer dummy
-scoreboard objectives add gm4_sr_proj_fire_delay dummy
-scoreboard objectives add gm4_sr_proj_fire_delay_left dummy
-scoreboard objectives add gm4_sr_proj_damage_change dummy
+scoreboard objectives add gm4_sr_config dummy
+
+scoreboard objectives add gm4_sr_mob.difficulty dummy
+scoreboard objectives add gm4_sr_mob.damage_cap dummy
+
+scoreboard objectives add gm4_sr_health.restoration dummy
+scoreboard objectives add gm4_sr_health.regeneration_timer dummy
+scoreboard objectives add gm4_sr_health.absorption_reduction_timer dummy
+scoreboard objectives add gm4_sr_health.quick_regeneration_health dummy
+scoreboard objectives add gm4_sr_health.quick_regeneration_timer dummy
+
+scoreboard objectives add gm4_sr_stat.current_health dummy
+scoreboard objectives add gm4_sr_stat.max_health dummy
+scoreboard objectives add gm4_sr_stat.health_percentage dummy
+scoreboard objectives add gm4_sr_stat.current_absorption dummy
+scoreboard objectives add gm4_sr_stat.max_absorption dummy
+
+scoreboard objectives add gm4_sr_stat.armor_recharge_change dummy
+scoreboard objectives add gm4_sr_stat.regeneration_rate_change dummy
+
+scoreboard objectives add gm4_sr_stat.hunger food
+scoreboard objectives add gm4_sr_stat.sleep_in_bed custom:sleep_in_bed
+scoreboard objectives add gm4_sr_stat.last_slept_night dummy
+scoreboard objectives add gm4_sr_stat.damage_taken minecraft.custom:minecraft.damage_taken
+scoreboard objectives add gm4_sr_stat.damage_absorbed minecraft.custom:minecraft.damage_absorbed
+scoreboard objectives add gm4_sr_stat.damage_resisted minecraft.custom:minecraft.damage_resisted
+scoreboard objectives add gm4_sr_stat.armor armor
+
+scoreboard objectives add gm4_sr_armor.tier dummy
+scoreboard objectives add gm4_sr_armor.reduction dummy
+scoreboard objectives add gm4_sr_armor.reduction_timer dummy
+
+scoreboard objectives add gm4_sr_arrow.fire_delay dummy
+scoreboard objectives add gm4_sr_arrow.fire_delay_left dummy
+scoreboard objectives add gm4_sr_arrow.damage_change dummy
 
 scoreboard objectives add gm4_sr_shield.use_ticks dummy
 scoreboard objectives add gm4_sr_shield.timer dummy
 
 # configs
 execute unless score $natural_regen gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $natural_regen gm4_sr_config 1
-execute unless score $combat_regen_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $combat_regen_timer gm4_sr_config 750
-execute unless score $armor_recharge_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $armor_recharge_timer gm4_sr_config 250
+execute unless score $combat_regen_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $combat_regen_timer gm4_sr_config 3750
+execute unless score $armor_recharge_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $armor_recharge_timer gm4_sr_config 2500
 
 # swap natural regeneration to module's system
 execute unless score $natural_regen_disabled gm4_mu_data matches 1 run gamerule doInsomnia false

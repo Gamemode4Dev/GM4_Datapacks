@@ -17,12 +17,12 @@ scoreboard players set $mob_health gm4_sr_data 16
 scoreboard players set $mob_damage gm4_sr_data 35
 scoreboard players set $mob_speed gm4_sr_data 30
 # max damage mob is allowed to deal in one hit (to deal with weapons)
-scoreboard players set @s gm4_sr_damage_cap 70
+scoreboard players set @s gm4_sr_mob.damage_cap 70
 tag @s add gm4_sr_check_damage_cap
 
 # reduce arrow damage
-execute store result score @s gm4_sr_proj_damage_change run random value -8..-4
-scoreboard players set @s gm4_sr_proj_fire_delay 3
+execute store result score @s gm4_sr_arrow.damage_change run random value -8..-4
+scoreboard players set @s gm4_sr_arrow.fire_delay 3
 
 # set armor
 execute store result score $armor_chance gm4_sr_data run random value 0..15

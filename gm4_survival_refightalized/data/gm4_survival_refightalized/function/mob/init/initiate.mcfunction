@@ -21,7 +21,7 @@ scoreboard players operation $difficulty gm4_sr_data > #0 gm4_sr_data
 scoreboard players operation $difficulty gm4_sr_data < #100 gm4_sr_data
 
 # store difficulty on mob
-scoreboard players operation @s gm4_sr_mob_difficulty = $difficulty gm4_sr_data
+scoreboard players operation @s gm4_sr_mob.difficulty = $difficulty gm4_sr_data
 
 # reset scoreboard
 scoreboard players reset $mob_extras gm4_sr_data

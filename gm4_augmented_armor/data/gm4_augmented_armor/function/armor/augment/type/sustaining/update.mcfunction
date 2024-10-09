@@ -11,7 +11,7 @@ execute store result score $level gm4_aa_data run data get storage gm4_augmented
 scoreboard players operation $level gm4_aa_data *= $missing_health gm4_aa_data
 
 # modify attribute
-execute store result storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.regen_speed int 1 run scoreboard players get $level gm4_aa_data
+execute store result storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.regen_speed.value int 1 run scoreboard players get $level gm4_aa_data
 
 # use lib_lore to remove the old current bonus text
 data modify storage gm4_lore:temp Source set from storage gm4_augmented_armor:temp components."minecraft:lore"
@@ -27,6 +27,3 @@ function #gm4_lore:insert
 
 # update
 data modify storage gm4_augmented_armor:temp components."minecraft:lore" set from storage gm4_lore:temp Source
-
-# set this score so player combat regeneration is recalculated
-scoreboard players set $update.combat_regeneration gm4_aa_data 1

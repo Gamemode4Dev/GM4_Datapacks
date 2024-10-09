@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{custom_attribute:{armor_recharge:'level_2'},augment:{name:reactive,id:10,triggers:{clocked:0,damage_dealt:0,damage_taken:0}}}}"
+              "tag": "{gm4_augmented_armor:{custom_attribute:{armor_recharge:{value:'level_2'}},augment:{name:reactive,id:10,triggers:{clocked:0,damage_dealt:0,damage_taken:0}}}}"
             }
           ]
         }
