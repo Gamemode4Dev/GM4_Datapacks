@@ -9,7 +9,7 @@ advancement revoke @s only gm4_guidebook:loot_village_chest
 # raycast to chest block
 scoreboard players set $ray gm4_guide 50
 scoreboard players set $found gm4_guide 0
-execute anchored eyes positioned ^ ^ ^ run function gm4_guidebook:get_book/chest/ray
+execute anchored eyes positioned ^ ^ ^ run function gm4_guidebook:get_book/chest/ray with storage gm4_guidebook:register
 
 # clean up
 scoreboard players reset $ray gm4_guide
