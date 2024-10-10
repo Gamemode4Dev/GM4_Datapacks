@@ -8,6 +8,7 @@ tag @e remove gm4_es_new_mob
 
 function #gm4_everstone:update_age
 
+execute if entity @s[type=bogged] run function gm4_everstone:aging/update_age/bogged
 execute if entity @s[type=guardian] run function gm4_everstone:aging/update_age/guardian
 execute if entity @s[type=piglin] run function gm4_everstone:aging/update_age/piglin
 execute if entity @s[type=skeleton] run function gm4_everstone:aging/update_age/skeleton

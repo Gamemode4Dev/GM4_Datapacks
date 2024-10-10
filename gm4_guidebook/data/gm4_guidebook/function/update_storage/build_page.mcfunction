@@ -1,4 +1,3 @@
-import json
 # builds each page of the table of contents
 # @s = none
 # located at world spawn
@@ -9,16 +8,12 @@ import json
 scoreboard players set $line_count gm4_guide 2
 data merge storage gm4_guidebook:temp {page:['["",{"translate":"gui.gm4.guidebook.page.toc","fallback":"","color":"white","font":"gm4:guidebook"}]'],lectern_page:[]}
 function gm4_guidebook:update_storage/build_line
+execute if score $line_count gm4_guide matches 2 run return 1
 
 # add table of contents page
-page = {
-    "nbt": "page[]",
-    "storage": "gm4_guidebook:temp",
-    "interpret": True,
-    "separator":"\n"
-  }
-data modify block 29999998 1 7133 front_text.messages[0] set value json.dumps(page,separators=(',',':'))
-data modify storage gm4_guidebook:register table_of_contents append from block 29999998 1 7133 front_text.messages[0]
+data modify block 29999998 1 7133 front_text.messages[0] set value '{"nbt":"page[]","storage":"gm4_guidebook:temp","interpret":true,"separator":{"text":"\\\\n","color":"white"}}'
+data modify storage gm4_guidebook:temp page_content set from block 29999998 1 7133 front_text.messages[0]
+function gm4_guidebook:update_storage/add_to_toc with storage gm4_guidebook:temp
 
 # store (unfinished) lectern toc page
 data modify storage gm4_guidebook:temp lectern_pages append from storage gm4_guidebook:temp lectern_page

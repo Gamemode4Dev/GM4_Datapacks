@@ -4,6 +4,7 @@
   "module_type": "expansion",
   "load_check": "metallurgy",
   "base_module": "metallurgy",
+  "wiki_link": "https://wiki.gm4.co/Metallurgy/Arborenda_Shamir",
   "icon": {
     "id": "minecraft:anvil"
   },

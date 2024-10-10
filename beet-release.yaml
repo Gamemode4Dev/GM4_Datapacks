@@ -25,6 +25,8 @@ pipeline:
       - gm4.plugins.module.default_pack_icon
       - gm4.plugins.readme_generator.libraries
     meta:
+      vanilla:
+        version: 1.21.1
       mecha:
         formatting:
           layout: preserve
@@ -51,6 +53,8 @@ pipeline:
         meta: {copy_files: {data_pack: {LICENSE.md: "../LICENSE.md"}}}
       - gm4.plugins.readme_generator
     meta:
+      vanilla:
+        version: 1.21.1
       mecha:
         formatting:
           layout: preserve
@@ -83,6 +87,8 @@ pipeline:
       - gm4.plugins.manifest.update_patch
       - gm4.plugins.resource_pack.pad_model_overrides
     meta:
+      vanilla:
+        version: 1.21.1
       pack_scan: resource_pack
 
   - gm4.plugins.manifest.write_meta
@@ -90,3 +96,5 @@ pipeline:
 meta:
   autosave:
     link: false
+  vanilla:
+    version: 1.21.1

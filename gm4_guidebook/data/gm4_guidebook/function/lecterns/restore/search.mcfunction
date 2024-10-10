@@ -14,10 +14,10 @@ execute if score $item gm4_guide matches 1.. store result score $slot gm4_guide 
 execute unless score $slot gm4_guide matches -1 store result score $count gm4_guide run data get storage gm4_guidebook:temp Item.count
 
 # replace item
-execute if score $slot gm4_guide matches 0..8 run function gm4_guidebook:lecterns/restore/hotbar
-execute if score $slot gm4_guide matches 9..17 run function gm4_guidebook:lecterns/restore/inv_1
-execute if score $slot gm4_guide matches 18..26 run function gm4_guidebook:lecterns/restore/inv_2
-execute if score $slot gm4_guide matches 27..35 run function gm4_guidebook:lecterns/restore/inv_3
+execute if score $slot gm4_guide matches 0..8 run function gm4_guidebook:lecterns/restore/hotbar with storage gm4_guidebook:register
+execute if score $slot gm4_guide matches 9..17 run function gm4_guidebook:lecterns/restore/inv_1 with storage gm4_guidebook:register
+execute if score $slot gm4_guide matches 18..26 run function gm4_guidebook:lecterns/restore/inv_2 with storage gm4_guidebook:register
+execute if score $slot gm4_guide matches 27..35 run function gm4_guidebook:lecterns/restore/inv_3 with storage gm4_guidebook:register
 
 # clean up
 data remove storage gm4_guidebook:temp Item

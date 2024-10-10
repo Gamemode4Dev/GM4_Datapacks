@@ -3,7 +3,7 @@
   "name": "Custom Crafters",
   "module_type": "base",
   "description": "Craft new items with a custom crafter!",
-  "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters",
+  "wiki_link": "https://wiki.gm4.co/Custom_Crafters",
   "icon": {
     "id": "minecraft:crafting_table"
   },
