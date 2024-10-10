@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "LLL",
+    "LWL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "tag": "minecraft:logs_that_burn"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "id": "minecraft:coal_block",
+    "count": 2,
+    "components": {
+      "minecraft:custom_model_data": "item/charcoal_block",
+      "minecraft:custom_name": "{\"translate\":\"block.gm4.charcoal_block\",\"fallback\":\"Block of Charcoal\",\"italic\":false}"
+    }
+  }
+}
