@@ -82,6 +82,12 @@
                   "predicate": {
                     "biomes": "minecraft:end_highlands"
                   }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biomes": "#gm4_end_fishing:nullscape/shadowlands"
+                  }
                 }
               ]
             }
@@ -134,6 +140,12 @@
                   "condition": "minecraft:location_check",
                   "predicate": {
                     "biomes": "minecraft:small_end_islands"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biomes": "#gm4_end_fishing:nullscape/void_barrens"
                   }
                 }
               ]

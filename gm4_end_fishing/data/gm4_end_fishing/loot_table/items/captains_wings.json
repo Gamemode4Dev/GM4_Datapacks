@@ -1,0 +1,46 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:elytra",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/captains_wings"
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "mode": "append",
+              "lore": [
+                {
+                  "translate": "text.gm4.end_ship_elytra.10.1",
+                  "fallback": "Nobody imagined the Captain's lost",
+                  "italic": false,
+                  "color": "dark_gray"
+                },
+                {
+                  "translate": "text.gm4.end_ship_elytra.10.2",
+                  "fallback": "wings would be seen again, ever.",
+                  "italic": false,
+                  "color": "dark_gray"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "min": 0,
+                "max": 0.005
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

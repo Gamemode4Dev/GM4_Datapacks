@@ -26,6 +26,12 @@
                   "predicate": {
                     "biomes": "minecraft:end_highlands"
                   }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biomes": "#gm4_end_fishing:nullscape/shadowlands"
+                  }
                 }
               ]
             }
@@ -40,8 +46,45 @@
         },
         {
           "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "inverted",
+              "term": {
+                "condition": "location_check",
+                "predicate": {
+                  "biomes": "#gm4_end_fishing:nullscape/crystal_peaks"
+                }
+              }
+            }
+          ],
           "weight": 1,
           "name": "minecraft:obsidian"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:nullscape/crystal_peaks"
+              }
+            }
+          ],
+          "weight": 8,
+          "name": "minecraft:crying_obsidian"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:nullscape/crystal_peaks"
+              }
+            }
+          ],
+          "weight": 16,
+          "name": "minecraft:amethyst_block"
         },
         {
           "type": "minecraft:item",
@@ -109,6 +152,12 @@
                   "predicate": {
                     "biomes": "minecraft:end_midlands"
                   }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biomes": "#gm4_end_fishing:nullscape/shadowlands"
+                  }
                 }
               ]
             }
@@ -130,6 +179,12 @@
                   "condition": "minecraft:location_check",
                   "predicate": {
                     "biomes": "minecraft:end_barrens"
+                  }
+                },
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "biomes": "#gm4_end_fishing:nullscape/void_barrens"
                   }
                 }
               ]
