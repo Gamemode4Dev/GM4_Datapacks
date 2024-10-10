@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "gm4_tunnel_bores:piston_minecart",
+  "pattern": [
+    "TMP"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:tripwire_hook"
+    },
+    "M": {
+      "item": "minecraft:furnace_minecart"
+    },
+    "P": {
+      "item": "minecraft:piston"
+    }
+  },
+  "result": {
+    "id": "minecraft:furnace_minecart",
+    "components": {
+      "minecraft:custom_model_data": "item/piston_minecart",
+      "minecraft:custom_data": "{gm4_machines:{id:'tunnel_bore'}}",
+      "minecraft:custom_name": "{\"translate\":\"item.gm4.minecart.bore\",\"fallback\":\"Minecart with Piston\",\"color\":\"white\",\"italic\":false}"
+    }
+  }
+}

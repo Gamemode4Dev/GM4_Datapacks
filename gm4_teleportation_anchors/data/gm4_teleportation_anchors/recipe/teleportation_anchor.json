@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "EPE",
+    "OLO",
+    "CCC"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "P": {
+      "item": "minecraft:ender_pearl"
+    },
+    "O": {
+      "item": "minecraft:crying_obsidian"
+    },
+    "L": {
+      "item": "minecraft:lodestone"
+    },
+    "C": {
+      "item": "minecraft:chiseled_stone_bricks"
+    }
+  },
+  "result": {
+    "id": "minecraft:player_head",
+    "components": {
+      "minecraft:custom_model_data": "item/teleportation_anchor",
+      "minecraft:profile": "$teleportation_anchor",
+      "minecraft:custom_data": "{gm4_machines:{id:'teleportation_anchor'}}",
+      "minecraft:custom_name": "{\"translate\":\"block.gm4.teleportation_anchor\",\"fallback\":\"Teleportation Anchor\",\"color\":\"white\",\"italic\":false}"
+    }
+  }
+}
