@@ -24,12 +24,11 @@ scoreboard objectives add gm4_oa_sniff dummy
 scoreboard objectives add gm4_health health
 scoreboard objectives add gm4_oa_sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add gm4_oa_swim minecraft.custom:minecraft.swim_one_cm
-scoreboard objectives add gm4_oa_bow minecraft.used:minecraft.bow
+scoreboard objectives add gm4_oa_bow_hawkeye minecraft.used:minecraft.bow
+scoreboard objectives add gm4_oa_bow_freezing minecraft.used:minecraft.bow
+scoreboard objectives add gm4_oa_bow_tranquilizing minecraft.used:minecraft.bow
 
-# check if players are in the nether and tag them if they are
-tag @a remove gm4_oa_in_nether
-execute in minecraft:the_nether run tag @a[x=0] add gm4_oa_in_nether
-
+# start module
 execute unless score orb_of_ankou gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Orb of Ankou"}
 execute unless score orb_of_ankou gm4_earliest_version < orb_of_ankou gm4_modules run scoreboard players operation orb_of_ankou gm4_earliest_version = orb_of_ankou gm4_modules
 scoreboard players set orb_of_ankou gm4_modules 1

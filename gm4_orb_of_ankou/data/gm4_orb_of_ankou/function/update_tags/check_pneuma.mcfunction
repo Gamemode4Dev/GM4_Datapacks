@@ -16,6 +16,7 @@ tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/draining] add gm4_pneuma_drain
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/expeditious] add gm4_pneuma_expeditious
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/feathery] add gm4_pneuma_feathery
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/feigning] add gm4_pneuma_feigning
+tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/freezing] add gm4_pneuma_freezing
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/gazing] add gm4_pneuma_gazing
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/gliding] add gm4_pneuma_gliding
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/hawkeye] add gm4_pneuma_hawkeye
@@ -31,6 +32,7 @@ tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/sniffing] add gm4_pneuma_sniff
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/soaring] add gm4_pneuma_soaring
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/striding] add gm4_pneuma_striding
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/synergetic] add gm4_pneuma_synergetic
+tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/tranquilizing] add gm4_pneuma_tranquilizing
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/vanishing] add gm4_pneuma_vanishing
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/volatile] add gm4_pneuma_volatile
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/withering] add gm4_pneuma_withering
@@ -43,7 +45,13 @@ tag @s[tag=gm4_pneuma_draining] add gm4_sneak_pneuma
 tag @s[tag=gm4_pneuma_shrieking] add gm4_sneak_pneuma
 tag @s[tag=gm4_pneuma_dashing] add gm4_sneak_pneuma
 
+scoreboard players reset @s gm4_oa_bow_hawkeye
+scoreboard players reset @s gm4_oa_bow_freezing
+scoreboard players reset @s gm4_oa_bow_tranquilizing
+
 # run tick functions
 execute if entity @a[gamemode=!spectator,tag=gm4_pneuma_agile,limit=1] run schedule function gm4_orb_of_ankou:pneumas/temp_tick/agile 1t
 execute if entity @a[gamemode=!spectator,tag=gm4_pneuma_hawkeye,limit=1] run schedule function gm4_orb_of_ankou:pneumas/temp_tick/hawkeye 1t
+execute if entity @a[gamemode=!spectator,tag=gm4_pneuma_freezing,limit=1] run schedule function gm4_orb_of_ankou:pneumas/temp_tick/freezing 1t
+execute if entity @a[gamemode=!spectator,tag=gm4_pneuma_tranquilizing,limit=1] run schedule function gm4_orb_of_ankou:pneumas/temp_tick/tranquilizing 1t
 execute if entity @a[gamemode=!spectator,tag=gm4_pneuma_striding,limit=1] run schedule function gm4_orb_of_ankou:pneumas/temp_tick/striding 1t
