@@ -2,10 +2,23 @@
   "env": {
     "gameVersion": "1.21",
     "exclude": [
-      "@gitignore",
+      ".beet_cache/",
       ".vscode/",
       ".github/",
-      "test/"
-    ]
+      "docs/",
+      "out/",
+      "release/"
+    ],
+    "mcmetaSummaryOverrides": {
+      "commands": {
+        "path": "./commands.json",
+        "replace": false
+      }
+    },
+    "customResources": {
+      "guidebook": {
+        "category": "gm4_guidebook"
+      }
+    }
   }
 }
