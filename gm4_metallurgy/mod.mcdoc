@@ -1,0 +1,18 @@
+dispatch mcdoc:custom_data[gm4_metallurgy] to struct CustomData {
+  has_shamir?: 1b,
+  ore_in_animation?: 1b,
+  active_shamir?: string,
+  stored_shamir?: string,
+  ore_type?: MetalType,
+  custom_model_data?: int,
+  item?: ItemType,
+  metal?: struct {
+    type: MetalType,
+    amount?: [short],
+    castable?: 1b,
+  },
+}
+
+type ItemType = ("ore" | "obsidian_cast")
+
+type MetalType = ("aluminium" | "barimium" | "barium" | "bismuth" | "copper" | "curies_bismium" | "thorium_brass" | "thorium")
