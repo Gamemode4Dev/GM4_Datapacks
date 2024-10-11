@@ -16,14 +16,14 @@ team join gm4_vecto_nocoll @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,dist
 scoreboard players operation @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] gm4_vecto_id = @s gm4_vecto_id
 
 # set boat type
-execute if predicate gm4_vecto_shamir:biome/acacia run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"acacia"}
-execute if predicate gm4_vecto_shamir:biome/birch run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"birch"}
-execute if predicate gm4_vecto_shamir:biome/dark_oak run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"dark_oak"}
-execute if predicate gm4_vecto_shamir:biome/jungle run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"jungle"}
-execute if predicate gm4_vecto_shamir:biome/spruce run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"spruce"}
-execute if predicate gm4_vecto_shamir:biome/mangrove run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"mangrove"}
-execute if predicate gm4_vecto_shamir:biome/cherry run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"cherry"}
-execute if predicate gm4_vecto_shamir:biome/bamboo run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"bamboo"}
+execute if biome ~ ~ ~ #gm4_vecto_shamir:acacia run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"acacia"}
+execute if biome ~ ~ ~ #gm4_vecto_shamir:birch run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"birch"}
+execute if biome ~ ~ ~ #gm4_vecto_shamir:dark_oak run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"dark_oak"}
+execute if biome ~ ~ ~ #gm4_vecto_shamir:jungle run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"jungle"}
+execute if biome ~ ~ ~ #gm4_vecto_shamir:spruce run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"spruce"}
+execute if biome ~ ~ ~ #gm4_vecto_shamir:mangrove run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"mangrove"}
+execute if biome ~ ~ ~ #gm4_vecto_shamir:cherry run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"cherry"}
+execute if biome ~ ~ ~ #gm4_vecto_shamir:bamboo run data merge entity @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] {Type:"bamboo"}
 
 # remove new tag
 tag @e[type=minecraft:boat,tag=gm4_vecto_new_vehicle,distance=..1,sort=nearest,limit=1] remove gm4_vecto_new_vehicle
