@@ -39,7 +39,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "minecraft:empty"
+              "value": "gm4:empty"
             }
           ],
           "conditions": [
@@ -102,7 +102,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "minecraft:empty"
+              "value": "gm4:empty"
             }
           ],
           "conditions": [
@@ -165,7 +165,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "minecraft:empty"
+              "value": "gm4:empty"
             }
           ],
           "conditions": [
@@ -228,7 +228,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "minecraft:empty"
+              "value": "gm4:empty"
             }
           ],
           "conditions": [

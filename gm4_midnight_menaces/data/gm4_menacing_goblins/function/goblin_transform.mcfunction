@@ -5,4 +5,4 @@ summon zombie ~ ~ ~ {CustomName:'{"translate":"entity.gm4.goblin","fallback":"Go
 scoreboard players set @e[type=zombie,tag=gm4_goblin,distance=0] gm4_entity_version 1
 
 tp @e[type=zombie,limit=1,distance=0] @s
-data merge entity @s {DeathTime:19s,Health:0f,DeathLootTable:"minecraft:empty"}
+data merge entity @s {DeathTime:19s,Health:0f,DeathLootTable:"gm4:empty"}
