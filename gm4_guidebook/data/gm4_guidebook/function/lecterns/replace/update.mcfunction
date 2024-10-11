@@ -10,10 +10,7 @@ execute unless entity @e[type=marker,tag=gm4_guide_lectern,distance=..0.5,limit=
 
 # replace book with lectern book
 execute store result score $trigger gm4_guide run data get block ~ ~ ~ Book.components."minecraft:custom_data".gm4_guidebook.trigger
-execute if score $trigger gm4_guide matches 1 run loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/guidebook
-execute unless score $trigger gm4_guide matches 1 run function #gm4_guidebook:update_lectern
-execute positioned ~ ~-3000 ~ run data modify block ~ ~3000 ~ Book.components set from entity @e[type=item,distance=..1,predicate=gm4_guidebook:lectern_contents,limit=1] Item.components
-execute positioned ~ ~-3000 ~ run kill @e[type=item,distance=..1,predicate=gm4_guidebook:lectern_contents,limit=1]
+function gm4_guidebook:lecterns/update with storage gm4_guidebook:register
 
 # store page count (minus 1)
 execute store result score @e[type=marker,tag=gm4_guide_lectern,distance=..0.5,limit=1] gm4_guide_pages run data get block ~ ~ ~ Book.components."minecraft:written_book_content".pages
@@ -22,6 +19,9 @@ scoreboard players remove @e[type=marker,tag=gm4_guide_lectern,distance=..0.5,li
 # mark toc
 tag @e[type=marker,tag=gm4_guide_lectern,distance=..0.5,limit=1] remove gm4_guide_toc
 execute if score $trigger gm4_guide matches 1 run tag @e[type=marker,tag=gm4_guide_lectern,distance=..0.5,limit=1] add gm4_guide_toc
+
+# start tracking
+function gm4_guidebook:lecterns/section/track
 
 # update page number
 execute if score $trigger gm4_guide matches 1 run data modify block ~ ~ ~ Page set value 1

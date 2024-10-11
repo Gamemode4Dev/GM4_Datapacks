@@ -9,9 +9,12 @@ on:
 env:
   VERSION: '1.21'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
-  TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.21/0.15.11/1.0.1/server/jar
-  TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/HXzEJYgV/fabric-api-0.100.1%2B1.21.jar
-  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/sQSunYHv/packtest-1.8-beta3-mc1.21.jar
+  # https://fabricmc.net/use/server/
+  TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.21.1/0.16.5/1.0.1/server/jar
+  # https://modrinth.com/mod/fabric-api/versions
+  TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/WTaAx4ah/fabric-api-0.105.0%2B1.21.1.jar
+  # https://modrinth.com/mod/packtest/versions
+  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/x9txtivi/packtest-1.8-mc1.21.1.jar
 
 jobs:
   build:

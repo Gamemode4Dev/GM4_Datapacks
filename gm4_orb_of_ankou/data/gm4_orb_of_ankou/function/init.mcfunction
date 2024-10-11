@@ -37,6 +37,5 @@ schedule function gm4_orb_of_ankou:main 1t
 schedule function gm4_orb_of_ankou:tick 1t
 
 
-execute if score gm4_guidebook load.status matches 1 run summon marker ~ 737.333098032259 ~ {CustomName:'"gm4_corripio_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"corripio_shamir",page_count:2,line_count:1,module_name:"Corripio Shamir"}}
 
 #$moduleUpdateList

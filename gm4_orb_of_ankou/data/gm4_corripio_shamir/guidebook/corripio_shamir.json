@@ -4,6 +4,7 @@
   "module_type": "expansion",
   "load_check": "orb_of_ankou",
   "base_module": "metallurgy",
+  "wiki_link": "https://wiki.gm4.co/Metallurgy/Corripio_Shamir",
   "icon": {
     "id": "minecraft:anvil"
   },

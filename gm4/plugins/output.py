@@ -2,6 +2,7 @@ from beet import Context
 from pathlib import Path
 import os
 import json
+import re
 import requests
 import shutil
 import logging
@@ -171,6 +172,7 @@ def publish_modrinth(ctx: Context, config: ManifestConfig, release_dir: Path, fi
 					file_bytes = f.read()
 
 				changelog = run(["git", "log", "-1", "--format=%s"])
+				changelog = re.sub(r"\(#(\d+)\)", "([#\\1](https://github.com/Gamemode4Dev/GM4_Datapacks/pull/\\1))", changelog)
 
 				res = requests.post(f"{MODRINTH_API}/version", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, files={
 					"data": json.dumps({

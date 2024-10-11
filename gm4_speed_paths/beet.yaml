@@ -16,6 +16,8 @@ meta:
       description: Gives you a speed effect when you walk on path blocks.
       recommended: []
       notes: []
+    modrinth:
+      project_id: vRH8BKZ7
     video: https://www.youtube.com/watch?v=99VFSW1ORzU
     wiki: https://wiki.gm4.co/wiki/Speed_Paths
     credits:

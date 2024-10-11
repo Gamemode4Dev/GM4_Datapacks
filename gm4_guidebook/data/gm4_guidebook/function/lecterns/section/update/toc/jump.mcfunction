@@ -4,9 +4,8 @@
 # run from gm4_guidebook:lecterns/section/check_page/normal
 
 # jump to section
-loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/guidebook
-execute positioned ~ ~-3000 ~ run data modify block ~ ~3000 ~ Book.components set from entity @e[type=item,distance=..1,predicate=gm4_guidebook:lectern_contents,limit=1] Item.components
-execute positioned ~ ~-3000 ~ run kill @e[type=item,distance=..1,predicate=gm4_guidebook:lectern_contents,limit=1]
+scoreboard players set $trigger gm4_guide 1
+function gm4_guidebook:lecterns/update with storage gm4_guidebook:register
 
 # store page count (minus 1)
 execute store result score @s gm4_guide_pages run data get block ~ ~ ~ Book.components."minecraft:written_book_content".pages

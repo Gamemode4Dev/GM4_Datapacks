@@ -66,6 +66,8 @@ meta:
         - gm4_cement_mixers
         - gm4_relocators
       notes: []
+    modrinth:
+      project_id: h4BcuD3C
     video: https://www.youtube.com/watch?v=qa9lcbii1BE
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks
     credits:

@@ -4,6 +4,7 @@
   "module_type": "expansion",
   "load_check": "desire_lines",
   "base_module": "metallurgy",
+  "wiki_link": "https://wiki.gm4.co/Metallurgy/Celaro_Shamir",
   "icon": {
     "id": "minecraft:anvil"
   },
