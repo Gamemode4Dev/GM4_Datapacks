@@ -317,10 +317,8 @@ def analyze_shaped_recipe(ctx: Context, recipe: dict[str, Any], name: str) -> Re
                         generate_custom_item_tag(ctx, TagData(f"#{NAMESPACE}:{name}_ingredient_{len(list_symbols) + 1}", ingredient)) #type: ignore
                         list_symbols.append(symbol)
                     item = f"#{NAMESPACE}:{name}_ingredient_{list_symbols.index(symbol) + 1}"
-                elif "item" in ingredient:
-                    item = ingredient["item"]
                 else:
-                    item = "#" + ingredient["tag"]
+                    item = ingredient
             pattern_row.append(item)
 
             def add_result(item: str):
@@ -430,15 +428,13 @@ def analyze_shapeless_recipe(ctx: Context, recipe: dict[str, Any], name: str) ->
             tag_count += 1
             item = f"#{NAMESPACE}:{name}_ingredient_{tag_count}"
             generate_custom_item_tag(ctx, TagData(item, entry)) # type: ignore
-        elif "item" in entry:
-            item = entry["item"]
+        else:
+            item = entry
             # special case: check if the item is a bucket or bottle type (used for output)
             if item in buckets:
                 bucket_count += 1
             elif item in bottles:
                 bottle_count += 1
-        else:
-            item = "#" + entry["tag"]
         ingredients.append(item)
 
     # if there were (non-empty) buckets in the recipe, return empty buckets
