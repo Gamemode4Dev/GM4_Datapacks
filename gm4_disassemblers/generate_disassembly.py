@@ -75,13 +75,16 @@ def beet_default(ctx: Context):
 
     pools: Any = []
     for ingredient, count in ingredients:
+      if ingredient == "minecraft:air":
+        pools.append({
+          "rolls": count,
+          "entries": [{"type": "minecraft:loot_table", "value": "gm4:air"}]
+        })
+        continue
       base: Any = {
         "rolls": count,
         "entries": [{"type": "minecraft:item", "name": ingredient}]
       }
-      if ingredient == "minecraft:air":
-        pools.append(base)
-        continue
       base["entries"][0]["conditions"] = [{
         "condition": "value_check",
         "value": {
@@ -107,7 +110,7 @@ def beet_default(ctx: Context):
           "type": "minecraft:alternatives",
           "children": [
             base["entries"][0],
-            { "type": "minecraft:item", "name": "minecraft:air" }
+            { "type": "minecraft:loot_table", "value": "gm4:air" }
           ]
         }]
       })
