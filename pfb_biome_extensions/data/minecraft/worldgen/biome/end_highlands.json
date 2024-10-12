@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/end_highlands",
-    "liquid": "#minecraft:liquid/in_biome/end_highlands"
-  },
+  "carvers": "#minecraft:in_biome/end_highlands",
   "downfall": 0.5,
   "effects": {
     "fog_color": 10518688,

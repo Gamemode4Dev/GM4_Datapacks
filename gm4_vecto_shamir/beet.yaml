@@ -6,9 +6,9 @@ data_pack:
   load: .
   overlays:
     - formats:
-        min_inclusive: 57
-        max_inclusive: 999
-      directory: overlay_57
+        min_inclusive: 0
+        max_inclusive: 48
+      directory: overlay_48
 
 resource_pack:
   load: ../gm4_metallurgy
