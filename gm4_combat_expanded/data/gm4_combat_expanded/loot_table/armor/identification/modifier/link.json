@@ -13,7 +13,7 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.max_health",
+                  "attribute": "minecraft:max_health",
                   "id": "gm4_combat_expanded:dynamic",
                   "amount": 0,
                   "operation": "add_value",

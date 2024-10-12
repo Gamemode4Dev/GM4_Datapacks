@@ -3,5 +3,5 @@
 # at @s
 # run from check_snowy_block
 
-attribute @s minecraft:generic.movement_speed modifier remove minecraft:bd5e1dd5-58e8-40fc-9028-cc0d390e7902
+attribute @s minecraft:movement_speed modifier remove minecraft:bd5e1dd5-58e8-40fc-9028-cc0d390e7902
 tag @s remove gm4_mountaineering_ski_slowness

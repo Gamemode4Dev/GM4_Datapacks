@@ -13,7 +13,7 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "attribute": "minecraft:fall_damage_multiplier",
                   "id": "gm4_combat_expanded:dynamic",
                   "amount": 0,
                   "operation": "add_multiplied_base",
@@ -163,7 +163,7 @@
                     "text": "10"
                   },
                   {
-                    "translate": "attribute.name.generic.fall_damage_multiplier"
+                    "translate": "attribute.name.fall_damage_multiplier"
                   }
                 ],
                 "color": "blue",
@@ -199,7 +199,7 @@
                     "text": "20"
                   },
                   {
-                    "translate": "attribute.name.generic.fall_damage_multiplier"
+                    "translate": "attribute.name.fall_damage_multiplier"
                   }
                 ],
                 "color": "blue",
@@ -235,7 +235,7 @@
                     "text": "30"
                   },
                   {
-                    "translate": "attribute.name.generic.fall_damage_multiplier"
+                    "translate": "attribute.name.fall_damage_multiplier"
                   }
                 ],
                 "color": "blue",
@@ -271,7 +271,7 @@
                     "text": "40"
                   },
                   {
-                    "translate": "attribute.name.generic.fall_damage_multiplier"
+                    "translate": "attribute.name.fall_damage_multiplier"
                   }
                 ],
                 "color": "blue",

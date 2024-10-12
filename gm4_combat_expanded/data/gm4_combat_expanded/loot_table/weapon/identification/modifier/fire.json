@@ -13,21 +13,21 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
                   "id": "gm4_combat_expanded:fire_reset_attack_damage",
                   "amount": -1,
                   "operation": "add_value",
                   "slot": "mainhand"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_speed",
+                  "attribute": "minecraft:attack_speed",
                   "id": "gm4_combat_expanded:fire_reset_attack_speed",
                   "amount": -4,
                   "operation": "add_value",
                   "slot": "mainhand"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
                   "id": "gm4_combat_expanded:base_attack_damage",
                   "amount": {
                     "type": "minecraft:score",
@@ -42,7 +42,7 @@
                   "slot": "mainhand"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_speed",
+                  "attribute": "minecraft:attack_speed",
                   "id": "gm4_combat_expanded:base_attack_speed",
                   "amount": {
                     "type": "minecraft:score",
@@ -113,7 +113,7 @@
                     }
                   ],
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "dark_green",
@@ -158,7 +158,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "dark_green",
@@ -209,7 +209,7 @@
                     }
                   ],
                   {
-                    "translate": "attribute.name.generic.attack_speed"
+                    "translate": "attribute.name.attack_speed"
                   }
                 ],
                 "color": "dark_green",
@@ -254,7 +254,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "attribute.name.generic.attack_speed"
+                    "translate": "attribute.name.attack_speed"
                   }
                 ],
                 "color": "dark_green",
