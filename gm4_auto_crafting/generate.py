@@ -516,7 +516,11 @@ def generate_crafting_loot_table(ctx: Context, result: list[RecipeResult], targe
     json: Any = {"type": "minecraft:generic","pools": []}
     for r in result:
         # populate pools
-        pool: Any = {"rolls":r.rolls,"entries":[{"type":"minecraft:item","name":r.name}]}
+        if r.name == "minecraft:air":
+            entry = {"type":"minecraft:loot_table","value":"gm4:air"}
+        else:
+            entry = {"type":"minecraft:item","name":r.name}
+        pool: Any = {"rolls":r.rolls,"entries":[entry]}
         # set count
         if r.count > 1:
             pool["entries"][0]["functions"] = [{"function":"minecraft:set_count","count":r.count}]
