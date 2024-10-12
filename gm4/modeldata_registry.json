@@ -1230,6 +1230,9 @@
       "gm4_book_binders:item/enchanted_page": 1,
       "gm4_book_binders:gui/advancement/book_binders_debind": 2
     },
+    "pearlescent_froglight": {
+      "gm4_monsters_unbound:item/elite_headwear/pearlescent": 1
+    },
     "phantom_membrane": {
       "gm4_midnight_menaces:guidebook_icon/enlarging_phantoms": 1
     },
