@@ -18,7 +18,8 @@ ATTRIBUTES_RENAMES = {
   "minecraft:gravity": "minecraft:generic.gravity",
   "minecraft:jump_strength": "minecraft:generic.jump_strength",
   "minecraft:knockback_resistance": "minecraft:generic.knockback_resistance",
-  "minecraft:luck": "minecraft:generic.luck",
+  # We only use "minecraft:luck" as a potion/effect, never as attribute
+  # "minecraft:luck": "minecraft:generic.luck",
   "minecraft:max_absorption": "minecraft:generic.max_absorption",
   "minecraft:max_health": "minecraft:generic.max_health",
   "minecraft:mining_efficiency": "minecraft:player.mining_efficiency",
