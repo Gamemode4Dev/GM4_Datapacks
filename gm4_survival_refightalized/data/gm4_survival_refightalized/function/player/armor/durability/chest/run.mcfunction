@@ -18,17 +18,17 @@ execute unless score $incoming_damage gm4_sr_data matches 1.. run return 0
 # find the total durability of this item
 execute store result score $total_durability gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:1b}].components."minecraft:max_damage"
 execute if score $total_durability gm4_sr_data matches 0 store result score $total_durability gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:1b}].components."minecraft:custom_data".gm4_augmented_armor.durability
-execute if score $total_durability gm4_sr_data matches 0 store result score $total_durability gm4_sr_data run function gm4_survival_refightalized:player/armor_durability/chest/find_durability
+execute if score $total_durability gm4_sr_data matches 0 store result score $total_durability gm4_sr_data run function gm4_survival_refightalized:player/armor/durability/chest/find_durability
 execute if score $total_durability gm4_sr_data matches 0 run return 0
 
 # add incoming damage to the current damage
 execute store result score $current_damage gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:1b}].components."minecraft:damage"
 scoreboard players operation $current_damage gm4_sr_data += $incoming_damage gm4_sr_data
-execute if score $current_damage gm4_sr_data > $total_durability gm4_sr_data run return run function gm4_survival_refightalized:player/armor_durability/chest/break
+execute if score $current_damage gm4_sr_data > $total_durability gm4_sr_data run return run function gm4_survival_refightalized:player/armor/durability/chest/break
 
 # apply to armor
 execute store result storage gm4_survival_refightalized:temp set.damage int 1 run scoreboard players get $current_damage gm4_sr_data
-function gm4_survival_refightalized:player/armor_durability/chest/eval with storage gm4_survival_refightalized:temp set
+function gm4_survival_refightalized:player/armor/durability/chest/eval with storage gm4_survival_refightalized:temp set
 
 # cleanup
 data remove storage gm4_survival_refightalized:temp set

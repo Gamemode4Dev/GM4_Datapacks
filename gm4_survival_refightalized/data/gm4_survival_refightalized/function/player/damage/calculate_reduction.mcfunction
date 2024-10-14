@@ -28,10 +28,10 @@ execute unless score $resistance_damage_reduction gm4_sr_data matches 0..99 run 
 # /!\ order for these is important!
 # 1. armor toughness (only if player still has armor)
 execute store result score $armor_toughness gm4_sr_data run attribute @s generic.armor_toughness get
-execute if score $armor_toughness gm4_sr_data matches 1.. if score @s gm4_sr_stat.armor matches 1.. run function gm4_survival_refightalized:player/health/damaged/armor_toughness
+execute if score $armor_toughness gm4_sr_data matches 1.. if score @s gm4_sr_stat.armor matches 1.. run function gm4_survival_refightalized:player/damage/reduction/armor_toughness
 
 # 2. enchantments
-execute if entity @s[advancements={gm4_survival_refightalized:damaged={bypasses_enchantments=false}}] run function gm4_survival_refightalized:player/health/damaged/enchantments
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={bypasses_enchantments=false}}] run function gm4_survival_refightalized:player/damage/reduction/enchantments/run
 
 # 3. resistance effect (uses highest level besides the one used for this module)
 scoreboard players operation $resistance_damage_reduction_percentage gm4_sr_data = $resistance_damage_reduction gm4_sr_data

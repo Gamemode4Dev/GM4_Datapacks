@@ -12,7 +12,7 @@ execute as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water 
 
 # restore armor here as well as in player submain to make it happen every 8 ticks
 scoreboard players remove @a[scores={gm4_sr_armor.reduction_timer=1..}] gm4_sr_armor.reduction_timer 10
-execute as @a[gamemode=!spectator,tag=gm4_sr_armor.reduction,scores={gm4_sr_armor.reduction_timer=..0}] run function gm4_survival_refightalized:player/health/regain_armor
+execute as @a[gamemode=!spectator,tag=gm4_sr_armor.reduction,scores={gm4_sr_armor.reduction_timer=..0}] run function gm4_survival_refightalized:player/armor/recharge
 
 # tick down skeleton arrow fire delay
 execute as @e[type=#gm4_survival_refightalized:can_fire_arrows,scores={gm4_sr_arrow.fire_delay_left=1..}] run function gm4_survival_refightalized:mob/process/arrow/tick_fire_delay

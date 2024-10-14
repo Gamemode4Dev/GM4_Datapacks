@@ -10,10 +10,10 @@ item replace block 29999998 1 7134 container.2 from entity @s armor.legs
 item replace block 29999998 1 7134 container.3 from entity @s armor.feet
 data modify storage gm4_survival_refightalized:temp Items set from block 29999998 1 7134 Items
 
-execute if items block 29999998 1 7134 container.0 * run function gm4_survival_refightalized:player/armor_durability/head/run
-execute if items block 29999998 1 7134 container.1 * run function gm4_survival_refightalized:player/armor_durability/chest/run
-execute if items block 29999998 1 7134 container.2 * run function gm4_survival_refightalized:player/armor_durability/legs/run
-execute if items block 29999998 1 7134 container.3 * run function gm4_survival_refightalized:player/armor_durability/feet/run
+execute if items block 29999998 1 7134 container.0 * run function gm4_survival_refightalized:player/armor/durability/head/run
+execute if items block 29999998 1 7134 container.1 * run function gm4_survival_refightalized:player/armor/durability/chest/run
+execute if items block 29999998 1 7134 container.2 * run function gm4_survival_refightalized:player/armor/durability/legs/run
+execute if items block 29999998 1 7134 container.3 * run function gm4_survival_refightalized:player/armor/durability/feet/run
 
 # stopsounds
 stopsound @s player item.armor.equip_chain

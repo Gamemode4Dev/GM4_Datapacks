@@ -35,10 +35,10 @@ scoreboard players set $enchant.fire_protection gm4_sr_data 0
 scoreboard players set $enchant.blast_protection gm4_sr_data 0
 scoreboard players set $enchant.projectile_protection gm4_sr_data 0
 scoreboard players set $enchant.feather_falling gm4_sr_data 0
-execute if entity @s[advancements={gm4_survival_refightalized:damaged={is_fire=true}}] run function gm4_survival_refightalized:player/health/damaged/fire_protection
-execute if entity @s[advancements={gm4_survival_refightalized:damaged={is_explosion=true}}] run function gm4_survival_refightalized:player/health/damaged/blast_protection
-execute if entity @s[advancements={gm4_survival_refightalized:damaged={is_projectile=true}}] run function gm4_survival_refightalized:player/health/damaged/projectile_protection
-execute if entity @s[advancements={gm4_survival_refightalized:damaged={is_fall=true}}] run function gm4_survival_refightalized:player/health/damaged/feather_falling
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={is_fire=true}}] run function gm4_survival_refightalized:player/damage/reduction/enchantments/fire_protection
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={is_explosion=true}}] run function gm4_survival_refightalized:player/damage/reduction/enchantments/blast_protection
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={is_projectile=true}}] run function gm4_survival_refightalized:player/damage/reduction/enchantments/projectile_protection
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={is_fall=true}}] run function gm4_survival_refightalized:player/damage/reduction/enchantments/feather_falling
 
 scoreboard players operation $enchant.damage_reduction gm4_sr_data < #80 gm4_sr_data
 scoreboard players operation $enchant.damage_reduction_percentage gm4_sr_data = $enchant.damage_reduction gm4_sr_data

@@ -26,7 +26,7 @@ execute unless score @s gm4_sr_stat.damage_resisted matches 1.. run scoreboard p
 execute store result storage gm4_augmented_armor:temp absorption.level int 1 run scoreboard players remove $apply_absorption_level gm4_aa_data 1
 function gm4_augmented_armor:armor/augment/type/reactive/eval_absorption with storage gm4_augmented_armor:temp absorption
 
-# set the absorption level, to be reduced from gm4_survival_refightalized:player/health/damaged/calculate_damage later this tick
+# set the absorption level, to be reduced when damage is calculated later this tick
 data remove storage gm4_augmented_armor:temp absorption
 
 # cleanup the add absorption score for next time

@@ -11,7 +11,7 @@ attribute @s[scores={gm4_sr_armor.reduction=..0}] generic.armor modifier remove 
 execute if entity @s[scores={gm4_sr_armor.reduction=..0}] run return run tag @s remove gm4_sr_armor.reduction
 
 execute store result storage gm4_survival_refightalized:temp set.armor_reduction int 1 run scoreboard players get @s gm4_sr_armor.reduction
-function gm4_survival_refightalized:player/health/eval_armor_reduction with storage gm4_survival_refightalized:temp set
+function gm4_survival_refightalized:player/armor/eval_reduction with storage gm4_survival_refightalized:temp set
 data remove storage gm4_survival_refightalized:temp set
 
 # reapply resistance

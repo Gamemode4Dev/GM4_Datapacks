@@ -6,4 +6,4 @@
 execute as @a[scores={gm4_sr_health.absorption_reduction_timer=1}] run attribute @s generic.max_absorption modifier remove gm4_sr_absorption_reduced
 scoreboard players remove @a[scores={gm4_sr_health.absorption_reduction_timer=1..}] gm4_sr_health.absorption_reduction_timer 1
 
-execute if entity @a[scores={gm4_sr_health.absorption_reduction_timer=1..}] run schedule function gm4_survival_refightalized:player/health/damaged/restore_absorption_clock 1t
+execute if entity @a[scores={gm4_sr_health.absorption_reduction_timer=1..}] run schedule function gm4_survival_refightalized:player/absorption/restore_clock 1t

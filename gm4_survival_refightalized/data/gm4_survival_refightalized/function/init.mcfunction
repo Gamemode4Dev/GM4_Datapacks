@@ -49,10 +49,10 @@ execute unless score $combat_regen_timer gm4_sr_config matches -2147483648..2147
 execute unless score $armor_recharge_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $armor_recharge_timer gm4_sr_config 2500
 
 # swap natural regeneration to module's system
-execute unless score $natural_regen_disabled gm4_mu_data matches 1 run gamerule doInsomnia false
+execute unless score $natural_regen_disabled gm4_mu_data matches 1 run gamerule naturalRegeneration false
 execute unless score $natural_regen_disabled gm4_mu_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'{"text":"[INFO] Survival Refightalized changed gamerule naturalRegeneration to false"}'}
 scoreboard players set $natural_regen_disabled gm4_mu_data 1
-execute store result score $naturalregeneration gm4_mu_data run gamerule doInsomnia
+execute store result score $naturalregeneration gm4_mu_data run gamerule naturalRegeneration
 execute if score $natural_regen gm4_sr_config matches 1 if score $naturalregeneration gm4_mu_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'[{"text":"[WARN]","color":"red"},{"text":" Survival Refightalized requires naturalRegeneration to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule naturalRegeneration false"}}]'}
 
 # constants

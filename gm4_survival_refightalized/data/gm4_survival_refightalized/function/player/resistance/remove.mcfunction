@@ -20,4 +20,4 @@ execute store result score $duration gm4_sr_data run data get storage gm4_surviv
 execute if score $duration gm4_sr_data matches 20.. store result storage gm4_survival_refightalized:temp reapply_resistance.duration_set int 0.05 run scoreboard players get $duration gm4_sr_data
 execute if score $duration gm4_sr_data matches -1 run data modify storage gm4_survival_refightalized:temp reapply_resistance.duration_set set value "infinite"
 
-function gm4_survival_refightalized:player/health/damaged/resistance_reapply_loop with storage gm4_survival_refightalized:temp reapply_resistance
+function gm4_survival_refightalized:player/resistance/reapply_loop with storage gm4_survival_refightalized:temp reapply_resistance

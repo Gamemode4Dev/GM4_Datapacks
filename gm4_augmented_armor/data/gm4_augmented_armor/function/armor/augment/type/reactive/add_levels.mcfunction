@@ -54,7 +54,7 @@ scoreboard players operation $actual_absorption_hearts gm4_aa_data *= #4 gm4_aa_
 scoreboard players operation $target_absorption_hearts gm4_aa_data -= $actual_absorption_hearts gm4_aa_data
 scoreboard players operation $damage_absorption gm4_sr_data -= $target_absorption_hearts gm4_aa_data
 
-# set the absorption level, to be reduced from gm4_survival_refightalized:player/health/damaged/calculate_damage later this tick
+# set the absorption level, to be reduced when damage is calculated later this tick
 execute store result storage gm4_augmented_armor:temp absorption.level int 1 run scoreboard players remove $apply_absorption_level gm4_aa_data 1
 function gm4_augmented_armor:armor/augment/type/reactive/eval_absorption with storage gm4_augmented_armor:temp absorption
 data remove storage gm4_augmented_armor:temp absorption

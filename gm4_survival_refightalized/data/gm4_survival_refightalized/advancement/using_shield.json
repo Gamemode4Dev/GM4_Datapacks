@@ -10,6 +10,6 @@
         }
     },
     "rewards": {
-        "function": "gm4_survival_refightalized:player/shield/using"
+        "function": "gm4_survival_refightalized:player/damage/shield/using"
     }
 }

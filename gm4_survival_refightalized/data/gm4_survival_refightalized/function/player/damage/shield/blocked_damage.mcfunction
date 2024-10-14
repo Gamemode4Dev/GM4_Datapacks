@@ -7,11 +7,11 @@
 advancement revoke @s only gm4_survival_refightalized:damaged
 
 # parried
-execute if score @s gm4_sr_shield.use_ticks matches ..5 run return run function gm4_survival_refightalized:player/health/damaged/shield_parry
+execute if score @s gm4_sr_shield.use_ticks matches ..5 run return run function gm4_survival_refightalized:player/damage/shield/parry
 
 # disable shield
 tag @s add gm4_sr_target
-execute at @s anchored eyes positioned ^ ^ ^1 summon armor_stand run function gm4_survival_refightalized:player/health/damaged/shield_disable
+execute at @s anchored eyes positioned ^ ^ ^1 summon armor_stand run function gm4_survival_refightalized:player/damage/shield/disable
 tag @s remove gm4_sr_target
 
 # dev damage log
