@@ -13,27 +13,10 @@
           "type": "minecraft:item",
           "conditions": [
             {
-              "condition": "minecraft:any_of",
-              "terms": [
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "biomes": "minecraft:end_midlands"
-                  }
-                },
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "biomes": "minecraft:end_highlands"
-                  }
-                },
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "biomes": "#gm4_end_fishing:nullscape/shadowlands"
-                  }
-                }
-              ]
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:mid_high"
+              }
             }
           ],
           "weight": 40,
@@ -45,33 +28,27 @@
           "name": "minecraft:phantom_membrane"
         },
         {
-          "type": "minecraft:item",
-          "conditions": [
+          "type": "minecraft:alternatives",
+          "children": [
             {
-              "condition": "inverted",
-              "term": {
-                "condition": "location_check",
-                "predicate": {
-                  "biomes": "#gm4_end_fishing:nullscape/crystal_peaks"
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "location_check",
+                  "predicate": {
+                    "biomes": "#gm4_end_fishing:nullscape/crystal_peaks"
+                  }
                 }
-              }
-            }
-          ],
-          "weight": 1,
-          "name": "minecraft:obsidian"
-        },
-        {
-          "type": "minecraft:item",
-          "conditions": [
+              ],
+              "weight": 8,
+              "name": "minecraft:crying_obsidian"
+            },
             {
-              "condition": "location_check",
-              "predicate": {
-                "biomes": "#gm4_end_fishing:nullscape/crystal_peaks"
-              }
+              "type": "minecraft:item",
+              "weight": 1,
+              "name": "minecraft:obsidian"
             }
-          ],
-          "weight": 8,
-          "name": "minecraft:crying_obsidian"
+          ]
         },
         {
           "type": "minecraft:item",
@@ -101,15 +78,10 @@
           "type": "minecraft:item",
           "conditions": [
             {
-              "condition": "minecraft:any_of",
-              "terms": [
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "biomes": "minecraft:the_end"
-                  }
-                }
-              ]
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:center"
+              }
             }
           ],
           "weight": 20,
@@ -119,15 +91,10 @@
           "type": "minecraft:item",
           "conditions": [
             {
-              "condition": "minecraft:any_of",
-              "terms": [
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "biomes": "minecraft:the_end"
-                  }
-                }
-              ]
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:center"
+              }
             }
           ],
           "weight": 44,
@@ -139,27 +106,10 @@
           "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/base",
           "conditions": [
             {
-              "condition": "minecraft:any_of",
-              "terms": [
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "biomes": "minecraft:end_highlands"
-                  }
-                },
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "biomes": "minecraft:end_midlands"
-                  }
-                },
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "biomes": "#gm4_end_fishing:nullscape/shadowlands"
-                  }
-                }
-              ]
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:mid_high"
+              }
             }
           ]
         },
@@ -167,27 +117,10 @@
           "type": "minecraft:item",
           "conditions": [
             {
-              "condition": "minecraft:any_of",
-              "terms": [
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "biomes": "minecraft:small_end_islands"
-                  }
-                },
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "biomes": "minecraft:end_barrens"
-                  }
-                },
-                {
-                  "condition": "minecraft:location_check",
-                  "predicate": {
-                    "biomes": "#gm4_end_fishing:nullscape/void_barrens"
-                  }
-                }
-              ]
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:barrens"
+              }
             }
           ],
           "weight": 15,
