@@ -9,6 +9,7 @@ pipeline:
       - gm4.plugins.output.test
       - gm4.plugins.player_heads
       - gm4.plugins.resource_pack
+      - gm4.plugins.attribute_rewrite
       - gm4_guidebook.generate_guidebooks.load_page_data
       - gm4_guidebook.generate_guidebooks.load_custom_recipes
       - gm4.plugins.test.load_tests
