@@ -10,6 +10,7 @@ pipeline:
 
 meta:
   gm4:
+    minecraft: ['1.21', '1.21.1']
     website:
       description: Adds a handy tooltip to Beehive items, telling you exactly how many bees and how much honey is stored inside! A beekeepers' dream!
       recommended: []
