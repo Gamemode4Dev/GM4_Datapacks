@@ -6,6 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "minecraft:diamond_boots",
           "weight": 20,
           "functions": [
             {
@@ -24,11 +25,11 @@
                 "max": 0.7
               }
             }
-          ],
-          "name": "minecraft:diamond_boots"
+          ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:diamond_chestplate",
           "weight": 20,
           "functions": [
             {
@@ -47,11 +48,11 @@
                 "max": 0.7
               }
             }
-          ],
-          "name": "minecraft:diamond_chestplate"
+          ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:diamond_leggings",
           "weight": 20,
           "functions": [
             {
@@ -70,11 +71,11 @@
                 "max": 0.7
               }
             }
-          ],
-          "name": "minecraft:diamond_leggings"
+          ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:diamond_helmet",
           "weight": 20,
           "functions": [
             {
@@ -93,11 +94,11 @@
                 "max": 0.7
               }
             }
-          ],
-          "name": "minecraft:diamond_helmet"
+          ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:iron_boots",
           "weight": 20,
           "functions": [
             {
@@ -116,11 +117,11 @@
                 "max": 0.7
               }
             }
-          ],
-          "name": "minecraft:iron_boots"
+          ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:iron_chestplate",
           "weight": 20,
           "functions": [
             {
@@ -139,11 +140,11 @@
                 "max": 0.7
               }
             }
-          ],
-          "name": "minecraft:iron_chestplate"
+          ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:iron_leggings",
           "weight": 20,
           "functions": [
             {
@@ -162,11 +163,11 @@
                 "max": 0.7
               }
             }
-          ],
-          "name": "minecraft:iron_leggings"
+          ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:iron_helmet",
           "weight": 20,
           "functions": [
             {
@@ -185,8 +186,7 @@
                 "max": 0.7
               }
             }
-          ],
-          "name": "minecraft:iron_helmet"
+          ]
         }
       ]
     }

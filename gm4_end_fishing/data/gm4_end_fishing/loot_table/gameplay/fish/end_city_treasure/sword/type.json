@@ -7,6 +7,7 @@
         {
           "type": "minecraft:item",
           "weight": 20,
+          "name": "minecraft:diamond_sword",
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
@@ -24,12 +25,12 @@
                 "max": 0.7
               }
             }
-          ],
-          "name": "minecraft:diamond_sword"
+          ]
         },
         {
           "type": "minecraft:item",
           "weight": 20,
+          "name": "minecraft:iron_sword",
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
@@ -47,8 +48,7 @@
                 "max": 0.7
               }
             }
-          ],
-          "name": "minecraft:iron_sword"
+          ]
         }
       ]
     }

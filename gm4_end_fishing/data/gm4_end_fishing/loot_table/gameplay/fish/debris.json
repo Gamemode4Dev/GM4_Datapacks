@@ -6,31 +6,33 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 50,
-          "name": "minecraft:ender_pearl"
+          "name": "minecraft:ender_pearl",
+          "weight": 50
         },
         {
           "type": "minecraft:item",
-          "weight": 25,
-          "name": "minecraft:end_stone"
+          "name": "minecraft:end_stone",
+          "weight": 25
         },
         {
           "type": "minecraft:item",
-          "weight": 1,
-          "name": "minecraft:end_rod"
+          "name": "minecraft:end_rod",
+          "weight": 1
         },
         {
           "type": "minecraft:item",
-          "weight": 4,
-          "name": "minecraft:chorus_fruit"
+          "name": "minecraft:chorus_fruit",
+          "weight": 4
         },
         {
           "type": "minecraft:item",
-          "weight": 2,
-          "name": "minecraft:chorus_flower"
+          "name": "minecraft:chorus_flower",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:chorus_fruit",
+          "weight": 40,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -38,12 +40,12 @@
                 "biomes": "#gm4_end_fishing:high"
               }
             }
-          ],
-          "weight": 40,
-          "name": "minecraft:chorus_fruit"
+          ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:iron_bars",
+          "weight": 10,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -51,12 +53,12 @@
                 "biomes": "#gm4_end_fishing:center"
               }
             }
-          ],
-          "weight": 10,
-          "name": "minecraft:iron_bars"
+          ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:end_rod",
+          "weight": 14,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -64,12 +66,12 @@
                 "biomes": "#gm4_end_fishing:mid_high"
               }
             }
-          ],
-          "weight": 14,
-          "name": "minecraft:end_rod"
+          ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:chorus_flower",
+          "weight": 35,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -77,9 +79,7 @@
                 "biomes": "#gm4_end_fishing:high"
               }
             }
-          ],
-          "weight": 35,
-          "name": "minecraft:chorus_flower"
+          ]
         },
         {
           "type": "minecraft:item",
@@ -94,6 +94,8 @@
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "weight": 10,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -102,8 +104,6 @@
               }
             }
           ],
-          "name": "minecraft:ender_pearl",
-          "weight": 10,
           "functions": [
             {
               "function": "minecraft:set_custom_data",

@@ -6,13 +6,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 10,
-          "name": "minecraft:shulker_shell"
+          "name": "minecraft:shulker_shell",
+          "weight": 10
         },
         {
           "type": "minecraft:item",
-          "weight": 5,
-          "name": "minecraft:dragon_head"
+          "name": "minecraft:dragon_head",
+          "weight": 5
         },
         {
           "type": "minecraft:loot_table",
@@ -21,6 +21,8 @@
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:end_crystal",
+          "weight": 40,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -28,14 +30,12 @@
                 "biomes": "#gm4_end_fishing:center"
               }
             }
-          ],
-          "weight": 40,
-          "name": "minecraft:end_crystal"
+          ]
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 11,
           "value": "gm4_end_fishing:items/enderpuff",
+          "weight": 11,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -47,19 +47,8 @@
         },
         {
           "type": "minecraft:item",
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biomes": "#gm4_end_fishing:mid_high"
-              }
-            }
-          ],
+          "name": "minecraft:dragon_head",
           "weight": 75,
-          "name": "minecraft:dragon_head"
-        },
-        {
-          "type": "minecraft:loot_table",
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -67,12 +56,25 @@
                 "biomes": "#gm4_end_fishing:mid_high"
               }
             }
-          ],
-          "weight": 1,
-          "value": "gm4_end_fishing:items/captains_wings"
+          ]
         },
         {
           "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:items/captains_wings",
+          "weight": 1,
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:mid_high"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:items/captains_wings",
+          "weight": 2,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -80,12 +82,12 @@
                 "biomes": "#gm4_end_fishing:nullscape/crystal_peaks"
               }
             }
-          ],
-          "weight": 2,
-          "value": "gm4_end_fishing:items/captains_wings"
+          ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:shulker_shell",
+          "weight": 110,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -93,9 +95,7 @@
                 "biomes": "#gm4_end_fishing:mid_high"
               }
             }
-          ],
-          "weight": 110,
-          "name": "minecraft:shulker_shell"
+          ]
         }
       ]
     }

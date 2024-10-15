@@ -6,11 +6,13 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "weight": 10,
-          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/base"
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/base",
+          "weight": 10
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:shulker_shell",
+          "weight": 40,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -18,20 +20,20 @@
                 "biomes": "#gm4_end_fishing:mid_high"
               }
             }
-          ],
-          "weight": 40,
-          "name": "minecraft:shulker_shell"
+          ]
         },
         {
           "type": "minecraft:item",
-          "weight": 20,
-          "name": "minecraft:phantom_membrane"
+          "name": "minecraft:phantom_membrane",
+          "weight": 20
         },
         {
           "type": "minecraft:alternatives",
           "children": [
             {
               "type": "minecraft:item",
+              "name": "minecraft:crying_obsidian",
+              "weight": 8,
               "conditions": [
                 {
                   "condition": "location_check",
@@ -39,19 +41,19 @@
                     "biomes": "#gm4_end_fishing:nullscape/crystal_peaks"
                   }
                 }
-              ],
-              "weight": 8,
-              "name": "minecraft:crying_obsidian"
+              ]
             },
             {
               "type": "minecraft:item",
-              "weight": 1,
-              "name": "minecraft:obsidian"
+              "name": "minecraft:obsidian",
+              "weight": 1
             }
           ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:amethyst_block",
+          "weight": 16,
           "conditions": [
             {
               "condition": "location_check",
@@ -59,9 +61,7 @@
                 "biomes": "#gm4_end_fishing:nullscape/crystal_peaks"
               }
             }
-          ],
-          "weight": 16,
-          "name": "minecraft:amethyst_block"
+          ]
         },
         {
           "type": "minecraft:item",
@@ -76,6 +76,8 @@
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:dragon_breath",
+          "weight": 20,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -83,12 +85,12 @@
                 "biomes": "#gm4_end_fishing:center"
               }
             }
-          ],
-          "weight": 20,
-          "name": "minecraft:dragon_breath"
+          ]
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:obsidian",
+          "weight": 44,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -96,14 +98,12 @@
                 "biomes": "#gm4_end_fishing:center"
               }
             }
-          ],
-          "weight": 44,
-          "name": "minecraft:obsidian"
+          ]
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 20,
           "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/base",
+          "weight": 20,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -115,6 +115,8 @@
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "weight": 15,
           "conditions": [
             {
               "condition": "minecraft:location_check",
@@ -123,8 +125,6 @@
               }
             }
           ],
-          "weight": 15,
-          "name": "minecraft:ender_pearl",
           "functions": [
             {
               "function": "minecraft:set_custom_data",
