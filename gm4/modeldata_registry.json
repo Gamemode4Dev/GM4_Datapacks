@@ -50,6 +50,9 @@
     "axolotl_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
     },
+    "azalea_leaves": {
+      "gm4_monsters_unbound:item/spore/default": 1
+    },
     "bamboo_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_bamboo_hanging_sign": 1,
       "gm4_trapped_signs:item/trapped_bamboo_hanging_sign": 2
@@ -187,6 +190,9 @@
     "cherry_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_cherry_hanging_sign": 1,
       "gm4_trapped_signs:item/trapped_cherry_hanging_sign": 2
+    },
+    "cherry_leaves": {
+      "gm4_monsters_unbound:item/spore/cherry": 1
     },
     "cherry_sign": {
       "gm4_trapped_signs:item/trapped_cherry_sign": 1,
@@ -573,6 +579,9 @@
       "gm4_better_fire:guidebook_icon/better_fire": 2,
       "gm4_animi_shamir:shamir/animi": 124,
       "gm4_orb_of_ankou:guidebook_icon/orb_of_ankou": 200
+    },
+    "flowering_azalea_leaves": {
+      "gm4_monsters_unbound:item/spore/flowering": 1
     },
     "furnace": {
       "gm4_smelteries:gui/advancement/smelteries": 1,
@@ -989,6 +998,9 @@
     "lime_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/lime": 300
     },
+    "lime_glazed_terracotta": {
+      "gm4_monsters_unbound:item/elite_headwear/mending": 1
+    },
     "lingering_potion": {
       "gm4_midnight_menaces:guidebook_icon/illusioner_nights": 1,
       "gm4_lightning_in_a_bottle:item/lingering_lightning_in_a_bottle": 4,
@@ -1225,6 +1237,9 @@
     },
     "oxidized_cut_copper": {
       "gm4_tinkering_compressors:block/tinkering_compressor_plate": 1
+    },
+    "packed_ice": {
+      "gm4_monsters_unbound:item/elite_headwear/glacial": 1
     },
     "paper": {
       "gm4_book_binders:item/enchanted_page": 1,

@@ -1,3 +1,13 @@
 model_data:
   - item: pearlescent_froglight
     reference: item/elite_headwear/pearlescent
+  - item: lime_glazed_terracotta
+    reference: item/elite_headwear/mending
+  - item: packed_ice
+    reference: item/elite_headwear/glacial
+  - item: azalea_leaves
+    reference: item/spore/default
+  - item: flowering_azalea_leaves
+    reference: item/spore/flowering
+  - item: cherry_leaves
+    reference: item/spore/cherry

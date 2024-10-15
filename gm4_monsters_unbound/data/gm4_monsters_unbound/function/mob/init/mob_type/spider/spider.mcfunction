@@ -11,7 +11,7 @@ execute if predicate {condition:"minecraft:all_of",terms:[{condition:"minecraft:
 # burned
 execute if predicate {condition:"minecraft:all_of",terms:[{condition:"minecraft:random_chance",chance:0.50},{condition:"minecraft:reference",name:"gm4_monsters_unbound:biome/burned"}]} run effect give @s fire_resistance infinite 0
 # flowering 
-execute if predicate gm4_monsters_unbound:biome/lush_caves if predicate {condition:"minecraft:random_chance",chance:0.50} run function gm4_monsters_unbound:mob/init/mob_type/spider/lush_caves
+execute if biome ~ ~ ~ lush_caves if predicate {condition:"minecraft:random_chance",chance:0.50} run function gm4_monsters_unbound:mob/init/mob_type/spider/lush_caves
 # toxic
 execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_monsters_unbound:biome/toxic] run function gm4_monsters_unbound:mob/init/mob_type/spider/toxic
 # growth

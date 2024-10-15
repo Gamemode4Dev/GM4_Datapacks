@@ -14,8 +14,8 @@ execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_monsters_unbound:biome/
 # growth 
 execute if predicate gm4_monsters_unbound:biome/growth run function gm4_monsters_unbound:mob/init/mob_type/enderman/growth
 # the end
-attribute @s[predicate=gm4_monsters_unbound:biome/the_end] generic.attack_damage modifier add gm4_monsters_unbound:stat_change.the_end 0.2 add_multiplied_base
-attribute @s[predicate=gm4_monsters_unbound:biome/the_end] generic.movement_speed modifier add gm4_monsters_unbound:stat_change.the_end 0.15 add_multiplied_base
+execute if dimension the_end run attribute @s generic.attack_damage modifier add gm4_monsters_unbound:stat_change.the_end 0.2 add_multiplied_base
+execute if dimension the_end run attribute @s generic.movement_speed modifier add gm4_monsters_unbound:stat_change.the_end 0.15 add_multiplied_base
 # nether wastes
 execute if biome ~ ~ ~ nether_wastes if predicate {condition:"minecraft:random_chance",chance:0.95} run function gm4_monsters_unbound:mob/init/mob_type/enderman/nether_wastes
 # soul sand valley
