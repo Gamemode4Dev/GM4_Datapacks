@@ -1,5 +1,5 @@
 {
-  "last_commit": "ce26b29fa89e9239c9f0c93a0339c58c5533b083",
+  "last_commit": "31484f1c4259e73413bab3f60710d0fc5e052abe",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -996,8 +996,8 @@
     {
       "id": "gm4_end_fishing",
       "name": "End Fishing",
-      "version": "1.5.4",
-      "hash": "d2f002f886d4ab166ff9f617d7fce0dd2b6eb037",
+      "version": "1.5.5",
+      "hash": "ab8a61f12216947262596da0ba3c53a9c5969839",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/End_Fishing",
       "credits": {
