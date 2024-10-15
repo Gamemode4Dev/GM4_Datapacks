@@ -6,38 +6,38 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 15,
-          "name": "minecraft:beetroot_seeds"
+          "name": "minecraft:beetroot_seeds",
+          "weight": 15
         },
         {
           "type": "minecraft:item",
-          "weight": 6,
-          "name": "minecraft:saddle"
+          "name": "minecraft:saddle",
+          "weight": 6
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 40,
-          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/generate"
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/generate",
+          "weight": 40
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 160,
-          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/generate"
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/generate",
+          "weight": 160
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 80,
-          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/generate"
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/generate",
+          "weight": 80
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 65,
-          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/generate"
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/generate",
+          "weight": 65
         },
         {
           "type": "minecraft:loot_table",
-          "weight": 3,
-          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/generate"
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/generate",
+          "weight": 3
         }
       ]
     }
