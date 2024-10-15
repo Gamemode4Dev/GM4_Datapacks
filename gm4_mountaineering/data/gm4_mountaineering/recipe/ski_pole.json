@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "T",
+    "S",
+    "S"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:tripwire_hook"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "minecraft:stick",
+    "components": {
+      "minecraft:custom_model_data": "item/poles",
+      "minecraft:max_stack_size": 1,
+      "minecraft:custom_data": "{gm4_mountaineering:{item:'poles'}}",
+      "minecraft:custom_name": "{\"translate\":\"item.gm4.poles\",\"fallback\":\"Ski Pole\",\"italic\":false}"
+    }
+  }
+}

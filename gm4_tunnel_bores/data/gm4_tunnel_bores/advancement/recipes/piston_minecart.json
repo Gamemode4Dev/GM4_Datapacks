@@ -1,0 +1,45 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "gm4_tunnel_bores:piston_minecart"
+      }
+    },
+    "has_the_minecart_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "gm4_tunnel_bores:piston_minecart_from_furnace_minecart"
+      }
+    },
+    "has_materials": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:furnace",
+              "minecraft:minecart",
+              "minecraft:furnace_minecart",
+              "minecraft:piston"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_the_minecart_recipe",
+      "has_materials"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gm4_tunnel_bores:piston_minecart",
+      "gm4_tunnel_bores:piston_minecart_from_furnace_minecart"
+    ]
+  }
+}
