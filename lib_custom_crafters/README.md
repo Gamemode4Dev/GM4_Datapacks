@@ -38,8 +38,8 @@ Note that the Custom Crafter automatically supports recipes placed anywhere in t
       "rolls": 8,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air"
+          "type": "minecraft:loot_table",
+          "value": "gm4:air"
         }
       ]
     },
@@ -82,8 +82,8 @@ the loot table `gm4_craft:crafting/string`:
       "rolls": 8,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air"
+          "type": "minecraft:loot_table",
+          "value": "gm4:air"
         }
       ]
     },

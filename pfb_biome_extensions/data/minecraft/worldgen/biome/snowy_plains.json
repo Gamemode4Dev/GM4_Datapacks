@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/snowy_plains",
-    "liquid": "#minecraft:liquid/in_biome/snowy_plains"
-  },
+  "carvers": "#minecraft:in_biome/snowy_plains",
   "creature_spawn_probability": 0.07,
   "downfall": 0.5,
   "effects": {

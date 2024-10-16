@@ -2,5 +2,5 @@
 # at @s
 # called by merge_slimes
 
-data merge entity @s {Size:0,DeathTime:19s,Health:0f,DeathLootTable:"minecraft:empty"}
+data merge entity @s {Size:0,DeathTime:19s,Health:0f,DeathLootTable:"gm4:empty"}
 playsound minecraft:entity.slime.squish hostile @a[distance=..15] ~ ~ ~ .5 .8

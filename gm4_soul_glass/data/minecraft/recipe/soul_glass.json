@@ -1,8 +1,6 @@
 {
    "type": "minecraft:blasting",
-   "ingredient": {
-      "item": "minecraft:soul_sand"
-   },
+   "ingredient": "minecraft:soul_sand",
    "result": {
       "id": "minecraft:brown_stained_glass"
    },

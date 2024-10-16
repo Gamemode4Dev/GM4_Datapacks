@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:vegetal_decoration/in_overworld",
+      "required": false
+    },
+    "minecraft:glow_lichen",
+    "minecraft:mushroom_island_vegetation",
+    "minecraft:brown_mushroom_taiga",
+    "minecraft:red_mushroom_taiga",
+    "minecraft:patch_sugar_cane",
+    "minecraft:patch_pumpkin"
+  ]
+}

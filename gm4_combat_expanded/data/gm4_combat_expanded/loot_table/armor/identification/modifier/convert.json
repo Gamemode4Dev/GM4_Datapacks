@@ -21,7 +21,7 @@
           "replace": false,
           "modifiers": [
             {
-              "attribute": "minecraft:generic.max_health",
+              "attribute": "minecraft:max_health",
               "id": "gm4_combat_expanded:permanent",
               "amount": {
                 "type": "minecraft:score",
@@ -36,7 +36,7 @@
               "slot": "chest"
             },
             {
-              "attribute": "minecraft:generic.armor",
+              "attribute": "minecraft:armor",
               "id": "gm4_combat_expanded:permanent_2",
               "amount": {
                 "type": "minecraft:score",

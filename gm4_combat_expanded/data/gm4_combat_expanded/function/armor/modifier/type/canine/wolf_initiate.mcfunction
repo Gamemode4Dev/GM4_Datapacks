@@ -3,7 +3,7 @@
 # at unspecified
 # run from armor/type/canine/wolf_spawn
 
-data merge entity @s {CollarColor:0b,variant:"gm4_combat_expanded:gm4_ce_canine",Tags:["gm4_ce_wolf"],active_effects:[{id:"minecraft:resistance",amplifier:9b,duration:-1,show_particles:0b}],attributes:[{id:"minecraft:generic.attack_damage",base:4},{id:"minecraft:generic.scale",base:1.15,}]}
+data merge entity @s {CollarColor:0b,variant:"gm4_combat_expanded:gm4_ce_canine",Tags:["gm4_ce_wolf"],active_effects:[{id:"minecraft:resistance",amplifier:9b,duration:-1,show_particles:0b}],attributes:[{id:"minecraft:attack_damage",base:4},{id:"minecraft:scale",base:1.15,}]}
 
 scoreboard players operation @s gm4_ce_id = $curr_id gm4_ce_id
 scoreboard players operation @s gm4_ce_data = $slot gm4_ce_data

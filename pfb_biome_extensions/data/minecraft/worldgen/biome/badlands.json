@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/badlands",
-    "liquid": "#minecraft:liquid/in_biome/badlands"
-  },
+  "carvers": "#minecraft:in_biome/badlands",
   "creature_spawn_probability": 0.03,
   "downfall": 0.0,
   "effects": {

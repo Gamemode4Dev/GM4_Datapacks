@@ -26,9 +26,9 @@ def beet_default(ctx: Context):
                 continue
             input = recipe.data["key"]["#"]
             if isinstance(input, list):
-                output: str = input[0]["item"] # type: ignore
+                output: str = input[0] # type: ignore
             else:
-                output: str = input["item"]
+                output: str = input
 
             ctx.data[f"gm4_standard_crafting:{dir}/{item.removeprefix('minecraft:')}"] = CustomCrafterRecipe({
                 "name": f"gm4_standard_crafting:{dir}/{item}",

@@ -1,0 +1,81 @@
+{
+  "carvers": {
+    "air": "#minecraft:air/in_biome/warped_forest",
+    "liquid": "#minecraft:liquid/in_biome/warped_forest"
+  },
+  "downfall": 0.0,
+  "effects": {
+    "additions_sound": {
+      "sound": "minecraft:ambient.warped_forest.additions",
+      "tick_chance": 0.0111
+    },
+    "ambient_sound": "minecraft:ambient.warped_forest.loop",
+    "fog_color": 1705242,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.warped_forest.mood",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.nether.warped_forest"
+    },
+    "particle": {
+      "options": {
+        "type": "minecraft:warped_spore"
+      },
+      "probability": 0.01428
+    },
+    "sky_color": 7254527,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "features": [
+    "#minecraft:raw_generation/in_biome/warped_forest",
+    "#minecraft:lakes/in_biome/warped_forest",
+    "#minecraft:local_modifications/in_biome/warped_forest",
+    "#minecraft:underground_structures/in_biome/warped_forest",
+    "#minecraft:surface_structures/in_biome/warped_forest",
+    "#minecraft:strongholds/in_biome/warped_forest",
+    "#minecraft:underground_ores/in_biome/warped_forest",
+    "#minecraft:underground_decoration/in_biome/warped_forest",
+    "#minecraft:fluid_springs/in_biome/warped_forest",
+    "#minecraft:vegetal_decoration/in_biome/warped_forest",
+    "#minecraft:top_layer_modification/in_biome/warped_forest"
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {
+    "minecraft:enderman": {
+      "charge": 1.0,
+      "energy_budget": 0.12
+    }
+  },
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "minecraft:strider",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 60
+      }
+    ],
+    "misc": [],
+    "monster": [
+      {
+        "type": "minecraft:enderman",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 1
+      }
+    ],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 2.0
+}

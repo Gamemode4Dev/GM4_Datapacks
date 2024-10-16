@@ -220,7 +220,7 @@ def versioned_namespace(ctx: Context, version: Version):
     namespace = ctx.project_id if ctx.project_id != 'base' else 'gm4'
     versioned_namespace = f"{namespace}-{version.major}.{version.minor}"
     ctx.require(rename_files(data_pack={
-        "match":{"functions": "*", "advancements": "*", "loot_tables": "*", "predicates": "*"},
+        "match": {"functions": "*", "advancements": "*", "loot_tables": "*", "predicates": "*"} if namespace != 'gm4' else {"functions": "*", "advancements": "*"},
         "find": f"{namespace}:([a-z_/]+)",
         "replace": f"{versioned_namespace}:\\1"
     }))

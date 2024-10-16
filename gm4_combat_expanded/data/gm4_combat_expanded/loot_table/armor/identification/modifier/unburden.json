@@ -13,7 +13,7 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.armor",
+                  "attribute": "minecraft:armor",
                   "id": "gm4_combat_expanded:permanent",
                   "amount": {
                     "type": "minecraft:score",
@@ -27,14 +27,14 @@
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_speed",
+                  "attribute": "minecraft:attack_speed",
                   "id": "gm4_combat_expanded:dynamic",
                   "amount": 0,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.movement_speed",
+                  "attribute": "minecraft:movement_speed",
                   "id": "gm4_combat_expanded:dynamic_2",
                   "amount": 0,
                   "operation": "add_multiplied_base",
@@ -86,12 +86,12 @@
                         "text": "1.5"
                       },
                       {
-                        "translate": "attribute.name.generic.attack_speed"
+                        "translate": "attribute.name.attack_speed"
                       }
                     ]
                   },
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   }
                 ],
                 "color": "blue",
@@ -131,12 +131,12 @@
                         "text": "1.5"
                       },
                       {
-                        "translate": "attribute.name.generic.movement_speed"
+                        "translate": "attribute.name.movement_speed"
                       }
                     ]
                   },
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   }
                 ],
                 "color": "blue",
@@ -176,12 +176,12 @@
                         "text": "1.75"
                       },
                       {
-                        "translate": "attribute.name.generic.attack_speed"
+                        "translate": "attribute.name.attack_speed"
                       }
                     ]
                   },
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   }
                 ],
                 "color": "blue",
@@ -221,12 +221,12 @@
                         "text": "1.75"
                       },
                       {
-                        "translate": "attribute.name.generic.movement_speed"
+                        "translate": "attribute.name.movement_speed"
                       }
                     ]
                   },
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   }
                 ],
                 "color": "blue",
@@ -266,12 +266,12 @@
                         "text": "2"
                       },
                       {
-                        "translate": "attribute.name.generic.attack_speed"
+                        "translate": "attribute.name.attack_speed"
                       }
                     ]
                   },
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   }
                 ],
                 "color": "blue",
@@ -311,12 +311,12 @@
                         "text": "2"
                       },
                       {
-                        "translate": "attribute.name.generic.movement_speed"
+                        "translate": "attribute.name.movement_speed"
                       }
                     ]
                   },
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   }
                 ],
                 "color": "blue",
@@ -356,12 +356,12 @@
                         "text": "2.25"
                       },
                       {
-                        "translate": "attribute.name.generic.attack_speed"
+                        "translate": "attribute.name.attack_speed"
                       }
                     ]
                   },
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   }
                 ],
                 "color": "blue",
@@ -401,12 +401,12 @@
                         "text": "2.25"
                       },
                       {
-                        "translate": "attribute.name.generic.movement_speed"
+                        "translate": "attribute.name.movement_speed"
                       }
                     ]
                   },
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   }
                 ],
                 "color": "blue",

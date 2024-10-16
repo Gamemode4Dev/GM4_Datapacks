@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/stony_shore",
-    "liquid": "#minecraft:liquid/in_biome/stony_shore"
-  },
+  "carvers": "#minecraft:in_biome/stony_shore",
   "downfall": 0.3,
   "effects": {
     "fog_color": 12638463,

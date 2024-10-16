@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:underground_decoration/in_overworld",
+      "required": false
+    },
+    "minecraft:sculk_vein",
+    "minecraft:sculk_patch_deep_dark"
+  ]
+}

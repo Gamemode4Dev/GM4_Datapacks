@@ -13,35 +13,35 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
                   "id": "gm4_combat_expanded:dynamic",
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_speed",
+                  "attribute": "minecraft:attack_speed",
                   "id": "gm4_combat_expanded:dynamic_2",
                   "amount": 0,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.movement_speed",
+                  "attribute": "minecraft:movement_speed",
                   "id": "gm4_combat_expanded:dynamic_3",
                   "amount": 0,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.knockback_resistance",
+                  "attribute": "minecraft:knockback_resistance",
                   "id": "gm4_combat_expanded:dynamic_4",
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.armor",
+                  "attribute": "minecraft:armor",
                   "id": "gm4_combat_expanded:permanent",
                   "amount": {
                     "type": "minecraft:score",
@@ -110,7 +110,7 @@
                     }
                   ],
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "blue",
@@ -154,7 +154,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "blue",
@@ -193,7 +193,7 @@
                     }
                   },
                   {
-                    "translate": "attribute.name.generic.attack_speed"
+                    "translate": "attribute.name.attack_speed"
                   }
                 ],
                 "color": "blue",
@@ -218,7 +218,7 @@
                     }
                   },
                   {
-                    "translate": "attribute.name.generic.movement_speed"
+                    "translate": "attribute.name.movement_speed"
                   }
                 ],
                 "color": "blue",
@@ -240,7 +240,7 @@
                     "text": "1"
                   },
                   {
-                    "translate": "attribute.name.generic.knockback_resistance"
+                    "translate": "attribute.name.knockback_resistance"
                   }
                 ],
                 "color": "blue",

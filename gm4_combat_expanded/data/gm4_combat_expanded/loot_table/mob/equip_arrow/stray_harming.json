@@ -58,7 +58,7 @@
                   "with": [
                     "15",
                     {
-                      "translate": "attribute.name.generic.movement_speed"
+                      "translate": "attribute.name.movement_speed"
                     }
                   ],
                   "color": "red",

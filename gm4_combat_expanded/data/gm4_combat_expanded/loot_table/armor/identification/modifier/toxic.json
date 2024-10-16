@@ -13,7 +13,7 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.armor",
+                  "attribute": "minecraft:armor",
                   "id": "gm4_combat_expanded:permanent",
                   "amount": {
                     "type": "minecraft:score",

@@ -3,5 +3,5 @@
 # at @s
 # run from apply_effects/check_path
 
-attribute @s minecraft:generic.movement_speed modifier remove minecraft:dc33007e-5da4-4fad-a850-9c5a058c22ba
+attribute @s minecraft:movement_speed modifier remove minecraft:dc33007e-5da4-4fad-a850-9c5a058c22ba
 tag @s remove gm4_on_path

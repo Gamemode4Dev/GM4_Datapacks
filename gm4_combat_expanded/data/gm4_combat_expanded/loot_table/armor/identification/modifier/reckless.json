@@ -13,14 +13,14 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
                   "id": "gm4_combat_expanded:dynamic",
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.armor",
+                  "attribute": "minecraft:armor",
                   "id": "gm4_combat_expanded:dynamic_2",
                   "amount": 0,
                   "operation": "add_value",
@@ -71,7 +71,7 @@
                       }
                     ],
                     {
-                      "translate": "attribute.name.generic.attack_damage"
+                      "translate": "attribute.name.attack_damage"
                     }
                   ]
                 },
@@ -98,7 +98,7 @@
                       }
                     ],
                     {
-                      "translate": "attribute.name.generic.armor"
+                      "translate": "attribute.name.armor"
                     }
                   ]
                 },
@@ -120,7 +120,7 @@
                 "fallback": "Cannot go below 0 %s",
                 "with": [
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   }
                 ],
                 "color": "dark_gray",

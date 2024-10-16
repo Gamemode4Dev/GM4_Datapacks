@@ -5,8 +5,8 @@
       "rolls": 4,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air"
+          "type": "minecraft:loot_table",
+          "value": "gm4:air"
         }
       ]
     },
@@ -29,8 +29,8 @@
       "rolls": 2,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air"
+          "type": "minecraft:loot_table",
+          "value": "gm4:air"
         }
       ]
     },
@@ -53,8 +53,8 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air"
+          "type": "minecraft:loot_table",
+          "value": "gm4:air"
         }
       ]
     }

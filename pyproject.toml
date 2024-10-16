@@ -6,7 +6,7 @@ authors = ["Gamemode 4 Contributors"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-beet = ">=0.108.4"
+beet = { git = "https://github.com/misode/beet.git", rev = "fix-overlay-folders" }
 mecha = ">=0.95.2"
 bolt = ">=0.49.1"
 PyYAML = "^6.0"

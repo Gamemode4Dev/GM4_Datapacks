@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/cherry_grove",
-    "liquid": "#minecraft:liquid/in_biome/cherry_grove"
-  },
+  "carvers": "#minecraft:in_biome/cherry_grove",
   "downfall": 0.8,
   "effects": {
     "fog_color": 12638463,

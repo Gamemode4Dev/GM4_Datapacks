@@ -2,7 +2,7 @@
 # run from transferring
 
 # get max health of player
-execute store result score @s gm4_sh_data run attribute @s minecraft:generic.max_health get
+execute store result score @s gm4_sh_data run attribute @s minecraft:max_health get
 
 # get current player health
 # health is stored as float, but displayed rounded up as integer (half hearts)

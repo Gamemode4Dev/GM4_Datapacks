@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:surface_structures/in_nether",
+      "required": false
+    },
+    "minecraft:delta",
+    "minecraft:small_basalt_columns",
+    "minecraft:large_basalt_columns"
+  ]
+}

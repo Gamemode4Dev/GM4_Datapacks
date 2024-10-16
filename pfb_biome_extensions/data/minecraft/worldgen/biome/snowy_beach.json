@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/snowy_beach",
-    "liquid": "#minecraft:liquid/in_biome/snowy_beach"
-  },
+  "carvers": "#minecraft:in_biome/snowy_beach",
   "downfall": 0.3,
   "effects": {
     "fog_color": 12638463,

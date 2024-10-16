@@ -38,7 +38,7 @@
                     }
                   ],
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "dark_green",
@@ -104,7 +104,7 @@
                     }
                   ],
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "dark_green",
@@ -170,7 +170,7 @@
                     }
                   ],
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "dark_green",
@@ -227,7 +227,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "dark_green",
@@ -281,7 +281,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "dark_green",
@@ -335,7 +335,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "dark_green",

@@ -3,4 +3,4 @@
 # at unspecified
 # run from player/damage/activate
 
-$attribute @s minecraft:generic.max_health modifier add gm4_combat_expanded:remove_health -$(remove_health) add_value
+$attribute @s minecraft:max_health modifier add gm4_combat_expanded:remove_health -$(remove_health) add_value

@@ -8,11 +8,11 @@ summon drowned ~-0.05 ~0.05 ~0.005 {Tags:["gm4_ce_extra_mob"]}
 summon drowned ~-0.15 ~0.1 ~-0.01 {Tags:["gm4_ce_extra_mob"]}
 scoreboard players set $mob_extras gm4_ce_data 1
 
-attribute @s generic.max_health modifier add gm4_combat_expanded:stat_change.miniboss 0.1 add_multiplied_base
-attribute @s generic.armor_toughness modifier add gm4_combat_expanded:stat_change.miniboss 0.5 add_multiplied_base
-attribute @s generic.armor modifier add gm4_combat_expanded:stat_change.miniboss 0.5 add_multiplied_base
-attribute @s generic.attack_knockback modifier add gm4_combat_expanded:stat_change.miniboss 0.75 add_value
-attribute @s generic.knockback_resistance modifier add gm4_combat_expanded:stat_change.miniboss 0.75 add_value
+attribute @s minecraft:max_health modifier add gm4_combat_expanded:stat_change.miniboss 0.1 add_multiplied_base
+attribute @s minecraft:armor_toughness modifier add gm4_combat_expanded:stat_change.miniboss 0.5 add_multiplied_base
+attribute @s minecraft:armor modifier add gm4_combat_expanded:stat_change.miniboss 0.5 add_multiplied_base
+attribute @s minecraft:attack_knockback modifier add gm4_combat_expanded:stat_change.miniboss 0.75 add_value
+attribute @s minecraft:knockback_resistance modifier add gm4_combat_expanded:stat_change.miniboss 0.75 add_value
 
 scoreboard players set @s gm4_ce_damage_cap 75
 

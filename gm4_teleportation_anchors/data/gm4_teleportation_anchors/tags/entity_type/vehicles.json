@@ -1,6 +1,6 @@
 {
     "values": [
         "minecraft:minecart",
-        "minecraft:boat"
+        "#gm4:boats"
     ]
 }

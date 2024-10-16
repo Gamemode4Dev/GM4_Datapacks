@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/soul_sand_valley",
-    "liquid": "#minecraft:liquid/in_biome/soul_sand_valley"
-  },
+  "carvers": "#minecraft:in_biome/soul_sand_valley",
   "downfall": 0.0,
   "effects": {
     "additions_sound": {

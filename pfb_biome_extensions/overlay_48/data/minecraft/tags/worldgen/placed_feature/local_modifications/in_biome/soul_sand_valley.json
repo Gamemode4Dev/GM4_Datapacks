@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:local_modifications/in_nether",
+      "required": false
+    },
+    "minecraft:basalt_pillar"
+  ]
+}

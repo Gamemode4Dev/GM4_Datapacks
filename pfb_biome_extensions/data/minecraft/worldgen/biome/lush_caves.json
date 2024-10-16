@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/lush_caves",
-    "liquid": "#minecraft:liquid/in_biome/lush_caves"
-  },
+  "carvers": "#minecraft:in_biome/lush_caves",
   "downfall": 0.5,
   "effects": {
     "fog_color": 12638463,

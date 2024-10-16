@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/jagged_peaks",
-    "liquid": "#minecraft:liquid/in_biome/jagged_peaks"
-  },
+  "carvers": "#minecraft:in_biome/jagged_peaks",
   "downfall": 0.9,
   "effects": {
     "fog_color": 12638463,

@@ -12,14 +12,14 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.max_health",
+                  "attribute": "minecraft:max_health",
                   "id": "gm4_combat_expanded:spore_max_health",
                   "amount": 16,
                   "operation": "add_value",
                   "slot": "head"
                 },
                 {
-                  "attribute": "minecraft:generic.armor",
+                  "attribute": "minecraft:armor",
                   "id": "gm4_combat_expanded:spore_armor",
                   "amount": 0.25,
                   "operation": "add_multiplied_base",
@@ -47,14 +47,14 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.max_health",
+                  "attribute": "minecraft:max_health",
                   "id": "gm4_combat_expanded:spore_max_health_2",
                   "amount": 8,
                   "operation": "add_value",
                   "slot": "head"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
                   "id": "gm4_combat_expanded:spore_armor_2",
                   "amount": -1.5,
                   "operation": "add_value",
@@ -105,7 +105,7 @@
             "minecraft:attribute_modifiers": {
               "modifiers": [
                 {
-                  "type": "minecraft:generic.max_health",
+                  "type": "minecraft:max_health",
                   "id": "gm4_combat_expanded:modifier_flowering",
                   "amount": -0.25,
                   "operation": "add_multiplied_base",

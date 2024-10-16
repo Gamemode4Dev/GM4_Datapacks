@@ -16,7 +16,7 @@ execute unless score $giant_damage gm4_ce_data matches 1.. if entity @s[advancem
 execute unless score $giant_damage gm4_ce_data matches 1.. run scoreboard players set $giant_damage gm4_ce_data 1
 advancement revoke @s only gm4_combat_expanded:used_giant_weapon
 
-execute store result storage gm4_combat_expanded:temp giant_strike.range float 0.1 run attribute @s player.entity_interaction_range get 10
+execute store result storage gm4_combat_expanded:temp giant_strike.range float 0.1 run attribute @s minecraft:entity_interaction_range get 10
 execute store result storage gm4_combat_expanded:temp giant_strike.damage int 2 run scoreboard players get $giant_damage gm4_ce_data
 
 tag @s add gm4_ce_target

@@ -12,7 +12,7 @@ tag @e[type=minecraft:item,distance=..1,limit=1,sort=nearest] add gm4_chairs_ign
 execute on passengers at @s align y run tp @s ~ ~1 ~
 
 # increase health to avoid visible death cloud
-attribute @s minecraft:generic.max_health base set 5
+attribute @s minecraft:max_health base set 5
 data modify entity @s Health set value 5
 
 # remove chair

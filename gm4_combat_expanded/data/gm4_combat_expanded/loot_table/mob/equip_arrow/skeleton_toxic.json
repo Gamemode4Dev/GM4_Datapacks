@@ -98,7 +98,7 @@
                   "with": [
                     "4",
                     {
-                      "translate": "attribute.name.generic.attack_damage"
+                      "translate": "attribute.name.attack_damage"
                     }
                   ],
                   "color": "red",
