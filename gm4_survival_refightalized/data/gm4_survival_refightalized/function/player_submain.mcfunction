@@ -9,6 +9,9 @@
 # DEV: trigger for players with `gm4_sr_dev` tag
 execute as @a[tag=gm4_sr_dev] at @s as @e[type=#gm4_survival_refightalized:modify,limit=1,sort=nearest] run function gm4_survival_refightalized:debug/dont_run/dev
 
+# process players that died
+execute as @a[scores={gm4_sr_stat.deaths=1..}] run function gm4_survival_refightalized:player/death
+
 # process player sleeping
 execute as @a[scores={gm4_sr_stat.sleep_in_bed=1..},gamemode=!spectator] run function gm4_survival_refightalized:player/health/regeneration/detect_sleep
 

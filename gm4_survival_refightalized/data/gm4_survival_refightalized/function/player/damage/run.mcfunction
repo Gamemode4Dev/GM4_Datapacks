@@ -23,8 +23,8 @@ execute if entity @s[advancements={gm4_survival_refightalized:damaged={cave_spid
 tellraw @s[tag=gm4_sr_dev,advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] {"text":"Non-Combat Damage","color":"dark_gray","italic":true}
 
 # calculate damage if player has armor
-execute if score @s gm4_sr_stat.damage_resisted matches 1.. run function gm4_survival_refightalized:player/damage/calculate_reduction
-execute unless score @s gm4_sr_stat.damage_resisted matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"No Armor - Damage (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_stat.damage_taken"},"color":"white"}]
+execute if score @s gm4_sr_stat.armor matches 1.. run function gm4_survival_refightalized:player/damage/calculate_reduction
+execute unless score @s gm4_sr_stat.armor matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"No Armor - Damage (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_stat.damage_taken"},"color":"white"}]
 
 # set combat regeneration timers, allow to be altered by function call
 scoreboard players operation $set gm4_sr_armor.reduction_timer = $armor_recharge_timer gm4_sr_config

@@ -3,6 +3,10 @@
 # at @s
 # run from player/health/damaged/calculate_reduction
 
+# check if player actually has resistance that should be removed
+execute store result score $resistance_level gm4_sr_data run data get storage gm4_survival_refightalized:temp active_effects[{id:"minecraft:resistance"}].amplifier
+execute unless score $resistance_level gm4_sr_data matches -1 run return 0
+
 # clear resistance to remove the immunite from armor
 effect clear @s resistance
 

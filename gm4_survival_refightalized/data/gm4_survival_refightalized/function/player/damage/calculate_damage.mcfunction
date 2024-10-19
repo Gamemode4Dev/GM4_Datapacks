@@ -20,7 +20,7 @@ scoreboard players operation $damage_left gm4_sr_data -= $damage_armor gm4_sr_da
 
 # | Absorption
 # get scores
-scoreboard players operation $current_absorption_hearts gm4_sr_data = @s gm4_sr_health.absorption
+scoreboard players operation $current_absorption_hearts gm4_sr_data = @s gm4_sr_stat.current_absorption
 scoreboard players operation $current_absorption_max gm4_sr_data = @s gm4_sr_stat.max_absorption
 # apply leftover damge to absorption first
 scoreboard players operation $damage_absorption gm4_sr_data += $damage_left gm4_sr_data

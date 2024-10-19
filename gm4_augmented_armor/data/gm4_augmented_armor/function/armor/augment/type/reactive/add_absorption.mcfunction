@@ -5,7 +5,7 @@ tellraw @s[tag=gm4_sr_dev] [{"text":" - Reactive Absorption: +","color":"gray"},
 
 
 # get player absorption amount and add the added absorption
-scoreboard players operation $target_absorption_hearts gm4_aa_data = @s gm4_sr_health.absorption
+scoreboard players operation $target_absorption_hearts gm4_aa_data = @s gm4_sr_stat.current_absorption
 scoreboard players operation $target_absorption_hearts gm4_aa_data += $reactive.add_absorption gm4_aa_data
 
 # check what level of absorption would do this and apply it

@@ -15,4 +15,4 @@ scoreboard players operation @s gm4_sr_health.quick_regeneration_health = @s gm4
 scoreboard players operation @s gm4_sr_health.quick_regeneration_health -= @s gm4_sr_stat.current_health
 
 # make this player fast regen health faster until it runs out
-tag @s add gm4_sr_fast_regen_quick
+tag @s add gm4_sr_quicker_regeneration_slept

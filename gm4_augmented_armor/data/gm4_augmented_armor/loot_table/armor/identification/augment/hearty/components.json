@@ -22,31 +22,15 @@
           "modifiers": [
             {
               "attribute": "minecraft:generic.max_health",
-              "id": "gm4_augmented_armor:permanent",
-              "amount": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$armor_clamp"
-                },
-                "score": "gm4_aa_data",
-                "scale": -1
-              },
+              "id": "gm4_augmented_armor:dynamic",
+              "amount": 0,
               "operation": "add_value",
               "slot": "chest"
             },
             {
               "attribute": "minecraft:generic.armor",
-              "id": "gm4_augmented_armor:permanent_2",
-              "amount": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$armor_clamp"
-                },
-                "score": "gm4_aa_data",
-                "scale": 1
-              },
+              "id": "gm4_augmented_armor:dynamic_2",
+              "amount": 0,
               "operation": "add_value",
               "slot": "chest"
             }

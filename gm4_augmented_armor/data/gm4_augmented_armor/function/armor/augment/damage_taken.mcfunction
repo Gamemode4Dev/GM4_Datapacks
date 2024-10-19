@@ -12,3 +12,4 @@ execute if score $augment gm4_aa_data matches 4 if score $active gm4_aa_data mat
 execute if score $augment gm4_aa_data matches 8 run function gm4_augmented_armor:armor/augment/type/sparking/damage_taken
 execute if score $augment gm4_aa_data matches 12 if score @s gm4_sr_stat.armor matches 1.. run function gm4_augmented_armor:armor/augment/type/plated/reduce_damage
 execute if score $augment gm4_aa_data matches 13 if score @s gm4_sr_stat.armor matches 1.. run function gm4_augmented_armor:armor/augment/type/sturdy/reduce_damage
+execute if score $augment gm4_aa_data matches 19 run function gm4_augmented_armor:armor/augment/type/rejuvenating/activate

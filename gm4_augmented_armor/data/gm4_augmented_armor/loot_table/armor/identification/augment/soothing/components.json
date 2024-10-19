@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{custom_attribute:{regen_speed:{value:'level_2'}},augment:{name:rejuvenating,id:19,triggers:{clocked:1,damage_dealt:0,damage_taken:1}}}}"
+              "tag": "{gm4_augmented_armor:{augment:{name:radiant,id:1,triggers:{clocked:0,damage_dealt:0,damage_taken:0}}}}"
             }
           ]
         }
@@ -32,8 +32,8 @@
               "fallback": "%s Augment:",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.rejuvenating",
-                  "fallback": "Rejuvenating"
+                  "translate": "item.gm4.augmented_armor.augment.radiant",
+                  "fallback": "Radiant"
                 }
               ],
               "color": "gray",
@@ -48,27 +48,8 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.sustaining",
-                "fallback": "Regenerate %s taken",
-                "with": [
-                  {
-                    "translate": "attribute.modifier.equals.1",
-                    "with": [
-                      {
-                        "score": {
-                          "name": "$level_1",
-                          "objective": "gm4_aa_data"
-                        }
-                      },
-                      {
-                        "translate": "item.gm4.augmented_armor.lore.sustaining_2",
-                        "fallback": "Combat Damage"
-                      }
-                    ],
-                    "color": "blue",
-                    "italic": false
-                  }
-                ],
+                "translate": "item.gm4.augmented_armor.lore.radiant",
+                "fallback": "A floating light follows you",
                 "color": "dark_gray",
                 "italic": false
               }
@@ -82,20 +63,9 @@
           "lore": [
             [
               {
-                "translate": "attribute.modifier.equals.1",
-                "with": [
-                  {
-                    "score": {
-                      "name": "$level_2",
-                      "objective": "gm4_aa_data"
-                    }
-                  },
-                  {
-                    "translate": "attribute.gm4.augmented_armor.regen_speed",
-                    "fallback": "Regeneration Speed"
-                  }
-                ],
-                "color": "red",
+                "translate": "item.gm4.augmented_armor.lore.radiant_2",
+                "fallback": "Sneak to make the light glow",
+                "color": "dark_gray",
                 "italic": false
               }
             ]
@@ -111,8 +81,8 @@
               "fallback": "%s %s",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.rejuvenating",
-                  "fallback": "Rejuvenating"
+                  "translate": "item.gm4.augmented_armor.augment.radiant",
+                  "fallback": "Radiant"
                 },
                 {
                   "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",

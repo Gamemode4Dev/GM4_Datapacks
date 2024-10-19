@@ -1,0 +1,2 @@
+
+$data modify storage gm4_lore:temp Input set value ['{"color":"red","italic":true,"translate":"attribute.modifier.take.1","with":["$(regen_speed)",{"fallback":"Regeneration Speed","translate":"attribute.gm4.augmented_armor.regen_speed"}]}','{"color":"blue","italic":true,"translate":"attribute.modifier.plus.1","with":["$(armor_recharge)",{"fallback":"Armor Recharge Rate","translate":"attribute.gm4.augmented_armor.armor_recharge"}]}']

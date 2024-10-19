@@ -21,7 +21,7 @@ function #gm4_lore:remove
 
 # use lib_lore to update the current bonus text
 data modify storage gm4_lore:temp Target set value '{"color":"gray","fallback":"%s Augment:","italic":false,"translate":"item.gm4.augmented_armor.lore.augment","with":[{"fallback":"Sustaining","translate":"item.gm4.augmented_armor.augment.sustaining"}]}'
-function gm4_augmented_armor:armor/augment/type/sustaining/eval_lore with storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.custom_attribute
+function gm4_augmented_armor:armor/augment/type/sustaining/eval_lore with storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.regen_speed
 scoreboard players set $start gm4_lore 2
 function #gm4_lore:insert
 

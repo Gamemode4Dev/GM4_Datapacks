@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{custom_attribute:{regen_speed:{value:0}},augment:{name:raging,id:25,triggers:{clocked:1,damage_dealt:0,damage_taken:1}}}}"
+              "tag": "{gm4_augmented_armor:{custom_attribute:{regen_speed:{value:0}},augment:{name:sustaining,id:25,triggers:{clocked:1,damage_dealt:0,damage_taken:1}}}}"
             }
           ]
         }
@@ -95,11 +95,11 @@
                       }
                     ],
                     "color": "blue",
-                    "italic": false
+                    "italic": true
                   }
                 ],
                 "color": "dark_gray",
-                "italic": false
+                "italic": true
               }
             ]
           ]
