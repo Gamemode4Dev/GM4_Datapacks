@@ -5,6 +5,7 @@
 
 # calculate damage taken to health
 scoreboard players operation $health_damage gm4_aa_data = $damage_total gm4_sr_data
+execute unless score $damage_total gm4_sr_data matches 1.. run scoreboard players operation $health_damage gm4_aa_data = @s gm4_sr_stat.damage_taken
 scoreboard players add $health_damage gm4_aa_data 5
 scoreboard players operation $health_damage gm4_aa_data /= #10 gm4_aa_data
 scoreboard players operation $health_damage gm4_aa_data -= @s gm4_sr_stat.armor

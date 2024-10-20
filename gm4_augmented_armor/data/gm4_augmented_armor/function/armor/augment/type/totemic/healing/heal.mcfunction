@@ -1,5 +1,5 @@
 
-scoreboard players add @s gm4_sr_health.restoration 1
+scoreboard players add @s gm4_sr_health.restoration 10
 tag @s remove gm4_aa_healing_totem_target
 execute at @s anchored eyes positioned ^ ^0.33 ^ run particle heart ~ ~ ~ 0.33 0.2 0.33 0 3
 

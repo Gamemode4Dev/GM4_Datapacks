@@ -15,7 +15,7 @@ scoreboard players operation $remove_health gm4_sr_data += $damage_health gm4_sr
 # if player died play custom death message
 execute if score $remove_health gm4_sr_data >= @s gm4_sr_stat.max_health run return run function gm4_survival_refightalized:player/health/reduce/death
 
-execute store result storage gm4_survival_refightalized damage_player.remove_health int 1 run scoreboard players get $remove_health gm4_sr_data
+execute store result storage gm4_survival_refightalized damage_player.remove_health float 0.1 run scoreboard players get $remove_health gm4_sr_data
 execute unless score $remove_health gm4_sr_data matches 0 run function gm4_survival_refightalized:player/health/reduce/eval with storage gm4_survival_refightalized damage_player
 data remove storage gm4_survival_refightalized damage_player
 

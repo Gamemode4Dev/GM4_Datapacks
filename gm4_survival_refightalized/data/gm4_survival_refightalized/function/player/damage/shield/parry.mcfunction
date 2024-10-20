@@ -6,9 +6,8 @@ stopsound @s player minecraft:entity.player.hurt
 
 # advancements
 advancement grant @s only gm4:survival_refightalized_parry
-scoreboard players operation $lethal_damage gm4_sr_data = @s gm4_sr_stat.armor
+execute store result score $lethal_damage gm4_sr_data run attribute @s generic.armor get 10
 scoreboard players operation $lethal_damage gm4_sr_data += @s gm4_sr_stat.current_health
-scoreboard players operation $lethal_damage gm4_sr_data *= #10 gm4_sr_data
 execute if score @s gm4_sr_stat.damage_resisted >= $lethal_damage gm4_sr_data run advancement grant @s only gm4:survival_refightalized_parry_lethal_damage
 
 # stop attacker for a bit
