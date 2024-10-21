@@ -22,8 +22,11 @@ execute if entity @s[type=drowned,predicate=gm4_monsters_unbound:biome/reef] run
 # growth
 execute if entity @s[type=!zombie_villager,tag=!gm4_mu_spore_zombie,predicate=gm4_monsters_unbound:biome/growth] run function gm4_monsters_unbound:mob/init/mob_type/zombie/growth
 
-# underground
-execute if predicate gm4_survival_refightalized:mob/underground if predicate {condition:"minecraft:random_chance",chance:0.5} run function gm4_monsters_unbound:mob/init/mob_type/zombie/underground/pick
+# dripstone caves
+execute if entity @s[tag=!gm4_sr_extra_mob] if biome ~ ~ ~ dripstone_caves run function gm4_monsters_unbound:mob/init/mob_type/zombie/dripstone_caves/try
+
+# underground (not dripstone caves)
+execute if predicate {condition:"all_of",terms:[{condition:"reference",name:"gm4_survival_refightalized:mob/underground"},{condition:"inverted",term:{condition:"location_check",predicate:{"biomes":"dripstone_caves"}}},{condition:"random_chance",chance:0.5}]} run function gm4_monsters_unbound:mob/init/mob_type/zombie/underground/pick
 
 # elites
 execute if entity @s[tag=gm4_sr_was_leader_or_baby] run function gm4_monsters_unbound:mob/init/elite/pick

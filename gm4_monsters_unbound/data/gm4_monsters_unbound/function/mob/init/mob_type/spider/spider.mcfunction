@@ -5,7 +5,7 @@
 
 # | Biome Modifiers
 # snowy
-execute if predicate {condition:"minecraft:all_of",terms:[{condition:"minecraft:random_chance",chance:0.15},{condition:"minecraft:reference",name:"gm4_monsters_unbound:biome/snowy"}]} run function gm4_monsters_unbound:mob/init/mob_type/spider/snowy
+execute if predicate {condition:"minecraft:all_of",terms:[{condition:"minecraft:random_chance",chance:0.15},{condition:"minecraft:reference",name:"gm4_monsters_unbound:biome/snowy"}]} run function gm4_monsters_unbound:mob/init/mob_type/spider/gargantuan
 # mountainous
 execute if predicate {condition:"minecraft:all_of",terms:[{condition:"minecraft:random_chance",chance:0.40},{condition:"minecraft:reference",name:"gm4_monsters_unbound:biome/mountainous"}]} run effect give @s speed infinite 0
 # burned
@@ -17,6 +17,8 @@ execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_monsters_unbound:biome/
 # growth
 execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_monsters_unbound:biome/growth] store success score $mob_extras gm4_sr_data run summon spider ~ ~ ~ {Tags:["gm4_sr_extra_mob"]}
 execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_monsters_unbound:biome/growth] if predicate {condition:"minecraft:random_chance",chance:0.60} store success score $mob_extras gm4_sr_data run summon spider ~ ~ ~ {Tags:["gm4_sr_extra_mob"]}
+# dripstone caves
+execute if predicate {condition:"minecraft:all_of",terms:[{condition:"minecraft:random_chance",chance:0.1},{condition:"minecraft:location_check",predicate:{biomes:"dripstone_caves"}}]} run function gm4_monsters_unbound:mob/init/mob_type/spider/gargantuan
 
 # underground
 execute if predicate {condition:"minecraft:all_of",terms:[{condition:"minecraft:random_chance",chance:0.25},{condition:"minecraft:reference",name:"gm4_survival_refightalized:mob/underground"}]} run function gm4_monsters_unbound:mob/init/mob_type/spider/underground/pick

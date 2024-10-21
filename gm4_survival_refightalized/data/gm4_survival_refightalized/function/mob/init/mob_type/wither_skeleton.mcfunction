@@ -37,4 +37,4 @@ execute if data entity @s HandItems[{id:"minecraft:bow"}] run loot replace entit
 
 # shoot arrows slower and weaker
 scoreboard players set @s gm4_sr_arrow.fire_delay 4
-execute store result score @s gm4_sr_arrow.damage_change run random value -12..-8
+execute store result score @s gm4_sr_arrow.damage_change run random value -6..0

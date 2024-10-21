@@ -23,6 +23,8 @@ tag @s remove gm4_mu_self
 execute if entity @s[type=!bogged,predicate=gm4_monsters_unbound:biome/growth] run function gm4_monsters_unbound:mob/init/mob_type/skeleton/growth
 # soul sand valley
 execute if biome ~ ~ ~ soul_sand_valley run effect give @s fire_resistance infinite 0 true
+# dripstone caves
+execute if predicate {condition:"minecraft:all_of",terms:[{condition:"location_check",predicate:{biomes:"dripstone_caves"}},{condition:"random_chance",chance:0.6}]} run item replace entity @s weapon.mainhand with air
 
 # underground
 execute if predicate gm4_survival_refightalized:mob/underground if predicate {condition:"minecraft:random_chance",chance:0.4} run function gm4_monsters_unbound:mob/init/mob_type/skeleton/underground

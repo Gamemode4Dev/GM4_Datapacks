@@ -6,11 +6,9 @@
 # TEMP - paper fix - damage resist score gets multiplied by 51.2, so we need to revert that or the player instantly dies
 # this currently breaks if a player takes a multiple of 51.2 damage, but that should be rare enough
 scoreboard players set #512 gm4_sr_data 512
-scoreboard players operation $paper_test gm4_sr_data = @s gm4_sr_stat.damage_resisted
-scoreboard players operation $paper_test gm4_sr_data %= #512 gm4_sr_data
-execute if score $paper_test gm4_sr_data matches 0 run tellraw @s[tag=gm4_sr_dev] {"text":"Paper Bug - divided damage by 51.2","color":"red","italic":true}
-execute if score $paper_test gm4_sr_data matches 0 run scoreboard players operation @s gm4_sr_stat.damage_resisted *= #10 gm4_sr_data
-execute if score $paper_test gm4_sr_data matches 0 run scoreboard players operation @s gm4_sr_stat.damage_resisted /= #512 gm4_sr_data
+execute if score $on_paper gm4_sr_data matches 1 run tellraw @s[tag=gm4_sr_dev] {"text":"Paper Bug - divided damage by 51.2","color":"red","italic":true}
+execute if score $on_paper gm4_sr_data matches 1 run scoreboard players operation @s gm4_sr_stat.damage_resisted *= #10 gm4_sr_data
+execute if score $on_paper gm4_sr_data matches 1 run scoreboard players operation @s gm4_sr_stat.damage_resisted /= #512 gm4_sr_data
 
 # grab active effects to check for resistance later - can be skipped if this was already done for cave spider poison reduction
 execute unless data storage gm4_survival_refightalized:temp active_effects run data modify storage gm4_survival_refightalized:temp active_effects set from entity @s active_effects

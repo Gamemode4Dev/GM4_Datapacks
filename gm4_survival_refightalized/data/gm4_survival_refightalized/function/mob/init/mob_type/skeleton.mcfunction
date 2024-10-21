@@ -4,24 +4,24 @@
 # run from mob/init/mob_type
 
 # Stat Block (normal/hard diff)
-# health: 6 - 22
-# damage: 2 - 5.5 (cap 7)
+# health: 9 - 22
+# damage: 2 - 6.5 (cap 7)
 # speed: 75 - 105%
 
 # base stat nerf
-attribute @s generic.max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -14 add_value
+attribute @s generic.max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -11 add_value
 attribute @s generic.movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.25 add_multiplied_base
 
 # max stat buffs
-scoreboard players set $mob_health gm4_sr_data 16
-scoreboard players set $mob_damage gm4_sr_data 35
+scoreboard players set $mob_health gm4_sr_data 13
+scoreboard players set $mob_damage gm4_sr_data 45
 scoreboard players set $mob_speed gm4_sr_data 30
 # max damage mob is allowed to deal in one hit (to deal with weapons)
 scoreboard players set @s gm4_sr_mob.damage_cap 70
 tag @s add gm4_sr_check_damage_cap
 
-# reduce arrow damage
-execute store result score @s gm4_sr_arrow.damage_change run random value -8..-4
+# arrow damage
+execute store result score @s gm4_sr_arrow.damage_change run random value -4..4
 scoreboard players set @s gm4_sr_arrow.fire_delay 3
 
 # set armor

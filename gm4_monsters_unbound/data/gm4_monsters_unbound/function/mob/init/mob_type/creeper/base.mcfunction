@@ -19,3 +19,5 @@ execute if entity @s[tag=gm4_mu_toxic_creeper] run function gm4_monsters_unbound
 attribute @s[predicate=gm4_monsters_unbound:biome/growth] generic.movement_speed modifier add gm4_monsters_unbound:stat_change.growth 0.2 add_multiplied_base
 # dark
 data modify entity @s[predicate=gm4_survival_refightalized:mob/underground] ExplosionRadius set value 4s
+# dripstone caves
+execute if biome ~ ~ ~ dripstone_caves if block ~.875 ~ ~.875 #gm4:no_collision if block ~.875 ~ ~-.875 #gm4:no_collision if block ~-.875 ~ ~.875 #gm4:no_collision if block ~-.875 ~ ~-.875 #gm4:no_collision run function gm4_monsters_unbound:mob/init/mob_type/creeper/dripstone_caves
