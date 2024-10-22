@@ -10,7 +10,7 @@
 # run from weapon/modifier/delay/explode_player
 
 # get max health
-execute store result score @s gm4_ce_health.max run attribute @s minecraft:generic.max_health get
+execute store result score @s gm4_ce_health.max run attribute @s minecraft:max_health get
 
 # calculate half of max health
 scoreboard players operation @s gm4_ce_health.max_half = @s gm4_ce_health.max

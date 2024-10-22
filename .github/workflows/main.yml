@@ -7,14 +7,8 @@ on:
   workflow_dispatch:
 
 env:
-  VERSION: '1.21'
+  VERSION: '1.21.2'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
-  # https://fabricmc.net/use/server/
-  TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.21.1/0.16.5/1.0.1/server/jar
-  # https://modrinth.com/mod/fabric-api/versions
-  TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/WTaAx4ah/fabric-api-0.105.0%2B1.21.1.jar
-  # https://modrinth.com/mod/packtest/versions
-  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/x9txtivi/packtest-1.8-mc1.21.1.jar
 
 jobs:
   build:
@@ -103,6 +97,22 @@ jobs:
           branch: release
 
   test:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # https://fabricmc.net/use/server/
+          # https://modrinth.com/mod/fabric-api/versions
+          # https://modrinth.com/mod/packtest/versions
+          - version: '1.21.1'
+            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/1.21.1/0.16.5/1.0.1/server/jar
+            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/WTaAx4ah/fabric-api-0.105.0%2B1.21.1.jar
+            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/x9txtivi/packtest-1.8-mc1.21.1.jar
+          - version: '1.21.2'
+            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/1.21.2/0.16.7/1.0.1/server/jar
+            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/UEjZZNue/fabric-api-0.106.1%2B1.21.2.jar
+            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/wjOUK14F/packtest-1.9-mc1.21.2.jar
+    name: 'test-${{ matrix.version }}'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -131,6 +141,7 @@ jobs:
       - name: Build all modules for tests
         run: poetry run beet -p beet-test.yaml -l ${{ env.LOG_LEVEL }} build
         env:
+          VERSION: ${{ matrix.version }}
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
       - name: Setup Java
@@ -141,10 +152,10 @@ jobs:
 
       - name: Download server files
         run: |
-          curl -o server.jar $TEST_FABRIC_SERVER
+          curl -o server.jar ${{ matrix.fabric_server_url }}
           mkdir mods
-          curl -o mods/fabric-api.jar $TEST_FABRIC_API
-          curl -o mods/packtest.jar $TEST_PACKTEST
+          curl -o mods/fabric-api.jar ${{ matrix.fabric_api_url }}
+          curl -o mods/packtest.jar ${{ matrix.packtest_url }}
 
       - name: Copy packs to world
         run: |
@@ -162,5 +173,5 @@ jobs:
         if: ${{ failure() && steps.run-tests.conclusion == 'failure' }}
         uses: actions/upload-artifact@v4
         with:
-          name: 'Test world for ${{ github.sha }}'
+          name: 'Test world in ${{ matrix.version }} for ${{ github.sha }}'
           path: ${{ github.workspace }}/world/

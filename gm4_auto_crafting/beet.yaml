@@ -6,6 +6,11 @@ data_pack:
   load: 
     - .
     - data/gm4_custom_crafters/loot_table/items/custom_crafter.json: ../lib_custom_crafters/data/gm4_custom_crafters/loot_table/items/custom_crafter.json
+  overlays:
+    - formats:
+        min_inclusive: 0
+        max_inclusive: 48
+      directory: overlay_48
 
 resource_pack:
   load: .

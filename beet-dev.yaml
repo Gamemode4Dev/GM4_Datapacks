@@ -7,6 +7,7 @@ pipeline:
       - gm4.plugins.output
       - gm4.plugins.player_heads
       - gm4.plugins.resource_pack
+      - gm4.plugins.attribute_rewrite
       - beet.contrib.model_merging
       - beet.contrib.optifine
       - beet.contrib.babelbox
@@ -16,8 +17,6 @@ pipeline:
     pipeline:
       - gm4.plugins.write_mcmeta
     meta:
-      vanilla:
-        version: 1.21.1
       gm4_dev: True
       mecha:
         formatting:
@@ -46,8 +45,6 @@ pipeline:
 meta:
   autosave:
     link: false
-  vanilla:
-    version: 1.21.1
   gm4_dev: True
 
 ignore: 

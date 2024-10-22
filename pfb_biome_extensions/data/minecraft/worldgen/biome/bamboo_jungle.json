@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/bamboo_jungle",
-    "liquid": "#minecraft:liquid/in_biome/bamboo_jungle"
-  },
+  "carvers": "#minecraft:in_biome/bamboo_jungle",
   "downfall": 0.9,
   "effects": {
     "fog_color": 12638463,

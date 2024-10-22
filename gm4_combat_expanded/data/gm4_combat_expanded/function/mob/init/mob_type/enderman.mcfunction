@@ -4,9 +4,9 @@
 # run from mob/init/mob_type
 
 # base stat nerf
-attribute @s[predicate=!gm4_combat_expanded:mob/modifier/the_end] generic.max_health modifier add gm4_combat_expanded:stat_change.base_nerf -2 add_value
-attribute @s generic.attack_damage modifier add gm4_combat_expanded:stat_change.base_nerf -3 add_value
-attribute @s generic.movement_speed modifier add gm4_combat_expanded:stat_change.base_nerf -0.1 add_multiplied_base
+attribute @s[predicate=!gm4_combat_expanded:mob/modifier/the_end] minecraft:max_health modifier add gm4_combat_expanded:stat_change.base_nerf -2 add_value
+attribute @s minecraft:attack_damage modifier add gm4_combat_expanded:stat_change.base_nerf -3 add_value
+attribute @s minecraft:movement_speed modifier add gm4_combat_expanded:stat_change.base_nerf -0.1 add_multiplied_base
 
 # max stat buffs
 scoreboard players set $mob_health gm4_ce_data 16
@@ -21,8 +21,8 @@ scoreboard players set @s gm4_ce_damage_cap 140
 # flowering 
 execute if predicate gm4_combat_expanded:mob/modifier/flowering if predicate gm4_combat_expanded:technical/chance/replace_enderman_slime run function gm4_combat_expanded:mob/init/modifier/special/flowering_enderman
 # the end
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/the_end] generic.attack_damage modifier add gm4_combat_expanded:stat_change.the_end 0.2 add_multiplied_base
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/the_end] generic.movement_speed modifier add gm4_combat_expanded:stat_change.the_end 0.15 add_multiplied_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/the_end] minecraft:attack_damage modifier add gm4_combat_expanded:stat_change.the_end 0.2 add_multiplied_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/the_end] minecraft:movement_speed modifier add gm4_combat_expanded:stat_change.the_end 0.15 add_multiplied_base
 # warped forest
 execute if predicate gm4_combat_expanded:mob/modifier/nether/warped_forest if predicate gm4_combat_expanded:technical/chance/extra_enderman run function gm4_combat_expanded:mob/init/modifier/special/warped_forest_enderman
 # nether wastes

@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/windswept_hills",
-    "liquid": "#minecraft:liquid/in_biome/windswept_hills"
-  },
+  "carvers": "#minecraft:in_biome/windswept_hills",
   "downfall": 0.3,
   "effects": {
     "fog_color": 12638463,

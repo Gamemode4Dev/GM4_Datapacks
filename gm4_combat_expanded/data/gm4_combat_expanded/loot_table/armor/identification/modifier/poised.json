@@ -13,14 +13,14 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.armor",
+                  "attribute": "minecraft:armor",
                   "id": "gm4_combat_expanded:dynamic",
                   "amount": 0,
                   "operation": "add_value",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
                   "id": "gm4_combat_expanded:dynamic_2",
                   "amount": 0,
                   "operation": "add_value",
@@ -71,7 +71,7 @@
                     }
                   },
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   }
                 ],
                 "color": "red",
@@ -107,7 +107,7 @@
                     }
                   ],
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "blue",
@@ -151,7 +151,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "blue",
@@ -209,7 +209,7 @@
                     }
                   },
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   }
                 ],
                 "color": "blue",
@@ -243,7 +243,7 @@
                     }
                   ],
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "red",
@@ -285,7 +285,7 @@
                     }
                   },
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "red",

@@ -13,7 +13,7 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_speed",
+                  "attribute": "minecraft:attack_speed",
                   "id": "gm4_combat_expanded:sword_ring_attack_speed",
                   "amount": {
                     "type": "minecraft:score",
