@@ -1,5 +1,5 @@
 {
-  "last_commit": "fd5c3ec156d847e6024411c48eb8ed06b87c605f",
+  "last_commit": "222b3d4b5b8051e3b47f2cf5c51109bf43e3e297",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -24,7 +24,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
@@ -61,7 +62,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": "Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.",
@@ -94,7 +96,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -143,7 +146,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -171,7 +175,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -205,7 +210,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
@@ -274,7 +280,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -312,7 +319,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -367,7 +375,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -401,7 +410,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -429,7 +439,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -468,7 +479,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -502,7 +514,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -535,7 +548,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -570,7 +584,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -636,7 +651,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -667,7 +683,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -699,7 +716,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -736,7 +754,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -774,7 +793,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -827,7 +847,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -863,7 +884,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -894,7 +916,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -927,7 +950,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -955,7 +979,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1009,7 +1034,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1042,7 +1068,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1095,7 +1122,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1128,7 +1156,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1162,7 +1191,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1216,7 +1246,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1250,7 +1281,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1332,7 +1364,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1366,7 +1399,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1399,7 +1433,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1433,7 +1468,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1471,7 +1507,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
@@ -1510,7 +1547,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1556,7 +1594,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1587,7 +1626,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1624,7 +1664,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1657,7 +1698,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1710,7 +1752,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": "Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
@@ -1756,7 +1799,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1790,7 +1834,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1818,7 +1863,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": "Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.",
@@ -1855,7 +1901,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1889,7 +1936,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1922,7 +1970,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1960,7 +2009,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -1993,7 +2043,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2027,7 +2078,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2058,7 +2110,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2089,7 +2142,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2128,7 +2182,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2167,7 +2222,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2202,7 +2258,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2238,7 +2295,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2282,7 +2340,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2313,7 +2372,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2349,7 +2409,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2380,7 +2441,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2413,7 +2475,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2456,7 +2519,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2489,7 +2553,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
@@ -2522,7 +2587,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2557,7 +2623,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2591,7 +2658,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2630,7 +2698,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2665,7 +2734,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2700,7 +2770,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2743,7 +2814,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2780,7 +2852,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2818,7 +2891,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2852,7 +2926,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
@@ -2885,7 +2960,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2921,7 +2997,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2955,7 +3032,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -2989,7 +3067,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -3020,7 +3099,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -3056,7 +3136,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -3168,7 +3249,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -3206,7 +3288,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": false,
       "important_note": null,
@@ -3236,7 +3319,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": true,
       "important_note": null,
@@ -3269,7 +3353,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": true,
       "important_note": null,
@@ -3297,7 +3382,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": true,
       "important_note": null,
@@ -3325,7 +3411,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": true,
       "important_note": null,
@@ -3353,7 +3440,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": true,
       "important_note": null,
@@ -3381,7 +3469,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": true,
       "important_note": null,
@@ -3409,7 +3498,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": true,
       "important_note": null,
@@ -3437,7 +3527,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": true,
       "important_note": null,
@@ -3466,7 +3557,8 @@
       "minecraft": [
         "1.21",
         "1.21.1",
-        "1.21.2"
+        "1.21.2",
+        "1.21.3"
       ],
       "hidden": true,
       "important_note": null,
