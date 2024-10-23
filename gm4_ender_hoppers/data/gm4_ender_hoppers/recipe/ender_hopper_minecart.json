@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "E",
+    "R",
+    "H"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:ender_eye"
+    },
+    "R": {
+      "item": "minecraft:respawn_anchor"
+    },
+    "H": {
+      "item": "minecraft:hopper_minecart"
+    }
+  },
+  "result": {
+    "id": "minecraft:hopper_minecart",
+    "components": {
+      "minecraft:custom_model_data": "item/ender_hopper_minecart",
+      "minecraft:custom_data": "{gm4_machines:{id:'ender_hopper_minecart'}}",
+      "minecraft:custom_name": "{\"translate\":\"item.gm4.ender_hopper_minecart\",\"fallback\":\"Minecart with Ender Hopper\",\"color\":\"white\",\"italic\":false}"
+    }
+  }
+}
