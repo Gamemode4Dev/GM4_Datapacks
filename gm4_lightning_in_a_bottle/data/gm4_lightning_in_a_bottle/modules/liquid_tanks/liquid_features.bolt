@@ -1,0 +1,25 @@
+from gm4_liquid_tanks:liquid_wrappers import liquid
+
+@liquid
+class BottledLightning:
+    id = 'liab_lightning'
+    name = "Lightning"
+    capacity = 300
+    skin = 'lightning_liquid'
+
+    liquid.init()
+    
+    @liquid.item_fill("glass_bottle", "potion[custom_data~{gm4_lightning_in_a_bottle:1b}]", 1)
+    def fill_bottle():
+        loot replace entity 344d47-4-4-4-f04ce104d weapon.mainhand loot gm4_lightning_in_a_bottle:items/bottle_of_lightning
+
+    @liquid.util_below
+    def lightning_strike():
+        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+            unless entity @s[gamemode=spectator]
+            unless entity @s[predicate=gm4_lightning_in_a_bottle:on_fire]
+            run function gm4_lightning_in_a_bottle:liquid_tanks/util/lightning:
+                execute at @s run summon lightning_bolt ~ ~ ~
+                scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
+                playsound entity.firework_rocket.twinkle block @a[distance=..8] ~ ~ ~ 2 1.5
+                advancement grant @s only gm4:lightning_in_a_bottle_drink
