@@ -1,5 +1,5 @@
 {
-  "last_commit": "222b3d4b5b8051e3b47f2cf5c51109bf43e3e297",
+  "last_commit": "bc97fd8e9a2145d6ab6aab1ad48ba80492a3ea1c",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2533,8 +2533,8 @@
     {
       "id": "gm4_soul_glass",
       "name": "Soul Glass",
-      "version": "1.4.9",
-      "hash": "78010d0c61870a987764774224bfa816c9336482",
+      "version": "1.4.10",
+      "hash": "8485a4197d58fa443ec6a705b98d83fe16736358",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Soul_Glass",
       "credits": {
