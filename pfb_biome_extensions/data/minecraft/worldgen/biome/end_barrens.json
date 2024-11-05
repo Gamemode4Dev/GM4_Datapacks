@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/end_barrens",
-    "liquid": "#minecraft:liquid/in_biome/end_barrens"
-  },
+  "carvers": "#minecraft:in_biome/end_barrens",
   "downfall": 0.5,
   "effects": {
     "fog_color": 10518688,

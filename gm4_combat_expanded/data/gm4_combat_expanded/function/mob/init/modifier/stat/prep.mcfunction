@@ -5,17 +5,17 @@
 
 # | Biome Modifiers
 # snowy
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] generic.movement_speed modifier add gm4_combat_expanded:stat_change.snowy -0.15 add_multiplied_base
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] generic.max_health modifier add gm4_combat_expanded:stat_change.snowy 0.15 add_multiplied_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] minecraft:movement_speed modifier add gm4_combat_expanded:stat_change.snowy -0.15 add_multiplied_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/snowy] minecraft:max_health modifier add gm4_combat_expanded:stat_change.snowy 0.15 add_multiplied_base
 # mountainous
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.armor modifier add gm4_combat_expanded:stat_change.mountainous 0.25 add_multiplied_base
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] generic.armor_toughness modifier add gm4_combat_expanded:stat_change.mountainous 0.5 add_multiplied_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] minecraft:armor modifier add gm4_combat_expanded:stat_change.mountainous 0.25 add_multiplied_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/mountainous] minecraft:armor_toughness modifier add gm4_combat_expanded:stat_change.mountainous 0.5 add_multiplied_base
 # burned
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/burned] generic.movement_speed modifier add gm4_combat_expanded:stat_change.burned 0.1 add_multiplied_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/burned] minecraft:movement_speed modifier add gm4_combat_expanded:stat_change.burned 0.1 add_multiplied_base
 # toxic
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/toxic] generic.attack_damage modifier add gm4_combat_expanded:stat_change.toxic -0.25 add_multiplied_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/toxic] minecraft:attack_damage modifier add gm4_combat_expanded:stat_change.toxic -0.25 add_multiplied_base
 # deep
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/deep] generic.armor_toughness modifier add gm4_combat_expanded:stat_change.deep 0.6 add_multiplied_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/deep] minecraft:armor_toughness modifier add gm4_combat_expanded:stat_change.deep 0.6 add_multiplied_base
 # dark
 execute if predicate gm4_combat_expanded:mob/modifier/dark run function gm4_combat_expanded:mob/init/modifier/special/dark_mob
 

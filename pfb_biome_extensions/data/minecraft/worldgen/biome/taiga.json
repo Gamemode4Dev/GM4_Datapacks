@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/taiga",
-    "liquid": "#minecraft:liquid/in_biome/taiga"
-  },
+  "carvers": "#minecraft:in_biome/taiga",
   "downfall": 0.8,
   "effects": {
     "fog_color": 12638463,

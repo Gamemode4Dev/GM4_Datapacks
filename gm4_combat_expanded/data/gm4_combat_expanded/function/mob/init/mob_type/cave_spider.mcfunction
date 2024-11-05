@@ -4,9 +4,9 @@
 # run from mob/init/mob_type
 
 # base stat nerf
-attribute @s generic.max_health modifier add gm4_combat_expanded:stat_change.base_nerf -8 add_value
-attribute @s generic.attack_damage modifier add gm4_combat_expanded:stat_change.base_nerf -1.5 add_value
-attribute @s generic.movement_speed modifier add gm4_combat_expanded:stat_change.base_nerf -0.12 add_multiplied_base
+attribute @s minecraft:max_health modifier add gm4_combat_expanded:stat_change.base_nerf -8 add_value
+attribute @s minecraft:attack_damage modifier add gm4_combat_expanded:stat_change.base_nerf -1.5 add_value
+attribute @s minecraft:movement_speed modifier add gm4_combat_expanded:stat_change.base_nerf -0.12 add_multiplied_base
 
 # max stat buffs
 scoreboard players set $mob_health gm4_ce_data 10
@@ -32,7 +32,7 @@ tag @s[predicate=gm4_combat_expanded:mob/modifier/toxic] add gm4_ce_poison_bite
 execute if entity @s[tag=!gm4_ce_extra_mob,predicate=gm4_combat_expanded:mob/modifier/growth] store success score $mob_extras gm4_ce_data run summon cave_spider ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
 execute if entity @s[tag=!gm4_ce_extra_mob,predicate=gm4_combat_expanded:mob/modifier/growth,predicate=gm4_combat_expanded:technical/chance/extra_spider_spawn] store success score $mob_extras gm4_ce_data run summon cave_spider ~ ~ ~ {Tags:["gm4_ce_extra_mob"]}
 # dark
-attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] generic.movement_speed modifier add gm4_combat_expanded:stat_change.dark 0.15 add_multiplied_base
+attribute @s[predicate=gm4_combat_expanded:mob/modifier/dark] minecraft:movement_speed modifier add gm4_combat_expanded:stat_change.dark 0.15 add_multiplied_base
 
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep

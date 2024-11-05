@@ -38,7 +38,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'soaring'},stored_attributes:[{AttributeName:'generic.max_health',Name:'generic.max_health',Amount:-0.2d,Operation:1,UUID:[0,972157,0,324820],Slot:'offhand'}],stored_color:[9295344]}}"
+              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'soaring'},stored_attributes:[{AttributeName:'minecraft:max_health',Name:'minecraft:max_health',Amount:-0.2d,Operation:1,UUID:[0,972157,0,324820],Slot:'offhand'}],stored_color:[9295344]}}"
             }
           ]
         }

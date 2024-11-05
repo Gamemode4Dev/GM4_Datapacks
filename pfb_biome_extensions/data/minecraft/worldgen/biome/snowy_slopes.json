@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/snowy_slopes",
-    "liquid": "#minecraft:liquid/in_biome/snowy_slopes"
-  },
+  "carvers": "#minecraft:in_biome/snowy_slopes",
   "downfall": 0.9,
   "effects": {
     "fog_color": 12638463,

@@ -13,7 +13,7 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.armor",
+                  "attribute": "minecraft:armor",
                   "id": "minecraft:armor.chestplate",
                   "amount": 6,
                   "operation": "add_value",

@@ -4,6 +4,7 @@
   "module_type": "expansion",
   "load_check": "mysterious_midnights",
   "base_module": "mysterious_midnights",
+  "wiki_link": "https://wiki.gm4.co/Mysterious_Midnights/Resurrecting_Skeletons",
   "icon": {
     "id": "minecraft:bone"
   },
@@ -17,7 +18,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:skeleton",
-              "nbt": "{DeathLootTable:\"minecraft:empty\",attributes:[{id:\"minecraft:generic.attack_damage\",base:10.0d}]}"
+              "nbt": "{DeathLootTable:\"minecraft:empty\",attributes:[{id:\"minecraft:attack_damage\",base:10.0d}]}"
             }
           }
         ]

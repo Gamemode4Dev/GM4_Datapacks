@@ -4,14 +4,10 @@
   "predicate": {
     "equipment": {
       "mainhand": {
-        "items": [
-          "minecraft:air"
-        ]
+        "count": 0
       },
       "offhand": {
-        "items": [
-          "minecraft:air"
-        ]
+        "count": 0
       }
     }
   }

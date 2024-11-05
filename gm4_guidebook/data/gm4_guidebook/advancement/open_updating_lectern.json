@@ -11,7 +11,7 @@
                 "blocks": [
                   "minecraft:lectern"
                 ],
-                "nbt": "{Book:{components:{'minecraft:custom_data':{gm4_guidebook:{lectern:1b}}}}}",
+                "nbt": "{Book:{components:{'minecraft:custom_data':{gm4_guidebook:{lectern:0b}}}}}",
                 "state": {
                   "has_book": "true"
                 }

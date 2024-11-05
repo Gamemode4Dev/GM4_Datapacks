@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/crimson_forest",
-    "liquid": "#minecraft:liquid/in_biome/crimson_forest"
-  },
+  "carvers": "#minecraft:in_biome/crimson_forest",
   "downfall": 0.0,
   "effects": {
     "additions_sound": {

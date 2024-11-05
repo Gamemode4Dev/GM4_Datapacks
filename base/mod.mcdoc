@@ -1,0 +1,55 @@
+dispatch minecraft:storage[gm4:log] to struct Gm4Log {
+  versions?: [LogVersion],
+  traverse_versions?: [LogVersion],
+  log?: struct {
+    require_id?: string
+  },
+  outdated_list?: [LogEntry],
+  queue?: [LogEntry],
+  temp?: #[text_component] string,
+}
+
+struct LogVersion {
+  id: string,
+  module: string,
+  version: string,
+  from?: string,
+}
+
+struct LogEntry {
+  type: ("text" | "install" | "outdated" | "missing" | "version_conflict"),
+  ...gm4:log_entry[[type]],
+}
+
+dispatch gm4:log_entry[text] to struct {
+  /// The text component message to display.
+  message: #[text_component] string,
+}
+
+dispatch gm4:log_entry[install] to struct {
+  /// The name of the module that was just installed.
+  module: string,
+}
+
+dispatch gm4:log_entry[outdated] to struct {
+  module: string,
+  download: #[url] string,
+  render: #[text_component] string,
+}
+
+dispatch gm4:log_entry[missing] to struct MissingLog {
+  /// The name of the module.
+  module: string,
+  /// The ID of the module.
+  id: string,
+  /// The name of the dependency.
+  require: string,
+  /// The ID of the dependency.
+  require_id: string,
+}
+
+dispatch gm4:log_entry[version_conflict] to struct {
+  ...MissingLog,
+  /// The required version of the dependency.
+  require_ver: string,
+}

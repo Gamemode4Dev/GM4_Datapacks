@@ -38,7 +38,7 @@
                     }
                   ],
                   {
-                    "translate": "attribute.name.generic.attack_speed"
+                    "translate": "attribute.name.attack_speed"
                   }
                 ],
                 "color": "dark_green",
@@ -83,7 +83,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "attribute.name.generic.attack_speed"
+                    "translate": "attribute.name.attack_speed"
                   }
                 ],
                 "color": "dark_green",
