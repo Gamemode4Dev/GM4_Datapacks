@@ -14,6 +14,7 @@
             "\ue012": -12,
             "\ue014": -14,
             "\ue016": -16,
+            "\ue018": -18,
             "\ue030": -30,
             "\ue148": -161,
             "\uf001": 1,
@@ -23,12 +24,22 @@
             "\uf015": 15,
             "\uf016": 16,
             "\uf018": 18,
+            "\uf019": 19,
             "\uf032": 32,
             "\uf037": 37,
             "\uf048": 48,
             "\uf110": 110,
             "☒": 10
          }
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:font_magic/spacing_square.png",
+         "ascent": -32768,
+         "height": -2,
+         "chars": [
+            "\uffff"
+         ]
       },
       {
          "type": "bitmap",
@@ -154,6 +165,15 @@
          "height": 256,
          "chars": [
             "\u900b"
+         ]
+      },
+      {
+         "type": "bitmap",
+         "file": "gm4_guidebook:font_magic/numbers.png",
+         "ascent": 0,
+         "height": 8,
+         "chars": [
+            "\u0abf\u0ac0\u0ac1\u0ac2\u0ac3\u0ac4\u0ac5\u0ac6\u0ac7\u0ac8"
          ]
       }
    ]

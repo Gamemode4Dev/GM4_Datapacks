@@ -118,7 +118,7 @@
             "insert": "recipe",
             "recipe": "gm4_boots_of_ostara:boots_of_ostara"
           },
-          "\n",
+          "\n\n",
           {
             "translate": "text.gm4.guidebook.boots_of_ostara.crafting_and_desire_lines",
             "fallback": "Boots of Ostara also prevent desire lines from forming."

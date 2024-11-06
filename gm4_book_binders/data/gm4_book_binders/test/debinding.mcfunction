@@ -1,6 +1,6 @@
 # @template gm4:test_platform
 # @dummy ~ ~1 ~
-# @timeout 200
+# @timeout 300
 
 give @s lectern
 execute at @s run tp @s ~ ~ ~ facing ~ ~-1.5 ~1.5

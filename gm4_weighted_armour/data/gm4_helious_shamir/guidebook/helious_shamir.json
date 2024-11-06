@@ -4,6 +4,7 @@
   "module_type": "expansion",
   "load_check": "weighted_armour",
   "base_module": "metallurgy",
+  "wiki_link": "https://wiki.gm4.co/Metallurgy/Helious_Shamir",
   "icon": {
     "id": "minecraft:anvil"
   },

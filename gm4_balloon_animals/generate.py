@@ -24,7 +24,11 @@ def beet_default(ctx: Context):
     rare_animals.sort()
     common_animals.sort()
 
+    # set wolf variants
+    wolf_variants = ["minecraft:pale", "minecraft:ashen", "minecraft:black", "minecraft:chestnut", "minecraft:rusty", "minecraft:snowy", "minecraft:spotted", "minecraft:striped", "minecraft:woods"]
+
     # store to meta
     ctx.meta['animals'] = animals
     ctx.meta['enumeration'] = [*common_animals, *rare_animals]
     ctx.meta['rare_start'] = len(common_animals)
+    ctx.meta['wolf_variants'] = wolf_variants

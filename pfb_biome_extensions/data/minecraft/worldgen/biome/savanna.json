@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/savanna",
-    "liquid": "#minecraft:liquid/in_biome/savanna"
-  },
+  "carvers": "#minecraft:in_biome/savanna",
   "downfall": 0.0,
   "effects": {
     "fog_color": 12638463,

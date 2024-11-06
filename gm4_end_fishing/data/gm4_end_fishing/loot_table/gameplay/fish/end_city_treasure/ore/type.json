@@ -6,23 +6,23 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 8,
-          "name": "minecraft:diamond"
+          "name": "minecraft:diamond",
+          "weight": 8
         },
         {
           "type": "minecraft:item",
-          "weight": 20,
-          "name": "minecraft:iron_ingot"
+          "name": "minecraft:iron_ingot",
+          "weight": 20
         },
         {
           "type": "minecraft:item",
-          "weight": 25,
-          "name": "minecraft:gold_ingot"
+          "name": "minecraft:gold_ingot",
+          "weight": 25
         },
         {
           "type": "minecraft:item",
-          "weight": 12,
-          "name": "minecraft:emerald"
+          "name": "minecraft:emerald",
+          "weight": 12
         }
       ]
     }

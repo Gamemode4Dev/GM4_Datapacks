@@ -1,5 +1,6 @@
 scoreboard objectives add gm4_es_data dummy
 scoreboard objectives add gm4_es_age dummy
+scoreboard objectives add gm4_es_age_alt dummy
 scoreboard objectives add gm4_es_mine minecraft.mined:minecraft.stone
 # set chance (out of 100) for a single mob to age every 30s
 # 10 = on average, a mob ages every 5 minutes

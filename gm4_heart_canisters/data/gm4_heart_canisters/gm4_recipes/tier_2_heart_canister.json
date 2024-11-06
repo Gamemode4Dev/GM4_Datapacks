@@ -15,7 +15,7 @@
       },
       "H": {
         "item": "minecraft:player_head",
-        "nbt": "{gm4_heart_canister:1b,gm4_heart_canister_tier:1b}",
+        "components": {"minecraft:custom_data":{"gm4_heart_canister":1,"gm4_heart_canister_tier":1}},
         "guidebook": {
           "type": "loot_table",
           "name": "gm4_heart_canisters:items/tier_1_heart_canister"

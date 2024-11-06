@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/dripstone_caves",
-    "liquid": "#minecraft:liquid/in_biome/dripstone_caves"
-  },
+  "carvers": "#minecraft:in_biome/dripstone_caves",
   "downfall": 0.4,
   "effects": {
     "fog_color": 12638463,

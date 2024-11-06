@@ -121,7 +121,8 @@
       "gm4_orb_of_ankou:pneuma/feigning": 234,
       "gm4_orb_of_ankou:pneuma/shrieking": 235,
       "gm4_orb_of_ankou:pneuma/dashing": 236,
-      "gm4_orb_of_ankou:pneuma/sniffing": 237
+      "gm4_orb_of_ankou:pneuma/sniffing": 237,
+      "gm4_orb_of_ankou:pneuma/tranquilizing": 238
     },
     "blaze_powder": {
       "gm4_mysterious_midnights:guidebook_icon/nightmare_nights": 1
@@ -572,7 +573,8 @@
       "gm4_orb_of_ankou:pneuma/feigning": 234,
       "gm4_orb_of_ankou:pneuma/shrieking": 235,
       "gm4_orb_of_ankou:pneuma/dashing": 236,
-      "gm4_orb_of_ankou:pneuma/sniffing": 237
+      "gm4_orb_of_ankou:pneuma/sniffing": 237,
+      "gm4_orb_of_ankou:pneuma/tranquilizing": 238
     },
     "flint_and_steel": {
       "gm4_orb_of_ankou:gui/advancement/orb_of_ankou_soul_forge": 1,
