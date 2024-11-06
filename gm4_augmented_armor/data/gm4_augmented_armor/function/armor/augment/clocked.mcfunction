@@ -19,3 +19,4 @@ execute if score $augment gm4_aa_data matches 24 run function gm4_augmented_armo
 execute if score $augment gm4_aa_data matches 25 run function gm4_augmented_armor:armor/augment/type/sustaining/check
 execute if score $augment gm4_aa_data matches 26 if score @s gm4_aa_stat.kills matches 1.. run function gm4_augmented_armor:armor/augment/type/vampiric/activate
 execute if score $augment gm4_aa_data matches 27 run function gm4_augmented_armor:armor/augment/type/steelheart/check
+execute if score $augment gm4_aa_data matches 28 run function gm4_augmented_armor:armor/augment/type/heartplate/check

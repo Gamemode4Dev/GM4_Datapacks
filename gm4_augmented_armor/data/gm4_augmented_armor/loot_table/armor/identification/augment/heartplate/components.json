@@ -10,12 +10,33 @@
           "functions": [
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{custom_attribute:{armor_recharge:{value:'level_2'}},augment:{name:plated,id:12,triggers:{clocked:0,damage_dealt:0,damage_taken:1}}}}"
+              "tag": "{gm4_augmented_armor:{custom_attribute:{regen_speed:{value:0}},augment:{name:heartplate,id:28,triggers:{clocked:1,damage_dealt:0,damage_taken:0}}}}"
             }
           ]
         }
       ],
       "functions": [
+        {
+          "function": "minecraft:set_attributes",
+          "replace": false,
+          "modifiers": [
+            {
+              "attribute": "minecraft:generic.max_health",
+              "id": "gm4_augmented_armor:permanent",
+              "amount": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_2"
+                },
+                "score": "gm4_aa_data",
+                "scale": 0.01
+              },
+              "operation": "add_multiplied_total",
+              "slot": "chest"
+            }
+          ]
+        },
         {
           "function": "minecraft:set_lore",
           "mode": "append",
@@ -32,8 +53,8 @@
               "fallback": "%s Augment:",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.plated",
-                  "fallback": "Plated"
+                  "translate": "item.gm4.augmented_armor.augment.heartplate",
+                  "fallback": "Heartplate"
                 }
               ],
               "color": "gray",
@@ -48,212 +69,7 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.plated",
-                "fallback": "Damage to %s is reduced by %s,",
-                "with": [
-                  {
-                    "translate": "attribute.name.armor"
-                  },
-                  {
-                    "text": "0.5",
-                    "color": "blue"
-                  }
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 1
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.plated",
-                "fallback": "Damage to %s is reduced by %s,",
-                "with": [
-                  {
-                    "translate": "attribute.name.armor"
-                  },
-                  {
-                    "text": "1",
-                    "color": "blue"
-                  }
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 2
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.plated",
-                "fallback": "Damage to %s is reduced by %s,",
-                "with": [
-                  {
-                    "translate": "attribute.name.armor"
-                  },
-                  {
-                    "text": "1.5",
-                    "color": "blue"
-                  }
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 3
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.plated",
-                "fallback": "Damage to %s is reduced by %s,",
-                "with": [
-                  {
-                    "translate": "attribute.name.armor"
-                  },
-                  {
-                    "text": "2",
-                    "color": "blue"
-                  }
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 4
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.plated",
-                "fallback": "Damage to %s is reduced by %s,",
-                "with": [
-                  {
-                    "translate": "attribute.name.armor"
-                  },
-                  {
-                    "text": "2.5",
-                    "color": "blue"
-                  }
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 5
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.plated_2",
-                "fallback": "down to a minimum of 1",
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "attribute.modifier.equals.1",
+                "translate": "attribute.modifier.plus.2",
                 "with": [
                   {
                     "score": {
@@ -262,12 +78,177 @@
                     }
                   },
                   {
-                    "translate": "attribute.gm4.augmented_armor.armor_recharge",
-                    "fallback": "Armor Recharge Rate"
+                    "translate": "attribute.name.generic.max_health"
                   }
                 ],
-                "color": "red",
+                "color": "blue",
                 "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.heartplate",
+                "fallback": "Gain %s per %s",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.plus.1",
+                    "with": [
+                      "1",
+                      {
+                        "translate": "attribute.gm4.augmented_armor.regen_speed",
+                        "fallback": "Regeneration Speed"
+                      }
+                    ],
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.name.generic.max_health"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 10
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.heartplate",
+                "fallback": "Gain %s per %s",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.plus.1",
+                    "with": [
+                      "1.5",
+                      {
+                        "translate": "attribute.gm4.augmented_armor.regen_speed",
+                        "fallback": "Regeneration Speed"
+                      }
+                    ],
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.name.generic.max_health"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 15
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.heartplate",
+                "fallback": "Gain %s per %s",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.plus.1",
+                    "with": [
+                      "2",
+                      {
+                        "translate": "attribute.gm4.augmented_armor.regen_speed",
+                        "fallback": "Regeneration Speed"
+                      }
+                    ],
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.name.generic.max_health"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": false
+              }
+            ]
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 20
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.heartplate_2",
+                "fallback": "Currently %s",
+                "with": [
+                  {
+                    "translate": "attribute.modifier.plus.1",
+                    "with": [
+                      "0",
+                      {
+                        "translate": "attribute.gm4.augmented_armor.regen_speed",
+                        "fallback": "Regeneration Speed"
+                      }
+                    ],
+                    "color": "blue"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": true
               }
             ]
           ]
@@ -282,8 +263,8 @@
               "fallback": "%s %s",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.plated",
-                  "fallback": "Plated"
+                  "translate": "item.gm4.augmented_armor.augment.heartplate",
+                  "fallback": "Heartplate"
                 },
                 {
                   "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",
