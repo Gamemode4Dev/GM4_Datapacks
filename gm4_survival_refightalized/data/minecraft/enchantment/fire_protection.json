@@ -22,7 +22,7 @@
         "minecraft:attributes": [
             {
                 "id": "minecraft:enchantment.fire_protection",
-                "attribute": "minecraft:generic.burning_time",
+                "attribute": "minecraft:burning_time",
                 "amount": {
                     "type": "minecraft:linear",
                     "base": -0.15,

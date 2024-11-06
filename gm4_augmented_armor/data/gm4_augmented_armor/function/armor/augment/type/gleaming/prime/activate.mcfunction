@@ -11,10 +11,10 @@ execute if score @s gm4_aa_augment.gleaming.timer = @s gm4_aa_augment.gleaming.t
 execute if score @s gm4_aa_augment.gleaming.timer matches 1.. run return 0
 
 # attack reach = 150% of player attack range
-execute store result score $attack_reach gm4_aa_data run attribute @s player.entity_interaction_range get 15
+execute store result score $attack_reach gm4_aa_data run attribute @s entity_interaction_range get 15
 
 # time to explode based on attack speed
-execute store result score $attack_speed gm4_aa_data run attribute @s generic.attack_speed get 100
+execute store result score $attack_speed gm4_aa_data run attribute @s attack_speed get 100
 scoreboard players set $timer gm4_aa_data 8000
 scoreboard players operation $timer gm4_aa_data /= $attack_speed gm4_aa_data
 

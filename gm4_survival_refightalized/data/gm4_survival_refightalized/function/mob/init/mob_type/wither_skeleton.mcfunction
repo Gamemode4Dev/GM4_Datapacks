@@ -9,9 +9,9 @@
 # speed: 95 - 120%
 
 # base stat nerf
-attribute @s generic.max_health modifier add gm4_survival_refightalized:stat_change.base_buff 2 add_value
-attribute @s generic.attack_damage modifier add gm4_survival_refightalized:stat_change.base_nerf -1.5 add_value
-attribute @s generic.movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.05 add_multiplied_base
+attribute @s max_health modifier add gm4_survival_refightalized:stat_change.base_buff 2 add_value
+attribute @s attack_damage modifier add gm4_survival_refightalized:stat_change.base_nerf -1.5 add_value
+attribute @s movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.05 add_multiplied_base
 
 # max stat buffs
 scoreboard players set $mob_health gm4_sr_data 10
@@ -22,7 +22,7 @@ scoreboard players set @s gm4_sr_mob.damage_cap 85
 tag @s add gm4_sr_check_damage_cap
 
 # knockback resistance
-attribute @s generic.knockback_resistance modifier add gm4_survival_refightalized:stat_change.kb_resist 0.666 add_value
+attribute @s knockback_resistance modifier add gm4_survival_refightalized:stat_change.kb_resist 0.666 add_value
 
 # set armor
 loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/wither_skeleton/feet

@@ -6,7 +6,7 @@ advancement revoke @s only gm4_augmented_armor:damage_dealt
 
 # | Prep for augments
 # store attack speed
-execute store result score $attribute.attack_speed gm4_aa_data run attribute @s generic.attack_speed get 10
+execute store result score $attribute.attack_speed gm4_aa_data run attribute @s attack_speed get 10
 
 # store armor items to storage
 item replace block 29999998 1 7134 container.0 from entity @s armor.head

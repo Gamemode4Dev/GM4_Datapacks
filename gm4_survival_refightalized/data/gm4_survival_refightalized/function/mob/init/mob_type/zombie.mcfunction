@@ -9,8 +9,8 @@
 # speed: 80 - 120%
 
 # base stat nerf
-attribute @s generic.max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -2 add_value
-attribute @s generic.movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.2 add_multiplied_base
+attribute @s max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -2 add_value
+attribute @s movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.2 add_multiplied_base
 
 # max stat buffs
 scoreboard players set $mob_health gm4_sr_data 18
@@ -32,6 +32,6 @@ scoreboard players set @s[type=drowned] gm4_sr_arrow.fire_delay 10
 
 # remove leader and baby zombies
 scoreboard players set $removed_bonus gm4_sr_data 0
-execute if data entity @s attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] store success score $removed_bonus gm4_sr_data run attribute @s minecraft:generic.max_health modifier remove minecraft:leader_zombie_bonus
+execute if data entity @s attributes[{id:"minecraft:max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] store success score $removed_bonus gm4_sr_data run attribute @s minecraft:max_health modifier remove minecraft:leader_zombie_bonus
 execute if data entity @s {IsBaby:1b} store success score $removed_bonus gm4_sr_data run data modify entity @s IsBaby set value 0b
 execute if score $removed_bonus gm4_sr_data matches 1 run tag @s add gm4_sr_was_leader_or_baby

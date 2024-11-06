@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "gm4_survival_refightalized:mob/equip_armor/material/golden/feet",
+          "value": "gm4_survival_refightalized:armor/golden/feet",
           "conditions": [
             {
               "condition": "minecraft:random_chance",
@@ -21,7 +21,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "gm4_survival_refightalized:mob/equip_armor/material/golden/legs",
+          "value": "gm4_survival_refightalized:armor/golden/legs",
           "conditions": [
             {
               "condition": "minecraft:random_chance",
@@ -36,7 +36,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "gm4_survival_refightalized:mob/equip_armor/material/golden/chest",
+          "value": "gm4_survival_refightalized:armor/golden/chest",
           "conditions": [
             {
               "condition": "minecraft:random_chance",
@@ -51,7 +51,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "value": "gm4_survival_refightalized:mob/equip_armor/material/golden/head",
+          "value": "gm4_survival_refightalized:armor/golden/head",
           "conditions": [
             {
               "condition": "minecraft:random_chance",

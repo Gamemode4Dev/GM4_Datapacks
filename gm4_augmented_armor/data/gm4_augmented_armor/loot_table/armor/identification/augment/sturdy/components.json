@@ -67,7 +67,7 @@
                 "fallback": "current %s, up to %s",
                 "with": [
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   },
                   [
                     {

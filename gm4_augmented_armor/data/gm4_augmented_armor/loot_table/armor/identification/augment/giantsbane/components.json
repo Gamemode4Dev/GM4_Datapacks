@@ -13,7 +13,7 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
                   "id": "gm4_augmented_armor:permanent",
                   "amount": {
                     "type": "minecraft:score",
@@ -78,7 +78,7 @@
                     }
                   },
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "red",
@@ -111,7 +111,7 @@
                         "fallback": "target's %s",
                         "with": [
                           {
-                            "translate": "attribute.name.generic.max_health"
+                            "translate": "attribute.name.max_health"
                           }
                         ]
                       }

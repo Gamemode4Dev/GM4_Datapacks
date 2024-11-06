@@ -183,10 +183,10 @@
                   "fallback": "Grants 20%% %s, %s",
                   "with": [
                     {
-                      "translate": "attribute.name.generic.movement_speed"
+                      "translate": "attribute.name.movement_speed"
                     },
                     {
-                      "translate": "attribute.name.generic.attack_speed"
+                      "translate": "attribute.name.attack_speed"
                     }
                   ],
                   "color": "dark_gray",
@@ -218,7 +218,7 @@
                   "fallback": "and %s to all players",
                   "with": [
                     {
-                      "translate": "attribute.name.player.block_break_speed"
+                      "translate": "attribute.name.block_break_speed"
                     }
                   ],
                   "color": "dark_gray",
@@ -446,7 +446,7 @@
                   "fallback": "Grants 1 %s to players in range,",
                   "with": [
                     {
-                      "translate": "attribute.name.generic.attack_damage"
+                      "translate": "attribute.name.attack_damage"
                     }
                   ],
                   "color": "dark_gray",
@@ -478,7 +478,7 @@
                   "fallback": "stacking 4 times. Mobs in range glow",
                   "with": [
                     {
-                      "translate": "attribute.name.generic.attack_damage"
+                      "translate": "attribute.name.attack_damage"
                     }
                   ],
                   "color": "dark_gray",

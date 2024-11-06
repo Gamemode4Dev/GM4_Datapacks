@@ -9,8 +9,8 @@
 # speed: 90 - 125%
 
 # base stat nerf
-attribute @s generic.max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -8 add_value
-attribute @s generic.movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.1 add_value
+attribute @s max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -8 add_value
+attribute @s movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.1 add_value
 
 # max stat buffs
 scoreboard players set $mob_health gm4_sr_data 12

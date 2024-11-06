@@ -52,7 +52,7 @@
                 "fallback": "When %s breaks release an explosion",
                 "with": [
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   }
                 ],
                 "color": "dark_gray",
@@ -72,13 +72,13 @@
                 "fallback": "freezing mobs within %s",
                 "with": [
                   {
-                    "translate": "attribute.name.player.entity_interaction_range"
+                    "translate": "attribute.name.entity_interaction_range"
                   },
                   {
                     "translate": "potion.withDuration",
                     "with": [
                       {
-                        "translate": "attribute.name.player.entity_interaction_range"
+                        "translate": "attribute.name.entity_interaction_range"
                       },
                       [
                         "0:0",

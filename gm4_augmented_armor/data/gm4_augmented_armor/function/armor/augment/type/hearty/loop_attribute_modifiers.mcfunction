@@ -6,7 +6,7 @@
 
 # check augment to see armor it grants
 data modify storage gm4_augmented_armor:temp check_modifier set from storage gm4_augmented_armor:temp attribute_modifiers[0]
-execute store result score $armor_add gm4_aa_data run data get storage gm4_augmented_armor:temp check_modifier{type:"minecraft:generic.armor"}.amount
+execute store result score $armor_add gm4_aa_data run data get storage gm4_augmented_armor:temp check_modifier{type:"minecraft:armor"}.amount
 scoreboard players operation $armor_total gm4_aa_data += $armor_add gm4_aa_data
 
 # loop over all modifiers

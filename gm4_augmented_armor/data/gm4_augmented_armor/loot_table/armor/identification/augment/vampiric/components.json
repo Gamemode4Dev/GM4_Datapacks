@@ -55,7 +55,7 @@
                   "with": [
                     "5",
                     {
-                      "translate": "attribute.name.generic.max_health"
+                      "translate": "attribute.name.max_health"
                     }
                   ]
                 }

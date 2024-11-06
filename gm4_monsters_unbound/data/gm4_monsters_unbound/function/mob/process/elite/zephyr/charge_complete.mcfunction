@@ -3,8 +3,8 @@
 # at @s
 # run from mob/process/attack_effect/charging_attack
 
-attribute @s generic.movement_speed modifier remove gm4_monsters_unbound:elite_buff.speed.charged
-attribute @s generic.attack_damage modifier remove gm4_monsters_unbound:elite_buff.speed.charged
+attribute @s movement_speed modifier remove gm4_monsters_unbound:elite_buff.speed.charged
+attribute @s attack_damage modifier remove gm4_monsters_unbound:elite_buff.speed.charged
 
 # don't charge again until player target is lost
 tag @s remove gm4_mu_charging_attack

@@ -13,7 +13,7 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "attribute": "minecraft:fall_damage_multiplier",
                   "id": "gm4_augmented_armor:dynamic",
                   "amount": 0,
                   "operation": "add_multiplied_total",
@@ -176,7 +176,7 @@
                         }
                       },
                       {
-                        "translate": "attribute.name.generic.fall_damage_multiplier"
+                        "translate": "attribute.name.fall_damage_multiplier"
                       }
                     ],
                     "color": "blue",

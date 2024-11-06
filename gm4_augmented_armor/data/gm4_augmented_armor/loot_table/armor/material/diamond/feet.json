@@ -13,21 +13,21 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "generic.armor",
+                  "attribute": "armor",
                   "id": "minecraft:armor.boots",
                   "amount": 3,
                   "operation": "add_value",
                   "slot": "feet"
                 },
                 {
-                  "attribute": "generic.armor_toughness",
+                  "attribute": "armor_toughness",
                   "id": "minecraft:armor.boots",
                   "amount": 2,
                   "operation": "add_value",
                   "slot": "feet"
                 },
                 {
-                  "attribute": "generic.knockback_resistance",
+                  "attribute": "knockback_resistance",
                   "id": "minecraft:armor.boots",
                   "amount": 0,
                   "operation": "add_value",
@@ -67,7 +67,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:reference",
-                  "name": "gm4_augmented_armor:mob/augment/reef"
+                  "name": "gm4_monsters_unbound:biome/reef"
                 },
                 {
                   "condition": "minecraft:value_check",
@@ -96,7 +96,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:reference",
-                  "name": "gm4_augmented_armor:mob/augment/growth"
+                  "name": "gm4_monsters_unbound:biome/growth"
                 },
                 {
                   "condition": "minecraft:value_check",

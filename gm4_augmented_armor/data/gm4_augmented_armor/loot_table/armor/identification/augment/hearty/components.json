@@ -21,14 +21,14 @@
           "replace": false,
           "modifiers": [
             {
-              "attribute": "minecraft:generic.max_health",
+              "attribute": "minecraft:max_health",
               "id": "gm4_augmented_armor:dynamic",
               "amount": 0,
               "operation": "add_value",
               "slot": "chest"
             },
             {
-              "attribute": "minecraft:generic.armor",
+              "attribute": "minecraft:armor",
               "id": "gm4_augmented_armor:dynamic_2",
               "amount": 0,
               "operation": "add_value",
@@ -72,10 +72,10 @@
                 "fallback": "Convert %s to %s",
                 "with": [
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   },
                   {
-                    "translate": "attribute.name.generic.max_health"
+                    "translate": "attribute.name.max_health"
                   }
                 ],
                 "color": "dark_gray",

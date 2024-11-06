@@ -13,28 +13,28 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.gravity",
+                  "attribute": "minecraft:gravity",
                   "id": "gm4_augmented_armor:permanent",
                   "amount": -0.15,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "attribute": "minecraft:fall_damage_multiplier",
                   "id": "gm4_augmented_armor:permanent_2",
                   "amount": -0.15,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.jump_strength",
+                  "attribute": "minecraft:jump_strength",
                   "id": "gm4_augmented_armor:permanent_3",
                   "amount": -0.075,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.safe_fall_distance",
+                  "attribute": "minecraft:safe_fall_distance",
                   "id": "gm4_augmented_armor:permanent_4",
                   "amount": -0.075,
                   "operation": "add_multiplied_base",
@@ -61,28 +61,28 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.gravity",
+                  "attribute": "minecraft:gravity",
                   "id": "gm4_augmented_armor:permanent",
                   "amount": -0.2,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "attribute": "minecraft:fall_damage_multiplier",
                   "id": "gm4_augmented_armor:permanent_2",
                   "amount": -0.2,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.jump_strength",
+                  "attribute": "minecraft:jump_strength",
                   "id": "gm4_augmented_armor:permanent_3",
                   "amount": -0.1,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.safe_fall_distance",
+                  "attribute": "minecraft:safe_fall_distance",
                   "id": "gm4_augmented_armor:permanent_4",
                   "amount": -0.1,
                   "operation": "add_multiplied_base",
@@ -109,28 +109,28 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.gravity",
+                  "attribute": "minecraft:gravity",
                   "id": "gm4_augmented_armor:permanent",
                   "amount": -0.25,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "attribute": "minecraft:fall_damage_multiplier",
                   "id": "gm4_augmented_armor:permanent_2",
                   "amount": -0.25,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.jump_strength",
+                  "attribute": "minecraft:jump_strength",
                   "id": "gm4_augmented_armor:permanent_3",
                   "amount": -0.125,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.safe_fall_distance",
+                  "attribute": "minecraft:safe_fall_distance",
                   "id": "gm4_augmented_armor:permanent_4",
                   "amount": -0.125,
                   "operation": "add_multiplied_base",
@@ -190,7 +190,7 @@
                 "fallback": "Reduced %s",
                 "with": [
                   {
-                    "translate": "attribute.name.generic.gravity"
+                    "translate": "attribute.name.gravity"
                   }
                 ],
                 "color": "blue",

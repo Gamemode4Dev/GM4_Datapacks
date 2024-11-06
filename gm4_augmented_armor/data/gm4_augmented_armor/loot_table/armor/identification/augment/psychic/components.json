@@ -13,7 +13,7 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_speed",
+                  "attribute": "minecraft:attack_speed",
                   "id": "gm4_augmented_armor:permanent",
                   "amount": {
                     "type": "minecraft:score",
@@ -78,7 +78,7 @@
                     }
                   },
                   {
-                    "translate": "attribute.name.generic.attack_speed"
+                    "translate": "attribute.name.attack_speed"
                   }
                 ],
                 "color": "red",
@@ -98,7 +98,7 @@
                 "fallback": "Spawn a rotating sword at %s",
                 "with": [
                   {
-                    "translate": "attribute.name.player.entity_interaction_range"
+                    "translate": "attribute.name.entity_interaction_range"
                   }
                 ],
                 "color": "dark_gray",
@@ -122,7 +122,7 @@
                     "with": [
                       "2",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue"
@@ -163,7 +163,7 @@
                     "with": [
                       "3",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue"
@@ -204,7 +204,7 @@
                     "with": [
                       "4",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue"
@@ -248,7 +248,7 @@
                     "with": [
                       "5",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue"

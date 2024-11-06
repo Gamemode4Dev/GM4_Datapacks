@@ -76,7 +76,7 @@
                         }
                       },
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue",
@@ -100,7 +100,7 @@
                 "fallback": "a radius of 150%% %s",
                 "with": [
                   {
-                    "translate": "attribute.name.player.entity_interaction_range"
+                    "translate": "attribute.name.entity_interaction_range"
                   }
                 ],
                 "color": "dark_gray",
@@ -120,7 +120,7 @@
                 "fallback": "Cooldown and explosion time scale with %s",
                 "with": [
                   {
-                    "translate": "attribute.name.generic.attack_speed"
+                    "translate": "attribute.name.attack_speed"
                   }
                 ],
                 "color": "dark_gray",

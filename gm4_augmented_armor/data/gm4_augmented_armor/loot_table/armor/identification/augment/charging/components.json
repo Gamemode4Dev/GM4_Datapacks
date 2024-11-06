@@ -13,21 +13,21 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_speed",
+                  "attribute": "minecraft:attack_speed",
                   "id": "gm4_augmented_armor:dynamic",
                   "amount": 0,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
                   "id": "gm4_augmented_armor:dynamic_2",
                   "amount": 0,
                   "operation": "add_multiplied_base",
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
                   "id": "gm4_augmented_armor:permanent",
                   "amount": {
                     "type": "minecraft:score",
@@ -92,7 +92,7 @@
                     }
                   },
                   {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                   }
                 ],
                 "color": "red",
@@ -121,7 +121,7 @@
                         }
                       },
                       {
-                        "translate": "attribute.name.generic.attack_speed"
+                        "translate": "attribute.name.attack_speed"
                       }
                     ],
                     "color": "blue",
@@ -145,7 +145,7 @@
                 "fallback": "if %s exceeds 4 instead gain",
                 "with": [
                   {
-                    "translate": "attribute.name.generic.attack_speed"
+                    "translate": "attribute.name.attack_speed"
                   }
                 ],
                 "color": "dark_gray",
@@ -169,7 +169,7 @@
                     "with": [
                       "100",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ]
                   }

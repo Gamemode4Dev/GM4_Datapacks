@@ -13,7 +13,7 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.scale",
+                  "attribute": "minecraft:scale",
                   "id": "gm4_augmented_armor:permanent",
                   "amount": {
                     "type": "minecraft:score",
@@ -28,7 +28,7 @@
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.step_height",
+                  "attribute": "minecraft:step_height",
                   "id": "gm4_augmented_armor:permanent_2",
                   "amount": {
                     "type": "minecraft:score",
@@ -43,7 +43,7 @@
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:player.block_interaction_range",
+                  "attribute": "minecraft:block_interaction_range",
                   "id": "gm4_augmented_armor:permanent_3",
                   "amount": {
                     "type": "minecraft:score",
@@ -58,7 +58,7 @@
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:player.entity_interaction_range",
+                  "attribute": "minecraft:entity_interaction_range",
                   "id": "gm4_augmented_armor:permanent_4",
                   "amount": {
                     "type": "minecraft:score",
@@ -73,7 +73,7 @@
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.attack_knockback",
+                  "attribute": "minecraft:attack_knockback",
                   "id": "gm4_augmented_armor:permanent_5",
                   "amount": {
                     "type": "minecraft:score",
@@ -88,7 +88,7 @@
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.gravity",
+                  "attribute": "minecraft:gravity",
                   "id": "gm4_augmented_armor:permanent_6",
                   "amount": {
                     "type": "minecraft:score",
@@ -103,7 +103,7 @@
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.jump_strength",
+                  "attribute": "minecraft:jump_strength",
                   "id": "gm4_augmented_armor:permanent_7",
                   "amount": {
                     "type": "minecraft:score",
@@ -118,7 +118,7 @@
                   "slot": "chest"
                 },
                 {
-                  "attribute": "minecraft:generic.safe_fall_distance",
+                  "attribute": "minecraft:safe_fall_distance",
                   "id": "gm4_augmented_armor:permanent_8",
                   "amount": {
                     "type": "minecraft:score",

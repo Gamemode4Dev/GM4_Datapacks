@@ -8,7 +8,7 @@ scoreboard players operation $damage_armor gm4_sr_data += $damage_total gm4_sr_d
 # if damage pierces armor no effect
 execute unless entity @s[advancements={gm4_survival_refightalized:damaged={armor_piercing=false,armor_piercing_mob=false}}] run scoreboard players set $damage_armor gm4_sr_data 0
 # if armor is reduced to below 1 play sound and remove resistance effect on player
-execute store result score $player_armor gm4_sr_data run attribute @s generic.armor get 10
+execute store result score $player_armor gm4_sr_data run attribute @s armor get 10
 scoreboard players operation $armor_check gm4_sr_data = $player_armor gm4_sr_data
 scoreboard players operation $armor_check gm4_sr_data -= $damage_armor gm4_sr_data
 execute if score $armor_check gm4_sr_data matches ..9 run function gm4_survival_refightalized:player/armor/break

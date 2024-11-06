@@ -3,4 +3,4 @@
 # at unspecified
 # run from armor/type/heal/activate
 
-$attribute @s minecraft:generic.max_health modifier add gm4_survival_refightalized:remove_health.healing -$(remove_health) add_value
+$attribute @s minecraft:max_health modifier add gm4_survival_refightalized:remove_health.healing -$(remove_health) add_value

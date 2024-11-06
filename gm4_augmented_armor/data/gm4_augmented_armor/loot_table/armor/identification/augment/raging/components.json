@@ -13,7 +13,7 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.attack_damage",
+                  "attribute": "minecraft:attack_damage",
                   "id": "gm4_augmented_armor:dynamic",
                   "amount": 0,
                   "operation": "add_value",
@@ -69,7 +69,7 @@
                     "with": [
                       "25",
                       {
-                        "translate": "attribute.name.generic.max_health"
+                        "translate": "attribute.name.max_health"
                       }
                     ],
                     "color": "dark_gray",
@@ -80,7 +80,7 @@
                     "with": [
                       "0.5",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue",
@@ -122,7 +122,7 @@
                     "with": [
                       "25",
                       {
-                        "translate": "attribute.name.generic.max_health"
+                        "translate": "attribute.name.max_health"
                       }
                     ],
                     "color": "dark_gray",
@@ -133,7 +133,7 @@
                     "with": [
                       "1",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue",
@@ -175,7 +175,7 @@
                     "with": [
                       "50",
                       {
-                        "translate": "attribute.name.generic.max_health"
+                        "translate": "attribute.name.max_health"
                       }
                     ],
                     "color": "dark_gray",
@@ -186,7 +186,7 @@
                     "with": [
                       "0.5",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue",
@@ -228,7 +228,7 @@
                     "with": [
                       "50",
                       {
-                        "translate": "attribute.name.generic.max_health"
+                        "translate": "attribute.name.max_health"
                       }
                     ],
                     "color": "dark_gray",
@@ -239,7 +239,7 @@
                     "with": [
                       "1",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue",
@@ -281,7 +281,7 @@
                     "with": [
                       "50",
                       {
-                        "translate": "attribute.name.generic.max_health"
+                        "translate": "attribute.name.max_health"
                       }
                     ],
                     "color": "dark_gray",
@@ -292,7 +292,7 @@
                     "with": [
                       "1.5",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue",
@@ -334,7 +334,7 @@
                     "with": [
                       "75",
                       {
-                        "translate": "attribute.name.generic.max_health"
+                        "translate": "attribute.name.max_health"
                       }
                     ],
                     "color": "dark_gray",
@@ -345,7 +345,7 @@
                     "with": [
                       "1",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue",
@@ -387,7 +387,7 @@
                     "with": [
                       "75",
                       {
-                        "translate": "attribute.name.generic.max_health"
+                        "translate": "attribute.name.max_health"
                       }
                     ],
                     "color": "dark_gray",
@@ -398,7 +398,7 @@
                     "with": [
                       "1.5",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue",
@@ -440,7 +440,7 @@
                     "with": [
                       "75",
                       {
-                        "translate": "attribute.name.generic.max_health"
+                        "translate": "attribute.name.max_health"
                       }
                     ],
                     "color": "dark_gray",
@@ -451,7 +451,7 @@
                     "with": [
                       "2",
                       {
-                        "translate": "attribute.name.generic.attack_damage"
+                        "translate": "attribute.name.attack_damage"
                       }
                     ],
                     "color": "blue",

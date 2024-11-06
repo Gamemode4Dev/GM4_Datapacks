@@ -16,10 +16,10 @@ scoreboard players set @s[scores={gm4_mu_timer=300..}] gm4_mu_timer 0
 execute if score @s gm4_mu_timer matches 1 run playsound block.beacon.activate hostile @a ~ ~ ~ 1 0.7
 execute if score @s gm4_mu_timer matches 101..110 run playsound block.beacon.deactivate hostile @a ~ ~ ~ 1 0.7
 
-attribute @s[scores={gm4_mu_timer=1}] generic.movement_speed modifier add gm4_monsters_unbound:elite_buff.pearlescent.charging -0.75 add_multiplied_total
-attribute @s[scores={gm4_mu_timer=5}] generic.movement_speed modifier remove gm4_monsters_unbound:elite_buff.pearlescent.charging
-attribute @s[scores={gm4_mu_timer=5}] generic.movement_speed modifier add gm4_monsters_unbound:elite_buff.pearlescent.firing -0.33 add_multiplied_total
-attribute @s[scores={gm4_mu_timer=101..110}] generic.movement_speed modifier remove gm4_monsters_unbound:elite_buff.pearlescent.firing
+attribute @s[scores={gm4_mu_timer=1}] movement_speed modifier add gm4_monsters_unbound:elite_buff.pearlescent.charging -0.75 add_multiplied_total
+attribute @s[scores={gm4_mu_timer=5}] movement_speed modifier remove gm4_monsters_unbound:elite_buff.pearlescent.charging
+attribute @s[scores={gm4_mu_timer=5}] movement_speed modifier add gm4_monsters_unbound:elite_buff.pearlescent.firing -0.33 add_multiplied_total
+attribute @s[scores={gm4_mu_timer=101..110}] movement_speed modifier remove gm4_monsters_unbound:elite_buff.pearlescent.firing
 
 execute if score @s gm4_mu_timer matches ..100 run particle block{block_state:"pearlescent_froglight"} ~ ~2 ~ 0.3 0.3 0.3 0.5 8
 

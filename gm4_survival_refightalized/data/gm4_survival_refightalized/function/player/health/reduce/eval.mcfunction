@@ -3,4 +3,4 @@
 # at unspecified
 # run from player/health/reduce/activate
 
-$attribute @s minecraft:generic.max_health modifier add gm4_survival_refightalized:remove_health.damaging -$(remove_health) add_value
+$attribute @s minecraft:max_health modifier add gm4_survival_refightalized:remove_health.damaging -$(remove_health) add_value

@@ -4,11 +4,11 @@
 # run from mob/process/elite/gargantuan/process
 
 scoreboard players operation @s gm4_mu_data = $curr_health gm4_mu_data
-attribute @s generic.movement_speed modifier remove gm4_monsters_unbound:elite_buff.giant.health_reduction_stats
-attribute @s generic.attack_damage modifier remove gm4_monsters_unbound:elite_buff.giant.health_reduction_stats
-attribute @s generic.knockback_resistance modifier remove gm4_monsters_unbound:elite_buff.giant.health_reduction_stats
+attribute @s movement_speed modifier remove gm4_monsters_unbound:elite_buff.giant.health_reduction_stats
+attribute @s attack_damage modifier remove gm4_monsters_unbound:elite_buff.giant.health_reduction_stats
+attribute @s knockback_resistance modifier remove gm4_monsters_unbound:elite_buff.giant.health_reduction_stats
 
-execute store result score $max_health gm4_mu_data run attribute @s generic.max_health get 10
+execute store result score $max_health gm4_mu_data run attribute @s max_health get 10
 scoreboard players operation $curr_health gm4_mu_data /= $max_health gm4_mu_data
 scoreboard players set $curr_health_percent_lost gm4_mu_data 100
 scoreboard players operation $curr_health_percent_lost gm4_mu_data -= $curr_health gm4_mu_data

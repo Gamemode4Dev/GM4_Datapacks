@@ -34,7 +34,7 @@ scoreboard players operation $total_level gm4_aa_data += $level gm4_aa_data
 
 # activate on all entities in range
 tag @s add gm4_aa_augment_damager
-execute store result storage gm4_augmented_armor:temp effect.range float 0.1 run attribute @s player.entity_interaction_range get 10
+execute store result storage gm4_augmented_armor:temp effect.range float 0.1 run attribute @s entity_interaction_range get 10
 function gm4_augmented_armor:armor/augment/type/frostburst/eval_explosion with storage gm4_augmented_armor:temp effect
 data remove storage gm4_augmented_armor:temp effect
 tag @s remove gm4_aa_augment_damager

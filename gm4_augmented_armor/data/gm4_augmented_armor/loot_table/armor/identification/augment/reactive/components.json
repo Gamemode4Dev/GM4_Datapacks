@@ -52,7 +52,7 @@
                 "fallback": "When %s breaks gain %s",
                 "with": [
                   {
-                    "translate": "attribute.name.generic.armor"
+                    "translate": "attribute.name.armor"
                   },
                   {
                     "translate": "potion.withDuration",
@@ -90,7 +90,7 @@
                         }
                       },
                       {
-                        "translate": "attribute.name.generic.max_health"
+                        "translate": "attribute.name.max_health"
                       }
                     ],
                     "color": "blue",

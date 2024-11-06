@@ -3,11 +3,11 @@
 # at @s
 # run from mob/process/elite/check_type
 
-attribute @s generic.follow_range modifier remove gm4_monsters_unbound:elite_buff.giant.charging
-attribute @s generic.movement_speed modifier remove gm4_monsters_unbound:elite_buff.giant.charging
+attribute @s follow_range modifier remove gm4_monsters_unbound:elite_buff.giant.charging
+attribute @s movement_speed modifier remove gm4_monsters_unbound:elite_buff.giant.charging
 playsound minecraft:entity.zombie.attack_wooden_door hostile @a ~ ~ ~ 1.25 0
 
-execute store result storage gm4_monsters_unbound:temp deal.damage float 0.75 run attribute @s generic.attack_damage get
+execute store result storage gm4_monsters_unbound:temp deal.damage float 0.75 run attribute @s attack_damage get
 
 tag @s add gm4_mu_self
 execute as @a[distance=..7,gamemode=!spectator] run function gm4_monsters_unbound:mob/process/elite/gargantuan/player_hit with storage gm4_monsters_unbound:temp deal
