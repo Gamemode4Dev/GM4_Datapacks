@@ -7,21 +7,11 @@
     "CCC"
   ],
   "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "T": {
-      "item": "minecraft:tnt"
-    },
-    "O": {
-      "item": "minecraft:obsidian"
-    },
-    "S": {
-      "item": "minecraft:stonecutter"
-    },
-    "C": {
-      "item": "minecraft:cobblestone"
-    }
+    "I": "minecraft:iron_ingot",
+    "T": "minecraft:tnt",
+    "O": "minecraft:obsidian",
+    "S": "minecraft:stonecutter",
+    "C": "minecraft:cobblestone"
   },
   "result": {
     "id": "minecraft:player_head",

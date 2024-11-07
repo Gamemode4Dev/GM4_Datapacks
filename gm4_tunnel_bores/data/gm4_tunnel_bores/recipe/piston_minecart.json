@@ -7,18 +7,10 @@
     "TMP"
   ],
   "key": {
-    "F": {
-      "item": "minecraft:furnace"
-    },
-    "T": {
-      "item": "minecraft:tripwire_hook"
-    },
-    "M": {
-      "item": "minecraft:minecart"
-    },
-    "P": {
-      "item": "minecraft:piston"
-    }
+    "F": "minecraft:furnace",
+    "T": "minecraft:tripwire_hook",
+    "M": "minecraft:minecart",
+    "P": "minecraft:piston"
   },
   "result": {
     "id": "minecraft:furnace_minecart",

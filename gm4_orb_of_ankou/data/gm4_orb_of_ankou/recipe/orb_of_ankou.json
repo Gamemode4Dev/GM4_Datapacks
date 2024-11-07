@@ -7,15 +7,9 @@
     "NCN"
   ],
   "key": {
-    "N": {
-      "item": "minecraft:netherite_scrap"
-    },
-    "C": {
-      "item": "minecraft:clay_ball"
-    },
-    "S": {
-      "item": "minecraft:nether_star"
-    }
+    "N": "minecraft:netherite_scrap",
+    "C": "minecraft:clay_ball",
+    "S": "minecraft:nether_star"
   },
   "result": {
     "id": "minecraft:firework_star",

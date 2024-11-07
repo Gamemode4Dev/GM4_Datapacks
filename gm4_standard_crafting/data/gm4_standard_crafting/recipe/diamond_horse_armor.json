@@ -7,12 +7,8 @@
     "D D"
   ],
   "key": {
-    "D": {
-      "item": "minecraft:diamond"
-    },
-    "L": {
-      "item": "minecraft:leather"
-    }
+    "D": "minecraft:diamond",
+    "L": "minecraft:leather"
   },
   "result": {
     "id": "minecraft:diamond_horse_armor"

@@ -8,12 +8,8 @@
     "SSS"
   ],
   "key": {
-    "S": {
-      "item": "minecraft:sand"
-    },
-    "R": {
-      "item": "minecraft:red_dye"
-    }
+    "S": "minecraft:sand",
+    "R": "minecraft:red_dye"
   },
   "result": {
     "id": "minecraft:red_sand",

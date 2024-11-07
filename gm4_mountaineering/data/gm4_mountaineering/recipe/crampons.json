@@ -6,12 +6,8 @@
     "NNN"
   ],
   "key": {
-    "B": {
-      "item": "minecraft:chainmail_boots"
-    },
-    "N": {
-      "item": "minecraft:iron_nugget"
-    }
+    "B": "minecraft:chainmail_boots",
+    "N": "minecraft:iron_nugget"
   },
   "result": {
     "id": "minecraft:chainmail_boots",

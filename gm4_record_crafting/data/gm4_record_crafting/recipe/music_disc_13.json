@@ -7,12 +7,8 @@
     "FFF"
   ],
   "key": {
-    "F": {
-      "item": "minecraft:flint"
-    },
-    "D": {
-      "item": "minecraft:yellow_dye"
-    }
+    "F": "minecraft:flint",
+    "D": "minecraft:yellow_dye"
   },
   "result": {
     "id": "minecraft:music_disc_13"

@@ -7,15 +7,9 @@
     "H"
   ],
   "key": {
-    "E": {
-      "item": "minecraft:ender_eye"
-    },
-    "R": {
-      "item": "minecraft:respawn_anchor"
-    },
-    "H": {
-      "item": "minecraft:hopper_minecart"
-    }
+    "E": "minecraft:ender_eye",
+    "R": "minecraft:respawn_anchor",
+    "H": "minecraft:hopper_minecart"
   },
   "result": {
     "id": "minecraft:hopper_minecart",

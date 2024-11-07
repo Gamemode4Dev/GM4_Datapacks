@@ -6,9 +6,7 @@
     "FF"
   ],
   "key": {
-    "F": {
-      "item": "minecraft:flint"
-    }
+    "F": "minecraft:flint"
   },
   "result": {
     "id": "minecraft:gravel",

@@ -7,21 +7,11 @@
     " W "
   ],
   "key": {
-    "S": {
-      "item": "minecraft:wheat_seeds"
-    },
-    "M": {
-      "item": "minecraft:moss_block"
-    },
-    "L": {
-      "item": "minecraft:leather_boots"
-    },
-    "G": {
-      "item": "minecraft:grass_block"
-    },
-    "W": {
-      "item": "minecraft:water_bucket"
-    }
+    "S": "minecraft:wheat_seeds",
+    "M": "minecraft:moss_block",
+    "L": "minecraft:leather_boots",
+    "G": "minecraft:grass_block",
+    "W": "minecraft:water_bucket"
   },
   "result": {
     "id": "minecraft:leather_boots",

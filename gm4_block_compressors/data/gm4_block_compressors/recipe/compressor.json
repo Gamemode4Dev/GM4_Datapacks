@@ -7,21 +7,11 @@
     "CCC"
   ],
   "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "P": {
-      "item": "minecraft:purpur_block"
-    },
-    "p": {
-      "item": "minecraft:piston"
-    },
-    "O": {
-      "item": "minecraft:obsidian"
-    },
-    "C": {
-      "item": "minecraft:cobblestone"
-    }
+    "I": "minecraft:iron_ingot",
+    "P": "minecraft:purpur_block",
+    "p": "minecraft:piston",
+    "O": "minecraft:obsidian",
+    "C": "minecraft:cobblestone"
   },
   "result": {
     "id": "minecraft:player_head",

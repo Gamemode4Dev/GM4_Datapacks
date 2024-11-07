@@ -7,12 +7,8 @@
     "S"
   ],
   "key": {
-    "T": {
-      "item": "minecraft:tripwire_hook"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    }
+    "T": "minecraft:tripwire_hook",
+    "S": "minecraft:stick"
   },
   "result": {
     "id": "minecraft:stick",

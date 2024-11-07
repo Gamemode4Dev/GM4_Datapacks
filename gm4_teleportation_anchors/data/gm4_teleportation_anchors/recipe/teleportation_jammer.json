@@ -8,25 +8,13 @@
   ],
   "key": {
     "P": [
-      {
-        "item": "minecraft:purpur_block"
-      },
-      {
-        "item": "minecraft:purpur_pillar"
-      }
+      "minecraft:purpur_block",
+      "minecraft:purpur_pillar"
     ],
-    "O": {
-      "item": "minecraft:crying_obsidian"
-    },
-    "E": {
-      "item": "minecraft:ender_eye"
-    },
-    "C": {
-      "item": "minecraft:cobblestone"
-    },
-    "e": {
-      "item": "minecraft:end_crystal"
-    }
+    "O": "minecraft:crying_obsidian",
+    "E": "minecraft:ender_eye",
+    "C": "minecraft:cobblestone",
+    "e": "minecraft:end_crystal"
   },
   "result": {
     "id": "minecraft:player_head",

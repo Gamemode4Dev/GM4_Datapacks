@@ -7,18 +7,10 @@
     " H "
   ],
   "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "G": {
-      "item": "minecraft:glass"
-    },
-    "C": {
-      "item": "minecraft:comparator"
-    },
-    "H": {
-      "item": "minecraft:hopper_minecart"
-    }
+    "I": "minecraft:iron_ingot",
+    "G": "minecraft:glass",
+    "C": "minecraft:comparator",
+    "H": "minecraft:hopper_minecart"
   },
   "result": {
     "id": "minecraft:hopper_minecart",

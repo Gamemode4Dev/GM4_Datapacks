@@ -7,21 +7,11 @@
     "CDC"
   ],
   "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "L": {
-      "item": "minecraft:light_blue_dye"
-    },
-    "C": {
-      "item": "minecraft:cobblestone"
-    },
-    "T": {
-      "item": "minecraft:crafting_table"
-    },
-    "D": {
-      "item": "minecraft:dropper"
-    }
+    "I": "minecraft:iron_ingot",
+    "L": "minecraft:light_blue_dye",
+    "C": "minecraft:cobblestone",
+    "T": "minecraft:crafting_table",
+    "D": "minecraft:dropper"
   },
   "result": {
     "id": "minecraft:player_head",

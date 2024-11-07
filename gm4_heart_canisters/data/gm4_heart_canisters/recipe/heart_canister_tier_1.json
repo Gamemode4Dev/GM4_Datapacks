@@ -7,18 +7,10 @@
     "OGO"
   ],
   "key": {
-    "O": {
-      "item": "minecraft:obsidian"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "G": {
-      "item": "minecraft:golden_apple"
-    },
-    "N": {
-      "item": "minecraft:nether_star"
-    }
+    "O": "minecraft:obsidian",
+    "I": "minecraft:iron_ingot",
+    "G": "minecraft:golden_apple",
+    "N": "minecraft:nether_star"
   },
   "result": {
     "id": "minecraft:player_head",

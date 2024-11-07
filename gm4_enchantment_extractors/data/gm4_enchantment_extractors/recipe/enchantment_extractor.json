@@ -7,18 +7,10 @@
     "CCC"
   ],
   "key": {
-    "E": {
-      "item": "minecraft:enchanting_table"
-    },
-    "G": {
-      "item": "minecraft:gold_ingot"
-    },
-    "g": {
-      "item": "minecraft:grindstone"
-    },
-    "C": {
-      "item": "minecraft:cobblestone"
-    }
+    "E": "minecraft:enchanting_table",
+    "G": "minecraft:gold_ingot",
+    "g": "minecraft:grindstone",
+    "C": "minecraft:cobblestone"
   },
   "result": {
     "id": "minecraft:player_head",

@@ -7,12 +7,8 @@
     "I I"
   ],
   "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "B": {
-      "item": "minecraft:iron_boots"
-    }
+    "I": "minecraft:iron_ingot",
+    "B": "minecraft:iron_boots"
   },
   "result": {
     "id": "minecraft:iron_boots",

@@ -7,18 +7,10 @@
     "IcI"
   ],
   "key": {
-    "C": {
-      "item": "minecraft:cobblestone"
-    },
-    "F": {
-      "item": "minecraft:furnace"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "c": {
-      "item": "minecraft:comparator"
-    }
+    "C": "minecraft:cobblestone",
+    "F": "minecraft:furnace",
+    "I": "minecraft:iron_ingot",
+    "c": "minecraft:comparator"
   },
   "result": {
     "id": "minecraft:player_head",

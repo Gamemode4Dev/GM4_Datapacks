@@ -3,18 +3,10 @@
   "category": "building",
   "ingredients": [
     [
-      {
-        "item": "minecraft:sandstone"
-      },
-      {
-        "item": "minecraft:chiseled_sandstone"
-      },
-      {
-        "item": "minecraft:cut_sandstone"
-      },
-      {
-        "item": "minecraft:smooth_sandstone"
-      }
+      "minecraft:sandstone",
+      "minecraft:chiseled_sandstone",
+      "minecraft:cut_sandstone",
+      "minecraft:smooth_sandstone"
     ]
   ],
   "result": {
