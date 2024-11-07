@@ -1,7 +1,7 @@
 import re
 import logging
 from typing import Any
-from beet import Context, TextFileBase
+from beet import Context, TextFileBase, Recipe
 
 logger = logging.getLogger("gm4.backwards")
 
@@ -73,8 +73,8 @@ def rewrite_recipes(ctx: Context):
     if ingr.startswith("#"):
       return { "tag": ingr[1:] }
     return { "item": ingr }
-
-  for id, resource in ctx.data.recipes.items():
+  
+  def rewrite_recipe(id: str, resource: Recipe):
     # If an overlay already exists for this recipe, us the contents of that
     # TODO: generalize this for all rewrite functions and handle multiple overlays
     for overlay in ctx.data.overlays.values():
@@ -103,3 +103,9 @@ def rewrite_recipes(ctx: Context):
     overlay = ctx.data.overlays["overlay_48"]
     overlay.supported_formats = { "min_inclusive": 48, "max_inclusive": 48 }
     overlay[id] = overlay_resource
+
+  for id, resource in ctx.data.recipes.items():
+    try:
+      rewrite_recipe(id, resource)
+    except BaseException as e:
+      logger.error(f"Failed to rewrite recipe {id}: {e}")
