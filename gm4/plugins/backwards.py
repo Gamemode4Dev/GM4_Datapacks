@@ -108,4 +108,4 @@ def rewrite_recipes(ctx: Context):
     try:
       rewrite_recipe(id, resource)
     except BaseException as e:
-      logger.error(f"Failed to rewrite recipe {id}: {e}")
+      logger.error(f"Failed to backport recipe {id}: {e}")
