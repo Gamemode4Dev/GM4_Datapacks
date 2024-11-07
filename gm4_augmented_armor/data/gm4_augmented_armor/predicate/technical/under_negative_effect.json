@@ -90,6 +90,15 @@
                     "minecraft:darkness": {}
                 }
             }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "flags": {
+                    "is_on_fire": true
+                }
+            }
         }
     ]
 }

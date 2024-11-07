@@ -33,7 +33,7 @@ scoreboard players set @a gm4_sr_stat.regeneration_rate_change 0
 function #gm4_survival_refightalized:player_submain
 
 # heal players if they have stored health
-execute as @a[gamemode=!spectator,scores={gm4_sr_health.restoration=1..}] run function gm4_survival_refightalized:player/health/heal/heal_calc
+execute as @a[gamemode=!spectator,scores={gm4_sr_health.restoration=1..}] run function gm4_survival_refightalized:player/health/heal/activate
 
 # health regeneration timer
 execute as @a[gamemode=!spectator,scores={gm4_sr_health.regeneration_timer=1..}] run function gm4_survival_refightalized:player/health/regeneration/timer

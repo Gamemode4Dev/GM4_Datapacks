@@ -17,3 +17,4 @@ data remove storage gm4_survival_refightalized:temp set
 
 # reapply resistance
 effect give @s resistance 2 255 true
+

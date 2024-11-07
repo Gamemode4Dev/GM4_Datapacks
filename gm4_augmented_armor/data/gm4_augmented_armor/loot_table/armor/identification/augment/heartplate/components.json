@@ -21,7 +21,7 @@
           "replace": false,
           "modifiers": [
             {
-              "attribute": "minecraft:generic.max_health",
+              "attribute": "minecraft:max_health",
               "id": "gm4_augmented_armor:permanent",
               "amount": {
                 "type": "minecraft:score",
@@ -32,7 +32,7 @@
                 "score": "gm4_aa_data",
                 "scale": 0.01
               },
-              "operation": "add_multiplied_total",
+              "operation": "add_multiplied_base",
               "slot": "chest"
             }
           ]
@@ -69,7 +69,7 @@
           "lore": [
             [
               {
-                "translate": "attribute.modifier.plus.2",
+                "translate": "attribute.modifier.plus.1",
                 "with": [
                   {
                     "score": {
@@ -78,7 +78,7 @@
                     }
                   },
                   {
-                    "translate": "attribute.name.generic.max_health"
+                    "translate": "attribute.name.max_health"
                   }
                 ],
                 "color": "blue",
@@ -110,7 +110,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "attribute.name.generic.max_health"
+                    "translate": "attribute.name.max_health"
                   }
                 ],
                 "color": "dark_gray",
@@ -156,7 +156,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "attribute.name.generic.max_health"
+                    "translate": "attribute.name.max_health"
                   }
                 ],
                 "color": "dark_gray",
@@ -202,7 +202,7 @@
                     "italic": false
                   },
                   {
-                    "translate": "attribute.name.generic.max_health"
+                    "translate": "attribute.name.max_health"
                   }
                 ],
                 "color": "dark_gray",
