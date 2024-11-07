@@ -75,6 +75,13 @@ def rewrite_recipes(ctx: Context):
     return { "item": ingr }
 
   for id, resource in ctx.data.recipes.items():
+    # If an overlay already exists for this recipe, us the contents of that
+    # TODO: generalize this for all rewrite functions and handle multiple overlays
+    for overlay in ctx.data.overlays.values():
+      if id in overlay.recipes:
+        resource = overlay.recipes[id]
+        break
+
     overlay_resource = resource.copy()
     data = overlay_resource.data
 
