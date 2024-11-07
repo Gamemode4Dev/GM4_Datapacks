@@ -61,9 +61,7 @@ def beet_default(ctx: Context):
                 "group": group, #type: ignore
                 "pattern": shape,
                 "key": {
-                    "#": {
-                        "item": item
-                    }
+                    "#": item
                 },
                 "result": {
                     "id": output,
@@ -112,9 +110,7 @@ def beet_default(ctx: Context):
                     "type": "shaped",
                     "recipe": shape,
                     "key": {
-                        "#": {
-                        "item": item
-                        }
+                        "#": item
                     }
                 },
                 "output": {
