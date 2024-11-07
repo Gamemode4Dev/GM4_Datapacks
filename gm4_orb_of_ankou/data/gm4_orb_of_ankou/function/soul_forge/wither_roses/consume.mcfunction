@@ -6,7 +6,7 @@ setblock ~ ~ ~ lily_of_the_valley
 scoreboard players add @s gm4_oa_roses 1
 
 # playsound
-playsound entity.generic.eat block @a[distance=..12] ~ ~ ~ 0.7 0.75
+playsound minecraft:entity.generic.eat block @a[distance=..12] ~ ~ ~ 0.7 0.75
 playsound minecraft:block.grass.break block @a[distance=..12] ~ ~ ~ 0.6 1
 playsound minecraft:entity.player.breath block @a[distance=..12] ~ ~ ~ 1 1.3
 

@@ -13,21 +13,21 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "generic.armor",
+                  "attribute": "minecraft:armor",
                   "id": "minecraft:armor.helmet",
                   "amount": 3,
                   "operation": "add_value",
                   "slot": "head"
                 },
                 {
-                  "attribute": "generic.armor_toughness",
+                  "attribute": "minecraft:armor_toughness",
                   "id": "gm4_combat_expanded:armor_toughness.helmet",
                   "amount": 2,
                   "operation": "add_value",
                   "slot": "head"
                 },
                 {
-                  "attribute": "generic.knockback_resistance",
+                  "attribute": "minecraft:knockback_resistance",
                   "id": "gm4_combat_expanded:knockback_resistance",
                   "amount": 0,
                   "operation": "add_value",

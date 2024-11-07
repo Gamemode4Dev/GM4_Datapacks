@@ -13,7 +13,7 @@
               "replace": false,
               "modifiers": [
                 {
-                  "attribute": "minecraft:generic.max_health",
+                  "attribute": "minecraft:max_health",
                   "id": "gm4_combat_expanded:dynamic",
                   "amount": 0,
                   "operation": "add_value",
@@ -66,7 +66,7 @@
                           "text": "1"
                         },
                         {
-                          "translate": "attribute.name.generic.max_health"
+                          "translate": "attribute.name.max_health"
                         }
                       ]
                     }
@@ -113,7 +113,7 @@
                           "text": "1"
                         },
                         {
-                          "translate": "attribute.name.generic.max_health"
+                          "translate": "attribute.name.max_health"
                         }
                       ]
                     }
@@ -160,7 +160,7 @@
                           "text": "1"
                         },
                         {
-                          "translate": "attribute.name.generic.max_health"
+                          "translate": "attribute.name.max_health"
                         }
                       ]
                     }
@@ -221,7 +221,7 @@
                     "text": "1"
                   },
                   {
-                    "translate": "attribute.name.generic.max_health"
+                    "translate": "attribute.name.max_health"
                   }
                 ],
                 "color": "red",

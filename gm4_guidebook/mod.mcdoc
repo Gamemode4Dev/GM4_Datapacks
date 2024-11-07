@@ -1,0 +1,47 @@
+use ::java::server::world::item::SingleItem
+use ::java::data::advancement::AdvancementCriterion
+use ::java::server::util::text::Text
+
+dispatch minecraft:resource[gm4_guidebook] to struct Book {
+  id: string,
+  name: string,
+  module_type: ("expansion" | "base" | "module"),
+  load_check?: string,
+  base_module?: string,
+  icon: SingleItem,
+  criteria: struct AdvancementCriteriaMap {
+		[string]: AdvancementCriterion,
+	},
+  sections: [Section],
+  description?: string,
+  wiki_link?: string,
+}
+
+struct Section {
+  name: string,
+  pages: [GuidebookText],
+  enable: [struct {[string]: (int | string)}],
+  requirements: [[string]],
+  prerequisites?: [string],
+  grants?: [string],
+}
+
+type GuidebookText = (
+  string |
+  [GuidebookTextObject] |
+  GuidebookTextObject |
+)
+
+type GuidebookTextObject = (
+  GuidebookInsert |
+  Text |
+)
+
+struct GuidebookInsert {
+  insert: ("title" | "locked_text" | "locked_text_title" | "recipe"),
+  ...gm4_guidebook:insert[[insert]],
+}
+
+dispatch gm4_guidebook:insert[recipe] to struct RecipeInsert {
+  recipe: string,
+}

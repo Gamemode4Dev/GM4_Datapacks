@@ -4,7 +4,7 @@
 # run from mob/init/mob_type
 
 # base stat nerf
-attribute @s generic.attack_damage modifier add gm4_combat_expanded:stat_change.base_nerf -3 add_value
+attribute @s minecraft:attack_damage modifier add gm4_combat_expanded:stat_change.base_nerf -3 add_value
 
 # max stat buffs
 scoreboard players set $mob_health gm4_ce_data 0

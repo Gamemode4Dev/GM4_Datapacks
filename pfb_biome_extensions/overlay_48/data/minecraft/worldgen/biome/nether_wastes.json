@@ -1,0 +1,94 @@
+{
+  "carvers": {
+    "air": "#minecraft:air/in_biome/nether_wastes",
+    "liquid": "#minecraft:liquid/in_biome/nether_wastes"
+  },
+  "downfall": 0.0,
+  "effects": {
+    "additions_sound": {
+      "sound": "minecraft:ambient.nether_wastes.additions",
+      "tick_chance": 0.0111
+    },
+    "ambient_sound": "minecraft:ambient.nether_wastes.loop",
+    "fog_color": 3344392,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.nether_wastes.mood",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.nether.nether_wastes"
+    },
+    "sky_color": 7254527,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "features": [
+    "#minecraft:raw_generation/in_biome/nether_wastes",
+    "#minecraft:lakes/in_biome/nether_wastes",
+    "#minecraft:local_modifications/in_biome/nether_wastes",
+    "#minecraft:underground_structures/in_biome/nether_wastes",
+    "#minecraft:surface_structures/in_biome/nether_wastes",
+    "#minecraft:strongholds/in_biome/nether_wastes",
+    "#minecraft:underground_ores/in_biome/nether_wastes",
+    "#minecraft:underground_decoration/in_biome/nether_wastes",
+    "#minecraft:fluid_springs/in_biome/nether_wastes",
+    "#minecraft:vegetal_decoration/in_biome/nether_wastes",
+    "#minecraft:top_layer_modification/in_biome/nether_wastes"
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "minecraft:strider",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 60
+      }
+    ],
+    "misc": [],
+    "monster": [
+      {
+        "type": "minecraft:ghast",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 50
+      },
+      {
+        "type": "minecraft:zombified_piglin",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:magma_cube",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 2
+      },
+      {
+        "type": "minecraft:enderman",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 1
+      },
+      {
+        "type": "minecraft:piglin",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 15
+      }
+    ],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 2.0
+}
