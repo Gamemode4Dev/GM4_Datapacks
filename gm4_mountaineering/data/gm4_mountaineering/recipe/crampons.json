@@ -17,14 +17,14 @@
       "minecraft:custom_name": "{\"translate\":\"item.gm4.crampons\",\"fallback\":\"Crampons\",\"italic\":false}",
       "minecraft:attribute_modifiers": [
         {
-          "type": "minecraft:generic.movement_speed",
+          "type": "minecraft:movement_speed",
           "id": "gm4_mountaineering:crampon_slowness",
           "amount": -0.2,
           "operation": "add_multiplied_base",
           "slot": "feet"
         },
         {
-          "type": "minecraft:generic.armor",
+          "type": "minecraft:armor",
           "id": "gm4_mountaineering:crampon_armor",
           "amount": 1,
           "operation": "add_value",
