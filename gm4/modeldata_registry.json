@@ -996,7 +996,8 @@
       "gm4_furniture:block/furniture/wood_set/fancy/chair_1": 64,
       "gm4_furniture:block/furniture/wood_set/fancy/stool_1": 65,
       "gm4_furniture:block/furniture/wood_set/fancy/light_1": 66,
-      "gm4_furniture:block/furniture/furniture_station": 67
+      "gm4_furniture:block/furniture/furniture_station": 67,
+      "gm4_furniture:block/furniture/metal_set/iron/lantern_1": 68
     },
     "leather_leggings": {
       "gm4_washing_tanks:guidebook_icon/washing_tanks": 1,
@@ -1341,6 +1342,7 @@
       "gm4_furniture:block/furniture/wood_set/fancy/stool_1": 65,
       "gm4_furniture:block/furniture/wood_set/fancy/light_1": 66,
       "gm4_furniture:block/furniture/furniture_station": 67,
+      "gm4_furniture:block/furniture/metal_set/iron/lantern_1": 68,
       "gm4_metallurgy:shamir/infinitas": 100,
       "gm4_metallurgy:shamir/sensus": 101,
       "gm4_weighted_armour:shamir/helious": 103,
