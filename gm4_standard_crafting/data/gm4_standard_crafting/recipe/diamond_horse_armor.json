@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "  D",
+    "DLD",
+    "D D"
+  ],
+  "key": {
+    "D": "minecraft:diamond",
+    "L": "minecraft:leather"
+  },
+  "result": {
+    "id": "minecraft:diamond_horse_armor"
+  }
+}
