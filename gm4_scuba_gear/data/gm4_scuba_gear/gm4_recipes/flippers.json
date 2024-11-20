@@ -1,0 +1,28 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "S S",
+      "R R",
+      "R R"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:turtle_scute"
+      },
+      "R": {
+        "item": "minecraft:rabbit_hide"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_scuba_gear:items/flippers",
+      "count": 1,
+      "guidebook": {
+        "display_color": 11009871
+      }
+    }
+  }
+}

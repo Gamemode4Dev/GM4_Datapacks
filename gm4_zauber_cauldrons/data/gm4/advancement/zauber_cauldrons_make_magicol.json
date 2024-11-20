@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "id": "clock",
+            "components": {
+                "minecraft:custom_model_data": "gui/advancement/zauber_cauldrons_make_magicol"
+            }
+        },
+        "title": {
+            "translate": "advancement.gm4.zauber_cauldrons.make_magicol.title",
+            "fallback": "Seeing Things in a New Light"
+        },
+        "description": {
+            "translate": "advancement.gm4.zauber_cauldrons.make_magicol.description",
+            "fallback": "Wait for the right Moon phase to make some Magicol",
+            "color": "gray"
+        },
+        "frame": "task",
+        "hidden": false
+    },
+    "parent": "gm4:zauber_cauldrons_full_armor",
+    "criteria": {
+        "make_magicol": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

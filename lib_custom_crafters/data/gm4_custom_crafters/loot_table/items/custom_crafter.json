@@ -1,0 +1,38 @@
+{
+  "type": "block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "gm4_custom_crafters:item/custom_crafter",
+                "minecraft:profile": "$gm4_custom_crafters:custom_crafter"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_machines:{id:'custom_crafter'}}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "translate": "block.gm4.custom_crafter",
+                  "fallback": "Custom Crafter",
+                  "color": "white",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

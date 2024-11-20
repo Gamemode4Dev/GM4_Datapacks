@@ -1,0 +1,155 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:potion",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:custom_model_data": "item/wormhole_in_a_bottle",
+                                "minecraft:potion_contents": {
+                                    "potion": "minecraft:thick",
+                                    "custom_color": 8587123
+                                },
+                                "minecraft:hide_additional_tooltip": {}
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_zauber_cauldrons:{item:'wormhole_bottle',bottle:{multi_use:0b}}}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.gm4.wormhole_in_a_bottle",
+                                "fallback": "Wormhole in a Bottle",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": {
+                                "translate": "item.gm4.wormhole_in_a_bottle",
+                                "fallback": "Wormhole in a Bottle",
+                                "italic": false
+                            },
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$has_soul_fire_heatsource"
+                                        },
+                                        "score": "gm4_zc_data"
+                                    },
+                                    "range": 1
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:copy_nbt",
+                            "source": {
+                                "type": "minecraft:storage",
+                                "source": "gm4_zauber_cauldrons:blueprint/item/multi_sip"
+                            },
+                            "ops": [
+                                {
+                                    "source": "gm4_zauber_cauldrons.bottle",
+                                    "target": "gm4_zauber_cauldrons.bottle",
+                                    "op": "replace"
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$has_soul_fire_heatsource"
+                                        },
+                                        "score": "gm4_zc_data"
+                                    },
+                                    "range": 1
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:copy_nbt",
+                            "source": {
+                                "type": "minecraft:storage",
+                                "source": "gm4_zauber_cauldrons:blueprint/item/wormhole"
+                            },
+                            "ops": [
+                                {
+                                    "source": "gm4_zauber_cauldrons.cauldron_pos",
+                                    "target": "gm4_zauber_cauldrons.cauldron_pos",
+                                    "op": "replace"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "mode": "append",
+                            "entity": "this",
+                            "lore": [
+                                [
+                                    {
+                                        "nbt": "gm4_zauber_cauldrons.bottle.sips",
+                                        "storage": "gm4_zauber_cauldrons:blueprint/item/multi_sip",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": "/",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "nbt": "gm4_zauber_cauldrons.bottle.size",
+                                        "storage": "gm4_zauber_cauldrons:blueprint/item/multi_sip",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "text": " ",
+                                        "color": "gray",
+                                        "italic": false
+                                    },
+                                    {
+                                        "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lore.sips",
+                                        "fallback": "Sips",
+                                        "color": "gray",
+                                        "italic": false
+                                    }
+                                ]
+                            ],
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$has_soul_fire_heatsource"
+                                        },
+                                        "score": "gm4_zc_data"
+                                    },
+                                    "range": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

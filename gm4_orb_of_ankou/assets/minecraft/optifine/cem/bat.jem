@@ -1,0 +1,65 @@
+{
+	"texture": "bat.png",
+	"textureSize": [32, 32],
+	"models": [
+		{
+			"part": "head",
+			"id": "head",
+			"invertAxis": "xy",
+			"translate": [0, -7, 0],
+			"boxes": [
+				{"coordinates": [-2, 7, -1, 4, 3, 2], "textureOffset": [0, 7]},
+				{"coordinates": [-4, 8, 0, 3, 5, 0], "textureOffset": [8, 15]},
+				{"coordinates": [1, 8, 0, 3, 5, 0], "textureOffset": [1, 15]}
+			]
+		},
+		{
+			"part": "body",
+			"id": "body",
+			"invertAxis": "xy",
+			"translate": [0, -7, 0],
+			"boxes": [
+				{"coordinates": [-1.5, 2, -1, 3, 5, 2], "textureOffset": [0, 0]},
+				{"coordinates": [-1.5, 5, -2, 3, 4, 3], "textureOffset": [20, 17]},
+				{"coordinates": [-1.5, 0, -2, 5, 5, 3], "textureOffset": [16, 24]},
+				{"coordinates": [-1.5, 0, 0, 3, 2, 0], "textureOffset": [16, 16]}
+			]
+		},
+		{
+			"part": "left_wing",
+			"id": "left_wing",
+			"invertAxis": "xy",
+			"translate": [1.5, -7, 0],
+			"boxes": [
+				{"coordinates": [-3.5, 2, 0, 2, 7, 0], "textureOffset": [12, 7]}
+			]
+		},
+		{
+			"part": "outer_left_wing",
+			"id": "outer_left_wing",
+			"invertAxis": "xy",
+			"translate": [3.5, -7, 0],
+			"boxes": [
+				{"coordinates": [-9.5, 1, 0, 6, 8, 0], "textureOffset": [16, 8]}
+			]
+		},
+		{
+			"part": "right_wing",
+			"id": "right_wing",
+			"invertAxis": "xy",
+			"translate": [-1.5, -7, 0],
+			"boxes": [
+				{"coordinates": [1.5, 2, 0, 2, 7, 0], "textureOffset": [12, 0]}
+			]
+		},
+		{
+			"part": "outer_right_wing",
+			"id": "outer_right_wing",
+			"invertAxis": "xy",
+			"translate": [-3.5, -7, 0],
+			"boxes": [
+				{"coordinates": [3.5, 1, 0, 6, 8, 0], "textureOffset": [16, 0]}
+			]
+		}
+	]
+}

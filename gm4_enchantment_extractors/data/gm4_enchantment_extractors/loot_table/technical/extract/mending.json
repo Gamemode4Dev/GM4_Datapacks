@@ -1,0 +1,82 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:enchanted_book",
+              "functions": [
+                {
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:mending": 1,
+                      "minecraft:vanishing_curse": 1
+                    }
+                  }
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "minecraft:mending",
+                          "levels": 1
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.03
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:enchanted_book",
+              "functions": [
+                {
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:stored_enchantments": {
+                      "minecraft:mending": 1
+                    }
+                  }
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "minecraft:mending",
+                          "levels": 1
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.020000000000000004
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

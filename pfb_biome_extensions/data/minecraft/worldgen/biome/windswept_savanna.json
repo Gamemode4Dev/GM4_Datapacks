@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/windswept_savanna",
-    "liquid": "#minecraft:liquid/in_biome/windswept_savanna"
-  },
+  "carvers": "#minecraft:in_biome/windswept_savanna",
   "downfall": 0.0,
   "effects": {
     "fog_color": 12638463,
@@ -77,6 +74,12 @@
         "maxCount": 1,
         "minCount": 1,
         "weight": 1
+      },
+      {
+        "type": "minecraft:armadillo",
+        "maxCount": 3,
+        "minCount": 2,
+        "weight": 10
       }
     ],
     "misc": [],

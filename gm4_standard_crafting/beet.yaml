@@ -1,11 +1,12 @@
 id: gm4_standard_crafting
 name: Standard Crafting
-version: 1.3.X
+version: 1.5.X
 
 data_pack:
   load: .
 
 pipeline:
+  - generate_recipes
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_custom_crafters
 
@@ -13,11 +14,13 @@ meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.0.0
+        lib_custom_crafters: 3.2.0
     website:
       description: A crafting recipe pack that adds some nifty new recipes to the game.
       recommended: []
       notes: []
+    modrinth:
+      project_id: KIxK9MA7
     video: https://www.youtube.com/watch?v=_GekIoefncg
     wiki: https://wiki.gm4.co/wiki/Standard_Crafting
     credits:

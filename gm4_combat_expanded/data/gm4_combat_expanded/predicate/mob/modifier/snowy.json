@@ -1,0 +1,27 @@
+[
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:reference",
+      "name": "gm4_combat_expanded:mob/modifier/dark"
+    }
+  },
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biomes": [
+        "minecraft:snowy_plains",
+        "minecraft:ice_spikes",
+        "minecraft:snowy_taiga",
+        "minecraft:snowy_beach",
+        "minecraft:grove",
+        "minecraft:snowy_slopes",
+        "minecraft:jagged_peaks",
+        "minecraft:frozen_peaks",
+        "minecraft:frozen_river",
+        "minecraft:frozen_ocean",
+        "minecraft:deep_frozen_ocean"
+      ]
+    }
+  }
+]

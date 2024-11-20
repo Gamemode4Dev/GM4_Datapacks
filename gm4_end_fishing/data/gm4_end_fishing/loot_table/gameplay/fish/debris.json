@@ -1,0 +1,117 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "weight": 50
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:end_stone",
+          "weight": 25
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:end_rod",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chorus_fruit",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chorus_flower",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chorus_fruit",
+          "weight": 40,
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:high"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_bars",
+          "weight": 10,
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:center"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:end_rod",
+          "weight": 14,
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:mid_high"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:chorus_flower",
+          "weight": 35,
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:high"
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{set_data:{type:'entity',id:'endermite'}}}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "weight": 10,
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biomes": "#gm4_end_fishing:barrens"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_end_fishing:{set_data:{type:'entity',id:'endermite'}}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

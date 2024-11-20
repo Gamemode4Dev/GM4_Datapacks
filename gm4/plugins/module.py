@@ -13,8 +13,10 @@ def gm4_root_advancement(ctx: Context):
             {
                 "display": {
                     "icon": {
-                        "item": "command_block",
-                        "nbt": "{CustomModelData:3420001}"
+                        "id": "command_block",
+                        "components": {
+                            "minecraft:custom_model_data": 3420001
+                        }
                     },
                     "title": {
                         "translate": "advancement.gm4.root.title",
@@ -26,12 +28,12 @@ def gm4_root_advancement(ctx: Context):
                         "color": "gray"
                     },
                     "background": "textures/block/light_blue_concrete_powder.png",
-                        "announce_to_chat": False
+                    "announce_to_chat": False
                 },
                 "criteria": {
                     "automatic": {
                         "trigger": "minecraft:tick"
                     }
                 }
-                }
+            }
         )

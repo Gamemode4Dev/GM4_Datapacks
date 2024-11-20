@@ -1,0 +1,16 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "feet": {
+        "items": [
+          "minecraft:leather_boots"
+        ],
+        "predicates": {
+          "minecraft:custom_data": "{gm4_boots_of_ostara:1b}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:leather_boots",
+          "functions": [
+            {
+              "function": "minecraft:reference",
+              "name": "gm4_boots_of_ostara:boots_of_ostara"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

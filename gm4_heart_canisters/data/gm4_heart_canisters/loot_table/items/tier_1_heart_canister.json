@@ -1,0 +1,49 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/heart_canister_tier_1",
+                                "minecraft:profile": "$heart_canister_tier_1" 
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_heart_canister:1b,gm4_heart_canister_tier:1b}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.gm4.heart_canister",
+                                "fallback": "Heart Canister",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "mode": "append",
+                            "lore": [
+                                {
+                                    "translate": "item.gm4.heart_canister.lore.tier",
+                                    "fallback": "Tier %s",
+                                    "with": [
+                                        "1"
+                                    ],
+                                    "italic": false,
+                                    "color": "gray"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "illusioner_nights",
+  "name": "Illusioner Nights",
+  "module_type": "expansion",
+  "load_check": "midnight_menaces",
+  "base_module": "mysterious_midnights",
+  "wiki_link": "https://wiki.gm4.co/Mysterious_Midnights/Midnight_Menaces/Illusioner_Nights",
+  "icon": {
+    "id": "minecraft:lingering_potion",
+    "components": {
+      "minecraft:potion_contents": "minecraft:long_invisibility"
+    }
+  },
+  "criteria": {
+    "fight_illusioner": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:illusioner",
+              "nbt": "{DeathLootTable:\"gm4_illusioner_nights:entities/illusioner\"}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "fight_illusioner"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.illusioner_nights.description",
+            "fallback": "During an Illusioner Nights event, illusioners will spawn.\n\nThese illusioners will drop golden carrots, and some potions when killed."
+          }
+        ]
+      ]
+    }
+  ]
+}

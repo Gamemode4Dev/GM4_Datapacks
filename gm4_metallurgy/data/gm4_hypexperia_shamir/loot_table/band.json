@@ -1,0 +1,37 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "gm4_metallurgy:bismuth_band",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "shamir/hypexperia"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_metallurgy:{stored_shamir:'hypexperia'}}"
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "mode": "append",
+                            "lore": [
+                                {
+                                    "translate": "item.gm4.shamir.hypexperia",
+                                    "fallback": "Hypexperia",
+                                    "italic": false,
+                                    "color": "gray"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

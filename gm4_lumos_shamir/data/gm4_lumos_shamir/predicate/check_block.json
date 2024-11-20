@@ -1,0 +1,131 @@
+{
+	"condition": "minecraft:any_of",
+	"terms": [
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"blocks": "#minecraft:trapdoors",
+					"state": {
+						"half": "top",
+						"open": "false"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"blocks": "#gm4_lumos_shamir:torch_placeable"
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"blocks": [
+						"minecraft:grindstone"
+					],
+					"state": {
+						"face": "floor"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"blocks": [
+						"minecraft:piston_head"
+					],
+					"state": {
+						"facing": "up"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"blocks": "#minecraft:fence_gates",
+					"state": {
+						"open": "false"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"blocks": "#minecraft:slabs",
+					"state": {
+						"type": "top"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"blocks": "#minecraft:slabs",
+					"state": {
+						"type": "double"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"blocks": "#minecraft:stairs",
+					"state": {
+						"half": "top"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"blocks": [
+						"minecraft:end_portal_frame"
+					],
+					"state": {
+						"eye": "true"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"blocks": [
+						"minecraft:bell"
+					],
+					"state": {
+						"attachment": "floor"
+					}
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,8 @@
+animals_list = []
+
+for animal in ctx.meta['animals']:
+  animals_list.append(f"{animal['id']}",)
+
+{
+  "values": sorted(animals_list)
+}

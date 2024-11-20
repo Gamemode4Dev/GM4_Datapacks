@@ -1,0 +1,29 @@
+{
+  "type": "display",
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "IBI",
+      "C C",
+      "C C"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "B": {
+        "item": "minecraft:light_blue_dye"
+      },
+      "C": {
+        "item": "minecraft:cobblestone"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_custom_crafters:items/custom_crafter",
+      "count": 1
+    }
+  }
+}

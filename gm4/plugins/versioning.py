@@ -1,7 +1,7 @@
 from beet import Context, Function, FunctionTag, PluginOptions, configurable
 from beet.contrib.rename_files import rename_files
 from beet.contrib.find_replace import find_replace
-from pydantic import Field, Extra
+from pydantic.v1 import Field, Extra
 import warnings
 from gm4.utils import Version, NoneAttribute
 import gm4.plugins.manifest # for ManifestCacheModel; a runtime circular dependency
@@ -178,7 +178,7 @@ def libraries(ctx: Context, opts: VersioningConfig):
     handle = ctx.data.functions[f"{ctx.project_id}:load"]
     handle.append([
         "\n",
-        f"data modify storage gm4:log versions append value {{id:\"{ctx.project_id}\",module:\"{ctx.project_id.replace('gm4', 'lib')}\",version:\"{ctx.project_version}\",from:\"{ctx.cache['currently_building'].json['name']}\"}}"
+        f"data modify storage gm4:log versions append value {{id:\"{ctx.project_id}\",module:\"{ctx.project_id.replace('gm4', 'lib')}\",version:\"{ctx.project_version}\",from:\"{ctx.cache['currently_building'].json.get('name', 'standalone')}\"}}"
     ])
 
     # strict version checks on advancements
@@ -220,7 +220,7 @@ def versioned_namespace(ctx: Context, version: Version):
     namespace = ctx.project_id if ctx.project_id != 'base' else 'gm4'
     versioned_namespace = f"{namespace}-{version.major}.{version.minor}"
     ctx.require(rename_files(data_pack={
-        "match":{"functions": "*", "advancements": "*", "loot_tables": "*", "predicates": "*"},
+        "match": {"functions": "*", "advancements": "*", "loot_tables": "*", "predicates": "*"} if namespace != 'gm4' else {"functions": "*", "advancements": "*"},
         "find": f"{namespace}:([a-z_/]+)",
         "replace": f"{versioned_namespace}:\\1"
     }))
@@ -295,6 +295,7 @@ def warn_on_future_version(ctx: Context, dep_id: str, ver: Version):
 
 def isolated_library(ctx: Context):
     """Generates the #load:load function tag when building libraries in isloation"""
+    ctx.cache["currently_building"].json = {"name": ctx.project_name, "id": ctx.project_id, "added_libs": []}
     # load.json tag
     ctx.data.function_tags["load:load"] = FunctionTag({
         "values": [

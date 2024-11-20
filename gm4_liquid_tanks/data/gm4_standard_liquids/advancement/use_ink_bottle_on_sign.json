@@ -1,0 +1,33 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:any_block_use",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                            "items": [
+                                "minecraft:potion"
+                            ],
+                            "predicates": {
+                              "minecraft:custom_data": "{gm4_standard_liquids:{potion:\"blindness\"}}"
+                            }
+                        }
+                    },
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "blocks": "#minecraft:all_signs"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_standard_liquids:util/signs/ink_sign"
+    }
+}

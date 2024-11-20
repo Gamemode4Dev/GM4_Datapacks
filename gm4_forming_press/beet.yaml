@@ -1,8 +1,11 @@
 id: gm4_forming_press
 name: Forming Press
-version: 1.3.X
+version: 1.5.X
 
 data_pack:
+  load: .
+
+resource_pack:
   load: .
 
 pipeline:
@@ -14,9 +17,47 @@ meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.0.0
-        lib_machines: 1.1.0
+        lib_custom_crafters: 3.2.0
+        lib_machines: 1.3.0
       schedule_loops: [main]
+    model_data:
+      - item: player_head
+        reference: item/forming_press
+        model: block/forming_press
+      - item: piston
+        template: block
+        transforms:
+          - name: item_display
+            origin: [0.5, 0.5, 0.5]
+            scale: [0.624, 0.624, 0.624]
+            rotation: [180, 0, 0]
+            translation: [0, -0.79, 0]
+        broadcast:
+          - reference: block/forming_press
+            textures:
+              front: block/forming_press_side
+              side: block/forming_press_side
+              top: block/forming_press_top_out
+              bottom: block/forming_press_bottom
+          - reference: block/forming_press_side
+            textures:
+              front: block/forming_press_front
+              side: block/forming_press_side
+              top: block/forming_press_top
+              bottom: block/forming_press_bottom
+          - reference: block/forming_press_down
+            textures:
+              front: block/forming_press_side
+              side: block/forming_press_side
+              top: block/forming_press_top
+              bottom: block/forming_press_bottom_out
+      - item: coal_block
+        reference: item/charcoal_block
+        template: vanilla
+    gui_fonts:
+      - translation: gui.gm4.forming_press
+        container: dropper
+        texture: gui/container/forming_press
     website:
       description: Create a Forming Press to unlock more efficient recipes for all types of brick and Charcoal.
       recommended:
@@ -35,6 +76,8 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
+    modrinth:
+      project_id: LGXxY3vu
     video: https://www.youtube.com/watch?v=ibtS4zAvglQ
     wiki: https://wiki.gm4.co/wiki/Forming_Press
     credits:
@@ -45,6 +88,6 @@ meta:
         - BluePsychoRanger
         - TheEpyonProject
       Textures by:
-        - kyrkis
+        - Kyrius
       Icon Design:
         - BluePsychoRanger

@@ -1,0 +1,50 @@
+{
+  "id": "resurrecting_zombies",
+  "name": "Resurrecting Zombies",
+  "module_type": "expansion",
+  "load_check": "mysterious_midnights",
+  "base_module": "mysterious_midnights",
+  "wiki_link": "https://wiki.gm4.co/Mysterious_Midnights/Resurrecting_Zombies",
+  "icon": {
+    "id": "minecraft:rotten_flesh"
+  },
+  "criteria": {
+    "fight_resurrected_zombie": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:zombie",
+              "nbt": "{DeathLootTable:\"minecraft:empty\",attributes:[{id:\"minecraft:attack_damage\",base:10.0d}]}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "fight_resurrected_zombie"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.resurrecting_zombies.description",
+            "fallback": "During a Resurrecting Zombies event, rotten flesh on the floor will resurrect into unarmed zombies, with a powerful attack."
+          }
+        ]
+      ]
+    }
+  ]
+}

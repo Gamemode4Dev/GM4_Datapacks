@@ -1,0 +1,21 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:red_mushroom",
+            "components": {
+                "minecraft:custom_model_data": 3240001
+            }
+        },
+        "title": "Things are grim indeed...",
+        "description": "Oh no, did I forget about those mushrooms?",
+        "frame": "challenge",
+        "hidden": true
+    },
+    "parent": "gm4:root",
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:impossible",
+            "conditions": {}
+        }
+    }
+}

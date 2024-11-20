@@ -1,0 +1,48 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:glass_bottle",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:custom_model_data": "item/magic_in_a_bottle"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_zauber_cauldrons:{item:'bottled_vex'}}"
+                        },
+                        {
+                            "function": "minecraft:copy_nbt",
+                            "source": {
+                                "type": "minecraft:storage",
+                                "source": "gm4_zauber_cauldrons:temp/item/bottled_vex"
+                            },
+                            "ops": [
+                                {
+                                    "source": "gm4_zauber_cauldrons",
+                                    "target": "gm4_zauber_cauldrons",
+                                    "op": "merge"
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.gm4.magic_in_a_bottle",
+                                "fallback": "Magic in a Bottle",
+                                "italic": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

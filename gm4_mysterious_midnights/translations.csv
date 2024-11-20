@@ -1,0 +1,20 @@
+key,en_us
+entity.gm4.falling_star,Falling Star
+item.gm4.endermite_egg,Endermite Egg
+item.gm4.endermite_egg.lore,"Oh, it didn't hatch"
+text.gm4.guidebook.module_desc.falling_stars,"Full moons gain an element of surprise with Mysterious Midnights! You might encounter falling stars, or Skeletons wielding poisonous arrows during full moons! So you better listen for that howl..."
+text.gm4.guidebook.falling_stars.description,"During a Falling Stars event, gifts will drop from the sky.\n\nDiamonds, iron nuggets, gold nuggets, endermites, end stone, and chorus fruit can be found falling from the sky."
+text.gm4.guidebook.module_desc.harvest_moons,"Full moons gain an element of surprise with Mysterious Midnights! You might encounter falling stars, or Skeletons wielding poisonous arrows during full moons! So you better listen for that howl..."
+text.gm4.guidebook.harvest_moons.description,"During a Harvest Moons event, random tick events, such as crop growth, will be 20 times quicker than normal."
+text.gm4.guidebook.mysterious_midnights.description,"Every full moon, there is a high chance that a Mysterious Midnight event will occur.\n\nWhen a Mysterious Midnight event occurs, a howling sound will be heard."
+text.gm4.guidebook.mysterious_midnights.sleeping,Mysterious Midnight events can usually be skipped by sleeping the night away.
+text.gm4.guidebook.module_desc.nightmare_nights,"Full moons gain an element of surprise with Mysterious Midnights! You might encounter falling stars, or Skeletons wielding poisonous arrows during full moons! So you better listen for that howl..."
+text.gm4.guidebook.nightmare_nights.description,"Nightmare Nights cannot be slept away. Attempting to sleep will deal instant damage.\n\nAdditionally, multiple Mysterious Midnights events will occur."
+text.gm4.guidebook.nightmare_nights.events,"While a Nightmare Night is active, the following events will occur:\n\n - Resurrecting Skeletons\n - Resurrecting Zombies\n - Tipped Skeletons"
+text.gm4.guidebook.nightmare_nights.events_with_menaces,"While a Nightmare Night is active, the following events will occur:\n\n - Resurrecting Skeletons\n - Resurrecting Zombies\n - Tipped Skeletons\n - Enlarging Phantoms\n - Illusioner Nights\n - Menacing Goblins"
+text.gm4.guidebook.module_desc.resurrecting_skeletons,"Full moons gain an element of surprise with Mysterious Midnights! You might encounter falling stars, or Skeletons wielding poisonous arrows during full moons! So you better listen for that howl..."
+text.gm4.guidebook.resurrecting_skeletons.description,"During a Resurrecting Skeletons event, bones on the floor will resurrect into unarmed skeletons, with a powerful attack."
+text.gm4.guidebook.module_desc.resurrecting_zombies,"Full moons gain an element of surprise with Mysterious Midnights! You might encounter falling stars, or Skeletons wielding poisonous arrows during full moons! So you better listen for that howl..."
+text.gm4.guidebook.resurrecting_zombies.description,"During a Resurrecting Zombies event, rotten flesh on the floor will resurrect into unarmed zombies, with a powerful attack."
+text.gm4.guidebook.module_desc.tipped_skeletons,"Full moons gain an element of surprise with Mysterious Midnights! You might encounter falling stars, or Skeletons wielding poisonous arrows during full moons! So you better listen for that howl..."
+text.gm4.guidebook.tipped_skeletons.description,"During a Tipped Skeletons event, skeletons will be equipped with tipped arrows.\n\nExtended slowness, extended weakness, extended poison, and strong harming tipped arrows are used."

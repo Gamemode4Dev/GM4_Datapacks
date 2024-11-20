@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone_button",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "translate": "text.gm4.block_compressors.compressed",
+                "fallback": "Compressed ×%s",
+                "with": [
+                  {
+                    "nbt": "Item.components.'minecraft:custom_data'.gm4_block_compressors.compression_level",
+                    "storage": "gm4_block_compressors:temp/item_stack"
+                  }
+                ],
+                "color": "gray",
+                "italic": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

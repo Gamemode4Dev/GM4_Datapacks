@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:end_rod",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/teleportation_jammer"
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.teleportation_anchors_jammer.title",
+      "fallback": "Make Some Noise"
+    },
+    "description": {
+      "translate": "advancement.gm4.teleportation_anchors_jammer.description",
+      "fallback": "Create a device to stop chorus in its tracks",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:custom_crafters",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

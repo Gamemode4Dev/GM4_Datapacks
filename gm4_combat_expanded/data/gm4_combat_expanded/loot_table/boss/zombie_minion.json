@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "bonus_rolls": 0,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:amethyst_shard",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "min": 0,
+                                "max": 2
+                            },
+                            "add": false
+                        },
+                        {
+                            "function": "minecraft:enchanted_count_increase",
+                            "enchantment": "minecraft:looting",
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "min": 0,
+                                "max": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "random_sequence": "gm4_combat_expanded:zombie_minion"
+}

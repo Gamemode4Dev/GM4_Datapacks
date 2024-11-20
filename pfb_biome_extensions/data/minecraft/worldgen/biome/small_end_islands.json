@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/small_end_islands",
-    "liquid": "#minecraft:liquid/in_biome/small_end_islands"
-  },
+  "carvers": "#minecraft:in_biome/small_end_islands",
   "downfall": 0.5,
   "effects": {
     "fog_color": 10518688,

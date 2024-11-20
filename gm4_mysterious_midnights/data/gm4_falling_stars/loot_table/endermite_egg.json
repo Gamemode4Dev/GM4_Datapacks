@@ -1,0 +1,45 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:end_stone",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.gm4.endermite_egg",
+                                "fallback": "Endermite Egg",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "mode": "append",
+                            "lore": [
+                                {
+                                    "translate": "item.gm4.endermite_egg.lore",
+                                    "fallback": "Oh, it didn't hatch",
+                                    "color": "dark_gray",
+                                    "italic": true
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/endermite_egg"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_endermite_egg:1b}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

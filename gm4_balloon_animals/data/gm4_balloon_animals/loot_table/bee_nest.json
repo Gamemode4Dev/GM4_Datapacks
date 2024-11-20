@@ -1,0 +1,29 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bee_nest",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:bees": [
+                  {
+                    "entity_data": {
+                      "id": "minecraft:bee"
+                    },
+                    "ticks_in_hive": 0,
+                    "min_ticks_in_hive": 0
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

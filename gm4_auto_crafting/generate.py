@@ -317,10 +317,8 @@ def analyze_shaped_recipe(ctx: Context, recipe: dict[str, Any], name: str) -> Re
                         generate_custom_item_tag(ctx, TagData(f"#{NAMESPACE}:{name}_ingredient_{len(list_symbols) + 1}", ingredient)) #type: ignore
                         list_symbols.append(symbol)
                     item = f"#{NAMESPACE}:{name}_ingredient_{list_symbols.index(symbol) + 1}"
-                elif "item" in ingredient:
-                    item = ingredient["item"]
                 else:
-                    item = "#" + ingredient["tag"]
+                    item = ingredient
             pattern_row.append(item)
 
             def add_result(item: str):
@@ -405,10 +403,10 @@ def analyze_shaped_recipe(ctx: Context, recipe: dict[str, Any], name: str) -> Re
             # if the entire thing is full, just print the recipe for manual correction
             # if it gets here the last bottle/bucket will be voided
             if not found_match:
-                print("FULL: " + recipe["result"]["item"] + " -> " + last_output)
+                print("FULL: " + recipe["result"]["id"] + " -> " + last_output)
 
     # set the last slot to the recipe result
-    result_id = recipe["result"]["item"]
+    result_id = recipe["result"]["id"]
     result_count = recipe["result"].get("count", 1)
     result.append(RecipeResult(result_id, count=result_count))
     # return the new formatted recipe
@@ -430,15 +428,13 @@ def analyze_shapeless_recipe(ctx: Context, recipe: dict[str, Any], name: str) ->
             tag_count += 1
             item = f"#{NAMESPACE}:{name}_ingredient_{tag_count}"
             generate_custom_item_tag(ctx, TagData(item, entry)) # type: ignore
-        elif "item" in entry:
-            item = entry["item"]
+        else:
+            item = entry
             # special case: check if the item is a bucket or bottle type (used for output)
             if item in buckets:
                 bucket_count += 1
             elif item in bottles:
                 bottle_count += 1
-        else:
-            item = "#" + entry["tag"]
         ingredients.append(item)
 
     # if there were (non-empty) buckets in the recipe, return empty buckets
@@ -451,7 +447,7 @@ def analyze_shapeless_recipe(ctx: Context, recipe: dict[str, Any], name: str) ->
     air_count = 8 - bucket_count - bottle_count
     result.append(RecipeResult("minecraft:air", rolls=air_count))
     # set the last slot to the recipe result
-    result_id = recipe["result"]["item"]
+    result_id = recipe["result"]["id"]
     result_count = recipe["result"].get("count", 1)
     result.append(RecipeResult(result_id, count=result_count))
     # return the new formatted recipe
@@ -500,7 +496,7 @@ def generate_custom_item_tag(ctx: Context, data: TagData) -> str:
     ctx.data.functions[fn_name].append(f"execute if predicate {NAMESPACE}:custom_item_tags/{name} run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.{NAMESPACE}.{name} set value 1b")
 
     # create predicate file for the item tag check
-    json: Any = {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"mainhand":{"tag": f"{NAMESPACE}:{name}"}}}}
+    json: Any = {"condition":"minecraft:entity_properties","entity":"this","predicate":{"equipment":{"mainhand":{"items": f"#{NAMESPACE}:{name}"}}}}
     ctx.data[f"{NAMESPACE}:custom_item_tags/{name}"] = Predicate(json)
 
     # return the name of the item tag just created
@@ -516,7 +512,11 @@ def generate_crafting_loot_table(ctx: Context, result: list[RecipeResult], targe
     json: Any = {"type": "minecraft:generic","pools": []}
     for r in result:
         # populate pools
-        pool: Any = {"rolls":r.rolls,"entries":[{"type":"minecraft:item","name":r.name}]}
+        if r.name == "minecraft:air":
+            entry = {"type":"minecraft:loot_table","value":"gm4:air"}
+        else:
+            entry = {"type":"minecraft:item","name":r.name}
+        pool: Any = {"rolls":r.rolls,"entries":[entry]}
         # set count
         if r.count > 1:
             pool["entries"][0]["functions"] = [{"function":"minecraft:set_count","count":r.count}]

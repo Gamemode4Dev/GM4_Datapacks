@@ -10,18 +10,19 @@ There are 2 function tags to be used: one for placing machines (`#gm4_machines:p
 ### Placing Down Machines
 Machine blocks must be player heads with the following NBT data:
 
-```
-{SkullOwner:{Name:"BLOCK_IDENTIFIER",Properties:{textures:[{Signature:"gm4_machine"}]}}}
+```mcfunction
+{components:{"minecraft:custom_data":{gm4_machines:{id:"BLOCK_INDENTIFIER"}}}}
 ```
 
 When placing down a player head with this NBT, the function tag `#gm4_machines:place_down` will run. This will run `as` the player who placed the block and `at` the center of the block that was placed. The following command should be used to verify the specific machine placed:
 
 ```mcfunction
-execute if score $placed_block gm4_machine_data matches 0 store success score $placed_block gm4_machine_data if data storage gm4_machines:temp {id:"BLOCK_INDENTIFIER"} run function MODULE_NAMESPACE:machine/create
+execute if score $placed_block gm4_machine_data matches 0 if data storage gm4_machines:temp {id:"BLOCK_INDENTIFIER"} run function MODULE_NAMESPACE:machine/create
 ```
 
 The function `MODULE_NAMESPACE:machine/create` should have the following commands: 
 ```mcfunction
+scoreboard players set $placed_block gm4_machine_data 1
 summon marker ~ ~ ~ {Tags:["gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","IDENTIFIER","ADD ANY EXTRA TAGS"],CustomName:'"PLEASE NAME YOUR MACHINE MARKERS"',<...>}
 ```
 
@@ -84,4 +85,4 @@ execute if entity @s[tag=IDENTIFIER] run function MODULE_NAMESPACE:machine/destr
 ```
 
 ## License
-This library, and the contents of the `lib_machines` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.
+This library, and the contents of the `lib_machines` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_data packs), is licensed under the MIT License.

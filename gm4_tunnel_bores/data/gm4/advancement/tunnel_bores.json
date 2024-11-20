@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "piston",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/tunnel_bores"
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.tunnel_bores.title",
+      "fallback": "Isn't It \"Groundbreaking\"?"
+    },
+    "description": {
+      "translate": "advancement.gm4.tunnel_bores.description",
+      "fallback": "Obtain a Minecart with Piston",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:custom_crafters",
+  "criteria": {
+    "obtain_tunnel_bore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:furnace_minecart"
+            ],
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"tunnel_bore\"}}"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

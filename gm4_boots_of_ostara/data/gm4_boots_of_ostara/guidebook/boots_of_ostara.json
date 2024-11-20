@@ -1,0 +1,157 @@
+{
+  "id": "boots_of_ostara",
+  "name": "Boots of Ostara",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:leather_boots",
+    "components": {
+      "minecraft:dyed_color": 3705899
+    }
+  },
+  "criteria": {
+    "obtain_leather_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:leather_boots"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_grass_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:grass_block"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_boots_of_ostara": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:leather_boots"
+            ],
+            "predicates": {
+              "minecraft:custom_data": "{gm4_boots_of_ostara:1b}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.boot_of_ostara.description",
+            "fallback": "Boots of Ostara can be crafted to aid in the spreading of grass and moss.\n\nThe boots can be crafted in a Custom Crafter."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "crafting",
+      "enable": [
+        {
+          "id": "gm4_desire_lines",
+          "load": -1
+        }
+      ],
+      "requirements": [
+        [
+          "obtain_leather_boots"
+        ],
+        [
+          "obtain_grass_block"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.boots_of_ostara.crafting",
+            "fallback": "The recipe for the Boots of Ostara is as follows:"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_boots_of_ostara:boots_of_ostara"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "crafting-desire_lines",
+      "enable": [
+        {
+          "id": "gm4_desire_lines",
+          "load": 1
+        }
+      ],
+      "requirements": [
+        [
+          "obtain_leather_boots"
+        ],
+        [
+          "obtain_grass_block"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "recipe",
+            "recipe": "gm4_boots_of_ostara:boots_of_ostara"
+          },
+          "\n\n",
+          {
+            "translate": "text.gm4.guidebook.boots_of_ostara.crafting_and_desire_lines",
+            "fallback": "Boots of Ostara also prevent desire lines from forming."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_boots_of_ostara"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.boots_of_ostara.grass",
+            "fallback": "Wearing the boots and holding a grass block in the offhand will spread grass onto dirt beneath the wearer.\n"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.boots_of_ostara.moss_and_armor_stands",
+            "fallback": "Similarly, moss will spread onto stone when held in the offhand.\n\nArmor stands can also spread vegetation!"
+          }
+        ]
+      ],
+      "grants": [
+        "crafting",
+        "crafting-desire_lines"
+      ]
+    }
+  ]
+}

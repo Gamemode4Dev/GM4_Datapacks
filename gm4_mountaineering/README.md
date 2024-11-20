@@ -4,7 +4,7 @@ Scale mountains and cross fields of snow with ease! Climb steep slopes with Cram
 
 <img src="images/mountaineering.webp" alt="Mountaineering Example" width="350"/> <!--$localAssetToURL--> 
 
-### Features:
+### Features
 - Crampons allow for vertical stone walls to be climbed
 - Use Skis to descend hills quickly and safely; your speed depends on the slope gradient
 - Hold Poles in each hand to gain jump boost effects; best paired with Skis

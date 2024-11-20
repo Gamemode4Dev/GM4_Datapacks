@@ -1,0 +1,8 @@
+key,en_us
+item.gm4.tower_structures.pirate_sword,Pirate Sword
+item.gm4.tower_structures.pirate_turtle_helmet,Pirate Turtle Helmet
+item.gm4.tower_structures.pirate_hat,Pirate Hat
+item.gm4.tower_structures.pirate_bow,Pirate Bow
+text.gm4.guidebook.module_desc.tower_structures,A custom terrain expansion pack that adds new tower structures to the world.
+text.gm4.guidebook.tower_structures.description,Towers can be found on the surface.\n\nThese towers contain rare loot and special spawners.
+text.gm4.guidebook.tower_structures.description.types,"Stone towers can be found in most biomes.\n\nThe Badlands, Desert, and Snowy biomes have special towers that match the terrain.\n\nOcean dungeons and ships can be found at sea."

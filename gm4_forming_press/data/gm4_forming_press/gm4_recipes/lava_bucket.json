@@ -1,0 +1,26 @@
+{
+  "type": "forming_press",
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "###",
+      "#X#",
+      "###"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:bucket"
+      },
+      "#": {
+        "item": "minecraft:netherrack"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:lava_bucket",
+      "count": 1
+    }
+  }
+}

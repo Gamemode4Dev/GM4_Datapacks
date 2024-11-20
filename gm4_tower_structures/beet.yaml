@@ -1,6 +1,6 @@
 id: gm4_tower_structures
 name: Tower Structures
-version: 3.2.X
+version: 3.4.X
 
 data_pack:
   load: .
@@ -14,12 +14,27 @@ meta:
   gm4:
     prefabs:
       - gm4_orbis
+    model_data:
+      - item: bow
+        reference: item/pirate_bow
+        template: vanilla
+      - item: leather_helmet
+        reference: item/pirate_hat
+        template: vanilla
+      - item: stone_sword
+        reference: item/pirate_sword
+        template: vanilla
+      - item: turtle_helmet
+        reference: item/pirate_turtle_helmet
+        template: vanilla
     website:
-      description: A custom terrain expansion pack that adds four new tower structures to the world.
+      description: A custom terrain expansion pack that adds new tower structures to the world.
       recommended:
         - gm4_dangerous_dungeons
         - gm4_cooler_caves
       notes: []
+    modrinth:
+      project_id: FvGL10DQ
     video: null
     wiki: https://wiki.gm4.co/wiki/Orbis/Tower_Structures
     credits:

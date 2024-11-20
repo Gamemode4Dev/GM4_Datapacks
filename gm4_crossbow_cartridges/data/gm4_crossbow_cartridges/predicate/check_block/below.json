@@ -1,0 +1,115 @@
+{
+	"condition": "minecraft:any_of",
+	"terms": [
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"blocks": "#gm4_crossbow_cartridges:torch_placeable_top"
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"blocks": "#minecraft:slabs",
+					"state": {
+						"type": "top"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"blocks": "#minecraft:slabs",
+					"state": {
+						"type": "double"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"blocks": "#minecraft:stairs",
+					"state": {
+						"half": "top"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"blocks": "#minecraft:trapdoors",
+					"state": {
+						"half": "top",
+						"open": "false"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"blocks": [
+						"minecraft:grindstone"
+					],
+					"state": {
+						"face": "floor"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"blocks": [
+						"minecraft:end_portal_frame"
+					],
+					"state": {
+						"eye": "true"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"blocks": "#minecraft:walls"
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetY": -1,
+			"predicate": {
+				"block": {
+					"blocks": "#minecraft:fences"
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"block": {
+					"blocks": [
+						"minecraft:piston_head"
+					],
+					"state": {
+						"facing": "up"
+					}
+				}
+			}
+		}
+	]
+}

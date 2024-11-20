@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 3,
+          "value": "gm4_balloon_animals:technical/random/pick_common"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 7,
+          "value": "gm4_balloon_animals:technical/random/pick_rare"
+        }
+      ]
+    }
+  ]
+}

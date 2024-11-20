@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/old_growth_birch_forest",
-    "liquid": "#minecraft:liquid/in_biome/old_growth_birch_forest"
-  },
+  "carvers": "#minecraft:in_biome/old_growth_birch_forest",
   "downfall": 0.6,
   "effects": {
     "fog_color": 12638463,
@@ -16,7 +13,7 @@
       "max_delay": 24000,
       "min_delay": 12000,
       "replace_current_music": false,
-      "sound": "minecraft:music.overworld.jungle_and_forest"
+      "sound": "minecraft:music.overworld.forest"
     },
     "sky_color": 8037887,
     "water_color": 4159204,

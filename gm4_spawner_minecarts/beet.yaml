@@ -1,6 +1,6 @@
 id: gm4_spawner_minecarts
 name: Spawner Minecarts
-version: 2.4.X
+version: 2.6.X
 
 data_pack:
   load: .
@@ -12,10 +12,16 @@ meta:
   gm4:
     versioning:
       schedule_loops: [main]
+    model_data:
+      - item: spawner
+        reference: gui/advancement/spawner_minecarts
+        template: advancement
     website:
       description: Pick up Spawners and move them wherever you want with Minecarts.
       recommended: []
       notes: []
+    modrinth:
+      project_id: j4qeIaSW
     video: null
     wiki: https://wiki.gm4.co/wiki/Spawner_Minecarts
     credits:

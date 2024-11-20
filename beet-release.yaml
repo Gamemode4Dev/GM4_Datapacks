@@ -1,33 +1,20 @@
 pipeline:
-  - gm4.plugins.list_modules
+  - gm4.plugins.annotations
   - gm4.plugins.manifest.create
-  - gm4.plugins.manifest.update_patch
   - gm4.plugins.output.clear_release
-  - gm4.plugins.manifest.write_meta
-  - broadcast: 'gm4_*'
-    extend: 'beet.yaml'
-    require:
-      - gm4.plugins.output.release
-      - gm4.plugins.player_heads
-    pipeline:
-      - gm4.plugins.manifest.write_updates
-      - gm4.plugins.manifest.write_credits
-      - require: [beet.contrib.copy_files]
-        meta: {copy_files: {data_pack: {LICENSE.md: "../LICENSE.md"}}}
-      - gm4.plugins.readme_generator
-      - gm4.plugins.write_mcmeta
-      - gm4.plugins.output.release
-    meta:
-      mecha:
-        formatting:
-          layout: preserve
-          nbt_compact: True
+  - gm4.plugins.resource_pack.setup
+
   - broadcast: 'lib_*'
     extend: 'beet.yaml'
+    require:
+      - gm4.plugins.annotations.add_module_dir_to_diagnostics
+      - gm4.plugins.output.release
+      - gm4.plugins.manifest.update_patch
+      - gm4.plugins.versioning.isolated_library
     pipeline:
       - beet.contrib.lantern_load.base_data_pack
-      - gm4.plugins.versioning.isolated_library
       - gm4.plugins.manifest.write_credits
+      - gm4.plugins.test.strip_tests
       - require: [beet.contrib.copy_files]
         meta:
           copy_files:
@@ -37,13 +24,70 @@ pipeline:
               pack.png: "pack.png"
       - gm4.plugins.module.default_pack_icon
       - gm4.plugins.readme_generator.libraries
-      - gm4.plugins.write_mcmeta
-      - gm4.plugins.output.release
     meta:
       mecha:
         formatting:
           layout: preserve
           nbt_compact: True
+
+  - broadcast: 'gm4_*'
+    extend: 'beet.yaml'
+    require:
+      - gm4.plugins.worker.clear_on_exit
+      - gm4.plugins.worker.store_project
+      - gm4.plugins.worker.freeze_last_stored
+      - gm4.plugins.manifest.update_patch
+      - gm4.plugins.player_heads
+      - gm4.plugins.resource_pack
+      - gm4.plugins.backwards
+      - beet.contrib.model_merging
+      - beet.contrib.optifine
+      - beet.contrib.babelbox
+      - gm4_guidebook.generate_guidebooks.load_page_data
+      - gm4_guidebook.generate_guidebooks.load_custom_recipes
+    pipeline:
+      - gm4.plugins.manifest.write_credits
+      - gm4.plugins.test.strip_tests
+      - require: [beet.contrib.copy_files]
+        meta: {copy_files: {data_pack: {LICENSE.md: "../LICENSE.md"}}}
+      - gm4.plugins.readme_generator
+    meta:
+      mecha:
+        formatting:
+          layout: preserve
+          nbt_compact: True
+      babelbox:
+        load: 
+          - assets/translations.csv
+          - translations.csv
+        namespace: gm4_translations
+        unicode_escape: True
+        dialect: excel
+      model_merging:
+        predicate_order: [custom_model_data]
+  
+  - pipeline:
+    - gm4.plugins.worker.retrieve_and_run
+    meta:
+      plugins:
+      - gm4.plugins.output.release
+      - gm4.plugins.manifest.write_updates
+      - gm4.plugins.write_mcmeta
+      - gm4.plugins.worker.store_project
+
+  - extend: beet.yaml
+    directory: resource_pack
+    require:
+      - gm4.plugins.worker.retrieve_and_merge
+      - gm4.plugins.output.release_resource_pack
+      - gm4.plugins.write_mcmeta
+      - gm4.plugins.manifest.update_patch
+      - gm4.plugins.resource_pack.pad_model_overrides
+    meta:
+      pack_scan: resource_pack
+
+  - gm4.plugins.manifest.write_meta
+
 meta:
   autosave:
     link: false

@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/savanna_plateau",
-    "liquid": "#minecraft:liquid/in_biome/savanna_plateau"
-  },
+  "carvers": "#minecraft:in_biome/savanna_plateau",
   "downfall": 0.0,
   "effects": {
     "fog_color": 12638463,
@@ -79,8 +76,20 @@
         "weight": 1
       },
       {
+        "type": "minecraft:armadillo",
+        "maxCount": 3,
+        "minCount": 2,
+        "weight": 10
+      },
+      {
         "type": "minecraft:llama",
         "maxCount": 4,
+        "minCount": 4,
+        "weight": 8
+      },
+      {
+        "type": "minecraft:wolf",
+        "maxCount": 8,
         "minCount": 4,
         "weight": 8
       }

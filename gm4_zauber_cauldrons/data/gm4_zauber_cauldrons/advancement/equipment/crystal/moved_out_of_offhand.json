@@ -1,0 +1,23 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "player": [],
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:firework_star"
+                        ],
+                        "predicates": {
+                          "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"crystal\"}}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_zauber_cauldrons:player/crystal/swap/restore_player_head"
+    }
+}

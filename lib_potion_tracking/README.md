@@ -1,5 +1,5 @@
 # lib_potion_tracking
-lib_potion_tracking is a mcfunction library that allows other datapacks to track thrown splash or lingering potions. This can be used to create custom splash/lingering potion events.
+lib_potion_tracking is a mcfunction library that allows other data packs to track thrown splash or lingering potions. This can be used to create custom splash/lingering potion events.
 
 ## How to Use
 There are 2 function tags to be used: one to initially tag the potion to be tracked, and another which activates when the tracked potion lands.
@@ -18,12 +18,12 @@ When the potion is tracked, a marker entity with the tag `gm4_potion_tracker` wi
 #### Tagging Example
 The follow function will tag all invisibility splash/lingering potions for tracking:
 ```mcfunction
-tag @s[tag=!gm4_potion,nbt={Item:{tag:{Potion:"minecraft:invisibility"}}}] add gm4_potion
-tag @s[tag=!gm4_potion,nbt={Item:{tag:{Potion:"minecraft:long_invisibility"}}}] add gm4_potion
-tag @s[tag=!gm4_potion,nbt={Item:{tag:{CustomPotionEffects:[{id:"minecraft:invisibility"}]}}}] add gm4_potion
+tag @s[tag=!gm4_potion,nbt={Item:{components:{"minecraft:potion_contents":{potion:"minecraft:invisibility"}}}}] add gm4_potion
+tag @s[tag=!gm4_potion,nbt={Item:{components:{"minecraft:potion_contents":{potion:"minecraft:long_invisibility"}}}}] add gm4_potion
+tag @s[tag=!gm4_potion,nbt={Item:{components:{"minecraft:potion_contents":{custom_effects:[{id:"minecraft:invisibility"}]}}}}] add gm4_potion
 ```
 
-So if the potion was a splash potion of invisibility, the summoned marker will have the following nbt: `{data:{gm4_potion:{Item:{id:"minecraft:splash_potion",Count:1b,tag:{Potion:"minecraft:invisibility"}}}}}`
+So if the potion was a splash potion of invisibility, the summoned marker will have the following nbt: `{data:{gm4_potion:{Item:{id:"minecraft:splash_potion",count:1,components:{"minecraft:potion_contents":{potion:"minecraft:invisibility"}}}}}}`
 
 
 ### Executing When the Potion Lands
@@ -36,10 +36,10 @@ The storage should be used to verify if the potion matches the module's custom p
 #### Landing Example
 The following function will catch when invisibility potions hit something:
 ```mcfunction
-execute if data storage gm4_potion_tracking:temp entity_data.Item.tag{Potion:"minecraft:invisibility"} run function ...
-execute if data storage gm4_potion_tracking:temp entity_data.Item.tag{Potion:"minecraft:long_invisibility"} run function ...
-execute if data storage gm4_potion_tracking:temp entity_data.Item.tag{CustomPotionEffects:[{id:"minecraft:invisibility"}]} run function ...
+execute if data storage gm4_potion_tracking:temp entity_data.Item.components."minecraft:potion_contents"{potion:"minecraft:invisibility"} run function ...
+execute if data storage gm4_potion_tracking:temp entity_data.Item.components."minecraft:potion_contents"{potion:"minecraft:long_invisibility"} run function ...
+execute if data storage gm4_potion_tracking:temp entity_data.Item.components."minecraft:potion_contents"{custom_effects:[{id:"minecraft:invisibility"}]} run function ...
 ```
 
 ## License
-This library, and the contents of the `lib_potion_tracking` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.
+This library, and the contents of the `lib_potion_tracking` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_data packs), is licensed under the MIT License.

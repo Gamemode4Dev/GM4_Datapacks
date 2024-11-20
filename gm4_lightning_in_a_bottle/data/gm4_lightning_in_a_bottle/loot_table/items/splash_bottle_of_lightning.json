@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "functions": [
+            {
+              "function": "minecraft:reference",
+              "name": "gm4_lightning_in_a_bottle:splash_bottle_of_lightning"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

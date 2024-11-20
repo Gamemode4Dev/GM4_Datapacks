@@ -1,0 +1,5 @@
+key,en_us
+text.gm4.guidebook.module_desc.dripleaf_filters,Dripleaves will flick items that match a hopper's contents into the hopper for you!
+text.gm4.guidebook.dripleaf_filters.description,Big dripleaves can sort items by searching hoppers in front of them.
+text.gm4.guidebook.dripleaf_filters.structure,"When an item falls onto a big dripleaf, the leaf will inspect a hopper placed on the ground in front of it."
+text.gm4.guidebook.dripleaf_filters.filtering,"If any of the items in the hopper match the item on the leaf, it will slide the item into the hopper.\n\nOtherwise it will collapse and drop the item below itself like normal."

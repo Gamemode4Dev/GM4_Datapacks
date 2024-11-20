@@ -1,32 +1,41 @@
 id: gm4_zauber_cauldrons
 name: Zauber Cauldrons
-version: 1.9.X
+version: 1.12.X
 
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+  
+require:
+  - bolt
+
 pipeline:
+  - gm4_zauber_cauldrons.generate
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_forceload
-  - gm4.plugins.include.lib_player_heads
   - gm4.plugins.include.lib_brewing
   - gm4.plugins.include.lib_trades
+  - gm4.plugins.include.lib_potion_tracking
 
 meta:
   gm4:
+    minecraft: []
     versioning:
       required:
-        lib_forceload: 1.1.0
-        lib_player_heads: 1.1.0
-        lib_brewing: 1.0.0
-        lib_trades: 1.3.0
+        lib_forceload: 1.4.0
+        lib_brewing: 1.2.0
+        lib_trades: 1.5.0
+        lib_potion_tracking: 1.2.0
       schedule_loops:
         - main
-        - cauldron/extra_items/crack_bottle
+        - cauldron/extra_items/process_bottled_vex_items
     website:
       description: Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game.
       recommended:
         - gm4_resource_pack
+        - gm4_zauber_liquids
       notes: []
     video: https://www.youtube.com/watch?v=Io1JTFUzyrc
     wiki: https://wiki.gm4.co/wiki/Zauber_Cauldrons
@@ -37,7 +46,8 @@ meta:
         - Bloo
         - Lue
         - BluePsychoRanger
-      Pixel Art:
+      Textures:
         - Memo
+        - Kyrius
       Icon Design:
         - DuckJr

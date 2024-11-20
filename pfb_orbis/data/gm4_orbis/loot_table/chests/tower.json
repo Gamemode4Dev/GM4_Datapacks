@@ -1,0 +1,165 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 15,
+          "value": "gm4_orbis:chests/tower/rare"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 35,
+          "value": "gm4_orbis:chests/tower/uncommon"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 60,
+          "value": "gm4_orbis:chests/tower/common"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 1,
+                "max": 5
+              },
+              "options": "#minecraft:non_treasure",
+              "conditions": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "max": 64
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 5,
+                "max": 10
+              },
+              "options": "#minecraft:non_treasure",
+              "conditions": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 65,
+                        "max": 70
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 10,
+                "max": 20
+              },
+              "options": "#minecraft:non_treasure",
+              "conditions": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 71,
+                        "max": 90
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 15,
+                "max": 25
+              },
+              "options": "#minecraft:non_treasure",
+              "conditions": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 90,
+                        "max": 131
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 20,
+                "max": 30
+              },
+              "options": "#minecraft:non_treasure",
+              "conditions": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 131,
+                        "max": 180
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 25,
+                "max": 30
+              },
+              "options": "#minecraft:non_treasure",
+              "conditions": [
+                {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "position": {
+                      "y": {
+                        "min": 180
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.7
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " S ",
+    "MLG",
+    " W "
+  ],
+  "key": {
+    "S": "minecraft:wheat_seeds",
+    "M": "minecraft:moss_block",
+    "L": "minecraft:leather_boots",
+    "G": "minecraft:grass_block",
+    "W": "minecraft:water_bucket"
+  },
+  "result": {
+    "id": "minecraft:leather_boots",
+    "components": {
+      "minecraft:dyed_color": {
+        "rgb": 3705899,
+        "show_in_tooltip": false
+      },
+      "minecraft:custom_model_data": "item/boots_of_ostara",
+      "minecraft:custom_data": "{gm4_boots_of_ostara:1b}",
+      "minecraft:custom_name": "{\"translate\": \"item.gm4.boots_of_ostara\",\"fallback\": \"Boots of Ostara\",\"italic\": false}",
+      "minecraft:lore": [
+        "{\"translate\":\"item.gm4.boots_of_ostara.lore\",\"fallback\":\"Brings abundance beneath you!\",\"color\":\"dark_gray\",\"italic\":false}"
+      ]
+    }
+  }
+}

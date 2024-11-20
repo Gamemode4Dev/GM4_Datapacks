@@ -1,8 +1,11 @@
 id: gm4_everstone
 name: Everstone
-version: 1.2.X
+version: 1.4.X
 
 data_pack:
+  load: .
+
+resource_pack:
   load: .
 
 pipeline:
@@ -15,11 +18,22 @@ meta:
         - main
         - tick
         - aging_clock
+    model_data:
+      - item: firework_star
+        reference: item/everstone
+        template: generated
+      - item: firework_star
+        reference: gui/advancement/everstones
+        template:
+          name: advancement
+          foward: item/everstone
     website:
       description: Collect Everstones during full moons and use them on baby mobs to stop them from aging! But watch out, some other mobs might start aging, too!
       recommended:
         - gm4_resource_pack
       notes: []
+    modrinth:
+      project_id: 4XVj9LBh
     video: null
     wiki: https://wiki.gm4.co/wiki/Everstone
     credits:

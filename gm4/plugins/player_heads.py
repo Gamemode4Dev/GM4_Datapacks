@@ -7,25 +7,22 @@ import sys
 import time
 from dataclasses import replace
 from io import BytesIO
-from typing import Any, Callable, ClassVar, Generator
+from typing import Any, Callable, ClassVar
 
 import requests
-from beet import Context, FileDeserialize, JsonFile, PngFile
-from mecha import CompilationUnit, Diagnostic, Mecha, MutatingReducer, rule
+from beet import Context, FileDeserialize, JsonFile, PngFile, NamespaceFileScope
+from mecha import Diagnostic, Mecha, MutatingReducer, rule
 from mecha.ast import (
-    AstChildren,
-    AstCommand,
+    AstJsonObject,
+    AstJsonObjectEntry,
+    AstJsonObjectKey,
     AstNbtCompound,
     AstNbtCompoundEntry,
-    AstNbtPath,
-    AstNbtPathKey,
-    AstResourceLocation,
+    AstNbtCompoundKey,
 )
-from nbtlib import IntArray # type: ignore
 from PIL.Image import Image
-from tokenstream import set_location
 
-from gm4.utils import nested_get
+from gm4.utils import InvokeOnJsonNbt
 
 parent_logger = logging.getLogger("gm4.player_heads")
 
@@ -36,6 +33,7 @@ def beet_default(ctx: Context):
     ctx.data.extend_namespace.append(Skin) # register new filetype to datapack
     tf = ctx.inject(SkinNbtTransformer)
     ctx.inject(Mecha).transform.extend(tf) # register new ruleset to mecha
+    ctx.require("mecha.contrib.json_files")
 
     yield
     tf.cache_nonnative_references()
@@ -45,12 +43,12 @@ def beet_default(ctx: Context):
 
 class Skin(PngFile):
     """Class representing a skin texture file."""
-    scope: ClassVar[tuple[str, ...]] = ("skins",)
+    scope: ClassVar[NamespaceFileScope] = ("skins",)
     extension: ClassVar[str] = ".png"
     image: ClassVar[FileDeserialize[Image]] = FileDeserialize() # purely here to solve type-warnings on PIL images
     
 
-class SkinNbtTransformer(MutatingReducer):
+class SkinNbtTransformer(MutatingReducer, InvokeOnJsonNbt):
     """Reducer class defining custom mecha parsing rules for skin texture data, and storing needed data for those operations"""
     def __init__(self, ctx: Context):
         self.ctx: Context = ctx
@@ -58,74 +56,43 @@ class SkinNbtTransformer(MutatingReducer):
         self.used_textures: list[str] = []
         super().__init__()
 
-    @rule(AstNbtCompoundEntry)
-    def skullowner_substitutions(self, node: AstNbtCompoundEntry, **kwargs: Any) -> Generator[Diagnostic, None, AstNbtCompoundEntry]:
-        if node.key.value == "SkullOwner":
-            match node.value.evaluate():
-                case val if "$" in val:
-                    skin_val, uuid, d = self.retrieve_texture(val, **kwargs)
-                    if d:
-                        yield d
-                    node = replace(node, value=AstNbtCompound.from_value({
-                        "Id": IntArray(uuid),
-                        "Properties": {
-                            "textures":[{
-                                "Value": skin_val
-                            }]
-                        }
-                    }))
-                case {"Value": str(val), **rest} if "$" in val:
-                    skin_val, uuid, d = self.retrieve_texture(val, **kwargs)
-                    if d:
-                        yield d
-                    node = replace(node, value=AstNbtCompound.from_value(
-                        ({"Name": n} if (n:=rest.get("Name")) else {}) |
-                        {"Id": IntArray(uuid),
-                         "Properties": {
-                            "textures":[
-                                {"Value": skin_val} |
-                                ({"Signature": s} if (s:=rest.get("Signature")) else {})]
-                            }
-                        }
-                    ))
-                case {"Properties": {"textures": [{"Value": str(val), **tex_rest}]}, **root_rest} if "$" in val:
-                    skin_val, uuid, d = self.retrieve_texture(val, **kwargs)
-                    if d:
-                        yield d
-                    node = replace(node, value=AstNbtCompound.from_value(
-                        ({"Name": n} if (n:=root_rest.get("Name")) else {}) |
-                        {"Id": IntArray(uuid),
-                         "Properties": {
-                            "textures":[
-                                {"Value": skin_val} | 
-                                ({"Signature": s} if (s:=tex_rest.get("Signature")) else {})]
-                            }
-                        }
-                    ))
-                case _:
-                    if "$" in node.value.evaluate().snbt():
-                        yield Diagnostic("warn", f"Unhandled SkullOwner substitution. Format failed to match known schemas.", 
-                                            filename=kwargs.get("filename"), file=kwargs.get("file"))
+    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='minecraft:profile'))
+    def json_substitutions(self, node: AstJsonObjectEntry, **kwargs: Any):
+        reference = node.value.evaluate()
+        if isinstance(reference, str) and reference.startswith("$"):
+            skin_val, uuid, d = self.retrieve_texture(reference, **kwargs)
+            if d:
+                yield d
+            node = replace(node, value=AstJsonObject.from_value({
+                "id": uuid,
+                "properties": [
+                    {
+                        "name": "textures",
+                        "value": skin_val,
+                    }
+                ]
+            }))
         return node
-    
-    @rule(AstCommand, identifier="data:modify:storage:target:targetPath:append:value:value")
-    def lib_player_heads_skullowner_subs(self, node: AstCommand) -> Generator[Diagnostic, None, AstCommand]:
-        """Captures skin texture data in lib_player_heads setup"""
-        ast_storage, ast_storage_path, ast_nbt = node.arguments
-        if isinstance(ast_storage, AstResourceLocation) and isinstance(ast_storage_path, AstNbtPath) and isinstance(ast_nbt, AstNbtCompound) and isinstance(path_key:=ast_storage_path.components[0], AstNbtPathKey):
-            if ast_storage.get_value() == "gm4_player_heads:register" and path_key.value == "heads":
-                nbt: dict[str, Any] = ast_nbt.evaluate()
-                match nbt:
-                    case {"value": str(value)} if "$" in value:
-                        skin_val, _, d = self.retrieve_texture(value)
-                        if d:
-                            erroring_subnode = next(i for i in ast_nbt.entries if i.key.value == "value")
-                            yield set_location(d, erroring_subnode)
-                        node = replace(node, arguments=AstChildren((ast_storage, ast_storage_path, AstNbtCompound.from_value(nbt|{"value": skin_val}))))
-                    case _:
-                        pass
+
+    @rule(AstNbtCompoundEntry, key=AstNbtCompoundKey(value='minecraft:profile'))
+    def cmd_substitutions_nbt(self, node: AstNbtCompoundEntry, **kwargs: Any):
+        reference = node.value.evaluate()
+        if isinstance(reference, str) and reference.startswith("$"):
+            skin_val, uuid, d = self.retrieve_texture(reference, **kwargs)
+            if d:
+                yield d
+            node = replace(node, value=AstNbtCompound.from_value({
+                "id": uuid,
+                "properties": [
+                    {
+                        "name": "textures",
+                        "value": skin_val,
+                    }
+                ]
+            }))
         return node
-    
+
+
     def retrieve_texture(self, skin_name: str, **kwargs: Any) -> tuple[str, list[int], Diagnostic|None]:
         skin_name = skin_name.lstrip("$")
         if ":" not in skin_name:
@@ -168,7 +135,7 @@ class SkinNbtTransformer(MutatingReducer):
         token = self.ctx.inject(MineskinAuthManager).token
 
         buf = BytesIO()
-        skin.image.save(buf, format="PNG")
+        skin.image.save(buf, format="PNG") # type: ignore
         res = requests.post(   
             url='https://api.mineskin.org/generate/upload',
             data={"name":"GM4_Skin", "visibility":0},
@@ -209,45 +176,12 @@ class SkinNbtTransformer(MutatingReducer):
     def cache_nonnative_references(self):
         """Adds any skin references from another module into skin_cache.json, so changes can trigger patch increments"""
         if (nonnative_refs := set(self.used_textures) - set(self.ctx.data[Skin])):
-            self.skin_cache["nonnative_references"][self.ctx.project_id] = list(nonnative_refs)
+            self.skin_cache["nonnative_references"][self.ctx.project_id] = sorted(nonnative_refs)
         else:
             self.skin_cache["nonnative_references"].pop(self.ctx.project_id, None)
 
     def output_skin_cache(self):
         JsonFile(self.skin_cache).dump(origin="", path="gm4/skin_cache.json")
-
-def process_json_files(ctx: Context):
-    """Passes nbt contained in advancements, loot_tables ect.. through the custom Mecha AST rule for appropiate texture replacements"""
-    tf = ctx.inject(SkinNbtTransformer)
-    mc = ctx.inject(Mecha)
-
-    def transform_snbt(snbt: str, db_entry_key: str) -> str:
-        escaped_snbt = snbt.replace("\n", "\\\\n")
-            # NOTE snbt in loot-tables reacts weird to \n characters. Both \n and \\\\n produce the same ingame output (\\n). 
-            # gm4 only has one case of \n in loot tables, so this replacement forces \n->\\\\n for the mecha parser to read it right.
-            # this may need to be altered in the future, but for now this means that \\\\n, while valid in vanilla loot-tables, will not
-            # work after being put through the mecha parser
-        node = mc.parse(escaped_snbt, type=AstNbtCompound) # parse string to AST
-        filename = os.path.relpath(jsonfile.original.source_path, ctx.directory) if jsonfile.original.source_path else None # get relative filepath for Diagnostics
-        mc.database.update({db_entry_key: CompilationUnit(source=snbt)}) #type:ignore   # register fake CompilationUnit for Diagnostic printing, using unique string as key instead of the File() object, to support multiple entries from the same file
-        return mc.serialize(tf.invoke(node, filename=filename, file=db_entry_key)) # run AST through custom rule, and serialize back to string, passing along data for Diagnostic
-    
-    for name, jsonfile in [*ctx.data.loot_tables.items(), *ctx.data.item_modifiers.items()]:
-        # item modifiers, annoyingly, can have a list as the root, so we wrap in a dict to use nested_get
-        contents = {"listroot": jsonfile.data} if type(jsonfile.data) is list else jsonfile.data
-
-        for func_list in nested_get(contents, "functions"):
-            f: Callable[[Any], bool] = lambda e: e["function"].removeprefix('minecraft:')=="set_nbt"
-            for i, entry in enumerate(filter(f, func_list)):
-                entry["tag"] = transform_snbt(entry["tag"], db_entry_key=f"{name}_{i}")
-
-    for name, jsonfile in ctx.data.advancements.items():
-        for i, entry in enumerate(nested_get(jsonfile.data, "icon")):
-            entry["nbt"] = transform_snbt(entry["nbt"], db_entry_key=f"{name}_{i}")
-
-    # send any raised diagnostic errors to Mecha for reporting
-    mc.diagnostics.extend(tf.diagnostics)
-
 
 class MineskinAuthManager():
     """A process for managing mineskin access credentials, prompting the user if needed"""

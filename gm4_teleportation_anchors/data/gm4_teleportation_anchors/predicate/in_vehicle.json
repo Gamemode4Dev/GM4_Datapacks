@@ -1,0 +1,23 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "vehicle": {
+          "type": "minecraft:minecart"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "vehicle": {
+          "type": "#gm4:boats"
+        }
+      }
+    }
+  ]
+}

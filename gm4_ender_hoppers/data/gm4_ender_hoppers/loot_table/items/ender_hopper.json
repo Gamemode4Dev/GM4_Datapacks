@@ -1,0 +1,38 @@
+{
+  "type": "block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/ender_hopper",
+                "minecraft:profile": "$ender_hopper"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'ender_hopper'}}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "translate": "block.gm4.ender_hopper",
+                  "fallback": "Ender Hopper",
+                  "color": "white",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

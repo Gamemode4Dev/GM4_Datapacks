@@ -1,8 +1,11 @@
 id: gm4_combat_expanded
 name: Combat Expanded
-version: 1.4.X
+version: 2.2.X
 
 data_pack:
+  load: .
+
+resource_pack:
   load: .
 
 pipeline:
@@ -12,15 +15,15 @@ pipeline:
 
 meta:
   gm4:
+    minecraft: []
     versioning:
       required:
-        lib_forceload: 1.1.0
-        lib_lore: 1.0.0
+        lib_forceload: 1.4.0
+        lib_lore: 1.2.0
       schedule_loops: 
         - tick
         - main
         - slow_clock
-        - player/submain
     website:
       description: Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
       recommended:
@@ -32,6 +35,16 @@ meta:
         - Thanathor
       Icon Design:
         - Hozz
+    model_data:
+      - template: advancement
+        broadcast:
+        - item: leather_chestplate
+          reference: gui/advancement/combat_expanded_identify
+    translation_linter_ignores:
+      - enchantment.level.14
+      - enchantment.level.15
+      - enchantment.level.16
+      - enchantment.level.17
   modrinth:
     project_id: zgxd3poi
   smithed:

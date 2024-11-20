@@ -1,0 +1,25 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "  X",
+      "XLX",
+      "X X"
+    ],
+    "key": {
+      "X": {
+        "item": "minecraft:gold_ingot"
+      },
+      "L": {
+        "item": "minecraft:leather"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:golden_horse_armor",
+      "count": 1
+    }
+  }
+}

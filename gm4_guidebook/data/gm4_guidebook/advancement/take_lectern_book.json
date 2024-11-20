@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:written_book"
+            ],
+            "count": 1,
+            "predicates": {
+              "minecraft:custom_data": "{gm4_guidebook:{lectern:1b}}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_guidebook:lecterns/restore/search"
+  }
+}

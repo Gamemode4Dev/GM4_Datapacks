@@ -1,6 +1,6 @@
 id: gm4_shroomites
 name: Shroomites
-version: 1.3.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -18,6 +18,8 @@ meta:
       description: Ever wondered why all the Mooshrooms are locked up on islands? This Module makes Mooshrooms spread mycelium and mushrooms wherever they go.
       recommended: []
       notes: []
+    modrinth:
+      project_id: 7Rcai2W4
     video: null
     wiki: https://wiki.gm4.co/wiki/Shroomites
     credits:
@@ -27,3 +29,7 @@ meta:
         - Bloo
       Icon Design:
         - DuckJr
+    model_data:
+      - item: red_mushroom
+        reference: gui/advancement/shroomites
+        template: advancement

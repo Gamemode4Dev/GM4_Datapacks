@@ -1,0 +1,43 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:any_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:location_check",
+                                "predicate": {
+                                    "block": {
+                                        "blocks": [
+                                            "minecraft:water_cauldron"
+                                        ],
+                                        "state": {
+                                            "level": "3"
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "condition": "minecraft:location_check",
+                                "predicate": {
+                                    "block": {
+                                        "blocks": [
+                                            "minecraft:lava_cauldron",
+                                            "minecraft:powder_snow"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_zauber_cauldrons:cauldron/liquid/update/level_3/find_cauldron"
+    }
+}

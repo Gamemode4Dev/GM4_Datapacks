@@ -1,0 +1,37 @@
+{
+  "type": "block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/relocator_empty",
+                "minecraft:profile": "$relocator_empty"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'relocator_empty'}}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "translate": "item.gm4.relocator",
+                  "fallback": "Relocator",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

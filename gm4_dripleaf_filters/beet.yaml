@@ -1,6 +1,6 @@
 id: gm4_dripleaf_filters
 name: Dripleaf Filters
-version: 1.2.X
+version: 1.4.X
 
 data_pack:
   load: .
@@ -17,6 +17,8 @@ meta:
       recommended:
         - gm4_book_binders
       notes: []
+    modrinth:
+      project_id: WNvo6RJr
     video: null
     wiki: https://wiki.gm4.co/wiki/Dripleaf_Filters
     credits:

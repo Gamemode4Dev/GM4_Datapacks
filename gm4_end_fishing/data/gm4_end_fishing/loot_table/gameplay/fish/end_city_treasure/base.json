@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:fishing",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:beetroot_seeds",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:saddle",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/sword/generate",
+          "weight": 40
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/armor/generate",
+          "weight": 160
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/tool/generate",
+          "weight": 80
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/generate",
+          "weight": 65
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/horse_armor/generate",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

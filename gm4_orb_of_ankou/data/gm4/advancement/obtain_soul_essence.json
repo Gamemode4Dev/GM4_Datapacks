@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "id": "black_dye",
+      "components": {
+        "minecraft:enchantment_glint_override": true,
+        "minecraft:custom_model_data": "gui/advancement/orb_of_ankou_soul_essence"
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.orb_of_ankou.obtain_soul_essence.title",
+      "fallback": "A Small Price to Pay..."
+    },
+    "description": {
+      "translate": "advancement.gm4.orb_of_ankou.obtain_soul_essence.description",
+      "fallback": "Obtain a piece of a mob's soul",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:metallurgy_cast",
+  "criteria": {
+    "soul_essence": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:black_dye"
+            ],
+            "predicates": {
+              "minecraft:custom_data": "{gm4_orb_of_ankou:{item:\"soul_essence\"}}"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

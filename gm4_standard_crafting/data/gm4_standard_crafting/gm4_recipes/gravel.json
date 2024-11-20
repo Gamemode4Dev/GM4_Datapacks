@@ -1,0 +1,21 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "FF",
+      "FF"
+    ],
+    "key": {
+      "F": {
+        "item": "minecraft:flint"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:gravel",
+      "count": 4
+    }
+  }
+}

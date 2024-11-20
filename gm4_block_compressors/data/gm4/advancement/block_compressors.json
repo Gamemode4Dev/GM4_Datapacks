@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "piston",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/block_compressors"
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.block_compressors.title",
+      "fallback": "Clever Crushing"
+    },
+    "description": {
+      "translate": "advancement.gm4.block_compressors.description",
+      "fallback": "Make yourself a Block Compressor",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:custom_crafters",
+  "criteria": {
+    "obtain_block_compressor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"block_compressor\"}}"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

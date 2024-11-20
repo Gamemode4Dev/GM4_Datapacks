@@ -1,8 +1,11 @@
 id: gm4_ender_hoppers
 name: Ender Hoppers
-version: 1.4.X
+version: 1.7.X
 
 data_pack:
+  load: .
+
+resource_pack: 
   load: .
 
 pipeline:
@@ -14,9 +17,35 @@ meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.0.0
-        lib_machines: 1.1.0
+        lib_custom_crafters: 3.2.0
+        lib_machines: 1.3.0
       schedule_loops: [main]
+    model_data:
+      - item: hopper_minecart
+        reference: item/ender_hopper_minecart
+        template: generated
+      - item: player_head
+        broadcast:
+          - reference: block/ender_hopper
+          - reference: block/ender_hopper_side
+          - reference: block/ender_hopper_minecart
+        template: custom
+        transforms: 
+          - name: item_display
+            origin: [0.5,0.5,0.5]
+            scale: [0.83,0.83,0.83]
+            translation: [0,0.641,0]
+            display: head
+      - item: player_head
+        reference: item/ender_hopper
+        model: item/ender_hopper_full
+    gui_fonts:
+      - translation: gui.gm4.ender_hopper
+        container: hopper
+        texture: gui/container/ender_hopper
+      - translation: gui.gm4.ender_hopper_minecart
+        container: hopper
+        texture: gui/container/ender_hopper
     website:
       description: Create special hoppers that teleport nearby items to them.
       recommended:
@@ -35,6 +64,8 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
+    modrinth:
+      project_id: dB4zrtK8
     video: https://www.youtube.com/watch?v=wrwg4BDgEGU
     wiki: https://wiki.gm4.co/wiki/Ender_Hoppers
     credits:
@@ -44,6 +75,6 @@ meta:
         - Misode
         - BluePsychoRanger
       Textures by:
-        - kyrkis
+        - Kyrius
       Icon Design:
         - Sparks

@@ -4,8 +4,8 @@
 ## Checks if any line of lore is the same as the first line
 
 # set inputs
-data modify storage gm4_lore:temp Source set from entity @s SelectedItem.tag.display.Lore
-data modify storage gm4_lore:temp Target set from entity @s SelectedItem.tag.display.Lore[0]
+data modify storage gm4_lore:temp Source set from entity @s SelectedItem.components."minecraft:lore"
+data modify storage gm4_lore:temp Target set from entity @s SelectedItem.components."minecraft:lore"[0]
 scoreboard players set $start gm4_lore 1
 # run operation
 function #gm4_lore:search

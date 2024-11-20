@@ -1,0 +1,3 @@
+key,en_us
+text.gm4.guidebook.module_desc.double_doors,"Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blocks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player."
+text.gm4.guidebook.double_doors.description,"Placing two doors adjacent to each other will link them together, so they open together.\n\nTrapdoors placed above doors will also act as part of the door, opening when the doors open."

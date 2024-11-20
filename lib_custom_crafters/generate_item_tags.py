@@ -14,7 +14,7 @@ def beet_default(ctx: Context):
       "predicate": {
         "equipment": {
           "mainhand": {
-            "tag": f"minecraft:{id}"
+            "items": f"#minecraft:{id}"
           }
         }
       }
@@ -25,5 +25,5 @@ def beet_default(ctx: Context):
     "# @s = 344d47-4-4-4-f04ce104d forceload armorstand",
     f"# run from gm4_custom_crafters:process_input/check_item via #gm4_custom_crafter:custom_item_checks",
     "",
-    *[f"execute if predicate gm4_custom_crafters:vanilla_item_tags/{id} run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.{id} set value 1b" for id in item_tags],
+    *[f"execute if predicate gm4_custom_crafters:vanilla_item_tags/{id} run data modify storage gm4_custom_crafters:temp/crafter item.item_tags.minecraft.\"{id}\" set value 1b" for id in item_tags],
   ])

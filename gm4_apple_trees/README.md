@@ -1,10 +1,10 @@
-# Apple Trees <!--$headerTitle--><!--$pmc:delete-->
+# Apple Trees<!--$headerTitle--><!--$pmc:delete-->
 
-Apples don't grow on oak trees, silly Mojang! This datapack adds actual apple trees. Find them in forests or buy a sapling from a Wandering Trader.
+Apples don't grow on oak trees, silly Mojang! This data pack adds actual apple trees. Find them in forests or buy a sapling from a Wandering Trader.
 
 <img src="images/apple_tree.png" alt="Apple Tree in a Forest" width="500"/><!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
-### Features:
+### Features
 - Apple trees naturally generate in Forests
     - Pick fully grown apples, or wait for them to fall on their own
     - Apples regrow every three 3 days

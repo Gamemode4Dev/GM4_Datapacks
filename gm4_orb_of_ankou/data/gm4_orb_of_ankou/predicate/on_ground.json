@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:inverted",
+  "term": {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "stepping_on": {
+        "block": {
+          "blocks": "#gm4:no_collision"
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 id: gm4_live_catch
 name: Live Catch
-version: 1.2.X
+version: 1.4.X
 
 data_pack:
   load: .
@@ -10,10 +10,16 @@ pipeline:
 
 meta:
   gm4:
+    model_data:
+      - item: pufferfish
+        reference: gui/advancement/live_catch
+        template: advancement
     website:
       description: Catch live fish when fishing! But watch out for Pufferfish, those might make for a nasty surprise!
       recommended: []
       notes: []
+    modrinth:
+      project_id: uSXn7pVW
     video: null
     wiki: https://wiki.gm4.co/wiki/Live_Catch
     credits:

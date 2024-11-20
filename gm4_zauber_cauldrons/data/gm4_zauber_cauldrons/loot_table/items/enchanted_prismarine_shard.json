@@ -1,0 +1,35 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:prismarine_shard",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:custom_model_data": "item/enchanted_prismarine_shard"
+              }
+            },
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_zauber_cauldrons:{item:'enchanted_prismarine_shard'}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.gm4.enchanted_prismarine_shard",
+                "fallback": "Enchanted Prismarine Shard",
+                "color": "aqua",
+                "italic": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

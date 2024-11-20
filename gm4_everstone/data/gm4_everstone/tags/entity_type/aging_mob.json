@@ -1,0 +1,12 @@
+{
+    "values": [
+        "minecraft:bogged",
+        "minecraft:guardian",
+        "minecraft:piglin",
+        "minecraft:skeleton",
+        "minecraft:slime",
+        "minecraft:stray",
+        "minecraft:vindicator",
+        "minecraft:zombie"
+    ]
+}

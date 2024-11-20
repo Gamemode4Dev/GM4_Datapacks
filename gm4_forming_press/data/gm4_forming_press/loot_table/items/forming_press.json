@@ -1,0 +1,38 @@
+{
+  "type": "block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:player_head",
+          "functions": [
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/forming_press",
+                "minecraft:profile": "$forming_press"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_machines:{id:'forming_press'}}"
+            },
+            {
+              "function": "set_name",
+              "name": [
+                {
+                  "translate": "block.gm4.forming_press",
+                  "fallback": "Forming Press",
+                  "color": "white",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

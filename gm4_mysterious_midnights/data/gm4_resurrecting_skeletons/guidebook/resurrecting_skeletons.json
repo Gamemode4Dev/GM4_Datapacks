@@ -1,0 +1,50 @@
+{
+  "id": "resurrecting_skeletons",
+  "name": "Resurrecting Skeletons",
+  "module_type": "expansion",
+  "load_check": "mysterious_midnights",
+  "base_module": "mysterious_midnights",
+  "wiki_link": "https://wiki.gm4.co/Mysterious_Midnights/Resurrecting_Skeletons",
+  "icon": {
+    "id": "minecraft:bone"
+  },
+  "criteria": {
+    "fight_resurrected_skeleton": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:skeleton",
+              "nbt": "{DeathLootTable:\"minecraft:empty\",attributes:[{id:\"minecraft:attack_damage\",base:10.0d}]}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "fight_resurrected_skeleton"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.resurrecting_skeletons.description",
+            "fallback": "During a Resurrecting Skeletons event, bones on the floor will resurrect into unarmed skeletons, with a powerful attack."
+          }
+        ]
+      ]
+    }
+  ]
+}

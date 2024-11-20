@@ -1,0 +1,16 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "offhand": {
+        "items": [
+          "minecraft:potion"
+        ],
+        "predicates": {
+          "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"wormhole_bottle\"}}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+key,en_us
+block.gm4.custom_crafter,Custom Crafter
+container.gm4.custom_crafter,Custom Crafter
+advancement.gm4.custom_crafters.title,Clever Crafting
+advancement.gm4.custom_crafters.description,Construct a Custom Crafter from a Dropper
+text.gm4.guidebook.module_desc.custom_crafters,Craft new items with a custom crafter!
+text.gm4.guidebook.custom_crafters.description,Custom crafters can be created to craft new items. Iron and a dropper is needed to make this machine.
+text.gm4.guidebook.custom_crafters.creation,"Arrange this recipe in a dropper, then use a crafting table on it."
+text.gm4.guidebook.custom_crafters.crafting,Custom crafters can also be crafted in a custom crafter:

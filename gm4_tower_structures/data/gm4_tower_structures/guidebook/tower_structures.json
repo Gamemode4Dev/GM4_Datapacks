@@ -1,0 +1,258 @@
+{
+  "id": "tower_structures",
+  "name": "Tower Structures",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:ladder"
+  },
+  "criteria": {
+    "enter_badlands_tower": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:badlands"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_default_tower": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:default"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_desert_tower": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:desert"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_snowy_tower": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:snowy"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_large_ship": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:ocean/large_ship"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_medium_ship": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:ocean/medium_ship"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_raft": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:ocean/raft"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_small_ship": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:ocean/small_ship"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_segmented_cold_frozen_tower": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:segmented/cold_frozen"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_segmented_frozen_tower": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:segmented/frozen"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_segmented_hot_tower": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:segmented/hot"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_segmented_hot_warm_tower": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:segmented/hot_warm"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "enter_segmented_warm_cold_tower": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "gm4_tower_structures:segmented/warm_cold"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "enter_badlands_tower",
+          "enter_default_tower",
+          "enter_desert_tower",
+          "enter_snowy_tower",
+          "enter_large_ship",
+          "enter_medium_ship",
+          "enter_raft",
+          "enter_small_ship",
+          "enter_segmented_cold_frozen_tower",
+          "enter_segmented_frozen_tower",
+          "enter_segmented_hot_tower",
+          "enter_segmented_hot_warm_tower",
+          "enter_segmented_warm_cold_tower"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.tower_structures.description",
+            "fallback": "Towers can be found on the surface.\n\nThese towers contain rare loot and special spawners."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.tower_structures.description.types",
+            "fallback": "Stone towers can be found in most biomes.\n\nThe Badlands, Desert, and Snowy biomes have special towers that match the terrain.\n\nOcean dungeons and ships can be found at sea."
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "id": "brown_stained_glass",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/soul_glass"
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.soul_glass.title",
+      "fallback": "Corruption at its Finest"
+    },
+    "description": {
+      "translate": "advancement.gm4.soul_glass.description",
+      "fallback": "Corrupt the effects of a beacon",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

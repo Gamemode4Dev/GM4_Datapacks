@@ -1,11 +1,15 @@
 id: gm4_smelteries
 name: Smelteries
-version: 1.5.X
+version: 1.7.X
 
 data_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
+  - gm4_smelteries.ore_display
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
   - gm4.plugins.include.lib_custom_crafters
@@ -14,14 +18,21 @@ meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.0.0
-        lib_machines: 1.1.0
+        lib_custom_crafters: 3.2.0
+        lib_machines: 1.3.0
       schedule_loops: [main]
+    
+    gui_fonts:
+      - translation: gui.gm4.smeltery
+        container: furnace
+        texture: gui/container/smeltery
     website:
       description: Build a Smeltery and double your ore output with this multi-block structure.
       recommended:
         - gm4_relocators
       notes: []
+    modrinth:
+      project_id: AHj8RSHk
     video: null
     wiki: https://wiki.gm4.co/wiki/smelteries
     credits:
@@ -34,6 +45,6 @@ meta:
         - SpecialBuilder32
         - BluePsychoRanger
       Textures By:
-        - kyrkis
+        - Kyrius
       Icon Design:
         - Hozz

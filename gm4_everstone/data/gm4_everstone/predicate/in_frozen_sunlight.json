@@ -1,0 +1,12 @@
+[
+  {
+    "condition": "minecraft:reference",
+    "name": "gm4_everstone:in_frozen"
+  },
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "can_see_sky": true
+    }
+  }
+]

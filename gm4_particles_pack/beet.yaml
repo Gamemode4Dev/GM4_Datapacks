@@ -1,6 +1,6 @@
 id: gm4_particles_pack
 name: Particles Pack
-version: 1.4.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -12,13 +12,15 @@ meta:
   gm4:
     versioning:
       schedule_loops: [main]
+      required:
+        gm4_better_armour_stands: 2.4.0
     website:
       description: Fireflies to flames, add some pezazz to your projects! Allows you to turn Armour Stands into particle sources that you control!
       recommended:
         - gm4_poses_pack
       notes: []
-    required:
-      gm4_better_armour_stands: 1.2.0
+    modrinth:
+      project_id: hqLgWYiS
     video: https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=238s
     wiki: https://wiki.gm4.co/wiki/Particles_Pack
     credits:

@@ -1,0 +1,70 @@
+{
+  "id": "mending_tanks",
+  "name": "Mending Tanks",
+  "module_type": "expansion",
+  "base_module": "liquid_tanks",
+  "icon": {
+    "id": "minecraft:diamond_axe",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:mending": 1
+      }
+    }
+  },
+  "criteria": {
+    "obtain_liquid_tank": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"liquid_tank\"}}"
+            }
+          }
+        ]
+      }
+    },
+    "obtain_mending_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "enchantments": [
+              {
+                "enchantments": "minecraft:mending"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_liquid_tank"
+        ],
+        [
+          "obtain_mending_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.mending_tanks.usage",
+            "fallback": "Items with the Mending enchantment will be reapaired when placed inside an Experience Tank."
+          }
+        ]
+      ]
+    }
+  ]
+}

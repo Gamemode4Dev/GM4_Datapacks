@@ -1,0 +1,26 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:reference",
+                        "name": "gm4_combat_expanded:modified_armor/convert"
+                    }
+                ],
+                "items": [
+                    {
+                        "items": "#gm4_combat_expanded:armor",
+                        "predicates": {
+                            "minecraft:custom_data": "{gm4_combat_expanded:{modifier:convert}}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_combat_expanded:armor/modifier/type/convert/update"
+    }
+}

@@ -1,0 +1,131 @@
+{
+  "id": "tunnel_bores",
+  "name": "Tunnel Bores",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:piston"
+  },
+  "criteria": {
+    "obtain_minecart": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:minecart"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_piston": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:piston"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_tunnel_bore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:furnace_minecart"
+            ],
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{id:\"tunnel_bore\"}}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.tunnel_bores.description",
+            "fallback": "Tunnel Bores can be crafted to aid in excavation. Piston Minecarts will break blocks and place rails, moving forward.\n\nThey can be crafted in a Custom Crafter."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "crafting",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_piston"
+        ],
+        [
+          "obtain_minecart"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.tunnel_bores.crafting",
+            "fallback": "Tunnel bores can be crafted as follows:"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_tunnel_bores:tunnel_bore"
+          }
+        ],
+        [
+          "\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_tunnel_bores:tunnel_bore_from_furnace_minecart"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_tunnel_bore"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.tunnel_bores.start_up",
+            "fallback": "Piston Minecarts are upgraded furnace minecarts and require coal as fuel. To start the bore, use a piece of coal on the bore.\n\nPiston Minecarts will mine piston-movable blocks in a 3x3 area centered at the block above it."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.tunnel_bores.supply",
+            "fallback": "These tunnel bores can place rails on solid blocks in front of it.\n\nChest Minecarts can be attached to supply the Piston Minecart with rails and coal."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.tunnel_bores.mining",
+            "fallback": "Tunnel bores will continuously mine blocks when it hits a breakable block, but will always try to mine and refuel when on a powered activator rail.\n\nThis makes it possible to keep a stationary bore."
+          }
+        ]
+      ],
+      "grants": [
+        "crafting"
+      ]
+    }
+  ]
+}

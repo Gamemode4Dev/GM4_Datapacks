@@ -1,0 +1,38 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:firework_star",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:custom_model_data": "item/everstone"
+              }
+            },
+            {
+              "function": "set_custom_data",
+              "tag": "{gm4_everstone:1b}"
+            },
+            {
+              "function": "set_name",
+              "name": {
+                "translate": "item.gm4.everstone",
+                "fallback": "Everstone",
+                "italic": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

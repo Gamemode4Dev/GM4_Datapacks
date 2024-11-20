@@ -3,11 +3,16 @@
 .AppleDouble
 .LSOverride
 
+### Libre Office ###
+.~lock.*
+
 ### Python ###
 __pycache__/
 *.py[cod]
 *$py.class
+.python-version
 
 ### Beet ###
 out/
 release/
+.beet_cache/

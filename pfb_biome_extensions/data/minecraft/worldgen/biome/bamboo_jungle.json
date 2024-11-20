@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/bamboo_jungle",
-    "liquid": "#minecraft:liquid/in_biome/bamboo_jungle"
-  },
+  "carvers": "#minecraft:in_biome/bamboo_jungle",
   "downfall": 0.9,
   "effects": {
     "fog_color": 12638463,
@@ -16,7 +13,7 @@
       "max_delay": 24000,
       "min_delay": 12000,
       "replace_current_music": false,
-      "sound": "minecraft:music.overworld.jungle_and_forest"
+      "sound": "minecraft:music.overworld.bamboo_jungle"
     },
     "sky_color": 7842047,
     "water_color": 4159204,

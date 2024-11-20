@@ -1,0 +1,41 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:player_head",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "item/crystal/{{effect}}",
+                                "minecraft:max_stack_size": 1,
+                                "minecraft:profile": "$crystal/{{effect}}"
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_custom_data",
+                            "tag": "{gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "item.gm4.zauber_cauldrons.crystal.{{effect}}",
+                                "fallback": "{{translate_fallback}}",
+                                "color": "yellow",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "mode": "append",
+                            "lore": {{lore}}
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

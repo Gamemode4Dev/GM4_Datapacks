@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/flower_forest",
-    "liquid": "#minecraft:liquid/in_biome/flower_forest"
-  },
+  "carvers": "#minecraft:in_biome/flower_forest",
   "downfall": 0.8,
   "effects": {
     "fog_color": 12638463,
@@ -16,7 +13,7 @@
       "max_delay": 24000,
       "min_delay": 12000,
       "replace_current_music": false,
-      "sound": "minecraft:music.overworld.jungle_and_forest"
+      "sound": "minecraft:music.overworld.flower_forest"
     },
     "sky_color": 7972607,
     "water_color": 4159204,

@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "potion",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/potion_liquids",
+        "minecraft:potion_contents": {
+          "custom_color": 13631487
+        }
+      }
+    },
+    "title": {
+      "translate": "advancement.gm4.potion_liquids.title",
+      "fallback": "Fizzy Lifting Drink"
+    },
+    "description": {
+      "translate": "advancement.gm4.potion_liquids.description",
+      "fallback": "Come on in, the air's fine",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:liquid_tanks_create",
+  "criteria": {
+    "consume_floating_potion": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{gm4_potion_liquids:{potion:'floating'}}"
+          }
+        }
+      }
+    }
+  }
+}

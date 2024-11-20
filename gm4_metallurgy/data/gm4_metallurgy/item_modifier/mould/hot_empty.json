@@ -1,0 +1,7 @@
+{
+  "function": "minecraft:set_components",
+  "components": {
+    "minecraft:custom_model_data": "block/mould/hot_empty",
+    "minecraft:profile": "$mould/hot_empty"
+  }
+}

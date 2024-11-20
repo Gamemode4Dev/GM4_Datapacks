@@ -1,0 +1,44 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "potion",
+                    "functions": [
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "minecraft:custom_model_data": "gm4_standard_liquids:item/ink_bottle",
+                                "minecraft:potion_contents": {
+                                    "custom_color": 68378,
+                                    "custom_effects": [
+                                        {
+                                            "id": "minecraft:blindness",
+                                            "amplifier": 0,
+                                            "duration": 2400
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "function": "set_custom_data",
+                            "tag": "{gm4_standard_liquids:{potion:'blindness'}}"
+                        },
+                        {
+                            "function": "set_name",
+                            "name": {
+                                "translate": "item.gm4.ink_bottle",
+                                "fallback": "Ink Bottle",
+                                "italic": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "head": {
+        "items": [
+          "golden_helmet"
+        ],
+        "predicates": {
+          "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"zauber_armor\"}}"
+        }
+      },
+      "chest": {
+        "items": [
+          "golden_chestplate"
+        ],
+        "predicates": {
+          "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"zauber_armor\"}}"
+        }
+      },
+      "legs": {
+        "items": [
+          "golden_leggings"
+        ],
+        "predicates": {
+          "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"zauber_armor\"}}"
+        }
+      },
+      "feet": {
+        "items": [
+          "golden_boots"
+        ],
+        "predicates": {
+          "minecraft:custom_data": "{gm4_zauber_cauldrons:{item:\"zauber_armor\"}}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "forming_press",
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "###",
+      "#C#",
+      "###"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:clay_ball"
+      },
+      "#": {
+        "item": "minecraft:netherrack"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "item",
+      "name": "minecraft:nether_bricks",
+      "count": 4
+    }
+  }
+}
