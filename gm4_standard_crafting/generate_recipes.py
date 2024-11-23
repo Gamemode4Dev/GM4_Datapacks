@@ -10,6 +10,7 @@ def beet_default(ctx: Context):
         NOTE: only generates the guidebook definitions - future work will generate function definitions too"""
     
     vanilla = ctx.inject(Vanilla)
+    vanilla.minecraft_version = '1.21.3'
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
     recipes = vanilla.mount("data/minecraft/recipe").data.recipes
 
