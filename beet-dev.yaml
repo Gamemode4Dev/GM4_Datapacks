@@ -17,8 +17,6 @@ pipeline:
     pipeline:
       - gm4.plugins.write_mcmeta
     meta:
-      vanilla:
-        version: 1.21.3
       gm4_dev: True
       mecha:
         formatting:
@@ -45,8 +43,6 @@ pipeline:
   - gm4.plugins.finished
 
 meta:
-  vanilla:
-    version: 1.21.3
   autosave:
     link: false
   gm4_dev: True
