@@ -17,11 +17,15 @@ pipeline:
     pipeline:
       - gm4.plugins.write_mcmeta
     meta:
+      vanilla:
+        version: 1.21.3
       mecha:
         formatting:
           layout: preserve
           nbt_compact: True
 
 meta:
+  vanilla:
+    version: 1.21.3
   autosave:
     link: false
