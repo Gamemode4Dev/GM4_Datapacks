@@ -264,6 +264,7 @@ class TagData:
 
 def beet_default(ctx: Context):
     vanilla = ctx.inject(Vanilla)
+    vanilla.minecraft_version = '1.21.3'
 
     recipes: list[RecipeData] = []
 

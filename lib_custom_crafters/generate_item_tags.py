@@ -4,6 +4,7 @@ from beet.contrib.vanilla import Vanilla
 def beet_default(ctx: Context):
   """Creates a predicate for every vanilla item tag and a function checking all of these predicates."""
   vanilla = ctx.inject(Vanilla)
+  vanilla.minecraft_version = '1.21.3'
   item_tags = vanilla.data.item_tags
   item_tags = [id.removeprefix("minecraft:") for id in item_tags]
 

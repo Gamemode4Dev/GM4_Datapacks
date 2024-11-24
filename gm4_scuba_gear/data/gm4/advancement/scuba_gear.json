@@ -19,8 +19,16 @@
   },
   "parent": "gm4:custom_crafters",
   "criteria": {
-    "scuba_gear": {
-      "trigger": "minecraft:impossible"
+    "all_gear_equipped": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_scuba_gear:all_gear_equipped"
+          }
+        ]
+      }
     }
   }
 }
