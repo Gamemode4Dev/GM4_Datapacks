@@ -1,0 +1,36 @@
+id: gm4_blossoming_pots
+name: Blossoming Pots
+version: 3.0.X
+  # should I start the version number over for gm4 release?
+data_pack:
+  load: .
+
+resource_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [main]
+    website:
+      description: Decorated Pots and Flower Pots extended to allow all kinds of things to be placed in them! Decorate in Style!
+      #recommended:
+        #- 
+      notes:
+        - <add notes on version or incompatibilities?>
+    #modrinth: 
+      #project_id: null
+    #smithed:
+      #pack_id: null
+    planetminecraft: 
+      uid: null
+    video: null
+    wiki: null
+    credits:
+      Creator:
+        - runcows
+      Icon Design:
+        - <no idea>

@@ -1,0 +1,13 @@
+execute unless score blossoming_pots gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Blossoming Pots"}
+execute unless score blossoming_pots gm4_earliest_version < blossoming_pots gm4_modules run scoreboard players operation blossoming_pots gm4_earliest_version = blossoming_pots gm4_modules
+scoreboard players set blossoming_pots gm4_modules 1
+
+scoreboard objectives add gm4_blossoming_pots.range dummy "gm4_bPots.range"
+scoreboard objectives add gm4_blossoming_pots.summon_loop dummy "gm4_bPots.sum_loop"
+scoreboard objectives add gm4_blossoming_pots.merge_loop dummy "gm4_bPots.mer_loop"
+scoreboard objectives add gm4_blossoming_pots.catch_up_loop dummy "gm4_bPots.cat_loop"
+
+execute unless data storage gm4_blossoming_pots:decorated_pots {version_history:[1]} run function gm4_blossoming_pots:decorated/set_storage
+execute unless data storage gm4_blossoming_pots:flower_pots {version_history:[1]} run function gm4_blossoming_pots:flower/set_storage
+
+schedule function gm4_blossoming_pots:main 1t
