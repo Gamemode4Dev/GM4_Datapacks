@@ -1,5 +1,5 @@
 {
-  "last_commit": "36d93e5e12e24b21655cc22830e0d5470ab65ed4",
+  "last_commit": "1e8387415869f6bf2554742ee387d4f7efb5a631",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1482,8 +1482,8 @@
     {
       "id": "gm4_lightning_in_a_bottle",
       "name": "Lightning in a Bottle",
-      "version": "1.7.10",
-      "hash": "1cd5186b02a3f522e257780683a1687ed037d67f",
+      "version": "1.7.11",
+      "hash": "302939caac0aa42cf80cf50c0f1a61bc7621c5ba",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
       "credits": {
