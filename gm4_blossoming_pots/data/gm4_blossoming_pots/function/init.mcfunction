@@ -3,9 +3,9 @@ execute unless score blossoming_pots gm4_earliest_version < blossoming_pots gm4_
 scoreboard players set blossoming_pots gm4_modules 1
 
 scoreboard objectives add gm4_blossoming_pots.range dummy "gm4_bPots.range"
-scoreboard objectives add gm4_blossoming_pots.summon_loop dummy "gm4_bPots.sum_loop"
-scoreboard objectives add gm4_blossoming_pots.merge_loop dummy "gm4_bPots.mer_loop"
-scoreboard objectives add gm4_blossoming_pots.catch_up_loop dummy "gm4_bPots.cat_loop"
+scoreboard objectives add gm4_blossoming_pots.loop dummy "gm4_bPots.loop"
+scoreboard objectives add gm4_blossoming_pots.merge_success dummy "gm4_bPots.merge_success"
+scoreboard objectives add gm4_blossoming_pots.sound dummy "gm4_bPots.sound"
 
 execute unless data storage gm4_blossoming_pots:decorated_pots {version_history:[1]} run function gm4_blossoming_pots:decorated/set_storage
 execute unless data storage gm4_blossoming_pots:flower_pots {version_history:[1]} run function gm4_blossoming_pots:flower/set_storage

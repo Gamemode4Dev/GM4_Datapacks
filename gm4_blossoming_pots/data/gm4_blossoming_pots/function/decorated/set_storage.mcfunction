@@ -15,38 +15,7 @@ data modify storage gm4_blossoming_pots:decorated_pots version_history append va
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripstone set value {\
     place_sound:"minecraft:block.pointed_dripstone.place",\
-    display_count:4,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:pointed_dripstone",\
-                Properties:{\
-                    vertical_direction:"down",\
-                    thickness:"middle"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.25f,0.7435f,0.25f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.5f,0.5f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:pointed_dripstone",\
-                Properties:{\
-                    vertical_direction:"down",\
-                    thickness:"middle"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.25f,0.7435f,0.25f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.5f,0.5f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:pointed_dripstone",\
@@ -79,58 +48,111 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:pointed_dripstone",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"middle"\
+                }\
+            },\
             transformation:{\
+                translation:[-0.35f,1.4435f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.4435f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:pointed_dripstone",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"frustum"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,2.143f,0.35f]\
+                translation:[-0.35f,2.143f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:pointed_dripstone",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"tip"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,2.8425f,0.35f]\
+                translation:[-0.35f,2.8425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         }\
     ],\
     3:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:pointed_dripstone",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"middle"\
+                }\
+            },\
             transformation:{\
+                translation:[-0.35f,1.4435f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.4435f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:pointed_dripstone",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"middle"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,2.143f,0.35f]\
+                translation:[-0.35f,2.143f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:pointed_dripstone",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"frustum"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,2.8425f,0.35f]\
+                translation:[-0.35f,2.8425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:pointed_dripstone",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"tip"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,3.542f,0.35f]\
+                translation:[-0.35f,3.542f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         }\
     ]\
@@ -138,7 +160,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:small_amethyst_bud set value {\
     place_sound:"minecraft:block.small_amethyst_bud.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -155,7 +176,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:small_amethyst_
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:medium_amethyst_bud set value {\
     place_sound:"minecraft:block.medium_amethyst_bud.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -172,7 +192,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:medium_amethyst
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:large_amethyst_bud set value {\
     place_sound:"minecraft:block.large_amethyst_bud.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -189,7 +208,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:large_amethyst_
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:amethyst_cluster set value {\
     place_sound:"minecraft:block.amethyst_cluster.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -207,30 +225,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:amethyst_cluste
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:oak_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:4,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:oak_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:oak_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:oak_leaves"\
@@ -255,74 +250,90 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:oak_leaves set 
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:oak_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,1.25f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:oak_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,1.25f,0.5f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:oak_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:oak_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,2.0f,0.5f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,2.0f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:oak_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:oak_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:oak_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:spruce_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:4,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:spruce_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:spruce_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:spruce_leaves"\
@@ -347,74 +358,90 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:spruce_leaves s
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:spruce_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,1.25f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:spruce_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,1.25f,0.5f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:spruce_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:spruce_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,2.0f,0.5f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,2.0f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:spruce_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:spruce_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:spruce_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:birch_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:4,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:birch_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:birch_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:birch_leaves"\
@@ -439,74 +466,90 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:birch_leaves se
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:birch_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,1.25f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:birch_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,1.25f,0.5f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:birch_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:birch_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,2.0f,0.5f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,2.0f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:birch_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:birch_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:birch_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:jungle_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:4,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:jungle_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:jungle_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:jungle_leaves"\
@@ -531,74 +574,90 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:jungle_leaves s
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:jungle_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,1.25f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:jungle_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,1.25f,0.5f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:jungle_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:jungle_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,2.0f,0.5f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,2.0f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:jungle_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:jungle_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:jungle_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:acacia_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:4,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:acacia_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:acacia_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:acacia_leaves"\
@@ -623,74 +682,90 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:acacia_leaves s
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:acacia_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,1.25f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:acacia_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,1.25f,0.5f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:acacia_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:acacia_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,2.0f,0.5f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,2.0f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:acacia_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:acacia_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:acacia_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:4,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:dark_oak_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:dark_oak_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:dark_oak_leaves"\
@@ -715,74 +790,90 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_leaves
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:dark_oak_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,1.25f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:dark_oak_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,1.25f,0.5f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:dark_oak_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:dark_oak_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,2.0f,0.5f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,2.0f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:dark_oak_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:dark_oak_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:dark_oak_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:4,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:mangrove_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:mangrove_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:mangrove_leaves"\
@@ -807,74 +898,90 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_leaves
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:mangrove_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,1.25f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:mangrove_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,1.25f,0.5f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:mangrove_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:mangrove_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,2.0f,0.5f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,2.0f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:mangrove_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:mangrove_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:mangrove_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_leaves set value {\
     place_sound:"minecraft:block.cherry_leaves.place",\
-    display_count:4,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:cherry_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:cherry_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:cherry_leaves"\
@@ -899,74 +1006,90 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_leaves s
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cherry_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,1.25f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cherry_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,1.25f,0.5f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cherry_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cherry_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,2.0f,0.5f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,2.0f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cherry_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cherry_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cherry_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea_leaves set value {\
     place_sound:"minecraft:block.azalea_leaves.place",\
-    display_count:4,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:azalea_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:azalea_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:azalea_leaves"\
@@ -991,74 +1114,90 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea_leaves s
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:azalea_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,1.25f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:azalea_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,1.25f,0.5f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:azalea_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:azalea_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,2.0f,0.5f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,2.0f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:azalea_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:azalea_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:azalea_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azalea_leaves set value {\
     place_sound:"minecraft:block.azalea_leaves.place",\
-    display_count:4,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:flowering_azalea_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:flowering_azalea_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:flowering_azalea_leaves"\
@@ -1083,44 +1222,83 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azale
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:flowering_azalea_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,1.25f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:flowering_azalea_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,1.25f,0.5f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:flowering_azalea_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:flowering_azalea_leaves"\
+            },\
             transformation:{\
-                scale:[0.5f,2.0f,0.5f]\
+                translation:[-0.355f,0.855f,0f],\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[0.5f,2.0f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:flowering_azalea_leaves"\
+            },\
             transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:flowering_azalea_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:flowering_azalea_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -1129,7 +1307,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azale
 # Sapling second stages with vanilla tweaks has a lighting bug at certain angles, so the second stage rotates it back to 0
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:oak_sapling set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1146,9 +1323,16 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:oak_sapling set
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:oak_sapling",\
                 Properties:{\
                     stage:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             },\
             Rotation:[0f,0f]\
         }\
@@ -1156,7 +1340,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:oak_sapling set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:spruce_sapling set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1173,9 +1356,16 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:spruce_sapling 
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:spruce_sapling",\
                 Properties:{\
                     stage:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             },\
             Rotation:[0f,0f]\
         }\
@@ -1183,7 +1373,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:spruce_sapling 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:birch_sapling set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1200,9 +1389,16 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:birch_sapling s
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:birch_sapling",\
                 Properties:{\
                     stage:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             },\
             Rotation:[0f,0f]\
         }\
@@ -1210,7 +1406,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:birch_sapling s
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:jungle_sapling set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1227,9 +1422,16 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:jungle_sapling 
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:jungle_sapling",\
                 Properties:{\
                     stage:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             },\
             Rotation:[0f,0f]\
         }\
@@ -1237,7 +1439,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:jungle_sapling 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:acacia_sapling set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1254,9 +1455,16 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:acacia_sapling 
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:acacia_sapling",\
                 Properties:{\
                     stage:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             },\
             Rotation:[0f,0f]\
         }\
@@ -1264,7 +1472,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:acacia_sapling 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_sapling set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1281,9 +1488,16 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_saplin
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:dark_oak_sapling",\
                 Properties:{\
                     stage:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             },\
             Rotation:[0f,0f]\
         }\
@@ -1293,7 +1507,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_saplin
     # lighting bug also affects the default mangrove propagule, so it gets rotated immediately to 0
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_propagule set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1311,16 +1524,23 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_propag
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:mangrove_propagule",\
                 Properties:{\
                     stage:"1"\
                 }\
-            }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.4935f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            },\
+            Rotation:[0f,0f]\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_sapling set value {\
     place_sound:"minecraft:block.cherry_sapling.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1337,9 +1557,16 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_sapling 
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:cherry_sapling",\
                 Properties:{\
                     stage:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             },\
             Rotation:[0f,0f]\
         }\
@@ -1348,7 +1575,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_sapling 
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea set value {\
     place_sound:"minecraft:block.azalea.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1364,58 +1590,72 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea set valu
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:azalea"\
+            },\
             transformation:{\
                 translation:[-0.3f,0.7435f,-0.3f],\
-                scale:[0.6f,0.6f,0.6f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.6f,0.6f,0.6f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:azalea"\
+            },\
             transformation:{\
                 translation:[-0.35f,0.7435f,-0.35f],\
-                scale:[0.7f,0.7f,0.7f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     4:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:azalea"\
+            },\
             transformation:{\
                 translation:[-0.4f,0.7435f,-0.4f],\
-                scale:[0.8f,0.8f,0.8f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.8f,0.8f,0.8f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     5:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:azalea"\
+            },\
             transformation:{\
                 translation:[-0.45f,0.7435f,-0.45f],\
-                scale:[0.9f,0.9f,0.9f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.9f,0.9f,0.9f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     6:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:azalea"\
+            },\
             transformation:{\
                 translation:[-0.5f,0.7435f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azalea set value {\
     place_sound:"minecraft:block.flowering_azalea.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1431,51 +1671,66 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azale
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:flowering_azalea"\
+            },\
             transformation:{\
                 translation:[-0.3f,0.7435f,-0.3f],\
-                scale:[0.6f,0.6f,0.6f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.6f,0.6f,0.6f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:flowering_azalea"\
+            },\
             transformation:{\
                 translation:[-0.35f,0.7435f,-0.35f],\
-                scale:[0.7f,0.7f,0.7f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     4:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:flowering_azalea"\
+            },\
             transformation:{\
                 translation:[-0.4f,0.7435f,-0.4f],\
-                scale:[0.8f,0.8f,0.8f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.8f,0.8f,0.8f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     5:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:flowering_azalea"\
+            },\
             transformation:{\
                 translation:[-0.45f,0.7435f,-0.45f],\
-                scale:[0.9f,0.9f,0.9f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.9f,0.9f,0.9f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     6:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:flowering_azalea"\
+            },\
             transformation:{\
                 translation:[-0.5f,0.7435f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -1483,7 +1738,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azale
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:brown_mushroom set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1499,18 +1753,20 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:brown_mushroom 
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:brown_mushroom"\
+            },\
             transformation:{\
                 translation:[-0.708f,0.7435f,0.0015f],\
-                left_rotation:[0f,0.384f,0f,0.924f]\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:red_mushroom set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1526,18 +1782,20 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:red_mushroom se
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:red_mushroom"\
+            },\
             transformation:{\
                 translation:[-0.708f,0.7435f,0.0015f],\
-                left_rotation:[0f,0.384f,0f,0.924f]\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:crimson_fungus set value {\
     place_sound:"minecraft:block.fungus.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1553,18 +1811,20 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:crimson_fungus 
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:crimson_fungus"\
+            },\
             transformation:{\
                 translation:[-0.708f,0.681f,0.0015f],\
-                left_rotation:[0f,0.384f,0f,0.924f]\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:warped_fungus set value {\
     place_sound:"minecraft:block.fungus.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1580,11 +1840,14 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:warped_fungus s
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:warped_fungus"\
+            },\
             transformation:{\
                 translation:[-0.708f,0.681f,0.0015f],\
-                left_rotation:[0f,0.384f,0f,0.924f]\
+                left_rotation:[0f,0.384f,0f,0.924f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -1592,7 +1855,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:warped_fungus s
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:short_grass set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1609,7 +1871,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:short_grass set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:fern set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1626,7 +1887,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:fern set value 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bush set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1644,7 +1904,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bush set v
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dandelion set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1661,7 +1920,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dandelion set v
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:poppy set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1678,7 +1936,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:poppy set value
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:blue_orchid set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1695,7 +1952,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:blue_orchid set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:allium set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1712,7 +1968,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:allium set valu
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:azure_bluet set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1729,7 +1984,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:azure_bluet set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:red_tulip set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1746,7 +2000,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:red_tulip set v
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:orange_tulip set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1763,7 +2016,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:orange_tulip se
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:white_tulip set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1780,7 +2032,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:white_tulip set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:pink_tulip set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1797,7 +2048,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pink_tulip set 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:oxeye_daisy set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1814,7 +2064,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:oxeye_daisy set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:cornflower set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1831,7 +2080,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cornflower set 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:lily_of_the_valley set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1848,7 +2096,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:lily_of_the_val
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:torchflower set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1865,7 +2112,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:torchflower set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:wither_rose set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1883,7 +2129,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:wither_rose set
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:spore_blossom set value {\
     place_sound:"minecraft:block.spore_blossom.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -1899,11 +2144,14 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:spore_blossom s
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:spore_blossom"\
+            },\
             transformation:{\
                 translation:[-0.5f,1.74f,0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         }\
     ]\
@@ -1911,7 +2159,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:spore_blossom s
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:bamboo set value {\
     place_sound:"minecraft:block.bamboo_sapling.place",\
-    display_count:8,\
     1:[\
         {\
             block_state:{\
@@ -1923,62 +2170,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bamboo set valu
                 scale:[1f,1f,1f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.5f,1.7435f,-0.5f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[1f,1f,1f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.5f,2.7435f,-0.5f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[1f,1f,1f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.5f,3.7435f,-0.5f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[1f,1f,1f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.5f,4.7435f,-0.5f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[1f,1f,1f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.5f,5.7435f,-0.5f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[1f,1f,1f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.5f,6.7435f,-0.5f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[1f,1f,1f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.5f,7.7435f,-0.5f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[1f,1f,1f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
         }\
     ],\
     2:[\
@@ -1988,22 +2179,28 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bamboo set valu
                 Properties:{\
                     leaves:"small"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     3:[\
         {\
             block_state:{\
+                Name:"minecraft:bamboo",\
                 Properties:{\
                     leaves:"none"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
@@ -2012,52 +2209,103 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bamboo set valu
                 Properties:{\
                     leaves:"small"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,1.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     4:[\
-        {},\
-        {},\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"none"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
         {\
             block_state:{\
                 Name:"minecraft:bamboo",\
                 Properties:{\
                     leaves:"small"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,1.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"small"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,2.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
     ],\
     5:[\
         {\
             block_state:{\
+                Name:"minecraft:bamboo",\
                 Properties:{\
+                    leaves:"none",\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
             block_state:{\
+                Name:"minecraft:bamboo",\
                 Properties:{\
+                    leaves:"small",\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,1.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
             block_state:{\
+                Name:"minecraft:bamboo",\
                 Properties:{\
+                    leaves:"small",\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,2.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
@@ -2067,24 +2315,61 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bamboo set valu
                     leaves:"large",\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,3.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     6:[\
-        {},\
         {\
             block_state:{\
+                Name:"minecraft:bamboo",\
                 Properties:{\
-                    leaves:"none"\
+                    leaves:"none",\
+                    age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
-        {},\
-        {},\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"none",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,1.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"small",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,2.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
         {\
             block_state:{\
                 Name:"minecraft:bamboo",\
@@ -2092,30 +2377,91 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bamboo set valu
                     leaves:"large",\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,3.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
-        {},\
-        {},\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"large",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,4.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
     ],\
     7:[\
-        {},\
-        {},\
         {\
             block_state:{\
+                Name:"minecraft:bamboo",\
                 Properties:{\
-                    leaves:"none"\
+                    leaves:"none",\
+                    age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
             block_state:{\
+                Name:"minecraft:bamboo",\
                 Properties:{\
-                    leaves:"small"\
+                    leaves:"none",\
+                    age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,1.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
-        {},\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"none",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,2.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"small",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,3.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
         {\
             block_state:{\
                 Name:"minecraft:bamboo",\
@@ -2123,30 +2469,106 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bamboo set valu
                     leaves:"large",\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,4.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
-        {},\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"large",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,5.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
     ],\
     8:[\
-        {},\
-        {},\
-        {},\
         {\
             block_state:{\
+                Name:"minecraft:bamboo",\
                 Properties:{\
-                    leaves:"none"\
+                    leaves:"none",\
+                    age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
             block_state:{\
+                Name:"minecraft:bamboo",\
                 Properties:{\
-                    leaves:"small"\
+                    leaves:"none",\
+                    age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,1.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
-        {},\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"none",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,2.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"none",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,3.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"small",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,4.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
         {\
             block_state:{\
                 Name:"minecraft:bamboo",\
@@ -2154,30 +2576,121 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bamboo set valu
                     leaves:"large",\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,5.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"large",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,6.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
     ],\
     9:[\
-        {},\
-        {},\
-        {},\
-        {},\
         {\
             block_state:{\
+                Name:"minecraft:bamboo",\
                 Properties:{\
-                    leaves:"none"\
+                    leaves:"none",\
+                    age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
             block_state:{\
+                Name:"minecraft:bamboo",\
                 Properties:{\
-                    leaves:"small"\
+                    leaves:"none",\
+                    age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,1.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
-        {},\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"none",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,2.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"none",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,3.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"none",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,4.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"small",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,5.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
         {\
             block_state:{\
                 Name:"minecraft:bamboo",\
@@ -2185,13 +2698,33 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bamboo set valu
                     leaves:"large",\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,6.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:bamboo",\
+                Properties:{\
+                    leaves:"large",\
+                    age:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,7.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:sugar_cane set value {\
     place_sound:"minecraft:block.grass.place",\
-    display_count:3,\
     1:[\
         {\
             block_state:{\
@@ -2203,55 +2736,64 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sugar_cane set 
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:sugar_cane"\
-            },\
-            transformation:{\
-                translation:[-0.25f,0.7435f,-0.25f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:sugar_cane"\
-            },\
-            transformation:{\
-                translation:[-0.25f,0.7435f,-0.25f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:sugar_cane"\
+            },\
             transformation:{\
-                translation:[-0.25f,1.2435f,-0.25f]\
+                translation:[-0.25f,0.7435f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:sugar_cane"\
+            },\
             transformation:{\
-                translation:[-0.25f,1.2435f,-0.25f]\
+                translation:[-0.25f,1.2435f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:sugar_cane"\
+            },\
             transformation:{\
-                translation:[-0.25f,1.7435f,-0.25f]\
+                translation:[-0.25f,0.7435f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:sugar_cane"\
+            },\
+            transformation:{\
+                translation:[-0.25f,1.2435f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:sugar_cane"\
+            },\
+            transformation:{\
+                translation:[-0.25f,1.7435f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -2263,8 +2805,20 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sugar_cane set 
     # center, left, right, front, back
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:cactus set value {\
     place_sound:"minecraft:block.wool.place",\
-    display_count:5,\
     1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.3684f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    2:[\
         {\
             block_state:{\
                 Name:"minecraft:potted_cactus"\
@@ -2281,98 +2835,147 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cactus set valu
                 Name:"minecraft:potted_cactus"\
             },\
             transformation:{\
-                translation:[-0.2f,0.6f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:potted_cactus"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.6f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:potted_cactus"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.6f,0.2f],\
-                left_rotation:[0f,0.707f,0f,0.707f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:potted_cactus"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.6f,0.2f],\
-                left_rotation:[0f,0.707f,0f,0.707f],\
+                translation:[-0.2f,1.05f,-0.2f],\
+                left_rotation:[0.328f,0f,0f,0.945f],\
                 scale:[0.4f,0.4f,0.4f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
-    2:[\
-        {},\
+    3:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.3684f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
             transformation:{\
                 translation:[-0.2f,1.05f,-0.2f],\
                 left_rotation:[0.328f,0f,0f,0.945f],\
+                scale:[0.4f,0.4f,0.4f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
-        {},\
-        {},\
-        {}\
-    ],\
-    3:[\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
             transformation:{\
                 translation:[-0.2f,0.7f,-0.05f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.4f,0.4f,0.4f],\
+                right_rotation:[-0.445f,0f,0f,0.895f]\
+            }\
+        }\
+    ],\
+    4:[\
+        {\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.3684f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
+            transformation:{\
+                translation:[-0.2f,1.05f,-0.2f],\
+                left_rotation:[0.328f,0f,0f,0.945f],\
+                scale:[0.4f,0.4f,0.4f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
+            transformation:{\
+                translation:[-0.2f,0.7f,-0.05f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.4f,0.4f,0.4f],\
                 right_rotation:[-0.445f,0f,0f,0.895f]\
             }\
         },\
-        {},\
-        {}\
-    ],\
-    4:[\
-        {},\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
             transformation:{\
                 translation:[-0.2f,1.0f,0.2f],\
+                left_rotation:[0f,0.707f,0f,0.707f],\
+                scale:[0.4f,0.4f,0.4f],\
+                right_rotation:[0.328f,0f,0f,0.945f]\
+            }\
+        }\
+    ],\
+    5:[\
+        {\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.3684f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
+            transformation:{\
+                translation:[-0.2f,1.05f,-0.2f],\
+                left_rotation:[0.328f,0f,0f,0.945f],\
+                scale:[0.4f,0.4f,0.4f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
+            transformation:{\
+                translation:[-0.2f,0.7f,-0.05f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.4f,0.4f,0.4f],\
+                right_rotation:[-0.445f,0f,0f,0.895f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
+            transformation:{\
+                translation:[-0.2f,1.0f,0.2f],\
+                left_rotation:[0f,0.707f,0f,0.707f],\
+                scale:[0.4f,0.4f,0.4f],\
                 right_rotation:[0.328f,0f,0f,0.945f]\
             }\
         },\
-        {}\
-    ],\
-    5:[\
-        {},\
-        {},\
-        {},\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
             transformation:{\
                 translation:[-0.05f,0.6f,0.2f],\
+                left_rotation:[0f,0.707f,0f,0.707f],\
+                scale:[0.4f,0.4f,0.4f],\
                 right_rotation:[-0.445f,0f,0f,0.895f]\
             }\
         }\
@@ -2381,7 +2984,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cactus set valu
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:crimson_roots set value {\
     place_sound:"minecraft:block.roots.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -2398,7 +3000,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:crimson_roots s
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:warped_roots set value {\
     place_sound:"minecraft:block.roots.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -2416,41 +3017,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:warped_roots se
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:weeping_vines set value {\
     place_sound:"minecraft:block.weeping_vines.place",\
-    display_count:9,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:weeping_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.7434f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:weeping_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.7434f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:weeping_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.35f,1.4434f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.7f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:weeping_vines"\
@@ -2467,420 +3034,493 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:weeping_vines s
                 Name:"minecraft:weeping_vines_plant"\
             },\
             transformation:{\
-                translation:[-0.35f,0.7434f,0.35f],\
+                translation:[-0.35f,1.4434f,0.35f],\
                 left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:weeping_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.7434f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:weeping_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.7434f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:weeping_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.7434f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:weeping_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.7434f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
+                scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         }\
     ],\
     2:[\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:weeping_vines"\
+            },\
             transformation:{\
+                translation:[-0.35f,2.8424f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.4434f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
             transformation:{\
-                translation:[-0.35f,2.1429f,0.35f]\
+                translation:[-0.35f,2.1429f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
             transformation:{\
-                translation:[-0.35f,2.8424f,0.35f]\
+                translation:[-0.35f,1.4434f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     3:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:weeping_vines"\
+            },\
             transformation:{\
+                translation:[-0.35f,3.5419f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.4434f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
             transformation:{\
-                translation:[-0.35f,2.1429f,0.35f]\
+                translation:[-0.35f,2.8424f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
             transformation:{\
-                translation:[-0.35f,2.8424f,0.35f]\
+                translation:[-0.35f,2.1429f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
             transformation:{\
-                translation:[-0.35f,3.5419f,0.35f]\
+                translation:[-0.35f,1.4434f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     4:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:weeping_vines"\
+            },\
             transformation:{\
-                translation:[-0.35f,2.1429f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.8424f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,3.5419f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,4.2414f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
+                translation:[-0.35f,4.2414f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.4434f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
-        {},\
-        {},\
-        {},\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,3.5419f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.8424f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.1429f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.4434f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
     ],\
     5:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:weeping_vines"\
+            },\
             transformation:{\
-                translation:[-0.35f,2.8424f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,3.5419f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,4.2414f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,4.9409f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.1429f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
+                translation:[-0.35f,4.9409f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.4434f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
-        {},\
-        {},\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,4.2414f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,3.5419f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.8424f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.1429f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.4434f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
     ],\
     6:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:weeping_vines"\
+            },\
             transformation:{\
-                translation:[-0.35f,3.5419f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,4.2414f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,4.9409f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,5.6404f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.8424f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.1429f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
+                translation:[-0.35f,5.6404f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.4434f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
-        {},\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,4.9409f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,4.2414f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,3.5419f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.8424f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.1429f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.4434f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
     ],\
     7:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:weeping_vines"\
+            },\
             transformation:{\
-                translation:[-0.35f,4.2414f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,4.9409f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,5.6404f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,6.3399f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,3.5419f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.8424f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.1429f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
+                translation:[-0.35f,6.3399f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.4434f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,5.6404f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,4.9409f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,4.2414f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,3.5419f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.8424f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.1429f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.4434f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
     ],\
     8:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:weeping_vines"\
+            },\
             transformation:{\
-                translation:[-0.35f,4.9409f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,5.6404f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,6.3399f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,7.0394f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,4.2414f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,3.5419f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.8424f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.1429f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
+                translation:[-0.35f,7.0394f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.4434f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,6.3399f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,5.6404f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,4.9409f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,4.2414f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,3.5419f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.8424f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.1429f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:weeping_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.4434f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:twisting_vines set value {\
     place_sound:"minecraft:block.weeping_vines.place",\
-    display_count:16,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:twisting_vines"\
@@ -2891,13 +3531,15 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:twisting_vines 
                 scale:[0.75f,0.75f,0.75f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
+        }\
+    ],\
+    2:[\
         {\
             block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
+                Name:"minecraft:twisting_vines"\
             },\
             transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
+                translation:[-0.375f,1.4935f,-0.375f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.75f,0.75f,0.75f],\
                 right_rotation:[0f,0f,0f,1f]\
@@ -2908,1317 +3550,1501 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:twisting_vines 
                 Name:"minecraft:twisting_vines_plant"\
             },\
             transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.75f,0.75f,0.75f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
-            },\
-            transformation:{\
-                translation:[-0.375f,-0.0065f,-0.375f],\
+                translation:[-0.375f,0.7435f,-0.375f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.75f,0.75f,0.75f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
-    2:[\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
-            }\
-        },\
-        {},\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
-            }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
-    ],\
     3:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
-            }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     4:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
+                translation:[-0.375f,2.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,2.9935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     5:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,2.9935f,-0.375f]\
+                translation:[-0.375f,3.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,3.7435f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     6:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,3.7435f,-0.375f]\
+                translation:[-0.375f,4.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,3.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,4.4935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     7:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,4.4935f,-0.375f]\
+                translation:[-0.375f,5.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,4.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,5.2435f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     8:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,5.2435f,-0.375f]\
+                translation:[-0.375f,5.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,5.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,5.9935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     9:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,5.9935f,-0.375f]\
+                translation:[-0.375f,6.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,5.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,6.7435f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     10:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,6.7435f,-0.375f]\
+                translation:[-0.375f,7.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,6.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,7.4935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     11:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,7.4935f,-0.375f]\
+                translation:[-0.375f,8.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,7.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,6.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,8.2435f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     12:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,8.2435f,-0.375f]\
+                translation:[-0.375f,8.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,8.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,7.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,8.9935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,6.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     13:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,8.9935f,-0.375f]\
+                translation:[-0.375f,9.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,8.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,9.7435f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,7.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,6.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     14:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,9.7435f,-0.375f]\
+                translation:[-0.375f,10.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,9.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,10.4935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,7.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,6.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {}\
+        }\
     ],\
     15:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,10.4935f,-0.375f]\
+                translation:[-0.375f,11.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,10.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,9.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,11.2435f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,7.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,6.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {}\
+        }\
     ],\
     16:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines"\
+            },\
             transformation:{\
-                translation:[-0.375f,11.2435f,-0.375f]\
+                translation:[-0.375f,11.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,11.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,10.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,11.9935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,9.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,7.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,6.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:twisting_vines_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -4226,7 +5052,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:twisting_vines 
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:tall_grass set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:2,\
     1:[\
         {\
             block_state:{\
@@ -4260,7 +5085,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:tall_grass set 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:large_fern set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:2,\
     1:[\
         {\
             block_state:{\
@@ -4296,36 +5120,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:large_fern set 
 # default sunflower rotation is sunflower facing east, player should be facing west
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:sunflower set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:3,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:sunflower",\
-                Properties:{\
-                    half:"lower"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.4f,-0.2565f,-0.4f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.8f,1f,0.8f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:sunflower",\
-                Properties:{\
-                    half:"lower"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.4f,-0.2565f,-0.4f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.8f,1f,0.8f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:sunflower",\
@@ -4343,82 +5138,82 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sunflower set v
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:sunflower",\
+                Properties:{\
+                    half:"lower"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,0.6185f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:sunflower",\
+                Properties:{\
+                    half:"upper"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,1.6185f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:sunflower",\
+                Properties:{\
+                    half:"lower"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,1.6185f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:sunflower",\
+                Properties:{\
+                    half:"lower"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,0.6185f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:sunflower",\
+                Properties:{\
+                    half:"upper"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,2.6185f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:lilac set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:3,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:lilac",\
-                Properties:{\
-                    half:"lower"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.25f,0.7435f,-0.25f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.0001f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:lilac",\
-                Properties:{\
-                    half:"lower"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.25f,0.7435f,-0.25f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.0001f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:lilac",\
@@ -4436,68 +5231,82 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:lilac set value
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:lilac",\
+                Properties:{\
+                    half:"lower"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,0.6185f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:lilac",\
+                Properties:{\
+                    half:"upper"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,1.6185f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:lilac",\
+                Properties:{\
+                    half:"lower"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,1.6185f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:lilac",\
+                Properties:{\
+                    half:"lower"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,0.6185f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:lilac",\
+                Properties:{\
+                    half:"upper"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,2.6185f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:rose_bush set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:2,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:rose_bush",\
-                Properties:{\
-                    half:"lower"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.25f,0.745f,-0.25f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.0001f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:rose_bush",\
@@ -4515,41 +5324,38 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:rose_bush set v
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:rose_bush",\
+                Properties:{\
+                    half:"lower"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,0.6185f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:rose_bush",\
+                Properties:{\
+                    half:"upper"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,1.6185f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:peony set value {\
     place_sound:"minecraft:item.bone_meal.use",\
-    display_count:2,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:peony",\
-                Properties:{\
-                    half:"lower"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.25f,0.745f,-0.25f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.0001f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:peony",\
@@ -4567,26 +5373,37 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:peony set value
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:peony",\
+                Properties:{\
+                    half:"lower"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,0.556f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:peony",\
+                Properties:{\
+                    half:"upper"\
+                }\
+            },\
             transformation:{\
                 translation:[-0.5f,1.556f,-0.5f],\
-                scale:[1f,1f,1f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:pitcher_plant set value {\
     place_sound:"minecraft:item.crop.plant",\
-    display_count:2,\
     1:[\
         {\
             block_state:{\
@@ -4621,7 +5438,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pitcher_plant s
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:big_dripleaf set value {\
     place_sound:"minecraft:block.big_dripleaf.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -4640,55 +5456,57 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:big_dripleaf se
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:big_dripleaf",\
+                Properties:{\
+                    facing:"east"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.25f,0.271f,-0.5f]\
+                translation:[-0.25f,0.271f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:big_dripleaf",\
+                Properties:{\
+                    facing:"east"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.25f,0.56855f,-0.5f]\
+                translation:[-0.25f,0.56855f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     4:[\
         {\
             block_state:{\
+                Name:"minecraft:big_dripleaf",\
                 Properties:{\
-                    tilt:"partial"\
+                    tilt:"partial",\
+                    facing:"east"\
                 }\
             },\
             transformation:{\
-                right_rotation:[0f,0f,0.191f,0.982f],\
-                translation:[-0.1490878f,0.45f,-0.5f]\
+                translation:[-0.1490878f,0.45f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0.191f,0.982f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:small_dripleaf set value {\
     place_sound:"minecraft:block.small_dripleaf.place",\
-    display_count:2,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:small_dripleaf",\
-                Properties:{\
-                    facing:"east",\
-                    half:"lower"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.5f,-0.319f,-0.5f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[1f,1f,1f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:small_dripleaf",\
@@ -4707,33 +5525,65 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:small_dripleaf 
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:small_dripleaf",\
+                Properties:{\
+                    facing:"east",\
+                    half:"lower"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.5f,-0.0065f,-0.5f]\
+                translation:[-0.5f,-0.0065f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:small_dripleaf",\
+                Properties:{\
+                    facing:"east",\
+                    half:"upper"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.5f,0.9935f,-0.5f]\
+                translation:[-0.5f,0.9935f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:small_dripleaf",\
+                Properties:{\
+                    facing:"east",\
+                    half:"lower"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.5f,0.306f,-0.5f]\
+                translation:[-0.5f,0.306f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:small_dripleaf",\
+                Properties:{\
+                    facing:"east",\
+                    half:"upper"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.5f,1.306f,-0.5f]\
+                translation:[-0.5f,1.306f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -4744,7 +5594,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:small_dripleaf 
     # Chorus Flower? Probably
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower set value {\
     place_sound:"minecraft:block.chorus_flower.grow",\
-    display_count:18,\
     1:[\
         {\
             block_state:{\
@@ -4752,28 +5601,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower s
             },\
             transformation:{\
                 translation:[-0.25f,1.2435f,-0.75f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:chorus_flower"\
-            },\
-            transformation:{\
-                translation:[-0.25f,1.2435f,-0.75f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:chorus_flower"\
-            },\
-            transformation:{\
-                translation:[-0.25f,1.7435f,0.25f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0f,0f,0f,1f]\
@@ -4835,17 +5662,26 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower s
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
+        }\
+    ],\
+    2:[\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_flower"\
+            },\
+            transformation:{\
+                translation:[-0.25f,2.2435f,-0.75f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
         },\
         {\
             block_state:{\
-                Name:"minecraft:chorus_plant",\
-                Properties:{\
-                    down:"true",\
-                    up:"true"\
-                }\
+                Name:"minecraft:chorus_flower"\
             },\
             transformation:{\
-                translation:[-0.25f,-0.065f,-0.25f],\
+                translation:[-0.25f,2.7435f,0.25f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0f,0f,0f,1f]\
@@ -4860,37 +5696,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower s
                 }\
             },\
             transformation:{\
-                translation:[-0.25f,-0.065f,-0.25f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:chorus_plant",\
-                Properties:{\
-                    up:"true",\
-                    south:"true"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.25f,-0.065f,-0.25f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:chorus_plant",\
-                Properties:{\
-                    down:"true",\
-                    up:"true"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.25f,-0.065f,-0.25f],\
+                translation:[-0.25f,0.7435f,-0.25f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0f,0f,0f,1f]\
@@ -4906,7 +5712,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower s
                 }\
             },\
             transformation:{\
-                translation:[-0.25f,-0.065f,-0.25f],\
+                translation:[-0.25f,1.2435f,-0.25f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0f,0f,0f,1f]\
@@ -4921,22 +5727,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower s
                 }\
             },\
             transformation:{\
-                translation:[-0.25f,-0.065f,-0.25f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:chorus_plant",\
-                Properties:{\
-                    up:"true",\
-                    south:"true"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.25f,-0.065f,-0.25f],\
+                translation:[-0.25f,1.2435f,0.25f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0f,0f,0f,1f]\
@@ -4951,7 +5742,243 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower s
                 }\
             },\
             transformation:{\
-                translation:[-0.25f,-0.065f,-0.25f],\
+                translation:[-0.25f,2.2435f,0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    down:"true",\
+                    up:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,1.7435f,0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    up:"true",\
+                    south:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,1.2435f,-0.75f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    down:"true",\
+                    up:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,1.7435f,-0.75f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    3:[\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_flower"\
+            },\
+            transformation:{\
+                translation:[0.25f,3.2435f,-0.75f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_flower"\
+            },\
+            transformation:{\
+                translation:[-0.75f,2.2435f,-0.75f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    down:"true",\
+                    up:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.7435f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    down:"true",\
+                    north:"true",\
+                    south:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,1.2435f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    up:"true",\
+                    north:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,1.2435f,0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    down:"true",\
+                    up:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,2.2435f,0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    down:"true",\
+                    up:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,1.7435f,0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    up:"true",\
+                    south:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,1.2435f,-0.75f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    down:"true",\
+                    up:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,1.7435f,-0.75f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    down:"true",\
+                    north:"true",\
+                    south:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,2.7435f,0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    up:"true",\
+                    north:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,2.7435f,0.75f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    up:"true",\
+                    south:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,2.7435f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:chorus_plant",\
+                Properties:{\
+                    down:"true",\
+                    up:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,3.2435f,-0.25f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0f,0f,0f,1f]\
@@ -4967,7 +5994,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower s
                 }\
             },\
             transformation:{\
-                translation:[-0.25f,-0.065f,-0.25f],\
+                translation:[-0.25f,2.2435f,-0.75f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0f,0f,0f,1f]\
@@ -4982,7 +6009,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower s
                 }\
             },\
             transformation:{\
-                translation:[-0.25f,-0.065f,-0.25f],\
+                translation:[0.25f,2.2435f,-0.75f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0f,0f,0f,1f]\
@@ -4997,145 +6024,32 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower s
                 }\
             },\
             transformation:{\
-                translation:[-0.25f,-0.065f,-0.25f],\
+                translation:[0.25f,2.7435f,-0.75f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
-        }\
-    ],\
-    2:[\
-        {\
-            transformation:{\
-                translation:[-0.25f,2.2435f,-0.75f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
         },\
         {\
-            transformation:{\
-                translation:[-0.25f,2.2435f,-0.75f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.25f,2.7435f,0.25f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.25f,2.7435f,0.25f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {},\
-        {},\
-        {},\
-        {\
-            transformation:{\
-                translation:[-0.25f,2.2435f,0.25f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.25f,1.7435f,0.25f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.25f,1.2435f,-0.75f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.25f,1.7435f,-0.75f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
-    ],\
-    3:[\
-        {\
-            transformation:{\
-                translation:[0.25f,3.2435f,-0.75f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.75f,2.2435f,-0.75f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
+            block_state:{\
+                Name:"minecraft:chorus_flower"\
+            },\
             transformation:{\
                 translation:[-0.25f,3.2435f,0.75f],\
-                scale:[0.5f,0.5f,0.5f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
+            block_state:{\
+                Name:"minecraft:chorus_flower"\
+            },\
             transformation:{\
                 translation:[-0.25f,3.7435f,-0.25f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {\
-            transformation:{\
-                translation:[-0.25f,2.7435f,0.25f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.25f,2.7435f,0.75f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.25f,2.7435f,-0.25f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.25f,3.2435f,-0.25f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.25f,2.2435f,-0.75f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[0.25f,2.2435f,-0.75f],\
-                scale:[0.5f,0.5f,0.5f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[0.25f,2.7435f,-0.75f],\
-                scale:[0.5f,0.5f,0.5f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -5143,7 +6057,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower s
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:hanging_roots set value {\
     place_sound:"minecraft:block.hanging_roots.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -5161,7 +6074,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:hanging_roots s
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:wheat_seeds set value {\
     place_sound:"minecraft:item.crop.plant",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -5181,63 +6093,112 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:wheat_seeds set
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:wheat",\
                 Properties:{\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.77475f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
             block_state:{\
+                Name:"minecraft:wheat",\
                 Properties:{\
                     age:"2"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.77475f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     4:[\
         {\
             block_state:{\
+                Name:"minecraft:wheat",\
                 Properties:{\
                     age:"3"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.77475f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     5:[\
         {\
             block_state:{\
+                Name:"minecraft:wheat",\
                 Properties:{\
                     age:"4"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.77475f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     6:[\
         {\
             block_state:{\
+                Name:"minecraft:wheat",\
                 Properties:{\
                     age:"5"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.77475f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     7:[\
         {\
             block_state:{\
+                Name:"minecraft:wheat",\
                 Properties:{\
                     age:"6"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.77475f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     8:[\
         {\
             block_state:{\
+                Name:"minecraft:wheat",\
                 Properties:{\
                     age:"7"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.77475f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -5245,7 +6206,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:wheat_seeds set
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:cocoa_beans set value {\
     place_sound:"minecraft:block.wood.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -5266,26 +6226,34 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cocoa_beans set
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:cocoa",\
                 Properties:{\
-                    age:"1"\
+                    age:"1",\
+                    facing:"north"\
                 }\
             },\
             transformation:{\
                 translation:[-0.24375f,0.5915625f,-0.12188125f],\
-                scale:[0.4875f,0.4875f,0.4875f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.4875f,0.4875f,0.4875f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
             block_state:{\
+                Name:"minecraft:cocoa",\
                 Properties:{\
-                    age:"2"\
+                    age:"2",\
+                    facing:"north"\
                 }\
             },\
             transformation:{\
                 translation:[-0.24375f,0.6525f,-0.15235f],\
-                scale:[0.4875f,0.4875f,0.4875f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.4875f,0.4875f,0.4875f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -5293,7 +6261,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cocoa_beans set
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:pumpkin_seeds set value {\
     place_sound:"minecraft:item.crop.plant",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -5313,48 +6280,80 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pumpkin_seeds s
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:pumpkin_stem",\
                 Properties:{\
                     age:"2"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.806f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
             block_state:{\
+                Name:"minecraft:pumpkin_stem",\
                 Properties:{\
                     age:"3"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.806f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     4:[\
         {\
             block_state:{\
+                Name:"minecraft:pumpkin_stem",\
                 Properties:{\
                     age:"4"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.806f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     5:[\
         {\
             block_state:{\
+                Name:"minecraft:pumpkin_stem",\
                 Properties:{\
                     age:"5"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.806f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     6:[\
         {\
             block_state:{\
+                Name:"minecraft:pumpkin_stem",\
                 Properties:{\
                     age:"7"\
                 }\
             },\
             transformation:{\
-                translation:[-0.5f,0.681f,-0.5f]\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
@@ -5365,13 +6364,18 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pumpkin_seeds s
                 Properties:{\
                     facing:"north"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:melon_seeds set value {\
     place_sound:"minecraft:item.crop.plant",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -5391,48 +6395,80 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:melon_seeds set
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:melon_stem",\
                 Properties:{\
                     age:"2"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.806f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
             block_state:{\
+                Name:"minecraft:melon_stem",\
                 Properties:{\
                     age:"3"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.806f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     4:[\
         {\
             block_state:{\
+                Name:"minecraft:melon_stem",\
                 Properties:{\
                     age:"4"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.806f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     5:[\
         {\
             block_state:{\
+                Name:"minecraft:melon_stem",\
                 Properties:{\
                     age:"5"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.806f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     6:[\
         {\
             block_state:{\
+                Name:"minecraft:melon_stem",\
                 Properties:{\
                     age:"7"\
                 }\
             },\
             transformation:{\
-                translation:[-0.5f,0.681f,-0.5f]\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
@@ -5443,13 +6479,18 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:melon_seeds set
                 Properties:{\
                     facing:"north"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:beetroot_seeds set value {\
     place_sound:"minecraft:item.crop.plant",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -5469,34 +6510,54 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:beetroot_seeds 
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:beetroots",\
                 Properties:{\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.77475f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
             block_state:{\
+                Name:"minecraft:beetroots",\
                 Properties:{\
                     age:"2"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.77475f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     4:[\
         {\
             block_state:{\
+                Name:"minecraft:beetroots",\
                 Properties:{\
                     age:"3"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.77475f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:torchflower_seeds set value {\
     place_sound:"minecraft:item.crop.plant",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -5516,9 +6577,16 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:torchflower_see
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:torchflower_crop",\
                 Properties:{\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.7345f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
@@ -5526,13 +6594,18 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:torchflower_see
         {\
             block_state:{\
                 Name:"minecraft:torchflower"\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.7345f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:pitcher_pod set value {\
     place_sound:"minecraft:item.crop.plant",\
-    display_count:2,\
     1:[\
         {\
             block_state:{\
@@ -5547,42 +6620,53 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pitcher_pod set
                 scale:[0.39f,0.39f,0.39f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
+        }\
+    ],\
+    2:[\
         {\
+            block_state:{\
+                Name:"minecraft:pitcher_crop",\
+                Properties:{\
+                    age:"1"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.195f,1.157875f,-0.195f],\
+                translation:[-0.195f,0.767875f,-0.195f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.39f,0.39f,0.39f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
-    2:[\
-        {\
-            block_state:{\
-                Properties:{\
-                    age:"1"\
-                }\
-            }\
-        },\
-        {}\
-    ],\
     3:[\
         {\
             block_state:{\
+                Name:"minecraft:pitcher_crop",\
                 Properties:{\
                     age:"2"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.195f,0.767875f,-0.195f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.39f,0.39f,0.39f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {}\
+        }\
     ],\
     4:[\
         {\
             block_state:{\
+                Name:"minecraft:pitcher_crop",\
                 Properties:{\
                     age:"3"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.195f,0.767875f,-0.195f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.39f,0.39f,0.39f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
@@ -5593,14 +6677,27 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pitcher_pod set
                     half:"upper"\
                 }\
             },\
+            transformation:{\
+                translation:[-0.195f,1.157875f,-0.195f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.39f,0.39f,0.39f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
         }\
     ],\
     5:[\
         {\
             block_state:{\
+                Name:"minecraft:pitcher_crop",\
                 Properties:{\
                     age:"4"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.195f,0.767875f,-0.195f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.39f,0.39f,0.39f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
@@ -5610,42 +6707,19 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pitcher_pod set
                     age:"4"\
                 }\
             },\
+            transformation:{\
+                translation:[-0.195f,1.157875f,-0.195f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.39f,0.39f,0.39f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
         }\
     ]\
 }
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:glow_berries set value {\
     place_sound:"minecraft:block.cave_vines.place",\
-    display_count:8,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:cave_vines_plant",\
-                Properties:{\
-                    berries:"true"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.743f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:cave_vines_plant",\
-                Properties:{\
-                    berries:"true"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.743f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:cave_vines",\
@@ -5659,362 +6733,509 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:glow_berries se
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
             }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:cave_vines_plant",\
-                Properties:{\
-                    berries:"true"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.743f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:cave_vines_plant",\
-                Properties:{\
-                    berries:"true"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.743f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:cave_vines_plant",\
-                Properties:{\
-                    berries:"true"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.743f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:cave_vines_plant",\
-                Properties:{\
-                    berries:"true"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.743f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:cave_vines_plant",\
-                Properties:{\
-                    berries:"true"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.35f,0.743f,0.35f],\
-                left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.7f,0.7f,0.00000001f],\
-                right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
         }\
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cave_vines",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
             transformation:{\
+                translation:[-0.35f,2.1425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.443f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
-        {},\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,2.1425f,0.35f]\
+                translation:[-0.35f,1.443f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     3:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cave_vines",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,2.1425f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
+                translation:[-0.35f,2.842f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.443f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,2.842f,0.35f]\
+                translation:[-0.35f,2.1425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.443f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
     ],\
     4:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cave_vines",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,2.842f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.1425f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,3.5415f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
+                translation:[-0.35f,3.5415f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.443f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
-        {},\
-        {},\
-        {},\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.842f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.1425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.443f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
     ],\
     5:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cave_vines",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,3.5415f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.842f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,4.241f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.1425f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
+                translation:[-0.35f,4.241f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.443f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
-        {},\
-        {},\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,3.5415f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.842f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.1425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.443f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
     ],\
     6:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cave_vines",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,4.241f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,3.5415f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,4.9405f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.842f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.1425f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
+                translation:[-0.35f,4.9405f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.443f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
-        {},\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,4.241f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,3.5415f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.842f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.1425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.443f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
     ],\
     7:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cave_vines",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,4.9405f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,4.241f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,5.64f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,3.5415f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.842f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.1425f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
+                translation:[-0.35f,5.64f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.443f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         },\
-        {}\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,4.9405f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,4.241f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,3.5415f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.842f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.1425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.443f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
     ],\
     8:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:cave_vines",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.35f,5.64f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,4.9405f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,6.3395f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,4.241f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,3.5415f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.842f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.35f,2.1425f,0.35f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
+                translation:[-0.35f,6.3395f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
-                translation:[-0.35f,1.443f,0.35f]\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,5.64f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,4.9405f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,4.241f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,3.5415f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.842f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.1425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:cave_vines_plant",\
+                Properties:{\
+                    berries:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.443f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         }\
     ]\
@@ -6022,7 +7243,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:glow_berries se
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:sweet_berries set value {\
     place_sound:"minecraft:block.sweet_berry_bush.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -6042,27 +7262,48 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sweet_berries s
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:sweet_berry_bush",\
                 Properties:{\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
             block_state:{\
+                Name:"minecraft:sweet_berry_bush",\
                 Properties:{\
                     age:"2"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     4:[\
         {\
             block_state:{\
+                Name:"minecraft:sweet_berry_bush",\
                 Properties:{\
                     age:"3"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -6070,7 +7311,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sweet_berries s
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:nether_wart set value {\
     place_sound:"minecraft:item.nether_wart.plant",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -6090,29 +7330,39 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:nether_wart set
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:nether_wart",\
                 Properties:{\
                     age:"1"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.775f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
             block_state:{\
+                Name:"minecraft:nether_wart",\
                 Properties:{\
                     age:"3"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.775f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 
-# we are abandoning the waterlogged pot requirement
-    # it was not actually a feature, but a limitation to the user, that only served to comfort me, and it was kinda half assed
-
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:seagrass set value {\
     place_sound:"minecraft:block.wet_grass.place",\
-    display_count:2,\
     1:[\
         {\
             block_state:{\
@@ -6120,14 +7370,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:seagrass set va
             },\
             transformation:{\
                 translation:[-0.25f,0.71225f,-0.25f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            transformation:{\
-                translation:[-0.25f,1.21225f,-0.25f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0f,0f,0f,1f]\
@@ -6141,6 +7383,12 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:seagrass set va
                 Properties:{\
                     half:"lower"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.71225f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
@@ -6149,6 +7397,12 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:seagrass set va
                 Properties:{\
                     half:"upper"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,1.21225f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -6156,7 +7410,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:seagrass set va
 # sea pickle second option has weird lighting from certain angles, so the first one just rotates it back to 0 :(
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:sea_pickle set value {\
     place_sound:"minecraft:block.slime_block.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -6176,42 +7429,25 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sea_pickle set 
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
             block_state:{\
+                Name:"minecraft:sea_pickle",\
                 Properties:{\
                     waterlogged:"true"\
                 }\
-            }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.7435f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            },\
+            Rotation:[0f,0f]\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:kelp set value {\
     place_sound:"minecraft:block.wet_grass.place",\
-    display_count:16,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:kelp",\
@@ -6225,1334 +7461,1565 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:kelp set value 
                 scale:[0.75f,0.75f,0.75f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:kelp_plant"\
-            },\
-            transformation:{\
-                translation:[-0.2f,0.3435f,-0.2f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4f,0.4f,0.4f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
         }\
     ],\
     2:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
-            }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     3:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,1.4935f,-0.375f]\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
-            }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     4:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,2.2435f,-0.375f]\
+                translation:[-0.375f,2.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,2.9935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     5:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,2.9935f,-0.375f]\
+                translation:[-0.375f,3.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,3.7435f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     6:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,3.7435f,-0.375f]\
+                translation:[-0.375f,4.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,3.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,4.4935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     7:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,4.4935f,-0.375f]\
+                translation:[-0.375f,5.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,4.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,5.2435f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     8:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,5.2435f,-0.375f]\
+                translation:[-0.375f,5.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,5.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,5.9935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     9:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,5.9935f,-0.375f]\
+                translation:[-0.375f,6.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,5.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,6.7435f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     10:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,6.7435f,-0.375f]\
+                translation:[-0.375f,7.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,6.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,7.4935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     11:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,7.4935f,-0.375f]\
+                translation:[-0.375f,8.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,7.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,6.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,8.2435f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     12:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,8.2435f,-0.375f]\
+                translation:[-0.375f,8.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,8.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,7.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,8.9935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,6.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     13:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,8.9935f,-0.375f]\
+                translation:[-0.375f,9.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,8.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,9.7435f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,7.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,6.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {},\
-        {}\
+        }\
     ],\
     14:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,9.7435f,-0.375f]\
+                translation:[-0.375f,10.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,9.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,10.4935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,7.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,6.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {},\
-        {}\
+        }\
     ],\
     15:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,10.4935f,-0.375f]\
+                translation:[-0.375f,11.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,10.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,9.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,11.2435f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,7.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,6.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
-        },\
-        {}\
+        }\
     ],\
     16:[\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp",\
+                Properties:{\
+                    age:"25"\
+                }\
+            },\
             transformation:{\
-                translation:[-0.375f,11.2435f,-0.375f]\
+                translation:[-0.375f,11.9935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
+            transformation:{\
+                translation:[-0.375f,11.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,10.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
-            transformation:{\
-                translation:[-0.375f,11.9935f,-0.375f]\
-            }\
-        },\
-        {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,9.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,8.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,7.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,6.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,5.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,4.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,3.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.9935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,2.2435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,1.4935f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         },\
         {\
-            start_interpolation:-1,\
-            interpolation_duration:10,\
+            block_state:{\
+                Name:"minecraft:kelp_plant"\
+            },\
             transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
-                scale:[0.75f,0.75f,0.75f]\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -7560,7 +9027,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:kelp set value 
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:tube_coral_block set value {\
     place_sound:"minecraft:block.coral_block.place",\
-    display_count:41,\
     1:[\
         {\
             block_state:{\
@@ -8068,7 +9534,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:tube_coral_bloc
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:brain_coral_block set value {\
     place_sound:"minecraft:block.coral_block.place",\
-    display_count:41,\
     1:[\
         {\
             block_state:{\
@@ -8576,7 +10041,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:brain_coral_blo
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:bubble_coral_block set value {\
     place_sound:"minecraft:block.coral_block.place",\
-    display_count:41,\
     1:[\
         {\
             block_state:{\
@@ -9084,7 +10548,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bubble_coral_bl
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:fire_coral_block set value {\
     place_sound:"minecraft:block.coral_block.place",\
-    display_count:41,\
     1:[\
         {\
             block_state:{\
@@ -9592,7 +11055,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:fire_coral_bloc
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:horn_coral_block set value {\
     place_sound:"minecraft:block.coral_block.place",\
-    display_count:41,\
     1:[\
         {\
             block_state:{\
@@ -10101,7 +11563,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:horn_coral_bloc
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_tube_coral_block set value {\
     place_sound:"minecraft:block.coral_block.place",\
-    display_count:41,\
     1:[\
         {\
             block_state:{\
@@ -10609,7 +12070,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_tube_coral
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_brain_coral_block set value {\
     place_sound:"minecraft:block.coral_block.place",\
-    display_count:41,\
     1:[\
         {\
             block_state:{\
@@ -11117,7 +12577,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_brain_cora
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bubble_coral_block set value {\
     place_sound:"minecraft:block.coral_block.place",\
-    display_count:41,\
     1:[\
         {\
             block_state:{\
@@ -11625,7 +13084,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bubble_cor
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_fire_coral_block set value {\
     place_sound:"minecraft:block.coral_block.place",\
-    display_count:41,\
     1:[\
         {\
             block_state:{\
@@ -12133,7 +13591,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_fire_coral
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_horn_coral_block set value {\
     place_sound:"minecraft:block.coral_block.place",\
-    display_count:41,\
     1:[\
         {\
             block_state:{\
@@ -12642,7 +14099,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_horn_coral
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:tube_coral set value {\
     place_sound:"minecraft:block.wet_grass.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12659,7 +14115,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:tube_coral set 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:brain_coral set value {\
     place_sound:"minecraft:block.wet_grass.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12676,7 +14131,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:brain_coral set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:bubble_coral set value {\
     place_sound:"minecraft:block.wet_grass.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12693,7 +14147,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bubble_coral se
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:fire_coral set value {\
     place_sound:"minecraft:block.wet_grass.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12710,7 +14163,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:fire_coral set 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:horn_coral set value {\
     place_sound:"minecraft:block.wet_grass.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12728,7 +14180,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:horn_coral set 
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_tube_coral set value {\
     place_sound:"minecraft:block.stone.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12745,7 +14196,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_tube_coral
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_brain_coral set value {\
     place_sound:"minecraft:block.stone.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12762,7 +14212,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_brain_cora
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bubble_coral set value {\
     place_sound:"minecraft:block.stone.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12779,7 +14228,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bubble_cor
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_fire_coral set value {\
     place_sound:"minecraft:block.stone.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12796,7 +14244,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_fire_coral
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_horn_coral set value {\
     place_sound:"minecraft:block.stone.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12814,7 +14261,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_horn_coral
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:tube_coral_fan set value {\
     place_sound:"minecraft:block.wet_grass.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12831,7 +14277,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:tube_coral_fan 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:brain_coral_fan set value {\
     place_sound:"minecraft:block.wet_grass.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12848,7 +14293,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:brain_coral_fan
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:bubble_coral_fan set value {\
     place_sound:"minecraft:block.wet_grass.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12865,7 +14309,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bubble_coral_fa
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:fire_coral_fan set value {\
     place_sound:"minecraft:block.wet_grass.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12882,7 +14325,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:fire_coral_fan 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:horn_coral_fan set value {\
     place_sound:"minecraft:block.wet_grass.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12900,7 +14342,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:horn_coral_fan 
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_tube_coral_fan set value {\
     place_sound:"minecraft:block.stone.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12917,7 +14358,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_tube_coral
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_brain_coral_fan set value {\
     place_sound:"minecraft:block.stone.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12934,7 +14374,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_brain_cora
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bubble_coral_fan set value {\
     place_sound:"minecraft:block.stone.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12951,7 +14390,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bubble_cor
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_fire_coral_fan set value {\
     place_sound:"minecraft:block.stone.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -12968,7 +14406,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_fire_coral
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_horn_coral_fan set value {\
     place_sound:"minecraft:block.stone.place",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -13007,34 +14444,54 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:carrot set valu
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:carrots",\
                 Properties:{\
                     age:"2"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.775f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
             block_state:{\
+                Name:"minecraft:carrots",\
                 Properties:{\
                     age:"4"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.775f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     4:[\
         {\
             block_state:{\
+                Name:"minecraft:carrots",\
                 Properties:{\
                     age:"7"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.775f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:potato set value {\
     place_sound:"minecraft:item.crop.plant",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
@@ -13054,27 +14511,48 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:potato set valu
     2:[\
         {\
             block_state:{\
+                Name:"minecraft:potatoes",\
                 Properties:{\
                     age:"2"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.775f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     3:[\
         {\
             block_state:{\
+                Name:"minecraft:potatoes",\
                 Properties:{\
                     age:"4"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.775f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ],\
     4:[\
         {\
             block_state:{\
+                Name:"minecraft:potatoes",\
                 Properties:{\
                     age:"7"\
                 }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.775f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -13082,7 +14560,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:potato set valu
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:wheat set value {\
     place_sound:"minecraft:item.crop.plant",\
-    display_count:2,\
     1:[\
         {\
             block_state:{\

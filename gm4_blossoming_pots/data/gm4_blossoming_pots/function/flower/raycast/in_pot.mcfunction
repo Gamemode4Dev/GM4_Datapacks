@@ -7,7 +7,7 @@
 execute unless block ~ ~ ~ minecraft:flower_pot run return fail
 
 # summon marker for checking
-summon minecraft:marker ~ ~ ~ {Tags:["gm4_blossoming_pots.temp.flower_pot","smithed.strict","smithed.entity"],CustomName:'{"text":"gm4_blossoming_pots.temp_marker"}'}
+summon minecraft:marker ~ ~ ~ {Tags:["gm4_blossoming_pots.temp.flower_pot","smithed.strict","smithed.entity"],CustomName:'{"text":"gm4_blossoming_pots.temp_marker"}',data:{id:null}}
 
 # if temp marker in physical hit box, return 1
 # dxdydz all 0 bc of MC-123441.

@@ -8,7 +8,8 @@
 scoreboard players set @s gm4_blossoming_pots.range 1200
 execute anchored eyes run function gm4_blossoming_pots:decorated/raycast/loop
 
-execute as @e[type=minecraft:marker,sort=nearest,tag=gm4_blossoming_pots.temp.decorated_pot] at @s align xyz positioned ~.5 ~.5 ~.5 run function gm4_blossoming_pots:decorated/as_marker
+execute as @e[type=minecraft:marker,sort=nearest,tag=gm4_blossoming_pots.temp.decorated_pot] at @s \
+    align xyz positioned ~.5 ~.5 ~.5 run function gm4_blossoming_pots:decorated/as_marker with block ~ ~ ~ item
 
 # Reset advancement
 advancement revoke @s only gm4_blossoming_pots:item_in_pot

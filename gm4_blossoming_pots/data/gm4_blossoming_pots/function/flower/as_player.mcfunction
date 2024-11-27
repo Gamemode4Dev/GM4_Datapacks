@@ -8,7 +8,8 @@
 scoreboard players set @s gm4_blossoming_pots.range 1200
 execute anchored eyes run function gm4_blossoming_pots:flower/raycast/loop
 
-execute as @e[type=minecraft:marker,sort=nearest,tag=gm4_blossoming_pots.temp.flower_pot] at @s align xyz positioned ~.5 ~.5 ~.5 run function gm4_blossoming_pots:flower/as_marker
+execute as @e[type=minecraft:marker,sort=nearest,tag=gm4_blossoming_pots.temp.flower_pot] at @s \
+    align xyz positioned ~.5 ~.5 ~.5 run function gm4_blossoming_pots:flower/as_marker with entity @s data
 
 # Reset advancement
 advancement revoke @s only gm4_blossoming_pots:interact_flower_pot

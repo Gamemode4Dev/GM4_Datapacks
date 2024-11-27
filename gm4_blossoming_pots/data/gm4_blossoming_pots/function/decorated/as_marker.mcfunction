@@ -1,28 +1,23 @@
-# Dispatch for operations concerning the decorated pots plants
+# Sets up loop for plant stage changes
 # @s = temp marker inside decorated pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
+# with block ~ ~ ~ item
 # run from decorated/as_player
 
-# summon the required amount of block displays, without data
-execute \
-    unless entity @e[type=minecraft:block_display,tag=gm4_blossoming_pots.display.decorated_pot,distance=..0.2] \
-    run function gm4_blossoming_pots:decorated/summon/initialize with block ~ ~ ~ item
+# early returns
+$execute unless data storage gm4_blossoming_pots:decorated_pots $(id).$(count) run return run kill @s
+$execute if data entity @n[type=minecraft:block_display,distance=..0.1,tag=gm4_blossoming_pots.display.decorated_pot] {FallDistance:$(count).0f} run return run kill @s
 
-# if new block displays summoned, catch it up to count
-execute if score @s gm4_blossoming_pots.summon_loop matches 0 \
-    run function gm4_blossoming_pots:decorated/catch_up/initialize
+$execute store result score $array_len gm4_blossoming_pots.loop run data get storage gm4_blossoming_pots:decorated_pots $(id).$(count)
 
-# merge the data of the corresponding item amount variant with the block displays there
-execute \
-    if entity @e[type=minecraft:block_display,tag=gm4_blossoming_pots.display.decorated_pot,distance=..0.2] \
-    run function gm4_blossoming_pots:decorated/merge/initialize with block ~ ~ ~ item
+data modify storage gm4_blossoming_pots:decorated_pots temp.rotation set from entity @s data.rotation
+execute store result storage gm4_blossoming_pots:decorated_pots temp.score int 1 run scoreboard players set @s gm4_blossoming_pots.loop 0
+$data merge storage gm4_blossoming_pots:decorated_pots {temp:{id:"$(id)",count:$(count)}}
+$data modify storage gm4_blossoming_pots:decorated_pots temp.data set from storage gm4_blossoming_pots:decorated_pots $(id).$(count)[0]
 
-# if merge score 0, succesfully merged data, play sound?
-    # merge or summon?
-        # merge score 0 triggers every pot interact, not ideal
-        # summon score 0 triggers only on first summon, not ideal either, but better
-    # ideally, we would only play sound on successful CHANGE, and not on just right click
-execute if score @s gm4_blossoming_pots.summon_loop matches 0 run function gm4_blossoming_pots:decorated/sound/find with block ~ ~ ~ item
+function gm4_blossoming_pots:decorated/loop with storage gm4_blossoming_pots:decorated_pots temp
 
-# kill marker
+$execute if score @s gm4_blossoming_pots.sound matches 1 as @a[distance=..16] \
+    run function gm4_blossoming_pots:decorated/play_sound with storage gm4_blossoming_pots:decorated_pots $(id)
+
 kill @s

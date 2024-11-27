@@ -1,21 +1,57 @@
-# Dispatch for operations concerning the flower pots plants
+# Sets up loop for plant stage changes
 # @s = temp marker inside flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
+# with entity @s data
+    # which should have {UUID, id, rotation}
 # run from flower/as_player
 
+# early returns
+# if empty hand, empty the pot, give player the item
 execute \
-    unless data entity @s data.id \
+    if data entity @s {data:{id:null}} \
     run return run function gm4_blossoming_pots:flower/item/give_back with entity @s data
+# if storage doesn't have, doesnt matter
+$execute unless data storage gm4_blossoming_pots:flower_pots $(id) run return run kill @s
+# if flower pot is full, return
+execute if data entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] {data:{full:1}} run return run kill @s
+
+# if no perma marker yet, summon it
+$execute unless entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] \
+    run summon minecraft:marker ~ ~ ~ {Tags:["gm4_blossoming_pots.data.flower_pot","smithed.strict","smithed.entity"],data:{id:"$(id)",count:0,full:0},CustomName:'{"text":"gm4_blossoming_pots.flower_pot"}'}
+
+# decrement player mainhand by 1
+$execute as @p[nbt={UUID:$(UUID)},gamemode=!creative] run item modify entity @s weapon.mainhand gm4_blossoming_pots:count_decr
+# increment perma marker count by 1
+    # this is a nightmare of selectors
+        # could tag it at the start of the function to have this be just checking that one tag?
+execute store result score @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] gm4_blossoming_pots.loop \
+    run data get entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] data.count 1
+scoreboard players add @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] gm4_blossoming_pots.loop 1
+execute store result entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] data.count int 1 \
+    run scoreboard players get @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] gm4_blossoming_pots.loop
+# set full if full
+function gm4_blossoming_pots:flower/set_full with entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] data
+# setting temp
+$data merge storage gm4_blossoming_pots:flower_pots {temp:{id:"$(id)",rotation:$(rotation)}}
+execute store result storage gm4_blossoming_pots:flower_pots temp.score int 1 run scoreboard players set @s gm4_blossoming_pots.loop 0
+data modify storage gm4_blossoming_pots:flower_pots temp.count set from entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] data.count
+function gm4_blossoming_pots:flower/set_temp_data with storage gm4_blossoming_pots:flower_pots temp
+function gm4_blossoming_pots:flower/store_array_len with storage gm4_blossoming_pots:flower_pots temp
+
+function gm4_blossoming_pots:flower/loop with storage gm4_blossoming_pots:flower_pots temp
+
+$execute if score @s gm4_blossoming_pots.sound matches 1 as @a[distance=..16] \
+    run function gm4_blossoming_pots:flower/play_sound with storage gm4_blossoming_pots:flower_pots $(id)
 
 # summon the required amount of block displays, without data
     # summon is also responsible summoning perma flower pot marker
-execute \
+#execute \
     unless entity @e[type=minecraft:block_display,tag=gm4_blossoming_pots.display.flower_pot,distance=..0.2] \
     run function gm4_blossoming_pots:flower/summon/initialize with entity @s data
 
 # merge the data of the corresponding item amount variant with the block displays there
     # merge is responsible for decrementing player item count, incrementing perma pot marker item count
-execute \
+#execute \
     if entity @e[type=minecraft:block_display,tag=gm4_blossoming_pots.display.flower_pot,distance=..0.2] \
     run function gm4_blossoming_pots:flower/merge/initialize with entity @s data
 
@@ -24,7 +60,7 @@ execute \
         # merge score 0 triggers every pot interact, not ideal
         # summon score 0 triggers only on first summon, not ideal either, but better
     # ideally, we would only play sound on successful CHANGE, and not on just right click
-execute if score @s gm4_blossoming_pots.merge_loop matches 0 run function gm4_blossoming_pots:flower/sound/find with entity @s data
+#execute if score @s gm4_blossoming_pots.merge_loop matches 0 run function gm4_blossoming_pots:flower/sound/find with entity @s data
 
 # kill marker
 kill @s
