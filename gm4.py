@@ -150,7 +150,7 @@ def module_updates(ctx: Context):
 	init.lines.append('# Module update list')
 	init.lines.append('kill @e[tag=gm4_update_message]')
 	for m in updates:
-		init.lines.append(f'execute if score {m["id"].removeprefix("gm4_")} gm4_modules matches ..{m["patch"] - 1} run summon minecraft:area_effect_cloud ~ ~ ~ {{CustomName:"\"{m["name"]}\"",Tags:["gm4_update_message"],Duration:2000}}')
+		init.lines.append(f'execute if score {m["id"].removeprefix("gm4_")} gm4_modules matches ..{m["patch"] - 1} run summon minecraft:area_effect_cloud ~ ~ ~ {{CustomName:"\\"{m["name"]}\\"",Tags:["gm4_update_message"],Duration:2000}}')
 
 
 def populate_credits(ctx: Context):
