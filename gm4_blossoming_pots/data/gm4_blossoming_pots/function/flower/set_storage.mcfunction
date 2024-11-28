@@ -1329,9 +1329,6 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:small_dripleaf set
     ]\
 }
 
-# Chorus Plant
-    # what item?
-    # Chorus Flower? Probably
 data modify storage gm4_blossoming_pots:flower_pots minecraft:chorus_flower set value {\
     place_sound:"minecraft:block.chorus_flower.grow",\
     maximum:2,\

@@ -5589,9 +5589,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:small_dripleaf 
     ]\
 }
 
-# Chorus Plant
-    # what item?
-    # Chorus Flower? Probably
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower set value {\
     place_sound:"minecraft:block.chorus_flower.grow",\
     1:[\
@@ -14424,7 +14421,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_horn_coral
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:carrot set value {\
     place_sound:"minecraft:item.crop.plant",\
-    display_count:1,\
     1:[\
         {\
             block_state:{\
