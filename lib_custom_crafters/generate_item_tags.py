@@ -7,12 +7,13 @@ def beet_default(ctx: Context):
   # Intentionally left at 1.21.3, not supporting new crafting recipes
   vanilla.minecraft_version = '1.21.3'
   item_tags = vanilla.data.item_tags
-  item_tags = [id.removeprefix("minecraft:") for id in item_tags]
+  item_tags = [
+    id.removeprefix("minecraft:")
+    for id in item_tags
+    if id not in ("minecraft:flowers", "minecraft:tall_flowers", "minecraft:trim_templates")
+  ]
 
   for id in item_tags:
-    # Item tags removed in 1.21.4
-    if id in ("flowers", "tall_flowers", "trim_templates"):
-      continue
     ctx.data[f"gm4_custom_crafters:vanilla_item_tags/{id}"] = Predicate({
       "condition": "minecraft:entity_properties",
       "entity": "this",
