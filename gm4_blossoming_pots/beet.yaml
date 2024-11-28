@@ -4,6 +4,11 @@ version: 3.0.X
   # should I start the version number over for gm4 release?
 data_pack:
   load: .
+  overlays:
+    - formats:
+        min_inclusive: 0
+        max_inclusive: 48
+      directory: overlay_48
 
 resource_pack:
   load: .
