@@ -20,5 +20,5 @@ execute store result storage gm4_blossoming_pots:flower_pots temp.score int 1 ru
 
 # sets temp.data to next score's data
 function gm4_blossoming_pots:flower/set_temp_data with storage gm4_blossoming_pots:flower_pots temp
-# again if needed
+# run again if needed
 execute unless score @s gm4_blossoming_pots.loop >= $array_len gm4_blossoming_pots.loop run function gm4_blossoming_pots:flower/loop with storage gm4_blossoming_pots:flower_pots temp

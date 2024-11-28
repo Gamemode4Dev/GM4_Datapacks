@@ -5,13 +5,12 @@
 data modify storage gm4_blossoming_pots:flower_pots version_history append value 1
 
 # Data storage layout
-    # gm4_blossoming_pots:flower_pots <item_namespace>:<item_name>
-        # place_sound: sound file to play when planting the plant for the first time, include namespace
-        # display_count: <int number, representing the number of display entities used for this item>
-        # 1:[]  array of starting data for the all the block displays, to be merged after summoning a blank block display
-        # 2:[]  array of data transformations to be made to all the block displays when a second item gets added
-            # IF one of the block displays does not change, simply put a blank object {} in its place
-        # 3:[].... same as 2:[], the numbers are the item counts in the pot
+    # gm4_blossoming_pots:decorated_pots <item_namespace>:<item_name>
+        # place_sound: sound file to play when succesfully adding plant or changing stage, include namespace
+        # maximum:  the number of stages / arrays. The maximum number of items the pot can take
+        # 1:[]  array of starting data for the all the block displays used in this stage, all data
+        # 2:[]  array of starting data for the all the block displays used in this stage, all data
+        # ......
 
 data modify storage gm4_blossoming_pots:flower_pots minecraft:pointed_dripstone set value {\
     place_sound:"minecraft:block.pointed_dripstone.place",\
