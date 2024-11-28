@@ -49,7 +49,7 @@ execute if score $found_rotation gm4_rl_data matches 0 store success score $foun
 execute if score $found_rotation gm4_rl_data matches 0 store success score $found_rotation gm4_rl_data if block ~ ~ ~ #gm4_relocators:relocatable_block[orientation=west_up] run data modify storage gm4_relocators:temp gm4_relocation.block_state.facing set value 11
 
 execute if block ~ ~ ~ #gm4_relocators:relocatable_block[waterlogged=true] run data modify storage gm4_relocators:temp gm4_relocation.block_state.waterlogged set value 1
-execute if data block ~ ~ ~ {BurnTime:0s} run data modify storage gm4_relocators:temp gm4_relocation.block_state.lit set value 0
+execute if data block ~ ~ ~ {lit_time_remaining:0s} run data modify storage gm4_relocators:temp gm4_relocation.block_state.lit set value 0
 
 # overwrite anything from custom block via entity
 data modify storage gm4_relocators:temp gm4_relocation merge from storage gm4_relocators:temp merge_data
