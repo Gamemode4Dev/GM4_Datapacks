@@ -1,7 +1,11 @@
 {
   "values": [
     "#minecraft:small_flowers",
-    "#minecraft:tall_flowers",
+    "minecraft:sunflower",
+    "minecraft:lilac",
+    "minecraft:peony",
+    "minecraft:rose_bush",
+    "minecraft:pitcher_plant",
     "minecraft:azalea",
     "minecraft:flowering_azalea",
     "minecraft:big_dripleaf",
