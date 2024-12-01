@@ -39,6 +39,7 @@ class DoorSound():
 
 def beet_default(ctx: Context):
     vanilla = ctx.inject(Vanilla)
+    vanilla.minecraft_version = '1.21.3'
     wood_types = [s.removeprefix("minecraft:").removesuffix(
         "_door") for s in vanilla.data.block_tags["minecraft:wooden_doors"].data["values"]]
     # make list of wood types accessible for bolt

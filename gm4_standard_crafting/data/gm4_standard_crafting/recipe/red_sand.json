@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "red_sand",
+  "ingredients": [
+    [
+      "minecraft:red_sandstone",
+      "minecraft:chiseled_red_sandstone",
+      "minecraft:cut_red_sandstone",
+      "minecraft:smooth_red_sandstone"
+    ]
+  ],
+  "result": {
+    "id": "minecraft:red_sand",
+    "count": 4
+  }
+}

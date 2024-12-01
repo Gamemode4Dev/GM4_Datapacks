@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " E ",
+    "GgG",
+    "CCC"
+  ],
+  "key": {
+    "E": "minecraft:enchanting_table",
+    "G": "minecraft:gold_ingot",
+    "g": "minecraft:grindstone",
+    "C": "minecraft:cobblestone"
+  },
+  "result": {
+    "id": "minecraft:player_head",
+    "components": {
+      "minecraft:custom_model_data": "item/enchantment_extractor",
+      "minecraft:profile": "$enchantment_extractor",
+      "minecraft:custom_data": "{gm4_machines:{id:'enchantment_extractor'}}",
+      "minecraft:custom_name": "{\"translate\":\"block.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\",\"color\":\"white\",\"italic\":false}"
+    }
+  }
+}
