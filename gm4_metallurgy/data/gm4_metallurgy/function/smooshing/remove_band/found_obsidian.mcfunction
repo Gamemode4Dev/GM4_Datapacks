@@ -1,3 +1,6 @@
+# @s = new band item
+# run from smooshing/remove_band/check
+
 # obtain metal type
 execute store success score has_modern_nbt_version gm4_ml_data run data modify entity @s Item.components."minecraft:custom_data".gm4_metallurgy.metal.type set from entity @e[type=item,tag=gm4_ml_source,dx=0,limit=1] Item.components."minecraft:custom_data".gm4_metallurgy.metal.type
 # obtain metal type from legacy items
