@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "FF",
+    "FF"
+  ],
+  "key": {
+    "F": "minecraft:flint"
+  },
+  "result": {
+    "id": "minecraft:gravel",
+    "count": 4
+  }
+}
