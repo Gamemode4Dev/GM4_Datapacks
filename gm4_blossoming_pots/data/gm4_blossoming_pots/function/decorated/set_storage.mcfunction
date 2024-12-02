@@ -7,12 +7,14 @@ data modify storage gm4_blossoming_pots:decorated_pots version_history append va
 # Data storage layout
     # gm4_blossoming_pots:decorated_pots <item_namespace>:<item_name>
         # place_sound: sound file to play when succesfully adding plant or changing stage, include namespace
+        # maximum:  the number of stages / arrays. The maximum number of items the pot can take
         # 1:[]  array of starting data for the all the block displays used in this stage, all data
         # 2:[]  array of starting data for the all the block displays used in this stage, all data
         # ......
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripstone set value {\
     place_sound:"minecraft:block.pointed_dripstone.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -158,6 +160,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:small_amethyst_bud set value {\
     place_sound:"minecraft:block.small_amethyst_bud.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -174,6 +177,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:small_amethyst_
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:medium_amethyst_bud set value {\
     place_sound:"minecraft:block.medium_amethyst_bud.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -190,6 +194,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:medium_amethyst
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:large_amethyst_bud set value {\
     place_sound:"minecraft:block.large_amethyst_bud.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -206,6 +211,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:large_amethyst_
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:amethyst_cluster set value {\
     place_sound:"minecraft:block.amethyst_cluster.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -223,10 +229,11 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:amethyst_cluste
 
 # For all leaves, experiment with different options
     # try un-rotated middle?
-    # inverted displays
+    # inverted displays - be wary of z fighting
     # empty
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:oak_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -335,6 +342,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:oak_leaves set 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:spruce_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -443,6 +451,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:spruce_leaves s
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:birch_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -551,6 +560,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:birch_leaves se
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:jungle_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -659,6 +669,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:jungle_leaves s
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:acacia_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -767,6 +778,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:acacia_leaves s
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -875,6 +887,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_leaves
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -983,6 +996,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_leaves
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_leaves set value {\
     place_sound:"minecraft:block.cherry_leaves.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -1091,6 +1105,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_leaves s
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea_leaves set value {\
     place_sound:"minecraft:block.azalea_leaves.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -1199,6 +1214,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea_leaves s
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azalea_leaves set value {\
     place_sound:"minecraft:block.azalea_leaves.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -1309,6 +1325,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azale
 # Sapling second stages with vanilla tweaks has a lighting bug at certain angles, so the second stage rotates it back to 0
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:oak_sapling set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -1342,6 +1359,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:oak_sapling set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:spruce_sapling set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -1375,6 +1393,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:spruce_sapling 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:birch_sapling set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -1408,6 +1427,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:birch_sapling s
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:jungle_sapling set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -1441,6 +1461,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:jungle_sapling 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:acacia_sapling set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -1474,6 +1495,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:acacia_sapling 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_sapling set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -1509,6 +1531,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_saplin
     # lighting bug also affects the default mangrove propagule, so it gets rotated immediately to 0
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_propagule set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -1543,6 +1566,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_propag
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_sapling set value {\
     place_sound:"minecraft:block.cherry_sapling.place",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -1577,6 +1601,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_sapling 
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea set value {\
     place_sound:"minecraft:block.azalea.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -1619,6 +1644,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea set valu
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azalea set value {\
     place_sound:"minecraft:block.flowering_azalea.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -1662,6 +1688,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azale
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:brown_mushroom set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1678,6 +1705,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:brown_mushroom 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:red_mushroom set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1694,6 +1722,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:red_mushroom se
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:crimson_fungus set value {\
     place_sound:"minecraft:block.fungus.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1710,6 +1739,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:crimson_fungus 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:warped_fungus set value {\
     place_sound:"minecraft:block.fungus.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1728,6 +1758,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:warped_fungus s
 # make slightly bigger, mess around with it. Try .8 scale
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:short_grass set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1744,6 +1775,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:short_grass set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:fern set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1760,6 +1792,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:fern set value 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bush set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1777,6 +1810,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bush set v
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dandelion set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1793,6 +1827,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dandelion set v
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:poppy set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1809,6 +1844,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:poppy set value
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:blue_orchid set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1825,6 +1861,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:blue_orchid set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:allium set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1841,6 +1878,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:allium set valu
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:azure_bluet set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1857,6 +1895,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:azure_bluet set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:red_tulip set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1873,6 +1912,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:red_tulip set v
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:orange_tulip set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1889,6 +1929,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:orange_tulip se
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:white_tulip set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1905,6 +1946,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:white_tulip set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:pink_tulip set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1921,6 +1963,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pink_tulip set 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:oxeye_daisy set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1937,6 +1980,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:oxeye_daisy set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:cornflower set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1953,6 +1997,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cornflower set 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:lily_of_the_valley set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1969,6 +2014,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:lily_of_the_val
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:torchflower set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -1985,6 +2031,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:torchflower set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:wither_rose set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -2002,6 +2049,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:wither_rose set
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:spore_blossom set value {\
     place_sound:"minecraft:block.spore_blossom.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -2019,6 +2067,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:spore_blossom s
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:bamboo set value {\
     place_sound:"minecraft:block.bamboo_sapling.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -2127,6 +2176,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bamboo set valu
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:sugar_cane set value {\
     place_sound:"minecraft:block.grass.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -2204,6 +2254,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sugar_cane set 
     # only the first stage, which makes me sad :(
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:cactus set value {\
     place_sound:"minecraft:block.wool.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -2221,6 +2272,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cactus set valu
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:crimson_roots set value {\
     place_sound:"minecraft:block.roots.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -2237,6 +2289,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:crimson_roots s
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:warped_roots set value {\
     place_sound:"minecraft:block.roots.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -2254,6 +2307,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:warped_roots se
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:weeping_vines set value {\
     place_sound:"minecraft:block.weeping_vines.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -2362,6 +2416,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:weeping_vines s
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:twisting_vines set value {\
     place_sound:"minecraft:block.weeping_vines.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -2439,6 +2494,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:twisting_vines 
 # try to make tall grass bigger, like short grass
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:tall_grass set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -2472,6 +2528,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:tall_grass set 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:large_fern set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -2507,6 +2564,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:large_fern set 
 # default sunflower rotation is sunflower facing east, player should be facing west
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:sunflower set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -2556,6 +2614,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sunflower set v
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:lilac set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -2605,6 +2664,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:lilac set value
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:rose_bush set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -2654,6 +2714,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:rose_bush set v
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:peony set value {\
     place_sound:"minecraft:item.bone_meal.use",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -2703,6 +2764,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:peony set value
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:pitcher_plant set value {\
     place_sound:"minecraft:item.crop.plant",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -2737,6 +2799,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pitcher_plant s
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:big_dripleaf set value {\
     place_sound:"minecraft:block.big_dripleaf.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -2788,6 +2851,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:big_dripleaf se
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:small_dripleaf set value {\
     place_sound:"minecraft:block.small_dripleaf.place",\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -2841,6 +2905,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:small_dripleaf 
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower set value {\
     place_sound:"minecraft:block.chorus_flower.grow",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -3305,6 +3370,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower s
 # try to make bigger, same as short grass
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:hanging_roots set value {\
     place_sound:"minecraft:block.hanging_roots.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3322,6 +3388,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:hanging_roots s
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:wheat_seeds set value {\
     place_sound:"minecraft:item.crop.plant",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -3375,6 +3442,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:wheat_seeds set
 # Try to rotate, remove if scuffed
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:cocoa_beans set value {\
     place_sound:"minecraft:block.wood.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -3430,6 +3498,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cocoa_beans set
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:pumpkin_seeds set value {\
     place_sound:"minecraft:item.crop.plant",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -3481,6 +3550,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pumpkin_seeds s
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:melon_seeds set value {\
     place_sound:"minecraft:item.crop.plant",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -3532,6 +3602,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:melon_seeds set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:beetroot_seeds set value {\
     place_sound:"minecraft:item.crop.plant",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -3585,6 +3656,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:beetroot_seeds 
 # Experiment with berries?
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:glow_berries set value {\
     place_sound:"minecraft:block.cave_vines.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -3679,6 +3751,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:glow_berries se
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:sweet_berries set value {\
     place_sound:"minecraft:block.sweet_berry_bush.place",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -3731,6 +3804,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sweet_berries s
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:nether_wart set value {\
     place_sound:"minecraft:item.nether_wart.plant",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -3783,6 +3857,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:nether_wart set
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:sea_pickle set value {\
     place_sound:"minecraft:block.slime_block.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3803,6 +3878,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sea_pickle set 
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:tube_coral set value {\
     place_sound:"minecraft:block.wet_grass.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3819,6 +3895,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:tube_coral set 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:brain_coral set value {\
     place_sound:"minecraft:block.wet_grass.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3835,6 +3912,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:brain_coral set
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:bubble_coral set value {\
     place_sound:"minecraft:block.wet_grass.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3851,6 +3929,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bubble_coral se
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:fire_coral set value {\
     place_sound:"minecraft:block.wet_grass.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3867,6 +3946,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:fire_coral set 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:horn_coral set value {\
     place_sound:"minecraft:block.wet_grass.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3884,6 +3964,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:horn_coral set 
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_tube_coral set value {\
     place_sound:"minecraft:block.stone.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3900,6 +3981,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_tube_coral
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_brain_coral set value {\
     place_sound:"minecraft:block.stone.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3916,6 +3998,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_brain_cora
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bubble_coral set value {\
     place_sound:"minecraft:block.stone.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3932,6 +4015,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bubble_cor
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_fire_coral set value {\
     place_sound:"minecraft:block.stone.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3948,6 +4032,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_fire_coral
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_horn_coral set value {\
     place_sound:"minecraft:block.stone.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3965,6 +4050,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_horn_coral
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:tube_coral_fan set value {\
     place_sound:"minecraft:block.wet_grass.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3981,6 +4067,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:tube_coral_fan 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:brain_coral_fan set value {\
     place_sound:"minecraft:block.wet_grass.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -3997,6 +4084,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:brain_coral_fan
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:bubble_coral_fan set value {\
     place_sound:"minecraft:block.wet_grass.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -4013,6 +4101,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bubble_coral_fa
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:fire_coral_fan set value {\
     place_sound:"minecraft:block.wet_grass.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -4029,6 +4118,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:fire_coral_fan 
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:horn_coral_fan set value {\
     place_sound:"minecraft:block.wet_grass.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -4046,6 +4136,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:horn_coral_fan 
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_tube_coral_fan set value {\
     place_sound:"minecraft:block.stone.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -4062,6 +4153,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_tube_coral
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_brain_coral_fan set value {\
     place_sound:"minecraft:block.stone.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -4078,6 +4170,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_brain_cora
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bubble_coral_fan set value {\
     place_sound:"minecraft:block.stone.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -4094,6 +4187,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_bubble_cor
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_fire_coral_fan set value {\
     place_sound:"minecraft:block.stone.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -4110,6 +4204,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_fire_coral
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_horn_coral_fan set value {\
     place_sound:"minecraft:block.stone.place",\
+    maximum:1,\
     1:[\
         {\
             block_state:{\
@@ -4128,6 +4223,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dead_horn_coral
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:carrot set value {\
     place_sound:"minecraft:item.crop.plant",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\
@@ -4179,6 +4275,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:carrot set valu
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:potato set value {\
     place_sound:"minecraft:item.crop.plant",\
+    maximum:3,\
     1:[\
         {\
             block_state:{\

@@ -1,23 +1,21 @@
-# Sets up loop for plant stage changes
+# Decides if loop_init should use maximum or count
 # @s = temp marker inside decorated pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with block ~ ~ ~ item
 # run from decorated/as_player
 
-# early returns
-$execute unless data storage gm4_blossoming_pots:decorated_pots $(id).$(count) run return run kill @s
-$execute if data entity @n[type=minecraft:block_display,distance=..0.1,tag=gm4_blossoming_pots.display.decorated_pot] {FallDistance:$(count).0f} run return run kill @s
+# early return
+$execute unless data storage gm4_blossoming_pots:decorated_pots $(id) run return run kill @s
 
-$execute store result score $array_len gm4_blossoming_pots.loop run data get storage gm4_blossoming_pots:decorated_pots $(id).$(count)
+$execute store result score @s gm4_blossoming_pots.loop run data get storage gm4_blossoming_pots:decorated_pots $(id).maximum
+# if over maximum use maximum as count
+$execute unless score @s gm4_blossoming_pots.loop matches $(count).. \
+    run data modify storage gm4_blossoming_pots:decorated_pots temp.count set from storage gm4_blossoming_pots:decorated_pots $(id).maximum
+# if not, just use count as is
+$execute if score @s gm4_blossoming_pots.loop matches $(count).. run data modify storage gm4_blossoming_pots:decorated_pots temp.count set value $(count)
 
-data modify storage gm4_blossoming_pots:decorated_pots temp.rotation set from entity @s data.rotation
-execute store result storage gm4_blossoming_pots:decorated_pots temp.score int 1 run scoreboard players set @s gm4_blossoming_pots.loop 0
-$data merge storage gm4_blossoming_pots:decorated_pots {temp:{id:"$(id)",count:$(count)}}
-$data modify storage gm4_blossoming_pots:decorated_pots temp.data set from storage gm4_blossoming_pots:decorated_pots $(id).$(count)[0]
+$data merge storage gm4_blossoming_pots:decorated_pots {temp:{id:"$(id)"}}
 
-function gm4_blossoming_pots:decorated/loop with storage gm4_blossoming_pots:decorated_pots temp
-
-$execute if score @s gm4_blossoming_pots.sound matches 1 as @a[distance=..16] \
-    run function gm4_blossoming_pots:decorated/play_sound with storage gm4_blossoming_pots:decorated_pots $(id)
+function gm4_blossoming_pots:decorated/loop_init with storage gm4_blossoming_pots:decorated_pots temp
 
 kill @s

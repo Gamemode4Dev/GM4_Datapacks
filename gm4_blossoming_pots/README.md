@@ -11,18 +11,17 @@ Decorated Pots and Flower Pots extended to allow all kinds of things to be place
   - All Leaves
   - Cactus
   - All Fungi
-  - All Dead / Alive Coral, Coral Fans & Coral Blocks!
+  - All Dead / Alive Coral & Coral Fans!
   - Nether Roots & Vines
   - Tall & Short Grass
   - Tall & Short Ferns
   - Dead Bush
   - All Lush Cave Plants
   - Sweet Berry Bush
-  - Kelp, Seagrass, Sea Pickle
-  - All Seeds
+  - Sea Pickle
+  - Most Seeds
   - Netherwart
   - Cocoa Beans
   - Chorus Flowers
-  - Wheat
   - All Amethyst Buds & Clusters
   - Dripstone
