@@ -19,12 +19,14 @@ execute if predicate {condition:"minecraft:all_of",terms:[{condition:"minecraft:
 tag @s add gm4_mu_self
 execute if entity @s[type=bogged,predicate=gm4_monsters_unbound:biome/toxic] if predicate {condition:"minecraft:random_chance",chance:0.15} summon spider run function gm4_monsters_unbound:mob/init/mob_type/skeleton/toxic
 tag @s remove gm4_mu_self
+# burning
+execute if predicate {condition:"minecraft:all_of",terms:[{condition:"minecraft:random_chance",chance:0.15},{condition:"minecraft:reference",name:"gm4_monsters_unbound:biome/burned"}]} run enchant @s flame 1
 # growth
 execute if entity @s[type=!bogged,predicate=gm4_monsters_unbound:biome/growth] run function gm4_monsters_unbound:mob/init/mob_type/skeleton/growth
-# soul sand valley
-execute if biome ~ ~ ~ soul_sand_valley run effect give @s fire_resistance infinite 0 true
 # dripstone caves
-execute if predicate {condition:"minecraft:all_of",terms:[{condition:"location_check",predicate:{biomes:"dripstone_caves"}},{condition:"random_chance",chance:0.6}]} run item replace entity @s weapon.mainhand with air
-
+execute if predicate {condition:"minecraft:all_of",terms:[{condition:"location_check",predicate:{biomes:"dripstone_caves"}},{condition:"random_chance",chance:0.6}]} run item replace entity @s weapon.mainhand with stone_pickaxe
 # underground
 execute if predicate gm4_survival_refightalized:mob/underground if predicate {condition:"minecraft:random_chance",chance:0.4} run function gm4_monsters_unbound:mob/init/mob_type/skeleton/underground
+
+# soul sand valley
+execute if biome ~ ~ ~ soul_sand_valley run effect give @s fire_resistance infinite 0 true

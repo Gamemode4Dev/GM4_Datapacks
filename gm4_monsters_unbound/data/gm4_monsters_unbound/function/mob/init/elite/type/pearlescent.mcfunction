@@ -12,7 +12,7 @@ attribute @s movement_speed modifier add gm4_monsters_unbound:elite_buff.pearles
 attribute @s[type=#gm4_survival_refightalized:skeleton_types] scale modifier add gm4_monsters_unbound:elite_buff.size 0.005025 add_multiplied_total
 attribute @s[type=!#gm4_survival_refightalized:skeleton_types] scale modifier add gm4_monsters_unbound:elite_buff.size 0.025641 add_multiplied_total
 
-item replace entity @s[type=#gm4_survival_refightalized:skeleton_types] weapon.mainhand with air
+item replace entity @s weapon.mainhand with air
 loot replace entity @s armor.head loot gm4_monsters_unbound:elite/pearlescent
 data modify entity @s ArmorDropChances[3] set value -327.670F
 

@@ -13,6 +13,11 @@ execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_monsters_unbound:biome/
 execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_monsters_unbound:biome/burned] store success score $mob_extras gm4_sr_data run summon enderman ~-.05 ~ ~.05 {Tags:["gm4_sr_extra_mob"]}
 # growth 
 execute if predicate gm4_monsters_unbound:biome/growth run function gm4_monsters_unbound:mob/init/mob_type/enderman/growth
+# underground
+execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_survival_refightalized:mob/underground] if predicate {condition:"minecraft:random_chance",chance:0.15} run function gm4_monsters_unbound:mob/init/mob_type/enderman/underground
+# dripstone caves
+execute if biome ~ ~ ~ dripstone_caves if block ~.875 ~ ~.875 #gm4:no_collision if block ~.875 ~ ~-.875 #gm4:no_collision if block ~-.875 ~ ~.875 #gm4:no_collision if block ~-.875 ~ ~-.875 #gm4:no_collision run function gm4_monsters_unbound:mob/init/mob_type/enderman/dripstone_caves
+
 # the end
 execute if dimension the_end run attribute @s attack_damage modifier add gm4_monsters_unbound:stat_change.the_end 0.2 add_multiplied_base
 execute if dimension the_end run attribute @s movement_speed modifier add gm4_monsters_unbound:stat_change.the_end 0.15 add_multiplied_base
@@ -20,6 +25,3 @@ execute if dimension the_end run attribute @s movement_speed modifier add gm4_mo
 execute if biome ~ ~ ~ nether_wastes if predicate {condition:"minecraft:random_chance",chance:0.95} run function gm4_monsters_unbound:mob/init/mob_type/enderman/nether_wastes
 # soul sand valley
 execute if biome ~ ~ ~ soul_sand_valley if predicate {condition:"minecraft:random_chance",chance:0.95} run function gm4_monsters_unbound:mob/init/mob_type/enderman/soul_sand_valley
-
-# underground
-execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_survival_refightalized:mob/underground] if predicate {condition:"minecraft:random_chance",chance:0.15} run function gm4_monsters_unbound:mob/init/mob_type/enderman/underground

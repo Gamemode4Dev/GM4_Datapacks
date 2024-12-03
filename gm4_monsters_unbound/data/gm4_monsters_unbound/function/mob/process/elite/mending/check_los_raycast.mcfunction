@@ -4,6 +4,8 @@
 # run from mob/process/elite/mending/process
 # run from here
 
+execute if score $target_healed gm4_mu_data matches 1.. run return 0
+
 tag @s remove gm4_mu_target
 
 scoreboard players add $raycast_travel_distance gm4_mu_data 3

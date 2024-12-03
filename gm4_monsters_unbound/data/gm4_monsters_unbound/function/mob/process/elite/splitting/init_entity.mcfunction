@@ -19,9 +19,10 @@ scoreboard players set @s gm4_sr_arrow.damage_change -14
 
 data modify entity @s Motion set from storage gm4_monsters_unbound:temp set.motion
 
-tag @s add gm4_mu_elite
+tag @s add gm4_mu_elite.split_entity
 tag @s add gm4_mu_split_entity
-function gm4_survival_refightalized:mob/init/calc_difficulty_base
+execute if dimension minecraft:overworld run function gm4_survival_refightalized:mob/init/calc_difficulty_overworld
+execute unless dimension minecraft:overworld run function gm4_survival_refightalized:mob/init/calc_difficulty_else
 
 item replace entity @s armor.head with spawner
 data modify entity @s ArmorDropChances[3] set value -327.670F

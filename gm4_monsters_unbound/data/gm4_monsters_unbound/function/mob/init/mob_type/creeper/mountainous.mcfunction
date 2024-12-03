@@ -10,3 +10,5 @@ attribute @s max_health modifier add gm4_monsters_unbound:stat_change.gargantuan
 data modify entity @s ExplosionRadius set value 4s
 
 team join gm4_mu_elite.gargantuan
+tag @s add gm4_mu_elite
+tag @s add gm4_mu_elite.gargantuan

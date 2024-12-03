@@ -79,23 +79,6 @@
       ],
       "functions": [
         {
-          "function": "minecraft:set_components",
-          "components": {
-            "minecraft:attribute_modifiers": {
-              "modifiers": [
-                {
-                  "type": "minecraft:max_health",
-                  "id": "gm4_monsters_unbound:modifier_flowering",
-                  "amount": -0.2,
-                  "operation": "add_multiplied_total",
-                  "slot": "head"
-                }
-              ],
-              "show_in_tooltip": false
-            }
-          }
-        },
-        {
           "function": "minecraft:set_custom_data",
           "tag": "{gm4_mu_spore:{generation:0}}"
         },

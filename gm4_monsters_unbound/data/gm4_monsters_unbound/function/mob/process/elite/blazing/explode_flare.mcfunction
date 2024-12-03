@@ -6,7 +6,7 @@
 particle flame ~ ~ ~ 0.01 0.01 0.01 0.1 32
 particle flame ~ ~ ~ 0.075 0.075 0.075 0.025 12
 
-playsound minecraft:entity.explode hostile @a ~ ~ ~ 1 1.4
+playsound entity.generic.explode hostile @a ~ ~ ~ 1 1.4
 playsound item.firecharge.use hostile @a ~ ~ ~ 1 0.7
 
 # hit players
