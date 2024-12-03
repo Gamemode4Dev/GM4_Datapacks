@@ -14,5 +14,5 @@ attribute @s attack_damage modifier add gm4_survival_refightalized:stat_change.b
 
 # max stat buffs
 scoreboard players set $mob_health gm4_sr_data 12
-scoreboard players set $mob_damage gm4_sr_data 25
+scoreboard players set $mob_damage gm4_sr_data 35
 scoreboard players set $mob_speed gm4_sr_data 0

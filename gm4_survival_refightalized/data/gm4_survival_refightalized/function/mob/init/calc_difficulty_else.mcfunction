@@ -12,8 +12,8 @@ execute if score $worlddiff gm4_sr_data matches 3 run scoreboard players set $di
 execute if score $worlddiff gm4_sr_data matches 2 run scoreboard players set $difficulty_base gm4_sr_data 25
 execute unless score $worlddiff gm4_sr_data matches 2..3 run scoreboard players set $difficulty_base gm4_sr_data 10
 
-# add at random 0-80
-execute store result score $random_add gm4_sr_data run random value 0..80
+# add at random 20-80
+execute store result score $random_add gm4_sr_data run random value 20..80
 scoreboard players operation $difficulty_base gm4_sr_data += $random_add gm4_sr_data
 
 # the rest of this function will also run for any additional spawns

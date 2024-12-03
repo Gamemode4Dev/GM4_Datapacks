@@ -26,7 +26,7 @@ execute positioned over motion_blocking_no_leaves summon marker run function gm4
 execute store result score $mob_depth gm4_sr_data run data get entity @s Pos[1]
 scoreboard players operation $mob_depth gm4_sr_data -= $world_surface gm4_sr_data
 scoreboard players remove $mob_depth gm4_sr_data 16
-scoreboard players operation $mob_depth gm4_sr_data > #-128 gm4_sr_data
+scoreboard players operation $mob_depth gm4_sr_data > #-128 gm4_sr_data 
 scoreboard players operation $mob_depth gm4_sr_data < #0 gm4_sr_data
 
 # underground quadratic increase +0-80 based on mob depth

@@ -4,7 +4,7 @@
 # run from mob/init/mob_type
 
 # Stat Block (normal/hard diff)
-# health: 22 - 32
+# health: 22 - 36
 # damage: 6.5 - 8.5 (armed), 0.5 - 2.5 (unarmed)
 # speed: 95 - 120%
 
@@ -14,7 +14,7 @@ attribute @s attack_damage modifier add gm4_survival_refightalized:stat_change.b
 attribute @s movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.05 add_multiplied_base
 
 # max stat buffs
-scoreboard players set $mob_health gm4_sr_data 10
+scoreboard players set $mob_health gm4_sr_data 14
 scoreboard players set $mob_damage gm4_sr_data 20
 scoreboard players set $mob_speed gm4_sr_data 25
 # max damage mob is allowed to deal in one hit (to deal with weapons)
