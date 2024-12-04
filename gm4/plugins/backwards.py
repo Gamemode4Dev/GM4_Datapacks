@@ -50,7 +50,6 @@ def rewrite_custom_model_data(id: str, resource: NamespaceFile):
   text = re.sub(r"\{\s*[\"']?floats[\"']?\s*:\s*\[\s*(\d+)[Ff]?\s*\]\s*\}", r"\1", text)
   if text == resource.text:
     return None
-  print(f"Fixed custom model data in {type(resource).snake_name} {id}")
   overlay = resource.copy()
   overlay.text = text
   return overlay
