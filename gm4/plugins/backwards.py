@@ -1,7 +1,7 @@
 import re
 import logging
 from typing import Any
-from beet import Context, TextFileBase, Recipe
+from beet import Context, TextFileBase, Recipe, Function
 
 logger = logging.getLogger("gm4.backwards")
 
@@ -9,8 +9,38 @@ logger = logging.getLogger("gm4.backwards")
 def beet_default(ctx: Context):
   yield
 
+  # backporting to 1.21.3 (57)
+  rewrite_furnace_nbt(ctx)
+
+  # backporting to 1.21.1 (48)
   rewrite_attributes(ctx)
   rewrite_recipes(ctx)
+
+
+FURNACE_RENAMES = {
+  "cooking_time_spent": "CookTime",
+  "cooking_total_time": "CookTimeTotal",
+  "lit_time_remaining": "BurnTime",
+  "lit_total_time": None,
+}
+
+def rewrite_furnace_nbt(ctx: Context):
+  for id, resource in ctx.data.all():
+    if isinstance(resource, Function):
+      resource.source_stop
+      overlay_text = resource.text
+      for src_field, overlay_field in FURNACE_RENAMES.items():
+        if overlay_field is None:
+          if re.match("\\b" + src_field + "\\b", overlay_text):
+            logger.error(f"Cannot backport furnace field {src_field} in function {id}")
+        else:
+          overlay_text = re.sub("\\b" + src_field + "\\b", overlay_field, overlay_text)
+      if overlay_text != resource.text:
+        overlay_resource = resource.copy()
+        overlay_resource.text = overlay_text
+        overlay = ctx.data.overlays["overlay_57"]
+        overlay.supported_formats = { "min_inclusive": 57, "max_inclusive": 57 }
+        overlay[id] = overlay_resource
 
 
 ATTRIBUTES_RENAMES = {
