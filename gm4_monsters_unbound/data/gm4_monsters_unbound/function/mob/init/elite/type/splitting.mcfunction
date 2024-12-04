@@ -3,6 +3,7 @@
 # at @s
 # run from mob/init/elite/pick
 
+tag @s add gm4_mu_elite.process
 tag @s add gm4_mu_elite.splitting
 
 attribute @s max_health modifier add gm4_monsters_unbound:elite_buff.vorpal 2.5 add_multiplied_total

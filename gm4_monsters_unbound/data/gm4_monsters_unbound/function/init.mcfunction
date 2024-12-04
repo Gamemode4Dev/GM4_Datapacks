@@ -10,15 +10,6 @@ scoreboard objectives add gm4_mu_frozen_time dummy
 scoreboard objectives add gm4_mu_feared_time dummy
 scoreboard objectives add gm4_mu_keep_tick dummy
 
-scoreboard objectives add gm4_mu_boss dummy
-scoreboard objectives add gm4_mu_boss.id dummy
-scoreboard objectives add gm4_mu_boss.tick_delay dummy
-scoreboard objectives add gm4_mu_boss.attack_id dummy
-scoreboard objectives add gm4_mu_boss.attack_progress dummy
-scoreboard objectives add gm4_mu_boss.health dummy
-scoreboard objectives add gm4_mu_boss.phase dummy
-scoreboard objectives add gm4_mu_boss.last_attack dummy
-scoreboard objectives add gm4_mu_boss.secondary_id dummy
 
 # configs
 execute unless score $spawn_phantoms gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $spawn_phantoms gm4_sr_config 1

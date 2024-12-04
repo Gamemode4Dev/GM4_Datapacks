@@ -20,9 +20,9 @@ scoreboard players set $mob_speed gm4_sr_data 30
 scoreboard players set @s gm4_sr_mob.damage_cap 70
 tag @s add gm4_sr_check_damage_cap
 
-# arrow damage
-execute store result score @s gm4_sr_arrow.damage_change run random value -4..4
-scoreboard players set @s gm4_sr_arrow.fire_delay 3
+# arrow damage - only set if it was not preset at spawning
+execute unless score @s gm4_sr_arrow.damage_change matches -2147483648..2147483647 store result score @s gm4_sr_arrow.damage_change run random value -4..4
+execute unless score @s gm4_sr_arrow.fire_delay matches -2147483648..2147483647 store result score @s gm4_sr_arrow.damage_change run random value -4..4
 
 # set armor
 execute store result score $armor_chance gm4_sr_data run random value 0..15

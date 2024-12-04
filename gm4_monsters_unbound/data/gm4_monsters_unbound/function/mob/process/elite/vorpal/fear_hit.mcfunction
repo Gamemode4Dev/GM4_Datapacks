@@ -5,5 +5,5 @@
 
 scoreboard players set $player_hit gm4_mu_data 1
 
-scoreboard players set $fear_seconds gm4_mu_data 5
+execute store result score $fear_seconds gm4_mu_data run random value 10..16
 function gm4_monsters_unbound:effect/fear/apply

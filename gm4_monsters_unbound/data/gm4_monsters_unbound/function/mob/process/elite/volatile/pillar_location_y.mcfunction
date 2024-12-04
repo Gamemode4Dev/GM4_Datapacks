@@ -4,7 +4,7 @@
 # run from mob/process/elite/volatile/pillar_location
 # run from here
 
-execute if block ~ ~ ~ #gm4:no_collision unless block ~ ~-1 ~ #gm4:no_collision run return run tp @s ~ ~ ~
+execute if block ~ ~ ~ #gm4:no_collision unless block ~ ~-1 ~ #gm4:no_collision align y run return run tp @s ~ ~ ~
 
 scoreboard players remove $move_y_limit gm4_mu_data 1
 execute if score $move_y_limit gm4_mu_data matches 0 run return 0

@@ -12,6 +12,7 @@ execute if entity @s[type=#gm4_survival_refightalized:skeleton_types] run return
 summon breeze_wind_charge ~ ~ ~ {Motion:[0.0,-5.0,0.0]}
 attribute @s movement_speed modifier remove gm4_monsters_unbound:elite_buff.speed.charging
 attribute @s movement_speed modifier add gm4_monsters_unbound:elite_buff.speed.charged 1.5 add_multiplied_total
-attribute @s attack_damage modifier add gm4_monsters_unbound:elite_buff.speed.charged 0.25 add_multiplied_total
+attribute @s attack_damage modifier add gm4_monsters_unbound:elite_buff.speed.charged 0.75 add_multiplied_total
+attribute @s attack_knockback modifier add gm4_monsters_unbound:elite_buff.speed.charged 2 add_value
 
 tag @s add gm4_mu_charging_attack

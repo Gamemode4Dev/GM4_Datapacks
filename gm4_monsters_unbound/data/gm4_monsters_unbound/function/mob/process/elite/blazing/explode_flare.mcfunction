@@ -4,7 +4,7 @@
 # run from mob/process/elite/blazing/process_flare
 
 particle flame ~ ~ ~ 0.01 0.01 0.01 0.1 32
-particle flame ~ ~ ~ 0.075 0.075 0.075 0.025 12
+particle explosion ~ ~ ~ 0 0 0 40 0
 
 playsound entity.generic.explode hostile @a ~ ~ ~ 1 1.4
 playsound item.firecharge.use hostile @a ~ ~ ~ 1 0.7

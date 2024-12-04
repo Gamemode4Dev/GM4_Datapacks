@@ -13,8 +13,8 @@ attribute @s attack_knockback modifier add gm4_monsters_unbound:elite_buff.giant
 attribute @s water_movement_efficiency modifier add gm4_monsters_unbound:elite_buff.giant 0.85 add_value
 attribute @s movement_speed modifier add gm4_monsters_unbound:elite_buff.giant -0.35 add_multiplied_total
 
-attribute @s[type=#gm4_survival_refightalized:skeleton_types] scale modifier add gm4_monsters_unbound:elite_buff.giant_size 1.507537 add_multiplied_total
-attribute @s[type=!#gm4_survival_refightalized:skeleton_types] scale modifier add gm4_monsters_unbound:elite_buff.giant_size 1.538461 add_multiplied_total
+attribute @s[type=#gm4_survival_refightalized:skeleton_types] scale modifier add gm4_monsters_unbound:elite_buff.giant_size 0.507537 add_multiplied_total
+attribute @s[type=!#gm4_survival_refightalized:skeleton_types] scale modifier add gm4_monsters_unbound:elite_buff.giant_size 0.538461 add_multiplied_total
 
 enchant @s[type=#gm4_survival_refightalized:skeleton_types] punch 2
 enchant @s[type=#gm4_survival_refightalized:skeleton_types] power 1

@@ -3,16 +3,18 @@
 # at @s
 # run from mob/process/elite/on_death/run
 
+data modify storage gm4_monsters_unbound:temp CustomName set from entity @s Item.components."minecraft:custom_name"
 
-data modify storage gm4_monsters_unbound:temp set.motion set value [0.23,0.33,0.22]
+# only 2-3 of the spawned skeletons will have bows, the rest will be melee with wooden swords
+scoreboard players set $has_bow gm4_mu_data 1
 execute summon skeleton run function gm4_monsters_unbound:mob/process/elite/splitting/init_entity
-data modify storage gm4_monsters_unbound:temp set.motion set value [-0.12,0.21,0.21]
 execute summon skeleton run function gm4_monsters_unbound:mob/process/elite/splitting/init_entity
-data modify storage gm4_monsters_unbound:temp set.motion set value [0.17,0.46,-0.12]
+execute store result score $has_bow gm4_mu_data run random value 0..1
 execute summon skeleton run function gm4_monsters_unbound:mob/process/elite/splitting/init_entity
-data modify storage gm4_monsters_unbound:temp set.motion set value [-0.17,0.19,-0.09]
+scoreboard players set $has_bow gm4_mu_data 0
 execute summon skeleton run function gm4_monsters_unbound:mob/process/elite/splitting/init_entity
-data modify storage gm4_monsters_unbound:temp set.motion set value [-0.21,0.61,0.12]
 execute summon skeleton run function gm4_monsters_unbound:mob/process/elite/splitting/init_entity
-data modify storage gm4_monsters_unbound:temp set.motion set value [0.02,0.58,0.28]
 execute summon skeleton run function gm4_monsters_unbound:mob/process/elite/splitting/init_entity
+
+data remove storage gm4_monsters_unbound:temp CustomName
+

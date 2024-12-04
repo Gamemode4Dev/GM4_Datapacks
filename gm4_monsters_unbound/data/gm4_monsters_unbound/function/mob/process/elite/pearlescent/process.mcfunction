@@ -9,7 +9,6 @@ execute if score @s gm4_mu_timer matches 1.. run scoreboard players set $attack 
 execute unless score $attack gm4_mu_data matches 1 on target if entity @s[type=player] if predicate {condition:"minecraft:random_chance",chance:0.33} run scoreboard players set $attack gm4_mu_data 1
 execute if score $attack gm4_mu_data matches 0 run return 0
 
-
 scoreboard players add @s gm4_mu_timer 1
 scoreboard players set @s[scores={gm4_mu_timer=300..}] gm4_mu_timer 0
 

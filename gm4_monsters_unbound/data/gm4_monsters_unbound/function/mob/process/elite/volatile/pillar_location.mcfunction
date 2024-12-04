@@ -4,7 +4,10 @@
 # run from mob/process/elite/volatile/process
 
 tag @s add gm4_mu_elite.volatile_pillar
-execute store result score @s gm4_mu_timer run random value 0..8
+execute store result score @s gm4_mu_timer run random value 0..14
+execute store result score @s gm4_mu_data run random value 2..5
+scoreboard players operation @s gm4_mu_timer -= @s gm4_mu_data
+scoreboard players operation @s gm4_mu_timer -= @s gm4_mu_data
 
 execute store result score $randomX gm4_mu_data run random value 0..12
 execute store result score $randomZ gm4_mu_data run random value 0..12
