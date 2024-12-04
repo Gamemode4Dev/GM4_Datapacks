@@ -12,6 +12,7 @@ def beet_default(ctx: Context):
 
   # backporting to 1.21.3 (57)
   backport(ctx.data, 57, rewrite_furnace_nbt)
+  backport(ctx.data, 57, rewrite_custom_model_data)
 
   # backporting to 1.21.1 (48)
   backport(ctx.data, 48, rewrite_attributes)
@@ -37,6 +38,19 @@ def rewrite_furnace_nbt(id: str, resource: NamespaceFile):
       text = re.sub("\\b" + src_field + "\\b", overlay_field, text)
   if text == resource.text:
     return None
+  overlay = resource.copy()
+  overlay.text = text
+  return overlay
+
+
+def rewrite_custom_model_data(id: str, resource: NamespaceFile):
+  if not isinstance(resource, TextFileBase):
+    return None
+  text = resource.text
+  text = re.sub(r"\{\s*[\"']?floats[\"']?\s*:\s*\[\s*(\d+)[Ff]?\s*\]\s*\}", r"\1", text)
+  if text == resource.text:
+    return None
+  print(f"Fixed custom model data in {type(resource).snake_name} {id}")
   overlay = resource.copy()
   overlay.text = text
   return overlay
