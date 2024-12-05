@@ -18,4 +18,3 @@ execute as @e[type=#gm4_survival_refightalized:can_fire_arrows,scores={gm4_sr_ar
 
 # schedule player submain 8 ticks from now
 schedule function gm4_survival_refightalized:player_submain 8t
-

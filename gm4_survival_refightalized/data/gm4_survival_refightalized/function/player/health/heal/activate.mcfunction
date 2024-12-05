@@ -4,7 +4,7 @@
 # run from any armor/active/heal/heal_calc
 
 # calculate health
-function gm4_survival_refightalized:player/health/heal/activate
+function gm4_survival_refightalized:player/health/calculate_hp
 
 # calculate max health to get player to new health
 # we can use stat.current_health as that already has the restoration added to it
