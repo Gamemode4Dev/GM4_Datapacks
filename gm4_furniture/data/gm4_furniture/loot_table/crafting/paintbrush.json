@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "gm4:air"
+          "value": "gm4:air"
         }
       ]
     },
