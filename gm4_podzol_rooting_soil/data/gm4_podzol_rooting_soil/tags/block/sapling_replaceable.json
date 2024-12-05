@@ -1,6 +1,6 @@
 {
     "values": [
-        "#minecraft:air",
+        "#gm4:replaceable",
         "#gm4:foliage"
     ]
 }
