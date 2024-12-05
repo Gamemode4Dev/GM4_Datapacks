@@ -1,5 +1,5 @@
 {
-  "last_commit": "57b7eb3d6495b2110e91a9d5ed5149913a61bfb0",
+  "last_commit": "7a893736ad9bcb54cd8b0f814487548a72553004",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -189,8 +189,8 @@
     {
       "id": "gm4_bat_grenades",
       "name": "Bat Grenades",
-      "version": "1.5.6",
-      "hash": "6d2f908c030381dc0cfa67dd4c8ea198678ed082",
+      "version": "1.5.7",
+      "hash": "cafaa3f69669c6f94aad85f7f3be7f829b2d906d",
       "video_link": "https://www.youtube.com/watch?v=uUoEKtte1GQ",
       "wiki_link": "https://wiki.gm4.co/wiki/Bat_Grenades",
       "credits": {
