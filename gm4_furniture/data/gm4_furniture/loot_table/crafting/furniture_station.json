@@ -5,8 +5,8 @@
       "rolls": 8,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air"
+          "type": "minecraft:loot_table",
+          "name": "gm4:air"
         }
       ]
     },
