@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "CCC",
+    "CFC",
+    "IcI"
+  ],
+  "key": {
+    "C": "minecraft:cobblestone",
+    "F": "minecraft:furnace",
+    "I": "minecraft:iron_ingot",
+    "c": "minecraft:comparator"
+  },
+  "result": {
+    "id": "minecraft:player_head",
+    "components": {
+      "minecraft:custom_model_data": "item/smeltery",
+      "minecraft:profile": "$smeltery",
+      "minecraft:custom_data": "{gm4_machines:{id:'smeltery'}}",
+      "minecraft:custom_name": "{\"translate\":\"block.gm4.smeltery\",\"fallback\":\"Smeltery\",\"color\":\"white\",\"italic\":false}"
+    }
+  }
+}

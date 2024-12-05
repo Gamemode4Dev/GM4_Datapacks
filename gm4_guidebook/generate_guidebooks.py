@@ -34,6 +34,33 @@ logger = logging.getLogger(__name__)
 # TODO:
 # merge some functions to reduce fuction call overhead
 
+DEFAULT_COLORS = {
+  "minecraft:leather_boots": 10511680,
+  "minecraft:leather_chestplate": 10511680,
+  "minecraft:leather_helmet": 10511680,
+  "minecraft:leather_leggings": 10511680
+}
+
+DEFAULT_OVERLAY_COLORS = {
+  "empty": 0
+}
+
+IS_DYED = [
+  "minecraft:leather_boots",
+  "minecraft:leather_chestplate",
+  "minecraft:leather_helmet",
+  "minecraft:leather_leggings",
+  "minecraft:leather_horse_armor",
+  "minecraft:wolf_armor"
+]
+
+OVERLAY_DYED = [
+  "minecraft:firework_star",
+  "minecraft:filled_map_markings",
+  "minecraft:potion",
+  "minecraft:spawn_egg",
+  "minecraft:tipped_arrow" # note: the texture file is tipped_arrow_head
+]
 
 class Section(BaseModel):
   name: str
@@ -135,31 +162,28 @@ def generate_files(ctx:Context, d: DataPack, overlay: bool = False):
 
     # get wiki link
     if not book.wiki_link:
-      book.wiki_link = ctx.meta['gm4']['wiki'] if "wiki" in ctx.meta["gm4"] else ""
-
-    # read the dict and get the page storages
-    loottable, lectern_loot, pages, lectern_pages = generate_loottable(book)
-
-    # add loot tables to datapack
-    d[f"gm4_guidebook:{book.id}"] = loottable
-    d[f"gm4_guidebook:lectern/{book.id}"] = lectern_loot
+      book.wiki_link = ctx.meta['gm4']['wiki'] if "wiki" in ctx.meta["gm4"] else "https://wiki.gm4.co"
 
     # add functions to datapack
     d[f"gm4_guidebook:{book.id}/add_toc_line"] = generate_add_toc_line_function(book, overlay)
-    d[f"gm4_guidebook:{book.id}/setup_storage"] = generate_setup_storage_function(
-      pages, lectern_pages, book, ctx, overlay)
+    d[f"gm4_guidebook:{book.id}/setup_storage"] = generate_setup_storage_function(book, ctx, overlay)
     d[f"gm4_guidebook:{book.id}/summon_marker"] = generate_summon_marker_function(book, overlay)
-    d[f"gm4_guidebook:{book.id}/update_hand"] = generate_update_hand_function(book, overlay)
-    d[f"gm4_guidebook:{book.id}/update_lectern"] = generate_update_lectern_function(book, overlay)
+    d[f"gm4_guidebook:{book.id}/init_player_db"] = generate_init_player_db_function(book, overlay)
 
-    # add advancements to datapack
+    # add advancements (and corresponding unlock functions) to datapack
     d["gm4_guidebook:root"] = root_advancement()
+    page_index: int = 0
+    load_map: dict[str,int] = {}
     for index, section in enumerate(book.sections):
       if (advancement := generate_advancement(book, index)) is not None:
         d[f"gm4_guidebook:{book.id}/unlock/{section.name}"] = advancement
         d[f"gm4_guidebook:{book.id}/display/{section.name}"] = generate_display_advancement(book, ctx.project_id)
         d[f"gm4_guidebook:{book.id}/rewards/{section.name}"] = generate_reward_function(
           section, book.id, book.name, book.description)
+        d[f"gm4_guidebook:{book.id}/rewards/unlock/{section.name}"], page_index, load_map = generate_unlock_function(
+          section, book.id, page_index, load_map)
+      else:
+        page_index += 1
         
     # register and create advancement icons to resource pack
     if d is ctx.data: # don't run for overlays - its not needed
@@ -779,7 +803,7 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
 """
 Reads a loot table (custom item) and creates a JSON text component to display the item in the guidebook
 """
-def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, TextComponent]:
+def loottable_to_display(loottable: str, data: dict[Any,Any], ctx: Context) -> tuple[TextComponent, TextComponent]:
   item = loottable.split(":")[1].split("/")[-1]
   if "gm4" in loottable:	
     item = f"gm4.{item}"
@@ -800,6 +824,8 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
   item_id: str = entry["name"]
   profile_name: str = ""
   name: TextComponent = ""
+  display_color = data["guidebook"]["display_color"] if (item_id in IS_DYED and "guidebook" in data and "display_color" in data["guidebook"]) else DEFAULT_COLORS[item_id] if item_id in DEFAULT_COLORS else 16777215 # white
+  overlay_color = data["guidebook"]["overlay_color"] if (item_id in OVERLAY_DYED and "guidebook" in data and "overlay_color" in data["guidebook"]) else DEFAULT_OVERLAY_COLORS[item_id] if item_id in DEFAULT_OVERLAY_COLORS else 16777215 # white
   lore: list[str] = []
   if "functions" in entry:
     for function in entry["functions"]:
@@ -823,7 +849,9 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
   #   color = get_texture_color(skin)
 
   # else:
-  color = get_texture_color(intuit_item_texture(item_id, ctx.inject(Vanilla)))
+  vanilla = ctx.inject(Vanilla)
+  vanilla.minecraft_version = '1.21.3'
+  color = get_texture_color(intuit_item_texture(item_id, vanilla))
 
   # create slot
   slot: dict[Any, Any] = {
@@ -834,12 +862,20 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
         "text": " ☒ ",
         "color": color
       },
-      {
-        "translate": f"gui.gm4.guidebook.crafting.display.{item}",
-        "fallback": " ☒ ",
-        "color": "white",
-        "font": "gm4:guidebook"
-      }
+      [
+        {
+          "translate": f"gui.gm4.guidebook.crafting.display.{item}",
+          "fallback": " ☒ ",
+          "color": f"#{format(display_color, 'x')}",
+          "font": "gm4:guidebook"
+        },
+        {
+          "translate": f"gui.gm4.guidebook.crafting.display.overlay.{item}",
+          "fallback": "",
+          "color": f"#{format(overlay_color, 'x')}",
+          "font": "gm4:guidebook"
+        }
+      ]
     ],
     "hoverEvent": {
       "action": "show_item",
@@ -872,16 +908,20 @@ def loottable_to_display(loottable: str, ctx: Context) -> tuple[TextComponent, T
   }
 
   # custom display name and lore
-  display_name = ""
-  display_lore = ""
   if name != "":
-    display_name = f"Name:'{name}'"
+    if "components" not in slot["hoverEvent"]["contents"]:
+      slot["hoverEvent"]["contents"]["components"] = {}
+    if "components" not in slot_under["hoverEvent"]["contents"]:
+      slot_under["hoverEvent"]["contents"]["components"] = {}
+    slot["hoverEvent"]["contents"]["components"]["minecraft:custom_name"] = name
+    slot_under["hoverEvent"]["contents"]["components"]["minecraft:custom_name"] = name
   if len(lore) > 0:
-    display_lore = f"Lore:{lore}"
-  if display_name != "" or display_lore != "":
-    display_tag = "{display:{" + display_name + "," + display_lore + "}}"
-    slot["hoverEvent"]["contents"]["tag"] = f"{display_tag}"
-    slot_under["hoverEvent"]["contents"]["tag"] = f"{display_tag}"
+    if "components" not in slot["hoverEvent"]["contents"]:
+      slot["hoverEvent"]["contents"]["components"] = {}
+    if "components" not in slot_under["hoverEvent"]["contents"]:
+      slot_under["hoverEvent"]["contents"]["components"] = {}
+    slot["hoverEvent"]["contents"]["components"]["minecraft:lore"] = lore
+    slot_under["hoverEvent"]["contents"]["components"]["minecraft:lore"] = lore
   return slot, slot_under
 
 
@@ -891,6 +931,7 @@ Reads a vanilla item and creates a JSON text component to display the item in th
 """
 def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextComponent, TextComponent]:
   vanilla = ctx.inject(Vanilla)
+  vanilla.minecraft_version = '1.21.3'
   if ingredient.get("id") == "empty":
     # show empty slot ()
     slot = {
@@ -927,13 +968,19 @@ def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextCompo
   else:
     # show filled slot (colored with a hover event)
     if "display" in ingredient and "loot_table" in ingredient["display"]["type"]:
-      return loottable_to_display(ingredient["display"]["name"], ctx)
+      return loottable_to_display(ingredient["display"]["name"], ingredient, ctx)
     else:
       if "display" in ingredient and "item" in ingredient["display"]["type"]:
         item = ingredient["display"]["name"]
       else:
         item = ingredient["id"]
       color = get_texture_color(intuit_item_texture(item, vanilla))
+      display_color = ingredient["guidebook"]["display_color"] if (item in IS_DYED and "guidebook" in ingredient and "display_color" in ingredient["guidebook"]) else ingredient["components"]["minecraft:dyed_color"]["rgb"] if (item in IS_DYED and "components" in ingredient and "minecraft:dyed_color" in ingredient["components"]) else DEFAULT_COLORS[item] if item in DEFAULT_COLORS else 16777215 # white
+      overlay_color = ingredient["guidebook"]["overlay_color"] if (item in OVERLAY_DYED and "guidebook" in ingredient and "overlay_color" in ingredient["guidebook"]) else ingredient["components"]["minecraft:dyed_color"]["rgb"] if (item in OVERLAY_DYED and"components" in ingredient and "minecraft:dyed_color" in ingredient["components"]) else DEFAULT_OVERLAY_COLORS[item] if item in DEFAULT_OVERLAY_COLORS else 16777215 # white
+      if "image" in ingredient:
+        image = ingredient["image"]
+      else:
+        image = item
       slot: dict[Any, Any] = {
         "translate": "gm4.second",
         "fallback": "%1$s",
@@ -942,12 +989,20 @@ def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextCompo
             "text": " ☒ ",
             "color": color
           },
-          {
-            "translate": f"gui.gm4.guidebook.crafting.display.{item.replace(':','.')}",
-            "fallback": " ☒ ",
-            "color": "white",
-            "font": "gm4:guidebook"
-          }
+          [
+            {
+              "translate": f"gui.gm4.guidebook.crafting.display.{image.replace(':','.')}",
+              "fallback": " ☒ ",
+              "color": f"#{format(display_color, 'x')}",
+              "font": "gm4:guidebook"
+            },
+            {
+              "translate": f"gui.gm4.guidebook.crafting.display.overlay.{image.replace(':','.')}",
+              "fallback": "",
+              "color": f"#{format(overlay_color, 'x')}",
+              "font": "gm4:guidebook"
+            }
+          ]
         ],
         "hoverEvent": {
           "action": "show_item",
@@ -978,9 +1033,9 @@ def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextCompo
           }
         }
       }
-      if "tag" in ingredient:
-        slot["hoverEvent"]["contents"]["tag"] = ingredient['tag']
-        slot_under["hoverEvent"]["contents"]["tag"] = ingredient['tag']
+      if "components" in ingredient:
+        slot["hoverEvent"]["contents"]["components"] = ingredient['components']
+        slot_under["hoverEvent"]["contents"]["components"] = ingredient['components']
   return slot, slot_under
 
 
@@ -1044,14 +1099,18 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
             ingr = r["input"]["key"][ingredient]
           
           if "guidebook" in ingr:
+            item["guidebook"] = ingr["guidebook"]
+          if "guidebook" in ingr and "type" in ingr["guidebook"]:
             item["display"] = ingr["guidebook"]
           else:
             if "tag" in ingr:
-              item["id"] = get_item_from_tag(ingr["tag"], ctx.inject(Vanilla))
+              vanilla = ctx.inject(Vanilla)
+              vanilla.minecraft_version = '1.21.3'
+              item["id"] = get_item_from_tag(ingr["tag"], vanilla)
             else:
               item["id"] = ingr["item"]
-            if "nbt" in ingr:
-              item["tag"] = ingr["nbt"].replace("'",'\"')
+            if "components" in ingr:
+              item["components"] = ingr["components"]
         ingredients.append(item)
 
   # shapeless
@@ -1087,14 +1146,18 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
         if isinstance(ingredient, list):
           item["id"] = ingredient[0]["item"] # type: ignore
           if "guidebook" in ingredient[0]:
-            item["display"] = ingredient[0]["guidebook"] # type: ignore
+            if "type" in ingredient[0]["guidebook"]:
+              item["display"] = ingredient[0]["guidebook"]
+            item["guidebook"] = ingredient[0]["guidebook"]
         else:
           if "guidebook" in ingredient:
+            item["guidebook"] = ingredient["guidebook"]
+          if "guidebook" in ingredient and "type" in ingredient["guidebook"]:
             item["display"] = ingredient["guidebook"]
           else:
             item["id"] = ingredient["item"]
-            if "nbt" in ingredient:
-              item["tag"] = ingredient["nbt"].replace("'",'\"')
+            if "components" in ingredient:
+              item["components"] = ingredient["components"]
       ingredients.append(item)
     while len(ingredients) < 9:
       ingredients.append({"id": "empty"})
@@ -1132,7 +1195,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
     res["id"] = res["name"]
     result, result_under = item_to_display(res, ctx)
   else:
-    result, result_under = loottable_to_display(res["name"], ctx)
+    result, result_under = loottable_to_display(res["name"], res, ctx)
   
   # show count
   res_count = ""
@@ -1296,298 +1359,6 @@ Return a bulletted string of the module name, indented if it's an expansion
 def get_toc_line(book_dict: Book) -> str:
   indent = "  ● " if book_dict.module_type == "expansion" else "● "
   return f"{indent}{book_dict.name}"
-
-
-
-"""
-Reads the book object to generate the loot tables (one for hand, one for lectern)
-and the page contents that need to be stored
-"""
-def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], list[Any]]:
-  page_storage:list[Any] = []
-  lectern_storage:list[Any] = []
-
-  # standard functions for every hand loot table
-  functions:list[dict[Any, Any]] = [
-    {
-      "function": "minecraft:set_components",
-      "components": {
-        "minecraft:custom_model_data": "gm4_guidebook:item/guidebook",
-        "minecraft:written_book_content": {
-          "pages": [],
-          "title": "Gamemode 4 Guidebook",
-          "author": "Unknown",
-          "generation": 3
-        }
-      }
-    },
-    {
-      "function": "minecraft:set_custom_data",
-      "tag": f"{'{'}gm4_guidebook:{'{'}lectern:0b, trigger:{str(book.trigger_id)}{'}'}{'}'}"
-    },
-    {
-      "function": "minecraft:set_name",
-      "name": {
-        "translate": "text.gm4.guidebook.title",
-        "fallback": "Gamemode 4 Guidebook",
-        "italic": False
-      }
-    },
-    {
-      "function": "minecraft:set_count",
-      "count": {
-        "type": "minecraft:score",
-        "target": {
-          "type": "minecraft:fixed",
-          "name": "$count"
-        },
-        "score": "gm4_guide"
-      }
-    }
-  ]
-
-  # standard functions for every lectern loot table
-  functions_lectern:list[dict[Any, Any]] = [
-    {
-      "function": "minecraft:set_components",
-      "components": {
-        "minecraft:custom_model_data": "gm4_guidebook:item/guidebook",
-        "minecraft:written_book_content": {
-          "pages": [],
-          "title": "Gamemode 4 Guidebook",
-          "author": "Unknown",
-          "generation": 3
-        }
-      }
-    },
-    {
-      "function": "minecraft:set_custom_data",
-      "tag": f"{'{'}gm4_guidebook:{'{'}lectern:1b, trigger:{str(book.trigger_id)}{'}'}{'}'}"
-    },
-    {
-      "function": "minecraft:set_name",
-      "name": {
-        "translate": "text.gm4.guidebook.title",
-        "fallback": "Gamemode 4 Guidebook",
-        "italic": False
-      }
-    },
-    # {
-    #   "function": "minecraft:copy_nbt",
-    #   "source": {
-    #     "type": "minecraft:storage",
-    #     "source": "gm4_guidebook:pages"
-    #   },
-    #   "ops": [
-    #     {
-    #       "source": "lectern_front_matter[]",
-    #       "target": "pages",
-    #       "op": "append"
-    #     }
-    #   ]
-    # }
-  ]
-
-  # create conditions list for each section
-  for i, section in enumerate(book.sections):
-    enable_conditions:list[dict[Any, Any]] = []
-
-    # condition to check load status of other modules
-    for module_check in section.enable:
-      condition = {
-        "condition": "minecraft:value_check",
-        "value": {
-           "type": "minecraft:score",
-           "target": {
-               "type": "minecraft:fixed",
-               "name": module_check['id']
-           },
-           "score": "load.status"
-            },
-        "range": {"min": 1}
-      }
-      if module_check["load"] <= 0: # type: ignore
-        condition = {"condition": "minecraft:inverted", "term": condition}
-      enable_conditions.append(condition)
-
-    # condition to check if another page is unlocked
-    unlock_condition = {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "type_specific": {
-          "type": "player",
-          "advancements": {
-            f"gm4_guidebook:{book.id}/unlock/{section.name}": True
-          }
-        }
-      }
-    }
-
-    # condition to check if another page is locked
-    lock_condition = {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "type_specific": {
-          "type": "player",
-          "advancements": {
-            f"gm4_guidebook:{book.id}/unlock/{section.name}": False
-          }
-        }
-      }
-    }
-
-    # create operations for page appending
-    enabled_ops:list[dict[Any, Any]] = []
-    fallback_ops:list[dict[Any, Any]] = []
-    enabled_ops_lectern:list[dict[Any, Any]] = []
-    fallback_ops_lectern:list[dict[Any, Any]] = []
-    for page in section.pages:
-      # append from the indexed storage
-      enabled_ops.append({
-        "op": "append",
-        "source": f"{book.id}.pages[{len(page_storage)}]",
-        "target": "pages"
-      })
-      # generate the page storage
-      page_storage.append(page)
-
-      enabled_ops_lectern.append({
-        "op": "append",
-        "source": f"{book.id}.lectern[{len(lectern_storage)}]",
-        "target": "pages"
-      })
-      lectern_storage.append(page)
-
-    # locked pages to be appended
-    fallback_default = {
-      "op": "append",
-      "source": f"{book.id}.locked[0]",
-      "target": "pages"
-    }
-    fallback_default_lectern = {
-      "op": "append",
-      "source": f"{book.id}.locked[1]",
-      "target": "pages"
-    }
-    fallback_ops = [fallback_default] * len(enabled_ops)
-    fallback_ops_lectern = [fallback_default_lectern] * len(enabled_ops)
-    if (i == 0):
-      fallback_ops[0] = {
-        "op": "append",
-        "source": f"{book.id}.locked[2]",
-        "target": "pages"
-      }
-      fallback_ops_lectern[0] = {
-        "op": "append",
-        "source": f"{book.id}.locked[3]",
-        "target": "pages"
-      }
-
-    # functions for each section
-    function: dict[Any, Any] = {
-      "function": "minecraft:copy_nbt",
-      "source": {
-        "type": "minecraft:storage",
-        "source": "gm4_guidebook:pages"
-      },
-      "ops": enabled_ops,
-      "conditions": [*enable_conditions]
-    }
-    fallback_function: dict[Any, Any] = {
-      "function": "minecraft:copy_nbt",
-      "source": {
-        "type": "minecraft:storage",
-        "source": "gm4_guidebook:pages"
-      },
-      "ops": fallback_ops,
-      "conditions": [*enable_conditions]
-    }
-
-    # lectern functions for each section
-    function_lectern: dict[Any, Any] = {
-      "function": "minecraft:copy_nbt",
-      "source": {
-        "type": "minecraft:storage",
-        "source": "gm4_guidebook:pages"
-      },
-      "ops": enabled_ops_lectern,
-      "conditions": [*enable_conditions]
-    }
-    fallback_function_lectern: dict[Any, Any] = {
-      "function": "minecraft:copy_nbt",
-      "source": {
-        "type": "minecraft:storage",
-        "source": "gm4_guidebook:pages"
-      },
-      "ops": fallback_ops_lectern,
-      "conditions": [*enable_conditions]
-    }
-    
-    # add functions to the section
-    if section.requirements and len(section.requirements) > 0:
-      function["conditions"].append(unlock_condition)
-      fallback_function["conditions"].append(lock_condition)
-      # functions.append(function)
-      # functions.append(fallback_function)
-
-      function_lectern["conditions"].append(unlock_condition)
-      fallback_function_lectern["conditions"].append(lock_condition)
-      # functions_lectern.append(function_lectern)
-      # functions_lectern.append(fallback_function_lectern)
-    else:
-      pass
-      # functions.append(function)
-      # functions_lectern.append(function_lectern)
-
-  # extra blank page for lecterns
-  # functions_lectern.append({
-  #   "function": "minecraft:copy_nbt",
-  #   "source": {
-  #     "type": "minecraft:storage",
-  #     "source": "gm4_guidebook:pages"
-  #   },
-  #   "ops": [
-  #     {
-  #       "source": "blank",
-  #       "target": "pages",
-  #       "op": "append"
-  #     }
-  #   ]
-  # })
-
-  hand_loot = LootTable({
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:written_book",
-            "functions": functions
-          }
-        ]
-      }
-    ]
-  })
-
-  lectern_loot = LootTable({
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "minecraft:written_book",
-            "functions": functions_lectern
-          }
-        ]
-      }
-    ]
-  })
-
-  return hand_loot, lectern_loot, page_storage, lectern_storage
 
 
 
@@ -1899,41 +1670,126 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
   # grants other sections when this section is obtained
   if section.grants:
     reward.append([f"{start}advancement grant @s only gm4_guidebook:{book_id}/unlock/{grant}" for grant in section.grants])
+  
+  # update the player's unlocked pages
+  reward.append([f"{start}function gm4_guidebook:{book_id}/rewards/unlock/{section.name}"])
+  
   return reward
+
+
+
+"""
+Creates the function that updates the player's db entry
+"""
+def generate_unlock_function(section: Section, book_id: str, page_index: int, load_map: dict[str,int]) -> tuple[Function, int, dict[str,int]]:
+  # initial setup
+  func = Function([
+    f"data modify storage gm4_guidebook:temp unlocking.uuid set from entity @s UUID",
+    f'data modify storage gm4_guidebook:temp unlocking.name set value "{book_id}"'
+  ])
+
+  # get first page of this section
+  if len(section.enable) > 0:
+    key = ""
+    for module_check in section.enable:
+      key += module_check["id"] # type: ignore
+      if key in load_map:
+        page_index = load_map[key]
+      else:
+        load_map[key] = page_index
+
+  # unlock each page
+  for i, _ in enumerate(section.pages):
+    page_name = f"{section.name}_{i}" if (len(section.pages) > 1) else section.name
+
+    # add commands
+    func.append([
+      f"data modify storage gm4_guidebook:temp unlocking.target_page set value {page_index}",
+      f"data modify storage gm4_guidebook:temp unlocking.lectern_target_page set value {page_index+5}",
+      f'data modify storage gm4_guidebook:temp unlocking.source_page set value "{page_name}"',
+      "function gm4_guidebook:player_db/update with storage gm4_guidebook:temp unlocking"
+    ])
+
+    page_index += 1
+
+
+  # clean up
+  func.append(["data remove storage gm4_guidebook:temp unlocking"])
+  return func, page_index, load_map
+
+
+
+"""
+Creates the page storage to store book info for a given module
+"""
+def generate_page_storage(book: Book, ctx: Context) -> dict[str,dict[str,list[str]|dict[str,str]]]:
+  hand_initial:list[str] = []
+  hand_unlockable:dict[str,str] = {}
+  lectern_initial:list[str] = ['["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]','["",{"translate":"gui.gm4.guidebook.page.toc","fallback":"","color":"white","font":"gm4:guidebook"}]','["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]','["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]','["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]']
+  lectern_unlockable:dict[str,str] = {}
+
+  for section_index, section in enumerate(book.sections):
+    # check if the page is unlockable or initial
+    if len(section.enable) == 0 and len(section.requirements) == 0 and len(section.prerequisites) == 0:
+      # add page to initial book
+      for page in section.pages:
+        hand_initial.append(stringify_page(page, book, ctx, False))
+        lectern_initial.append(stringify_page(page, book, ctx, True))
+    elif len(section.enable) != 0 and len(section.requirements) == 0 and len(section.prerequisites) == 0:      
+      raise ValueError(f'Section "{section.name}" in "{book.id}" has both module dependencies and requirements')
+    else:
+      for page_index, page in enumerate(section.pages):
+        # add locked page to initial book
+        add_locked_page = True
+        ## only add a locked page for one iteration of a complementary page
+        for module_check in section.enable:
+          if module_check["load"] != -1:
+            add_locked_page = False
+        
+        if add_locked_page:
+          if (section_index == 0):
+            locked_text: list[dict[Any, Any]|str] = [{'insert':'title'},{'insert':'locked_text_title'}]
+          else:
+            locked_text: list[dict[Any, Any]|str] = [{'insert':'locked_text'}]
+          hand_initial.append(stringify_page(locked_text, book, ctx, False))
+          lectern_initial.append(stringify_page(locked_text, book, ctx, True))
+
+        # add page to unlockable map
+        page_name = f"{section.name}_{page_index}" if (len(section.pages) > 1) else section.name
+        hand_unlockable[page_name] = stringify_page(page, book, ctx, False)
+        lectern_unlockable[page_name] = stringify_page(page, book, ctx, True)
+
+  lectern_initial.append('["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]')
+
+  return {
+    "hand": {
+      "initial": hand_initial,
+      "unlockable": hand_unlockable
+    },
+    "lectern": {
+      "initial": lectern_initial,
+      "unlockable": lectern_unlockable
+    }
+  }
 
 
 
 """
 Creates the function that populates the page storage
 """
-def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], book: Book, ctx: Context, overlay: bool = False) -> Function:
-  populated_pages: list[str] = []
-  populated_lectern: list[str] = []
-  locked_pages: list[str] = []
-
-  # setup locked storage  
-  locked_title: list[dict[Any, Any]|str] = [{'insert':'title'},{'insert':'locked_text_title'}]
-  locked_text: list[dict[Any, Any]|str] = [{'insert':'locked_text'}]
-  locked_pages.append(stringify_page(locked_text, book, ctx, False))
-  locked_pages.append(stringify_page(locked_text, book, ctx, True))
-  locked_pages.append(stringify_page(locked_title, book, ctx, False))
-  locked_pages.append(stringify_page(locked_title, book, ctx, True))
-
-  # populate the inserts and stringify the pages
-  for page in pages:
-    populated_pages.append(stringify_page(page, book, ctx, False))
-  for page in lectern_pages:
-    populated_lectern.append(stringify_page(page, book, ctx, True))
+def generate_setup_storage_function(book: Book, ctx: Context, overlay: bool = False) -> Function:
+  # create page storage
+  storage = generate_page_storage(book, ctx)
 
   # write each command to be placed in the function
-  unlocked = f"execute if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:pages {book.id}.pages set value {populated_pages}"
-  locked = f"execute if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:pages {book.id}.locked set value {locked_pages}"
-  lectern = f"execute if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:pages {book.id}.lectern set value {populated_lectern}"
+  short_circuit = f"execute unless score {book.load_check} load.status matches 1.. run return 0"
+  trigger_map = f"data modify storage gm4_guidebook:register trigger_map.{book.trigger_id} set value {'{'}name:\"{book.id}\",load:\"{book.load_check}\"{'}'}"
+  page_storage = f"data modify storage gm4_guidebook:register pages.{book.id} set value {json.dumps(storage, ensure_ascii=False)}"
   
   return Function([
-    unlocked,
-    locked,
-    lectern
+    short_circuit,
+    trigger_map,
+    page_storage
   ], tags=[] if overlay else ["gm4_guidebook:setup_storage"])
 
 
@@ -1984,24 +1840,35 @@ def generate_summon_marker_function(book: Book, overlay: bool = False) -> Functi
 
 
 """
-Creates the function to update the guidebook in hand
+Creates the function to initialize a player's book entry
 """
-def generate_update_hand_function(book: Book, overlay: bool = False) -> Function:
-  start = f"execute if score @s gm4_guide matches {book.trigger_id} if score {book.load_check} load.status matches 1.. run"
-  return Function([
-    f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:{book.id}",
-    f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_offhand] weapon.offhand loot gm4_guidebook:{book.id}"
-  ], tags=[] if overlay else ["gm4_guidebook:update_hand"])
+def generate_init_player_db_function(book: Book, overlay: bool = False) -> Function:
+  func: Function = Function([], tags=[] if overlay else ["gm4_guidebook:init_player_db"])
 
+  # check guidebook unlock advancements
+  for section in book.sections:
+    # skip any pages that are unlocked by default
+    if len(section.enable) == 0 and len(section.requirements) == 0 and len(section.prerequisites) == 0:
+      continue
+    # check for complementary pages
+    if section.enable and len(section.enable) > 0:
+      score_check = " "
+      for module_check in section.enable:
+        if module_check["load"] == -1:
+          score_check += " unless "
+        else:
+          score_check += " if "
+        score_check += f"score {module_check['id']} load.status matches 1.."
+    else:
+      score_check = ""
 
-"""
-Creates the function tag to update the guidebook in lecterns
-"""
-def generate_update_lectern_function(book: Book, overlay: bool = False) -> Function:
-  start = f"execute if score $trigger gm4_guide matches {book.trigger_id} if score {book.load_check} load.status matches 1.. run"
-  return Function([
-    f"{start} loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/{book.id}"
-  ], tags=[] if overlay else ["gm4_guidebook:update_lectern"])
+    # update player db
+    func.append(f"execute{score_check} if entity @s[advancements={'{'}gm4_guidebook:{book.id}/unlock/{section.name}=true{'}'}] run function gm4_guidebook:{book.id}/rewards/unlock/{section.name}")
+
+  # early return
+  func.append(["return 1"])
+
+  return func
 
 
 """
@@ -2029,11 +1896,26 @@ def generate_toast_model(book: Book, ctx: Context) -> Model:
   ctx.assets[f"{ctx.project_id}:gui/guidebook/{book.id}"] = Texture(img)
 
   # create model for new texture
+  textures = {
+    "layer0": f"{ctx.project_id}:gui/guidebook/{book.id}"
+  }
+   # some items will tint layer0, so we special case those here.
+  if book.icon.id in IS_DYED:
+    textures = {
+      "layer0": "gm4:item/empty",
+      "layer1": f"{ctx.project_id}:gui/guidebook/{book.id}"
+    }
+   # some items will tint layer1, so we special case those here.
+  if book.icon.id in OVERLAY_DYED:
+    textures = {
+      "layer0": "gm4:item/empty",
+      "layer1": "gm4:item/empty",
+      "layer2": f"{ctx.project_id}:gui/guidebook/{book.id}"
+    }
+
   return Model({
     "parent": "builtin/generated",
-    "textures":{
-      "layer0": f"{ctx.project_id}:gui/guidebook/{book.id}"
-    },
+    "textures": textures,
     "display":{
       "gui":{
         "scale": [1.4, 1.4, 1]

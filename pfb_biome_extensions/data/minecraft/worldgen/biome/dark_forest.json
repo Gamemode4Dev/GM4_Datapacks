@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/dark_forest",
-    "liquid": "#minecraft:liquid/in_biome/dark_forest"
-  },
+  "carvers": "#minecraft:in_biome/dark_forest",
   "downfall": 0.8,
   "effects": {
     "fog_color": 12638463,

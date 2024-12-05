@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/plains",
-    "liquid": "#minecraft:liquid/in_biome/plains"
-  },
+  "carvers": "#minecraft:in_biome/plains",
   "downfall": 0.4,
   "effects": {
     "fog_color": 12638463,

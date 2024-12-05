@@ -38,8 +38,8 @@ Note that the Custom Crafter automatically supports recipes placed anywhere in t
       "rolls": 8,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air"
+          "type": "minecraft:loot_table",
+          "value": "gm4:air"
         }
       ]
     },
@@ -82,8 +82,8 @@ the loot table `gm4_craft:crafting/string`:
       "rolls": 8,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air"
+          "type": "minecraft:loot_table",
+          "value": "gm4:air"
         }
       ]
     },
@@ -108,4 +108,4 @@ the loot table `gm4_craft:crafting/string`:
 In the example above, the `stack_size` is set to 21 because the output for a single craft is 3 string and the maximum stack size for string is 64, so 64/3 = 21.3 maximum input items (then round down since 22 would exceed the max stack size of string). The loot table ensures that all items are deleted and the last slot of the dropper is replaced with the output for one craft.
 
 ## License
-This library, and the contents of the `lib_custom_crafters` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.
+This library, and the contents of the `lib_custom_crafters` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_data packs), is licensed under the MIT License.

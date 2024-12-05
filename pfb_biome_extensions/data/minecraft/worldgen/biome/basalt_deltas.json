@@ -1,8 +1,5 @@
 {
-  "carvers": {
-    "air": "#minecraft:air/in_biome/basalt_deltas",
-    "liquid": "#minecraft:liquid/in_biome/basalt_deltas"
-  },
+  "carvers": "#minecraft:in_biome/basalt_deltas",
   "downfall": 0.0,
   "effects": {
     "additions_sound": {

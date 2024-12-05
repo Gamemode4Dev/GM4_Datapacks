@@ -12,14 +12,14 @@
               "components": {
                 "minecraft:attribute_modifiers": [
                   {
-                    "type": "generic.armor",
+                    "type": "minecraft:armor",
                     "id": "gm4_scuba_gear:helmet_armor",
                     "slot": "head",
                     "amount": 2,
                     "operation": "add_value"
                   },
                   {
-                    "type": "generic.attack_speed",
+                    "type": "minecraft:attack_speed",
                     "id": "gm4_scuba_gear:helmet_attack_speed",
                     "slot": "head",
                     "amount": -0.5,

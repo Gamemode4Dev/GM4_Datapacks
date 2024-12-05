@@ -51,6 +51,7 @@ ITEMS = {
 def beet_default(ctx: Context):
   """Creates a loot table for dropping the 9 result items when disassembling an item."""
   vanilla = ctx.inject(Vanilla)
+  vanilla.minecraft_version = '1.21.3'
   recipes = vanilla.data.recipes
 
   for item, durability in ITEMS.items():
@@ -62,27 +63,31 @@ def beet_default(ctx: Context):
         for r in recipe["pattern"]
       ]).rjust(9, " ")
       ingredient_groups = ["".join(g) for _, g in itertools.groupby(pattern)]
-      recipe_keys = {k: n["item"] for k, n in recipe["key"].items()}
       ingredients = [
-        ("minecraft:air" if p[0] == " " else recipe_keys[p[0]], len(p))
+        ("minecraft:air" if p[0] == " " else recipe["key"][p[0]], len(p))
         for p in ingredient_groups
       ]
     else:
       for ingredient in recipe["ingredients"]:
-        ingredients.append((ingredient["item"], 1))
+        ingredients.append((ingredient, 1))
       if len(ingredients) < 9:
         ingredients.append(("minecraft:air", 9-len(ingredients)))
 
     pools: Any = []
     for ingredient, count in ingredients:
-      base: Any = {
-        "rolls": count,
-        "entries": [{"type": "minecraft:item", "name": ingredient}]
-      }
       if ingredient == "minecraft:air":
-        pools.append(base)
+        pools.append({
+          "rolls": count,
+          "entries": [{"type": "minecraft:loot_table", "value": "gm4:air"}]
+        })
         continue
-      base["entries"][0]["conditions"] = [{
+
+      if ingredient.startswith("#"):
+        entry: Any = {"type": "minecraft:tag", "name": ingredient[1:], "expand": True}
+      else:
+        entry: Any = {"type": "minecraft:item", "name": ingredient}
+
+      entry["conditions"] = [{
         "condition": "value_check",
         "value": {
           "type": "score",
@@ -106,8 +111,8 @@ def beet_default(ctx: Context):
         "entries": [{
           "type": "minecraft:alternatives",
           "children": [
-            base["entries"][0],
-            { "type": "minecraft:item", "name": "minecraft:air" }
+            entry,
+            { "type": "minecraft:loot_table", "value": "gm4:air" }
           ]
         }]
       })

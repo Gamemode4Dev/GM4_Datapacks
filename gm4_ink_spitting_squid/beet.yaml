@@ -23,6 +23,8 @@ meta:
       description: Improves the vanilla ink effect by adding Blindness. Glow Squid will give Night Vision when disturbed, which might come in handy if you're out of torches!
       recommended: []
       notes: []
+    modrinth:
+      project_id: ljOfYHJv
     planetminecraft:
       uid: 4581763
     video: https://www.youtube.com/watch?v=68LMYEhueZ0

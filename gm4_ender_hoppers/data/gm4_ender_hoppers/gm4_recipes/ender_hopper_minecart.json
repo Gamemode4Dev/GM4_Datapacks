@@ -8,7 +8,7 @@
     "key": {
       "E": {
         "item": "minecraft:player_head",
-        "nbt": "{gm4_machines:{id:\"ender_hopper\"}}"
+        "components": {"minecraft:custom_data":{"gm4_machines":{"id":"ender_hopper"}}}
       },
       "M": {
         "item": "minecraft:minecart"

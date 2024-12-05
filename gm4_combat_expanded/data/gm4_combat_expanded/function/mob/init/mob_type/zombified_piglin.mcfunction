@@ -4,9 +4,9 @@
 # run from mob/init/mob_type
 
 # base stat nerf
-attribute @s generic.max_health modifier add gm4_combat_expanded:stat_change.base_nerf -3 add_value
-attribute @s generic.attack_damage modifier add gm4_combat_expanded:stat_change.base_nerf -2.5 add_value
-attribute @s generic.movement_speed modifier add gm4_combat_expanded:stat_change.base_nerf -0.02 add_multiplied_base
+attribute @s minecraft:max_health modifier add gm4_combat_expanded:stat_change.base_nerf -3 add_value
+attribute @s minecraft:attack_damage modifier add gm4_combat_expanded:stat_change.base_nerf -2.5 add_value
+attribute @s minecraft:movement_speed modifier add gm4_combat_expanded:stat_change.base_nerf -0.02 add_multiplied_base
 
 # max stat buffs
 scoreboard players set $mob_health gm4_ce_data 18
@@ -26,7 +26,7 @@ loot replace entity @s weapon.mainhand loot gm4_combat_expanded:weapon/sword/gol
 data modify entity @s HandDropChances set value [0.20F,0.20F]
 
 # remove zombie leader bonus
-execute if data entity @s attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] run data remove entity @s attributes[{id:"minecraft:generic.max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}]
+execute if data entity @s attributes[{id:"minecraft:max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] run data remove entity @s attributes[{id:"minecraft:max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}]
 
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep

@@ -21,7 +21,7 @@ from gm4.utils import Version, run
 
 parent_logger = logging.getLogger("gm4.manifest")
 
-SUPPORTED_GAME_VERSIONS = ["1.21", "1.21.1"]
+SUPPORTED_GAME_VERSIONS = ["1.21", "1.21.1", "1.21.2", "1.21.3"]
 
 # config models for beet.yaml metas
 CreditsModel = dict[str, list[str]]
@@ -157,7 +157,7 @@ def create(ctx: Context):
 				logger.error("No existing meta.json manifest file was located. Build was cancelled to avoid faulty releases.")
 				sys.exit(1) # quit the build and mark the github action as failed
 			else:
-				logger.warn("No existing meta.json manifest file was located")
+				logger.warning("No existing meta.json manifest file was located")
 		ctx.cache["previous_manifest"].json = ManifestFileModel(last_commit="",modules=[],libraries={},contributors=[]).dict()
 
 	

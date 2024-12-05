@@ -6,4 +6,4 @@ item replace entity @e[type=armor_stand,distance=..4,limit=1] weapon.mainhand wi
 item replace entity @e[type=armor_stand,distance=..4,limit=1] weapon.offhand with minecraft:moss_block
 loot replace entity @e[type=armor_stand,distance=..4,limit=1] armor.feet loot gm4_boots_of_ostara:items/boots_of_ostara
 
-await block ~1 ~ ~1 grass_block
+await block ~1 ~ ~1 moss_block

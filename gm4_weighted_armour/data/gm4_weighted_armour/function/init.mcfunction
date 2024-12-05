@@ -8,6 +8,5 @@ scoreboard players set weighted_armour gm4_modules 1
 schedule function gm4_weighted_armour:main 1t
 
 
-execute if score gm4_guidebook load.status matches 1 run summon marker ~ 1688.746464910336 ~ {CustomName:'"gm4_helious_shamir_guide"',Tags:["gm4_guide"],data:{type:"_expansion",base:"metallurgy",id:"helious_shamir",page_count:2,line_count:1,module_name:"Helious Shamir"}}
 
 #$moduleUpdateList
