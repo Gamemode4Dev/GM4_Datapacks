@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:raw_generation/in_end",
+      "required": false
+    },
+    "minecraft:end_island_decorated"
+  ]
+}
