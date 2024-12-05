@@ -1,0 +1,450 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 7
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 13
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 7
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 12
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 7
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 11
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 7
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 10
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 7
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 9
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 7
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 6
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 11
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 6
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 10
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 6
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 9
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 6
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 6
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 5
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 9
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 5
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 5
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 5
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 4
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 4
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 4
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 3
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 3
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stone",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "GM4 Augmented Armor - 1 & 2"
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "minecraft:max_stack_size": 2
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
