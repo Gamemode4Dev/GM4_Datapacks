@@ -13,6 +13,7 @@
     "minecraft:lava",
     "minecraft:light",
     "minecraft:nether_sprouts",
+    { "id": "minecraft:resin_clump", "required": false },
     "minecraft:sculk_vein",
     "minecraft:seagrass",
     "minecraft:snow",
