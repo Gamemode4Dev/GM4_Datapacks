@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "minecraft:small_flowers"
+            "items": "#minecraft:small_flowers"
           }
         ]
       }
