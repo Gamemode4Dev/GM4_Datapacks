@@ -12,6 +12,7 @@ Allow your saplings to... plant themselves!<!--$pmc:headerSize-->
 
 ### Credits
 - Creator: [Bloo](https://twitter.com/Bloo_dev)
+- Updated by: [Misode](https://twitter.com/misode_)
 - Icon Design: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
 
 ---
