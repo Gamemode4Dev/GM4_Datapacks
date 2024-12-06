@@ -3,7 +3,7 @@
 # run from furnace_lit
 
 scoreboard players set $cook_time gm4_smelt_data -1
-execute store result score $cook_time gm4_smelt_data run data get block ~ ~ ~ CookTime
+execute store result score $cook_time gm4_smelt_data run data get block ~ ~ ~ cooking_time_spent
 
 # display ore
 tag @s add gm4_smeltery_processing

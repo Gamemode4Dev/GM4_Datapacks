@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:underground_structures/in_end",
+      "required": false
+    }
+  ]
+}

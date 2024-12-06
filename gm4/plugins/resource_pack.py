@@ -552,22 +552,15 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
             if exc:
                 yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
-            node = replace(node, value=AstJsonValue.from_value(index+self.cmd_prefix))
+            node = replace(node, value=AstJsonValue.from_value({ "floats": [index+self.cmd_prefix] }))
         return node
     
     @rule(AstJsonObject)
-    def json_substitutions_item_modifier(self, node: AstJsonObjectEntry, **kwargs: Any):
-        match node.evaluate(): # type: ignore , node has evaluate method
-            case {"function": "minecraft:set_custom_model_data", "value": str(reference)}:
-                index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
-                if exc:
-                    yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
-                node = replace(node, entries=AstChildren([
-                    replace(child, value=AstJsonValue.from_value(index+self.cmd_prefix))  # type: ignore , child is AstJsonValue
-                    if child.key==AstJsonObjectKey(value="value") # type: ignore , child is AstJsonValue
-                    else child
-                    for child in node.entries # type: ignore , child is AstJsonValue
-                ])) # type: ignore
+    def json_substitutions_item_modifier(self, node: AstJsonObject, **kwargs: Any):
+        match node.evaluate():
+            case {"function": "minecraft:set_custom_model_data"}:
+                yield Diagnostic("error", "Item modifier set_custom_model_data is not supported", filename=kwargs.get("filename"), file=kwargs.get("file"))
+            case _: pass
         return node
 
     @rule(AstNbtCompoundEntry, key=AstNbtCompoundKey(value="minecraft:custom_model_data"))
@@ -577,7 +570,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
             if exc:
                 yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
-            node = replace(node, value=AstNbtValue.from_value(index+self.cmd_prefix))
+            node = replace(node, value=AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] }))
         return node
 
     @rule(AstItemComponent)
@@ -589,7 +582,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                 index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
                 if exc:
                     yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
-                node = replace(node, value=AstNbtValue.from_value(index+self.cmd_prefix))
+                node = replace(node, value=AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] }))
         return node
 
     @rule(AstCommand, identifier="data:modify:storage:target:targetPath:set:value:value")
@@ -603,7 +596,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                 if exc:
                     d = Diagnostic("error", str(exc))
                     yield set_location(d, ast_nbt)
-                node = replace(node, arguments=AstChildren([ast_target, ast_target_path, AstNbtValue.from_value(index+self.cmd_prefix)]))
+                node = replace(node, arguments=AstChildren([ast_target, ast_target_path, AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] })]))
         return node
     
     

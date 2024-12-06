@@ -12,8 +12,7 @@
     "minecraft:oxeye_daisy",
     "minecraft:cornflower",
     "minecraft:lily_of_the_valley",
-    { "id": "minecraft:grass", "required": false },
-    { "id": "minecraft:short_grass", "required": false },
+    "minecraft:short_grass",
     "minecraft:tall_grass"
   ]
 }
