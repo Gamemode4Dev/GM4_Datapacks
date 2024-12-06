@@ -23,7 +23,7 @@
                             "lore": [
                                 {
                                     "translate": "item.gm4.shamir.vigere",
-                                    "fallback": "Vigere",
+                                    "fallback": "Vigere Shamir",
                                     "italic": false,
                                     "color": "gray"
                                 }
