@@ -1,0 +1,36 @@
+id: gm4_hotswap_hotbars
+name: Hotswap Hotbars
+version: 1.0.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_forceload
+  - gm4.plugins.include.lib_machines
+  - gm4.plugins.include.lib_custom_crafters
+
+meta:
+  gm4:
+    versioning:
+      required:
+        lib_custom_crafters: 3.0.0
+        lib_machines: 1.1.0
+        lib_forceload: 1.1.0
+    website:
+      description: Store and swap between additional hotbars with the new hotswapper item!
+      recommended: 
+        - gm4_animi_shamir
+        - gm4_block_compressors
+        - gm4_potion_swords
+        - gm4_relocators
+        - gm4_tinkering_compressors
+        - gm4_tunnel_bores
+        - gm4_xp_storage
+      notes: []
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Hotswap_Hotbars
+    credits:
+      Creator:
+        - BluePsychoRanger
