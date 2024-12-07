@@ -1,6 +1,7 @@
 {
     "values": [
         "minecraft:cave_spider",
+        { "id": "minecraft:creaking", "required": false },
         "minecraft:drowned",
         "minecraft:enderman",
         "minecraft:piglin",

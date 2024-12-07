@@ -24,7 +24,7 @@
         "entries": [
           {
             "type": "minecraft:loot_table",
-            "value": "gm4_bat_grenades:bat_leather",
+            "value": "gm4_bat_grenades:items/bat_leather",
             "weight": 1
           },
           {

@@ -14,9 +14,7 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "predicates": {
-                      "minecraft:custom_data": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{gm4_lightning_in_a_bottle:1b}}}}}}"
-                    }
+                    "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{gm4_lightning_in_a_bottle:1b}}}}}}"
                   }
                 }
               ]

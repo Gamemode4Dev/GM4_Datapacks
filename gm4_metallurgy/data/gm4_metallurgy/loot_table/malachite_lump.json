@@ -41,7 +41,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": 3420018,
+                "minecraft:custom_model_data": {
+                  "floats": [
+                    3420018
+                  ]
+                },
                 "minecraft:profile": "$ore/copper_RETIRED"
               }
             },
