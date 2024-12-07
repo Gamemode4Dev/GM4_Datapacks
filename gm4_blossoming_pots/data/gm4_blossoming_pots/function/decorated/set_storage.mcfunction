@@ -227,25 +227,11 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:amethyst_cluste
     ]\
 }
 
-# For all leaves, experiment with different options
-    # try un-rotated middle?
-    # inverted displays - be wary of z fighting
-    # empty
+# For all leaves, empty no rotated middle, no inverted
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:oak_leaves set value {\
     place_sound:"minecraft:item.bone_meal.use",\
     maximum:3,\
     1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:oak_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:oak_leaves"\
@@ -259,17 +245,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:oak_leaves set 
         }\
     ],\
     2:[\
-        {\
-            block_state:{\
-                Name:"minecraft:oak_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,1.25f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:oak_leaves"\
@@ -294,17 +269,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:oak_leaves set 
         }\
     ],\
     3:[\
-        {\
-            block_state:{\
-                Name:"minecraft:oak_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,2.0f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:oak_leaves"\
@@ -349,17 +313,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:spruce_leaves s
                 Name:"minecraft:spruce_leaves"\
             },\
             transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:spruce_leaves"\
-            },\
-            transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.75f,0.75f,0.75f],\
@@ -368,17 +321,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:spruce_leaves s
         }\
     ],\
     2:[\
-        {\
-            block_state:{\
-                Name:"minecraft:spruce_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,1.25f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:spruce_leaves"\
@@ -403,17 +345,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:spruce_leaves s
         }\
     ],\
     3:[\
-        {\
-            block_state:{\
-                Name:"minecraft:spruce_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,2.0f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:spruce_leaves"\
@@ -458,17 +389,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:birch_leaves se
                 Name:"minecraft:birch_leaves"\
             },\
             transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:birch_leaves"\
-            },\
-            transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.75f,0.75f,0.75f],\
@@ -477,17 +397,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:birch_leaves se
         }\
     ],\
     2:[\
-        {\
-            block_state:{\
-                Name:"minecraft:birch_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,1.25f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:birch_leaves"\
@@ -512,17 +421,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:birch_leaves se
         }\
     ],\
     3:[\
-        {\
-            block_state:{\
-                Name:"minecraft:birch_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,2.0f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:birch_leaves"\
@@ -567,17 +465,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:jungle_leaves s
                 Name:"minecraft:jungle_leaves"\
             },\
             transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:jungle_leaves"\
-            },\
-            transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.75f,0.75f,0.75f],\
@@ -586,17 +473,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:jungle_leaves s
         }\
     ],\
     2:[\
-        {\
-            block_state:{\
-                Name:"minecraft:jungle_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,1.25f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:jungle_leaves"\
@@ -621,17 +497,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:jungle_leaves s
         }\
     ],\
     3:[\
-        {\
-            block_state:{\
-                Name:"minecraft:jungle_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,2.0f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:jungle_leaves"\
@@ -676,17 +541,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:acacia_leaves s
                 Name:"minecraft:acacia_leaves"\
             },\
             transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:acacia_leaves"\
-            },\
-            transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.75f,0.75f,0.75f],\
@@ -695,17 +549,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:acacia_leaves s
         }\
     ],\
     2:[\
-        {\
-            block_state:{\
-                Name:"minecraft:acacia_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,1.25f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:acacia_leaves"\
@@ -730,17 +573,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:acacia_leaves s
         }\
     ],\
     3:[\
-        {\
-            block_state:{\
-                Name:"minecraft:acacia_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,2.0f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:acacia_leaves"\
@@ -785,17 +617,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_leaves
                 Name:"minecraft:dark_oak_leaves"\
             },\
             transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:dark_oak_leaves"\
-            },\
-            transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.75f,0.75f,0.75f],\
@@ -804,17 +625,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_leaves
         }\
     ],\
     2:[\
-        {\
-            block_state:{\
-                Name:"minecraft:dark_oak_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,1.25f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:dark_oak_leaves"\
@@ -839,17 +649,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_leaves
         }\
     ],\
     3:[\
-        {\
-            block_state:{\
-                Name:"minecraft:dark_oak_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,2.0f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:dark_oak_leaves"\
@@ -894,17 +693,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_leaves
                 Name:"minecraft:mangrove_leaves"\
             },\
             transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:mangrove_leaves"\
-            },\
-            transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.75f,0.75f,0.75f],\
@@ -913,17 +701,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_leaves
         }\
     ],\
     2:[\
-        {\
-            block_state:{\
-                Name:"minecraft:mangrove_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,1.25f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:mangrove_leaves"\
@@ -948,17 +725,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_leaves
         }\
     ],\
     3:[\
-        {\
-            block_state:{\
-                Name:"minecraft:mangrove_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,2.0f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:mangrove_leaves"\
@@ -1003,17 +769,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_leaves s
                 Name:"minecraft:cherry_leaves"\
             },\
             transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:cherry_leaves"\
-            },\
-            transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.75f,0.75f,0.75f],\
@@ -1022,17 +777,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_leaves s
         }\
     ],\
     2:[\
-        {\
-            block_state:{\
-                Name:"minecraft:cherry_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,1.25f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:cherry_leaves"\
@@ -1057,17 +801,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_leaves s
         }\
     ],\
     3:[\
-        {\
-            block_state:{\
-                Name:"minecraft:cherry_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,2.0f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:cherry_leaves"\
@@ -1112,17 +845,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea_leaves s
                 Name:"minecraft:azalea_leaves"\
             },\
             transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:azalea_leaves"\
-            },\
-            transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.75f,0.75f,0.75f],\
@@ -1131,17 +853,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea_leaves s
         }\
     ],\
     2:[\
-        {\
-            block_state:{\
-                Name:"minecraft:azalea_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,1.25f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:azalea_leaves"\
@@ -1166,17 +877,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea_leaves s
         }\
     ],\
     3:[\
-        {\
-            block_state:{\
-                Name:"minecraft:azalea_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,2.0f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:azalea_leaves"\
@@ -1221,17 +921,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azale
                 Name:"minecraft:flowering_azalea_leaves"\
             },\
             transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
-        {\
-            block_state:{\
-                Name:"minecraft:flowering_azalea_leaves"\
-            },\
-            transformation:{\
                 translation:[-0.375f,0.7435f,-0.375f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.75f,0.75f,0.75f],\
@@ -1240,17 +929,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azale
         }\
     ],\
     2:[\
-        {\
-            block_state:{\
-                Name:"minecraft:flowering_azalea_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,1.25f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:flowering_azalea_leaves"\
@@ -1275,17 +953,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:flowering_azale
         }\
     ],\
     3:[\
-        {\
-            block_state:{\
-                Name:"minecraft:flowering_azalea_leaves"\
-            },\
-            transformation:{\
-                translation:[-0.355f,0.855f,0f],\
-                left_rotation:[0f,0.384f,0f,0.924f],\
-                scale:[0.5f,2.0f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        },\
         {\
             block_state:{\
                 Name:"minecraft:flowering_azalea_leaves"\
@@ -1755,7 +1422,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:warped_fungus s
     ]\
 }
 
-# make slightly bigger, mess around with it. Try .8 scale
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:short_grass set value {\
     place_sound:"minecraft:item.bone_meal.use",\
     maximum:1,\
@@ -1765,9 +1431,9 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:short_grass set
                 Name:"minecraft:short_grass"\
             },\
             transformation:{\
-                translation:[-0.25f,0.7435f,-0.25f],\
+                translation:[-0.361f,0.65325f,-0.361f],\
                 left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.5f,0.5f],\
+                scale:[0.722f,0.722f,0.722f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
@@ -2251,10 +1917,9 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sugar_cane set 
     ]\
 }
 # Cactus
-    # only the first stage, which makes me sad :(
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:cactus set value {\
     place_sound:"minecraft:block.wool.place",\
-    maximum:1,\
+    maximum:2,\
     1:[\
         {\
             block_state:{\
@@ -2265,6 +1930,41 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cactus set valu
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[1f,1f,1f],\
                 right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    2:[\
+        {\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.3684f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
+            transformation:{\
+                translation:[-0.2f,1.05f,-0.2f],\
+                left_rotation:[0.328f,0f,0f,0.945f],\
+                scale:[0.4f,0.4f,0.4f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:potted_cactus"\
+            },\
+            transformation:{\
+                translation:[-0.2f,0.7f,-0.05f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.4f,0.4f,0.4f],\
+                right_rotation:[-0.445f,0f,0f,0.895f]\
             }\
         }\
     ]\
@@ -2279,7 +1979,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:crimson_roots s
                 Name:"minecraft:potted_crimson_roots"\
             },\
             transformation:{\
-                translation:[-0.5f,0.35355f,-0.5f],\
+                translation:[-0.5f,0.353f,-0.5f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[1f,1f,1f],\
                 right_rotation:[0f,0f,0f,1f]\
@@ -2296,7 +1996,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:warped_roots se
                 Name:"minecraft:potted_warped_roots"\
             },\
             transformation:{\
-                translation:[-0.5f,0.35355f,-0.5f],\
+                translation:[-0.5f,0.353f,-0.5f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[1f,1f,1f],\
                 right_rotation:[0f,0f,0f,1f]\
@@ -2491,7 +2191,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:twisting_vines 
     ]\
 }
 
-# try to make tall grass bigger, like short grass
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:tall_grass set value {\
     place_sound:"minecraft:item.bone_meal.use",\
     maximum:1,\
@@ -2504,9 +2203,9 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:tall_grass set 
                 }\
             },\
             transformation:{\
-                translation:[-0.25f,0.64975f,-0.25f],\
+                translation:[-0.361f,0.65325f,-0.361f],\
                 left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.5f,0.5f],\
+                scale:[0.722f,0.722f,0.722f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         },\
@@ -2518,9 +2217,9 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:tall_grass set 
                 }\
             },\
             transformation:{\
-                translation:[-0.25f,1.14975f,-0.25f],\
+                translation:[-0.361f,1.37525f,-0.361f],\
                 left_rotation:[0f,0f,0f,1f],\
-                scale:[0.5f,0.5f,0.5f],\
+                scale:[0.722f,0.722f,0.722f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
@@ -3367,7 +3066,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:chorus_flower s
     ]\
 }
 
-# try to make bigger, same as short grass
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:hanging_roots set value {\
     place_sound:"minecraft:block.hanging_roots.place",\
     maximum:1,\
@@ -3377,9 +3075,9 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:hanging_roots s
                 Name:"minecraft:hanging_roots"\
             },\
             transformation:{\
-                translation:[-0.25f,1.2432f,0.25f],\
+                translation:[-0.361f,1.37525f,0.361f],\
                 left_rotation:[0.707f,0f,0f,0.707f],\
-                scale:[0.5f,0.5f,0.5f],\
+                scale:[0.722f,0.722f,0.722f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
             }\
         }\
@@ -3433,63 +3131,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:wheat_seeds set
                 translation:[-0.25f,0.77475f,-0.25f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.5f,0.5f,0.5f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        }\
-    ]\
-}
-
-# Try to rotate, remove if scuffed
-data modify storage gm4_blossoming_pots:decorated_pots minecraft:cocoa_beans set value {\
-    place_sound:"minecraft:block.wood.place",\
-    maximum:3,\
-    1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:cocoa",\
-                Properties:{\
-                    age:"0",\
-                    facing:"north"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.24375f,0.530625f,-0.0914125f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4875f,0.4875f,0.4875f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        }\
-    ],\
-    2:[\
-        {\
-            block_state:{\
-                Name:"minecraft:cocoa",\
-                Properties:{\
-                    age:"1",\
-                    facing:"north"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.24375f,0.5915625f,-0.12188125f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4875f,0.4875f,0.4875f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        }\
-    ],\
-    3:[\
-        {\
-            block_state:{\
-                Name:"minecraft:cocoa",\
-                Properties:{\
-                    age:"2",\
-                    facing:"north"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.24375f,0.6525f,-0.15235f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4875f,0.4875f,0.4875f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
@@ -3653,7 +3294,6 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:beetroot_seeds 
     ]\
 }
 
-# Experiment with berries?
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:glow_berries set value {\
     place_sound:"minecraft:block.cave_vines.place",\
     maximum:3,\
@@ -3662,7 +3302,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:glow_berries se
             block_state:{\
                 Name:"minecraft:cave_vines",\
                 Properties:{\
-                    berries:"true"\
+                    berries:"false"\
                 }\
             },\
             transformation:{\
@@ -3692,7 +3332,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:glow_berries se
             block_state:{\
                 Name:"minecraft:cave_vines_plant",\
                 Properties:{\
-                    berries:"true"\
+                    berries:"false"\
                 }\
             },\
             transformation:{\
@@ -3722,7 +3362,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:glow_berries se
             block_state:{\
                 Name:"minecraft:cave_vines_plant",\
                 Properties:{\
-                    berries:"true"\
+                    berries:"false"\
                 }\
             },\
             transformation:{\

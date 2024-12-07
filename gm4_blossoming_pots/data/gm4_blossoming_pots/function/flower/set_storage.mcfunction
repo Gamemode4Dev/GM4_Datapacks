@@ -289,7 +289,6 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:flowering_azalea_l
     ]\
 }
 
-# unsure if stretched was fine?
 data modify storage gm4_blossoming_pots:flower_pots minecraft:short_grass set value {\
     place_sound:"minecraft:item.bone_meal.use",\
     maximum:1,\
@@ -702,66 +701,9 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:wheat_seeds set va
                 }\
             },\
             transformation:{\
-                translation:[-0.15f,-0.22525f,-0.15f],\
+                translation:[-0.1875f,-0.22525f,-0.1875f],\
                 left_rotation:[0f,0f,0f,1f],\
-                scale:[0.3f,0.3f,0.3f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        }\
-    ]\
-}
-
-# try to rotate??????
-data modify storage gm4_blossoming_pots:flower_pots minecraft:cocoa_beans set value {\
-    place_sound:"minecraft:block.wood.place",\
-    maximum:3,\
-    1:[\
-        {\
-            block_state:{\
-                Name:"minecraft:cocoa",\
-                Properties:{\
-                    age:"0",\
-                    facing:"north"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.24375f,-0.469375f,-0.0914125f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4875f,0.4875f,0.4875f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        }\
-    ],\
-    2:[\
-        {\
-            block_state:{\
-                Name:"minecraft:cocoa",\
-                Properties:{\
-                    age:"1",\
-                    facing:"north"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.24375f,-0.4084375f,-0.12188125f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4875f,0.4875f,0.4875f],\
-                right_rotation:[0f,0f,0f,1f]\
-            }\
-        }\
-    ],\
-    3:[\
-        {\
-            block_state:{\
-                Name:"minecraft:cocoa",\
-                Properties:{\
-                    age:"2",\
-                    facing:"north"\
-                }\
-            },\
-            transformation:{\
-                translation:[-0.24375f,-0.3475f,-0.15235f],\
-                left_rotation:[0f,0f,0f,1f],\
-                scale:[0.4875f,0.4875f,0.4875f],\
+                scale:[0.375f,0.375f,0.375f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
@@ -820,9 +762,9 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:beetroot_seeds set
                 }\
             },\
             transformation:{\
-                translation:[-0.15f,-0.22525f,-0.15f],\
+                translation:[-0.1875f,-0.22525f,-0.1875f],\
                 left_rotation:[0f,0f,0f,1f],\
-                scale:[0.3f,0.3f,0.3f],\
+                scale:[0.375f,0.375f,0.375f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
@@ -838,7 +780,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:glow_berries set v
             block_state:{\
                 Name:"minecraft:cave_vines_plant",\
                 Properties:{\
-                    berries:"true"\
+                    berries:"false"\
                 }\
             },\
             transformation:{\
@@ -898,9 +840,9 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:nether_wart set va
                 }\
             },\
             transformation:{\
-                translation:[-0.15f,-0.225f,-0.15f],\
+                translation:[-0.1875f,-0.225f,-0.1875f],\
                 left_rotation:[0f,0f,0f,1f],\
-                scale:[0.3f,0.3f,0.3f],\
+                scale:[0.375f,0.375f,0.375f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
@@ -1272,7 +1214,6 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:dead_horn_coral_fa
     ]\
 }
 
-# Experiment with making bigger
 data modify storage gm4_blossoming_pots:flower_pots minecraft:carrot set value {\
     place_sound:"minecraft:item.crop.plant",\
     maximum:1,\
@@ -1285,9 +1226,9 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:carrot set value {
                 }\
             },\
             transformation:{\
-                translation:[-0.15f,-0.22525f,-0.15f],\
+                translation:[-0.225f,-0.22525f,-0.225f],\
                 left_rotation:[0f,0f,0f,1f],\
-                scale:[0.3f,0.3f,0.3f],\
+                scale:[0.45f,0.45f,0.45f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
@@ -1305,9 +1246,9 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:potato set value {
                 }\
             },\
             transformation:{\
-                translation:[-0.15f,-0.22525f,-0.15f],\
+                translation:[-0.225f,-0.22525f,-0.225f],\
                 left_rotation:[0f,0f,0f,1f],\
-                scale:[0.3f,0.3f,0.3f],\
+                scale:[0.45f,0.45f,0.45f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
