@@ -850,7 +850,7 @@ def loottable_to_display(loottable: str, data: dict[Any,Any], ctx: Context) -> t
 
   # else:
   vanilla = ctx.inject(Vanilla)
-  vanilla.minecraft_version = '1.21.3'
+  vanilla.minecraft_version = '1.21.4'
   color = get_texture_color(intuit_item_texture(item_id, vanilla))
 
   # create slot
@@ -931,7 +931,7 @@ Reads a vanilla item and creates a JSON text component to display the item in th
 """
 def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextComponent, TextComponent]:
   vanilla = ctx.inject(Vanilla)
-  vanilla.minecraft_version = '1.21.3'
+  vanilla.minecraft_version = '1.21.4'
   if ingredient.get("id") == "empty":
     # show empty slot ()
     slot = {
@@ -1105,7 +1105,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
           else:
             if "tag" in ingr:
               vanilla = ctx.inject(Vanilla)
-              vanilla.minecraft_version = '1.21.3'
+              vanilla.minecraft_version = '1.21.4'
               item["id"] = get_item_from_tag(ingr["tag"], vanilla)
             else:
               item["id"] = ingr["item"]

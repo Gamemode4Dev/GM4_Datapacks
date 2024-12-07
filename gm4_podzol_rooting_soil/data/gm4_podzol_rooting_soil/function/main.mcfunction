@@ -9,4 +9,4 @@ scoreboard players add last_uuid gm4_podzol_data 11
 scoreboard players operation last_uuid gm4_podzol_data %= #200 gm4_podzol_data
 
 # get sapling items
-execute as @e[type=item] run function gm4_podzol_rooting_soil:process_saplings
+execute as @e[type=item,predicate=gm4_podzol_rooting_soil:plantable_on_ground] at @s run function gm4_podzol_rooting_soil:process_item
