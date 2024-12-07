@@ -31,9 +31,9 @@
                             "function": "set_name",
                             "name": {
                                 "translate": "item.gm4.floating_potion",
-                                "fallback": "Potion of Floating",
-                                "italic": false
-                            }
+                                "fallback": "Potion of Floating"
+                            },
+                            "target": "item_name"
                         }
                     ]
                 }

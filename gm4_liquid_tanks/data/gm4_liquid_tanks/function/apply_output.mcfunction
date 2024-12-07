@@ -2,8 +2,17 @@
 # @s = processing tank
 
 # merge count from input and set to tank
-data modify storage gm4_liquid_tanks:temp/tank output.count set from storage gm4_liquid_tanks:temp/tank input_slot.count
-data modify block ~ ~ ~ Items[{Slot:0b}] set from storage gm4_liquid_tanks:temp/tank output
+item_modifier gm4_liquid_tanks:apply_output_count:
+    function: "minecraft:set_count"
+    count:
+        type: "minecraft:score"
+        target: 
+            type: "minecraft:fixed"
+            name: "$stack_size"
+        score: "gm4_lt_value"
+
+item replace block ~ ~ ~ container.0 from entity 344d47-4-4-4-f04ce104d weapon.mainhand gm4_liquid_tanks:apply_output_count
+item replace entity 344d47-4-4-4-f04ce104d weapon.mainhand with air
 
 # apply value delta
 scoreboard players operation @s gm4_lt_value += $stack_value gm4_lt_value
