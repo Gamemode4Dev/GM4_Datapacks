@@ -2,7 +2,7 @@
 # @s = null
 # run from init
 
-data modify storage gm4_blossoming_pots:decorated_pots version_history append value "1-26"
+data modify storage gm4_blossoming_pots:decorated_pots version_history append value "1-61"
 
 # Data storage layout
     # gm4_blossoming_pots:decorated_pots <item_namespace>:<item_name>
@@ -11,6 +11,101 @@ data modify storage gm4_blossoming_pots:decorated_pots version_history append va
         # 1:[]  array of starting data for the all the block displays used in this stage, all data
         # 2:[]  array of starting data for the all the block displays used in this stage, all data
         # ......
+
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:pale_hanging_moss set value {\
+    place_sound:"minecraft:block.moss_carpet.place",\
+    maximum:3,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_hanging_moss",\
+                Properties:{\
+                    tip:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.443f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
+    ],\
+    2:[\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_hanging_moss",\
+                Properties:{\
+                    tip:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.1425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_hanging_moss",\
+                Properties:{\
+                    tip:"false"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.443f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
+    ],\
+    3:[\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_hanging_moss",\
+                Properties:{\
+                    tip:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.842f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_hanging_moss",\
+                Properties:{\
+                    tip:"false"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,2.1425f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_hanging_moss",\
+                Properties:{\
+                    tip:"false"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.35f,1.443f,0.35f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.7f,0.7f,0.7f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
+    ]\
+}
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripstone set value {\
     place_sound:"minecraft:block.pointed_dripstone.place",\
@@ -836,6 +931,82 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_leaves s
         }\
     ]\
 }
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:pale_oak_leaves set value {\
+    place_sound:"minecraft:block.grass.place",\
+    maximum:3,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_oak_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    2:[\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_oak_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_oak_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    3:[\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_oak_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_oak_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_oak_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea_leaves set value {\
     place_sound:"minecraft:block.azalea_leaves.place",\
     maximum:3,\
@@ -1251,6 +1422,40 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_sapling 
         {\
             block_state:{\
                 Name:"minecraft:cherry_sapling",\
+                Properties:{\
+                    stage:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            },\
+            Rotation:[0f,0f]\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:pale_oak_sapling set value {\
+    place_sound:"minecraft:block.cherry_sapling.place",\
+    maximum:2,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_oak_sapling"\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    2:[\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_oak_sapling",\
                 Properties:{\
                     stage:"1"\
                 }\
@@ -1685,6 +1890,40 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:torchflower set
         {\
             block_state:{\
                 Name:"minecraft:torchflower"\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:closed_eyeblossom set value {\
+    place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:closed_eyeblossom"\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:open_eyeblossom set value {\
+    place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:open_eyeblossom"\
             },\
             transformation:{\
                 translation:[-0.5f,0.681f,-0.5f],\

@@ -9,7 +9,7 @@ scoreboard objectives add gm4_blossoming_pots.sound dummy "gm4_bPots.sound"
 
 scoreboard players set $raycast_multiplier gm4_blossoming_pots.range 200
 
-execute unless data storage gm4_blossoming_pots:decorated_pots {version_history:["1-26"]} run function gm4_blossoming_pots:decorated/set_storage
-execute unless data storage gm4_blossoming_pots:flower_pots {version_history:["1-26"]} run function gm4_blossoming_pots:flower/set_storage
+execute unless data storage gm4_blossoming_pots:decorated_pots {version_history:["1-61"]} run function gm4_blossoming_pots:decorated/set_storage
+execute unless data storage gm4_blossoming_pots:flower_pots {version_history:["1-61"]} run function gm4_blossoming_pots:flower/set_storage
 
 schedule function gm4_blossoming_pots:main 1t
