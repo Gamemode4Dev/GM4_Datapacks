@@ -7,6 +7,7 @@
 execute unless block ~ ~ ~ minecraft:flower_pot run return fail
 
 # summon marker for checking
+    # item id of players main hand is stored on the temp marker and set to null until it is overwritten in flower/raycast/player_rotation. It is set to null here in case the players hand is empty
 summon minecraft:marker ~ ~ ~ {Tags:["gm4_blossoming_pots.temp.flower_pot","smithed.strict","smithed.entity"],CustomName:'{"text":"gm4_blossoming_pots.temp_marker"}',data:{id:null}}
 
 # if temp marker in physical hit box, return 1

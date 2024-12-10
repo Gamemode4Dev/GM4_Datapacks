@@ -16,11 +16,6 @@
       "trigger": "minecraft:any_block_use"
     }
   },
-  "requirements": [
-    [
-      "use_pot"
-    ]
-  ],
   "rewards": {
     "function": "gm4_blossoming_pots:flower/vanilla_pots/as_player"
   }

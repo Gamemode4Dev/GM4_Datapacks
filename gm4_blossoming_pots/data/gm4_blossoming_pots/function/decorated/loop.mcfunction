@@ -3,8 +3,7 @@
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with storage gm4_blossoming_pots:decorated_pots temp
     # which should contain {rotation, score, id, count, data}
-# run from decorated/as_marker
-# run from this function...
+# run from decorated/as_marker and self
 
 # summon if needed
 $execute unless entity @n[type=minecraft:block_display,distance=..0.1,tag=gm4_blossoming_pots.display.decorated_pot.$(score)] \

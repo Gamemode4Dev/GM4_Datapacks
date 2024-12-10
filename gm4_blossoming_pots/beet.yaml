@@ -1,7 +1,7 @@
 id: gm4_blossoming_pots
 name: Blossoming Pots
-version: 3.0.X
-  # should I start the version number over for gm4 release?
+version: 3.1.X
+
 data_pack:
   load: .
   overlays:
@@ -38,4 +38,4 @@ meta:
       Creator:
         - runcows
       Icon Design:
-        - <no idea>
+        - runcows

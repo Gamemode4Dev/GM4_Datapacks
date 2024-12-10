@@ -3,8 +3,7 @@
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with storage gm4_blossoming_pots:flower_pots temp
     # which should contain {rotation, score, id, count, data}
-# run from flower/as_marker
-# run from this function...
+# run from flower/as_marker and self
 
 # summon if needed
 $execute unless entity @n[type=minecraft:block_display,distance=..0.1,tag=gm4_blossoming_pots.display.flower_pot.$(score)] \

@@ -18,11 +18,6 @@
       "trigger": "minecraft:any_block_use"
     }
   },
-  "requirements": [
-    [
-      "use_pot"
-    ]
-  ],
   "rewards": {
     "function": "gm4_blossoming_pots:decorated/as_player"
   }
