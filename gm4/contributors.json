@@ -80,6 +80,10 @@
         "links": ["https://youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"]
     },
     {
+        "name": "runcows",
+        "links": ["http://discordapp.com/users/272901888989593600"]
+    },
+    {
         "name": "Scommander",
         "links": ["https://github.com/Scommander"]
     },
@@ -122,9 +126,5 @@
     {
         "name": "Venomousbirds",
         "links": ["https://venomousbirds.artstation.com/"]
-    },
-    {
-        "name": "runcows",
-        "links": ["http://discordapp.com/users/272901888989593600"]
     }
 ]
