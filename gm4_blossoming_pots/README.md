@@ -21,7 +21,6 @@ Decorated Pots and Flower Pots extended to allow all kinds of things to be place
   - Sea Pickle
   - Most Seeds
   - Netherwart
-  - Cocoa Beans
   - Chorus Flowers
   - All Amethyst Buds & Clusters
   - Dripstone
