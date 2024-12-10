@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "use_pot": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:flower_pot"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:any_block_use"
+    }
+  },
+  "rewards": {
+    "function": "gm4_blossoming_pots:flower/as_player"
+  }
+}
