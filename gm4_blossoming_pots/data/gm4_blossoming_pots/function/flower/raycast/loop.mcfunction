@@ -4,7 +4,7 @@
 # run from flower/as_player and self
 
 # if current location is within the flower pots hit box, summon a temp marker, set its data with the player rotation, and exit raycast
-execute if function gm4_blossoming_pots:flower/raycast/in_pot run return run function gm4_blossoming_pots:flower/raycast/player_rotation
+execute if function gm4_blossoming_pots:flower/raycast/is_flower_pot run return run function gm4_blossoming_pots:flower/raycast/player_rotation
 
 # remove range
 scoreboard players remove @s gm4_blossoming_pots.range 1

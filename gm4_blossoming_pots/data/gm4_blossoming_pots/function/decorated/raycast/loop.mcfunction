@@ -4,7 +4,7 @@
 # run from decorated/as_player and self
 
 # if current location is within the decorated pots hit box, summon a temp marker, set its data with the player rotation, and exit raycast
-execute if function gm4_blossoming_pots:decorated/raycast/in_pot run return run function gm4_blossoming_pots:decorated/raycast/player_rotation
+execute if function gm4_blossoming_pots:decorated/raycast/is_decorated_pot run return run function gm4_blossoming_pots:decorated/raycast/player_rotation
 
 scoreboard players remove @s gm4_blossoming_pots.range 1
 

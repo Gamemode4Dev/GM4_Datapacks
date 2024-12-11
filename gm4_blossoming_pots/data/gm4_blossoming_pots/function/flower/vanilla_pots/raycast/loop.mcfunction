@@ -5,7 +5,7 @@
 # run from this function...
 
 # if current execution context in flower pot hitbox, set new temp markers data to have player UUID
-execute if function gm4_blossoming_pots:flower/vanilla_pots/raycast/in_pot run return run \
+execute if function gm4_blossoming_pots:flower/vanilla_pots/raycast/is_vanilla_pot run return run \
     data modify entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.temp.vanilla_flower_pot,distance=..0.1] data.UUID set from entity @s UUID
 
 # remove range
