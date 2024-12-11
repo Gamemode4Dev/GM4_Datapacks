@@ -10,6 +10,10 @@ $execute if data entity @n[type=minecraft:block_display,distance=..0.1,tag=gm4_b
 
 $execute store result score $array_len gm4_blossoming_pots.loop run data get storage gm4_blossoming_pots:decorated_pots $(id).$(count)
 
+# check how many block displays there are present, if there are more than we need, kill all of them and resummon after. This solves partial display cannibalizing
+execute store result score $display_count gm4_blossoming_pots.loop if entity @e[type=minecraft:block_display,tag=gm4_blossoming_pots.display.decorated_pot,distance=..0.1]
+execute if score $array_len gm4_blossoming_pots.loop < $display_count gm4_blossoming_pots.loop run kill @e[type=minecraft:block_display,tag=gm4_blossoming_pots.display.decorated_pot,distance=..0.1]
+
 data modify storage gm4_blossoming_pots:decorated_pots temp.rotation set from entity @s data.rotation
 execute store result storage gm4_blossoming_pots:decorated_pots temp.score int 1 run scoreboard players set @s gm4_blossoming_pots.loop 0
 $data merge storage gm4_blossoming_pots:decorated_pots {temp:{id:"$(id)",count:$(count)}}
