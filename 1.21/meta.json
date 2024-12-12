@@ -1,5 +1,5 @@
 {
-  "last_commit": "a0e7d405e88ad746a51b60889527d836bb966d3e",
+  "last_commit": "7af127cc516212fc2a84bbbbe2fe42a76884b5dc",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -920,8 +920,8 @@
     {
       "id": "gm4_double_doors",
       "name": "Double Doors",
-      "version": "1.2.6",
-      "hash": "8a554841b9e3a26d4adb12dcbfb7eb4834c6d0bf",
+      "version": "1.2.7",
+      "hash": "996b73c9bc4937570523bc23f0a21b0911956e98",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Double_Doors",
       "credits": {
@@ -2177,8 +2177,8 @@
     {
       "id": "gm4_podzol_rooting_soil",
       "name": "Podzol Rooting Soil",
-      "version": "1.5.6",
-      "hash": "74fe1b755cf70d656f4b47f67a734ae4773fe46e",
+      "version": "1.5.7",
+      "hash": "cc47af428d95156db68f872e4b638ad6f8299879",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Podzol_Rooting_Soil",
       "credits": {
@@ -2707,8 +2707,8 @@
     {
       "id": "gm4_standard_crafting",
       "name": "Standard Crafting",
-      "version": "1.5.13",
-      "hash": "299d9ce38e359808f220b4739822e5e4788c48b6",
+      "version": "1.5.14",
+      "hash": "e5c13b6706972bb587dd5606760e31504096496c",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
       "credits": {
@@ -2784,8 +2784,8 @@
     {
       "id": "gm4_sweethearts",
       "name": "Sweethearts",
-      "version": "1.5.6",
-      "hash": "3011fd32b65f45d4d7ffff58853fdaaa00014814",
+      "version": "1.5.7",
+      "hash": "254209807c78dcb0011868cc1f21a1012ce1d96d",
       "video_link": "https://www.youtube.com/watch?v=mcopNZzY2dA",
       "wiki_link": "https://wiki.gm4.co/wiki/Sweethearts",
       "credits": {
