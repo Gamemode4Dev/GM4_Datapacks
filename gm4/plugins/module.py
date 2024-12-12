@@ -15,7 +15,11 @@ def gm4_root_advancement(ctx: Context):
                     "icon": {
                         "id": "command_block",
                         "components": {
-                            "minecraft:custom_model_data": 3420001
+                            "minecraft:custom_model_data": {
+                                "floats": [
+                                    3420001
+                                ]
+                            }
                         }
                     },
                     "title": {
