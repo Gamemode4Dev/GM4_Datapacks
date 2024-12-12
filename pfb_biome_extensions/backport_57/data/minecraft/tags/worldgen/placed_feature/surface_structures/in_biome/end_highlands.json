@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:surface_structures/in_end",
+      "required": false
+    },
+    "minecraft:end_gateway_return"
+  ]
+}
