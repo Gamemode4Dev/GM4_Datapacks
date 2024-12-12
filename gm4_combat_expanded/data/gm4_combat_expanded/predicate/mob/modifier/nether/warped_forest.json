@@ -1,0 +1,8 @@
+[
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "biomes": "minecraft:warped_forest"
+    }
+  }
+]

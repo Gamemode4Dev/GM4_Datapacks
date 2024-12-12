@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "join": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "function": "gm4_combat_expanded:player/give_id"
+  }
+}

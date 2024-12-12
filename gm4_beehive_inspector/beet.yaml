@@ -1,6 +1,6 @@
 id: gm4_beehive_inspector
 name: Beehive Inspector
-version: 1.3.X
+version: 1.4.X
 
 data_pack:
   load: .

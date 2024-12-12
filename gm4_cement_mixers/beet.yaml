@@ -1,6 +1,6 @@
 id: gm4_cement_mixers
 name: Cement Mixers
-version: 1.3.X
+version: 1.4.X
 
 data_pack:
   load: .
@@ -12,7 +12,7 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_liquid_tanks: 2.2.0
+        gm4_liquid_tanks: 2.3.0
     website:
       description: Allows Liquid Tanks to convert Concrete Powder items into Concrete, at the cost of ⅓ of a Bucket of Water per Concrete Powder.
       recommended: []

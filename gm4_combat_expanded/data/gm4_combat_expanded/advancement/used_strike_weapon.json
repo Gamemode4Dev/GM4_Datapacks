@@ -1,0 +1,47 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "gm4_ce_sword_hit_triggered"
+              },
+              "range": {
+                "min": 1
+              }
+            }
+          },
+          {
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "mainhand": {
+                      "items": "#gm4_combat_expanded:weapon",
+                      "predicates": {
+                        "minecraft:custom_data": "{gm4_combat_expanded:{strike:1}}"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_combat_expanded:weapon/process"
+  }
+}

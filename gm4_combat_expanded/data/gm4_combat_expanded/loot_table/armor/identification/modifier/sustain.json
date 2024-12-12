@@ -1,0 +1,74 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_combat_expanded:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_combat_expanded:{modifier:45}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.combat_expanded.lore.low_hp",
+              "fallback": "When Low on Health:",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.combat_expanded.lore.sustain",
+                "fallback": "Quicker Regeneration",
+                "color": "blue",
+                "italic": false
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.combat_expanded.name.sustain",
+              "fallback": "Sustaining %s",
+              "with": [
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_combat_expanded.name",
+                  "storage": "gm4_combat_expanded:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

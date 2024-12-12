@@ -6,7 +6,7 @@
 data modify entity @s HandItems[0] set from storage gm4_enchantment_extractors:temp current_item
 
 # check if mending already in extractor
-execute store result score $existing_mending gm4_ench_data if items block ~ ~ ~ container.* *[stored_enchantments~[{enchantment:"minecraft:mending"}]]
+execute store result score $existing_mending gm4_ench_data if items block ~ ~ ~ container.* *[stored_enchantments~[{enchantments:"minecraft:mending"}]]
 
 # if cursed extract only the curse
 execute if data storage gm4_enchantment_extractors:temp current_item.components."minecraft:enchantments".levels."minecraft:vanishing_curse" run function gm4_enchantment_extractors:extract_vanishing
@@ -29,7 +29,7 @@ data remove storage gm4_enchantment_extractors:temp current_item.components."min
 data modify block ~ ~ ~ Items append from storage gm4_enchantment_extractors:temp current_item
 
 # grant mending advancement
-execute unless score $existing_mending gm4_ench_data matches 1.. if items block ~ ~ ~ container.* *[stored_enchantments~[{enchantment:"minecraft:mending"}]] unless items block ~ ~ ~ container.* *[stored_enchantments~[{enchantment:"minecraft:mending"},{enchantment:"minecraft:vanishing_curse"}]] run advancement grant @a[distance=..5] only gm4:enchantment_extractors_mending
+execute unless score $existing_mending gm4_ench_data matches 1.. if items block ~ ~ ~ container.* *[stored_enchantments~[{enchantments:"minecraft:mending"}]] unless items block ~ ~ ~ container.* *[stored_enchantments~[{enchantments:"minecraft:mending"},{enchantments:"minecraft:vanishing_curse"}]] run advancement grant @a[distance=..5] only gm4:enchantment_extractors_mending
 
 # clean up
 data remove entity @s HandItems[0]

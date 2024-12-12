@@ -1,6 +1,6 @@
 id: gm4_end_fishing
 name: End Fishing
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .

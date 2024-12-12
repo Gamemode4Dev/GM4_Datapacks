@@ -1,6 +1,6 @@
 id: gm4_custom_crafters
 name: Gamemode 4 Custom Crafters
-version: 3.2.X
+version: 3.3.X
 description: A dropper-based custom crafter for custom item crafting purposes.
 
 data_pack:
@@ -33,8 +33,8 @@ meta:
   gm4:
     versioning:
       required: 
-        lib_machines: 1.2.0
-        lib_forceload: 1.3.0
+        lib_machines: 1.3.0
+        lib_forceload: 1.4.0
       schedule_loops: [main]
       extra_version_injections:
         functions: 

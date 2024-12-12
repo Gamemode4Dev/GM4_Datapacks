@@ -1,6 +1,6 @@
 id: gm4_display_frames
 name: Display Frames
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_potion_tracking: 1.1.0
+        lib_potion_tracking: 1.2.0
       schedule_loops: [main]
     website:
       description: Splash item frames with invisibilty to make invisible item frames! Great for interior decor!
