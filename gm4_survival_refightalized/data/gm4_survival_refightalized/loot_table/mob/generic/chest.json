@@ -8,8 +8,8 @@
                     "type": "minecraft:alternatives",
                     "children": [
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/diamond/chest",
+                            "type": "minecraft:item",
+                            "name": "minecraft:diamond_chestplate",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -32,8 +32,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/golden/chest",
+                            "type": "minecraft:item",
+                            "name": "golden_chestplate",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -56,8 +56,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/iron/chest",
+                            "type": "minecraft:item",
+                            "name": "iron_chestplate",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -80,8 +80,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/chainmail/chest",
+                            "type": "minecraft:item",
+                            "name": "chainmail_chestplate",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -90,8 +90,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/leather/chest"
+                            "type": "minecraft:item",
+                            "name": "leather_chestplate"
                         }
                     ],
                     "conditions": [

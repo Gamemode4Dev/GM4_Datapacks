@@ -8,8 +8,8 @@
           "type": "minecraft:alternatives",
           "children": [
             {
-              "type": "minecraft:item",
-              "name": "iron_helmet",
+              "type": "minecraft:loot_table",
+              "value": "gm4_augmented_armor:armor/material/iron/head",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -18,8 +18,8 @@
               ]
             },
             {
-              "type": "minecraft:item",
-              "name": "chainmail_helmet",
+              "type": "minecraft:loot_table",
+              "value": "gm4_augmented_armor:armor/material/chainmail/head",
               "conditions": [
                 {
                   "condition": "minecraft:reference",

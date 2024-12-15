@@ -32,3 +32,4 @@ function gm4_survival_refightalized:player/armor/durability/feet/eval with stora
 
 # cleanup
 data remove storage gm4_survival_refightalized:temp set
+scoreboard players reset $total_durability gm4_sr_data

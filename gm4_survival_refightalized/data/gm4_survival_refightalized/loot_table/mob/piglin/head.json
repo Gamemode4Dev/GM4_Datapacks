@@ -5,8 +5,8 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:loot_table",
-          "value": "gm4_survival_refightalized:armor/golden/head",
+          "type": "minecraft:item",
+          "name": "golden_helmet",
           "conditions": [
             {
               "condition": "minecraft:random_chance",

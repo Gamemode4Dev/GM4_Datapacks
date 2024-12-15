@@ -19,7 +19,7 @@ execute store result score $resistance_level gm4_sr_data run data get storage gm
 execute unless score $resistance_level gm4_sr_data matches -1 run return run scoreboard players reset @s gm4_sr_stat.damage_resisted
 
 # dev damage log
-tellraw @s[tag=gm4_sr_dev] [{"text":"Damage Taken (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_stat.damage_resisted"},"color":"white"}]
+tellraw @s[tag=gm4_sr_dev] [{"text":"Base Damage Taken (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_stat.damage_resisted"},"color":"white"}]
 
 # transfer damage resistance to damage to health score
 scoreboard players operation $damage_total gm4_sr_data = @s gm4_sr_stat.damage_resisted

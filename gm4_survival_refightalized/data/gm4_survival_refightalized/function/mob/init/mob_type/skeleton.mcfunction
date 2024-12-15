@@ -24,11 +24,17 @@ tag @s add gm4_sr_check_damage_cap
 execute unless score @s gm4_sr_arrow.damage_change matches -2147483648..2147483647 store result score @s gm4_sr_arrow.damage_change run random value -4..4
 execute unless score @s gm4_sr_arrow.fire_delay matches -2147483648..2147483647 store result score @s gm4_sr_arrow.damage_change run random value -4..4
 
+# set weapon
+loot replace entity @s[tag=!gm4_sr_melee_skeleton] weapon.mainhand loot gm4_survival_refightalized:mob/skeleton/weapon
+
 # set armor
 execute store result score $armor_chance gm4_sr_data run random value 0..15
+execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.feet loot gm4_augmented_armor:mob/generic/feet
+execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.legs loot gm4_augmented_armor:mob/generic/legs
+execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.chest loot gm4_augmented_armor:mob/generic/chest
+execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.head loot gm4_augmented_armor:mob/generic/head
+execute if score gm4_augmented_armor load.status matches 1 run return 1
 loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/generic/feet
 loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/generic/legs
 loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/generic/chest
 loot replace entity @s armor.head loot gm4_survival_refightalized:mob/generic/head
-# set weapon
-loot replace entity @s[tag=!gm4_sr_melee_skeleton] weapon.mainhand loot gm4_survival_refightalized:mob/skeleton/weapon

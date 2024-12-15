@@ -8,8 +8,8 @@
                     "type": "minecraft:alternatives",
                     "children": [
                         {
-                            "type": "minecraft:item",
-                            "name": "diamond_boots",
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_augmented_armor:armor/material/diamond/legs",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -32,8 +32,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:item",
-                            "name": "golden_boots",
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_augmented_armor:armor/material/golden/legs",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -56,8 +56,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:item",
-                            "name": "iron_boots",
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_augmented_armor:armor/material/iron/legs",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -80,8 +80,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:item",
-                            "name": "chainmail_boots",
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_augmented_armor:armor/material/chainmail/legs",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -90,8 +90,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:item",
-                            "name": "leather_boots"
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_augmented_armor:armor/material/leather/legs"
                         }
                     ],
                     "conditions": [

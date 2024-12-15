@@ -32,5 +32,4 @@ item replace entity @s armor.head with spawner
 data modify entity @s ArmorDropChances[3] set value -327.670F
 
 team join gm4_mu_elite.split
-execute if score $has_bow gm4_mu_data matches 0 run say air
 execute if score $has_bow gm4_mu_data matches 0 run item replace entity @s[type=#gm4_survival_refightalized:skeleton_types] weapon.mainhand with wooden_sword

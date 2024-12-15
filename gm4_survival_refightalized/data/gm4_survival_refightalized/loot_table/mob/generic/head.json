@@ -8,8 +8,8 @@
                     "type": "minecraft:alternatives",
                     "children": [
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/special/turtle_helmet",
+                            "type": "minecraft:item",
+                            "name": "turtle_helmet",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -18,8 +18,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/diamond/head",
+                            "type": "minecraft:item",
+                            "name": "diamond_helmet",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -42,8 +42,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/golden/head",
+                            "type": "minecraft:item",
+                            "name": "golden_helmet",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -66,8 +66,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/iron/head",
+                            "type": "minecraft:item",
+                            "name": "iron_helmet",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -90,8 +90,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/chainmail/head",
+                            "type": "minecraft:item",
+                            "name": "chainmail_helmet",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -100,8 +100,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/leather/head"
+                            "type": "minecraft:item",
+                            "name": "leather_helmet"
                         }
                     ],
                     "conditions": [

@@ -8,8 +8,8 @@
                     "type": "minecraft:alternatives",
                     "children": [
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/diamond/legs",
+                            "type": "minecraft:item",
+                            "name": "diamond_leggings",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -32,8 +32,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/golden/legs",
+                            "type": "minecraft:item",
+                            "name": "golden_leggings",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -56,8 +56,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/iron/legs",
+                            "type": "minecraft:item",
+                            "name": "iron_leggings",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -80,8 +80,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/chainmail/legs",
+                            "type": "minecraft:item",
+                            "name": "chainmail_leggings",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -90,8 +90,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:loot_table",
-                            "value": "gm4_survival_refightalized:armor/leather/legs"
+                            "type": "minecraft:item",
+                            "name": "leather_leggings"
                         }
                     ],
                     "conditions": [

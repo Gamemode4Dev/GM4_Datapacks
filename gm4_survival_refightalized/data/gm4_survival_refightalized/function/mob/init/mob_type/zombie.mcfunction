@@ -20,13 +20,6 @@ scoreboard players set $mob_speed gm4_sr_data 40
 scoreboard players set @s gm4_sr_mob.damage_cap 80
 tag @s add gm4_sr_check_damage_cap
 
-# set armor
-execute store result score $armor_chance gm4_sr_data run random value 0..15
-loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/generic/feet
-loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/generic/legs
-loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/generic/chest
-loot replace entity @s armor.head loot gm4_survival_refightalized:mob/generic/head
-
 # add fire delay to drowned for tridents
 scoreboard players set @s[type=drowned] gm4_sr_arrow.fire_delay 10
 
@@ -35,3 +28,15 @@ scoreboard players set $removed_bonus gm4_sr_data 0
 execute if data entity @s attributes[{id:"minecraft:max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] store success score $removed_bonus gm4_sr_data run attribute @s minecraft:max_health modifier remove minecraft:leader_zombie_bonus
 execute if data entity @s {IsBaby:1b} store success score $removed_bonus gm4_sr_data run data modify entity @s IsBaby set value 0b
 execute if score $removed_bonus gm4_sr_data matches 1 run tag @s add gm4_sr_was_leader_or_baby
+
+# set armor
+execute store result score $armor_chance gm4_sr_data run random value 0..15
+execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.feet loot gm4_augmented_armor:mob/generic/feet
+execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.legs loot gm4_augmented_armor:mob/generic/legs
+execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.chest loot gm4_augmented_armor:mob/generic/chest
+execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.head loot gm4_augmented_armor:mob/generic/head
+execute if score gm4_augmented_armor load.status matches 1 run return 1
+loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/generic/feet
+loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/generic/legs
+loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/generic/chest
+loot replace entity @s armor.head loot gm4_survival_refightalized:mob/generic/head

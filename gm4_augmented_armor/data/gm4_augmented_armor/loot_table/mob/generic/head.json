@@ -8,8 +8,18 @@
                     "type": "minecraft:alternatives",
                     "children": [
                         {
-                            "type": "minecraft:item",
-                            "name": "diamond_boots",
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_augmented_armor:armor/material/special/turtle_helmet",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "gm4_survival_refightalized:mob/material_check/turtle_helmet"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_augmented_armor:armor/material/diamond/head",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -32,8 +42,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:item",
-                            "name": "golden_boots",
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_augmented_armor:armor/material/golden/head",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -56,8 +66,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:item",
-                            "name": "iron_boots",
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_augmented_armor:armor/material/iron/head",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -80,8 +90,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:item",
-                            "name": "chainmail_boots",
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_augmented_armor:armor/material/chainmail/head",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -90,8 +100,8 @@
                             ]
                         },
                         {
-                            "type": "minecraft:item",
-                            "name": "leather_boots"
+                            "type": "minecraft:loot_table",
+                            "value": "gm4_augmented_armor:armor/material/leather/head"
                         }
                     ],
                     "conditions": [

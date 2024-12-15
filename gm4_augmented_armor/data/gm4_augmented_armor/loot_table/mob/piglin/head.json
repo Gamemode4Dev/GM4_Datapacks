@@ -5,8 +5,8 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "golden_boots",
+          "type": "minecraft:loot_table",
+          "value": "gm4_augmented_armor:armor/material/golden/head",
           "conditions": [
             {
               "condition": "minecraft:random_chance",

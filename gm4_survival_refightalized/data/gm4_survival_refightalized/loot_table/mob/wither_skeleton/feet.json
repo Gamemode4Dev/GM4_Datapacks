@@ -8,8 +8,8 @@
           "type": "minecraft:alternatives",
           "children": [
             {
-              "type": "minecraft:loot_table",
-              "value": "gm4_survival_refightalized:armor/iron/feet",
+              "type": "minecraft:item",
+              "name": "iron_boots",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -18,8 +18,8 @@
               ]
             },
             {
-              "type": "minecraft:loot_table",
-              "value": "gm4_survival_refightalized:armor/chainmail/feet",
+              "type": "minecraft:item",
+              "name": "chainmail_boots",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -29,17 +29,7 @@
             },
             {
               "type": "minecraft:loot_table",
-              "value": "gm4_survival_refightalized:armor/chainmail/feet",
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_survival_refightalized:mob/material_check/chainmail"
-                }
-              ]
-            },
-            {
-              "type": "minecraft:loot_table",
-              "value": "minecraft:empty"
+              "value": "gm4:empty"
             }
           ],
           "conditions": [
