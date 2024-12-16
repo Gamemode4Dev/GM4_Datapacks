@@ -19,8 +19,8 @@ execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_survival_refightalized:
 execute if biome ~ ~ ~ dripstone_caves if block ~.875 ~ ~.875 #gm4:no_collision if block ~.875 ~ ~-.875 #gm4:no_collision if block ~-.875 ~ ~.875 #gm4:no_collision if block ~-.875 ~ ~-.875 #gm4:no_collision run function gm4_monsters_unbound:mob/init/mob_type/enderman/dripstone_caves
 
 # the end
-execute if dimension the_end run attribute @s attack_damage modifier add gm4_monsters_unbound:stat_change.the_end 0.2 add_multiplied_base
-execute if dimension the_end run attribute @s movement_speed modifier add gm4_monsters_unbound:stat_change.the_end 0.15 add_multiplied_base
+execute if dimension the_end run attribute @s minecraft:attack_damage modifier add gm4_monsters_unbound:stat_change.the_end 0.2 add_multiplied_base
+execute if dimension the_end run attribute @s minecraft:movement_speed modifier add gm4_monsters_unbound:stat_change.the_end 0.15 add_multiplied_base
 # nether wastes
 execute if biome ~ ~ ~ nether_wastes if predicate {condition:"minecraft:random_chance",chance:0.95} run function gm4_monsters_unbound:mob/init/mob_type/enderman/nether_wastes
 # soul sand valley

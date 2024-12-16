@@ -6,13 +6,13 @@
 tag @s add gm4_mu_elite.process
 tag @s add gm4_mu_elite.blazing
 
-attribute @s max_health modifier add gm4_monsters_unbound:elite_buff.fire 2.5 add_multiplied_total
-attribute @s attack_damage modifier add gm4_monsters_unbound:elite_buff.fire -0.99 add_multiplied_total
-attribute @s movement_speed modifier add gm4_monsters_unbound:elite_buff.fire -0.45 add_multiplied_total
-attribute @s burning_time modifier add gm4_monsters_unbound:elite_buff.fire -1 add_multiplied_total
+attribute @s minecraft:max_health modifier add gm4_monsters_unbound:elite_buff.fire 2.5 add_multiplied_total
+attribute @s minecraft:attack_damage modifier add gm4_monsters_unbound:elite_buff.fire -0.99 add_multiplied_total
+attribute @s minecraft:movement_speed modifier add gm4_monsters_unbound:elite_buff.fire -0.45 add_multiplied_total
+attribute @s minecraft:burning_time modifier add gm4_monsters_unbound:elite_buff.fire -1 add_multiplied_total
 
-attribute @s[type=#gm4_survival_refightalized:skeleton_types] scale modifier add gm4_monsters_unbound:elite_buff.size 0.005025 add_multiplied_total
-attribute @s[type=!#gm4_survival_refightalized:skeleton_types] scale modifier add gm4_monsters_unbound:elite_buff.size 0.025641 add_multiplied_total
+attribute @s[type=#gm4_survival_refightalized:skeleton_types] minecraft:scale modifier add gm4_monsters_unbound:elite_buff.size 0.005025 add_multiplied_total
+attribute @s[type=!#gm4_survival_refightalized:skeleton_types] minecraft:scale modifier add gm4_monsters_unbound:elite_buff.size 0.025641 add_multiplied_total
 
 enchant @s[type=#gm4_survival_refightalized:skeleton_types] flame
 scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_arrow.damage_change -18

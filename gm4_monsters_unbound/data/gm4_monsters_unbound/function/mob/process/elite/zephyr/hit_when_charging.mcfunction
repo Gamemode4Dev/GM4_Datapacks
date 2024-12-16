@@ -7,10 +7,10 @@ execute anchored eyes positioned ^ ^-0.15 ^ run particle small_gust ~ ~ ~ 0.45 0
 playsound minecraft:entity.breeze.hurt hostile @a ~ ~ ~ 1 0
 effect give @s slowness 1 9 true
 
-attribute @s movement_speed modifier remove gm4_monsters_unbound:elite_buff.speed.charging
-attribute @s movement_speed modifier remove gm4_monsters_unbound:elite_buff.speed.charged
-attribute @s attack_damage modifier remove gm4_monsters_unbound:elite_buff.speed.charged
-attribute @s attack_knockback modifier remove gm4_monsters_unbound:elite_buff.speed.charged
+attribute @s minecraft:movement_speed modifier remove gm4_monsters_unbound:elite_buff.speed.charging
+attribute @s minecraft:movement_speed modifier remove gm4_monsters_unbound:elite_buff.speed.charged
+attribute @s minecraft:attack_damage modifier remove gm4_monsters_unbound:elite_buff.speed.charged
+attribute @s minecraft:attack_knockback modifier remove gm4_monsters_unbound:elite_buff.speed.charged
 
 execute if score @s gm4_mu_timer matches 2.. run summon breeze_wind_charge ~ ~ ~ {Motion:[0.0,-5.0,0.0]}
 

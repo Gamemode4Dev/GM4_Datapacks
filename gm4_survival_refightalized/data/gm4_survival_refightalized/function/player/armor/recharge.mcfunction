@@ -8,7 +8,7 @@ scoreboard players remove @s[scores={gm4_sr_armor.reduction=1..}] gm4_sr_armor.r
 scoreboard players operation @s gm4_sr_armor.reduction > #0 gm4_sr_data
 
 # if no armor reduction is left don't apply armor
-attribute @s[scores={gm4_sr_armor.reduction=..0}] armor modifier remove gm4_survival_refightalized:armor_reduced
+attribute @s[scores={gm4_sr_armor.reduction=..0}] minecraft:armor modifier remove gm4_survival_refightalized:armor_reduced
 execute if entity @s[scores={gm4_sr_armor.reduction=..0}] run return run tag @s remove gm4_sr_armor.reduction
 
 execute store result storage gm4_survival_refightalized:temp set.armor_reduction float 0.1 run scoreboard players get @s gm4_sr_armor.reduction
@@ -17,4 +17,3 @@ data remove storage gm4_survival_refightalized:temp set
 
 # reapply resistance
 effect give @s resistance 2 255 true
-

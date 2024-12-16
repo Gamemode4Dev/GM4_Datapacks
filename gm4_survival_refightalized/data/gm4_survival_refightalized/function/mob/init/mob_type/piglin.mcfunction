@@ -9,8 +9,8 @@
 # speed: 80 - 115%
 
 # base stat nerf
-attribute @s attack_damage modifier add gm4_survival_refightalized:stat_change.base_nerf -3 add_value
-attribute @s movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.2 add_multiplied_base
+attribute @s minecraft:attack_damage modifier add gm4_survival_refightalized:stat_change.base_nerf -3 add_value
+attribute @s minecraft:movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.2 add_multiplied_base
 
 # max stat buffs
 scoreboard players set $mob_health gm4_sr_data 16

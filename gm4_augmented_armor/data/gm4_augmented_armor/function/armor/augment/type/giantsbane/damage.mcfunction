@@ -1,5 +1,5 @@
 
-execute store result score $giantsbane_damage gm4_aa_data run attribute @s max_health get 100
+execute store result score $giantsbane_damage gm4_aa_data run attribute @s minecraft:max_health get 100
 scoreboard players operation $giantsbane_damage gm4_aa_data *= $augment.giantsbane_damage gm4_aa_data
 scoreboard players operation $giantsbane_damage gm4_aa_data /= #100 gm4_aa_data
 

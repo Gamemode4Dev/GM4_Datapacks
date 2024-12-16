@@ -31,7 +31,7 @@ function gm4_survival_refightalized:mob/init/mob_type
 function #gm4_survival_refightalized:init_mob
 
 # remove the damage bonus from hard difficulty if needed
-execute if score $worlddiff gm4_sr_data matches 3 run attribute @s attack_damage modifier add gm4_survival_refightalized:stat_change.hard_difficulty_offset -0.333334 add_multiplied_total
+execute if score $worlddiff gm4_sr_data matches 3 run attribute @s minecraft:attack_damage modifier add gm4_survival_refightalized:stat_change.hard_difficulty_offset -0.333334 add_multiplied_total
 
 # set modifiers
 execute unless score $removed_mob gm4_sr_data matches 1 run function gm4_survival_refightalized:mob/init/stat/prep

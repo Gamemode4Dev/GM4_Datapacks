@@ -23,8 +23,8 @@ execute store result storage gm4_augmented_armor:temp lightning.deg_pp int 1 run
 
 scoreboard players operation $particles_to_display gm4_aa_data = @s gm4_aa_augment.sparking.static_stacks
 
-execute store result storage gm4_augmented_armor:temp lightning.scale float 0.0075 run attribute @s scale get 100
-execute store result storage gm4_augmented_armor:temp lightning.height float 0.0133 run attribute @s scale get 100
+execute store result storage gm4_augmented_armor:temp lightning.scale float 0.0075 run attribute @s minecraft:scale get 100
+execute store result storage gm4_augmented_armor:temp lightning.height float 0.0133 run attribute @s minecraft:scale get 100
 
 execute rotated 0 0 run function gm4_augmented_armor:armor/augment/type/sparking/particles/eval_rotation with storage gm4_augmented_armor:temp lightning
 

@@ -16,7 +16,7 @@ scoreboard players add @s gm4_mu_timer 1
 execute if score @s gm4_mu_timer matches 1..4 anchored eyes positioned ^ ^-0.15 ^ run particle small_gust ~ ~ ~ 0.35 0.35 0.35 1 6 normal
 
 tag @s[scores={gm4_mu_timer=1}] add gm4_mu_elite.on_hit
-attribute @s[scores={gm4_mu_timer=1}] movement_speed modifier add gm4_monsters_unbound:elite_buff.speed.charging -1 add_multiplied_total
+attribute @s[scores={gm4_mu_timer=1}] minecraft:movement_speed modifier add gm4_monsters_unbound:elite_buff.speed.charging -1 add_multiplied_total
 
 execute if score @s gm4_mu_timer matches 2 run playsound minecraft:entity.breeze.inhale hostile @a ~ ~ ~ 1 0.5
 execute if score @s gm4_mu_timer matches 3 run playsound minecraft:entity.breeze.charge hostile @a ~ ~ ~ 1 0.5

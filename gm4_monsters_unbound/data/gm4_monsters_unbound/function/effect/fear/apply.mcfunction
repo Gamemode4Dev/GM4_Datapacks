@@ -22,9 +22,9 @@ effect give @s nausea 3 0 true
 effect give @s wither 1 0 true
 
 # apply attributes
-attribute @s attack_damage modifier add gm4_monsters_unbound:feared -0.5 add_multiplied_total
-attribute @s attack_speed modifier add gm4_monsters_unbound:feared -0.5 add_multiplied_total
-attribute @s block_break_speed modifier add gm4_monsters_unbound:feared -0.5 add_multiplied_total
+attribute @s minecraft:attack_damage modifier add gm4_monsters_unbound:feared -0.5 add_multiplied_total
+attribute @s minecraft:attack_speed modifier add gm4_monsters_unbound:feared -0.5 add_multiplied_total
+attribute @s minecraft:block_break_speed modifier add gm4_monsters_unbound:feared -0.5 add_multiplied_total
 
 # apply fear
 scoreboard players operation @s gm4_mu_feared_time += $add_fear_time gm4_mu_data

@@ -23,5 +23,5 @@ scoreboard players operation @s gm4_sr_stat.health_percentage *= #100 gm4_sr_dat
 scoreboard players operation @s gm4_sr_stat.health_percentage /= @s gm4_sr_stat.max_health
 
 # calculate absorption health same as red hearts
-execute store result score @s gm4_sr_stat.max_absorption run attribute @s max_absorption get 10
+execute store result score @s gm4_sr_stat.max_absorption run attribute @s minecraft:max_absorption get 10
 execute store result score @s gm4_sr_stat.current_absorption run data get entity @s AbsorptionAmount 10

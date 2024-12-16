@@ -18,8 +18,8 @@ scoreboard players set @s[scores={gm4_mu_timer=20..}] gm4_mu_timer 0
 scoreboard players set $particle_ring gm4_mu_data 72
 execute if score @s gm4_mu_timer matches 2..4 rotated 0 0 run function gm4_monsters_unbound:mob/process/elite/gargantuan/particle_ring
 
-attribute @s[scores={gm4_mu_timer=1}] movement_speed modifier add gm4_monsters_unbound:elite_buff.giant.charging -1 add_multiplied_total
-attribute @s[scores={gm4_mu_timer=1}] follow_range modifier add gm4_monsters_unbound:elite_buff.giant.charging -1 add_multiplied_total
+attribute @s[scores={gm4_mu_timer=1}] minecraft:movement_speed modifier add gm4_monsters_unbound:elite_buff.giant.charging -1 add_multiplied_total
+attribute @s[scores={gm4_mu_timer=1}] minecraft:follow_range modifier add gm4_monsters_unbound:elite_buff.giant.charging -1 add_multiplied_total
 
 execute if score @s gm4_mu_timer matches 2 run playsound minecraft:entity.zombie.attack_wooden_door hostile @a ~ ~ ~ 1 1.2
 execute if score @s gm4_mu_timer matches 3 run playsound minecraft:entity.zombie.attack_wooden_door hostile @a ~ ~ ~ 1 1.4

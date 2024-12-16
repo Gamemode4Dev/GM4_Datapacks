@@ -7,7 +7,7 @@
 execute if biome ~ ~ ~ cherry_grove run tag @s add gm4_mu_spore_zombie.cherry
 
 # lower max health
-attribute @s max_health modifier add gm4_monsters_unbound:stat_change.spore_zombie -0.2 add_multiplied_total
+attribute @s minecraft:max_health modifier add gm4_monsters_unbound:stat_change.spore_zombie -0.2 add_multiplied_total
 
 # put spore on head and store generation
 loot replace entity @s armor.head loot gm4_monsters_unbound:mob/equip_armor/spore

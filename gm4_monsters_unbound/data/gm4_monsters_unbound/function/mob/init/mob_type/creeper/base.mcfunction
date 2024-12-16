@@ -16,7 +16,7 @@ execute if predicate gm4_monsters_unbound:biome/flowering run function gm4_monst
 tag @s[predicate=gm4_monsters_unbound:biome/toxic] add gm4_mu_toxic_creeper
 execute if entity @s[tag=gm4_mu_toxic_creeper] run function gm4_monsters_unbound:mob/process/toxic_creeper
 # growth
-attribute @s[predicate=gm4_monsters_unbound:biome/growth] movement_speed modifier add gm4_monsters_unbound:stat_change.growth 0.2 add_multiplied_base
+attribute @s[predicate=gm4_monsters_unbound:biome/growth] minecraft:movement_speed modifier add gm4_monsters_unbound:stat_change.growth 0.2 add_multiplied_base
 # underground
 data modify entity @s[predicate=gm4_survival_refightalized:mob/underground] ExplosionRadius set value 4s
 # dripstone caves

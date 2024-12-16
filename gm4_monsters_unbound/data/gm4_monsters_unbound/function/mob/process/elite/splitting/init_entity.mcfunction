@@ -4,15 +4,15 @@
 # run from mob/process/elite/splitting/skeleton
 # run from mob/process/elite/splitting/zombie
 
-attribute @s attack_damage modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
-attribute @s gravity modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
-attribute @s jump_strength modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
-attribute @s knockback_resistance modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
-attribute @s max_health modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
-attribute @s scale modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
-attribute @s step_height modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
-attribute @s movement_speed modifier add gm4_monsters_unbound:split_entity 0.33 add_multiplied_total
-attribute @s[type=#gm4_survival_refightalized:skeleton_types] follow_range modifier add gm4_monsters_unbound:split_entity -0.66 add_multiplied_total
+attribute @s minecraft:attack_damage modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
+attribute @s minecraft:gravity modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
+attribute @s minecraft:jump_strength modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
+attribute @s minecraft:knockback_resistance modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
+attribute @s minecraft:max_health modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
+attribute @s minecraft:scale modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
+attribute @s minecraft:step_height modifier add gm4_monsters_unbound:split_entity -0.5 add_multiplied_total
+attribute @s minecraft:movement_speed modifier add gm4_monsters_unbound:split_entity 0.33 add_multiplied_total
+attribute @s[type=#gm4_survival_refightalized:skeleton_types] minecraft:follow_range modifier add gm4_monsters_unbound:split_entity -0.66 add_multiplied_total
 
 scoreboard players set @s gm4_sr_arrow.fire_delay 6
 scoreboard players set @s gm4_sr_arrow.damage_change -14

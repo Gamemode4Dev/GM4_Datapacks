@@ -3,8 +3,8 @@
 # at @s
 # run from mob/init/mob_type/zombie/base
 
-attribute @s movement_speed modifier add gm4_monsters_unbound:stat_change.reef 1 add_multiplied_base
-attribute @s attack_damage modifier add gm4_monsters_unbound:stat_change.reef 2 add_value
+attribute @s minecraft:movement_speed modifier add gm4_monsters_unbound:stat_change.reef 1 add_multiplied_base
+attribute @s minecraft:attack_damage modifier add gm4_monsters_unbound:stat_change.reef 2 add_value
 
 execute if predicate {condition:"minecraft:random_chance",chance:0.6} if entity @s[tag=!gm4_sr_extra_mob] store success score $mob_extras gm4_sr_data run summon drowned ~ ~ ~ {Tags:["gm4_sr_extra_mob"]}
 execute if predicate {condition:"minecraft:random_chance",chance:0.6} if entity @s[tag=!gm4_sr_extra_mob] store success score $mob_extras gm4_sr_data run summon drowned ~ ~ ~ {Tags:["gm4_sr_extra_mob"]}

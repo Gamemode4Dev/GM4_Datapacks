@@ -7,6 +7,6 @@
 
 tag @s add gm4_mu_shielded_zombie
 item replace entity @s weapon.offhand with shield
-attribute @s knockback_resistance modifier add gm4_monsters_unbound:stat_change.shield 0.9 add_value
-attribute @s armor modifier add gm4_monsters_unbound:stat_change.shield 20 add_value
-attribute @s armor_toughness modifier add gm4_monsters_unbound:stat_change.shield 10 add_value
+attribute @s minecraft:knockback_resistance modifier add gm4_monsters_unbound:stat_change.shield 0.9 add_value
+attribute @s minecraft:armor modifier add gm4_monsters_unbound:stat_change.shield 20 add_value
+attribute @s minecraft:armor_toughness modifier add gm4_monsters_unbound:stat_change.shield 10 add_value
