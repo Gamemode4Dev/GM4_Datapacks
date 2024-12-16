@@ -23,7 +23,7 @@
 							"lore": [
 								{
 									"translate": "item.gm4.shamir.lumos",
-									"fallback": "Lumos",
+									"fallback": "Lumos Shamir",
 									"italic": false,
 									"color": "gray"
 								}

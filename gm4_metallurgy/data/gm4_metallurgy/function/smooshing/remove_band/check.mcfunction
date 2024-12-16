@@ -1,4 +1,7 @@
+# @s = item being crushed by a piston that has a shamir
+# run from smooshing/prepare_transfer
 
+scoreboard players reset $legacy_item gm4_ml_data
 #check whether the other item is an obsidian block
 scoreboard players set valid_obsidian gm4_ml_data 0
 execute as @e[type=item,dx=0,predicate=gm4_metallurgy:is_obsidian,limit=1] run function gm4_metallurgy:smooshing/remove_band/found_obsidian
