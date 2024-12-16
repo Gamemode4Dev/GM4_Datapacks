@@ -1,5 +1,8 @@
 # @dummy
 
+# Give regeneration so this test does not rely on naturalRegeneration gamerule
+effect give @s minecraft:regeneration infinite 100
+
 loot give @s loot gm4_heart_canisters:items/tier_1_heart_canister
 loot give @s loot gm4_heart_canisters:items/tier_1_heart_canister
 loot give @s loot gm4_heart_canisters:items/tier_1_heart_canister
