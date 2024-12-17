@@ -1,0 +1,16 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+        {
+            "condition": "minecraft:weather_check",
+            "thundering": true
+        },
+        {
+            "condition": "minecraft:inverted",
+            "term": {
+                "condition": "minecraft:reference",
+                "name": "gm4_survival_refightalized:mob/underground"
+            }
+        }
+    ]
+}

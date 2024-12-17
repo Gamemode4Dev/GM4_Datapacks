@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:packed_ice",
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_mu_elite_on_death:{name:glacial,id:1}}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/elite_headwear/glacial"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
