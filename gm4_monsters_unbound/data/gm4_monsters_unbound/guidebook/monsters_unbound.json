@@ -1,97 +1,11 @@
 {
-  "id": "survival_refightalized",
-  "name": "Survival Refightalized",
+  "id": "monsters_unbound",
+  "name": "Monsters Unbound",
   "module_type": "module",
   "icon": {
-    "id": "minecraft:netherite_sword"
+    "id": "minecraft:chainmail_chestplate"
   },
   "criteria": {
-    "equip_armor": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:any_of",
-            "terms": [
-              {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "equipment": {
-                    "feet": {
-                      "items": "#gm4_survival_refightalized:armor"
-                    }
-                  }
-                }
-              },
-              {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "equipment": {
-                    "legs": {
-                      "items": "#gm4_survival_refightalized:armor"
-                    }
-                  }
-                }
-              },
-              {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "equipment": {
-                    "chest": {
-                      "items": "#gm4_survival_refightalized:armor"
-                    }
-                  }
-                }
-              },
-              {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "equipment": {
-                    "head": {
-                      "items": "#gm4_survival_refightalized:armor"
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "obtain_shield": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "player": [],
-        "items": [
-          {
-            "items": "minecraft:shield"
-          }
-        ]
-      }
-    },
-    "kill_hostile": {
-      "trigger": "minecraft:player_hurt_entity",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "minecraft:adventure/kill_a_mob": true
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
     "enter_underground": {
       "trigger": "minecraft:location",
       "conditions": {
@@ -99,6 +13,219 @@
           {
             "condition": "minecraft:reference",
             "name": "gm4_survival_refightalized:mob/underground"
+          }
+        ]
+      }
+    },
+    "enter_dripstone_caves": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "biomes": "minecraft:dripstone_caves"
+          }
+        }
+      }
+    },
+    "enter_burned": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_monsters_unbound:biome/burned"
+          }
+        ]
+      }
+    },
+    "enter_flowering": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_monsters_unbound:biome/flowering"
+          }
+        ]
+      }
+    },
+    "enter_growth": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_monsters_unbound:biome/growth"
+          }
+        ]
+      }
+    },
+    "enter_mountainous": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_monsters_unbound:biome/mountainous"
+          }
+        ]
+      }
+    },
+    "enter_reef": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_monsters_unbound:biome/reef"
+          }
+        ]
+      }
+    },
+    "enter_snowy": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_monsters_unbound:biome/snowy"
+          }
+        ]
+      }
+    },
+    "enter_toxic": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_monsters_unbound:biome/toxic"
+          }
+        ]
+      }
+    },
+    "kill_elite_blazing": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_mu_elite.blazing\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "kill_elite_gargantuan": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_mu_elite.gargantuan\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "kill_elite_glacial": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_mu_elite.glacial\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "kill_elite_mending": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_mu_elite.mending\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "kill_elite_pearlescent": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_mu_elite.pearlescent\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "kill_elite_splitting": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_mu_elite.splitting\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "kill_elite_volatile": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_mu_elite.volatile\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "kill_elite_vorpal": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_mu_elite.vorpal\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "kill_elite_zephyr": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:[\"gm4_mu_elite.zephyr\"]}"
+            }
           }
         ]
       }
@@ -115,13 +242,8 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.survival_refightalized.description",
-            "fallback": "Health Regeneration",
-            "bold": true
-          },
-          {
-            "translate": "text.gm4.guidebook.survival_refightalized.description",
-            "fallback": "Damage is split in combat and non-combat damage.\nCombat damage regenerates every 60 seconds, while non-combat damage regenerates rapidly when out of combat.\nSleeping converts all combat damage to non-combat damage, once per night."
+            "translate": "text.gm4.guidebook.monsters_unbound.description.biomes",
+            "fallback": "Mobs spawned in different biomes have special modifiers.\n\nSome areas and biomes spawn different mobs than usual."
           }
         ]
       ]
@@ -130,9 +252,6 @@
       "name": "description",
       "enable": [],
       "requirements": [
-        [
-          "kill_hostile"
-        ],
         [
           "enter_underground"
         ]
@@ -140,8 +259,8 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.survival_refightalized.description",
-            "fallback": "Mobs are stronger based on their environment, such as being outside during a thunderstorm or full moon, or being deep underground.\n\nCertain mobs have additional effects, such as Skeletons firing slower, and Phantoms drowning underwater."
+            "translate": "text.gm4.guidebook.monsters_unbound.description.underground",
+            "fallback": "Mobs spawned underground are generally stronger and can have varying buffs and potion effects."
           }
         ]
       ]
@@ -151,16 +270,356 @@
       "enable": [],
       "requirements": [
         [
-          "equip_armor"
-        ],
-        [
-          "obtain_shield"
+          "enter_burned"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.survival_refightalized.description",
+            "translate": "text.gm4.guidebook.monsters_unbound.description.burned",
+            "fallback": "Mobs spawned in a %s biome are weaker but faster.\n\nHusks spawn in large groups.",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.monsters_unbound.burned",
+                "fallback": "burned",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.desert"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.savanna_plateau"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.windswept_savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.wooded_badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.eroded_badlands"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "enter_dripstone_caves"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.dripstone_caves",
+            "fallback": "More Spiders are found in Dripstone Caves, and Skeletons may wield pickaxes.\n\nSome Dripstone may be trapped and drop a mob when walked below."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "enter_flowering"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.flowering",
+            "fallback": "Mobs spawned in a %s biome are ",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.monsters_unbound.flowering",
+                "fallback": "flowering",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.sunflower_plains"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.flower_forest"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.cherry_grove"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.lush_caves"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "enter_underground"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.underground",
+            "fallback": "Mobs spawned in a %s biome are weaker but faster.\n\nHusks spawn in large groups..",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.monsters_unbound.burned",
+                "fallback": "burned",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.desert"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.savanna_plateau"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.windswept_savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.wooded_badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.eroded_badlands"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "enter_underground"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.underground",
+            "fallback": "Mobs spawned in a %s biome are weaker but faster.\n\nHusks spawn in large groups..",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.monsters_unbound.burned",
+                "fallback": "burned",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.desert"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.savanna_plateau"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.windswept_savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.wooded_badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.eroded_badlands"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "enter_underground"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.underground",
+            "fallback": "Mobs spawned in a %s biome are weaker but faster.\n\nHusks spawn in large groups..",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.monsters_unbound.burned",
+                "fallback": "burned",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.desert"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.savanna_plateau"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.windswept_savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.wooded_badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.eroded_badlands"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "enter_underground"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.underground",
+            "fallback": "Mobs spawned in a %s biome are weaker but faster.\n\nHusks spawn in large groups..",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.monsters_unbound.burned",
+                "fallback": "burned",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.desert"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.savanna_plateau"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.windswept_savanna"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.wooded_badlands"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.eroded_badlands"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description",
             "fallback": "Armor no longer reduces damage taken, instead serving as a second health bar. Armor regenerates rapidly out of combat.\nArmor Toughness reduces armor damage taken from high damage attacks, up to 25%.\nProtection reduces all damage by 1% per level, or 4% for Fire, Blast or Projectile Protection.\nShields will go on cooldown after blocking damage."
           }
         ]

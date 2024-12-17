@@ -173,6 +173,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "chainmail_chestplate": {
+      "gm4_monsters_unbound:guidebook_icon/monsters_unbound": 1,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_iacio_shamir:shamir/iacio": 122,
@@ -968,6 +969,7 @@
     },
     "leather_chestplate": {
       "gm4_combat_expanded:gui/advancement/combat_expanded_identify": 1,
+      "gm4_survival_refightalized:guidebook_icon/survival_refightalized": 4,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_iacio_shamir:shamir/iacio": 122,
@@ -1180,7 +1182,6 @@
     "netherite_sword": {
       "gm4_combat_expanded:guidebook_icon/combat_expanded": 1,
       "gm4_augmented_armor:guidebook_icon/survival_refightalized": 2,
-      "gm4_monsters_unbound:guidebook_icon/survival_refightalized": 3,
       "gm4_survival_refightalized:guidebook_icon/survival_refightalized": 4,
       "gm4_end_fishing:item/end_city_swords_1": 10,
       "gm4_end_fishing:item/end_city_swords_2": 11,

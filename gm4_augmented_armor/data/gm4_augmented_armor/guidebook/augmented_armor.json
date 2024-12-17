@@ -1,9 +1,9 @@
 {
-  "id": "survival_refightalized",
-  "name": "Survival Refightalized",
+  "id": "augmented_armor",
+  "name": "Augmented Armor",
   "module_type": "module",
   "icon": {
-    "id": "minecraft:netherite_sword"
+    "id": "minecraft:iron_chestplate"
   },
   "criteria": {
     "kill_hostile": {

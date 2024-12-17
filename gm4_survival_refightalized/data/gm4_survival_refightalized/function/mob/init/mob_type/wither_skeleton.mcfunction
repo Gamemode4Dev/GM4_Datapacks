@@ -35,11 +35,9 @@ scoreboard players set @s gm4_sr_arrow.fire_delay 4
 execute store result score @s gm4_sr_arrow.damage_change run random value -6..0
 
 # set armor
-execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.feet loot gm4_augmented_armor:mob/wither_skeleton/feet
-execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.legs loot gm4_augmented_armor:mob/wither_skeleton/legs
-execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.chest loot gm4_augmented_armor:mob/wither_skeleton/chest
-execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.head loot gm4_augmented_armor:mob/wither_skeleton/head
-execute if score gm4_augmented_armor load.status matches 1 run return 1
+scoreboard players set $override_equipment gm4_sr_data 0
+function #gm4_survival_refightalized:equip/wither_skeleton
+execute if score $override_equipment gm4_sr_data matches 1 run return 1
 loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/wither_skeleton/feet
 loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/wither_skeleton/legs
 loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/wither_skeleton/chest

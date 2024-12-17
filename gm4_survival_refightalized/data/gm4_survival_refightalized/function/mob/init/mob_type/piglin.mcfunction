@@ -21,11 +21,9 @@ scoreboard players set @s gm4_sr_mob.damage_cap 70
 tag @s add gm4_sr_check_damage_cap
 
 # set armor
-execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.feet loot gm4_augmented_armor:mob/piglin/feet
-execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.legs loot gm4_augmented_armor:mob/piglin/legs
-execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.chest loot gm4_augmented_armor:mob/piglin/chest
-execute if score gm4_augmented_armor load.status matches 1 run loot replace entity @s armor.head loot gm4_augmented_armor:mob/piglin/head
-execute if score gm4_augmented_armor load.status matches 1 run return 1
+scoreboard players set $override_equipment gm4_sr_data 0
+function #gm4_survival_refightalized:equip/piglin
+execute if score $override_equipment gm4_sr_data matches 1 run return 1
 loot replace entity @s armor.feet loot gm4_survival_refightalized:mob/piglin/feet
 loot replace entity @s armor.legs loot gm4_survival_refightalized:mob/piglin/legs
 loot replace entity @s armor.chest loot gm4_survival_refightalized:mob/piglin/chest

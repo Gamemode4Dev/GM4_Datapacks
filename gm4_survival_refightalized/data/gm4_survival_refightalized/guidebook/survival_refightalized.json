@@ -3,7 +3,7 @@
   "name": "Survival Refightalized",
   "module_type": "module",
   "icon": {
-    "id": "minecraft:netherite_sword"
+    "id": "minecraft:leather_chestplate"
   },
   "criteria": {
     "equip_armor": {
@@ -115,13 +115,43 @@
             "insert": "title"
           },
           {
-            "translate": "text.gm4.guidebook.survival_refightalized.description",
-            "fallback": "Health Regeneration",
-            "bold": true
-          },
+            "translate": "text.gm4.guidebook.survival_refightalized.description.health",
+            "fallback": "Damage taken is split in combat and non-combat damage.\nCombat damage regenerates every 60 seconds, while non-combat damage regenerates rapidly when out of combat.\nSleeping converts all combat damage to non-combat damage, once per night."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "equip_armor"
+        ]
+      ],
+      "pages": [
+        [
           {
-            "translate": "text.gm4.guidebook.survival_refightalized.description",
-            "fallback": "Damage is split in combat and non-combat damage.\nCombat damage regenerates every 60 seconds, while non-combat damage regenerates rapidly when out of combat.\nSleeping converts all combat damage to non-combat damage, once per night."
+            "translate": "text.gm4.guidebook.survival_refightalized.description.armor",
+            "fallback": "Armor no longer reduces damage taken, instead serving as a second health bar. Armor recharges rapidly shortly after it takes damage.\nProtection enchantments have reduced effectiveness."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+
+        [
+          "obtain_shield"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.survival_refightalized.description.shield",
+            "fallback": "Shields will go on cooldown after blocking any damage.\n\nBlocking damage within 0.25s of holding the Shield performs a Parry, releasing the Shield within that 0.25s will not disable it."
           }
         ]
       ]
@@ -140,28 +170,8 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.survival_refightalized.description",
+            "translate": "text.gm4.guidebook.survival_refightalized.description.mobs",
             "fallback": "Mobs are stronger based on their environment, such as being outside during a thunderstorm or full moon, or being deep underground.\n\nCertain mobs have additional effects, such as Skeletons firing slower, and Phantoms drowning underwater."
-          }
-        ]
-      ]
-    },
-    {
-      "name": "description",
-      "enable": [],
-      "requirements": [
-        [
-          "equip_armor"
-        ],
-        [
-          "obtain_shield"
-        ]
-      ],
-      "pages": [
-        [
-          {
-            "translate": "text.gm4.guidebook.survival_refightalized.description",
-            "fallback": "Armor no longer reduces damage taken, instead serving as a second health bar. Armor regenerates rapidly out of combat.\nArmor Toughness reduces armor damage taken from high damage attacks, up to 25%.\nProtection reduces all damage by 1% per level, or 4% for Fire, Blast or Projectile Protection.\nShields will go on cooldown after blocking damage."
           }
         ]
       ]
