@@ -105,7 +105,7 @@
           },
           {
             "translate": "text.gm4.guidebook.survival_refightalized.description.health",
-            "fallback": "Damage taken is split in combat and non-combat damage.\nCombat damage regenerates every 60 seconds, while non-combat damage regenerates rapidly when out of combat.\nSleeping converts all combat damage to non-combat damage, once per night."
+            "fallback": "Damage taken is split in combat and non-combat damage.\nCombat damage regenerates every 60 seconds, while non-combat damage regenerates rapidly when out of combat."
           }
         ]
       ]
@@ -131,7 +131,6 @@
       "name": "description",
       "enable": [],
       "requirements": [
-
         [
           "obtain_shield"
         ]
@@ -157,7 +156,7 @@
         [
           {
             "translate": "text.gm4.guidebook.survival_refightalized.description.mobs",
-            "fallback": "Mobs are stronger based on their environment, such as being outside during a thunderstorm or full moon, or being deep underground.\n\nCertain mobs have additional effects, such as Skeletons firing slower, and Phantoms drowning underwater."
+            "fallback": "Mobs are stronger based on their environment, such as being outside during a thunderstorm or full moon, or being deep underground.\nSome mobs are altered, like as Skeletons firing slower, and Phantoms drowning."
           }
         ]
       ]
