@@ -1,0 +1,33 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type": "#gm4:hostile"
+            }
+        },
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type": "#gm4:neutral",
+                "targeted_entity": {
+                    "type": "minecraft:player"
+                }
+            }
+        },
+        {
+            "condition": "minecraft:value_check",
+            "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "gm4_aa_in_pvp"
+            },
+            "range": {
+                "min": 1
+            }
+        }
+    ]
+}

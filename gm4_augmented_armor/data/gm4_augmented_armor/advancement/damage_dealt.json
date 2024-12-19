@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "damage_dealt": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_augmented_armor:modified_armor/generic_damage_dealt"
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[\"gm4_aa_augment_damager\"]}"
+              }
+            }
+          }
+        ],
+        "damage": {
+          "blocked": false,
+          "type": {}
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_augmented_armor:armor/trigger/damage_dealt"
+  }
+}
