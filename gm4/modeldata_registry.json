@@ -792,6 +792,7 @@
     },
     "iron_chestplate": {
       "gm4_weighted_armour:guidebook_icon/weighted_armour": 1,
+      "gm4_augmented_armor:guidebook_icon/augmented_armor": 2,
       "gm4_end_fishing:item/end_city_armor_1": 10,
       "gm4_end_fishing:item/end_city_armor_2": 11,
       "gm4_end_fishing:item/end_city_armor_3": 12,
@@ -1181,7 +1182,6 @@
     },
     "netherite_sword": {
       "gm4_combat_expanded:guidebook_icon/combat_expanded": 1,
-      "gm4_augmented_armor:guidebook_icon/survival_refightalized": 2,
       "gm4_survival_refightalized:guidebook_icon/survival_refightalized": 4,
       "gm4_end_fishing:item/end_city_swords_1": 10,
       "gm4_end_fishing:item/end_city_swords_2": 11,
