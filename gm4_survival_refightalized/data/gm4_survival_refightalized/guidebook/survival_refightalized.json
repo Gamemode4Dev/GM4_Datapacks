@@ -91,17 +91,6 @@
           }
         ]
       }
-    },
-    "enter_underground": {
-      "trigger": "minecraft:location",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_survival_refightalized:mob/underground"
-          }
-        ]
-      }
     }
   },
   "sections": [
@@ -162,9 +151,6 @@
       "requirements": [
         [
           "kill_hostile"
-        ],
-        [
-          "enter_underground"
         ]
       ],
       "pages": [

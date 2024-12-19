@@ -71,15 +71,14 @@
         ]
       }
     },
-    "enter_reef": {
+    "enter_warm_ocean": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_monsters_unbound:biome/reef"
+        "player": {
+          "location": {
+            "biomes": "minecraft:warm_ocean"
           }
-        ]
+        }
       }
     },
     "enter_snowy": {
@@ -351,7 +350,7 @@
         [
           {
             "translate": "text.gm4.guidebook.monsters_unbound.description.flowering",
-            "fallback": "Mobs spawned in a %s biome are ",
+            "fallback": "In %s biomes Spore Zombies can be found, these drop a respawning Spore on death. Spores are susceptible to fire.\n\nCreepers are weaker but invisible.",
             "with": [
               {
                 "translate": "text.gm4.guidebook.monsters_unbound.flowering",
@@ -389,45 +388,122 @@
       "enable": [],
       "requirements": [
         [
-          "enter_underground"
+          "enter_growth"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.monsters_unbound.description.underground",
-            "fallback": "Mobs spawned in a %s biome are weaker but faster.\n\nHusks spawn in large groups..",
+            "translate": "text.gm4.guidebook.monsters_unbound.description.growth",
+            "fallback": "Mobs spawned in a %s biome are faster.\n\nSkeletons usually use melee weapons.\n\nMore Spiders are found here",
             "with": [
               {
-                "translate": "text.gm4.guidebook.monsters_unbound.burned",
-                "fallback": "burned",
+                "translate": "text.gm4.guidebook.monsters_unbound.growth",
+                "fallback": "growth",
                 "color": "blue",
                 "hoverEvent": {
                   "action": "show_text",
                   "contents": [
                     "- ",
                     {
-                      "translate": "biome.minecraft.desert"
+                      "translate": "biome.minecraft.snowy_taiga"
                     },
                     "\n- ",
                     {
-                      "translate": "biome.minecraft.savanna"
+                      "translate": "biome.minecraft.grove"
                     },
                     "\n- ",
                     {
-                      "translate": "biome.minecraft.savanna_plateau"
+                      "translate": "biome.minecraft.taiga"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.old_growth_pine_taiga"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.old_growth_spruce_taiga"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.dark_forest"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.mangrove_swamp"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "enter_mountainous"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.mountainous",
+            "fallback": "Phantoms can spawn in %s biomes.\n\nCreepers have more health.\n\nSpiders are faster",
+            "with": [
+              {
+                "translate": "text.gm4.guidebook.monsters_unbound.mountainous",
+                "fallback": "mountainous",
+                "color": "blue",
+                "hoverEvent": {
+                  "action": "show_text",
+                  "contents": [
+                    "- ",
+                    {
+                      "translate": "biome.minecraft.snowy_slopes"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.jagged_peaks"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.frozen_peaks"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.windswept_hills"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.windswept_gravelly_hills"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.windswept_forest"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.stony_shores"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.cherry_grove"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.meadow"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.stony_peaks"
                     },
                     "\n- ",
                     {
                       "translate": "biome.minecraft.windswept_savanna"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.badlands"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.wooded_badlands"
                     },
                     "\n- ",
                     {
@@ -446,49 +522,65 @@
       "enable": [],
       "requirements": [
         [
-          "enter_underground"
+          "enter_snowy"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.monsters_unbound.description.underground",
-            "fallback": "Mobs spawned in a %s biome are weaker but faster.\n\nHusks spawn in large groups..",
+            "translate": "text.gm4.guidebook.monsters_unbound.description.snowy",
+            "fallback": "Mobs can ambush the player from snow in %s biomes.\n\nMobs can apply slowness.\n\nSpiders can be Gargantuan Elites.",
             "with": [
               {
-                "translate": "text.gm4.guidebook.monsters_unbound.burned",
-                "fallback": "burned",
+                "translate": "text.gm4.guidebook.monsters_unbound.snowy",
+                "fallback": "snowy",
                 "color": "blue",
                 "hoverEvent": {
                   "action": "show_text",
                   "contents": [
                     "- ",
                     {
-                      "translate": "biome.minecraft.desert"
+                      "translate": "biome.minecraft.snowy_plains"
                     },
                     "\n- ",
                     {
-                      "translate": "biome.minecraft.savanna"
+                      "translate": "biome.minecraft.ice_spikes"
                     },
                     "\n- ",
                     {
-                      "translate": "biome.minecraft.savanna_plateau"
+                      "translate": "biome.minecraft.snowy_taiga"
                     },
                     "\n- ",
                     {
-                      "translate": "biome.minecraft.windswept_savanna"
+                      "translate": "biome.minecraft.snowy_beach"
                     },
                     "\n- ",
                     {
-                      "translate": "biome.minecraft.badlands"
+                      "translate": "biome.minecraft.grove"
                     },
                     "\n- ",
                     {
-                      "translate": "biome.minecraft.wooded_badlands"
+                      "translate": "biome.minecraft.snowy_slopes"
                     },
                     "\n- ",
                     {
-                      "translate": "biome.minecraft.eroded_badlands"
+                      "translate": "biome.minecraft.jagged_peaks"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.frozen_peaks"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.frozen_river"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.frozen_ocean"
+                    },
+                    "\n- ",
+                    {
+                      "translate": "biome.minecraft.deep_frozen_ocean"
                     }
                   ]
                 }
@@ -503,49 +595,37 @@
       "enable": [],
       "requirements": [
         [
-          "enter_underground"
+          "enter_toxic"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.monsters_unbound.description.underground",
-            "fallback": "Mobs spawned in a %s biome are weaker but faster.\n\nHusks spawn in large groups..",
+            "translate": "text.gm4.guidebook.monsters_unbound.description.toxic",
+            "fallback": "Mobs spawned in a %s biome can apply various negative effects.\n\nMore Witches are found here.",
             "with": [
               {
-                "translate": "text.gm4.guidebook.monsters_unbound.burned",
-                "fallback": "burned",
+                "translate": "text.gm4.guidebook.monsters_unbound.toxic",
+                "fallback": "toxic",
                 "color": "blue",
                 "hoverEvent": {
                   "action": "show_text",
                   "contents": [
                     "- ",
                     {
-                      "translate": "biome.minecraft.desert"
+                      "translate": "biome.minecraft.swamp"
                     },
                     "\n- ",
                     {
-                      "translate": "biome.minecraft.savanna"
+                      "translate": "biome.minecraft.mangrove_swamp"
                     },
                     "\n- ",
                     {
-                      "translate": "biome.minecraft.savanna_plateau"
+                      "translate": "biome.minecraft.jungle"
                     },
                     "\n- ",
                     {
-                      "translate": "biome.minecraft.windswept_savanna"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.badlands"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.wooded_badlands"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.eroded_badlands"
+                      "translate": "biome.minecraft.bamboo_jungle"
                     }
                   ]
                 }
@@ -560,54 +640,14 @@
       "enable": [],
       "requirements": [
         [
-          "enter_underground"
+          "enter_warm_ocean"
         ]
       ],
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.monsters_unbound.description.underground",
-            "fallback": "Mobs spawned in a %s biome are weaker but faster.\n\nHusks spawn in large groups..",
-            "with": [
-              {
-                "translate": "text.gm4.guidebook.monsters_unbound.burned",
-                "fallback": "burned",
-                "color": "blue",
-                "hoverEvent": {
-                  "action": "show_text",
-                  "contents": [
-                    "- ",
-                    {
-                      "translate": "biome.minecraft.desert"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.savanna"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.savanna_plateau"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.windswept_savanna"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.badlands"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.wooded_badlands"
-                    },
-                    "\n- ",
-                    {
-                      "translate": "biome.minecraft.eroded_badlands"
-                    }
-                  ]
-                }
-              }
-            ]
+            "translate": "text.gm4.guidebook.monsters_unbound.description.warm_ocean",
+            "fallback": "Drowned spawned in a Warm Ocean are much more powerful and have a larger chance to spawn wielding a Trident."
           }
         ]
       ]
@@ -619,8 +659,161 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.monsters_unbound.description",
-            "fallback": "Armor no longer reduces damage taken, instead serving as a second health bar. Armor regenerates rapidly out of combat.\nArmor Toughness reduces armor damage taken from high damage attacks, up to 25%.\nProtection reduces all damage by 1% per level, or 4% for Fire, Blast or Projectile Protection.\nShields will go on cooldown after blocking damage."
+            "translate": "text.gm4.guidebook.monsters_unbound.description.elites",
+            "fallback": "Zombies that spawn as babies or as leaders are replaced with a random Elite variant.\n\nSkeletons have a static 5% chance to be an Elite."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_elite_blazing"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.elite_blazing",
+            "fallback": "Blazing Elites are slow and immune to burning. Their attacks deal little damage but have Fire Aspect II or Flame. Occasionally will spawn slow moving homing projectiles that explode on contact."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_elite_gargantuan"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.elite_gargantuan",
+            "fallback": "Gargantuan Elites are much bigger and gain stats based on their missing health. Will occasionally perform an AoE stomp attack."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_elite_glacial"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.elite_glacial",
+            "fallback": "Glacial Elites leave a sphere of frozen energy on death. This sphere explodes after 2 seconds freezing any entity inside for 3 seconds."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_elite_mending"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.elite_mending",
+            "fallback": "Mending Elites will heal other undead mobs in their line of sight, this will never target other Mending Elites."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_elite_pearlescent"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.elite_pearlescent",
+            "fallback": "Pearescent Elites can shoot damaging lasers from their eyes, the laser is blocked by terrain."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_elite_splitting"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.elite_splitting",
+            "fallback": "Splitting Elites split into 6 smaller and weaker versions of itself on death."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_elite_volatile"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.elite_volatile",
+            "fallback": "Volatile Elites create randomly targeted purple beams of energy around them that explode after a delay, dealing heavy magic damage."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_elite_vorpal"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.elite_vorpal",
+            "fallback": "Vorpal Elites teleport randomly on getting hit. On death a homing skull will track the nearest player and apply Fear, which blinds and slows interactions."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_elite_zephyr"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.monsters_unbound.description.elite_zephyr",
+            "fallback": "Zephyr Elites can charge a powerful wind-charged attack. Damaging them during the charge time dissipates the charge. Zephyr Zombies will rush the player, Zephyr Skeletons fire a burst of arrows."
           }
         ]
       ]
