@@ -87,9 +87,7 @@
           "target": "item_name",
           "name": {
             "translate": "item.gm4.monsters_unbound.zombie_spore",
-            "with": [
-              "Zombie Spore"
-            ],
+            "fallback": "Zombie Spore",
             "italic": false
           }
         }
