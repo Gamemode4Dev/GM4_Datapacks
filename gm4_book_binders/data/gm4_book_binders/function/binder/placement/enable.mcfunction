@@ -1,4 +1,4 @@
-# @s any book binder armor stand in lectern with book on actual lectern
+# @s any disabled book binder armor stand in lectern without book on actual lectern
 # at @s
 # run from gm4_book_binders:process_binder
 
