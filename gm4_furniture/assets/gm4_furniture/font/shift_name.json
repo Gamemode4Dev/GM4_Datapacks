@@ -9,9 +9,9 @@
       },
       {
           "type": "ttf",
-          "file": "minecraft.ttf",
-          "shift": [0,3],
-          "size": 13,
+          "file": "gm4_furniture:minecraft.ttf",
+          "shift": [0,7],
+          "size": 8,
           "oversample": 7
       }
   ]
