@@ -1,0 +1,320 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 0
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:white_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 1
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:light_gray_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 2
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:gray_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 3
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:black_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 4
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:brown_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 5
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:red_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 6
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:orange_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 7
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:yellow_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 8
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:lime_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 9
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:green_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 10
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:cyan_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 11
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:light_blue_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 12
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:blue_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 13
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:purple_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 14
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:magenta_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 15
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:pink_shulker_box",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$color"
+                    },
+                    "score": "gm4_hh_data"
+                  },
+                  "range": 16
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
