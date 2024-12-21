@@ -95,7 +95,7 @@
   },
   "sections": [
     {
-      "name": "description",
+      "name": "health",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "armor",
       "enable": [],
       "requirements": [
         [
@@ -128,7 +128,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "shield",
       "enable": [],
       "requirements": [
         [
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "mobs",
       "enable": [],
       "requirements": [
         [

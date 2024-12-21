@@ -232,7 +232,7 @@
   },
   "sections": [
     {
-      "name": "description",
+      "name": "biomes",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -248,7 +248,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "underground",
       "enable": [],
       "requirements": [
         [
@@ -265,7 +265,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "burned",
       "enable": [],
       "requirements": [
         [
@@ -322,7 +322,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "dripstone_caves",
       "enable": [],
       "requirements": [
         [
@@ -339,7 +339,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "flowering",
       "enable": [],
       "requirements": [
         [
@@ -384,7 +384,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "growth",
       "enable": [],
       "requirements": [
         [
@@ -441,7 +441,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "mountainous",
       "enable": [],
       "requirements": [
         [
@@ -518,7 +518,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "snowy",
       "enable": [],
       "requirements": [
         [
@@ -591,7 +591,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "toxic",
       "enable": [],
       "requirements": [
         [
@@ -636,7 +636,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "warm_ocean",
       "enable": [],
       "requirements": [
         [
@@ -653,7 +653,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "elites",
       "enable": [],
       "requirements": [],
       "pages": [
@@ -666,7 +666,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "elite_blazing",
       "enable": [],
       "requirements": [
         [
@@ -683,7 +683,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "elite_gargantuan",
       "enable": [],
       "requirements": [
         [
@@ -700,7 +700,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "elite_glacial",
       "enable": [],
       "requirements": [
         [
@@ -717,7 +717,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "elite_mending",
       "enable": [],
       "requirements": [
         [
@@ -734,7 +734,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "elite_pearlescent",
       "enable": [],
       "requirements": [
         [
@@ -751,7 +751,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "elite_splitting",
       "enable": [],
       "requirements": [
         [
@@ -768,7 +768,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "elite_volatile",
       "enable": [],
       "requirements": [
         [
@@ -785,7 +785,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "elite_vorpal",
       "enable": [],
       "requirements": [
         [
@@ -802,7 +802,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "elite_zephyr",
       "enable": [],
       "requirements": [
         [
