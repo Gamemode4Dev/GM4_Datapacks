@@ -4,7 +4,6 @@
 # run from mob/init/mob_type/skeleton/base
 # run from mob/init/mob_type/zombie/base
 
-tag @s remove gm4_sr_was_leader_or_baby
 tag @s add gm4_mu_elite
 
 # zombie villagers are not replaced
