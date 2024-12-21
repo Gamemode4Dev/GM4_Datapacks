@@ -23,11 +23,13 @@ tag @s add gm4_sr_check_damage_cap
 # add fire delay to drowned for tridents
 scoreboard players set @s[type=drowned] gm4_sr_arrow.fire_delay 10
 
-# remove leader and baby zombies
-scoreboard players set $removed_bonus gm4_sr_data 0
-execute if data entity @s attributes[{id:"minecraft:max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] store success score $removed_bonus gm4_sr_data run attribute @s minecraft:max_health modifier remove minecraft:leader_zombie_bonus
-execute if data entity @s {IsBaby:1b} store success score $removed_bonus gm4_sr_data run data modify entity @s IsBaby set value 0b
-execute if score $removed_bonus gm4_sr_data matches 1 run tag @s add gm4_sr_was_leader_or_baby
+# remove leader bonus from zombies
+execute if data entity @s attributes[{id:"minecraft:max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] run attribute @s minecraft:max_health modifier remove minecraft:leader_zombie_bonus
+
+# remove baby zombies (will be turned into Elites with Monsters Unbound)
+scoreboard players set $was_baby gm4_sr_data 0
+execute if data entity @s {IsBaby:1b} store success score $was_baby gm4_sr_data run data modify entity @s IsBaby set value 0b
+execute if score $was_baby gm4_sr_data matches 1 run tag @s add gm4_sr_was_baby
 
 # set armor
 scoreboard players set $override_equipment gm4_sr_data 0

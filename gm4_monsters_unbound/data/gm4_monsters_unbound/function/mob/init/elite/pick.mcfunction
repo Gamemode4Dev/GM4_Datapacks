@@ -21,6 +21,9 @@ execute store result score $elite_pick gm4_mu_data run random value 1..100
 execute if score $prepicked_elite gm4_mu_data matches 1..100 run scoreboard players operation $elite_pick gm4_mu_data = $prepicked_elite gm4_mu_data
 scoreboard players reset $prepicked_elite gm4_mu_data
 
+# do not allow Gargantuan Elite if there is no space
+execute if score $elite_pick gm4_mu_data matches 96.. unless block ~ ~1 ~ #gm4:no_collision store result score $elite_pick gm4_mu_data run random value 1..95
+
 # GLACIAL 15% 
 # 3.5x health, 45% KB resist
 # attacks apply chill (15 sec stacking slowness, applies freeze at 7 stacks)
@@ -47,30 +50,30 @@ execute if score $elite_pick gm4_mu_data matches 31..45 run return run function 
 # occasionally stops to shoot homing fireballs at the closest player, exploding when they hit terrain / a player to deal 5 explosion damage
 execute if score $elite_pick gm4_mu_data matches 46..55 run return run function gm4_monsters_unbound:mob/init/elite/type/blazing
 
+# VORPAL 10%
+# 3.5x health
+# can teleports up to 8 blocks away when hit, 65% chance
+# On Death shoot a black cloud tracking the closest player, causing them to go blind, obscuring their vision and removing sounds
+execute if score $elite_pick gm4_mu_data matches 56..65 run return run function gm4_monsters_unbound:mob/init/elite/type/vorpal
+
+# SPLITTING 10%
+# 3.5x health
+# on death splits into 5 miniature versions of the entity, with -50% in scale and reduced stats
+execute if score $elite_pick gm4_mu_data matches 66..75 run return run function gm4_monsters_unbound:mob/init/elite/type/splitting
+
+# VOLATILE 10%
+# 3.5x health, +20% movement speed, +25% attack damage, arrow delay set to 0
+# calls down pillars of energy that explode after 4 seconds, leaving a dragon_fireball
+execute if score $elite_pick gm4_mu_data matches 76..85 run return run function gm4_monsters_unbound:mob/init/elite/type/volatile
+
+# PEARLESCENT 10%
+# 3.5x health
+# occasionally slow to shoot a beam of light at a player, damaging them over time
+execute if score $elite_pick gm4_mu_data matches 86..95 run return run function gm4_monsters_unbound:mob/init/elite/type/pearlescent
+
 # GARGANTUAN 5%
 # 6.5x health (4.5x for skeleton), +50% size, +35% attack damage, 1.75 attack knockback, 85% movement efficiency, -35% speed
 # projectile protection 4, skeletons have punch II and power I on bow
 # based on missing health gain up to 150% speed, 50% attack damage and from 85-100% knockback resistance
 # Occasionally charges up a stomp attack that slows and deals 75% damage to players within 7 blocks
-execute if score $elite_pick gm4_mu_data matches 56..60 run return run function gm4_monsters_unbound:mob/init/elite/type/gargantuan
-
-# VORPAL 10%
-# 3.5x health
-# can teleports up to 8 blocks away when hit, 65% chance
-# On Death shoot a black cloud tracking the closest player, causing them to go blind, obscuring their vision and removing sounds
-execute if score $elite_pick gm4_mu_data matches 61..70 run return run function gm4_monsters_unbound:mob/init/elite/type/vorpal
-
-# SPLITTING 10%
-# 3.5x health
-# on death splits into 5 miniature versions of the entity, with -50% in scale and reduced stats
-execute if score $elite_pick gm4_mu_data matches 71..80 run return run function gm4_monsters_unbound:mob/init/elite/type/splitting
-
-# VOLATILE 10%
-# 3.5x health, +20% movement speed, +25% attack damage, arrow delay set to 0
-# calls down pillars of energy that explode after 4 seconds, leaving a dragon_fireball
-execute if score $elite_pick gm4_mu_data matches 81..90 run return run function gm4_monsters_unbound:mob/init/elite/type/volatile
-
-# PEARLESCENT 10%
-# 3.5x health
-# occasionally slow to shoot a beam of light at a player, damaging them over time
-execute if score $elite_pick gm4_mu_data matches 91.. run return run function gm4_monsters_unbound:mob/init/elite/type/pearlescent
+execute if score $elite_pick gm4_mu_data matches 96.. run return run function gm4_monsters_unbound:mob/init/elite/type/gargantuan
