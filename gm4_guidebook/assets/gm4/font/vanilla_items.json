@@ -479,15 +479,6 @@
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/bundle_filled.png",
-            "ascent": -32768,
-            "height": -16,
-            "chars": [
-                "\u0938"
-            ]
-        },
-        {
-            "type": "bitmap",
             "file": "minecraft:item/cake.png",
             "ascent": -32768,
             "height": -16,
@@ -4488,15 +4479,6 @@
             "height": 16,
             "chars": [
                 "\u0dc6"
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "minecraft:item/bundle_filled.png",
-            "ascent": 8,
-            "height": 16,
-            "chars": [
-                "\u0dc7"
             ]
         },
         {
