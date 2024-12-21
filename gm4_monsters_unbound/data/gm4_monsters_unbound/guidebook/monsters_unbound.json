@@ -20,11 +20,14 @@
     "enter_dripstone_caves": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "location": {
-            "biomes": "minecraft:dripstone_caves"
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "minecraft:dripstone_caves"
+            }
           }
-        }
+        ]
       }
     },
     "enter_burned": {
@@ -74,11 +77,14 @@
     "enter_warm_ocean": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": {
-          "location": {
-            "biomes": "minecraft:warm_ocean"
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": "minecraft:warm_ocean"
+            }
           }
-        }
+        ]
       }
     },
     "enter_snowy": {
