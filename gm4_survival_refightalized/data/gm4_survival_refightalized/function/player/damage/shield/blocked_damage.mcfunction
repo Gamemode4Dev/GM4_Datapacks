@@ -16,7 +16,7 @@ execute if score @s gm4_sr_shield.use_ticks matches ..5 run return run function 
 function gm4_survival_refightalized:player/damage/shield/disable
 
 # dev damage log
-tellraw @s[tag=gm4_sr_dev] {"text":"Damage blocked by shield","color":"dark_gray"}
+tellraw @s[tag=gm4_sr_dev.damage_log] {"text":"Damage blocked by shield","color":"dark_gray"}
 
 # cleanup
 scoreboard players reset @s gm4_sr_stat.damage_resisted

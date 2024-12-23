@@ -145,6 +145,17 @@
         }
       }
     },
+    "witch": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "minecraft:poison": {}
+        },
+        "source": {
+          "type": "minecraft:witch"
+        }
+      }
+    },
     "cave_spider": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
@@ -189,6 +200,7 @@
       "is_fall",
       "is_explosion",
       "is_projectile",
+      "witch",
       "cave_spider",
       "catch_other"
     ]

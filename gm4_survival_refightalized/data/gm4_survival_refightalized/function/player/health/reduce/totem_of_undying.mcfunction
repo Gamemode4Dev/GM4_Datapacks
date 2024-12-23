@@ -7,4 +7,4 @@ execute if score $resistance_level gm4_sr_data matches -1 run function gm4_survi
 damage @s 99999999999999 generic
 
 # dev damage log
-tellraw @s[tag=gm4_sr_dev] [{"text":"Triggered Totem","color":"gray"}]
+tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"Triggered Totem","color":"gray"}]

@@ -46,35 +46,6 @@
               "tag": "{gm4_augmented_armor:{durability:112,identified:0,armor_clamp:-5,slot:1,material:4,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_chestplate\"}'}}"
             },
             {
-              "function": "minecraft:enchant_randomly",
-              "options": [
-                "minecraft:projectile_protection"
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_monsters_unbound:biome/growth"
-                },
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:binomial",
-                    "n": 1,
-                    "p": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$difficulty"
-                      },
-                      "score": "gm4_aa_data",
-                      "scale": 0.008
-                    }
-                  },
-                  "range": 1
-                }
-              ]
-            },
-            {
               "function": "minecraft:enchant_with_levels",
               "levels": {
                 "min": {

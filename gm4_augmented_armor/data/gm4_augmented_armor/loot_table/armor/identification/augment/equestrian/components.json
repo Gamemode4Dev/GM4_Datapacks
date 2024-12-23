@@ -1,0 +1,358 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_augmented_armor:armor/identification/base",
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_augmented_armor:{augment:{name:equestrian,id:1,triggers:{clocked:1,damage_dealt:0,damage_taken:0}}}}"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            ""
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.augment",
+              "fallback": "%s Augment:",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.equestrian",
+                  "fallback": "Equestrian"
+                }
+              ],
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.equestrian",
+              "fallback": "Mount has %s",
+              "with": [
+                {
+                  "translate": "effect.minecraft.speed",
+                  "color": "blue"
+                }
+              ],
+              "color": "dark_gray",
+              "italic": false
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 1
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.equestrian",
+              "fallback": "Mount has %s",
+              "with": [
+                {
+                  "translate": "potion.withAmplifier",
+                  "with": [
+                    {
+                      "translate": "effect.minecraft.speed"
+                    },
+                    {
+                      "translate": "potion.potency.1"
+                    }
+                  ],
+                  "color": "blue"
+                }
+              ],
+              "color": "dark_gray",
+              "italic": false
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 2
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.equestrian",
+              "fallback": "Mount has %s",
+              "with": [
+                {
+                  "translate": "potion.withAmplifier",
+                  "with": [
+                    {
+                      "translate": "effect.minecraft.speed"
+                    },
+                    {
+                      "translate": "potion.potency.2"
+                    }
+                  ],
+                  "color": "blue"
+                }
+              ],
+              "color": "dark_gray",
+              "italic": false
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_1"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 3
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.equestrian_2",
+              "fallback": "and %s",
+              "with": [
+                {
+                  "translate": "potion.withAmplifier",
+                  "with": [
+                    {
+                      "translate": "effect.minecraft.resistance"
+                    },
+                    {
+                      "translate": "potion.potency.1"
+                    }
+                  ],
+                  "color": "blue"
+                }
+              ],
+              "color": "dark_gray",
+              "italic": false
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_2"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 1
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.equestrian_2",
+              "fallback": "and %s",
+              "with": [
+                {
+                  "translate": "potion.withAmplifier",
+                  "with": [
+                    {
+                      "translate": "effect.minecraft.jump_boost"
+                    },
+                    {
+                      "translate": "potion.potency.1"
+                    }
+                  ],
+                  "color": "blue"
+                }
+              ],
+              "color": "dark_gray",
+              "italic": false
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_2"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 2
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.equestrian_2",
+              "fallback": "and %s",
+              "with": [
+                {
+                  "translate": "effect.minecraft.fire_resistance",
+                  "color": "blue"
+                }
+              ],
+              "color": "dark_gray",
+              "italic": false
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_2"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 3
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            {
+              "translate": "item.gm4.augmented_armor.lore.equestrian_2",
+              "fallback": "and %s",
+              "with": [
+                {
+                  "translate": "effect.minecraft.regeneration",
+                  "color": "blue"
+                }
+              ],
+              "color": "dark_gray",
+              "italic": false
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$level_2"
+                },
+                "score": "gm4_aa_data"
+              },
+              "range": 4
+            }
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.equestrian_3",
+                "fallback": "%s stacks like Enchantments (2x %s = %s)",
+                "with": [
+                  {
+                    "translate": "effect.minecraft.speed"
+                  },
+                  {
+                    "translate": "potion.potency.1"
+                  },
+                  {
+                    "translate": "potion.potency.2"
+                  }
+                ],
+                "color": "dark_gray",
+                "italic": true
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_name",
+          "entity": "this",
+          "target": "item_name",
+          "name": [
+            {
+              "translate": "item.gm4.augmented_armor.name",
+              "fallback": "%s %s",
+              "with": [
+                {
+                  "translate": "item.gm4.augmented_armor.augment.equestrian",
+                  "fallback": "Equestrian"
+                },
+                {
+                  "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",
+                  "storage": "gm4_augmented_armor:temp",
+                  "interpret": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

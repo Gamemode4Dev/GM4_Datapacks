@@ -46,64 +46,6 @@
               "tag": "{gm4_augmented_armor:{durability:91,identified:0,armor_clamp:-1,slot:3,material:4,name:'{\"italic\":false,\"translate\":\"item.minecraft.golden_boots\"}'}}"
             },
             {
-              "function": "minecraft:enchant_randomly",
-              "options": [
-                "minecraft:depth_strider"
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_monsters_unbound:biome/reef"
-                },
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:binomial",
-                    "n": 1,
-                    "p": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$difficulty"
-                      },
-                      "score": "gm4_aa_data",
-                      "scale": 0.005
-                    }
-                  },
-                  "range": 1
-                }
-              ]
-            },
-            {
-              "function": "minecraft:enchant_randomly",
-              "options": [
-                "minecraft:projectile_protection"
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_monsters_unbound:biome/growth"
-                },
-                {
-                  "condition": "minecraft:value_check",
-                  "value": {
-                    "type": "minecraft:binomial",
-                    "n": 1,
-                    "p": {
-                      "type": "minecraft:score",
-                      "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$difficulty"
-                      },
-                      "score": "gm4_aa_data",
-                      "scale": 0.008
-                    }
-                  },
-                  "range": 1
-                }
-              ]
-            },
-            {
               "function": "minecraft:enchant_with_levels",
               "levels": {
                 "min": {

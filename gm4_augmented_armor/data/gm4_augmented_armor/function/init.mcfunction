@@ -31,11 +31,6 @@ scoreboard objectives add gm4_aa_augment.equestrian.speed_level dummy
 scoreboard objectives add gm4_aa_augment.psychic.id dummy
 scoreboard objectives add gm4_aa_augment.psychic.degree dummy
 scoreboard objectives add gm4_aa_augment.totemic.strength_effect dummy
-scoreboard objectives add gm4_aa_augment.gleaming.damage dummy
-scoreboard objectives add gm4_aa_augment.gleaming.timer dummy
-scoreboard objectives add gm4_aa_augment.gleaming.timer_full dummy
-scoreboard objectives add gm4_aa_augment.gleaming.reach dummy
-scoreboard objectives add gm4_aa_augment.soothe.timer dummy
 scoreboard objectives add gm4_aa_augment.canine.timer dummy
 scoreboard objectives add gm4_aa_augment.canine.slot dummy
 scoreboard objectives add gm4_aa_augment.dashing.timer dummy

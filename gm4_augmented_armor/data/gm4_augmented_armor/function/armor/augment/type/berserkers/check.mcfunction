@@ -1,5 +1,5 @@
 # check if heal pulse is off cooldown
-# @s = player wearing soothing armour
+# @s = player wearing the armor
 # at @s
 # run from armor/check_augment/hp_check
 

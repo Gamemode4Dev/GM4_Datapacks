@@ -1,7 +1,7 @@
 
 # make sure at least 1 damage is dealt
 scoreboard players operation $damage_total gm4_sr_data > #1 gm4_sr_data
-tellraw @s[tag=gm4_sr_dev] [{"text":"Real Damage Taken (x10): ","color":"gray"},{"score":{"name":"$damage_total","objective":"gm4_sr_data"},"color":"white"}]
+tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"Real Damage Taken (x10): ","color":"gray"},{"score":{"name":"$damage_total","objective":"gm4_sr_data"},"color":"white"}]
 
 # | Armor
 scoreboard players operation $damage_armor gm4_sr_data += $damage_total gm4_sr_data
@@ -35,13 +35,13 @@ scoreboard players operation $damage_health gm4_sr_data += $damage_left gm4_sr_d
 
 # | Damage the player
 # armor
-execute if score $damage_armor gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"  > Armor: ","color":"gray"},{"score":{"name":"$damage_armor","objective":"gm4_sr_data"},"color":"white"}]
+execute if score $damage_armor gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"  > Armor: ","color":"gray"},{"score":{"name":"$damage_armor","objective":"gm4_sr_data"},"color":"white"}]
 execute if score $damage_armor gm4_sr_data matches 1.. run function gm4_survival_refightalized:player/armor/eval_reduction with storage gm4_survival_refightalized:temp set
 # absorption hearts
-execute if score $damage_absorption gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"  > Absorption: ","color":"gray"},{"score":{"name":"$damage_absorption","objective":"gm4_sr_data"},"color":"white"}]
+execute if score $damage_absorption gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"  > Absorption: ","color":"gray"},{"score":{"name":"$damage_absorption","objective":"gm4_sr_data"},"color":"white"}]
 execute if score $damage_absorption gm4_sr_data matches 1.. run function gm4_survival_refightalized:player/absorption/eval_reduction with storage gm4_survival_refightalized:temp set
 # red hearts
-execute if score $damage_health gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"  > Health: ","color":"gray"},{"score":{"name":"$damage_health","objective":"gm4_sr_data"},"color":"white"}]
+execute if score $damage_health gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"  > Health: ","color":"gray"},{"score":{"name":"$damage_health","objective":"gm4_sr_data"},"color":"white"}]
 execute if score $damage_health gm4_sr_data matches 1.. run function gm4_survival_refightalized:player/health/reduce/activate
 
 # advancement

@@ -9,5 +9,3 @@ execute store result score $augment gm4_aa_data run data get storage gm4_augment
 
 # run based on augment id
 execute if score $augment gm4_aa_data matches 8 run function gm4_augmented_armor:armor/augment/type/sparking/damage_dealt
-execute if score $augment gm4_aa_data matches 22 run function gm4_augmented_armor:armor/augment/type/charging/damage_dealt
-execute if score $augment gm4_aa_data matches 23 run function gm4_augmented_armor:armor/augment/type/giantsbane/damage_dealt

@@ -11,6 +11,6 @@ scoreboard players operation $enchant.projectile_protection gm4_sr_data += $ench
 execute store result score $enchant.projectile_protection.add gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:3b}].components."minecraft:enchantments".levels."minecraft:projectile_protection" 4
 scoreboard players operation $enchant.projectile_protection gm4_sr_data += $enchant.projectile_protection.add gm4_sr_data
 
-execute if score $enchant.damage_reduction gm4_sr_data matches 0 if score $enchant.projectile_protection gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] {"text":"Enchantments:","color":"gray"}
+execute if score $enchant.damage_reduction gm4_sr_data matches 0 if score $enchant.projectile_protection gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev.damage_log] {"text":"Enchantments:","color":"gray"}
 scoreboard players operation $enchant.damage_reduction gm4_sr_data += $enchant.projectile_protection gm4_sr_data
-execute if score $enchant.projectile_protection gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":" > Projectile Protection: ","color":"gray"},{"score":{"name":"$enchant.projectile_protection","objective":"gm4_sr_data"},"color":"white"},{"text":"%","color":"white"}]
+execute if score $enchant.projectile_protection gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":" > Projectile Protection: ","color":"gray"},{"score":{"name":"$enchant.projectile_protection","objective":"gm4_sr_data"},"color":"white"},{"text":"%","color":"white"}]

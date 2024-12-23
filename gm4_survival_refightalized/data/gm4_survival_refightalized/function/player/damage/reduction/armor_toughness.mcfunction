@@ -29,4 +29,4 @@ scoreboard players operation $armor_toughness_effect gm4_sr_data /= #100 gm4_sr_
 scoreboard players operation $damage_total gm4_sr_data -= $armor_toughness_effect gm4_sr_data
 
 # dev damage log
-tellraw @s[tag=gm4_sr_dev] [{"text":"Armor Toughness: ","color":"gray"},{"text":"-","color":"white"},{"score":{"name":"$armor_toughness_effect","objective":"gm4_sr_data"},"color":"white"},{"text":" = ","color":"gray"},{"score":{"name":"$damage_total","objective":"gm4_sr_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$armor_toughness.dividend","objective":"gm4_sr_data"},"color":"dark_gray"},{"text":"%)","color":"dark_gray"}]
+tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"Armor Toughness: ","color":"gray"},{"text":"-","color":"white"},{"score":{"name":"$armor_toughness_effect","objective":"gm4_sr_data"},"color":"white"},{"text":" = ","color":"gray"},{"score":{"name":"$damage_total","objective":"gm4_sr_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$armor_toughness.dividend","objective":"gm4_sr_data"},"color":"dark_gray"},{"text":"%)","color":"dark_gray"}]

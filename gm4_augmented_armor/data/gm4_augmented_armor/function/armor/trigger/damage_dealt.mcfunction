@@ -24,8 +24,5 @@ execute if data storage gm4_augmented_armor:temp Items[{Slot:2b}].components."mi
 execute if data storage gm4_augmented_armor:temp Items[{Slot:3b}].components."minecraft:custom_data".gm4_augmented_armor.augment.triggers{damage_dealt:1} run function gm4_augmented_armor:armor/slot/feet
 scoreboard players set $trigger.damage_dealt gm4_aa_data 0
 
-# Giantsbane
-execute if score $augment.giantsbane_damage gm4_aa_data matches 1.. run function gm4_augmented_armor:armor/augment/type/giantsbane/activate
-
 # cleanup
 data remove storage gm4_augmented_armor:temp Items

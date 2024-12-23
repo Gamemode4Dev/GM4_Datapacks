@@ -1,6 +1,6 @@
 # show stats of the closest modified mob
 # @s = modified mob
-# at player with gm4_sr_dev tag
+# at player with gm4_sr_dev.mob_stats tag
 # run from player/player_submain
 
 execute store result score $dev.difficulty gm4_sr_data run scoreboard players get @s gm4_sr_mob.difficulty
@@ -15,5 +15,5 @@ scoreboard players operation $dev.damage_10 gm4_sr_data /= #100 gm4_sr_data
 scoreboard players operation $dev.damage_1 gm4_sr_data = $dev.damage gm4_sr_data
 scoreboard players operation $dev.damage_1 gm4_sr_data %= #100 gm4_sr_data
 execute store result score $dev.speed gm4_sr_data run attribute @s minecraft:movement_speed get 100
-execute at @s run particle firework ~ ~1 ~ 0.2 0.5 0.2 0 3 force @p[tag=gm4_sr_dev]
-title @p[tag=gm4_sr_dev] actionbar [{"text":"Diff: ","color":"gray"},{"score":{"name":"$dev.difficulty","objective":"gm4_sr_data"},"color":"white"},{"text":" Health: ","color":"gray"},{"score":{"name":"$dev.health_curr","objective":"gm4_sr_data"},"color":"white"},{"text":"/","color":"white"},{"score":{"name":"$dev.health_max","objective":"gm4_sr_data"},"color":"white"},{"text":" Damage: "},{"score":{"name":"$dev.damage_10","objective":"gm4_sr_data"},"color":"white"},{"text":".","color":"white"},{"score":{"name":"$dev.damage_1","objective":"gm4_sr_data"},"color":"white"},{"text":" Speed: "},{"score":{"name":"$dev.speed","objective":"gm4_sr_data"},"color":"white"}]
+execute at @s run particle firework ~ ~1 ~ 0.2 0.5 0.2 0 3 force @p[tag=gm4_sr_dev.mob_stats]
+title @p[tag=gm4_sr_dev.mob_stats] actionbar [{"text":"Diff: ","color":"gray"},{"score":{"name":"$dev.difficulty","objective":"gm4_sr_data"},"color":"white"},{"text":" Health: ","color":"gray"},{"score":{"name":"$dev.health_curr","objective":"gm4_sr_data"},"color":"white"},{"text":"/","color":"white"},{"score":{"name":"$dev.health_max","objective":"gm4_sr_data"},"color":"white"},{"text":" Damage: "},{"score":{"name":"$dev.damage_10","objective":"gm4_sr_data"},"color":"white"},{"text":".","color":"white"},{"score":{"name":"$dev.damage_1","objective":"gm4_sr_data"},"color":"white"},{"text":" Speed: "},{"score":{"name":"$dev.speed","objective":"gm4_sr_data"},"color":"white"}]

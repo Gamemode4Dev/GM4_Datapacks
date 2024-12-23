@@ -1,5 +1,5 @@
 
-tellraw @s[tag=gm4_sr_dev] [{"text":" - Reactive Absorption: +","color":"gray"},{"score":{"name":"$reactive.add_absorption","objective":"gm4_aa_data"},"color":"white"}]
+tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":" - Reactive Absorption: +","color":"gray"},{"score":{"name":"$reactive.add_absorption","objective":"gm4_aa_data"},"color":"white"}]
 
 # playsound
 

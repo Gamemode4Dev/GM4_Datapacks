@@ -15,10 +15,7 @@ data remove block 29999998 1 7134 Items
 execute if items entity @s armor.* #gm4_survival_refightalized:armor[custom_data~{gm4_augmented_armor:{custom_attribute:{arrow_damage:{}}}}] run function gm4_augmented_armor:armor/custom_attribute/arrow_damage
 execute if items entity @s armor.* #gm4_survival_refightalized:armor[custom_data~{gm4_augmented_armor:{custom_attribute:{arrow_speed:{}}}}] run function gm4_augmented_armor:armor/custom_attribute/arrow_speed
 
-# augments
-execute if items entity @s armor.* #gm4_survival_refightalized:armor[custom_data~{gm4_augmented_armor:{augment:{name:blastshot}}}] run function gm4_augmented_armor:armor/augment/type/blastshot/find_arrow
-execute if items entity @s armor.* #gm4_survival_refightalized:armor[custom_data~{gm4_augmented_armor:{augment:{name:hawkeye}}}] run function gm4_augmented_armor:armor/augment/type/hawkeye/find_arrow
-# archery last so it can copy any other buffs
+# archery
 execute if items entity @s armor.* #gm4_survival_refightalized:armor[custom_data~{gm4_augmented_armor:{augment:{name:archery}}}] run function gm4_augmented_armor:armor/augment/type/archery/find_arrow
 
 # cleanup

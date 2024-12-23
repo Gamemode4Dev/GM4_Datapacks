@@ -64,7 +64,7 @@ scoreboard players operation @s gm4_sr_stat.max_absorption = $actual_absorption_
 scoreboard players operation @s gm4_sr_stat.current_absorption = @s gm4_sr_stat.max_absorption
 
 # dev log
-tellraw @s[tag=gm4_sr_dev] [{"text":" - Reactive Absorption: +","color":"gray"},{"score":{"name":"$reactive.add_absorption","objective":"gm4_aa_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$actual_absorption_hearts","objective":"gm4_aa_data"},"color":"dark_gray"},{"text":")","color":"dark_gray"}]
+tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":" - Reactive Absorption: +","color":"gray"},{"score":{"name":"$reactive.add_absorption","objective":"gm4_aa_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$actual_absorption_hearts","objective":"gm4_aa_data"},"color":"dark_gray"},{"text":")","color":"dark_gray"}]
 
 # cleanup
 data remove storage gm4_augmented_armor:temp Items

@@ -792,7 +792,6 @@
     },
     "iron_chestplate": {
       "gm4_weighted_armour:guidebook_icon/weighted_armour": 1,
-      "gm4_augmented_armor:guidebook_icon/augmented_armor": 2,
       "gm4_end_fishing:item/end_city_armor_1": 10,
       "gm4_end_fishing:item/end_city_armor_2": 11,
       "gm4_end_fishing:item/end_city_armor_3": 12,

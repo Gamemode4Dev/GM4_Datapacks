@@ -31,7 +31,3 @@ data modify entity @s item.components set from storage gm4_augmented_armor:temp 
 
 tag @s add gm4_aa_archery_arrow
 tag @s add gm4_sr_arrow_checked
-
-# apply buffs if needed
-execute if score $apply.blastshot gm4_aa_data matches 1 run function gm4_augmented_armor:armor/augment/type/blastshot/prime
-execute if score $apply.hawkeye gm4_aa_data matches 1 run function gm4_augmented_armor:armor/augment/type/hawkeye/apply

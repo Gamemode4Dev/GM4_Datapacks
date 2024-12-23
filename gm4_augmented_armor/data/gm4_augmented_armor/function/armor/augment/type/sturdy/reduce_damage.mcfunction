@@ -17,4 +17,4 @@ scoreboard players operation $damage_reduction gm4_aa_data /= #1000 gm4_aa_data
 scoreboard players operation $damage_total gm4_sr_data -= $damage_reduction gm4_aa_data
 
 # dev damage log
-tellraw @s[tag=gm4_sr_dev] [{"text":"Sturdy Augment: ","color":"gray"},{"text":"-","color":"white"},{"score":{"name":"$damage_reduction","objective":"gm4_aa_data"},"color":"white"},{"text":" = "},{"score":{"name":"$damage_total","objective":"gm4_sr_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$level","objective":"gm4_aa_data"},"color":"dark_gray"},{"text":"‰)","color":"dark_gray"}]
+tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"Sturdy Augment: ","color":"gray"},{"text":"-","color":"white"},{"score":{"name":"$damage_reduction","objective":"gm4_aa_data"},"color":"white"},{"text":" = "},{"score":{"name":"$damage_total","objective":"gm4_sr_data"},"color":"white"},{"text":" (","color":"dark_gray"},{"score":{"name":"$level","objective":"gm4_aa_data"},"color":"dark_gray"},{"text":"‰)","color":"dark_gray"}]

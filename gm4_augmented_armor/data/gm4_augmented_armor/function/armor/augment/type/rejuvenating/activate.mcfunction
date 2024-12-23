@@ -24,4 +24,4 @@ scoreboard players operation $quick_regen_health gm4_aa_data /= #100 gm4_aa_data
 scoreboard players operation @s gm4_sr_health.quick_regeneration_health += $quick_regen_health gm4_aa_data
 
 # dev damage log
-tellraw @s[tag=gm4_sr_dev] [{"text":"Rejuvenating Augment: ","color":"gray"},{"score":{"name":"$quick_regen_health","objective":"gm4_aa_data"},"color":"white"},{"text":" to quick regeneration"}]
+tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"Rejuvenating Augment: ","color":"gray"},{"score":{"name":"$quick_regen_health","objective":"gm4_aa_data"},"color":"white"},{"text":" to quick regeneration"}]

@@ -17,7 +17,7 @@ execute on attacker run function gm4_survival_refightalized:player/damage/shield
 tag @s remove gm4_sr_parrier
 
 # dev damage log
-tellraw @s[tag=gm4_sr_dev] {"text":"Parry","color":"dark_gray"}
+tellraw @s[tag=gm4_sr_dev.damage_log] {"text":"Parry","color":"dark_gray"}
 
 # cleanup
 scoreboard players reset @s gm4_sr_stat.damage_resisted

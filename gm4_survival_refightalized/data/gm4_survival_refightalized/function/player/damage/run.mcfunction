@@ -11,20 +11,21 @@ scoreboard players set $damage_health gm4_sr_data 0
 scoreboard players set $damage_total gm4_sr_data 0
 
 # dev damage log
-tellraw @s[tag=gm4_sr_dev] {"text":"-- Damage Log --"}
+tellraw @s[tag=gm4_sr_dev.damage_log] {"text":"-- Damage Log --"}
 
 # disable shield if damage was blocked, don't run the rest of this function
 execute unless score @s[scores={gm4_sr_shield.timer=1..2,gm4_sr_shield.use_ticks=1..}] gm4_sr_stat.damage_taken matches 1.. unless score @s gm4_sr_stat.damage_absorbed matches 1.. run return run function gm4_survival_refightalized:player/damage/shield/blocked_damage
 
-# cave spider poison reduction
+# cave spider / witch poison reduction
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={cave_spider=true}}] run function gm4_survival_refightalized:player/damage/cave_spider_poison_reduction
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={witch=true}}] run function gm4_survival_refightalized:player/damage/witch_poison_reduction
 
 # dev damage log
-tellraw @s[tag=gm4_sr_dev,advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] {"text":"Non-Combat Damage","color":"dark_gray","italic":true}
+tellraw @s[tag=gm4_sr_dev.damage_log,advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] {"text":"Non-Combat Damage","color":"dark_gray","italic":true}
 
 # calculate damage if player has armor
 execute if score @s gm4_sr_stat.armor matches 1.. run function gm4_survival_refightalized:player/damage/calculate_reduction
-execute unless score @s gm4_sr_stat.armor matches 1.. run tellraw @s[tag=gm4_sr_dev] [{"text":"No Armor - Damage (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_stat.damage_taken"},"color":"white"}]
+execute unless score @s gm4_sr_stat.armor matches 1.. run tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"No Armor - Damage (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_stat.damage_taken"},"color":"white"}]
 
 # set combat regeneration timers, allow to be altered by function call
 scoreboard players operation $set gm4_sr_armor.reduction_timer = $armor_recharge_timer gm4_sr_config
@@ -54,7 +55,7 @@ scoreboard players operation @s gm4_sr_stat.damage_taken += $damage_health gm4_s
 scoreboard players operation @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] gm4_sr_health.quick_regeneration_health += @s gm4_sr_stat.damage_taken
 scoreboard players reset @s gm4_sr_stat.damage_taken
 scoreboard players reset @s gm4_sr_stat.damage_absorbed
-scoreboard players set @s gm4_sr_health.quick_regeneration_timer 2
+scoreboard players set @s gm4_sr_health.quick_regeneration_timer 6
 
 # cleanup
 scoreboard players reset @s gm4_sr_stat.damage_resisted
