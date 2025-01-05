@@ -1,5 +1,5 @@
 {
-  "last_commit": "1d26d1102835ab04ba9641bcb441822922a85753",
+  "last_commit": "3abb7bd3e144f60b72b6a9c081c584fb7f0acd06",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -398,8 +398,8 @@
     {
       "id": "gm4_book_binders",
       "name": "Book Binders",
-      "version": "1.4.7",
-      "hash": "60d1b982279af244da52357e463304957c6ebfce",
+      "version": "1.4.8",
+      "hash": "526a5481adec5401587cf4e6074a54863d29f0ef",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Book_Binders",
       "credits": {
