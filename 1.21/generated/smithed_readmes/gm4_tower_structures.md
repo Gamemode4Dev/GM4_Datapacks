@@ -11,8 +11,8 @@ A custom terrain expansion pack that adds new tower structures to the world. <!-
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Orbis/Tower_Structures)
 
 ### Credits
-- Creator: [Sparks](https://twitter.com/SelcouthSparks)
-- Updated by: [Misode](https://twitter.com/misode_)
+- Creator: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
+- Updated by: [Misode](https://bsky.app/profile/misode.dev)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---

@@ -13,8 +13,8 @@ Increase you max health with craftable health canisters!<!--$pmc:headerSize-->
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Heart_Canisters)
 
 ### Credits
-- Creators: [Sparks](https://twitter.com/SelcouthSparks), SpiderRobotMan
-- Updated by: [SpecialBuilder32](https://twitter.com/SpecialBuilder), [Misode](https://twitter.com/misode_), TheEpyonProject
+- Creators: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social), SpiderRobotMan
+- Updated by: [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [Misode](https://bsky.app/profile/misode.dev), TheEpyonProject
 - Textures by: Jonpot
 - Icon Design: Hozz
 

@@ -10,8 +10,8 @@ Throw items further!<!--$pmc:headerSize-->
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Metallurgy/Iacio_Shamir)
 
 ### Credits
-- Creator: [Denniss](https://twitter.com/Dennis2p_)
-- Icon Design: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
+- Creator: [Denniss](https://github.com/Dennis-0)
+- Icon Design: [BPR](https://bsky.app/profile/bpr02.com)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

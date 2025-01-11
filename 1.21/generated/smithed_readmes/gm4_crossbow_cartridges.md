@@ -15,8 +15,8 @@ Shoot more than just arrows! Crossbow Cartridges allows your crossbow to fire a 
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Crossbow_Cartridges)
 
 ### Credits
-- Creators: [Denniss](https://twitter.com/Dennis2p_), [Nik3141](https://youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ)
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Creators: [Denniss](https://github.com/Dennis-0), [Nik3141](https://youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

@@ -13,10 +13,10 @@ A full list of recipes can be read on the [Wiki](https://wiki.gm4.co/Standard_Cr
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Tinkering_Compressors)
 
 ### Credits
-- Creator: [SirSheepe](https://twitter.com/SirSheepe)
-- Updated by: [MichaelMiner137](https://linktr.ee/MichaelMiner137), [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
-- Textures by: [Kyrius](http://discordapp.com/users/287287322360414218)
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Creator: [SirSheepe](https://bsky.app/profile/sirsheepe.bsky.social)
+- Updated by: [MichaelModulo](https://www.michaelmodulo.dev/page/links.html), [BPR](https://bsky.app/profile/bpr02.com)
+- Textures by: [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

@@ -12,7 +12,7 @@ Play the risky game and nearly break your tools! The lower your durability, the 
 
 ### Credits
 - Creator: Kattacka
-- Icon Design: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
+- Icon Design: [BPR](https://bsky.app/profile/bpr02.com)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

@@ -13,8 +13,8 @@ Read more about specific block conversions on the [Wiki](https://wiki.gm4.co/Lig
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Lightning_in_a_Bottle)
 
 ### Credits
-- Creator: [Bloo](https://twitter.com/Bloo_dev), [BluePsychoRanger](https://twitter.com/BluPsychoRanger), TheEpyonProject
-- Icon Design: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
+- Creator: [Bloo](https://bsky.app/profile/bloo.boo), [BPR](https://bsky.app/profile/bpr02.com), TheEpyonProject
+- Icon Design: [BPR](https://bsky.app/profile/bpr02.com)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

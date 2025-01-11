@@ -10,8 +10,8 @@ Mending items but using a Gamemode 4 Liquid Tank! <!--$pmc:headerSize-->
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Liquid_Tanks/Mending_Tanks)
 
 ### Credits
-- Creator: [Kroppeb](https://twitter.com/kroppeb)
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Creator: [Kroppeb](https://tech.lgbt/@Kroppeb)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

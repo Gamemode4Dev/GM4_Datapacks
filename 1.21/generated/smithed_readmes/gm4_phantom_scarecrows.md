@@ -13,7 +13,7 @@ Do you regret that phantoms were added to the game but don't want to change any 
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Phantom_Scarecrows)
 
 ### Credits
-- Creator: [Bloo](https://twitter.com/Bloo_dev)
+- Creator: [Bloo](https://bsky.app/profile/bloo.boo)
 - Inspired by: [Chopper2112](https://twitter.com/TheChopper2112)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 

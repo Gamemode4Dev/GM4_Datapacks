@@ -14,8 +14,8 @@ Turn ladders into vertical railways for your minecarts! This simple data pack is
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Vertical_Rails)
 
 ### Credits
-- Creators: [Sparks](https://twitter.com/SelcouthSparks), [SiberianHat](https://twitter.com/SiberianHat)
-- Updated by: [SpecialBuilder32](https://twitter.com/SpecialBuilder), [Kruthers](https://twitter.com/Pandakruthers)
+- Creators: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social), [SiberianHat](https://twitter.com/SiberianHat)
+- Updated by: [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [Kruthers](https://twitter.com/Pandakruthers)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---

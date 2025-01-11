@@ -17,8 +17,8 @@ Read more options for poses on the [Wiki](https://wiki.gm4.co/Better_Armour_Stan
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Poses_Pack)
 
 ### Credits
-- Creators: [Sparks](https://twitter.com/SelcouthSparks)
-- Updated by: [Misode](https://twitter.com/misode_), [Denniss](https://twitter.com/Dennis2p_)
+- Creators: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
+- Updated by: [Misode](https://bsky.app/profile/misode.dev), [Denniss](https://github.com/Dennis-0)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---

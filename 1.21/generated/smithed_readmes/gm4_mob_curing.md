@@ -12,7 +12,7 @@ Convert mobs to their prior forms, much like Zombie Villager curing, but on a mu
 
 ### Credits
 - Creator: Epyon
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

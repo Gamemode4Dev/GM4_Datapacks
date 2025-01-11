@@ -20,9 +20,9 @@ If you also want to allow diamond armour and tools to be disassembled, run the f
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Disassemblers)
 
 ### Credits
-- Creator: [Sparks](https://twitter.com/SelcouthSparks)
-- Updated by: Federick90, [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
-- Textures by: [Kyrius](http://discordapp.com/users/287287322360414218)
+- Creator: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
+- Updated by: Federick90, [BPR](https://bsky.app/profile/bpr02.com)
+- Textures by: [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social)
 - Icon Design: Hozz
 
 ---

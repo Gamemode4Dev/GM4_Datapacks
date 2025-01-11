@@ -15,8 +15,8 @@ Connect your places with paths and get a speed buff for doing so!<!--$pmc:header
 
 ### Credits
 - Creator: [15Redstones](https://twitter.com/15Redstones)
-- Updated by: [Misode](https://twitter.com/misode_), TheEpyonProject
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Updated by: [Misode](https://bsky.app/profile/misode.dev), TheEpyonProject
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

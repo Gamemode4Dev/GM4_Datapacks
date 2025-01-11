@@ -16,8 +16,8 @@ The full list of mob conversions can be found on the [Wiki](https://wiki.gm4.co/
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Everstone)
 
 ### Credits
-- Creators: [Denniss](https://twitter.com/Dennis2p_), [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
-- Icon Design: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
+- Creators: [Denniss](https://github.com/Dennis-0), [BPR](https://bsky.app/profile/bpr02.com)
+- Icon Design: [BPR](https://bsky.app/profile/bpr02.com)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

@@ -15,8 +15,8 @@ Apples don't grow on oak trees, silly Mojang! This data pack adds actual apple t
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Apple_Trees)
 
 ### Credits
-- Creators: [Bloo](https://twitter.com/Bloo_dev), [BluePsychoRanger](https://twitter.com/BluPsychoRanger), [SpecialBuilder32](https://twitter.com/SpecialBuilder)
-- Icon Design: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
+- Creators: [Bloo](https://bsky.app/profile/bloo.boo), [BPR](https://bsky.app/profile/bpr02.com), [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social)
+- Icon Design: [BPR](https://bsky.app/profile/bpr02.com)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

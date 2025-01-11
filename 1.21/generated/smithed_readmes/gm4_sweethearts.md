@@ -13,7 +13,7 @@ Use the power of Flowers to share your health to friends who may be a bit low. <
 
 ### Credits
 - Creator: [The8BitMonkey](https://youtube.com/the8bitmonkey)
-- Updated by: [BluePsychoRanger](https://twitter.com/BluPsychoRanger), [Thanathor](https://twitter.com/The_Thanathor)
+- Updated by: [BPR](https://bsky.app/profile/bpr02.com), [Thanathor](https://bsky.app/profile/thanathor.bsky.social)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---

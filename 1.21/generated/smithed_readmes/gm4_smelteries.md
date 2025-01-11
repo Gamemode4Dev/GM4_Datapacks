@@ -13,9 +13,9 @@ Build a multi-block structure to double the output of your ores!<!--$pmc:headerS
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/smelteries)
 
 ### Credits
-- Creator: [Bloo](https://twitter.com/Bloo_dev)
-- Updated By: [Andante](https://twitter.com/andantett), [Kroppeb](https://twitter.com/kroppeb), [Misode](https://twitter.com/misode_), [SpecialBuilder32](https://twitter.com/SpecialBuilder), [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
-- Textures By: [Kyrius](http://discordapp.com/users/287287322360414218)
+- Creator: [Bloo](https://bsky.app/profile/bloo.boo)
+- Updated By: [Andante](https://bsky.app/profile/andante.dev), [Kroppeb](https://tech.lgbt/@Kroppeb), [Misode](https://bsky.app/profile/misode.dev), [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [BPR](https://bsky.app/profile/bpr02.com)
+- Textures By: [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social)
 - Icon Design: Hozz
 
 ---

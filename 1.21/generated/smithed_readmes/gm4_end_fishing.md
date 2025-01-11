@@ -13,8 +13,8 @@ More specifics on the loot available and the chances per biome can be found on t
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/End_Fishing)
 
 ### Credits
-- Creator: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Creator: [BPR](https://bsky.app/profile/bpr02.com)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

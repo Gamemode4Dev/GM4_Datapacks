@@ -15,9 +15,9 @@ Stand on top of an Ender Chest to store Experience, stand below to retrieve it!<
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/XP_Storage)
 
 ### Credits
-- Creator: [Sparks](https://twitter.com/SelcouthSparks)
-- Updated by: [Bloo](https://twitter.com/Bloo_dev), [Sparks](https://twitter.com/SelcouthSparks), [SpecialBuilder32](https://twitter.com/SpecialBuilder)
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Creator: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
+- Updated by: [Bloo](https://bsky.app/profile/bloo.boo), [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social), [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

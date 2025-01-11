@@ -14,9 +14,9 @@ If you don't want to farm creepers, this adds a way to craft music discs!<!--$pm
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Record_Crafting)
 
 ### Credits
-- Creator: [Sparks](https://twitter.com/SelcouthSparks)
-- Updated by: [Bloo](https://twitter.com/Bloo_dev)
-- Icon Design: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
+- Creator: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
+- Updated by: [Bloo](https://bsky.app/profile/bloo.boo)
+- Icon Design: [BPR](https://bsky.app/profile/bpr02.com)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

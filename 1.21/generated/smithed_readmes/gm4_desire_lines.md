@@ -20,8 +20,8 @@ When playing with other Gamemode 4 data packs, adds some bonus features:
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Desire_Lines)
 
 ### Credits
-- Creator: [Sparks](https://twitter.com/SelcouthSparks)
-- Updated by: [SpecialBuilder32](https://twitter.com/SpecialBuilder), [Misode](https://twitter.com/misode_), [Andante](https://twitter.com/andantett)
+- Creator: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
+- Updated by: [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [Misode](https://bsky.app/profile/misode.dev), [Andante](https://bsky.app/profile/andante.dev)
 - Icon Design: JonPot
 
 ---

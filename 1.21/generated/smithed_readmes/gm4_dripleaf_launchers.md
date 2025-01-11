@@ -10,7 +10,7 @@ Who wants to find the nearest cliff to deploy their Elytra? Use the power of nat
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Dripleaf_Launchers)
 
 ### Credits
-- Creator: [Thanathor](https://twitter.com/The_Thanathor)
+- Creator: [Thanathor](https://bsky.app/profile/thanathor.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

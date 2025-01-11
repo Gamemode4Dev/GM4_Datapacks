@@ -14,9 +14,9 @@ Powerful potions, Wormholes, portable Beacons and special armour that makes you 
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Zauber_Cauldrons)
 
 ### Credits
-- Creator: [Bloo](https://twitter.com/Bloo_dev)
-- Updated by: [Bloo](https://twitter.com/Bloo_dev), [Lue](https://github.com/Luexa), [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
-- Textures: [Memo](https://linktr.ee/miraku_memo), [Kyrius](http://discordapp.com/users/287287322360414218)
+- Creator: [Bloo](https://bsky.app/profile/bloo.boo)
+- Updated by: [Bloo](https://bsky.app/profile/bloo.boo), [Lue](https://github.com/Luexa), [BPR](https://bsky.app/profile/bpr02.com)
+- Textures: [Memo](https://linktr.ee/miraku_memo), [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---

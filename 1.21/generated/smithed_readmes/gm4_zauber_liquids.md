@@ -12,10 +12,10 @@ Allows Zauber Cauldron produced potions to be stored in Liquid Tanks!<!--$pmc:he
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids)
 
 ### Credits
-- Creators: [SpecialBuilder32](https://twitter.com/SpecialBuilder), [Bloo](https://twitter.com/Bloo_dev)
+- Creators: [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [Bloo](https://bsky.app/profile/bloo.boo)
 - Updated by: [JP12](https://github.com/jpeterik12)
 - Textures by: Vilder50, Hozz
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

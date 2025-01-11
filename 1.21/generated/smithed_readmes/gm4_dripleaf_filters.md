@@ -11,7 +11,7 @@ Sort streams of items out with Big Dripleafs spitting items out that match the p
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Dripleaf_Filters)
 
 ### Credits
-- Creator: [Sparks](https://twitter.com/SelcouthSparks)
+- Creator: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 - Icon Design: Hozz
 
 ---

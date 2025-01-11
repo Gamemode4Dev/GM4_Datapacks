@@ -16,9 +16,9 @@ Read more about the other liquids supported on the [Wiki](https://wiki.gm4.co/Li
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Liquid_Tanks)
 
 ### Credits
-- Creator: [SpecialBuilder32](https://twitter.com/SpecialBuilder)
-- Updated by: [SpecialBuilder32](https://twitter.com/SpecialBuilder), [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
-- Textures by: Vilder50, [Kyrius](http://discordapp.com/users/287287322360414218)
+- Creator: [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social)
+- Updated by: [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [BPR](https://bsky.app/profile/bpr02.com)
+- Textures by: Vilder50, [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---

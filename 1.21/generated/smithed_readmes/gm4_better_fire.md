@@ -13,9 +13,9 @@ Fire needed more effects in game...<!--$pmc:headerSize-->
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Better_Fire)
 
 ### Credits
-- Creator: [Sparks](https://twitter.com/SelcouthSparks)
-- Updated By: [Bloo](https://twitter.com/Bloo_dev), [SpecialBuilder32](https://twitter.com/SpecialBuilder)
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Creator: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
+- Updated By: [Bloo](https://bsky.app/profile/bloo.boo), [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

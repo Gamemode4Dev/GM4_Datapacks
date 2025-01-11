@@ -16,7 +16,7 @@ than regular rail lines. <!--$pmc:headerSize-->
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Ziprails)
 
 ### Credits
-- Creators: [Sparks](https://twitter.com/SelcouthSparks), [SpecialBuilder32](https://twitter.com/SpecialBuilder), [Bloo](https://twitter.com/Bloo_dev)
+- Creators: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social), [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [Bloo](https://bsky.app/profile/bloo.boo)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---

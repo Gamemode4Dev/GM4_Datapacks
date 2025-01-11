@@ -16,9 +16,9 @@ Hoppers now have a larger range and teleport items to them!<!--$pmc:headerSize--
 
 ### Credits
 - Creator: Elemend
-- Updated by: [Misode](https://twitter.com/misode_), [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
-- Textures by: [Kyrius](http://discordapp.com/users/287287322360414218)
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Updated by: [Misode](https://bsky.app/profile/misode.dev), [BPR](https://bsky.app/profile/bpr02.com)
+- Textures by: [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

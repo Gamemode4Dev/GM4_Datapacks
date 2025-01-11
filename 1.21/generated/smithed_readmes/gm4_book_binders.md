@@ -12,8 +12,8 @@ Storing enchantments is a hassle, but with this data pack it is now an breeze!<!
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Book_Binders)
 
 ### Credits
-- Creators: [Bloo](https://twitter.com/Bloo_dev), [Sparks](https://twitter.com/SelcouthSparks)
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Creators: [Bloo](https://bsky.app/profile/bloo.boo), [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

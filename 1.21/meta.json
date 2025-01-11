@@ -1,11 +1,11 @@
 {
-  "last_commit": "3abb7bd3e144f60b72b6a9c081c584fb7f0acd06",
+  "last_commit": "e56b5c319c17d0d13ac150a0a3a8be461839d632",
   "modules": [
     {
       "id": "gm4_animi_shamir",
       "name": "Animi Shamir",
-      "version": "1.4.10",
-      "hash": "de91ac448a85cd68d64efc10444245d72a6e745c",
+      "version": "1.4.11",
+      "hash": "4325d25d384524f3dad96cdd9c1e31273bb11a15",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Animi_Shamir",
       "credits": {
@@ -39,18 +39,18 @@
     {
       "id": "gm4_apple_trees",
       "name": "Apple Trees",
-      "version": "2.4.8",
-      "hash": "c4d392522519a79ce4e047e520448df40a458161",
+      "version": "2.4.9",
+      "hash": "2ae95cbaff373d072d5490dc3c3f4ec6f4810678",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Apple_Trees",
       "credits": {
         "Creators": [
           "Bloo",
-          "BluePsychoRanger",
+          "BPR",
           "SpecialBuilder32"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -78,8 +78,8 @@
     {
       "id": "gm4_audere_shamir",
       "name": "Audere Shamir",
-      "version": "1.4.7",
-      "hash": "2bcc035a18ed7f642b6fbca6f2605cdf0a88ec06",
+      "version": "1.4.8",
+      "hash": "509fd220661a776fc62551d20c4d4483e9205814",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Audere_Shamir",
       "credits": {
@@ -87,7 +87,7 @@
           "Kattacka"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -113,13 +113,13 @@
     {
       "id": "gm4_auto_crafting",
       "name": "Auto Crafting",
-      "version": "1.4.14",
-      "hash": "153636b98581cb2bf7f5afb6d2cac894c7501781",
+      "version": "1.4.15",
+      "hash": "6652e4a9c65dc652f1963e06bcf7461eac7f6aaf",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters/Auto_Crafting",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Hozz"
@@ -194,8 +194,8 @@
     {
       "id": "gm4_bat_grenades",
       "name": "Bat Grenades",
-      "version": "1.5.9",
-      "hash": "3c3f4316ab1542ef27bd18ec0b73b0399154a1b5",
+      "version": "1.5.10",
+      "hash": "94201dd7c6d3de311d05d4d2a60b8119705d04ca",
       "video_link": "https://www.youtube.com/watch?v=uUoEKtte1GQ",
       "wiki_link": "https://wiki.gm4.co/wiki/Bat_Grenades",
       "credits": {
@@ -230,8 +230,8 @@
     {
       "id": "gm4_beehive_inspector",
       "name": "Beehive Inspector",
-      "version": "1.4.7",
-      "hash": "2ed533bfad56e891601d0f8bc75aa6021d8f670b",
+      "version": "1.4.8",
+      "hash": "307081cfcc7ff5e8b81e3c952ac807a0580caade",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Beehive_Inspector",
       "credits": {
@@ -239,7 +239,7 @@
           "Misode"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -260,8 +260,8 @@
     {
       "id": "gm4_better_armour_stands",
       "name": "Better Armour Stands",
-      "version": "2.4.7",
-      "hash": "9f045d47cbb9ec0e671aab034fbd953dd3e52c33",
+      "version": "2.4.8",
+      "hash": "e3a04682ab9008f4ae0819d4ce594dd69128ddf7",
       "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw",
       "wiki_link": "https://wiki.gm4.co/wiki/Better_Armour_Stands",
       "credits": {
@@ -301,8 +301,8 @@
     {
       "id": "gm4_better_fire",
       "name": "Better Fire",
-      "version": "1.5.7",
-      "hash": "1d5fab7e7138f7b81f5af703ca9ddf0ed16a740f",
+      "version": "1.5.8",
+      "hash": "35deabaf110a6e6a98c093c72282208817f79539",
       "video_link": "https://www.youtube.com/watch?v=J5024LhHuWk",
       "wiki_link": "https://wiki.gm4.co/wiki/Better_Fire",
       "credits": {
@@ -341,8 +341,8 @@
     {
       "id": "gm4_block_compressors",
       "name": "Block Compressors",
-      "version": "1.5.14",
-      "hash": "a4008bcbf3f2962fcf45a07b5d867bb3cfd19544",
+      "version": "1.5.15",
+      "hash": "8c6fd698232e237f1096bb34c37639e61137dbe1",
       "video_link": "https://www.youtube.com/watch?v=sdrTJYjL8C0",
       "wiki_link": "https://wiki.gm4.co/wiki/Block_Compressors",
       "credits": {
@@ -353,7 +353,7 @@
           "SunderB",
           "Misode",
           "JP12",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures by": [
           "Kyrius"
@@ -398,8 +398,8 @@
     {
       "id": "gm4_book_binders",
       "name": "Book Binders",
-      "version": "1.4.8",
-      "hash": "526a5481adec5401587cf4e6074a54863d29f0ef",
+      "version": "1.4.9",
+      "hash": "5d488a1b39ffd7a9b3f92aa1ec8f67d3b2cf61a7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Book_Binders",
       "credits": {
@@ -434,8 +434,8 @@
     {
       "id": "gm4_bookshelf_inspector",
       "name": "Bookshelf Inspector",
-      "version": "1.3.6",
-      "hash": "38b82613a34e97ec5a2ad5d7d7788d7a073b8b59",
+      "version": "1.3.7",
+      "hash": "3b1f90b87b0345126cf77e2cd76d20bd11de44e1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Bookshelf_Inspector",
       "credits": {
@@ -464,8 +464,8 @@
     {
       "id": "gm4_boots_of_ostara",
       "name": "Boots of Ostara",
-      "version": "1.7.15",
-      "hash": "9e0b0e7ddc593a38ee1468ca1300863e3ed498a3",
+      "version": "1.7.16",
+      "hash": "868f09333bb3033f27559f4f16763bd743da63e4",
       "video_link": "https://www.youtube.com/watch?v=H4UGM6_wGCE",
       "wiki_link": "https://wiki.gm4.co/wiki/Boots_of_Ostara",
       "credits": {
@@ -473,7 +473,8 @@
           "The8BitMonkey"
         ],
         "Updated by": [
-          "Misode"
+          "Misode",
+          "catter1"
         ],
         "Icon Design": [
           "Hozz"
@@ -541,8 +542,8 @@
     {
       "id": "gm4_cement_mixers",
       "name": "Cement Mixers",
-      "version": "1.4.7",
-      "hash": "9aaceb224a492f0d4f52471e4a3d764e1dafeec2",
+      "version": "1.4.8",
+      "hash": "d8abaf3806f1ed1ec05ca1a6adc2c22f7146cfd4",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Cement_Mixers",
       "credits": {
@@ -576,8 +577,8 @@
     {
       "id": "gm4_chairs",
       "name": "Chairs",
-      "version": "1.5.7",
-      "hash": "4a250a93e3acb30c4154b6b32245ab48fc4cd06e",
+      "version": "1.5.8",
+      "hash": "05d6fd5d55b1eb3d0722b7f18a36b6757a52a402",
       "video_link": "https://www.youtube.com/watch?v=7KbBw1hEKdY",
       "wiki_link": "https://wiki.gm4.co/wiki/Chairs",
       "credits": {
@@ -613,8 +614,8 @@
     {
       "id": "gm4_combat_expanded",
       "name": "Combat Expanded",
-      "version": "2.2.10",
-      "hash": "f1ccf4fa128542972fae1f5b77df71c737659cc1",
+      "version": "2.2.11",
+      "hash": "e43850e434cdb703a356fd397bc5390d548c1bb1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Combat_Expanded",
       "credits": {
@@ -642,8 +643,8 @@
     {
       "id": "gm4_cooler_caves",
       "name": "Cooler Caves",
-      "version": "2.4.8",
-      "hash": "c5ece255962b317b0fbd46b81330be68130b1b66",
+      "version": "2.4.9",
+      "hash": "059b7654bb25c1f5952cd16776b5b9b18e6c0ced",
       "video_link": "https://www.youtube.com/watch?v=cAsXiwLWHFo",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Cooler_Caves",
       "credits": {
@@ -681,8 +682,8 @@
     {
       "id": "gm4_cozy_campfires",
       "name": "Cozy Campfires",
-      "version": "1.4.7",
-      "hash": "ea5d88cf47dc572da2f4f4b3344c8bc974ca0bb7",
+      "version": "1.4.8",
+      "hash": "fd7b531f830defc03214825a2bccd676684d19d6",
       "video_link": "https://www.youtube.com/watch?v=nvAbzAtDFhw",
       "wiki_link": "https://wiki.gm4.co/wiki/Cozy_Campfires",
       "credits": {
@@ -690,7 +691,7 @@
           "Bloo"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -714,8 +715,8 @@
     {
       "id": "gm4_crossbow_cartridges",
       "name": "Crossbow Cartridges",
-      "version": "1.7.8",
-      "hash": "a63c3fdc5ed1f98f948fac9868f755ef750b4c5c",
+      "version": "1.7.9",
+      "hash": "76d13c23441256b68aea4f8804835a3744981513",
       "video_link": "https://www.youtube.com/watch?v=XJiGvX7l-pI",
       "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
       "credits": {
@@ -748,8 +749,8 @@
     {
       "id": "gm4_dangerous_dungeons",
       "name": "Dangerous Dungeons",
-      "version": "2.4.7",
-      "hash": "ff73a82524bfaa28464852e06ce9c3eb00839813",
+      "version": "2.4.8",
+      "hash": "92c5545208925b0c06bf491e568d60c5f61c6cb5",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Dangerous_Dungeons",
       "credits": {
@@ -787,8 +788,8 @@
     {
       "id": "gm4_desire_lines",
       "name": "Desire Lines",
-      "version": "1.5.7",
-      "hash": "79732721ccfb2034dd653b10c5246378076d6267",
+      "version": "1.5.8",
+      "hash": "3261c039e153cfe3aab6fdf6e33ac8a42ef70217",
       "video_link": "https://www.youtube.com/watch?v=wmGaatfekfs",
       "wiki_link": "https://wiki.gm4.co/wiki/Desire_Lines",
       "credits": {
@@ -827,8 +828,8 @@
     {
       "id": "gm4_disassemblers",
       "name": "Disassemblers",
-      "version": "2.4.15",
-      "hash": "27429c2685676a42f9850e0e3cf829df1c829783",
+      "version": "2.4.16",
+      "hash": "6dec52b364f1b6c17b0fc9d6c5a793ab18bce53a",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Disassemblers",
       "credits": {
@@ -837,7 +838,7 @@
         ],
         "Updated by": [
           "Federick90",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures by": [
           "Kyrius"
@@ -882,17 +883,17 @@
     {
       "id": "gm4_display_frames",
       "name": "Display Frames",
-      "version": "1.5.12",
-      "hash": "ab1ab9a9b2a4b501105244603b623e6d0a0a25eb",
+      "version": "1.5.13",
+      "hash": "eef1bd259b766b27dbcd6afeffe630870b85542d",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Display_Frames",
       "credits": {
         "Creators": [
-          "BluePsychoRanger",
+          "BPR",
           "TheEpyonProject"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -920,8 +921,8 @@
     {
       "id": "gm4_double_doors",
       "name": "Double Doors",
-      "version": "1.2.8",
-      "hash": "d250c2f626b09792122c7922609ddba8fc603fee",
+      "version": "1.2.9",
+      "hash": "6edb72f46d98365f669d9b8e7518a2e8a24e9cb0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Double_Doors",
       "credits": {
@@ -953,8 +954,8 @@
     {
       "id": "gm4_dripleaf_filters",
       "name": "Dripleaf Filters",
-      "version": "1.4.7",
-      "hash": "7439b7ea411fd7dcfda4f35bf3e6fdda1c917bce",
+      "version": "1.4.8",
+      "hash": "8003d9e27b68e1736edaf522a5f54bc0957e9a76",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Filters",
       "credits": {
@@ -988,8 +989,8 @@
     {
       "id": "gm4_dripleaf_launchers",
       "name": "Dripleaf Launchers",
-      "version": "1.3.6",
-      "hash": "dbfef25653a22b8b048664759b1f1476c97f8dbd",
+      "version": "1.3.7",
+      "hash": "de4c3658e469e348c18d15231e191625c195ed5a",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Launchers",
       "credits": {
@@ -1018,8 +1019,8 @@
     {
       "id": "gm4_enchantment_extractors",
       "name": "Enchantment Extractors",
-      "version": "2.4.15",
-      "hash": "e0a241cbbe5e01fcd61080cefd65afc712b4e6f4",
+      "version": "2.4.16",
+      "hash": "7ed4a3c49a09e95ffce4f1131595eb69028d335e",
       "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
       "wiki_link": "https://wiki.gm4.co/wiki/Enchantment_Extractors",
       "credits": {
@@ -1029,7 +1030,7 @@
         "Updated by": [
           "SpecialBuilder32",
           "Misode",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures by": [
           "Kyrius"
@@ -1074,13 +1075,13 @@
     {
       "id": "gm4_end_fishing",
       "name": "End Fishing",
-      "version": "1.5.8",
-      "hash": "4f16636c51a9fb8d3b7920134677040b46b8d0e1",
+      "version": "1.5.9",
+      "hash": "87d8da832e84160e7414799023f9edc75ce3eae2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/End_Fishing",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Sparks"
@@ -1109,8 +1110,8 @@
     {
       "id": "gm4_ender_hoppers",
       "name": "Ender Hoppers",
-      "version": "1.7.14",
-      "hash": "65e446788af89eceb5d46ec7ca4deb489204f788",
+      "version": "1.7.15",
+      "hash": "311365ad014cfedfb9a7802ef5b314f41bac30c5",
       "video_link": "https://www.youtube.com/watch?v=wrwg4BDgEGU",
       "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
       "credits": {
@@ -1119,7 +1120,7 @@
         ],
         "Updated by": [
           "Misode",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures by": [
           "Kyrius"
@@ -1164,8 +1165,8 @@
     {
       "id": "gm4_enderman_support_class",
       "name": "Enderman Support Class",
-      "version": "1.6.7",
-      "hash": "0843d6400e78b40acd138876efd5e87e669e647b",
+      "version": "1.6.8",
+      "hash": "618ef8731046f0681a38f6b21e1ec3c2ec9dd331",
       "video_link": "https://www.youtube.com/watch?v=2hWZ4OKUaqI",
       "wiki_link": "https://wiki.gm4.co/wiki/Enderman_Support_Class",
       "credits": {
@@ -1199,17 +1200,17 @@
     {
       "id": "gm4_everstone",
       "name": "Everstone",
-      "version": "1.4.8",
-      "hash": "09815f90770d13e7a5e300eb35e0b2ffa5acb6f8",
+      "version": "1.4.9",
+      "hash": "d6944064b34dfcef5a8ecea0b202a52cc34ba24c",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Everstone",
       "credits": {
         "Creators": [
           "Denniss",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -1235,8 +1236,8 @@
     {
       "id": "gm4_forming_press",
       "name": "Forming Press",
-      "version": "1.5.15",
-      "hash": "8b637effaaa1521f832b6178b06ed622b47582f0",
+      "version": "1.5.16",
+      "hash": "abcaad198095e3b20eb4bf0f701ada40ad44d5c5",
       "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
       "wiki_link": "https://wiki.gm4.co/wiki/Forming_Press",
       "credits": {
@@ -1245,14 +1246,14 @@
         ],
         "Updated by": [
           "Misode",
-          "BluePsychoRanger",
+          "BPR",
           "TheEpyonProject"
         ],
         "Textures by": [
           "Kyrius"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -1291,17 +1292,17 @@
     {
       "id": "gm4_fulcio_shamir",
       "name": "Fulcio Shamir",
-      "version": "1.4.7",
-      "hash": "41db52312d19cdc93602077a10c3e87e70db460f",
+      "version": "1.4.8",
+      "hash": "3fa707add6d54a5ec5eebe0563bd5ea731082b14",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Fulcio_Shamir",
       "credits": {
         "Creators": [
-          "BluePsychoRanger",
+          "BPR",
           "Bloo"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -1327,13 +1328,13 @@
     {
       "id": "gm4_guidebook",
       "name": "Guidebook",
-      "version": "3.0.3",
-      "hash": "3115a963c7c3ac1790f5016cf549f2e4fe904e62",
+      "version": "3.0.4",
+      "hash": "3694538b398d21738bcc824988dba77d80ea2114",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",
       "credits": {
         "Creators": [
-          "BluePsychoRanger",
+          "BPR",
           "JP12"
         ]
       },
@@ -1354,8 +1355,8 @@
     {
       "id": "gm4_heart_canisters",
       "name": "Heart Canisters",
-      "version": "1.7.14",
-      "hash": "76dfc3b0f4298cda5d0d4c5bf5e60a59fd80f39d",
+      "version": "1.7.15",
+      "hash": "0f390809acbc2750285d502d2cb171ac47593cde",
       "video_link": "https://www.youtube.com/watch?v=zjmL6rjoq0g",
       "wiki_link": "https://wiki.gm4.co/wiki/Heart_Canisters",
       "credits": {
@@ -1411,13 +1412,13 @@
     {
       "id": "gm4_holographic_tags",
       "name": "Holographic Tags",
-      "version": "1.4.8",
-      "hash": "a683fb4567ea79ebf130ec9bc0226351dfb91480",
+      "version": "1.4.9",
+      "hash": "48bda3d08921a1be33ef117aa8f81baed7ceb100",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Holographic_Tags",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Inspired by": [
           "SethBling"
@@ -1447,8 +1448,8 @@
     {
       "id": "gm4_iacio_shamir",
       "name": "Iacio Shamir",
-      "version": "1.4.7",
-      "hash": "9779e348265eb8e75b01aa028e75be85c0eb0a69",
+      "version": "1.4.8",
+      "hash": "ee14fb6cbed4414e8177c790f185ce0021a9a33e",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Iacio_Shamir",
       "credits": {
@@ -1456,7 +1457,7 @@
           "Denniss"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -1482,8 +1483,8 @@
     {
       "id": "gm4_ink_spitting_squid",
       "name": "Ink Spitting Squid",
-      "version": "1.5.7",
-      "hash": "70a12dda6a9f714e28ac7512fd8e2cbae5de33a9",
+      "version": "1.5.8",
+      "hash": "283bb4c3c531ae3d2c0392411e042e6f368ee77c",
       "video_link": "https://www.youtube.com/watch?v=68LMYEhueZ0",
       "wiki_link": "https://wiki.gm4.co/wiki/Ink_Spitting_Squid",
       "credits": {
@@ -1491,7 +1492,7 @@
           "Energyxxer"
         ],
         "Updated by": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Sparks"
@@ -1518,18 +1519,18 @@
     {
       "id": "gm4_lightning_in_a_bottle",
       "name": "Lightning in a Bottle",
-      "version": "1.7.13",
-      "hash": "2921fe48718829c1b70de08dd075fcd0900efa19",
+      "version": "1.7.14",
+      "hash": "edf67709fc4255421c993c8e346bb9deb6758e04",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
       "credits": {
         "Creator": [
           "Bloo",
-          "BluePsychoRanger",
+          "BPR",
           "TheEpyonProject"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -1558,8 +1559,8 @@
     {
       "id": "gm4_liquid_minecarts",
       "name": "Liquid Minecarts",
-      "version": "1.6.12",
-      "hash": "7c4533f16f40f7c2e17c7847638feb881978bc2b",
+      "version": "1.6.13",
+      "hash": "c33523d5872b4b0cb0d6fc3a1e7d6cd841414519",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts",
       "credits": {
@@ -1568,7 +1569,7 @@
         ],
         "Updated by": [
           "SpecialBuilder32",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Hozz"
@@ -1599,8 +1600,8 @@
     {
       "id": "gm4_liquid_tanks",
       "name": "Liquid Tanks",
-      "version": "2.6.14",
-      "hash": "dd4b2fba4e67b68bbcbdec42e3cecf0186289429",
+      "version": "2.6.15",
+      "hash": "2c75a14bd067966bb8271e5ef7d7222247613701",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
       "credits": {
@@ -1609,7 +1610,7 @@
         ],
         "Updated by": [
           "SpecialBuilder32",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures by": [
           "Vilder50",
@@ -1647,16 +1648,16 @@
     {
       "id": "gm4_live_catch",
       "name": "Live Catch",
-      "version": "1.4.7",
-      "hash": "209207ede77734986e57d739d34a345681e08ac6",
+      "version": "1.4.8",
+      "hash": "c5cfb404461db3953194b030f4c970c29281ba00",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Live_Catch",
       "credits": {
         "Creator": [
-          "MichaelMiner137"
+          "MichaelModulo"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -1680,8 +1681,8 @@
     {
       "id": "gm4_lumos_shamir",
       "name": "Lumos Shamir",
-      "version": "1.4.7",
-      "hash": "1ef036876b21e331a836fcc705b9bd5b81f216ab",
+      "version": "1.4.8",
+      "hash": "d80d89f88d9b81044c37425bf372abe8309d2392",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Lumos_Shamir",
       "credits": {
@@ -1693,7 +1694,7 @@
           "Misode"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -1719,8 +1720,8 @@
     {
       "id": "gm4_mending_tanks",
       "name": "Mending Tanks",
-      "version": "1.5.7",
-      "hash": "33cc2990a36a3f194c3ae370e1b41144dfd091a4",
+      "version": "1.5.8",
+      "hash": "67a3da5d4460173aa7203a92b259d7894310192f",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Mending_Tanks",
       "credits": {
@@ -1754,8 +1755,8 @@
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.6.11",
-      "hash": "019c8e7fbe328d80c9f13c83fafb1d8f3251a5be",
+      "version": "1.6.12",
+      "hash": "c2e72de8c8371b48a2737b9ce2df45ae53163d93",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -1763,13 +1764,13 @@
           "Sparks",
           "SpecialBuilder32",
           "Bloo",
-          "BluePsychoRanger",
+          "BPR",
           "SirSheepe"
         ],
         "Updated by": [
           "Denniss",
           "Misode",
-          "MichaelMiner137",
+          "MichaelModulo",
           "TheEpyonProject"
         ],
         "Textures by": [
@@ -1822,16 +1823,16 @@
     {
       "id": "gm4_midnight_menaces",
       "name": "Midnight Menaces",
-      "version": "1.5.7",
-      "hash": "ec0fc3cf62167c57cdd7c1cafde9a4e6cbc7ced8",
+      "version": "1.5.8",
+      "hash": "2b2657443f2be3453125aadb2397b7ae0d7483f3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights/Midnight_Menaces",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -1857,8 +1858,8 @@
     {
       "id": "gm4_mob_curing",
       "name": "Mob Curing",
-      "version": "1.7.8",
-      "hash": "7fc8d472883a81f0570b12fdac9a5a44da9620f5",
+      "version": "1.7.9",
+      "hash": "6b819ee5edbbee30d94b0b06cef017f3ffd0c6bf",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mob_Curing",
       "credits": {
@@ -1923,8 +1924,8 @@
     {
       "id": "gm4_mysterious_midnights",
       "name": "Mysterious Midnights",
-      "version": "1.6.10",
-      "hash": "b708846046b8f42b3bec55fd4dca00ec911324ef",
+      "version": "1.6.11",
+      "hash": "241c80452792b4c945b1b00e84f8396815e1ceeb",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights",
       "credits": {
@@ -1933,7 +1934,7 @@
         ],
         "Updated by": [
           "Bloo",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "DuckJr"
@@ -1962,8 +1963,8 @@
     {
       "id": "gm4_note_block_interface",
       "name": "Note Block Interface",
-      "version": "1.4.7",
-      "hash": "1c6405f2e6324456a7e2e95339a54f18979045e7",
+      "version": "1.4.8",
+      "hash": "c6379ab55c198674b620520d2484f51f0edff8b2",
       "video_link": "https://www.youtube.com/watch?v=Kqrdy-8-sb8",
       "wiki_link": "https://wiki.gm4.co/wiki/Note_Block_Interface",
       "credits": {
@@ -1998,16 +1999,16 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.7.16",
-      "hash": "39cc99b708381049fff8f908b1528292e9af0ce4",
+      "version": "1.7.17",
+      "hash": "eefbd75c97d3459eb0e4959933700341d69a257a",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -2033,8 +2034,8 @@
     {
       "id": "gm4_particles_pack",
       "name": "Particles Pack",
-      "version": "1.6.8",
-      "hash": "9397f4b9e612faa305d420e7d1dfc49b90328aef",
+      "version": "1.6.9",
+      "hash": "58f1e31edf8ea1f32b6855887d605a22e00293df",
       "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=238s",
       "wiki_link": "https://wiki.gm4.co/wiki/Particles_Pack",
       "credits": {
@@ -2073,8 +2074,8 @@
     {
       "id": "gm4_percurro_shamir",
       "name": "Percurro Shamir",
-      "version": "1.4.8",
-      "hash": "3717580cc1cebc982ff1e46053efec9e63bba426",
+      "version": "1.4.9",
+      "hash": "596a255cd91367f12f777c357f72946386e4ba26",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Percurro_Shamir",
       "credits": {
@@ -2082,7 +2083,7 @@
           "Bloo"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -2108,8 +2109,8 @@
     {
       "id": "gm4_phantom_scarecrows",
       "name": "Phantom Scarecrows",
-      "version": "1.4.7",
-      "hash": "c9e4b830639bd95a0201450c8d58340095262af2",
+      "version": "1.4.8",
+      "hash": "74ea0b8ebd2792e730af7d2297c29be7b729efa1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Phantom_Scarecrows",
       "credits": {
@@ -2144,8 +2145,8 @@
     {
       "id": "gm4_pig_tractors",
       "name": "Pig Tractors",
-      "version": "1.7.7",
-      "hash": "9118bc46f1e0c105602beb169a39770dd74bf852",
+      "version": "1.7.8",
+      "hash": "2613fdf3ac263ac2d68d7aace558bc22b8973aa3",
       "video_link": "https://www.youtube.com/watch?v=7i0WFHUfBXs",
       "wiki_link": "https://wiki.gm4.co/wiki/Pig_Tractors",
       "credits": {
@@ -2177,8 +2178,8 @@
     {
       "id": "gm4_podzol_rooting_soil",
       "name": "Podzol Rooting Soil",
-      "version": "1.5.8",
-      "hash": "0d5fb23110f96f51f8a211fef155db74608de3b0",
+      "version": "1.5.9",
+      "hash": "44e72d0042103ce0509bad6d32e847e473fa32bc",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Podzol_Rooting_Soil",
       "credits": {
@@ -2189,7 +2190,7 @@
           "Misode"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -2213,8 +2214,8 @@
     {
       "id": "gm4_poses_pack",
       "name": "Poses Pack",
-      "version": "1.6.7",
-      "hash": "d64b74452b3c42b72416dd999609a25bddfab14d",
+      "version": "1.6.8",
+      "hash": "ed916b91e0a4bcaa295faed0a5788d1edf6da4e8",
       "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=217s",
       "wiki_link": "https://wiki.gm4.co/wiki/Poses_Pack",
       "credits": {
@@ -2254,8 +2255,8 @@
     {
       "id": "gm4_potion_liquids",
       "name": "Potion Liquids",
-      "version": "1.7.8",
-      "hash": "52effa998ca5893ff76655098356be2c70387d48",
+      "version": "1.7.9",
+      "hash": "67ae5a1dc41e344b582f4b0b73df6ead403c53a5",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids",
       "credits": {
@@ -2295,8 +2296,8 @@
     {
       "id": "gm4_potion_swords",
       "name": "Potion Swords",
-      "version": "1.6.8",
-      "hash": "ee6f2b09bedf86a045c864b97e090acb16c8c996",
+      "version": "1.6.9",
+      "hash": "01e327f390e112cc29e64a982c6d59fa4baf598a",
       "video_link": "https://www.youtube.com/watch?v=9xI3CQ1z5cg",
       "wiki_link": "https://wiki.gm4.co/wiki/Potion_Swords",
       "credits": {
@@ -2332,8 +2333,8 @@
     {
       "id": "gm4_record_crafting",
       "name": "Record Crafting",
-      "version": "1.4.14",
-      "hash": "8551093c505710d96b84a5b52d17e7c2836b48c5",
+      "version": "1.4.15",
+      "hash": "6630db64a94ee7d1d98e63bed5201d30265ddc19",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "wiki_link": "https://wiki.gm4.co/wiki/Record_Crafting",
       "credits": {
@@ -2344,7 +2345,7 @@
           "Bloo"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -2370,13 +2371,13 @@
     {
       "id": "gm4_relocators",
       "name": "Relocators",
-      "version": "2.4.15",
-      "hash": "3ab5b488949bcf51b22f1a962eeac03431c9d119",
+      "version": "2.4.16",
+      "hash": "ef14bc5096583a713723e7a8fd7cf2da6660c521",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Relocators",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Hozz"
@@ -2416,16 +2417,16 @@
     {
       "id": "gm4_rope_ladders",
       "name": "Rope Ladders",
-      "version": "1.4.6",
-      "hash": "8e27d75480bac4926bbdc4d193e484978cd407af",
+      "version": "1.4.7",
+      "hash": "240e2256f7e5d45dce9cb96b771f00c7b06668d9",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Rope_Ladders",
       "credits": {
         "Creator": [
-          "MichaelMiner137"
+          "MichaelModulo"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -2449,16 +2450,16 @@
     {
       "id": "gm4_scuba_gear",
       "name": "SCUBA Gear",
-      "version": "1.5.14",
-      "hash": "8cf407e9a2b61196dd721bbab51ab654262e8f12",
+      "version": "1.5.15",
+      "hash": "0c3b5a3605822b4186779cef72417de0653688bd",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/SCUBA_Gear",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures by": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "DuckJr"
@@ -2487,8 +2488,8 @@
     {
       "id": "gm4_shapeless_portals",
       "name": "Shapeless Portals",
-      "version": "1.2.7",
-      "hash": "2e1231c31ba5c4bf2750bbc3bbe30c5c9c06ce88",
+      "version": "1.2.8",
+      "hash": "7cb786241f75ac96cf2b3a2d996de9de4b246150",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Shapeless_Portals",
       "credits": {
@@ -2520,8 +2521,8 @@
     {
       "id": "gm4_shroomites",
       "name": "Shroomites",
-      "version": "1.5.7",
-      "hash": "07db49df2f16b8448104cfa1d37b01f68ed3547e",
+      "version": "1.5.8",
+      "hash": "c50361ecc0e6749c30c6b238a8a4c7ad331c6336",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Shroomites",
       "credits": {
@@ -2555,8 +2556,8 @@
     {
       "id": "gm4_smelteries",
       "name": "Smelteries",
-      "version": "1.7.14",
-      "hash": "191f2204cb5017b9e6d4177a6dfee3f74d21f7dd",
+      "version": "1.7.15",
+      "hash": "9e46f63b33710fbf9902320189426a180b987c43",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/smelteries",
       "credits": {
@@ -2568,7 +2569,7 @@
           "Kroppeb",
           "Misode",
           "SpecialBuilder32",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures By": [
           "Kyrius"
@@ -2600,13 +2601,13 @@
     {
       "id": "gm4_soul_glass",
       "name": "Soul Glass",
-      "version": "1.4.13",
-      "hash": "414ee1f6f6024f286d8f6981ccfaab25199aff83",
+      "version": "1.4.14",
+      "hash": "28953ec433ca55caaa83e97ba0657de4fbb0e8e7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Soul_Glass",
       "credits": {
         "Creators": [
-          "BluePsychoRanger",
+          "BPR",
           "Denniss",
           "Lue"
         ],
@@ -2635,8 +2636,8 @@
     {
       "id": "gm4_spawner_minecarts",
       "name": "Spawner Minecarts",
-      "version": "2.6.7",
-      "hash": "975a889c680f726b7af4260673cf4737285acfe7",
+      "version": "2.6.8",
+      "hash": "3b671a700b552e093648f64f9d029f0834acc6eb",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Spawner_Minecarts",
       "credits": {
@@ -2670,8 +2671,8 @@
     {
       "id": "gm4_speed_paths",
       "name": "Speed Paths",
-      "version": "1.5.7",
-      "hash": "196068aeea77b6f5723699f8fe1f5b96405cddc6",
+      "version": "1.5.8",
+      "hash": "15280bfef7fec61c66124dc6cc446594426735b9",
       "video_link": "https://www.youtube.com/watch?v=99VFSW1ORzU",
       "wiki_link": "https://wiki.gm4.co/wiki/Speed_Paths",
       "credits": {
@@ -2707,8 +2708,8 @@
     {
       "id": "gm4_standard_crafting",
       "name": "Standard Crafting",
-      "version": "1.5.15",
-      "hash": "2a07989936443da477cab92fb300329483551955",
+      "version": "1.5.16",
+      "hash": "189f9cecad19dcdcbe9a2d50c943f3e80a6c9449",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
       "credits": {
@@ -2743,8 +2744,8 @@
     {
       "id": "gm4_sunken_treasure",
       "name": "Sunken Treasure",
-      "version": "1.6.7",
-      "hash": "bb8ebad7ff9aa5857eda332a2b582e970a3b19f9",
+      "version": "1.6.8",
+      "hash": "55bd55910a8e33d570e234cd0439cce8d92b5196",
       "video_link": "https://www.youtube.com/watch?v=VV7ZIyIzKV0",
       "wiki_link": "https://wiki.gm4.co/wiki/Sunken_Treasure",
       "credits": {
@@ -2753,7 +2754,7 @@
           "Sparks"
         ],
         "Updated by": [
-          "BluePsychoRanger",
+          "BPR",
           "Lue"
         ],
         "Icon Design": [
@@ -2784,8 +2785,8 @@
     {
       "id": "gm4_sweethearts",
       "name": "Sweethearts",
-      "version": "1.5.8",
-      "hash": "d28e4a16b5fbaf8461898b5b6291a504097c4936",
+      "version": "1.5.9",
+      "hash": "758365f306ecff3a1a9a302f5e5bfcce44995312",
       "video_link": "https://www.youtube.com/watch?v=mcopNZzY2dA",
       "wiki_link": "https://wiki.gm4.co/wiki/Sweethearts",
       "credits": {
@@ -2793,7 +2794,7 @@
           "The8BitMonkey"
         ],
         "Updated by": [
-          "BluePsychoRanger",
+          "BPR",
           "Thanathor"
         ],
         "Icon Design": [
@@ -2821,13 +2822,13 @@
     {
       "id": "gm4_teleportation_anchors",
       "name": "Teleportation Anchors",
-      "version": "1.5.14",
-      "hash": "7f66cdac2cb37aeb8df405573980b5e9b2b328ca",
+      "version": "1.5.15",
+      "hash": "1f57a4b320e96f8db0c24ce1b5c467db73d90967",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Teleportation_Anchors",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Hozz"
@@ -2858,8 +2859,8 @@
     {
       "id": "gm4_tinkering_compressors",
       "name": "Tinkering Compressors",
-      "version": "1.5.12",
-      "hash": "8cd66f29fdd60a5a5df48b6a00072fbe0882643f",
+      "version": "1.5.13",
+      "hash": "2b3cf30a3f99d8ac542033300fdc7a26444ec926",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tinkering_Compressors",
       "credits": {
@@ -2867,8 +2868,8 @@
           "SirSheepe"
         ],
         "Updated by": [
-          "MichaelMiner137",
-          "BluePsychoRanger"
+          "MichaelModulo",
+          "BPR"
         ],
         "Textures by": [
           "Kyrius"
@@ -2903,8 +2904,8 @@
     {
       "id": "gm4_tower_structures",
       "name": "Tower Structures",
-      "version": "3.4.8",
-      "hash": "eacd758aa2dc608b028dadef7208d100350f8a4e",
+      "version": "3.4.9",
+      "hash": "9ded10b4d6887b335203095e72fd92a64df7a9bb",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Tower_Structures",
       "credits": {
@@ -2942,8 +2943,8 @@
     {
       "id": "gm4_tunnel_bores",
       "name": "Tunnel Bores",
-      "version": "1.5.16",
-      "hash": "a70eae494046c82ad94dc201019bfc4a424f3be8",
+      "version": "1.5.17",
+      "hash": "9c99f3e035d939fa2a13279d283ff7bde72c73ec",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tunnel_Bores",
       "credits": {
@@ -2952,7 +2953,7 @@
         ],
         "Updated by": [
           "Bloo",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Hozz"
@@ -2982,8 +2983,8 @@
     {
       "id": "gm4_undead_players",
       "name": "Undead Players",
-      "version": "1.6.8",
-      "hash": "30f99c810e7fce6502a7e7e7f414177513dd6f93",
+      "version": "1.6.9",
+      "hash": "9a2c45240aa13393b632e323d62b075a55a7a543",
       "video_link": "https://www.youtube.com/watch?v=dD8nChP8t9A",
       "wiki_link": "https://wiki.gm4.co/wiki/Undead_Players",
       "credits": {
@@ -3018,8 +3019,8 @@
     {
       "id": "gm4_vecto_shamir",
       "name": "Vecto Shamir",
-      "version": "1.5.7",
-      "hash": "f1cada005e02b905398ebb83b63f7f3e36f28cb9",
+      "version": "1.5.8",
+      "hash": "0e1ba58fb7c1af6c11b23280fa362b7ee206b299",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vecto_Shamir",
       "credits": {
@@ -3027,7 +3028,7 @@
           "Denniss"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -3053,8 +3054,8 @@
     {
       "id": "gm4_vertical_rails",
       "name": "Vertical Rails",
-      "version": "1.5.7",
-      "hash": "be9c47a6fbb23f76cc1901f148635005084586d6",
+      "version": "1.5.8",
+      "hash": "7af36d0aa36bb9e34056ded781581b0a5dd60cc7",
       "video_link": "https://www.youtube.com/watch?v=LJoN7CmJL4Q",
       "wiki_link": "https://wiki.gm4.co/wiki/Vertical_Rails",
       "credits": {
@@ -3091,8 +3092,8 @@
     {
       "id": "gm4_vigere_shamir",
       "name": "Vigere Shamir",
-      "version": "1.4.7",
-      "hash": "9cf5d7b4a58e603b91b32041372484feab048c90",
+      "version": "1.4.8",
+      "hash": "f669a301a73227222e2ccee084206c9b3bad54d8",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vigere_Shamir",
       "credits": {
@@ -3101,7 +3102,7 @@
           "TheEpyonProject"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -3127,8 +3128,8 @@
     {
       "id": "gm4_washing_tanks",
       "name": "Washing Tanks",
-      "version": "1.4.8",
-      "hash": "6051191cc2d575c36fad80d853af4f63519b7504",
+      "version": "1.4.9",
+      "hash": "20057a5c54b115800621f1f6b087a4d5bd7956b0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Washing_Tanks",
       "credits": {
@@ -3137,7 +3138,7 @@
           "Misode"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -3163,8 +3164,8 @@
     {
       "id": "gm4_weighted_armour",
       "name": "Weighted Armour",
-      "version": "1.7.7",
-      "hash": "38830f2bba5292279f5ea9a79d9ae41811a21535",
+      "version": "1.7.8",
+      "hash": "6fce91aefdf0f8f26a7dfd48359b91c78a2c2238",
       "video_link": "https://www.youtube.com/watch?v=rVRSXTGQPbg",
       "wiki_link": "https://wiki.gm4.co/wiki/Weighted_Armour",
       "credits": {
@@ -3196,8 +3197,8 @@
     {
       "id": "gm4_xp_storage",
       "name": "XP Storage",
-      "version": "1.6.7",
-      "hash": "deef110c3cdd75d320cc16e8e62447a33765547b",
+      "version": "1.6.8",
+      "hash": "14e1fe1c210af7e1910da49a295b3b5783fe9137",
       "video_link": "https://www.youtube.com/watch?v=hgq-5waSpVU&index=11&list=PLpa6LLAKqMWbXt5VvxCc6H4mwI-qacdGA",
       "wiki_link": "https://wiki.gm4.co/wiki/XP_Storage",
       "credits": {
@@ -3234,8 +3235,8 @@
     {
       "id": "gm4_zauber_cauldrons",
       "name": "Zauber Cauldrons",
-      "version": "1.12.12",
-      "hash": "ca4380453b3bd2b4817945f1604ccfb4d9703b0f",
+      "version": "1.12.13",
+      "hash": "c87f062504788da3f35a262c02eb377fa21d1f28",
       "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
       "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
       "credits": {
@@ -3245,7 +3246,7 @@
         "Updated by": [
           "Bloo",
           "Lue",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures": [
           "Memo",
@@ -3273,8 +3274,8 @@
     {
       "id": "gm4_zauber_liquids",
       "name": "Zauber Liquids",
-      "version": "1.8.7",
-      "hash": "5f2292cc440e072ed41dbfa92802f540910c1ddd",
+      "version": "1.8.8",
+      "hash": "74deacd68f4f287c89b2de3ea5d9fba56e2dd94c",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids",
       "credits": {
@@ -3311,8 +3312,8 @@
     {
       "id": "gm4_ziprails",
       "name": "Ziprails",
-      "version": "1.5.7",
-      "hash": "96d0342a9bc12fd1c6776d9a5657609ee723aa21",
+      "version": "1.5.8",
+      "hash": "7453781a6a29c194aab0ef412b5031d154ec8588",
       "video_link": "https://www.youtube.com/watch?v=QA7a5q2kVcg",
       "wiki_link": "https://wiki.gm4.co/wiki/Ziprails",
       "credits": {
@@ -3364,7 +3365,7 @@
           "KompetenterKeks"
         ],
         "Font Magic": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -3396,7 +3397,7 @@
       "wiki_link": "",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -3491,7 +3492,7 @@
       "wiki_link": "",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -3521,7 +3522,7 @@
       "wiki_link": "",
       "credits": {
         "Machines Library Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -3581,7 +3582,7 @@
       "wiki_link": "",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -3641,7 +3642,7 @@
       "wiki_link": "",
       "credits": {
         "Creator": [
-          "BluePsychoRanger",
+          "BPR",
           "Bloo"
         ]
       },
@@ -3674,25 +3675,31 @@
     "Andante": {
       "name": "Andante",
       "links": [
-        "https://twitter.com/andantett"
+        "https://bsky.app/profile/andante.dev"
       ]
     },
     "Bloo": {
       "name": "Bloo",
       "links": [
-        "https://twitter.com/Bloo_dev"
+        "https://bsky.app/profile/bloo.boo"
       ]
     },
-    "BluePsychoRanger": {
-      "name": "BluePsychoRanger",
+    "BPR": {
+      "name": "BPR",
       "links": [
-        "https://twitter.com/BluPsychoRanger"
+        "https://bsky.app/profile/bpr02.com"
       ]
     },
     "Bunnygamers": {
       "name": "Bunnygamers",
       "links": [
-        "https://twitter.com/BunnygamersMC"
+        "https://bsky.app/profile/bunnygamers.bsky.social"
+      ]
+    },
+    "catter1": {
+      "name": "catter1",
+      "links": [
+        "https://bsky.app/profile/catter.dev"
       ]
     },
     "Chopper2112": {
@@ -3704,7 +3711,7 @@
     "Denniss": {
       "name": "Denniss",
       "links": [
-        "https://twitter.com/Dennis2p_"
+        "https://github.com/Dennis-0"
       ]
     },
     "DuckJr": {
@@ -3738,7 +3745,7 @@
     "Kroppeb": {
       "name": "Kroppeb",
       "links": [
-        "https://twitter.com/kroppeb"
+        "https://tech.lgbt/@Kroppeb"
       ]
     },
     "Kruthers": {
@@ -3750,7 +3757,7 @@
     "Kyrius": {
       "name": "Kyrius",
       "links": [
-        "http://discordapp.com/users/287287322360414218"
+        "https://bsky.app/profile/kyriuspixels.bsky.social"
       ]
     },
     "Lue": {
@@ -3759,16 +3766,16 @@
         "https://github.com/Luexa"
       ]
     },
-    "MichaelMiner137": {
-      "name": "MichaelMiner137",
+    "MichaelModulo": {
+      "name": "MichaelModulo",
       "links": [
-        "https://linktr.ee/MichaelMiner137"
+        "https://www.michaelmodulo.dev/page/links.html"
       ]
     },
     "Misode": {
       "name": "Misode",
       "links": [
-        "https://twitter.com/misode_"
+        "https://bsky.app/profile/misode.dev"
       ]
     },
     "Memo": {
@@ -3804,25 +3811,25 @@
     "SirSheepe": {
       "name": "SirSheepe",
       "links": [
-        "https://twitter.com/SirSheepe"
+        "https://bsky.app/profile/sirsheepe.bsky.social"
       ]
     },
     "Sparks": {
       "name": "Sparks",
       "links": [
-        "https://twitter.com/SelcouthSparks"
+        "https://bsky.app/profile/selcouthsparks.bsky.social"
       ]
     },
     "SpecialBuilder32": {
       "name": "SpecialBuilder32",
       "links": [
-        "https://twitter.com/SpecialBuilder"
+        "https://bsky.app/profile/specialbuilder32.bsky.social"
       ]
     },
     "Thanathor": {
       "name": "Thanathor",
       "links": [
-        "https://twitter.com/The_Thanathor"
+        "https://bsky.app/profile/thanathor.bsky.social"
       ]
     },
     "The8BitMonkey": {

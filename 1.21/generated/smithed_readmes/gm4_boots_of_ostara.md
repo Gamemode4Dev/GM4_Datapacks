@@ -15,7 +15,7 @@ Make grass appear beneath your feet!<!--$pmc:headerSize-->
 
 ### Credits
 - Creator: [The8BitMonkey](https://youtube.com/the8bitmonkey)
-- Updated by: [Misode](https://twitter.com/misode_)
+- Updated by: [Misode](https://bsky.app/profile/misode.dev), [catter1](https://bsky.app/profile/catter.dev)
 - Icon Design: Hozz
 
 ---

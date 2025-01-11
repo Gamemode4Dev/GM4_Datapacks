@@ -15,8 +15,8 @@ A full list of drops can be read on the [Wiki](https://wiki.gm4.co/Sunken_Treasu
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Sunken_Treasure)
 
 ### Credits
-- Creators: [Wumpacraft](https://twitter.com/wumpacraft), [Sparks](https://twitter.com/SelcouthSparks)
-- Updated by: [BluePsychoRanger](https://twitter.com/BluPsychoRanger), [Lue](https://github.com/Luexa)
+- Creators: [Wumpacraft](https://twitter.com/wumpacraft), [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
+- Updated by: [BPR](https://bsky.app/profile/bpr02.com), [Lue](https://github.com/Luexa)
 - Icon Design: Hozz
 
 ---

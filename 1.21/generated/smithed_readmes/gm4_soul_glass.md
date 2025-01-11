@@ -14,8 +14,8 @@ Read more info about inverted effects on the [Wiki](https://wiki.gm4.co/Soul_Gla
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Soul_Glass)
 
 ### Credits
-- Creators: [BluePsychoRanger](https://twitter.com/BluPsychoRanger), [Denniss](https://twitter.com/Dennis2p_), [Lue](https://github.com/Luexa)
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Creators: [BPR](https://bsky.app/profile/bpr02.com), [Denniss](https://github.com/Dennis-0), [Lue](https://github.com/Luexa)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

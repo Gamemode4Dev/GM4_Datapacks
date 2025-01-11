@@ -15,10 +15,10 @@ More info on what recipes are added can be read on the [Wiki](https://wiki.gm4.c
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Forming_Press)
 
 ### Credits
-- Creator: [Bloo](https://twitter.com/Bloo_dev)
-- Updated by: [Misode](https://twitter.com/misode_), [BluePsychoRanger](https://twitter.com/BluPsychoRanger), TheEpyonProject
-- Textures by: [Kyrius](http://discordapp.com/users/287287322360414218)
-- Icon Design: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
+- Creator: [Bloo](https://bsky.app/profile/bloo.boo)
+- Updated by: [Misode](https://bsky.app/profile/misode.dev), [BPR](https://bsky.app/profile/bpr02.com), TheEpyonProject
+- Textures by: [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social)
+- Icon Design: [BPR](https://bsky.app/profile/bpr02.com)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

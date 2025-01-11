@@ -13,8 +13,8 @@ Cover your blade in the power of a potion and use it when you attack.<!--$pmc:he
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Potion_Swords)
 
 ### Credits
-- Creator: [Bloo](https://twitter.com/Bloo_dev)
-- Updated by: [Bloo](https://twitter.com/Bloo_dev), [SpecialBuilder32](https://twitter.com/SpecialBuilder)
+- Creator: [Bloo](https://bsky.app/profile/bloo.boo)
+- Updated by: [Bloo](https://bsky.app/profile/bloo.boo), [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---

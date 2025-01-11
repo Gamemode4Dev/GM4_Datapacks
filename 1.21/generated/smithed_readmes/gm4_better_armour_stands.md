@@ -42,9 +42,9 @@ Add particles to your builds with the [Particles Pack Expansion](https://gm4.co/
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Better_Armour_Stands)
 
 ### Credits
-- Creator: [Sparks](https://twitter.com/SelcouthSparks)
-- Updated by: [SpecialBuilder32](https://twitter.com/SpecialBuilder), [Misode](https://twitter.com/misode_), [Denniss](https://twitter.com/Dennis2p_)
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Creator: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
+- Updated by: [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [Misode](https://bsky.app/profile/misode.dev), [Denniss](https://github.com/Dennis-0)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

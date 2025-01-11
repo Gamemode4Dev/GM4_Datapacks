@@ -13,8 +13,8 @@ See the contents of your bee's nests!<!--$pmc:headerSize-->
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Beehive_Inspector)
 
 ### Credits
-- Creator: [Misode](https://twitter.com/misode_)
-- Icon Design: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
+- Creator: [Misode](https://bsky.app/profile/misode.dev)
+- Icon Design: [BPR](https://bsky.app/profile/bpr02.com)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

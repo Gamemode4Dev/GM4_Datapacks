@@ -15,7 +15,7 @@ Note Blocks have always been a bit... odd to use. Figuring out what note its set
 
 ### Credits
 - Creator: [Scommander](https://github.com/Scommander)
-- Updated by: [Denniss](https://twitter.com/Dennis2p_)
+- Updated by: [Denniss](https://github.com/Dennis-0)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---

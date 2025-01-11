@@ -16,8 +16,8 @@ Read the [Wiki](https://wiki.gm4.co/Liquid_Tanks/Potion_Liquids) for more intera
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids)
 
 ### Credits
-- Creator: [SpecialBuilder32](https://twitter.com/SpecialBuilder)
-- Updated by: [SpecialBuilder32](https://twitter.com/SpecialBuilder)
+- Creator: [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social)
+- Updated by: [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social)
 - Textures by: Vilder50
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 

@@ -17,7 +17,7 @@ A full list of all modifiers to mobs, weapons and armour can be found at the [Wi
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Combat_Expanded)
 
 ### Credits
-- Creator: [Thanathor](https://twitter.com/The_Thanathor)
+- Creator: [Thanathor](https://bsky.app/profile/thanathor.bsky.social)
 - Icon Design: Hozz
 
 ---

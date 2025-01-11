@@ -28,9 +28,9 @@ Build the Multiblock Structure
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Custom_Crafters/Auto_Crafting)
 
 ### Credits
-- Creator: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
+- Creator: [BPR](https://bsky.app/profile/bpr02.com)
 - Icon Design: Hozz
-- Textures: [Kyrius](http://discordapp.com/users/287287322360414218)
+- Textures: [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

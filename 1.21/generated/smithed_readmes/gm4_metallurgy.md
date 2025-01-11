@@ -14,8 +14,8 @@ Read more about all the details on the [Wiki](https://wiki.gm4.co/Metallurgy).
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Metallurgy)
 
 ### Credits
-- Creators: [Sparks](https://twitter.com/SelcouthSparks), [SpecialBuilder32](https://twitter.com/SpecialBuilder), [Bloo](https://twitter.com/Bloo_dev), [BluePsychoRanger](https://twitter.com/BluPsychoRanger), [SirSheepe](https://twitter.com/SirSheepe)
-- Updated by: [Denniss](https://twitter.com/Dennis2p_), [Misode](https://twitter.com/misode_), [MichaelMiner137](https://linktr.ee/MichaelMiner137), TheEpyonProject
+- Creators: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social), [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [Bloo](https://bsky.app/profile/bloo.boo), [BPR](https://bsky.app/profile/bpr02.com), [SirSheepe](https://bsky.app/profile/sirsheepe.bsky.social)
+- Updated by: [Denniss](https://github.com/Dennis-0), [Misode](https://bsky.app/profile/misode.dev), [MichaelModulo](https://www.michaelmodulo.dev/page/links.html), TheEpyonProject
 - Textures by: [Memo](https://linktr.ee/miraku_memo)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 

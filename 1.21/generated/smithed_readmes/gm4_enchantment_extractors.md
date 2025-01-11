@@ -16,8 +16,8 @@ Read more about the success rates on the [Wiki](https://wiki.gm4.co/Enchantment_
 
 ### Credits
 - Creator: [The8BitMonkey](https://youtube.com/the8bitmonkey)
-- Updated by: [SpecialBuilder32](https://twitter.com/SpecialBuilder), [Misode](https://twitter.com/misode_), [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
-- Textures by: [Kyrius](http://discordapp.com/users/287287322360414218)
+- Updated by: [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [Misode](https://bsky.app/profile/misode.dev), [BPR](https://bsky.app/profile/bpr02.com)
+- Textures by: [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---
