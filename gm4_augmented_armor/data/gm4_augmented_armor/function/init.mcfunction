@@ -27,7 +27,8 @@ scoreboard objectives add gm4_aa_stat.damage_dealt_resisted minecraft.custom:min
 scoreboard objectives add gm4_aa_augment.link.id dummy
 scoreboard objectives add gm4_aa_augment.link.slot dummy
 scoreboard objectives add gm4_aa_augment.link.max_health dummy
-scoreboard objectives add gm4_aa_augment.equestrian.speed_level dummy
+
+scoreboard objectives add gm4_aa_augment.equine.speed_level dummy
 scoreboard objectives add gm4_aa_augment.psychic.id dummy
 scoreboard objectives add gm4_aa_augment.psychic.degree dummy
 scoreboard objectives add gm4_aa_augment.totemic.strength_effect dummy
@@ -42,8 +43,6 @@ scoreboard objectives add gm4_aa_augment.sparking.timer dummy
 scoreboard objectives add gm4_aa_augment.sparking.deg dummy
 scoreboard objectives add gm4_aa_augment.sparking.striking_timer dummy
 scoreboard objectives add gm4_aa_augment.berserkers.timer dummy
-scoreboard objectives add gm4_aa_augment.hawkeye.max_damage dummy
-scoreboard objectives add gm4_aa_augment.hawkeye.count dummy
 
 scoreboard objectives add gm4_aa_training_dummy.dps dummy
 scoreboard objectives add gm4_aa_training_dummy.total_damage dummy

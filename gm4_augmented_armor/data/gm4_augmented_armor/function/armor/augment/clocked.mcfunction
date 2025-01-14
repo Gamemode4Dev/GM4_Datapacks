@@ -8,13 +8,16 @@ execute store result score $active gm4_aa_data run data get storage gm4_augmente
 execute store result score $augment gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.augment.id
 
 # run based on augment id
-execute if score $augment gm4_aa_data matches 1 on vehicle run function gm4_augmented_armor:armor/augment/type/equestrian/mount
+execute if score $augment gm4_aa_data matches 1 on vehicle run function gm4_augmented_armor:armor/augment/type/equine/mount
+execute if score $augment gm4_aa_data matches 2 unless score @s gm4_aa_augment.dashing.timer matches ..-1 run function gm4_augmented_armor:armor/augment/type/dashing/apply
+execute if score $augment gm4_aa_data matches 3 run function gm4_augmented_armor:armor/augment/type/flighty/check
 execute if score $augment gm4_aa_data matches 4 run function gm4_augmented_armor:armor/augment/type/acrobatic/check
 execute if score $augment gm4_aa_data matches 5 run function gm4_augmented_armor:armor/augment/type/vigorous/get_immunities
 execute if score $augment gm4_aa_data matches 6 if score @s gm4_aa_stat.kills matches 1.. run function gm4_augmented_armor:armor/augment/type/totemic/activate
 execute if score $augment gm4_aa_data matches 14 run function gm4_augmented_armor:armor/augment/type/berserkers/check
 execute if score $augment gm4_aa_data matches 15 run function gm4_augmented_armor:armor/augment/type/gutsy/check
 execute if score $augment gm4_aa_data matches 17 run function gm4_augmented_armor:armor/augment/type/canine/check
+execute if score $augment gm4_aa_data matches 24 run function gm4_augmented_armor:armor/augment/type/linked/check
 execute if score $augment gm4_aa_data matches 25 run function gm4_augmented_armor:armor/augment/type/sustaining/check
 execute if score $augment gm4_aa_data matches 26 if score @s gm4_aa_stat.kills matches 1.. run function gm4_augmented_armor:armor/augment/type/vampiric/activate
 execute if score $augment gm4_aa_data matches 27 run function gm4_augmented_armor:armor/augment/type/steelheart/check

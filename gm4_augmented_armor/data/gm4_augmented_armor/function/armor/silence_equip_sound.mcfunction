@@ -2,7 +2,7 @@
 # @s = player that is having their armor nbt change
 # at unspecified
 # run from armor/augment/type/convert/update
-# run from armor/augment/type/link/process/set_max_health
+# run from armor/augment/type/linked/process/set_max_health
 # run from armor/augment/type/psychic/damage_dealt/apply_durability
 # run from item_modify_eval/chest_update
 # run from item_modify_eval/feet_update

@@ -8,4 +8,6 @@ execute store result score $active gm4_aa_data run data get storage gm4_augmente
 execute store result score $augment gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.augment.id
 
 # run based on augment id
+execute if score $augment gm4_aa_data matches 2 if score @s gm4_aa_augment.dashing.timer matches 1.. run function gm4_augmented_armor:armor/augment/type/dashing/remove
+execute if score $augment gm4_aa_data matches 3 run function gm4_augmented_armor:armor/augment/type/flighty/add
 execute if score $augment gm4_aa_data matches 8 run function gm4_augmented_armor:armor/augment/type/sparking/damage_dealt

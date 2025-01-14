@@ -17,6 +17,7 @@ execute if score $trigger.damage_taken gm4_aa_data matches 1 run function gm4_au
 execute if predicate gm4_augmented_armor:technical/convert_netherite/head run function gm4_augmented_armor:armor/convert_netherite
 
 # make changes
+data modify storage gm4_augmented_armor:temp store set from storage gm4_augmented_armor:temp components
 execute if score $change gm4_aa_data matches 1 run function gm4_augmented_armor:item_modify_eval/head_update with storage gm4_augmented_armor:temp
 
 # cleanup

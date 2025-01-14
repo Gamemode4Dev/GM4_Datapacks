@@ -9,8 +9,29 @@
           "value": "gm4_augmented_armor:armor/identification/base",
           "functions": [
             {
+              "function": "minecraft:set_attributes",
+              "replace": false,
+              "modifiers": [
+                {
+                  "attribute": "minecraft:movement_speed",
+                  "id": "gm4_augmented_armor:permanent",
+                  "amount": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "$level_1"
+                    },
+                    "score": "gm4_aa_data",
+                    "scale": 0.01
+                  },
+                  "operation": "add_multiplied_base",
+                  "slot": "chest"
+                }
+              ]
+            },
+            {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_augmented_armor:{custom_attribute:{armor_recharge:{value:'level_2'}},augment:{name:bursting,id:11,triggers:{clocked:0,damage_dealt:0,damage_taken:0}}}}"
+              "tag": "{gm4_augmented_armor:{augment:{name:dashing,id:2,triggers:{clocked:1,damage_dealt:1,damage_taken:1}}}}"
             }
           ]
         }
@@ -32,8 +53,8 @@
               "fallback": "%s Augment:",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.bursting",
-                  "fallback": "Bursting"
+                  "translate": "item.gm4.augmented_armor.augment.dashing",
+                  "fallback": "Dashing"
                 }
               ],
               "color": "gray",
@@ -48,50 +69,51 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.bursting",
-                "fallback": "When %s breaks release an explosion",
-                "with": [
-                  {
-                    "translate": "attribute.name.armor"
-                  }
-                ],
+                "translate": "item.gm4.augmented_armor.lore.dashing",
+                "fallback": "%s & %s ramp up while sprinting,",
                 "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.bursting_2",
-                "fallback": "freezing mobs within %s",
+                "italic": false,
                 "with": [
                   {
-                    "translate": "attribute.name.entity_interaction_range"
+                    "translate": "effect.minecraft.speed"
                   },
                   {
-                    "translate": "potion.withDuration",
-                    "with": [
-                      {
-                        "translate": "attribute.name.entity_interaction_range"
-                      },
-                      [
-                        "0:0",
-                        {
-                          "score": {
-                            "name": "$level_1",
-                            "objective": "gm4_aa_data"
-                          }
-                        }
-                      ]
-                    ]
+                    "translate": "effect.minecraft.hunger"
                   }
-                ],
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.dashing_2",
+                "fallback": "up to level %s. Taking or dealing damage",
+                "color": "dark_gray",
+                "italic": false,
+                "with": [
+                  {
+                    "translate": "potion.potency.4"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        {
+          "function": "minecraft:set_lore",
+          "mode": "append",
+          "entity": "this",
+          "lore": [
+            [
+              {
+                "translate": "item.gm4.augmented_armor.lore.dashing_3",
+                "fallback": "resets the effect. Additional pieces",
                 "color": "dark_gray",
                 "italic": false
               }
@@ -105,75 +127,12 @@
           "lore": [
             [
               {
-                "translate": "item.gm4.augmented_armor.lore.bursting_3",
-                "fallback": "for %s second",
-                "with": [
-                  {
-                    "score": {
-                      "name": "$level_1",
-                      "objective": "gm4_aa_data"
-                    },
-                    "color": "blue"
-                  }
-                ],
+                "translate": "item.gm4.augmented_armor.lore.dashing_4",
+                "fallback": "add to max level and ramping speed",
                 "color": "dark_gray",
                 "italic": false
               }
             ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": 1
-            }
-          ]
-        },
-        {
-          "function": "minecraft:set_lore",
-          "mode": "append",
-          "entity": "this",
-          "lore": [
-            [
-              {
-                "translate": "item.gm4.augmented_armor.lore.bursting_3s",
-                "fallback": "for %s seconds",
-                "with": [
-                  {
-                    "score": {
-                      "name": "$level_1",
-                      "objective": "gm4_aa_data"
-                    },
-                    "color": "blue"
-                  }
-                ],
-                "color": "dark_gray",
-                "italic": false
-              }
-            ]
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$level_1"
-                },
-                "score": "gm4_aa_data"
-              },
-              "range": {
-                "min": 2
-              }
-            }
           ]
         },
         {
@@ -187,13 +146,12 @@
                 "with": [
                   {
                     "score": {
-                      "name": "$level_2",
+                      "name": "$level_1",
                       "objective": "gm4_aa_data"
                     }
                   },
                   {
-                    "translate": "attribute.gm4.augmented_armor.armor_recharge",
-                    "fallback": "Armor Recharge Rate"
+                    "translate": "attribute.name.movement_speed"
                   }
                 ],
                 "color": "red",
@@ -212,8 +170,8 @@
               "fallback": "%s %s",
               "with": [
                 {
-                  "translate": "item.gm4.augmented_armor.augment.bursting",
-                  "fallback": "Bursting"
+                  "translate": "item.gm4.augmented_armor.augment.dashing",
+                  "fallback": "Dashing"
                 },
                 {
                   "nbt": "components.'minecraft:custom_data'.gm4_augmented_armor.name",
