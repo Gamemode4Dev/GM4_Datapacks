@@ -1,0 +1,87 @@
+{
+    "criteria": {
+        "damage_pvp_player": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:value_check",
+                                "value": {
+                                    "type": "minecraft:score",
+                                    "target": "this",
+                                    "score": "gm4_aa_in_pvp"
+                                },
+                                "range": {
+                                    "min": 1
+                                }
+                            },
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "type": "minecraft:player"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "damage_player": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:all_of",
+                        "terms": [
+                            {
+                                "condition": "minecraft:inverted",
+                                "term": {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": "this",
+                                        "score": "gm4_aa_in_pvp"
+                                    },
+                                    "range": {
+                                        "min": 1
+                                    }
+                                }
+                            },
+                            {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "type": "minecraft:player"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "damaged_by_player": {
+            "trigger": "minecraft:entity_hurt_player",
+            "conditions": {
+                "damage": {
+                    "source_entity": {
+                        "type": "minecraft:player"
+                    }
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "damage_pvp_player",
+            "damage_player",
+            "damaged_by_player"
+        ]
+    ],
+    "rewards": {
+        "function": "gm4_augmented_armor:player/in_pvp"
+    }
+}
