@@ -1,0 +1,43 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lime_shulker_box",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3420005,HideFlags:2,gm4_hotswap_hotbars:{item:\"hotswapper\"}}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "item.gm4.hotswapper",
+                "fallback": "Mechanical Shulker Box",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "attribute": "minecraft:zombie.spawn_reinforcements",
+                  "name": "gm4_unstackable",
+                  "amount": {
+                    "type": "minecraft:uniform",
+                    "min": 0,
+                    "max": 1
+                  },
+                  "operation": "addition",
+                  "slot": "feet"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
