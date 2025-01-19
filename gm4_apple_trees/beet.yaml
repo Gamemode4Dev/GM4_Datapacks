@@ -39,10 +39,10 @@ meta:
     credits:
       Creators:
         - Bloo
-        - BluePsychoRanger
+        - BPR
         - SpecialBuilder32
       Icon Design:
-        - BluePsychoRanger
+        - BPR
     model_data:
       - item: apple
         reference: block/apple_unripe
