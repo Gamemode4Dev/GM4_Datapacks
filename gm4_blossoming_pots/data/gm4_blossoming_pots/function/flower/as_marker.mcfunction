@@ -1,8 +1,7 @@
 # Sets up loop for plant stage changes
 # @s = temp marker inside flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
-# with entity @s data
-    # which should have {UUID, id, rotation}
+# with {UUID, id, rotation}
 # run from flower/as_player
 
 # early returns
