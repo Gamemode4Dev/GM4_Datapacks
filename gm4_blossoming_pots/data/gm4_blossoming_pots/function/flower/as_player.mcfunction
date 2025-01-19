@@ -10,5 +10,5 @@ advancement revoke @s only gm4_blossoming_pots:interact_flower_pot
 execute store result score @s gm4_blossoming_pots.range run attribute @s minecraft:block_interaction_range get 200
 execute anchored eyes run function gm4_blossoming_pots:flower/raycast/loop
 
-execute as @e[type=minecraft:marker,sort=nearest,tag=gm4_blossoming_pots.temp.flower_pot] at @s \
+execute as @n[type=minecraft:marker,tag=gm4_blossoming_pots.temp.flower_pot] at @s \
     align xyz positioned ~.5 ~.5 ~.5 run function gm4_blossoming_pots:flower/as_marker with entity @s data
