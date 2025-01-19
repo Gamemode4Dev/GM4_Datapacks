@@ -1,11 +1,11 @@
 {
-  "last_commit": "e56b5c319c17d0d13ac150a0a3a8be461839d632",
+  "last_commit": "889f48b1edb5235382748e9db456622f80bea4fe",
   "modules": [
     {
       "id": "gm4_animi_shamir",
       "name": "Animi Shamir",
-      "version": "1.4.11",
-      "hash": "4325d25d384524f3dad96cdd9c1e31273bb11a15",
+      "version": "1.4.12",
+      "hash": "feebf70f2f4bb6eeb87e22dabec02bf7083a10cd",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Animi_Shamir",
       "credits": {
@@ -39,8 +39,8 @@
     {
       "id": "gm4_apple_trees",
       "name": "Apple Trees",
-      "version": "2.4.9",
-      "hash": "2ae95cbaff373d072d5490dc3c3f4ec6f4810678",
+      "version": "2.4.10",
+      "hash": "70827198a8eb43822a0a28cd68706b730be8fd8e",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Apple_Trees",
       "credits": {
@@ -78,8 +78,8 @@
     {
       "id": "gm4_audere_shamir",
       "name": "Audere Shamir",
-      "version": "1.4.8",
-      "hash": "509fd220661a776fc62551d20c4d4483e9205814",
+      "version": "1.4.9",
+      "hash": "d5e27feb30892f63c1ffbab48044b5c6dd6864b4",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Audere_Shamir",
       "credits": {
@@ -113,8 +113,8 @@
     {
       "id": "gm4_auto_crafting",
       "name": "Auto Crafting",
-      "version": "1.4.15",
-      "hash": "6652e4a9c65dc652f1963e06bcf7461eac7f6aaf",
+      "version": "1.4.16",
+      "hash": "7956a3ae886bf6174d0320294e7ef5df76136179",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters/Auto_Crafting",
       "credits": {
@@ -164,8 +164,8 @@
     {
       "id": "gm4_balloon_animals",
       "name": "Balloon Animals",
-      "version": "1.2.9",
-      "hash": "31c332c83229ab0b717cbfce7036959d924dd0de",
+      "version": "1.2.10",
+      "hash": "e2e7ebe98e1431b9892f8a2697b17da3005af308",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Balloon_Animals",
       "credits": {
@@ -194,8 +194,8 @@
     {
       "id": "gm4_bat_grenades",
       "name": "Bat Grenades",
-      "version": "1.5.10",
-      "hash": "94201dd7c6d3de311d05d4d2a60b8119705d04ca",
+      "version": "1.5.11",
+      "hash": "26f5ee7d4368f409747bc81be6fce4380bc0d337",
       "video_link": "https://www.youtube.com/watch?v=uUoEKtte1GQ",
       "wiki_link": "https://wiki.gm4.co/wiki/Bat_Grenades",
       "credits": {
@@ -230,8 +230,8 @@
     {
       "id": "gm4_beehive_inspector",
       "name": "Beehive Inspector",
-      "version": "1.4.8",
-      "hash": "307081cfcc7ff5e8b81e3c952ac807a0580caade",
+      "version": "1.4.9",
+      "hash": "d535380988926eeea4af110b55c9160ace548ab9",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Beehive_Inspector",
       "credits": {
@@ -260,8 +260,8 @@
     {
       "id": "gm4_better_armour_stands",
       "name": "Better Armour Stands",
-      "version": "2.4.8",
-      "hash": "e3a04682ab9008f4ae0819d4ce594dd69128ddf7",
+      "version": "2.4.9",
+      "hash": "1dac0bf89482dc48dc3b1753a9435d37203abc09",
       "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw",
       "wiki_link": "https://wiki.gm4.co/wiki/Better_Armour_Stands",
       "credits": {
@@ -301,8 +301,8 @@
     {
       "id": "gm4_better_fire",
       "name": "Better Fire",
-      "version": "1.5.8",
-      "hash": "35deabaf110a6e6a98c093c72282208817f79539",
+      "version": "1.5.9",
+      "hash": "9883ff1169eede4450fbf2413c4b87b898f9f36f",
       "video_link": "https://www.youtube.com/watch?v=J5024LhHuWk",
       "wiki_link": "https://wiki.gm4.co/wiki/Better_Fire",
       "credits": {
@@ -341,8 +341,8 @@
     {
       "id": "gm4_block_compressors",
       "name": "Block Compressors",
-      "version": "1.5.15",
-      "hash": "8c6fd698232e237f1096bb34c37639e61137dbe1",
+      "version": "1.5.16",
+      "hash": "2339228f13355f437b1217d0f5e4d85f02686083",
       "video_link": "https://www.youtube.com/watch?v=sdrTJYjL8C0",
       "wiki_link": "https://wiki.gm4.co/wiki/Block_Compressors",
       "credits": {
@@ -398,8 +398,8 @@
     {
       "id": "gm4_book_binders",
       "name": "Book Binders",
-      "version": "1.4.9",
-      "hash": "5d488a1b39ffd7a9b3f92aa1ec8f67d3b2cf61a7",
+      "version": "1.4.10",
+      "hash": "0abcd63f8302fe2dc127e75ef9efa1da0630aa84",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Book_Binders",
       "credits": {
@@ -434,8 +434,8 @@
     {
       "id": "gm4_bookshelf_inspector",
       "name": "Bookshelf Inspector",
-      "version": "1.3.7",
-      "hash": "3b1f90b87b0345126cf77e2cd76d20bd11de44e1",
+      "version": "1.3.8",
+      "hash": "9e2d61d4879e802438629f4d080686d2737c2da5",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Bookshelf_Inspector",
       "credits": {
@@ -464,8 +464,8 @@
     {
       "id": "gm4_boots_of_ostara",
       "name": "Boots of Ostara",
-      "version": "1.7.16",
-      "hash": "868f09333bb3033f27559f4f16763bd743da63e4",
+      "version": "1.7.17",
+      "hash": "df7b4646b055a14a9cc3f07f82b0b252474d3884",
       "video_link": "https://www.youtube.com/watch?v=H4UGM6_wGCE",
       "wiki_link": "https://wiki.gm4.co/wiki/Boots_of_Ostara",
       "credits": {
@@ -506,8 +506,8 @@
     {
       "id": "gm4_calling_bell",
       "name": "Calling Bell",
-      "version": "1.4.8",
-      "hash": "46255a3b82931dc9aec4587c906b27062151c57d",
+      "version": "1.4.9",
+      "hash": "ac1d905751843425cdf2d859401d48198e081978",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Calling_Bell",
       "credits": {
@@ -542,8 +542,8 @@
     {
       "id": "gm4_cement_mixers",
       "name": "Cement Mixers",
-      "version": "1.4.8",
-      "hash": "d8abaf3806f1ed1ec05ca1a6adc2c22f7146cfd4",
+      "version": "1.4.9",
+      "hash": "70e101465d9eddc74907a651aa79828a8c0edb49",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Cement_Mixers",
       "credits": {
@@ -577,8 +577,8 @@
     {
       "id": "gm4_chairs",
       "name": "Chairs",
-      "version": "1.5.8",
-      "hash": "05d6fd5d55b1eb3d0722b7f18a36b6757a52a402",
+      "version": "1.5.9",
+      "hash": "dccc6423c4822952cc3529d080041126e30d0388",
       "video_link": "https://www.youtube.com/watch?v=7KbBw1hEKdY",
       "wiki_link": "https://wiki.gm4.co/wiki/Chairs",
       "credits": {
@@ -614,8 +614,8 @@
     {
       "id": "gm4_combat_expanded",
       "name": "Combat Expanded",
-      "version": "2.2.11",
-      "hash": "e43850e434cdb703a356fd397bc5390d548c1bb1",
+      "version": "2.2.12",
+      "hash": "e7851b1d7e3d74e612f03f76d8932dd50e4ffcf2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Combat_Expanded",
       "credits": {
@@ -643,8 +643,8 @@
     {
       "id": "gm4_cooler_caves",
       "name": "Cooler Caves",
-      "version": "2.4.9",
-      "hash": "059b7654bb25c1f5952cd16776b5b9b18e6c0ced",
+      "version": "2.4.10",
+      "hash": "9416e970d8494b2a790bf9e2c30c8eb8fb823f22",
       "video_link": "https://www.youtube.com/watch?v=cAsXiwLWHFo",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Cooler_Caves",
       "credits": {
@@ -682,8 +682,8 @@
     {
       "id": "gm4_cozy_campfires",
       "name": "Cozy Campfires",
-      "version": "1.4.8",
-      "hash": "fd7b531f830defc03214825a2bccd676684d19d6",
+      "version": "1.4.9",
+      "hash": "353b8b3b504f3d1cdc6b0992f89d7ed7552543db",
       "video_link": "https://www.youtube.com/watch?v=nvAbzAtDFhw",
       "wiki_link": "https://wiki.gm4.co/wiki/Cozy_Campfires",
       "credits": {
@@ -715,8 +715,8 @@
     {
       "id": "gm4_crossbow_cartridges",
       "name": "Crossbow Cartridges",
-      "version": "1.7.9",
-      "hash": "76d13c23441256b68aea4f8804835a3744981513",
+      "version": "1.7.10",
+      "hash": "8cf04e7353e6d5ea32a4fc756229b9cce861d489",
       "video_link": "https://www.youtube.com/watch?v=XJiGvX7l-pI",
       "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
       "credits": {
@@ -749,8 +749,8 @@
     {
       "id": "gm4_dangerous_dungeons",
       "name": "Dangerous Dungeons",
-      "version": "2.4.8",
-      "hash": "92c5545208925b0c06bf491e568d60c5f61c6cb5",
+      "version": "2.4.9",
+      "hash": "6689ced6fcaa4f69d29721d5bf1eed2e38de78f8",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Dangerous_Dungeons",
       "credits": {
@@ -788,8 +788,8 @@
     {
       "id": "gm4_desire_lines",
       "name": "Desire Lines",
-      "version": "1.5.8",
-      "hash": "3261c039e153cfe3aab6fdf6e33ac8a42ef70217",
+      "version": "1.5.9",
+      "hash": "314221a99d36fe5d8cd32e10f65ac4f0a0ae592e",
       "video_link": "https://www.youtube.com/watch?v=wmGaatfekfs",
       "wiki_link": "https://wiki.gm4.co/wiki/Desire_Lines",
       "credits": {
@@ -828,8 +828,8 @@
     {
       "id": "gm4_disassemblers",
       "name": "Disassemblers",
-      "version": "2.4.16",
-      "hash": "6dec52b364f1b6c17b0fc9d6c5a793ab18bce53a",
+      "version": "2.4.17",
+      "hash": "f3bd0a397cdd4302330a7c60695ef78ab283b461",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Disassemblers",
       "credits": {
@@ -883,8 +883,8 @@
     {
       "id": "gm4_display_frames",
       "name": "Display Frames",
-      "version": "1.5.13",
-      "hash": "eef1bd259b766b27dbcd6afeffe630870b85542d",
+      "version": "1.5.14",
+      "hash": "0c2e9b2dfe26e9451dbd41335b30443a5444a45b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Display_Frames",
       "credits": {
@@ -921,8 +921,8 @@
     {
       "id": "gm4_double_doors",
       "name": "Double Doors",
-      "version": "1.2.9",
-      "hash": "6edb72f46d98365f669d9b8e7518a2e8a24e9cb0",
+      "version": "1.2.10",
+      "hash": "4850e13d08637a33577c9882eb300c454f35ba6c",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Double_Doors",
       "credits": {
@@ -954,8 +954,8 @@
     {
       "id": "gm4_dripleaf_filters",
       "name": "Dripleaf Filters",
-      "version": "1.4.8",
-      "hash": "8003d9e27b68e1736edaf522a5f54bc0957e9a76",
+      "version": "1.4.9",
+      "hash": "789652ca2c55642abf9df27a9ca5c20b73d8695f",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Filters",
       "credits": {
@@ -989,8 +989,8 @@
     {
       "id": "gm4_dripleaf_launchers",
       "name": "Dripleaf Launchers",
-      "version": "1.3.7",
-      "hash": "de4c3658e469e348c18d15231e191625c195ed5a",
+      "version": "1.3.8",
+      "hash": "a015fe1ec650c83c1929a0c6b549d3a57dfd8701",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Launchers",
       "credits": {
@@ -1019,8 +1019,8 @@
     {
       "id": "gm4_enchantment_extractors",
       "name": "Enchantment Extractors",
-      "version": "2.4.16",
-      "hash": "7ed4a3c49a09e95ffce4f1131595eb69028d335e",
+      "version": "2.4.17",
+      "hash": "f12c560ffe841595ab255d1792bd9715789da2cd",
       "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
       "wiki_link": "https://wiki.gm4.co/wiki/Enchantment_Extractors",
       "credits": {
@@ -1075,8 +1075,8 @@
     {
       "id": "gm4_end_fishing",
       "name": "End Fishing",
-      "version": "1.5.9",
-      "hash": "87d8da832e84160e7414799023f9edc75ce3eae2",
+      "version": "1.5.10",
+      "hash": "445777664b1b36ea515081e852b200e5071a963b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/End_Fishing",
       "credits": {
@@ -1110,8 +1110,8 @@
     {
       "id": "gm4_ender_hoppers",
       "name": "Ender Hoppers",
-      "version": "1.7.15",
-      "hash": "311365ad014cfedfb9a7802ef5b314f41bac30c5",
+      "version": "1.7.16",
+      "hash": "09907d9fdb338b52b6aa61940a761534c9f7dac0",
       "video_link": "https://www.youtube.com/watch?v=wrwg4BDgEGU",
       "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
       "credits": {
@@ -1165,8 +1165,8 @@
     {
       "id": "gm4_enderman_support_class",
       "name": "Enderman Support Class",
-      "version": "1.6.8",
-      "hash": "618ef8731046f0681a38f6b21e1ec3c2ec9dd331",
+      "version": "1.6.9",
+      "hash": "389717d36abd5b23db631641ea1e8cc2c227ae8a",
       "video_link": "https://www.youtube.com/watch?v=2hWZ4OKUaqI",
       "wiki_link": "https://wiki.gm4.co/wiki/Enderman_Support_Class",
       "credits": {
@@ -1200,8 +1200,8 @@
     {
       "id": "gm4_everstone",
       "name": "Everstone",
-      "version": "1.4.9",
-      "hash": "d6944064b34dfcef5a8ecea0b202a52cc34ba24c",
+      "version": "1.4.10",
+      "hash": "8513b255f8095246c9d01dba280876e1b6462bf5",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Everstone",
       "credits": {
@@ -1236,8 +1236,8 @@
     {
       "id": "gm4_forming_press",
       "name": "Forming Press",
-      "version": "1.5.16",
-      "hash": "abcaad198095e3b20eb4bf0f701ada40ad44d5c5",
+      "version": "1.5.17",
+      "hash": "1d02eb44d2a607ec8ce7682fd6f37948b75d4e5b",
       "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
       "wiki_link": "https://wiki.gm4.co/wiki/Forming_Press",
       "credits": {
@@ -1292,8 +1292,8 @@
     {
       "id": "gm4_fulcio_shamir",
       "name": "Fulcio Shamir",
-      "version": "1.4.8",
-      "hash": "3fa707add6d54a5ec5eebe0563bd5ea731082b14",
+      "version": "1.4.9",
+      "hash": "85b49b8d3f8ac208d094a34e227b6361947840ec",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Fulcio_Shamir",
       "credits": {
@@ -1328,8 +1328,8 @@
     {
       "id": "gm4_guidebook",
       "name": "Guidebook",
-      "version": "3.0.4",
-      "hash": "3694538b398d21738bcc824988dba77d80ea2114",
+      "version": "3.0.5",
+      "hash": "c16720d75250544139d6c27424c982ac02fffa26",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",
       "credits": {
@@ -1355,8 +1355,8 @@
     {
       "id": "gm4_heart_canisters",
       "name": "Heart Canisters",
-      "version": "1.7.15",
-      "hash": "0f390809acbc2750285d502d2cb171ac47593cde",
+      "version": "1.7.16",
+      "hash": "82d714c134b319a646c2d74154739abaaa0f55f3",
       "video_link": "https://www.youtube.com/watch?v=zjmL6rjoq0g",
       "wiki_link": "https://wiki.gm4.co/wiki/Heart_Canisters",
       "credits": {
@@ -1412,8 +1412,8 @@
     {
       "id": "gm4_holographic_tags",
       "name": "Holographic Tags",
-      "version": "1.4.9",
-      "hash": "48bda3d08921a1be33ef117aa8f81baed7ceb100",
+      "version": "1.4.10",
+      "hash": "4126fde709b19157c7dfb6f294bca9fb93b1cbc5",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Holographic_Tags",
       "credits": {
@@ -1448,8 +1448,8 @@
     {
       "id": "gm4_iacio_shamir",
       "name": "Iacio Shamir",
-      "version": "1.4.8",
-      "hash": "ee14fb6cbed4414e8177c790f185ce0021a9a33e",
+      "version": "1.4.9",
+      "hash": "100a6d5bcfd01b6c816dbae9713e66117d5b8e36",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Iacio_Shamir",
       "credits": {
@@ -1483,8 +1483,8 @@
     {
       "id": "gm4_ink_spitting_squid",
       "name": "Ink Spitting Squid",
-      "version": "1.5.8",
-      "hash": "283bb4c3c531ae3d2c0392411e042e6f368ee77c",
+      "version": "1.5.9",
+      "hash": "4a295cf7df6536cb16b4db3ea7b902d37e72c156",
       "video_link": "https://www.youtube.com/watch?v=68LMYEhueZ0",
       "wiki_link": "https://wiki.gm4.co/wiki/Ink_Spitting_Squid",
       "credits": {
@@ -1519,8 +1519,8 @@
     {
       "id": "gm4_lightning_in_a_bottle",
       "name": "Lightning in a Bottle",
-      "version": "1.7.14",
-      "hash": "edf67709fc4255421c993c8e346bb9deb6758e04",
+      "version": "1.7.15",
+      "hash": "4dacc4d0a85f5044b75def04d995bd1d11d01979",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
       "credits": {
@@ -1559,8 +1559,8 @@
     {
       "id": "gm4_liquid_minecarts",
       "name": "Liquid Minecarts",
-      "version": "1.6.13",
-      "hash": "c33523d5872b4b0cb0d6fc3a1e7d6cd841414519",
+      "version": "1.6.14",
+      "hash": "18d17835912d905a0888f4de9878e6f860e9d7aa",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts",
       "credits": {
@@ -1600,8 +1600,8 @@
     {
       "id": "gm4_liquid_tanks",
       "name": "Liquid Tanks",
-      "version": "2.6.15",
-      "hash": "2c75a14bd067966bb8271e5ef7d7222247613701",
+      "version": "2.6.16",
+      "hash": "15b005800bbe7ae3f1e0e99ed185a1fc541ed2ad",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
       "credits": {
@@ -1648,8 +1648,8 @@
     {
       "id": "gm4_live_catch",
       "name": "Live Catch",
-      "version": "1.4.8",
-      "hash": "c5cfb404461db3953194b030f4c970c29281ba00",
+      "version": "1.4.9",
+      "hash": "42f4414608a1f22c65aafba47d8f0ac9073df0d3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Live_Catch",
       "credits": {
@@ -1681,8 +1681,8 @@
     {
       "id": "gm4_lumos_shamir",
       "name": "Lumos Shamir",
-      "version": "1.4.8",
-      "hash": "d80d89f88d9b81044c37425bf372abe8309d2392",
+      "version": "1.4.9",
+      "hash": "82f1fc670635ef066aedac233ff8de7b775713c7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Lumos_Shamir",
       "credits": {
@@ -1720,8 +1720,8 @@
     {
       "id": "gm4_mending_tanks",
       "name": "Mending Tanks",
-      "version": "1.5.8",
-      "hash": "67a3da5d4460173aa7203a92b259d7894310192f",
+      "version": "1.5.9",
+      "hash": "716d24f517d0becba6eca9d1af86c5a7433784b1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Mending_Tanks",
       "credits": {
@@ -1755,8 +1755,8 @@
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.6.12",
-      "hash": "c2e72de8c8371b48a2737b9ce2df45ae53163d93",
+      "version": "1.6.13",
+      "hash": "d38377d494df34ab719bbddd7d9b6b55a1895f29",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -1823,8 +1823,8 @@
     {
       "id": "gm4_midnight_menaces",
       "name": "Midnight Menaces",
-      "version": "1.5.8",
-      "hash": "2b2657443f2be3453125aadb2397b7ae0d7483f3",
+      "version": "1.5.9",
+      "hash": "2d7b8e5a3971be666086f0b07bf64342fa74f35e",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights/Midnight_Menaces",
       "credits": {
@@ -1858,8 +1858,8 @@
     {
       "id": "gm4_mob_curing",
       "name": "Mob Curing",
-      "version": "1.7.9",
-      "hash": "6b819ee5edbbee30d94b0b06cef017f3ffd0c6bf",
+      "version": "1.7.10",
+      "hash": "0999c5894ec44040f3b9260c6689a49572a7041b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mob_Curing",
       "credits": {
@@ -1894,8 +1894,8 @@
     {
       "id": "gm4_mountaineering",
       "name": "Mountaineering",
-      "version": "1.3.14",
-      "hash": "ddef735a9e52c5f8965e3d60fd9e132fcf380fe7",
+      "version": "1.3.15",
+      "hash": "974aaee28d71a951b49d4b1c9f05ae7c008afdb0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mountaineering",
       "credits": {
@@ -1924,8 +1924,8 @@
     {
       "id": "gm4_mysterious_midnights",
       "name": "Mysterious Midnights",
-      "version": "1.6.11",
-      "hash": "241c80452792b4c945b1b00e84f8396815e1ceeb",
+      "version": "1.6.12",
+      "hash": "0ad435d64a5fe5ee184ee9cc1459c966e69f75b9",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights",
       "credits": {
@@ -1963,8 +1963,8 @@
     {
       "id": "gm4_note_block_interface",
       "name": "Note Block Interface",
-      "version": "1.4.8",
-      "hash": "c6379ab55c198674b620520d2484f51f0edff8b2",
+      "version": "1.4.9",
+      "hash": "eca6f956a02e250912441e2f456bdef1bfb129ea",
       "video_link": "https://www.youtube.com/watch?v=Kqrdy-8-sb8",
       "wiki_link": "https://wiki.gm4.co/wiki/Note_Block_Interface",
       "credits": {
@@ -1999,8 +1999,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.7.17",
-      "hash": "eefbd75c97d3459eb0e4959933700341d69a257a",
+      "version": "1.7.18",
+      "hash": "144159716a160d795f49201b96b546fa4407a5e3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -2034,8 +2034,8 @@
     {
       "id": "gm4_particles_pack",
       "name": "Particles Pack",
-      "version": "1.6.9",
-      "hash": "58f1e31edf8ea1f32b6855887d605a22e00293df",
+      "version": "1.6.10",
+      "hash": "29281ea96c29e7f850b26603f4aa2f5accbd3d06",
       "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=238s",
       "wiki_link": "https://wiki.gm4.co/wiki/Particles_Pack",
       "credits": {
@@ -2074,8 +2074,8 @@
     {
       "id": "gm4_percurro_shamir",
       "name": "Percurro Shamir",
-      "version": "1.4.9",
-      "hash": "596a255cd91367f12f777c357f72946386e4ba26",
+      "version": "1.4.10",
+      "hash": "45d9e2c3fa475c1b9e7cbf389fd4897eb2b9abb2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Percurro_Shamir",
       "credits": {
@@ -2109,8 +2109,8 @@
     {
       "id": "gm4_phantom_scarecrows",
       "name": "Phantom Scarecrows",
-      "version": "1.4.8",
-      "hash": "74ea0b8ebd2792e730af7d2297c29be7b729efa1",
+      "version": "1.4.9",
+      "hash": "a475a3d1f6dbe445a7e9deb0833adc34f91c77bc",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Phantom_Scarecrows",
       "credits": {
@@ -2145,8 +2145,8 @@
     {
       "id": "gm4_pig_tractors",
       "name": "Pig Tractors",
-      "version": "1.7.8",
-      "hash": "2613fdf3ac263ac2d68d7aace558bc22b8973aa3",
+      "version": "1.7.9",
+      "hash": "baa37c90f45f3cc5930cb2c0ce143ecf80f41068",
       "video_link": "https://www.youtube.com/watch?v=7i0WFHUfBXs",
       "wiki_link": "https://wiki.gm4.co/wiki/Pig_Tractors",
       "credits": {
@@ -2178,8 +2178,8 @@
     {
       "id": "gm4_podzol_rooting_soil",
       "name": "Podzol Rooting Soil",
-      "version": "1.5.9",
-      "hash": "44e72d0042103ce0509bad6d32e847e473fa32bc",
+      "version": "1.5.10",
+      "hash": "29cac2910cb2ad93d5df0e6c3946fed0e8b97836",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Podzol_Rooting_Soil",
       "credits": {
@@ -2214,8 +2214,8 @@
     {
       "id": "gm4_poses_pack",
       "name": "Poses Pack",
-      "version": "1.6.8",
-      "hash": "ed916b91e0a4bcaa295faed0a5788d1edf6da4e8",
+      "version": "1.6.9",
+      "hash": "f6528249947c518c8676541d3e7e9342dbdce82a",
       "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=217s",
       "wiki_link": "https://wiki.gm4.co/wiki/Poses_Pack",
       "credits": {
@@ -2255,8 +2255,8 @@
     {
       "id": "gm4_potion_liquids",
       "name": "Potion Liquids",
-      "version": "1.7.9",
-      "hash": "67ae5a1dc41e344b582f4b0b73df6ead403c53a5",
+      "version": "1.7.10",
+      "hash": "d74afdc9f9b0033dcb67b57d809b1e958871960c",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids",
       "credits": {
@@ -2296,8 +2296,8 @@
     {
       "id": "gm4_potion_swords",
       "name": "Potion Swords",
-      "version": "1.6.9",
-      "hash": "01e327f390e112cc29e64a982c6d59fa4baf598a",
+      "version": "1.6.10",
+      "hash": "0c72a746b6e74f8e293c2a78c7b5a0f79592ad5f",
       "video_link": "https://www.youtube.com/watch?v=9xI3CQ1z5cg",
       "wiki_link": "https://wiki.gm4.co/wiki/Potion_Swords",
       "credits": {
@@ -2333,8 +2333,8 @@
     {
       "id": "gm4_record_crafting",
       "name": "Record Crafting",
-      "version": "1.4.15",
-      "hash": "6630db64a94ee7d1d98e63bed5201d30265ddc19",
+      "version": "1.4.16",
+      "hash": "1f7bd0bd144bd149493fa0c71b5440fed71b6ef9",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "wiki_link": "https://wiki.gm4.co/wiki/Record_Crafting",
       "credits": {
@@ -2371,8 +2371,8 @@
     {
       "id": "gm4_relocators",
       "name": "Relocators",
-      "version": "2.4.16",
-      "hash": "ef14bc5096583a713723e7a8fd7cf2da6660c521",
+      "version": "2.4.17",
+      "hash": "bae937889c8a6b2618b7de2200b054f128b6d730",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Relocators",
       "credits": {
@@ -2417,8 +2417,8 @@
     {
       "id": "gm4_rope_ladders",
       "name": "Rope Ladders",
-      "version": "1.4.7",
-      "hash": "240e2256f7e5d45dce9cb96b771f00c7b06668d9",
+      "version": "1.4.8",
+      "hash": "e9120aff8fdb05cf64d35012dada38862d868f63",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Rope_Ladders",
       "credits": {
@@ -2450,8 +2450,8 @@
     {
       "id": "gm4_scuba_gear",
       "name": "SCUBA Gear",
-      "version": "1.5.15",
-      "hash": "0c3b5a3605822b4186779cef72417de0653688bd",
+      "version": "1.5.16",
+      "hash": "2bb8ebff7ea369a8d6ca5add8706419b9b943936",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/SCUBA_Gear",
       "credits": {
@@ -2488,8 +2488,8 @@
     {
       "id": "gm4_shapeless_portals",
       "name": "Shapeless Portals",
-      "version": "1.2.8",
-      "hash": "7cb786241f75ac96cf2b3a2d996de9de4b246150",
+      "version": "1.2.9",
+      "hash": "a2ba5700fb22751ce519fc97ca049bb46b5b8a29",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Shapeless_Portals",
       "credits": {
@@ -2521,8 +2521,8 @@
     {
       "id": "gm4_shroomites",
       "name": "Shroomites",
-      "version": "1.5.8",
-      "hash": "c50361ecc0e6749c30c6b238a8a4c7ad331c6336",
+      "version": "1.5.9",
+      "hash": "49f60f7a5f88202b1d82fc40d1cb26997ef04aa6",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Shroomites",
       "credits": {
@@ -2556,8 +2556,8 @@
     {
       "id": "gm4_smelteries",
       "name": "Smelteries",
-      "version": "1.7.15",
-      "hash": "9e46f63b33710fbf9902320189426a180b987c43",
+      "version": "1.7.16",
+      "hash": "b29b988cf67dece0eba6f4846ca2fe3bb727d664",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/smelteries",
       "credits": {
@@ -2601,8 +2601,8 @@
     {
       "id": "gm4_soul_glass",
       "name": "Soul Glass",
-      "version": "1.4.14",
-      "hash": "28953ec433ca55caaa83e97ba0657de4fbb0e8e7",
+      "version": "1.4.15",
+      "hash": "a8c883c5c6cc9eb01f9cc6429a1cca1e70b2bc95",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Soul_Glass",
       "credits": {
@@ -2636,8 +2636,8 @@
     {
       "id": "gm4_spawner_minecarts",
       "name": "Spawner Minecarts",
-      "version": "2.6.8",
-      "hash": "3b671a700b552e093648f64f9d029f0834acc6eb",
+      "version": "2.6.9",
+      "hash": "ad0baf66145dbc83b84b592ed018f6c178783557",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Spawner_Minecarts",
       "credits": {
@@ -2671,8 +2671,8 @@
     {
       "id": "gm4_speed_paths",
       "name": "Speed Paths",
-      "version": "1.5.8",
-      "hash": "15280bfef7fec61c66124dc6cc446594426735b9",
+      "version": "1.5.9",
+      "hash": "16af04c07c1cd89d54f1742e79918e167ee2e349",
       "video_link": "https://www.youtube.com/watch?v=99VFSW1ORzU",
       "wiki_link": "https://wiki.gm4.co/wiki/Speed_Paths",
       "credits": {
@@ -2708,8 +2708,8 @@
     {
       "id": "gm4_standard_crafting",
       "name": "Standard Crafting",
-      "version": "1.5.16",
-      "hash": "189f9cecad19dcdcbe9a2d50c943f3e80a6c9449",
+      "version": "1.5.17",
+      "hash": "2f137ce529ecfe8fc5cdcf0fbb7bc1d7ae4a1d39",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
       "credits": {
@@ -2744,8 +2744,8 @@
     {
       "id": "gm4_sunken_treasure",
       "name": "Sunken Treasure",
-      "version": "1.6.8",
-      "hash": "55bd55910a8e33d570e234cd0439cce8d92b5196",
+      "version": "1.6.9",
+      "hash": "f564005f07d3f111fac5eebca37dbc90955efafa",
       "video_link": "https://www.youtube.com/watch?v=VV7ZIyIzKV0",
       "wiki_link": "https://wiki.gm4.co/wiki/Sunken_Treasure",
       "credits": {
@@ -2785,8 +2785,8 @@
     {
       "id": "gm4_sweethearts",
       "name": "Sweethearts",
-      "version": "1.5.9",
-      "hash": "758365f306ecff3a1a9a302f5e5bfcce44995312",
+      "version": "1.5.10",
+      "hash": "6be62eb05b7e116557bc82eac4cdb3a16b85ad09",
       "video_link": "https://www.youtube.com/watch?v=mcopNZzY2dA",
       "wiki_link": "https://wiki.gm4.co/wiki/Sweethearts",
       "credits": {
@@ -2822,8 +2822,8 @@
     {
       "id": "gm4_teleportation_anchors",
       "name": "Teleportation Anchors",
-      "version": "1.5.15",
-      "hash": "1f57a4b320e96f8db0c24ce1b5c467db73d90967",
+      "version": "1.5.16",
+      "hash": "f0d5e6fe73193c60f6ff257a476dbf1d6b53ea09",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Teleportation_Anchors",
       "credits": {
@@ -2859,8 +2859,8 @@
     {
       "id": "gm4_tinkering_compressors",
       "name": "Tinkering Compressors",
-      "version": "1.5.13",
-      "hash": "2b3cf30a3f99d8ac542033300fdc7a26444ec926",
+      "version": "1.5.14",
+      "hash": "ceb223e2022a2f3e0724cdef095d1d8cafcd8283",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tinkering_Compressors",
       "credits": {
@@ -2904,8 +2904,8 @@
     {
       "id": "gm4_tower_structures",
       "name": "Tower Structures",
-      "version": "3.4.9",
-      "hash": "9ded10b4d6887b335203095e72fd92a64df7a9bb",
+      "version": "3.4.10",
+      "hash": "2e7850f68d3b37c21436842562d7cf3fcddc97d1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Tower_Structures",
       "credits": {
@@ -2943,8 +2943,8 @@
     {
       "id": "gm4_tunnel_bores",
       "name": "Tunnel Bores",
-      "version": "1.5.17",
-      "hash": "9c99f3e035d939fa2a13279d283ff7bde72c73ec",
+      "version": "1.5.18",
+      "hash": "30a028562c921f2dfe9bcde35abc154ab6a026a9",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tunnel_Bores",
       "credits": {
@@ -2983,8 +2983,8 @@
     {
       "id": "gm4_undead_players",
       "name": "Undead Players",
-      "version": "1.6.9",
-      "hash": "9a2c45240aa13393b632e323d62b075a55a7a543",
+      "version": "1.6.10",
+      "hash": "75da4617b3e243dbc7a371a66ad29f03a8dc3f9a",
       "video_link": "https://www.youtube.com/watch?v=dD8nChP8t9A",
       "wiki_link": "https://wiki.gm4.co/wiki/Undead_Players",
       "credits": {
@@ -3019,8 +3019,8 @@
     {
       "id": "gm4_vecto_shamir",
       "name": "Vecto Shamir",
-      "version": "1.5.8",
-      "hash": "0e1ba58fb7c1af6c11b23280fa362b7ee206b299",
+      "version": "1.5.9",
+      "hash": "0bbcbbabb959545899de601335ad7eceb5681c41",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vecto_Shamir",
       "credits": {
@@ -3054,8 +3054,8 @@
     {
       "id": "gm4_vertical_rails",
       "name": "Vertical Rails",
-      "version": "1.5.8",
-      "hash": "7af36d0aa36bb9e34056ded781581b0a5dd60cc7",
+      "version": "1.5.9",
+      "hash": "3a486ff55e1b54f9eff4f19568f59bb6dd1e137a",
       "video_link": "https://www.youtube.com/watch?v=LJoN7CmJL4Q",
       "wiki_link": "https://wiki.gm4.co/wiki/Vertical_Rails",
       "credits": {
@@ -3092,8 +3092,8 @@
     {
       "id": "gm4_vigere_shamir",
       "name": "Vigere Shamir",
-      "version": "1.4.8",
-      "hash": "f669a301a73227222e2ccee084206c9b3bad54d8",
+      "version": "1.4.9",
+      "hash": "9613b12b63861e0707e6d1e62b37448d10b3e564",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vigere_Shamir",
       "credits": {
@@ -3128,8 +3128,8 @@
     {
       "id": "gm4_washing_tanks",
       "name": "Washing Tanks",
-      "version": "1.4.9",
-      "hash": "20057a5c54b115800621f1f6b087a4d5bd7956b0",
+      "version": "1.4.10",
+      "hash": "5cceffa43bd2b5f0d41af0a03be86b2560989e88",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Washing_Tanks",
       "credits": {
@@ -3164,8 +3164,8 @@
     {
       "id": "gm4_weighted_armour",
       "name": "Weighted Armour",
-      "version": "1.7.8",
-      "hash": "6fce91aefdf0f8f26a7dfd48359b91c78a2c2238",
+      "version": "1.7.9",
+      "hash": "c997544e37acfd76bf3c1ba60a2b0ba873461f11",
       "video_link": "https://www.youtube.com/watch?v=rVRSXTGQPbg",
       "wiki_link": "https://wiki.gm4.co/wiki/Weighted_Armour",
       "credits": {
@@ -3197,8 +3197,8 @@
     {
       "id": "gm4_xp_storage",
       "name": "XP Storage",
-      "version": "1.6.8",
-      "hash": "14e1fe1c210af7e1910da49a295b3b5783fe9137",
+      "version": "1.6.9",
+      "hash": "3582d21ca1da6acf29f6f0fc60533b36919c87f4",
       "video_link": "https://www.youtube.com/watch?v=hgq-5waSpVU&index=11&list=PLpa6LLAKqMWbXt5VvxCc6H4mwI-qacdGA",
       "wiki_link": "https://wiki.gm4.co/wiki/XP_Storage",
       "credits": {
@@ -3235,8 +3235,8 @@
     {
       "id": "gm4_zauber_cauldrons",
       "name": "Zauber Cauldrons",
-      "version": "1.12.13",
-      "hash": "c87f062504788da3f35a262c02eb377fa21d1f28",
+      "version": "1.12.14",
+      "hash": "d57851e0025085a4eaf5fab2b6c7ac9812043046",
       "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
       "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
       "credits": {
@@ -3274,8 +3274,8 @@
     {
       "id": "gm4_zauber_liquids",
       "name": "Zauber Liquids",
-      "version": "1.8.8",
-      "hash": "74deacd68f4f287c89b2de3ea5d9fba56e2dd94c",
+      "version": "1.8.9",
+      "hash": "3432e8707adfac771d32c4b5ad8f3ea155218877",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids",
       "credits": {
@@ -3312,8 +3312,8 @@
     {
       "id": "gm4_ziprails",
       "name": "Ziprails",
-      "version": "1.5.8",
-      "hash": "7453781a6a29c194aab0ef412b5031d154ec8588",
+      "version": "1.5.9",
+      "hash": "b382e482deae4b2fd521b948318034a1af69fb6b",
       "video_link": "https://www.youtube.com/watch?v=QA7a5q2kVcg",
       "wiki_link": "https://wiki.gm4.co/wiki/Ziprails",
       "credits": {
@@ -3349,8 +3349,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.3.15",
-      "hash": "600684b9583318d19df2a83f2884ff7020e63679",
+      "version": "1.3.16",
+      "hash": "00e470f211f301e52d8b6e70f1eda75b7c0aa555",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3391,8 +3391,8 @@
     "lib_brewing": {
       "id": "gm4_brewing",
       "name": "Gamemode 4 Brewing",
-      "version": "1.3.3",
-      "hash": "680e00a882374d2dc3f411134f40bff02b9f13b8",
+      "version": "1.3.4",
+      "hash": "d43d251d585c3c020fcd9c84d29c44db46f24acd",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3421,8 +3421,8 @@
     "lib_custom_crafters": {
       "id": "gm4_custom_crafters",
       "name": "Gamemode 4 Custom Crafters",
-      "version": "3.3.11",
-      "hash": "29ed8ca9d8c2e4df8fd901369df62c15d7bd3063",
+      "version": "3.3.12",
+      "hash": "2f00b4b0d33293734aae9e30abf8e2637893ec6d",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3456,8 +3456,8 @@
     "lib_forceload": {
       "id": "gm4_forceload",
       "name": "Gamemode 4 Forceload",
-      "version": "1.4.4",
-      "hash": "a6d854d6d80486f0c42f88423e6b119cc68e66a0",
+      "version": "1.4.5",
+      "hash": "0ab8314ec6e906e28627e5a0d61e21f6cd1321a6",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3486,8 +3486,8 @@
     "lib_lore": {
       "id": "gm4_lore",
       "name": "Gamemode 4 Lore",
-      "version": "1.2.3",
-      "hash": "a0265c01bb849d2d4341d3232c6b1250d3ddcbac",
+      "version": "1.2.4",
+      "hash": "160c8bb44c8fd87f165c665fd49f07edf05c6972",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3516,8 +3516,8 @@
     "lib_machines": {
       "id": "gm4_machines",
       "name": "Gamemode 4 Machines",
-      "version": "1.3.8",
-      "hash": "b8c2fd04259cd1558c2aacee4ec7b69019a1644d",
+      "version": "1.3.9",
+      "hash": "06cc53c66b438e762438c9d0e3092b41d11f81b0",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3546,8 +3546,8 @@
     "lib_player_death": {
       "id": "gm4_player_death",
       "name": "Gamemode 4 Player Death",
-      "version": "1.2.2",
-      "hash": "31ddeb3da63d6e20b0d0e99a224434f79f0c2e2a",
+      "version": "1.2.3",
+      "hash": "17b0bad5cbadbc186e23b5840273349120415c87",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3576,8 +3576,8 @@
     "lib_potion_tracking": {
       "id": "gm4_potion_tracking",
       "name": "Gamemode 4 Potion Tracking",
-      "version": "1.2.8",
-      "hash": "232386a5f6d9ed2ae47a69aa579f589103b97a35",
+      "version": "1.2.9",
+      "hash": "bf4ea4b0b1e190b1ab05ef261d131cb1d44d10f6",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3606,8 +3606,8 @@
     "lib_trades": {
       "id": "gm4_trades",
       "name": "Gamemode 4 Trades",
-      "version": "1.5.3",
-      "hash": "f1cf6b20b5919917b8f343888c5a6b02fed405f4",
+      "version": "1.5.4",
+      "hash": "6ce027b851a3b03d525808026e39eee7931bc313",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3636,8 +3636,8 @@
     "lib_trees": {
       "id": "gm4_trees",
       "name": "Gamemode 4 Trees",
-      "version": "1.2.3",
-      "hash": "1b2819092dfd2b94ca5c877423d561c7a5e278cb",
+      "version": "1.2.4",
+      "hash": "44a7b55a3c2957d7fd20b5a2d72135d1b5da80ee",
       "video_link": "",
       "wiki_link": "",
       "credits": {
