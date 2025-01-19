@@ -1,7 +1,7 @@
 # gives the player the items from the custom flower pot back when right clicking with an empty hand
 # @s = temp marker inside flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
-# with entity @s data
+# with {UUID}
 # run from flower/as_marker
 
 # give player item

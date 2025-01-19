@@ -1,7 +1,7 @@
 # summons items of perma marker's storage, and kills perma marker on flower pot breakage
 # @s = flower pot perma marker
 # at @s
-# with entity @s data
+# with {id, count}
 # run from main
 
 # just summonining an item so not giving it smithed.entity

@@ -1,7 +1,7 @@
 # sets temp.data for the loop
 # @s = temp marker inside decorated pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
-# with storage gm4_blossoming_pots:decorated_pots temp
+# with {id, count, score}
 # run from decorated/loop
 
 

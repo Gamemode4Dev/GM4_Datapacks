@@ -1,8 +1,7 @@
 # Main Loop 
 # @s = temp marker inside decorated pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
-# with storage gm4_blossoming_pots:decorated_pots temp
-    # which should contain {rotation, score, id, count, data}
+# with {rotation, score, id, count, data}
 # run from decorated/as_marker and self
 
 # summon if needed

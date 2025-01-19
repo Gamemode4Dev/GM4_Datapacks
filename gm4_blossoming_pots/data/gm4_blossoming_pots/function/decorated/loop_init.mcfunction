@@ -1,8 +1,7 @@
 # Sets up loop for plant stage changes
 # @s = temp marker inside decorated pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
-# with storage gm4_blossoming_pots:decorated_pots temp
-    # which should have id and count
+# with {id, count}
 # run from decorated/as_marker
 
 # early returns

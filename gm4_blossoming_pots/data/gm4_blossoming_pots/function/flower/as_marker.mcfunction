@@ -30,12 +30,14 @@ execute store result entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.dat
     run scoreboard players get @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] gm4_blossoming_pots.loop
 # set full if full
 function gm4_blossoming_pots:flower/set_full with entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] data
+
 # setting temp
 $data merge storage gm4_blossoming_pots:flower_pots {temp:{id:"$(id)",rotation:$(rotation)}}
 execute store result storage gm4_blossoming_pots:flower_pots temp.score int 1 run scoreboard players set @s gm4_blossoming_pots.loop 0
 data modify storage gm4_blossoming_pots:flower_pots temp.count set from entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] data.count
 function gm4_blossoming_pots:flower/set_temp_data with storage gm4_blossoming_pots:flower_pots temp
 function gm4_blossoming_pots:flower/store_array_len with storage gm4_blossoming_pots:flower_pots temp
+# temp storage should now contain {rotation, score, id, count, data}
 
 function gm4_blossoming_pots:flower/loop with storage gm4_blossoming_pots:flower_pots temp
 

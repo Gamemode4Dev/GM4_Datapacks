@@ -1,7 +1,7 @@
 # Decides if loop_init should use maximum or count
 # @s = temp marker inside decorated pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
-# with block ~ ~ ~ item
+# with {id, count}
 # run from decorated/as_player
 
 # early return

@@ -19,7 +19,7 @@ execute as @n[type=minecraft:item,distance=..0.5,nbt={Item:{id:"minecraft:flower
     # store item data in temp, or marker lol
     # kill it
     # Use marker data (which has player UUID) to give player the item back, might need a macro function for that
-execute run data modify entity @s data.Item set from entity @n[type=minecraft:item,distance=..0.5,nbt={Age:0s},predicate=gm4_blossoming_pots:item_potable] Item.id
+execute run data modify entity @s data.id set from entity @n[type=minecraft:item,distance=..0.5,nbt={Age:0s},predicate=gm4_blossoming_pots:item_potable] Item.id
 execute as @n[type=minecraft:item,distance=..0.5,nbt={Age:0s},predicate=gm4_blossoming_pots:item_potable] run kill @s
 function gm4_blossoming_pots:flower/vanilla_pots/give_back with entity @s data
 
