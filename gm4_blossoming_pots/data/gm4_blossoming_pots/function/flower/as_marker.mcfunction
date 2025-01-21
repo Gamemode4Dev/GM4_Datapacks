@@ -32,7 +32,6 @@ execute store result entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.dat
 function gm4_blossoming_pots:flower/set_full with entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] data
 
 # setting temp
-$data merge storage gm4_blossoming_pots:flower_pots {temp:{id:"$(id)",rotation:$(rotation)}}
 execute store result storage gm4_blossoming_pots:flower_pots temp.score int 1 run scoreboard players set @s gm4_blossoming_pots.loop 0
 data modify storage gm4_blossoming_pots:flower_pots temp.count set from entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] data.count
 function gm4_blossoming_pots:flower/set_temp_data with storage gm4_blossoming_pots:flower_pots temp
