@@ -7,8 +7,8 @@
 # early returns
 # if empty hand, empty the pot, give player the item
 execute \
-    if data entity @s {data:{id:null}} \
-    run return run function gm4_blossoming_pots:flower/item/give_back with entity @s data
+    if data storage gm4_blossoming_pots:flower_pots {temp:{id:"null"}} \
+    run return run function gm4_blossoming_pots:flower/item/give_back with storage gm4_blossoming_pots:flower_pots temp
 # if storage doesn't have, doesnt matter
 $execute unless data storage gm4_blossoming_pots:flower_pots $(id) run return run kill @s
 # if flower pot is full, return

@@ -4,9 +4,7 @@
 # run from flower/raycast/is_flower_pot
 
 # merge marker data for if it doesn't get killed
-    # item id of players main hand is stored on the temp marker and set to null until it is overwritten in flower/raycast/player_rotation. It is set to null here in case the players hand is empty
-    # id is not used by flower/vanilla_pots at all
-data merge entity @s {Tags:["gm4_blossoming_pots.temp.flower_pot","smithed.strict","smithed.entity"],CustomName:'{"text":"gm4_blossoming_pots.temp_marker"}',data:{id:null}}
+data merge entity @s {Tags:["gm4_blossoming_pots.temp.flower_pot","smithed.strict","smithed.entity"],CustomName:'{"text":"gm4_blossoming_pots.temp_marker"}'}
 
 # if temp marker in physical hit box, return 1
 # dxdydz all 0 bc of MC-123441.

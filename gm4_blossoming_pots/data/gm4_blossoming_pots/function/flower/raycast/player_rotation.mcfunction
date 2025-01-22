@@ -3,12 +3,11 @@
 # at @s anchored eyes, then marched forward 0.005 over and over. This should be in the same spot as the new temp marker
 # run from flower/raycast/loop
 
-# HERE
+# set item id to null, should player not be holding an item
+data modify storage gm4_blossoming_pots:flower_pots temp.id set value null
 data modify storage gm4_blossoming_pots:flower_pots temp.id set from entity @s SelectedItem.id
-data modify storage gm4_blossoming_pots:flower_pots temp.UUID set from entity @s UUID
 
-data modify entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.temp.flower_pot,distance=..0.01] data.id set from entity @s SelectedItem.id
-data modify entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.temp.flower_pot,distance=..0.01] data.UUID set from entity @s UUID
+data modify storage gm4_blossoming_pots:flower_pots temp.UUID set from entity @s UUID
 
 # player facing west
 execute if entity @s[y_rotation=45..135] run return run data modify storage gm4_blossoming_pots:flower_pots temp.rotation set value 0
