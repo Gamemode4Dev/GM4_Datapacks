@@ -25,7 +25,8 @@ from beet import (
     NamespaceProxy,
     PluginOptions,
     WrappedException,
-    YamlFile
+    YamlFile,
+    ResourcePack
 )
 from beet.contrib.link import LinkManager
 from beet.contrib.optifine import OptifineProperties
@@ -402,6 +403,8 @@ def pad_model_overrides(ctx: Context):
                     for vanilla_override in reversed(vanilla_overrides):
                         overrides.insert(i+1, deepcopy(vanilla_override))
 
+def merge_policy(ctx: Context):
+    ctx.assets.merge_policy.extend_namespace(ItemModel, item_definition_merging)
 
 def link_resource_pack(ctx: Context):
     """manually links the combined resource pack to minecraft's RP folder when using 'beet dev'"""
@@ -690,6 +693,27 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             self.ctx.generate("gm4:container_gui", merge=Font({
                 "providers": providers
             }))
+
+def item_definition_merging(pack: ResourcePack, path: str, current: ItemModel, conflict: ItemModel) -> bool:
+    """ItemModel beet merge rule for combining range_dispatch properly"""
+    if current.data["model"].get("type") != "minecraft:range_dispatch" or conflict.data["model"].get("type") != "minecraft:range_dispatch":
+        parent_logger.warning(f"item model {path} was sent to merging but only one file uses 'range_dispatch'")
+        return False
+    
+    merged_entries: list[Any] = current.data["model"]["entries"]
+    merged_entries.extend(conflict.data["model"]["entries"])
+    merged_entries.sort(key=lambda entry: entry["threshold"])
+
+    # remove duplicate entries - relying on each CMD to be unique already
+    seen_values: set[int] = set()
+    for entry in merged_entries.copy():
+        if (v:=entry["threshold"]) not in seen_values:
+            seen_values.add(v)
+        else: # otherwise its a duplicate
+            merged_entries.remove(entry)
+
+    return True
+
 
 class TranslationLinter(Reducer):
     """Mecha linter ensuring all translation keys are registered in translations.csv"""
