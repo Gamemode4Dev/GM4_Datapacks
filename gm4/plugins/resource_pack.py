@@ -16,6 +16,7 @@ from beet import (
     Cache,
     Context,
     Font,
+    ItemModel,
     InvalidOptions,
     JsonFile,
     Language,
@@ -341,7 +342,8 @@ def build(ctx: Context):
     rp.update_modeldata_registry()
     rp.generate_model_files()
     rp.process_optifine()
-    rp.generate_model_overrides()
+    # rp.generate_model_overrides()
+    rp.generate_item_definitions()
 
     if not ctx.assets.extra.get("pack.png") and ctx.data.extra.get("pack.png"):
         ctx.assets.icon = ctx.data.icon
@@ -468,6 +470,46 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                 if ref.startswith(self.ctx.project_id) and ref not in all_refs and self.ctx.project_id != 'gm4':
                     self.logger.info(f"Removing undefined custom_model_data from {item_id} registry: '{ref}'")
                     del reg[ref]
+
+    def generate_item_definitions(self):
+        """Generates item-model-definition files in the 'minecraft' namespace, adding range_dispatch entries for each custom_model_data value"""
+        vanilla = self.ctx.inject(Vanilla)
+        vanilla.minecraft_version = '1.21.4'
+        vanilla_item_defs_jar = vanilla.mount("assets/minecraft/items")
+        # group models by item id
+        for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
+            models = filter(lambda m: item_id in m.item.entries(), self.opts.model_data) # with this item_id
+            models = sorted(models, key=lambda m: self.retrieve_index(m.reference)[0])
+
+            vanilla_itemdef = vanilla_item_defs_jar.assets.item_models[f"minecraft:{item_id}"].data["model"]
+
+            new_itemdef: dict[str, Any] = {
+                "model": {
+                    "type": "minecraft:range_dispatch",
+                    "property": "minecraft:custom_model_data",
+                    "entries": [],
+                    "fallback": vanilla_itemdef
+                }
+            }
+            itemdef_entries: list[Any] = new_itemdef["model"]["entries"]
+
+            for model in models:
+                m = model.model[item_id] # model string, or predicate settings, for this particular item id
+                # NOTE only end fishing elytra utlize predicate specification here.
+                # TODO handle predicate format?
+
+                itemdef_entries.append({
+                    "threshold": self.cmd_prefix+self.retrieve_index(model.reference)[0],
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": m # TODO this is where select customs settings will be moved!
+                    }
+                })
+            
+            itemdef_entries.sort(key=lambda entry: entry["threshold"]) # sort entries ascending
+            self.ctx.assets.item_models[f"minecraft:{item_id}"] = ItemModel(new_itemdef)
+
+
 
     def generate_model_overrides(self):
         """Generates item model overrides in the 'minecraft' namespace, adding predicates for custom_model_data"""
