@@ -1,7 +1,7 @@
 # Assigns a score to this marker and reads it back. Kills the marker afterwards
 # @s = test marker, just summoned
 # at @s
-# run from gm4:environment_check/score_on_non_player_entity
+# run from gm4:environment_check/score_on_non_player_entity/run
 
 # set up marker
 scoreboard players set @s gm4.environment_check_results 1
