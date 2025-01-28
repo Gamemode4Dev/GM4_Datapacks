@@ -4,7 +4,7 @@ execute if data storage gm4:log log{type:"install"} run tellraw @a[tag=gm4_show_
 execute if data storage gm4:log log{type:"missing"} run tellraw @a[tag=gm4_show_log] [{"nbt":"log.module","storage":"gm4:log","color":"red"},{"text":" is disabled because ","color":"red"},{"nbt":"log.require","storage":"gm4:log","color":"red"},{"text":" is not installed."}]
 execute if data storage gm4:log log{type:"outdated"} run function gm4:outdated_logs/outdated_start
 execute if data storage gm4:log log{type:"version_conflict"} run function gm4:conflict_logs/version_conflict_start
-execute if data storage gm4:log log{type:"environment_check_failed"} run tellraw @a[tag=gm4_show_log] [{"text":"Cancelled installation of ","color":"red"},{"nbt":"log.module","storage":"gm4:log"},{"text":" as the required environment check '","color":"red"},{"nbt":"log.environment_check","storage":"gm4:log"},{"text":"' failed!","color":"red"}]
+execute if data storage gm4:log log{type:"environment_check_failed"} run tellraw @a[tag=gm4_show_log] [{"nbt":"log.module","storage":"gm4:log","color":"red"},{"text":" is disabled because the required environment check '","color":"red"},{"nbt":"log.environment_check","storage":"gm4:log","color":"red"},{"text":"' failed!","color":"red"}]
 
 data remove storage gm4:log queue[0]
 execute store result score #log_size gm4_data run data get storage gm4:log queue

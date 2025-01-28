@@ -59,21 +59,21 @@ def modules(ctx: Context, opts: VersioningConfig):
 
     # add required environment checks
     for namespaced_environment_check in opts.environment_checks:
-        base_namespace = None
         match namespaced_environment_check.split(":"):
             case [check]:
                 namespace = ctx.project_id
+                line = f"if function {namespace}:{check} "
             case ["gm4", check]:
                 namespace = "gm4"
                 base_version = Version(base_ver)
-                base_namespace = f"gm4-{base_version.major}.{base_version.minor}" # NOTE this is a bit sketch. Does only base need this treatment? How do I know which namespaces need to be versioned for function calls? Or for scoreboards?
+                line = f"if function {namespace}-{base_version.major}.{base_version.minor}:environment_check/{check}/run "  # NOTE this is a bit sketch. Does only base need this treatment? How do I know which namespaces need to be versioned for function calls? Or for scoreboards?
             case [namespace, check]:
-                pass
+                line = f"if function {namespace}:{check} "
             case _:
                 raise ValueError(f"{namespaced_environment_check} is not a valid environment check name")
 
-        lines[0] += f"if function {namespace if not base_namespace else base_namespace}:environment_check/{check} "
-        lines[1] += f"if function {namespace if not base_namespace else base_namespace}:environment_check/{check} "
+        lines[0] += line
+        lines[1] += line
         log_data = f"{{type:\"environment_check_failed\",module:\"{ctx.project_name}\",id:\"{ctx.project_id}\",environment_check:\"{namespace}:{check}\"}}"
         lines.append(f"execute if score ${check} {namespace}.environment_check_results matches 0 run data modify storage gm4:log queue append value {log_data}")
 
