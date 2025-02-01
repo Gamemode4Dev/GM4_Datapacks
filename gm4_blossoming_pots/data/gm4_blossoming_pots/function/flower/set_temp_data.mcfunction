@@ -1,4 +1,4 @@
-# sets temp.data for the loop
+# Sets temp.data for flower/set_displays
 # @s = temp marker inside flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with {id, count, score}

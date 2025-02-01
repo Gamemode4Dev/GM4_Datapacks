@@ -1,6 +1,6 @@
-# sets rotation data of the new temp marker from players
+# Gets player rotation data for later
 # @s = player who interacted with a decorated pot
-# at @s anchored eyes, then marched forward 0.005 over and over. This should be in the same spot as the new temp marker
+# at @s
 # run from decorated/as_player
 
 # player facing west

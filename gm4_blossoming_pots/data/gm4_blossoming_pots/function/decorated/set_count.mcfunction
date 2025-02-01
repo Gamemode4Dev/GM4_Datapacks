@@ -1,4 +1,4 @@
-# Decides if loop_init should use maximum or count
+# Decides if decorated/prepare_data should use maximum or count
 # @s = temp marker inside decorated pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with {id, count}

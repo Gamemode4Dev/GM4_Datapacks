@@ -1,4 +1,4 @@
-# gives player the vanilla flower pot item back that they tried to plant in a custom flower pot
+# Gives player the vanilla flower pot item back that they tried to plant in a custom flower pot
 # @s = temp marker inside filled vanilla flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with {UUID, id}

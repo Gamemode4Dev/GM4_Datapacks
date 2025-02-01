@@ -1,4 +1,4 @@
-# literally just plays sound
+# Literally just plays sound
 # @s = temp marker inside decorated pot
 # with {place_sound}
 # at @s align xyz positioned ~.5 ~.5 ~.5

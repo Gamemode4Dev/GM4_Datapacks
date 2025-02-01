@@ -1,4 +1,4 @@
-# sets perma marker data to indicate it is full when its count reaches the same as storage's maximum
+# Sets perma marker full tag to full when its count reaches the same as storage's maximum
 # @s = perma marker inside flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with {id, count}

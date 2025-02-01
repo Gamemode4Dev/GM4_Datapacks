@@ -1,4 +1,4 @@
-# main loop for raycasting for the flower pot the player interacted with
+# Main loop for raycasting for the flower pot the player interacted with
 # @s = player who interacted with a flower pot
 # at @s anchored eyes, then marched forward 0.005 over and over
 # run from flower/as_player and self

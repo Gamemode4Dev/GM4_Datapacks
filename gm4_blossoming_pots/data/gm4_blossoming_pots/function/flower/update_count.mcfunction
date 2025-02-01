@@ -1,4 +1,4 @@
-# increments perma markers count and sets full tag if count has reached the maximum
+# Increments perma markers count and check-and-sets full tag
 # @s = perma marker inside flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # run from flower/prepare_data
