@@ -1,9 +1,9 @@
 # literally just plays sound
-# @s = a single player within 16 blocks of the flower pot
+# @s = temp marker inside flower pot
 # with storage gm4_blossoming_pots:flower_pots <id of item in >
-# at the center of the block of the flower pot
+# at @s align xyz positioned ~.5 ~.5 ~.5
 # with {place_sound}
-# run from flower/as_marker
+# run from flower/prepare_data
 
 
-$playsound $(place_sound) block @s ~ ~-0.3125 ~
+$playsound $(place_sound) block @a[distance=..16] ~ ~-0.3125 ~
