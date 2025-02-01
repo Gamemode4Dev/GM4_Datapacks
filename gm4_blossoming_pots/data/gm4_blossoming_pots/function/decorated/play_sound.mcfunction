@@ -1,7 +1,7 @@
 # literally just plays sound
-# @s = a single player within 16 blocks of the decorated pot
+# @s = temp marker inside decorated pot
 # with {place_sound}
-# at the center of the decorated pot
+# at @s align xyz positioned ~.5 ~.5 ~.5
 # run from decorated/loop_init
 
-$playsound $(place_sound) block @s ~ ~ ~
+$playsound $(place_sound) block @a[distance=..16] ~ ~ ~

@@ -1,7 +1,7 @@
 # Checks the temp markers physical location in the block, to see if it is in the collision box of the decorated pot
 # @s = temp marker summoned in parent function
 # at @s
-# run from decorated/raycast/is_decorated_pot
+# run from decorated/raycast
 
 # merge marker data for if it doesn't get killed
 data merge entity @s {Tags:["gm4_blossoming_pots.temp.decorated_pot","smithed.strict","smithed.entity"],CustomName:'{"text":"gm4_blossoming_pots.temp_marker"}'}
