@@ -19,9 +19,7 @@ execute as @n[type=minecraft:item,distance=..0.5,nbt={Item:{id:"minecraft:flower
     # store item data in temp
     # kill it
     # Use temp storage to give player the item back, need a macro function for that
-execute run data modify storage gm4_blossoming_pots:flower_pots temp.id set from entity @n[type=minecraft:item,distance=..0.5,nbt={Age:0s},predicate=gm4_blossoming_pots:item_potable] Item.id
-execute as @n[type=minecraft:item,distance=..0.5,nbt={Age:0s},predicate=gm4_blossoming_pots:item_potable] run kill @s
-    # Note: Should the above 2 commands be combined into one function to save on the selectors?
+execute as @n[type=minecraft:item,distance=..0.5,nbt={Age:0s},predicate=gm4_blossoming_pots:item_potable] run function gm4_blossoming_pots:vanilla_pot_handling/get_dropped_item
 function gm4_blossoming_pots:vanilla_pot_handling/give_item_back with storage gm4_blossoming_pots:flower_pots temp
 
 # kill marker
