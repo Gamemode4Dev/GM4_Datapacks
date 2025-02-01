@@ -4,7 +4,7 @@
 # run from advancement gm4_blossoming_pots:item_in_pot
 
 # Reset advancement
-advancement revoke @s only gm4_blossoming_pots:item_in_pot
+advancement revoke @s only gm4_blossoming_pots:interact_with_decorated_pot
 
 # Raycast for the pot (set up range and search)
 execute store result score @s gm4_blossoming_pots.range run attribute @s minecraft:block_interaction_range get 200
