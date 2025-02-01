@@ -1,7 +1,7 @@
 # Checks the temp markers physical location in the block, to see if it is in the collision box of the flower pot
 # @s = temp marker summoned in parent function
 # at @s
-# run from flower/vanilla_pots/is_vanilla_pot
+# run from vanilla_pot_handling/raycast
 
 # merge marker data for if it doesn't get killed
 data merge entity @s {Tags:["gm4_blossoming_pots.temp.vanilla_flower_pot","smithed.strict","smithed.entity"],CustomName:'{"text":"gm4_blossoming_pots.temp_marker"}'}

@@ -2,6 +2,6 @@
 # @s = temp marker inside filled vanilla flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with {UUID, id}
-# run from flower/vanilla_pots/as_marker
+# run from vanilla_pot_handling/as_marker
 
 $execute at @p[nbt={UUID:$(UUID)},gamemode=!creative] run summon minecraft:item ~ ~ ~ {Item:{id:"$(id)"}}
