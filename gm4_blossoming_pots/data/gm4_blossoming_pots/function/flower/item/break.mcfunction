@@ -1,8 +1,11 @@
-# Summons item stack of perma marker's storage, and kills perma marker on flower pot breakage
+# Flower pot cleanup if marker isn't in a flower pot
 # @s = flower pot perma marker
 # at @s
 # with {id, count}
 # run from main
+
+# kill associated displays
+kill @e[type=minecraft:block_display,tag=gm4_blossoming_pots.display.flower_pot,distance=..0.1]
 
 # just summonining an item so not giving it smithed.entity
 # Motion is predetermined. I can't be asked to make it random, shoot me.
