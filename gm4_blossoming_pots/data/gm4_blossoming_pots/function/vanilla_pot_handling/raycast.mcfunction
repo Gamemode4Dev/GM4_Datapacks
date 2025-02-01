@@ -5,7 +5,7 @@
 
 # if block is a vanilla flower pot and execution context is in the flower pot, proceed to as_marker
 execute unless block ~ ~ ~ #gm4_blossoming_pots:potted_plants \
-    summon minecraft:marker if function gm4_blossoming_pots:vanilla_pot_handling/in_pot \
+    summon minecraft:marker if function gm4_blossoming_pots:vanilla_pot_handling/in_vanilla_flower_pot \
     at @s align xyz positioned ~.5 ~.5 ~.5 \
     run return run function gm4_blossoming_pots:vanilla_pot_handling/as_marker
     
