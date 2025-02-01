@@ -22,7 +22,6 @@ $execute unless entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flo
 $execute as @p[nbt={UUID:$(UUID)},gamemode=!creative] run item modify entity @s weapon.mainhand gm4_blossoming_pots:count_decr
 # increment perma marker count by 1
     # this is a nightmare of selectors
-        # could tag it at the start of the function to have this be just checking that one tag?
 execute store result score @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] gm4_blossoming_pots.loop \
     run data get entity @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] data.count 1
 scoreboard players add @n[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.2] gm4_blossoming_pots.loop 1
