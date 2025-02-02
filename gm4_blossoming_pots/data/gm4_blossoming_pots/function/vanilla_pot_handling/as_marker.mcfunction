@@ -17,8 +17,9 @@ execute as @n[type=minecraft:item,distance=..0.5,nbt={Item:{id:"minecraft:flower
 
 # store dropped items data in temp and kill it
 execute as @n[type=minecraft:item,distance=..0.5,nbt={Age:0s},predicate=gm4_blossoming_pots:item_potable] run function gm4_blossoming_pots:vanilla_pot_handling/get_dropped_item
-# use temp storage to give player the item back, need a macro function for that
-function gm4_blossoming_pots:vanilla_pot_handling/give_item_back with storage gm4_blossoming_pots:flower_pots temp
+
+# giving item back is run from as_player following this.
+data modify storage gm4_blossoming_pots:flower_pots temp.signal_give_back set value 1
 
 # kill marker
 kill @s

@@ -6,8 +6,6 @@
 # set item id to null, should player not be holding an item
 data modify storage gm4_blossoming_pots:flower_pots temp.id set value null
 data modify storage gm4_blossoming_pots:flower_pots temp.id set from entity @s SelectedItem.id
-# set player UUID for later
-data modify storage gm4_blossoming_pots:flower_pots temp.UUID set from entity @s UUID
 
 # player facing west
 execute if entity @s[y_rotation=45..135] unless entity @s[y_rotation=45] run return run data modify storage gm4_blossoming_pots:flower_pots temp.rotation set value 0
