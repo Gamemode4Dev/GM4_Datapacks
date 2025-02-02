@@ -19,7 +19,7 @@ $execute unless entity @e[type=minecraft:marker,tag=gm4_blossoming_pots.data.flo
     run summon minecraft:marker ~ ~ ~ {Tags:["gm4_blossoming_pots.data.flower_pot","smithed.strict","smithed.entity"],data:{id:"$(id)",count:0,full:0},CustomName:'{"text":"gm4_blossoming_pots.flower_pot"}'}
 
 # signal player mainhand to be decremented by as_player
-data modify storage gm4_blossoming_pots:decorated_pots temp.signal_item_decr set value 1
+data modify storage gm4_blossoming_pots:flower_pots temp.signal_item_decr set value 1
 # increment perma marker count by 1
 execute as @e[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.1,limit=1] run function gm4_blossoming_pots:flower/update_count
 

@@ -14,7 +14,7 @@ execute store result score @s gm4_blossoming_pots.range run attribute @s minecra
 execute anchored eyes run function gm4_blossoming_pots:flower/raycast
 
 # if signaled, decrement player mainhand (set in flower/prepare_data)
-execute if data storage gm4_blossoming_pots:decorated_pots temp.signal_item_decr run item modify entity @s weapon.mainhand gm4_blossoming_pots:count_decr
+execute if data storage gm4_blossoming_pots:flower_pots temp.signal_item_decr if entity @s[gamemode=!creative] run item modify entity @s weapon.mainhand gm4_blossoming_pots:count_decr
 
 # if signaled, give item back to player (set in flower/remove_plant)
 execute if data storage gm4_blossoming_pots:flower_pots temp.perma_marker_data run function gm4_blossoming_pots:flower/give_item_to_player with storage gm4_blossoming_pots:flower_pots temp.perma_marker_data

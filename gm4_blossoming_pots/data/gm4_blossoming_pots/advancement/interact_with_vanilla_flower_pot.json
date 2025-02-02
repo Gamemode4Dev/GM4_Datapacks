@@ -17,6 +17,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_blossoming_pots:flower/vanilla_pots/as_player"
+    "function": "gm4_blossoming_pots:vanilla_pot_handling/as_player"
   }
 }

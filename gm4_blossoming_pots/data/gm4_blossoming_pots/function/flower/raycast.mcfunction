@@ -4,7 +4,7 @@
 # run from flower/as_player and self
 
 # if current location is within the flower pots hit box, summon a temp marker, set its data with the player rotation, and exit raycast
-execute unless block ~ ~ ~ minecraft:flower_pot \
+execute if block ~ ~ ~ minecraft:flower_pot \
     summon minecraft:marker if function gm4_blossoming_pots:flower/in_flower_pot \
     at @s align xyz positioned ~.5 ~.5 ~.5 \
     run return run function gm4_blossoming_pots:flower/prepare_data with storage gm4_blossoming_pots:flower_pots temp
