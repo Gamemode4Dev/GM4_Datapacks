@@ -5,6 +5,8 @@
 
 # Reset advancement
 advancement revoke @s only gm4_blossoming_pots:interact_with_decorated_pot
+# Reset temp
+data remove storage gm4_blossoming_pots:decorated_pots temp
 
 function gm4_blossoming_pots:decorated/get_player_rotation
 # raycast
