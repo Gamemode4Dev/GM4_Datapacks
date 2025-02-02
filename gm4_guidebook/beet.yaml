@@ -18,7 +18,6 @@ pipeline:
 
 meta:
   gm4:
-    minecraft: []
     versioning:
       required:
         lib_forceload: 1.4.0
