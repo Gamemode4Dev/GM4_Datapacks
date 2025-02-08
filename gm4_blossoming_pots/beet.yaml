@@ -22,10 +22,8 @@ meta:
       schedule_loops: [main]
     website:
       description: Decorated Pots and Flower Pots extended to allow all kinds of things to be placed in them! Decorate in Style!
-      #recommended:
-        #- 
-      notes:
-        - <add notes on version or incompatibilities?>
+      recommended: []
+      notes: []
     #modrinth: 
       #project_id: null
     #smithed:
