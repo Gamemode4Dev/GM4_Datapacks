@@ -11,4 +11,4 @@ data remove storage gm4_blossoming_pots:decorated_pots temp
 function gm4_blossoming_pots:decorated/get_player_rotation
 # raycast
 execute store result score @s gm4_blossoming_pots.range run attribute @s minecraft:block_interaction_range get 200
-execute anchored eyes run function gm4_blossoming_pots:decorated/raycast
+execute anchored eyes positioned ^ ^ ^ run function gm4_blossoming_pots:decorated/raycast

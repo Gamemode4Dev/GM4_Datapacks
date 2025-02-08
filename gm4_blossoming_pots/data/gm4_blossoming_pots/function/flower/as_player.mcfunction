@@ -11,7 +11,7 @@ data remove storage gm4_blossoming_pots:flower_pots temp
 function gm4_blossoming_pots:flower/get_player_data
 # raycast
 execute store result score @s gm4_blossoming_pots.range run attribute @s minecraft:block_interaction_range get 200
-execute anchored eyes run function gm4_blossoming_pots:flower/raycast
+execute anchored eyes positioned ^ ^ ^ run function gm4_blossoming_pots:flower/raycast
 
 # if signaled, decrement player mainhand (set in flower/prepare_data)
 execute if data storage gm4_blossoming_pots:flower_pots temp.signal_item_decr if entity @s[gamemode=!creative] run item modify entity @s weapon.mainhand gm4_blossoming_pots:count_decr

@@ -10,7 +10,7 @@ data remove storage gm4_blossoming_pots:flower_pots temp
 
 # Raycast for the pot (set up range and search) and proceed if needed
 execute store result score @s gm4_blossoming_pots.range run attribute @s minecraft:block_interaction_range get 200
-execute anchored eyes run function gm4_blossoming_pots:vanilla_pot_handling/raycast
+execute anchored eyes positioned ^ ^ ^ run function gm4_blossoming_pots:vanilla_pot_handling/raycast
 
 # if signaled (set in vanilla_pot_handling/as_marker), summon item at player to give it back to them
 execute if data storage gm4_blossoming_pots:flower_pots temp.signal_give_back if entity @s[gamemode=!creative] run function gm4_blossoming_pots:vanilla_pot_handling/give_item_back with storage gm4_blossoming_pots:flower_pots temp
