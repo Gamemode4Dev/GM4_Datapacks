@@ -6,6 +6,7 @@ scoreboard objectives add gm4_blossoming_pots.range dummy "gm4_bPots.range"
 scoreboard objectives add gm4_blossoming_pots.loop dummy "gm4_bPots.loop"
 scoreboard objectives add gm4_blossoming_pots.merge_success dummy "gm4_bPots.merge_success"
 scoreboard objectives add gm4_blossoming_pots.sound dummy "gm4_bPots.sound"
+scoreboard objectives add gm4_blossoming_pots.display_stage dummy "gm4_bPots.display_stage"
 
 execute unless data storage gm4_blossoming_pots:decorated_pots {version_history:["1-61"]} run function gm4_blossoming_pots:decorated/set_storage
 execute unless data storage gm4_blossoming_pots:flower_pots {version_history:["1-61"]} run function gm4_blossoming_pots:flower/set_storage

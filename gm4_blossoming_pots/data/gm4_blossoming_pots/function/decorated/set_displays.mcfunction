@@ -10,11 +10,11 @@ $execute unless entity @e[type=minecraft:block_display,distance=..0.1,tag=gm4_bl
 # merge data and store the success
 $execute store success score @s gm4_blossoming_pots.merge_success \
     run data merge entity @e[type=minecraft:block_display,distance=..0.1,tag=gm4_blossoming_pots.display.decorated_pot.$(score),limit=1] $(data)
+# set display_stage score to prevent running the loop when the displays are already on the right stage number
+$scoreboard players set @e[type=minecraft:block_display,distance=..0.1,tag=gm4_blossoming_pots.display.decorated_pot.$(score),limit=1] gm4_blossoming_pots.display_stage $(count)
+
 # if a single merge success set sound to play
 execute if score @s gm4_blossoming_pots.merge_success matches 1 run scoreboard players set @s gm4_blossoming_pots.sound 1
-
-# set FallDistance to the current stage of the display, this is used to prevent running the loop when the displays already have the desired data
-$data merge entity @e[type=minecraft:block_display,distance=..0.1,tag=gm4_blossoming_pots.display.decorated_pot.$(score),limit=1] {FallDistance:$(count).0f}
 
 # increment score
 execute store result storage gm4_blossoming_pots:decorated_pots temp.score int 1 run scoreboard players add @s gm4_blossoming_pots.loop 1
