@@ -4,4 +4,4 @@
 # with {id, count}
 # run from flower/update_count
 
-$execute if data storage gm4_blossoming_pots:flower_pots {"$(id)":{maximum:$(count)}} run data modify entity @s data.full set value 1
+$execute if data storage gm4_blossoming_pots:flower_pots {"$(id)":{maximum:$(count)}} run data modify entity @s data.gm4_blossoming_pots.full set value 1
