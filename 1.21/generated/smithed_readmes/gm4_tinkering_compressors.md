@@ -14,7 +14,7 @@ A full list of recipes can be read on the [Wiki](https://wiki.gm4.co/Standard_Cr
 
 ### Credits
 - Creator: [SirSheepe](https://bsky.app/profile/sirsheepe.bsky.social)
-- Updated by: [MichaelModulo](https://www.michaelmodulo.dev/page/links.html), [BPR](https://bsky.app/profile/bpr02.com)
+- Updated by: [Modulorium](https://www.modulorium.dev), [BPR](https://bsky.app/profile/bpr02.com)
 - Textures by: [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social)
 - Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 

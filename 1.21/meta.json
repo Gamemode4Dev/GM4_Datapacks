@@ -1,5 +1,5 @@
 {
-  "last_commit": "00a8bb2de23f8140b27c7e0212e7701acc2943fd",
+  "last_commit": "4de739ea8bcdedfda45dada0c8f14419a467cbce",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1687,13 +1687,13 @@
     {
       "id": "gm4_live_catch",
       "name": "Live Catch",
-      "version": "1.4.9",
-      "hash": "42f4414608a1f22c65aafba47d8f0ac9073df0d3",
+      "version": "1.4.10",
+      "hash": "0e4a634b14b84c9f7bb56cf31137b47c81ff228b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Live_Catch",
       "credits": {
         "Creator": [
-          "MichaelModulo"
+          "Modulorium"
         ],
         "Icon Design": [
           "BPR"
@@ -1794,8 +1794,8 @@
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.6.13",
-      "hash": "d38377d494df34ab719bbddd7d9b6b55a1895f29",
+      "version": "1.6.14",
+      "hash": "45694ed8416e558208b1406b4ee3a86e1ec52fad",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -1809,7 +1809,7 @@
         "Updated by": [
           "Denniss",
           "Misode",
-          "MichaelModulo",
+          "Modulorium",
           "TheEpyonProject"
         ],
         "Textures by": [
@@ -2456,13 +2456,13 @@
     {
       "id": "gm4_rope_ladders",
       "name": "Rope Ladders",
-      "version": "1.4.8",
-      "hash": "e9120aff8fdb05cf64d35012dada38862d868f63",
+      "version": "1.4.9",
+      "hash": "2c4f0358b59c8e22fede9010b62572f6f6212989",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Rope_Ladders",
       "credits": {
         "Creator": [
-          "MichaelModulo"
+          "Modulorium"
         ],
         "Icon Design": [
           "BPR"
@@ -2898,8 +2898,8 @@
     {
       "id": "gm4_tinkering_compressors",
       "name": "Tinkering Compressors",
-      "version": "1.5.14",
-      "hash": "ceb223e2022a2f3e0724cdef095d1d8cafcd8283",
+      "version": "1.5.15",
+      "hash": "5bdcf48d7dacc6da96dcb0ac6789da6756c67877",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tinkering_Compressors",
       "credits": {
@@ -2907,7 +2907,7 @@
           "SirSheepe"
         ],
         "Updated by": [
-          "MichaelModulo",
+          "Modulorium",
           "BPR"
         ],
         "Textures by": [
@@ -3805,10 +3805,10 @@
         "https://github.com/Luexa"
       ]
     },
-    "MichaelModulo": {
-      "name": "MichaelModulo",
+    "Modulorium": {
+      "name": "Modulorium",
       "links": [
-        "https://www.michaelmodulo.dev/page/links.html"
+        "https://www.modulorium.dev"
       ]
     },
     "Misode": {

@@ -13,7 +13,7 @@ Ever wanted to place unsupported ladders? This modular data pack allows you to e
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Rope_Ladders)
 
 ### Credits
-- Creator: [MichaelModulo](https://www.michaelmodulo.dev/page/links.html)
+- Creator: [Modulorium](https://www.modulorium.dev)
 - Icon Design: [BPR](https://bsky.app/profile/bpr02.com)
 
 ---

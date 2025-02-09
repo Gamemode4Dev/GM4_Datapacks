@@ -15,7 +15,7 @@ Read more about all the details on the [Wiki](https://wiki.gm4.co/Metallurgy).
 
 ### Credits
 - Creators: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social), [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [Bloo](https://bsky.app/profile/bloo.boo), [BPR](https://bsky.app/profile/bpr02.com), [SirSheepe](https://bsky.app/profile/sirsheepe.bsky.social)
-- Updated by: [Denniss](https://github.com/Dennis-0), [Misode](https://bsky.app/profile/misode.dev), [MichaelModulo](https://www.michaelmodulo.dev/page/links.html), TheEpyonProject
+- Updated by: [Denniss](https://github.com/Dennis-0), [Misode](https://bsky.app/profile/misode.dev), [Modulorium](https://www.modulorium.dev), TheEpyonProject
 - Textures by: [Memo](https://linktr.ee/miraku_memo)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
