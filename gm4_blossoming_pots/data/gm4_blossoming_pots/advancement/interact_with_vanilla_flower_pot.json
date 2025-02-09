@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "use_pot": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "#gm4_blossoming_pots:potted_plants"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:any_block_use"
+    }
+  },
+  "rewards": {
+    "function": "gm4_blossoming_pots:vanilla_pot_handling/as_player"
+  }
+}
