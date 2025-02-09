@@ -5,7 +5,7 @@
 # run from decorated/set_count
 
 # early return if displays are already on desired stage, does not check plant type
-$execute if score @e[type=minecraft:block_display,distance=..0.1,tag=gm4_blossoming_pots.display.decorated_pot,limit=1] gm4_blossoming_pots.display_stage $(count) run return run kill @s
+$execute if score @e[type=minecraft:block_display,distance=..0.1,tag=gm4_blossoming_pots.display.decorated_pot,limit=1] gm4_blossoming_pots.display_stage matches $(count) run return run kill @s
 
 $execute store result score $array_len gm4_blossoming_pots.loop run data get storage gm4_blossoming_pots:decorated_pots $(id).$(count)
 
