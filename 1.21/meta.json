@@ -1,5 +1,5 @@
 {
-  "last_commit": "b122299c099e1bb0ebfae828ab8f940b57507af0",
+  "last_commit": "00a8bb2de23f8140b27c7e0212e7701acc2943fd",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -392,6 +392,39 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "TSz8iiMD",
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_blossoming_pots",
+      "name": "Blossoming Pots",
+      "version": "3.1.0",
+      "hash": "3db5ae742020194be5ccd4ea4d408473fe224b36",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Blossoming_Pots",
+      "credits": {
+        "Creator": [
+          "runcows"
+        ],
+        "Icon Design": [
+          "runcows"
+        ]
+      },
+      "requires": [],
+      "description": "Decorated Pots and Flower Pots extended to allow all kinds of things to be placed in them! Decorate in Style!",
+      "recommends": [],
+      "minecraft": [
+        "1.21",
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2025-02-09",
+      "modrinth_id": null,
       "smithed_link": null,
       "pmc_link": null
     },
@@ -3355,8 +3388,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.3.17",
-      "hash": "9fa678eb334d716054c5d140d40499dad35b2211",
+      "version": "1.3.18",
+      "hash": "55506ba3fe4488f36e75b52cc55eb510fe0cb064",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3794,6 +3827,12 @@
       "name": "Nik3141",
       "links": [
         "https://youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"
+      ]
+    },
+    "runcows": {
+      "name": "runcows",
+      "links": [
+        "https://bsky.app/profile/runcows.bsky.social"
       ]
     },
     "Scommander": {
