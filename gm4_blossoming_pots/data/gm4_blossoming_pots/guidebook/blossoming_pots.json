@@ -1,0 +1,46 @@
+{
+    "id": "blossoming_pots",
+    "name": "Blossoming Pots",
+    "module_type": "module",
+    "icon": {
+      "id": "minecraft:decorated_pot"
+    },
+    "criteria": {
+      "obtain_pot": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "minecraft:decorated_pot",
+                "minecraft:flower_pot"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "sections": [
+      {
+        "name": "display",
+        "enable": [],
+        "requirements": [
+          [
+            "obtain_pot"
+          ]
+        ],
+        "pages": [
+          [
+            {
+              "insert": "title"
+            },
+            {
+              "translate": "text.gm4.guidebook.blossoming_pots.description",
+              "fallback": "Interacting with a Decorated Pot or empty Flower Pot while holding any one of the supported items will plant it in the pot.\n\nCheck the full supported item list on the wiki."
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  

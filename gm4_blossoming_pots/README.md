@@ -1,26 +1,11 @@
 # Blossoming Pots<!--$headerTitle--><!--$pmc:delete-->
 
-Decorated Pots and Flower Pots extended to allow all kinds of things to be placed in them! Decorate in Style! <!--$pmc:headerSize-->
+Greatly expands the selection of potable plants. Use Decorated Pots as just abnormally large flower pots. Decorate in Style! <!--$pmc:headerSize-->
+
+<img src="images/blossoming_pots.webp" alt="Plant in decorated pots and flower pots alike" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
 ### Features
-- Some plants have multiple different heights or options depending on how many items you put in the pot. 
-- Directional plants are placed oriented towards you.
-- Allows you to plant the following
-  - All Flowers (including 2 tall)
-  - All Saplings (including azaleas and propagules)
-  - All Leaves
-  - Cactus
-  - All Fungi
-  - All Dead / Alive Coral & Coral Fans!
-  - Nether Roots & Vines
-  - Tall & Short Grass
-  - Tall & Short Ferns
-  - Dead Bush
-  - All Lush Cave Plants
-  - Sweet Berry Bush
-  - Sea Pickle
-  - Most Seeds
-  - Netherwart
-  - Chorus Flowers
-  - All Amethyst Buds & Clusters
-  - Dripstone
+- Interacting with a decorated pot or empty flower pot while holding any one of the supported items will plant it in the pot.
+- Interacting with a flower pot from this module with an empty hand will empty the flower pot, just like vanilla flower pots. Decorated Pots will have to be broken to unplant that which you have potted.
+- Decorated pot plants often have multiple stages for a plant.
+- [Click Here](https://wiki.gm4.co/Blossoming_Pots#Supported_Items) to see the full list of supported items
