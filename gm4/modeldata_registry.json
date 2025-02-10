@@ -275,6 +275,9 @@
       "gm4_trapped_signs:item/trapped_dark_oak_sign": 1,
       "gm4_trapped_signs:item/secret_trapped_dark_oak_sign": 2
     },
+    "decorated_pot": {
+      "gm4_blossoming_pots:guidebook_icon/blossoming_pots": 1
+    },
     "deepslate_copper_ore": {
       "gm4_smelteries:block/ore_display/deepslate_copper_ore": 1
     },
