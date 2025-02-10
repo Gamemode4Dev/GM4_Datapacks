@@ -1,11 +1,11 @@
 # Blossoming Pots<!--$headerTitle--><!--$pmc:delete-->
 
-Greatly expands the selection of potable plants. Use Decorated Pots as just abnormally large flower pots. Decorate in Style! <!--$pmc:headerSize-->
+Greatly expands the selection of potable plants. Use Decorated Pots as abnormally large Flower Pots. Decorate in Style! <!--$pmc:headerSize-->
 
-<img src="images/blossoming_pots.webp" alt="Plant in decorated pots and flower pots alike" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
+<img src="images/blossoming_pots.webp" alt="Plant in Decorated Pots and Flower Pots alike" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
 ### Features
-- Interacting with a decorated pot or empty flower pot while holding any one of the supported items will plant it in the pot.
-- Interacting with a flower pot from this module with an empty hand will empty the flower pot, just like vanilla flower pots. Decorated Pots will have to be broken to unplant that which you have potted.
-- Decorated pot plants often have multiple stages for a plant.
-- [Click Here](https://wiki.gm4.co/Blossoming_Pots#Supported_Items) to see the full list of supported items
+- To pot a plant, interact with a Decorated Pot or empty Flower Pot while holding a supported item.
+- Flower Pots from this module can be emptied by interacting with an empty hand, just like vanilla Flower Pots. To empty a Decorated Pot of its plant, it must be broken.
+- Decorated Pot plants often have multiple stages for a plant.
+- [Read the wiki](https://wiki.gm4.co/Blossoming_Pots#Supported_Items) to see the full list of supported items

@@ -36,7 +36,7 @@
             },
             {
               "translate": "text.gm4.guidebook.blossoming_pots.description",
-              "fallback": "Interacting with a Decorated Pot or empty Flower Pot while holding any one of the supported items will plant it in the pot.\n\nCheck the full supported item list on the wiki."
+              "fallback": "To pot a plant, interact with a Decorated Pot or empty Flower Pot while holding a supported item.\n\nCheck the full supported item list on the wiki."
             }
           ]
         ]
