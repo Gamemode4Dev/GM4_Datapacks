@@ -1,7 +1,7 @@
 # Upgrade legacy flower pot plant to current gm4 version
 # @s = type=minecraft:marker, tag=rc_blossoming_pots.flowerPot
 # at @s
-# run from upgrade_path/3.1
+# run from upgrade_path/3.1 and decorated/as_player and flower/as_player and vanilla_pot_handling/as_player
 
 
 # Note: legacy pot displays are located at align xyz positioned ~.5 ~ ~.5, different from current version.

@@ -5,6 +5,15 @@
 
 # Reset advancement
 advancement revoke @s only gm4_blossoming_pots:interact_with_vanilla_flower_pot
+
+# run upgrade paths if needed
+execute if data storage gm4_blossoming_pots:decorated_pots {version_history:["pre-gm4"]} \
+    as @e[type=minecraft:block_display,tag=rc_blossoming_pots.decorPotPlant0,distance=..10] at @s \
+    run function gm4_blossoming_pots:upgrade_path/3.1/legacy_decorated_pot
+execute if data storage gm4_blossoming_pots:flower_pots {version_history:["pre-gm4"]} \
+    as @e[type=minecraft:block_display,tag=rc_blossoming_pots.flowerPot,distance=..10] at @s \
+    run function gm4_blossoming_pots:upgrade_path/3.1/legacy_flower_pot
+
 # Reset temp
 data remove storage gm4_blossoming_pots:flower_pots temp
 
