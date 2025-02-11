@@ -1,8 +1,8 @@
 # Sets up loop for plant stage changes
-# @s = temp marker inside flower pot
+# @s = temp entity inside flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
-# with {UUID, id, rotation}
-# run from flower/raycast
+# with {id, rotation}
+# run from flower/raycast and upgrade_path/3.1/legacy_flower_pot
 
 # early returns
 # if empty hand, empty the pot, give player the item

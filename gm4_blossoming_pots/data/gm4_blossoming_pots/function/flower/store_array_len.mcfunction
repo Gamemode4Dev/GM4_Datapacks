@@ -1,5 +1,5 @@
 # Sets array length because we need to macro the count
-# @s = temp marker inside flower pot
+# @s = temp entity inside flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with {id, count}
 # run from flower/prepare_data

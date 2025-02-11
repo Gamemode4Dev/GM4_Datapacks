@@ -1,5 +1,5 @@
 # Main Loop for setting displays to desired stage
-# @s = temp marker inside decorated pot
+# @s = temp entity inside decorated pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with {rotation, score, id, count, data}
 # run from decorated/prepare_data and self

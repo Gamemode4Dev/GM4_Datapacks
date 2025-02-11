@@ -1,8 +1,8 @@
 # Decides if decorated/prepare_data should use maximum or count
-# @s = temp marker inside decorated pot
+# @s = temp entity inside decorated pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with {id, count}
-# run from decorated/check_if_pot_empty
+# run from decorated/check_if_pot_empty and upgrade_path/3.1/legacy_decorated_pot
 
 # early return for unsupported item
 $execute unless data storage gm4_blossoming_pots:decorated_pots $(id) run return run kill @s

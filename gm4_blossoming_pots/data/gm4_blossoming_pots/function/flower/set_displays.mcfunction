@@ -1,5 +1,5 @@
 # Main Loop for setting displays to desired stage
-# @s = temp marker inside flower pot
+# @s = temp temp inside flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with {rotation, score, data}
 # run from flower/as_marker and self
