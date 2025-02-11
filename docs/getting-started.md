@@ -4,6 +4,7 @@ This guide will show how to setup a local development environment to build, test
 ## Table of contents
 * [Installation](#installation)
 * [Building modules](#building-modules)
+* [Common issues](#common-issues)
 * [Submitting changes](#submitting-changes)
 
 ## Installation
@@ -11,7 +12,7 @@ To contribute to our project you need to install [Git](https://git-scm.com/downl
 
 Our modules are built using [beet](https://github.com/mcbeet/beet), which is a Python framework that allows us to automatically validate and generate part of our data packs and resource packs.
 
-You will need to install [uv](https://docs.astral.sh/uv/) as project manager. If you don't already have Python installed, uv will do that automatically.
+You will need to install [uv](https://docs.astral.sh/uv/) as project manager. If you don't already have Python installed, uv will do that automatically. We currently use Python 3.10.
 ```sh
 # MacOS, Linux, or Git Bash (recommended)
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -40,13 +41,21 @@ uv run beet dev --link <world_name> --watch metallurgy *_shamir
 ```
 * `uv run` makes sure that the command uses the correct Python dependencies
 * `beet dev` builds the data packs to the `out` folder
-* `--link <world_name>` copies the packs to a local world
+* `--link <world_name>` copies the packs to a local world (filepath to the world's directory)
 * `--watch` watches for file changes and then rebuilds
 * `metallurgy *_shamir` specifies the list of module IDs to build
 
 Building the release version of all modules is also possible. It will output the zipped data packs in the `release/<version>` folder. Running this could take a few minutes!
 ```
 uv run beet -p beet-release.yaml build
+```
+
+## Common issues
+When building the modules, sometimes you will encounter odd errors.
+
+If you get an error about a beet plugin exception, many times it can be resolved simply by refreshing the beet cache.
+```
+uv run beet cache --clear
 ```
 
 ## Submitting changes
