@@ -384,13 +384,29 @@ def dump_registry(ctx: Context):
     JsonFile(registry).dump(origin="", path="gm4/modeldata_registry.json")
     ctx.cache["modeldata_registry"].delete()
 
-def pad_model_overrides(ctx: Context):
+def pad_item_def_range_dispatch(ctx: Context):
+    """Adds entries to vanilla item definitions range_dispach, filling in gaps between CMD values"""
+    pad_model_overrides_1_21_3(ctx, ctx.assets.overlays["backport_57"]) # call legacy pad function
+
+    for item_def in ctx.assets["minecraft"].item_models.values():
+        vanilla_item_def = item_def.data["model"]["fallback"]
+        entries: list[Any] = item_def.data["model"]["entries"]
+        prior_cmd = 1e8
+        for i, entry in reversed(list(enumerate(entries))):
+            if prior_cmd-(prior_cmd:=entry["threshold"]) > 1: # theres a gap to fill
+                entries.insert(i+1, {
+                    "threshold": prior_cmd+1,
+                    "model": vanilla_item_def
+                })
+
+# NOTE legacy code called by plugins.backwards. Remove in 1.22 update
+def pad_model_overrides_1_21_3(ctx: Context, assets: ResourcePack):
     """Adds overrides for the vanilla model, filling in gaps between CMD values"""
     vanilla = ctx.inject(Vanilla)
     vanilla.minecraft_version = '1.21.5'
     vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
 
-    for name, model in ctx.assets["minecraft"].models.items():
+    for name, model in assets["minecraft"].models.items():
         vanilla_overrides = [{"predicate":{},"model": f"minecraft:{name}"}] + vanilla_models_jar.assets["minecraft"].models[name].data.get("overrides", [])
         overrides: list[Any] = model.data["overrides"]
         prior_cmd = 1e8
@@ -513,7 +529,8 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
 
 
 
-    def generate_model_overrides(self):
+    # NOTE legacy code called by plugins.backwards. Remove in 1.22 update
+    def generate_model_overrides_1_21_3(self, pack: ResourcePack):
         """Generates item model overrides in the 'minecraft' namespace, adding predicates for custom_model_data"""
         vanilla = self.ctx.inject(Vanilla)
         vanilla.minecraft_version = '1.21.5'
