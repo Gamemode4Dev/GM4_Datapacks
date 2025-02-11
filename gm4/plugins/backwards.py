@@ -3,6 +3,7 @@ import logging
 from typing import Any, Tuple, Callable
 from beet import Context, Pack, TextFileBase, Recipe, Function, NamespaceFile
 from beet.core.utils import SupportedFormats
+from gm4.plugins.resource_pack import GM4ResourcePack
 
 logger = logging.getLogger("gm4.backwards")
 
@@ -17,6 +18,24 @@ def beet_default(ctx: Context):
   # backporting to 1.21.1 (48)
   backport(ctx.data, 48, rewrite_attributes)
   backport(ctx.data, 48, rewrite_recipe)
+
+  yield from resource_pack(ctx) # bypass the yield clause, since we're already in the exit phase
+
+# Create old resource pack assets for 1.21.3, used standalone for libraries
+def resource_pack(ctx: Context):
+  yield
+  rp = ctx.inject(GM4ResourcePack)
+
+  # use a draft generator to ensure merge rules are followed
+  with ctx.generate.draft() as draft:
+    overlay = draft.assets.overlays[f"backport_57"]
+    overlay.supported_formats = { "min_inclusive": 0, "max_inclusive": 57 }
+    rp.generate_model_overrides_1_21_3(overlay)
+
+  # TODO NOTE
+  # call the old RP code from here, for clarity and sense - requires handling for 
+  # sub packs AKA libraries. Wrap 1.21.3- rp code in a generate.draft to ensure proper
+  # merge rules apply. Note outdated methods of rp-plugin.
 
 
 FURNACE_RENAMES = {

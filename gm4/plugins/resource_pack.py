@@ -343,7 +343,6 @@ def build(ctx: Context):
     rp.update_modeldata_registry()
     rp.generate_model_files()
     rp.process_optifine()
-    # rp.generate_model_overrides()
     rp.generate_item_definitions()
 
     if not ctx.assets.extra.get("pack.png") and ctx.data.extra.get("pack.png"):
@@ -548,7 +547,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                         } | pred.get("predicate", {}),
                         "model": pred["model"] if pred.get("user_defined") else m # type:ignore , user-defined model predicates use their own model reference. m is a string in all other cases
                     })
-            self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(vanilla_model)
+            pack.models[f"minecraft:item/{item_id}"] = Model(vanilla_model)
 
     def retrieve_index(self, reference: str) -> tuple[int, KeyError|None]:
         """retrieves the CMD value for the given reference"""
