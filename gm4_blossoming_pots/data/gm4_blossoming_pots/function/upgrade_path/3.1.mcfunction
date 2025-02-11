@@ -4,7 +4,7 @@
 
 
 # upgrade legacy flower pots
-execute as @e[type=minecraft:block_display,tag=rc_blossoming_pots.flowerPot] at @s \
+execute as @e[type=minecraft:marker,tag=rc_blossoming_pots.flowerPot] at @s \
     run function gm4_blossoming_pots:upgrade_path/3.1/legacy_flower_pot
 
 # upgrade legacy decorated pots
