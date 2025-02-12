@@ -1,5 +1,5 @@
 # Sets perma marker full tag to full when its count reaches the same as storage's maximum
-# @s = perma temp inside flower pot
+# @s = perma marker inside flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with {id, count}
 # run from flower/update_count
