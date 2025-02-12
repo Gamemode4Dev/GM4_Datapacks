@@ -10,8 +10,8 @@
 data remove storage gm4_blossoming_pots:flower_pots temp
 
 # grab item id
-execute store result storage gm4_blossoming_pots:flower_pots temp.legacy.id int 1 \
-    run data modify storage gm4_blossoming_pots:flower_pots temp.id set from entity @s data.id
+data modify storage gm4_blossoming_pots:flower_pots temp.id set from entity @s data.id
+data modify storage gm4_blossoming_pots:flower_pots temp.legacy.id set from storage gm4_blossoming_pots:flower_pots temp.id
 
 # grab Rotation from block display tag=rc_blossoming_pots.flowerPotPlant0
 data modify storage gm4_blossoming_pots:decorated_pots temp.rotation set from entity @e[type=minecraft:block_display,tag=rc_blossoming_pots.flowerPotPlant0,distance=..0.1,limit=1] Rotation[0]
