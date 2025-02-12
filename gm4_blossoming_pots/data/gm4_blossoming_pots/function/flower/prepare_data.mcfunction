@@ -2,7 +2,7 @@
 # @s = temp entity inside flower pot
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # with {id, rotation}
-# run from flower/raycast and upgrade_path/3.1/legacy_flower_pot
+# run from flower/raycast and upgrade_paths/3.1/legacy_flower_pot
 
 # early returns
 # if empty hand, empty the pot, give player the item

@@ -1,7 +1,7 @@
 # Upgrade legacy flower pot plant to current gm4 version
 # @s = type=minecraft:marker, tag=rc_blossoming_pots.flowerPot
 # at @s
-# run from upgrade_path/3.1 and decorated/as_player and flower/as_player and vanilla_pot_handling/as_player
+# run from upgrade_paths/3.1 and decorated/as_player and flower/as_player and vanilla_pot_handling/as_player
 
 
 # Note: legacy pot displays are located at align xyz positioned ~.5 ~ ~.5, different from current version.
@@ -25,7 +25,7 @@ execute store result storage gm4_blossoming_pots:flower_pots temp.legacy.count i
 execute positioned ~ ~.5 ~ run function gm4_blossoming_pots:flower/cleanup with storage gm4_blossoming_pots:flower_pots temp.legacy
 
 # We need to check using a macro function if the id stored in @s data is in storage, and if not then drop item with cleanup
-function gm4_blossoming_pots:upgrade_path/3.1/check_legacy_flower_pot_in_storage with storage gm4_blossoming_pots:flower_pots temp.legacy
+function gm4_blossoming_pots:upgrade_paths/3.1/check_legacy_flower_pot_in_storage with storage gm4_blossoming_pots:flower_pots temp.legacy
 
 # set legacy count back to 1 for potential clean up
 data modify storage gm4_blossoming_pots:flower_pots temp.legacy.count set value 1
