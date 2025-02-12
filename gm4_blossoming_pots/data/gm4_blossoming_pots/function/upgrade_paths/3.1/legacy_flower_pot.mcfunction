@@ -14,7 +14,7 @@ data modify storage gm4_blossoming_pots:flower_pots temp.id set from entity @s d
 data modify storage gm4_blossoming_pots:flower_pots temp.legacy.id set from storage gm4_blossoming_pots:flower_pots temp.id
 
 # grab Rotation from block display tag=rc_blossoming_pots.flowerPotPlant0
-data modify storage gm4_blossoming_pots:decorated_pots temp.rotation set from entity @e[type=minecraft:block_display,tag=rc_blossoming_pots.flowerPotPlant0,distance=..0.1,limit=1] Rotation[0]
+data modify storage gm4_blossoming_pots:flower_pots temp.rotation set from entity @e[type=minecraft:block_display,tag=rc_blossoming_pots.flowerPotPlant0,distance=..0.1,limit=1] Rotation[0]
 
 # kill all block displays for this plant
 kill @e[type=minecraft:block_display,tag=rc_blossoming_pots.flowerPotPlant,distance=..0.1]
@@ -22,7 +22,7 @@ kill @e[type=minecraft:block_display,tag=rc_blossoming_pots.flowerPotPlant,dista
 # drop items of id and count-1
 execute store result score @s gm4_blossoming_pots.loop run data get entity @s data.count
 execute store result storage gm4_blossoming_pots:flower_pots temp.legacy.count int 1 run scoreboard players remove @s gm4_blossoming_pots.loop 1
-execute positioned ~ ~.5 ~ run function gm4_blossoming_pots:flower/cleanup with storage gm4_blossoming_pots:flower_pots temp.legacy
+execute unless score @s gm4_blossoming_pots.loop matches ..0 positioned ~ ~.5 ~ run function gm4_blossoming_pots:flower/cleanup with storage gm4_blossoming_pots:flower_pots temp.legacy
 
 # We need to check using a macro function if the id stored in @s data is in storage, and if not then drop item with cleanup
 function gm4_blossoming_pots:upgrade_paths/3.1/check_legacy_flower_pot_in_storage with storage gm4_blossoming_pots:flower_pots temp.legacy
