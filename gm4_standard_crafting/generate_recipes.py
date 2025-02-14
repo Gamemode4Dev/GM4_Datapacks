@@ -133,4 +133,4 @@ def beet_default(ctx: Context):
     recursive_apply(stairs, "stairs_decraft", ["##", "##"], 4)
 
     slabs: list[str] = item_tags["minecraft:slabs"].data['values']
-    recursive_apply(slabs, "slab_decraft", ["#", "#"], 1)
+    recursive_apply(slabs, "slab_decraft", ["##"], 1)

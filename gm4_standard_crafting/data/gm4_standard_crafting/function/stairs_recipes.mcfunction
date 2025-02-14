@@ -71,3 +71,10 @@ execute if score $crafted gm4_crafting matches 0 store success score $crafted gm
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:polished_deepslate_stairs"},{Slot:1b,id:"minecraft:polished_deepslate_stairs"},{Slot:3b,id:"minecraft:polished_deepslate_stairs"},{Slot:4b,id:"minecraft:polished_deepslate_stairs"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/stairs_decraft/polished_deepslate
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:deepslate_brick_stairs"},{Slot:1b,id:"minecraft:deepslate_brick_stairs"},{Slot:3b,id:"minecraft:deepslate_brick_stairs"},{Slot:4b,id:"minecraft:deepslate_brick_stairs"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/stairs_decraft/deepslate_bricks
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:deepslate_tile_stairs"},{Slot:1b,id:"minecraft:deepslate_tile_stairs"},{Slot:3b,id:"minecraft:deepslate_tile_stairs"},{Slot:4b,id:"minecraft:deepslate_tile_stairs"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/stairs_decraft/deepslate_tiles
+
+# DOES THIS NOT HAVE NEWER STAIR TYPES?
+    # PALE OAK
+    # RESIN BRICK
+    # TUFF
+    # POLISHED TUFF
+    # TUFF BRICK
