@@ -1,0 +1,20 @@
+{
+    "condition": "minecraft:inverted",
+    "term": {
+        "condition": "minecraft:any_of",
+        "terms": [
+            {
+                "condition": "minecraft:reference",
+                "name": "gm4_survival_refightalized:technical/night_time"
+            },
+            {
+                "condition": "minecraft:weather_check",
+                "raining": true
+            },
+            {
+                "condition": "minecraft:weather_check",
+                "thundering": true
+            }
+        ]
+    }
+}

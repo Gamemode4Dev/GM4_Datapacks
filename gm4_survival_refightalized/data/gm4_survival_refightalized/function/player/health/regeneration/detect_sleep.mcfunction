@@ -6,7 +6,7 @@
 # reset score to check for sleep again
 scoreboard players reset @s gm4_sr_stat.sleep_in_bed
 
-# turn all lost health of this player to fast regen health (once per night)
+# turn all lost health of this player to fast regen health
 execute store result score $current_night gm4_sr_data run time query day
 execute if score @s gm4_sr_stat.last_slept_night = $current_night gm4_sr_data run return 0
 scoreboard players operation @s gm4_sr_stat.last_slept_night = $current_night gm4_sr_data

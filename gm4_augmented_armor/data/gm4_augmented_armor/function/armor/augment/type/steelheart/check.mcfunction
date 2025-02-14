@@ -1,7 +1,7 @@
 
 # check what regeneration speed this player would have without this armor
 execute store result score $mod_regeneration_speed gm4_aa_data run data get storage gm4_augmented_armor:temp components."minecraft:custom_data".gm4_augmented_armor.custom_attribute.regen_speed.value
-scoreboard players set $current_regeneration_speed gm4_aa_data 100
+scoreboard players operation $current_regeneration_speed gm4_aa_data = @s gm4_sr_stat.regeneration_rate_base
 scoreboard players operation $current_regeneration_speed gm4_aa_data += @s gm4_sr_stat.regeneration_rate_change
 scoreboard players operation $current_regeneration_speed gm4_aa_data -= $mod_regeneration_speed gm4_aa_data
 

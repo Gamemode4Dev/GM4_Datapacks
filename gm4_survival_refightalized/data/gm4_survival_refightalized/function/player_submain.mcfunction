@@ -14,7 +14,6 @@ execute as @a[scores={gm4_sr_stat.deaths=1..}] run function gm4_survival_refight
 
 # process player sleeping
 execute as @a[scores={gm4_sr_stat.sleep_in_bed=1..},gamemode=!spectator] run function gm4_survival_refightalized:player/health/regeneration/detect_sleep
-
 # natural regen
 execute unless score $natural_regen gm4_sr_config matches -1 store result score $natural_regen gm4_sr_config run gamerule naturalRegeneration
 execute if score $natural_regen gm4_sr_config matches 0 as @a[gamemode=!spectator] unless score @s gm4_sr_health.regeneration_timer matches 1.. unless score @s gm4_sr_stat.hunger matches ..6 run function gm4_survival_refightalized:player/health/regeneration/combat_health
@@ -36,6 +35,6 @@ function #gm4_survival_refightalized:player_submain
 execute as @a[gamemode=!spectator,scores={gm4_sr_health.restoration=1..}] run function gm4_survival_refightalized:player/health/heal/activate
 
 # health regeneration timer
-execute as @a[gamemode=!spectator,scores={gm4_sr_health.regeneration_timer=1..}] run function gm4_survival_refightalized:player/health/regeneration/timer
+execute as @a[gamemode=!spectator,scores={gm4_sr_health.regeneration_timer=1..}] at @s run function gm4_survival_refightalized:player/health/regeneration/timer
 # quick regeneration timer
 scoreboard players remove @a[gamemode=!spectator,scores={gm4_sr_health.quick_regeneration_timer=1..}] gm4_sr_health.quick_regeneration_timer 1
