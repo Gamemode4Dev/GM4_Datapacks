@@ -12,6 +12,7 @@ execute if score $crafted gm4_crafting matches 0 store success score $crafted gm
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:bamboo_mosaic_slab"},{Slot:1b,id:"minecraft:bamboo_mosaic_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/bamboo_mosaic
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:crimson_slab"},{Slot:1b,id:"minecraft:crimson_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/crimson_planks
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:warped_slab"},{Slot:1b,id:"minecraft:warped_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/warped_planks
+execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:pale_oak_slab"},{Slot:1b,id:"minecraft:pale_oak_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/pale_oak_planks
 
 #stones
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:cobblestone_slab"},{Slot:1b,id:"minecraft:cobblestone_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/cobblestone
@@ -24,6 +25,8 @@ execute if score $crafted gm4_crafting matches 0 store success score $crafted gm
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:polished_diorite_slab"},{Slot:1b,id:"minecraft:polished_diorite_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/polished_diorite
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:granite_slab"},{Slot:1b,id:"minecraft:granite_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/granite
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:polished_granite_slab"},{Slot:1b,id:"minecraft:polished_granite_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/polished_granite
+execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:tuff_slab"},{Slot:1b,id:"minecraft:tuff_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/tuff
+execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:polished_tuff_slab"},{Slot:1b,id:"minecraft:polished_tuff_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/polished_tuff
 
 #bricks
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:brick_slab"},{Slot:1b,id:"minecraft:brick_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/bricks
@@ -33,6 +36,8 @@ execute if score $crafted gm4_crafting matches 0 store success score $crafted gm
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:mossy_stone_brick_slab"},{Slot:1b,id:"minecraft:mossy_stone_brick_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/mossy_stone_bricks
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:end_stone_brick_slab"},{Slot:1b,id:"minecraft:end_stone_brick_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/end_stone_bricks
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:mud_brick_slab"},{Slot:1b,id:"minecraft:mud_brick_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/mud_bricks
+execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:tuff_brick_slab"},{Slot:1b,id:"minecraft:tuff_brick_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/tuff_bricks
+execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:resin_brick_slab"},{Slot:1b,id:"minecraft:resin_brick_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/resin_bricks
 
 #sandstone
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:sandstone_slab"},{Slot:1b,id:"minecraft:sandstone_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/sandstone
@@ -74,10 +79,3 @@ execute if score $crafted gm4_crafting matches 0 store success score $crafted gm
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:polished_deepslate_slab"},{Slot:1b,id:"minecraft:polished_deepslate_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/polished_deepslate
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:deepslate_brick_slab"},{Slot:1b,id:"minecraft:deepslate_brick_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/deepslate_bricks
 execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:"minecraft:deepslate_tile_slab"},{Slot:1b,id:"minecraft:deepslate_tile_slab"}]} run loot replace block ~ ~ ~ container.0 loot gm4_standard_crafting:crafting/slab_decraft/deepslate_tiles
-
-# DOES THIS NOT HAVE NEWER SLAB TYPES?
-    # PALE OAK
-    # RESIN BRICK
-    # TUFF
-    # POLISHED TUFF
-    # TUFF BRICK
