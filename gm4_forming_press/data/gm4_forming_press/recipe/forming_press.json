@@ -7,7 +7,7 @@
         "CFC"
     ],
     "key": {
-        "p": "minecraft:piston",
+        "P": "minecraft:piston",
         "C": "minecraft:cobblestone",
         "R": "minecraft:repeater",
         "F": "minecraft:furnace"
