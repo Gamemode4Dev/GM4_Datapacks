@@ -108,7 +108,7 @@ def beet_default(ctx: Context):
             })
 
             if since_61:
-                return
+                continue
             ctx.data[recipe_path] = CustomCrafterRecipe({
                 "name": f"gm4_standard_crafting:{dir}/{item}",
                 "input": {
