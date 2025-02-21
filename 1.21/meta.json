@@ -1,5 +1,5 @@
 {
-  "last_commit": "a453c59f1ff8adcd0ac213c0a8dabc964363837e",
+  "last_commit": "709738bcf0ecc48f13e8f73b1d38378e35ba9868",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2747,8 +2747,8 @@
     {
       "id": "gm4_standard_crafting",
       "name": "Standard Crafting",
-      "version": "1.5.18",
-      "hash": "0d4e82ec6c6dac339cf3e3568fae5c718fc30d61",
+      "version": "1.5.19",
+      "hash": "1cf5241c287e659444574b79671fe22d3a54fc2c",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
       "credits": {
@@ -3388,8 +3388,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.3.18",
-      "hash": "55506ba3fe4488f36e75b52cc55eb510fe0cb064",
+      "version": "1.3.19",
+      "hash": "46e7fd0f8b601663fc02f1b2cfcb6edf07052f0b",
       "video_link": "",
       "wiki_link": "",
       "credits": {
