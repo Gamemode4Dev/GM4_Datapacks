@@ -3,7 +3,7 @@ execute unless score blossoming_pots gm4_earliest_version < blossoming_pots gm4_
 scoreboard players set blossoming_pots gm4_modules 1
 
 # detect pre-gm4 blossoming pots
-execute if data storage rc_blossoming_pots:storage version_history run function gm4_blossoming_pots:legacy_version_detected
+execute if data storage rc_blossoming_pots:storage version_history run scoreboard players set blossoming_pots gm4_earliest_version 0
 
 scoreboard objectives add gm4_blossoming_pots.range dummy "gm4_bPots.range"
 scoreboard objectives add gm4_blossoming_pots.loop dummy "gm4_bPots.loop"
@@ -11,7 +11,7 @@ scoreboard objectives add gm4_blossoming_pots.merge_success dummy "gm4_bPots.mer
 scoreboard objectives add gm4_blossoming_pots.sound dummy "gm4_bPots.sound"
 scoreboard objectives add gm4_blossoming_pots.display_stage dummy "gm4_bPots.display_stage"
 
-execute unless data storage gm4_blossoming_pots:decorated_pots {version_history:["1-26"]} run function gm4_blossoming_pots:decorated/set_storage
-execute unless data storage gm4_blossoming_pots:flower_pots {version_history:["1-26"]} run function gm4_blossoming_pots:flower/set_storage
+function gm4_blossoming_pots:decorated/set_storage
+function gm4_blossoming_pots:flower/set_storage
 
 schedule function gm4_blossoming_pots:main 1t
