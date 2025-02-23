@@ -1,5 +1,5 @@
 {
-  "last_commit": "709738bcf0ecc48f13e8f73b1d38378e35ba9868",
+  "last_commit": "4c9dd646564b76cdd761dddf8e01a5e994310af9",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -748,8 +748,8 @@
     {
       "id": "gm4_crossbow_cartridges",
       "name": "Crossbow Cartridges",
-      "version": "1.7.10",
-      "hash": "8cf04e7353e6d5ea32a4fc756229b9cce861d489",
+      "version": "1.7.11",
+      "hash": "4c5bb4d0689e68aadfc22e87502c9fb0cc766e61",
       "video_link": "https://www.youtube.com/watch?v=XJiGvX7l-pI",
       "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
       "credits": {
