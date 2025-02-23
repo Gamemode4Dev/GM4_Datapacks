@@ -18,7 +18,6 @@ data modify storage gm4_blossoming_pots:decorated_pots temp.rotation set from en
 
 # initialize other loop data
 execute store result storage gm4_blossoming_pots:decorated_pots temp.score int 1 run scoreboard players set @s gm4_blossoming_pots.loop 0
-#$data merge storage gm4_blossoming_pots:decorated_pots {temp:{id:"$(id)",count:$(count)}} # <--- Not needed since set_count sets these???
 $data modify storage gm4_blossoming_pots:decorated_pots temp.data set from storage gm4_blossoming_pots:decorated_pots $(id).$(count)[0]
 
 function gm4_blossoming_pots:decorated/set_displays with storage gm4_blossoming_pots:decorated_pots temp
