@@ -3,13 +3,13 @@
     "category": "misc",
     "pattern": [
         " P ",
-        "CRC",
+        "CcC",
         "CFC"
     ],
     "key": {
         "P": "minecraft:piston",
         "C": "minecraft:cobblestone",
-        "R": "minecraft:repeater",
+        "c": "minecraft:comparator",
         "F": "minecraft:furnace"
     },
     "result": {
