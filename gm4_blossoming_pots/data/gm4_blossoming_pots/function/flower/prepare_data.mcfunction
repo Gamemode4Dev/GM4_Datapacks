@@ -33,6 +33,7 @@ function gm4_blossoming_pots:flower/store_array_len with storage gm4_blossoming_
 function gm4_blossoming_pots:flower/set_displays with storage gm4_blossoming_pots:flower_pots temp
 
 $execute if score $play_sound gm4_blossoming_pots.misc matches 1 \
-    run function gm4_blossoming_pots:flower/play_sound with storage gm4_blossoming_pots:flower_pots $(id)
+    positioned ~ ~-0.3125 ~ \
+    run function gm4_blossoming_pots:play_sound with storage gm4_blossoming_pots:flower_pots $(id)
 
 kill @s

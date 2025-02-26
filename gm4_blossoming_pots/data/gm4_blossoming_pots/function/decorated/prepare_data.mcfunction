@@ -24,4 +24,4 @@ function gm4_blossoming_pots:decorated/set_displays with storage gm4_blossoming_
 
 # play sound
 $execute if score $play_sound gm4_blossoming_pots.misc matches 1 \
-    run function gm4_blossoming_pots:decorated/play_sound with storage gm4_blossoming_pots:decorated_pots $(id)
+    run function gm4_blossoming_pots:play_sound with storage gm4_blossoming_pots:decorated_pots $(id)
