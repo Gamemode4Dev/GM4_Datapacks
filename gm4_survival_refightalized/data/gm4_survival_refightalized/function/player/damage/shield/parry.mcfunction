@@ -21,3 +21,5 @@ tellraw @s[tag=gm4_sr_dev.damage_log] {"text":"Parry","color":"dark_gray"}
 
 # cleanup
 scoreboard players reset @s gm4_sr_stat.damage_resisted
+scoreboard players reset @s gm4_sr_stat.damage_blocked
+advancement revoke @s only gm4_survival_refightalized:damaged

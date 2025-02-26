@@ -31,6 +31,7 @@ scoreboard objectives add gm4_sr_stat.last_slept_night dummy
 scoreboard objectives add gm4_sr_stat.damage_taken custom:damage_taken
 scoreboard objectives add gm4_sr_stat.damage_absorbed custom:damage_absorbed
 scoreboard objectives add gm4_sr_stat.damage_resisted custom:damage_resisted
+scoreboard objectives add gm4_sr_stat.damage_blocked custom:damage_blocked_by_shield
 scoreboard objectives add gm4_sr_stat.armor armor
 scoreboard objectives add gm4_sr_stat.deaths deathCount
 

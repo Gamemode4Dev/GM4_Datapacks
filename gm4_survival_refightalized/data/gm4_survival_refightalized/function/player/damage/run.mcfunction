@@ -3,6 +3,9 @@
 # at @s
 # run from tick
 
+# dev damage log
+tellraw @s[tag=gm4_sr_dev.damage_log] {"text":"-- Damage Log --"}
+
 # prep scores
 function gm4_survival_refightalized:player/health/calculate_hp
 scoreboard players set $damage_armor gm4_sr_data 0
@@ -10,8 +13,12 @@ scoreboard players set $damage_absorption gm4_sr_data 0
 scoreboard players set $damage_health gm4_sr_data 0
 scoreboard players set $damage_total gm4_sr_data 0
 
-# dev damage log
-tellraw @s[tag=gm4_sr_dev.damage_log] {"text":"-- Damage Log --"}
+### TEMP - paper fix - damage resist score gets multiplied by 51.2, so we need to revert that or the player instantly dies
+### this currently breaks if a player takes a multiple of 51.2 damage, but that should be rare enough
+scoreboard players set #512 gm4_sr_data 512
+execute if score $on_paper gm4_sr_data matches 1 run tellraw @s[tag=gm4_sr_dev.damage_log] {"text":"Paper Bug - divided damage by 51.2","color":"red","italic":true}
+execute if score $on_paper gm4_sr_data matches 1 run scoreboard players operation @s gm4_sr_stat.damage_resisted *= #10 gm4_sr_data
+execute if score $on_paper gm4_sr_data matches 1 run scoreboard players operation @s gm4_sr_stat.damage_resisted /= #512 gm4_sr_data
 
 # disable shield if damage was blocked, don't run the rest of this function
 execute unless score @s[scores={gm4_sr_shield.timer=1..2,gm4_sr_shield.use_ticks=1..}] gm4_sr_stat.damage_taken matches 1.. unless score @s gm4_sr_stat.damage_absorbed matches 1.. run return run function gm4_survival_refightalized:player/damage/shield/blocked_damage
@@ -59,6 +66,7 @@ scoreboard players set @s gm4_sr_health.quick_regeneration_timer 6
 
 # cleanup
 scoreboard players reset @s gm4_sr_stat.damage_resisted
+scoreboard players reset @s gm4_sr_stat.damage_blocked
 advancement revoke @s only gm4_survival_refightalized:damaged
 data remove storage gm4_survival_refightalized:temp active_effects
 data remove storage gm4_survival_refightalized:temp set

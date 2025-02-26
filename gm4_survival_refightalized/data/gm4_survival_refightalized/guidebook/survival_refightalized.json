@@ -156,7 +156,7 @@
         [
           {
             "translate": "text.gm4.guidebook.survival_refightalized.description.mobs",
-            "fallback": "Mobs are stronger based on their environment, such as being outside during a thunderstorm or full moon, or being deep underground.\nSome mobs are altered, like as Skeletons firing slower, and Phantoms drowning."
+            "fallback": "Mobs are stronger based on their environment, such as being outside during a thunderstorm or full moon, or being deep underground.\nSome mobs are altered, such as Skeletons firing slower, and Phantoms drowning."
           }
         ]
       ]
