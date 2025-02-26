@@ -4,4 +4,4 @@
 # with {id, count}
 # run from flower/prepare_data
 
-$execute store result score $array_len gm4_blossoming_pots.loop run data get storage gm4_blossoming_pots:flower_pots $(id).$(count)
+$execute store result score $array_len gm4_blossoming_pots.misc run data get storage gm4_blossoming_pots:flower_pots $(id).$(count)

@@ -22,4 +22,4 @@ execute store result score @s gm4_blossoming_pots.range run attribute @s minecra
 execute anchored eyes positioned ^ ^ ^ run function gm4_blossoming_pots:vanilla_pot_handling/raycast
 
 # if signaled (set in vanilla_pot_handling/as_marker), summon item at player to give it back to them
-execute if data storage gm4_blossoming_pots:flower_pots temp.signal_give_back if entity @s[gamemode=!creative] run function gm4_blossoming_pots:vanilla_pot_handling/give_item_back with storage gm4_blossoming_pots:flower_pots temp
+execute if score $signal_give_back gm4_blossoming_pots.misc matches 1 if entity @s[gamemode=!creative] run function gm4_blossoming_pots:vanilla_pot_handling/give_item_back with storage gm4_blossoming_pots:flower_pots temp

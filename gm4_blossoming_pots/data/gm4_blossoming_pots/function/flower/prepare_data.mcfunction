@@ -24,15 +24,15 @@ data modify storage gm4_blossoming_pots:flower_pots temp.signal_item_decr set va
 execute as @e[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.1,limit=1] run function gm4_blossoming_pots:flower/update_count
 
 # setting temp
-execute store result storage gm4_blossoming_pots:flower_pots temp.score int 1 run scoreboard players set @s gm4_blossoming_pots.loop 0
+execute store result storage gm4_blossoming_pots:flower_pots temp.display_number int 1 run scoreboard players set $display_number gm4_blossoming_pots.misc 0
 # temp.count set in flower/update_count
 function gm4_blossoming_pots:flower/set_temp_data with storage gm4_blossoming_pots:flower_pots temp
 function gm4_blossoming_pots:flower/store_array_len with storage gm4_blossoming_pots:flower_pots temp
-# temp storage should now contain {rotation, score, id, count, data}
+# temp storage should now contain {rotation, display_number, id, count, data}
 
 function gm4_blossoming_pots:flower/set_displays with storage gm4_blossoming_pots:flower_pots temp
 
-$execute if score @s gm4_blossoming_pots.sound matches 1 \
+$execute if score $play_sound gm4_blossoming_pots.misc matches 1 \
     run function gm4_blossoming_pots:flower/play_sound with storage gm4_blossoming_pots:flower_pots $(id)
 
 kill @s

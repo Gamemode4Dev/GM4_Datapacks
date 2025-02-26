@@ -4,4 +4,4 @@
 # with {id}
 # run from upgrade_paths/3.1/legacy_flower_pot
 
-$execute if data storage gm4_blossoming_pots:flower_pots $(id) run data modify storage gm4_blossoming_pots:flower_pots temp.legacy.in_storage set value 1
+$execute store success score $legacy_in_storage gm4_blossoming_pots.misc if data storage gm4_blossoming_pots:flower_pots $(id)

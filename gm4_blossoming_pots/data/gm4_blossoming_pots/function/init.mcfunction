@@ -6,10 +6,8 @@ scoreboard players set blossoming_pots gm4_modules 1
 execute if data storage rc_blossoming_pots:storage version_history run scoreboard players set blossoming_pots gm4_earliest_version 0
 
 scoreboard objectives add gm4_blossoming_pots.range dummy "gm4_bPots.range"
-scoreboard objectives add gm4_blossoming_pots.loop dummy "gm4_bPots.loop"
-scoreboard objectives add gm4_blossoming_pots.merge_success dummy "gm4_bPots.merge_success"
-scoreboard objectives add gm4_blossoming_pots.sound dummy "gm4_bPots.sound"
 scoreboard objectives add gm4_blossoming_pots.display_stage dummy "gm4_bPots.display_stage"
+scoreboard objectives add gm4_blossoming_pots.misc dummy "gm4_bPots.misc"
 
 function gm4_blossoming_pots:decorated/set_storage
 function gm4_blossoming_pots:flower/set_storage

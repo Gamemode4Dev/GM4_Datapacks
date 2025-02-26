@@ -20,9 +20,9 @@ data modify storage gm4_blossoming_pots:flower_pots temp.rotation set from entit
 kill @e[type=minecraft:block_display,tag=rc_blossoming_pots.flowerPotPlant,distance=..0.1]
 
 # drop items of id and count-1
-execute store result score @s gm4_blossoming_pots.loop run data get entity @s data.count
-execute store result storage gm4_blossoming_pots:flower_pots temp.legacy.count int 1 run scoreboard players remove @s gm4_blossoming_pots.loop 1
-execute unless score @s gm4_blossoming_pots.loop matches ..0 positioned ~ ~.5 ~ run function gm4_blossoming_pots:flower/cleanup with storage gm4_blossoming_pots:flower_pots temp.legacy
+execute store result score $count gm4_blossoming_pots.misc run data get entity @s data.count
+execute store result storage gm4_blossoming_pots:flower_pots temp.legacy.count int 1 run scoreboard players remove $count gm4_blossoming_pots.misc 1
+execute unless score $count gm4_blossoming_pots.misc matches ..0 positioned ~ ~.5 ~ run function gm4_blossoming_pots:flower/cleanup with storage gm4_blossoming_pots:flower_pots temp.legacy
 
 # We need to check using a macro function if the id stored in @s data is in storage, and if not then drop item with cleanup
 function gm4_blossoming_pots:upgrade_paths/3.1/check_legacy_flower_pot_in_storage with storage gm4_blossoming_pots:flower_pots temp.legacy
@@ -31,11 +31,11 @@ function gm4_blossoming_pots:upgrade_paths/3.1/check_legacy_flower_pot_in_storag
 data modify storage gm4_blossoming_pots:flower_pots temp.legacy.count set value 1
 
 # if legacy plant IS NOT in modern storage, clean up @s and drop items using legacy storage
-execute positioned ~ ~.5 ~ unless data storage gm4_blossoming_pots:flower_pots temp.legacy.in_storage run \
+execute positioned ~ ~.5 ~ unless score $legacy_in_storage gm4_blossoming_pots.misc matches 1 run \
     return run function gm4_blossoming_pots:flower/cleanup with storage gm4_blossoming_pots:flower_pots temp.legacy
 
-# if legacy plant IS in moder storage, summon new displays and perma marker using @s as a temp entity
-execute positioned ~ ~.5 ~ if data storage gm4_blossoming_pots:flower_pots temp.legacy.in_storage run \
+# if legacy plant IS in modern storage, summon new displays and perma marker using @s as a temp entity
+execute positioned ~ ~.5 ~ if score $legacy_in_storage gm4_blossoming_pots.misc matches 1 run \
     return run function gm4_blossoming_pots:flower/prepare_data with storage gm4_blossoming_pots:flower_pots temp
 
 # @s is killed in both return runs
