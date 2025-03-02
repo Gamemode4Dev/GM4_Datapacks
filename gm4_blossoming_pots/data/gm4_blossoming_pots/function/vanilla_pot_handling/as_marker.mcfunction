@@ -19,7 +19,7 @@ execute as @n[type=minecraft:item,distance=..0.5,nbt={Item:{id:"minecraft:flower
 execute as @n[type=minecraft:item,distance=..0.5,nbt={Age:0s},predicate=gm4_blossoming_pots:item_potable] run function gm4_blossoming_pots:vanilla_pot_handling/get_dropped_item
 
 # giving item back is run from as_player following this.
-data modify storage gm4_blossoming_pots:flower_pots temp.signal_give_back set value 1
+scoreboard players set $signal_give_back gm4_blossoming_pots.misc 1
 
 # kill marker
 kill @s

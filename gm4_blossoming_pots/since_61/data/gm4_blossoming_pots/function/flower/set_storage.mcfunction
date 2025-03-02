@@ -2,7 +2,6 @@
 # @s = null
 # run from init
 
-data modify storage gm4_blossoming_pots:flower_pots version_history append value "1-61"
 
 # Data storage layout
     # gm4_blossoming_pots:decorated_pots <item_namespace>:<item_name>
