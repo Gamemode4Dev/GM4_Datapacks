@@ -16,6 +16,7 @@ from beet import (
     Cache,
     Context,
     Font,
+    ItemModel,
     InvalidOptions,
     JsonFile,
     Language,
@@ -24,7 +25,8 @@ from beet import (
     NamespaceProxy,
     PluginOptions,
     WrappedException,
-    YamlFile
+    YamlFile,
+    ResourcePack
 )
 from beet.contrib.link import LinkManager
 from beet.contrib.optifine import OptifineProperties
@@ -341,7 +343,7 @@ def build(ctx: Context):
     rp.update_modeldata_registry()
     rp.generate_model_files()
     rp.process_optifine()
-    rp.generate_model_overrides()
+    rp.generate_item_definitions()
 
     if not ctx.assets.extra.get("pack.png") and ctx.data.extra.get("pack.png"):
         ctx.assets.icon = ctx.data.icon
@@ -382,13 +384,29 @@ def dump_registry(ctx: Context):
     JsonFile(registry).dump(origin="", path="gm4/modeldata_registry.json")
     ctx.cache["modeldata_registry"].delete()
 
-def pad_model_overrides(ctx: Context):
+def pad_item_def_range_dispatch(ctx: Context):
+    """Adds entries to vanilla item definitions range_dispach, filling in gaps between CMD values"""
+    pad_model_overrides_1_21_3(ctx, ctx.assets.overlays["backport_57"]) # call legacy pad function
+
+    for item_def in ctx.assets["minecraft"].item_models.values():
+        vanilla_item_def = item_def.data["model"]["fallback"]
+        entries: list[Any] = item_def.data["model"]["entries"]
+        prior_cmd = 1e8
+        for i, entry in reversed(list(enumerate(entries))):
+            if prior_cmd-(prior_cmd:=entry["threshold"]) > 1: # theres a gap to fill
+                entries.insert(i+1, {
+                    "threshold": prior_cmd+1,
+                    "model": vanilla_item_def
+                })
+
+# NOTE legacy code called by plugins.backwards. Remove in 1.22 update
+def pad_model_overrides_1_21_3(ctx: Context, assets: ResourcePack):
     """Adds overrides for the vanilla model, filling in gaps between CMD values"""
     vanilla = ctx.inject(Vanilla)
     vanilla.minecraft_version = '1.21.3'
     vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
 
-    for name, model in ctx.assets["minecraft"].models.items():
+    for name, model in assets["minecraft"].models.items():
         vanilla_overrides = [{"predicate":{},"model": f"minecraft:{name}"}] + vanilla_models_jar.assets["minecraft"].models[name].data.get("overrides", [])
         overrides: list[Any] = model.data["overrides"]
         prior_cmd = 1e8
@@ -400,6 +418,8 @@ def pad_model_overrides(ctx: Context):
                     for vanilla_override in reversed(vanilla_overrides):
                         overrides.insert(i+1, deepcopy(vanilla_override))
 
+def merge_policy(ctx: Context):
+    ctx.assets.merge_policy.extend_namespace(ItemModel, item_definition_merging)
 
 def link_resource_pack(ctx: Context):
     """manually links the combined resource pack to minecraft's RP folder when using 'beet dev'"""
@@ -469,7 +489,48 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                     self.logger.info(f"Removing undefined custom_model_data from {item_id} registry: '{ref}'")
                     del reg[ref]
 
-    def generate_model_overrides(self):
+    def generate_item_definitions(self):
+        """Generates item-model-definition files in the 'minecraft' namespace, adding range_dispatch entries for each custom_model_data value"""
+        vanilla = self.ctx.inject(Vanilla)
+        vanilla.minecraft_version = '1.21.4'
+        vanilla_item_defs_jar = vanilla.mount("assets/minecraft/items")
+        # group models by item id
+        for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
+            models = filter(lambda m: item_id in m.item.entries(), self.opts.model_data) # with this item_id
+            models = sorted(models, key=lambda m: self.retrieve_index(m.reference)[0])
+
+            vanilla_itemdef = vanilla_item_defs_jar.assets.item_models[f"minecraft:{item_id}"].data["model"]
+
+            new_itemdef: dict[str, Any] = {
+                "model": {
+                    "type": "minecraft:range_dispatch",
+                    "property": "minecraft:custom_model_data",
+                    "entries": [],
+                    "fallback": vanilla_itemdef
+                }
+            }
+            itemdef_entries: list[Any] = new_itemdef["model"]["entries"]
+
+            for model in models:
+                m = model.model[item_id] # model string, or predicate settings, for this particular item id
+                # NOTE only end fishing elytra utlize predicate specification here.
+                # TODO handle predicate format?
+
+                itemdef_entries.append({
+                    "threshold": self.cmd_prefix+self.retrieve_index(model.reference)[0],
+                    "model": {
+                        "type": "minecraft:model",
+                        "model": m # TODO this is where select customs settings will be moved!
+                    }
+                })
+            
+            itemdef_entries.sort(key=lambda entry: entry["threshold"]) # sort entries ascending
+            self.ctx.assets.item_models[f"minecraft:{item_id}"] = ItemModel(new_itemdef)
+
+
+
+    # NOTE legacy code called by plugins.backwards. Remove in 1.22 update
+    def generate_model_overrides_1_21_3(self, pack: ResourcePack):
         """Generates item model overrides in the 'minecraft' namespace, adding predicates for custom_model_data"""
         vanilla = self.ctx.inject(Vanilla)
         vanilla.minecraft_version = '1.21.3'
@@ -503,7 +564,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                         } | pred.get("predicate", {}),
                         "model": pred["model"] if pred.get("user_defined") else m # type:ignore , user-defined model predicates use their own model reference. m is a string in all other cases
                     })
-            self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(vanilla_model)
+            pack.models[f"minecraft:item/{item_id}"] = Model(vanilla_model)
 
     def retrieve_index(self, reference: str) -> tuple[int, KeyError|None]:
         """retrieves the CMD value for the given reference"""
@@ -648,6 +709,27 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             self.ctx.generate("gm4:container_gui", merge=Font({
                 "providers": providers
             }))
+
+def item_definition_merging(pack: ResourcePack, path: str, current: ItemModel, conflict: ItemModel) -> bool:
+    """ItemModel beet merge rule for combining range_dispatch properly"""
+    if current.data["model"].get("type") != "minecraft:range_dispatch" or conflict.data["model"].get("type") != "minecraft:range_dispatch":
+        parent_logger.warning(f"item model {path} was sent to merging but only one file uses 'range_dispatch'")
+        return False
+    
+    merged_entries: list[Any] = current.data["model"]["entries"]
+    merged_entries.extend(conflict.data["model"]["entries"])
+    merged_entries.sort(key=lambda entry: entry["threshold"])
+
+    # remove duplicate entries - relying on each CMD to be unique already
+    seen_values: set[int] = set()
+    for entry in merged_entries.copy():
+        if (v:=entry["threshold"]) not in seen_values:
+            seen_values.add(v)
+        else: # otherwise its a duplicate
+            merged_entries.remove(entry)
+
+    return True
+
 
 class TranslationLinter(Reducer):
     """Mecha linter ensuring all translation keys are registered in translations.csv"""
