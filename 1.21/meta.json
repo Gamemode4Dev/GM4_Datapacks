@@ -1,5 +1,5 @@
 {
-  "last_commit": "e9bb8eaa196e462c26b630a62e3fb3df05713907",
+  "last_commit": "a766ec208811d3f45155a94053837ce96a48df0e",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -425,7 +425,7 @@
       "search_keywords": [],
       "publish_date": "2025-02-09",
       "modrinth_id": "wOnn6VDU",
-      "smithed_link": null,
+      "smithed_link": "gm4_blossoming_pots",
       "pmc_link": null
     },
     {
