@@ -1,0 +1,5 @@
+key,en_us
+text.gm4.guidebook.module_desc.blossoming_pots,"Greatly expands the selection of potable plants. Use Decorated Pots as abnormally large flower pots. Decorate in Style!"
+text.gm4.guidebook.blossoming_pots.description,"To pot a plant, interact with a Decorated Pot or empty Flower Pot while holding a supported item.\nTo remove a plant, break the decorated pot or interact with the flower pot with an empty hand."
+text.gm4.guidebook.blossoming_pots.item_list.1,"§nSupported Items:§r\n\nVanilla Flower Pot\n                    plants\nPale hanging moss\nPointed dripstone\nAmethyst crystals\nLeaves\nShort & tall grass\nLush cave plants"
+text.gm4.guidebook.blossoming_pots.item_list.2,"§nSupported Items:§r\n\nSugar cane\nNether vines\n2 tall plants\nChorus flower\nNon-sniffer seeds\nNether wart\nSweet berries\nCoral reef plants"
