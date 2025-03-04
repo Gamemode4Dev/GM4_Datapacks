@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "gm4_hotswap_hotbars"
+              },
+              "score": "load.status"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_hotswap_hotbars:hotswapper_mainhand"
+          }
+        ],
+        "items": [
+          {
+            "items": [
+              "minecraft:firework_star"
+            ],
+            "nbt": "{gm4_hotswap_hotbars:{item:\"hotswapper_item\"}}"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_hotswap_hotbars:swap/next_hotbar"
+  }
+}
