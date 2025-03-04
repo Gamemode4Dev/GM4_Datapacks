@@ -12,8 +12,6 @@ scoreboard objectives add gm4_sr_mob.damage_cap dummy
 scoreboard objectives add gm4_sr_health.restoration dummy
 scoreboard objectives add gm4_sr_health.regeneration_timer dummy
 scoreboard objectives add gm4_sr_health.absorption_reduction_timer dummy
-scoreboard objectives add gm4_sr_health.quick_regeneration_health dummy
-scoreboard objectives add gm4_sr_health.quick_regeneration_timer dummy
 
 scoreboard objectives add gm4_sr_stat.current_health dummy
 scoreboard objectives add gm4_sr_stat.max_health dummy
@@ -23,11 +21,8 @@ scoreboard objectives add gm4_sr_stat.max_absorption dummy
 
 scoreboard objectives add gm4_sr_stat.armor_recharge_change dummy
 scoreboard objectives add gm4_sr_stat.regeneration_rate_change dummy
-scoreboard objectives add gm4_sr_stat.regen_to_percentage dummy
 
 scoreboard objectives add gm4_sr_stat.hunger food
-scoreboard objectives add gm4_sr_stat.sleep_in_bed custom:sleep_in_bed
-scoreboard objectives add gm4_sr_stat.last_slept_night dummy
 scoreboard objectives add gm4_sr_stat.damage_taken custom:damage_taken
 scoreboard objectives add gm4_sr_stat.damage_absorbed custom:damage_absorbed
 scoreboard objectives add gm4_sr_stat.damage_resisted custom:damage_resisted
@@ -48,7 +43,7 @@ scoreboard objectives add gm4_sr_shield.timer dummy
 
 # configs
 execute unless score $natural_regen gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $natural_regen gm4_sr_config 1
-execute unless score $combat_regen_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $combat_regen_timer gm4_sr_config 1875
+execute unless score $combat_regen_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $combat_regen_timer gm4_sr_config 1250
 execute unless score $armor_recharge_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $armor_recharge_timer gm4_sr_config 1250
 
 # swap natural regeneration to module's system

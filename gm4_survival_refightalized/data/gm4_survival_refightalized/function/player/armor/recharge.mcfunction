@@ -4,6 +4,10 @@
 # run from main
 # run from player/process
 
+# only run if health is full
+function gm4_survival_refightalized:player/health/calculate_hp
+execute unless score @s gm4_sr_stat.health_percentage matches 100.. run return 0
+
 scoreboard players remove @s[scores={gm4_sr_armor.reduction=1..}] gm4_sr_armor.reduction 10
 scoreboard players operation @s gm4_sr_armor.reduction > #0 gm4_sr_data
 

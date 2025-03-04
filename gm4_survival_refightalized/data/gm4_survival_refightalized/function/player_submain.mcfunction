@@ -12,25 +12,18 @@ execute as @a[tag=gm4_sr_dev.mob_stats] at @s as @e[type=#gm4_survival_refightal
 # process players that died
 execute as @a[scores={gm4_sr_stat.deaths=1..}] run function gm4_survival_refightalized:player/death
 
-# process player sleeping
-execute as @a[scores={gm4_sr_stat.sleep_in_bed=1..},gamemode=!spectator] run function gm4_survival_refightalized:player/health/regeneration/detect_sleep
-# quick regen from non-combat damage
-execute unless score $natural_regen gm4_sr_config matches -1 store result score $natural_regen gm4_sr_config run gamerule naturalRegeneration
-execute if score $natural_regen gm4_sr_config matches 0 as @a[scores={gm4_sr_health.quick_regeneration_health=1..},gamemode=!spectator] unless score @s gm4_sr_health.quick_regeneration_timer matches 1.. run function gm4_survival_refightalized:player/health/regeneration/fast_health
-scoreboard players remove @a[gamemode=!spectator,scores={gm4_sr_health.quick_regeneration_timer=1..}] gm4_sr_health.quick_regeneration_timer 1
-
 # reset regeneration and armor recharge changes, can be set again from the function tag
 scoreboard players set @a gm4_sr_stat.armor_recharge_change 0
 scoreboard players set @a gm4_sr_stat.regeneration_rate_change 0
-scoreboard players set @a gm4_sr_stat.regen_to_percentage 50
 
 # function tag call for expansions to keep clocks sync'd
 function #gm4_survival_refightalized:player_submain
 
-# health regen timer
-execute if score $natural_regen gm4_sr_config matches 0 as @a[gamemode=!spectator] run function gm4_survival_refightalized:player/health/regeneration/timer
 # armor recharge timer
 execute as @a[gamemode=!spectator,tag=gm4_sr_armor.reduction] run function gm4_survival_refightalized:player/armor/timer
+# health regen timer
+execute unless score $natural_regen gm4_sr_config matches -1 store result score $natural_regen gm4_sr_config run gamerule naturalRegeneration
+execute if score $natural_regen gm4_sr_config matches 0 as @a[gamemode=!spectator] run function gm4_survival_refightalized:player/health/regeneration/timer
 
 # if player has armor use new damage calculation
 effect give @a[gamemode=!spectator,scores={gm4_sr_stat.armor=1..}] resistance 2 255 true

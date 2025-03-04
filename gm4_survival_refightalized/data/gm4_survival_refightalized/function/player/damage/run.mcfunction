@@ -45,26 +45,20 @@ function #gm4_survival_refightalized:damage_taken
 # divide the damage taken between armor, absorption and health
 execute if score $damage_total gm4_sr_data matches 1.. run function gm4_survival_refightalized:player/damage/calculate_damage
 
-# apply armor recharge timer, halved if damage was non-combat, 0 if damage did not apply to armor
-execute if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] run scoreboard players operation $set gm4_sr_armor.reduction_timer /= #2 gm4_sr_data
+# apply armor recharge timer, /5 if damage was non-combat, 0 if damage did not apply to armor
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] run scoreboard players operation $set gm4_sr_armor.reduction_timer /= #5 gm4_sr_data
 execute if score $damage_armor gm4_sr_data matches 1.. run scoreboard players operation @s gm4_sr_armor.reduction_timer > $set gm4_sr_armor.reduction_timer
 # apply durability damage to armor unless it was armor piercing damage
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={armor_piercing=false,armor_piercing_mob=false}}] run function gm4_survival_refightalized:player/armor/durability/check
 
-# apply health regeneration timer, max 300 if damage was non-combat, 0 if damage did not apply to health
-execute if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] run scoreboard players operation $set gm4_sr_health.regeneration_timer < #300 gm4_sr_data
+# apply health regeneration timer, /5 if damage was non-combat, 0 if damage did not apply to health
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] run scoreboard players operation $set gm4_sr_health.regeneration_timer /= #5 gm4_sr_data
 execute if score $damage_health gm4_sr_data matches 1.. run scoreboard players operation @s gm4_sr_health.regeneration_timer > $set gm4_sr_health.regeneration_timer
-# out-of-combat damage regenerates rapidly (every 1.6 seconds)
-scoreboard players operation @s gm4_sr_stat.damage_taken += @s gm4_sr_stat.damage_absorbed
-scoreboard players add @s gm4_sr_stat.damage_taken 5
-scoreboard players operation @s gm4_sr_stat.damage_taken /= #10 gm4_sr_data
-scoreboard players operation @s gm4_sr_stat.damage_taken += $damage_health gm4_sr_data
-scoreboard players operation @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] gm4_sr_health.quick_regeneration_health += @s gm4_sr_stat.damage_taken
-scoreboard players reset @s gm4_sr_stat.damage_taken
-scoreboard players reset @s gm4_sr_stat.damage_absorbed
-scoreboard players set @s gm4_sr_health.quick_regeneration_timer 6
+scoreboard players operation @s[scores={gm4_sr_stat.damage_taken=1..}] gm4_sr_health.regeneration_timer > $set gm4_sr_health.regeneration_timer
 
 # cleanup
+scoreboard players reset @s gm4_sr_stat.damage_taken
+scoreboard players reset @s gm4_sr_stat.damage_absorbed
 scoreboard players reset @s gm4_sr_stat.damage_resisted
 scoreboard players reset @s gm4_sr_stat.damage_blocked
 advancement revoke @s only gm4_survival_refightalized:damaged
