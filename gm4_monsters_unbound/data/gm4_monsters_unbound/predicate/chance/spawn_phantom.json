@@ -1,0 +1,18 @@
+[
+    {
+        "condition": "minecraft:random_chance",
+        "chance": 0.075
+    },
+    {
+        "condition": "minecraft:reference",
+        "name": "gm4_monsters_unbound:biome/mountainous"
+    },
+    {
+        "condition": "minecraft:time_check",
+        "value": {
+            "min": 13188,
+            "max": 22812
+        },
+        "period": 24000
+    }
+]
