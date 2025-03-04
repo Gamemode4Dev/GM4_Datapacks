@@ -24,11 +24,11 @@ meta:
       description: Decorated Pots and Flower Pots extended to allow all kinds of things to be placed in them! Decorate in Style!
       recommended: []
       notes: []
-    modrinth: 
+    modrinth:
       project_id: wOnn6VDU
-    #smithed:
-      #pack_id: null
-    planetminecraft: 
+    smithed:
+      pack_id: gm4_blossoming_pots
+    planetminecraft:
       uid: 6135276
     video: null
     wiki: https://wiki.gm4.co/wiki/Blossoming_Pots
