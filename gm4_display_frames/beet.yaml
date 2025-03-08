@@ -28,10 +28,10 @@ meta:
     wiki: https://wiki.gm4.co/wiki/Display_Frames
     credits:
       Creators:
-        - BluePsychoRanger
+        - BPR
         - TheEpyonProject
       Icon Design:
-        - BluePsychoRanger
+        - BPR
     model_data:
       - item: splash_potion
         reference: gui/advancement/display_frames

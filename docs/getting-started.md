@@ -4,14 +4,22 @@ This guide will show how to setup a local development environment to build, test
 ## Table of contents
 * [Installation](#installation)
 * [Building modules](#building-modules)
+* [Common issues](#common-issues)
 * [Submitting changes](#submitting-changes)
 
 ## Installation
 To contribute to our project you need to install [Git](https://git-scm.com/downloads) and a text editor. We recommend [VSCode](https://code.visualstudio.com/).
 
-Our modules are built using [beet](https://github.com/mcbeet/beet), which allows us to automatically validate and generate part of our data packs and resource packs. However this requires some extra setup:
-* [Python](https://www.python.org/downloads/) (version 3.10)
-* [Poetry](https://python-poetry.org/docs/)
+Our modules are built using [beet](https://github.com/mcbeet/beet), which is a Python framework that allows us to automatically validate and generate part of our data packs and resource packs.
+
+You will need to install [uv](https://docs.astral.sh/uv/) as project manager. If you don't already have Python installed, uv will do that automatically. We currently use Python 3.10.
+```sh
+# MacOS, Linux, or Git Bash (recommended)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Powershell on Windows
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
 
 Create your own fork of this repository.
 ![Forking the repository on GitHub](images/create-fork.png)
@@ -21,7 +29,7 @@ Clone your fork locally:
 git clone https://github.com/<username>/GM4_Datapacks.git
 ```
 
-Open the `GM4_Datapacks` folder in VScode. Then run `poetry install`. This will install beet and all our other dependencies.
+Open the `GM4_Datapacks` folder in VScode. Then run `uv sync`. This will install beet and all our other dependencies.
 
 You are now ready to build our modules and make changes!
 
@@ -29,17 +37,25 @@ You are now ready to build our modules and make changes!
 The source of each module is stored in each `gm4_*` folder. To convert them to a valid data pack, you need to use Beet:
 
 ```
-poetry run beet dev --link <world_name> --watch metallurgy *_shamir
+uv run beet dev --link <world_name> --watch metallurgy *_shamir
 ```
-* `poetry run` makes sure that the command uses the correct Python dependencies
+* `uv run` makes sure that the command uses the correct Python dependencies
 * `beet dev` builds the data packs to the `out` folder
-* `--link <world_name>` copies the packs to a local world
+* `--link <world_name>` copies the packs to a local world (filepath to the world's directory)
 * `--watch` watches for file changes and then rebuilds
 * `metallurgy *_shamir` specifies the list of module IDs to build
 
 Building the release version of all modules is also possible. It will output the zipped data packs in the `release/<version>` folder. Running this could take a few minutes!
 ```
-poetry run beet -p beet-release.yaml build
+uv run beet -p beet-release.yaml build
+```
+
+## Common issues
+When building the modules, sometimes you will encounter odd errors.
+
+If you get an error about a beet plugin exception, many times it can be resolved simply by refreshing the beet cache.
+```
+uv run beet cache --clear
 ```
 
 ## Submitting changes
@@ -55,7 +71,7 @@ git checkout -b <branch_name>
 While making changes, test the data packs in a local world:
 
 ```
-poetry run beet dev --link <world_name> --watch <module_id>
+uv run beet dev --link <world_name> --watch <module_id>
 ```
 
 When you are happy with the changes, create a commit on the branch.
