@@ -1,0 +1,8 @@
+# Action for reeled allay
+# @s = allay
+# at @s
+# run from gm4_reeling_rods:fishing/allay/adv
+
+data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s HandItems[0]
+data remove entity @s HandItems[0]
+execute align xz positioned ~0.5 ~ ~0.5 run function gm4_reeling_rods:separate
