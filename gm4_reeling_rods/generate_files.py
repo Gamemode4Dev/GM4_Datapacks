@@ -19,7 +19,8 @@ def beet_default(ctx: Context):
     def create_files(entities: List[Entity]):
         for entity in entities:
             since_61 = "pale_oak" in entity.entity_type
-            output_pack = ctx.data.overlays["since_61"] if since_61 else ctx.data
+            is_chest_boat = "chest_boat" in entity.entity_type or "chest_raft" in entity.entity_type
+            output_pack = ctx.data.overlays["since_61"] if since_61 else ctx.data.overlays["since_57"] if is_chest_boat else ctx.data
             entity_type_no_prefix = entity.entity_type.removeprefix('minecraft:')
             output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv"] = Function([
                 f"# Initial Logic for rod reeling {entity_type_no_prefix}",
@@ -78,7 +79,7 @@ def beet_default(ctx: Context):
                         "function": f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv"
                     }
                 })
-            if not ("minecart" in entity.entity_type or "chest" in entity.entity_type): # Other entity types need to have actions defined manually
+            if not ("minecart" in entity.entity_type or is_chest_boat): # Other entity types need to have actions defined manually
                 continue
             if "minecart" in entity.entity_type: # minecart types
                 output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"] = Function([
@@ -95,7 +96,7 @@ def beet_default(ctx: Context):
                     "function gm4_reeling_rods:summon_entity with storage gm4_reeling_rods:temp"
                 ])
                 continue
-            if "chest" in entity.entity_type: # chest boats / raft
+            if is_chest_boat: # chest boats / raft specific
                 output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"] = Function([
                     f"# Action for reeled {entity_type_no_prefix}",
                     f"# @s = {entity_type_no_prefix}",
