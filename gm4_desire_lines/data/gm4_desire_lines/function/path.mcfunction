@@ -4,8 +4,8 @@
 # run from player
 
 # check blocks
-fill ~ ~-0.07 ~ ~ ~-0.07 ~ coarse_dirt replace dirt
-fill ~ ~-0.07 ~ ~ ~-0.07 ~ dirt replace grass_block
+fill ~ ~-0.06 ~ ~ ~-0.06 ~ coarse_dirt replace dirt
+fill ~ ~-0.06 ~ ~ ~-0.06 ~ dirt replace grass_block
 fill ~ ~ ~ ~ ~ ~ air replace snow[layers=1]
 fill ~ ~ ~ ~ ~ ~ snow[layers=1] replace snow[layers=2]
 
