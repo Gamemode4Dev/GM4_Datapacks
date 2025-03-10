@@ -5,4 +5,4 @@
 
 data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s HandItems[0]
 data modify entity @s HandItems[0] set value {}
-execute align xz positioned ~0.5 ~ ~0.5 run function gm4_reeling_rods:separate
+function gm4_reeling_rods:separate
