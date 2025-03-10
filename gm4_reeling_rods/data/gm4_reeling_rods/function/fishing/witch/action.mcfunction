@@ -1,0 +1,8 @@
+# Action for reeled witch
+# @s = witch
+# at @s
+# run from gm4_reeling_rods:fishing/witch/adv
+
+data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s HandItems[0]
+data modify entity @s HandItems[0] set value {}
+execute positioned ~ ~1.2 ~ run function gm4_reeling_rods:separate

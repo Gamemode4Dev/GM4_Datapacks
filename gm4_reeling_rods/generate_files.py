@@ -143,6 +143,7 @@ def beet_default(ctx: Context):
     entity_list.append(Entity("minecraft:hopper_minecart","-0.56", True))
     entity_list.append(Entity("minecraft:tnt_minecart","-0.56",True))
     entity_list.append(Entity("minecraft:shulker","-0.8",False))
+    entity_list.append(Entity("minecraft:witch","-1.56",True))
     entity_list.append(Entity("minecraft:end_crystal","-1.6",False))
     
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
