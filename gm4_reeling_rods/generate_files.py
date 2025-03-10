@@ -132,16 +132,16 @@ def beet_default(ctx: Context):
         ctx.data["gm4_reeling_rods:set_lookup_table"] = Function(strList)
     
     entity_list: List[Entity] = []
-    
+    # Vertical displacement for mobs is -0.8 * the entities hibox height. Entities with hitboxes that arent just width and height are different
     entity_list.append(Entity("minecraft:painting","-0.4",False))
     entity_list.append(Entity("minecraft:item_frame","-0.4",False))
     entity_list.append(Entity("minecraft:glow_item_frame","-0.4",False))
     entity_list.append(Entity("minecraft:leash_knot","-0.4",False))
     entity_list.append(Entity("minecraft:allay","-0.48",True))
-    entity_list.append(Entity("minecraft:chest_minecart","-0.55999",True))
-    entity_list.append(Entity("minecraft:furnace_minecart","-0.55999", True))
-    entity_list.append(Entity("minecraft:hopper_minecart","-0.55999", True))
-    entity_list.append(Entity("minecraft:tnt_minecart","-0.55999",True))
+    entity_list.append(Entity("minecraft:chest_minecart","-0.56",True))
+    entity_list.append(Entity("minecraft:furnace_minecart","-0.56", True))
+    entity_list.append(Entity("minecraft:hopper_minecart","-0.56", True))
+    entity_list.append(Entity("minecraft:tnt_minecart","-0.56",True))
     entity_list.append(Entity("minecraft:shulker","-0.8",False))
     entity_list.append(Entity("minecraft:end_crystal","-1.6",False))
     
