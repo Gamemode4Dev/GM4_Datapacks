@@ -5,6 +5,9 @@ version: 1.4.X
 data_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
   - gm4.plugins.extend.module
 
@@ -12,7 +15,7 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_liquid_tanks: 2.3.0
+        gm4_liquid_tanks: 2.7.0
     website:
       description: Die! Dye! Remove die from items in a Liquid Tank filled with Water, at the cost of ⅓ of a bucket.
       recommended: []
