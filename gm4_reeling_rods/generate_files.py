@@ -133,15 +133,9 @@ def beet_default(ctx: Context):
     
     entity_list: List[Entity] = []
     # Vertical displacement for mobs is -0.8 * the entities hibox height. Entities with hitboxes that arent just width and height are different
-    entity_list.append(Entity("minecraft:painting","-0.4",False))
-    entity_list.append(Entity("minecraft:item_frame","-0.4",False))
-    entity_list.append(Entity("minecraft:glow_item_frame","-0.4",False))
+    
     entity_list.append(Entity("minecraft:leash_knot","-0.4",False))
     entity_list.append(Entity("minecraft:allay","-0.48",True))
-    entity_list.append(Entity("minecraft:chest_minecart","-0.56",True))
-    entity_list.append(Entity("minecraft:furnace_minecart","-0.56", True))
-    entity_list.append(Entity("minecraft:hopper_minecart","-0.56", True))
-    entity_list.append(Entity("minecraft:tnt_minecart","-0.56",True))
     entity_list.append(Entity("minecraft:shulker","-0.8",False))
     entity_list.append(Entity("minecraft:witch","-1.56",True))
     entity_list.append(Entity("minecraft:end_crystal","-1.6",False))
@@ -149,7 +143,11 @@ def beet_default(ctx: Context):
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
     for chest_boat in item_tags["minecraft:chest_boats"].data['values']:
         entity_list.append(Entity(chest_boat,"-0.45",True))
-    
+    for minecart in ["minecraft:chest_minecart","minecraft:furnace_minecart","minecraft:hopper_minecart","minecraft:tnt_minecart"]:
+        entity_list.append(Entity(minecart,"-0.56",True))
+    for special_hitbox in ["minecraft:painting","minecraft:item_frame", "minecraft:glow_item_frame"]:
+        entity_list.append(Entity(special_hitbox,"-0.4",False))
+
     create_files(entity_list)
     create_lookup_file()
     
