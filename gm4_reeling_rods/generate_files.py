@@ -28,6 +28,7 @@ def beet_default(ctx: Context):
                 "# at @s",
                 f"# run from advancement gm4_reeling_rods:fishing/{entity_type_no_prefix}",
                 f"\nadvancement revoke @s only gm4_reeling_rods:fishing/{entity_type_no_prefix}",
+                "\nexecute if entity @s[gamemode=adventure] run return fail",
                 "\nfunction gm4_reeling_rods:store_player_pos",
                 "\ntag @s add gm4_reeling_rods.player\n",
                 "execute as @e[type=minecraft:fishing_bobber,distance=..33] \\",

@@ -5,6 +5,8 @@
 
 advancement revoke @s only gm4_reeling_rods:fishing/chest_boat
 
+execute if entity @s[gamemode=adventure] run return fail
+
 function gm4_reeling_rods:store_player_pos
 
 tag @s add gm4_reeling_rods.player
