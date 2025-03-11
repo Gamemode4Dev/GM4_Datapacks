@@ -173,6 +173,7 @@ def beet_default(ctx: Context):
     entity_list.append(Entity("minecraft:shulker",False,"-0.8",False))
     entity_list.append(Entity("minecraft:end_crystal",False,"-1.6",False))
     entity_list.append(Entity("minecraft:fox",True,"-0.56",True))
+    entity_list.append(Entity("minecraft:pig",True,"-0.72",True))
     
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
     for chest_boat in item_tags["minecraft:chest_boats"].data['values']:
