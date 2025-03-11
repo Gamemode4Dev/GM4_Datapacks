@@ -137,7 +137,6 @@ def beet_default(ctx: Context):
     entity_list.append(Entity("minecraft:leash_knot","-0.4",False))
     entity_list.append(Entity("minecraft:allay","-0.48",True))
     entity_list.append(Entity("minecraft:shulker","-0.8",False))
-    entity_list.append(Entity("minecraft:witch","-1.56",True))
     entity_list.append(Entity("minecraft:end_crystal","-1.6",False))
     
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
@@ -147,7 +146,8 @@ def beet_default(ctx: Context):
         entity_list.append(Entity(minecart,"-0.56",True))
     for special_hitbox in ["minecraft:painting","minecraft:item_frame", "minecraft:glow_item_frame"]:
         entity_list.append(Entity(special_hitbox,"-0.4",False))
-
+    for villager_height in ["minecraft:witch","minecraft:villager"]:
+        entity_list.append(Entity(villager_height,"-1.56",True))
     create_files(entity_list)
     create_lookup_file()
     
