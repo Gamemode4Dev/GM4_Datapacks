@@ -1,13 +1,27 @@
 from typing import List
 from beet import Context, Advancement, Function
 from beet.contrib.vanilla import Vanilla
+from beet.core.utils import JsonDict
 import math
+from copy import deepcopy
 
 class Entity:
-    def __init__(self, entity_type: str, vertical_displacement: str, needs_enchantment: bool):
+    def __init__(self, entity_type: str, can_be_baby: bool, vertical_displacement: str, needs_enchantment: bool):
         self.entity_type = entity_type
         self.vertical_displacement = vertical_displacement
         self.needs_enchantment = needs_enchantment
+        self.can_be_baby = can_be_baby
+
+# Function from:    https://www.geeksforgeeks.org/recursively-merge-dictionaries-in-python/
+def recursive_merge(dict1:JsonDict, dict2:JsonDict):
+    for key, value in dict2.items():
+        if key in dict1 and isinstance(dict1[key], dict) and isinstance(value, dict):
+            # Recursively merge nested dictionaries
+            dict1[key] = recursive_merge(dict1[key], value) # type: ignore
+        else:
+            # Merge non-dictionary values
+            dict1[key] = value
+    return dict1
 
 def beet_default(ctx: Context):
     """generates the advancements, the subsequent functions for handling reeling, and set_lookup_table.mcfunction
@@ -22,7 +36,60 @@ def beet_default(ctx: Context):
             is_chest_boat = "chest_boat" in entity.entity_type or "chest_raft" in entity.entity_type
             output_pack = ctx.data.overlays["since_61"] if since_61 else ctx.data.overlays["since_57"] if is_chest_boat else ctx.data
             entity_type_no_prefix = entity.entity_type.removeprefix('minecraft:')
-            output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv"] = Function([
+            # Create advancement file
+            advancement_json : JsonDict = {
+                "criteria":{
+                    "fishing_rod_hooked":{
+                        "trigger":"minecraft:fishing_rod_hooked",
+                        "conditions":{
+                            "entity":{
+                                "type" : entity.entity_type
+                            }
+                        }
+                    }
+                },
+                "rewards":{
+                    "function": f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv"
+                }
+            }
+            if entity.needs_enchantment:
+                recursive_merge(advancement_json,{
+                    "criteria":{
+                        "fishing_rod_hooked":{
+                            "conditions":{
+                                "rod":{
+                                    "predicates":{
+                                        "minecraft:enchantments":[
+                                            {"enchantments":"gm4_reeling_rods:reeling"}
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                })
+            output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}"] = Advancement(advancement_json)
+            if entity.can_be_baby:
+                advancement_json_baby:JsonDict = deepcopy(advancement_json)
+                recursive_merge(advancement_json_baby,{
+                    "criteria":{
+                        "fishing_rod_hooked":{
+                            "conditions":{
+                                "entity":{
+                                    "flags":{
+                                        "is_baby": True
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "rewards":{
+                        "function": f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv_baby"
+                    }
+                })
+                output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}_baby"] = Advancement(advancement_json_baby)
+            # Create adv function
+            adv_func : List[str] = [
                 f"# Initial Logic for rod reeling {entity_type_no_prefix}",
                 "# @s = player who fished",
                 "# at @s",
@@ -38,48 +105,15 @@ def beet_default(ctx: Context):
                 "\tunless data entity @s {Invulnerable:1b} unless data entity @s Tags[] \\",
                 f"\trun function gm4_reeling_rods:fishing/{entity_type_no_prefix}/action",
                 "\ntag @s remove gm4_reeling_rods.player"
-            ])
-            if entity.needs_enchantment:
-                output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}"] = Advancement({
-                    "criteria":{
-                        "fishing_rod_hooked":{
-                            "trigger": "minecraft:fishing_rod_hooked",
-                            "conditions": {
-                                "rod": {
-                                    "predicates": {
-                                        "minecraft:enchantments": [
-                                            {
-                                                "enchantments": "gm4_reeling_rods:reeling"
-                                            }
-                                        ]
-                                    }
-                                },
-                                "entity": {
-                                    "type": entity.entity_type
-                                }
-                            }
-                        }
-                    },
-                    "rewards": {
-                        "function": f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv"
-                    }
-                })
-            else:
-                output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}"] = Advancement({
-                    "criteria":{
-                        "fishing_rod_hooked":{
-                            "trigger":"minecraft:fishing_rod_hooked",
-                            "conditions":{
-                                "entity":{
-                                    "type": entity.entity_type
-                                }
-                            }
-                        }
-                    },
-                    "rewards":{
-                        "function": f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv"
-                    }
-                })
+            ]
+            output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv"] = Function(adv_func)
+            if entity.can_be_baby:
+                adv_func_baby = deepcopy(adv_func)
+                adv_func_baby[0] = f"# Initial Logic for rod reeling baby {entity_type_no_prefix}"
+                adv_func_baby[3] = f"# run from advancement gm4_reeling_rods:fishing/{entity_type_no_prefix}_baby"
+                adv_func_baby[4] = f"\nadvancement revoke @s only gm4_reeling_rods:fishing/{entity_type_no_prefix}_baby"
+                adv_func_baby[10] = f"\tat @s positioned ~ ~{str(float(entity.vertical_displacement) / 2)} ~ \\"
+                output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv_baby"] = Function(adv_func_baby)
             if not ("minecart" in entity.entity_type or is_chest_boat): # Other entity types need to have actions defined manually
                 continue
             if "minecart" in entity.entity_type: # minecart types
@@ -134,20 +168,20 @@ def beet_default(ctx: Context):
     entity_list: List[Entity] = []
     # Vertical displacement for mobs is -0.8 * the entities hibox height. Entities with hitboxes that arent just width and height are different
     
-    entity_list.append(Entity("minecraft:leash_knot","-0.4",False))
-    entity_list.append(Entity("minecraft:allay","-0.48",True))
-    entity_list.append(Entity("minecraft:shulker","-0.8",False))
-    entity_list.append(Entity("minecraft:end_crystal","-1.6",False))
+    entity_list.append(Entity("minecraft:leash_knot",False,"-0.4",False))
+    entity_list.append(Entity("minecraft:allay",False,"-0.48",True))
+    entity_list.append(Entity("minecraft:shulker",False,"-0.8",False))
+    entity_list.append(Entity("minecraft:end_crystal",False,"-1.6",False))
     
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
     for chest_boat in item_tags["minecraft:chest_boats"].data['values']:
-        entity_list.append(Entity(chest_boat,"-0.45",True))
+        entity_list.append(Entity(chest_boat,False,"-0.45",True))
     for minecart in ["minecraft:chest_minecart","minecraft:furnace_minecart","minecraft:hopper_minecart","minecraft:tnt_minecart"]:
-        entity_list.append(Entity(minecart,"-0.56",True))
+        entity_list.append(Entity(minecart,False,"-0.56",True))
     for special_hitbox in ["minecraft:painting","minecraft:item_frame", "minecraft:glow_item_frame"]:
-        entity_list.append(Entity(special_hitbox,"-0.4",False))
+        entity_list.append(Entity(special_hitbox,False,"-0.4",False))
     for villager_height in ["minecraft:witch","minecraft:villager"]:
-        entity_list.append(Entity(villager_height,"-1.56",True))
+        entity_list.append(Entity(villager_height,False,"-1.56",True))
     create_files(entity_list)
     create_lookup_file()
     
