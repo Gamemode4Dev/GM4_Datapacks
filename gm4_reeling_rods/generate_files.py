@@ -189,3 +189,53 @@ def beet_default(ctx: Context):
     create_files(entity_list)
     create_lookup_file()
     
+    '''
+    My goal for right now is to go to the maximum scope and then have things cut back.
+    Push this idea as far as I can, then reign it in.
+    
+    TODO:
+        ALL DISMOUNT
+            Check if passenger, dismount.
+            Prepend this logic to all entity list action function
+            Return if dismounting
+        Horse, Skele Horse, Zomb Horse :
+            Steal Armor?
+            Desaddle
+        Donkey, Mule :
+            ChestedHorse + Items
+            Desaddle
+        Llama, Trader Llama :
+            ChestedHorse + Items
+            Carpet stored in armor.body
+        Pufferfish :
+            Fully Puff? Only able to hook outside of water
+            Do they already do this?
+        Sheep :
+            Shear?
+        Wandering Trader :
+            Theft Trades?
+            Steal llamas?
+        Wolf :
+            Steal armor?
+        Piglin, Zomb Piglin, Piglin Brute, Bogged, 
+        Skeleton, Stray, Husk, Drowned, Pillager, 
+        Vindicator, Vex, Wither Skele, Zombie, Zomb Villager:
+            Steal held item. No threat? Armor instead?
+            Balance issues per mob
+        Creaking : 
+            Look into how fishing one works in vanilla.             
+            If rooted on ground, unroot and fly at player
+        Evoker :
+            ????
+        Illusioner :
+            ????
+        Player :
+            Steal hand items?
+            Armor? Too busted?
+    
+    NOTE:   --- NO ---
+        Enderman:       NOT FEASIBLE. Block state stored, not item data.
+            Steal held block
+            Could setblock with the block state, then get drop from breaking
+            Could map block type to item, but that's far too much work and not maintainable
+    '''
