@@ -114,8 +114,7 @@ def beet_default(ctx: Context):
                 adv_func_baby[4] = f"\nadvancement revoke @s only gm4_reeling_rods:fishing/{entity_type_no_prefix}_baby"
                 adv_func_baby[10] = f"\tat @s positioned ~ ~{str(float(entity.vertical_displacement) / 2)} ~ \\"
                 output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv_baby"] = Function(adv_func_baby)
-            if not ("minecart" in entity.entity_type or is_chest_boat): # Other entity types need to have actions defined manually
-                continue
+            # Some generated action files
             if "minecart" in entity.entity_type: # minecart types
                 output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"] = Function([
                     f"# Action for reeled {entity_type_no_prefix}",
@@ -144,6 +143,18 @@ def beet_default(ctx: Context):
                     "data remove storage gm4_reeling_rods:temp entity_data.UUID",
                     f"data modify storage gm4_reeling_rods:temp entity_type set value \"{entity.entity_type.replace('_chest','')}\"",
                     "function gm4_reeling_rods:summon_entity with storage gm4_reeling_rods:temp"
+                ])
+                continue
+            if "_horse" in entity.entity_type: # skele and zombie horses
+                output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"] = Function([
+                    f"# Action for reeled {entity_type_no_prefix}",
+                    f"# @s = {entity_type_no_prefix}",
+                    "# at @s",
+                    f"# run from gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv",
+                    "\ndata modify storage gm4_reeling_rods:temp item_data set value {}",
+                    "data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s SaddleItem",
+                    "execute positioned ~ ~0.8 ~ run function gm4_reeling_rods:separate",
+                    "execute if data storage gm4_reeling_rods:temp {item_data:{Item:{id:\"minecraft:saddle\"}}} run item replace entity @s horse.saddle with minecraft:air"
                 ])
                 continue
     
@@ -177,6 +188,7 @@ def beet_default(ctx: Context):
     entity_list.append(Entity("minecraft:strider",True,"-1.36",True))
     entity_list.append(Entity("minecraft:snow_golem", False, "-1.52",True))
     entity_list.append(Entity("minecraft:wolf",True,"-0.68",True))
+    entity_list.append(Entity("minecraft:donkey",True,"-1.2",True))
     
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
     for chest_boat in item_tags["minecraft:chest_boats"].data['values']:
@@ -187,6 +199,8 @@ def beet_default(ctx: Context):
         entity_list.append(Entity(special_hitbox,False,"-0.4",False))
     for villager_height in ["minecraft:witch","minecraft:villager"]:
         entity_list.append(Entity(villager_height,False,"-1.56",True))
+    for horse_height in ["minecraft:mule","minecraft:horse", "minecraft:zombie_horse", "minecraft:skeleton_horse"]:
+        entity_list.append(Entity(horse_height,True,"-1.28",True))
     create_files(entity_list)
     create_lookup_file()
     
@@ -199,18 +213,9 @@ def beet_default(ctx: Context):
             Check if passenger, dismount.
             Prepend this logic to all entity list action function
             Return if dismounting
-        Horse, Skele Horse, Zomb Horse :
-            Steal Armor?
-            Desaddle
-        Donkey, Mule :
-            ChestedHorse + Items
-            Desaddle
         Llama, Trader Llama :
             ChestedHorse + Items
             Carpet stored in armor.body
-        Wandering Trader :
-            Theft Trades?
-            Steal llamas?
         Piglin, Zomb Piglin, Piglin Brute, Bogged, 
         Skeleton, Stray, Husk, Drowned, Pillager, 
         Vindicator, Vex, Wither Skele, Zombie, Zomb Villager:
@@ -233,5 +238,7 @@ def beet_default(ctx: Context):
             Puff up a bit
         Sheep :         Would need a map from Color Byte to string. Annoying. Maybe revisit
             Shear?
-        
+        Wandering Trader :  Doesn't hold items. Maybe revist
+            Theft Trades?
+            Steal llamas?
     '''
