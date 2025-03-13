@@ -176,6 +176,7 @@ def beet_default(ctx: Context):
     entity_list.append(Entity("minecraft:pig",True,"-0.72",True))
     entity_list.append(Entity("minecraft:strider",True,"-1.36",True))
     entity_list.append(Entity("minecraft:snow_golem", False, "-1.52",True))
+    entity_list.append(Entity("minecraft:wolf",True,"-0.68",True))
     
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
     for chest_boat in item_tags["minecraft:chest_boats"].data['values']:
@@ -207,24 +208,14 @@ def beet_default(ctx: Context):
         Llama, Trader Llama :
             ChestedHorse + Items
             Carpet stored in armor.body
-        Pufferfish :
-            Fully Puff? Only able to hook outside of water
-            Do they already do this?
-        Sheep :
-            Shear?
         Wandering Trader :
             Theft Trades?
             Steal llamas?
-        Wolf :
-            Steal armor?
         Piglin, Zomb Piglin, Piglin Brute, Bogged, 
         Skeleton, Stray, Husk, Drowned, Pillager, 
         Vindicator, Vex, Wither Skele, Zombie, Zomb Villager:
             Steal held item. No threat? Armor instead?
             Balance issues per mob
-        Creaking : 
-            Look into how fishing one works in vanilla.             
-            If rooted on ground, unroot and fly at player
         Evoker :
             ????
         Illusioner :
@@ -238,4 +229,9 @@ def beet_default(ctx: Context):
             Steal held block
             Could setblock with the block state, then get drop from breaking
             Could map block type to item, but that's far too much work and not maintainable
+        Pufferfish :    Setting PuffState has issues. Also stupid hitbox changes size >:(
+            Puff up a bit
+        Sheep :         Would need a map from Color Byte to string. Annoying. Maybe revisit
+            Shear?
+        
     '''
