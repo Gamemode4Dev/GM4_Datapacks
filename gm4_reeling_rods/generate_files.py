@@ -157,6 +157,21 @@ def beet_default(ctx: Context):
                     "execute if data storage gm4_reeling_rods:temp {item_data:{Item:{id:\"minecraft:saddle\"}}} run item replace entity @s horse.saddle with minecraft:air"
                 ])
                 continue
+            if "llama" in entity.entity_type: # llama and trader_llama
+                output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"] = Function([
+                    f"# Action for reeled {entity_type_no_prefix}",
+                    f"# @s = {entity_type_no_prefix}",
+                    "# at @s",
+                    f"# run from gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv",
+                    "\ndata modify storage gm4_reeling_rods:temp entity_data set from entity @s",
+                    "data modify storage gm4_reeling_rods:temp item_data set value {}",
+                    "data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s body_armor_item",
+                    "execute if data entity @s {ChestedHorse:1b} run data modify storage gm4_reeling_rods:temp item_data.Item set value {id:\"minecraft:chest\",count:1}",
+                    "execute positioned ~ ~1 ~ run function gm4_reeling_rods:separate",
+                    "execute if data entity @s {ChestedHorse:1b} run return run data modify entity @s ChestedHorse set value 0b",
+                    "item replace entity @s armor.body with minecraft:air"
+                ])
+                continue
     
     def create_lookup_file():
         lookup_keys = [0]
@@ -189,6 +204,8 @@ def beet_default(ctx: Context):
     entity_list.append(Entity("minecraft:snow_golem", False, "-1.52",True))
     entity_list.append(Entity("minecraft:wolf",True,"-0.68",True))
     entity_list.append(Entity("minecraft:donkey",True,"-1.2",True))
+    entity_list.append(Entity("minecraft:llama",True,"-1.496",True))
+    entity_list.append(Entity("minecraft:trader_llama",True,"-1.496",True))
     
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
     for chest_boat in item_tags["minecraft:chest_boats"].data['values']:
@@ -213,9 +230,6 @@ def beet_default(ctx: Context):
             Check if passenger, dismount.
             Prepend this logic to all entity list action function
             Return if dismounting
-        Llama, Trader Llama :
-            ChestedHorse + Items
-            Carpet stored in armor.body
         Piglin, Zomb Piglin, Piglin Brute, Bogged, 
         Skeleton, Stray, Husk, Drowned, Pillager, 
         Vindicator, Vex, Wither Skele, Zombie, Zomb Villager:
