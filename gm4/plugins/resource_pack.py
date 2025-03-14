@@ -76,23 +76,28 @@ class ModelData(BaseModel):
     """A complete config for a single model"""
     item: ListOption[str]
     reference: str
-    model: MapOption[str|list[dict[str,Any]]] = "" # defaults to same value as 'reference'      #type:ignore ; the validator handles the default value
+    model: 'MapOption[str|ItemModelOptions]' = "" # defaults to same value as 'reference'      #type:ignore ; the validator handles the default value
     template: 'str|TemplateOptions' = "custom"
     transforms: Optional[list['TransformOptions']]
     textures: MapOption[str] = [] # defaults to same value as reference         #type:ignore ; the validator handles the default value
 
     @validator('model', pre=True, always=True) # type: ignore ; v1 validator behaves strangely with type checking
-    def default_model(cls, model: Any, values: dict[str,Any]) -> dict[str, str|list[dict[str,Any]]]:
-        if isinstance(model, str):
+    def default_model(cls, model: Any, values: dict[str,Any]) -> dict[str, 'str|ItemModelOptions']:
+        if isinstance(model, str) or (isinstance(model, dict) and "type" in model):
             model = [model] # so we can check len for number of items
         if not model and "reference" in values: # no reference set, default to reference string
             return {item: values["reference"] for item in values['item'].entries()}
-        if len(i:=values['item'].entries()) == 1 and isinstance(model, list) and isinstance(model[0], dict): # only one item id, predicate model allowed to be single list
-            return {i[0]: model}
-        if len(model)!=len(values["item"].entries()) and len(model)>1: # a single model name may be broadcast to all items, but otherwise lengths match       # type: ignore ; 'model' inherits list[Unknown] from previous isinstance check
+        if len(model)!=len(values["item"].entries()) and len(model)>1 and not "type" in model: # a single model name may be broadcast to all items, but otherwise lengths match       # type: ignore ; 'model' inherits list[Unknown] from previous isinstance check
             raise ValidationError([ErrorWrapper(ValueError("length of 'item' and 'model' do not match"), loc=())], model=ModelData)
         if isinstance(model, list): # apply item->model map data
-            return dict(zip(values['item'].entries(), cycle(model))) # type: ignore
+            model = dict(zip(values['item'].entries(), cycle(model))) # type: ignore
+        for k, opts in model.items(): # find and apply sub ItemModelOptions, where required     #type:ignore ; dict check above muddles type
+            if isinstance(opts, dict): # effectively, isinstance(ItemModelOptions)
+                try:
+                    submodel = {m.type: m for m in ItemModelOptions.__subclasses__()}[opts['type']]
+                    model[k] = submodel.parse_obj(opts)
+                except KeyError:
+                    raise ValidationError([ErrorWrapper(ValueError(f"the specified item model special-case '{opts['type']}' could not be found"), loc=())], model=ModelData)
         if isinstance(model, dict) and set(model.keys())!=set(values['item'].entries()): # make sure the map keys match the item types       # type: ignore ; model is Unknown type
             raise ValidationError([ErrorWrapper(ValueError("dict keys do not match values in 'item'"), loc=())], model=ModelData)
         return model # model is already a mapped dict, of the same length as item      # type: ignore
@@ -140,10 +145,8 @@ class ModelData(BaseModel):
         for i, model_name in enumerate(ret_model):
             if isinstance(model_name, str):
                 ret_model[i] = add_namespace(model_name, namespace) # accessed by index to overwrite original
-            else: # isinstance(model_name, list[dict]), add namespace to buried model parameter
-                for predicated_model in model_name:
-                    if 'model' in predicated_model:
-                        predicated_model['model'] = add_namespace(predicated_model['model'], namespace)
+            else: # isinstance(model_name, ItemModelOptions), add namespace to buried model parameter
+                ret_model[i] = model_name.add_namespace(namespace) # type: ignore ; pydantic validation ensures type is ItemModelOptions
         ret_dict["model"] = ret_model
         if self.textures:
             if isinstance(self.textures.__root__, list):
@@ -157,8 +160,8 @@ class NestedModelData(BaseModel):
     """A potentially incomplete config, allowing for nested inheritance of fields"""
     item: Optional[ListOption[str]]
     reference: Optional[str]
-    model: Optional[Any] # defalts to reference, expects type of 'Optional[MapOption[str|list[dict[str,Any]]]]', but Pydantic casting caused unknown issues
-    template: Optional["str|TemplateOptions"] = "custom"
+    model: Optional['MapOption[str|ItemModelOptions]'] # defalts to reference
+    template: Optional['str|TemplateOptions'] = "custom"
     transforms: Optional[list['TransformOptions']]
     textures: Optional[MapOption[str]]
     broadcast: Optional[list['NestedModelData']] = []
@@ -282,6 +285,27 @@ class TemplateOptions(BaseModel, extra=Extra.allow):
     def mutate_config(self, config: ModelData):
         """Overridden to let a template mutate/mangle root level fields of ModelData"""
         pass
+
+class ItemModelOptions(BaseModel, extra=Extra.allow):
+    """A pydantic model to extend for handling special-case item model definitions, like broken elytra conditions"""
+    type: ClassVar[str]
+    def __init_subclass__(cls) -> None:
+        cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
+
+    def generate_json(self) -> dict[str,Any]:
+        """Overridden to specify the special-cases condition structure"""
+        raise NotImplementedError()
+    
+    def add_namespace(self, namespace: str):
+        """Adds namespace data to sub-config fields added by option, or overridden for granular handling"""
+        r = self.dict()
+        for attr, field in self.__class__.__fields__.items():
+            if attr != "type" and field.type_ is str:
+                r[attr] = add_namespace(r[attr], namespace)
+        return r
+
+    def dict(self, **kwargs: Any) -> dict[str,Any]:
+        return super().dict(**kwargs) | {"type": self.type} # ensure name class-var is preserved in dict-casting
 
 class TransformOptions(BaseModel, extra=Extra.allow):
     """A pydantic model to extend for configured model transformers, which add model offset/scale ect.. to model files"""
@@ -516,12 +540,16 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                 # NOTE only end fishing elytra utlize predicate specification here.
                 # TODO handle predicate format?
 
+                if isinstance(m, str):
+                    model_json = {
+                        "type": "minecraft:model",
+                        "model": m
+                    }
+                else: # isinstance(m, ItemModelOptions):
+                    model_json = m.generate_json() # convert to item-model-definition json
                 itemdef_entries.append({
                     "threshold": self.cmd_prefix+self.retrieve_index(model.reference)[0],
-                    "model": {
-                        "type": "minecraft:model",
-                        "model": m # TODO this is where select customs settings will be moved!
-                    }
+                    "model": model_json
                 })
             
             itemdef_entries.sort(key=lambda entry: entry["threshold"]) # sort entries ascending
@@ -548,15 +576,18 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             
             for model in models:
                 m = model.model[item_id] # model string, or predicate settings, for this particular item id
+
+                if isinstance(m, ItemModelOptions):
+                    # This item uses a special-case logic, rebuilt for the 1.21.4 resource pack item-model-definitions.
+                    # This model file will be manually provided and hardcoded (only case is end fishing elytra)
+                    break
+
                 # setup overrides to add CMD to
-                if isinstance(m, list): # manual predicate merging specified
-                    merge_overrides = [o|{"user_defined": True} for o in m]
-                else: 
-                    merge_overrides = unchanged_vanilla_overrides.copy() # get vanilla overrides
-                    merge_overrides.append({}) # add an empty predicate to add CMD onto, without all other case checks
+                merge_overrides = unchanged_vanilla_overrides.copy() # get vanilla overrides
+                merge_overrides.append({}) # add an empty predicate to add CMD onto, without all other case checks
 
                 for pred in merge_overrides:
-                    if not pred.get("model") and not isinstance(m, str):
+                    if not pred.get("model") and not isinstance(m, str): # type:ignore ; new ItemModelOptions structure does not store required predicate information anymore. 
                         self.logger.warning(f"Manually specified model predicate has no 'model' field, and is malformed:\n\t{pred}")
                     vanilla_overrides.append({
                         "predicate": {
@@ -877,13 +908,13 @@ def limit_mecha_diagnostics(record: logging.LogRecord):
     record.args = ("\n".join(truncated),)
     return True
     
-#== Default Templates and Transforms ==#
+#== Default Templates, Transforms and Item Model Special Cases ==#
 def ensure_single_model_config(template_name: str, config: ModelData) -> str:
     """Does common error checking for templates that only work when creating a single model file"""
     if len(config.model.entries()) > 1:
         raise InvalidOptions("gm4.model_data", f"{config.reference}; Template '{template_name}' only supports single entry 'model' fields.")
-    if isinstance(model_name:=config.model.entries()[0], list):
-        raise InvalidOptions("gm4.model_data", f"{config.reference}; Template '{template_name}' does not support predicate override 'model' fields.")
+    if isinstance(model_name:=config.model.entries()[0], ItemModelOptions):
+        raise InvalidOptions("gm4.model_data", f"{config.reference}; Template '{template_name}' does not support special case 'model' fields.")
     return model_name
 
 class BlankTemplate(TemplateOptions):
@@ -895,11 +926,14 @@ class BlankTemplate(TemplateOptions):
         if config.transforms:
             ret_list: list[Model] = []
             for m in config.model.entries():
-                for model_file in ([override['model'] for override in m] if not isinstance(m, str) else [m]):
-                    try:
-                        ret_list.append(models_container[model_file])
-                    except:
-                        parent_logger.warning(f"Custom specified model {model_file} does not exist, but was configured to recieve transforms.")
+                if isinstance(m, ItemModelOptions):
+                    raise InvalidOptions("gm4.model_data", f"{config.reference}; Cannot add transforms to special-case 'model' fields.") 
+                # NOTE this could be supported, by having ItemModelOptions subclasses list their filenames in a common location to access 
+                # by this function, though this is currently uneeded
+                try:
+                    ret_list.append(models_container[m])
+                except:
+                    parent_logger.warning(f"Custom specified model {m} does not exist, but was configured to recieve transforms.")
             return ret_list
         return []
 
@@ -913,8 +947,8 @@ class GeneratedTemplate(TemplateOptions):
         
         ret_list: list[Model] = []
         for model_name in config.model.entries():
-            if isinstance(model_name, list):
-                raise InvalidOptions("gm4.model_data", f"{config.reference}; Template 'generated' does not support predicate override 'model' fields.")
+            if isinstance(model_name, ItemModelOptions):
+                raise InvalidOptions("gm4.model_data", f"{config.reference}; Template 'generated' does not support specil case 'model' fields.")
             m = models_container[model_name] = Model({
                 "parent": "minecraft:item/generated",
                 "textures": {
@@ -1090,3 +1124,24 @@ class HopperContainerGui(LeftAlignContainerGui, ContainerGuiOptions):
 
 class DropperContainerGui(CenteredContainerGui, ContainerGuiOptions):
     container = "dropper"
+
+class ConditionBroken(ItemModelOptions):
+    """Generator for item model definitions using the broken boolean condition (ie. Elytra textures variants)"""
+    # NOTE this format could be further generalized, but is not yet due to Elytra being the only current case required to implement.
+    type = "condition_broken"
+    unbroken: str
+    broken: str
+
+    def generate_json(self) -> dict[str, Any]:
+        return {
+            "type": "minecraft:condition",
+            "property": "minecraft:broken",
+            "on_false": {
+                "type": "minecraft:model",
+                "model": self.unbroken
+            },
+            "on_true": {
+                "type": "minecraft:model",
+                "model": self.broken
+            }
+        }
