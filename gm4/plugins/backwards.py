@@ -28,14 +28,9 @@ def resource_pack(ctx: Context):
 
   # use a draft generator to ensure merge rules are followed
   with ctx.generate.draft() as draft:
-    overlay = draft.assets.overlays[f"backport_57"]
-    overlay.supported_formats = { "min_inclusive": 0, "max_inclusive": 57 }
+    overlay = draft.assets.overlays[f"backport_42"]
+    overlay.supported_formats = { "min_inclusive": 0, "max_inclusive": 42 }
     rp.generate_model_overrides_1_21_3(overlay)
-
-  # TODO NOTE
-  # call the old RP code from here, for clarity and sense - requires handling for 
-  # sub packs AKA libraries. Wrap 1.21.3- rp code in a generate.draft to ensure proper
-  # merge rules apply. Note outdated methods of rp-plugin.
 
 
 FURNACE_RENAMES = {

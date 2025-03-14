@@ -410,7 +410,7 @@ def dump_registry(ctx: Context):
 
 def pad_item_def_range_dispatch(ctx: Context):
     """Adds entries to vanilla item definitions range_dispach, filling in gaps between CMD values"""
-    pad_model_overrides_1_21_3(ctx, ctx.assets.overlays["backport_57"]) # call legacy pad function
+    pad_model_overrides_1_21_3(ctx, ctx.assets.overlays["backport_42"]) # call legacy pad function
 
     for item_def in ctx.assets["minecraft"].item_models.values():
         vanilla_item_def = item_def.data["model"]["fallback"]
@@ -537,8 +537,6 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
 
             for model in models:
                 m = model.model[item_id] # model string, or predicate settings, for this particular item id
-                # NOTE only end fishing elytra utlize predicate specification here.
-                # TODO handle predicate format?
 
                 if isinstance(m, str):
                     model_json = {
