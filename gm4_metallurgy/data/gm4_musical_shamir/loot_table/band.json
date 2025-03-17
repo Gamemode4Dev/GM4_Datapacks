@@ -23,7 +23,7 @@
                             "lore": [
                                 {
                                     "translate": "item.gm4.shamir.musical",
-                                    "fallback": "Musical",
+                                    "fallback": "Musical Shamir",
                                     "italic": false,
                                     "color": "gray"
                                 }

@@ -1,5 +1,5 @@
 key,en_us
-item.gm4.shamir.percurro,Percurro
+item.gm4.shamir.percurro,Percurro Shamir
 text.gm4.guidebook.module_desc.percurro_shamir,Adds the 'Percurro' Shamir to Metallurgy! Weapons with Percurro let you teleport past your enemies in the blink of an eye!
 text.gm4.guidebook.percurro_shamir.description,Percurro teleports the user behind their target when attacking.
 text.gm4.guidebook.percurro_shamir.usage,"The Percurro Shamir is found on Curie's Bismium Bands. It can be placed onto swords, axes, and tridents.\n\nAttacking a mob teleports the user up to 6 blocks behind the target, turning to face the target."
