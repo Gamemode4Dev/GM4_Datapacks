@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        " P ",
+        "CcC",
+        "CFC"
+    ],
+    "key": {
+        "P": "minecraft:piston",
+        "C": "minecraft:cobblestone",
+        "c": "minecraft:comparator",
+        "F": "minecraft:furnace"
+    },
+    "result": {
+        "id": "minecraft:player_head",
+        "components": {
+            "minecraft:custom_model_data": "item/forming_press",
+            "minecraft:profile": "$forming_press",
+            "minecraft:custom_data": "{gm4_machines:{id:'forming_press'}}",
+            "minecraft:custom_name": "{\"translate\":\"block.gm4.forming_press\",\"fallback\":\"Forming Press\",\"color\":\"white\",\"italic\":false}"
+        }
+    }
+}
