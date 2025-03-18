@@ -10,8 +10,12 @@ class Entity:
         self.can_dismount = can_dismount
 
 def beet_default(ctx: Context):
-    """generates the advancements, the subsequent functions for handling reeling, and set_lookup_table.mcfunction
-        NOTE: Only generates action functions for minecarts and chest boats. Others will have to be defined manually"""
+    """generates files
+        - set_lookup_table
+        - advancements and reward functions for every bit state of an entity's tagged id
+        - fishing/select_type and overlays
+        - a few action functions for specified entity types
+    """
     create_lookup_file(ctx)
     create_bit_advancements(ctx)
 
@@ -167,7 +171,7 @@ def create_select_type(ctx: Context, entities: List[Entity]):
         # base          gets since_57, else
         # backport_48   gets backport_48, else
         for write in writeTo:
-            command = f"execute if entity @s[type={entity.entity_type}] return "
+            command = f"execute if entity @s[type={entity.entity_type}] run return "
             if entity.needs_enchantment:
                 command = command + "run execute if data storage gm4_reeling_rods:temp enchanted "
             command = command + f"run function gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"
