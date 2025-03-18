@@ -25,7 +25,7 @@ pipeline:
 meta:
   gm4:
     versioning:
-      schedule_loops: []
+      schedule_loops: [tick]
     website:
       description: Reel in more than just fish with these rods! Yoink the chest from the chest boat and more!
       recommended: 
