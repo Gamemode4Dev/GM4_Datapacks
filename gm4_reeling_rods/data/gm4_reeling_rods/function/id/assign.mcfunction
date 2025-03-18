@@ -19,3 +19,4 @@ $tag @s add $(bit_12)
 $tag @s add $(bit_13)
 $tag @s add $(bit_14)
 $tag @s add $(bit_15)
+tag @s add gm4_reeling_rods.id.tagged
