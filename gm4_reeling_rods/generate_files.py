@@ -120,6 +120,7 @@ def create_bit_advancements(ctx: Context):
                 f"# player adv logic for getting bit {bit} at value {value}",
                 f"# run from advancement fishing/bit_{bit}_{value}\n",
                 f"advancement revoke @s only gm4_reeling_rods:fishing/bit_{bit}_{value}\n",
+                "execute if entity @s[gamemode=adventure] run return fail\n",
                 "data modify storage gm4_reeling_rods:temp bit_data set value {bit_tag:\"" + f"gm4_reeling_rods.id.{bit}.{value}\", bit:\"{bit}\"" + "}",
                 "data remove storage gm4_reeling_rods:temp enchanted",
                 "execute if predicate gm4_reeling_rods:holding_reeling_rod run data modify storage gm4_reeling_rods:temp enchanted set value 1",
@@ -166,10 +167,10 @@ def create_select_type(ctx: Context, entities: List[Entity]):
         # base          gets since_57, else
         # backport_48   gets backport_48, else
         for write in writeTo:
-            command = f"execute if entity @s[type={entity.entity_type}] "
+            command = f"execute if entity @s[type={entity.entity_type}] return "
             if entity.needs_enchantment:
-                command = command + "if data storage gm4_reeling_rods:temp enchanted "
-            command = command + f"run return run function gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"
+                command = command + "run execute if data storage gm4_reeling_rods:temp enchanted "
+            command = command + f"run function gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"
             write[order].append(command)
     finalSelectFunction(selectFuncBase, ctx.data)
     finalSelectFunction(selectFuncSince61, ctx.data.overlays["since_61"])
