@@ -1,5 +1,6 @@
-# actually assigns entity tags
-# with {AAAAAA}
+# assigns @s bit tags
+# @s = entity to set tags
+# with {bit_0, bit_1, bit_2, bit_3, bit_4, bit_5, bit_6, bit_7, bit_8, bit_9, bit_10, bit_11, bit_12, bit_13, bit_14, bit_15}
 # run from id/set
 
 $tag @s add $(bit_0)

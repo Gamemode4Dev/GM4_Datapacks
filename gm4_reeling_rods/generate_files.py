@@ -1,5 +1,5 @@
 from typing import List
-from beet import Context, Advancement, Function, DataPack 
+from beet import Context, Advancement, Function, DataPack
 from beet.contrib.vanilla import Vanilla
 import math
 
@@ -50,8 +50,6 @@ My goal for right now is to go to the maximum scope and then have things cut bac
 Push this idea as far as I can, then reign it in.
 
     TODO:
-        ALL DISMOUNT
-            Add more mobs. Hopefully all....
         Piglin, Zomb Piglin, Piglin Brute, Bogged, 
         Skeleton, Stray, Husk, Drowned, Pillager, 
         Vindicator, Vex, Wither Skele, Zombie, Zomb Villager:
@@ -64,17 +62,16 @@ Push this idea as far as I can, then reign it in.
         Player :
             Steal hand items?
             Armor? Too busted?
-            Multiple hitbox sizes.....
-        Pufferfish :
-            Puff up
 
     NOTE:   --- NO ---
         Enderman:       NOT FEASIBLE. Block state stored, not item data.
             Steal held block
             Could setblock with the block state, then get drop from breaking
             Could map block type to item, but that's far too much work and not maintainable
-        Pufferfish :    Setting PuffState has issues. Also stupid hitbox changes size >:(
+        Pufferfish :
             Puff up a bit
+            ISSUE: Setting PuffState has issues. Set once is fine. Once it deflates a bit, setting again flashes and then reverts. 
+            Probably an MC bug
         Sheep :         Would need a map from Color Byte to string. Annoying. Maybe revisit
             Shear?
         Wandering Trader :  Doesn't hold items. Maybe revist
