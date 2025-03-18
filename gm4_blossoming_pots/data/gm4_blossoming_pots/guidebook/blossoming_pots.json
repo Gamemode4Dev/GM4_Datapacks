@@ -1,0 +1,57 @@
+{
+  "id": "blossoming_pots",
+  "name": "Blossoming Pots",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:decorated_pot"
+  },
+  "criteria": {
+    "obtain_pot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:decorated_pot",
+              "minecraft:flower_pot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "display",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_pot"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.blossoming_pots.description",
+            "fallback": "To pot a plant, interact with a Decorated Pot or empty Flower Pot while holding a supported item.\nTo remove a plant, break the decorated pot or interact with the flower pot with an empty hand."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.blossoming_pots.item_list.1",
+            "fallback": "§nSupported Items:§r\n\nVanilla Flower Pot\n                    plants\nPale hanging moss\nPointed dripstone\nAmethyst crystals\nLeaves\nShort & tall grass\nLush cave plants"
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.blossoming_pots.item_list.2",
+            "fallback": "§nSupported Items:§r\n\nSugar cane\nNether vines\n2 tall plants\nChorus flower\nNon-sniffer seeds\nNether wart\nSweet berries\nCoral reef plants"
+          }
+        ]
+      ]
+    }
+  ]
+}
