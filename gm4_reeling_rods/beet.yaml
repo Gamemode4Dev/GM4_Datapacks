@@ -30,6 +30,7 @@ meta:
       description: Reel in more than just fish with these rods! Yoink the chest from the chest boat and more!
       recommended: 
         - gm4_end_fishing
+        - gm4_live_catch
       notes: []
     #modrinth:
       #project_id: 
