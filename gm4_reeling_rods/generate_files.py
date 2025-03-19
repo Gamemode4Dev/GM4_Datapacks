@@ -188,14 +188,25 @@ def generated_action(output_pack: DataPack, entity: Entity):
             f"# Action for reeled {entity_type_no_prefix}",
             f"# @s = {entity_type_no_prefix}",
             "# at @s",
-            f"# run from gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv",
+            f"# run from gm4_reeling_rods:fishing/select_type",
             "\ndata modify storage gm4_reeling_rods:temp entity_data set from entity @s",
             "data modify storage gm4_reeling_rods:temp item_data.Item set value {id:\"" + entity.entity_type.removesuffix('_minecart') + "\",count:1}",
             "function gm4_reeling_rods:separate",
-            "tp @s ~ -1000 ~",
             "data remove storage gm4_reeling_rods:temp entity_data.UUID",
+            "data remove storage gm4_reeling_rods:temp entity_data.Passengers",
             "data modify storage gm4_reeling_rods:temp entity_type set value \"minecraft:minecart\"",
-            "function gm4_reeling_rods:summon_entity with storage gm4_reeling_rods:temp"
+            "function gm4_reeling_rods:summon_entity with storage gm4_reeling_rods:temp",
+            f"execute on passengers run function gm4_reeling_rods:fishing/minecart_passenger_transfer",
+            "tp @s ~ -1000 ~",
+        ])
+        # technically this is generated 4 times, but its just one file, so uh idk
+        output_pack[f"gm4_reeling_rods:fishing/minecart_passenger_transfer"] = Function([
+            "# transfer old passenger to new minecart",
+            f"# @s = passengers of {entity_type_no_prefix}",
+            f"# at old {entity_type_no_prefix}",
+            "# run from gm4_reeling_rods:fishing/{all_minecart}/action",
+            "\nride @s dismount",
+            "ride @s mount @e[type=minecraft:minecart,distance=..0.00001,limit=1]"
         ])
         return
     if "chest" in entity.entity_type: # chest boats / raft specific
@@ -203,18 +214,28 @@ def generated_action(output_pack: DataPack, entity: Entity):
             f"# Action for reeled {entity_type_no_prefix}",
             f"# @s = {entity_type_no_prefix}",
             "# at @s",
-            f"# run from gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv",
+            f"# run from gm4_reeling_rods:fishing/select_type",
             "\ndata modify storage gm4_reeling_rods:temp entity_data set from entity @s",
             "data modify storage gm4_reeling_rods:temp item_data.Item set value {id:\"minecraft:chest\",count:1}",
             "execute positioned ~ ~0.75 ~ run function gm4_reeling_rods:separate",
-            "tp @s ~ -1000 ~",
             "data remove storage gm4_reeling_rods:temp entity_data.UUID",
+            "data remove storage gm4_reeling_rods:temp entity_data.Passengers",
             f"data modify storage gm4_reeling_rods:temp entity_type set value \"{entity.entity_type.replace('_chest','')}\"",
-            "function gm4_reeling_rods:summon_entity with storage gm4_reeling_rods:temp"
+            "function gm4_reeling_rods:summon_entity with storage gm4_reeling_rods:temp",
+            f"execute on passengers run function gm4_reeling_rods:fishing/{entity_type_no_prefix}/passenger_transfer",
+            "tp @s ~ -1000 ~"
+        ])
+        output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/passenger_transfer"] = Function([
+            "# transfer old passenger to new boat",
+            f"# @s = passengers of {entity_type_no_prefix}",
+            f"# at old {entity_type_no_prefix}",
+            f"# run from gm4_reeling_rods:fishing/{entity_type_no_prefix}/action",
+            "\nride @s dismount",
+            f"ride @s mount @e[type={entity.entity_type.replace('_chest','')},distance=..0.00001,limit=1]"
         ])
         return
     if "_horse" in entity.entity_type: # skele and zombie horses
-        output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"] = Function([
+        output_pack[f"gm4_reeling_rods:fishing/select_type"] = Function([
             f"# Action for reeled {entity_type_no_prefix}",
             f"# @s = {entity_type_no_prefix}",
             "# at @s",
@@ -226,7 +247,7 @@ def generated_action(output_pack: DataPack, entity: Entity):
         ])
         return
     if "llama" in entity.entity_type: # llama and trader_llama
-        output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"] = Function([
+        output_pack[f"gm4_reeling_rods:fishing/select_type"] = Function([
             f"# Action for reeled {entity_type_no_prefix}",
             f"# @s = {entity_type_no_prefix}",
             "# at @s",
