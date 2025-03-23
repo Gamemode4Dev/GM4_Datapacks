@@ -54,33 +54,42 @@ My goal for right now is to go to the maximum scope and then have things cut bac
 Push this idea as far as I can, then reign it in.
 
     TODO:
-        Piglin, Zomb Piglin, Piglin Brute, Bogged, 
-        Skeleton, Stray, Husk, Drowned, Pillager, 
-        Vindicator, Vex, Wither Skele, Zombie, Zomb Villager:
-            Steal held item. No threat? Armor instead?
-            Balance issues per mob
-        Evoker :
-            ????
-        Illusioner :
-            ????
-        Player :
-            Steal hand items?
-            Armor? Too busted?
+    Hand & Armor Yoinking
+        Should pull a random of those that exist
+
+        Villagers can have armor dispensed onto them, but only the head slot will render
+        Illager types can have armor on them through commands, but it doesn't render. Ignore armor then
+
+        Should return success of yoinking and have select_type return if yoinked item. I think, idk, i'll figure it out later
+    
+    
+        Bogged, Skeleton, Stray, Wither Skele,
+        Husk, Drowned, Zombie, Zomb Villager,
+        Piglin, Zomb Piglin, Piglin Brute, PLAYER:
+            Random item of hand or armor
+            Player might need special handling
+        Vindicator, Vex, Pillager, Illusioner, Allay:
+            Random of Hands
+            Allay will need to be revisited
 
     NOTE:   --- NO ---
-        Enderman:       NOT FEASIBLE. Block state stored, not item data.
+        Enderman :
             Steal held block
+            ISSUE: Block state stored, not item data.
             Could setblock with the block state, then get drop from breaking
             Could map block type to item, but that's far too much work and not maintainable
         Pufferfish :
             Puff up a bit
             ISSUE: Setting PuffState has issues. Set once is fine. Once it deflates a bit, setting again flashes and then reverts. 
             Probably an MC bug
-        Sheep :         Would need a map from Color Byte to string. Annoying. Maybe revisit
+        Sheep :
             Shear?
+            ISSUE: Would need a map from Color Byte to string. Annoying. Maybe revisit
         Wandering Trader :  Doesn't hold items. Maybe revist
             Theft Trades?
             Steal llamas?
+        Evoker :
+            No Ideas
 '''
 
 def create_lookup_file(ctx: Context):
