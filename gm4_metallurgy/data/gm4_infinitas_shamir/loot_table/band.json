@@ -23,7 +23,7 @@
                             "lore": [
                                 {
                                     "translate": "item.gm4.shamir.infinitas",
-                                    "fallback": "Infinitas",
+                                    "fallback": "Infinitas Shamir",
                                     "italic": false,
                                     "color": "gray"
                                 }

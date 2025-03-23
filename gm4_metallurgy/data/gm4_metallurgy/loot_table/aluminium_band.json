@@ -40,12 +40,6 @@
                                     ],
                                     "italic": false,
                                     "color": "#F47989"
-                                },
-                                {
-                                    "translate": "item.gm4.metallurgy.shamir",
-                                    "fallback": "Shamir",
-                                    "italic": false,
-                                    "color": "aqua"
                                 }
                             ]
                         }

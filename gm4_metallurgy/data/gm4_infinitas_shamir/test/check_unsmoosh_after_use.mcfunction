@@ -33,4 +33,3 @@ setblock ~1 ~4 ~1 redstone_block
 
 await items entity @e[type=item,distance=..6] contents minecraft:player_head[custom_data~{gm4_metallurgy:{stored_shamir:"infinitas"}}]
 execute as @e[type=item,distance=..6] if items entity @s contents minecraft:player_head unless data entity @s Item.components."minecraft:custom_data".gm4_metallurgy.stored_shamir run fail "Unsmooshed shamir did not properly transfer shamir to cast"
-execute as @e[type=item,distance=..6] if items entity @s contents minecraft:player_head unless data entity @s Item.components."minecraft:lore"[2] run fail "Unsmooshed shamir is missing the lore line containing the shamir name"

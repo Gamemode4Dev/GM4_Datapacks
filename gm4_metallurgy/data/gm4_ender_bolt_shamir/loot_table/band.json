@@ -23,7 +23,7 @@
                             "lore": [
                                 {
                                     "translate": "item.gm4.shamir.ender_bolt",
-                                    "fallback": "Ender Bolt",
+                                    "fallback": "Ender Bolt Shamir",
                                     "italic": false,
                                     "color": "gray"
                                 }
