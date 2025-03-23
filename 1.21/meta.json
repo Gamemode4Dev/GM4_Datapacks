@@ -1,5 +1,5 @@
 {
-  "last_commit": "131d932e27035160a14ee70018c4b66a041582b6",
+  "last_commit": "c9f4f1d15293c486a73fd0195a9f4243eee3af09",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1269,8 +1269,8 @@
     {
       "id": "gm4_forming_press",
       "name": "Forming Press",
-      "version": "1.5.19",
-      "hash": "ca56b977ad1e8c0240644a31ffe8e93eaee93ee7",
+      "version": "1.5.20",
+      "hash": "dcf7e0bac49ee915fa9e1a035f4395fdbe2832a1",
       "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
       "wiki_link": "https://wiki.gm4.co/wiki/Forming_Press",
       "credits": {
