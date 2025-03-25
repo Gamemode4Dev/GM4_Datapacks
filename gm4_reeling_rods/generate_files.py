@@ -23,31 +23,39 @@ def beet_default(ctx: Context):
     vanilla.minecraft_version = '1.21.4'
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
 
-    entity_list: List[Entity] = []
-    entity_list.append(Entity("minecraft:leash_knot",False,False))
-    entity_list.append(Entity("minecraft:allay",True,True))
-    entity_list.append(Entity("minecraft:shulker",False,True))
-    entity_list.append(Entity("minecraft:end_crystal",False,False))
-    entity_list.append(Entity("minecraft:fox",True,True))
-    entity_list.append(Entity("minecraft:pig",True,True))
-    entity_list.append(Entity("minecraft:strider",True,True))
-    entity_list.append(Entity("minecraft:snow_golem",True,True))
-    entity_list.append(Entity("minecraft:wolf",True,True))
-    entity_list.append(Entity("minecraft:donkey",True,True))
-    entity_list.append(Entity("minecraft:llama",True,True))
-    entity_list.append(Entity("minecraft:trader_llama",True,True))
-    
+    # Here we define all entities with a specific action, those not listed will simply dismount if possible
+    needsEnchant_canDismount: List[str] = [
+        "minecraft:allay", "minecraft:fox", "minecraft:pig",
+        "minecraft:strider", "minecraft:snow_golem", "minecraft:wolf",
+        "minecraft:donkey", "minecraft:llama", "minecraft:trader_llama",
+        "minecraft:witch","minecraft:villager", "minecraft:mule",
+        "minecraft:horse", "minecraft:zombie_horse", "minecraft:skeleton_horse"
+    ]
+    noEnchant_canDismount: List[str] = [
+        "minecraft:shulker"
+    ]
+    needsEnchant_noDismount: List[str] = [
+        "minecraft:chest_minecart", "minecraft:furnace_minecart", "minecraft:hopper_minecart",
+        "minecraft:tnt_minecart", "minecraft:chest_boat"
+    ]
     for chest_boat in item_tags["minecraft:chest_boats"].data['values']:
-        entity_list.append(Entity(chest_boat,True,False))
-    entity_list.append(Entity("minecraft:chest_boat",True,False))
-    for minecart in ["minecraft:chest_minecart","minecraft:furnace_minecart","minecraft:hopper_minecart","minecraft:tnt_minecart"]:
-        entity_list.append(Entity(minecart,True,False))
-    for special_hitbox in ["minecraft:painting","minecraft:item_frame", "minecraft:glow_item_frame"]:
-        entity_list.append(Entity(special_hitbox,False,False))
-    for villager_height in ["minecraft:witch","minecraft:villager"]:
-        entity_list.append(Entity(villager_height,True,True))
-    for horse_height in ["minecraft:mule","minecraft:horse", "minecraft:zombie_horse", "minecraft:skeleton_horse"]:
-        entity_list.append(Entity(horse_height,True,True))
+        needsEnchant_noDismount.append(chest_boat)
+    
+    noEnchant_noDismount: List[str] = [
+        "minecraft:leash_knot", "minecraft:end_crystal", "minecraft:painting",
+        "minecraft:item_frame", "minecraft:glow_item_frame"
+    ]
+    
+    entity_list: List[Entity] = []
+    for name in needsEnchant_canDismount:
+        entity_list.append(Entity(name,True,True))
+    for name in noEnchant_canDismount:
+        entity_list.append(Entity(name,False,True))
+    for name in needsEnchant_noDismount:
+        entity_list.append(Entity(name,True,False))
+    for name in noEnchant_noDismount:
+        entity_list.append(Entity(name,False,False))
+    
     create_select_type(ctx, entity_list)
 '''
 My goal for right now is to go to the maximum scope and then have things cut back.
@@ -65,12 +73,17 @@ Push this idea as far as I can, then reign it in.
     
         Bogged, Skeleton, Stray, Wither Skele,
         Husk, Drowned, Zombie, Zomb Villager,
-        Piglin, Zomb Piglin, Piglin Brute, PLAYER:
+        Piglin, Zomb Piglin, Piglin Brute, 
+        Player, Villager, Allay, Witch:
             Random item of hand or armor
             Player might need special handling
-        Vindicator, Vex, Pillager, Illusioner, Allay:
+            Villager will need special handling due to consequences
+            Allay and Witch can't have armor, but that means it should just fail
+                They also need to be revisted and have the old code scrapped
+        Vindicator, Vex, Pillager, Illusioner:
             Random of Hands
-            Allay will need to be revisited
+            Can have armor with commands, but we don't want to yoink?
+            What if we did? Would it actually be a problem?
 
     NOTE:   --- NO ---
         Enderman :
@@ -151,17 +164,20 @@ def finalSelectFunction(strings: List[List[str]], output_pack: DataPack):
         "# at @s",
         "# run from player/find_fished_entity\n"
     ]
+    # entities that don't dismount
     for line in strings[0]:
         finalFunction.append(line)
+    # dismount logic
     finalFunction.append("\n# dismounting logic\nexecute if function gm4_reeling_rods:fishing/is_passenger run return run ride @s dismount\n")
+    # entities that do dismount, only runs if not dismounting
     for line in strings[1]:
         finalFunction.append(line)
     output_pack["gm4_reeling_rods:fishing/select_type"] = Function(finalFunction)
 
 def create_select_type(ctx: Context, entities: List[Entity]):
-    selectFuncBase: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after dismount"]]
-    selectFuncSince61: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after dismount"]]
-    selectFuncBackport48: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after dismount"]]
+    selectFuncBase: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
+    selectFuncSince61: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
+    selectFuncBackport48: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
     for entity in entities:
         since_61 = "pale_oak" in entity.entity_type
         backport_48 = "minecraft:chest_boat" in entity.entity_type
