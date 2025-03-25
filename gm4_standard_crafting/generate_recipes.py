@@ -1,5 +1,6 @@
 from beet import Context, Recipe, Advancement
 from beet.contrib.vanilla import Vanilla
+from gm4_guidebook.generate_guidebooks import CustomCrafterRecipe
 import logging
 
 logger = logging.getLogger(__name__)
@@ -100,6 +101,26 @@ def beet_default(ctx: Context):
                     "recipes": [
                         recipe_path
                     ]
+                }
+            })
+
+            ctx.data[recipe_path] = CustomCrafterRecipe({
+                "name": f"gm4_standard_crafting:{dir}/{item.removeprefix('minecraft:')}",
+                "input": {
+                    "type": "shaped",
+                    "recipe": shape,
+                    "key": {
+                        "#": {
+                            "item": item
+                        }
+                    }
+                },
+                "output": {
+                    "result": {
+                        "type": "item",
+                        "name": output,
+                        "count": output_count
+                    }
                 }
             })
 
