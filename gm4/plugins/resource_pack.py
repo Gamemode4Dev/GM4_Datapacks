@@ -2,7 +2,6 @@ import csv
 import glob
 import logging
 import os
-import re
 import sys
 from copy import deepcopy
 from dataclasses import replace
@@ -24,12 +23,10 @@ from beet import (
     Model,
     NamespaceProxy,
     PluginOptions,
-    WrappedException,
     YamlFile,
     ResourcePack
 )
 from beet.contrib.link import LinkManager
-from beet.contrib.optifine import OptifineProperties
 from beet.contrib.vanilla import Vanilla
 from beet.core.utils import format_validation_error
 from mecha import (
@@ -366,7 +363,6 @@ def build(ctx: Context):
     rp.generate_gui_fonts()
     rp.update_modeldata_registry()
     rp.generate_model_files()
-    rp.process_optifine()
     rp.generate_item_definitions()
 
     if not ctx.assets.extra.get("pack.png") and ctx.data.extra.get("pack.png"):
@@ -494,7 +490,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     def generate_item_definitions(self):
         """Generates item-model-definition files in the 'minecraft' namespace, adding range_dispatch entries for each custom_model_data value"""
         vanilla = self.ctx.inject(Vanilla)
-        vanilla.minecraft_version = '1.21.4'
+        vanilla.minecraft_version = '1.21.5'
         vanilla_item_defs_jar = vanilla.mount("assets/minecraft/items")
         # group models by item id
         for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
@@ -530,48 +526,6 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             
             itemdef_entries.sort(key=lambda entry: entry["threshold"]) # sort entries ascending
             self.ctx.assets.item_models[f"minecraft:{item_id}"] = ItemModel(new_itemdef)
-
-
-
-    # NOTE legacy code called by plugins.backwards. Remove in 1.22 update
-    def generate_model_overrides_1_21_3(self, pack: ResourcePack):
-        """Generates item model overrides in the 'minecraft' namespace, adding predicates for custom_model_data"""
-        vanilla = self.ctx.inject(Vanilla)
-        vanilla.minecraft_version = '1.21.5'
-        vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
-        # group models by item id
-        for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
-            models = filter(lambda m: item_id in m.item.entries(), self.opts.model_data) # with this item_id
-            models = sorted(models, key=lambda m: self.retrieve_index(m.reference)[0])
-
-            vanilla_model = deepcopy( (v:=vanilla_models_jar.assets.models[f"minecraft:item/{item_id}"].data) | ({} if v.get("overrides") else {"overrides": []}) )
-            vanilla_overrides: list[Any] = vanilla_model["overrides"]
-            for override in vanilla_overrides:
-                override["model"] = add_namespace(override["model"], "minecraft") # ensure vanilla models have namespaced files
-            unchanged_vanilla_overrides = vanilla_overrides.copy()
-            
-            for model in models:
-                m = model.model[item_id] # model string, or predicate settings, for this particular item id
-
-                if isinstance(m, ItemModelOptions):
-                    # This item uses a special-case logic, rebuilt for the 1.21.4 resource pack item-model-definitions.
-                    # This model file will be manually provided and hardcoded (only case is end fishing elytra)
-                    break
-
-                # setup overrides to add CMD to
-                merge_overrides = unchanged_vanilla_overrides.copy() # get vanilla overrides
-                merge_overrides.append({}) # add an empty predicate to add CMD onto, without all other case checks
-
-                for pred in merge_overrides:
-                    if not pred.get("model") and not isinstance(m, str): # type:ignore ; new ItemModelOptions structure does not store required predicate information anymore. 
-                        self.logger.warning(f"Manually specified model predicate has no 'model' field, and is malformed:\n\t{pred}")
-                    vanilla_overrides.append({
-                        "predicate": {
-                            "custom_model_data": self.cmd_prefix+self.retrieve_index(model.reference)[0],
-                        } | pred.get("predicate", {}),
-                        "model": pred["model"] if pred.get("user_defined") else m # type:ignore , user-defined model predicates use their own model reference. m is a string in all other cases
-                    })
-            pack.models[f"minecraft:item/{item_id}"] = Model(vanilla_model)
 
     def retrieve_index(self, reference: str) -> tuple[int, KeyError|None]:
         """retrieves the CMD value for the given reference"""
@@ -666,23 +620,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                     yield set_location(d, ast_nbt)
                 node = replace(node, arguments=AstChildren([ast_target, ast_target_path, AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] })]))
         return node
-    
-    
-    #== Non-mecha CMD filling ==#
-    def process_optifine(self):
-        """Handles string references in the .properties files of Optifine"""
-        # TODO 1.20.5: figure out how to do this
-        pattern = re.compile(r"^nbt.CustomModelData=(?:regex:\()?(.+?)\)?$", re.MULTILINE)
-        for name, propfile in self.ctx.assets[OptifineProperties].items():
-            match = pattern.search(propfile.text)
-            if not match:
-                continue
 
-            for ref in [r for r in match.group(1).split("|") if r.startswith("$")]:
-                index, exc = self.retrieve_index(add_namespace(ref.lstrip("$"), self.ctx.project_id))
-                if exc:
-                    raise WrappedException(f"Optifine CIT file {name}.properties") from exc
-                propfile.text = propfile.text.replace(ref, str(index+self.cmd_prefix))
 
     #== Model file generation ==#
     def generate_model_files(self):

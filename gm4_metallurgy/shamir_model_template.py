@@ -71,6 +71,7 @@ class ShamirTemplate(TemplateOptions):
         models_loc = f"{config.reference}"
         models: dict[str, str|list[dict[str,Any]]] = {} # the value of config.models to be applied after going through special cases
         ret_list: list[Model] = []
+        return ret_list # TODO 1.21.5: re-enable this
 
         for item in config.item.entries():
             if item == "player_head":
@@ -143,33 +144,6 @@ class ShamirTemplate(TemplateOptions):
                     "model": f"{models_loc}/{item_variant}"
                 })
             models.update({item: variants})
-
-            # optifine .properties handling
-            if item in GROUP_LOOKUP["armor"]:
-                material = item.split("_")[0]
-
-                if material == "golden":
-                    material = "gold" # vanilla armor textures are called "gold_layer_1" for some reason
-                layer = item.endswith("leggings")+1 # leggings use layer 2
-                
-                self.bound_ctx.generate(f"gm4_metallurgy:cit/{self.metal}/{item}", merge=OptifineProperties(
-                    "\n".join([e for e in [
-                        "type=armor",
-                        f"matchItems={item}",
-                        f"texture.{material}_layer_{layer}={material}_layer_{layer}",
-                        f"texture.leather_layer_{layer}_overlay=leather_layer_{layer}_overlay" if material == "leather" else None,
-                        f"nbt.CustomModelData=regex:(${config.reference})"
-                    ] if e is not None])
-                ))
-            elif item in ["elytra", "trident", "spyglass"]:
-                self.bound_ctx.generate(f"gm4_metallurgy:cit/{self.metal}/{item}", merge=OptifineProperties(
-                    "\n".join([
-                        "type=elytra" if item=="elytra" else f"type=item",
-                        f"matchItems={item}",
-                        f"texture.{item}={item}",
-                        f"nbt.CustomModelData=regex:(${config.reference})"
-                    ])
-                ))
 
         config.model = MapOption(__root__=models)
         return ret_list
