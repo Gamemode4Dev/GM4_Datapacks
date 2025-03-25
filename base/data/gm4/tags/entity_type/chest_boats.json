@@ -1,15 +1,14 @@
 {
   "values": [
-    { "id": "minecraft:chest_boat", "required": false },
-    { "id": "minecraft:oak_chest_boat", "required": false },
-    { "id": "minecraft:spruce_chest_boat", "required": false },
-    { "id": "minecraft:birch_chest_boat", "required": false },
-    { "id": "minecraft:jungle_chest_boat", "required": false },
-    { "id": "minecraft:acacia_chest_boat", "required": false },
-    { "id": "minecraft:cherry_chest_boat", "required": false },
-    { "id": "minecraft:dark_oak_chest_boat", "required": false },
-    { "id": "minecraft:mangrove_chest_boat", "required": false },
-    { "id": "minecraft:bamboo_chest_raft", "required": false },
-    { "id": "minecraft:pale_oak_chest_boat", "required": false }
+    "minecraft:oak_chest_boat",
+    "minecraft:spruce_chest_boat",
+    "minecraft:birch_chest_boat",
+    "minecraft:jungle_chest_boat",
+    "minecraft:acacia_chest_boat",
+    "minecraft:cherry_chest_boat",
+    "minecraft:dark_oak_chest_boat",
+    "minecraft:mangrove_chest_boat",
+    "minecraft:bamboo_chest_raft",
+    "minecraft:pale_oak_chest_boat"
   ]
 }
