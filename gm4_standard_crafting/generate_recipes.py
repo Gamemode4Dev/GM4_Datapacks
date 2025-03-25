@@ -1,6 +1,5 @@
 from beet import Context, Recipe, Advancement
 from beet.contrib.vanilla import Vanilla
-from gm4_guidebook.generate_guidebooks import CustomCrafterRecipe
 import logging
 
 logger = logging.getLogger(__name__)
@@ -10,7 +9,7 @@ def beet_default(ctx: Context):
         NOTE: only generates the vanilla recipes and guidebook definitions - future work will generate function definitions too"""
     
     vanilla = ctx.inject(Vanilla)
-    vanilla.minecraft_version = '1.21.4'
+    vanilla.minecraft_version = '1.21.5'
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
     recipes = vanilla.mount("data/minecraft/recipe").data.recipes
 
@@ -33,9 +32,6 @@ def beet_default(ctx: Context):
 
             recipe_path = f"gm4_standard_crafting:{dir}/{item.removeprefix('minecraft:')}"
 
-            since_61 = "pale_oak" in item or "resin" in item
-            output_pack = ctx.data.overlays["since_61"] if since_61 else ctx.data
-
             output_recipe = recipes.get(output) # type: ignore
             if output_recipe is None:
                 group: str = output.removeprefix('minecraft:') # type: ignore
@@ -56,9 +52,9 @@ def beet_default(ctx: Context):
                         }
                     ]
                 }
-                output_pack[output] = Recipe(output_recipe.data)
+                ctx.data[output] = Recipe(output_recipe.data)
 
-            output_pack[recipe_path] = Recipe({
+            ctx.data[recipe_path] = Recipe({
                 "type": "minecraft:crafting_shaped",
                 "category": "building",
                 "group": group, #type: ignore
@@ -72,7 +68,7 @@ def beet_default(ctx: Context):
                 }
             })
 
-            output_pack[f"gm4_standard_crafting:recipes/{dir}/{item.removeprefix('minecraft:')}"] = Advancement({
+            ctx.data[f"gm4_standard_crafting:recipes/{dir}/{item.removeprefix('minecraft:')}"] = Advancement({
                 "parent": "minecraft:recipes/root",
                 "criteria": {
                     "has_the_recipe": {
@@ -104,28 +100,6 @@ def beet_default(ctx: Context):
                     "recipes": [
                         recipe_path
                     ]
-                }
-            })
-
-            if since_61:
-                continue
-            ctx.data[recipe_path] = CustomCrafterRecipe({
-                "name": f"gm4_standard_crafting:{dir}/{item}",
-                "input": {
-                    "type": "shaped",
-                    "recipe": shape,
-                    "key": {
-                        "#": {
-                            "item": item
-                        }
-                    }
-                },
-                "output": {
-                    "result": {
-                        "type": "item",
-                        "name": output,
-                        "count": output_count
-                    }
                 }
             })
 

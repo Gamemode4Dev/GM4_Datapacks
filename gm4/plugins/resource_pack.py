@@ -385,7 +385,7 @@ def dump_registry(ctx: Context):
 def pad_model_overrides(ctx: Context):
     """Adds overrides for the vanilla model, filling in gaps between CMD values"""
     vanilla = ctx.inject(Vanilla)
-    vanilla.minecraft_version = '1.21.3'
+    vanilla.minecraft_version = '1.21.5'
     vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
 
     for name, model in ctx.assets["minecraft"].models.items():
@@ -472,7 +472,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     def generate_model_overrides(self):
         """Generates item model overrides in the 'minecraft' namespace, adding predicates for custom_model_data"""
         vanilla = self.ctx.inject(Vanilla)
-        vanilla.minecraft_version = '1.21.3'
+        vanilla.minecraft_version = '1.21.5'
         vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
         # group models by item id
         for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
@@ -655,7 +655,7 @@ class TranslationLinter(Reducer):
         self.ctx = ctx
         self.mecha_database = ctx.inject(Mecha).database
         vanilla = ctx.inject(Vanilla)
-        vanilla.minecraft_version = '1.21.3'
+        vanilla.minecraft_version = '1.21.5'
         vanilla_lang = vanilla.mount("assets/minecraft/lang/en_us.json")
         self.vanilla_keys = set(vanilla_lang.assets.languages["minecraft:en_us"].data.keys())
         self.total_keys: set[str] = set()
