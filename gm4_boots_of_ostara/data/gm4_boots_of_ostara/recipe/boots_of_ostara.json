@@ -16,9 +16,11 @@
   "result": {
     "id": "minecraft:leather_boots",
     "components": {
-      "minecraft:dyed_color": {
-        "rgb": 3705899,
-        "show_in_tooltip": false
+      "minecraft:dyed_color": 3705899,
+      "minecraft:tooltip_display": {
+        "hidden_components": [
+          "minecraft:dyed_color"
+        ]
       },
       "minecraft:custom_model_data": "item/boots_of_ostara",
       "minecraft:custom_data": "{gm4_boots_of_ostara:1b}",

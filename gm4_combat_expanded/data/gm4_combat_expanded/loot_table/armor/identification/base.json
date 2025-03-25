@@ -11,9 +11,7 @@
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:damage": 0,
-                "minecraft:attribute_modifiers": {
-                  "modifiers": []
-                },
+                "minecraft:attribute_modifiers": [],
                 "minecraft:enchantments": {}
               }
             }

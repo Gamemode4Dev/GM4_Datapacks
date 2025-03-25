@@ -975,8 +975,8 @@ def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextCompo
       else:
         item = ingredient["id"]
       color = get_texture_color(intuit_item_texture(item, vanilla))
-      display_color = ingredient["guidebook"]["display_color"] if (item in IS_DYED and "guidebook" in ingredient and "display_color" in ingredient["guidebook"]) else ingredient["components"]["minecraft:dyed_color"]["rgb"] if (item in IS_DYED and "components" in ingredient and "minecraft:dyed_color" in ingredient["components"]) else DEFAULT_COLORS[item] if item in DEFAULT_COLORS else 16777215 # white
-      overlay_color = ingredient["guidebook"]["overlay_color"] if (item in OVERLAY_DYED and "guidebook" in ingredient and "overlay_color" in ingredient["guidebook"]) else ingredient["components"]["minecraft:dyed_color"]["rgb"] if (item in OVERLAY_DYED and"components" in ingredient and "minecraft:dyed_color" in ingredient["components"]) else DEFAULT_OVERLAY_COLORS[item] if item in DEFAULT_OVERLAY_COLORS else 16777215 # white
+      display_color = ingredient["guidebook"]["display_color"] if (item in IS_DYED and "guidebook" in ingredient and "display_color" in ingredient["guidebook"]) else ingredient["components"]["minecraft:dyed_color"] if (item in IS_DYED and "components" in ingredient and "minecraft:dyed_color" in ingredient["components"]) else DEFAULT_COLORS[item] if item in DEFAULT_COLORS else 16777215 # white
+      overlay_color = ingredient["guidebook"]["overlay_color"] if (item in OVERLAY_DYED and "guidebook" in ingredient and "overlay_color" in ingredient["guidebook"]) else ingredient["components"]["minecraft:dyed_color"] if (item in OVERLAY_DYED and"components" in ingredient and "minecraft:dyed_color" in ingredient["components"]) else DEFAULT_OVERLAY_COLORS[item] if item in DEFAULT_OVERLAY_COLORS else 16777215 # white
       if "image" in ingredient:
         image = ingredient["image"]
       else:
