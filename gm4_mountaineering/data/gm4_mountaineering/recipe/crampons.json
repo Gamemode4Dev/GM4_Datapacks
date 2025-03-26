@@ -14,7 +14,7 @@
     "components": {
       "minecraft:custom_model_data": "item/crampons",
       "minecraft:custom_data": "{gm4_mountaineering:{item:'crampons'}}",
-      "minecraft:custom_name": "{\"translate\":\"item.gm4.crampons\",\"fallback\":\"Crampons\",\"italic\":false}",
+      "minecraft:custom_name": {"translate":"item.gm4.crampons","fallback":"Crampons","italic":false},
       "minecraft:attribute_modifiers": [
         {
           "type": "minecraft:movement_speed",

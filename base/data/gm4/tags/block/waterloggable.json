@@ -59,7 +59,7 @@
     "minecraft:pointed_dripstone",
     "minecraft:purple_stained_glass_pane",
     "minecraft:red_stained_glass_pane",
-    { "id": "minecraft:resin_clump", "required": false },
+    "minecraft:resin_clump",
     "minecraft:scaffolding",
     "minecraft:sculk_sensor",
     "minecraft:sculk_vein",

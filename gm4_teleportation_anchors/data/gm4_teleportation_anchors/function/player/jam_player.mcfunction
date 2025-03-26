@@ -3,7 +3,7 @@
 
 tag @s add gm4_ta_teleported_player
 tag @s add gm4_ta_store_pos
-summon marker ~ ~ ~ {CustomName:'"gm4_ta_player_pos"',Tags:["gm4_ta_player_pos","gm4_ta_new_player_pos"]}
+summon marker ~ ~ ~ {CustomName:"gm4_ta_player_pos",Tags:["gm4_ta_player_pos","gm4_ta_new_player_pos"]}
 
 execute if entity @s[type=!player] store result score @s gm4_ta_id run data get entity @s UUID[3]
 

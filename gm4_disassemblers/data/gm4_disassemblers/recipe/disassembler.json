@@ -19,7 +19,7 @@
       "minecraft:custom_model_data": "item/disassembler",
       "minecraft:profile": "$disassembler",
       "minecraft:custom_data": "{gm4_machines:{id:'disassembler'}}",
-      "minecraft:custom_name": "{\"translate\":\"block.gm4.disassembler\",\"fallback\":\"Disassembler\",\"color\":\"white\",\"italic\":false}"
+      "minecraft:custom_name": {"translate":"block.gm4.disassembler","fallback":"Disassembler","color":"white","italic":false}
     }
   }
 }

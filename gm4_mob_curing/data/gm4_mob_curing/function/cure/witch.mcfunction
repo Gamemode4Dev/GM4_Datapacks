@@ -3,7 +3,7 @@
 # at @s
 # run from check_item
 
-summon villager ~ ~ ~ {Tags:["gm4_mob_curing_potion_cleric","gm4_mob_curing_needs_init"],VillagerData:{profession:"minecraft:cleric",level:5,type:"minecraft:plains"},Xp:1,CustomName:'{"translate":"entity.gm4.potion_cleric","fallback":"Potion Cleric§"}',Team:"gm4_hide_name"}
+summon villager ~ ~ ~ {Tags:["gm4_mob_curing_potion_cleric","gm4_mob_curing_needs_init"],VillagerData:{profession:"minecraft:cleric",level:5,type:"minecraft:plains"},Xp:1,CustomName:{"translate":"entity.gm4.potion_cleric","fallback":"Potion Cleric§"},Team:"gm4_hide_name"}
 
 tp @e[type=villager,distance=..1,tag=gm4_mob_curing_needs_init,sort=nearest,limit=1] @s
 tag @s add gm4_mob_curing_needs_init

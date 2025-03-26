@@ -38,7 +38,7 @@ scoreboard players operation $difficulty gm4_ce_data < #100 gm4_ce_data
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:weapon/axe/iron
 
 # set droprate to 40%
-data modify entity @s HandDropChances set value [0.40F,0.40F]
+data modify entity @s drop_chances merge value {mainhand:0.40F,offhand:0.40F}
 
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep

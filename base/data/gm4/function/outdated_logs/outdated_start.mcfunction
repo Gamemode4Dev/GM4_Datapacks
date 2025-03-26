@@ -1,4 +1,4 @@
-tellraw @a[tag=gm4_show_log] [{"text":"The following modules are outdated! Click here to download the latest versions.","color":"gold","clickEvent":{"action":"open_url","value":"https://www.gm4.co/modules"},"hoverEvent":{"action":"show_text","value":{"text":"Click to visit gm4.co/modules","color":"#4AA0C7"}}}]
+tellraw @a[tag=gm4_show_log] [{"text":"The following modules are outdated! Click here to download the latest versions.","color":"gold","click_event":{"action":"open_url","url":"https://www.gm4.co/modules"},"hover_event":{"action":"show_text","value":{"text":"Click to visit gm4.co/modules","color":"#4AA0C7"}}}]
 
 data modify storage gm4:log outdated_list set from storage gm4:log queue
 data remove storage gm4:log outdated_list[{type:"text"}]

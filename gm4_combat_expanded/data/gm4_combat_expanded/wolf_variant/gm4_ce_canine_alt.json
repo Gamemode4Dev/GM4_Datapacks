@@ -1,4 +1,10 @@
 {
+    "assets": {
+        "angry": "gm4_combat_expanded:entity/wolf/gm4_ce_canine_alt_angry",
+        "tame": "gm4_combat_expanded:entity/wolf/gm4_ce_canine_alt_tame",
+        "wild": "gm4_combat_expanded:entity/wolf/gm4_ce_canine_alt"
+    },
+    "spawn_conditions": [],
     "angry_texture": "gm4_combat_expanded:entity/wolf/gm4_ce_canine_alt_angry",
     "biomes": "minecraft:mushroom_fields",
     "tame_texture": "gm4_combat_expanded:entity/wolf/gm4_ce_canine_alt_tame",

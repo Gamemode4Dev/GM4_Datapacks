@@ -13,8 +13,9 @@ execute store result storage gm4_block_compressors:temp/item_stack Item.componen
 # set count to 1 and add compressed item visuals 
 data merge storage gm4_block_compressors:temp/item_stack {Item:{count:1,components:{"minecraft:enchantment_glint_override":true}}}
 execute as 344d47-4-4-4-f04ce104d run loot replace entity @s weapon.offhand loot gm4_block_compressors:technical/compressed_lore
-execute as 344d47-4-4-4-f04ce104d run data modify storage gm4_block_compressors:temp/item_stack Item.components."minecraft:lore" append from entity @s HandItems[1].components."minecraft:custom_name"
-data merge entity 344d47-4-4-4-f04ce104d {HandItems:[{},{}]}
+execute as 344d47-4-4-4-f04ce104d run data modify storage gm4_block_compressors:temp/item_stack Item.components."minecraft:lore" append from entity @s equipment.offhand.components."minecraft:custom_name"
+data remove entity 344d47-4-4-4-f04ce104d equipment.mainhand
+data remove entity 344d47-4-4-4-f04ce104d equipment.offhand
 
 # clone data to original item entity
 data modify entity @s Item set from storage gm4_block_compressors:temp/item_stack Item
