@@ -18,7 +18,7 @@
       "minecraft:custom_model_data": "item/liquid_tank",
       "minecraft:profile": "$liquid_tank",
       "minecraft:custom_data": "{gm4_machines:{id:'liquid_tank'}}",
-      "minecraft:custom_name": "{\"translate\":\"block.gm4.liquid_tank\",\"fallback\":\"Liquid Tank\",\"color\":\"white\",\"italic\":false}"
+      "minecraft:custom_name": {"translate":"block.gm4.liquid_tank","fallback":"Liquid Tank","color":"white","italic":false}
     }
   }
 }

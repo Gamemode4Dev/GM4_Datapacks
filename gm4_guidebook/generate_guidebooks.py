@@ -830,10 +830,10 @@ def loottable_to_display(loottable: str, data: dict[Any,Any], ctx: Context) -> t
   if "functions" in entry:
     for function in entry["functions"]:
       if "set_name" in function["function"]:
-        name = f'{json.dumps(function["name"])}'
+        name = function["name"]
       elif "set_lore" in function["function"]:
         for line in function["lore"]:
-          lore.append(f'{json.dumps(line)}')
+          lore.append(line)
       elif "set_components" in function["function"]:
         for key, value in function["components"].items():
           if "profile" in key:
@@ -1815,7 +1815,7 @@ Creates the function to summon a guidebook marker with proper NBT
 """
 def generate_summon_marker_function(book: Book, overlay: bool = False) -> Function:
   marker_nbt = nbtlib.Compound()
-  marker_nbt["CustomName"] = nbtlib.String(f'"gm4_{book.id}"')
+  marker_nbt["CustomName"] = nbtlib.String(f'gm4_{book.id}')
   marker_nbt["Tags"] = nbtlib.List([nbtlib.String("gm4_guide"),nbtlib.String(f"gm4_guide_{book.id}")])
   marker_nbt["data"] = nbtlib.Compound()
   marker_nbt["data"]["type"] = nbtlib.String(book.module_type)

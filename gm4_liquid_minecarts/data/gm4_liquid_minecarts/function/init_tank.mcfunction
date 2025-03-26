@@ -2,7 +2,7 @@
 #run from try_to_unload
 
 #summon display stand
-summon armor_stand ~ ~-.95 ~ {CustomName:'"gm4_liquid_tank_display"',Tags:["gm4_no_edit","gm4_liquid_tank_display","gm4_lm_needs_texture","smithed.entity","smithed.strict"],NoGravity:1b,Marker:1b,Invisible:1b,Invulnerable:1b,Small:1b,Silent:1b,DisabledSlots:4144959,HasVisualFire:1b}
+summon armor_stand ~ ~-.95 ~ {CustomName:"gm4_liquid_tank_display",Tags:["gm4_no_edit","gm4_liquid_tank_display","gm4_lm_needs_texture","smithed.entity","smithed.strict"],NoGravity:1b,Marker:1b,Invisible:1b,Invulnerable:1b,Small:1b,Silent:1b,DisabledSlots:4144959,HasVisualFire:1b}
 data modify entity @e[type=armor_stand,tag=gm4_lm_needs_texture,limit=1,sort=nearest] equipment.head set from entity @s Passengers[0].equipment.feet.components."minecraft:custom_data".gm4_liquid_minecarts.tank.texture
 data modify entity @e[type=marker,tag=gm4_liquid_tank,limit=1,sort=nearest,distance=..0.1] data.gm4_liquid_tanks.liquid_tag set from entity @s Passengers[0].equipment.feet.components."minecraft:custom_data".gm4_liquid_minecarts.liquid_tag
 tag @e[type=armor_stand] remove gm4_lm_needs_texture
