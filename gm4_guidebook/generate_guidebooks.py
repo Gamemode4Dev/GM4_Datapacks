@@ -237,11 +237,11 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "run_command",
-        "value": "/trigger gm4_guide set 1"
+        "command": "/trigger gm4_guide set 1"
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.return_to_toc",
@@ -264,11 +264,11 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "open_url",
-        "value": book.wiki_link
+        "url": book.wiki_link
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.open_wiki",
@@ -293,11 +293,11 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide set {book.trigger_id}"
+        "command": f"/trigger gm4_guide set {book.trigger_id}"
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.refresh",
@@ -319,11 +319,11 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide_prev set {book.trigger_id}"
+        "command": f"/trigger gm4_guide_prev set {book.trigger_id}"
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.prev",
@@ -345,11 +345,11 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide_next set {book.trigger_id}"
+        "command": f"/trigger gm4_guide_next set {book.trigger_id}"
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.next",
@@ -373,11 +373,11 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "run_command",
-        "value": "/trigger gm4_guide set 1"
+        "command": "/trigger gm4_guide set 1"
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.return_to_toc",
@@ -400,11 +400,11 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "open_url",
-        "value": book.wiki_link
+        "url": book.wiki_link
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.open_wiki",
@@ -429,11 +429,11 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide set {book.trigger_id}"
+        "command": f"/trigger gm4_guide set {book.trigger_id}"
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.refresh",
@@ -456,11 +456,11 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide_prev set {book.trigger_id}"
+        "command": f"/trigger gm4_guide_prev set {book.trigger_id}"
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.prev",
@@ -483,11 +483,11 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "run_command",
-        "value": f"/trigger gm4_guide_next set {book.trigger_id}"
+        "command": f"/trigger gm4_guide_next set {book.trigger_id}"
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.next",
@@ -530,11 +530,11 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "change_page",
-        "value": "2"
+        "page": 2
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.return_to_toc",
@@ -557,11 +557,11 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "open_url",
-        "value": book.wiki_link
+        "url": book.wiki_link
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.open_wiki",
@@ -586,11 +586,11 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "change_page",
-        "value": "3"
+        "page": 3
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.refresh",
@@ -612,11 +612,11 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "change_page",
-        "value": "4"
+        "page": 4
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.prev",
@@ -638,11 +638,11 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "change_page",
-        "value": "1"
+        "page": 1
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.next",
@@ -666,11 +666,11 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "change_page",
-        "value": "2"
+        "page": 2
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.return_to_toc",
@@ -693,11 +693,11 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "open_url",
-        "value": book.wiki_link
+        "url": book.wiki_link
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.open_wiki",
@@ -722,11 +722,11 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "change_page",
-        "value": "3"
+        "page": 3
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.refresh",
@@ -749,11 +749,11 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "change_page",
-        "value": "4"
+        "page": 4
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.prev",
@@ -776,11 +776,11 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
           "font": "gm4:guidebook"
         }
       ],
-      "clickEvent": {
+      "click_event": {
         "action": "change_page",
-        "value": "1"
+        "page": 1
       },
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "value": {
           "translate": "text.gm4.guidebook.next",
@@ -877,11 +877,9 @@ def loottable_to_display(loottable: str, data: dict[Any,Any], ctx: Context) -> t
         }
       ]
     ],
-    "hoverEvent": {
+    "hover_event": {
       "action": "show_item",
-      "contents": {
-        "id": item_id
-      }
+      "id": item_id
     }
   }
   slot_under: dict[Any, Any] = {
@@ -899,29 +897,27 @@ def loottable_to_display(loottable: str, data: dict[Any,Any], ctx: Context) -> t
         "font": "gm4:guidebook"
       }
     ],
-    "hoverEvent": {
+    "hover_event": {
       "action": "show_item",
-      "contents": {
-        "id": item_id
-      }
+      "id": item_id
     }
   }
 
   # custom display name and lore
   if name != "":
-    if "components" not in slot["hoverEvent"]["contents"]:
-      slot["hoverEvent"]["contents"]["components"] = {}
-    if "components" not in slot_under["hoverEvent"]["contents"]:
-      slot_under["hoverEvent"]["contents"]["components"] = {}
-    slot["hoverEvent"]["contents"]["components"]["minecraft:custom_name"] = name
-    slot_under["hoverEvent"]["contents"]["components"]["minecraft:custom_name"] = name
+    if "components" not in slot["hover_event"]:
+      slot["hover_event"]["components"] = {}
+    if "components" not in slot_under["hover_event"]:
+      slot_under["hover_event"]["components"] = {}
+    slot["hover_event"]["components"]["minecraft:custom_name"] = name
+    slot_under["hover_event"]["components"]["minecraft:custom_name"] = name
   if len(lore) > 0:
-    if "components" not in slot["hoverEvent"]["contents"]:
-      slot["hoverEvent"]["contents"]["components"] = {}
-    if "components" not in slot_under["hoverEvent"]["contents"]:
-      slot_under["hoverEvent"]["contents"]["components"] = {}
-    slot["hoverEvent"]["contents"]["components"]["minecraft:lore"] = lore
-    slot_under["hoverEvent"]["contents"]["components"]["minecraft:lore"] = lore
+    if "components" not in slot["hover_event"]:
+      slot["hover_event"]["components"] = {}
+    if "components" not in slot_under["hover_event"]:
+      slot_under["hover_event"]["components"] = {}
+    slot["hover_event"]["components"]["minecraft:lore"] = lore
+    slot_under["hover_event"]["components"]["minecraft:lore"] = lore
   return slot, slot_under
 
 
@@ -1004,11 +1000,9 @@ def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextCompo
             }
           ]
         ],
-        "hoverEvent": {
+        "hover_event": {
           "action": "show_item",
-          "contents": {
-            "id": item
-          }
+          "id": item
         }
       }
       slot_under: dict[Any, Any] = {
@@ -1026,16 +1020,14 @@ def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextCompo
             "font": "gm4:guidebook"
           }
         ],
-        "hoverEvent": {
+        "hover_event": {
           "action": "show_item",
-          "contents": {
-            "id": item
-          }
+          "id": item
         }
       }
       if "components" in ingredient:
-        slot["hoverEvent"]["contents"]["components"] = ingredient['components']
-        slot_under["hoverEvent"]["contents"]["components"] = ingredient['components']
+        slot["hover_event"]["components"] = ingredient['components']
+        slot_under["hover_event"]["components"] = ingredient['components']
   return slot, slot_under
 
 
@@ -1130,7 +1122,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
           "font": "gm4:guidebook"
         }
       ],
-      "hoverEvent": {
+      "hover_event": {
         "action": "show_text",
         "contents": {
           "translate": "text.gm4.guidebook.shapeless",
@@ -1376,11 +1368,11 @@ def populate_insert(element: dict[Any, Any], book: Book, ctx: Context, lectern: 
         }
     # (default) locked text
     elif element["insert"] == "locked_text":
-      locked_text = ["\n",{'translate':'gm4.second','fallback':'%1$s',"with":[{'text':'\n\n\n\n           ???           '},{'translate': 'gui.gm4.guidebook.locked_page', 'fallback': '\n\n\n\n           ???           ','color': 'white','font':'gm4:guidebook'}],'hoverEvent':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}]
+      locked_text = ["\n",{'translate':'gm4.second','fallback':'%1$s',"with":[{'text':'\n\n\n\n           ???           '},{'translate': 'gui.gm4.guidebook.locked_page', 'fallback': '\n\n\n\n           ???           ','color': 'white','font':'gm4:guidebook'}],'hover_event':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}]
       return locked_text
     # title page locked text
     elif element["insert"] == "locked_text_title":
-      locked_text = ["",{'translate':'gm4.second','fallback':'%1$s',"with":[{'text':'\n\n\n\n           ???           '},{'translate': 'gui.gm4.guidebook.locked_page', 'fallback': '\n\n\n\n           ???           ','color': 'white','font':'gm4:guidebook'}],'hoverEvent':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}]
+      locked_text = ["",{'translate':'gm4.second','fallback':'%1$s',"with":[{'text':'\n\n\n\n           ???           '},{'translate': 'gui.gm4.guidebook.locked_page', 'fallback': '\n\n\n\n           ???           ','color': 'white','font':'gm4:guidebook'}],'hover_event':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}]
       return locked_text
     # recipes
     elif element["insert"] == "recipe":
@@ -1638,7 +1630,7 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
         {
           "text": f"[{book_name}]", # module name (never translated)
           "color": "#4AA0C7", 
-          "hoverEvent": 
+          "hover_event": 
           {
             "action": "show_text", 
             "contents": [
@@ -1800,11 +1792,11 @@ def generate_add_toc_line_function(book: Book, overlay: bool = False) -> Functio
   text_component = {
     "text": get_toc_line(book),
     "color": "#4AA0C7",
-    "clickEvent": {
+    "click_event": {
       "action": "run_command",
-      "value": f"/trigger gm4_guide set {book.trigger_id}"
+      "command": f"/trigger gm4_guide set {book.trigger_id}"
     },
-    "hoverEvent": {
+    "hover_event": {
       "action": "show_text",
       "contents": [{
         "translate": "text.gm4.guidebook.jump_to_section",
