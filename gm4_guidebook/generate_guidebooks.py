@@ -1124,7 +1124,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
       ],
       "hover_event": {
         "action": "show_text",
-        "contents": {
+        "value": {
           "translate": "text.gm4.guidebook.shapeless",
           "fallback": "Recipe is shapeless"
         }
@@ -1368,11 +1368,11 @@ def populate_insert(element: dict[Any, Any], book: Book, ctx: Context, lectern: 
         }
     # (default) locked text
     elif element["insert"] == "locked_text":
-      locked_text = ["\n",{'translate':'gm4.second','fallback':'%1$s',"with":[{'text':'\n\n\n\n           ???           '},{'translate': 'gui.gm4.guidebook.locked_page', 'fallback': '\n\n\n\n           ???           ','color': 'white','font':'gm4:guidebook'}],'hover_event':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}]
+      locked_text = ["\n",{'translate':'gm4.second','fallback':'%1$s',"with":[{'text':'\n\n\n\n           ???           '},{'translate': 'gui.gm4.guidebook.locked_page', 'fallback': '\n\n\n\n           ???           ','color': 'white','font':'gm4:guidebook'}],'hover_event':{'action':'show_text','value':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}]
       return locked_text
     # title page locked text
     elif element["insert"] == "locked_text_title":
-      locked_text = ["",{'translate':'gm4.second','fallback':'%1$s',"with":[{'text':'\n\n\n\n           ???           '},{'translate': 'gui.gm4.guidebook.locked_page', 'fallback': '\n\n\n\n           ???           ','color': 'white','font':'gm4:guidebook'}],'hover_event':{'action':'show_text','contents':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}]
+      locked_text = ["",{'translate':'gm4.second','fallback':'%1$s',"with":[{'text':'\n\n\n\n           ???           '},{'translate': 'gui.gm4.guidebook.locked_page', 'fallback': '\n\n\n\n           ???           ','color': 'white','font':'gm4:guidebook'}],'hover_event':{'action':'show_text','value':[{'translate':'text.gm4.guidebook.undiscovered','fallback':'Undiscovered','italic':True,'color':'red'}]}}]
       return locked_text
     # recipes
     elif element["insert"] == "recipe":
@@ -1633,7 +1633,7 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
           "hover_event": 
           {
             "action": "show_text", 
-            "contents": [
+            "value": [
               {
                 "text": book_name, # module name
                 "color": "#4AA0C7"
@@ -1798,7 +1798,7 @@ def generate_add_toc_line_function(book: Book, overlay: bool = False) -> Functio
     },
     "hover_event": {
       "action": "show_text",
-      "contents": [{
+      "value": [{
         "translate": "text.gm4.guidebook.jump_to_section",
         "fallback": "Jump to Section",
         "color": "gold"
