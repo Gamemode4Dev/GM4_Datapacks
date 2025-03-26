@@ -4,7 +4,7 @@
 
 # check for the existence of an hand item
 scoreboard players reset $has_hand_item gm4_binder_data
-execute store success score $has_hand_item gm4_binder_data if entity @s[nbt={HandItems:[{count:1}]}]
+execute store success score $has_hand_item gm4_binder_data if items entity @s weapon.* *
 
 # drop hand items if necessary
 execute if score $has_hand_item gm4_binder_data matches 1.. run function gm4_book_binders:binder/placement/drop_hand_item

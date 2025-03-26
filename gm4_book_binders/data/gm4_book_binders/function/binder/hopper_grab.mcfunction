@@ -3,8 +3,8 @@
 # run from gm4_book_binders:binder/tick
 
 # give item into armor stand's hand (done before count is reduced)
-data modify entity @s HandItems[0] set from block ~ ~ ~ Items[0]
-data modify entity @s HandItems[0].count set value 1
+data modify entity @s equipment.mainhand set from block ~ ~ ~ Items[0]
+data modify entity @s equipment.mainhand.count set value 1
 
 # remove one item from hopper's first (filled) slot
 execute store result score $hopper_slot_count gm4_binder_data run data get block ~ ~ ~ Items[0].count

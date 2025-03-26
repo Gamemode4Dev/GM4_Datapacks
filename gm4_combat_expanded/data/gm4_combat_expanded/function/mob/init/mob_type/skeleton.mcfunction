@@ -49,10 +49,10 @@ loot replace entity @s armor.head loot gm4_combat_expanded:mob/equip_armor/gener
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/skeleton
 
 # drop rate for custom arrows
-execute if score $arrow gm4_ce_data matches 1 run data modify entity @s HandDropChances[1] set value 0.25F
+execute if score $arrow gm4_ce_data matches 1 run data modify entity @s drop_chances.offhand set value 0.25F
 
 # half droprate of armor in "Dark"
-data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] drop_chances merge value {feet:0.0452F,legs:0.0452F,chest:0.0452F,head:0.0452F}
 
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep

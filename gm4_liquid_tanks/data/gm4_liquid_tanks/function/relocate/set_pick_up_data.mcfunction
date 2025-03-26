@@ -11,7 +11,7 @@ data modify storage gm4_relocators:temp merge_data.entity_data.marker.Tags set f
 tag @s add gm4_relocating_block
 data modify storage gm4_relocators:temp merge_data.entity_data.marker.data set from entity @s data
 
-data modify storage gm4_relocators:temp merge_data.entity_data.stand.ArmorItems set from entity @e[type=armor_stand,tag=gm4_liquid_tank_stand,distance=..0.5,limit=1] ArmorItems
+data modify storage gm4_relocators:temp merge_data.entity_data.stand.equipment set from entity @e[type=armor_stand,tag=gm4_liquid_tank_stand,distance=..0.5,limit=1] equipment
 data modify storage gm4_relocators:temp merge_data.entity_data.stand.Tags set from entity @e[type=armor_stand,tag=gm4_liquid_tank_stand,distance=..0.5,limit=1] Tags
 
 execute positioned ~ ~-0.75 ~ run data modify storage gm4_relocators:temp merge_data.entity_data.display set from entity @e[type=armor_stand,tag=gm4_liquid_tank_display,distance=..0.3,limit=1] {}
