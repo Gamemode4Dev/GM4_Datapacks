@@ -1045,7 +1045,7 @@ class DropperContainerGui(CenteredContainerGui, ContainerGuiOptions):
 
 class ConditionBroken(ItemModelOptions):
     """Generator for item model definitions using the broken boolean condition (ie. Elytra textures variants)"""
-    # NOTE this format could be further generalized, but is not yet due to Elytra being the only current case required to implement.
+    # NOTE this format could be further generalized, but is not yet due to Elytra (and shamirs) being the only current case required to implement.
     type = "condition_broken"
     unbroken: str
     broken: str
