@@ -432,7 +432,7 @@ def pad_model_overrides_1_21_3(ctx: Context, assets: ResourcePack):
 
     for name, model in assets["minecraft"].models.items():
         vanilla_overrides = [{"predicate":{},"model": f"minecraft:{name}"}] + vanilla_models_jar.assets["minecraft"].models[name].data.get("overrides", [])
-        overrides: list[Any] = model.data["overrides"]
+        overrides: list[Any] = model.data.get("overrides", [])
         prior_cmd = 1e8
         for i, override in reversed(list(enumerate(overrides))):
             if "custom_model_data" in (pred:=override.get("predicate")):
@@ -1125,7 +1125,7 @@ class DropperContainerGui(CenteredContainerGui, ContainerGuiOptions):
 
 class ConditionBroken(ItemModelOptions):
     """Generator for item model definitions using the broken boolean condition (ie. Elytra textures variants)"""
-    # NOTE this format could be further generalized, but is not yet due to Elytra being the only current case required to implement.
+    # NOTE this format could be further generalized, but is not yet due to Elytra (and shamirs) being the only current case required to implement.
     type = "condition_broken"
     unbroken: str
     broken: str
