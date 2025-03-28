@@ -575,14 +575,21 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             for model in models:
                 m = model.model[item_id] # model string, or predicate settings, for this particular item id
 
+                has_manual_predicates = False
                 if isinstance(m, ItemModelOptions):
                     # This item uses a special-case logic, rebuilt for the 1.21.4 resource pack item-model-definitions.
                     # This model file will be manually provided and hardcoded (only case is end fishing elytra)
-                    break
 
-                # setup overrides to add CMD to
-                merge_overrides = unchanged_vanilla_overrides.copy() # get vanilla overrides
-                merge_overrides.append({}) # add an empty predicate to add CMD onto, without all other case checks
+                    # Metallurgy shamirs still utilize this function for backwards compatability generation via _complex_bypass
+                    if m.type == "_complex_bypass":
+                        merge_overrides = [o|{"user_defined": True} for o in m.payload_1_21_3]
+                        has_manual_predicates = True
+                    else:
+                        break
+                
+                if not has_manual_predicates:
+                    merge_overrides = unchanged_vanilla_overrides.copy() # get vanilla overrides
+                    merge_overrides.append({}) # add an empty predicate to add CMD onto, without all other case checks
 
                 for pred in merge_overrides:
                     if not pred.get("model") and not isinstance(m, str): # type:ignore ; new ItemModelOptions structure does not store required predicate information anymore. 
