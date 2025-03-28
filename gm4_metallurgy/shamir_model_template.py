@@ -1,7 +1,7 @@
 from beet import Context, Model, NamespaceProxy, ListOption, ResourcePack
 from beet.contrib.vanilla import Vanilla, ClientJar
 from beet.contrib.optifine import OptifineProperties
-from typing import Any, ClassVar, Literal
+from typing import Any, ClassVar, Literal, Optional
 from itertools import product, chain, count
 import re
 import logging
@@ -66,6 +66,7 @@ class ShamirTemplate(TemplateOptions):
     bound_ctx: ClassVar[Context]
     metallurgy_assets: ClassVar[ResourcePack] = ResourcePack(path="gm4_metallurgy") # load metallurgy textures so expansion shamirs can fall back on their
     vanilla_models_jar: ClassVar[ClientJar]
+    vanilla_models_jar_1_21_3: ClassVar[ClientJar]
 
     def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         logger = parent_logger.getChild(self.bound_ctx.project_id)
@@ -187,6 +188,7 @@ class ComplexBypass(ItemModelOptions):
     # NOTE should this be in the base resource_pack file? Depends if any other modules use this approach
     type = "_complex_bypass"
     payload: dict[str, Any]
+    payload_1_21_3: Optional[Any] = [] # NOTE backwards compatability field. Will be removed in 1.21.5 update
 
     def generate_json(self) -> dict[str, Any]:
         return self.payload
@@ -222,6 +224,10 @@ def beet_default(ctx: Context):
     vanilla.minecraft_version = '1.21.5'
     ShamirTemplate.vanilla_models_jar = vanilla.mount("assets/minecraft/items")
     merge_policy(ctx)
+
+    # 1.21.3 Backwards Compat
+    vanilla.minecraft_version = '1.21.3'
+    ShamirTemplate.vanilla_models_jar_1_21_3 = vanilla.mount("assets/minecraft/models/item")
 
 def merge_policy(ctx: Context):
     ctx.assets.merge_policy.extend_namespace(OptifineProperties, optifine_armor_properties_merging)
