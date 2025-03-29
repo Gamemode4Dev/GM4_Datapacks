@@ -8,7 +8,7 @@ from dataclasses import replace
 from functools import cache
 from fnmatch import fnmatch
 from itertools import cycle
-from typing import Any, ClassVar, Literal, Optional
+from typing import Any, ClassVar, Literal, Optional, Union
 
 import numpy as np
 from beet import (
@@ -39,6 +39,7 @@ from mecha import (
     AstJsonObjectEntry,
     AstJsonObjectKey,
     AstJsonValue,
+    AstNbtCompound,
     AstNbtCompoundEntry,
     AstNbtCompoundKey,
     AstNbtPath,
@@ -707,8 +708,9 @@ class TranslationLinter(Reducer):
             except DiagnosticError:
                 pass # string is not json
 
+    @rule(AstNbtCompound)
     @rule(AstJsonObject)
-    def missing_en_us_translations(self, node: AstJsonObject):
+    def missing_en_us_translations(self, node: Union[AstNbtCompound, AstJsonObject]):
         self.setup_translation_lookups()
                 
         # manually skip gm4 root advancement, which contains globally defined translations
@@ -717,26 +719,28 @@ class TranslationLinter(Reducer):
             return
         
         # check node fallback contents against babelbox translations
-        match node.evaluate(): # type: ignore , node has evaluate() method
-            case {"translate": str(transl_key), "fallback": str(fallback)}:
-                if transl_key.startswith("gui.gm4") or transl_key=="gm4.second":
-                    # gui-texture translations from other modules are defined in their gui_fonts segment of beet.yaml, so they won't be
-                    # known to the linter easily. For now, we just ignore their warnings
-                    return
-                if self.babelbox_lang.get(transl_key) != fallback:
-                    if transl_key in self.babelbox_lang and not self.backfill_enable:
-                        yield set_location(Diagnostic("info", f"Fallback for {transl_key} does not match that provided in 'translations.csv'"), node)
-                        
-                    elif self.backfill_enable and transl_key not in self.backfill_values and transl_key not in self.foreign_keys:
-                        self.logger.info(f"Backfilling the fallback for {transl_key} into 'translations.csv'")
-                        self.backfill_values[transl_key] = fallback
-                yield self.check_key(transl_key, node)
-            
-            case {"translate": str(transl_key), **other_keys}:
-                if "fallback" not in other_keys and self.babelbox_lang.get(transl_key): # if non-technical translation
-                    yield set_location(Diagnostic("warn", f"No translation fallback specified for {transl_key}"), node)
-                yield self.check_key(transl_key, node)
-        return
+        translate_entry = next((e for e in node.entries if e.key.value == "translate"), None)
+        if not translate_entry:
+            return
+        transl_key = str(translate_entry.value.evaluate())
+        fallback_extry = next((e for e in node.entries if e.key.value == "fallback"), None)
+        if fallback_extry:
+            fallback = str(fallback_extry.value.evaluate())
+            if transl_key.startswith("gui.gm4") or transl_key=="gm4.second":
+                # gui-texture translations from other modules are defined in their gui_fonts segment of beet.yaml, so they won't be
+                # known to the linter easily. For now, we just ignore their warnings
+                return
+            if self.babelbox_lang.get(transl_key) != fallback:
+                if transl_key in self.babelbox_lang and not self.backfill_enable:
+                    yield set_location(Diagnostic("info", f"Fallback for {transl_key} does not match that provided in 'translations.csv'"), node)
+                elif self.backfill_enable and transl_key not in self.backfill_values and transl_key not in self.foreign_keys:
+                    self.logger.info(f"Backfilling the fallback for {transl_key} into 'translations.csv'")
+                    self.backfill_values[transl_key] = fallback
+            yield self.check_key(transl_key, node)
+        else:
+            if self.babelbox_lang.get(transl_key):
+                yield set_location(Diagnostic("warn", f"No translation fallback specified for {transl_key}"), node)
+            yield self.check_key(transl_key, node)
 
     def check_key(self, transl_key: str, node: Any):
         self.used_keys.add(transl_key)
