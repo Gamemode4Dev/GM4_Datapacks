@@ -299,7 +299,7 @@ def write_updates(ctx: Context):
 			continue # not a datapack (ie the rp) and has score to print
 		version = Version(m.version).int_rep()
 		website = f"https://gm4.co/modules/{m.id[4:].replace('_','-')}"
-		init.lines.append(f"execute if score {m.id} load.status matches -1.. if score {m.id.removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m.name}',download:'{website}',render:'{{\"text\":\"{m.name}\",\"click_event\":{{\"action\":\"open_url\",\"url\":\"{website}\"}},\"hover_event\":{{\"action\":\"show_text\",\"value\":{{\"text\":\"Click to visit {website}\",\"color\":\"#4AA0C7\"}}}}}}'}}")
+		init.lines.append(f"execute if score {m.id} load.status matches -1.. if score {m.id.removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m.name}',download:'{website}',render:{{'text':'{m.name}','click_event':{{'action':'open_url','url':'{website}'}},'hover_event':{{'action':'show_text','value':{{'text':'Click to visit {website}','color':'#4AA0C7'}}}}}}}}")
 	
 def repro_structure_to_bytes(content: StructureFileData) -> bytes:
     """a modified Structure.to_bytes from beet, which ensures the GZip does not add

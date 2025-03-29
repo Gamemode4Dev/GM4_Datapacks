@@ -3,7 +3,7 @@
 
 # check blocks around the marker ray
 scoreboard players set $found gm4_count 0
-execute store success score $found gm4_count align xyz positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ brewing_stand unless entity @e[type=marker,distance=..0.1,tag=gm4_brewing_stand,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_brewing_stand"],CustomName:'"gm4_brewing_stand"'}
+execute store success score $found gm4_count align xyz positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ brewing_stand unless entity @e[type=marker,distance=..0.1,tag=gm4_brewing_stand,limit=1] run summon marker ~ ~ ~ {Tags:["gm4_brewing_stand"],CustomName:"gm4_brewing_stand"}
 
 # move forward
 scoreboard players add $ray gm4_count 1
