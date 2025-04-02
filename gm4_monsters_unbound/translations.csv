@@ -1,0 +1,10 @@
+key,en_us
+advancement.gm4.monsters_unbound.elite_kill.title,Elite Hunter
+advancement.gm4.monsters_unbound.elite_kill.description,Kill any Elite monster
+advancement.gm4.monsters_unbound.elite_kill_all.title,Elites Hunted
+advancement.gm4.monsters_unbound.elite_kill_all.description,Kill one of every Elite monster
+text.gm4.guidebook.module_desc.monsters_unbound,Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
+text.gm4.guidebook.monsters_unbound.description.biomes,Mobs spawned in different biomes have special modifiers.\n\nSome areas and biomes spawn different mobs than usual.
+text.gm4.guidebook.monsters_unbound.description.elites,Zombies that spawn as babies or as leaders are replaced with a random Elite variant.\n\nSkeletons have a static 5% chance to be an Elite.
+text.gm4.guidebook.monsters_unbound.description.elite_zephyr,"Zephyr Elites can charge a powerful wind-charged attack. Damaging them during the charge time dissipates the charge. Zephyr Zombies will rush the player, Zephyr Skeletons fire a burst of arrows."
+item.gm4.monsters_unbound.zombie_spore,Zombie Spore

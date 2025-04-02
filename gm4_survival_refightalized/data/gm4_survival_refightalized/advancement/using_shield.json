@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "items": "minecraft:shield"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_survival_refightalized:player/damage/shield/using"
+    }
+}
