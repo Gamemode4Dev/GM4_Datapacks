@@ -5,7 +5,7 @@
 
 data modify storage gm4_relocators:temp merge_data set value {custom_block:"gm4_smeltery",lore:'{"translate":"block.gm4.smeltery","fallback":"Smeltery","color":"gray","italic":true}'}
 data modify storage gm4_relocators:temp merge_data.entity_data.Rotation set from entity @s Rotation
-data modify storage gm4_relocators:temp merge_data.entity_data.ArmorItems set from entity @e[type=armor_stand,tag=gm4_smeltery_stand,distance=..0.6,limit=1] ArmorItems
+data modify storage gm4_relocators:temp merge_data.entity_data.equipment set from entity @e[type=armor_stand,tag=gm4_smeltery_stand,distance=..0.6,limit=1] equipment
 
 kill @e[type=armor_stand,tag=gm4_smeltery_stand,limit=1,distance=..0.6]
 scoreboard players operation $current gm4_smelt_id = @s gm4_smelt_id

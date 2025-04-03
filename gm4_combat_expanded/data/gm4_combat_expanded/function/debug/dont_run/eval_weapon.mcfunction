@@ -15,7 +15,7 @@ data modify storage gm4_combat_expanded:temp components."minecraft:custom_data".
 data modify storage gm4_combat_expanded:temp components."minecraft:damage" set value 0
 
 # sharpness
-execute store result score $current_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:enchantments".levels."minecraft:sharpness"
+execute store result score $current_sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:enchantments"."minecraft:sharpness"
 execute if score $current_sharpness gm4_ce_data matches 1.. run function gm4_combat_expanded:weapon/update_sharpness
 
 # modify weapon

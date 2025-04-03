@@ -201,7 +201,7 @@ dev = [
 requires-dist = [
     { name = "beet", specifier = ">=0.109.3" },
     { name = "bolt", specifier = ">=0.49.1" },
-    { name = "mecha", specifier = ">=0.95.2" },
+    { name = "mecha", git = "https://github.com/misode/mecha?branch=snbt-1.21.5" },
     { name = "pillow", specifier = ">=10.0.0,<11.0.0" },
     { name = "pydantic", specifier = ">=2.6.1,<3.0.0" },
     { name = "pyyaml", specifier = ">=6.0,<7.0" },
@@ -306,15 +306,11 @@ wheels = [
 
 [[package]]
 name = "mecha"
-version = "0.95.2"
-source = { registry = "https://pypi.org/simple" }
+version = "0.97.1"
+source = { git = "https://github.com/misode/mecha?branch=snbt-1.21.5#51f81508abb2ecaf406feaebb8f1917cc183858e" }
 dependencies = [
     { name = "beet" },
     { name = "tokenstream" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/f9/73/a0241a4bf3a6b9c5b3a10469ced5f9f55f2e8df48bf284b691d2887ad3ce/mecha-0.95.2.tar.gz", hash = "sha256:06ee6f80f9dc091617fdeef7c03ffbbf482d5ec07cceab6e9f31a72a4e8a1ed8", size = 136006 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/23/86/fa11198171f8fa90f74a6fb5768d6bd53f25d87517699f6be7903af0ec63/mecha-0.95.2-py3-none-any.whl", hash = "sha256:8abbbc6eee9871d622bf9c90cd6c3217b8325966d546bb0ca229d1eb7b963eff", size = 162272 },
 ]
 
 [[package]]

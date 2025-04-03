@@ -1,7 +1,7 @@
 # @s = player with expeditious pneuma who stopped sneaking
 # run from pneumas/sneak/stopped
 
-summon marker ~ ~ ~ {CustomName:'"Expeditious TP"',Tags:["gm4_oa_expeditious"]}
+summon marker ~ ~ ~ {CustomName:"Expeditious TP",Tags:["gm4_oa_expeditious"]}
 tp @e[type=marker,tag=gm4_oa_expeditious,limit=1] @s
 
 scoreboard players set @s gm4_pneuma_data 0

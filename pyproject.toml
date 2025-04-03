@@ -24,6 +24,9 @@ dev-dependencies = [
     "uv >= 0.5.4",
 ]
 
+[tool.uv.sources]
+mecha = { git = "https://github.com/misode/mecha", branch = "snbt-1.21.5" }
+
 [project.entry-points.beet]
 commands = "gm4.commands"
 autoload = "gm4.plugins.autoload"

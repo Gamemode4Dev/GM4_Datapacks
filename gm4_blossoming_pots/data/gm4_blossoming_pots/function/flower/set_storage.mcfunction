@@ -11,6 +11,41 @@
         # 2:[]  array of starting data for the all the block displays used in this stage, all data
         # ......
 
+data modify storage gm4_blossoming_pots:flower_pots minecraft:pale_hanging_moss set value {\
+    place_sound:"minecraft:block.moss_carpet.place",\
+    maximum:1,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_hanging_moss",\
+                Properties:{\
+                    tip:"false"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.243f,0.25f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_hanging_moss",\
+                Properties:{\
+                    tip:"true"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.7425f,0.25f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
+    ]\
+}
+
 data modify storage gm4_blossoming_pots:flower_pots minecraft:pointed_dripstone set value {\
     place_sound:"minecraft:block.pointed_dripstone.place",\
     maximum:1,\
@@ -243,6 +278,23 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:cherry_leaves set 
         {\
             block_state:{\
                 Name:"minecraft:cherry_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.25f,-0.125f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:flower_pots minecraft:pale_oak_leaves set value {\
+    place_sound:"minecraft:block.grass.place",\
+    maximum:1,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:pale_oak_leaves"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.125f,-0.25f],\

@@ -4,7 +4,7 @@
 # run from flower/raycast
 
 # merge marker data for if it doesn't get killed
-data merge entity @s {Tags:["gm4_blossoming_pots.temp.flower_pot","smithed.strict","smithed.entity"],CustomName:'{"text":"gm4_blossoming_pots.temp_marker"}'}
+data merge entity @s {Tags:["gm4_blossoming_pots.temp.flower_pot","smithed.strict","smithed.entity"],CustomName:{"text":"gm4_blossoming_pots.temp_marker"}}
 
 # if temp marker in physical hit box, return 1
 # dxdydz all 0 bc of MC-123441.

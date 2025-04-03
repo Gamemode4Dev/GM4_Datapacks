@@ -23,5 +23,5 @@ playsound minecraft:entity.husk.ambient hostile @a[distance=..16] ~ ~ ~ 0.5
 playsound block.redstone_torch.burnout hostile @a[distance=..16] ~ ~ ~ 0.5 .1
 
 # clean up
-data merge entity @s {DeathTime:19s,Health:0,DeathLootTable:"gm4:empty",HandDropChances:[-327.67F,-327.67F],ArmorDropChances:[-327.67F,-327.67F,-327.67F,-327.67F]}
+data merge entity @s {DeathTime:19s,Health:0,DeathLootTable:"gm4:empty",drop_chances:{mainhand:0F,offhand:0F,feet:0F,legs:0F,chest:0F,head:0F}}
 tp @s ~ ~-5000 ~

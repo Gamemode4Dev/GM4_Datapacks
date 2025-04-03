@@ -19,7 +19,7 @@
       "minecraft:custom_model_data": "item/teleportation_anchor",
       "minecraft:profile": "$teleportation_anchor",
       "minecraft:custom_data": "{gm4_machines:{id:'teleportation_anchor'}}",
-      "minecraft:custom_name": "{\"translate\":\"block.gm4.teleportation_anchor\",\"fallback\":\"Teleportation Anchor\",\"color\":\"white\",\"italic\":false}"
+      "minecraft:custom_name": {"translate":"block.gm4.teleportation_anchor","fallback":"Teleportation Anchor","color":"white","italic":false}
     }
   }
 }

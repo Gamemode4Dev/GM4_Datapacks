@@ -12,7 +12,7 @@ data modify storage gm4_combat_expanded:temp components set from block 29999998 
 data remove block 29999998 1 7134 Items
 
 # set max health to calculated value
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic"}].amount int 1 run scoreboard players get $set_max_health gm4_ce_data
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers"[{id:"gm4_combat_expanded:dynamic"}].amount int 1 run scoreboard players get $set_max_health gm4_ce_data
 
 # update linked armor piece
 execute if score @s gm4_ce_link_slot matches 0 run function gm4_combat_expanded:item_modify_eval/head_update with storage gm4_combat_expanded:temp

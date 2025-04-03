@@ -7,7 +7,7 @@ execute at @s run tp @s ~ ~ ~ 270 50
 summon item ~1.5 ~2.5 ~1.5 {Item:{id:"minecraft:bucket"}}
 loot spawn ~1.5 ~2.5 ~1.5 loot gm4_infinitas_shamir:band
 
-await delay 1s
+await delay 1.5s
 
 setblock ~1 ~4 ~1 redstone_block
 

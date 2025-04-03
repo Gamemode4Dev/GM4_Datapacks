@@ -21,8 +21,6 @@ loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/minib
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/miniboss
 loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_weapon/shield
 
-data modify entity @s ArmorDropChances set value [0.50F,0.50F,0.50F,0.50F]
-
-data modify entity @s HandDropChances set value [0.50F,0.75F]
+data modify entity @s drop_chances merge value {mainhand:0.50F,offhand:0.75F,feet:0.50F,legs:0.50F,chest:0.50F,head:0.50F}
 
 scoreboard players set $modifier_picked gm4_ce_data 1

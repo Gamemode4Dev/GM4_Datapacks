@@ -8,4 +8,4 @@ summon item ~ ~ ~ {Tags:["gm4_ce_dropped_wolf_armor"],Item:{id:"wolf_armor",coun
 item replace entity @e[type=item,tag=gm4_ce_dropped_wolf_armor,limit=1,sort=nearest,distance=..1] contents from entity @s armor.body
 
 # remove armor from wolf
-data remove entity @s body_armor_item
+item replace entity @s armor.body with minecraft:air
