@@ -1,0 +1,5 @@
+model_data:
+  - item: leather_horse_armor
+    reference: item/furniture/paintbrush
+  - item: [player_head, leather_horse_armor]
+    reference: block/furniture/furniture_station
