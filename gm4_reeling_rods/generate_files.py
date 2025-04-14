@@ -10,7 +10,7 @@ class Entity:
         self.can_dismount = can_dismount
 
 def beet_default(ctx: Context):
-    """generates files
+    """NOTE: generates files
         - set_lookup_table
         - advancements and reward functions for every bit state of an entity's tagged id
         - fishing/select_type and overlays
@@ -61,31 +61,52 @@ def beet_default(ctx: Context):
 My goal for right now is to go to the maximum scope and then have things cut back.
 Push this idea as far as I can, then reign it in.
 
-    TODO:
-    Hand & Armor Yoinking
+    TODO: Hand & Armor Yoinking
+        Treat this as an action. No entity should have an action AND have item theft
+        Therefore, it should take place after a failed dismount
+        As a consequence of no overlap, we can just return run the theft function, no need to conditional it
+    
         Should pull a random of those that exist
+            Use the random check order that you have in your notebook
+        Yoinked item height.
+            Previously, in manually defined yoinking, the item height was hard coded per entity
+            This is not easily possible with a generic item yoink
+            What do we do?
+            We could pass a value with a macro, same principal as hard coding the value, not pretty but it works
+            Is it possible to get the entity hitbox height? If we can then we can math out the location
+        Use a type tag list for which entities can have items yoinked
+        
+        
+        NOTE: Specific Entities
+            Villagers:
+                -{ Special Exception }-
+                Currently are set up as a manually defined mainhand theft with reputational harm and trade sell out
+                Needs to implement theft for armor as well (armor can be dispensed onto them; only head renders)
+                Does the armor theft cause reputational damage to player?
+            Illagers:
+                [ Vindicator, Vex, Pillager, Illusioner, Evoker? ]
+                Can have armor on them through commands (not dispensed), but doesn't render
+                Probably shouldn't theft armor that can't be applied by players, that's the realm of datapackers
+                Should use a special hand item theft function
+            Fox, Allay, Witch:
+                Needs to have old code scrapped
+                Cannot have armor (<1.21.5)
+                Should use a special hand item theft funciton (for clarity)
+            Player:
+                Try to implement using the generic entity item yoinking
+                But if there's player specific problems, just split player off into a special case
+            All the rest:
+                [ Bogged, Skeleton, Stray, Wither Skeleton ]
+                [ Husk, Drowned, Zombie, Zombie Villager ]
+                [ Piglin, Piglin Brute, Zombie Piglin ]
+                
+                Steal armor or hand item just fine
+                Nugget idea?
+                    Try to use drop chances for armor and if it fails drop armor material?
+                    What about datapack armor?... I worry about compatibility
 
-        Villagers can have armor dispensed onto them, but only the head slot will render
-        Illager types can have armor on them through commands, but it doesn't render. Ignore armor then
 
-        Should return success of yoinking and have select_type return if yoinked item. I think, idk, i'll figure it out later
-    
-    
-        Bogged, Skeleton, Stray, Wither Skele,
-        Husk, Drowned, Zombie, Zomb Villager,
-        Piglin, Zomb Piglin, Piglin Brute, 
-        Player, Villager, Allay, Witch:
-            Random item of hand or armor
-            Player might need special handling
-            Villager will need special handling due to consequences
-            Allay and Witch can't have armor, but that means it should just fail
-                They also need to be revisted and have the old code scrapped
-        Vindicator, Vex, Pillager, Illusioner:
-            Random of Hands
-            Can have armor with commands, but we don't want to yoink?
-            What if we did? Would it actually be a problem?
-
-    NOTE:   --- NO ---
+    \\ ---[ REJECTED FOR A REASON ]--- \\
         Enderman :
             Steal held block
             ISSUE: Block state stored, not item data.
@@ -94,15 +115,13 @@ Push this idea as far as I can, then reign it in.
         Pufferfish :
             Puff up a bit
             ISSUE: Setting PuffState has issues. Set once is fine. Once it deflates a bit, setting again flashes and then reverts. 
-            Probably an MC bug
+            Probably an MC bug, should make an issue for it if it doesn't exist
         Sheep :
             Shear?
-            ISSUE: Would need a map from Color Byte to string. Annoying. Maybe revisit
+            ISSUE: Would need to map from Color Byte to string. Annoying. Maybe revisit
         Wandering Trader :  Doesn't hold items. Maybe revist
             Theft Trades?
             Steal llamas?
-        Evoker :
-            No Ideas
 '''
 
 def create_lookup_file(ctx: Context):
