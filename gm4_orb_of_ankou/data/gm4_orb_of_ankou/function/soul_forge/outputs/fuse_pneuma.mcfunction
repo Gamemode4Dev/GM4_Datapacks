@@ -8,7 +8,7 @@ summon item ~ ~0.2 ~ {PickupDelay:40s,Glowing:1b,Item:{id:"minecraft:firework_st
 data modify storage gm4_orb_of_ankou:temp Item set from storage gm4_orb_of_ankou:temp equipment.head
 
 # set data of soul shard into orb of ankou
-data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:lore"[0] set value '{"translate":"text.gm4.orb_of_ankou.pneumas","fallback":"Pneumas:","italic":false,"color":"light_purple"}'
+data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:lore"[0] set value {"translate":"text.gm4.orb_of_ankou.pneumas","fallback":"Pneumas:","italic":false,"color":"light_purple"}
 
 data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:lore" append from storage gm4_orb_of_ankou:temp equipment.chest.components."minecraft:lore"[]
 data modify storage gm4_orb_of_ankou:temp Item.components."minecraft:custom_data".gm4_orb_of_ankou.pneumas append from storage gm4_orb_of_ankou:temp equipment.chest.components."minecraft:custom_data".gm4_orb_of_ankou.pneumas[]

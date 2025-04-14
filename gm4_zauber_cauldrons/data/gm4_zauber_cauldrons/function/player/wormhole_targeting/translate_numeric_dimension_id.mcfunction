@@ -6,7 +6,7 @@
 # this macro function will fail to instantiate if $(dimension) does not contain a number, as the score ... matches expects a number, not a string.
 # as a result, this function will not run if a string is stored in $(dimension)
 
-# find dimension marker with matching id and get its name (the name will be something like '"minecraft:overworld"')
+# find dimension marker with matching id and get its name (the name will be something like "minecraft:overworld")
 $execute as @e[type=marker,tag=gm4_dimension] if score @s gm4_dimension matches $(dimension) run tag @s add gm4_zc_targeted_dimension
 data modify storage gm4_zauber_cauldrons:temp/wormhole_targeting/destination cauldron_pos.dimension set from entity @e[type=marker,tag=gm4_zc_targeted_dimension,limit=1] CustomName
 

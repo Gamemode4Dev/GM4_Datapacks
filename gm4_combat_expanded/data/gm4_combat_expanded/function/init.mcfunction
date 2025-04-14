@@ -5,16 +5,16 @@ scoreboard players set combat_expanded gm4_modules 1
 # disable natural regeneration
 execute unless score $natural_regen gm4_ce_data matches -1 store result score $natural_regen gm4_ce_data run gamerule naturalRegeneration
 execute unless score $natural_regen_disabled gm4_ce_data matches 1 run gamerule naturalRegeneration false
-execute unless score $natural_regen_disabled gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'{"text":"[INFO] Combat Expanded changed gamerule naturalRegeneration to false"}'}
-execute unless score $natural_regen_disabled gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'[{"text":"[INFO] Combat Expanded: To disable Combat Expanded\'s natural regeneration: "},{"text":"click here","color":"red","click_event":{"action":"suggest_command","command":"/scoreboard players set $natural_regeneration gm4_ce_data -1"}}]'}
-execute if score $natural_regen_disabled gm4_ce_data matches 1 if score $natural_regen gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'[{"text":"[WARN]","color":"red"},{"text":" Combat Expanded requires naturalRegeneration to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","click_event":{"action":"suggest_command","command":"/gamerule naturalRegeneration false"}}]'}
+execute unless score $natural_regen_disabled gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:{"text":"[INFO] Combat Expanded changed gamerule naturalRegeneration to false"}}
+execute unless score $natural_regen_disabled gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:[{"text":"[INFO] Combat Expanded: To disable Combat Expanded\'s natural regeneration: "},{"text":"click here","color":"red","click_event":{"action":"suggest_command","command":"/scoreboard players set $natural_regeneration gm4_ce_data -1"}}]}
+execute if score $natural_regen_disabled gm4_ce_data matches 1 if score $natural_regen gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:[{"text":"[WARN]","color":"red"},{"text":" Combat Expanded requires naturalRegeneration to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","click_event":{"action":"suggest_command","command":"/gamerule naturalRegeneration false"}}]}
 scoreboard players set $natural_regen_disabled gm4_ce_data 1
 
 # disable natural phantom spawning
 execute store result score $phantoms gm4_ce_data run gamerule doInsomnia
 execute unless score $phantoms_disabled gm4_ce_data matches 1 run gamerule doInsomnia false
-execute unless score $phantoms_disabled gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'{"text":"[INFO] Combat Expanded changed gamerule doInsomnia to false"}'}
-execute if score $phantoms_disabled gm4_ce_data matches 1 if score $phantoms gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:'[{"text":"[WARN]","color":"red"},{"text":" Combat Expanded requires doInsomnia to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","click_event":{"action":"suggest_command","command":"/gamerule doInsomnia false"}}]'}
+execute unless score $phantoms_disabled gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:{"text":"[INFO] Combat Expanded changed gamerule doInsomnia to false"}}
+execute if score $phantoms_disabled gm4_ce_data matches 1 if score $phantoms gm4_ce_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:[{"text":"[WARN]","color":"red"},{"text":" Combat Expanded requires doInsomnia to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","click_event":{"action":"suggest_command","command":"/gamerule doInsomnia false"}}]}
 scoreboard players set $phantoms_disabled gm4_ce_data 1
 
 # reset all links

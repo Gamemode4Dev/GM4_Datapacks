@@ -11,7 +11,7 @@ data modify storage gm4_bookshelf_inspector:store enchantment_list set value []
 function gm4_bookshelf_inspector:process_display/spawn/process_enchantments
 
 # add to the text
-data modify storage gm4_bookshelf_inspector:temp text append value '{"nbt":"enchantment_list[]","storage":"gm4_bookshelf_inspector:store","separator":"\\n","interpret":true,"color":"gray"}'
+data modify storage gm4_bookshelf_inspector:temp text append value {"nbt":"enchantment_list[]","storage":"gm4_bookshelf_inspector:store","separator":"\\n","interpret":true,"color":"gray"}
 
 # cleanup
 data remove storage gm4_bookshelf_inspector:temp enchantments
