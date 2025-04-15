@@ -7,8 +7,8 @@ authors = [
 ]
 requires-python = ">= 3.10, < 4.0"
 dependencies = [
-    "beet >= 0.109.3",
-    "mecha >= 0.95.2",
+    "beet >= 0.110.0",
+    "mecha >= 0.98.0",
     "bolt >= 0.49.1",
     "PyYAML >= 6.0, < 7.0",
     "pydantic >= 2.6.1, < 3.0.0",
@@ -23,9 +23,6 @@ dev-dependencies = [
     "isort >= 5.10.1, < 6.0.0",
     "uv >= 0.5.4",
 ]
-
-[tool.uv.sources]
-mecha = { git = "https://github.com/misode/mecha", branch = "snbt-1.21.5" }
 
 [project.entry-points.beet]
 commands = "gm4.commands"
