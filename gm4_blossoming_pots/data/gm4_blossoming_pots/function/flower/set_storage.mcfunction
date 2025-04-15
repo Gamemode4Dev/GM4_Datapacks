@@ -357,6 +357,58 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:short_grass set va
         }\
     ]\
 }
+data modify storage gm4_blossoming_pots:flower_pots minecraft:short_dry_grass set value {\
+    place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:short_dry_grass"\
+            },\
+            transformation:{\
+                translation:[-0.325f,-0.2565f,-0.325f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.65f,0.65f,0.65f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:flower_pots minecraft:bush set value {\
+    place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:bush"\
+            },\
+            transformation:{\
+                translation:[-0.4325f,-0.2565f,-0.4325f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.863f,0.863f,0.863f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+
+data modify storage gm4_blossoming_pots:flower_pots minecraft:cactus_flower set value {\
+    place_sound:"minecraft:block.cactus_flower.place",\
+    maximum:1,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:cactus_flower"\
+            },\
+            transformation:{\
+                translation:[-0.4f,-0.2565f,-0.4f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.8f,0.9f,0.8f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
 
 data modify storage gm4_blossoming_pots:flower_pots minecraft:spore_blossom set value {\
     place_sound:"minecraft:block.spore_blossom.place",\
@@ -371,6 +423,24 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:spore_blossom set 
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.4f,0.4f,0.6f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
+            }\
+        }\
+    ]\
+}
+
+data modify storage gm4_blossoming_pots:flower_pots minecraft:firefly_bush set value {\
+    place_sound:"minecraft:block.sweet_berry_bush.place",\
+    maximum:1,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:firefly_bush"\
+            },\
+            transformation:{\
+                translation:[-0.3f,-0.2565f,-0.3f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.6f,0.6f,0.6f],\
+                right_rotation:[0f,0f,0f,1f]\
             }\
         }\
     ]\
@@ -525,6 +595,23 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:large_fern set val
                 translation:[-0.4f,0.5485f,-0.4f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.8f,0.8f,0.8f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:flower_pots minecraft:tall_dry_grass set value {\
+    place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:tall_dry_grass"\
+            },\
+            transformation:{\
+                translation:[-0.325f,-0.2565f,-0.325f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.65f,0.65f,0.65f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
