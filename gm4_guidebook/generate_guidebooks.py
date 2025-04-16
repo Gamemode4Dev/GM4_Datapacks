@@ -1717,7 +1717,7 @@ Creates the page storage to store book info for a given module
 def generate_page_storage(book: Book, ctx: Context) -> dict[str,dict[str,list[str]|dict[str,str]]]:
   hand_initial:list[str] = []
   hand_unlockable:dict[str,str] = {}
-  lectern_initial:list[str] = ['["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]','["",{"translate":"gui.gm4.guidebook.page.toc","fallback":"","color":"white","font":"gm4:guidebook"}]','["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]','["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]','["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]']
+  lectern_initial:list[Any] = [["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["",{"translate":"gui.gm4.guidebook.page.toc","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]]
   lectern_unlockable:dict[str,str] = {}
 
   for section_index, section in enumerate(book.sections):
@@ -1751,7 +1751,7 @@ def generate_page_storage(book: Book, ctx: Context) -> dict[str,dict[str,list[st
         hand_unlockable[page_name] = stringify_page(page, book, ctx, False)
         lectern_unlockable[page_name] = stringify_page(page, book, ctx, True)
 
-  lectern_initial.append('["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]')
+  lectern_initial.append(["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}])
 
   return {
     "hand": {

@@ -3,7 +3,7 @@
 # located at the center of the block to be picked up
 # run from gm4_liquid_tanks:relocate/pick_up_check
 
-data modify storage gm4_relocators:temp merge_data set value {custom_block:"gm4_liquid_tank",lore:'{"translate":"block.gm4.liquid_tank","fallback":"Liquid Tank","color":"gray","italic":true}'}
+data modify storage gm4_relocators:temp merge_data set value {custom_block:"gm4_liquid_tank",lore:{"translate":"block.gm4.liquid_tank","fallback":"Liquid Tank","color":"gray","italic":true}}
 data modify storage gm4_relocators:temp merge_data.entity_data.Rotation set from entity @s Rotation
 
 tag @s remove gm4_relocating_block

@@ -9,7 +9,7 @@ function gm4_guidebook:update_storage/lectern/click_event with storage gm4_guide
 data modify storage gm4_guidebook:temp page append from block 29999998 1 7133 front_text.messages[0]
 
 # add blank page for each module
-data modify storage gm4_guidebook:temp toc_back append value '["\\n\\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]'
+data modify storage gm4_guidebook:temp toc_back append value ["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]
 
 # check the next module
 execute store result storage gm4_guidebook:temp click int 1 run scoreboard players add $click gm4_guide_pages 1

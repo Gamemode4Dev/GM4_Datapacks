@@ -29,7 +29,7 @@ loot replace block 29999998 1 7134 container.2 loot gm4_combat_expanded:technica
 
 # update lore with lib_lore
 data modify storage gm4_lore:temp Source set from storage gm4_combat_expanded:temp components."minecraft:lore"
-data modify storage gm4_lore:temp Target set value '{"color":"gray","italic":false,"translate":"item.modifiers.mainhand"}'
+data modify storage gm4_lore:temp Target set value {"color":"gray","italic":false,"translate":"item.modifiers.mainhand"}
 scoreboard players set $start gm4_lore 1
 function #gm4_lore:remove
 data modify storage gm4_lore:temp Input set from block 29999998 1 7134 Items[{Slot:2b}].components."minecraft:lore"
