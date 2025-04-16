@@ -1,7 +1,7 @@
 {
     "criteria": {
         "requirement": {
-            "trigger": "minecraft:enter_block",
+            "trigger": "minecraft:tick",
             "conditions": {
                 "player": [
                     {
