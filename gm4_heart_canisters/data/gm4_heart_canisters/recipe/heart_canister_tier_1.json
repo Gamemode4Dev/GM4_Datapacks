@@ -18,9 +18,9 @@
       "minecraft:custom_model_data": "item/heart_canister_tier_1",
       "minecraft:profile": "$heart_canister_tier_1",
       "minecraft:custom_data": "{gm4_heart_canister:1b,gm4_heart_canister_tier:1b}",
-      "minecraft:custom_name": "{\"translate\":\"item.gm4.heart_canister\",\"fallback\":\"Heart Canister\",\"italic\":false}",
+      "minecraft:custom_name": {"translate":"item.gm4.heart_canister","fallback":"Heart Canister","italic":false},
       "minecraft:lore": [
-        "{\"translate\":\"item.gm4.heart_canister.lore.tier\",\"fallback\":\"Tier %s\",\"with\":[\"1\"],\"color\":\"gray\",\"italic\":false}"
+        {"translate":"item.gm4.heart_canister.lore.tier","fallback":"Tier %s","with":["1"],"color":"gray","italic":false}
       ]
     }
   }

@@ -27,11 +27,10 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:villager",
-              "type_specific": {
-                "type": "villager",
-                "variant": "minecraft:plains"
+              "components": {
+                "minecraft:villager/variant": "minecraft:plains"
               },
-              "nbt": "{CustomName:'{\"translate\":\"entity.gm4.potion_cleric\",\"fallback\":\"Potion Cleric§\"}'}"
+              "nbt": "{CustomName:{\"translate\":\"entity.gm4.potion_cleric\",\"fallback\":\"Potion Cleric§\"}}"
             }
           }
         ]

@@ -106,17 +106,19 @@
                 3420001
               ]
             },
-            "minecraft:attribute_modifiers": {
-              "modifiers": [
-                {
-                  "type": "minecraft:max_health",
-                  "id": "gm4_combat_expanded:modifier_flowering",
-                  "amount": -0.25,
-                  "operation": "add_multiplied_base",
-                  "slot": "head"
-                }
-              ],
-              "show_in_tooltip": false
+            "minecraft:attribute_modifiers": [
+              {
+                "type": "minecraft:max_health",
+                "id": "gm4_combat_expanded:modifier_flowering",
+                "amount": -0.25,
+                "operation": "add_multiplied_base",
+                "slot": "head"
+              }
+            ],
+            "minecraft:tooltip_display": {
+              "hidden_components": [
+                "minecraft:attribute_modifiers"
+              ]
             }
           }
         },

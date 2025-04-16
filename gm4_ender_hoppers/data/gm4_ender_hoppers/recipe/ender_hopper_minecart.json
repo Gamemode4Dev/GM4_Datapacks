@@ -16,7 +16,7 @@
     "components": {
       "minecraft:custom_model_data": "item/ender_hopper_minecart",
       "minecraft:custom_data": "{gm4_machines:{id:'ender_hopper_minecart'}}",
-      "minecraft:custom_name": "{\"translate\":\"item.gm4.ender_hopper_minecart\",\"fallback\":\"Minecart with Ender Hopper\",\"color\":\"white\",\"italic\":false}"
+      "minecraft:custom_name": {"translate":"item.gm4.ender_hopper_minecart","fallback":"Minecart with Ender Hopper","color":"white","italic":false}
     }
   }
 }

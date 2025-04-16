@@ -18,7 +18,7 @@
             "minecraft:custom_model_data": "item/forming_press",
             "minecraft:profile": "$forming_press",
             "minecraft:custom_data": "{gm4_machines:{id:'forming_press'}}",
-            "minecraft:custom_name": "{\"translate\":\"block.gm4.forming_press\",\"fallback\":\"Forming Press\",\"color\":\"white\",\"italic\":false}"
+            "minecraft:custom_name": {"translate":"block.gm4.forming_press","fallback":"Forming Press","color":"white","italic":false}
         }
     }
 }

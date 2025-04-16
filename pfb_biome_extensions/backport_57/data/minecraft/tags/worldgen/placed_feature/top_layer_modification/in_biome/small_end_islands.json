@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "#minecraft:top_layer_modification/in_end",
-      "required": false
-    }
-  ]
-}

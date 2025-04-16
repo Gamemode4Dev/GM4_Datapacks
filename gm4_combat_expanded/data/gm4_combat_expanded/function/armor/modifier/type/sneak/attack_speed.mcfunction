@@ -14,5 +14,5 @@ data modify storage gm4_combat_expanded:temp components."minecraft:custom_data".
 scoreboard players set $active gm4_ce_data 2
 
 # activate attributes
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic"}].amount float 0.25 run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic_2"}].amount float 0.01 run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level2
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers"[{id:"gm4_combat_expanded:dynamic"}].amount float 0.25 run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers"[{id:"gm4_combat_expanded:dynamic_2"}].amount float 0.01 run data get storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.level2

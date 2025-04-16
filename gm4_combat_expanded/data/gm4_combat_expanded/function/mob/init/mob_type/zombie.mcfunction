@@ -45,7 +45,7 @@ execute if entity @s[type=drowned,predicate=gm4_combat_expanded:mob/modifier/ree
 execute if entity @s[type=!zombie_villager,tag=!gm4_ce_spore_zombie,predicate=gm4_combat_expanded:mob/modifier/growth] run function gm4_combat_expanded:mob/init/modifier/special/growth_zombie
 
 # half droprate of armor in "Dark"
-data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] ArmorDropChances set value [0.0452F,0.0452F,0.0452F,0.0452F]
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/dark] drop_chances merge value {feet:0.0452F,legs:0.0452F,chest:0.0452F,head:0.0452F}
 
 # | Other Modifiers
 # only allow one of the following modifiers

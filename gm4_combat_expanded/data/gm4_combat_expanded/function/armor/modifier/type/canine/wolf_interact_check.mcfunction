@@ -7,7 +7,7 @@ advancement revoke @s only gm4_combat_expanded:interact_canine
 execute as @e[type=wolf,tag=gm4_ce_wolf,nbt={InLove:600}] run function gm4_combat_expanded:armor/modifier/type/canine/wolf_fed_power
 
 # check if wolves are wearing armor
-execute as @e[type=wolf,tag=gm4_ce_wolf,nbt={body_armor_item:{}}] at @s run function gm4_combat_expanded:armor/modifier/type/canine/wolf_remove_armor
+execute as @e[type=wolf,tag=gm4_ce_wolf] if items entity @s armor.body * at @s run function gm4_combat_expanded:armor/modifier/type/canine/wolf_remove_armor
 
 # check if wolves are sitting
 execute as @e[type=wolf,tag=gm4_ce_wolf,nbt={Sitting:1b}] run function gm4_combat_expanded:armor/modifier/type/canine/wolf_stand_up

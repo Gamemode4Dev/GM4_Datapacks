@@ -4,7 +4,7 @@
 # run from toggle functions in gm4_double_doors:{{ material_name }}/door/...
 
 # set name
-data modify entity @s CustomName set value '"gm4_double_doors_auto_toggle_marker"'
+data modify entity @s CustomName set value "gm4_double_doors_auto_toggle_marker"
 
 # store inverted target door state onto marker
 execute if score $target_door_state gm4_double_doors_data matches 1 run scoreboard players set @s gm4_double_doors_auto_toggle_target_state 0
