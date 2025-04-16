@@ -1,5 +1,5 @@
 {
-  "last_commit": "c9f4f1d15293c486a73fd0195a9f4243eee3af09",
+  "last_commit": "487646072be213bcf63e1857d07bc6bf78e73a8d",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2184,8 +2184,8 @@
     {
       "id": "gm4_pig_tractors",
       "name": "Pig Tractors",
-      "version": "1.7.9",
-      "hash": "baa37c90f45f3cc5930cb2c0ce143ecf80f41068",
+      "version": "1.7.10",
+      "hash": "60daa7c937460db85ff874891353b5da95690370",
       "video_link": "https://www.youtube.com/watch?v=7i0WFHUfBXs",
       "wiki_link": "https://wiki.gm4.co/wiki/Pig_Tractors",
       "credits": {
