@@ -12,7 +12,7 @@ data merge entity @s {Tags:["gm4_bookshelf_inspector_display","gm4_bookshelf_ins
 # build text storage
 data modify storage gm4_bookshelf_inspector:temp text set value []
 function gm4_bookshelf_inspector:process_display/spawn/decide_name
-data modify entity @s text set value {"nbt":"text[]","storage":"gm4_bookshelf_inspector:temp","separator":"\\n","interpret":true}
+data modify entity @s text set value {"nbt":"text[]","storage":"gm4_bookshelf_inspector:temp","separator":"\n","interpret":true}
 data remove storage gm4_bookshelf_inspector:temp text
 
 # set rotation

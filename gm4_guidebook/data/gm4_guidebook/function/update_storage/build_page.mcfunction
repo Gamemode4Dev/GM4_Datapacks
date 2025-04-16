@@ -11,7 +11,7 @@ function gm4_guidebook:update_storage/build_line
 execute if score $line_count gm4_guide matches 2 run return 1
 
 # add table of contents page
-data modify block 29999998 1 7133 front_text.messages[0] set value {"nbt":"page[]","storage":"gm4_guidebook:temp","interpret":true,"separator":{"text":"\\\\n","color":"white"}}
+data modify block 29999998 1 7133 front_text.messages[0] set value {"nbt":"page[]","storage":"gm4_guidebook:temp","interpret":true,"separator":{"text":"\n","color":"white"}}
 data modify storage gm4_guidebook:temp page_content set from block 29999998 1 7133 front_text.messages[0]
 function gm4_guidebook:update_storage/add_to_toc with storage gm4_guidebook:temp
 
