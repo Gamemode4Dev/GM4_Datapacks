@@ -19,7 +19,9 @@ from mecha.ast import (
     AstNbtCompound,
     AstNbtCompoundEntry,
     AstNbtCompoundKey,
+    AstNbtValue,
 )
+from nbtlib import String # type: ignore
 from PIL.Image import Image
 
 from gm4.utils import InvokeOnJsonNbt
@@ -76,9 +78,8 @@ class SkinNbtTransformer(MutatingReducer, InvokeOnJsonNbt):
 
     @rule(AstNbtCompoundEntry, key=AstNbtCompoundKey(value='minecraft:profile'))
     def cmd_substitutions_nbt(self, node: AstNbtCompoundEntry, **kwargs: Any):
-        reference = node.value.evaluate()
-        if isinstance(reference, str) and reference.startswith("$"):
-            skin_val, uuid, d = self.retrieve_texture(reference, **kwargs)
+        if isinstance(node.value, AstNbtValue) and isinstance(node.value.value, String) and node.value.value.startswith("$"):
+            skin_val, uuid, d = self.retrieve_texture(node.value.value, **kwargs)
             if d:
                 yield d
             node = replace(node, value=AstNbtCompound.from_value({

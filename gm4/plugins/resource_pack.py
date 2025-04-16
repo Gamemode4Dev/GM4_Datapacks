@@ -588,9 +588,8 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
 
     @rule(AstNbtCompoundEntry, key=AstNbtCompoundKey(value="minecraft:custom_model_data"))
     def cmd_substitutions_nbt(self, node: AstNbtCompoundEntry, **kwargs: Any):
-        reference = node.value.evaluate()
-        if isinstance(reference, str):
-            index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
+        if isinstance(node.value, AstNbtValue) and isinstance(node.value.value, String):
+            index, exc = self.retrieve_index(add_namespace(node.value.value, self.ctx.project_id))
             if exc:
                 yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
             node = replace(node, value=AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] }))
@@ -600,9 +599,8 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     @rule(AstItemPredicateTestComponent)
     def cmd_substitutions_component(self, node: AstItemComponent | AstItemPredicateTestComponent, **kwargs: Any):
         if node.value and node.key.get_canonical_value() == "minecraft:custom_model_data":
-            reference = node.value.evaluate()
-            if isinstance(reference, str):
-                index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
+            if isinstance(node.value, AstNbtValue) and isinstance(node.value.value, String):
+                index, exc = self.retrieve_index(add_namespace(node.value.value, self.ctx.project_id))
                 if exc:
                     yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
                 node = replace(node, value=AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] }))
@@ -613,13 +611,15 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     @rule(AstCommand, identifier="data:modify:entity:target:targetPath:set:value:value")
     def cmd_substitutions_datamodify(self, node: AstCommand):
         ast_target, ast_target_path, ast_nbt = node.arguments
-        match ast_target_path, ast_nbt.evaluate(): # type: ignore ; ast_nbt is AstNbtValue|AstNbtCompound, which do have .evaluate() methods
-            case AstNbtPath(components=[*_, AstNbtPathKey(value="minecraft:custom_model_data")]), String(reference):
+        match ast_target_path, ast_nbt:
+            case AstNbtPath(components=[*_, AstNbtPathKey(value="minecraft:custom_model_data")]), AstNbtValue(value=String(reference)):
                 index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
                 if exc:
                     d = Diagnostic("error", str(exc))
                     yield set_location(d, ast_nbt)
                 node = replace(node, arguments=AstChildren([ast_target, ast_target_path, AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] })]))
+            case _:
+                pass
         return node
 
 
