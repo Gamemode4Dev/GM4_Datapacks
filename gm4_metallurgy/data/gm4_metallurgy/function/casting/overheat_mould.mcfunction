@@ -4,7 +4,7 @@
 # run from destroy_mould
 
 setblock ~ ~-1 ~ lava[level=1]
-summon item ~ ~ ~ {Item:{id:"minecraft:magma_block",count:1,components:{"minecraft:lore":['{"translate":"item.gm4.slightly_overheated_obsidian","fallback":"Slightly Overheated Obsidian","italic":false}']}},Motion:[0.0,0.2,0.0]}
+summon item ~ ~ ~ {Item:{id:"minecraft:magma_block",count:1,components:{"minecraft:lore":[{"translate":"item.gm4.slightly_overheated_obsidian","fallback":"Slightly Overheated Obsidian","italic":false}]}},Motion:[0.0,0.2,0.0]}
 particle large_smoke ~ ~ ~ 0.2 0.2 0.2 0.05 20
 playsound block.fire.extinguish block @a ~ ~ ~ .25 .9
 fill ~1 ~1 ~1 ~-1 ~-1 ~-1 fire replace air

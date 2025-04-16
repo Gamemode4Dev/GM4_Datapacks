@@ -25,11 +25,11 @@ loot replace entity @s armor.feet loot gm4_combat_expanded:mob/equip_armor/withe
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:mob/equip_weapon/wither_skeleton
 
 # withering arrow
-execute if data entity @s HandItems[{id:"minecraft:bow"}] store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/withering
-execute if score $arrow gm4_ce_data matches 1 run data modify entity @s HandDropChances[1] set value 0.25F
+execute if items entity @s weapon.mainhand minecraft:bow store success score $arrow gm4_ce_data run loot replace entity @s weapon.offhand loot gm4_combat_expanded:mob/equip_arrow/withering
+execute if score $arrow gm4_ce_data matches 1 run data modify entity @s drop_chances merge value {offhand:0.25F}
 
 # if weapon is held set hand droprate to 20%
-execute if data entity @s HandItems[{id:"minecraft:stone_sword"}] run data modify entity @s HandDropChances set value [0.20F,0.20F]
+execute if items entity @s weapon.mainhand minecraft:stone_sword run data modify entity @s drop_chances set value {mainhand:0.20F,offhand:0.20F}
 
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep

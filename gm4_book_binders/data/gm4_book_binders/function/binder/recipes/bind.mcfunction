@@ -15,7 +15,7 @@ item replace entity @e[type=item,tag=gm4_empty_enchanted_book,distance=..0.3] co
 advancement grant @a[distance=..3,gamemode=!spectator] only gm4:book_binders_bind
 
 # clear stored pages
-data remove entity @s ArmorItems[0].components."minecraft:stored_enchantments"
+data remove entity @s equipment.feet.components."minecraft:stored_enchantments"
 
 # reset tags
 tag @s remove gm4_book_binder_with_page

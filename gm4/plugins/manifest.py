@@ -21,7 +21,7 @@ from gm4.utils import Version, run
 
 parent_logger = logging.getLogger("gm4.manifest")
 
-SUPPORTED_GAME_VERSIONS = ["1.21", "1.21.1", "1.21.2", "1.21.3", "1.21.4"]
+SUPPORTED_GAME_VERSIONS = ["1.21.5"]
 
 # config models for beet.yaml metas
 CreditsModel = dict[str, list[str]]
@@ -145,7 +145,7 @@ def create(ctx: Context):
 	ctx.cache["gm4_manifest"].json = manifest.dict()
 
 	# Read in the previous manifest, if found
-	version = os.getenv("VERSION", "1.21")
+	version = os.getenv("VERSION", "1.21.5")
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
 
@@ -219,7 +219,7 @@ def update_patch(ctx: Context):
 
 def write_meta(ctx: Context):
 	"""Write the updated meta.json file."""
-	version = os.getenv("VERSION", "1.21")
+	version = os.getenv("VERSION", "1.21.5")
 	release_dir = Path('release') / version
 	os.makedirs(release_dir, exist_ok=True)
 
@@ -299,7 +299,7 @@ def write_updates(ctx: Context):
 			continue # not a datapack (ie the rp) and has score to print
 		version = Version(m.version).int_rep()
 		website = f"https://gm4.co/modules/{m.id[4:].replace('_','-')}"
-		init.lines.append(f"execute if score {m.id} load.status matches -1.. if score {m.id.removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m.name}',download:'{website}',render:'{{\"text\":\"{m.name}\",\"clickEvent\":{{\"action\":\"open_url\",\"value\":\"{website}\"}},\"hoverEvent\":{{\"action\":\"show_text\",\"value\":{{\"text\":\"Click to visit {website}\",\"color\":\"#4AA0C7\"}}}}}}'}}")
+		init.lines.append(f"execute if score {m.id} load.status matches -1.. if score {m.id.removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m.name}',download:'{website}',render:{{'text':'{m.name}','click_event':{{'action':'open_url','url':'{website}'}},'hover_event':{{'action':'show_text','value':{{'text':'Click to visit {website}','color':'#4AA0C7'}}}}}}}}")
 	
 def repro_structure_to_bytes(content: StructureFileData) -> bytes:
     """a modified Structure.to_bytes from beet, which ensures the GZip does not add

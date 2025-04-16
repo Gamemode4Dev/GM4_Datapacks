@@ -9,17 +9,17 @@ def beet_default(ctx: Context):
 	manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
 	manifest_entry = {v.id:v for v in (manifest.modules|manifest.libraries).values()}.get(ctx.project_id, NoneAttribute())
 
-	ctx.data.pack_format = 61
-	ctx.data.supported_formats = {"min_inclusive": 48, "max_inclusive": 61}
-	ctx.assets.pack_format = 46
-	ctx.assets.supported_formats = {"min_inclusive": 34, "max_inclusive": 46}
+	ctx.data.pack_format = 71
+	ctx.data.supported_formats = {"min_inclusive": 71, "max_inclusive": 71}
+	ctx.assets.pack_format = 55
+	ctx.assets.supported_formats = {"min_inclusive": 55, "max_inclusive": 55}
 
 	for pack in ctx.packs:
 		pack.description = [
 			ctx.project_name,
 			"\n",
 			{
-				"text": f"Gamemode 4 for 1.21 - 1.21.4",
+				"text": f"Gamemode 4 for 1.21.5",
 				"color": "#4AA0C7"
 			}
 		]

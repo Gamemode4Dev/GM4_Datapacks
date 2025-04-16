@@ -5,8 +5,8 @@
 
 scoreboard players set $placed_block gm4_rl_data 1
 
-summon armor_stand ~ ~-0.5 ~ {Small:1b,NoGravity:1b,Marker:1b,Invulnerable:1b,Invisible:1b,Silent:1b,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],HasVisualFire:1b,CustomName:'"gm4_liquid_tank_stand"',ArmorItems:[{},{},{},{id:"glass",count:1,components:{"minecraft:custom_model_data":"block/liquid_tank"}}],Rotation:[0.0f,0.0f]}
-summon marker ~ ~ ~ {Tags:["gm4_liquid_tank","gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:'"gm4_liquid_tank"',Rotation:[0.0f,0.0f]}
+summon armor_stand ~ ~-0.5 ~ {Small:1b,NoGravity:1b,Marker:1b,Invulnerable:1b,Invisible:1b,Silent:1b,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_liquid_tank_stand","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],HasVisualFire:1b,CustomName:"gm4_liquid_tank_stand",equipment:{head:{id:"glass",count:1,components:{"minecraft:custom_model_data":"block/liquid_tank"}}},Rotation:[0.0f,0.0f]}
+summon marker ~ ~ ~ {Tags:["gm4_liquid_tank","gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:"gm4_liquid_tank",Rotation:[0.0f,0.0f]}
 
 execute as @e[type=marker,tag=gm4_new_machine,limit=1,distance=..0.1] run function gm4_liquid_tanks:relocate/restore_liquid
 

@@ -25,7 +25,7 @@ execute if entity @s[type=witch,predicate=gm4_combat_expanded:technical/in_witch
 execute if entity @s[type=enderman] if dimension the_end run scoreboard players set $mob_health gm4_ce_data 0
 # remove bonus damage if weapon is held, then set droprate to 20% (unless in "Dark")
 execute if predicate gm4_combat_expanded:mob/has_weapon run scoreboard players set $mob_damage gm4_ce_data 0
-execute if score $mob_damage gm4_ce_data matches 0 run data modify entity @s[predicate=!gm4_combat_expanded:mob/modifier/dark] HandDropChances set value [0.20F,0.20F]
+execute if score $mob_damage gm4_ce_data matches 0 run data modify entity @s[predicate=!gm4_combat_expanded:mob/modifier/dark] drop_chances merge value {mainhand:0.20F,offhand:0.20F}
 # randomise stats - set values between 0 and current value based on:
 # HEALTH = 0.5*score + BINOMDIST(n=0.5*score,p=0.5)
 execute if score $mob_health gm4_ce_data matches 1.. store result score $mob_health gm4_ce_data run loot spawn 29999998 1 7133 loot gm4_combat_expanded:mob/randomize_stats/health

@@ -5,10 +5,10 @@ advancement revoke @s only gm4_relocators:backwards_compatibility/place_relocate
 
 # store item into armor stand
 execute positioned ~ ~-5 ~ run kill @e[type=armor_stand,tag=gm4_relocator_fill,dy=13]
-summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,NoGravity:1b,Small:1b,CustomName:'"gm4_relocator_fill"',Tags:["gm4_relocator_fill"]}
+summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,NoGravity:1b,Small:1b,CustomName:"gm4_relocator_fill",Tags:["gm4_relocator_fill"]}
 tp @e[type=armor_stand,limit=1,tag=gm4_relocator_fill,distance=..0.001] ~ ~ ~ ~ 0
 execute align y run tp @e[type=armor_stand,limit=1,tag=gm4_relocator_fill,distance=..0.001] ~ ~ ~
-data modify entity @e[type=armor_stand,limit=1,tag=gm4_relocator_fill,distance=..0.001] ArmorItems[0] set from entity @s SelectedItem
+data modify entity @e[type=armor_stand,limit=1,tag=gm4_relocator_fill,distance=..0.001] equipment.feet set from entity @s SelectedItem
 
 # check for relocated block heads
 execute as @e[type=armor_stand,tag=gm4_relocator_fill,limit=1,sort=nearest,distance=..0.001] at @s run function gm4_relocators:backwards_compatibility/place_down/find_head

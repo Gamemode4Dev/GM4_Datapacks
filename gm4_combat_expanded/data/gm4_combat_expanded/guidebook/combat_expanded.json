@@ -214,9 +214,9 @@
                 "translate": "text.gm4.guidebook.combat_expanded.dark",
                 "fallback": "dark",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     {
                       "translate": "text.gm4.guidebook.combat_expanded.dark_areas",
                       "fallback": "Light Level 0, except in %s",
@@ -256,9 +256,9 @@
                 "translate": "text.gm4.guidebook.combat_expanded.burned",
                 "fallback": "burned",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.desert"
@@ -317,9 +317,9 @@
                 "translate": "text.gm4.guidebook.combat_expanded.deep",
                 "fallback": "deep oceans",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.deep_lukewarm_ocean"
@@ -366,9 +366,9 @@
                 "translate": "text.gm4.guidebook.combat_expanded.flowering",
                 "fallback": "flowering",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.sunflower_plains"
@@ -415,9 +415,9 @@
                 "translate": "text.gm4.guidebook.combat_expanded.growth",
                 "fallback": "growth",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.taiga"
@@ -476,9 +476,9 @@
                 "translate": "text.gm4.guidebook.combat_expanded.mountainous",
                 "fallback": "mountainous",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.windswept_savanna"
@@ -557,9 +557,9 @@
                 "translate": "text.gm4.guidebook.combat_expanded.reef",
                 "fallback": "warm oceans",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.warm_ocean"
@@ -594,9 +594,9 @@
                 "translate": "text.gm4.guidebook.combat_expanded.snowy",
                 "fallback": "snowy",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.snowy_plains"
@@ -671,9 +671,9 @@
                 "translate": "text.gm4.guidebook.combat_expanded.toxic",
                 "fallback": "toxic",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.swamp"
@@ -729,9 +729,9 @@
             "translate": "item.gm4.combat_expanded.name.quick",
             "fallback": "Light %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.quick_modifier",
                   "fallback": "- Less attack damage, but quicker attack speed"
@@ -744,9 +744,9 @@
             "translate": "item.gm4.combat_expanded.name.heavy",
             "fallback": "Heavy %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.heavy_modifier",
                   "fallback": "- Stronger attack damage, but has slower attack speed\n- Knockback II-III"
@@ -759,9 +759,9 @@
             "translate": "item.gm4.combat_expanded.name.fire",
             "fallback": "Flaming %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.fire_modifier",
                   "fallback": "- Less attack damage, but has Fire Aspect III-V"
@@ -774,9 +774,9 @@
             "translate": "item.gm4.combat_expanded.name.double",
             "fallback": "Twofold %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.double_modifier",
                   "fallback": "- Has low base attack damage but will double total attack damage"
@@ -789,9 +789,9 @@
             "translate": "item.gm4.combat_expanded.name.giant",
             "fallback": "Giant %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.giant_modifier",
                   "fallback": "- Deals damage to everything within 4.5 blocks"
@@ -804,9 +804,9 @@
             "translate": "item.gm4.combat_expanded.name.poison",
             "fallback": "Venomous %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.poison_modifier",
                   "fallback": "- Poisons attacked target"
@@ -819,9 +819,9 @@
             "translate": "item.gm4.combat_expanded.name.weakness",
             "fallback": "Crippling %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.weakness_modifier",
                   "fallback": "- Temporarily slows and weakens attacked target"
@@ -834,9 +834,9 @@
             "translate": "item.gm4.combat_expanded.name.pierce",
             "fallback": "Piercing %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.pierce_modifier",
                   "fallback": "- Reduces armor of attacked target for 10 seconds"
@@ -849,9 +849,9 @@
             "translate": "item.gm4.combat_expanded.name.delay",
             "fallback": "Resonating %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.delay_modifier",
                   "fallback": "- Shortly after hitting a target, they will be dealt heavy damage, attacking through armor and effects"
@@ -866,9 +866,9 @@
             "translate": "item.gm4.combat_expanded.name.swift",
             "fallback": "Swift %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.swift_modifier",
                   "fallback": "- Reduced attack speed, but attacks grant bonus attack speed for 6 seconds"
@@ -881,9 +881,9 @@
             "translate": "item.gm4.combat_expanded.name.lightning",
             "fallback": "Charged %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.lightning_modifier",
                   "fallback": "- Attacks apply lightning charges.\n- 7+ charges cause a lightning strike"
@@ -902,9 +902,9 @@
             "translate": "item.gm4.combat_expanded.name.archer",
             "fallback": "Archery %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.archer_modifier",
                   "fallback": "- Multiple arrows will be shot from a single arrow shot\n- Lower attack speed when equipped"
@@ -924,9 +924,9 @@
             "translate": "item.gm4.combat_expanded.name.canine",
             "fallback": "Canine %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.canine_modifier",
                   "fallback": "- Lower attack speed\n- Spawns an invulnerable dog that deals 4 damage\n- Commanding to sit will cause it to lose aggro\n- Feeding it will grant strength"
@@ -946,9 +946,9 @@
             "translate": "item.gm4.combat_expanded.name.beacon",
             "fallback": "Radiant %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.beacon_modifier",
                   "fallback": "- A floating light follows the wearer\n- Crouching will apply glowing and a light pulse"
@@ -968,9 +968,9 @@
             "translate": "item.gm4.combat_expanded.name.horse",
             "fallback": "Equestrian %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.horse_modifier",
                   "fallback": "- Mounts receive speed and additional helpful effects"
@@ -990,9 +990,9 @@
             "translate": "item.gm4.combat_expanded.name.husk",
             "fallback": "Dashing %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.husk_modifier",
                   "fallback": "- Applies increasing speed and hunger while sprinting\n- Lower movement speed while not sprinting"
@@ -1012,9 +1012,9 @@
             "translate": "item.gm4.combat_expanded.name.convert",
             "fallback": "Hearty %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.convert_modifier",
                   "fallback": "- Converts armor from this piece to max health"
@@ -1034,9 +1034,9 @@
             "translate": "item.gm4.combat_expanded.name.sword_ring",
             "fallback": "Psychic %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.sword_ring_modifier",
                   "fallback": "- Spawns a floating sword to circle around the wearer\n- Lower attack speed when equipped"
@@ -1062,9 +1062,9 @@
             "translate": "item.gm4.combat_expanded.name.reactive",
             "fallback": "Reactive %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.reactive_modifier",
                   "fallback": "- Gain absorption for 30 seconds\n- Reduced armor"
@@ -1084,9 +1084,9 @@
             "translate": "item.gm4.combat_expanded.name.toxic",
             "fallback": "Coated %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.toxic_modifier",
                   "fallback": "- Applies poison, weakness or instant health to the attacker\n- Reduced armor"
@@ -1106,9 +1106,9 @@
             "translate": "item.gm4.combat_expanded.name.second_wind",
             "fallback": "Rejuvenating %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.second_wind_modifier",
                   "fallback": "- Stores some damage taken, then restores it when the wearer is out of combat\n- Reduced armor"
@@ -1128,9 +1128,9 @@
             "translate": "item.gm4.combat_expanded.name.spark",
             "fallback": "Sparking %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.spark_modifier",
                   "fallback": "- Apply a lightning charge to attacker.\n- 7+ charges cause a lightning strike"
@@ -1156,9 +1156,9 @@
             "translate": "item.gm4.combat_expanded.name.burn",
             "fallback": "Burning %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.burn_modifier",
                   "fallback": "- Deal fire damage to nearby entities for 10 seconds, damage stacks with more kills\n- Taking damage also adds a stack\n- At 10 stacks also set entities on fire and gain fire resistance"
@@ -1178,9 +1178,9 @@
             "translate": "item.gm4.combat_expanded.name.reckless",
             "fallback": "Reckless %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.reckless_modifier",
                   "fallback": "- Decrease armor and increase attack damage for 15 seconds\n- Effect can stack until piece runs out of armor"
@@ -1200,9 +1200,9 @@
             "translate": "item.gm4.combat_expanded.name.vamp",
             "fallback": "Vampiric %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.vamp_modifier",
                   "fallback": "- Regenerate a heart of health\n- Reduced armor"
@@ -1222,9 +1222,9 @@
             "translate": "item.gm4.combat_expanded.name.totem",
             "fallback": "Totemic %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.totem_modifier",
                   "fallback": "- Summons a totem that gives allies regeneration, resistance, speed, or strength\n- Totems can stack if mobs are killed within its range of 18 blocks"
@@ -1244,9 +1244,9 @@
             "translate": "item.gm4.combat_expanded.name.drain",
             "fallback": "Draining %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.drain_modifier",
                   "fallback": "- Grants 1 bonus max health, up to a cap\n- Taking damage reduces max health"
@@ -1272,9 +1272,9 @@
             "translate": "item.gm4.combat_expanded.name.scout",
             "fallback": "Scouting %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.scout_modifier",
                   "fallback": "- Quicker movement speed"
@@ -1294,9 +1294,9 @@
             "translate": "item.gm4.combat_expanded.name.shielded",
             "fallback": "Shielded %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.shielded_modifier",
                   "fallback": "- Gain absorption"
@@ -1316,9 +1316,9 @@
             "translate": "item.gm4.combat_expanded.name.sneak",
             "fallback": "Sly %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.sneak_modifier",
                   "fallback": "- Gains invisibility when sneaking, when sneaking ends gain attack speed"
@@ -1338,9 +1338,9 @@
             "translate": "item.gm4.combat_expanded.name.focus",
             "fallback": "Focused %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.focus_modifier",
                   "fallback": "- Gain attack damage, lose attack damage when damaged\n- Nearby mobs have glowing"
@@ -1366,12 +1366,12 @@
             "translate": "item.gm4.combat_expanded.name.poised",
             "fallback": "Fluxed %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.poised_modifier",
-                  "fallback": "- Higher attack damage, but lower armor\n- Has an opposite effect when health is below 50%"
+                  "fallback": "- Higher attack damage, but lower armor\n- Has an opposite effect when health is below 50%%"
                 },
                 "\n",
                 {
@@ -1388,9 +1388,9 @@
             "translate": "item.gm4.combat_expanded.name.soothe",
             "fallback": "Soothing %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.soothe_modifier",
                   "fallback": "- AOE of healing effect and regeneration\n- Can be recharged by killing mobs"
@@ -1410,9 +1410,9 @@
             "translate": "item.gm4.combat_expanded.name.berserk",
             "fallback": "Berserkers %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.berserk_modifier",
                   "fallback": "- Gain attack damage, attack speed, movement speed and knockback resistance"
@@ -1432,9 +1432,9 @@
             "translate": "item.gm4.combat_expanded.name.sustain",
             "fallback": "Sustaining %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.sustain_modifier",
                   "fallback": "- Regenerate health faster"
@@ -1454,9 +1454,9 @@
             "translate": "item.gm4.combat_expanded.name.immune",
             "fallback": "Vigorous %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.immune_modifier",
                   "fallback": "- Immune to mining fatigue, poison or weakness, and to hunger, blindness, nausea or wither"
@@ -1482,9 +1482,9 @@
             "translate": "item.gm4.combat_expanded.name.half",
             "fallback": "Fractal %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.half_modifier",
                   "fallback": "- Damage is dealt until wearer is at half health\n- Resistance III when equipped"
@@ -1510,9 +1510,9 @@
             "translate": "item.gm4.combat_expanded.name.vorpal",
             "fallback": "Vorpal %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.vorpal_modifier",
                   "fallback": "- Teleport to a random location within 16 blocks when damaged\n- Full knockback resistance when equipped"
@@ -1532,9 +1532,9 @@
             "translate": "item.gm4.combat_expanded.name.wild_magic",
             "fallback": "Wild Magic %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.wild_magic_modifier",
                   "fallback": "- Apply a random potion effect with random level and duration to wearer when damaged"
@@ -1554,9 +1554,9 @@
             "translate": "item.gm4.combat_expanded.name.link",
             "fallback": "Unlinked %s",
             "with": [""],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.combat_expanded.link_modifier",
                   "fallback": "- Link to any adventurer wearing this armor with the same renamed name\n- All adventurers in the link share their health total"

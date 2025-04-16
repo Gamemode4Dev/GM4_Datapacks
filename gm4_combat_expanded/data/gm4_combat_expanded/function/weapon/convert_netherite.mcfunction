@@ -7,11 +7,11 @@
 data modify storage gm4_combat_expanded:temp components."minecraft:custom_data".gm4_combat_expanded.netherite set value 1
 
 # add damage from netherite
-execute store result score $damage gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:base_attack_damage"}].amount 10
-execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:base_attack_damage"}].amount double 0.1 run scoreboard players add $damage gm4_ce_data 10
+execute store result score $damage gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers"[{id:"gm4_combat_expanded:base_attack_damage"}].amount 10
+execute store result storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers"[{id:"gm4_combat_expanded:base_attack_damage"}].amount double 0.1 run scoreboard players add $damage gm4_ce_data 10
 
 # add sharpness damage for lore
-execute store result score $sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:enchantments".levels."minecraft:sharpness"
+execute store result score $sharpness gm4_ce_data run data get storage gm4_combat_expanded:temp components."minecraft:enchantments"."minecraft:sharpness"
 scoreboard players operation $sharpness gm4_ce_data *= #5 gm4_ce_data
 execute if score $sharpness gm4_ce_data matches 1.. run scoreboard players add $sharpness gm4_ce_data 5
 scoreboard players operation $damage gm4_ce_data += $sharpness gm4_ce_data
@@ -31,7 +31,7 @@ loot replace block 29999998 1 7134 container.2 loot gm4_combat_expanded:technica
 
 # update lore with lib_lore
 data modify storage gm4_lore:temp Source set from storage gm4_combat_expanded:temp components."minecraft:lore"
-data modify storage gm4_lore:temp Target set value '{"translate":"item.modifiers.mainhand","italic":false,"color":"gray"}'
+data modify storage gm4_lore:temp Target set value {"translate":"item.modifiers.mainhand","italic":false,"color":"gray"}
 scoreboard players set $start gm4_lore 1
 function #gm4_lore:remove
 data modify storage gm4_lore:temp Input set from block 29999998 1 7134 Items[{Slot:2b}].components."minecraft:lore"
