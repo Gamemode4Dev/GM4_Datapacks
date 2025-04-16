@@ -7,9 +7,4 @@ data merge entity @s {Silent:1b,NoGravity:1b,Invulnerable:1b,ChestedHorse:1b,Var
 
 loot replace entity @s horse.0 loot gm4_balloon_animals:lead
 
-data modify storage gm4_balloon_animals:temp name_json set from entity @s Items[0].components."minecraft:lore"[0]
-data modify storage gm4_balloon_animals:temp name_spliced set string storage gm4_balloon_animals:temp name_json 24 -2
-
-# Example Lead display components:
-# item_name: "Cow"
-# lore[0]: {"color":"gray","text":"Abigail"}
+data modify storage gm4_balloon_animals:temp CustomName set from entity @s Items[0].components."minecraft:lore"[0].text
