@@ -357,6 +357,9 @@ def beet_default(ctx: Context):
     VanillaTemplate.vanilla = Vanilla(ctx)
     VanillaTemplate.vanilla.minecraft_version = '1.21.5'
     VanillaTemplate.vanilla_jar = VanillaTemplate.vanilla.mount("assets/minecraft/items")
+    AdvancementIconTemplate.vanilla = Vanilla(ctx)
+    AdvancementIconTemplate.vanilla.minecraft_version = '1.21.4'
+    AdvancementIconTemplate.vanilla_jar = AdvancementIconTemplate.vanilla.mount("assets/minecraft/items")
 
     yield
     tl.warn_unused_translations()
@@ -957,12 +960,16 @@ class BlockTemplate(TemplateOptions):
 class AdvancementIconTemplate(TemplateOptions):
     name = "advancement"
     forward: Optional[str]
+    vanilla: ClassVar[Vanilla] # mounted to by beet plugin since it requires context access
+    vanilla_jar: ClassVar[ClientJar]
 
     # NOTE since advancements are all in the gm4 namespace, so are these models. This template ignores the 'model' field of ModelData
     def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         advancement_name = config.reference.split("/")[-1]
         if not self.forward:
-            self.forward = f"minecraft:item/{config.item.entries()[0]}"
+            item = config.item.entries()[0]
+            self.forward = self.vanilla_jar.assets.item_models[add_namespace(item, "minecraft")].data.get("model", {}).get("model", "") # type: ignore ; json access is string
+
         m = models_container[f"gm4:gui/advancements/{advancement_name}"] = Model({
             "parent": self.forward
         })
