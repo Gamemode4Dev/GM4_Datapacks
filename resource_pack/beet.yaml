@@ -6,7 +6,12 @@ resource_pack:
   load:
     pack.png: pack.png
     # other files are inherited by the full-project build
-
+  overlays:
+    - formats:
+        min_inclusive: 0
+        max_inclusive: 42
+      directory: backport_42
+      
 pipeline:
   - dev_warning
 

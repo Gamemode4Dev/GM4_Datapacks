@@ -30,7 +30,7 @@ from beet import (
 )
 from beet.contrib.link import LinkManager
 from beet.contrib.optifine import OptifineProperties
-from beet.contrib.vanilla import Vanilla
+from beet.contrib.vanilla import Vanilla, ClientJar
 from beet.core.utils import format_validation_error
 from mecha import (
     AstChildren,
@@ -354,6 +354,11 @@ def beet_default(ctx: Context):
 
     logging.getLogger("beet.contrib.babelbox").addFilter(block_incomplete_translation)
     logging.getLogger("mecha").addFilter(limit_mecha_diagnostics)
+
+    # attach context to template classes
+    VanillaTemplate.vanilla = Vanilla(ctx)
+    VanillaTemplate.vanilla.minecraft_version = '1.21.4'
+    VanillaTemplate.vanilla_jar = VanillaTemplate.vanilla.mount("assets/minecraft/items")
 
     yield
     tl.warn_unused_translations()
@@ -993,6 +998,8 @@ class HandheldTemplate(TemplateOptions):
 
 class VanillaTemplate(TemplateOptions):
     name = "vanilla"
+    vanilla: ClassVar[Vanilla] # mounted to by beet plugin since it requires context access
+    vanilla_jar: ClassVar[ClientJar]
 
     def process(self, config: ModelData, models_container: NamespaceProxy[Model]):
         model_names = config.model.entries()
@@ -1003,8 +1010,9 @@ class VanillaTemplate(TemplateOptions):
 
         ret_list: list[Model] = []
         for item, model_name in zip(config.item.entries(), model_names):
+            vanilla_model_path: str = self.vanilla_jar.assets.item_models[add_namespace(item, "minecraft")].data.get("model", {}).get("model", "") # type: ignore ; json access is string
             m = models_container[model_name] = Model({      # type: ignore ; list is checked above to be all strings
-                "parent": f"minecraft:item/{item}"
+                "parent": vanilla_model_path
             })
             ret_list.append(m)
         config.model = MapOption(__root__=dict(zip(config.item.entries(), model_names)))
