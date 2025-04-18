@@ -285,6 +285,8 @@
         "minecraft:suspicious_sand",
         "minecraft:target",
         "minecraft:terracotta",
+        "minecraft:test_block",
+        "minecraft:test_instance_block",
         "minecraft:tinted_glass",
         "minecraft:tnt",
         "minecraft:trial_spawner",
