@@ -1716,7 +1716,7 @@ Creates the page storage to store book info for a given module
 """
 def generate_page_storage(book: Book, ctx: Context) -> any: # type: ignore
   hand_initial:list[Any] = []
-  hand_unlockable:dict[str,Any|str] = {}
+  hand_unlockable:dict[str,Any] = {}
   lectern_initial:list[Any] = [["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["",{"translate":"gui.gm4.guidebook.page.toc","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]]
   lectern_unlockable:dict[str,Any] = {}
 
