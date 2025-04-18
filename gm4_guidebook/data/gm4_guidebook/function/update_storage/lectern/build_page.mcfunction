@@ -16,7 +16,7 @@ page = {
     "interpret": True,
     "separator":"\n"
   }
-data modify block 29999998 1 7133 front_text.messages[0] set value json.dumps(page,separators=(',',':'))
+data modify block 29999998 1 7133 front_text.messages[0] set value page
 data modify storage gm4_guidebook:register lectern_toc append from block 29999998 1 7133 front_text.messages[0]
 
 # loop for all modules
