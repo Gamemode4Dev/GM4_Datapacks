@@ -1386,7 +1386,7 @@ def populate_insert(element: dict[Any, Any], book: Book, ctx: Context, lectern: 
 """
 Converts the JSON text component into a string to be placed inside the page NBT
 """
-def stringify_page(page: TextComponent, book: Book, ctx: Context, lectern: bool = False) -> str:
+def stringify_page(page: TextComponent, book: Book, ctx: Context, lectern: bool = False) -> list[dict[Any,Any]|str]:
   page_with_header: list[dict[Any,Any]|str] = generate_lectern_header(book) if lectern else generate_book_header(book)
   # populate insertions for a single value
   if isinstance(page, dict):
@@ -1402,7 +1402,7 @@ def stringify_page(page: TextComponent, book: Book, ctx: Context, lectern: bool 
     page_with_header.extend(page)
   else:
     page_with_header.append(page)
-  return f'{json.dumps(page_with_header)}'
+  return page_with_header
 
 
 
@@ -1714,11 +1714,11 @@ def generate_unlock_function(section: Section, book_id: str, page_index: int, lo
 """
 Creates the page storage to store book info for a given module
 """
-def generate_page_storage(book: Book, ctx: Context) -> dict[str,dict[str,list[str]|dict[str,str]]]:
-  hand_initial:list[str] = []
-  hand_unlockable:dict[str,str] = {}
+def generate_page_storage(book: Book, ctx: Context) -> any: # type: ignore
+  hand_initial:list[list[dict[Any,Any]|str]] = []
+  hand_unlockable:dict[list[dict[Any,Any]|str]|str,list[dict[Any,Any]|str]|str] = {}
   lectern_initial:list[Any] = [["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["",{"translate":"gui.gm4.guidebook.page.toc","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]]
-  lectern_unlockable:dict[str,str] = {}
+  lectern_unlockable:dict[list[dict[Any,Any]|str]|str,list[dict[Any,Any]|str]|str] = {}
 
   for section_index, section in enumerate(book.sections):
     # check if the page is unlockable or initial
@@ -1806,7 +1806,7 @@ def generate_add_toc_line_function(book: Book, overlay: bool = False) -> Functio
     }
   }
   return Function([
-    f"execute if score $trigger gm4_guide matches {book.trigger_id} if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:temp page append value ' {json.dumps(text_component, ensure_ascii=False)}'"
+    f"execute if score $trigger gm4_guide matches {book.trigger_id} if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:temp page append value {json.dumps(text_component, ensure_ascii=False)}"
   ], tags=[] if overlay else ["gm4_guidebook:add_toc_line"])
 
 
