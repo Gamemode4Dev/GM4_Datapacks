@@ -9,7 +9,6 @@ data merge storage gm4_guidebook:temp {page:[["",{"translate":"gui.gm4.guidebook
 function gm4_guidebook:update_storage/lectern/build_line
 
 # add table of contents page
-page = 
 data modify block 29999998 1 7133 front_text.messages[0] set value {"nbt": "page[]","storage": "gm4_guidebook:temp","interpret": True,"separator":"\n"}
 data modify storage gm4_guidebook:register lectern_toc append from block 29999998 1 7133 front_text.messages[0]
 
