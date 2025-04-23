@@ -21,10 +21,10 @@ scoreboard players set @s gm4_ce_damage_cap 60
 tag @s[predicate=gm4_combat_expanded:mob/modifier/snowy] add gm4_ce_slowing_attacks
 # burned
 effect give @s[predicate=gm4_combat_expanded:mob/modifier/burned] fire_resistance infinite 0 true
-data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/burned,predicate=gm4_combat_expanded:technical/chance/grow_phantom_slight] Size set value 1
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/burned,predicate=gm4_combat_expanded:technical/chance/grow_phantom_slight] size set value 1
 # flowering
-data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering,predicate=gm4_combat_expanded:technical/chance/grow_phantom_slight] Size set value 1
-data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering,predicate=gm4_combat_expanded:technical/chance/grow_phantom_large] Size set value 2
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering,predicate=gm4_combat_expanded:technical/chance/grow_phantom_slight] size set value 1
+data modify entity @s[predicate=gm4_combat_expanded:mob/modifier/flowering,predicate=gm4_combat_expanded:technical/chance/grow_phantom_large] size set value 2
 
 # set modifiers
 execute unless score $replaced_mob gm4_ce_data matches 1 run function gm4_combat_expanded:mob/init/modifier/stat/prep

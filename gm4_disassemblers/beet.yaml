@@ -61,8 +61,6 @@ meta:
         - gm4_resource_pack
         - gm4_relocators
         - gm4_standard_crafting
-        - gm4_auto_crafting
-        - gm4_record_crafting
         - gm4_ender_hoppers
         - gm4_enchantment_extractors
         - gm4_forming_press

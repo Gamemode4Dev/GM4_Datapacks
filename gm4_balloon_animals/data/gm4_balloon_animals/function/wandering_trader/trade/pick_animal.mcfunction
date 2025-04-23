@@ -5,7 +5,7 @@
 execute store result score $animal_id gm4_balloon_animals_data run loot spawn ~ ~-4096 ~ loot gm4_balloon_animals:technical/random/enumeration_value
 
 for animal in ctx.meta['animals']:
-    if animal['function'] not in ['init_animal', 'init_wolf']:
+    if animal['function'] not in ['init_animal', 'init_wolf','init_farm']:
         execute if score $animal_id gm4_balloon_animals_data matches ctx.meta['enumeration'].index(animal['id']) summon minecraft:trader_llama run function f"gm4_balloon_animals:wandering_trader/trade/{animal['function']}"
         continue
         

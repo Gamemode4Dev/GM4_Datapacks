@@ -33,7 +33,10 @@
       "minecraft:potted_warped_fungus",
       "minecraft:potted_crimson_roots",
       "minecraft:potted_warped_roots",
-      "minecraft:potted_mangrove_propagule"
+      "minecraft:potted_mangrove_propagule",
+      "minecraft:potted_closed_eyeblossom",
+      "minecraft:potted_open_eyeblossom",
+      "minecraft:potted_pale_oak_sapling"
     ]
   }
   

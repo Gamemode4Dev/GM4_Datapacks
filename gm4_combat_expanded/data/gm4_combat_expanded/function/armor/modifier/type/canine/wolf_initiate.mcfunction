@@ -10,6 +10,6 @@ scoreboard players operation @s gm4_ce_data = $slot gm4_ce_data
 data modify entity @s Owner set from storage gm4_combat_expanded:temp uuid
 
 # if named Green use the alt dog version, don't display name
-execute if data storage gm4_combat_expanded:temp components{"minecraft:custom_name":'"Green"'} run return run data merge entity @s {variant:"gm4_combat_expanded:gm4_ce_canine_alt",CollarColor:5b}
+execute if data storage gm4_combat_expanded:temp components{"minecraft:custom_name":"Green"} run return run data merge entity @s {variant:"gm4_combat_expanded:gm4_ce_canine_alt",CollarColor:5b}
 
 data modify entity @s CustomName set from storage gm4_combat_expanded:temp components."minecraft:custom_name"

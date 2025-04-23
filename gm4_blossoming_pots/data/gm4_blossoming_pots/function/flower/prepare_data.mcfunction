@@ -16,7 +16,7 @@ execute if data entity @e[type=minecraft:marker,tag=gm4_blossoming_pots.data.flo
 
 # if no perma marker yet, summon it
 $execute unless entity @e[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..0.1,limit=1] \
-    run summon minecraft:marker ~ ~ ~ {Tags:["gm4_blossoming_pots.data.flower_pot","smithed.strict","smithed.entity"],data:{gm4_blossoming_pots:{id:"$(id)",count:0,full:0}},CustomName:'{"text":"gm4_blossoming_pots.flower_pot"}'}
+    run summon minecraft:marker ~ ~ ~ {Tags:["gm4_blossoming_pots.data.flower_pot","smithed.strict","smithed.entity"],data:{gm4_blossoming_pots:{id:"$(id)",count:0,full:0}},CustomName:{"text":"gm4_blossoming_pots.flower_pot"}}
 
 # signal player mainhand to be decremented by as_player
 scoreboard players set $signal_item_decr gm4_blossoming_pots.misc 1

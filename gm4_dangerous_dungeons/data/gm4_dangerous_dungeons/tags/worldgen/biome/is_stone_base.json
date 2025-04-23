@@ -29,7 +29,7 @@
     "minecraft:sparse_jungle",
     "minecraft:windswept_savanna",
     "minecraft:frozen_peaks",
-    { "id": "minecraft:pale_garden", "required": false },
+    "minecraft:pale_garden",
     "#gm4_dangerous_dungeons:is_snowy",
     "minecraft:dripstone_caves"
   ]

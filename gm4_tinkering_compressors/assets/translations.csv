@@ -1,8 +1,0 @@
-key,en_us
-block.gm4.tinkering_compressor,Tinkering Compressor
-container.gm4.tinkering_compressor,Tinker Amount
-advancement.gm4.tinkering_compressors.title,Automatic Tinkering
-advancement.gm4.tinkering_compressors.description,Make yourself a Tinkering Compressor
-text.gm4.guidebook.module_desc.tinkering_compressors,"Automatically compress stacks of items into their block form with a tinker shamir as a machine block, and back."
-text.gm4.guidebook.tinkering_compressors.creation,A Block Compressor can be upgraded to a Tinkering Compressor.\n\nThis is done by dropping a Tinker Shamir on top of a Compressor and smooshing it with a downwards piston.
-text.gm4.guidebook.tinkering_compressors.usage,"A Tinkering Compressor with 64 items inside will tinker compress items on top of it, transforming them into their block form. It supports the all tinkering.\n\nPlacing 1 item inside will instead detinker any items on top of it."

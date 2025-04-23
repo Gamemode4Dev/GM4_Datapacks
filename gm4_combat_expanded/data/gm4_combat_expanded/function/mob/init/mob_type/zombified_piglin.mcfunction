@@ -23,7 +23,7 @@ loot replace entity @s[predicate=gm4_combat_expanded:mob/modifier/nether/crimson
 loot replace entity @s weapon.mainhand loot gm4_combat_expanded:weapon/sword/gold
 
 # set droprate to 20%
-data modify entity @s HandDropChances set value [0.20F,0.20F]
+data modify entity @s drop_chances merge value {mainhand:0.20F,offhand:0.20F}
 
 # remove zombie leader bonus
 execute if data entity @s attributes[{id:"minecraft:max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] run data remove entity @s attributes[{id:"minecraft:max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}]

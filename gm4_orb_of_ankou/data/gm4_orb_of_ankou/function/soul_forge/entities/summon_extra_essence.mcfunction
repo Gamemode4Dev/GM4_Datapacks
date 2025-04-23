@@ -2,7 +2,7 @@
 # run from soul_forge/destroy
 
 # summon endermite
-data modify storage gm4_orb_of_ankou:temp ArmorItems[0].components set from storage gm4_orb_of_ankou:temp ArmorItems[1].components
+data modify storage gm4_orb_of_ankou:temp equipment.feet.components set from storage gm4_orb_of_ankou:temp equipment.legs.components
 function gm4_orb_of_ankou:soul_forge/entities/severed_soul
 
 # loop

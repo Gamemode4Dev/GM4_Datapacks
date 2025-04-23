@@ -13,5 +13,5 @@ data modify storage gm4_combat_expanded:temp components."minecraft:custom_data".
 scoreboard players set $active gm4_ce_data 0
 
 # remove attribute
-data modify storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic"}].amount set value 0
-data modify storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers".modifiers[{id:"gm4_combat_expanded:dynamic_2"}].amount set value 0
+data modify storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers"[{id:"gm4_combat_expanded:dynamic"}].amount set value 0
+data modify storage gm4_combat_expanded:temp components."minecraft:attribute_modifiers"[{id:"gm4_combat_expanded:dynamic_2"}].amount set value 0
