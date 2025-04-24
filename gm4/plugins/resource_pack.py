@@ -1003,6 +1003,7 @@ class VanillaTemplate(TemplateOptions):
         return self._item_def_map.get(item)
 
 class AdvancementIconTemplate(VanillaTemplate, TemplateOptions): # TODO make this inheritance work properly. Treat as single-vanilla forward or create new where needed
+    """Creates a model for advancement icons, either pointing to the vanilla model, or to a specified other item model"""
     name = "advancement"
     forward: Optional[str]
     tints: Optional[ListOption[int|tuple[float,float,float]]] # optional constant tints to apply to the item model
@@ -1010,14 +1011,17 @@ class AdvancementIconTemplate(VanillaTemplate, TemplateOptions): # TODO make thi
     # NOTE since advancements are all in the gm4 namespace, so are these models. This template ignores the 'model' field of ModelData
     def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         advancement_name = config.reference.split("/")[-1]
+
         if not self.forward:
+            # then we use the vanilla item's model and settings - inheriting from VanillaTemplate for this
             item = config.item.entries()[0]
-            self.forward = self.vanilla_jar.assets.item_models[add_namespace(item, "minecraft")].data.get("model", {}).get("model", "") # type: ignore ; json access is string
+            config_copy = config.copy(update={"model": MapOption(__root__={config.item.entries()[0]: f"gm4:gui/advancements/{advancement_name}"})})
+            TemplateOptions.create_models(self, config_copy, models_container)
 
         m = models_container[f"gm4:gui/advancements/{advancement_name}"] = Model({
             "parent": self.forward
         })
-        config.model = MapOption(__root__={config.item.entries()[0]: f"gm4:gui/advancements/{advancement_name}"})
+        # config.model = MapOption(__root__={config.item.entries()[0]: f"gm4:gui/advancements/{advancement_name}"})
         return [m]
     
     def get_item_def_entry(self, config: ModelData, item: str):
