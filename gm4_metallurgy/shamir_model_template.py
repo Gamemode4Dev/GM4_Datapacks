@@ -1,13 +1,13 @@
 from beet import Context, Model, NamespaceProxy, ListOption, ResourcePack
 from beet.contrib.vanilla import Vanilla, ClientJar
 from beet.contrib.optifine import OptifineProperties
-from typing import Any, ClassVar, Literal, Optional
+from typing import Any, ClassVar, Literal
 from itertools import product, chain, count
 import re
 import logging
 from copy import deepcopy
 
-from gm4.plugins.resource_pack import ModelData, TemplateOptions, ItemModelOptions
+from gm4.plugins.resource_pack import ModelData, TemplateOptions, JsonType
 from gm4.utils import add_namespace, MapOption
 
 parent_logger = logging.getLogger("gm4."+__name__)
@@ -63,15 +63,18 @@ class ShamirTemplate(TemplateOptions):
     textures_path: str = "" # directory of texture files to use for shamirs, falling back to the default metallurgy textures
     metal: Literal["aluminium", "barimium", "barium", "bismuth", "curies_bismium", "thorium"] # the metallurgy metal this shamir is made of
 
+    _item_def_map: dict[str, JsonType] = {}
+    _model_overrides_1_21_3: dict[str, list[JsonType]] = {} # NOTE to be removed in 1.21.5
+
     bound_ctx: ClassVar[Context]
     metallurgy_assets: ClassVar[ResourcePack] = ResourcePack(path="gm4_metallurgy") # load metallurgy textures so expansion shamirs can fall back on their
     vanilla_models_jar: ClassVar[ClientJar]
     vanilla_models_jar_1_21_3: ClassVar[ClientJar]
 
-    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         logger = parent_logger.getChild(self.bound_ctx.project_id)
         models_loc = f"{config.reference}"
-        models: dict[str, str|ItemModelOptions] = {} # the value of config.models to be applied after going through special cases
+        models: dict[str, str] = {} # the value of config.models to be applied after going through special cases
         ret_list: list[Model] = []
         return ret_list # TODO 1.21.5: re-enable this
 
@@ -166,12 +169,18 @@ class ShamirTemplate(TemplateOptions):
                 itemdef_compound["model"] = variant_path # update our copy to point to the new model
 
             if item_variants:
-                models.update({item: ComplexBypass(payload=mutatable_itemdef_copy)})
+                self._item_def_map[item] = mutatable_itemdef_copy
+                self._model_overrides_1_21_3[item] = variants
+                models.update({item: "NULL"}) # actual model paths contained within itemdef compound
             else:
                 models.update({item: f"{models_loc}/{item}"})
 
         config.model = MapOption(__root__=models)
         return ret_list
+    
+    def get_item_def_entry(self, config: ModelData, item: str) -> None|JsonType:
+        # TODO fill me out, replacing ComplexBypass
+        return self._item_def_map.get(item)
     
     def mutate_config(self, config: ModelData):
         expanded_items = set(chain.from_iterable([GROUP_LOOKUP.get(group, [group]) for group in config.item.entries()])) | {"player_head"}
@@ -181,17 +190,6 @@ class ShamirTemplate(TemplateOptions):
             config.textures = MapOption(__root__={"band": f"gm4_metallurgy:item/band/{self.metal}_band"})
         else: # isinstance(.., dict):
             config.textures = MapOption(__root__={"band": f"gm4_metallurgy:item/band/{self.metal}_band"}|config.textures.__root__)
-
-class ComplexBypass(ItemModelOptions):
-    """Generator for item model definitions on trimed armor, compasses with complex vanilla display conditions.
-    NOT INTENDED FOR USAGE IN CONFIG FILES. Used by config-mutating templates to pass item-model-def variants upstream to the file creation stage"""
-    # NOTE should this be in the base resource_pack file? Depends if any other modules use this approach
-    type = "_complex_bypass"
-    payload: dict[str, Any]
-    payload_1_21_3: Optional[Any] = [] # NOTE backwards compatability field. Will be removed in 1.21.5 update
-
-    def generate_json(self) -> dict[str, Any]:
-        return self.payload
 
 def optifine_armor_properties_merging(pack: ResourcePack, path: str, current: OptifineProperties, conflict: OptifineProperties) -> bool:
     if not path.startswith("gm4_metallurgy:cit"): # only apply this rule to metallurgy files
