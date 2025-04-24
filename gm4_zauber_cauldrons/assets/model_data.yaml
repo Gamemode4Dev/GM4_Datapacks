@@ -66,7 +66,9 @@ model_data:
       forward: item/bottled_magicol/temperate_potion
   - item: clock
     reference: gui/advancement/zauber_cauldrons_make_magicol
-    template: advancement
+    template: 
+      name: advancement
+      forward: minecraft:clock_00
   - item: grass_block
     reference: gui/advancement/zauber_cauldrons_paint_biome
     template: advancement
