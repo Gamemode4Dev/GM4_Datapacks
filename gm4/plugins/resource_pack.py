@@ -332,9 +332,6 @@ def beet_default(ctx: Context):
     VanillaTemplate.vanilla = Vanilla(ctx)
     VanillaTemplate.vanilla.minecraft_version = '1.21.5'
     VanillaTemplate.vanilla_jar = VanillaTemplate.vanilla.mount("assets/minecraft/items")
-    AdvancementIconTemplate.vanilla = Vanilla(ctx)
-    AdvancementIconTemplate.vanilla.minecraft_version = '1.21.4'
-    AdvancementIconTemplate.vanilla_jar = AdvancementIconTemplate.vanilla.mount("assets/minecraft/items")
 
     yield
     tl.warn_unused_translations()
@@ -891,86 +888,40 @@ class VanillaTemplate(TemplateOptions):
 
     def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]):
         model_names = config.model.entries()
-        if any([isinstance(m, list) for m in model_names]):
-            raise InvalidOptions("gm4.model_data", f"{config.reference}; Template 'vanilla' does not support predicate override 'model' fields.")
         if len(set(model_names)) == 1 and len(config.item.entries()) > 1:
             model_names = [f"{model_names[0]}_{item}" for item in config.item.entries()] # if only one model name given, make one model per item id
         
-        model_def_entries = [
-            {
-                "type": "minecraft:model",
-                "model": m
-            }
-        for m in model_names]
+        model_def_map: dict[str,JsonType] = {}
 
         ret_list: list[Model] = []
         for item, model_name in zip(config.item.entries(), model_names):
             model_compound = self.vanilla_jar.assets.item_models[add_namespace(item, "minecraft")].data.get("model", {})
             if model_compound["type"] == "minecraft:special": # uses some special handling
                 vanilla_model_path: str = model_compound["base"] # covers player_head use case. Others may not be handled properly yet.
+                special_model = True
             else:
                 vanilla_model_path: str = model_compound.get("model", "")
+                special_model = False
             m = models_container[model_name] = Model({
                 "parent": vanilla_model_path
             })
             ret_list.append(m)
-        self._item_def_map.update(dict(zip(config.item.entries(), model_def_entries)))
+            model_def_map[item] = {
+                "type": "minecraft:special" if special_model else "minecraft:model",
+                "model": model_compound["model"] if special_model else model_name
+            } | (
+                {"tints": t if (t:=model_compound.get("tints")) else {}}
+            )
+        self._item_def_map.update(model_def_map)
         return ret_list
     
     def get_item_def_entry(self, config: ModelData, item: str):
-        return 
+        return self._item_def_map.get(item)
 
-class BlockTemplate(TemplateOptions):
-    name = "block"
-    texture_map = ["top", "bottom", "front", "side"]
-
-    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]):
-        model_name = ensure_single_model_config(self.name, config)
-        m = models_container[model_name] = Model({
-            "parent": "minecraft:block/cube",
-            "textures": {
-                "down":  config.textures['bottom'],
-                "up":    config.textures['top'],
-                "north": config.textures['front'],
-                "south": config.textures['side'],
-                "west":  config.textures['side'],
-                "east":  config.textures['side']
-            }
-        })
-        return [m]
-
-class ConditionTemplate(BlankTemplate, TemplateOptions):
-    """Custom models using boolean condition variants (ie. broken/repaired elytra, cast/uncast fishing rods...)"""
-    name = "condition"
-    property: str
-    on_true: str
-    on_false: str
-
-    def get_item_def_entry(self, config: ModelData, item: str) -> JsonType:
-        return {
-            "type": "minecraft:condition",
-            "property": self.property,
-            "on_false": {
-                "type": "minecraft:model",
-                "model": self.on_false
-            },
-            "on_true": {
-                "type": "minecraft:model",
-                "model": self.on_true
-            }
-        }
-    
-    def add_namespace(self, namespace: str):
-        return self.dict() | {"on_true": add_namespace(self.on_true, namespace),
-                              "on_false": add_namespace(self.on_false, namespace)}
-
-
-class AdvancementIconTemplate(TemplateOptions):
+class AdvancementIconTemplate(VanillaTemplate, TemplateOptions): # TODO make this inheritance work properly. Treat as single-vanilla forward or create new where needed
     name = "advancement"
     forward: Optional[str]
     tints: Optional[ListOption[int|tuple[float,float,float]]] # optional constant tints to apply to the item model
-    vanilla: ClassVar[Vanilla] # mounted to by beet plugin since it requires context access
-    vanilla_jar: ClassVar[ClientJar]
 
     # NOTE since advancements are all in the gm4 namespace, so are these models. This template ignores the 'model' field of ModelData
     def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
@@ -1002,6 +953,50 @@ class AdvancementIconTemplate(TemplateOptions):
     
     def add_namespace(self, namespace: str):
         return self.dict() | ({"forward": add_namespace(self.forward, namespace)} if self.forward else {})
+
+class BlockTemplate(TemplateOptions):
+    name = "block"
+    texture_map = ["top", "bottom", "front", "side"]
+
+    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]):
+        model_name = ensure_single_model_config(self.name, config)
+        m = models_container[model_name] = Model({
+            "parent": "minecraft:block/cube",
+            "textures": {
+                "down":  config.textures['bottom'],
+                "up":    config.textures['top'],
+                "north": config.textures['front'],
+                "south": config.textures['side'],
+                "west":  config.textures['side'],
+                "east":  config.textures['side']
+            }
+        })
+        return [m]
+    
+class ConditionTemplate(BlankTemplate, TemplateOptions):
+    """Custom models using boolean condition variants (ie. broken/repaired elytra, cast/uncast fishing rods...)"""
+    name = "condition"
+    property: str
+    on_true: str
+    on_false: str
+
+    def get_item_def_entry(self, config: ModelData, item: str) -> JsonType:
+        return {
+            "type": "minecraft:condition",
+            "property": self.property,
+            "on_false": {
+                "type": "minecraft:model",
+                "model": self.on_false
+            },
+            "on_true": {
+                "type": "minecraft:model",
+                "model": self.on_true
+            }
+        }
+    
+    def add_namespace(self, namespace: str):
+        return self.dict() | {"on_true": add_namespace(self.on_true, namespace),
+                              "on_false": add_namespace(self.on_false, namespace)}
 
 class ItemDisplayModel(TransformOptions):
     """Calculates the model transform for an item_display entity, located at the specified origin, facing south, for the model to align with the block-grid"""
