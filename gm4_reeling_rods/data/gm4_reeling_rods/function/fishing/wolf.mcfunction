@@ -1,7 +1,7 @@
 # Action for reeled wolf
 # @s = wolf
 # at @s
-# run from fishing/wolf/adv and fishing/wolf/adv_baby
+# run from fishing/select_type
 
 # fail if no Owner
 execute unless data entity @s Owner run return fail

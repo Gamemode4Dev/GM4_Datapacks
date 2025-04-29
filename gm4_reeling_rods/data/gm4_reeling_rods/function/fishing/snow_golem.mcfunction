@@ -1,7 +1,7 @@
 # Action for reeled snow_golem
 # @s = snow_golem
 # at @s
-# run from fishing/snow_golem/adv
+# run from fishing/select_type
 
 # fail if no Pumpkin
 execute unless data entity @s {Pumpkin:1b} run return fail

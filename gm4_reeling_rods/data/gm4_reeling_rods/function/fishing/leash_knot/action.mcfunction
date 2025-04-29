@@ -1,7 +1,7 @@
 # Action for reeled leash knot
 # @s = leash knot
 # at @s
-# run from gm4_reeling_rods:fishing/leash_knot/adv
+# run from fishing/select_type
 
 tag @s add gm4_reeling_rods.leash_knot
 

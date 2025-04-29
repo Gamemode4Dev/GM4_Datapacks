@@ -1,7 +1,7 @@
 # Action for reeled horse
 # @s = horse
 # at @s
-# run from fishing/horse/adv and fishing/horse/adv_baby
+# run from fishing/select_type
 
 data modify storage gm4_reeling_rods:temp item_data set value {}
 data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s SaddleItem

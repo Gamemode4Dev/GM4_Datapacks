@@ -1,60 +1,19 @@
 from typing import List
 from beet import Context, Advancement, Function, DataPack
-from beet.contrib.vanilla import Vanilla
 import math
-
-class Entity:
-    def __init__(self, entity_type: str, needs_enchantment: bool, can_dismount: bool):
-        self.entity_type = entity_type
-        self.needs_enchantment = needs_enchantment
-        self.can_dismount = can_dismount
+from pathlib import Path
+from gm4.utils import CSV
 
 def beet_default(ctx: Context):
     """NOTE: generates files
         - set_lookup_table
         - advancements and reward functions for every bit state of an entity's tagged id
-        - fishing/select_type and overlays
-        - a few action functions for specified entity types
+        - fishing/select_type and overlays of it
     """
     create_lookup_file(ctx)
     create_bit_advancements(ctx)
 
-    vanilla = ctx.inject(Vanilla)
-    vanilla.minecraft_version = '1.21.4'
-    item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
-
-    # Here we define all entities with a specific action, those not listed will simply dismount if possible
-    needsEnchant_canDismount: List[str] = [
-        "minecraft:allay", "minecraft:fox", "minecraft:pig",
-        "minecraft:strider", "minecraft:snow_golem", "minecraft:wolf",
-        "minecraft:donkey", "minecraft:llama", "minecraft:trader_llama",
-        "minecraft:witch","minecraft:villager", "minecraft:mule",
-        "minecraft:horse", "minecraft:zombie_horse", "minecraft:skeleton_horse"
-    ]
-    noEnchant_canDismount: List[str] = [
-        "minecraft:shulker"
-    ]
-    needsEnchant_noDismount: List[str] = [
-        "minecraft:chest_minecart", "minecraft:furnace_minecart", "minecraft:hopper_minecart",
-        "minecraft:tnt_minecart", "minecraft:chest_boat"
-    ]
-    for chest_boat in item_tags["minecraft:chest_boats"].data['values']:
-        needsEnchant_noDismount.append(chest_boat)
-    
-    noEnchant_noDismount: List[str] = [
-        "minecraft:leash_knot", "minecraft:end_crystal", "minecraft:painting",
-        "minecraft:item_frame", "minecraft:glow_item_frame"
-    ]
-    
-    entity_list: List[Entity] = []
-    for name in needsEnchant_canDismount:
-        entity_list.append(Entity(name,True,True))
-    for name in noEnchant_canDismount:
-        entity_list.append(Entity(name,False,True))
-    for name in needsEnchant_noDismount:
-        entity_list.append(Entity(name,True,False))
-    for name in noEnchant_noDismount:
-        entity_list.append(Entity(name,False,False))
+    entity_list =  CSV.from_file(Path('gm4_reeling_rods','entities.csv'))
     
     create_select_type(ctx, entity_list)
 '''
@@ -175,6 +134,30 @@ def create_bit_advancements(ctx: Context):
                 "tag @s remove gm4_reeling_rods.player"
             ])
 
+def create_select_type(ctx: Context, entities: CSV):
+    selectFuncBase: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
+    selectFuncSince61: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
+    selectFuncBackport48: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
+    for entity in entities:
+        since_61 = "pale_oak" in entity['id']
+        backport_48 = "minecraft:chest_boat" in entity['id']
+        since_57 = "_chest_boat" in entity['id'] or "_chest_raft" in entity['id']
+
+        order = 1 if entity['can_dismount'] == "TRUE" else 0     # other action before or after dismounting logic
+        writeTo = [selectFuncSince61] if since_61 else [selectFuncBackport48] if backport_48 else [selectFuncBase, selectFuncSince61] if since_57 else [selectFuncBackport48, selectFuncBase, selectFuncSince61]
+        # since_61      gets since_61, since_57, else
+        # base          gets since_57, else
+        # backport_48   gets backport_48, else
+        for write in writeTo:
+            command = f"execute if entity @s[type={entity['id']}] run return "
+            if entity['needs_enchantment'] == "TRUE":
+                command = command + "run execute if data storage gm4_reeling_rods:temp enchanted "
+            command = command + entity['command']
+            write[order].append(command)
+    finalSelectFunction(selectFuncBase, ctx.data.overlays["since_57"]) # should just be ctx.data when moved to 1.21.5, these overlays are gonna be a nightmare to update.,., Figure it out later
+    finalSelectFunction(selectFuncSince61, ctx.data.overlays["since_61"])
+    finalSelectFunction(selectFuncBackport48, ctx.data.overlays["backport_48"])
+
 def finalSelectFunction(strings: List[List[str]], output_pack: DataPack):
     finalFunction: List[str] = [
         "# GENERATED from generate_files.py",
@@ -192,116 +175,3 @@ def finalSelectFunction(strings: List[List[str]], output_pack: DataPack):
     for line in strings[1]:
         finalFunction.append(line)
     output_pack["gm4_reeling_rods:fishing/select_type"] = Function(finalFunction)
-
-def create_select_type(ctx: Context, entities: List[Entity]):
-    selectFuncBase: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
-    selectFuncSince61: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
-    selectFuncBackport48: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
-    for entity in entities:
-        since_61 = "pale_oak" in entity.entity_type
-        backport_48 = "minecraft:chest_boat" in entity.entity_type
-        since_57 = "_chest_boat" in entity.entity_type or "_chest_raft" in entity.entity_type
-        entity_type_no_prefix = entity.entity_type.removeprefix('minecraft:')
-
-        # generate an action if its one of those types
-        generated_action(
-            ctx.data.overlays["since_61"] if since_61 else ctx.data.overlays["backport_48"] if backport_48 else ctx.data.overlays["since_57"] if since_57 else ctx.data,
-            entity
-        )
-
-        order = 1 if entity.can_dismount else 0     # other action before or after dismounting logic
-        writeTo = [selectFuncSince61] if since_61 else [selectFuncBackport48] if backport_48 else [selectFuncBase, selectFuncSince61] if since_57 else [selectFuncBackport48, selectFuncBase, selectFuncSince61]
-        # since_61      gets since_61, since_57, else
-        # base          gets since_57, else
-        # backport_48   gets backport_48, else
-        for write in writeTo:
-            command = f"execute if entity @s[type={entity.entity_type}] run return "
-            if entity.needs_enchantment:
-                command = command + "run execute if data storage gm4_reeling_rods:temp enchanted "
-            command = command + f"run function gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"
-            write[order].append(command)
-    finalSelectFunction(selectFuncBase, ctx.data)
-    finalSelectFunction(selectFuncSince61, ctx.data.overlays["since_61"])
-    finalSelectFunction(selectFuncBackport48, ctx.data.overlays["backport_48"])
-
-
-def generated_action(output_pack: DataPack, entity: Entity):
-    entity_type_no_prefix = entity.entity_type.removeprefix('minecraft:')
-    if "minecart" in entity.entity_type: # minecart types
-        output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"] = Function([
-            f"# Action for reeled {entity_type_no_prefix}",
-            f"# @s = {entity_type_no_prefix}",
-            "# at @s",
-            f"# run from gm4_reeling_rods:fishing/select_type",
-            "\ndata modify storage gm4_reeling_rods:temp entity_data set from entity @s",
-            "data modify storage gm4_reeling_rods:temp item_data.Item set value {id:\"" + entity.entity_type.removesuffix('_minecart') + "\",count:1}",
-            "function gm4_reeling_rods:separate",
-            "data remove storage gm4_reeling_rods:temp entity_data.UUID",
-            "data remove storage gm4_reeling_rods:temp entity_data.Passengers",
-            "data modify storage gm4_reeling_rods:temp entity_type set value \"minecraft:minecart\"",
-            "function gm4_reeling_rods:summon_entity with storage gm4_reeling_rods:temp",
-            f"execute on passengers run function gm4_reeling_rods:fishing/minecart_passenger_transfer",
-            "tp @s ~ -1000 ~",
-        ])
-        # technically this is generated 4 times, but its just one file, so uh idk
-        output_pack[f"gm4_reeling_rods:fishing/minecart_passenger_transfer"] = Function([
-            "# transfer old passenger to new minecart",
-            f"# @s = passengers of {entity_type_no_prefix}",
-            f"# at old {entity_type_no_prefix}",
-            "# run from gm4_reeling_rods:fishing/{all_minecart}/action",
-            "\nride @s dismount",
-            "ride @s mount @e[type=minecraft:minecart,distance=..0.00001,limit=1]"
-        ])
-        return
-    if "chest" in entity.entity_type: # chest boats / raft specific
-        output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/action"] = Function([
-            f"# Action for reeled {entity_type_no_prefix}",
-            f"# @s = {entity_type_no_prefix}",
-            "# at @s",
-            f"# run from gm4_reeling_rods:fishing/select_type",
-            "\ndata modify storage gm4_reeling_rods:temp entity_data set from entity @s",
-            "data modify storage gm4_reeling_rods:temp item_data.Item set value {id:\"minecraft:chest\",count:1}",
-            "execute positioned ~ ~0.75 ~ run function gm4_reeling_rods:separate",
-            "data remove storage gm4_reeling_rods:temp entity_data.UUID",
-            "data remove storage gm4_reeling_rods:temp entity_data.Passengers",
-            f"data modify storage gm4_reeling_rods:temp entity_type set value \"{entity.entity_type.replace('_chest','')}\"",
-            "function gm4_reeling_rods:summon_entity with storage gm4_reeling_rods:temp",
-            f"execute on passengers run function gm4_reeling_rods:fishing/{entity_type_no_prefix}/passenger_transfer",
-            "tp @s ~ -1000 ~"
-        ])
-        output_pack[f"gm4_reeling_rods:fishing/{entity_type_no_prefix}/passenger_transfer"] = Function([
-            "# transfer old passenger to new boat",
-            f"# @s = passengers of {entity_type_no_prefix}",
-            f"# at old {entity_type_no_prefix}",
-            f"# run from gm4_reeling_rods:fishing/{entity_type_no_prefix}/action",
-            "\nride @s dismount",
-            f"ride @s mount @e[type={entity.entity_type.replace('_chest','')},distance=..0.00001,limit=1]"
-        ])
-        return
-    if "_horse" in entity.entity_type: # skele and zombie horses
-        output_pack[f"gm4_reeling_rods:fishing/select_type"] = Function([
-            f"# Action for reeled {entity_type_no_prefix}",
-            f"# @s = {entity_type_no_prefix}",
-            "# at @s",
-            f"# run from gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv",
-            "\ndata modify storage gm4_reeling_rods:temp item_data set value {}",
-            "data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s SaddleItem",
-            "execute positioned ~ ~0.8 ~ run function gm4_reeling_rods:separate",
-            "execute if data storage gm4_reeling_rods:temp {item_data:{Item:{id:\"minecraft:saddle\"}}} run item replace entity @s horse.saddle with minecraft:air"
-        ])
-        return
-    if "llama" in entity.entity_type: # llama and trader_llama
-        output_pack[f"gm4_reeling_rods:fishing/select_type"] = Function([
-            f"# Action for reeled {entity_type_no_prefix}",
-            f"# @s = {entity_type_no_prefix}",
-            "# at @s",
-            f"# run from gm4_reeling_rods:fishing/{entity_type_no_prefix}/adv",
-            "\ndata modify storage gm4_reeling_rods:temp entity_data set from entity @s",
-            "data modify storage gm4_reeling_rods:temp item_data set value {}",
-            "data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s body_armor_item",
-            "execute if data entity @s {ChestedHorse:1b} run data modify storage gm4_reeling_rods:temp item_data.Item set value {id:\"minecraft:chest\",count:1}",
-            "execute positioned ~ ~1 ~ run function gm4_reeling_rods:separate",
-            "execute if data entity @s {ChestedHorse:1b} run return run data modify entity @s ChestedHorse set value 0b",
-            "item replace entity @s armor.body with minecraft:air"
-        ])
-        return

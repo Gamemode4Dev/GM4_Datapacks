@@ -10,7 +10,6 @@ $execute if data storage gm4_reeling_rods:id {next:{bit_$(bit):"gm4_reeling_rods
   run return run data modify storage gm4_reeling_rods:id next.bit_$(bit) set value "gm4_reeling_rods.id.$(bit).1"
 
 # change bit 1 -> 0, then go on to next bit
-# from here we know the bit is 1 so we don't need to check it
 $data modify storage gm4_reeling_rods:id next.bit_$(bit) set value "gm4_reeling_rods.id.$(bit).0"
 execute if score $bit gm4_reeling_rods.math matches 15 run return 1
 # next bit

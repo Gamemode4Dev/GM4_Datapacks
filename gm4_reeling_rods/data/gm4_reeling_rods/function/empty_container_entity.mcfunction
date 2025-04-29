@@ -24,7 +24,7 @@ execute store result storage gm4_reeling_rods:temp item_data.Motion[1] double 0.
     scoreboard players operation $motionY gm4_reeling_rods.math += $randomY gm4_reeling_rods.math
 execute store result storage gm4_reeling_rods:temp item_data.Motion[2] double 0.006 run \
     scoreboard players operation $motionZ gm4_reeling_rods.math += $randomZ gm4_reeling_rods.math
-# scale 0.01 for same magnitude as main item
+# scale 0.01 for same magnitude as main item, currently 0.006 to be slower
 
 # summon item with data
 function gm4_reeling_rods:summon_item with storage gm4_reeling_rods:temp

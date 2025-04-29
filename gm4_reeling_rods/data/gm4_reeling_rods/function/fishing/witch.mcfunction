@@ -1,7 +1,7 @@
 # Action for reeled witch
 # @s = witch
 # at @s
-# run from gm4_reeling_rods:fishing/witch/adv
+# run from fishing/select_type
 
 # return if no item in mainhand
 execute unless data entity @s HandItems[0].id run return fail

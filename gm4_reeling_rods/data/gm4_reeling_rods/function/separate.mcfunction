@@ -1,7 +1,7 @@
 # Separates an entity that needs it
 # @s = entity to be separated
 # at @s 
-# run from fishing/{entity}/action
+# run from fishing/{entity} (/action)
 
 function gm4_reeling_rods:get_motion_to_player
 function gm4_reeling_rods:summon_item with storage gm4_reeling_rods:temp

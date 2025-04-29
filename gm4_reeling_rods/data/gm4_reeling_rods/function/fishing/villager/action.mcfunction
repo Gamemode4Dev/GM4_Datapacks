@@ -1,7 +1,7 @@
 # Action for reeled villager
 # @s = villager
 # at @s
-# run from gm4_reeling_rods:fishing/villager/adv
+# run from fishing/select_type
 
 # fail if baby
 execute store result score $misc gm4_reeling_rods.math run data get entity @s Age
