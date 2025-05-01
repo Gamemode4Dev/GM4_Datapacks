@@ -20,49 +20,29 @@ def beet_default(ctx: Context):
 My goal for right now is to go to the maximum scope and then have things cut back.
 Push this idea as far as I can, then reign it in.
 
-    TODO: Hand & Armor Yoinking
-        Treat this as an action. No entity should have an action AND have item theft
-        Therefore, it should take place after a failed dismount
-        As a consequence of no overlap, we can just return run the theft function, no need to conditional it
+    Hand & Armor Yoinking
+        Treat this as an action. If an entity is in one of the tags, don't list them separately in the csv
     
-        Should pull a random of those that exist
-            Use the random check order that you have in your notebook
         Yoinked item height.
             Previously, in manually defined yoinking, the item height was hard coded per entity
-            This is not easily possible with a generic item yoink
-            What do we do?
-            We could pass a value with a macro, same principal as hard coding the value, not pretty but it works
-            Is it possible to get the entity hitbox height? If we can then we can math out the location
-        Use a type tag list for which entities can have items yoinked
+            This is not possible with a generic item yoink
+            Right now the yoinked item is .7 block above entity origin
         
-        
-        NOTE: Specific Entities
+        Specific Entities
             Villagers:
-                -{ Special Exception }-
-                Currently are set up as a manually defined mainhand theft with reputational harm and trade sell out
-                Needs to implement theft for armor as well (armor can be dispensed onto them; only head renders)
                 Does the armor theft cause reputational damage to player?
+                Currently, no. Easy to change though
             Illagers:
-                [ Vindicator, Vex, Pillager, Illusioner, Evoker? ]
                 Can have armor on them through commands (not dispensed), but doesn't render
                 Probably shouldn't theft armor that can't be applied by players, that's the realm of datapackers
-                Should use a special hand item theft function
-            Fox, Allay, Witch:
-                Needs to have old code scrapped
-                Cannot have armor (<1.21.5)
-                Should use a special hand item theft funciton (for clarity)
+                Using hand item theft function
             Player:
-                Try to implement using the generic entity item yoinking
-                But if there's player specific problems, just split player off into a special case
-            All the rest:
-                [ Bogged, Skeleton, Stray, Wither Skeleton ]
-                [ Husk, Drowned, Zombie, Zombie Villager ]
-                [ Piglin, Piglin Brute, Zombie Piglin ]
-                
-                Steal armor or hand item just fine
-                Nugget idea?
-                    Try to use drop chances for armor and if it fails drop armor material?
-                    What about datapack armor?... I worry about compatibility
+                Technically working for < 1.21.5, but for 1.21.5 it can be collapsed
+        
+        Nugget idea?
+            Try to use drop chances for armor and if it fails drop armor material?
+            What about datapack armor?... I worry about compatibility
+            Probably want to implement drop chances one way though
 
 
     \\ ---[ REJECTED FOR A REASON ]--- \\
@@ -105,7 +85,7 @@ def create_bit_advancements(ctx: Context):
     for bit in range(16):
         for value in range(2):
             # default adv
-            ctx.data[f"gm4_reeling_rods:fishing/bit_{bit}_{value}"] = Advancement({
+            ctx.data[f"gm4_reeling_rods:fished/bit_{bit}_{value}"] = Advancement({
                 "criteria":{
                     "fishing_rod_hooked":{
                         "trigger":"minecraft:fishing_rod_hooked",
@@ -122,8 +102,8 @@ def create_bit_advancements(ctx: Context):
             })
             ctx.data[f"gm4_reeling_rods:player/bit_{bit}_{value}"] = Function([
                 f"# player adv logic for getting bit {bit} at value {value}",
-                f"# run from advancement fishing/bit_{bit}_{value}\n",
-                f"advancement revoke @s only gm4_reeling_rods:fishing/bit_{bit}_{value}\n",
+                f"# run from advancement fished/bit_{bit}_{value}\n",
+                f"advancement revoke @s only gm4_reeling_rods:fished/bit_{bit}_{value}\n",
                 "execute if entity @s[gamemode=adventure] run return fail\n",
                 "data modify storage gm4_reeling_rods:temp bit_data set value {bit_tag:\"" + f"gm4_reeling_rods.id.{bit}.{value}\", bit:\"{bit}\"" + "}",
                 "data remove storage gm4_reeling_rods:temp enchanted",
@@ -149,9 +129,9 @@ def create_select_type(ctx: Context, entities: CSV):
         # base          gets since_57, else
         # backport_48   gets backport_48, else
         for write in writeTo:
-            command = f"execute if entity @s[type={entity['id']}] run return "
+            command = f"execute if entity @s[type={entity['id']}] run return run "
             if entity['needs_enchantment'] == "TRUE":
-                command = command + "run execute if data storage gm4_reeling_rods:temp enchanted "
+                command = command + "execute if data storage gm4_reeling_rods:temp enchanted run "
             command = command + entity['command']
             write[order].append(command)
     finalSelectFunction(selectFuncBase, ctx.data.overlays["since_57"]) # should just be ctx.data when moved to 1.21.5, these overlays are gonna be a nightmare to update.,., Figure it out later
@@ -170,8 +150,8 @@ def finalSelectFunction(strings: List[List[str]], output_pack: DataPack):
     for line in strings[0]:
         finalFunction.append(line)
     # dismount logic
-    finalFunction.append("\n# dismounting logic\nexecute if function gm4_reeling_rods:fishing/is_passenger run return run ride @s dismount\n")
+    finalFunction.append("\n# dismounting logic\nexecute if function gm4_reeling_rods:is_passenger run return run ride @s dismount\n")
     # entities that do dismount, only runs if not dismounting
     for line in strings[1]:
         finalFunction.append(line)
-    output_pack["gm4_reeling_rods:fishing/select_type"] = Function(finalFunction)
+    output_pack["gm4_reeling_rods:fished/select_type"] = Function(finalFunction)

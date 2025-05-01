@@ -11,7 +11,7 @@ $execute as @e[type=minecraft:fishing_bobber,distance=..33] \
   at @s as @e[distance=..42, limit=1, \
     tag=$(bit_0), tag=$(bit_1), tag=$(bit_2), tag=$(bit_3), tag=$(bit_4), tag=$(bit_5), tag=$(bit_6), tag=$(bit_7), \
     tag=$(bit_8), tag=$(bit_9), tag=$(bit_10), tag=$(bit_11), tag=$(bit_12), tag=$(bit_13), tag=$(bit_14), tag=$(bit_15)\
-  ] unless entity @s[tag=smithed.entity] at @s run function gm4_reeling_rods:fishing/select_type
+  ] unless entity @s[tag=smithed.entity] at @s run function gm4_reeling_rods:fished/select_type
 
 # kill marker after
 kill @s
