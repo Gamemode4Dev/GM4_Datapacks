@@ -1,0 +1,14 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "mainhand": {
+                "items": [
+                    "minecraft:leather_horse_armor"
+                ],
+                "nbt": "{gm4_furniture:paintbrush}"
+            }
+        }
+    }
+}
