@@ -13,7 +13,7 @@ summon minecraft:bee ~ ~ ~ {Tags:["gm4_cb_projectile"]}
 execute as @e[type=minecraft:bee,tag=gm4_cb_projectile,limit=1,distance=..1] run function gm4_crossbow_cartridges:projectile/arrow_motion
 
 # remove bee from beehive
-execute if entity @s[gamemode=!creative] run function gm4_crossbow_cartridges:set_bees with storage gm4_crossbow_cartridges:temp
+execute if entity @s[gamemode=!creative] run function gm4_crossbow_cartridges:projectile/set_bees with storage gm4_crossbow_cartridges:temp
 data remove storage gm4_crossbow_cartridges:temp bees
 
 # bee sting sound
