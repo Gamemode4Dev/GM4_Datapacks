@@ -4,7 +4,7 @@
 # run from check_projectile
 
 tag @s add gm4_cb_use
-data modify storage gm4_crossbow_cartridges:temp projectile.Item.components set from entity @s Inventory[{Slot:-106b}].components
+data modify storage gm4_crossbow_cartridges:temp projectile.Item.components set from entity @s equipment.offhand.components
 data modify storage gm4_crossbow_cartridges:temp projectile.Owner set from entity @s UUID
 
 # replace arrow with splash/lingering potion and copy data
