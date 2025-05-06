@@ -908,9 +908,11 @@ class VanillaTemplate(TemplateOptions):
             ret_list.append(m)
             model_def_map[item] = {
                 "type": "minecraft:special" if special_model else "minecraft:model",
-                "model": model_compound["model"] if special_model else model_name
+                "model": model_compound["model"] if special_model else model_name,
             } | (
-                {"tints": t if (t:=model_compound.get("tints")) else {}}
+                {"base": model_name} if special_model else {}
+            ) | (
+                {"tints": t} if (t:=model_compound.get("tints")) else {}
             )
         self._item_def_map.update(model_def_map)
         return ret_list
@@ -931,28 +933,32 @@ class AdvancementIconTemplate(VanillaTemplate, TemplateOptions): # TODO make thi
         if not self.forward:
             # then we use the vanilla item's model and settings - inheriting from VanillaTemplate for this
             item = config.item.entries()[0]
-            config_copy = config.copy(update={"model": MapOption(__root__={config.item.entries()[0]: f"gm4:gui/advancements/{advancement_name}"})})
-            TemplateOptions.create_models(self, config_copy, models_container)
-
-        m = models_container[f"gm4:gui/advancements/{advancement_name}"] = Model({
-            "parent": self.forward
-        })
-        # config.model = MapOption(__root__={config.item.entries()[0]: f"gm4:gui/advancements/{advancement_name}"})
+            config_copy = config.copy(update={"model": MapOption(__root__={config.item.entries()[0]: f"gm4:gui/advancement/{advancement_name}"})})
+            m = VanillaTemplate.create_models(self, config_copy, models_container)[0]
+        
+        else:
+            m = models_container[f"gm4:gui/advancement/{advancement_name}"] = Model({
+                "parent": self.forward
+            })
+        config.model = MapOption(__root__={config.item.entries()[0]: f"gm4:gui/advancement/{advancement_name}"})
         return [m]
     
     def get_item_def_entry(self, config: ModelData, item: str):
-        if self.tints:
-            return {
-                "type": "model",
-                "model": config.model.entries()[0],
-                "tints": [
-                    {
-                        "type": "minecraft:constant",
-                        "value": tint
-                    }
-                    for tint in self.tints.entries()
-                ]
-            }
+        if not self.forward: # use item def from VanillaTemplate
+            return VanillaTemplate.get_item_def_entry(self, config, item)
+        else:
+            if self.tints:
+                return {
+                    "type": "model",
+                    "model": config.model.entries()[0],
+                    "tints": [
+                        {
+                            "type": "minecraft:constant",
+                            "value": tint
+                        }
+                        for tint in self.tints.entries()
+                    ]
+                }
         return None
     
     def add_namespace(self, namespace: str):
