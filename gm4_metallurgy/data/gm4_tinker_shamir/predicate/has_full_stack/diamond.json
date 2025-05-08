@@ -6,7 +6,7 @@
       "entity": "this",
       "predicate": {
         "slots": {
-          "inventory.*": {
+          "container.*": {
             "items": "minecraft:diamond",
             "count": 64
           }
