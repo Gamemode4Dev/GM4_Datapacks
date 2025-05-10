@@ -19,6 +19,13 @@
                             "tag": "{gm4_heart_canister:1b,gm4_heart_canister_tier:2b}"
                         },
                         {
+                            "function": "set_components",
+                            "components": {
+                                "max_stack_size": 5,
+                                "!equippable": {}
+                            }
+                        },
+                        {
                             "function": "minecraft:set_name",
                             "name": {
                                 "translate": "item.gm4.heart_canister",
