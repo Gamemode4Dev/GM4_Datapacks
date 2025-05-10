@@ -137,3 +137,13 @@ Optionally, a failed environment check can display a message to the user by incl
 data modify storage <namespace>:environment_checks result set value {<check name>: {probable_cause: "This may be caused by the programmer not expecting you to run this on a potato."}}
 ```
 within your check, once again replacing the `<namespace>` and `<check name>` with the module's and the new check's name respectively, as well as adding a more adequate message.
+
+Multiple modules may require the same environment check during a single reload.
+To cut down on lag, you should ensure your environment check tries to use a previous test result -- from the same `/reload` period -- before deciding to re-run the test.
+This can be done using
+```mcfunction
+execute unless data storage <namespace>:environment_checks result.<check name>
+```
+You **must also clear all check results** in post-load.
+
+For a textbook example of an environment check, inspect `gm4:score_on_non_player_entity` in `base`.
