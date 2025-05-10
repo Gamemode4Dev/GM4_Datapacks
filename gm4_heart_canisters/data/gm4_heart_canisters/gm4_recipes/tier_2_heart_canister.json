@@ -14,7 +14,7 @@
         "item": "minecraft:iron_block"
       },
       "H": {
-        "item": "minecraft:player_head",
+        "item": "minecraft:poisonous_potato",
         "components": {"minecraft:custom_data":{"gm4_heart_canister":1,"gm4_heart_canister_tier":1}},
         "guidebook": {
           "type": "loot_table",
