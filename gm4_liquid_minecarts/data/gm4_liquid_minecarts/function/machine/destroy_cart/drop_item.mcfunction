@@ -8,4 +8,3 @@ execute store success score $dropped_item gm4_machine_data run loot spawn ~ ~ ~ 
 
 # kill original (invalid) item
 kill @s
-
