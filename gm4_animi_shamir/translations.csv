@@ -1,5 +1,5 @@
 key,en_us
-item.gm4.shamir.animi,Animi
+item.gm4.shamir.animi,Animi Shamir
 text.gm4.guidebook.module_desc.animi_shamir,Adds the Animi Shamir to Metallurgy. Items with Animi will respawn with you when you die!
 text.gm4.guidebook.animi_shamir.description,Animi allows items to return to their owner upon death.
 text.gm4.guidebook.animi_shamir.usage,"The Animi Shamir is found on Curie's Bismium Bands. It can be placed onto tools, armour, weapons, and elytra.\n\nAnimi items do not drop when the owner dies, instead appearing in their inventory upon respawning."

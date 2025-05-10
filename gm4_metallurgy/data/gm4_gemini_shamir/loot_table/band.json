@@ -23,7 +23,7 @@
                             "lore": [
                                 {
                                     "translate": "item.gm4.shamir.gemini",
-                                    "fallback": "Gemini",
+                                    "fallback": "Gemini Shamir",
                                     "italic": false,
                                     "color": "gray"
                                 }

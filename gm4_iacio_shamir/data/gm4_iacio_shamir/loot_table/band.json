@@ -23,7 +23,7 @@
 							"lore": [
 								{
 									"translate": "item.gm4.shamir.iacio",
-									"fallback": "Iacio",
+									"fallback": "Iacio Shamir",
 									"italic": false,
 									"color": "gray"
 								}
