@@ -5,6 +5,7 @@
 
 tag @s add gm4_cb_use
 data modify storage gm4_crossbow_cartridges:temp bees set from entity @s equipment.offhand.components."minecraft:bees"
+execute unless data storage gm4_crossbow_cartridges:temp bees run return fail
 data modify storage gm4_crossbow_cartridges:temp projectile set from storage gm4_crossbow_cartridges:temp bees[0].entity_data
 data remove storage gm4_crossbow_cartridges:temp bees[0]
 
