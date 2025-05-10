@@ -1,13 +1,21 @@
-# gets called for every player with at least 1 heart canister tier 1 item
+# gets called for every player with at least 1 heart canister item
 
-scoreboard players set @s[nbt={Inventory:[{count:1,components:{"minecraft:custom_data":{gm4_heart_canister_tier:1b}}}]}] gm4_heart_can 1
-scoreboard players set @s[nbt={Inventory:[{count:2,components:{"minecraft:custom_data":{gm4_heart_canister_tier:1b}}}]}] gm4_heart_can 2
-scoreboard players set @s[nbt={Inventory:[{count:3,components:{"minecraft:custom_data":{gm4_heart_canister_tier:1b}}}]}] gm4_heart_can 3
-scoreboard players set @s[nbt={Inventory:[{count:4,components:{"minecraft:custom_data":{gm4_heart_canister_tier:1b}}}]}] gm4_heart_can 4
-scoreboard players set @s[nbt={Inventory:[{count:5,components:{"minecraft:custom_data":{gm4_heart_canister_tier:1b}}}]}] gm4_heart_can 5
+# tier 1
+scoreboard players set $count_total gm4_heart_can 0
+data modify storage gm4_heart_cannisters:temp heart_cannister_data set value []
+data modify storage gm4_heart_cannisters:temp heart_cannister_data append from entity @s Inventory[{components:{"minecraft:custom_data":{gm4_heart_canister_tier:1b}}}]
+execute store result score $count_add gm4_heart_can run data get entity @s equipment.offhand{components:{"minecraft:custom_data":{gm4_heart_canister_tier:1b}}}.count
+scoreboard players operation $count_total gm4_heart_can += $count_add gm4_heart_can
+function gm4_heart_canisters:count_heart_canisters
+scoreboard players operation $count_total gm4_heart_can < $heart_cannister_cap gm4_heart_can
+scoreboard players operation @s gm4_heart_can += $count_total gm4_heart_can
 
-scoreboard players set @s[scores={gm4_heart_can=5..},nbt={Inventory:[{count:1,components:{"minecraft:custom_data":{gm4_heart_canister_tier:2b}}}]}] gm4_heart_can 6
-scoreboard players set @s[scores={gm4_heart_can=5..},nbt={Inventory:[{count:2,components:{"minecraft:custom_data":{gm4_heart_canister_tier:2b}}}]}] gm4_heart_can 7
-scoreboard players set @s[scores={gm4_heart_can=5..},nbt={Inventory:[{count:3,components:{"minecraft:custom_data":{gm4_heart_canister_tier:2b}}}]}] gm4_heart_can 8
-scoreboard players set @s[scores={gm4_heart_can=5..},nbt={Inventory:[{count:4,components:{"minecraft:custom_data":{gm4_heart_canister_tier:2b}}}]}] gm4_heart_can 9
-scoreboard players set @s[scores={gm4_heart_can=5..},nbt={Inventory:[{count:5,components:{"minecraft:custom_data":{gm4_heart_canister_tier:2b}}}]}] gm4_heart_can 10
+# tier 2
+scoreboard players set $count_total gm4_heart_can 0
+data modify storage gm4_heart_cannisters:temp heart_cannister_data set value []
+data modify storage gm4_heart_cannisters:temp heart_cannister_data append from entity @s Inventory[{components:{"minecraft:custom_data":{gm4_heart_canister_tier:2b}}}]
+execute store result score $count_add gm4_heart_can run data get entity @s equipment.offhand{components:{"minecraft:custom_data":{gm4_heart_canister_tier:2b}}}.count
+scoreboard players operation $count_total gm4_heart_can += $count_add gm4_heart_can
+function gm4_heart_canisters:count_heart_canisters
+scoreboard players operation $count_total gm4_heart_can < $heart_cannister_cap gm4_heart_can
+scoreboard players operation @s gm4_heart_can += $count_total gm4_heart_can

@@ -9,7 +9,7 @@
           "container.*": {
             "items": "minecraft:player_head",
             "predicates": {
-              "minecraft:custom_data": "{gm4_heart_canister_tier:1b}"
+              "minecraft:custom_data": "{gm4_heart_canister:1b}"
             }
           }
         }
@@ -23,7 +23,7 @@
           "armor.*": {
             "items": "minecraft:player_head",
             "predicates": {
-              "minecraft:custom_data": "{gm4_heart_canister_tier:1b}"
+              "minecraft:custom_data": "{gm4_heart_canister:1b}"
             }
           }
         }
@@ -37,7 +37,7 @@
           "player.cursor": {
             "items": "minecraft:player_head",
             "predicates": {
-              "minecraft:custom_data": "{gm4_heart_canister_tier:1b}"
+              "minecraft:custom_data": "{gm4_heart_canister:1b}"
             }
           }
         }
@@ -51,7 +51,7 @@
           "player.crafting.*": {
             "items": "minecraft:player_head",
             "predicates": {
-              "minecraft:custom_data": "{gm4_heart_canister_tier:1b}"
+              "minecraft:custom_data": "{gm4_heart_canister:1b}"
             }
           }
         }
@@ -65,7 +65,7 @@
           "weapon.*": {
             "items": "minecraft:player_head",
             "predicates": {
-              "minecraft:custom_data": "{gm4_heart_canister_tier:1b}"
+              "minecraft:custom_data": "{gm4_heart_canister:1b}"
             }
           }
         }
