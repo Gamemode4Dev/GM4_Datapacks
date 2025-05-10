@@ -38,7 +38,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'pricking'},stored_enchantments:[{id:'minecraft:thorns',lvl:5}],stored_color:[8375363]}}"
+              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'pricking'},stored_enchantments:{'minecraft:thorns':5},stored_color:[8375363]}}"
             }
           ]
         }
