@@ -1,7 +1,7 @@
 # @s = item frame with renamed name tag
 # run from main
 
-summon area_effect_cloud ~ ~ ~ {CustomNameVisible:1b,Particle:{type:"minecraft:block",block_state:"minecraft:air"},Duration:-1,Tags:["gm4_hologram","smithed.entity","smithed.strict"]}
+summon area_effect_cloud ~ ~ ~ {Radius:0.0f,CustomNameVisible:1b,Particle:{type:"minecraft:block",block_state:"minecraft:air"},Duration:-1,Tags:["gm4_hologram","smithed.entity","smithed.strict"]}
 data modify entity @e[type=area_effect_cloud,tag=gm4_hologram,limit=1,sort=nearest,distance=..0.1] CustomName set from entity @s Item.components."minecraft:custom_name"
 data modify entity @e[type=area_effect_cloud,tag=gm4_hologram,limit=1,sort=nearest,distance=..0.1] Rotation set from entity @s Rotation
 scoreboard players set @e[type=area_effect_cloud,tag=gm4_hologram,limit=1,sort=nearest,distance=..0.1] gm4_entity_version 1
