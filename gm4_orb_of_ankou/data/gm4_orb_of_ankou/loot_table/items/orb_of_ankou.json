@@ -19,9 +19,12 @@
                                     ]
                                 },
                                 "minecraft:tooltip_display": {
-                                  "hidden_components": [
-                                    "minecraft:firework_explosion"
-                                  ]
+                                    "hidden_components": [
+                                        "minecraft:firework_explosion"
+                                    ]
+                                },
+                                "minecraft:equippable": {
+                                    "slot": "offhand"
                                 }
                             }
                         },
