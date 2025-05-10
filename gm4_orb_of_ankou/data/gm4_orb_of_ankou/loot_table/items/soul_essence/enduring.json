@@ -38,7 +38,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'enduring'},stored_attributes:[{AttributeName:'minecraft:max_health',Name:'minecraft:max_health',Amount:8,Operation:0,UUID:[0,585761,0,502439],Slot:'offhand'},{AttributeName:'minecraft:movement_speed',Name:'minecraft:movement_speed',Amount:-0.2d,Operation:1,UUID:[0,944632,0,806703],Slot:'offhand'}],stored_color:[5815552]}}"
+              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'enduring'},stored_attributes:[{type:'minecraft:max_health',amount:8,operation:'add_value',id:'gm4_orb_of_ankou:enduring_max_health',slot:'offhand'},{type:'minecraft:movement_speed',amount:-0.2,operation:'add_multiplied_base',id:'gm4_orb_of_ankou:enduring_movement_speed',slot:'offhand'}],stored_color:[5815552]}}"
             }
           ]
         }

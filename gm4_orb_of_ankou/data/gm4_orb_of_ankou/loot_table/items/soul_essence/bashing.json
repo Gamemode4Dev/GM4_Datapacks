@@ -38,7 +38,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'bashing'},stored_attributes:[{AttributeName:'minecraft:attack_speed',Name:'minecraft:attack_speed',Amount:-0.4d,Operation:1,UUID:[0,399214,0,360169],Slot:'offhand'},{AttributeName:'minecraft:attack_damage',Name:'minecraft:attack_damage',Amount:0.7d,Operation:1,UUID:[0,787852,0,423204],Slot:'offhand'}],stored_color:[13181000]}}"
+              "tag": "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'bashing'},stored_attributes:[{type:'minecraft:attack_speed',amount:-0.4d,operation:'add_multiplied_base',id:'gm4_orb_of_ankou:bashing_attack_speed',slot:'offhand'},{type:'minecraft:attack_damage',amount:0.7,operation:'add_multiplied_base',id:'gm4_orb_of_ankou:bashing_attack_damage',slot:'offhand'}],stored_color:[13181000]}}"
             }
           ]
         }
