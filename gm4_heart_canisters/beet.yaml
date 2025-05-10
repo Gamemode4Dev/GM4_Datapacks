@@ -19,17 +19,17 @@ meta:
         lib_custom_crafters: 3.2.0
       schedule_loops: [main]
     model_data:
-      - item: player_head
+      - item: poisonous_potato
         template: generated
         broadcast:
           - reference: item/heart_canister_tier_1
           - reference: item/heart_canister_tier_2
-      - item: player_head
+      - item: poisonous_potato
         reference: gui/advancement/heart_canisters_tier_1
         template:
           name: advancement
           forward: item/heart_canister_tier_1
-      - item: player_head
+      - item: poisonous_potato
         template:
           name: advancement
           forward: item/heart_canister_tier_2
