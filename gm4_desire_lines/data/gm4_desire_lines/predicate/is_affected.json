@@ -11,6 +11,9 @@
         "flags": {
             "is_on_ground": true
         },
+        "effects": {
+            "minecraft:slow_falling": {}
+        },
         "movement": {
             "speed": {
                 "min": 0.01
