@@ -11,12 +11,19 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_model_data": "item/heart_canister_tier_1",
-                                "minecraft:profile": "$heart_canister_tier_1" 
+                                "minecraft:profile": "$heart_canister_tier_1"
                             }
                         },
                         {
                             "function": "minecraft:set_custom_data",
                             "tag": "{gm4_heart_canister:1b,gm4_heart_canister_tier:1b}"
+                        },
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "max_stack_size": 5,
+                                "!equippable": {}
+                            }
                         },
                         {
                             "function": "minecraft:set_name",

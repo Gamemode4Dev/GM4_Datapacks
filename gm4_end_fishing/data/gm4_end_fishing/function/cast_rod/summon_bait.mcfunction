@@ -1,7 +1,7 @@
 # @s = fishing bobber positioned ~ ~-5 ~
 # run from tick
 
-summon minecraft:armor_stand ~ ~ ~ {DisabledSlots:2039552,Small:1b,Invisible:1b,NoGravity:1b,Tags:["gm4_no_edit","gm4_end_fishing_bait_new","gm4_end_fishing_bait"],CustomName:'"gm4_end_fishing_bait"'}
+summon minecraft:armor_stand ~ ~ ~ {DisabledSlots:2039552,Small:1b,Invisible:1b,NoGravity:1b,Tags:["gm4_no_edit","gm4_end_fishing_bait_new","gm4_end_fishing_bait"],CustomName:"gm4_end_fishing_bait"}
 
 scoreboard players operation @e[type=armor_stand,limit=1,tag=gm4_end_fishing_bait_new] gm4_ef_id = @s gm4_ef_id
 scoreboard players operation @e[type=armor_stand,limit=1,tag=gm4_end_fishing_bait_new] gm4_ef_lure = @s gm4_ef_lure

@@ -1,0 +1,41 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {
+          "container.*": {
+            "items": "minecraft:coal",
+            "count": 64
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {
+          "armor.*": {
+            "items": "minecraft:coal",
+            "count": 64
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {
+          "weapon.offhand": {
+            "items": "minecraft:coal",
+            "count": 64
+          }
+        }
+      }
+    }
+  ]
+}

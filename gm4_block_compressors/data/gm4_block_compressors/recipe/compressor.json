@@ -19,7 +19,7 @@
       "minecraft:custom_model_data": "block/block_compressor_full",
       "minecraft:profile": "$block_compressor",
       "minecraft:custom_data": "{gm4_machines:{id:'block_compressor'}}",
-      "minecraft:custom_name": "{\"translate\":\"block.gm4.block_compressor\",\"fallback\":\"Compressor\",\"color\":\"white\",\"italic\":false}"
+      "minecraft:custom_name": {"translate":"block.gm4.block_compressor","fallback":"Compressor","color":"white","italic":false}
     }
   }
 }

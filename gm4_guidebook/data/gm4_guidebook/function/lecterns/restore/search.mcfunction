@@ -6,6 +6,7 @@
 
 advancement revoke @s only gm4_guidebook:take_lectern_book
 
+# TODO 1.21.5: this might not work for the offhand
 # get item data
 scoreboard players set $slot gm4_guide -1
 data modify storage gm4_guidebook:temp Inventory set from entity @s Inventory

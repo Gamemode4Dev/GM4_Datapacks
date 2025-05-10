@@ -2,7 +2,6 @@ key,en_us
 advancement.gm4.undead_players.description,Die and raise up an undead zombie in your body's place
 advancement.gm4.undead_players.title,Risen
 entity.gm4.drowned_player_name,Drowned %s
-entity.gm4.drowned_player,Drowned Player
 entity.gm4.undead_player_name,Undead %s
 text.gm4.guidebook.module_desc.undead_players,"You'll find your death point faster, but you'll have to fight your corpse for your stuff back!"
 text.gm4.guidebook.undead_players.description,"When one dies, an undead version of them will spawn at the death site.\n\nThis zombie have a visible name, will never despawn, and will pick up armor and weapons."

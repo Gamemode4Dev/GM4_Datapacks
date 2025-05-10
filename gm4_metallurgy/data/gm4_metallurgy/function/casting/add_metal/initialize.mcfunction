@@ -7,7 +7,7 @@ execute store result score $metal_amount gm4_ml_data run data get storage gm4_me
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy{item:"obsidian_cast"} run scoreboard players set $is_obsidian_cast gm4_ml_data 1
 
 # store recasted shamir id
-execute if score $is_obsidian_cast gm4_ml_data matches 1 run data modify entity @s ArmorItems[0].components."minecraft:custom_data".gm4_metallurgy set from storage gm4_metallurgy:temp/item/ore gm4_metallurgy
+execute if score $is_obsidian_cast gm4_ml_data matches 1 run data modify entity @s equipment.feet.components."minecraft:custom_data".gm4_metallurgy set from storage gm4_metallurgy:temp/item/ore gm4_metallurgy
 
 # absorb ore item
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal{type:"aluminium"} run function gm4_metallurgy:casting/add_metal/add_aluminium

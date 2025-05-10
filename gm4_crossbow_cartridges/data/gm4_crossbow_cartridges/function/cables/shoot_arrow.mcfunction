@@ -6,7 +6,7 @@
 tag @s add gm4_cb_use
 
 # store amount of string on the player, with max value of 40
-execute store result score @s gm4_cb_string run data get entity @s Inventory[-1].count
+execute store result score @s gm4_cb_string run data get entity @s equipment.offhand.count
 
 # check for tripwire hook on the player
 execute store success score @s gm4_cb_tw_hook run clear @s minecraft:tripwire_hook 0

@@ -1,7 +1,7 @@
 # @s = soul forge with an orb and shard
 # run from soul_forge/wither_roses/steps
 
-summon marker ~-6 ~1 ~-6 {CustomName:'"gm4_oa_wither_rose_catcher"',Tags:["gm4_oa_wither_rose_catcher","gm4_oa_unset"]}
+summon marker ~-6 ~1 ~-6 {CustomName:"gm4_oa_wither_rose_catcher",Tags:["gm4_oa_wither_rose_catcher","gm4_oa_unset"]}
 
 #calculate random position
 execute store result score random_x gm4_oa_roses run data get entity @e[type=marker,tag=gm4_oa_wither_rose_catcher,tag=gm4_oa_unset,limit=1] UUID[0]

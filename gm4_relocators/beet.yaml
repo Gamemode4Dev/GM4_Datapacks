@@ -40,7 +40,6 @@ meta:
         - gm4_ender_hoppers
         - gm4_liquid_tanks
         - gm4_smelteries
-        - gm4_tinkering_compressors
       notes: []
     modrinth:
       project_id: FdwwppEn

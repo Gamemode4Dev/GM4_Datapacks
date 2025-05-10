@@ -1,5 +1,5 @@
 key,en_us
-item.gm4.shamir.fulcio,Fulcio
+item.gm4.shamir.fulcio,Fulcio Shamir
 text.gm4.guidebook.module_desc.fulcio_shamir,Adds the shamir 'Fulcio' to Metallurgy. It allows you to place blocks in mid-air! This also enables you to choose the orientation of blocks like logs without needing a supporting block.
 text.gm4.guidebook.fulcio_shamir.description,"Fulcio changes block placement. While sneaking, blocks can be placed in mid-air."
 text.gm4.guidebook.fulcio_shamir.usage,The Fulcio Shamir is found on Barimium Bands. It can be placed onto compasses.\n\nHolding the tool and sneaking will create a temporary space where blocks can be placed.

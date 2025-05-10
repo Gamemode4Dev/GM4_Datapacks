@@ -31,7 +31,7 @@ def gm4_root_advancement(ctx: Context):
                         "fallback": "Semi-funny blurb about GM4",
                         "color": "gray"
                     },
-                    "background": "textures/block/light_blue_concrete_powder.png",
+                    "background": "block/light_blue_concrete_powder",
                     "announce_to_chat": False
                 },
                 "criteria": {

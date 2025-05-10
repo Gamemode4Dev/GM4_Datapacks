@@ -38,6 +38,4 @@ meta:
     model_data:
       - item: armor_stand
         reference: gui/advancement/better_armour_stands
-        template:
-          name: advancement
-          forward: minecraft:item/armor_stand
+        template: advancement

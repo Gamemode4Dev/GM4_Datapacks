@@ -1,5 +1,5 @@
 data merge storage gm4:log {queue:[],versions:[]}
-data modify storage gm4:log queue append value {type:"text",message:'{"text":"[GM4]: Checking for updates...","color":"#4AA0C7"}'}
+data modify storage gm4:log queue append value {type:"text",message:{"text":"[GM4]: Checking for updates...","color":"#4AA0C7"}}
 
 scoreboard objectives add gm4_modules dummy
 scoreboard objectives add gm4_data dummy
@@ -15,6 +15,6 @@ execute unless score $cooldown gm4_creative matches 0.. run scoreboard players s
 # Setting this to 0 will always show logs to all players
 execute unless score $global_cooldown gm4_creative matches 0.. run scoreboard players set $global_cooldown gm4_creative 10
 
-execute unless score gm4 gm4_modules matches 1.. run data modify storage gm4:log queue append value {type:"text",message:'{"text":"[GM4]: Welcome to Gamemode 4. Initialising...","color":"green"}'}
+execute unless score gm4 gm4_modules matches 1.. run data modify storage gm4:log queue append value {type:"text",message:{"text":"[GM4]: Welcome to Gamemode 4. Initialising...","color":"green"}}
 execute unless score gm4 gm4_modules matches 1.. run schedule function gm4:intro_song/init 2s
 execute unless score gm4 gm4_modules matches 1.. run scoreboard players set gm4 gm4_modules 1

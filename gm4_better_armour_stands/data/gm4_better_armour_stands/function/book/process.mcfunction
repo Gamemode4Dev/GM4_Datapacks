@@ -3,7 +3,7 @@
 # run from book/use
 
 # get book pages
-data modify storage gm4_better_armour_stands:temp pages set from entity @s HandItems[0].components."minecraft:writable_book_content".pages
+data modify storage gm4_better_armour_stands:temp pages set from entity @s equipment.mainhand.components."minecraft:writable_book_content".pages
 
 # restore item held by armor stand and book from player
 item replace entity @a[tag=gm4_bas_active,limit=1,gamemode=creative,predicate=gm4_better_armour_stands:holding/mainhand/book_and_quill,predicate=!gm4_better_armour_stands:holding/mainhand/book_ignore] weapon.mainhand with minecraft:air

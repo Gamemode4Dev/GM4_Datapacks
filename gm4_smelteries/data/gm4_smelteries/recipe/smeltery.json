@@ -18,7 +18,7 @@
       "minecraft:custom_model_data": "item/smeltery",
       "minecraft:profile": "$smeltery",
       "minecraft:custom_data": "{gm4_machines:{id:'smeltery'}}",
-      "minecraft:custom_name": "{\"translate\":\"block.gm4.smeltery\",\"fallback\":\"Smeltery\",\"color\":\"white\",\"italic\":false}"
+      "minecraft:custom_name": {"translate":"block.gm4.smeltery","fallback":"Smeltery","color":"white","italic":false}
     }
   }
 }

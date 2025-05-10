@@ -15,7 +15,7 @@
     "components": {
       "minecraft:custom_model_data": "item/piston_minecart",
       "minecraft:custom_data": "{gm4_machines:{id:'tunnel_bore'}}",
-      "minecraft:custom_name": "{\"translate\":\"item.gm4.minecart.bore\",\"fallback\":\"Minecart with Piston\",\"color\":\"white\",\"italic\":false}"
+      "minecraft:custom_name": {"translate":"item.gm4.minecart.bore","fallback":"Minecart with Piston","color":"white","italic":false}
     }
   }
 }

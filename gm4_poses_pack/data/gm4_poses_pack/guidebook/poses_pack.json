@@ -63,9 +63,9 @@
           },
           {
             "text": "head up",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -74,7 +74,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "head up"
             }
@@ -84,9 +84,9 @@
           },
           {
             "text": "head down",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -95,7 +95,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "head down"
             }
@@ -105,9 +105,9 @@
           },
           {
             "text": "head left",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -116,7 +116,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "head left"
             }
@@ -126,9 +126,9 @@
           },
           {
             "text": "head right",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -137,7 +137,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "head right"
             }
@@ -159,9 +159,9 @@
           },
           {
             "text": "arms reaching",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -170,7 +170,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "arms reaching"
             }
@@ -180,9 +180,9 @@
           },
           {
             "text": "arms swinging",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -191,7 +191,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "arms swinging"
             }
@@ -201,9 +201,9 @@
           },
           {
             "text": "arms resting",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -212,7 +212,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "arms resting"
             }
@@ -222,9 +222,9 @@
           },
           {
             "text": "arms raised",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -233,7 +233,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "arms raised"
             }
@@ -243,9 +243,9 @@
           },
           {
             "text": "arms down",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -254,7 +254,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "arms down"
             }
@@ -277,9 +277,9 @@
           },
           {
             "text": "legs sitting",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -288,7 +288,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "legs sitting"
             }
@@ -298,9 +298,9 @@
           },
           {
             "text": "legs walking",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -309,7 +309,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "legs walking"
             }
@@ -319,9 +319,9 @@
           },
           {
             "text": "legs flying",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -330,7 +330,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "legs flying"
             }
@@ -340,9 +340,9 @@
           },
           {
             "text": "legs down",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -351,7 +351,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "legs down"
             }

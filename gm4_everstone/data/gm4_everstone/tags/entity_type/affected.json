@@ -28,6 +28,6 @@
         "minecraft:villager",
         "minecraft:wolf",
         "minecraft:zombie_horse",
-        "#gm4_everstone:aging_mob"
+        "#gm4_everstone:force_age_lock"
     ]
 }
