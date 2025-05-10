@@ -23,7 +23,7 @@
                             "lore": [
                                 {
                                     "translate": "item.gm4.shamir.moneo",
-                                    "fallback": "Moneo",
+                                    "fallback": "Moneo Shamir",
                                     "italic": false,
                                     "color": "gray"
                                 }

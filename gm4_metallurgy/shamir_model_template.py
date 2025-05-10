@@ -5,8 +5,9 @@ from typing import Any, ClassVar, Literal
 from itertools import product, chain, count
 import re
 import logging
+from copy import deepcopy
 
-from gm4.plugins.resource_pack import ModelData, TemplateOptions
+from gm4.plugins.resource_pack import ModelData, TemplateOptions, JsonType
 from gm4.utils import add_namespace, MapOption
 
 parent_logger = logging.getLogger("gm4."+__name__)
@@ -62,14 +63,18 @@ class ShamirTemplate(TemplateOptions):
     textures_path: str = "" # directory of texture files to use for shamirs, falling back to the default metallurgy textures
     metal: Literal["aluminium", "barimium", "barium", "bismuth", "curies_bismium", "thorium"] # the metallurgy metal this shamir is made of
 
+    _item_def_map: dict[str, JsonType] = {}
+    _model_overrides_1_21_3: dict[str, list[JsonType]] = {} # NOTE to be removed in 1.21.5
+
     bound_ctx: ClassVar[Context]
     metallurgy_assets: ClassVar[ResourcePack] = ResourcePack(path="gm4_metallurgy") # load metallurgy textures so expansion shamirs can fall back on their
     vanilla_models_jar: ClassVar[ClientJar]
+    vanilla_models_jar_1_21_3: ClassVar[ClientJar]
 
-    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         logger = parent_logger.getChild(self.bound_ctx.project_id)
         models_loc = f"{config.reference}"
-        models: dict[str, str|list[dict[str,Any]]] = {} # the value of config.models to be applied after going through special cases
+        models: dict[str, str] = {} # the value of config.models to be applied after going through special cases
         ret_list: list[Model] = []
         return ret_list # TODO 1.21.5: re-enable this
 
@@ -124,29 +129,58 @@ class ShamirTemplate(TemplateOptions):
             models_container[f"{models_loc}/{item}"] = m
             ret_list.append(m)
 
-            variants: Any = [{"model": f"{models_loc}/{item}"}] # the base model is just a regular model reference
-            for override in self.vanilla_models_jar.assets.models[f"minecraft:item/{item}"].data.get('overrides', []):
-                item_variant = override['model'].split('/')[-1] # ie, iron_chestplate_quartz_trim, fishing_rod_cast, compass_00, elytra_broken ect...
+            # define recursive search function for looking at vanilla item definitions to copy/modify
+            def recursive_extract_variants(json: dict[str, Any]) -> tuple[list[str], list[Any]]:
+                ret_variants: list[str] = []
+                ret_pointers: list[Any] = []
+                for val in json.values():
+                    match val:
+                        case {"type": "minecraft:model", "model": str(m)}:
+                            ret_variants.append(m.split('/')[-1]) # ie, iron_chestplate_quartz_trim, fishing_rod_cast, compass_00, elytra_broken ect...
+                            ret_pointers.append(val)
+                        case list()|dict(): # val is dict, or list of dicts
+                            for elem in val if isinstance(val, list) else [val]: # type: ignore ; this is json
+                                if isinstance(elem, dict):
+                                    rec_varis, rec_pts = recursive_extract_variants(elem) # type: ignore ; this is json
+                                    ret_variants.extend(rec_varis)
+                                    ret_pointers.extend(rec_pts)
+                        case _:
+                            pass
+                        
+                return ret_variants, ret_pointers
 
+            # create texture variants, using the vanilla item definition as a template
+            mutatable_itemdef_copy = deepcopy(self.vanilla_models_jar.assets.item_models[f"minecraft:{item}"].data["model"])
+            item_variants, itemdef_compounds = recursive_extract_variants(mutatable_itemdef_copy)
+            for item_variant, itemdef_compound in zip(item_variants, itemdef_compounds):
                 texture_variant = ('/'.join(texture.split('/')[0:-1] + [item_variant])) # is there an explicit texture for this variant. ie broken_elytra.png?
                 variant_tex_exists = texture_variant in self.bound_ctx.assets.textures or texture_variant in self.metallurgy_assets.textures
 
-                m = Model({
-                    "parent": f"minecraft:item/{item_variant}",
-                    "textures": {
-                        f"layer{total_layers+1}": texture_variant if variant_tex_exists else texture
-                    }
-                })
-                models_container[f"{models_loc}/{item_variant}"] = m
-                ret_list.append(m)
-                variants.append({
-                    "predicate": override['predicate'],
-                    "model": f"{models_loc}/{item_variant}"
-                })
-            models.update({item: variants})
+                if (variant_path:=f"{models_loc}/{item_variant}") not in models_container: # create a new model file if one does not exist
+                    m = Model({
+                        "parent": f"minecraft:item/{item_variant}",
+                        "textures": {
+                            f"layer{total_layers+1}": texture_variant if variant_tex_exists else texture
+                        }
+                    })
+                    models_container[f"{models_loc}/{item_variant}"] = m
+                    ret_list.append(m)
+
+                itemdef_compound["model"] = variant_path # update our copy to point to the new model
+
+            if item_variants:
+                self._item_def_map[item] = mutatable_itemdef_copy
+                self._model_overrides_1_21_3[item] = variants
+                models.update({item: "NULL"}) # actual model paths contained within itemdef compound
+            else:
+                models.update({item: f"{models_loc}/{item}"})
 
         config.model = MapOption(__root__=models)
         return ret_list
+    
+    def get_item_def_entry(self, config: ModelData, item: str) -> None|JsonType:
+        # TODO fill me out, replacing ComplexBypass
+        return self._item_def_map.get(item)
     
     def mutate_config(self, config: ModelData):
         expanded_items = set(chain.from_iterable([GROUP_LOOKUP.get(group, [group]) for group in config.item.entries()])) | {"player_head"}
@@ -156,7 +190,6 @@ class ShamirTemplate(TemplateOptions):
             config.textures = MapOption(__root__={"band": f"gm4_metallurgy:item/band/{self.metal}_band"})
         else: # isinstance(.., dict):
             config.textures = MapOption(__root__={"band": f"gm4_metallurgy:item/band/{self.metal}_band"}|config.textures.__root__)
-
 
 def optifine_armor_properties_merging(pack: ResourcePack, path: str, current: OptifineProperties, conflict: OptifineProperties) -> bool:
     if not path.startswith("gm4_metallurgy:cit"): # only apply this rule to metallurgy files
@@ -187,8 +220,12 @@ def beet_default(ctx: Context):
     ShamirTemplate.bound_ctx = ctx
     vanilla = ctx.inject(Vanilla)
     vanilla.minecraft_version = '1.21.5'
-    ShamirTemplate.vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
+    ShamirTemplate.vanilla_models_jar = vanilla.mount("assets/minecraft/items")
     merge_policy(ctx)
+
+    # 1.21.3 Backwards Compat
+    vanilla.minecraft_version = '1.21.3'
+    ShamirTemplate.vanilla_models_jar_1_21_3 = vanilla.mount("assets/minecraft/models/item")
 
 def merge_policy(ctx: Context):
     ctx.assets.merge_policy.extend_namespace(OptifineProperties, optifine_armor_properties_merging)
