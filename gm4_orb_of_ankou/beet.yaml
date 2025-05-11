@@ -3,10 +3,9 @@ name: Orb of Ankou
 version: 1.7.X
 
 data_pack:
-  load: [
-    .,
-    https://cdn.modrinth.com/data/oDhxdGVZ/versions/aW4ph2OC/player_motion.zip
-  ]
+  load:
+    - .
+    - https://cdn.modrinth.com/data/oDhxdGVZ/versions/aW4ph2OC/player_motion.zip
 
 resource_pack:
   load:
