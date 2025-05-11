@@ -1,6 +1,6 @@
 id: gm4_machines
 name: Gamemode 4 Machines
-version: 1.3.X
+version: 1.4.X
 description: lib_machines is a mcfunction library that adds logic for placing and breaking custom blocks. 
 
 data_pack:
@@ -15,7 +15,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_forceload: 1.4.0
+        lib_forceload: 1.5.0
       schedule_loops: [main]
       extra_version_injections:
         functions:

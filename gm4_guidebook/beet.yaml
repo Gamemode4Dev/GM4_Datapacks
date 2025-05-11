@@ -1,6 +1,6 @@
 id: gm4_guidebook
 name: Guidebook
-version: 3.0.X
+version: 3.1.X
 
 data_pack:
   load: .
@@ -25,7 +25,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_forceload: 1.4.0
+        lib_forceload: 1.5.0
       schedule_loops: 
         - main
         - tick
