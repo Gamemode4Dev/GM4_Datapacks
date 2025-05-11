@@ -49,7 +49,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_orb_of_ankou:{item:'soul_shard',pneumas:[{id:'aggressive'}],stored_color:[10682368]}}"
+              "tag": "{gm4_orb_of_ankou:{item:'soul_shard',pneumas:[{id:'aggressive'}],stored_color:[10682368],smithed:{ignore:{functionality:1b,crafting:1b}}}}"
             }
           ]
         }

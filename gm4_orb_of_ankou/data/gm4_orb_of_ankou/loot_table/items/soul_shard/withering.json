@@ -49,7 +49,7 @@
             },
             {
               "function": "minecraft:set_custom_data",
-              "tag": "{gm4_orb_of_ankou:{item:\"soul_shard\",stored_pneuma:{id:\"withering\"},stored_color:[4067968]}}"
+              "tag": "{gm4_orb_of_ankou:{item:\"soul_shard\",stored_pneuma:{id:\"withering\"},stored_color:[4067968],smithed:{ignore:{functionality:1b,crafting:1b}}}}"
             }
           ]
         }

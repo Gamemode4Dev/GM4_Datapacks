@@ -119,7 +119,7 @@ def looting_chance(base: float,lvl: int) -> float:
 
 def generate_soul_essence_loot_tables(ctx: Context):
   for pneuma in pneumas:
-    custom_data = "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'" + pneuma + "'}}}"
+    custom_data = "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'" + pneuma + "'}},smithed:{ignore:{functionality:1b,crafting:1b}}}"
     ctx.data[f"gm4_orb_of_ankou:items/soul_essence/{pneuma}"] = LootTable({
       "type": "minecraft:generic",
       "pools": [
