@@ -1,6 +1,6 @@
 id: gm4_particles_pack
 name: Particles Pack
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -13,7 +13,7 @@ meta:
     versioning:
       schedule_loops: [main]
       required:
-        gm4_better_armour_stands: 2.4.0
+        gm4_better_armour_stands: 2.5.0
     website:
       description: Fireflies to flames, add some pezazz to your projects! Allows you to turn Armour Stands into particle sources that you control!
       recommended:
