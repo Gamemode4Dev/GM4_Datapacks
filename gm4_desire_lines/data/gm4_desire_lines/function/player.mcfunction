@@ -5,8 +5,6 @@
 
 # terminate if player is not able to create a desire line
 execute unless predicate gm4_desire_lines:is_affected run return fail
-# slow falling prevents desire lines
-execute if predicate gm4_desire_lines:has_slow_falling run return fail
 
 # determine trigger probability
 scoreboard players operation $probability gm4_desire_lines = #base_probability gm4_desire_lines
