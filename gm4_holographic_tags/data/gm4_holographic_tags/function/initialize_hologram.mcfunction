@@ -1,5 +1,5 @@
 # initializes data on the text display
-# @s = inewly spawned text display
+# @s = newly spawned text display
 # run from main
 
 data merge entity @s {text:{color:"#FFFFFF",text:"test"},line_width:2147483647 ,billboard:"center",Tags:["gm4_hologram","smithed.entity","smithed.strict"],background:0}
