@@ -25,24 +25,24 @@ def beet_default(ctx: Context):
             if not recipe:
                 logger.debug(f"No vanilla recipe found for {item}, skipping")
                 continue
-            input = recipe.data["key"]["#"]
+            input: str | list[str] = recipe.data["key"]["#"]
             if isinstance(input, list):
-                output: str = input[0] # type: ignore
+                output = input[0]
             else:
-                output: str = input
+                output = input
 
             recipe_path = f"gm4_standard_crafting:{dir}/{item.removeprefix('minecraft:')}"
 
             since_61 = "pale_oak" in item or "resin" in item
             output_pack = ctx.data.overlays["since_61"] if since_61 else ctx.data
 
-            output_recipe = recipes.get(output) # type: ignore
+            output_recipe = recipes.get(output)
             if output_recipe is None:
-                group: str = output.removeprefix('minecraft:') # type: ignore
+                group: str = output.removeprefix('minecraft:')
             elif "group" in output_recipe.data:
                 group: str = output_recipe.data["group"]
             else:
-                group: str = output.removeprefix('minecraft:') # type: ignore
+                group: str = output.removeprefix('minecraft:')
                 output_recipe.data["group"] = group
                 output_recipe.data["__smithed__"] = {
                     "rules": [
@@ -61,7 +61,7 @@ def beet_default(ctx: Context):
             output_pack[recipe_path] = Recipe({
                 "type": "minecraft:crafting_shaped",
                 "category": "building",
-                "group": group, #type: ignore
+                "group": group,
                 "pattern": shape,
                 "key": {
                     "#": item
@@ -127,7 +127,7 @@ def beet_default(ctx: Context):
                 }
             })
 
-            output_pack[f"gm4_standard_crafting:crafting/{dir}/{output.removeprefix('minecraft:')}"] = LootTable({ # type: ignore
+            output_pack[f"gm4_standard_crafting:crafting/{dir}/{output.removeprefix('minecraft:')}"] = LootTable({
                 "type": "minecraft:generic",
                 "pools": [
                     {
@@ -157,7 +157,7 @@ def beet_default(ctx: Context):
                 ]
             })
 
-            command: str = "execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:\"" + item + "\"},{Slot:1b,id:\"" + item + "\"},{Slot:3b,id:\"" + item + "\"},{Slot:4b,id:\"" + item + "\"}]} run loot replace block ~ ~ ~ container.0 loot " + f"gm4_standard_crafting:crafting/{dir}/{output.removeprefix('minecraft:')}" # type: ignore
+            command: str = "execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:\"" + item + "\"},{Slot:1b,id:\"" + item + "\"},{Slot:3b,id:\"" + item + "\"},{Slot:4b,id:\"" + item + "\"}]} run loot replace block ~ ~ ~ container.0 loot " + f"gm4_standard_crafting:crafting/{dir}/{output.removeprefix('minecraft:')}"
             since_61_function.append(command)
             if since_61:
                 continue
