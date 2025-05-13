@@ -59,8 +59,6 @@ class DoorSound():
 
 
 def beet_default(ctx: Context):
-    vanilla = ctx.inject(Vanilla)
-    vanilla.minecraft_version = '1.21.5'
 
     # prepare list of door materials
     door_materials = [
