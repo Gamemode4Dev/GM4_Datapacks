@@ -14,3 +14,6 @@ execute positioned ~.5 ~.5 ~.5 run function #gm4_trees:initialize_sapling
 
 # clean up
 data remove storage gm4_trees:temp sapling
+
+# signal that a sapling was found
+return 1
