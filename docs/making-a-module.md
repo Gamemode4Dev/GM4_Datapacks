@@ -68,6 +68,9 @@ meta:
         - main # namespace assumed to be the module id
         - gm4_bat_grenades:tick # but one can be manually specified
 
+      # A list of checks to run when installing the module. May be omitted if not needed
+      environment_checks: [gm4:score_on_non_player_entity]
+
     website:
       # A description. This should be a good summary of what this module adds or achieves, to get someone interested in this module
       description: Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!
