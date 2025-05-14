@@ -32,7 +32,8 @@
                 "minecraft:rarity": "common",
                 "minecraft:equippable": {
                   "slot": "offhand"
-                }
+                },
+                "minecraft:max_stack_size": 1
               }
             },
             {
