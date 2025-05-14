@@ -1,5 +1,5 @@
 {
-  "last_commit": "93ccc3d1a77d3e0e745ec0bda1ce741a36926263",
+  "last_commit": "464e87200c7c5b3dc3673e7ef22117ba96028010",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2747,8 +2747,8 @@
     {
       "id": "gm4_standard_crafting",
       "name": "Standard Crafting",
-      "version": "1.5.21",
-      "hash": "cf3efbb9d11fbc0842579d5e86d1e336ea9b6f38",
+      "version": "1.5.22",
+      "hash": "86c8918bf38a1302d5bed0e19c1ce8fc008191d8",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
       "credits": {
