@@ -159,7 +159,7 @@ def beet_default(ctx: Context):
     
     stairs_recipes = ctx.data[f"gm4_standard_crafting:stairs_recipes"] = Function(["##stairs"])
     stairs: list[str] = item_tags["minecraft:stairs"].data['values']
-    recursive_apply(stairs, "stairs_decraft", ["##", "##"], 4, stairs_recipes)
+    recursive_apply(stairs, "stairs_decraft", ["##", "##"], 3, stairs_recipes)
 
     slabs_recipes = ctx.data[f"gm4_standard_crafting:slabs_recipes"] = Function(["##slabs"])
     slabs: list[str] = item_tags["minecraft:slabs"].data['values']
