@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "id": "poisonous_potato",
+      "id": "player_head",
       "components": {
         "minecraft:custom_model_data": "gui/advancement/heart_canisters_max",
         "minecraft:profile": "$heart_canister_tier_2"
