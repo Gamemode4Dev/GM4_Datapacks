@@ -18,4 +18,4 @@ execute if score valid_shard gm4_oa_forge matches 1 if score pneuma_count gm4_oa
 # if all the checks pass, fuse the shard with the orb
 execute if score valid_shard gm4_oa_forge matches 1 run function gm4_orb_of_ankou:soul_forge/outputs/fuse_pneuma
 
-data remove storage gm4_orb_of_ankoou:temp Orb
+data remove storage gm4_orb_of_ankou:temp Orb

@@ -21,6 +21,7 @@ scoreboard objectives add gm4_oa_snk_num dummy
 scoreboard objectives add gm4_oa_marker dummy
 scoreboard objectives add gm4_oa_feign_t dummy
 scoreboard objectives add gm4_oa_sniff dummy
+scoreboard objectives add gm4_oa_jump_stop dummy
 scoreboard objectives add gm4_health health
 scoreboard objectives add gm4_oa_sneak minecraft.custom:minecraft.sneak_time
 scoreboard objectives add gm4_oa_swim minecraft.custom:minecraft.swim_one_cm

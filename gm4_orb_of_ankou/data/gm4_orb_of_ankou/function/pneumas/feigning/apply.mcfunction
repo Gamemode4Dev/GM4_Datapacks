@@ -6,8 +6,9 @@ effect give @s invisibility 10 255 true
 effect give @s resistance 10 255 true
 effect give @s slowness 10 255 true
 effect give @s weakness 10 255 true
-effect give @s jump_boost 10 128 true
 effect give @s regeneration 10 0 false
+attribute @s minecraft:jump_strength modifier add gm4_orb_of_ankou:prevent_jump -1024 add_multiplied_total
+scoreboard players set @s gm4_oa_jump_stop 13
 
 # set data of hostile mobs
 tag @e[type=#gm4_orb_of_ankou:feigning_affected,distance=..50] add gm4_oa_feigning

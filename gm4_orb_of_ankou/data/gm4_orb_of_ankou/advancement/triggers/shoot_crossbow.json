@@ -2,17 +2,7 @@
   "criteria": {
     "crossbow_shot": {
       "trigger": "minecraft:shot_crossbow",
-      "conditions": {
-        "item": {
-          "components": {
-            "minecraft:charged_projectiles": [
-              {
-                "id": "minecraft:arrow"
-              }
-            ]
-          }
-        }
-      }
+      "conditions": {}
     }
   },
   "rewards": {
