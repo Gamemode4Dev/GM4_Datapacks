@@ -1330,7 +1330,13 @@
       "gm4_auto_crafting:item/auto_crafter": 140
     },
     "poisonous_potato": {
-      "gm4_chairs:gui/advancement/chairs_sit": 1
+      "gm4_chairs:gui/advancement/chairs_sit": 1,
+      "gm4_heart_canisters:gui/advancement/heart_canisters_tier_1": 4,
+      "gm4_heart_canisters:gui/advancement/heart_canisters_tier_2": 5,
+      "gm4_heart_canisters:gui/advancement/heart_canisters_max": 6,
+      "gm4_heart_canisters:item/heart_canister_tier_1": 7,
+      "gm4_heart_canisters:item/heart_canister_tier_2": 8,
+      "gm4_heart_canisters:guidebook_icon/heart_canisters": 10
     },
     "poppy": {
       "gm4_sweethearts:gui/advancement/sweethearts": 1,

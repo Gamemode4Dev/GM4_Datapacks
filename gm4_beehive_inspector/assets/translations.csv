@@ -1,5 +1,0 @@
-key,en_us
-text.gm4.beehive_inspector.bees,Bees
-text.gm4.beehive_inspector.honey,Honey
-text.gm4.guidebook.module_desc.beehive_inspector,"Adds a handy tooltip to Beehive items, telling you exactly how many bees and how much honey is stored inside! A beekeepers' dream!"
-text.gm4.guidebook.beehive_inspector.description,"Mining beehives and bee nests causes the block to display the honey level and bee count.\n\nOther forms of destruction, such as explosions, do not yield the same results."

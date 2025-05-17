@@ -10,4 +10,4 @@ item replace block ~1 ~1 ~1 container.6 with minecraft:obsidian
 item replace block ~1 ~1 ~1 container.7 with minecraft:golden_apple
 item replace block ~1 ~1 ~1 container.8 with minecraft:obsidian
 
-await items block ~1 ~1 ~1 container.* minecraft:player_head[count=1,custom_data~{gm4_heart_canister:1b,gm4_heart_canister_tier:1b}]
+await items block ~1 ~1 ~1 container.* minecraft:poisonous_potato[count=1,custom_data~{gm4_heart_canister:1b,gm4_heart_canister_tier:1b}]

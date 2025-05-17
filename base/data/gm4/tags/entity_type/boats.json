@@ -1,6 +1,5 @@
 {
   "values": [
-    { "id": "minecraft:boat", "required": false },
-    { "id": "#minecraft:boat", "required": false }
+    "#minecraft:boat"
   ]
 }

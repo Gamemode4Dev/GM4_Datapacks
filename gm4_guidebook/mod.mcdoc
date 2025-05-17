@@ -1,4 +1,4 @@
-use ::java::server::world::item::SingleItem
+use ::java::world::item::SingleItem
 use ::java::data::advancement::AdvancementCriterion
 use ::java::server::util::text::Text
 

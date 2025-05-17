@@ -14,7 +14,11 @@
                                 "minecraft:potion_contents": {
                                     "custom_color": {{potion_color}}
                                 },
-                                "minecraft:hide_additional_tooltip": {}
+                                "minecraft:tooltip_display": {
+                                    "hidden_components": [
+                                        "minecraft:potion_contents"
+                                    ]
+                                }
                             }
                         },
                         {

@@ -4,10 +4,10 @@
 # run from gm4_shroomites:spore/move/vertical
 
 # select valid directions
-summon marker ~1 ~ ~ {Tags:["gm4_shroomite_path"],CustomName:'"gm4_shroomite_path"'}
-summon marker ~-1 ~ ~ {Tags:["gm4_shroomite_path"],CustomName:'"gm4_shroomite_path"'}
-summon marker ~ ~ ~1 {Tags:["gm4_shroomite_path"],CustomName:'"gm4_shroomite_path"'}
-summon marker ~ ~ ~-1 {Tags:["gm4_shroomite_path"],CustomName:'"gm4_shroomite_path"'}
+summon marker ~1 ~ ~ {Tags:["gm4_shroomite_path"],CustomName:"gm4_shroomite_path"}
+summon marker ~-1 ~ ~ {Tags:["gm4_shroomite_path"],CustomName:"gm4_shroomite_path"}
+summon marker ~ ~ ~1 {Tags:["gm4_shroomite_path"],CustomName:"gm4_shroomite_path"}
+summon marker ~ ~ ~-1 {Tags:["gm4_shroomite_path"],CustomName:"gm4_shroomite_path"}
 execute as @e[type=marker,tag=gm4_shroomite_path] at @s if block ~ ~ ~ #gm4:full_collision run function gm4_shroomites:spore/move/step_up
 
 # move in random valid direction

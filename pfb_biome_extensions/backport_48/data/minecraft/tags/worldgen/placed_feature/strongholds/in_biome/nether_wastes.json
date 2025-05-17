@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "#minecraft:strongholds/in_nether",
-      "required": false
-    }
-  ]
-}

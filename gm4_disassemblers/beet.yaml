@@ -1,6 +1,6 @@
 id: gm4_disassemblers
 name: Disassemblers
-version: 2.4.X
+version: 2.5.X
 
 data_pack:
   load: .
@@ -18,8 +18,8 @@ meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.2.0
-        lib_machines: 1.3.0
+        lib_custom_crafters: 3.4.0
+        lib_machines: 1.4.0
       schedule_loops: [main]
     model_data:
       - item: player_head
@@ -61,8 +61,6 @@ meta:
         - gm4_resource_pack
         - gm4_relocators
         - gm4_standard_crafting
-        - gm4_auto_crafting
-        - gm4_record_crafting
         - gm4_ender_hoppers
         - gm4_enchantment_extractors
         - gm4_forming_press

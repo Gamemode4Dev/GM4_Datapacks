@@ -1,8 +1,0 @@
-[
-  {
-    "condition": "minecraft:location_check",
-    "predicate": {
-      "biomes": "minecraft:soul_sand_valley"
-    }
-  }
-]

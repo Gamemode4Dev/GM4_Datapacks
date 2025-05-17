@@ -1,3 +1,5 @@
+use ::java::util::text::Text
+
 dispatch minecraft:storage[gm4:log] to struct Gm4Log {
   versions?: [LogVersion],
   traverse_versions?: [LogVersion],
@@ -6,7 +8,7 @@ dispatch minecraft:storage[gm4:log] to struct Gm4Log {
   },
   outdated_list?: [LogEntry],
   queue?: [LogEntry],
-  temp?: #[text_component] string,
+  temp?: Text,
 }
 
 struct LogVersion {
@@ -23,7 +25,7 @@ struct LogEntry {
 
 dispatch gm4:log_entry[text] to struct {
   /// The text component message to display.
-  message: #[text_component] string,
+  message: Text,
 }
 
 dispatch gm4:log_entry[install] to struct {
@@ -34,7 +36,7 @@ dispatch gm4:log_entry[install] to struct {
 dispatch gm4:log_entry[outdated] to struct {
   module: string,
   download: #[url] string,
-  render: #[text_component] string,
+  render: Text,
 }
 
 dispatch gm4:log_entry[missing] to struct MissingLog {

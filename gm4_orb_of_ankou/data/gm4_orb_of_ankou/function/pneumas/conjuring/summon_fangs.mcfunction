@@ -2,7 +2,7 @@
 # run from pneumas/conjuring/throw
 
 summon evoker_fangs ~ ~ ~ {Tags:[gm4_oa_fang]}
-data modify entity @e[type=evoker_fangs,tag=gm4_oa_fang,limit=1,distance=..0.1] Owner set from entity @s ArmorItems[0].components."minecraft:custom_data".gm4_oa_conjuring
+data modify entity @e[type=evoker_fangs,tag=gm4_oa_fang,limit=1,distance=..0.1] Owner set from entity @s equipment.feet.components."minecraft:custom_data".gm4_oa_conjuring
 tag @e[type=evoker_fangs] remove gm4_oa_fang
 
 tag @a[distance=..1,gamemode=!creative,gamemode=!spectator] add gm4_oa_magic_ignore

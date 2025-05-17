@@ -1,0 +1,20 @@
+use ::java::util::text::Text
+use ::java::world::entity::AnyEntity
+
+dispatch minecraft:storage[gm4_relocators:temp] to struct RelocatorsTemp {
+  merge_data?: struct MergeData {
+    custom_block: string,
+    lore: Text,
+    entity_data?: AnyEntity
+  },
+  gm4_relocation?: struct Gm4Relocation {
+    custom_block?: string,
+    block_state?: struct {
+      id: #[id=block] string,
+      [string]: any,
+    },
+    lore?: Text,
+    data?: any,
+  },
+  lore?: Text,
+}

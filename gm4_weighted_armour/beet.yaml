@@ -1,6 +1,6 @@
 id: gm4_weighted_armour
 name: Weighted Armour
-version: 1.7.X
+version: 1.8.X
 
 data_pack:
   load: .

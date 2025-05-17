@@ -25,7 +25,7 @@
         "items": [
           {
             "items": [
-              "minecraft:player_head"
+              "minecraft:poisonous_potato"
             ],
             "predicates": {
               "minecraft:custom_data": "{gm4_heart_canister_tier:1b}"

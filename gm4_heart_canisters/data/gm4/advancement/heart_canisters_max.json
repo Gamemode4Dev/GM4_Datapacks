@@ -26,7 +26,7 @@
         "items": [
           {
             "items": [
-              "minecraft:player_head"
+              "minecraft:poisonous_potato"
             ],
             "count": 5,
             "predicates": {
@@ -35,7 +35,7 @@
           },
           {
             "items": [
-              "minecraft:player_head"
+              "minecraft:poisonous_potato"
             ],
             "count": 5,
             "predicates": {

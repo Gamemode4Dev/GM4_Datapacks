@@ -1,6 +1,6 @@
 id: gm4_zauber_liquids
 name: Zauber Liquids
-version: 1.8.X
+version: 1.9.X
 
 data_pack:
   load: .
@@ -13,8 +13,8 @@ meta:
     minecraft: []
     versioning:
       required:
-        gm4_liquid_tanks: 2.3.0
-        gm4_zauber_cauldrons: 1.12.0
+        gm4_liquid_tanks: 2.7.0
+        gm4_zauber_cauldrons: 1.13.0
     website:
       description: From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!
       recommended: []

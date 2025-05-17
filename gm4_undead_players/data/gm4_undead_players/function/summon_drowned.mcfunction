@@ -7,7 +7,7 @@ teleport @s ~ -10000 ~
 data merge entity @s {Health:0f,DeathTime:19s}
 
 # Summon the drowned and initialize it based on the contents of storage. 
-summon drowned ~ ~ ~ {Tags:["gm4_undead_player","gm4_undead_player_new"],PersistenceRequired:1b,CustomNameVisible:1b,ArmorDropChances:[1f,1f,1f,1f],HandDropChances:[1f,1f]}
+summon drowned ~ ~ ~ {Tags:["gm4_undead_player","gm4_undead_player_new"],PersistenceRequired:1b,CustomNameVisible:1b,drop_chances:{mainhand:1F,offhand:1F,feet:1F,legs:1F,chest:1F,head:1F}}
 execute as @e[type=drowned,tag=gm4_undead_player_new,distance=0,limit=1] run function gm4_undead_players:init_drowned
 
 # Clear storage to avoid deep comparison when this function is next called.

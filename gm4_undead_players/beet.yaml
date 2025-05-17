@@ -1,6 +1,6 @@
 id: gm4_undead_players
 name: Undead Players
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -13,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_player_death: 1.2.0
+        lib_player_death: 1.3.0
       schedule_loops: [main]
     model_data:
       - item: zombie_head

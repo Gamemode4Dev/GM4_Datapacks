@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "upgrade_heart_canisters": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "player_head",
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "gm4_heart_canister": 1
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_heart_canisters:upgrade_path/upgrade_heart_canisters"
+    }
+}

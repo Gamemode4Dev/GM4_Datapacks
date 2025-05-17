@@ -4,6 +4,8 @@ execute unless score heart_canisters gm4_modules matches 1 run data modify stora
 execute unless score heart_canisters gm4_earliest_version < heart_canisters gm4_modules run scoreboard players operation heart_canisters gm4_earliest_version = heart_canisters gm4_modules
 scoreboard players set heart_canisters gm4_modules 1
 
+scoreboard players set $heart_cannister_cap gm4_heart_can 5
+
 schedule function gm4_heart_canisters:main 1t
 
 #$moduleUpdateList

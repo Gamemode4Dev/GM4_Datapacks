@@ -14,7 +14,7 @@ data modify entity @s[nbt={Invisible:1b}] Glowing set value 1
 summon minecraft:interaction ~ ~ ~ {Tags:["smithed.entity","smithed.strict","gm4_bas_detect","gm4_bas_new","gm4_bas_temp"],height:2,width:1}
 
 # spawn marker for player offset and current armour stand data
-summon marker ~ ~ ~ {CustomName:'"gm4_bas_player_offset"',Tags:["smithed.entity","smithed.strict","gm4_bas_player_offset","gm4_bas_marker","gm4_bas_new","gm4_bas_temp"]}
+summon marker ~ ~ ~ {CustomName:"gm4_bas_player_offset",Tags:["smithed.entity","smithed.strict","gm4_bas_player_offset","gm4_bas_marker","gm4_bas_new","gm4_bas_temp"]}
 data modify entity @e[type=minecraft:marker,tag=gm4_bas_player_offset,tag=gm4_bas_new,distance=..1,limit=1] data set from storage gm4_better_armour_stands:temp Data
 data remove storage gm4_better_armour_stands:temp Data
 

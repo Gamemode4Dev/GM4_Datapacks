@@ -16,6 +16,7 @@ This document explains Gamemode 4's Resource Pack management tools, which use cu
     * [Extending `TemplateOptions`](#extending-templateoptions)
     * [Extending `TransformOptions`](#extending-transformoptions)
     * [Extending `ContainerGuiOptions`](#extending-containerguioptions)
+    * [Extending `ItemModelOptions`](#extending-itemmodeloptions)
 
 ## Getting Started
 Just like how data pack resources are stored in a `data` directory, resource pack assets are stored in an `assets` directory for each module, and follow the same structure as an ordinary minecraft resource pack. 
@@ -166,27 +167,16 @@ model:
   apple: item/my_model_apple
   potato: item/my_model_potato
 ```
-More complex model predicates for items with multiple vanilla models (e.g. elytra & broken elytra, clock ect) can be specified here as a list of predicates, following the same syntax as model files e.g.
+More complex model styles, like for items with multiple vanilla models (e.g. elytra & broken elytra, clock ect) are handled through a special-case syntax. Currently only broken elytra are supported, so packs utlizing conditions in item model definitions will need to provide handlers.
 ```yaml
+item: elytra
 model:
-  - predicate: {broken: 0}
-    model: item/elytra/captains_wings
-  - predicate: {broken: 1}
-    model: item/elytra/broken_captains_wings
+  type: condition_broken
+  unbroken: item/elytra/captains_wings
+  broken: item/elytra/broken_captains_wings
 ```
-This list of predicates may also be mapped to a specific item as above.
 
-```yaml
-item: [apple, elytra]
-model:
-  apple: my_model_apple
-  elytra:
-    - predicate: {broken: 0}
-      model: item/elytra/captains_wings
-    - predicate: {broken: 1}
-      model: item/elytra/broken_captains_wings
-```
-Items who have multiple vanilla models, like clocks, who do not have the manual predicates specified in model will have the same provided model file applied to all variants.
+Items who have multiple vanilla models, like clocks, who do not utilize special-case providers in the model config will have the same provided model file applied to all variants.
 
 - `template` (optional), a model-file generating template to apply. Accepts a string name of a template, or a compound containing template configuration values. Defaults to `custom`, which generates no Model files. See [here](#model-templates) for details on available templates.
 - `transforms` (optional), a list of model transforms to apply. Accepts a compound of configuration data. See [here](#model-transforms) for details on available transforms.
@@ -267,3 +257,9 @@ Additionally, there are two extendable subclasses already available for containe
 
 #### Methods
 - `process(self, config: GuiFont, counter_cache: Cache) -> tuple[str, list[dict[str, Any]]]`: Requisitions unique characters and returns the translation value (usually made of these characters), and a list of font providers, which usually reference `config.texture`.
+
+### Extending ItemModelOptions
+Individual modules may add additional handlers for special-case item model definitions by extending `ItemModelOptions` in a beet plugin. This subclass defines the additional config fields and a method that generates the model compound used in the item model definition. 
+
+#### Methods
+- 'generate_json(self) -> dict[str,Any]`: Returns the model object used in the item model defintion. e.g. ```{"type": "minecraft:condition"...}```

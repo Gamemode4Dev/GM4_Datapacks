@@ -6,7 +6,7 @@
 # save item count
 scoreboard players set $count gm4_guide 0
 execute store result score $count gm4_guide run data get entity @s[predicate=gm4_guidebook:book_in_mainhand] SelectedItem.count
-execute if score $count gm4_guide matches 0 store result score $count gm4_guide run data get entity @s[predicate=gm4_guidebook:book_in_offhand] Inventory[{Slot:-106b}].count
+execute if score $count gm4_guide matches 0 store result score $count gm4_guide run data get entity @s[predicate=gm4_guidebook:book_in_offhand] equipment.offhand.count
 
 # replace book
 ## short-circuit if it's the table of contents

@@ -1,4 +1,4 @@
-from typing import ClassVar
+from typing import ClassVar, List
 from pathlib import Path
 import csv
 from dataclasses import dataclass
@@ -30,6 +30,27 @@ def read_sound_id_from_csv():
         csv_file = csv.reader(file)
         next(csv_file)  # skip header line
         return {row[0]: DoorSound(open=row[1],close=row[2]) for row in csv_file}
+    
+def resolve_blocktag(ctx: Context, minecraft_version: str, tag_name: str) -> List[str]:
+    """
+    Traverses the given block tag depth-first, replacing all mentions of vanilla block tags with their contents.
+    Returns a flat list of all block ids contained in the block tag and any sub-tags.
+    Raises a `ValueError` if a block tag can not be resolved.
+    """
+    vanilla = ctx.inject(Vanilla)
+    vanilla.minecraft_version = minecraft_version
+    tag_name = tag_name.removeprefix("#")  # hash-symbol is not needed for lookup
+    if tag_name not in vanilla.data.block_tags:  # ensure block tag exists
+        raise ValueError(f"Unknown block tag '{tag_name}' for Minecraft version '{minecraft_version}'!")
+    
+    entries: List[str] = vanilla.data.block_tags[tag_name].data["values"]
+    out: List[str] = []
+    for entry in entries:
+        if entry.startswith("#minecraft:"):  # found another block tag, resolve it first
+            out += resolve_blocktag(ctx, minecraft_version, entry)
+        else:
+            out.append(entry)  # block id, append to out
+    return out
 
 @dataclass
 class DoorSound():
@@ -38,26 +59,25 @@ class DoorSound():
 
 
 def beet_default(ctx: Context):
-    vanilla = ctx.inject(Vanilla)
-    vanilla.minecraft_version = '1.21.4'
-    wood_types = [
-        s.removeprefix("minecraft:").removesuffix("_door")
-        for s in vanilla.data.block_tags["minecraft:wooden_doors"].data["values"]
-        if "pale_oak" not in s
+
+    # prepare list of door materials
+    door_materials = [
+        door.removeprefix("minecraft:").removesuffix("_door")
+        for door in resolve_blocktag(ctx, "1.21.5", "minecraft:mob_interactable_doors")
     ]
     # make list of wood types accessible for bolt
-    ctx.meta['wood_types'] = wood_types
+    ctx.meta['door_materials'] = door_materials
 
     # store door opening/closing sounds to dict
     sound_ids = read_sound_id_from_csv()
-    for wood in wood_types:
+    for wood in door_materials:
         if not wood in sound_ids: # if sound is not specified in csv, default to normal wooden door sound
-            logger.info(f"{wood} door has no sound configured sound effect. Using the default instead")
+            logger.info(f"{wood} door has no sound effect configured in sound_names.json! Using the default instead.")
             sound_ids[wood] = DoorSound(open='minecraft:block.wooden_door.open', close='minecraft:block.wooden_door.close')
     ctx.meta['sound_ids'] = sound_ids  # make sound dict accessible to bolt
 
     # for each wood type in the vanilla doors tag, render a copy of the "templates" directory with the appropiate wood-type
-    for wood in wood_types:
+    for wood in door_materials:
         subproject_config = {
             "require": [
                 "gm4_double_doors.generate.register_snbt_files"

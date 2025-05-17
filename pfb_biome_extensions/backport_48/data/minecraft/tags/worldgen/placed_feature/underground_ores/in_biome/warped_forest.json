@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "#minecraft:underground_ores/in_nether",
-      "required": false
-    }
-  ]
-}

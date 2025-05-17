@@ -8,19 +8,23 @@
   ],
   "key": {
     "O": "minecraft:obsidian",
-    "I": "minecraft:iron_ingot",
+    "I": "minecraft:iron_block",
     "G": "minecraft:golden_apple",
     "N": "minecraft:nether_star"
   },
   "result": {
-    "id": "minecraft:player_head",
+    "id": "minecraft:poisonous_potato",
     "components": {
       "minecraft:custom_model_data": "item/heart_canister_tier_1",
+      "!food": {},
+      "!consumable": {},
+      "item_model": "minecraft:player_head",
+      "max_stack_size": 5,
       "minecraft:profile": "$heart_canister_tier_1",
       "minecraft:custom_data": "{gm4_heart_canister:1b,gm4_heart_canister_tier:1b}",
-      "minecraft:custom_name": "{\"translate\":\"item.gm4.heart_canister\",\"fallback\":\"Heart Canister\",\"italic\":false}",
+      "minecraft:custom_name": {"translate":"item.gm4.heart_canister","fallback":"Heart Canister","italic":false},
       "minecraft:lore": [
-        "{\"translate\":\"item.gm4.heart_canister.lore.tier\",\"fallback\":\"Tier %s\",\"with\":[\"1\"],\"color\":\"gray\",\"italic\":false}"
+        {"translate":"item.gm4.heart_canister.lore.tier","fallback":"Tier %s","with":["1"],"color":"gray","italic":false}
       ]
     }
   }
