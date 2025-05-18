@@ -398,7 +398,7 @@
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/broken_elytra.png",
+            "file": "minecraft:item/elytra_broken.png",
             "ascent": -32768,
             "height": -16,
             "chars": [
@@ -4402,7 +4402,7 @@
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/broken_elytra.png",
+            "file": "minecraft:item/elytra_broken.png",
             "ascent": 8,
             "height": 16,
             "chars": [

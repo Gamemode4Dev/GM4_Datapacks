@@ -3,7 +3,7 @@
   "name": "Heart Canisters",
   "module_type": "module",
   "icon": {
-    "id": "minecraft:player_head",
+    "id": "minecraft:poisonous_potato",
     "components": {
       "minecraft:profile": "$heart_canister_tier_1"
     }
@@ -27,7 +27,7 @@
         "items": [
           {
             "items": [
-              "minecraft:player_head"
+              "minecraft:poisonous_potato"
             ],
             "predicates": {
               "minecraft:custom_data": "{gm4_heart_canister:1b}"

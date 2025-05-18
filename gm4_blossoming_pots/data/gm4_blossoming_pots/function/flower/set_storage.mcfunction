@@ -383,9 +383,9 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:bush set value {\
                 Name:"minecraft:bush"\
             },\
             transformation:{\
-                translation:[-0.4325f,-0.2565f,-0.4325f],\
+                translation:[-0.39f,-0.2565f,-0.39f],\
                 left_rotation:[0f,0f,0f,1f],\
-                scale:[0.863f,0.863f,0.863f],\
+                scale:[0.78f,0.78f,0.78f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
