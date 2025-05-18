@@ -15,14 +15,10 @@ scoreboard players operation $motion_x gm4_pneuma_data *= $multiplier gm4_pneuma
 scoreboard players operation $motion_z gm4_pneuma_data *= $multiplier gm4_pneuma_data
 
 # set motion
-# execute store result entity @s Motion[0] double 0.0045 run scoreboard players get $motion_x gm4_pneuma_data
-# execute store result entity @s Motion[2] double 0.0045 run scoreboard players get $motion_z gm4_pneuma_data
-# data modify entity @s Motion[1] set value 0.4d
-
-scoreboard players operation $x player_motion.api.launch = $motion_x gm4_pneuma_data
-scoreboard players set $y player_motion.api.launch 5200
-scoreboard players operation $z player_motion.api.launch = $motion_z gm4_pneuma_data
-execute as @a[tag=gm4_oa_dasher,limit=1] run function player_motion:api/launch_xyz
+scoreboard players operation $x gm4_player_motion.api.launch = $motion_x gm4_pneuma_data
+scoreboard players set $y gm4_player_motion.api.launch 5200
+scoreboard players operation $z gm4_player_motion.api.launch = $motion_z gm4_pneuma_data
+execute as @a[tag=gm4_oa_dasher,limit=1] run function #gm4_player_motion:launch_xyz
 
 ## clean up
 data remove storage gm4_oa_dashing:temp Pos
