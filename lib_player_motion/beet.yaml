@@ -1,21 +1,20 @@
 id: gm4_player_motion
 name: Gamemode 4 Player Motion
-version: 1.4.2
+version: 1.0.0
 
 data_pack:
   load: 
-    - https://cdn.modrinth.com/data/oDhxdGVZ/versions/aW4ph2OC/player_motion.zip
-    - data: data
+    data: data
 
 pipeline:
-  - gm4.plugins.refactor_external
   - gm4.plugins.extend.library
+  - gm4.plugins.include.lib_forceload
 
 meta:
   gm4:
-    refactor_external:
-      prefix: player_motion
     versioning:
+      required:
+        lib_forceload: 1.5.0
       schedule_loops: [internal/technical/tick]
     credits:
       Original Creator:
