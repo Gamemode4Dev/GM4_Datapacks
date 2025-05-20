@@ -30,6 +30,9 @@
                   "fallback": "Soul Shard"
                 },
                 "minecraft:rarity": "common",
+                "minecraft:damage_resistant": {
+                    "types": "#minecraft:is_fire"
+                },
                 "minecraft:equippable": {
                   "slot": "offhand"
                 },

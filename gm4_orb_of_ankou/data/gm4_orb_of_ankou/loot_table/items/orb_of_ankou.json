@@ -23,6 +23,9 @@
                                         "minecraft:firework_explosion"
                                     ]
                                 },
+                                "minecraft:damage_resistant": {
+                                    "types": "#minecraft:is_fire"
+                                },
                                 "minecraft:equippable": {
                                     "slot": "offhand"
                                 },
