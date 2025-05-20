@@ -20,6 +20,8 @@ BUCKETABLE = ["water", "lava", "milk", "powder_snow", "cod", "salmon", "pufferfi
 
 TEXTURELESS = ["shield"] # item model is unable to receive layer in vanilla
 
+SPECIAL_MODEL_IGNORES = ["shield"] # models with special case handling, that cannot be customized with resource packs the way we want.
+
 # define item group lookups
 GROUP_LOOKUP = {
     "armor": [f"{material}_{armor}" for material, armor in product(ARMOR_MATERIALS, ARMOR)] + ["turtle_helmet"],
@@ -171,6 +173,10 @@ class ShamirTemplate(TemplateOptions):
             if item_variants:
                 self._item_def_map[item] = mutatable_itemdef_copy
                 self._model_overrides_1_21_3[item] = variants
+                models.update({item: "NULL"}) # actual model paths contained within itemdef compound
+            elif item in SPECIAL_MODEL_IGNORES:
+                # use the vanilla item-def anyway
+                self._item_def_map[item] = mutatable_itemdef_copy
                 models.update({item: "NULL"}) # actual model paths contained within itemdef compound
             else:
                 models.update({item: f"{models_loc}/{item}"})
