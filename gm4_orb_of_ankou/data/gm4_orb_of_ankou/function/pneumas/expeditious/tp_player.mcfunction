@@ -3,6 +3,7 @@
 # run from pneumas/expeditious/set_ypos
 
 # prevent reroll
+scoreboard players set set_y gm4_pneuma_data 11
 scoreboard players set expeditious_attempt gm4_pneuma_data 12
 
 # move player
