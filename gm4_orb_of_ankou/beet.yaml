@@ -24,7 +24,7 @@ meta:
       required:
         gm4_metallurgy: 1.5.0
         lib_custom_crafters: 3.4.0
-        lib_player_motion: 1.4.2
+        lib_player_motion: 1.0.0
       schedule_loops:
         - main
         - tick
