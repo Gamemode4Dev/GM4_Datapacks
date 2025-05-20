@@ -38,4 +38,4 @@ tag @s remove gm4_pneuma_withering
 tag @s remove gm4_sneak_pneuma
 tag @s remove gm4_has_pneuma
 
-tag @s remove gm4_oa_soaring_active
+execute as @s[tag=gm4_oa_soaring_active] at @s run function gm4_orb_of_ankou:pneumas/soaring/toggle
