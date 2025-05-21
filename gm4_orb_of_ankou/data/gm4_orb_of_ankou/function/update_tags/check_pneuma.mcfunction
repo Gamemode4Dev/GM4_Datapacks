@@ -4,7 +4,6 @@
 tag @s add gm4_has_pneuma
 
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/aggressive] add gm4_pneuma_aggressive
-tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/agile] add gm4_pneuma_agile
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/bargaining] add gm4_pneuma_bargaining
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/blasting] add gm4_pneuma_blasting
 tag @s[predicate=gm4_orb_of_ankou:pneuma_equipped/blinding] add gm4_pneuma_blinding
@@ -50,7 +49,6 @@ scoreboard players reset @s gm4_oa_bow_freezing
 scoreboard players reset @s gm4_oa_bow_tranquilizing
 
 # run tick functions
-execute if entity @a[gamemode=!spectator,tag=gm4_pneuma_agile,limit=1] run schedule function gm4_orb_of_ankou:pneumas/temp_tick/agile 1t
 execute if entity @a[gamemode=!spectator,tag=gm4_pneuma_hawkeye,limit=1] run schedule function gm4_orb_of_ankou:pneumas/temp_tick/hawkeye 1t
 execute if entity @a[gamemode=!spectator,tag=gm4_pneuma_freezing,limit=1] run schedule function gm4_orb_of_ankou:pneumas/temp_tick/freezing 1t
 execute if entity @a[gamemode=!spectator,tag=gm4_pneuma_tranquilizing,limit=1] run schedule function gm4_orb_of_ankou:pneumas/temp_tick/tranquilizing 1t

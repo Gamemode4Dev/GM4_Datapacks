@@ -19,15 +19,22 @@
                                     ]
                                 },
                                 "minecraft:tooltip_display": {
-                                  "hidden_components": [
-                                    "minecraft:firework_explosion"
-                                  ]
-                                }
+                                    "hidden_components": [
+                                        "minecraft:firework_explosion"
+                                    ]
+                                },
+                                "minecraft:damage_resistant": {
+                                    "types": "#minecraft:is_fire"
+                                },
+                                "minecraft:equippable": {
+                                    "slot": "offhand"
+                                },
+                                "minecraft:max_stack_size": 1
                             }
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": "{gm4_orb_of_ankou:{item:'orb'}}"
+                            "tag": "{gm4_orb_of_ankou:{item:'orb'},smithed:{ignore:{functionality:1b,crafting:1b}}}"
                         },
                         {
                             "function": "minecraft:set_name",

@@ -15,6 +15,7 @@ execute if score @s gm4_oa_powder matches 1.. run function gm4_orb_of_ankou:soul
 execute if score @s gm4_oa_glowstone matches 1.. run function gm4_orb_of_ankou:soul_forge/entities/summon_glowstone_sprite
 execute if score @s gm4_oa_tears matches 1.. run function gm4_orb_of_ankou:soul_forge/entities/summon_wandering_tear
 execute if score @s gm4_oa_roses matches 1.. run function gm4_orb_of_ankou:soul_forge/entities/withering_magic
+kill @e[type=marker,tag=gm4_oa_wither_rose_catcher,distance=..10]
 
 # summon endermites for extra essences stored inside the soul forge
 execute if score @s gm4_oa_essence matches 1.. run function gm4_orb_of_ankou:soul_forge/entities/summon_extra_essence
