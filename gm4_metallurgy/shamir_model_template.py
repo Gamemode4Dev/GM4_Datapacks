@@ -66,19 +66,16 @@ class ShamirTemplate(TemplateOptions):
     metal: Literal["aluminium", "barimium", "barium", "bismuth", "curies_bismium", "thorium"] # the metallurgy metal this shamir is made of
 
     _item_def_map: dict[str, JsonType] = {}
-    _model_overrides_1_21_3: dict[str, list[JsonType]] = {} # NOTE to be removed in 1.21.5
 
     bound_ctx: ClassVar[Context]
     metallurgy_assets: ClassVar[ResourcePack] = ResourcePack(path="gm4_metallurgy") # load metallurgy textures so expansion shamirs can fall back on their
     vanilla_models_jar: ClassVar[ClientJar]
-    vanilla_models_jar_1_21_3: ClassVar[ClientJar]
 
     def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         logger = parent_logger.getChild(self.bound_ctx.project_id)
         models_loc = f"{config.reference}"
         models: dict[str, str] = {} # the value of config.models to be applied after going through special cases
         ret_list: list[Model] = []
-        return ret_list # TODO 1.21.5: re-enable this
 
         for item in config.item.entries():
             if item == "player_head":
@@ -172,7 +169,6 @@ class ShamirTemplate(TemplateOptions):
 
             if item_variants:
                 self._item_def_map[item] = mutatable_itemdef_copy
-                self._model_overrides_1_21_3[item] = variants
                 models.update({item: "NULL"}) # actual model paths contained within itemdef compound
             elif item in SPECIAL_MODEL_IGNORES:
                 # use the vanilla item-def anyway
@@ -228,10 +224,6 @@ def beet_default(ctx: Context):
     vanilla.minecraft_version = '1.21.5'
     ShamirTemplate.vanilla_models_jar = vanilla.mount("assets/minecraft/items")
     merge_policy(ctx)
-
-    # 1.21.3 Backwards Compat
-    vanilla.minecraft_version = '1.21.3'
-    ShamirTemplate.vanilla_models_jar_1_21_3 = vanilla.mount("assets/minecraft/models/item")
 
 def merge_policy(ctx: Context):
     ctx.assets.merge_policy.extend_namespace(OptifineProperties, optifine_armor_properties_merging)
