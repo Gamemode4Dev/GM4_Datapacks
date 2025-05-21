@@ -932,18 +932,18 @@ class AdvancementIconTemplate(VanillaTemplate, TemplateOptions): # TODO make thi
     # NOTE since advancements are all in the gm4 namespace, so are these models. This template ignores the 'model' field of ModelData
     def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         advancement_name = config.reference.split("/")[-1]
+        item = config.item.entries()[0]
 
         if not self.forward:
             # then we use the vanilla item's model and settings - inheriting from VanillaTemplate for this
-            item = config.item.entries()[0]
-            config_copy = config.copy(update={"model": MapOption(__root__={config.item.entries()[0]: f"gm4:gui/advancement/{advancement_name}"})})
+            config_copy = config.copy(update={"model": MapOption(__root__={item: f"gm4:gui/advancement/{advancement_name}"})})
             m = VanillaTemplate.create_models(self, config_copy, models_container)[0]
         
         else:
             m = models_container[f"gm4:gui/advancement/{advancement_name}"] = Model({
                 "parent": self.forward
             })
-        config.model = MapOption(__root__={config.item.entries()[0]: f"gm4:gui/advancement/{advancement_name}"})
+        config.model = MapOption(__root__={item: f"gm4:gui/advancement/{advancement_name}"})
         return [m]
     
     def get_item_def_entry(self, config: ModelData, item: str):
@@ -976,12 +976,13 @@ class BlockTemplate(TemplateOptions):
         m = models_container[model_name] = Model({
             "parent": "minecraft:block/cube",
             "textures": {
-                "down":  config.textures['bottom'],
-                "up":    config.textures['top'],
-                "north": config.textures['front'],
-                "south": config.textures['side'],
-                "west":  config.textures['side'],
-                "east":  config.textures['side']
+                "particle": config.textures['side'],
+                "down":     config.textures['bottom'],
+                "up":       config.textures['top'],
+                "north":    config.textures['front'],
+                "south":    config.textures['side'],
+                "west":     config.textures['side'],
+                "east":     config.textures['side']
             }
         })
         return [m]
