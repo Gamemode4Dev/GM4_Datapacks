@@ -87,7 +87,7 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.heart_canisters.usage_tier_1",
+            "translate": "text.gm4.guidebook.heart_canisters.crafting_tier_2",
             "fallback": "Tier 2 heart canisters require five tier 1 canisters also in the inventory to function."
           },
           "\n",
@@ -98,8 +98,8 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.heart_canisters.stacking",
-            "fallback": "Heart canisters of the same type must be in the same inventory slot to provide the proper amount of health.\n\nOnly up to five of each heart canister tier will give extra health."
+            "translate": "text.gm4.guidebook.heart_canisters.max_amount",
+            "fallback": "Only up to five of each heart canister tier will give extra health."
           }
         ]
       ],
