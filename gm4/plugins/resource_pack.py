@@ -559,6 +559,10 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             for model in models:
                 m = model.model[item_id] # model string, or predicate settings, for this particular item id
 
+                if model.reference in ("gm4_end_fishing:item/captains_wings", "gm4_end_fishing:item/ravaged_wings"):
+                    # hardcode a skip for this entry, used to prevent conflicts between hardcoded 1.21.3 files and the new 1.21.4 format.
+                    continue
+
                 has_manual_predicates = False
                 if model.template.name == "shamir" and item_id in model.template._model_overrides_1_21_3: # type: ignore
                     # This item uses a special-case logic, rebuilt for the 1.21.4 resource pack item-model-definitions.
@@ -980,6 +984,9 @@ class VanillaTemplate(TemplateOptions):
         ret_list: list[Model] = []
         for item, model_name in zip(config.item.entries(), model_names):
             model_compound = self.vanilla_jar.assets.item_models[add_namespace(item, "minecraft")].data.get("model", {})
+            if model_compound["type"] == "minecraft:select": # template off the fallback model, (e.g. non-festive chest)
+                model_compound = model_compound["fallback"]
+
             if model_compound["type"] == "minecraft:special": # uses some special handling
                 vanilla_model_path: str = model_compound["base"] # covers player_head use case. Others may not be handled properly yet.
                 special_model = True

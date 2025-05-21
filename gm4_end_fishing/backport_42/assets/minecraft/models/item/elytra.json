@@ -25,19 +25,6 @@
         },
         {
             "predicate": {
-                "custom_model_data": 3420002
-            },
-            "model": "minecraft:item/elytra"
-        },
-        {
-            "predicate": {
-                "broken": 1,
-                "custom_model_data": 3420002
-            },
-            "model": "item/broken_elytra"
-        },
-        {
-            "predicate": {
                 "custom_model_data": 3420010,
                 "broken": 0
             },
@@ -63,97 +50,6 @@
                 "broken": 1
             },
             "model": "gm4_end_fishing:item/elytra/broken_ravaged_wings"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 3420012
-            },
-            "model": "minecraft:item/elytra"
-        },
-        {
-            "predicate": {
-                "broken": 1,
-                "custom_model_data": 3420012
-            },
-            "model": "item/broken_elytra"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 3420113
-            },
-            "model": "gm4_metallurgy:shamir/moneo/elytra"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 3420113,
-                "broken": 1
-            },
-            "model": "gm4_metallurgy:shamir/moneo/broken_elytra"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 3420114
-            },
-            "model": "minecraft:item/elytra"
-        },
-        {
-            "predicate": {
-                "broken": 1,
-                "custom_model_data": 3420114
-            },
-            "model": "item/broken_elytra"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 3420124
-            },
-            "model": "gm4_animi_shamir:shamir/animi/elytra"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 3420124,
-                "broken": 1
-            },
-            "model": "gm4_animi_shamir:shamir/animi/broken_elytra"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 3420125
-            },
-            "model": "minecraft:item/elytra"
-        },
-        {
-            "predicate": {
-                "broken": 1,
-                "custom_model_data": 3420125
-            },
-            "model": "item/broken_elytra"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 3420200
-            },
-            "model": "gm4:gui/advancements/orb_of_ankou_soaring_pneuma"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 3420200,
-                "broken": 1
-            },
-            "model": "gm4:gui/advancements/orb_of_ankou_soaring_pneuma"
-        },
-        {
-            "predicate": {
-                "custom_model_data": 3420201
-            },
-            "model": "minecraft:item/elytra"
-        },
-        {
-            "predicate": {
-                "broken": 1,
-                "custom_model_data": 3420201
-            },
-            "model": "item/broken_elytra"
         }
     ]
 }
