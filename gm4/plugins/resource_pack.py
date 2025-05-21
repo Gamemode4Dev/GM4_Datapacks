@@ -896,6 +896,9 @@ class VanillaTemplate(TemplateOptions):
         ret_list: list[Model] = []
         for item, model_name in zip(config.item.entries(), model_names):
             model_compound = self.vanilla_jar.assets.item_models[add_namespace(item, "minecraft")].data.get("model", {})
+            if model_compound["type"] == "minecraft:select": # template off the fallback model, (e.g. non-festive chest)
+                model_compound = model_compound["fallback"]
+
             if model_compound["type"] == "minecraft:special": # uses some special handling
                 vanilla_model_path: str = model_compound["base"] # covers player_head use case. Others may not be handled properly yet.
                 special_model = True
