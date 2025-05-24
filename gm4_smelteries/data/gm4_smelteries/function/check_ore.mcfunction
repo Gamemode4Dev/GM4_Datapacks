@@ -3,8 +3,8 @@
 # located at the smeltery block (furnace)
 # run from verify_furnace
 
-# check if item is doubable by setting the head item of the stand
-data modify entity @s HandItems[0] set from block ~ ~ ~ Items[{Slot:0b}]
+# check if item is double-able by setting the head item of the stand
+data modify entity @s equipment.mainhand set from block ~ ~ ~ Items[{Slot:0b}]
 item replace entity @s armor.head with air
 execute store result score $double gm4_smelt_data run loot replace entity @s armor.head fish gm4_smelteries:technical/smeltable_display ~ ~ ~ mainhand
 item replace entity @s weapon with air

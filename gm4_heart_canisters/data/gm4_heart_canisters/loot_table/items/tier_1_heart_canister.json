@@ -5,13 +5,17 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:player_head",
+                    "name": "minecraft:poisonous_potato",
                     "functions": [
                         {
                             "function": "minecraft:set_components",
                             "components": {
+                                "!food": {},
+                                "!consumable": {},
+                                "item_model": "minecraft:player_head",
+                                "max_stack_size": 5,
                                 "minecraft:custom_model_data": "item/heart_canister_tier_1",
-                                "minecraft:profile": "$heart_canister_tier_1" 
+                                "minecraft:profile": "$heart_canister_tier_1"
                             }
                         },
                         {

@@ -13,6 +13,7 @@ def beet_default(ctx: Context):
   read_csv()
   generate_corripio(ctx)
   generate_pneuma_predicates(ctx)
+  generate_soul_essence_loot_tables(ctx)
   
 
 def generate_corripio(ctx: Context):
@@ -115,6 +116,61 @@ def generate_pneuma_predicates(ctx: Context):
 def looting_chance(base: float,lvl: int) -> float:
   return min(1.0,round(base * (1 + (3 * (lvl**3))),6))
 
+
+def generate_soul_essence_loot_tables(ctx: Context):
+  for pneuma in pneumas:
+    custom_data = "{gm4_orb_of_ankou:{item:'soul_essence',stored_pneuma:{id:'" + pneuma + "'}},smithed:{ignore:{functionality:1b,crafting:1b}}}"
+    ctx.data[f"gm4_orb_of_ankou:items/soul_essence/{pneuma}"] = LootTable({
+      "type": "minecraft:generic",
+      "pools": [
+        {
+          "rolls": 1,
+          "entries": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:black_dye",
+              "functions": [
+                {
+                  "function": "minecraft:set_lore",
+                  "mode": "append",
+                  "lore": [
+                    {
+                      "translate": f"text.gm4.pneuma_{pneuma}",
+                      "fallback": pneuma.replace("_", " ").title(),
+                      "italic": False,
+                      "color": "blue"
+                    }
+                  ]
+                },
+                {
+                  "function": "minecraft:set_name",
+                  "name": {
+                    "translate": "item.gm4.soul_essence",
+                    "fallback": "Soul Essence",
+                    "italic": False,
+                    "color": "white"
+                  }
+                },
+                {
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:enchantment_glint_override": True,
+                    "minecraft:custom_model_data": f"pneuma/{pneuma}",
+                    "minecraft:damage_resistant": {
+                        "types": "#minecraft:is_fire"
+                    },
+                  }
+                },
+                {
+                  "function": "minecraft:set_custom_data",
+                  "tag": custom_data
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    })
 
 
 def read_csv():

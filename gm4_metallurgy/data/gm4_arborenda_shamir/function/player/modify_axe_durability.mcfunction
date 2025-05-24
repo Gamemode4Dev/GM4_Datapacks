@@ -12,7 +12,7 @@ execute if score @s gm4_use_axe_sto matches 1.. run scoreboard players set $max_
 execute if score @s gm4_use_axe_woo matches 1.. run scoreboard players set $max_damage gm4_arb_data 58
 
 # get unbreaking level
-execute store result score $unbreaking_level gm4_arb_data run data get storage gm4_arborenda_shamir:temp tool.components."minecraft:enchantments".levels."minecraft:unbreaking"
+execute store result score $unbreaking_level gm4_arb_data run data get storage gm4_arborenda_shamir:temp tool.components."minecraft:enchantments"."minecraft:unbreaking"
 scoreboard players add $unbreaking_level gm4_arb_data 1
 scoreboard players set $damage_chance gm4_arb_data 100
 scoreboard players operation $damage_chance gm4_arb_data /= $unbreaking_level gm4_arb_data

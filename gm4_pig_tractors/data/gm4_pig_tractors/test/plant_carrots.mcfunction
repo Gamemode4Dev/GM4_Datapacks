@@ -2,7 +2,7 @@
 # @dummy ~1.5 ~1 ~0.5
 
 setblock ~1 ~ ~1 farmland
-summon pig ~1.5 ~1 ~1.5 {Saddle:1b}
+summon pig ~1.5 ~1 ~1.5 {equipment:{saddle:{id:"minecraft:saddle"}}}
 dummy @s use entity @e[type=pig,distance=..4,limit=1]
 give @s carrot
 

@@ -1,6 +1,6 @@
 id: gm4_potion_swords
 name: Potion Swords
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .

@@ -2,8 +2,10 @@
 # run from soul_forge/destroy
 
 # summon endermite
-data modify storage gm4_orb_of_ankou:temp ArmorItems[0].components set from storage gm4_orb_of_ankou:temp ArmorItems[1].components
-function gm4_orb_of_ankou:soul_forge/entities/severed_soul
+execute positioned ~ ~0.2 ~ summon endermite run function gm4_orb_of_ankou:soul_forge/entities/set_data/severed_soul with storage gm4_orb_of_ankou:temp equipment.legs.components."minecraft:custom_data".gm4_orb_of_ankou.stored_pneuma
+
+# visuals
+playsound minecraft:entity.endermite.hurt hostile @a[distance=..12] ~ ~ ~ 0.7 1
 
 # loop
 scoreboard players remove @s gm4_oa_essence 1

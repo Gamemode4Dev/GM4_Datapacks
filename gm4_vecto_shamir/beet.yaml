@@ -1,18 +1,9 @@
 id: gm4_vecto_shamir
 name: Vecto Shamir
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 0
-        max_inclusive: 48
-      directory: backport_48
-    - formats:
-        min_inclusive: 61
-        max_inclusive: 61
-      directory: since_61
 
 resource_pack:
   load: ../gm4_metallurgy
@@ -25,7 +16,7 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_metallurgy: 1.4.0
+        gm4_metallurgy: 1.5.0
       schedule_loops: [main]
     model_data:
       - item: boots

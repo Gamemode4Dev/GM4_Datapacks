@@ -1,6 +1,6 @@
 id: gm4_holographic_tags
 name: Holographic Tags
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -29,6 +29,8 @@ meta:
     credits:
       Creator:
         - BPR
+      Updated by:
+        - Bloo
       Inspired by:
         - SethBling
       Icon Design:

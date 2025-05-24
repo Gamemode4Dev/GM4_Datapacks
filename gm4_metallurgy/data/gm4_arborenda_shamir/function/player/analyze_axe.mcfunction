@@ -15,7 +15,7 @@ execute if score @s gm4_use_axe_sto matches 1.. run scoreboard players set $axe_
 execute if score @s gm4_use_axe_woo matches 1.. run scoreboard players set $axe_delay gm4_arb_data 22
 
 # efficiency bonus (simplified formula, does not match vanilla)
-execute store result score $efficiency_level gm4_arb_data run data get storage gm4_arborenda_shamir:temp tool.components."minecraft:enchantments".levels."minecraft:efficiency"
+execute store result score $efficiency_level gm4_arb_data run data get storage gm4_arborenda_shamir:temp tool.components."minecraft:enchantments"."minecraft:efficiency"
 scoreboard players operation $axe_delay gm4_arb_data -= $efficiency_level gm4_arb_data
 
 # limit to min delay of 1 tick between block breaks

@@ -3,7 +3,7 @@
 
 setblock ~1 ~ ~1 farmland
 setblock ~1 ~1 ~1 carrots[age=7]
-summon pig ~1.5 ~1 ~1.5 {Saddle:1b}
+summon pig ~1.5 ~1 ~1.5 {equipment:{saddle:{id:"minecraft:saddle"}}}
 dummy @s use entity @e[type=pig,distance=..4,limit=1]
 
 await block ~1 ~1 ~1 carrots[age=0]

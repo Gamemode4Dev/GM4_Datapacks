@@ -38,4 +38,5 @@ tag @s remove gm4_pneuma_withering
 tag @s remove gm4_sneak_pneuma
 tag @s remove gm4_has_pneuma
 
-tag @s remove gm4_oa_soaring_active
+tag @s remove gm4_oa_soaring_idle
+tag @s remove gm4_oa_soaring_toggled

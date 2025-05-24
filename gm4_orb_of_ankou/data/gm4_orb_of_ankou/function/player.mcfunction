@@ -10,3 +10,6 @@ execute at @s[tag=gm4_pneuma_synergetic] run function gm4_orb_of_ankou:pneumas/s
 # soaring
 execute at @s[tag=gm4_oa_soaring_active] run function gm4_orb_of_ankou:pneumas/soaring/apply
 
+# disable jump revert
+scoreboard players remove @a[scores={gm4_oa_jump_stop=1..}] gm4_oa_jump_stop 1
+execute as @a[scores={gm4_oa_jump_stop=1}] run attribute @s minecraft:jump_strength modifier remove gm4_orb_of_ankou:prevent_jump

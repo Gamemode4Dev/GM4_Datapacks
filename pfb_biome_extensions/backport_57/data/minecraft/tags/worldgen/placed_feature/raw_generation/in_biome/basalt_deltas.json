@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "#minecraft:raw_generation/in_nether",
-      "required": false
-    }
-  ]
-}

@@ -40,9 +40,9 @@
           },
           {
             "translate": "block.minecraft.tnt",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_item",
-              "value": "{id:\"minecraft:tnt\",count:1}"
+              "id": "minecraft:tnt"
             }
           },
           {
@@ -50,9 +50,9 @@
           },
           {
             "translate": "item.minecraft.fire_charge",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_item",
-              "value": "{id:\"minecraft:fire_charge\",count:1}"
+              "id": "minecraft:fire_charge"
             }
           },
           {
@@ -60,9 +60,9 @@
           },
           {
             "translate": "item.minecraft.wind_charge",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_item",
-              "value": "{id:\"minecraft:wind_charge\",count:1}"
+              "id": "minecraft:wind_charge"
             }
           },
           {
@@ -70,9 +70,9 @@
           },
           {
             "translate": "item.minecraft.potion",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "item.minecraft.splash_potion"
                 },
@@ -90,9 +90,9 @@
           },
           {
             "translate": "block.minecraft.torch",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "block.minecraft.torch"
                 },
@@ -113,9 +113,9 @@
           },
           {
             "text": "* ",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.crossbow_cartridges.torch",
                   "fallback": "Torch is placed on the block the arrow hits.\nIf the torch cannot be placed here, it is dropped.",
@@ -129,16 +129,16 @@
           },
           {
             "translate": "item.minecraft.string",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_item",
-              "value": "{id:\"minecraft:string\",count:1}"
+              "id": "minecraft:string"
             }
           },
           {
             "text": "* ",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.crossbow_cartridges.string",
                   "fallback": "Stand in a tripwire hook and look in one of the\ncardinal directions to create a tripwire line.\n\nA tripwire hook can be placed automatically at the end.",
@@ -166,9 +166,9 @@
           },
           {
             "text": "* ",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.crossbow_cartridges.bucket.2",
                   "fallback": "The water bucket will be kept",

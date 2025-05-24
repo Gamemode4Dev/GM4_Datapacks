@@ -23,7 +23,7 @@
                             "lore": [
                                 {
                                     "translate": "item.gm4.shamir.hypexperia",
-                                    "fallback": "Hypexperia",
+                                    "fallback": "Hypexperia Shamir",
                                     "italic": false,
                                     "color": "gray"
                                 }

@@ -20,7 +20,7 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "type": "minecraft:potion",
+                  "type": "minecraft:splash_potion",
                   "nbt": "{Tags:['gm4_falling_star']}"
                 }
               },

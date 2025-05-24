@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "#minecraft:lakes/in_nether",
-      "required": false
-    }
-  ]
-}

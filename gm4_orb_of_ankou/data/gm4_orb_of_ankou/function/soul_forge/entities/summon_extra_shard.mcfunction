@@ -2,13 +2,7 @@
 # run from soul_forge/destroy
 
 # spawn bat
-summon bat ~ ~0.2 ~ {CustomName:'{"translate":"entity.gm4.congealed_shard","fallback":"Congealed Soul Shard§"}',CustomNameVisible:0b,Team:"gm4_hide_name",DeathLootTable:"gm4:empty",PersistenceRequired:1b,Tags:["gm4_oa_unset","gm4_oa_congealed_shard","gm4_oa_ignore","gm4_defused_bat"],HandDropChances:[2.0f,1.0f],Motion:[0.0,0.6,0.0],active_effects:[{id:'minecraft:fire_resistance',amplifier:0b,duration:1000000,show_particles:0b}]}
-
-# set loot drop to soul shard
-data modify entity @e[type=bat,tag=gm4_oa_unset,limit=1] HandItems[0] set from storage gm4_orb_of_ankou:temp ArmorItems[2]
-
-# randomize motion in x and z
-execute as @e[type=bat,tag=gm4_oa_unset,limit=1] run function gm4_orb_of_ankou:soul_forge/entities/randomize_motion
+execute positioned ~ ~0.2 ~ summon bat run function gm4_orb_of_ankou:soul_forge/entities/set_data/congealed_shard with storage gm4_orb_of_ankou:temp equipment.chest.components."minecraft:custom_data".gm4_orb_of_ankou.pneumas[-1]
 
 # visuals
 playsound minecraft:entity.bat.hurt hostile @a[distance=..12] ~ ~ ~ 0.7 1

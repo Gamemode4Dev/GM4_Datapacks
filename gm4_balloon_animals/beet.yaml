@@ -1,6 +1,6 @@
 id: gm4_balloon_animals
 name: Balloon Animals
-version: 1.2.X
+version: 1.3.X
 
 data_pack:
   load: .
@@ -17,7 +17,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_trades: 1.5.0
+        lib_trades: 1.6.0
       schedule_loops: [main]
     website:
       description: Looking for exotic animals? This module makes some Wandering Traders sell cute baby animals!

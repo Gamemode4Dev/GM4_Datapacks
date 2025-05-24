@@ -4,7 +4,7 @@
 
 # tag the armor soul forge
 tag @e[type=armor_stand,tag=gm4_soul_forge,limit=1,sort=nearest,distance=..1] add gm4_oa_selected_forge
-data modify storage gm4_orb_of_ankou:temp ArmorItems set from entity @e[type=armor_stand,tag=gm4_oa_selected_forge,limit=1] ArmorItems
+data modify storage gm4_orb_of_ankou:temp equipment set from entity @e[type=armor_stand,tag=gm4_oa_selected_forge,limit=1] equipment
 
 # if valid item, add it to the scoreboard storage
 data modify storage gm4_orb_of_ankou:temp Item set from entity @s Item
@@ -17,9 +17,9 @@ execute unless entity @s[tag=gm4_oa_checked_item] if data storage gm4_orb_of_ank
 execute unless entity @s[tag=gm4_oa_checked_item] if data storage gm4_orb_of_ankou:temp Item{id:"minecraft:firework_star",components:{"minecraft:custom_data":{gm4_orb_of_ankou:{item:"orb"}}}} run function gm4_orb_of_ankou:soul_forge/recipes/check_orb
 
 # apply data modify to armor stand
-data modify entity @e[type=armor_stand,tag=gm4_oa_selected_forge,limit=1] ArmorItems set from storage gm4_orb_of_ankou:temp ArmorItems
+data modify entity @e[type=armor_stand,tag=gm4_oa_selected_forge,limit=1] equipment set from storage gm4_orb_of_ankou:temp equipment
 tag @e[type=armor_stand,tag=gm4_soul_forge] remove gm4_oa_selected_forge
-data remove storage gm4_orb_of_ankou:temp ArmorItems
+data remove storage gm4_orb_of_ankou:temp equipment
 
 # play burn sound and kill item
 execute unless entity @s[tag=gm4_oa_checked_item] run playsound minecraft:entity.generic.burn block @a[distance=..12] ~0.5 ~0.5 ~0.5 0.2 1.5

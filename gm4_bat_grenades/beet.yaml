@@ -1,6 +1,6 @@
 id: gm4_bat_grenades
 name: Bat Grenades
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .

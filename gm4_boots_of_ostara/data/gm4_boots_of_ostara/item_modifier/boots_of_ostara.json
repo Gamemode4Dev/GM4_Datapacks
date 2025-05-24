@@ -2,9 +2,11 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:dyed_color": {
-                "rgb": 3705899,
-                "show_in_tooltip": false
+            "minecraft:dyed_color": 3705899,
+            "minecraft:tooltip_display": {
+                "hidden_components": [
+                    "minecraft:dyed_color"
+                ]
             },
             "minecraft:custom_model_data": "item/boots_of_ostara"
         }

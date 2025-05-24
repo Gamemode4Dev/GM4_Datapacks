@@ -18,7 +18,7 @@
       "minecraft:custom_model_data": "item/enchantment_extractor",
       "minecraft:profile": "$enchantment_extractor",
       "minecraft:custom_data": "{gm4_machines:{id:'enchantment_extractor'}}",
-      "minecraft:custom_name": "{\"translate\":\"block.gm4.enchantment_extractor\",\"fallback\":\"Enchantment Extractor\",\"color\":\"white\",\"italic\":false}"
+      "minecraft:custom_name": {"translate":"block.gm4.enchantment_extractor","fallback":"Enchantment Extractor","color":"white","italic":false}
     }
   }
 }

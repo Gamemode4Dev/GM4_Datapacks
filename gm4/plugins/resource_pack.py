@@ -2,20 +2,20 @@ import csv
 import glob
 import logging
 import os
-import re
 import sys
 from copy import deepcopy
 from dataclasses import replace
 from functools import cache
 from fnmatch import fnmatch
 from itertools import cycle
-from typing import Any, ClassVar, Literal, Optional
+from typing import Any, ClassVar, Literal, Optional, Union
 
 import numpy as np
 from beet import (
     Cache,
     Context,
     Font,
+    ItemModel,
     InvalidOptions,
     JsonFile,
     Language,
@@ -23,12 +23,11 @@ from beet import (
     Model,
     NamespaceProxy,
     PluginOptions,
-    WrappedException,
-    YamlFile
+    YamlFile,
+    ResourcePack
 )
 from beet.contrib.link import LinkManager
-from beet.contrib.optifine import OptifineProperties
-from beet.contrib.vanilla import Vanilla
+from beet.contrib.vanilla import Vanilla, ClientJar
 from beet.core.utils import format_validation_error
 from mecha import (
     AstChildren,
@@ -40,6 +39,7 @@ from mecha import (
     AstJsonObjectEntry,
     AstJsonObjectKey,
     AstJsonValue,
+    AstNbtCompound,
     AstNbtCompoundEntry,
     AstNbtCompoundKey,
     AstNbtPath,
@@ -65,6 +65,8 @@ from gm4.utils import (
     propagate_location,
 )
 
+JsonType = dict[str,Any]
+
 CUSTOM_MODEL_PREFIX = 3420000
 
 parent_logger = logging.getLogger("gm4.resource_pack")
@@ -74,29 +76,27 @@ class ModelData(BaseModel):
     """A complete config for a single model"""
     item: ListOption[str]
     reference: str
-    model: MapOption[str|list[dict[str,Any]]] = "" # defaults to same value as 'reference'      #type:ignore ; the validator handles the default value
+    model: 'MapOption[str]' = "" # defaults to same value as 'reference'      #type:ignore ; the validator handles the default value
     template: 'str|TemplateOptions' = "custom"
     transforms: Optional[list['TransformOptions']]
     textures: MapOption[str] = [] # defaults to same value as reference         #type:ignore ; the validator handles the default value
 
     @validator('model', pre=True, always=True) # type: ignore ; v1 validator behaves strangely with type checking
-    def default_model(cls, model: Any, values: dict[str,Any]) -> dict[str, str|list[dict[str,Any]]]:
-        if isinstance(model, str):
+    def default_model(cls, model: Any, values: JsonType) -> dict[str, str]:
+        if isinstance(model, str) or (isinstance(model, dict) and "type" in model):
             model = [model] # so we can check len for number of items
         if not model and "reference" in values: # no reference set, default to reference string
             return {item: values["reference"] for item in values['item'].entries()}
-        if len(i:=values['item'].entries()) == 1 and isinstance(model, list) and isinstance(model[0], dict): # only one item id, predicate model allowed to be single list
-            return {i[0]: model}
-        if len(model)!=len(values["item"].entries()) and len(model)>1: # a single model name may be broadcast to all items, but otherwise lengths match       # type: ignore ; 'model' inherits list[Unknown] from previous isinstance check
+        if len(model)!=len(values["item"].entries()) and len(model)>1 and not "type" in model: # a single model name may be broadcast to all items, but otherwise lengths match       # type: ignore ; 'model' inherits list[Unknown] from previous isinstance check
             raise ValidationError([ErrorWrapper(ValueError("length of 'item' and 'model' do not match"), loc=())], model=ModelData)
         if isinstance(model, list): # apply item->model map data
-            return dict(zip(values['item'].entries(), cycle(model))) # type: ignore
+            model = dict(zip(values['item'].entries(), cycle(model))) # type: ignore
         if isinstance(model, dict) and set(model.keys())!=set(values['item'].entries()): # make sure the map keys match the item types       # type: ignore ; model is Unknown type
             raise ValidationError([ErrorWrapper(ValueError("dict keys do not match values in 'item'"), loc=())], model=ModelData)
         return model # model is already a mapped dict, of the same length as item      # type: ignore
     
     @validator('template') # type: ignore ; v1 validator behaves strangely with type checking
-    def enforce_custom_with_override_predicates(cls, template: 'str|TemplateOptions', values: dict[str,Any]) -> 'TemplateOptions':
+    def enforce_custom_with_override_predicates(cls, template: 'str|TemplateOptions', values: JsonType) -> 'TemplateOptions':
         # if isinstance(values.get('model'), list) and template != "custom":
         #     raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
         #     # NOTE I don't believe this is a valid check anymore, but I'll leave it here commented in case it needs to be repaired in the future
@@ -109,7 +109,7 @@ class ModelData(BaseModel):
             raise ValidationError([ErrorWrapper(ValueError(f"the specified template '{name}' could not be found"), loc=())], model=ModelData)
     
     @validator('transforms', each_item=True) # type: ignore ; v1 validator behaves strangely with type checking
-    def apply_transform_submodel(cls, transform: 'TransformOptions', values: dict[str,Any]) -> 'None|TransformOptions':
+    def apply_transform_submodel(cls, transform: 'TransformOptions', values: JsonType) -> 'None|TransformOptions':
         # find and apply proper submodel
         try:
             submodel = {m.name: m for m in TransformOptions.__subclasses__()}[transform.name]
@@ -118,7 +118,7 @@ class ModelData(BaseModel):
             raise ValidationError([ErrorWrapper(ValueError(f"the specified template '{transform.name}' could not be found"), loc=())], model=ModelData)
     
     @validator('textures', pre=True, always=True) # type: ignore ; v1 validator behaves strangely with type checking
-    def default_texture(cls, textures: MapOption[str], values: dict[str,Any]) -> MapOption[str]:
+    def default_texture(cls, textures: MapOption[str], values: JsonType) -> MapOption[str]:
         empty_list = False
         if textures is None: # type: ignore
             empty_list = True
@@ -136,12 +136,7 @@ class ModelData(BaseModel):
         ret_dict["reference"] = add_namespace(self.reference, namespace)
         ret_model = deepcopy(self.model.entries())
         for i, model_name in enumerate(ret_model):
-            if isinstance(model_name, str):
-                ret_model[i] = add_namespace(model_name, namespace) # accessed by index to overwrite original
-            else: # isinstance(model_name, list[dict]), add namespace to buried model parameter
-                for predicated_model in model_name:
-                    if 'model' in predicated_model:
-                        predicated_model['model'] = add_namespace(predicated_model['model'], namespace)
+            ret_model[i] = add_namespace(model_name, namespace) # accessed by index to overwrite original
         ret_dict["model"] = ret_model
         if self.textures:
             if isinstance(self.textures.__root__, list):
@@ -155,8 +150,8 @@ class NestedModelData(BaseModel):
     """A potentially incomplete config, allowing for nested inheritance of fields"""
     item: Optional[ListOption[str]]
     reference: Optional[str]
-    model: Optional[Any] # defalts to reference, expects type of 'Optional[MapOption[str|list[dict[str,Any]]]]', but Pydantic casting caused unknown issues
-    template: Optional["str|TemplateOptions"] = "custom"
+    model: Optional[MapOption[str]] # defalts to reference
+    template: Optional['str|TemplateOptions'] = "custom"
     transforms: Optional[list['TransformOptions']]
     textures: Optional[MapOption[str]]
     broadcast: Optional[list['NestedModelData']] = []
@@ -182,7 +177,7 @@ class GuiFont(BaseModel):
     texture: str
 
     @validator('container') # type: ignore ; v1 validator behaves strangely with type checking
-    def resolve_container(cls, container: 'str|ContainerGuiOptions', values: dict[str,Any]) -> 'ContainerGuiOptions':
+    def resolve_container(cls, container: 'str|ContainerGuiOptions', values: JsonType) -> 'ContainerGuiOptions':
         container_type = container.container if isinstance(container, ContainerGuiOptions) else container
         try:
             subclass = {m.container: m for m in ContainerGuiOptions.__subclasses__()}[container_type]
@@ -254,14 +249,14 @@ class TemplateOptions(BaseModel, extra=Extra.allow):
     def __init_subclass__(cls) -> None:
         cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
 
-    def dict(self, **kwargs: Any) -> dict[str,Any]:
+    def dict(self, **kwargs: Any) -> JsonType:
         return super().dict(**kwargs) | {"name": self.name} # ensure name class-var is preserved in dict-casting
 
     def generate_model(self, config: ModelData, models_container: NamespaceProxy[Model]) -> None:
         """Processes the template, and applies transforms"""
         if self.texture_map and config.textures and isinstance(config.textures.__root__, list):
             config = ModelData(**config.dict() | {"textures": dict(zip(self.texture_map, config.textures.entries()))})
-        for output_model in self.process(config, models_container): # for each returned pointer, add transforms as needed
+        for output_model in self.create_models(config, models_container): # for each returned pointer, add transforms as needed
             if self.default_transforms:
                 for transform in self.default_transforms:
                     transform.apply_transform(output_model)
@@ -269,9 +264,13 @@ class TemplateOptions(BaseModel, extra=Extra.allow):
                 for transform in config.transforms:
                     transform.apply_transform(output_model)
 
-    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         """Overridden to create and mount the model object, and return pointers to them"""
         raise NotImplementedError()
+    
+    def get_item_def_entry(self, config: ModelData, item: str) -> None|JsonType:
+        """Overridden to return the entry for the item-model-definition, or None to point to ModelData.model string"""
+        return None
     
     def add_namespace(self, namespace: str):
         """Overridden to add namespace data to sub-config fields added by a template"""
@@ -287,7 +286,7 @@ class TransformOptions(BaseModel, extra=Extra.allow):
     def __init_subclass__(cls) -> None:
         cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
 
-    def dict(self, **kwargs: Any) -> dict[str,Any]:
+    def dict(self, **kwargs: Any) -> JsonType:
         return super().dict(**kwargs) | {"name": self.name} # ensure name class-var is preserved in dict-casting
     
     def apply_transform(self, model: Model) -> None:
@@ -300,7 +299,7 @@ class ContainerGuiOptions(BaseModel, extra=Extra.allow):
     def __init_subclass__(cls) -> None:
         cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
 
-    def process(self, config: GuiFont, counter_cache: Cache) -> tuple[str, list[dict[str,Any]]]:
+    def process(self, config: GuiFont, counter_cache: Cache) -> tuple[str, list[JsonType]]:
         """requisitions unicode characters and returns the translation and font providers that make it up"""
         raise NotImplementedError()
     
@@ -309,7 +308,7 @@ class ContainerGuiOptions(BaseModel, extra=Extra.allow):
         counter_cache.json["__next__"] += 1
         return chr(ret)
 
-    def dict(self, **kwargs: Any) -> dict[str,Any]:
+    def dict(self, **kwargs: Any) -> JsonType:
         return super().dict(**kwargs) | {"container": self.container} # ensure name class-var is preserved in dict-casting
     
     
@@ -329,6 +328,11 @@ def beet_default(ctx: Context):
     logging.getLogger("beet.contrib.babelbox").addFilter(block_incomplete_translation)
     logging.getLogger("mecha").addFilter(limit_mecha_diagnostics)
 
+    # attach context to template classes
+    VanillaTemplate.vanilla = Vanilla(ctx)
+    VanillaTemplate.vanilla.minecraft_version = '1.21.5'
+    VanillaTemplate.vanilla_jar = VanillaTemplate.vanilla.mount("assets/minecraft/items")
+
     yield
     tl.warn_unused_translations()
     tl.apply_babelbox_backfill()
@@ -340,8 +344,7 @@ def build(ctx: Context):
     rp.generate_gui_fonts()
     rp.update_modeldata_registry()
     rp.generate_model_files()
-    rp.process_optifine()
-    rp.generate_model_overrides()
+    rp.generate_item_definitions()
 
     if not ctx.assets.extra.get("pack.png") and ctx.data.extra.get("pack.png"):
         ctx.assets.icon = ctx.data.icon
@@ -382,24 +385,20 @@ def dump_registry(ctx: Context):
     JsonFile(registry).dump(origin="", path="gm4/modeldata_registry.json")
     ctx.cache["modeldata_registry"].delete()
 
-def pad_model_overrides(ctx: Context):
-    """Adds overrides for the vanilla model, filling in gaps between CMD values"""
-    vanilla = ctx.inject(Vanilla)
-    vanilla.minecraft_version = '1.21.3'
-    vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
-
-    for name, model in ctx.assets["minecraft"].models.items():
-        vanilla_overrides = [{"predicate":{},"model": f"minecraft:{name}"}] + vanilla_models_jar.assets["minecraft"].models[name].data.get("overrides", [])
-        overrides: list[Any] = model.data["overrides"]
+def pad_item_def_range_dispatch(ctx: Context):
+    for item_def in ctx.assets["minecraft"].item_models.values():
+        vanilla_item_def = item_def.data["model"]["fallback"]
+        entries: list[Any] = item_def.data["model"]["entries"]
         prior_cmd = 1e8
-        for i, override in reversed(list(enumerate(overrides))):
-            if "custom_model_data" in (pred:=override.get("predicate")):
-                if prior_cmd-(prior_cmd:=pred["custom_model_data"]) > 1: # theres a gap to fill with the vanilla model
-                    for entry in vanilla_overrides:
-                        entry["predicate"]["custom_model_data"] = prior_cmd+1
-                    for vanilla_override in reversed(vanilla_overrides):
-                        overrides.insert(i+1, deepcopy(vanilla_override))
+        for i, entry in reversed(list(enumerate(entries))):
+            if prior_cmd-(prior_cmd:=entry["threshold"]) > 1: # theres a gap to fill
+                entries.insert(i+1, {
+                    "threshold": prior_cmd+1,
+                    "model": vanilla_item_def
+                })
 
+def merge_policy(ctx: Context):
+    ctx.assets.merge_policy.extend_namespace(ItemModel, item_definition_merging)
 
 def link_resource_pack(ctx: Context):
     """manually links the combined resource pack to minecraft's RP folder when using 'beet dev'"""
@@ -469,41 +468,49 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                     self.logger.info(f"Removing undefined custom_model_data from {item_id} registry: '{ref}'")
                     del reg[ref]
 
-    def generate_model_overrides(self):
-        """Generates item model overrides in the 'minecraft' namespace, adding predicates for custom_model_data"""
+    def generate_item_definitions(self):
+        """Generates item-model-definition files in the 'minecraft' namespace, adding range_dispatch entries for each custom_model_data value"""
         vanilla = self.ctx.inject(Vanilla)
-        vanilla.minecraft_version = '1.21.3'
-        vanilla_models_jar = vanilla.mount("assets/minecraft/models/item")
+        vanilla.minecraft_version = '1.21.5'
+        vanilla_item_defs_jar = vanilla.mount("assets/minecraft/items")
         # group models by item id
         for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
             models = filter(lambda m: item_id in m.item.entries(), self.opts.model_data) # with this item_id
             models = sorted(models, key=lambda m: self.retrieve_index(m.reference)[0])
 
-            vanilla_model = deepcopy( (v:=vanilla_models_jar.assets.models[f"minecraft:item/{item_id}"].data) | ({} if v.get("overrides") else {"overrides": []}) )
-            vanilla_overrides: list[Any] = vanilla_model["overrides"]
-            for override in vanilla_overrides:
-                override["model"] = add_namespace(override["model"], "minecraft") # ensure vanilla models have namespaced files
-            unchanged_vanilla_overrides = vanilla_overrides.copy()
-            
-            for model in models:
-                m = model.model[item_id] # model string, or predicate settings, for this particular item id
-                # setup overrides to add CMD to
-                if isinstance(m, list): # manual predicate merging specified
-                    merge_overrides = [o|{"user_defined": True} for o in m]
-                else: 
-                    merge_overrides = unchanged_vanilla_overrides.copy() # get vanilla overrides
-                    merge_overrides.append({}) # add an empty predicate to add CMD onto, without all other case checks
+            vanilla_itemdef = vanilla_item_defs_jar.assets.item_models[f"minecraft:{item_id}"].data["model"]
 
-                for pred in merge_overrides:
-                    if not pred.get("model") and not isinstance(m, str):
-                        self.logger.warning(f"Manually specified model predicate has no 'model' field, and is malformed:\n\t{pred}")
-                    vanilla_overrides.append({
-                        "predicate": {
-                            "custom_model_data": self.cmd_prefix+self.retrieve_index(model.reference)[0],
-                        } | pred.get("predicate", {}),
-                        "model": pred["model"] if pred.get("user_defined") else m # type:ignore , user-defined model predicates use their own model reference. m is a string in all other cases
-                    })
-            self.ctx.assets.models[f"minecraft:item/{item_id}"] = Model(vanilla_model)
+            new_itemdef: dict[str, Any] = {
+                "model": {
+                    "type": "minecraft:range_dispatch",
+                    "property": "minecraft:custom_model_data",
+                    "entries": [],
+                    "fallback": vanilla_itemdef
+                }
+            }
+            itemdef_entries: list[Any] = new_itemdef["model"]["entries"]
+
+            for model in models:
+                if isinstance(model.template, str):
+                    continue # TODO is this correct?
+
+                if not (m:=model.template.get_item_def_entry(model, item_id)):
+                    # no special handling, just point to model file by name
+                    m = model.model[item_id] # model string for this particular item id
+                    model_json: JsonType = {
+                        "type": "minecraft:model",
+                        "model": m
+                    }
+                else:
+                    model_json = m
+            
+                itemdef_entries.append({
+                    "threshold": self.cmd_prefix+self.retrieve_index(model.reference)[0],
+                    "model": model_json
+                })
+            
+            itemdef_entries.sort(key=lambda entry: entry["threshold"]) # sort entries ascending
+            self.ctx.assets.item_models[f"minecraft:{item_id}"] = ItemModel(new_itemdef)
 
     def retrieve_index(self, reference: str) -> tuple[int, KeyError|None]:
         """retrieves the CMD value for the given reference"""
@@ -565,9 +572,8 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
 
     @rule(AstNbtCompoundEntry, key=AstNbtCompoundKey(value="minecraft:custom_model_data"))
     def cmd_substitutions_nbt(self, node: AstNbtCompoundEntry, **kwargs: Any):
-        reference = node.value.evaluate()
-        if isinstance(reference, str):
-            index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
+        if isinstance(node.value, AstNbtValue) and isinstance(node.value.value, String):
+            index, exc = self.retrieve_index(add_namespace(node.value.value, self.ctx.project_id))
             if exc:
                 yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
             node = replace(node, value=AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] }))
@@ -577,9 +583,8 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     @rule(AstItemPredicateTestComponent)
     def cmd_substitutions_component(self, node: AstItemComponent | AstItemPredicateTestComponent, **kwargs: Any):
         if node.value and node.key.get_canonical_value() == "minecraft:custom_model_data":
-            reference = node.value.evaluate()
-            if isinstance(reference, str):
-                index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
+            if isinstance(node.value, AstNbtValue) and isinstance(node.value.value, String):
+                index, exc = self.retrieve_index(add_namespace(node.value.value, self.ctx.project_id))
                 if exc:
                     yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
                 node = replace(node, value=AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] }))
@@ -590,31 +595,17 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     @rule(AstCommand, identifier="data:modify:entity:target:targetPath:set:value:value")
     def cmd_substitutions_datamodify(self, node: AstCommand):
         ast_target, ast_target_path, ast_nbt = node.arguments
-        match ast_target_path, ast_nbt.evaluate(): # type: ignore ; ast_nbt is AstNbtValue|AstNbtCompound, which do have .evaluate() methods
-            case AstNbtPath(components=[*_, AstNbtPathKey(value="minecraft:custom_model_data")]), String(reference):
+        match ast_target_path, ast_nbt:
+            case AstNbtPath(components=[*_, AstNbtPathKey(value="minecraft:custom_model_data")]), AstNbtValue(value=String(reference)):
                 index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
                 if exc:
                     d = Diagnostic("error", str(exc))
                     yield set_location(d, ast_nbt)
                 node = replace(node, arguments=AstChildren([ast_target, ast_target_path, AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] })]))
+            case _:
+                pass
         return node
-    
-    
-    #== Non-mecha CMD filling ==#
-    def process_optifine(self):
-        """Handles string references in the .properties files of Optifine"""
-        # TODO 1.20.5: figure out how to do this
-        pattern = re.compile(r"^nbt.CustomModelData=(?:regex:\()?(.+?)\)?$", re.MULTILINE)
-        for name, propfile in self.ctx.assets[OptifineProperties].items():
-            match = pattern.search(propfile.text)
-            if not match:
-                continue
 
-            for ref in [r for r in match.group(1).split("|") if r.startswith("$")]:
-                index, exc = self.retrieve_index(add_namespace(ref.lstrip("$"), self.ctx.project_id))
-                if exc:
-                    raise WrappedException(f"Optifine CIT file {name}.properties") from exc
-                propfile.text = propfile.text.replace(ref, str(index+self.cmd_prefix))
 
     #== Model file generation ==#
     def generate_model_files(self):
@@ -649,13 +640,34 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                 "providers": providers
             }))
 
+def item_definition_merging(pack: ResourcePack, path: str, current: ItemModel, conflict: ItemModel) -> bool:
+    """ItemModel beet merge rule for combining range_dispatch properly"""
+    if current.data["model"].get("type") != "minecraft:range_dispatch" or conflict.data["model"].get("type") != "minecraft:range_dispatch":
+        parent_logger.warning(f"item model {path} was sent to merging but only one file uses 'range_dispatch'")
+        return False
+    
+    merged_entries: list[Any] = current.data["model"]["entries"]
+    merged_entries.extend(conflict.data["model"]["entries"])
+    merged_entries.sort(key=lambda entry: entry["threshold"])
+
+    # remove duplicate entries - relying on each CMD to be unique already
+    seen_values: set[int] = set()
+    for entry in merged_entries.copy():
+        if (v:=entry["threshold"]) not in seen_values:
+            seen_values.add(v)
+        else: # otherwise its a duplicate
+            merged_entries.remove(entry)
+
+    return True
+
+
 class TranslationLinter(Reducer):
     """Mecha linter ensuring all translation keys are registered in translations.csv"""
     def __init__(self, ctx: Context):
         self.ctx = ctx
         self.mecha_database = ctx.inject(Mecha).database
         vanilla = ctx.inject(Vanilla)
-        vanilla.minecraft_version = '1.21.3'
+        vanilla.minecraft_version = '1.21.5'
         vanilla_lang = vanilla.mount("assets/minecraft/lang/en_us.json")
         self.vanilla_keys = set(vanilla_lang.assets.languages["minecraft:en_us"].data.keys())
         self.total_keys: set[str] = set()
@@ -680,8 +692,9 @@ class TranslationLinter(Reducer):
             except DiagnosticError:
                 pass # string is not json
 
+    @rule(AstNbtCompound)
     @rule(AstJsonObject)
-    def missing_en_us_translations(self, node: AstJsonObject):
+    def missing_en_us_translations(self, node: Union[AstNbtCompound, AstJsonObject]):
         self.setup_translation_lookups()
                 
         # manually skip gm4 root advancement, which contains globally defined translations
@@ -690,26 +703,28 @@ class TranslationLinter(Reducer):
             return
         
         # check node fallback contents against babelbox translations
-        match node.evaluate(): # type: ignore , node has evaluate() method
-            case {"translate": str(transl_key), "fallback": str(fallback)}:
-                if transl_key.startswith("gui.gm4") or transl_key=="gm4.second":
-                    # gui-texture translations from other modules are defined in their gui_fonts segment of beet.yaml, so they won't be
-                    # known to the linter easily. For now, we just ignore their warnings
-                    return
-                if self.babelbox_lang.get(transl_key) != fallback:
-                    if transl_key in self.babelbox_lang and not self.backfill_enable:
-                        yield set_location(Diagnostic("info", f"Fallback for {transl_key} does not match that provided in 'translations.csv'"), node)
-                        
-                    elif self.backfill_enable and transl_key not in self.backfill_values and transl_key not in self.foreign_keys:
-                        self.logger.info(f"Backfilling the fallback for {transl_key} into 'translations.csv'")
-                        self.backfill_values[transl_key] = fallback
-                yield self.check_key(transl_key, node)
-            
-            case {"translate": str(transl_key), **other_keys}:
-                if "fallback" not in other_keys and self.babelbox_lang.get(transl_key): # if non-technical translation
-                    yield set_location(Diagnostic("warn", f"No translation fallback specified for {transl_key}"), node)
-                yield self.check_key(transl_key, node)
-        return
+        translate_entry = next((e for e in node.entries if e.key.value == "translate"), None)
+        if not translate_entry:
+            return
+        transl_key = str(translate_entry.value.evaluate())
+        fallback_extry = next((e for e in node.entries if e.key.value == "fallback"), None)
+        if fallback_extry:
+            fallback = str(fallback_extry.value.evaluate())
+            if transl_key.startswith("gui.gm4") or transl_key=="gm4.second":
+                # gui-texture translations from other modules are defined in their gui_fonts segment of beet.yaml, so they won't be
+                # known to the linter easily. For now, we just ignore their warnings
+                return
+            if self.babelbox_lang.get(transl_key) != fallback:
+                if transl_key in self.babelbox_lang and not self.backfill_enable:
+                    yield set_location(Diagnostic("info", f"Fallback for {transl_key} does not match that provided in 'translations.csv'"), node)
+                elif self.backfill_enable and transl_key not in self.backfill_values and transl_key not in self.foreign_keys:
+                    self.logger.info(f"Backfilling the fallback for {transl_key} into 'translations.csv'")
+                    self.backfill_values[transl_key] = fallback
+            yield self.check_key(transl_key, node)
+        else:
+            if self.babelbox_lang.get(transl_key):
+                yield set_location(Diagnostic("warn", f"No translation fallback specified for {transl_key}"), node)
+            yield self.check_key(transl_key, node)
 
     def check_key(self, transl_key: str, node: Any):
         self.used_keys.add(transl_key)
@@ -795,44 +810,39 @@ def limit_mecha_diagnostics(record: logging.LogRecord):
     record.args = ("\n".join(truncated),)
     return True
     
-#== Default Templates and Transforms ==#
+#== Default Templates, Transforms and Item Model Special Cases ==#
 def ensure_single_model_config(template_name: str, config: ModelData) -> str:
     """Does common error checking for templates that only work when creating a single model file"""
     if len(config.model.entries()) > 1:
         raise InvalidOptions("gm4.model_data", f"{config.reference}; Template '{template_name}' only supports single entry 'model' fields.")
-    if isinstance(model_name:=config.model.entries()[0], list):
-        raise InvalidOptions("gm4.model_data", f"{config.reference}; Template '{template_name}' does not support predicate override 'model' fields.")
-    return model_name
+    return config.model.entries()[0]
 
 class BlankTemplate(TemplateOptions):
     name = "custom"
 
-    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         """A model file will be provided in source - do not generate a model.
             Will process any specified transforms and add them to the model file"""
         if config.transforms:
             ret_list: list[Model] = []
             for m in config.model.entries():
-                for model_file in ([override['model'] for override in m] if not isinstance(m, str) else [m]):
-                    try:
-                        ret_list.append(models_container[model_file])
-                    except:
-                        parent_logger.warning(f"Custom specified model {model_file} does not exist, but was configured to recieve transforms.")
+                try:
+                    ret_list.append(models_container[m])
+                except:
+                    parent_logger.warning(f"Custom specified model {m} does not exist, but was configured to recieve transforms.")
             return ret_list
         return []
 
 class GeneratedTemplate(TemplateOptions):
     name = "generated"
 
-    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         if len(config.textures.entries()) > 1:
             raise InvalidOptions("gm4.model_data", f"{config.reference}; Template 'generated' currently only supports a single texture.")
             # NOTE in the future, `generated` could accept a map for textures to provide a different texture for each model. But packs may be better served by simply creating those models themselves    
         
         ret_list: list[Model] = []
         for model_name in config.model.entries():
-            if isinstance(model_name, list):
-                raise InvalidOptions("gm4.model_data", f"{config.reference}; Template 'generated' does not support predicate override 'model' fields.")
             m = models_container[model_name] = Model({
                 "parent": "minecraft:item/generated",
                 "textures": {
@@ -845,7 +855,7 @@ class GeneratedTemplate(TemplateOptions):
 class GeneratedOverlayTemplate(TemplateOptions):
     name = "generated_overlay"
 
-    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         """A special-case 'generated' template, where an 'overlay' texture is specified by appending '_overlay' to its filename"""
         model_name = ensure_single_model_config(self.name, config)
         m = models_container[model_name] = Model({
@@ -860,7 +870,7 @@ class GeneratedOverlayTemplate(TemplateOptions):
 class HandheldTemplate(TemplateOptions):
     name = "handheld"
 
-    def process(self, config: ModelData, models_container: NamespaceProxy[Model]):
+    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]):
         model_name = ensure_single_model_config(self.name, config)
         m = models_container[model_name] = Model({
             "parent": "minecraft:item/handheld",
@@ -872,59 +882,135 @@ class HandheldTemplate(TemplateOptions):
 
 class VanillaTemplate(TemplateOptions):
     name = "vanilla"
+    vanilla: ClassVar[Vanilla] # mounted to by beet plugin since it requires context access
+    vanilla_jar: ClassVar[ClientJar]
+    _item_def_map: dict[str, JsonType] = {}
 
-    def process(self, config: ModelData, models_container: NamespaceProxy[Model]):
+    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]):
         model_names = config.model.entries()
-        if any([isinstance(m, list) for m in model_names]):
-            raise InvalidOptions("gm4.model_data", f"{config.reference}; Template 'vanilla' does not support predicate override 'model' fields.")
         if len(set(model_names)) == 1 and len(config.item.entries()) > 1:
             model_names = [f"{model_names[0]}_{item}" for item in config.item.entries()] # if only one model name given, make one model per item id
+        
+        model_def_map: dict[str,JsonType] = {}
 
         ret_list: list[Model] = []
         for item, model_name in zip(config.item.entries(), model_names):
-            m = models_container[model_name] = Model({      # type: ignore ; list is checked above to be all strings
-                "parent": f"minecraft:item/{item}"
+            model_compound = self.vanilla_jar.assets.item_models[add_namespace(item, "minecraft")].data.get("model", {})
+            if model_compound["type"] == "minecraft:select": # template off the fallback model, (e.g. non-festive chest)
+                model_compound = model_compound["fallback"]
+
+            if model_compound["type"] == "minecraft:special": # uses some special handling
+                vanilla_model_path: str = model_compound["base"] # covers player_head use case. Others may not be handled properly yet.
+                special_model = True
+            else:
+                vanilla_model_path: str = model_compound.get("model", "")
+                special_model = False
+            m = models_container[model_name] = Model({
+                "parent": vanilla_model_path
             })
             ret_list.append(m)
-        config.model = MapOption(__root__=dict(zip(config.item.entries(), model_names)))
+            model_def_map[item] = {
+                "type": "minecraft:special" if special_model else "minecraft:model",
+                "model": model_compound["model"] if special_model else model_name,
+            } | (
+                {"base": model_name} if special_model else {}
+            ) | (
+                {"tints": t} if (t:=model_compound.get("tints")) else {}
+            )
+        self._item_def_map.update(model_def_map)
         return ret_list
+    
+    def get_item_def_entry(self, config: ModelData, item: str):
+        return self._item_def_map.get(item)
+
+class AdvancementIconTemplate(VanillaTemplate, TemplateOptions): # TODO make this inheritance work properly. Treat as single-vanilla forward or create new where needed
+    """Creates a model for advancement icons, either pointing to the vanilla model, or to a specified other item model"""
+    name = "advancement"
+    forward: Optional[str]
+    tints: Optional[ListOption[int|tuple[float,float,float]]] # optional constant tints to apply to the item model
+
+    # NOTE since advancements are all in the gm4 namespace, so are these models. This template ignores the 'model' field of ModelData
+    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+        advancement_name = config.reference.split("/")[-1]
+        item = config.item.entries()[0]
+
+        if not self.forward:
+            # then we use the vanilla item's model and settings - inheriting from VanillaTemplate for this
+            config_copy = config.copy(update={"model": MapOption(__root__={item: f"gm4:gui/advancement/{advancement_name}"})})
+            m = VanillaTemplate.create_models(self, config_copy, models_container)[0]
+        
+        else:
+            m = models_container[f"gm4:gui/advancement/{advancement_name}"] = Model({
+                "parent": self.forward
+            })
+        config.model = MapOption(__root__={item: f"gm4:gui/advancement/{advancement_name}"})
+        return [m]
+    
+    def get_item_def_entry(self, config: ModelData, item: str):
+        if not self.forward: # use item def from VanillaTemplate
+            return VanillaTemplate.get_item_def_entry(self, config, item)
+        else:
+            if self.tints:
+                return {
+                    "type": "model",
+                    "model": config.model.entries()[0],
+                    "tints": [
+                        {
+                            "type": "minecraft:constant",
+                            "value": tint
+                        }
+                        for tint in self.tints.entries()
+                    ]
+                }
+        return None
+    
+    def add_namespace(self, namespace: str):
+        return self.dict() | ({"forward": add_namespace(self.forward, namespace)} if self.forward else {})
 
 class BlockTemplate(TemplateOptions):
     name = "block"
     texture_map = ["top", "bottom", "front", "side"]
 
-    def process(self, config: ModelData, models_container: NamespaceProxy[Model]):
+    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]):
         model_name = ensure_single_model_config(self.name, config)
         m = models_container[model_name] = Model({
             "parent": "minecraft:block/cube",
             "textures": {
-                "down":  config.textures['bottom'],
-                "up":    config.textures['top'],
-                "north": config.textures['front'],
-                "south": config.textures['side'],
-                "west":  config.textures['side'],
-                "east":  config.textures['side']
+                "particle": config.textures['side'],
+                "down":     config.textures['bottom'],
+                "up":       config.textures['top'],
+                "north":    config.textures['front'],
+                "south":    config.textures['side'],
+                "west":     config.textures['side'],
+                "east":     config.textures['side']
             }
         })
         return [m]
     
-class AdvancementIconTemplate(TemplateOptions):
-    name = "advancement"
-    forward: Optional[str]
+class ConditionTemplate(BlankTemplate, TemplateOptions):
+    """Custom models using boolean condition variants (ie. broken/repaired elytra, cast/uncast fishing rods...)"""
+    name = "condition"
+    property: str
+    on_true: str
+    on_false: str
 
-    # NOTE since advancements are all in the gm4 namespace, so are these models. This template ignores the 'model' field of ModelData
-    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
-        advancement_name = config.reference.split("/")[-1]
-        if not self.forward:
-            self.forward = f"minecraft:item/{config.item.entries()[0]}"
-        m = models_container[f"gm4:gui/advancements/{advancement_name}"] = Model({
-            "parent": self.forward
-        })
-        config.model = MapOption(__root__={config.item.entries()[0]: f"gm4:gui/advancements/{advancement_name}"})
-        return [m]
+    def get_item_def_entry(self, config: ModelData, item: str) -> JsonType:
+        return {
+            "type": "minecraft:condition",
+            "property": self.property,
+            "on_false": {
+                "type": "minecraft:model",
+                "model": self.on_false
+            },
+            "on_true": {
+                "type": "minecraft:model",
+                "model": self.on_true
+            }
+        }
     
     def add_namespace(self, namespace: str):
-        return self.dict() | ({"forward": add_namespace(self.forward, namespace)} if self.forward else {})
+        return self.dict() | {"on_true": add_namespace(self.on_true, namespace),
+                              "on_false": add_namespace(self.on_false, namespace)}
 
 class ItemDisplayModel(TransformOptions):
     """Calculates the model transform for an item_display entity, located at the specified origin, facing south, for the model to align with the block-grid"""

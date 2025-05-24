@@ -1,6 +1,6 @@
 id: gm4_animi_shamir
 name: Animi Shamir
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -18,8 +18,8 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_metallurgy: 1.4.0
-        lib_player_death: 1.2.0
+        gm4_metallurgy: 1.5.0
+        lib_player_death: 1.3.0
       schedule_loops: [main]
     model_data:
       - reference: shamir/animi

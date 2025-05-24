@@ -1,6 +1,6 @@
 id: gm4_relocators
 name: Relocators
-version: 2.4.X
+version: 2.5.X
 
 data_pack:
   load: .
@@ -17,8 +17,8 @@ meta:
   gm4:
     versioning:
       required:
-        lib_machines: 1.3.0
-        lib_custom_crafters: 3.2.0
+        lib_machines: 1.4.0
+        lib_custom_crafters: 3.4.0
     model_data:
       - item: player_head
         reference: item/relocator_empty
@@ -40,7 +40,6 @@ meta:
         - gm4_ender_hoppers
         - gm4_liquid_tanks
         - gm4_smelteries
-        - gm4_tinkering_compressors
       notes: []
     modrinth:
       project_id: FdwwppEn

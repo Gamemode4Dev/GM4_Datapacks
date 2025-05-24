@@ -1,6 +1,6 @@
 id: gm4_end_fishing
 name: End Fishing
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -26,18 +26,18 @@ meta:
         reference: item/enderpuff
       - item: elytra
         reference: item/captains_wings
-        model:
-          - predicate: {broken: 0}
-            model: item/elytra/captains_wings
-          - predicate: {broken: 1}
-            model: item/elytra/broken_captains_wings
+        template:
+          name: condition
+          property: minecraft:broken
+          on_true: item/elytra/broken_captains_wings
+          on_false: item/elytra/captains_wings
       - item: elytra
         reference: item/ravaged_wings
-        model:
-          - predicate: {broken: 0}
-            model: item/elytra/ravaged_wings
-          - predicate: {broken: 1}
-            model: item/elytra/broken_ravaged_wings
+        template:
+          name: condition
+          property: minecraft:broken
+          on_true: item/elytra/broken_ravaged_wings
+          on_false: item/elytra/ravaged_wings
       - item: fishing_rod
         reference: gui/advancement/end_fishing
         template: advancement

@@ -284,9 +284,9 @@
                 "fallback": "Aggressive"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.aggressive",
                   "fallback": "Grants Strength when damaged"
@@ -304,9 +304,9 @@
                 "fallback": "Feigning"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.feigning",
                   "fallback": "Grants Slowness, Resistance, Invisibility, and Regeneration when damaged below half health"
@@ -324,9 +324,9 @@
                 "fallback": "Incombustible"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.incombustible",
                   "fallback": "Grants Fire Resistance when damaged by fire"
@@ -344,9 +344,9 @@
                 "fallback": "Lifeless"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.lifeless",
                   "fallback": "Negates Poison effect and heals when damaged by Instant Damage effect"
@@ -364,9 +364,9 @@
                 "fallback": "Neutralizing"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.neutralizing",
                   "fallback": "Negates Poison effect; Instant Damage effect deals less damage"
@@ -384,9 +384,9 @@
                 "fallback": "Pricking"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.pricking",
                   "fallback": "75% chance to deal 1-4 damage to the attacker (Thorns V)"
@@ -404,9 +404,9 @@
                 "fallback": "Retreating"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.retreating",
                   "fallback": "Grants Speed and Weakness when damaged"
@@ -424,9 +424,9 @@
                 "fallback": "Volatile"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.volatile",
                   "fallback": "Creates explosion if damaged below 1.5 hearts"
@@ -450,9 +450,9 @@
                 "fallback": "Blasting"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.blasting",
                   "fallback": "Shoots fireballs when shooting a crossbow with blaze powder in the inventory"
@@ -470,9 +470,9 @@
                 "fallback": "Depriving"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.depriving",
                   "fallback": "Applies Hunger to attacked targets; Applies Weakness to attacked mobs"
@@ -490,12 +490,12 @@
                 "fallback": "Freezing"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.freezing",
-                  "fallback": "Applies Slowness to attacked targets"
+                  "fallback": "Applies Slowness to arrows shot from bows"
                 }
               ]
             }
@@ -510,12 +510,32 @@
                 "fallback": "Hawkeye"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.hawkeye",
                   "fallback": "Doubles the damage of arrows shot from bows; Arrows shot from bows will have Piercing I"
+                }
+              ]
+            }
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.orb_of_ankou.pneuma_list",
+            "fallback": " - %1$s*",
+            "with": [
+              {
+                "translate": "text.gm4.pneuma_tranquilizing",
+                "fallback": "Tranquilizing"
+              }
+            ],
+            "hover_event": {
+              "action": "show_text",
+              "value": [
+                {
+                  "translate": "text.gm4.guidebook.orb_of_ankou.note.tranquilizing",
+                  "fallback": "Applies Poison to arrows shot from bows"
                 }
               ]
             }
@@ -530,9 +550,9 @@
                 "fallback": "Venomous"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.venomous",
                   "fallback": "Applies Poison to attacked target"
@@ -550,9 +570,9 @@
                 "fallback": "Withering"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.withering",
                   "fallback": "Applies Wither to attacked target"
@@ -576,9 +596,9 @@
                 "fallback": "Agile"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.agile",
                   "fallback": "Prevents fall damage"
@@ -596,9 +616,9 @@
                 "fallback": "Anchoring"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.anchoring",
                   "fallback": "Grants 90% Knockback Resistance"
@@ -616,9 +636,9 @@
                 "fallback": "Bargaining"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.bargaining",
                   "fallback": "Grants Regeneration upon trading with villagers"
@@ -636,9 +656,9 @@
                 "fallback": "Bashing"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.bashing",
                   "fallback": "Grants +70% Attack Damage, but -40% Attack Speed"
@@ -656,9 +676,9 @@
                 "fallback": "Bubbly"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.bubbly",
                   "fallback": "Grants 2 minutes of Water Breathing when submerged"
@@ -676,9 +696,9 @@
                 "fallback": "Enduring"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.enduring",
                   "fallback": "Grants +8 Max Health, but -20% Speed"
@@ -696,9 +716,9 @@
                 "fallback": "Gliding"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.gliding",
                   "fallback": "Grants Dolphin's Grace when swimming"
@@ -716,9 +736,9 @@
                 "fallback": "Striding"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.striding",
                   "fallback": "Temporarily converts lava sources into magma blocks upon stepping on them"
@@ -736,9 +756,9 @@
                 "fallback": "Synergetic"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.synergetic",
                   "fallback": "Grants Strength to tamed wolves and other Synergetic users"
@@ -762,9 +782,9 @@
                 "fallback": "Bounding"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.bounding",
                   "fallback": "Increasingly stronger Jump Boost"
@@ -782,9 +802,9 @@
                 "fallback": "Conjuring"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.conjuring",
                   "fallback": "Increasingly farther Evoker fang attack"
@@ -802,9 +822,9 @@
                 "fallback": "Dashing"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.dashing",
                   "fallback": "Increasingly farther horizontal dash"
@@ -822,9 +842,9 @@
                 "fallback": "Draining"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.draining",
                   "fallback": "Increasingly farther Mining Fatigue AOE"
@@ -842,9 +862,9 @@
                 "fallback": "Expeditious"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.expeditious",
                   "fallback": "Increasingly farther random teleport"
@@ -862,9 +882,9 @@
                 "fallback": "Rushing"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.rushing",
                   "fallback": "Increasingly faster and longer Speed burst"
@@ -882,9 +902,9 @@
                 "fallback": "Shrieking"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.shrieking",
                   "fallback": "Sonic boom 15 blocks far, dealing 6 hearts of damage"
@@ -908,9 +928,9 @@
                 "fallback": "Blinding"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.blinding",
                   "fallback": "Blindness AOE for 7 seconds"
@@ -928,9 +948,9 @@
                 "fallback": "Feathery"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.feathery",
                   "fallback": "Grants Slow Falling for 7 seconds"
@@ -948,9 +968,9 @@
                 "fallback": "Gazing"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.gazing",
                   "fallback": "Grants Night Vision for 30 seconds"
@@ -968,9 +988,9 @@
                 "fallback": "Soaring"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.soaring",
                   "fallback": "Sneaking toggles the ability: Look up to ascend and down to descend"
@@ -988,9 +1008,9 @@
                 "fallback": "Vanishing"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.vanishing",
                   "fallback": "Grants Invisibility for 90 seconds"
@@ -1014,9 +1034,9 @@
                 "fallback": "Phasing"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.phasing",
                   "fallback": "Allows walking through 1-wide walls"
@@ -1034,9 +1054,9 @@
                 "fallback": "Scaling"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.scaling",
                   "fallback": "Allows climbing up walls"
@@ -1054,9 +1074,9 @@
                 "fallback": "Sniffing"
               }
             ],
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.orb_of_ankou.note.sniffing",
                   "fallback": "Sniffs up torchflowers and pitcher pods"
