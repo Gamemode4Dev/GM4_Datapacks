@@ -7,7 +7,7 @@ authors = [
 ]
 requires-python = ">= 3.10, < 4.0"
 dependencies = [
-    "beet >= 0.110.0",
+    "beet >= 0.110.1",
     "mecha >= 0.98.0",
     "bolt >= 0.49.1",
     "PyYAML >= 6.0, < 7.0",
