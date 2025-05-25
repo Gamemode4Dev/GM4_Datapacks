@@ -22,9 +22,10 @@
                 "predicate": {
                   "type": "minecraft:slime",
                   "type_specific": {
-                    "type": "slime"
+                    "type": "slime",
+                    "size": 0
                   },
-                  "nbt": "{Size:0,DeathLootTable:\"minecraft:empty\"}"
+                  "nbt": "{DeathLootTable:\"minecraft:empty\"}"
                 }
               },
               {

@@ -1,6 +1,0 @@
-{
-	"parent": "gm4:block/plate",
-	"textures": {
-		"top": "gm4_tinkering_compressors:block/tinkering_compressor_plate"
-	}
-}

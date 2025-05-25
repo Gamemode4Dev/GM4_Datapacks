@@ -1,6 +1,6 @@
 id: gm4_fulcio_shamir
 name: Fulcio Shamir
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -16,7 +16,7 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_metallurgy: 1.4.0
+        gm4_metallurgy: 1.5.0
       schedule_loops:
         - main
         - 4_tick

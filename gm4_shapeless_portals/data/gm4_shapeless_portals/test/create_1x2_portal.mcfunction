@@ -1,5 +1,6 @@
 # @template gm4:test_platform
 # @dummy ~1.5 ~1 ~0.5
+# @optional
 
 fill ~ ~ ~1 ~2 ~3 ~1 obsidian
 fill ~1 ~1 ~1 ~1 ~2 ~1 air

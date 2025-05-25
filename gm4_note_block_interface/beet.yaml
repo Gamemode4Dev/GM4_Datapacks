@@ -1,6 +1,6 @@
 id: gm4_note_block_interface
 name: Note Block Interface
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .

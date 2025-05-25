@@ -1,0 +1,23 @@
+id: gm4_player_motion
+name: Gamemode 4 Player Motion
+version: 1.0.0
+
+data_pack:
+  load: 
+    data: data
+
+pipeline:
+  - gm4.plugins.extend.library
+  - gm4.plugins.include.lib_forceload
+
+meta:
+  gm4:
+    versioning:
+      required:
+        lib_forceload: 1.5.0
+      schedule_loops: [internal/technical/tick]
+    credits:
+      Original Creator:
+        - MulverineX
+      Adapted for GM4 by:
+        - BPR

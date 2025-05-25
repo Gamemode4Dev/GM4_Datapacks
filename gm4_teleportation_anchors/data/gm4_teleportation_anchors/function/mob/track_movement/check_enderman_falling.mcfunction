@@ -1,7 +1,7 @@
 # @s = endermen  near a teleporation jammer
 # run from mob/track_movement/check_dy
 
-execute store result score fall gm4_ta_pos_y run data get entity @s FallDistance 100
+execute store result score fall gm4_ta_pos_y run data get entity @s fall_distance 100
 execute if score fall gm4_ta_pos_y matches 0..90 run tag @s add gm4_ta_teleported
 execute if score fall gm4_ta_pos_y matches 91.. run tag @s add gm4_ta_falling
 

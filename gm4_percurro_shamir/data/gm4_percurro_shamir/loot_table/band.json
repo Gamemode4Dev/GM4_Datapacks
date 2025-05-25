@@ -23,7 +23,7 @@
                             "lore": [
                                 {
                                     "translate": "item.gm4.shamir.percurro",
-                                    "fallback": "Percurro",
+                                    "fallback": "Percurro Shamir",
                                     "italic": false,
                                     "color": "gray"
                                 }

@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "#minecraft:air/in_end",
-      "required": false
-    }
-  ]
-}

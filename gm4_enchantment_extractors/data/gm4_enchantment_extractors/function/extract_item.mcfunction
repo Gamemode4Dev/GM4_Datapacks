@@ -3,14 +3,14 @@
 # located at the enchantment extractor block
 # run from process_items
 
-data modify entity @s HandItems[0] set from storage gm4_enchantment_extractors:temp current_item
+data modify entity @s equipment.mainhand set from storage gm4_enchantment_extractors:temp current_item
 
 # check if mending already in extractor
 execute store result score $existing_mending gm4_ench_data if items block ~ ~ ~ container.* *[stored_enchantments~[{enchantments:"minecraft:mending"}]]
 
 # if cursed extract only the curse
-execute if data storage gm4_enchantment_extractors:temp current_item.components."minecraft:enchantments".levels."minecraft:vanishing_curse" run function gm4_enchantment_extractors:extract_vanishing
-execute if data storage gm4_enchantment_extractors:temp current_item.components."minecraft:enchantments".levels."minecraft:binding_curse" run function gm4_enchantment_extractors:extract_binding
+execute if data storage gm4_enchantment_extractors:temp current_item.components."minecraft:enchantments"."minecraft:vanishing_curse" run function gm4_enchantment_extractors:extract_vanishing
+execute if data storage gm4_enchantment_extractors:temp current_item.components."minecraft:enchantments"."minecraft:binding_curse" run function gm4_enchantment_extractors:extract_binding
 
 # extract
 execute unless score $curse_extracted gm4_ench_data matches 1 store result score $added_books gm4_ench_data run loot insert ~ ~ ~ fish gm4_enchantment_extractors:technical/extract/check ~ ~ ~ mainhand
@@ -32,7 +32,7 @@ data modify block ~ ~ ~ Items append from storage gm4_enchantment_extractors:tem
 execute unless score $existing_mending gm4_ench_data matches 1.. if items block ~ ~ ~ container.* *[stored_enchantments~[{enchantments:"minecraft:mending"}]] unless items block ~ ~ ~ container.* *[stored_enchantments~[{enchantments:"minecraft:mending"},{enchantments:"minecraft:vanishing_curse"}]] run advancement grant @a[distance=..5] only gm4:enchantment_extractors_mending
 
 # clean up
-data remove entity @s HandItems[0]
+data remove entity @s equipment.mainhand
 scoreboard players reset $existing_mending gm4_ench_data
 scoreboard players reset $curse_extracted gm4_ench_data
 scoreboard players reset $added_books gm4_ench_data

@@ -16,7 +16,11 @@
                                     "potion": "minecraft:thick",
                                     "custom_color": 8587123
                                 },
-                                "minecraft:hide_additional_tooltip": {}
+                                "minecraft:tooltip_display": {
+                                    "hidden_components": [
+                                        "minecraft:potion_contents"
+                                    ]
+                                }
                             }
                         },
                         {

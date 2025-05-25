@@ -1,5 +1,5 @@
 key,en_us
-item.gm4.shamir.vigere,Vigere
+item.gm4.shamir.vigere,Vigere Shamir
 text.gm4.guidebook.module_desc.vigere_shamir,Adds the shamir 'Vigere' to Metallurgy. It heals you when you block with a shield.
 text.gm4.guidebook.vigere_shamir.description,Vigere alters shields to heal the user upon blocking an attack.
 text.gm4.guidebook.vigere_shamir.usage,The Vigere Shamir is found on Barimium Bands. It can be placed onto shields.\n\nBlocking an attack will heal the user 1.5 hearts and apply Mining Fatigue VI for 3 seconds.\nHealing damages the shield more.

@@ -1,6 +1,6 @@
 type,id,rare,function,names
-Cow,minecraft:cow,FALSE,init_animal,"Abigail,Beef,Belle,Bessie,Clarabell,Delilah,Duchess,Maggie,Moo,Wellington,Wendy"
-Pig,minecraft:pig,FALSE,init_animal,"Bacon,Betty,Hamm,Hoagie,Piglet,Pua,Pumbaa,Sharla,Swinton"
+Cow,minecraft:cow,FALSE,init_farm,"Abigail,Beef,Belle,Bessie,Clarabell,Delilah,Duchess,Maggie,Moo,Wellington,Wendy"
+Pig,minecraft:pig,FALSE,init_farm,"Bacon,Betty,Hamm,Hoagie,Piglet,Pua,Pumbaa,Sharla,Swinton"
 Sheep,minecraft:sheep,FALSE,init_animal,"Baabra,Bellwether,Blackie,Doug,Gruff,Lamb,Lambie,Sheera,Woolensworth,Woolter"
 Horse,minecraft:horse,FALSE,init_animal,"Achilles,Buck,Bullseye,Galahad,Khan,Lancelot,Major,Maximus,Pearl,Shadow"
 Rabbit,minecraft:rabbit,FALSE,init_animal,"Berry,Bouncy,Bushy,Clover,Houdini,Jack,Judy,March,Nibbles,Oswald,Roger,Squirt,Thumper"

@@ -1,8 +1,0 @@
-[
-  {
-    "condition": "minecraft:location_check",
-    "predicate": {
-      "biomes": "minecraft:basalt_deltas"
-    }
-  }
-]

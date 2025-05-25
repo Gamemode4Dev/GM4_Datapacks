@@ -22,7 +22,7 @@
       "minecraft:custom_model_data": "item/teleportation_jammer",
       "minecraft:profile": "$teleportation_jammer",
       "minecraft:custom_data": "{gm4_machines:{id:'teleportation_jammer'}}",
-      "minecraft:custom_name": "{\"translate\":\"block.gm4.teleportation_jammer\",\"fallback\":\"Teleportation Jammer\",\"color\":\"white\",\"italic\":false}"
+      "minecraft:custom_name": {"translate":"block.gm4.teleportation_jammer","fallback":"Teleportation Jammer","color":"white","italic":false}
     }
   }
 }

@@ -4,7 +4,7 @@
 # run from main
 
 # spawn chair
-summon minecraft:pig ~ ~-10000.39 ~ {CustomName:'"gm4_chair"',Tags:["gm4_chairs","smithed.entity","smithed.strict","smithed.block"],Team:"gm4_chairs",NoAI:1b,Saddle:1b,NoGravity:1b,Silent:1b,DeathTime:19s,InLove:2147483647,attributes:[{id:"minecraft:max_health",base:1.0},{id:"minecraft:movement_speed",base:0.0}],active_effects:[{id:'minecraft:invisibility',amplifier:0,duration:2147483647,show_particles:0b},{id:'minecraft:resistance',amplifier:10b,duration:2147483647,show_particles:0b}],DeathLootTable:"gm4:empty"}
+summon minecraft:pig ~ ~-10000.39 ~ {CustomName:"gm4_chair",Tags:["gm4_chairs","smithed.entity","smithed.strict","smithed.block"],Team:"gm4_chairs",NoAI:1b,equipment:{saddle:{id:"minecraft:saddle"}},NoGravity:1b,Silent:1b,DeathTime:19s,InLove:2147483647,attributes:[{id:"minecraft:max_health",base:1.0},{id:"minecraft:movement_speed",base:0.0}],active_effects:[{id:'minecraft:invisibility',amplifier:0,duration:2147483647,show_particles:0b},{id:'minecraft:resistance',amplifier:10b,duration:2147483647,show_particles:0b}],DeathLootTable:"gm4:empty"}
 
 # set chair to orientation of stairs
 execute if block ~ ~ ~ #minecraft:stairs[facing=north] positioned ~ ~-10000 ~ as @e[type=minecraft:pig,tag=gm4_chairs,distance=..0.4,limit=1] at @s run tp @s ~ ~10000 ~.05 0 0
