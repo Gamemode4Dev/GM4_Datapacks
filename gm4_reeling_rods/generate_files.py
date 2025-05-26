@@ -8,7 +8,7 @@ def beet_default(ctx: Context):
     """NOTE: generates files
         - set_lookup_table
         - advancements and reward functions for every bit state of an entity's tagged id
-        - fishing/select_type and overlays of it
+        - fishing/select_type
     """
     create_lookup_file(ctx)
     create_bit_advancements(ctx)
@@ -21,12 +21,7 @@ My goal for right now is to go to the maximum scope and then have things cut bac
 Push this idea as far as I can, then reign it in.
 
     Hand & Armor Yoinking
-        Treat this as an action. If an entity is in one of the tags, don't list them separately in the csv
-    
-        Yoinked item height.
-            Previously, in manually defined yoinking, the item height was hard coded per entity
-            This is not possible with a generic item yoink
-            Right now the yoinked item is .7 block above entity origin
+        Treated as an action. If an entity is in one of the tags, don't list them separately in the csv
         
         Specific Entities
             Villagers:
@@ -36,8 +31,6 @@ Push this idea as far as I can, then reign it in.
                 Can have armor on them through commands (not dispensed), but doesn't render
                 Probably shouldn't theft armor that can't be applied by players, that's the realm of datapackers
                 Using hand item theft function
-            Player:
-                Technically working for < 1.21.5, but for 1.21.5 it can be collapsed
         
         Nugget idea?
             Try to use drop chances for armor and if it fails drop armor material?
@@ -84,7 +77,6 @@ def create_lookup_file(ctx: Context):
 def create_bit_advancements(ctx: Context):
     for bit in range(16):
         for value in range(2):
-            # default adv
             ctx.data[f"gm4_reeling_rods:fished/bit_{bit}_{value}"] = Advancement({
                 "criteria":{
                     "fishing_rod_hooked":{
