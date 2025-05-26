@@ -13,7 +13,6 @@ minecraft:chest_minecart,TRUE,FALSE,"function gm4_reeling_rods:fished/minecart/a
 minecraft:furnace_minecart,TRUE,FALSE,"function gm4_reeling_rods:fished/minecart/action {block:'minecraft:furnace'}"
 minecraft:hopper_minecart,TRUE,FALSE,"function gm4_reeling_rods:fished/minecart/action {block:'minecraft:hopper'}"
 minecraft:tnt_minecart,TRUE,FALSE,"function gm4_reeling_rods:fished/minecart/action {block:'minecraft:tnt'}"
-minecraft:chest_boat,TRUE,FALSE,"function gm4_reeling_rods:fished/chest_boat/action {boat_type:'minecraft:boat'}"
 minecraft:acacia_chest_boat,TRUE,FALSE,"function gm4_reeling_rods:fished/chest_boat/action {boat_type:'minecraft:acacia_boat'}"
 minecraft:bamboo_chest_raft,TRUE,FALSE,"function gm4_reeling_rods:fished/chest_boat/action {boat_type:'minecraft:bamboo_raft'}"
 minecraft:birch_chest_boat,TRUE,FALSE,"function gm4_reeling_rods:fished/chest_boat/action {boat_type:'minecraft:birch_boat'}"

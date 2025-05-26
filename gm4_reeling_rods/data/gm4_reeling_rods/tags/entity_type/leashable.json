@@ -3,7 +3,7 @@
         "#gm4:boats",
         "#gm4:chest_boats",
         "#gm4_reeling_rods:llamas",
-        "#gm4_reeling_rods:undead_horse",
+        "#gm4_reeling_rods:steal_saddle",
         "minecraft:allay",
         "minecraft:armadillo",
         "minecraft:axolotl",
@@ -25,14 +25,12 @@
         "minecraft:mule",
         "minecraft:ocelot",
         "minecraft:parrot",
-        "minecraft:pig",
         "minecraft:polar_bear",
         "minecraft:rabbit",
         "minecraft:sheep",
         "minecraft:sniffer",
         "minecraft:snow_golem",
         "minecraft:squid",
-        "minecraft:strider",
         "minecraft:wolf",
         "minecraft:zoglin"
     ]
