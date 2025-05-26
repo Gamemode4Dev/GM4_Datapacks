@@ -18,5 +18,5 @@ $summon minecraft:marker ~ ~ ~ \
   {\
     Tags:["gm4_reeling_rods.player_marker","smithed.strict","smithed.entity"],\
     data:{gm4_reeling_rods:{id:{bit_$(bit):"$(bit_tag)"}}},\
-    CustomName:'{"text":"gm4_reeling_rods.player_marker"}'\
+    CustomName:{"text":"gm4_reeling_rods.player_marker"}\
   }

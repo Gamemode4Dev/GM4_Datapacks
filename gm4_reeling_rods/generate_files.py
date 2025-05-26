@@ -1,5 +1,5 @@
 from typing import List
-from beet import Context, Advancement, Function, DataPack
+from beet import Context, Advancement, Function
 import math
 from pathlib import Path
 from gm4.utils import CSV
@@ -115,43 +115,28 @@ def create_bit_advancements(ctx: Context):
             ])
 
 def create_select_type(ctx: Context, entities: CSV):
-    selectFuncBase: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
-    selectFuncSince61: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
-    selectFuncBackport48: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
+    commandOrder: List[List[str]] = [["# non-dismount entities"],["# dismountable entities, action after failed dismount"]]
     for entity in entities:
-        since_61 = "pale_oak" in entity['id']
-        backport_48 = "minecraft:chest_boat" in entity['id']
-        since_57 = "_chest_boat" in entity['id'] or "_chest_raft" in entity['id']
-
-        order = 1 if entity['can_dismount'] == "TRUE" else 0     # other action before or after dismounting logic
-        writeTo = [selectFuncSince61] if since_61 else [selectFuncBackport48] if backport_48 else [selectFuncBase, selectFuncSince61] if since_57 else [selectFuncBackport48, selectFuncBase, selectFuncSince61]
-        # since_61      gets since_61, since_57, else
-        # base          gets since_57, else
-        # backport_48   gets backport_48, else
-        for write in writeTo:
-            command = f"execute if entity @s[type={entity['id']}] run return run "
-            if entity['needs_enchantment'] == "TRUE":
-                command = command + "execute if data storage gm4_reeling_rods:temp enchanted run "
-            command = command + entity['command']
-            write[order].append(command)
-    finalSelectFunction(selectFuncBase, ctx.data.overlays["since_57"]) # should just be ctx.data when moved to 1.21.5, these overlays are gonna be a nightmare to update.,., Figure it out later
-    finalSelectFunction(selectFuncSince61, ctx.data.overlays["since_61"])
-    finalSelectFunction(selectFuncBackport48, ctx.data.overlays["backport_48"])
-
-def finalSelectFunction(strings: List[List[str]], output_pack: DataPack):
+        order = 1 if entity['can_dismount'] == "TRUE" else 0
+        command = f"execute if entity @s[type={entity['id']}] run return run "
+        if entity['needs_enchantment'] == "TRUE":
+            command = command + "execute if data storage gm4_reeling_rods:temp enchanted run "
+        command = command + entity['command']
+        commandOrder[order].append(command)
+    
     finalFunction: List[str] = [
         "# GENERATED from generate_files.py",
         "# Selects the right entity type or dismounts the entity",
         "# @s = fished entity",
-        "# at @s",
+        "# at bobber in entity",
         "# run from player/find_fished_entity\n"
     ]
     # entities that don't dismount
-    for line in strings[0]:
+    for line in commandOrder[0]:
         finalFunction.append(line)
     # dismount logic
     finalFunction.append("\n# dismounting logic\nexecute if function gm4_reeling_rods:is_passenger run return run ride @s dismount\n")
     # entities that do dismount, only runs if not dismounting
-    for line in strings[1]:
+    for line in commandOrder[1]:
         finalFunction.append(line)
-    output_pack["gm4_reeling_rods:fished/select_type"] = Function(finalFunction)
+    ctx.data["gm4_reeling_rods:fished/select_type"] = Function(finalFunction)

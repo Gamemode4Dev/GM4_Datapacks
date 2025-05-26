@@ -13,3 +13,6 @@ execute unless score @a[tag=gm4_reeling_rods.player,limit=1] gm4_reeling_rods.bi
 # all bits received
 scoreboard players set @a[tag=gm4_reeling_rods.player] gm4_reeling_rods.bit_count 0
 function gm4_reeling_rods:player/find_fished_entity with entity @s data.gm4_reeling_rods.id
+
+# kill marker after
+kill @s

@@ -1,6 +1,6 @@
 # adds a "major_negaive" gossip of the player to the villager
 # @s = villager
-# at @s
+# at bobber in @s
 # with {Target}
 # run from fished/villager/action
 

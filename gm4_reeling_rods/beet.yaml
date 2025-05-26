@@ -4,19 +4,6 @@ version: 1.0.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 61
-        max_inclusive: 61
-      directory: since_61
-    - formats:
-        min_inclusive: 57
-        max_inclusive: 61
-      directory: since_57
-    - formats:
-        min_inclusive: 48
-        max_inclusive: 48
-      directory: backport_48
 
 pipeline:
   - generate_files

@@ -1,6 +1,6 @@
 # Pick an order to check equipment slots for stealing
 # @s = #gm4_reeling_rods:steal_equipment
-# at @s
+# at bobber in @s
 # run from fished/select_type & fished/villager/action
 
 execute store result score $order gm4_reeling_rods.math run random value 1..6

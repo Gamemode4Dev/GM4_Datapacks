@@ -11,7 +11,6 @@
 data modify storage gm4_reeling_rods:temp item_data.Item set from storage gm4_reeling_rods:temp entity_data.Items[0]
 
 # randomize motion slightly....
-    # this is the complicated bit
 execute store result score $motionX gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp motion_vector[0] 100
 execute store result score $motionY gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp motion_vector[1] 100
 execute store result score $motionZ gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp motion_vector[2] 100

@@ -1,6 +1,6 @@
 # Checks slots to steal
 # @s = #gm4_reeling_rods:steal_equipment
-# at @s
+# at bobber in @s
 # run from fished/stealable/steal_equipment
 
 # 1

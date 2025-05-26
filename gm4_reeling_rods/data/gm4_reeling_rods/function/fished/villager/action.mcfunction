@@ -1,11 +1,11 @@
 # Action for reeled villager
 # @s = villager
-# at @s
+# at bobber in @s
 # run from fished/select_type
 
 # store mainhand data for a potential trade steal
 data modify storage gm4_reeling_rods:temp entity_data set value {}
-data modify storage gm4_reeling_rods:temp entity_data.mainhand set from entity @s HandItems[0]
+data modify storage gm4_reeling_rods:temp entity_data.mainhand set from entity @s equipment.mainhand
 
 # try to steal
 execute store result score $slot gm4_reeling_rods.math run function gm4_reeling_rods:fished/stealable/steal_equipment
@@ -22,6 +22,6 @@ data modify storage gm4_reeling_rods:temp entity_data.gossip.Target set from ent
 function gm4_reeling_rods:fished/villager/add_gossip with storage gm4_reeling_rods:temp entity_data.gossip
 
 # angry particles
-particle minecraft:angry_villager ~ ~1.5 ~ 0.3 0.3 0.3 20 3
+particle minecraft:angry_villager ~ ~ ~ 0.3 0.3 0.3 20 3
 # angry sound
-playsound minecraft:entity.villager.hurt neutral @a[distance=..16] ~ ~1.5 ~
+playsound minecraft:entity.villager.hurt neutral @a[distance=..16] ~ ~ ~

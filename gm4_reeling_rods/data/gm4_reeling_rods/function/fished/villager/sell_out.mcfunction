@@ -1,6 +1,6 @@
 # sells out a trade
 # @s = villager
-# at @s
+# at bobber in @s
 # with {mainhand}
 # run from fished/villager/action
 
