@@ -9,4 +9,3 @@ execute if entity @s[tag=gm4_red_shroomite] unless block ~ ~ ~ red_mushroom run 
 
 # process this shroom
 execute if block ~ ~ ~ #gm4_shroomites:mushrooms run function gm4_shroomites:shroom/process
-

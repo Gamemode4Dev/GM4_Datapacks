@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    {
-      "id": "#minecraft:local_modifications/in_end",
-      "required": false
-    }
-  ]
-}

@@ -5,7 +5,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "stepping_on": {
+                "location": {
                     "block": {
                         "blocks": [
                             "minecraft:big_dripleaf"
@@ -21,7 +21,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-                "stepping_on": {
+                "location": {
                     "block": {
                         "blocks": [
                             "minecraft:big_dripleaf"

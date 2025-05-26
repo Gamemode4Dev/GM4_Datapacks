@@ -7,7 +7,7 @@
     "minecraft:jungle_sapling",
     "minecraft:mangrove_propagule",
     "minecraft:oak_sapling",
-    { "id": "minecraft:pale_oak_sapling", "required": false },
+    "minecraft:pale_oak_sapling",
     "minecraft:spruce_sapling"
   ]
 }

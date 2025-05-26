@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:vegetal_decoration/in_overworld",
+      "required": false
+    },
+    "minecraft:glow_lichen",
+    "minecraft:pale_garden_vegetation",
+    "minecraft:pale_moss_patch",
+    "minecraft:pale_garden_flowers",
+    "minecraft:flower_pale_garden",
+    "minecraft:patch_grass_forest",
+    "minecraft:patch_pumpkin",
+    "minecraft:patch_sugar_cane",
+    "minecraft:patch_firefly_bush_near_water"
+  ]
+}

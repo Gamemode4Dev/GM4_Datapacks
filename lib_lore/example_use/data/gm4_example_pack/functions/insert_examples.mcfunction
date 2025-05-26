@@ -4,8 +4,8 @@
 
 # set inputs
 data modify storage gm4_lore:temp Source set from entity @s SelectedItem.components."minecraft:lore"
-data modify storage gm4_lore:temp Target set value '{"text":"The inserted lines will appear after this line"}'
-data modify storage gm4_lore:temp Input set value ['{"text":"This line will be inserted after the line"}','{"text":"This line will also be inserted after the line"}','{"text":"Same with this line"}']
+data modify storage gm4_lore:temp Target set value {"text":"The inserted lines will appear after this line"}
+data modify storage gm4_lore:temp Input set value [{"text":"This line will be inserted after the line"},{"text":"This line will also be inserted after the line"},{"text":"Same with this line"}]
 # run operation
 function #gm4_lore:insert
 # update player's item with item modifier
@@ -17,8 +17,8 @@ item modify entity @s weapon.mainhand gm4_example_pack:update_player
 
 # set inputs
 data modify storage gm4_lore:temp Source set from entity @e[type=item,limit=1,sort=nearest] Item.components."minecraft:lore"
-data modify storage gm4_lore:temp Target set value '{"text":"The inserted lines will appear before this line since start is -1"}'
-data modify storage gm4_lore:temp Input set value ['{"text":"This line will be inserted before the line"}','{"text":"This line will also be inserted, following the previous line (still in front of the TARGET_LINE)"}']
+data modify storage gm4_lore:temp Target set value {"text":"The inserted lines will appear before this line since start is -1"}
+data modify storage gm4_lore:temp Input set value [{"text":"This line will be inserted before the line"},{"text":"This line will also be inserted, following the previous line (still in front of the TARGET_LINE)"}]
 scoreboard players set $start gm4_lore -1
 # run operation
 function #gm4_lore:insert
@@ -30,11 +30,11 @@ data modify entity @e[type=item,limit=1,sort=nearest] Item.components."minecraft
 ## Inserts Lore in one item, and also transfers them to another item
 
 # set inputs
-summon item ~ ~ ~ {Tags:["item_1"],Item:{components:{"minecraft:lore":['{"text":"TARGET_LINE"}','{"text":"The inserted lines will appear after this line"}','{"text":"The inserted lines will appear before this line"}']}}}
+summon item ~ ~ ~ {Tags:["item_1"],Item:{components:{"minecraft:lore":[{"text":"TARGET_LINE"},{"text":"The inserted lines will appear after this line"},{"text":"The inserted lines will appear before this line"}]}}}
 data modify storage gm4_lore:temp Source set from entity @e[type=item,tag=item_1,limit=1] Item.components."minecraft:lore"
-data modify storage gm4_lore:temp Target set value '{"text":"TARGET_LINE"}'
+data modify storage gm4_lore:temp Target set value {"text":"TARGET_LINE"}
 scoreboard players set $start gm4_lore 1
-data modify storage gm4_lore:temp Input set value ['{"text":"This line will be inserted"}','{"text":"This line will follow the line before it"}']
+data modify storage gm4_lore:temp Input set value [{"text":"This line will be inserted"},{"text":"This line will follow the line before it"}]
 # run operation
 function #gm4_lore:insert
 # set updated lore into item_1

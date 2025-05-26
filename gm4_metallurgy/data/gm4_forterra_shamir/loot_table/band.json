@@ -23,7 +23,7 @@
                             "lore": [
                                 {
                                     "translate": "item.gm4.shamir.forterra",
-                                    "fallback": "Forterra",
+                                    "fallback": "Forterra Shamir",
                                     "italic": false,
                                     "color": "gray"
                                 }

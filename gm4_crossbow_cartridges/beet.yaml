@@ -1,6 +1,6 @@
 id: gm4_crossbow_cartridges
 name: Crossbow Cartridges
-version: 1.7.X
+version: 1.8.X
 
 data_pack:
   load: .

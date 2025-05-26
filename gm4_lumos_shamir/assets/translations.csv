@@ -1,5 +1,5 @@
 key,en_us
-item.gm4.shamir.lumos,Lumos
+item.gm4.shamir.lumos,Lumos Shamir
 text.gm4.guidebook.module_desc.lumos_shamir,Adds the shamir 'Lumos' to Metallurgy. It places torches when it is dark.
 text.gm4.guidebook.lumos_shamir.description,Lumos takes torches from the inventory and places them if the light level is too low.
 text.gm4.guidebook.lumos_shamir.usage,The Lumos Shamir is found on Curie's Bismium Bands. It can be placed onto pickaxes and shovels.\n\nHolding the tool will cause torches to be placed when standing in low light levels.
