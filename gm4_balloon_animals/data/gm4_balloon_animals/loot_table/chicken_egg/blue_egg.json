@@ -5,19 +5,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-<<<<<<<< HEAD:gm4_monsters_unbound/data/gm4_monsters_unbound/loot_table/elite/splitting_skeleton.json
-          "name": "minecraft:spawner",
-          "functions": [
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{gm4_mu_elite_on_death:{name:splitting_skeleton,id:4}}"
-========
           "name": "minecraft:blue_egg",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": 8
->>>>>>>> upstream/master:gm4_balloon_animals/data/gm4_balloon_animals/loot_table/chicken_egg/blue_egg.json
             }
           ]
         }
