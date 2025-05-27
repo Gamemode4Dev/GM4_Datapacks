@@ -5,6 +5,7 @@ id,needs_enchantment,can_dismount,command
 #gm4_reeling_rods:steal_hand,TRUE,TRUE,"function gm4_reeling_rods:fished/stealable/steal_hand"
 #gm4_reeling_rods:steal_saddle,TRUE,TRUE,"function gm4_reeling_rods:fished/stealable/steal_slot/saddle"
 minecraft:horse,TRUE,TRUE,"function gm4_reeling_rods:fished/horse"
+minecraft:sheep,TRUE,TRUE,"function gm4_reeling_rods:fished/sheep"
 minecraft:snow_golem,TRUE,TRUE,"function gm4_reeling_rods:fished/snow_golem"
 minecraft:villager,TRUE,TRUE,"function gm4_reeling_rods:fished/villager/action"
 minecraft:wolf,TRUE,TRUE,"function gm4_reeling_rods:fished/wolf"
