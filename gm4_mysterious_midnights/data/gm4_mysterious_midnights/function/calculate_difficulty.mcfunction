@@ -9,7 +9,8 @@ scoreboard players set 16 gm4_mm_data 16
 scoreboard players operation difficulty gm4_mm_data %= 16 gm4_mm_data
 
 # spawn AEC for random selection (1/3 of nights are not a mysterious midnight)
-execute if score difficulty gm4_mm_data matches 6.. run playsound entity.wolf.howl weather @a[x=0] ~ ~100000000000 ~ 0 1 1
+execute if score difficulty gm4_mm_data matches 6.. run playsound event.mob_effect.raid_omen weather @a[x=0] ~ ~100000000000 ~ 0 .5 1
+execute if score difficulty gm4_mm_data matches 6.. run playsound block.trial_spawner.ominous_activate weather @a[x=0] ~ ~100000000000 ~ 0 .6 1
 execute if score difficulty gm4_mm_data matches 6..10 run function #gm4_mysterious_midnights:setup_common_expansion
 execute if score difficulty gm4_mm_data matches 11..13 run function #gm4_mysterious_midnights:setup_uncommon_expansion
 execute if score difficulty gm4_mm_data matches 14.. run function #gm4_mysterious_midnights:setup_rare_expansion

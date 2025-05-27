@@ -80,9 +80,9 @@
           },
           {
             "text": "arms",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.arms",
                   "fallback": "Toggle the arms of the armour stand",
@@ -97,7 +97,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "arms"
             }
@@ -107,9 +107,9 @@
           },
           {
             "text": "base",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.base",
                   "fallback": "Toggle the base plate of the armour stand",
@@ -124,7 +124,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "base"
             }
@@ -134,9 +134,9 @@
           },
           {
             "text": "size",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.size",
                   "fallback": "Toggle the size of the armour stand",
@@ -151,7 +151,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "size"
             }
@@ -161,9 +161,9 @@
           },
           {
             "text": "gravity",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.gravity",
                   "fallback": "Toggle the gravity of the armour stand",
@@ -178,7 +178,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "gravity"
             }
@@ -188,9 +188,9 @@
           },
           {
             "text": "visible",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.visible",
                   "fallback": "Toggle the visibility of the armour stand.\nHolding a book with this code will reveal\nnearby invisible armour stands.",
@@ -205,7 +205,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "visible"
             }
@@ -215,9 +215,9 @@
           },
           {
             "text": "turn",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.turn",
                   "fallback": "Toggle rotating of the armour stand",
@@ -232,7 +232,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "turn"
             }
@@ -242,9 +242,9 @@
           },
           {
             "text": "lock",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.lock",
                   "fallback": "Disable interactions with the armour stand",
@@ -259,7 +259,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "lock"
             }
@@ -269,9 +269,9 @@
           },
           {
             "text": "unlock",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.unlock",
                   "fallback": "Enable interactions with the armour stand.\nHolding a book with this code will reveal\nnearby locked armour stands.",
@@ -286,7 +286,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "unlock"
             }
@@ -302,9 +302,9 @@
           },
           {
             "text": "pose",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.pose",
                   "fallback": "Edit a part of the armour stand by looking at its \"joint\".\n- Hold sneak to enable \"snapping\"\n- Left click to invert this pose\n- Right click to stop editing",
@@ -319,7 +319,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "pose"
             }
@@ -329,9 +329,9 @@
           },
           {
             "text": "pose mirror",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.pose_mirror",
                   "fallback": "Edit a part of the armour stand by looking at its \"joint\".\nIf an arm/leg is selected, the other arm/leg pose is mirrored.\n- Hold sneak to enable \"snapping\"\n- Left click to invert this pose\n- Right click to stop editing",
@@ -346,7 +346,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "pose mirror"
             }
@@ -356,9 +356,9 @@
           },
           {
             "text": "move",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.move",
                   "fallback": "Move the armour stand around you.\n- Hold sneak to enable \"snapping\"\n- Right click to stop editing",
@@ -373,7 +373,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "move"
             }
@@ -383,9 +383,9 @@
           },
           {
             "text": "rotate",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.rotate",
                   "fallback": "Rotate the armour stand.\n- Hold sneak to enable \"snapping\"\n- Right click to stop editing",
@@ -400,7 +400,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "rotate"
             }
@@ -410,9 +410,9 @@
           },
           {
             "text": "flip",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.flip",
                   "fallback": "Flip the full pose of the armour stand",
@@ -427,7 +427,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "flip"
             }
@@ -437,9 +437,9 @@
           },
           {
             "text": "default",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.default",
                   "fallback": "- Look at a part of the armour stand to reset this pose.\n- Sneak to fully reset the armour stand.",
@@ -454,7 +454,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "default"
             }
@@ -470,9 +470,9 @@
           },
           {
             "text": "equip",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.equip",
                   "fallback": "Look at the head or shoulders of the armour stand to place an item from the offhand into this slot.",
@@ -487,7 +487,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "equip"
             }
@@ -504,9 +504,9 @@
           },
           {
             "text": "copy",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy",
                   "fallback": "Copy modified features onto the armour stand items in your offhand.",
@@ -521,7 +521,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "copy"
             }
@@ -531,9 +531,9 @@
           },
           {
             "text": "paste",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.paste",
                   "fallback": "Copy features from the copied armour stand items in your offhand to the armour stand.",
@@ -548,7 +548,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "paste"
             }

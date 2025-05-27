@@ -4,17 +4,17 @@
 # run from goblin_steal/check_player
 
 # get current diamond count
-execute store result score count gm4_menace_data run data get entity @s ArmorItems[0].count
+execute store result score count gm4_menace_data run data get entity @s equipment.feet.count
 
 # take 1 diamond from player
 clear @a[tag=gm4_goblin_target,limit=1,distance=..3] diamond 1
 
 # store diamonds at feet slot
-execute if score count gm4_menace_data matches 0 run data modify entity @s ArmorItems[0] set value {id:"minecraft:diamond",count:1}
-execute if score count gm4_menace_data matches 1..63 if predicate gm4_menacing_goblins:store_chance store result entity @s ArmorItems[0].count byte 1 run scoreboard players add count gm4_menace_data 1
+execute if score count gm4_menace_data matches 0 run data modify entity @s equipment.feet set value {id:"minecraft:diamond",count:1}
+execute if score count gm4_menace_data matches 1..63 if predicate gm4_menacing_goblins:store_chance store result entity @s equipment.feet.count byte 1 run scoreboard players add count gm4_menace_data 1
 
 # show that it got stolen
-data modify entity @s HandItems[1] set value {id:"minecraft:diamond",count:1}
+data modify entity @s equipment.offhand set value {id:"minecraft:diamond",count:1}
 playsound minecraft:entity.zombie.ambient hostile @a[distance=..5] ~ ~ ~ 0.2 2
 playsound minecraft:entity.witch.celebrate hostile @a[distance=..5] ~ ~ ~ 1 2
 playsound minecraft:block.chain.break hostile @a[distance=..5] ~ ~ ~ 2 2

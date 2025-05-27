@@ -3,7 +3,7 @@
   "name": "Heart Canisters",
   "module_type": "module",
   "icon": {
-    "id": "minecraft:player_head",
+    "id": "minecraft:poisonous_potato",
     "components": {
       "minecraft:profile": "$heart_canister_tier_1"
     }
@@ -27,7 +27,7 @@
         "items": [
           {
             "items": [
-              "minecraft:player_head"
+              "minecraft:poisonous_potato"
             ],
             "predicates": {
               "minecraft:custom_data": "{gm4_heart_canister:1b}"
@@ -87,8 +87,8 @@
       "pages": [
         [
           {
-            "translate": "text.gm4.guidebook.heart_canisters.usage_tier_1",
-            "fallback": "Tier 2 heart canisters require five tier 1 canisters also in the inventory to function."
+            "translate": "text.gm4.guidebook.heart_canisters.crafting_tier_2",
+            "fallback": "Tier 2 heart canisters can be crafted with tier 1 canisters."
           },
           "\n",
           {
@@ -98,8 +98,8 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.heart_canisters.stacking",
-            "fallback": "Heart canisters of the same type must be in the same inventory slot to provide the proper amount of health.\n\nOnly up to five of each heart canister tier will give extra health."
+            "translate": "text.gm4.guidebook.heart_canisters.max_amount",
+            "fallback": "Each heart canister will give 2 extra hearts.\n\nOnly up to five of each heart canister tier will give extra health."
           }
         ]
       ],

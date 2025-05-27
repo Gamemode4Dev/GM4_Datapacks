@@ -23,7 +23,7 @@ Every dimension gets a `birch_wall_sign` placed at `29999998 1 7133`. This can b
 
 example:
 ```
-data modify block 29999998 1 7133 front_text.messages[0] set value '[{"text": "killed by "},{"storage":"my_storage:register", "nbt":"my_text.name"}]'
+data modify block 29999998 1 7133 front_text.messages[0] set value [{"text": "killed by "},{"storage":"my_storage:register", "nbt":"my_text.name"}]
 data modify entity @s CustomName set from block ~ ~ ~ front_text.messages[0]
 ```
 

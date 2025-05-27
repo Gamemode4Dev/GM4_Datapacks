@@ -1,6 +1,6 @@
 id: gm4_midnight_menaces
 name: Midnight Menaces
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -12,7 +12,7 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_mysterious_midnights: 1.3.0
+        gm4_mysterious_midnights: 1.7.0
       schedule_loops: [main]
     website:
       description: Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!

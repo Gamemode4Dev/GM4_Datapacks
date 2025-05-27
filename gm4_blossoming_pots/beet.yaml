@@ -1,14 +1,9 @@
 id: gm4_blossoming_pots
 name: Blossoming Pots
-version: 3.2.X
+version: 3.3.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 61
-        max_inclusive: 61
-      directory: since_61
 
 resource_pack:
   load: .

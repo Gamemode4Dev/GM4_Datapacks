@@ -1,6 +1,6 @@
 id: gm4_potion_liquids
 name: Potion Liquids
-version: 1.7.X
+version: 1.8.X
 
 data_pack:
   load: .
@@ -13,8 +13,8 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_liquid_tanks: 2.3.0
-        lib_brewing: 1.2.0
+        gm4_liquid_tanks: 2.7.0
+        lib_brewing: 1.4.0
     model_data:
       - item: potion
         reference: gui/advancement/potion_liquids

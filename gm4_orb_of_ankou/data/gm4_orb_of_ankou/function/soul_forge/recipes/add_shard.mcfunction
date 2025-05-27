@@ -7,8 +7,8 @@ playsound minecraft:entity.blaze.ambient block @a[distance=..12] ~0.5 ~0.5 ~0.5 
 particle minecraft:cloud ~0.5 ~1.5 ~0.5 0.2 1 0.2 0.01 5
 
 # add single shard to forge storage
-data modify storage gm4_orb_of_ankou:temp ArmorItems[2] set from storage gm4_orb_of_ankou:temp Item
-data modify storage gm4_orb_of_ankou:temp ArmorItems[2].count set value 1b
+data modify storage gm4_orb_of_ankou:temp equipment.chest set from storage gm4_orb_of_ankou:temp Item
+data modify storage gm4_orb_of_ankou:temp equipment.chest.count set value 1b
 tag @e[type=armor_stand,tag=gm4_oa_selected_forge,limit=1] add gm4_oa_has_shard
 
 # convert extra shards to congealed shards

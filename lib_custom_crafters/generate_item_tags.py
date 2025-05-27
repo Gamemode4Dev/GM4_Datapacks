@@ -4,13 +4,11 @@ from beet.contrib.vanilla import Vanilla
 def beet_default(ctx: Context):
   """Creates a predicate for every vanilla item tag and a function checking all of these predicates."""
   vanilla = ctx.inject(Vanilla)
-  # Intentionally left at 1.21.3, not supporting new crafting recipes
-  vanilla.minecraft_version = '1.21.3'
+  vanilla.minecraft_version = '1.21.5'
   item_tags = vanilla.data.item_tags
   item_tags = [
     id.removeprefix("minecraft:")
     for id in item_tags
-    if id not in ("minecraft:flowers", "minecraft:tall_flowers", "minecraft:trim_templates")
   ]
 
   for id in item_tags:

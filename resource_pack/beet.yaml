@@ -1,12 +1,17 @@
 id: gm4_resource_pack
 name: Resource Pack
-version: 1.3.X
+version: 1.4.X
 
 resource_pack:
   load:
     pack.png: pack.png
     # other files are inherited by the full-project build
-
+  overlays:
+    - formats:
+        min_inclusive: 0
+        max_inclusive: 42
+      directory: backport_42
+      
 pipeline:
   - dev_warning
 

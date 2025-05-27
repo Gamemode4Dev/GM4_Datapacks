@@ -11,7 +11,7 @@ scoreboard players operation @s gm4_ml_ore_th += $metal_amount gm4_ml_data
 # add secondary metal
 execute store result score $metal_amount gm4_ml_data run data get storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal.amount[1]
 scoreboard players operation @s gm4_ml_ore_bi += $metal_amount gm4_ml_data
-execute if score $is_obsidian_cast gm4_ml_data matches 1.. run summon item ~.45 ~0.1 ~.65 {Item:{id:"minecraft:obsidian",count:1,components:{"minecraft:custom_model_data":"item/slightly_damaged_obsidian","minecraft:lore":['{"translate":"item.gm4.slightly_damaged_obsidian","fallback":"Slightly Damaged Obsidian","color":"dark_gray"}']}}}
+execute if score $is_obsidian_cast gm4_ml_data matches 1.. run summon item ~.45 ~0.1 ~.65 {Item:{id:"minecraft:obsidian",count:1,components:{"minecraft:custom_model_data":"item/slightly_damaged_obsidian","minecraft:lore":[{"translate":"item.gm4.slightly_damaged_obsidian","fallback":"Slightly Damaged Obsidian","color":"dark_gray"}]}}}
 
 # visuals
 particle minecraft:block{block_state:"minecraft:lime_concrete_powder"} ~.45 ~0.1 ~.65 .1 .1 .1 0 2

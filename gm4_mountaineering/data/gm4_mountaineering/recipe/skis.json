@@ -15,7 +15,7 @@
     "components": {
       "minecraft:custom_model_data": "item/skis",
       "minecraft:custom_data": "{gm4_mountaineering:{item:'skis'}}",
-      "minecraft:custom_name": "{\"translate\":\"item.gm4.skis\",\"fallback\":\"Skis\",\"italic\":false}"
+      "minecraft:custom_name": {"translate":"item.gm4.skis","fallback":"Skis","italic":false}
     }
   }
 }

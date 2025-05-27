@@ -10,5 +10,5 @@ advancement.gm4.heart_canisters.tier_2.description,Craft a tier 2 Heart Canister
 text.gm4.guidebook.module_desc.heart_canisters,Introduces two tiers of pricey canisters that increase your health when carried.
 text.gm4.guidebook.heart_canisters.description,Heart Canisters can be used to increase health. Up to 20 additional hearts can be obtained.\n\nThey can be crafted in a Custom Crafter using golden apples and a powerful core.
 text.gm4.guidebook.heart_canisters.crafting_tier_1,The recipes for a heart canister is as follows:
-text.gm4.guidebook.heart_canisters.usage_tier_1,Tier 2 heart canisters require five tier 1 canisters also in the inventory to function.
-text.gm4.guidebook.heart_canisters.stacking,Heart canisters of the same type must be in the same inventory slot to provide the proper amount of health.\n\nOnly up to five of each heart canister tier will give extra health.
+text.gm4.guidebook.heart_canisters.crafting_tier_2,Tier 2 heart canisters can be crafted with tier 1 canisters.
+text.gm4.guidebook.heart_canisters.max_amount,Each heart canister will give 2 extra hearts.\n\nOnly up to five of each heart canister tier will give extra health.

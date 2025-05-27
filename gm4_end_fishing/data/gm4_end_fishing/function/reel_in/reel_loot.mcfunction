@@ -5,8 +5,8 @@ advancement revoke @s only gm4_end_fishing:reel_loot
 advancement grant @s only gm4:end_fishing
 tag @s add gm4_ef_reel_loot
 tag @s add gm4_ef_looted
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:fishing_rod"}}] run function gm4_end_fishing:durability/prep_mainhand
-execute unless entity @s[nbt={SelectedItem:{id:"minecraft:fishing_rod"}}] if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:fishing_rod"}]}] run function gm4_end_fishing:durability/prep_offhand
+execute if items entity @s weapon.mainhand minecraft:fishing_rod run function gm4_end_fishing:durability/prep_mainhand
+execute unless items entity @s weapon.mainhand minecraft:fishing_rod if items entity @s weapon.offhand minecraft:fishing_rod run function gm4_end_fishing:durability/prep_offhand
 
 scoreboard players operation $current gm4_ef_id = @s gm4_ef_id
 execute as @e[type=armor_stand,tag=gm4_ef_has_fish] if score @s gm4_ef_id = $current gm4_ef_id run tag @s add gm4_ef_reeled_in
