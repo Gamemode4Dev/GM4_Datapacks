@@ -1,5 +1,5 @@
 key,en_us
-item.gm4.shamir.audere,Audere
+item.gm4.shamir.audere,Audere Shamir
 text.gm4.guidebook.module_desc.audere_shamir,Adds the shamir 'Audere' to Metallurgy. Gain Haste with low durability tools.
 text.gm4.guidebook.audere_shamir.description,"Audere buffs mining speed, as durability decreases."
 text.gm4.guidebook.audere_shamir.usage,The Audere Shamir is found on Barium Bands. It can be placed onto tools.\n\nHigher levels of Haste are awarded for lower durability (percentage-based).\n\nThe maximum level of Haste is IV.

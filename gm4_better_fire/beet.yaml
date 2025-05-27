@@ -1,6 +1,6 @@
 id: gm4_better_fire
 name: Better Fire
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -39,6 +39,4 @@ meta:
         template: generated
       - item: bow
         reference: gui/advancement/better_fire
-        template:
-          name: advancement
-          forward: minecraft:item/bow
+        template: advancement

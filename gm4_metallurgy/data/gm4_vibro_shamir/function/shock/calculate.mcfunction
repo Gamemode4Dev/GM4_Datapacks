@@ -2,7 +2,7 @@
 # run from shock/activate
 
 # raycast to the vibro player
-summon marker ~ ~ ~ {CustomName:'"gm4_vibro_ray"',Tags:["gm4_vibro_ray"]}
+summon marker ~ ~ ~ {CustomName:"gm4_vibro_ray",Tags:["gm4_vibro_ray"]}
 execute as @e[type=marker,tag=gm4_vibro_ray,limit=1] at @s run function gm4_vibro_shamir:shock/ray_execute
 
 # damage dealt to the vibro player is multiplied by 2 and divided by the distance+dampening

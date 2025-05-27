@@ -16,7 +16,7 @@
       "minecraft:custom_model_data": "item/poles",
       "minecraft:max_stack_size": 1,
       "minecraft:custom_data": "{gm4_mountaineering:{item:'poles'}}",
-      "minecraft:custom_name": "{\"translate\":\"item.gm4.poles\",\"fallback\":\"Ski Pole\",\"italic\":false}"
+      "minecraft:custom_name": {"translate":"item.gm4.poles","fallback":"Ski Pole","italic":false}
     }
   }
 }

@@ -398,7 +398,7 @@
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/broken_elytra.png",
+            "file": "minecraft:item/elytra_broken.png",
             "ascent": -32768,
             "height": -16,
             "chars": [
@@ -3395,24 +3395,6 @@
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/spawn_egg.png",
-            "ascent": -32768,
-            "height": -16,
-            "chars": [
-                "\u0a7e"
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "minecraft:item/spawn_egg_overlay.png",
-            "ascent": -32768,
-            "height": -16,
-            "chars": [
-                "\u0a7f"
-            ]
-        },
-        {
-            "type": "bitmap",
             "file": "minecraft:item/spectral_arrow.png",
             "ascent": -32768,
             "height": -16,
@@ -4402,7 +4384,7 @@
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/broken_elytra.png",
+            "file": "minecraft:item/elytra_broken.png",
             "ascent": 8,
             "height": 16,
             "chars": [
@@ -7395,24 +7377,6 @@
             "height": 16,
             "chars": [
                 "\u0f0c"
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "minecraft:item/spawn_egg.png",
-            "ascent": 8,
-            "height": 16,
-            "chars": [
-                "\u0f0d"
-            ]
-        },
-        {
-            "type": "bitmap",
-            "file": "minecraft:item/spawn_egg_overlay.png",
-            "ascent": 8,
-            "height": 16,
-            "chars": [
-                "\u0f0e"
             ]
         },
         {

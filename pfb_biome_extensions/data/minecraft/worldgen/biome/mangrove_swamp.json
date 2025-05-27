@@ -2,6 +2,7 @@
   "carvers": "#minecraft:in_biome/mangrove_swamp",
   "downfall": 0.9,
   "effects": {
+    "dry_foliage_color": 8082228,
     "fog_color": 12638463,
     "foliage_color": 9285927,
     "grass_color_modifier": "swamp",

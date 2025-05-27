@@ -1,8 +1,8 @@
 # @s = custom crafter with teleportation jammer recipe
 # run from recipe_check
 
-data merge storage gm4_custom_crafters:temp/crafter {Items:[],CustomName:'{"color":"dark_purple","translate":"block.gm4.teleportation_jammer","fallback":"Teleportation Jammer"}'}
-data merge entity @s {CustomName:'"gm4_teleportation_jammer"',ArmorItems:[{},{},{},{id:"purpur_pillar",count:1,components:{"minecraft:custom_model_data":"block/teleportation_jammer"}}]}
+data merge storage gm4_custom_crafters:temp/crafter {Items:[],CustomName:{"color":"dark_purple","translate":"block.gm4.teleportation_jammer","fallback":"Teleportation Jammer"}}
+data merge entity @s {CustomName:"gm4_teleportation_jammer",equipment:{head:{id:"purpur_pillar",count:1,components:{"minecraft:custom_model_data":"block/teleportation_jammer"}}}}
 playsound minecraft:block.chorus_flower.death block @a[distance=..8] ~ ~ ~ 100 1.3
 playsound minecraft:block.beacon.power_select block @a[distance=..8] ~ ~ ~ 0.3 0.3
 tag @s add gm4_teleportation_jammer

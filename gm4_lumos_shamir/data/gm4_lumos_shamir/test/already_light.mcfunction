@@ -1,5 +1,6 @@
 # @template gm4_lumos_shamir:test_dark
 # @dummy ~1 ~1 ~1
+# @optional
 
 setblock ~1 ~3 ~1 minecraft:glowstone
 

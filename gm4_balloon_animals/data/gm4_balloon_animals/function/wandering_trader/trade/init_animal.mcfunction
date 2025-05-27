@@ -17,4 +17,4 @@ execute store result storage gm4_balloon_animals:temp gm4_balloon_animals.id int
 
 execute summon trader_llama run function gm4_balloon_animals:wandering_trader/trade/spawn_trade_llama
 
-data modify entity @s CustomName set from storage gm4_balloon_animals:temp name_spliced
+data modify entity @s CustomName set from storage gm4_balloon_animals:temp CustomName

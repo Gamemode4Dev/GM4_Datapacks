@@ -23,7 +23,7 @@
                             "lore": [
                                 {
                                     "translate": "item.gm4.shamir.helious",
-                                    "fallback": "Helious",
+                                    "fallback": "Helious Shamir",
                                     "italic": false,
                                     "color": "gray"
                                 }

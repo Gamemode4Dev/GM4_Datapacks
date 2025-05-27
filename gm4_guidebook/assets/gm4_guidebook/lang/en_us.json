@@ -1176,8 +1176,6 @@
     "gui.gm4.guidebook.crafting.display.minecraft.soul_campfire": "\u0f0a\u0a7b\uf015",
     "gui.gm4.guidebook.crafting.display.minecraft.soul_lantern": "\u0f0b\u0a7c\uf015",
     "gui.gm4.guidebook.crafting.display.minecraft.soul_torch": "\u0f0c\u0a7d\uf015",
-    "gui.gm4.guidebook.crafting.display.minecraft.spawn_egg": "\u0f0d\u0a7e\uf015",
-    "gui.gm4.guidebook.crafting.display.overlay.minecraft.spawn_egg": "\uffff\ue018\u0f0e\u0a7f\uf015",
     "gui.gm4.guidebook.crafting.display.minecraft.spectral_arrow": "\u0f0f\u0a80\uf015",
     "gui.gm4.guidebook.crafting.display.minecraft.spider_eye": "\u0f10\u0a81\uf015",
     "gui.gm4.guidebook.crafting.display.minecraft.splash_potion": "\u0f11\u0a82\uf015",

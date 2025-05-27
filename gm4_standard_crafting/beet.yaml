@@ -1,14 +1,9 @@
 id: gm4_standard_crafting
 name: Standard Crafting
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 61
-        max_inclusive: 61
-      directory: since_61
 
 pipeline:
   - generate_recipes
@@ -19,7 +14,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.2.0
+        lib_custom_crafters: 3.4.0
     website:
       description: A crafting recipe pack that adds some nifty new recipes to the game.
       recommended: []

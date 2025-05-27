@@ -15,7 +15,7 @@ execute if score $target_door_state gm4_double_doors_data matches 1 unless block
 scoreboard players set $triggered_by_auto_toggle gm4_double_doors_data 1
 
 # select material type to run block actions & sound event
-for material_name in ctx.meta['wood_types']:
+for material_name in ctx.meta['door_materials']:
     execute unless score $toggled_door gm4_double_doors_data matches 1.. if entity @s[tag=f"gm4_double_doors_{material_name}",tag=gm4_double_doors_left] run function f"gm4_double_doors:{material_name}/door/left_hinge/get_facing"
     execute unless score $toggled_door gm4_double_doors_data matches 1.. if entity @s[tag=f"gm4_double_doors_{material_name}",tag=gm4_double_doors_right] run function f"gm4_double_doors:{material_name}/door/right_hinge/get_facing"
     execute if score $play_sound gm4_double_doors_data matches 1 if score $target_door_state gm4_double_doors_data matches 0 run playsound ctx.meta['sound_ids'][material_name].close block @a[distance=..16] ~ ~ ~

@@ -9,5 +9,6 @@ def beet_default(ctx: Context):
     ctx.require(
         "beet.contrib.default",
         "beet.contrib.model_merging",
+        "gm4.plugins.resource_pack.merge_policy",
         "gm4_metallurgy.shamir_model_template.merge_policy"
     )
