@@ -1,7 +1,7 @@
 # reduce damage with armor toughness
 # @s = damaged player
 # at @s
-# run from player/health/damaged/calculate_reduction
+# run from player/damage/calculate_reduction
 
 # Formula:
 # Damage reduction percentage = (damage * armor_toughness * 50) / ( damage * armor_toughness + 3500 )

@@ -3,17 +3,24 @@
 # at @s
 # run from mob/init/calc_difficulty_else
 # run from mob/init/calc_difficulty_overworld
+# run from here
 
+# get the highest armor tier from closest player
+scoreboard players operation $armor_tier gm4_sr_data = @p gm4_sr_armor.tier
+
+# get difficulty data in score
 scoreboard players operation $difficulty gm4_sr_data = $difficulty_base gm4_sr_data
+execute store result score $difficulty_mult gm4_sr_data run random value -35..35
+execute store result score $difficulty_flat gm4_sr_data run random value -15..15
+# function tag so other modules can modify the difficulty
+function #gm4_survival_refightalized:init_difficulty
 
 # apply a random difficulty_mult to nudge difficulty around
-execute store result score $difficulty_mult gm4_sr_data run random value -35..35
 scoreboard players operation $difficulty_add gm4_sr_data = $difficulty gm4_sr_data
 scoreboard players operation $difficulty_add gm4_sr_data *= $difficulty_mult gm4_sr_data
 scoreboard players operation $difficulty_add gm4_sr_data /= #100 gm4_sr_data
 scoreboard players operation $difficulty gm4_sr_data += $difficulty_add gm4_sr_data
 # apply a random difficulty_flat to nudge difficulty around
-execute store result score $difficulty_flat gm4_sr_data run random value -15..15
 scoreboard players operation $difficulty gm4_sr_data += $difficulty_flat gm4_sr_data
 
 # make sure difficulty is between 0 - 100
@@ -31,6 +38,7 @@ function gm4_survival_refightalized:mob/init/mob_type
 function #gm4_survival_refightalized:init_mob
 
 # remove the damage bonus from hard difficulty if needed
+# ( Hard normally adds a x1.5 damage multiplier, this counteracts that so mobs can be better tuned )
 execute if score $worlddiff gm4_sr_data matches 3 run attribute @s minecraft:attack_damage modifier add gm4_survival_refightalized:stat_change.hard_difficulty_offset -0.333334 add_multiplied_total
 
 # set modifiers

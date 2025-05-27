@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "requirement": {
+        "vanilla_shield": {
             "trigger": "minecraft:using_item",
             "conditions": {
                 "item": {

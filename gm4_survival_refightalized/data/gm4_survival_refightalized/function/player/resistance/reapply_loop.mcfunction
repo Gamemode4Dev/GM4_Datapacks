@@ -1,7 +1,7 @@
 # reapply resistance effects that the player had besides the one from this module
 # @s = damaged player
 # at @s
-# run from player/health/damaged/resistance_remove
+# run from player/resistance/remove
 # run from here
 
 # reapply

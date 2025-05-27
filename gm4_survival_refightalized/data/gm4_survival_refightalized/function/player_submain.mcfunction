@@ -6,13 +6,13 @@
 ## /!\
 # This function is NOT run as the player because the order of some of these functions is important
 
-# DEV: trigger for players with `gm4_sr_dev.damage_log` tag
-execute as @a[tag=gm4_sr_dev.mob_stats] at @s as @e[type=#gm4_survival_refightalized:modify,limit=1,sort=nearest] run function gm4_survival_refightalized:debug/dont_run/dev
+# DEV: trigger for players with `gm4_sr_dev.mob_stats` tag
+execute as @a[tag=gm4_sr_dev.mob_stats] at @s as @n[type=#gm4_survival_refightalized:modify] run function gm4_survival_refightalized:debug/dont_run/dev
 
 # process players that died
 execute as @a[scores={gm4_sr_stat.deaths=1..}] run function gm4_survival_refightalized:player/death
 
-# reset regeneration and armor recharge changes, can be set again from the function tag
+# reset regeneration and armor recharge changes, can be set from function tag
 scoreboard players set @a gm4_sr_stat.armor_recharge_change 0
 scoreboard players set @a gm4_sr_stat.regeneration_rate_change 0
 

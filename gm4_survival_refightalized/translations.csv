@@ -1,12 +1,17 @@
 key,en_us
+
 advancement.gm4.survival_refightalized.armor_damage.title,Armor Up!
 advancement.gm4.survival_refightalized.armor_damage.description,Discover that Armor works a bit differently now
 advancement.gm4.survival_refightalized.parry.title,Not Today
 advancement.gm4.survival_refightalized.parry.description,Parry with a Shield by blocking just before an attack
 advancement.gm4.survival_refightalized.parry_lethal_damage.title,"Not Today, Either"
 advancement.gm4.survival_refightalized.parry_lethal_damage.description,Block lethal damage with a Shield Parry
-text.gm4.guidebook.module_desc.survival_refightalized,Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
-text.gm4.guidebook.survival_refightalized.description.health,"Damage taken is split in combat and non-combat damage.\nCombat damage regenerates every 60 seconds, while non-combat damage regenerates rapidly when out of combat.\nSleeping converts all combat damage to non-combat damage, once per night."
-text.gm4.guidebook.survival_refightalized.description.mobs,"Mobs are stronger based on their environment, such as being outside during a thunderstorm or full moon, or being deep underground.\n\nCertain mobs have additional effects, such as Skeletons firing slower, and Phantoms drowning underwater."
+
 item.gm4.survival_refightalized.lore.wither_arrow,Arrow of Wither
+
 text.gm4.survival_refightalized.death, ran out of health
+text.gm4.guidebook.module_desc.survival_refightalized,Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
+text.gm4.guidebook.survival_refightalized.description.health,"Damage taken is split in combat and non-combat damage.\nCombat damage regenerates every 60 seconds, while non-combat damage regenerates rapidly when out of combat."
+text.gm4.guidebook.survival_refightalized.description.mobs,"Mobs are stronger based on their environment, such as being outside during a thunderstorm or full moon, or being deep underground.\nSome mobs are altered, such as Skeletons firing slower, and Phantoms drowning."
+text.gm4.guidebook.survival_refightalized.description.armor,"Armor no longer reduces damage taken, instead serving as a second health bar. Armor recharges rapidly shortly after it takes damage.\nProtection enchantments have reduced effectiveness."
+text.gm4.guidebook.survival_refightalized.description.shield,"Shields will go on cooldown after blocking any damage.\n\nBlocking damage within 0.25s of holding the Shield performs a Parry, releasing the Shield within that 0.25s will not disable it."

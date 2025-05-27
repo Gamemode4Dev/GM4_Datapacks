@@ -1,8 +1,7 @@
-# regain 1 armor for this player
+# regain armor for this player
 # @s = player with reduced armor
 # at unspecified
-# run from main
-# run from player/process
+# run from player/armor/timer
 
 # only run if health is full
 function gm4_survival_refightalized:player/health/calculate_hp

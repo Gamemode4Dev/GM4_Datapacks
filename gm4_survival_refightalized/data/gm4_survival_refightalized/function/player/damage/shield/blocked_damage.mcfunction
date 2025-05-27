@@ -1,7 +1,7 @@
 # disable shield if it blocked damage
 # @s = damaged player
 # at @s
-# run from player/health/damaged/run
+# run from player/damage/run
 
 # revoke advancement as it's not needed for shield blocking
 advancement revoke @s only gm4_survival_refightalized:damaged

@@ -1,3 +1,7 @@
+# process players that have their armor reduced
+# @s = player
+# at unspecified
+# run from player/player_submain
 
 # gm4_sr_stat.armor_recharge_change is normally 0, but can be changed by expansions
 scoreboard players set $armor_recharge gm4_sr_data 100

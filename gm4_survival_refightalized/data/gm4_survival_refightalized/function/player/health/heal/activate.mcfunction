@@ -1,7 +1,7 @@
 # code taken from sweethearts
 # @s = player to heal
 # at unspecified
-# run from any armor/active/heal/heal_calc
+# run from player_submain
 
 # calculate health
 function gm4_survival_refightalized:player/health/calculate_hp

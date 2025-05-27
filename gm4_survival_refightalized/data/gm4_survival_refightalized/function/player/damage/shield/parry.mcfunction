@@ -1,3 +1,7 @@
+# shield parry
+# @s = damaged player
+# at @s
+# run from player/damage/run
 
 tag @s add gm4_sr_parried
 

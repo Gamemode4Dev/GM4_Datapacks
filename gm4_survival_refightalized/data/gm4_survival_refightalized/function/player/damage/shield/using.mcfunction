@@ -1,4 +1,6 @@
-
+# run while using a shield
+# @s = player using a shield
+# at @s
 advancement revoke @s only gm4_survival_refightalized:using_shield
 
 # if player parried disable the shield if it is held for 0.25 seconds total

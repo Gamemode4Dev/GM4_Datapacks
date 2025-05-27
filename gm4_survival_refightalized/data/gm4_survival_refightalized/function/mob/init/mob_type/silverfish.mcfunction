@@ -3,7 +3,7 @@
 # at @s
 # run from mob/init/mob_type
 
-# Stat Block (normal/hard diff)
+## Stat Block (normal/hard diff)
 # health: 1 - 6
 # damage: 1 - 2.5
 # speed: 80 - 120%

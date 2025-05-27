@@ -3,7 +3,7 @@
 # at @s
 # run from mob/init/mob_type
 
-# Stat Block (normal/hard diff)
+## Stat Block (normal/hard diff)
 # health: 16 - 32
 # damage: 5 - 7 (melee), 2 - 4 (unarmed)
 # speed: 80 - 115%

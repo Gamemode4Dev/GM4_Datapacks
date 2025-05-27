@@ -1,7 +1,7 @@
 # reduce poison duration from witch potions
 # @s = damaged player
 # at @s
-# run from player/health/damaged/run
+# run from player/damage/run
 
 # get effect data
 data modify storage gm4_survival_refightalized:temp active_effects set from entity @s active_effects

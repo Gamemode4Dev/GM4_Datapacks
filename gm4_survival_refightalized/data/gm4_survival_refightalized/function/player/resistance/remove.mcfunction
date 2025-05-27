@@ -1,7 +1,8 @@
 # remove resistance from armor if armor is broken
 # @s = damaged player
 # at @s
-# run from player/health/damaged/calculate_reduction
+# run from player/damage/armor/break
+# run from player/
 
 # check if player actually has resistance that should be removed
 execute store result score $resistance_level gm4_sr_data run data get storage gm4_survival_refightalized:temp active_effects[{id:"minecraft:resistance"}].amplifier

@@ -1,7 +1,7 @@
 # reduce poison duration from cave spider attacks
 # @s = damaged player
 # at @s
-# run from player/health/damaged/run
+# run from player/damage/run
 
 # dont run on easy, no poison applied
 execute store result score $worlddiff gm4_sr_data run difficulty

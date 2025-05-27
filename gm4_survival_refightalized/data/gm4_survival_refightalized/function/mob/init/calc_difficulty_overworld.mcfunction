@@ -3,9 +3,6 @@
 # at @s
 # run from mob/init/check_mob
 
-# get the tier from closest player
-scoreboard players operation $armor_tier gm4_sr_data = @p gm4_sr_armor.tier
-
 # use world difficulty to set base difficulty 5/10/20
 execute store result score $worlddiff gm4_sr_data run difficulty
 execute if score $worlddiff gm4_sr_data matches 3 run scoreboard players set $difficulty_base gm4_sr_data 20
@@ -16,7 +13,7 @@ execute unless score $worlddiff gm4_sr_data matches 2..3 run scoreboard players 
 execute if predicate gm4_survival_refightalized:technical/raining run scoreboard players add $difficulty_base gm4_sr_data 10
 # not underground + thundering (will also add the raining modifier) +15
 execute if predicate gm4_survival_refightalized:technical/thundering run scoreboard players add $difficulty_base gm4_sr_data 15
-# night & not underground biome 0-20 based on moon phase
+# not underground + nighttime +0-20 based on moon phase (0 at new moon, 20 at full moon)
 scoreboard players operation $moon_diff_add gm4_sr_data = $moon gm4_sr_data
 scoreboard players operation $moon_diff_add gm4_sr_data *= #5 gm4_sr_data
 execute unless predicate gm4_survival_refightalized:mob/underground if predicate gm4_survival_refightalized:technical/night_time run scoreboard players operation $difficulty_base gm4_sr_data += $moon_diff_add gm4_sr_data

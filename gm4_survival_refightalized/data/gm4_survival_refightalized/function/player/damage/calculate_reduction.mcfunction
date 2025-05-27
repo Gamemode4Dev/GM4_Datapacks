@@ -1,9 +1,9 @@
 # calculate damage reduction based on different factors - if armor is worn
 # @s = damaged player
 # at @s
-# run from player/health/damaged/run
+# run from player/damage/run
 
-# grab active effects to check for resistance later - can be skipped if this was already done for cave spider poison reduction
+# grab active effects to check for resistance later - can be skipped if this was already done for cave spider / witch poison reduction
 execute unless data storage gm4_survival_refightalized:temp active_effects run data modify storage gm4_survival_refightalized:temp active_effects set from entity @s active_effects
 
 # don't run if this resistance level is not due to armor (as the player will already have taken the damage)

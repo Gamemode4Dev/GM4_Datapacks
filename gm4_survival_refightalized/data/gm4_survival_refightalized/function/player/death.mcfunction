@@ -1,3 +1,7 @@
+# process players that died
+# @s = player
+# at player that died
+# run from player/player_submain
 
 # reset scores
 scoreboard players set @s gm4_sr_stat.deaths 0

@@ -3,7 +3,7 @@
 # at @s
 # run from mob/init/mob_type
 
-# Stat Block (normal/hard diff)
+## Stat Block (normal/hard diff)
 # health: 22 - 36
 # damage: 6.5 - 8.5 (armed), 0.5 - 2.5 (unarmed)
 # speed: 95 - 120%
@@ -28,7 +28,7 @@ attribute @s minecraft:knockback_resistance modifier add gm4_survival_refightali
 loot replace entity @s weapon.mainhand loot gm4_survival_refightalized:mob/wither_skeleton/weapon
 
 # withering arrow if a bow is held
-execute if data entity @s HandItems[{id:"minecraft:bow"}] run loot replace entity @s weapon.offhand loot gm4_survival_refightalized:mob/wither_skeleton/arrow
+execute if items entity @s weapon.mainhand bow run loot replace entity @s weapon.offhand loot gm4_survival_refightalized:mob/wither_skeleton/arrow
 
 # shoot arrows slower and weaker
 scoreboard players set @s gm4_sr_arrow.fire_delay 4

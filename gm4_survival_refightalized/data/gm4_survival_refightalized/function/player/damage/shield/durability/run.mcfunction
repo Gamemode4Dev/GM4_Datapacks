@@ -1,3 +1,7 @@
+# shield durability damage
+# @s = damaged player
+# at @s
+# run from player/damage/shield/blocked_damage
 
 scoreboard players set $mainhand_shield gm4_sr_data 0
 item replace block 29999998 1 7134 container.4 from entity @s weapon.offhand

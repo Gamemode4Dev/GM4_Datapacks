@@ -8,9 +8,7 @@ scoreboard players add $unbreaking_level gm4_sr_data 1
 scoreboard players set $damage_chance gm4_sr_data 100
 scoreboard players operation $damage_chance gm4_sr_data /= $unbreaking_level gm4_sr_data
 scoreboard players set $damage_opportunities gm4_sr_data 1
-execute store result score $incoming_damage gm4_sr_data run loot spawn 29999998 1 7133 loot gm4_survival_refightalized:technical/roll_damage
-# TODO: remove (spigot bug)
-execute positioned 29999998 1 7133 run kill @e[type=item,distance=..2]
+execute store result score $incoming_damage gm4_sr_data run loot spawn ~ -4064 ~ loot gm4_survival_refightalized:technical/roll_damage
 
 # if no damage is going to be applied cancel function
 execute unless score $incoming_damage gm4_sr_data matches 1.. run return 0

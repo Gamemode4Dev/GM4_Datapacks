@@ -3,9 +3,6 @@
 # at @s
 # run from mob/init/check_mob
 
-# get the tier from closest player
-scoreboard players operation $armor_tier gm4_sr_data = @p gm4_sr_armor.tier
-
 # use world difficulty to set base difficulty 10/25/50
 execute store result score $worlddiff gm4_sr_data run difficulty
 execute if score $worlddiff gm4_sr_data matches 3 run scoreboard players set $difficulty_base gm4_sr_data 50

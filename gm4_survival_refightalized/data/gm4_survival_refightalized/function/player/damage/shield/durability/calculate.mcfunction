@@ -1,3 +1,7 @@
+# shield durability damage
+# @s = damaged player
+# at @s
+# run from player/damage/shield/durability/run
 
 # if unbreakable don't run
 execute if data storage gm4_survival_refightalized:temp Items[{Slot:4b}].components."minecraft:unbreakable" run return 0
@@ -15,9 +19,7 @@ scoreboard players operation $damage_chance gm4_sr_data /= $unbreaking_level gm4
 scoreboard players operation $damage_opportunities gm4_sr_data = @s gm4_sr_stat.damage_resisted
 scoreboard players add $damage_opportunities gm4_sr_data 5
 scoreboard players operation $damage_opportunities gm4_sr_data /= #10 gm4_sr_data
-execute store result score $incoming_damage gm4_sr_data run loot spawn 29999998 1 7133 loot gm4_survival_refightalized:technical/roll_damage
-# TODO: remove (spigot bug)
-execute positioned 29999998 1 7133 run kill @e[type=item,distance=..2]
+execute store result score $incoming_damage gm4_sr_data run loot spawn ~ -4064 ~ loot gm4_survival_refightalized:technical/roll_damage
 
 # dev damage log
 tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"Shield Damage Base: ","color":"gray"},{"score":{"name":"$damage_opportunities","objective":"gm4_sr_data"},"color":"white"}]
@@ -29,7 +31,6 @@ execute unless score $incoming_damage gm4_sr_data matches 1.. run return 0
 # find the total durability of this item
 execute store result score $total_durability gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:4b}].components."minecraft:max_damage"
 execute if score $total_durability gm4_sr_data matches 0 run scoreboard players set $total_durability gm4_sr_data 336
-execute if score $total_durability gm4_sr_data matches 0 run return 0
 
 # add incoming damage to the current damage
 execute store result score $current_damage gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:4b}].components."minecraft:damage"

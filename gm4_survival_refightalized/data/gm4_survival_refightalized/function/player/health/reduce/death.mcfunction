@@ -1,9 +1,10 @@
 # kill the player if they get reduced to 0 health
 # @s = player to damage
 # at unspecified
-# run from player/health/reduced/activate
+# run from player/health/reduce/activate
 
-execute if predicate gm4_survival_refightalized:technical/holding_totem_of_undying run return run function gm4_survival_refightalized:player/health/reduce/totem_of_undying
+# check if player is holding item with death_protection component
+execute if items entity @s weapon.* *[death_protection] run return run function gm4_survival_refightalized:player/health/reduce/death_protection
 
 tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"Custom Death Message:","color":"gray"}]
 

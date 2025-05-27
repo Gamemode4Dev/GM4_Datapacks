@@ -1,4 +1,4 @@
-# stop regen when player gets damaged
+# run when player gets damaged
 # @s = damaged player
 # at @s
 # run from tick
@@ -39,7 +39,7 @@ scoreboard players operation $set gm4_sr_armor.reduction_timer = $armor_recharge
 scoreboard players operation $set gm4_sr_health.regeneration_timer = $combat_regen_timer gm4_sr_config
 
 # function call
-# called after damage is calculated but before it is applied (unless there was no armor, then it is applied before)
+# called after damage is calculated but before it is applied (unless there was no armor, then it is applied by the game)
 function #gm4_survival_refightalized:damage_taken
 
 # divide the damage taken between armor, absorption and health

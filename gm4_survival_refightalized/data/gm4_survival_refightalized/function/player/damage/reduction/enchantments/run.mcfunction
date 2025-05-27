@@ -1,7 +1,7 @@
 # reduce damage with enchantments
 # @s = damaged player
 # at @s
-# run from player/health/damaged/calculate_reduction
+# run from player/damage/calculate_reduction
 
 # get required data
 item replace block 29999998 1 7134 container.0 from entity @s armor.head
@@ -11,7 +11,7 @@ item replace block 29999998 1 7134 container.3 from entity @s armor.feet
 data modify storage gm4_survival_refightalized:temp Items set from block 29999998 1 7134 Items
 data remove block 29999998 1 7134 Items
 
-# enchantments have been nerfed! Protection values are:
+# /?\ enchantments have been nerfed! Protection values are:
 # 1% per level of Protection
 # 4% per level of Fire / Blast / Projectile Protection
 
@@ -40,6 +40,7 @@ execute if entity @s[advancements={gm4_survival_refightalized:damaged={is_explos
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={is_projectile=true}}] run function gm4_survival_refightalized:player/damage/reduction/enchantments/projectile_protection
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={is_fall=true}}] run function gm4_survival_refightalized:player/damage/reduction/enchantments/feather_falling
 
+# total enchantment damage reduction is capped at 80%
 scoreboard players operation $enchant.damage_reduction gm4_sr_data < #80 gm4_sr_data
 scoreboard players operation $enchant.damage_reduction_percentage gm4_sr_data = $enchant.damage_reduction gm4_sr_data
 scoreboard players operation $enchant.damage_reduction gm4_sr_data *= $damage_total gm4_sr_data

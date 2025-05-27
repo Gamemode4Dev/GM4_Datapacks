@@ -1,3 +1,7 @@
+# devide damage between armor, absorption and health
+# @s = damaged player
+# at @s
+# run from player/damage/run
 
 # make sure at least 1 damage is dealt
 scoreboard players operation $damage_total gm4_sr_data > #1 gm4_sr_data

@@ -1,7 +1,7 @@
 # reduce damage with feather falling
 # @s = damaged player
 # at @s
-# run from player/health/damaged/enchantments
+# run from player/damage/reduction/enchantments/ruun
 
 execute store result score $enchant.feather_falling gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:0b}].components."minecraft:enchantments".levels."minecraft:feather_falling" 12
 execute store result score $enchant.feather_falling.add gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:1b}].components."minecraft:enchantments".levels."minecraft:feather_falling" 12
