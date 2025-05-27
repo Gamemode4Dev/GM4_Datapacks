@@ -1,7 +1,7 @@
 # Loops through Items[] and creates an item entity for each item, setting a slightly random motion
 # @s = entity with an Items[] tag
 # at @s
-# run from separate
+# run from pull_items
 
 # Assumptions
     # storage gm4_reeling_rods:temp motion_vector is a Motion[] vector that reaches player

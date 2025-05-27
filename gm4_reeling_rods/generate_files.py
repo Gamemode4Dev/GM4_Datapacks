@@ -37,7 +37,6 @@ Push this idea as far as I can, then reign it in.
             What about datapack armor?... I worry about compatibility
             Probably want to implement drop chances one way though
 
-
     \\ ---[ REJECTED FOR A REASON ]--- \\
         Enderman :
             Steal held block
@@ -48,9 +47,6 @@ Push this idea as far as I can, then reign it in.
             Puff up a bit
             ISSUE: Setting PuffState has issues. Set once is fine. Once it deflates a bit, setting again flashes and then reverts. 
             Probably an MC bug, should make an issue for it if it doesn't exist
-        Sheep :
-            Shear?
-            ISSUE: Would need to map from Color Byte to string. Annoying. Maybe revisit
         Wandering Trader :  Doesn't hold items. Maybe revist
             Theft Trades?
             Steal llamas?

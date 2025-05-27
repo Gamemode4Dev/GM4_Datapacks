@@ -9,5 +9,5 @@ data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s Sele
 data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s equipment.mainhand
 item replace entity @s weapon.mainhand with minecraft:air
 data modify storage gm4_reeling_rods:temp item_data.PickupDelay set value 10s
-function gm4_reeling_rods:separate
+function gm4_reeling_rods:pull_items
 return 1

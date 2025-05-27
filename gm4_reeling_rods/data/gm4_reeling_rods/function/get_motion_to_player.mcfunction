@@ -1,5 +1,5 @@
 # Gets motion vector to launch item to player
-# run from separate
+# run from pull_items
 
 
 data modify storage gm4_reeling_rods:temp item_data.Motion set value [0d,0d,0d]

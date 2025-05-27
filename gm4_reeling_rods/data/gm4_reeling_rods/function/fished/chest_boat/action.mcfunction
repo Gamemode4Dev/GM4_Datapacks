@@ -6,7 +6,7 @@
 
 data modify storage gm4_reeling_rods:temp entity_data set from entity @s
 data modify storage gm4_reeling_rods:temp item_data.Item set value {id:"minecraft:chest",count:1}
-execute positioned ~ ~0.3 ~ run function gm4_reeling_rods:separate
+execute positioned ~ ~0.3 ~ run function gm4_reeling_rods:pull_items
 data remove storage gm4_reeling_rods:temp entity_data.UUID
 data remove storage gm4_reeling_rods:temp entity_data.Passengers
 $data modify storage gm4_reeling_rods:temp entity_type set value "$(boat_type)"
