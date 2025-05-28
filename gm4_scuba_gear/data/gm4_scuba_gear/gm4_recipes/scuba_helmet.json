@@ -2,18 +2,15 @@
   "input": {
     "type": "shaped",
     "recipe": [
-      "GTG",
-      "GPG"
+      "CCC",
+      "CGC"
     ],
     "key": {
+      "C": {
+        "item": "minecraft:copper_ingot"
+      },
       "G": {
-        "item": "minecraft:gold_ingot"
-      },
-      "T": {
-        "item": "minecraft:turtle_helmet"
-      },
-      "P": {
-        "item": "minecraft:glass_pane"
+        "item": "minecraft:glass"
       }
     }
   },

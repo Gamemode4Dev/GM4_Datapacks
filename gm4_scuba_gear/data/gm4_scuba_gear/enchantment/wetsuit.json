@@ -1,0 +1,109 @@
+{
+  "description": "",
+  "supported_items": "minecraft:leather_leggings",
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "legs"
+  ],
+  "effects": {
+    "minecraft:location_changed": [
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "minecraft:player",
+                "input": {
+                  "jump": false,
+                  "sneak": false
+                }
+              },
+              "location": {
+                "fluid": {
+                  "fluids": "#minecraft:water"
+                }
+              }
+            }
+          }
+        ],
+        "effect": {
+          "type": "minecraft:attribute",
+          "attribute": "minecraft:gravity",
+          "id": "gm4_scuba_gear:wetsuit/neutral_buoyancy",
+          "amount": -1,
+          "operation": "add_multiplied_total"
+        }
+      },
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "minecraft:player",
+                "input": {
+                  "jump": true,
+                  "sneak": false
+                }
+              },
+              "location": {
+                "fluid": {
+                  "fluids": "#minecraft:water"
+                }
+              }
+            }
+          }
+        ],
+        "effect": {
+          "type": "minecraft:attribute",
+          "attribute": "minecraft:gravity",
+          "id": "gm4_scuba_gear:wetsuit/negative_buoyancy",
+          "amount": -1.2,
+          "operation": "add_multiplied_total"
+        }
+      },
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "minecraft:player",
+                "input": {
+                  "jump": false,
+                  "sneak": true
+                }
+              },
+              "location": {
+                "fluid": {
+                  "fluids": "#minecraft:water"
+                }
+              }
+            }
+          }
+        ],
+        "effect": {
+          "type": "minecraft:attribute",
+          "attribute": "minecraft:gravity",
+          "id": "gm4_scuba_gear:wetsuit/positive_buoyancy",
+          "amount": 1.2,
+          "operation": "add_multiplied_total"
+        }
+      }
+    ]
+  }
+}

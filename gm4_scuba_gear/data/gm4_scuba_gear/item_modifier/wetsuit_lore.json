@@ -1,0 +1,31 @@
+{
+  "function": "minecraft:set_lore",
+  "entity": "this",
+  "lore": [
+    {
+      "translate": "item.modifiers.gm4.scuba_gear.in_water",
+      "fallback": "When in Water:",
+      "color": "gray",
+      "italic": false
+    },
+    {
+      "translate": "item.modifiers.gm4.scuba_gear.neutral_bouyancy",
+      "fallback": "Neutral Bouyancy",
+      "color": "blue",
+      "italic": false
+    },
+    {
+      "translate": "attribute.modifier.plus.1",
+      "with": [
+        "20",
+        {
+          "translate": "item.modifiers.gm4.scuba_gear.vertical_swimming_speed",
+          "fallback": "Vertical Swimming Speed"
+        }
+      ],
+      "color": "blue",
+      "italic": false
+    }
+  ],
+  "mode": "replace_all"
+}

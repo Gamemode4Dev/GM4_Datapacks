@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "KCK",
+    "K K",
+    "K K"
+  ],
+  "key": {
+    "C": [
+      "minecraft:copper_ingot"
+    ],
+    "K": [
+      "minecraft:dried_kelp"
+    ]
+  },
+  "result": {
+    "id": "minecraft:leather_leggings",
+    "components": {
+      "minecraft:item_name": "{\"translate\": \"item.gm4.wetsuit\",\"fallback\": \"Wetsuit\",\"italic\": false,\"color\": \"white\"}",
+      "minecraft:attribute_modifiers": [
+        {
+          "type": "minecraft:armor",
+          "id": "gm4_scuba_gear:wetsuit/armor",
+          "amount": 2,
+          "operation": "add_value",
+          "slot": "legs"
+        }
+      ],
+      "minecraft:dyed_color": {
+        "rgb": 2367281,
+        "show_in_tooltip": false
+      },
+      "minecraft:max_damage": 180,
+      "!minecraft:enchantable": {},
+      "minecraft:custom_data": {
+        "gm4_scuba_gear": {
+          "item": "wetsuit"
+        }
+      },
+      "minecraft:enchantments": {
+        "levels": {
+          "gm4_scuba_gear:wetsuit": 1
+        }
+      },
+      "minecraft:enchantment_glint_override": false,
+      "minecraft:rarity": "common"
+    },
+    "count": 1
+  }
+}

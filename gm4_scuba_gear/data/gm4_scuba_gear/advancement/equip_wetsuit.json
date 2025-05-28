@@ -1,0 +1,46 @@
+{
+  "criteria": {
+    "equip_flippers": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "legs": {
+                  "items": "minecraft:leather_leggings",
+                  "components": {
+                    "minecraft:lore": []
+                  },
+                  "predicates": {
+                    "minecraft:custom_data": {
+                      "gm4_scuba_gear": {
+                        "item": "wetsuit"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }],
+        "items": [
+          {
+            "items": "minecraft:leather_leggings",
+            "predicates": {
+              "minecraft:custom_data": {
+                "gm4_scuba_gear": {
+                  "item": "wetsuit"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_scuba_gear:lore/apply_wetsuit"
+  }
+}

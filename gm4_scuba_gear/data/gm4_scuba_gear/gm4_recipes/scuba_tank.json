@@ -2,33 +2,19 @@
   "input": {
     "type": "shaped",
     "recipe": [
-      "GPG",
-      "SGS",
-      "GGG"
+      "C C",
+      "PCP",
+      "CCC"
     ],
     "key": {
-      "G": {
-        "item": "minecraft:gold_ingot"
+      "C": {
+        "item": "minecraft:copper_ingot"
       },
       "P": [
         {
-          "item": "minecraft:potion",
-          "components": {"minecraft:potion_contents":{"potion":"minecraft:water_breathing"}},
-          "guidebook": {
-            "overlay_color": 10017472
-          }
-        },
-        {
-          "item": "minecraft:potion",
-          "components": {"minecraft:potion_contents":{"potion":"minecraft:long_water_breathing"}},
-          "guidebook": {
-            "overlay_color": 10017472
-          }
+          "item": "minecraft:decorated_pot"
         }
-      ],
-      "S": {
-        "item": "minecraft:turtle_scute"
-      }
+      ]
     }
   },
   "output": {
