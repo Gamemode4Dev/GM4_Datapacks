@@ -18,12 +18,12 @@ data remove block 29999998 1 7134 Items
 scoreboard players set $enchant.damage_reduction gm4_sr_data 0
 
 # generic protection enchantment
-execute store result score $enchant.protection gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:0b}].components."minecraft:enchantments".levels."minecraft:protection" 1
-execute store result score $enchant.protection.add gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:1b}].components."minecraft:enchantments".levels."minecraft:protection" 1
+execute store result score $enchant.protection gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:0b}].components."minecraft:enchantments"."minecraft:protection" 1
+execute store result score $enchant.protection.add gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:1b}].components."minecraft:enchantments"."minecraft:protection" 1
 scoreboard players operation $enchant.protection gm4_sr_data += $enchant.protection.add gm4_sr_data
-execute store result score $enchant.protection.add gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:2b}].components."minecraft:enchantments".levels."minecraft:protection" 1
+execute store result score $enchant.protection.add gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:2b}].components."minecraft:enchantments"."minecraft:protection" 1
 scoreboard players operation $enchant.protection gm4_sr_data += $enchant.protection.add gm4_sr_data
-execute store result score $enchant.protection.add gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:3b}].components."minecraft:enchantments".levels."minecraft:protection" 1
+execute store result score $enchant.protection.add gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:3b}].components."minecraft:enchantments"."minecraft:protection" 1
 scoreboard players operation $enchant.protection gm4_sr_data += $enchant.protection.add gm4_sr_data
 
 execute if score $enchant.damage_reduction gm4_sr_data matches 0 if score $enchant.protection gm4_sr_data matches 1.. run tellraw @s[tag=gm4_sr_dev.damage_log] {"text":"Enchantments:","color":"gray"}

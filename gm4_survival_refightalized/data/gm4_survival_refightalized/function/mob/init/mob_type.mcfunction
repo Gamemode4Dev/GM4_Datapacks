@@ -3,6 +3,11 @@
 # at @s
 # run from mob/init/initiate
 
+# these are reset to 0, otherwise if the spawn function fails it can cause a crash due constantly increasing scores
+scoreboard players set $mob_health gm4_sr_data 0
+scoreboard players set $mob_damage gm4_sr_data 0
+scoreboard players set $mob_speed gm4_sr_data 0
+
 # zombie, zombie_villager, husk, drowned
 execute if entity @s[type=#gm4_survival_refightalized:zombie_types] run return run function gm4_survival_refightalized:mob/init/mob_type/zombie
 # skeleton, bogged, stray

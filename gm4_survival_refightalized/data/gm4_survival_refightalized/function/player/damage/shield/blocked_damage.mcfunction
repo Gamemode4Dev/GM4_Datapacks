@@ -6,14 +6,19 @@
 # revoke advancement as it's not needed for shield blocking
 advancement revoke @s only gm4_survival_refightalized:damaged
 
+# get shield data
+scoreboard players set $mainhand_shield gm4_sr_data 0
+execute if items entity @s weapon.mainhand *[custom_data~{gm4_survival_refightalized:{shield:{}}}] store success score $mainhand_shield gm4_sr_data run item replace block 29999998 1 7134 container.0 from entity @s weapon.mainhand
+execute if score $mainhand_shield gm4_sr_data matches 0 run item replace block 29999998 1 7134 container.0 from entity @s weapon.offhand
+data modify storage gm4_survival_refightalized:temp Item set from block 29999998 1 7134 Items[0]
+data remove block 29999998 1 7134 Items
+
 # non-player attacker is weak for 1 second so they don't immediatly hit again
 execute on attacker run effect give @s[type=!player] weakness 1 9 true
 
-# apply durability damage to shield if needed
-execute unless score @s gm4_sr_stat.damage_blocked matches 1.. run function gm4_survival_refightalized:player/damage/shield/durability/run
-
-# parried
-execute if score @s gm4_sr_shield.use_ticks matches ..5 run return run function gm4_survival_refightalized:player/damage/shield/parry
+# parry attack (shield won't get disabled)
+execute store result score $parry_ticks gm4_sr_data run data get storage gm4_survival_refightalized:temp Item.components."minecraft:custom_data".gm4_survival_refightalized.shield.parry_ticks
+execute if score @s gm4_sr_shield.use_ticks <= $parry_ticks gm4_sr_data run return run function gm4_survival_refightalized:player/damage/shield/parry
 
 # disable shield
 function gm4_survival_refightalized:player/damage/shield/disable

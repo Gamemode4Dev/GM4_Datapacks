@@ -1,7 +1,7 @@
-# set damage on armor item
-# @s = player wearing the item
-# at unspecified
-# 
+# apply durability damage on armor item
+# @s = damaged player
+# at @s
+# run from player/damage/run
 
 # get item data
 item replace block 29999998 1 7134 container.0 from entity @s armor.head

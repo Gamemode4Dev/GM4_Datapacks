@@ -3,10 +3,7 @@
 # at @s
 # run from player/damage/run
 
-tag @s add gm4_sr_parried
-
-playsound minecraft:item.shield.block player @a ~ ~ ~ 1 1.5
-stopsound @s player minecraft:entity.player.hurt
+tag @s add gm4_sr_attack_parried
 
 # advancements
 advancement grant @s only gm4:survival_refightalized_parry

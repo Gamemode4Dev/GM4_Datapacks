@@ -15,8 +15,11 @@ execute if score $mob_health gm4_sr_data matches 1.. store result score $mob_hea
 execute if score $mob_damage gm4_sr_data matches 1.. store result score $mob_damage gm4_sr_data run loot spawn ~ -4064 ~ loot gm4_survival_refightalized:randomize_stats/damage
 # SPEED = RANDOM(0 - 0.5*score) + BINOMDIST(n=0.5*score,p=0.5)
 execute if score $mob_speed gm4_sr_data matches 1.. store result score $mob_speed gm4_sr_data run loot spawn ~ -4064 ~ loot gm4_survival_refightalized:randomize_stats/speed
+execute positioned ~ -4064 ~ run kill @e[type=item,distance=..1]
 
 # store modifiers modified by difficulty
+execute if score $difficulty gm4_sr_data matches 101.. run say problem difficuly
+
 execute store result storage gm4_survival_refightalized:temp picked_stat.health float 0.01 run scoreboard players operation $mob_health gm4_sr_data *= $difficulty gm4_sr_data
 execute store result storage gm4_survival_refightalized:temp picked_stat.damage float 0.001 run scoreboard players operation $mob_damage gm4_sr_data *= $difficulty gm4_sr_data
 execute store result storage gm4_survival_refightalized:temp picked_stat.speed float 0.0001 run scoreboard players operation $mob_speed gm4_sr_data *= $difficulty gm4_sr_data

@@ -1,14 +1,19 @@
+# apply durability damage on armor item
+# @s = damaged player
+# at @s
+# run from player/armor/durability/check
 
 # if unbreakable don't run
 execute if data storage gm4_survival_refightalized:temp Items[{Slot:3b}].components."minecraft:unbreakable" run return 0
 
 # calculate incoming damage based on unbreaking
-execute store result score $unbreaking_level gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:3b}].components."minecraft:enchantments".levels."minecraft:unbreaking"
+execute store result score $unbreaking_level gm4_sr_data run data get storage gm4_survival_refightalized:temp Items[{Slot:3b}].components."minecraft:enchantments"."minecraft:unbreaking"
 scoreboard players add $unbreaking_level gm4_sr_data 1
 scoreboard players set $damage_chance gm4_sr_data 100
 scoreboard players operation $damage_chance gm4_sr_data /= $unbreaking_level gm4_sr_data
 scoreboard players set $damage_opportunities gm4_sr_data 1
 execute store result score $incoming_damage gm4_sr_data run loot spawn ~ -4064 ~ loot gm4_survival_refightalized:technical/roll_damage
+execute positioned ~ -4064 ~ run kill @e[type=item,distance=..1]
 
 # if no damage is going to be applied cancel function
 execute unless score $incoming_damage gm4_sr_data matches 1.. run return 0

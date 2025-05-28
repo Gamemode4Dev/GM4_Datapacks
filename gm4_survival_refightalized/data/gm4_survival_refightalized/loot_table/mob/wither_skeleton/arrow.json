@@ -16,36 +16,18 @@
                     {
                       "id": "minecraft:wither",
                       "amplifier": 0,
-                      "duration": 200,
+                      "duration": 1600,
                       "show_particles": true,
                       "show_icon": true,
                       "ambient": false
                     }
                   ]
-                },
-                "minecraft:hide_additional_tooltip": {}
+                }
               }
             },
             {
-              "function": "minecraft:set_lore",
-              "mode": "append",
-              "lore": [
-                {
-                  "translate": "potion.withDuration",
-                  "with": [
-                    {
-                      "translate": "effect.minecraft.wither"
-                    },
-                    "0:10"
-                  ],
-                  "color": "red",
-                  "italic": false
-                }
-              ]
-            },
-            {
               "function": "minecraft:set_name",
-              "target": "item_name",
+              "target": "custom_name",
               "name": {
                 "translate": "item.gm4.survival_refightalized.lore.wither_arrow",
                 "fallback": "Arrow of Wither",

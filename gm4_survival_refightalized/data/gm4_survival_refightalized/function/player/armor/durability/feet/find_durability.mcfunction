@@ -1,7 +1,7 @@
 # set damage on armor item
 # @s = player wearing the item
 # at unspecified
-# 
+# run from player/armor/durability/feet/run
 
 execute if items block 29999998 1 7134 container.3 leather_boots run return 65
 execute if items block 29999998 1 7134 container.3 golden_boots run return 91
