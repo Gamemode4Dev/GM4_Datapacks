@@ -10,7 +10,7 @@ attribute @s minecraft:max_health modifier add gm4_monsters_unbound:elite_buff.v
 attribute @s minecraft:attack_damage modifier add gm4_monsters_unbound:elite_buff.vorpal 0.25 add_multiplied_total
 
 loot replace entity @s armor.head loot gm4_monsters_unbound:elite/vorpal
-data modify entity @s ArmorDropChances[3] set value 1F
+data modify entity @s drop_chances.head set value 1
 
 scoreboard players add @s gm4_sr_arrow.damage_change 5
 

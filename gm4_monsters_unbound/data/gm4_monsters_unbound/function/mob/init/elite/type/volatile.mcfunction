@@ -9,7 +9,7 @@ tag @s add gm4_mu_elite.volatile
 attribute @s minecraft:max_health modifier add gm4_monsters_unbound:elite_buff.volatile 2.5 add_multiplied_total
 
 loot replace entity @s armor.head loot gm4_monsters_unbound:elite/volatile
-data modify entity @s ArmorDropChances[3] set value 1F
+data modify entity @s drop_chances.head set value 1
 
 team join gm4_mu_elite.volatile
 

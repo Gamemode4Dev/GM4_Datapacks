@@ -10,6 +10,6 @@ attribute @s minecraft:max_health modifier add gm4_monsters_unbound:elite_buff.v
 
 loot replace entity @s[type=!#gm4_survival_refightalized:skeleton_types] armor.head loot gm4_monsters_unbound:elite/splitting_zombie
 loot replace entity @s[type=#gm4_survival_refightalized:skeleton_types] armor.head loot gm4_monsters_unbound:elite/splitting_skeleton
-data modify entity @s ArmorDropChances[3] set value 1F
+data modify entity @s drop_chances.head set value 1
 
 team join gm4_mu_elite.splitting

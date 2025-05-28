@@ -15,9 +15,9 @@ enchant @s[type=#gm4_survival_refightalized:skeleton_types] flame
 scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_arrow.damage_change -18
 scoreboard players add @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_arrow.fire_delay 2
 item replace entity @s[type=!#gm4_survival_refightalized:skeleton_types] weapon.mainhand with blaze_rod[enchantments={fire_aspect:2}]
-data modify entity @s HandDropChances[0] set value -327.670F
+data modify entity @s drop_chances.mainhand set value 0
 
 item replace entity @s armor.head with magma_block
-data modify entity @s ArmorDropChances[3] set value -327.670F
+data modify entity @s drop_chances.head set value 0
 
 team join gm4_mu_elite.blazing

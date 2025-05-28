@@ -16,7 +16,7 @@
                     {
                       "id": "minecraft:weakness",
                       "amplifier": 0,
-                      "duration": 100,
+                      "duration": 800,
                       "show_particles": true,
                       "show_icon": true,
                       "ambient": false
@@ -24,7 +24,7 @@
                     {
                       "id": "minecraft:hunger",
                       "amplifier": 1,
-                      "duration": 100,
+                      "duration": 800,
                       "show_particles": true,
                       "show_icon": true,
                       "ambient": false
@@ -32,83 +32,18 @@
                     {
                       "id": "minecraft:poison",
                       "amplifier": 0,
-                      "duration": 100,
+                      "duration": 800,
                       "show_particles": true,
                       "show_icon": true,
                       "ambient": false
                     }
                   ]
-                },
-                "minecraft:hide_additional_tooltip": {}
+                }
               }
             },
             {
-              "function": "minecraft:set_lore",
-              "mode": "append",
-              "lore": [
-                {
-                  "translate": "potion.withDuration",
-                  "with": [
-                    {
-                      "translate": "potion.withAmplifier",
-                      "with": [
-                        {
-                          "translate": "effect.minecraft.hunger"
-                        },
-                        {
-                          "translate": "potion.potency.1"
-                        }
-                      ]
-                    },
-                    "0:05"
-                  ],
-                  "color": "red",
-                  "italic": false
-                },
-                {
-                  "translate": "potion.withDuration",
-                  "with": [
-                    {
-                      "translate": "effect.minecraft.weakness"
-                    },
-                    "0:05"
-                  ],
-                  "color": "red",
-                  "italic": false
-                },
-                {
-                  "translate": "potion.withDuration",
-                  "with": [
-                    {
-                      "translate": "effect.minecraft.poison"
-                    },
-                    "0:05"
-                  ],
-                  "color": "red",
-                  "italic": false
-                },
-                "",
-                {
-                  "translate": "potion.whenDrank",
-                  "color": "dark_purple",
-                  "italic": false
-                },
-                {
-                  "translate": "attribute.modifier.take.0",
-                  "with": [
-                    "4",
-                    {
-                      "translate": "attribute.name.attack_damage"
-                    }
-                  ],
-                  "color": "red",
-                  "italic": false
-                }
-              ]
-            },
-            {
               "function": "minecraft:set_name",
-              "target": "item_name",
+              "target": "custom_name",
               "name": {
                 "translate": "item.minecraft.tipped_arrow.effect.poison",
                 "italic": false

@@ -1,2 +1,2 @@
 
-data modify entity @s ArmorItems[3].components."minecraft:custom_name" set from entity @s CustomName
+data modify entity @s equipment.head.components."minecraft:custom_name" set from entity @s CustomName

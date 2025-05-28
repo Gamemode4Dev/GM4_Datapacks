@@ -25,9 +25,7 @@ meta:
         - main
         - slow_clock
     website:
-      description: Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
-      recommended:
-        - gm4_augmented_armor
+      description: Mobs gain special effects based on their biome.
     video: null
     wiki: https://wiki.gm4.co/wiki/Monsters_Unbound
     credits:

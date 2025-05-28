@@ -24,10 +24,9 @@ meta:
         - main
         - slow_clock
     website:
-      description: Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
+      description: A reworked survival experience with more varied mobs and new armor and shield mechanics.
       recommended:
         - gm4_monsters_unbound
-        - gm4_augmented_armor
     video: null
     wiki: https://wiki.gm4.co/wiki/Survival_Refightalized
     credits:

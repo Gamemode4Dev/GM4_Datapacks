@@ -11,11 +11,11 @@ attribute @s minecraft:max_health modifier add gm4_monsters_unbound:stat_change.
 
 # put spore on head and store generation
 loot replace entity @s armor.head loot gm4_monsters_unbound:mob/equip_armor/spore
-execute store result entity @s ArmorItems[3].components."minecraft:custom_data".gm4_mu_spore.generation int 1 run scoreboard players add @s gm4_mu_generation 1
+execute store result entity @s equipment.head.components."minecraft:custom_data".gm4_mu_spore.generation int 1 run scoreboard players add @s gm4_mu_generation 1
 
 # let generation determine dropchance of spore
 scoreboard players set $spore_dropchange gm4_mu_data 11
-execute store result entity @s ArmorDropChances[3] float 0.1 run scoreboard players operation $spore_dropchange gm4_mu_data -= @s gm4_mu_generation
+execute store result entity @s drop_chances.head float 0.1 run scoreboard players operation $spore_dropchange gm4_mu_data -= @s gm4_mu_generation
 
 # remove any possible elite triggers
 data remove entity @s attributes[{id:"minecraft:max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}]

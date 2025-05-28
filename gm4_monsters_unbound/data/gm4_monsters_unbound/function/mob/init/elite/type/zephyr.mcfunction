@@ -14,7 +14,7 @@ attribute @s minecraft:attack_knockback modifier add gm4_monsters_unbound:elite_
 attribute @s minecraft:fall_damage_multiplier modifier add gm4_monsters_unbound:elite_buff.speed -1 add_multiplied_total
 
 item replace entity @s armor.head with white_wool
-data modify entity @s ArmorDropChances[3] set value -327.670F
+data modify entity @s drop_chances.head set value 0
 
 team join gm4_mu_elite.zephyr
 

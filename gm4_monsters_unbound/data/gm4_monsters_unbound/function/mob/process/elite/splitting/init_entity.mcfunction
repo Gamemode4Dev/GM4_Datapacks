@@ -29,7 +29,7 @@ execute if dimension minecraft:overworld run function gm4_survival_refightalized
 execute unless dimension minecraft:overworld run function gm4_survival_refightalized:mob/init/calc_difficulty_else
 
 item replace entity @s armor.head with spawner
-data modify entity @s ArmorDropChances[3] set value -327.670F
+data modify entity @s drop_chances.head set value 0
 
 team join gm4_mu_elite.split
 execute if score $has_bow gm4_mu_data matches 0 run item replace entity @s[type=#gm4_survival_refightalized:skeleton_types] weapon.mainhand with wooden_sword

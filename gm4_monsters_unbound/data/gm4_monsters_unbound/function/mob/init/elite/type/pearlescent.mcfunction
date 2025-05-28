@@ -11,6 +11,6 @@ attribute @s minecraft:movement_speed modifier add gm4_monsters_unbound:elite_bu
 
 item replace entity @s weapon.mainhand with air
 loot replace entity @s armor.head loot gm4_monsters_unbound:elite/pearlescent
-data modify entity @s ArmorDropChances[3] set value -327.670F
+data modify entity @s drop_chances.head set value 0
 
 team join gm4_mu_elite.pearlescent
