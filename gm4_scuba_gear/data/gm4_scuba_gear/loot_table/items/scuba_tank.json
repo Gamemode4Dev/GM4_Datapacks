@@ -12,18 +12,18 @@
               "components": {
                 "minecraft:attribute_modifiers": [
                   {
-                    "type": "minecraft:movement_speed",
-                    "id": "gm4_scuba_gear:tank_movement_speed",
-                    "slot": "chest",
-                    "amount": -0.1,
-                    "operation": "add_multiplied_base"
-                  },
-                  {
                     "type": "minecraft:armor",
                     "slot": "chest",
                     "id": "gm4_scuba_gear:tank_armor",
                     "amount": 4,
                     "operation": "add_value"
+                  },
+                  {
+                    "type": "minecraft:oxygen_bonus",
+                    "id": "gm4_scuba_gear:tank/oxygen_bonus",
+                    "amount": 16,
+                    "operation": "add_value",
+                    "slot": "chest"
                   }
                 ],
                 "minecraft:custom_model_data": "item/scuba_tank"

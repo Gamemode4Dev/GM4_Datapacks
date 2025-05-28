@@ -20,7 +20,7 @@
       "minecraft:attribute_modifiers": [
         {
           "type": "minecraft:armor",
-          "id": "gm4_scuba_gear:scuba_helmet/armor",
+          "id": "minecraft:armor.helmet",
           "amount": 3,
           "operation": "add_value",
           "slot": "head"

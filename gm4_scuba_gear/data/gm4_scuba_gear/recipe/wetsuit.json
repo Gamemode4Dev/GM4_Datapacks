@@ -27,10 +27,7 @@
           "slot": "legs"
         }
       ],
-      "minecraft:dyed_color": {
-        "rgb": 2367281,
-        "show_in_tooltip": false
-      },
+      "minecraft:dyed_color": 2367281,
       "minecraft:max_damage": 180,
       "!minecraft:enchantable": {},
       "minecraft:custom_data": {
@@ -39,12 +36,61 @@
         }
       },
       "minecraft:enchantments": {
-        "levels": {
-          "gm4_scuba_gear:wetsuit": 1
-        }
+        "gm4_scuba_gear:wetsuit": 1
       },
       "minecraft:enchantment_glint_override": false,
-      "minecraft:rarity": "common"
+      "minecraft:rarity": "common",
+      "minecraft:tooltip_display": {
+        "hidden_components": [
+          "minecraft:attribute_modifiers",
+          "minecraft:dyed_color"
+        ]
+      },
+      "minecraft:lore": [
+        {
+          "translate": "item.modifiers.gm4.scuba_gear.in_water",
+          "fallback": "When in Water:",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "translate": "item.modifiers.gm4.scuba_gear.neutral_buoyancy",
+          "fallback": "Neutral Buoyancy",
+          "color": "blue",
+          "italic": false
+        },
+        {
+          "translate": "attribute.modifier.plus.1",
+          "with": [
+            "20",
+            {
+              "translate": "item.modifiers.gm4.scuba_gear.vertical_swimming_speed",
+              "fallback": "Vertical Swimming Speed"
+            }
+          ],
+          "color": "blue",
+          "italic": false
+        },
+        {
+          "text": ""
+        },
+        {
+          "translate": "item.modifiers.legs",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "translate": "attribute.modifier.plus.0",
+          "with": [
+            "2",
+            {
+              "translate": "attribute.name.armor"
+            }
+          ],
+          "color": "blue",
+          "italic": false
+        }
+      ]
     },
     "count": 1
   }

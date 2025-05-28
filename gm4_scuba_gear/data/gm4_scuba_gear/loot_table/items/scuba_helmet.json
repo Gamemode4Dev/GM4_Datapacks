@@ -13,17 +13,17 @@
                 "minecraft:attribute_modifiers": [
                   {
                     "type": "minecraft:armor",
-                    "id": "gm4_scuba_gear:helmet_armor",
+                    "id": "minecraft:armor.helmet",
                     "slot": "head",
-                    "amount": 2,
+                    "amount": 3,
                     "operation": "add_value"
                   },
                   {
-                    "type": "minecraft:attack_speed",
-                    "id": "gm4_scuba_gear:helmet_attack_speed",
+                    "type": "minecraft:submerged_mining_speed",
+                    "id": "gm4_scuba_gear:scuba_helmet/submerged_mining_speed",
                     "slot": "head",
-                    "amount": -0.5,
-                    "operation": "add_value"
+                    "amount": 5,
+                    "operation": "add_multiplied_total"
                   }
                 ],
                 "minecraft:custom_model_data": "item/scuba_helmet",

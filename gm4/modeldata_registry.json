@@ -975,6 +975,7 @@
     },
     "leather_leggings": {
       "gm4_washing_tanks:guidebook_icon/washing_tanks": 1,
+      "gm4_scuba_gear:item/wetsuit": 2,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_animi_shamir:shamir/animi": 124
