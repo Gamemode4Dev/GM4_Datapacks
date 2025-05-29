@@ -1,3 +1,7 @@
+# apply a stack of chill
+# @s = player that was hit
+# at unspecified
+# run from mob/process/attack_effect/slowing_attack
 
 execute if entity @s[tag=gm4_mu_immune_slowness] run return 0
 

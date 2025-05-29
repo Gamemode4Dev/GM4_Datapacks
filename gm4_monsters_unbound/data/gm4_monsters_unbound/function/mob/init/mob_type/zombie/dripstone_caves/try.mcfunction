@@ -1,3 +1,7 @@
+# zombie dripstone try to place a trap
+# @s = zombie
+# at @s
+# run from mob/init/mob_type/zombie/base
 
 tp @s ~ ~-2050 ~
 kill @s

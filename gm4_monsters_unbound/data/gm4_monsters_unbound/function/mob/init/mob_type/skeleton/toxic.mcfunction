@@ -4,4 +4,4 @@
 # run from mob/init/mob_type/skeleton/base
 
 tag @s add gm4_sr_extra_mob
-ride @n[tag=gm4_mu_self] mount @s
+ride @e[tag=gm4_mu_self,distance=..0.1,limit=1] mount @s

@@ -1,16 +1,13 @@
 key,en_us
-
 advancement.gm4.survival_refightalized.armor_damage.title,Armor Up!
 advancement.gm4.survival_refightalized.armor_damage.description,Discover that Armor works a bit differently now
 advancement.gm4.survival_refightalized.parry.title,Not Today
 advancement.gm4.survival_refightalized.parry.description,Parry with a Shield by blocking just before an attack
 advancement.gm4.survival_refightalized.parry_lethal_damage.title,"Not Today, Either"
 advancement.gm4.survival_refightalized.parry_lethal_damage.description,Block lethal damage with a Shield Parry
-
 item.gm4.survival_refightalized.lore.wither_arrow,Arrow of Wither
-
 text.gm4.survival_refightalized.death, ran out of health
-text.gm4.guidebook.module_desc.survival_refightalized,Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
+text.gm4.guidebook.module_desc.survival_refightalized,A reworked survival experience with more varied mobs and new armor and shield mechanics.
 text.gm4.guidebook.survival_refightalized.description.health,"Damage taken is split in combat and non-combat damage.\nCombat damage regenerates every 60 seconds, while non-combat damage regenerates rapidly when out of combat."
 text.gm4.guidebook.survival_refightalized.description.mobs,"Mobs are stronger based on their environment, such as being outside during a thunderstorm or full moon, or being deep underground.\nSome mobs are altered, such as Skeletons firing slower, and Phantoms drowning."
 text.gm4.guidebook.survival_refightalized.description.armor,"Armor no longer reduces damage taken, instead serving as a second health bar. Armor recharges rapidly shortly after it takes damage.\nProtection enchantments have reduced effectiveness."

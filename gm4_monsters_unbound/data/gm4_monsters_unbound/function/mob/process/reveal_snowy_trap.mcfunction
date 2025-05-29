@@ -17,4 +17,4 @@ execute if score $pick_entity gm4_mu_data matches 1 run summon zombie ~ ~-0.75 ~
 execute if score $pick_entity gm4_mu_data matches 2 run summon stray ~ ~-0.75 ~ {Tags:["gm4_sr_extra_mob"],Motion:[0.0d,0.5d,0.0d]}
 execute if score $pick_entity gm4_mu_data matches 3 run summon creeper ~ ~-0.75 ~ {Tags:["gm4_sr_extra_mob"],Motion:[0.0d,0.5d,0.0d]}
 
-execute as @n[type=#gm4_survival_refightalized:modify,tag=gm4_sr_extra_mob] at @s run function gm4_survival_refightalized:mob/init/initiate
+execute as @e[type=#gm4_survival_refightalized:modify,tag=gm4_sr_extra_mob,distance=..1,limit=1] at @s run function gm4_survival_refightalized:mob/init/initiate

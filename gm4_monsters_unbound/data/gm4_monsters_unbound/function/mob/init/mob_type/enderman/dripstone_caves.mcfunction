@@ -1,4 +1,7 @@
-
+# replace with spider
+# @s = enderman
+# at @s
+# run from mob/init/mob_type/enderman/base
 
 summon spider ~ ~ ~ {Tags:["gm4_sr_extra_mob"]}
 tp @s ~ ~-2050 ~

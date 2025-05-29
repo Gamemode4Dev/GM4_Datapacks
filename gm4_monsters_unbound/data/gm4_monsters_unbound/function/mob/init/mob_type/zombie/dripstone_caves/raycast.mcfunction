@@ -1,3 +1,8 @@
+# zombie dripstone try to find place for a trap
+# @s = zombie
+# at @s positioned ~ ~x ~
+# run from mob/init/mob_type/zombie/dripstone_caves/try
+# run from here
 
 execute if block ~ ~1 ~ #gm4_monsters_unbound:dripstone run return run function gm4_monsters_unbound:mob/init/mob_type/zombie/dripstone_caves/place
 

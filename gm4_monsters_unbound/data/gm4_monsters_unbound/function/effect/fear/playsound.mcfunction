@@ -1,3 +1,7 @@
+# play fear sounds
+# @s = player with fear effect
+# at @s
+# run from effect/fear/tick
 
 execute store result score $picksound gm4_mu_data run random value 1..11
 

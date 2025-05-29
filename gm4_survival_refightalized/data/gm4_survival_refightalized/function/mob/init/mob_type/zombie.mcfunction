@@ -26,6 +26,9 @@ scoreboard players set @s[type=drowned] gm4_sr_arrow.fire_delay 10
 # remove leader bonus from zombies
 execute if data entity @s attributes[{id:"minecraft:max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] run attribute @s minecraft:max_health modifier remove minecraft:leader_zombie_bonus
 
+# remove chicken jockeys
+ride @s dismount
+
 # remove baby zombies (will be turned into Elites with Monsters Unbound)
 scoreboard players set $was_baby gm4_sr_data 0
 execute if data entity @s {IsBaby:1b} store success score $was_baby gm4_sr_data run data modify entity @s IsBaby set value 0b

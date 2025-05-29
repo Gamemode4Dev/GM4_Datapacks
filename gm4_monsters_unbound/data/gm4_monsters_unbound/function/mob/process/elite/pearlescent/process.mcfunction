@@ -23,5 +23,5 @@ attribute @s[scores={gm4_mu_timer=101..110}] minecraft:movement_speed modifier r
 execute if score @s gm4_mu_timer matches ..100 run particle block{block_state:"pearlescent_froglight"} ~ ~2 ~ 0.3 0.3 0.3 0.5 8
 
 scoreboard players set $attack_hit gm4_mu_data 0
-execute if score @s gm4_mu_timer matches 5..100 run function gm4_monsters_unbound:mob/process/elite/pearlescent/lazer
+execute if score @s gm4_mu_timer matches 5..100 run function gm4_monsters_unbound:mob/process/elite/pearlescent/laser
 execute if score @s gm4_mu_timer matches 10.. if score $attack_hit gm4_mu_data matches 0 run scoreboard players add @s gm4_mu_timer 10

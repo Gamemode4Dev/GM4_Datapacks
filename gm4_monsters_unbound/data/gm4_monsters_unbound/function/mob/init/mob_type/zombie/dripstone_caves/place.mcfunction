@@ -1,3 +1,7 @@
+# place dripstone trap
+# @s = zombie
+# at @s positioned ~ ~x ~
+# run from mob/init/mob_type/zombie/dripstone_caves/raycast
 
 tp @s ~ ~-2050 ~
 kill @s

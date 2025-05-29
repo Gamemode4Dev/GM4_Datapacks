@@ -10,7 +10,6 @@ scoreboard objectives add gm4_mu_frozen_time dummy
 scoreboard objectives add gm4_mu_feared_time dummy
 scoreboard objectives add gm4_mu_keep_tick dummy
 
-
 # configs
 execute unless score $spawn_phantoms gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $spawn_phantoms gm4_sr_config 1
 
@@ -28,25 +27,25 @@ execute unless score $mob_limit.phantom gm4_sr_config matches -2147483648..21474
 
 # elite teams
 team add gm4_mu_elite.glacial
-team modify gm4_mu_elite.glacial prefix {"text":"Glacial "}
+team modify gm4_mu_elite.glacial prefix {"translate":"text.gm4.monsters_unbound.elite_name.glacial","fallback":"Glacial "}
 team add gm4_mu_elite.mending
-team modify gm4_mu_elite.mending prefix {"text":"Slate "}
+team modify gm4_mu_elite.mending prefix {"translate":"text.gm4.monsters_unbound.elite_name.slate","fallback":"Slate "}
 team add gm4_mu_elite.blazing
-team modify gm4_mu_elite.blazing prefix {"text":"Blazing "}
+team modify gm4_mu_elite.blazing prefix {"translate":"text.gm4.monsters_unbound.elite_name.blazing","fallback":"Blazing "}
 team add gm4_mu_elite.zephyr
-team modify gm4_mu_elite.zephyr prefix {"text":"Zephyr "}
+team modify gm4_mu_elite.zephyr prefix {"translate":"text.gm4.monsters_unbound.elite_name.zephyr","fallback":"Zephyr "}
 team add gm4_mu_elite.gargantuan
-team modify gm4_mu_elite.gargantuan prefix {"text":"Gargantuan "}
+team modify gm4_mu_elite.gargantuan prefix {"translate":"text.gm4.monsters_unbound.elite_name.gargantuan","fallback":"Gargantuan "}
 team add gm4_mu_elite.vorpal
-team modify gm4_mu_elite.vorpal prefix {"text":"Vorpal "}
+team modify gm4_mu_elite.vorpal prefix {"translate":"text.gm4.monsters_unbound.elite_name.vorpal","fallback":"Vorpal "}
 team add gm4_mu_elite.splitting
-team modify gm4_mu_elite.splitting prefix {"text":"Splitting "}
+team modify gm4_mu_elite.splitting prefix {"translate":"text.gm4.monsters_unbound.elite_name.splitting","fallback":"Splitting "}
 team add gm4_mu_elite.split
-team modify gm4_mu_elite.split prefix {"text":"Split "}
+team modify gm4_mu_elite.split prefix {"translate":"text.gm4.monsters_unbound.elite_name.split","fallback":"Split "}
 team add gm4_mu_elite.volatile
-team modify gm4_mu_elite.volatile prefix {"text":"Volatile "}
+team modify gm4_mu_elite.volatile prefix {"translate":"text.gm4.monsters_unbound.elite_name.volatile","fallback":"Volatile "}
 team add gm4_mu_elite.pearlescent
-team modify gm4_mu_elite.pearlescent prefix {"text":"Pearlescent "}
+team modify gm4_mu_elite.pearlescent prefix {"translate":"text.gm4.monsters_unbound.elite_name.pearlescent","fallback":"Pearlescent "}
 
 # constants
 scoreboard players set #2 gm4_mu_data 2
