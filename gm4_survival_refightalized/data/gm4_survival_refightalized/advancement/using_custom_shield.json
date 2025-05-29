@@ -1,0 +1,21 @@
+{
+    "criteria": {
+        "custom_shield": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": {
+                            "gm4_survival_refightalized": {
+                                "shield": {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_survival_refightalized:player/damage/shield/using"
+    }
+}
