@@ -6,7 +6,7 @@ scoreboard players set lively_lily_pads gm4_modules 1
 # detect pre-gm4 lively lily pads
 #execute if data storage rc_blossoming_pots:storage version_history run scoreboard players set blossoming_pots gm4_earliest_version 0
 
-#scoreboard objectives add gm4_blossoming_pots.range dummy "gm4_bPots.range"
+scoreboard objectives add gm4_llp.data dummy "gm4_llp.data"
 #scoreboard objectives add gm4_blossoming_pots.display_stage dummy "gm4_bPots.display_stage"
 #scoreboard objectives add gm4_blossoming_pots.misc dummy "gm4_bPots.misc"
 
