@@ -5,11 +5,16 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_chestplate",
+          "name": "minecraft:leather_chestplate",
           "functions": [
             {
               "function": "minecraft:set_components",
               "components": {
+                "minecraft:item_name": {
+                  "translate": "item.gm4.scuba_tank",
+                  "fallback": "SCUBA Tank",
+                  "italic": false
+                },
                 "minecraft:attribute_modifiers": [
                   {
                     "type": "minecraft:armor",
@@ -26,19 +31,24 @@
                     "slot": "chest"
                   }
                 ],
-                "minecraft:custom_model_data": "item/scuba_tank"
-              }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{gm4_scuba_gear:{item:'tank'}}"
-            },
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "translate": "item.gm4.scuba_tank",
-                "fallback": "SCUBA Tank",
-                "italic": false
+                "minecraft:custom_data": {
+                  "gm4_scuba_gear": {
+                    "item": "tank"
+                  }
+                },
+                "minecraft:custom_model_data": "item/scuba_tank",
+                "!minecraft:enchantable": {},
+                "minecraft:max_damage": 192,
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:dyed_color",
+                    "minecraft:trim"
+                  ]
+                },
+                "minecraft:trim": {
+                  "material": "minecraft:copper",
+                  "pattern": "minecraft:silence"
+                }
               }
             }
           ]

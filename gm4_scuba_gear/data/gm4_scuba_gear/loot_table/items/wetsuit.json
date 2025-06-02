@@ -8,87 +8,59 @@
           "name": "minecraft:leather_leggings",
           "functions": [
             {
-              "function": "minecraft:set_enchantments",
-              "enchantments": {
-                "gm4_scuba_gear:wetsuit": 1
-              }
-            },
-            {
               "function": "minecraft:set_components",
               "components": {
+                "minecraft:item_name": {
+                  "translate": "item.gm4.wetsuit",
+                  "fallback": "Wetsuit",
+                  "color": "white",
+                  "italic": false
+                },
+                "minecraft:custom_data": {
+                  "gm4_scuba_gear": {
+                    "item": "wetsuit"
+                  }
+                },
+                "minecraft:custom_model_data": "item/wetsuit",
+                "minecraft:enchantments": {
+                  "gm4_scuba_gear:wetsuit": 1
+                },
+                "minecraft:enchantment_glint_override": false,
+                "minecraft:max_damage": 180,
+                "!minecraft:enchantable": {},
                 "minecraft:dyed_color": 2367281,
                 "minecraft:tooltip_display": {
                   "hidden_components": [
-                    "minecraft:attribute_modifiers",
                     "minecraft:dyed_color"
                   ]
                 },
-                "minecraft:custom_model_data": "item/wetsuit",
-                "minecraft:enchantment_glint_override": false,
-                "minecraft:rarity": "common"
+                "minecraft:lore": [
+                  {
+                    "translate": "item.modifiers.gm4.scuba_gear.in_water",
+                    "fallback": "When in Water:",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "translate": "item.modifiers.gm4.scuba_gear.neutral_buoyancy",
+                    "fallback": "Neutral Buoyancy",
+                    "color": "blue",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.modifier.plus.1",
+                    "with": [
+                      "20",
+                      {
+                        "translate": "item.modifiers.gm4.scuba_gear.vertical_swimming_speed",
+                        "fallback": "Vertical Swimming Speed"
+                      }
+                    ],
+                    "color": "blue",
+                    "italic": false
+                  }
+                ]
               }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{gm4_scuba_gear:{item:'wetsuit'}}"
-            },
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "translate": "item.gm4.wetsuit",
-                "fallback": "Wetsuit",
-                "color": "white",
-                "italic": false
-              }
-            },
-            {
-              "function": "minecraft:set_lore",
-              "lore": [
-                {
-                  "translate": "item.modifiers.gm4.scuba_gear.in_water",
-                  "fallback": "When in Water:",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "item.modifiers.gm4.scuba_gear.neutral_buoyancy",
-                  "fallback": "Neutral Buoyancy",
-                  "color": "blue",
-                  "italic": false
-                },
-                {
-                  "translate": "attribute.modifier.plus.1",
-                  "with": [
-                    "20",
-                    {
-                      "translate": "item.modifiers.gm4.scuba_gear.vertical_swimming_speed",
-                      "fallback": "Vertical Swimming Speed"
-                    }
-                  ],
-                  "color": "blue",
-                  "italic": false
-                },
-                {
-                  "text": ""
-                },
-                {
-                  "translate": "item.modifiers.legs",
-                  "color": "gray",
-                  "italic": false
-                },
-                {
-                  "translate": "attribute.modifier.plus.0",
-                  "with": [
-                    "2",
-                    {
-                      "translate": "attribute.name.armor"
-                    }
-                  ],
-                  "color": "blue",
-                  "italic": false
-                }
-              ],
-              "mode": "replace_all"
             }
           ]
         }

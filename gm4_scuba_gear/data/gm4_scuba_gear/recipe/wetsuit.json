@@ -17,24 +17,21 @@
   "result": {
     "id": "minecraft:leather_leggings",
     "components": {
-      "minecraft:item_name": "{\"translate\": \"item.gm4.wetsuit\",\"fallback\": \"Wetsuit\",\"italic\": false,\"color\": \"white\"}",
-      "minecraft:attribute_modifiers": [
-        {
-          "type": "minecraft:armor",
-          "id": "gm4_scuba_gear:wetsuit/armor",
-          "amount": 2,
-          "operation": "add_value",
-          "slot": "legs"
-        }
-      ],
-      "minecraft:dyed_color": 2367281,
+      "minecraft:item_name": {
+        "translate": "item.gm4.wetsuit",
+        "fallback": "Wetsuit",
+        "color": "white",
+        "italic": false
+      },
       "minecraft:max_damage": 180,
       "!minecraft:enchantable": {},
+      "minecraft:dyed_color": 2367281,
       "minecraft:custom_data": {
         "gm4_scuba_gear": {
           "item": "wetsuit"
         }
       },
+      "minecraft:custom_model_data": "item/wetsuit",
       "minecraft:enchantments": {
         "gm4_scuba_gear:wetsuit": 1
       },
@@ -42,7 +39,6 @@
       "minecraft:rarity": "common",
       "minecraft:tooltip_display": {
         "hidden_components": [
-          "minecraft:attribute_modifiers",
           "minecraft:dyed_color"
         ]
       },
@@ -66,25 +62,6 @@
             {
               "translate": "item.modifiers.gm4.scuba_gear.vertical_swimming_speed",
               "fallback": "Vertical Swimming Speed"
-            }
-          ],
-          "color": "blue",
-          "italic": false
-        },
-        {
-          "text": ""
-        },
-        {
-          "translate": "item.modifiers.legs",
-          "color": "gray",
-          "italic": false
-        },
-        {
-          "translate": "attribute.modifier.plus.0",
-          "with": [
-            "2",
-            {
-              "translate": "attribute.name.armor"
             }
           ],
           "color": "blue",

@@ -17,6 +17,5 @@ text.gm4.guidebook.scuba_gear.usage_scuba_tank,Wearing the scuba tank adds 4 min
 text.gm4.guidebook.scuba_gear.usage_scuba_helmet,Wearing the scuba helmet increases underwater mining speed by 6 times.
 item.modifiers.gm4.scuba_gear.in_water,"When in Water:"
 item.modifiers.gm4.scuba_gear.on_land,"When on Land:"
-item.modifiers.gm4.scuba_gear.swimming,"When swimming:"
 item.modifiers.gm4.scuba_gear.neutral_buoyancy,"Neutral Buoyancy"
 item.modifiers.gm4.scuba_gear.vertical_swimming_speed,"Vertical Swimming Speed"

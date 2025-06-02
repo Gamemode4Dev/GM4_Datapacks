@@ -1,5 +1,6 @@
 {
   "description": "",
+  "exclusive_set": "minecraft:depth_strider",
   "supported_items": "minecraft:leather_boots",
   "weight": 1,
   "max_level": 1,
@@ -39,31 +40,6 @@
           "attribute": "minecraft:movement_speed",
           "id": "gm4_scuba_gear:flippers/on_land",
           "amount": -0.25,
-          "operation": "add_multiplied_base"
-        }
-      },
-      {
-        "requirements": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "location": {
-                "fluid": {
-                  "fluids": "#minecraft:water"
-                }
-              },
-              "flags": {
-                "is_swimming": true
-              }
-            }
-          }
-        ],
-        "effect": {
-          "type": "minecraft:attribute",
-          "attribute": "minecraft:movement_speed",
-          "id": "gm4_scuba_gear:flippers/swim_speed",
-          "amount": 1,
           "operation": "add_multiplied_base"
         }
       }

@@ -706,13 +706,13 @@
     },
     "gm4_scuba_gear:scuba_helmet": {
       "uuid": [
-        -68336571,
-        19415274,
-        -1818733955,
-        -1859858872
+        -1411342862,
+        -1228846809,
+        -1234065086,
+        1387403600
       ],
-      "value": "ewogICJ0aW1lc3RhbXAiIDogMTYyODUzNDg1MTY2MCwKICAicHJvZmlsZUlkIiA6ICJmMGIzYmRkMjEwNDg0Y2VlYjZhNTQyYmZiOGEyNTdiMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJBbm9uaW1ZVFQiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDExZTAyOTJlZTgzZDUwZTQzM2MxNTkxNzE5OGZhNDRjYjZkMTMyODhiNmFhNjZmYmUzY2QxZTZkZjY1OGRhNCIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9",
-      "hash": "9b2ea1635d53878417688b505a8875422100d314",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWY2YWVlYzM2ZjQ2MmRlYjUzOTc0NWFhMzY4MThiNmQ0NGIwYzk1OGViNTY4NTJlYTAyZTM0YzMzZmRiZGZmMCd9fX0=",
+      "hash": "4a257159fd9d30ceff7484d393efe9ed2e399abf",
       "parent_module": "gm4_scuba_gear"
     },
     "gm4_smelteries:smeltery": {

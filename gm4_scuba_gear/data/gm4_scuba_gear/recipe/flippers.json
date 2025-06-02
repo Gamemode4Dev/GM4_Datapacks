@@ -16,11 +16,16 @@
   "result": {
     "id": "minecraft:leather_boots",
     "components": {
-      "minecraft:item_name": "{\"translate\": \"item.gm4.flippers\",\"fallback\": \"Flippers\",\"italic\": false,\"color\": \"white\"}",
+      "minecraft:item_name": {
+        "translate": "item.gm4.flippers",
+        "fallback": "Flippers",
+        "color": "white",
+        "italic": false
+      },
       "minecraft:attribute_modifiers": [
         {
           "type": "minecraft:armor",
-          "id": "gm4_scuba_gear:flippers/armor",
+          "id": "minecraft:generic.armor",
           "amount": 1,
           "operation": "add_value",
           "slot": "feet"
@@ -33,47 +38,25 @@
           "slot": "feet"
         }
       ],
-      "minecraft:dyed_color": 2367281,
-      "minecraft:max_damage": 156,
-      "!minecraft:enchantable": {},
       "minecraft:custom_model_data": "item/flippers",
       "minecraft:custom_data": {
         "gm4_scuba_gear": {
           "item": "flippers"
         }
       },
+      "minecraft:dyed_color": 2367281,
+      "!minecraft:enchantable": {},
       "minecraft:enchantments": {
         "gm4_scuba_gear:flippers": 1
       },
       "minecraft:enchantment_glint_override": false,
-      "minecraft:rarity": "common",
+      "minecraft:max_damage": 156,
       "minecraft:tooltip_display": {
         "hidden_components": [
           "minecraft:dyed_color"
         ]
       },
       "minecraft:lore": [
-        {
-          "translate": "item.modifiers.gm4.scuba_gear.swimming",
-          "fallback": "When swimming:",
-          "color": "gray",
-          "italic": false
-        },
-        {
-          "translate": "attribute.modifier.plus.1",
-          "with": [
-            "200",
-            {
-              "translate": "attribute.name.generic.movement_speed",
-              "fallback": "Speed"
-            }
-          ],
-          "color": "blue",
-          "italic": false
-        },
-        {
-          "text": ""
-        },
         {
           "translate": "item.modifiers.gm4.scuba_gear.on_land",
           "fallback": "When on Land:",

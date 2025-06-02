@@ -16,7 +16,12 @@
   "result": {
     "id": "minecraft:player_head",
     "components": {
-      "minecraft:item_name": "\"SCUBA Helmet\"",
+      "minecraft:item_name": {
+        "translate": "item.gm4.scuba_helmet",
+        "fallback": "SCUBA Helmet",
+        "color": "white",
+        "italic": false
+      },
       "minecraft:attribute_modifiers": [
         {
           "type": "minecraft:armor",
@@ -33,16 +38,16 @@
           "slot": "head"
         }
       ],
-      "!minecraft:enchantable": {},
-      "minecraft:custom_model_data": "item/scuba_helmet",
-      "minecraft:profile": "$scuba_helmet",
       "minecraft:custom_data": {
         "gm4_scuba_gear": {
           "item": "helmet"
         }
       },
+      "minecraft:custom_model_data": "item/scuba_helmet",
+      "!minecraft:enchantable": {},
       "minecraft:max_damage": 132,
       "minecraft:max_stack_size": 1,
+      "minecraft:profile": "$scuba_helmet",
       "minecraft:rarity": "common"
     },
     "count": 1
