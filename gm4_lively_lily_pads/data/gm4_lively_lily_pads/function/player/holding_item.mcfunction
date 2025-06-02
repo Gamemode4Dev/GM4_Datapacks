@@ -4,7 +4,6 @@
 
 # tag
 tag @s add gm4_llp_holding_item
-tag @s remove gm4_llp_sees_lily_pad
 
 # raycast for lily_pad
 execute store result score $ray gm4_llp.data run attribute @s minecraft:block_interaction_range get 10

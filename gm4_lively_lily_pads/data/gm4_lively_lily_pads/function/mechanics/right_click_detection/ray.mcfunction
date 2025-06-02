@@ -3,7 +3,7 @@
 # at @s anchored eyes, moving forward
 # run from player/holding_item
 
-execute if block ~ ~ ~ minecraft:lily_pad align xyz positioned ~.5 ~ ~.5 run return run function gm4_rope_ladders:mechanics/right_click_detection/detect_ladder_raycast/found
+execute if block ~ ~ ~ minecraft:lily_pad align xyz positioned ~.5 ~.1 ~.5 run return run function gm4_lively_lily_pads:mechanics/right_click_detection/found
 
 # loop
 scoreboard players remove $ray gm4_llp.data 1
