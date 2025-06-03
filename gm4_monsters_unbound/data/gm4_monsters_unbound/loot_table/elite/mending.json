@@ -10,7 +10,11 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/elite_headwear/mending"
+                "minecraft:custom_model_data": "item/elite_headwear/mending",
+                "enchantment_glint_override": false,
+                "enchantments": {
+                  "binding_curse": 1
+                }
               }
             }
           ]
