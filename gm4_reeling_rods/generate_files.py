@@ -8,7 +8,7 @@ def beet_default(ctx: Context):
     """NOTE: generates files
         - set_lookup_table
         - advancements and reward functions for every bit state of an entity's tagged id
-        - fishing/select_type
+        - fished/select_type
     """
     create_lookup_file(ctx)
     create_bit_advancements(ctx)
@@ -94,9 +94,10 @@ def create_bit_advancements(ctx: Context):
                 f"advancement revoke @s only gm4_reeling_rods:fished/bit_{bit}_{value}\n",
                 "execute if entity @s[gamemode=adventure] run return fail\n",
                 "data modify storage gm4_reeling_rods:temp bit_data set value {bit_tag:\"" + f"gm4_reeling_rods.id.{bit}.{value}\", bit:\"{bit}\"" + "}",
+                "data modify storage gm4_reeling_rods:temp bit_data.UUID set from entity @s UUID",
                 "data remove storage gm4_reeling_rods:temp enchanted",
                 "execute if predicate gm4_reeling_rods:holding_reeling_rod run data modify storage gm4_reeling_rods:temp enchanted set value 1",
-                "function gm4_reeling_rods:store_player_pos",
+                "function gm4_reeling_rods:player/store_pos",
                 "tag @s add gm4_reeling_rods.player",
                 "function gm4_reeling_rods:player/received_bit with storage gm4_reeling_rods:temp bit_data",
                 "tag @s remove gm4_reeling_rods.player"

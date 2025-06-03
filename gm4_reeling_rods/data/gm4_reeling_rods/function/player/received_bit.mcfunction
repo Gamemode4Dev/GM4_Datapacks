@@ -1,22 +1,17 @@
 # Logic for when a player receives a bit
 # @s = player who received a bit
 # at @s
-# with {bit, bit_tag}
+# with {bit, UUID}
 # run from player/bit_{bit}_{value}
 
-# Assumptions: 
-  # bit and bit_tag are stored in storage gm4_reeling_rods:temp bit_data
-  # this score is set to 0 after all bits received
-scoreboard players add @s gm4_reeling_rods.bit_count 1
+$data modify storage gm4_reeling_rods:players "$(UUID)".bit_$(bit) set from storage gm4_reeling_rods:temp bit_data.bit_tag
 
-# if marker exists proceed to player/add_bit
-execute as @e[type=minecraft:marker,distance=..0.001,tag=gm4_reeling_rods.player_marker,limit=1] run \
-  return run function gm4_reeling_rods:player/add_bit with storage gm4_reeling_rods:temp bit_data
+# fail if not all bits
+$execute store result score $bit_count gm4_reeling_rods.math run data get storage gm4_reeling_rods:players "$(UUID)"
+execute unless score $bit_count gm4_reeling_rods.math matches 16 run return fail
 
-# first bit, no marker found, summon one
-$summon minecraft:marker ~ ~ ~ \
-  {\
-    Tags:["gm4_reeling_rods.player_marker","smithed.strict","smithed.entity"],\
-    data:{gm4_reeling_rods:{id:{bit_$(bit):"$(bit_tag)"}}},\
-    CustomName:{"text":"gm4_reeling_rods.player_marker"}\
-  }
+# all bits received
+$function gm4_reeling_rods:player/find_fished_entity with storage gm4_reeling_rods:players "$(UUID)"
+
+# clear storage
+$data remove storage gm4_reeling_rods:players "$(UUID)"
