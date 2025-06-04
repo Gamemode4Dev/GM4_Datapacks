@@ -1,13 +1,11 @@
 {
   "values": [
     "#gm4_lively_lily_pads:coral_fan",
+    "#gm4_lively_lily_pads:light_14",
+    "#gm4_lively_lily_pads:light_9",
     "#minecraft:candles",
     "minecraft:cactus_flower",
-    "minecraft:lantern",
     "minecraft:redstone_torch",
-    "minecraft:soul_lantern",
-    "minecraft:soul_torch",
-    "minecraft:spore_blossom",
-    "minecraft:torch"
+    "minecraft:spore_blossom"
   ]
 }
