@@ -1,4 +1,4 @@
-# text manipulation for candles
+# string manipulation and data transfer from legacy candles
 # @s = block display, tag=lilyPadLight
 # at @s align xyz positioned ~.5 ~.02 ~.5
 # run from upgrade_paths/3.0/update_legacy_display
