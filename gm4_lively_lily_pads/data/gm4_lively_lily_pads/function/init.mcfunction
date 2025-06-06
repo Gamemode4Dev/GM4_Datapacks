@@ -11,3 +11,4 @@ scoreboard objectives add gm4_llp.data dummy "gm4_llp.data"
 #scoreboard objectives add gm4_blossoming_pots.misc dummy "gm4_bPots.misc"
 
 schedule function gm4_lively_lily_pads:main 1t
+schedule function gm4_lively_lily_pads:tick 1t

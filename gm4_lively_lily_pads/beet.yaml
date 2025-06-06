@@ -6,12 +6,13 @@ data_pack:
   load: .
 
 pipeline:
+  - generate
   - gm4.plugins.extend.module
 
 meta:
   gm4:
     versioning:
-      schedule_loops: [main]
+      schedule_loops: [main,tick]
     website:
       description: Place decorations on Lily Pads!
       recommended: []

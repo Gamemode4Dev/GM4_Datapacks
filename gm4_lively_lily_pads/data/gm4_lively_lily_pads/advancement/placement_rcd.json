@@ -29,6 +29,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_lively_lily_pads:mechanics/interactions/placement/interact_right_click_detection"
+    "function": "gm4_lively_lily_pads:mechanics/interactions/placement/interact_rcd"
   }
 }

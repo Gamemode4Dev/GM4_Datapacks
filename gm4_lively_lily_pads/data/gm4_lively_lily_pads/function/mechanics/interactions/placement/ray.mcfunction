@@ -1,12 +1,12 @@
 # raycasts from the players head that moves forward until it finds a lily_pad block with a rcd
 # @s = player holding supported item, interacted with rcd
 # at @s anchored eyes, moving forward
-# run from mechanics/interactions/placement/interact_right_click_detection
+# run from mechanics/interactions/placement/interact_rcd
 
 # as used as an if
-execute if block ~ ~ ~ minecraft:lily_pad align xyz positioned ~.5 ~.1 ~.5 \
+execute if block ~ ~ ~ minecraft:lily_pad align xyz positioned ~.5 ~.02 ~.5 \
   as @e[type=minecraft:interaction,tag=gm4_llp_placement_rcd,limit=1,distance=..0.1] \
-  run return run function gm4_lively_lily_pads:mechanics/interactions/placement/found
+  run return run function gm4_lively_lily_pads:mechanics/interactions/placement/found with storage gm4_llp:temp
 
 # loop
 scoreboard players remove $ray gm4_llp.data 1

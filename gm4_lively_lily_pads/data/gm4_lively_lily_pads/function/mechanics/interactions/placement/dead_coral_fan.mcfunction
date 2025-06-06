@@ -1,4 +1,4 @@
-# places coral_fan displays
+# places dead_coral_fan displays
 # @s = placement rcd
 # at @s
 # with {SelectedItem}
@@ -6,7 +6,7 @@
 
 # summon
 $summon minecraft:block_display ~ ~ ~ {\
-  Tags:["gm4_llp_display","gm4_llp_display.1","gm4_llp_wet_grass_sound","smithed.entity"],\
+  Tags:["gm4_llp_display","gm4_llp_display.1","gm4_llp_stone_sound","smithed.entity"],\
   block_state:{\
     Name:"$(SelectedItem)"\
   },\
@@ -31,4 +31,4 @@ $summon minecraft:block_display ~ ~ ~ {\
 }
 
 # sound
-playsound minecraft:block.wet_grass.place block @a[distance=..16] ~ ~ ~
+playsound minecraft:block.stone.place block @a[distance=..16] ~ ~ ~

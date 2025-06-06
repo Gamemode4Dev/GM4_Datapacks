@@ -1,13 +1,14 @@
-# places cactus_flower displays
+# places light_9 displays
 # @s = placement rcd
 # at @s
+# with {SelectedItem}
 # run from mechanics/interactions/placement/found
 
 # summon
 summon minecraft:block_display ~ ~ ~ {\
-  Tags:["gm4_llp_display","gm4_llp_display.1","gm4_llp_cactus_flower_sound","smithed.entity"],\
+  Tags:["gm4_llp_display","gm4_llp_display.1","gm4_llp_light","gm4_llp_lantern_sound","smithed.entity"],\
   block_state:{\
-    Name:"minecraft:cactus_flower"\
+    Name:"minecraft:soul_lantern"\
   },\
   transformation:{\
     scale:[0.8f,0.8f,0.8f],\
@@ -16,6 +17,8 @@ summon minecraft:block_display ~ ~ ~ {\
     right_rotation:[0f,0f,0f,1f]\
   }\
 }
+# light block
+setblock ~ ~1 ~ light[level=9] keep
 
 # sound
-playsound minecraft:block.cactus_flower.place block @a[distance=..16] ~ ~ ~
+playsound minecraft:block.lantern.place block @a[distance=..16] ~ ~ ~

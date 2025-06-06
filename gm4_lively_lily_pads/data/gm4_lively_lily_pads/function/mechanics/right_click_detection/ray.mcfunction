@@ -3,7 +3,7 @@
 # at @s anchored eyes, moving forward
 # run from player/holding_item
 
-execute if block ~ ~ ~ minecraft:lily_pad align xyz positioned ~.5 ~.1 ~.5 \
+execute if block ~ ~ ~ minecraft:lily_pad align xyz positioned ~.5 ~.02 ~.5 \
   unless entity @e[type=minecraft:block_display,limit=1,distance=..0.1,tag=gm4_llp_display] \
   run return run function gm4_lively_lily_pads:mechanics/right_click_detection/found
 

@@ -5,13 +5,13 @@
 
 # summon
 summon minecraft:block_display ~ ~ ~ {\
-  Tags:["gm4_llp_display","gm4_llp_display.1"],\
+  Tags:["gm4_llp_display","gm4_llp_display.1","gm4_llp_light","gm4_llp_wood_sound","smithed.entity"],\
   block_state:{\
     Name:"minecraft:redstone_torch"\
   },\
   transformation:{\
     scale:[0.8f,0.8f,0.8f],\
-    translation:[-0.4f,-0.08f,-0.4f],\
+    translation:[-0.4f,0f,-0.4f],\
     left_rotation:[0f,0f,0f,1f],\
     right_rotation:[0f,0f,0f,1f]\
   }\

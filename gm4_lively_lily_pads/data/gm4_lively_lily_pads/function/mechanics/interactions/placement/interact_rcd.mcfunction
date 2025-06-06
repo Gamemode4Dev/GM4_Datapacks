@@ -29,9 +29,12 @@ execute if items entity @s weapon.mainhand minecraft:redstone_torch run \
 execute if items entity @s weapon.mainhand minecraft:spore_blossom run \
   scoreboard players set $item_type gm4_llp.data 10
 
+# string manipulation step 1
+execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4_llp:temp SelectedItem
+
 # need to raycast for lily pad with a placement rcd on it
 execute store result score $ray gm4_llp.data run attribute @s minecraft:block_interaction_range get 10
 execute anchored eyes positioned ^ ^ ^ run function gm4_lively_lily_pads:mechanics/interactions/placement/ray
 
 # minus one on player mainhand if successful
-execute if entity @s[gamemode=!creative] if score $minus_one gm4_llp.data matches 1 run item modify entity @s weapon.mainhand gm4_lively_lily_pads:minus_one
+execute if entity @s[gamemode=!creative] if score $minus_one gm4_llp.data matches 1 run item modify entity @s weapon.mainhand {function:"minecraft:set_count",count:-1,add:1b}

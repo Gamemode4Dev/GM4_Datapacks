@@ -2,7 +2,7 @@
 # run from mechanics/right_click_detection/found & self
 
 # visuals
-particle egg_crack ~ ~0.1 ~ 0 0 0 .01 1
+particle egg_crack ~ ~.05 ~ 0 0 0 .01 1
 
 # reset scoreboard
 scoreboard players remove $timer gm4_llp.data 1
