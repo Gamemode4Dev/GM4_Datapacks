@@ -14,6 +14,6 @@ execute anchored eyes positioned ^ ^ ^ run function gm4_lively_lily_pads:mechani
 execute if score $ignited gm4_llp.data matches 0 run return fail
 
 # item use (fire charge or flint and steel)
-execute if entity @s[gamemode=!creative] if items entity @s weapon.mainhand fire_charge run \
-  return run item modify entity @s weapon.mainhand {function:"minecraft:set_count",count:-1,add:1b}
-execute if entity @s[gamemode=!creative] run function gm4_lively_lily_pads:mechanics/interactions/light_candle/unbreaking_damage
+execute if items entity @s weapon.mainhand fire_charge run return \
+  run function gm4_lively_lily_pads:mechanics/interactions/light_candle/used_fire_charge
+execute run function gm4_lively_lily_pads:mechanics/interactions/light_candle/used_flint_and_steel

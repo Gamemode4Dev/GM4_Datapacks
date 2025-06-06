@@ -1,7 +1,7 @@
 # updates light blocks
 # @s = candle block display
 # at @s
-# run from mechanics/interactions/light_candle/modify
+# run from mechanics/interactions/light_candle/modify & mechanics/interactions/add_candle/modify
 
 # light blocks
 execute if block ~ ~1 ~ light run setblock ~ ~1 ~ air
