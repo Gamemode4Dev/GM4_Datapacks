@@ -17,18 +17,6 @@ $summon minecraft:block_display ~ ~ ~ {\
     right_rotation:[0f,0f,0f,1f]\
   }\
 }
-$summon minecraft:block_display ~ ~ ~ {\
-  Tags:["gm4_llp_display","gm4_llp_display.2","smithed.entity"],\
-  block_state:{\
-    Name:"$(SelectedItem)"\
-  },\
-  transformation:{\
-    scale:[0.25f,0.6f,0.25f],\
-    translation:[-0.125f,0f,-0.125f],\
-    left_rotation:[0f,0f,0f,1f],\
-    right_rotation:[0f,0f,0f,1f]\
-  }\
-}
 
 # sound
 playsound minecraft:block.stone.place block @a[distance=..16] ~ ~ ~

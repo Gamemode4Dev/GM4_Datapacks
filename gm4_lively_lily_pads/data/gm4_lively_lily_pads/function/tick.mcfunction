@@ -1,5 +1,6 @@
-# handles candle flame particles
+# handles particles and light_block refeshing
 
-schedule function gm4_lively_lily_pads:tick 5t
+schedule function gm4_lively_lily_pads:tick 8t
 
-execute as @e[type=block_display,tag=gm4_llp_lit_candle] at @s run function gm4_lively_lily_pads:mechanics/particles/candle_count
+execute as @e[type=block_display,tag=gm4_llp_light] at @s run function gm4_lively_lily_pads:mechanics/particles/select_type
+#execute as @e[type=block_display,tag=gm4_llp_lit_candle] at @s run function gm4_lively_lily_pads:mechanics/particles/candle_count

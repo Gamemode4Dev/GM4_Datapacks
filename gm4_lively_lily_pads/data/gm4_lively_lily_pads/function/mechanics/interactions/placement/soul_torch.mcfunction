@@ -5,7 +5,7 @@
 
 # summon
 summon minecraft:block_display ~ ~ ~ {\
-  Tags:["gm4_llp_display","gm4_llp_display.1","gm4_llp_light","gm4_llp_wood_sound","smithed.entity"],\
+  Tags:["gm4_llp_display","gm4_llp_display.1","gm4_llp_light","gm4_llp_light.9","gm4_llp_wood_sound","gm4_llp_smoke_torch","smithed.entity"],\
   block_state:{\
     Name:"minecraft:soul_torch"\
   },\
