@@ -1,8 +1,7 @@
 # places light_9 displays
-# @s = placement rcd
-# at @s
-# with {SelectedItem}
-# run from mechanics/interactions/placement/found
+# @s = placement rcd (upgrade path different)
+# lily_pad align xyz positioned ~.5 ~.02 ~.5
+# run from mechanics/interactions/placement/found & upgrade_paths/3.0/update_legacy_display
 
 # summon
 summon minecraft:block_display ~ ~ ~ {\

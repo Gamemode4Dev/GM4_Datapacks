@@ -1,7 +1,7 @@
 # places redstone_torch displays
-# @s = placement rcd
-# at @s
-# run from mechanics/interactions/placement/found
+# @s = placement rcd (upgrade path different)
+# lily_pad align xyz positioned ~.5 ~.02 ~.5
+# run from mechanics/interactions/placement/found & upgrade_paths/3.0/update_legacy_display
 
 # summon
 summon minecraft:block_display ~ ~ ~ {\

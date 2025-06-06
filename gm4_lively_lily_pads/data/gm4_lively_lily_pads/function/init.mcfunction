@@ -2,13 +2,10 @@ execute unless score lively_lily_pads gm4_modules matches 1 run data modify stor
 execute unless score lively_lily_pads gm4_earliest_version < lively_lily_pads gm4_modules run scoreboard players operation lively_lily_pads gm4_earliest_version = lively_lily_pads gm4_modules
 scoreboard players set lively_lily_pads gm4_modules 1
 
-## GET BACK TO LATER
 # detect pre-gm4 lively lily pads
-#execute if data storage rc_blossoming_pots:storage version_history run scoreboard players set blossoming_pots gm4_earliest_version 0
+  # We do this in mechanics/placement/interact_rcd
 
 scoreboard objectives add gm4_llp.data dummy "gm4_llp.data"
-#scoreboard objectives add gm4_blossoming_pots.display_stage dummy "gm4_bPots.display_stage"
-#scoreboard objectives add gm4_blossoming_pots.misc dummy "gm4_bPots.misc"
 
 schedule function gm4_lively_lily_pads:main 1t
 schedule function gm4_lively_lily_pads:tick 1t

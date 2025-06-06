@@ -1,6 +1,6 @@
 # placement decision
 # @s = placement rcd
-# at @s   (lily_pad align xyz positioned ~.5 ~.02 ~.5)
+# lily_pad align xyz positioned ~.5 ~.02 ~.5
 # with {str_len}
 # run from mechanics/interactions/placement/ray
 

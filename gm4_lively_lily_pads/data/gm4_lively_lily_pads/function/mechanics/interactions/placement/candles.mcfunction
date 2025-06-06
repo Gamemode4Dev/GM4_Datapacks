@@ -1,8 +1,8 @@
 # places candle displays
-# @s = placement rcd
-# at @s
+# @s = placement rcd (upgrade path different)
+# lily_pad align xyz positioned ~.5 ~.02 ~.5
 # with {SelectedItem, string}
-# run from mechanics/interactions/placement/found
+# run from mechanics/interactions/placement/found & upgrade_paths/3.0/upgrade_candle
 
 # summon
 $summon minecraft:block_display ~ ~ ~ {\

@@ -6,6 +6,9 @@
 advancement revoke @s only gm4_lively_lily_pads:placement_rcd
 scoreboard players reset $minus_one gm4_llp.data
 
+## breif check to enable Upgrade_Path 3.0
+execute if entity @e[type=minecraft:interaction,tag=lilyPadInt,limit=1] run scoreboard players set lively_lily_pads gm4_earliest_version 0
+
 # item information
 data modify storage gm4_llp:temp SelectedItem set from entity @s SelectedItem.id
 execute if items entity @s weapon.mainhand #gm4_lively_lily_pads:coral_fan run \
