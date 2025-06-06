@@ -47,9 +47,6 @@ Push this idea as far as I can, then reign it in.
             Puff up a bit
             ISSUE: Setting PuffState has issues. Set once is fine. Once it deflates a bit, setting again flashes and then reverts. 
             Probably an MC bug, should make an issue for it if it doesn't exist
-        Wandering Trader :  Doesn't hold items. Maybe revist
-            Theft Trades?
-            Steal llamas?
 '''
 
 def create_lookup_file(ctx: Context):
