@@ -3,6 +3,8 @@
 # at bobber in @s
 # run from fished/select_type
 
+# fail if baby
+execute unless data entity @s {Age:0} run return fail
 # set item id to correct mushroom type
 execute if data entity @s {Type:"red"} run data modify storage gm4_reeling_rods:temp item_data.Item.id set value "minecraft:red_mushroom"
 execute if data entity @s {Type:"brown"} run data modify storage gm4_reeling_rods:temp item_data.Item.id set value "minecraft:brown_mushroom"
@@ -20,3 +22,5 @@ execute at @s run function gm4_reeling_rods:summon_entity with storage gm4_reeli
 execute at @s on passengers run function gm4_reeling_rods:fished/mooshroom/passenger_transfer
 
 tp @s ~ -1000 ~
+
+playsound entity.mooshroom.shear neutral @a[distance=..16] ~ ~ ~

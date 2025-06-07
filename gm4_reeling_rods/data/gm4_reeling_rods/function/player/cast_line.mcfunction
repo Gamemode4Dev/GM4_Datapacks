@@ -5,4 +5,4 @@
 
 scoreboard players set @s gm4_reeling_rods.rods_cast 0
 
-schedule function gm4_reeling_rods:id/loop 1t
+function gm4_reeling_rods:id/loop

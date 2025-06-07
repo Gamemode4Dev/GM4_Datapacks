@@ -8,4 +8,4 @@
 execute as @e[type=!#gm4_reeling_rods:ignore,distance=..42] at @s run function gm4_reeling_rods:id/set
 
 # schedule again, since bobber still exists
-schedule function gm4_reeling_rods:id/loop 5t
+schedule function gm4_reeling_rods:id/loop 2t

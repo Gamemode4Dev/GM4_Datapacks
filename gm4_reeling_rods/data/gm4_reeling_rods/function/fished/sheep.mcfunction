@@ -25,3 +25,5 @@ execute if data entity @s {Color:14b} run data modify storage gm4_reeling_rods:t
 execute if data entity @s {Color:15b} run data modify storage gm4_reeling_rods:temp item_data.Item set value {id:"minecraft:black_wool",count:1}
 
 function gm4_reeling_rods:pull_items
+
+playsound minecraft:entity.sheep.shear neutral @a[distance=..16] ~ ~ ~
