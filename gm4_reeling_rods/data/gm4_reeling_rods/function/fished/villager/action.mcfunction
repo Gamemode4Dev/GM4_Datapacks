@@ -18,7 +18,7 @@ execute unless score $slot gm4_reeling_rods.math matches 1 run return fail
 function gm4_reeling_rods:fished/villager/sell_out with storage gm4_reeling_rods:temp entity_data
 
 # adds 20 "major_negative" gossip of the player to the villager
-data modify storage gm4_reeling_rods:temp entity_data.gossip.Target set from entity @a[tag=gm4_reeling_rods.player,limit=1,distance=..33] UUID
+data modify storage gm4_reeling_rods:temp entity_data.gossip.Target set from entity @p[tag=gm4_reeling_rods.player] UUID
 function gm4_reeling_rods:fished/villager/add_gossip with storage gm4_reeling_rods:temp entity_data.gossip
 
 # angry particles
