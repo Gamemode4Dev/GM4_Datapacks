@@ -13,4 +13,4 @@ execute at @s as @e[type=#gm4_reeling_rods:leashable,distance=..10] \
 
 kill @s
 
-execute at @a[tag=gm4_reeling_rods.player,limit=1,distance=..50] run playsound minecraft:entity.leash_knot.place neutral @a[distance=..16] ~ ~ ~
+execute at @p[tag=gm4_reeling_rods.player] run playsound minecraft:entity.leash_knot.place neutral @a[distance=..16] ~ ~ ~
