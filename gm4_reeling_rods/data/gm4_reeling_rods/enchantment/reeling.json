@@ -1,0 +1,22 @@
+{
+    "description":{
+        "text": "Reeling"
+    },
+    "supported_items": "minecraft:fishing_rod",
+    "primary_items": "minecraft:fishing_rod",
+    "weight": 3,
+    "max_level": 1,
+    "min_cost": {
+        "base": 5,
+        "per_level_above_first": 8
+    },
+    "max_cost": {
+        "base": 55,
+        "per_level_above_first": 8
+    },
+    "anvil_cost": 2,
+    "slots": [
+        "any"
+    ],
+    "effects": {}
+}
