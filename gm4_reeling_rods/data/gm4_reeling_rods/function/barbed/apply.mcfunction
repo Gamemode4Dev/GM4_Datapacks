@@ -13,7 +13,7 @@ playsound minecraft:entity.player.attack.crit player @a[distance=..16] ~ ~ ~ 1 1
 # handle death (@e only selects entities which are alive)
 # | this is of importance for entities which display death messages or re-spawn
 tag @s add gm4_reeling_rods.victim
-execute at @s unless entity @e[type=#gm4_reeling_rods:support_death_message,tag=gm4_reeling_rods.victim,distance=0,limit=1] run function gm4_reeling_rods:barbed/on_scratch_death
+execute if entity @s[type=#gm4_reeling_rods:support_death_message] at @s unless entity @e[type=#gm4_reeling_rods:support_death_message,tag=gm4_reeling_rods.victim,distance=0,limit=1] run function gm4_reeling_rods:barbed/on_scratch_death
 
 # if the victim is still alive, schedule bleeding damage
 execute at @s if entity @e[tag=gm4_reeling_rods.victim,distance=0,limit=1] run function gm4_reeling_rods:barbed/schedule_bleeding

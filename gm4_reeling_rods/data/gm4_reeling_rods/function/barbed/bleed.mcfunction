@@ -36,7 +36,7 @@ execute anchored eyes run particle damage_indicator ^ ^ ^1 .5 .5 .5 0 8 normal @
 # handle death (@e only selects entities which are alive)
 # | this is of importance for entities which display death messages or re-spawn
 tag @s add gm4_reeling_rods.victim
-execute at @s unless entity @e[type=#gm4_reeling_rods:support_death_message,tag=gm4_reeling_rods.victim,distance=0,limit=1] run function gm4_reeling_rods:barbed/on_bleeding_death
+execute if entity @s[type=#gm4_reeling_rods:support_death_message] at @s unless entity @e[type=#gm4_reeling_rods:support_death_message,tag=gm4_reeling_rods.victim,distance=0,limit=1] run function gm4_reeling_rods:barbed/on_bleeding_death
 tag @s remove gm4_reeling_rods.victim
 execute if score $show_death_messages gm4_reeling_rods.barbed_damage_timer matches 1 run gamerule showDeathMessages true
 scoreboard players reset $show_death_messages gm4_reeling_rods.barbed_damage_timer
