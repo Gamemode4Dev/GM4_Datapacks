@@ -1,5 +1,5 @@
 {
-    "replace": true,
+    "replace": false,
     "values": [
       "minecraft:arrow",
       "minecraft:bad_respawn_point",

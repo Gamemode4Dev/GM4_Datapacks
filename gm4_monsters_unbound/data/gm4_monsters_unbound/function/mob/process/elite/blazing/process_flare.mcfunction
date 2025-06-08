@@ -23,7 +23,7 @@ execute unless block ~ ~ ~ #gm4:no_collision run scoreboard players set $flare_h
 scoreboard players add @s gm4_mu_timer 1
 execute if score @s gm4_mu_timer matches 80.. run scoreboard players set $flare_hit gm4_mu_data 1
 # explode when something is hit
-execute if score $flare_hit gm4_mu_data matches 1 run return run function gm4_monsters_unbound:mob/process/elite/blazing/explode_flare
+execute if score $flare_hit gm4_mu_data matches 1 run return run function gm4_monsters_unbound:mob/process/elite/blazing/flare_explode
 
 # keep running
 scoreboard players set $keep_tick.elite_process_flare gm4_mu_keep_tick 1

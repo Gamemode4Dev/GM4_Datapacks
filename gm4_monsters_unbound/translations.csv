@@ -41,3 +41,6 @@ text.gm4.guidebook.monsters_unbound.description.elite_pearlescent,"Pearescent El
 text.gm4.guidebook.monsters_unbound.description.elite_splitting,Splitting Elites split into 6 smaller and weaker versions of itself on death.
 text.gm4.guidebook.monsters_unbound.description.elite_volatile,"Volatile Elites create randomly targeted purple beams of energy around them that explode after a delay, dealing heavy magic damage."
 text.gm4.guidebook.monsters_unbound.description.elite_vorpal,"Vorpal Elites teleport randomly on getting hit. On death a homing skull will track the nearest player and apply Fear, which blinds and slows interactions."
+text.gm4.monsters_unbound.death.pearlescent_elite_laser,"%s was seen by %s"
+text.gm4.monsters_unbound.death.volatile_elite_meteorite,"%s was struck by a meteorite"
+text.gm4.monsters_unbound.death.blazing_elite_flare,"%s was blown up by a Blazing Flare"
