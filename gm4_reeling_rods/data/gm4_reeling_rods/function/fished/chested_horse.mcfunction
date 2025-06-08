@@ -3,7 +3,6 @@
 # at bobber in @s
 # run from fished/select_type
 
-data modify storage gm4_reeling_rods:temp entity_data set from entity @s
 data modify storage gm4_reeling_rods:temp item_data set value {}
 data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s equipment.saddle
 execute if data entity @s {ChestedHorse:1b} run data modify storage gm4_reeling_rods:temp item_data.Item set value {id:"minecraft:chest",count:1}
