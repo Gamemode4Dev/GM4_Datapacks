@@ -1,6 +1,6 @@
 # clears all id tags off of @s
 # @s = entity with tag gm4_reeling_rods.id.tagged
-# run from tick
+# run from id/loop
 
 tag @s remove gm4_reeling_rods.id.0.0
 tag @s remove gm4_reeling_rods.id.1.0
