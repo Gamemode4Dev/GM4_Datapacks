@@ -4,17 +4,17 @@
     },
     "supported_items": "minecraft:fishing_rod",
     "primary_items": "minecraft:fishing_rod",
-    "weight": 3,
+    "weight": 2,
     "max_level": 1,
     "min_cost": {
-        "base": 5,
-        "per_level_above_first": 8
+        "base": 15,
+        "per_level_above_first": 9
     },
     "max_cost": {
-        "base": 55,
-        "per_level_above_first": 8
+        "base": 65,
+        "per_level_above_first": 9
     },
-    "anvil_cost": 2,
+    "anvil_cost": 5,
     "slots": [
         "any"
     ],
