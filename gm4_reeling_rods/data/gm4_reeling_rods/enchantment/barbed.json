@@ -1,0 +1,22 @@
+{
+    "description":{
+        "text": "Barbed"
+    },
+    "supported_items": "minecraft:fishing_rod",
+    "primary_items": "minecraft:fishing_rod",
+    "weight": 1,
+    "max_level": 5,
+    "min_cost": {
+        "base": 2,
+        "per_level_above_first": 9
+    },
+    "max_cost": {
+        "base": 55,
+        "per_level_above_first": 9
+    },
+    "anvil_cost": 3,
+    "slots": [
+        "any"
+    ],
+    "effects": {}
+}
