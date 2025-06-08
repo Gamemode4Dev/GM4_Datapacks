@@ -21,6 +21,8 @@ execute summon snowball run function gm4_reeling_rods:barbed/find_attacker
 
 # apply damage
 # | if the attacker was found, attribute it to the attacker, if not do not attribute it to anyone
-execute if score $found_attacker gm4_reeling_rods.barbed_attacker_uuid0 matches 1.. run damage @s 2 magic by @p[tag=gm4_reeling_rods.barbed_attacker]
-execute unless score $found_attacker gm4_reeling_rods.barbed_attacker_uuid0 matches 1.. run damage @s 2 magic
-particle damage_indicator ~ ~ ~ .3 .3 .3 1 4
+execute if score $found_attacker gm4_reeling_rods.barbed_attacker_uuid0 matches 1.. run damage @s 2 cactus by @p[tag=gm4_reeling_rods.barbed_attacker]
+execute unless score $found_attacker gm4_reeling_rods.barbed_attacker_uuid0 matches 1.. run damage @s 2 cactus
+playsound minecraft:block.pointed_dripstone.drip_lava neutral @a[distance=..6] ~ ~ ~ 1 1.8
+execute anchored eyes run particle damage_indicator ^ ^ ^ .2 .2 .2 0 3
+execute anchored eyes run particle damage_indicator ^ ^ ^1 .5 .5 .5 0 8 normal @s

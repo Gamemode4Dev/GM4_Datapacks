@@ -106,7 +106,7 @@ def create_select_type(ctx: Context, entities: CSV):
         "# run from player/find_fished_entity",
         "",
         "# apply barbed damage",
-        "execute if data storage gm4_reeling_rods:temp enchanted.barbed if data entity @s Health unless data entity @s {Invulnerable:1b} run function gm4_reeling_rods:barbed/apply with storage gm4_reeling_rods:temp enchanted.barbed",
+        "execute if data storage gm4_reeling_rods:temp enchanted.barbed if data entity @s Health unless data entity @s {Invulnerable:1b} unless entity @s[type=player,gamemode=creative] run function gm4_reeling_rods:barbed/apply with storage gm4_reeling_rods:temp enchanted.barbed",
         "",
         "# non-dismountable entities",
         "",

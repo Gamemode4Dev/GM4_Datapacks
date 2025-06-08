@@ -5,7 +5,8 @@
 # run from fished/select_type
 
 # immediate damage (amount scales with enchantment level)
-$damage @s $(damage) magic by @p[tag=gm4_reeling_rods.player]
+$damage @s $(damage) cactus by @p[tag=gm4_reeling_rods.player]
+playsound minecraft:entity.player.attack.crit player @a[distance=..16] ~ ~ ~ 1 1.82
 
 # bleeding damage (more frequent with higher levels, but constant in amount)
 data modify storage gm4_reeling_rods:temp enchanted.barbed.attacker_uuid set from entity @a[limit=1,tag=gm4_reeling_rods.player] UUID
