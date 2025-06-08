@@ -2,19 +2,20 @@
     "description":{
         "text": "Barbed"
     },
+    "exclusive_set": "gm4_reeling_rods:reeling",
     "supported_items": "minecraft:fishing_rod",
     "primary_items": "minecraft:fishing_rod",
     "weight": 1,
     "max_level": 5,
     "min_cost": {
-        "base": 15,
-        "per_level_above_first": 9
+        "base": 1,
+        "per_level_above_first": 10
     },
     "max_cost": {
-        "base": 65,
-        "per_level_above_first": 9
+        "base": 51,
+        "per_level_above_first": 10
     },
-    "anvil_cost": 7,
+    "anvil_cost": 1,
     "slots": [
         "any"
     ],
