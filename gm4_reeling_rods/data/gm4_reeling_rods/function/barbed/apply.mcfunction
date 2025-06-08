@@ -5,8 +5,18 @@
 # run from fished/select_type
 
 # immediate damage (amount scales with enchantment level)
+execute store result score $show_death_messages gm4_reeling_rods.barbed_damage_timer run gamerule showDeathMessages
+gamerule showDeathMessages false
 $damage @s $(damage) cactus by @p[tag=gm4_reeling_rods.player]
 playsound minecraft:entity.player.attack.crit player @a[distance=..16] ~ ~ ~ 1 1.82
+
+# handle death (@e only selects entities which are alive)
+# | this is of importance for entities which display death messages or re-spawn
+tag @s add gm4_reeling_rods.victim
+execute at @s unless entity @e[tag=gm4_reeling_rods.victim,distance=0,limit=1] run function gm4_reeling_rods:barbed/on_scratch_death
+tag @s remove gm4_reeling_rods.victim
+execute if score $show_death_messages gm4_reeling_rods.barbed_damage_timer matches 1 run gamerule showDeathMessages true
+scoreboard players reset $show_death_messages gm4_reeling_rods.barbed_damage_timer
 
 # bleeding damage (more frequent with higher levels, but constant in amount)
 data modify storage gm4_reeling_rods:temp enchanted.barbed.attacker_uuid set from entity @a[limit=1,tag=gm4_reeling_rods.player] UUID
