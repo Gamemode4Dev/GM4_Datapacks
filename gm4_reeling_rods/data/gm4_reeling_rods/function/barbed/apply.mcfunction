@@ -2,7 +2,7 @@
 # @s = hooked entity
 # at bobber position
 # with {damage}
-# run from fished/select_type
+# run from hooked_entity/select_type
 
 # immediate damage (amount scales with enchantment level)
 execute store result score $show_death_messages gm4_reeling_rods.barbed_damage_timer run gamerule showDeathMessages

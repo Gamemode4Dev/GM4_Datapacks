@@ -2,15 +2,15 @@ execute unless score reeling_rods gm4_modules matches 1 run data modify storage 
 execute unless score reeling_rods gm4_earliest_version < reeling_rods gm4_modules run scoreboard players operation reeling_rods gm4_earliest_version = reeling_rods gm4_modules
 scoreboard players set reeling_rods gm4_modules 1
 
-scoreboard objectives add gm4_reeling_rods.math dummy "gm4_reeling math"
-scoreboard objectives add gm4_reeling_rods.lookup dummy "gm4_reeling lookup table"
+scoreboard objectives add gm4_reeling_rods.math dummy
+scoreboard objectives add gm4_reeling_rods.lookup dummy
 scoreboard objectives add gm4_reeling_rods.barbed_damage_timer dummy
 scoreboard objectives add gm4_reeling_rods.barbed_damage_period dummy
 scoreboard objectives add gm4_reeling_rods.barbed_attacker_uuid0 dummy
 scoreboard objectives add gm4_reeling_rods.barbed_attacker_uuid1 dummy
 scoreboard objectives add gm4_reeling_rods.barbed_attacker_uuid2 dummy
 scoreboard objectives add gm4_reeling_rods.barbed_attacker_uuid3 dummy
-scoreboard objectives add gm4_reeling_rods.rods_cast minecraft.used:minecraft.fishing_rod "gm4_reeling rods cast"
+scoreboard objectives add gm4_reeling_rods.rods_cast minecraft.used:minecraft.fishing_rod
 # id
 scoreboard objectives add gm4_reeling_rods.id_bit.0 dummy
 scoreboard objectives add gm4_reeling_rods.id_bit.1 dummy
