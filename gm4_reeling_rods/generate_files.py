@@ -7,7 +7,7 @@ from gm4.utils import CSV
 def beet_default(ctx: Context):
     """NOTE: generates files
         - set_lookup_table
-        - advancements and reward functions for every bit state of an entity's tagged id
+        - advancements and reward functions for every bit state of an entity's scoreboard id
         - hooked_entity/select_type
     """
     create_lookup_file(ctx)
@@ -31,11 +31,19 @@ Push this idea as far as I can, then reign it in.
                 Can have armor on them through commands (not dispensed), but doesn't render
                 Probably shouldn't theft armor that can't be applied by players, that's the realm of datapackers
                 Using hand item theft function
+                - CANT STEAL PILLAGER BANNER. Is that bad?
         
         Nugget idea?
             Try to use drop chances for armor and if it fails drop armor material?
             What about datapack armor?... I worry about compatibility
             Probably want to implement drop chances one way though
+        Drowned Trident Theft
+            Super easy. Just lure them on land and then yoink it
+            Probably want to balance that
+        Drop Chances
+            Should implement for balance
+            Maybe just have gear break if the drop chance fails?
+            That's the best idea so far I think
 
     \\ ---[ REJECTED FOR A REASON ]--- \\
         Enderman :
