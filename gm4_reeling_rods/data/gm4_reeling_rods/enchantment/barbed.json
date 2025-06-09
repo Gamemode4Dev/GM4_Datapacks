@@ -1,6 +1,7 @@
 {
-    "description":{
-        "text": "Barbed"
+    "description": {
+        "translate": "gm4.reeling_rods.enchantment.barbed",
+        "fallback": "Barbed"
     },
     "exclusive_set": "gm4_reeling_rods:reeling",
     "supported_items": "minecraft:fishing_rod",
