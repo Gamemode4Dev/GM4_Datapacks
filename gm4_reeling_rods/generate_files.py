@@ -121,6 +121,7 @@ def create_select_type(ctx: Context, entities: CSV):
         "",
         "# apply barbed damage",
         "execute if data storage gm4_reeling_rods:temp enchanted.barbed if data entity @s Health unless data entity @s {Invulnerable:1b} unless entity @s[type=player,gamemode=creative] run function gm4_reeling_rods:barbed/apply with storage gm4_reeling_rods:temp enchanted.barbed",
+        "execute if data storage gm4_reeling_rods:temp enchanted.barbed if entity @s[type=minecraft:tnt_minecart] run return run data modify entity @s fuse set value 0s",
         "",
         "# non-dismountable entities",
         "",
@@ -143,6 +144,6 @@ def create_select_type(ctx: Context, entities: CSV):
         if entity["can_dismount"].as_bool():
             lines.append(command)  # dismountable entities should be handled last and are appended to the end of the function
         else:
-            lines.insert(9, command)  # non-dismountable entities should be handled first and are inserted before the dismountable entities
+            lines.insert(10, command)  # non-dismountable entities should be handled first and are inserted before the dismountable entities
 
     ctx.data["gm4_reeling_rods:hooked_entity/select_type"] = Function(lines)
