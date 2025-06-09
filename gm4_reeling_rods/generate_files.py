@@ -75,9 +75,15 @@ def create_bit_advancements(ctx: Context):
                     "fishing_rod_hooked":{
                         "trigger":"minecraft:fishing_rod_hooked",
                         "conditions":{
-                            "entity":{
-                                "nbt": "{" + f"Tags:[\"gm4_reeling_rods.id.{bit}.{value}\"]" + "}"
-                            }
+                            "entity": [
+                                {
+                                    "condition": "minecraft:entity_scores",
+                                    "entity": "this",
+                                    "scores": {
+                                        f"gm4_reeling_rods.id_bit.{bit}": value
+                                    }
+                                }
+                            ]
                         }
                     }
                 },
@@ -90,7 +96,7 @@ def create_bit_advancements(ctx: Context):
                 f"# run from advancement fished/bit_{bit}_{value}\n",
                 f"advancement revoke @s only gm4_reeling_rods:fished/bit_{bit}_{value}\n",
                 "execute if entity @s[gamemode=adventure] run return fail\n",
-                "data modify storage gm4_reeling_rods:temp bit_data set value {bit_tag:\"" + f"gm4_reeling_rods.id.{bit}.{value}\", bit:\"{bit}\"" + "}",
+                "data modify storage gm4_reeling_rods:temp bit_data set value {bit_score:\"" + f"gm4_reeling_rods.id_bit.{bit}={value}\", bit:\"{bit}\"" + "}",
                 "data modify storage gm4_reeling_rods:temp bit_data.UUID set from entity @s UUID",
                 "tag @s add gm4_reeling_rods.player",
                 "function gm4_reeling_rods:player/received_bit with storage gm4_reeling_rods:temp bit_data",

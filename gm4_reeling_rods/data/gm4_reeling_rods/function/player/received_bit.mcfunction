@@ -4,7 +4,7 @@
 # with {bit, UUID}
 # run from player/bit_{bit}_{value}
 
-$data modify storage gm4_reeling_rods:players "$(UUID)".bit_$(bit) set from storage gm4_reeling_rods:temp bit_data.bit_tag
+$data modify storage gm4_reeling_rods:players "$(UUID)".bit_$(bit) set from storage gm4_reeling_rods:temp bit_data.bit_score
 
 # fail if not all bits
 $execute store result score $bit_count gm4_reeling_rods.math run data get storage gm4_reeling_rods:players "$(UUID)"
