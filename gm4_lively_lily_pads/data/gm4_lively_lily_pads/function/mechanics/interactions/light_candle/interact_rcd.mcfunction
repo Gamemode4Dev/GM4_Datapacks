@@ -1,12 +1,15 @@
 # light candle interact logic
-# @s = player who wants to add a candle
+# @s = player who wants to light a candle
 # at @s
-# run from advancement: add_candle_rcd
+# run from advancement: light_candle_rcd
 
 advancement revoke @s only gm4_lively_lily_pads:light_candle_rcd
-scoreboard players reset $minus_one gm4_llp.data
+
+# return if adventure
+execute if entity @s[gamemode=adventure] run return fail
 
 # raycast
+scoreboard players reset $minus_one gm4_llp.data
 execute store result score $ray gm4_llp.data run attribute @s minecraft:block_interaction_range get 10
 execute anchored eyes positioned ^ ^ ^ run function gm4_lively_lily_pads:mechanics/interactions/light_candle/ray
 

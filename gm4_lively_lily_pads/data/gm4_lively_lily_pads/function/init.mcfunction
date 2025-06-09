@@ -5,7 +5,7 @@ scoreboard players set lively_lily_pads gm4_modules 1
 # detect pre-gm4 lively lily pads
   # We do this in mechanics/placement/interact_rcd
 
-scoreboard objectives add gm4_llp.data dummy "gm4_llp.data"
+scoreboard objectives add gm4_llp.data dummy
 
 schedule function gm4_lively_lily_pads:main 1t
 schedule function gm4_lively_lily_pads:tick 1t

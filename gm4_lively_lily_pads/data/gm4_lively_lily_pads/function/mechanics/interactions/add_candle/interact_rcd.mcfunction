@@ -4,7 +4,9 @@
 # run from advancement: add_candle_rcd
 
 advancement revoke @s only gm4_lively_lily_pads:add_candle_rcd
-scoreboard players reset $minus_one gm4_llp.data
+
+# return if adventure
+execute if entity @s[gamemode=adventure] run return fail
 
 # store item
 data modify storage gm4_llp:temp SelectedItem set from entity @s SelectedItem.id
@@ -13,6 +15,7 @@ data modify storage gm4_llp:temp SelectedItem set from entity @s SelectedItem.id
 execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4_llp:temp SelectedItem
 
 # raycast
+scoreboard players reset $minus_one gm4_llp.data
 execute store result score $ray gm4_llp.data run attribute @s minecraft:block_interaction_range get 10
 function gm4_lively_lily_pads:mechanics/interactions/add_candle/ray_init with storage gm4_llp:temp
 

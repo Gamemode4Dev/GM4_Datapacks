@@ -1,5 +1,5 @@
 # cleans up
-# @s = type=block_display, tag=gm4_llp_display.1
+# @s = type=block_display, tag=gm4_llp_display
 # at @s
 # run from main
 
@@ -25,4 +25,4 @@ execute if entity @s[tag=gm4_llp_cactus_flower_sound] run playsound minecraft:bl
 
 # kill entities
 kill @e[type=minecraft:interaction,tag=gm4_llp_generic_candle_rcd,limit=1,distance=..0.1]
-kill @e[type=minecraft:block_display,tag=gm4_llp_display,distance=..0.1]
+kill @s

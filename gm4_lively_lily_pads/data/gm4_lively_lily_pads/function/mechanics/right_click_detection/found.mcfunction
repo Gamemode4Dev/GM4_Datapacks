@@ -4,7 +4,7 @@
 # run from mechanics/right_click_detection/ray
 
 # spawn an interaction if needed
-execute unless entity @e[type=interaction,tag=gm4_llp_rcd,distance=..0.1,limit=1] \
+execute unless entity @e[type=interaction,tag=gm4_llp_placement_rcd,distance=..0.1,limit=1] \
   run summon minecraft:interaction ~ ~ ~ {Glowing:1b,width:0.4f,height:0.3f,response:1b,Tags:["gm4_llp_placement_rcd","smithed.entity","smithed.strict"]}
 
 # start loop

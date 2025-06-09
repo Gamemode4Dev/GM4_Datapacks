@@ -1,5 +1,5 @@
 # summons item
-# @s = type=block_display, tag=gm4_llp_display.1
+# @s = type=block_display, tag=gm4_llp_display
 # at @s
 # with {id, count, motion}
 # run from mechanics/cleanup/kill

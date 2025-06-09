@@ -4,10 +4,12 @@
 # run from advancement: gm4_lively_lily_pads:placement_rcd
 
 advancement revoke @s only gm4_lively_lily_pads:placement_rcd
-scoreboard players reset $minus_one gm4_llp.data
 
 ## breif check to enable Upgrade_Path 3.0
 execute if entity @e[type=minecraft:interaction,tag=lilyPadInt,limit=1] run scoreboard players set lively_lily_pads gm4_earliest_version 0
+
+# return if adventure
+execute if entity @s[gamemode=adventure] run return fail
 
 # item information
 data modify storage gm4_llp:temp SelectedItem set from entity @s SelectedItem.id
@@ -36,6 +38,7 @@ execute if items entity @s weapon.mainhand minecraft:spore_blossom run \
 execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4_llp:temp SelectedItem
 
 # need to raycast for lily pad with a placement rcd on it
+scoreboard players reset $minus_one gm4_llp.data
 execute store result score $ray gm4_llp.data run attribute @s minecraft:block_interaction_range get 10
 execute anchored eyes positioned ^ ^ ^ run function gm4_lively_lily_pads:mechanics/interactions/placement/ray
 

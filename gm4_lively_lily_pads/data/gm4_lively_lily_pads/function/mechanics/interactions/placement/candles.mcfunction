@@ -6,7 +6,7 @@
 
 # summon
 $summon minecraft:block_display ~ ~ ~ {\
-  Tags:["gm4_llp_display","gm4_llp_display.1","gm4_llp_$(string)","gm4_llp_generic_candle","gm4_llp_light","smithed.entity"],\
+  Tags:["gm4_llp_display","gm4_llp_$(string)","gm4_llp_generic_candle","gm4_llp_light","smithed.entity"],\
   block_state:{\
     Name:"$(SelectedItem)",\
     Properties:{\
