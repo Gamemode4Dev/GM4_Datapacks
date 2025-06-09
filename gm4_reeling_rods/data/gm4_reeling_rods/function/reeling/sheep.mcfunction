@@ -6,7 +6,7 @@
 execute if data entity @s {Sheared:1} run return fail
 
 data modify entity @s Sheared set value true
-
+data modify storage gm4_reeling_rods:temp item_data set value {}
 execute if data entity @s {Color:0b} run data modify storage gm4_reeling_rods:temp item_data.Item set value {id:"minecraft:white_wool",count:1}
 execute if data entity @s {Color:1b} run data modify storage gm4_reeling_rods:temp item_data.Item set value {id:"minecraft:orange_wool",count:1}
 execute if data entity @s {Color:2b} run data modify storage gm4_reeling_rods:temp item_data.Item set value {id:"minecraft:magenta_wool",count:1}

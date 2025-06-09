@@ -5,6 +5,8 @@
 
 # fail if baby
 execute unless data entity @s {Age:0} run return fail
+
+data modify storage gm4_reeling_rods:temp item_data set value {}
 # set item id to correct mushroom type
 execute if data entity @s {Type:"red"} run data modify storage gm4_reeling_rods:temp item_data.Item.id set value "minecraft:red_mushroom"
 execute if data entity @s {Type:"brown"} run data modify storage gm4_reeling_rods:temp item_data.Item.id set value "minecraft:brown_mushroom"
