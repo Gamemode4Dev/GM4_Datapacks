@@ -5,7 +5,7 @@
 
 # brushing effect
 tag @s add gm4_horse_self
-execute on vehicle unless score @s gm4_horse_need.brushing matches 741.. at @s run function gm4_horsemanship:need/care/brush/apply
+execute on vehicle unless score @s gm4_horse_need.brushing matches 734.. at @s run function gm4_horsemanship:need/care/brush/apply
 tag @s remove gm4_horse_self
 
 # restore player location

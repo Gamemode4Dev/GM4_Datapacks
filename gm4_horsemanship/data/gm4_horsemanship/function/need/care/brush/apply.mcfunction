@@ -9,8 +9,5 @@ execute if score @s gm4_horse_need.brushing matches 731.. run playsound minecraf
 execute at @p[tag=gm4_horse_self] run playsound item.brush.brushing.generic player @a ~ ~ ~ 3 0
 
 # scoreboards
-scoreboard players add @s gm4_horse_need.brushing 10
+scoreboard players add @s gm4_horse_need.brushing 30
 scoreboard players operation @s gm4_horse_need.brushing < $need_cap.brushing gm4_horse_data
-
-scoreboard players add @s gm4_horse_need.care 25
-scoreboard players operation @s gm4_horse_need.care < $need_cap.care gm4_horse_data

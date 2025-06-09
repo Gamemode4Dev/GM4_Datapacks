@@ -20,7 +20,7 @@ execute store result storage gm4_horse:temp attribute.jump float 0.00001 run sco
 
 # | Scores
 scoreboard players add @s gm4_horse_level 1
-scoreboard players operation @s gm4_horse_need.stamina_cap += $need_cap.stamina_step gm4_horse_data
+scoreboard players operation @s gm4_horse.stamina_cap += $need_cap.stamina_step gm4_horse_data
 scoreboard players operation @s gm4_horse_need.stamina += $need_cap.stamina_step gm4_horse_data
 scoreboard players set @s gm4_horse_experience 0
 
