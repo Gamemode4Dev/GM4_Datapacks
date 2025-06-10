@@ -9,3 +9,4 @@ execute as @e[type=#gm4_survival_refightalized:arrow,tag=!gm4_sr_arrow_checked,t
 # shield parry
 execute as @a[scores={gm4_sr_shield.timer=1}] run function gm4_survival_refightalized:player/damage/shield/remove_using
 scoreboard players remove @a[scores={gm4_sr_shield.timer=1..}] gm4_sr_shield.timer 1
+scoreboard players remove @a[scores={gm4_sr_shield.spam_detection=1..}] gm4_sr_shield.spam_detection 1

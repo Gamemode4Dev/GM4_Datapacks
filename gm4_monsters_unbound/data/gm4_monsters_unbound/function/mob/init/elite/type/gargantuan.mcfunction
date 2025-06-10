@@ -21,7 +21,7 @@ enchant @s[type=#gm4_survival_refightalized:skeleton_types] power 1
 
 scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_arrow.fire_delay 7
 
-item replace entity @s armor.head with cobblestone[enchantment_glint_override=false,minecraft:enchantments={"projectile_protection":5}] 1 
+item replace entity @s armor.head with cobblestone[enchantment_glint_override=false,minecraft:enchantments={projectile_protection:5,binding_curse:1}] 1 
 data modify entity @s drop_chances.head set value 0
 
 team join gm4_mu_elite.gargantuan

@@ -1,7 +1,7 @@
 # shield parry
 # @s = damaged player
 # at @s
-# run from player/damage/run
+# run from player/damage/shield/blocked_damage
 
 tag @s add gm4_sr_attack_parried
 
@@ -11,6 +11,9 @@ execute store result score $lethal_damage gm4_sr_data run attribute @s minecraft
 scoreboard players operation $lethal_damage gm4_sr_data += @s gm4_sr_stat.current_health
 scoreboard players operation $lethal_damage gm4_sr_data += @s gm4_sr_stat.current_absorption
 execute if score @s gm4_sr_stat.damage_resisted >= $lethal_damage gm4_sr_data run advancement grant @s only gm4:survival_refightalized_parry_lethal_damage
+
+# reset spam detection
+scoreboard players set @s gm4_sr_shield.spam_detection 0
 
 # stop attacker for a bit
 tag @s add gm4_sr_parrier

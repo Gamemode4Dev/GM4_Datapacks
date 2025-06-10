@@ -38,6 +38,7 @@ scoreboard objectives add gm4_sr_arrow.fire_delay dummy
 scoreboard objectives add gm4_sr_arrow.fire_delay_left dummy
 scoreboard objectives add gm4_sr_arrow.damage_change dummy
 
+scoreboard objectives add gm4_sr_shield.spam_detection dummy
 scoreboard objectives add gm4_sr_shield.use_ticks dummy
 scoreboard objectives add gm4_sr_shield.timer dummy
 

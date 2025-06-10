@@ -17,7 +17,7 @@ scoreboard players add @s[type=#gm4_survival_refightalized:skeleton_types] gm4_s
 item replace entity @s[type=!#gm4_survival_refightalized:skeleton_types] weapon.mainhand with blaze_rod[enchantments={fire_aspect:2}]
 data modify entity @s drop_chances.mainhand set value 0
 
-item replace entity @s armor.head with magma_block
+item replace entity @s armor.head with magma_block[enchantments={binding_curse:1},enchantment_glint_override=false]
 data modify entity @s drop_chances.head set value 0
 
 team join gm4_mu_elite.blazing
