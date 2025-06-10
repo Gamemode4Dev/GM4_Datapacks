@@ -9,6 +9,9 @@ pipeline:
   - generate_files
   - gm4.plugins.extend.module
 
+require:
+  - bolt
+
 meta:
   gm4:
     versioning:
