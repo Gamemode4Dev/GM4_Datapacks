@@ -1,0 +1,119 @@
+from typing import List
+from beet import Context, Advancement, Function
+import math
+from pathlib import Path
+from gm4.utils import CSV, CSVRow
+
+def beet_default(ctx: Context):
+    """
+        - generates set_lookup_table.mcfunction
+        - generates advancements and reward functions for every bit state of an entity's scoreboard id
+        - reads csv to ctx.meta for hooked_entity/select_type.mcfunction
+    """
+    create_lookup_file(ctx)
+    create_bit_advancements(ctx)
+
+    entity_list =  CSV.from_file(Path('gm4_reeling_rods','entities.csv'))
+    dismountable_entities: list[CSVRow] = []
+    non_dismountable_entities: list[CSVRow] = []
+    for entity_type in entity_list:
+        if entity_type['can_dismount'].as_bool():
+            dismountable_entities.append(entity_type)
+            continue
+        non_dismountable_entities.append(entity_type)
+    ctx.meta['dismountable_entities'] = dismountable_entities
+    ctx.meta['non_dismountable_entities'] = non_dismountable_entities
+'''
+My goal for right now is to go to the maximum scope and then have things cut back.
+Push this idea as far as I can, then reign it in.
+
+    Hand & Armor Yoinking
+        Treated as an action. If an entity is in one of the tags, don't list them separately in the csv
+        
+        Specific Entities
+            Villagers:
+                Does the armor theft cause reputational damage to player?
+                Currently, no. Easy to change though
+            Illagers:
+                Can have armor on them through commands (not dispensed), but doesn't render
+                Probably shouldn't theft armor that can't be applied by players, that's the realm of datapackers
+                Using hand item theft function
+                - CANT STEAL PILLAGER BANNER. Is that bad?
+        
+        Nugget idea?
+            Try to use drop chances for armor and if it fails drop armor material?
+            What about datapack armor?... I worry about compatibility
+            Probably want to implement drop chances one way though
+        Drowned Trident Theft
+            Super easy. Just lure them on land and then yoink it
+            Probably want to balance that
+        Drop Chances
+            Should implement for balance
+            Maybe just have gear break if the drop chance fails?
+            That's the best idea so far I think
+
+    \\ ---[ REJECTED FOR A REASON ]--- \\
+        Enderman :
+            Steal held block
+            ISSUE: Block state stored, not item data.
+            Could setblock with the block state, then get drop from breaking
+            Could map block type to item, but that's far too much work and not maintainable
+        Pufferfish :
+            Puff up a bit
+            ISSUE: Setting PuffState has issues. Set once is fine. Once it deflates a bit, setting again flashes and then reverts. 
+            Probably an MC bug, should make an issue for it if it doesn't exist
+'''
+
+def create_lookup_file(ctx: Context):
+    lookup_keys = [0]
+    for dx in range(0,34):
+        for dy in range(0,34):
+            for dz in range(0,34):
+                potenital_key = (dx * dx) + (dy * dy) + (dz * dz)
+                if (math.sqrt(potenital_key) > 33): # ignore values out of fishing bobber range
+                    continue
+                if potenital_key in lookup_keys:    # ignore if already found
+                    continue
+                lookup_keys.append(potenital_key)
+    lookup_keys.sort()
+    strList: List[str] = []
+    for key in lookup_keys:
+        value = math.floor(100*(0.08*math.sqrt(math.sqrt(key))))
+        strList.append(f"scoreboard players set ${key} gm4_reeling_rods.lookup {value}")
+    ctx.data["gm4_reeling_rods:set_lookup_table"] = Function(strList)
+
+def create_bit_advancements(ctx: Context):
+    for bit in range(16):
+        for value in range(2):
+            ctx.data[f"gm4_reeling_rods:fished/bit_{bit}_{value}"] = Advancement({
+                "criteria":{
+                    "fishing_rod_hooked":{
+                        "trigger":"minecraft:fishing_rod_hooked",
+                        "conditions":{
+                            "entity": [
+                                {
+                                    "condition": "minecraft:entity_scores",
+                                    "entity": "this",
+                                    "scores": {
+                                        f"gm4_reeling_rods.id_bit.{bit}": value
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "rewards":{
+                    "function": f"gm4_reeling_rods:player/bit_{bit}_{value}"
+                }
+            })
+            ctx.data[f"gm4_reeling_rods:player/bit_{bit}_{value}"] = Function([
+                f"# player adv logic for getting bit {bit} at value {value}. Generated by generate_files.py.",
+                f"# run from advancement fished/bit_{bit}_{value}\n",
+                f"advancement revoke @s only gm4_reeling_rods:fished/bit_{bit}_{value}\n",
+                "execute if entity @s[gamemode=adventure] run return fail\n",
+                "data modify storage gm4_reeling_rods:temp bit_data set value {bit_score:\"" + f"gm4_reeling_rods.id_bit.{bit}={value}\", bit:\"{bit}\"" + "}",
+                "data modify storage gm4_reeling_rods:temp bit_data.UUID set from entity @s UUID",
+                "tag @s add gm4_reeling_rods.player",
+                "function gm4_reeling_rods:player/received_bit with storage gm4_reeling_rods:temp bit_data",
+                "tag @s remove gm4_reeling_rods.player"
+            ])

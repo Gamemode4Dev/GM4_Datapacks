@@ -1,0 +1,11 @@
+{
+  "values": [
+    "minecraft:allay",
+    "minecraft:armor_stand",
+    "minecraft:fox",
+    "minecraft:player",
+    "minecraft:villager",
+    "minecraft:wandering_trader",
+    "minecraft:witch"
+  ]
+}
