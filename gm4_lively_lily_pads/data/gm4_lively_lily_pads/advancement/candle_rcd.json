@@ -3,9 +3,6 @@
     "requirement": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "item": {
-          "items": "#minecraft:creeper_igniters"
-        },
         "entity": [
           {
             "condition": "minecraft:entity_properties",
@@ -20,6 +17,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_lively_lily_pads:mechanics/interactions/light_candle/interact_rcd"
+    "function": "gm4_lively_lily_pads:mechanics/interactions/candle_rc/interact_rcd"
   }
 }

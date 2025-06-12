@@ -1,6 +1,6 @@
 # calculates damage for flint and steel
 # @s = player
-# run from mechanics/interactions/light_candle/interact_rcd
+# run from mechanics/interactions/candle_rc/interact_rcd
 
 # sound
 playsound minecraft:item.flintandsteel.use player @a[distance=..16]

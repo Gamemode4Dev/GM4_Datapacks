@@ -1,7 +1,7 @@
 # fire charge use logic
 # @s = player who ignited candle
 # at @s
-# run from mechanics/interactions/light_candle/interact_rcd
+# run from mechanics/interactions/candle_rc/interact_rcd
 
 # sound
 playsound minecraft:item.firecharge.use player @a[distance=..16]
