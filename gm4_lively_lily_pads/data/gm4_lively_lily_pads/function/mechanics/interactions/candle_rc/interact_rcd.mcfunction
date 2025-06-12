@@ -14,7 +14,7 @@ execute store success score $holding_lighter gm4_llp.data if items entity @s wea
 
 # raycast
 scoreboard players reset $ignited gm4_llp.data
-execute store result score $ray gm4_llp.data run attribute @s minecraft:block_interaction_range get 10
+execute store result score $ray gm4_llp.data run attribute @s minecraft:block_interaction_range get 2
 execute anchored eyes positioned ^ ^ ^ run function gm4_lively_lily_pads:mechanics/interactions/candle_rc/ray
 
 # return if not ignited

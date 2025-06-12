@@ -10,4 +10,4 @@ execute if block ~ ~ ~ minecraft:lily_pad align xyz positioned ~.5 ~.02 ~.5 \
 
 # loop
 scoreboard players remove $ray gm4_llp.data 1
-execute if score $ray gm4_llp.data matches 0.. positioned ^ ^ ^.1 run function gm4_lively_lily_pads:mechanics/interactions/candle_rc/ray
+execute if score $ray gm4_llp.data matches 0.. positioned ^ ^ ^.5 run function gm4_lively_lily_pads:mechanics/interactions/candle_rc/ray
