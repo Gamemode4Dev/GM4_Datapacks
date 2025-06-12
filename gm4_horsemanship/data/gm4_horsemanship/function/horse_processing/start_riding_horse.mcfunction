@@ -10,6 +10,3 @@ execute if score $interaction_resolved gm4_horse_data matches 0 if predicate gm4
 
 # check for food
 execute if score $interaction_resolved gm4_horse_data matches 0 if predicate gm4_horsemanship:holding_food run function gm4_horsemanship:need/food/feed_added_food
-
-# if no other interactions happened, assume horse was mounted
-##execute if score $interaction_resolved gm4_horse_data matches 0 on vehicle run function gm4_horsemanship:riding/initialize

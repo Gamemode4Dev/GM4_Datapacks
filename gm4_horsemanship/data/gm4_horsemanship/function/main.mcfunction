@@ -1,7 +1,10 @@
 schedule function gm4_horsemanship:main 16t
 
+# init new horses
+execute as @e[type=#gm4_horsemanship:trainable,tag=!gm4_horse,tag=!smithed.entity] run function gm4_horsemanship:level/init_horse
+
 # horse processing
-execute as @e[type=#gm4_horsemanship:trainable,tag=gm4_horse] at @s run function gm4_horsemanship:horse_processing/general
+execute as @e[type=#gm4_horsemanship:trainable,tag=gm4_horse.tamed] at @s run function gm4_horsemanship:horse_processing/general
 scoreboard players reset @a gm4_horse_riding
 
 # horse grazing

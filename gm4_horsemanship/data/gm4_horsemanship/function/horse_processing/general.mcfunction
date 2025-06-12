@@ -3,6 +3,9 @@
 # at @s
 # run from main
 
+# check health for fed horses
+execute if entity @s[tag=gm4_horse.check_health] run function gm4_horsemanship:horse_processing/cap_health
+
 ## | Health Status
 # health should always be slightly below max, to allow for feeding the horse at any time
 execute store result score $max_health gm4_horse_data run attribute @s max_health get 100
@@ -79,7 +82,6 @@ scoreboard players operation @s gm4_horse_need.social < $need_cap.social gm4_hor
 execute if score $saddled gm4_horse_data matches 1 run scoreboard players remove @s[scores={gm4_horse_need.brushing=1..}] gm4_horse_need.brushing 1
 execute if score $riding gm4_horse_data matches 1 run scoreboard players remove @s[scores={gm4_horse_need.brushing=1..}] gm4_horse_need.brushing 1
 execute unless score @s gm4_horse_need.brushing matches 50.. run particle block{block_state:"dirt"} ~ ~1 ~ 0.4 0.3 0.4 0 1
-
 
 ## | Training
 scoreboard players set @s gm4_horse_comfort 100
