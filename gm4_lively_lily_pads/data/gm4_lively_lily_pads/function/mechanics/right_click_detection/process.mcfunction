@@ -1,6 +1,9 @@
 # processes the "right click detection" interaction so that it is despawned when unneeded
 # run from mechanics/right_click_detection/loop
 
+# visuals
+particle egg_crack ~ ~.05 ~ 0 0 0 .01 1
+
 scoreboard players set $timer gm4_llp.data 10
 
 # kill rcd if uneeded
