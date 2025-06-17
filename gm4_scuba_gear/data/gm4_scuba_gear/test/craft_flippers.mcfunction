@@ -1,7 +1,7 @@
 # @template gm4_custom_crafters:test_platform
 
-item replace block ~1 ~1 ~1 container.3 with turtle_scute
-item replace block ~1 ~1 ~1 container.5 with turtle_scute
+item replace block ~1 ~1 ~1 container.3 with copper_ingot
+item replace block ~1 ~1 ~1 container.5 with copper_ingot
 item replace block ~1 ~1 ~1 container.6 with dried_kelp
 item replace block ~1 ~1 ~1 container.8 with dried_kelp
 
