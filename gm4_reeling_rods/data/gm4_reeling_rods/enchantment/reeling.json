@@ -1,0 +1,24 @@
+{
+    "description": {
+        "translate": "gm4.reeling_rods.enchantment.reeling",
+        "fallback": "Reeling"
+    },
+    "exclusive_set": "gm4_reeling_rods:barbed",
+    "supported_items": "minecraft:fishing_rod",
+    "primary_items": "minecraft:fishing_rod",
+    "weight": 1,
+    "max_level": 1,
+    "min_cost": {
+        "base": 20,
+        "per_level_above_first": 0
+    },
+    "max_cost": {
+        "base": 70,
+        "per_level_above_first": 0
+    },
+    "anvil_cost": 8,
+    "slots": [
+        "any"
+    ],
+    "effects": {}
+}
