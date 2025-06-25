@@ -3,8 +3,8 @@
 # at @s
 # run from need/graze/complete
 
-# set grazing to cap
-scoreboard players operation @s[tag=gm4_horse] gm4_horse_need.graze = $need_cap.graze gm4_horse_data
+# if this is a gm4_horse fill its grazing need to 1050
+execute if entity @s[tag=gm4_horse.tamed] run scoreboard players set @s[scores={gm4_horse_need.graze=..1049}] gm4_horse_need.graze 1050
 
 # particles and sound
 playsound minecraft:block.grass.break block @a ~ ~ ~ 1 1
