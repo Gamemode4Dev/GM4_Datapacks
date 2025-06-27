@@ -18,6 +18,7 @@
         "minecraft:frog",
         "minecraft:glow_squid",
         "minecraft:goat",
+        { "id": "minecraft:happy_ghast", "required": false },
         "minecraft:hoglin",
         "minecraft:horse",
         "minecraft:iron_golem",
