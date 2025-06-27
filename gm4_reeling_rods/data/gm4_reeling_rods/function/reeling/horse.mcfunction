@@ -3,13 +3,6 @@
 # at bobber in @s
 # run from hooked_entity/select_type
 
-data modify storage gm4_reeling_rods:temp item_data set value {}
-data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s equipment.saddle
-data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s equipment.body
-execute store result score $armored gm4_reeling_rods.math if items entity @s armor.body *
-function gm4_reeling_rods:pull_items
-execute if score $armored gm4_reeling_rods.math matches 0 run item replace entity @s saddle with minecraft:air
-execute if score $armored gm4_reeling_rods.math matches 1 run item replace entity @s armor.body with minecraft:air
-
-execute if data storage gm4_reeling_rods:temp item_data.Item run \
-  playsound minecraft:entity.item.pickup neutral @a[distance=..16] ~ ~ ~
+# armor, then saddle
+execute unless function gm4_reeling_rods:reeling/stealable/steal_slot/body \
+  run function gm4_reeling_rods:reeling/stealable/steal_slot/saddle
