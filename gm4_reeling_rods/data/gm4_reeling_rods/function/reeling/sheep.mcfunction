@@ -3,8 +3,10 @@
 # at bobber in @s
 # run from hooked_entity/select_type
 
+# fail if sheared
 execute if data entity @s {Sheared:1} run return fail
 
+# steal
 data modify entity @s Sheared set value true
 data modify storage gm4_reeling_rods:temp item_data set value {}
 execute if data entity @s {Color:0b} run data modify storage gm4_reeling_rods:temp item_data.Item set value {id:"minecraft:white_wool",count:1}
@@ -23,7 +25,6 @@ execute if data entity @s {Color:12b} run data modify storage gm4_reeling_rods:t
 execute if data entity @s {Color:13b} run data modify storage gm4_reeling_rods:temp item_data.Item set value {id:"minecraft:green_wool",count:1}
 execute if data entity @s {Color:14b} run data modify storage gm4_reeling_rods:temp item_data.Item set value {id:"minecraft:red_wool",count:1}
 execute if data entity @s {Color:15b} run data modify storage gm4_reeling_rods:temp item_data.Item set value {id:"minecraft:black_wool",count:1}
-
 function gm4_reeling_rods:pull_items
 
 playsound minecraft:entity.sheep.shear neutral @a[distance=..16] ~ ~ ~

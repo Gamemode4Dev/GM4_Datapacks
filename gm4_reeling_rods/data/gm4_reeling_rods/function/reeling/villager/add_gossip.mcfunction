@@ -5,7 +5,7 @@
 # run from reeling/villager/action
 
 $execute store success score $success gm4_reeling_rods.math run \
-    data modify storage gm4_reeling_rods:temp entity_data.gossip merge from entity @s Gossips[{Type:"major_negative",Target:$(Target)}]
+  data modify storage gm4_reeling_rods:temp entity_data.gossip merge from entity @s Gossips[{Type:"major_negative",Target:$(Target)}]
 
 execute unless score $success gm4_reeling_rods.math matches 1 run data modify storage gm4_reeling_rods:temp entity_data.gossip merge value {Type:"major_negative",Value:0}
 

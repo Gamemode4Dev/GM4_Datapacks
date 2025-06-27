@@ -4,5 +4,4 @@
 # run from tick
 
 scoreboard players set @s gm4_reeling_rods.rods_cast 0
-
 function gm4_reeling_rods:id/loop

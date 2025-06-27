@@ -4,10 +4,13 @@
 # with {block}
 # run from hooked_entity/select_type
 
-data modify storage gm4_reeling_rods:temp entity_data set from entity @s
+# steal
 data modify storage gm4_reeling_rods:temp item_data set value {}
 $data modify storage gm4_reeling_rods:temp item_data.Item set value {id:"$(block)",count:1}
 function gm4_reeling_rods:pull_items
+
+# replace with minecart
+data modify storage gm4_reeling_rods:temp entity_data set from entity @s
 data remove storage gm4_reeling_rods:temp entity_data.UUID
 data remove storage gm4_reeling_rods:temp entity_data.Passengers
 data modify storage gm4_reeling_rods:temp entity_type set value "minecraft:minecart"

@@ -19,8 +19,9 @@ data modify storage gm4_reeling_rods:temp item_data.Item set value {}
 # need SelectedItem to work with players since players don't use equipment.mainhand
 data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s SelectedItem
 data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s equipment.mainhand
-item replace entity @s weapon.mainhand with minecraft:air
 data modify storage gm4_reeling_rods:temp item_data.PickupDelay set value 10s
 function gm4_reeling_rods:pull_items
+item replace entity @s weapon.mainhand with minecraft:air
+
 playsound minecraft:entity.item.pickup neutral @a[distance=..16] ~ ~ ~
 return 1

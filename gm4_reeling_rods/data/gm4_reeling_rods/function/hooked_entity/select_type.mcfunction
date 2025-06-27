@@ -5,7 +5,7 @@
 
 # apply barbed damage
 execute if data storage gm4_reeling_rods:temp enchanted.barbed if data entity @s Health unless data entity @s {Invulnerable:1b} \
-    unless entity @s[type=player,gamemode=creative] run function gm4_reeling_rods:barbed/apply with storage gm4_reeling_rods:temp enchanted.barbed
+  unless entity @s[type=player,gamemode=creative] run function gm4_reeling_rods:barbed/apply with storage gm4_reeling_rods:temp enchanted.barbed
 execute if data storage gm4_reeling_rods:temp enchanted.barbed if entity @s[type=minecraft:tnt_minecart] run return run data modify entity @s fuse set value 0s
 
 raw # non-dismountable entities

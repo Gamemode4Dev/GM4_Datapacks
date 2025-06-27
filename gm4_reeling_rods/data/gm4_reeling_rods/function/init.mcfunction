@@ -29,7 +29,7 @@ scoreboard objectives add gm4_reeling_rods.id_bit.13 dummy
 scoreboard objectives add gm4_reeling_rods.id_bit.14 dummy
 scoreboard objectives add gm4_reeling_rods.id_bit.15 dummy
 
-# set_lookup_table generated in generate_files.py
+# set_lookup_table is generated in generate_files.py
 function gm4_reeling_rods:set_lookup_table
 
 schedule function gm4_reeling_rods:tick 5t

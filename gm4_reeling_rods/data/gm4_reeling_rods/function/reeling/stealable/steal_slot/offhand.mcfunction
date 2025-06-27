@@ -9,8 +9,9 @@ execute if data entity @s {drop_chances:{offhand:0.0f}} run return run function 
 ## steal slot
 data modify storage gm4_reeling_rods:temp item_data.Item set value {}
 data modify storage gm4_reeling_rods:temp item_data.Item set from entity @s equipment.offhand
-item replace entity @s weapon.offhand with minecraft:air
 data modify storage gm4_reeling_rods:temp item_data.PickupDelay set value 10s
 function gm4_reeling_rods:pull_items
+item replace entity @s weapon.offhand with minecraft:air
+
 playsound minecraft:entity.item.pickup neutral @a[distance=..16] ~ ~ ~
 return 2

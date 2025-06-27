@@ -17,11 +17,10 @@ execute unless score $slot gm4_reeling_rods.math matches 1 run return fail
 # find trade and sell it out
 function gm4_reeling_rods:reeling/villager/sell_out with storage gm4_reeling_rods:temp entity_data
 
-# adds 20 "major_negative" gossip of the player to the villager
+# add 20 "major_negative" gossip of the player to the villager
 data modify storage gm4_reeling_rods:temp entity_data.gossip.Target set from entity @p[tag=gm4_reeling_rods.player] UUID
 function gm4_reeling_rods:reeling/villager/add_gossip with storage gm4_reeling_rods:temp entity_data.gossip
 
-# angry particles
+# feedback
 particle minecraft:angry_villager ~ ~ ~ 0.3 0.3 0.3 20 3
-# angry sound
 playsound minecraft:entity.villager.hurt neutral @a[distance=..16] ~ ~ ~
