@@ -3,4 +3,4 @@
 # run from potion_tracking/verify_landed_potion
 
 tag @s add gm4_liab_lingering
-data merge entity @s {Particle:{type:"minecraft:electric_spark"},RadiusOnUse:0f,RadiusPerTick:0f}
+data merge entity @s {custom_particle:{type:"minecraft:electric_spark"},RadiusOnUse:0f,RadiusPerTick:0f}

@@ -47,4 +47,4 @@ def check_formats(supported: SupportedFormats, format: int):
     case { "min_inclusive": min, "max_inclusive": max }:
       return min <= format <= max
     case _:
-      raise ValueError(f"Unknown supported)formats structure {supported}")
+      raise ValueError(f"Unknown supported_formats structure {supported}")
