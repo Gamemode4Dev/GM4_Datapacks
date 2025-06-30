@@ -23,4 +23,5 @@ $execute as @e[type=minecraft:fishing_bobber,distance=..33] \
   at @s as @e[\
     distance=..42, limit=1, type=!#gm4_reeling_rods:ignore, \
     scores={$(bit_0),$(bit_1),$(bit_2),$(bit_3),$(bit_4),$(bit_5),$(bit_6),$(bit_7),$(bit_8),$(bit_9),$(bit_10),$(bit_11),$(bit_12),$(bit_13),$(bit_14),$(bit_15)}\
-  ] unless entity @s[tag=smithed.entity] run function gm4_reeling_rods:hooked_entity/select_type
+  ] unless entity @s[tag=smithed.entity] unless data entity @s {Invulnerable:1b} \
+  run function gm4_reeling_rods:hooked_entity/select_type
