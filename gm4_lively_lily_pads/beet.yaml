@@ -19,8 +19,8 @@ meta:
       notes: []
     modrinth:
       project_id: 7wnTwrbr
-    smithed:
-      pack_id: gm4_lively_lily_pads
+    #smithed:
+      #pack_id: gm4_lively_lily_pads
     planetminecraft:
       uid: 6138391
     video: null
@@ -28,5 +28,5 @@ meta:
     credits:
       Creator:
         - runcows
-      #Icon Design:
-      #  - runcows
+      Icon Design:
+        - runcows
