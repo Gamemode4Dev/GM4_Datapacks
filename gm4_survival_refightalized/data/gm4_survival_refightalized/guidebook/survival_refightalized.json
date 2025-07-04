@@ -1,0 +1,165 @@
+{
+  "id": "survival_refightalized",
+  "name": "Survival Refightalized",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:leather_chestplate"
+  },
+  "criteria": {
+    "equip_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "feet": {
+                      "items": "#gm4_survival_refightalized:armor"
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "legs": {
+                      "items": "#gm4_survival_refightalized:armor"
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "chest": {
+                      "items": "#gm4_survival_refightalized:armor"
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "equipment": {
+                    "head": {
+                      "items": "#gm4_survival_refightalized:armor"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_shield": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": "minecraft:shield"
+          }
+        ]
+      }
+    },
+    "kill_hostile": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "advancements": {
+                  "minecraft:adventure/kill_a_mob": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "health",
+      "enable": [],
+      "requirements": [],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.survival_refightalized.description.health",
+            "fallback": "Damage taken is split in combat and non-combat damage.\nCombat damage regenerates every 60 seconds, while non-combat damage regenerates rapidly when out of combat."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "armor",
+      "enable": [],
+      "requirements": [
+        [
+          "equip_armor"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.survival_refightalized.description.armor",
+            "fallback": "Armor no longer reduces damage taken, instead serving as a second health bar. Armor recharges rapidly shortly after it takes damage.\nProtection enchantments have reduced effectiveness."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "shield",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_shield"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.survival_refightalized.description.shield",
+            "fallback": "Shields will go on cooldown after blocking any damage.\n\nBlocking damage within 0.25s of holding the Shield performs a Parry, releasing the Shield within that 0.25s will not disable it."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "mobs",
+      "enable": [],
+      "requirements": [
+        [
+          "kill_hostile"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.survival_refightalized.description.mobs",
+            "fallback": "Mobs are stronger based on their environment, such as being outside during a thunderstorm or full moon, or being deep underground.\nSome mobs are altered, such as Skeletons firing slower, and Phantoms drowning."
+          }
+        ]
+      ]
+    }
+  ]
+}
