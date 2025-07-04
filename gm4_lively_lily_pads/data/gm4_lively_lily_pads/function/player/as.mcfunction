@@ -1,0 +1,9 @@
+# @s = player
+# at @s
+# run from main
+
+# tag
+tag @s remove gm4_llp_holding_item
+
+# check if player is holding item
+execute if entity @s[gamemode=!adventure] if predicate gm4_lively_lily_pads:holding_supported_item run function gm4_lively_lily_pads:player/holding_item
