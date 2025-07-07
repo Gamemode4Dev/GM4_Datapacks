@@ -1,0 +1,110 @@
+{
+  "id": "reeling_rods",
+  "name": "Reeling Rods",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:fishing_rod"
+  },
+  "criteria": {
+    "obtain_fishing_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:fishing_rod"
+          }
+        ]
+      }
+    },
+    "obtain_reeling_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:fishing_rod",
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "gm4_reeling_rods:reeling"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "obtain_barbed_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:fishing_rod",
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "gm4_reeling_rods:barbed"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_fishing_rod"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.reeling_rods.description",
+            "fallback": "All fishing rods have extra abilities when hooking Paintings, Item Frames, Leash Knots, Shulkers and End Crystals. Hooking any entity will also dismount them from their vehicle."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "reeling",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_reeling_rod"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.reeling_rods.reeling",
+            "fallback": "Reeling is an enchantment that revolves around stealing from entities. Pull the chest from chest boats and so much more!"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "barbed",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_barbed_rod"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.reeling_rods.barbed",
+            "fallback": "Barbed turns a fishing rod into a lethal weapon. With 5 levels, it applies a scratching damage to the hooked mob and then bleeding damage."
+          }
+        ]
+      ]
+    }
+  ]
+}
