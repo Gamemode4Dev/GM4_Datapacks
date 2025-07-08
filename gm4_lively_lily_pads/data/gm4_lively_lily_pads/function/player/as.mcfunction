@@ -2,6 +2,9 @@
 # at @s
 # run from main
 
+# id 
+execute unless score @s gm4_llp.id matches 0.. run function gm4_lively_lily_pads:player/set_id
+
 # tag
 tag @s remove gm4_llp_holding_item
 

@@ -4,8 +4,9 @@
 # run from mechanics/right_click_detection/ray
 
 # spawn an interaction if needed
+scoreboard players operation $player gm4_llp.id = @s gm4_llp.id
 execute unless entity @e[type=interaction,tag=gm4_llp_placement_rcd,distance=..0.1,limit=1] \
-  run summon minecraft:interaction ~ ~ ~ {Glowing:1b,width:0.4f,height:0.3f,response:1b,Tags:["gm4_llp_placement_rcd","smithed.entity","smithed.strict"]}
+  summon minecraft:interaction run function gm4_lively_lily_pads:mechanics/right_click_detection/create
 
 # start loop
 scoreboard players set $timer gm4_llp.data 10

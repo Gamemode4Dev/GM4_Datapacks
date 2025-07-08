@@ -6,6 +6,8 @@ scoreboard players set lively_lily_pads gm4_modules 1
   # We do this in mechanics/placement/interact_rcd
 
 scoreboard objectives add gm4_llp.data dummy
+scoreboard objectives add gm4_llp.id dummy
+execute unless score $next gm4_llp.id matches 0.. run scoreboard players set $next gm4_llp.id 0
 
 schedule function gm4_lively_lily_pads:main 1t
 schedule function gm4_lively_lily_pads:tick 1t
