@@ -2,7 +2,7 @@
 # @s = player who wants to add a candle
 # at @s anchored eyes, moving forward
 # with {string}
-# run from mechanincs/interactions/add_candle/ray_init
+# run from mechanincs/interactions/add_candle/ray_init & self
 
 # as used as an if
 $execute if block ~ ~ ~ minecraft:lily_pad align xyz positioned ~.5 ~.02 ~.5 \

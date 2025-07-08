@@ -1,7 +1,7 @@
 # raycasts from the players head that moves forward until it finds a lily_pad block with a rcd
 # @s = player holding supported item, interacted with rcd
 # at @s anchored eyes, moving forward
-# run from mechanics/interactions/placement/interact_rcd
+# run from mechanics/interactions/placement/interact_rcd and self
 
 # as used as an if
 execute if block ~ ~ ~ minecraft:lily_pad align xyz positioned ~.5 ~.02 ~.5 \

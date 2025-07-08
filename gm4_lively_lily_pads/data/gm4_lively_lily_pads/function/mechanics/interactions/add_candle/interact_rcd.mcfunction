@@ -16,7 +16,7 @@ execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4
 
 # raycast
 scoreboard players reset $minus_one gm4_llp.data
-execute store result score $ray gm4_llp.data run attribute @s minecraft:block_interaction_range get 2
+execute store result score $ray gm4_llp.data run attribute @s minecraft:entity_interaction_range get 2
 function gm4_lively_lily_pads:mechanics/interactions/add_candle/ray_init with storage gm4_llp:temp
 
 # minus one on player mainhand if successful

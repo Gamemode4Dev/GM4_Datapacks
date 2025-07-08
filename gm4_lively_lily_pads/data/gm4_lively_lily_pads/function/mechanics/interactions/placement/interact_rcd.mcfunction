@@ -39,7 +39,7 @@ execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4
 
 # need to raycast for lily pad with a placement rcd on it
 scoreboard players reset $minus_one gm4_llp.data
-execute store result score $ray gm4_llp.data run attribute @s minecraft:block_interaction_range get 10
+execute store result score $ray gm4_llp.data run attribute @s minecraft:entity_interaction_range get 10
 execute anchored eyes positioned ^ ^ ^ run function gm4_lively_lily_pads:mechanics/interactions/placement/ray
 
 # minus one on player mainhand if successful

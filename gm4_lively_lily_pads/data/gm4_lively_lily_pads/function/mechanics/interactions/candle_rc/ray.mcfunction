@@ -1,7 +1,7 @@
 # raycasts from the players head that moves forward until it finds a lily_pad block with the right rcd
 # @s = player who wants to add a candle
 # at @s anchored eyes, moving forward
-# run from mechanincs/interactions/candle_rc/ray_init  and  self
+# run from mechanincs/interactions/candle_rc/interact_rcd & self
 
 # as used as an if
 execute if block ~ ~ ~ minecraft:lily_pad align xyz positioned ~.5 ~.02 ~.5 \

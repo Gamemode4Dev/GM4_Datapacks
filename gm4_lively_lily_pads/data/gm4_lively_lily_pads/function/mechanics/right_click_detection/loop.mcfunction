@@ -1,5 +1,6 @@
 # loops as long as a "right click detection" interaction exists
-# run from mechanics/right_click_detection/found & self
+# run from mechanics/right_click_detection/found
+# scheduled from self
 
 # reset scoreboard
 scoreboard players remove $timer gm4_llp.data 1
