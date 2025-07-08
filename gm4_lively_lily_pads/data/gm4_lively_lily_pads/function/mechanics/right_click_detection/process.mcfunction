@@ -4,7 +4,7 @@
 # run from mechanics/right_click_detection/loop
 
 # visuals
-particle egg_crack ~ ~.05 ~ 0.05 0.05 0.05 .01 1
+particle scrape ~ ~.1 ~ 0 0 0 0 1
 
 scoreboard players set $timer gm4_llp.data 10
 
