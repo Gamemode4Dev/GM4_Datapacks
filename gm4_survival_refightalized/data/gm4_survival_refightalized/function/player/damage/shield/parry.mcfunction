@@ -12,6 +12,10 @@ scoreboard players operation $lethal_damage gm4_sr_data += @s gm4_sr_stat.curren
 scoreboard players operation $lethal_damage gm4_sr_data += @s gm4_sr_stat.current_absorption
 execute if score @s gm4_sr_stat.damage_resisted >= $lethal_damage gm4_sr_data run advancement grant @s only gm4:survival_refightalized_parry_lethal_damage
 
+# parry sounds
+playsound entity.arrow.hit_player player @s ~ ~ ~ 0.25 0.5
+playsound item.shield.block player @a ~ ~ ~ 1 1.25
+
 # reset spam detection
 scoreboard players set @s gm4_sr_shield.spam_detection 0
 

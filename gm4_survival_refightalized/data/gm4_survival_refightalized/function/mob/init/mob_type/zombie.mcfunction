@@ -8,6 +8,10 @@
 # damage: 3 - 6.5 (cap 8)
 # speed: 80 - 120%
 
+# check if this is a jockey
+scoreboard players set $jockey gm4_sr_data 0
+execute on vehicle run scoreboard players set $jockey gm4_sr_data 1
+
 # base stat nerf
 attribute @s minecraft:max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -2 add_value
 attribute @s minecraft:movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.2 add_multiplied_base
@@ -26,12 +30,9 @@ scoreboard players set @s[type=drowned] gm4_sr_arrow.fire_delay 10
 # remove leader bonus from zombies
 execute if data entity @s attributes[{id:"minecraft:max_health"}].modifiers[{id:"minecraft:leader_zombie_bonus"}] run attribute @s minecraft:max_health modifier remove minecraft:leader_zombie_bonus
 
-# remove chicken jockeys
-ride @s dismount
-
-# remove baby zombies (will be turned into Elites with Monsters Unbound)
+# remove baby zombies except chicken jockeys (will be turned into Elites with Monsters Unbound)
 scoreboard players set $was_baby gm4_sr_data 0
-execute if data entity @s {IsBaby:1b} store success score $was_baby gm4_sr_data run data modify entity @s IsBaby set value 0b
+execute unless score $jockey gm4_sr_data matches 1 if data entity @s {IsBaby:1b} store success score $was_baby gm4_sr_data run data modify entity @s IsBaby set value 0b
 execute if score $was_baby gm4_sr_data matches 1 run tag @s add gm4_sr_was_baby
 
 # set armor
