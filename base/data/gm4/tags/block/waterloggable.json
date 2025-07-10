@@ -35,6 +35,7 @@
     "minecraft:dead_tube_coral_fan",
     "minecraft:dead_tube_coral",
     "minecraft:decorated_pot",
+    { "id": "minecraft:dried_ghast", "required": false },
     "minecraft:ender_chest",
     "minecraft:glass_pane",
     "minecraft:glow_lichen",
