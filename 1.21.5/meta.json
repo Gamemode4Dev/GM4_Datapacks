@@ -1,5 +1,5 @@
 {
-  "last_commit": "11df25fb473071964ef7662a44edf402e6f86e57",
+  "last_commit": "8a817d4a3ad60e797ba3c4fac1a0137509d87e34",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1822,8 +1822,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.8.3",
-      "hash": "583dc3db71c2a0caa76a0b70f7523afba4923f89",
+      "version": "1.8.4",
+      "hash": "72261492533a6e42ca51a3b9bd0beb5e163f1760",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -2599,8 +2599,8 @@
     {
       "id": "gm4_tower_structures",
       "name": "Tower Structures",
-      "version": "3.5.1",
-      "hash": "2c4bb4373c9e424a84626e8531091f0ab58f6996",
+      "version": "3.5.2",
+      "hash": "917b539e32b4eb8769982cbb1ea7c815af3acbb3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Tower_Structures",
       "credits": {
@@ -3237,7 +3237,7 @@
     "lib_player_motion": {
       "id": "gm4_player_motion",
       "name": "Gamemode 4 Player Motion",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "hash": "e01c038d89650476d4c3fea5cc675b691f30d4a9",
       "video_link": "",
       "wiki_link": "",
