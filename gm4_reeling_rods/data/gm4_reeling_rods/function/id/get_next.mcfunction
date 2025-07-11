@@ -1,4 +1,6 @@
 # Gets the next id
+# @s = entity to be assigned id
+# at @s
 # run from id/set
 
 ## Binary Counter

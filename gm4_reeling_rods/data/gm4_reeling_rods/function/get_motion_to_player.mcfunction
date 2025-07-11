@@ -1,4 +1,6 @@
-# Gets motion vector to launch item to player
+# Gets motion vector to launch item to player. X and Z motion is 10% the block distance between the player and item. Y motion uses the sum of the squares of position deltas as a lookup table key, the value of which is added to the Y position delta to get the Y motion.
+# @s = entity with items to be yoinked
+# at @s 
 # run from pull_items
 
 data modify storage gm4_reeling_rods:temp item_data.Motion set value [0d,0d,0d]
@@ -32,7 +34,7 @@ scoreboard players operation $lookup_key gm4_reeling_rods.math += $motionY gm4_r
 execute store result storage gm4_reeling_rods:temp lookup_key int 1 \
   run scoreboard players operation $lookup_key gm4_reeling_rods.math += $motionZ gm4_reeling_rods.math
 
-# store motion Y, scaled up
+# Get Y motion, scaled up to match the squared values of before
 execute store result score $motionY gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp item_data.Motion[1] 100
 
 # Add looked up value
