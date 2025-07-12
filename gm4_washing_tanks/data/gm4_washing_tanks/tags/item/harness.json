@@ -1,0 +1,19 @@
+{
+  "values": [
+    { "id": "minecraft:orange_harness", "required": false },
+    { "id": "minecraft:magenta_harness", "required": false },
+    { "id": "minecraft:light_blue_harness", "required": false },
+    { "id": "minecraft:yellow_harness", "required": false },
+    { "id": "minecraft:lime_harness", "required": false },
+    { "id": "minecraft:pink_harness", "required": false },
+    { "id": "minecraft:gray_harness", "required": false },
+    { "id": "minecraft:light_gray_harness", "required": false },
+    { "id": "minecraft:cyan_harness", "required": false },
+    { "id": "minecraft:purple_harness", "required": false },
+    { "id": "minecraft:blue_harness", "required": false },
+    { "id": "minecraft:brown_harness", "required": false },
+    { "id": "minecraft:green_harness", "required": false },
+    { "id": "minecraft:red_harness", "required": false },
+    { "id": "minecraft:black_harness", "required": false }
+  ]
+}

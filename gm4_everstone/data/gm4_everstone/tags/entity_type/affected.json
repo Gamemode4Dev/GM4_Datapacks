@@ -9,6 +9,7 @@
         "minecraft:donkey",
         "minecraft:fox",
         "minecraft:goat",
+        { "id": "minecraft:happy_ghast", "required": false },
         "minecraft:hoglin",
         "minecraft:horse",
         "minecraft:llama",

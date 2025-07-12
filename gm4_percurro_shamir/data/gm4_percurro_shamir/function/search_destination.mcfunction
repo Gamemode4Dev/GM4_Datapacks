@@ -3,7 +3,7 @@
 # run from advancement gm4_percurro_shamir:use
 
 # place temporary departion marker
-summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["gm4_percurro_depart"],Duration:1,Particle:{type:"minecraft:block",block_state:"minecraft:air"}}
+summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["gm4_percurro_depart"],Duration:1,custom_particle:{type:"minecraft:block",block_state:"minecraft:air"}}
 
 # search for valid destination and teleport
 execute positioned ^ ^ ^6 run function gm4_percurro_shamir:check_teleport_destination/y_0
