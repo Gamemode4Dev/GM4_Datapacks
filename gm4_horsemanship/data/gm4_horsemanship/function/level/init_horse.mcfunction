@@ -5,6 +5,13 @@
 
 tag @s add gm4_horse
 
+# check for foal
+execute store result score $age gm4_horse_data run data get entity @s Age
+execute if score $age gm4_horse_data matches ..-1 run tag @s add gm4_horse.foal
+scoreboard players set @s[tag=gm4_horse.foal] gm4_horse_need.on_leash 150
+scoreboard players set @s[tag=gm4_horse.foal] gm4_horse_need.graze 1
+scoreboard players set @s[tag=gm4_horse.foal] gm4_horse_potential.foal 11250
+
 # | Max Health & Scale
 execute store result storage gm4_horse:temp attribute.health_remove_base float -0.01 run attribute @s max_health base get 100
 # 0.8 - 1.2

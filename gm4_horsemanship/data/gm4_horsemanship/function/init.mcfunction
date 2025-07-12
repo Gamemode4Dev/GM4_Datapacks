@@ -19,18 +19,25 @@ scoreboard objectives add gm4_horse_need.graze dummy
 
 scoreboard objectives add gm4_horse_potential.total dummy
 scoreboard objectives add gm4_horse_potential.realized dummy
+scoreboard objectives add gm4_horse_potential.foal dummy
 
 scoreboard objectives add gm4_horse.stamina_cap dummy
 scoreboard objectives add gm4_horse.swim_power dummy
+
+scoreboard objectives add gm4_horse_effect_clock dummy
 
 # constants
 scoreboard players set #0 gm4_horse_data 0
 scoreboard players set #4 gm4_horse_data 4
 scoreboard players set #10 gm4_horse_data 10
 scoreboard players set #15 gm4_horse_data 15
+scoreboard players set #20 gm4_horse_data 20
+scoreboard players set #25 gm4_horse_data 25
+scoreboard players set #30 gm4_horse_data 30
 scoreboard players set #50 gm4_horse_data 50
 scoreboard players set #100 gm4_horse_data 100
 scoreboard players set #1000 gm4_horse_data 1000
+scoreboard players set #1125 gm4_horse_data 1125
 scoreboard players set #1405 gm4_horse_data 1405
 scoreboard players set #4216 gm4_horse_data 4216
 scoreboard players set #100000 gm4_horse_data 100000

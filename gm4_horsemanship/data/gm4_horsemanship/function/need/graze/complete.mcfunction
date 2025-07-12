@@ -7,8 +7,7 @@ tag @s remove gm4_horse.grazing
 tag @s remove gm4_horse.force_graze
 
 # if this is a baby horse accelerate its growth by 10% (same effect as on sheep)
-execute store result score $Age gm4_horse_data run data get entity @s Age
-execute if score $Age gm4_horse_data matches ..-1 store result entity @s Age int 0.9 run data get entity @s Age
+execute if entity @s[tag=gm4_horse.foal] run function gm4_horsemanship:need/graze/foal
 
 # if block was hay bale grant more score and don't run rest
 execute if block ~ ~-1 ~ hay_block run return run function gm4_horsemanship:need/graze/hay_block
