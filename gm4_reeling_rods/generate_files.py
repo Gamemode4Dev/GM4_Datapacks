@@ -1,8 +1,8 @@
-from typing import List
 from beet import Context, Advancement, Function
 import math
 from pathlib import Path
 from gm4.utils import CSV, CSVRow
+from itertools import product 
 
 def beet_default(ctx: Context):
     """
@@ -65,22 +65,17 @@ Push this idea as far as I can, then reign it in.
 '''
 
 def create_lookup_file(ctx: Context):
-    lookup_keys = [0]
-    for dx in range(0,34):
-        for dy in range(0,34):
-            for dz in range(0,34):
-                potenital_key = (dx * dx) + (dy * dy) + (dz * dz)
-                if (math.sqrt(potenital_key) > 33): # ignore values out of fishing bobber range
-                    continue
-                if potenital_key in lookup_keys:    # ignore if already found
-                    continue
-                lookup_keys.append(potenital_key)
-    lookup_keys.sort()
-    strList: List[str] = []
-    for key in lookup_keys:
-        value = math.floor(100*(0.08*math.sqrt(math.sqrt(key))))
-        strList.append(f"scoreboard players set ${key} gm4_reeling_rods.lookup {value}")
-    ctx.data["gm4_reeling_rods:set_lookup_table"] = Function(strList)
+    ctx.data["gm4_reeling_rods:set_lookup_table"] = Function(  
+        [  
+            f"scoreboard players set ${key} gm4_reeling_rods.lookup {value}"  
+            for key, value in {  
+                (x**2 + y**2 + z**2): int(  
+                    100 * (0.08 * math.sqrt(math.sqrt(x**2 + y**2 + z**2)))  
+                )  
+                for x, y, z in product(range(0, 34), range(0, 34), range(0, 34))  
+            }.items() if math.sqrt(key) <= 33
+        ]
+    )  
 
 def create_bit_advancements(ctx: Context):
     for bit in range(16):
