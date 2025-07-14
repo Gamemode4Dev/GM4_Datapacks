@@ -1,7 +1,7 @@
 # Steal Offhand
 # @s = #gm4_reeling_rods:steal_hand or #gm4_reeling_rods:steal_equipment
 # at bobber in @s
-# run from reeling/stealable/order/*
+# run from reeling/stealable/order/* and reeling/stealable/steal_hand
 
 # fail if 0% drop chance
 execute if data entity @s {drop_chances:{offhand:0.0f}} run return run function gm4_reeling_rods:reeling/stealable/zero_chance

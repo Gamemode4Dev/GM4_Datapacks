@@ -1,7 +1,7 @@
 # Steal Mainhand
 # @s = #gm4_reeling_rods:steal_hand or #gm4_reeling_rods:steal_equipment
 # at bobber in @s
-# run from reeling/stealable/order/*
+# run from reeling/stealable/order/* and reeling/stealable/steal_hand
 
 ## drop chance fail conditions
 # to use default drop chances, we'd use 85 here as 8.5%, but we're setting it to 11.5% to match looting 3 chances
