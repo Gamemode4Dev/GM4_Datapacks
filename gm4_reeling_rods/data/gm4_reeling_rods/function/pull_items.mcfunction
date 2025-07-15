@@ -1,6 +1,6 @@
 # Separates an entity that needs it
 # @s = entity with items to be yoinked
-# at @s 
+# at bobber in @s (most of the time)
 # run from hooked_entity/* & reeling/* & reeling/*/action & reeling/stealable/steal_slot/*
 
 function gm4_reeling_rods:get_motion_to_player

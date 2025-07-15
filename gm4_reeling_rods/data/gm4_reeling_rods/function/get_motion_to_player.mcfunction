@@ -1,15 +1,16 @@
 # Gets motion vector to launch item to player. X and Z motion is 10% the block distance between the player and item. Y motion uses the sum of the squares of position deltas as a lookup table key, the value of which is added to the Y position delta to get the Y motion.
 # @s = entity with items to be yoinked
-# at @s 
+# at bobber in @s (most of the time)
 # run from pull_items
 
 data modify storage gm4_reeling_rods:temp item_data.Motion set value [0d,0d,0d]
 
-# Store item pos
-data modify storage gm4_reeling_rods:temp item_data.Pos set from entity @s Pos
-execute store result score $itemX gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp item_data.Pos[0] 1
-execute store result score $itemY gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp item_data.Pos[1] 1
-execute store result score $itemZ gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp item_data.Pos[2] 1
+# Store current position
+execute summon marker run function gm4_reeling_rods:get_execution_pos
+# | position stored in storage gm4_reeling_rods:temp position
+execute store result score $itemX gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp position[0] 1
+execute store result score $itemY gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp position[1] 1
+execute store result score $itemZ gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp position[2] 1
 
 # Player postion is stored in $motionX... ect from player/find_hooked_entity
 
