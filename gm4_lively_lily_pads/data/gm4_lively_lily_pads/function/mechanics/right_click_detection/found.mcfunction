@@ -1,6 +1,6 @@
 # execute at nearest lily pad in front of player
 # @s = player holding supported item
-# at position of lily pad block, align xyz positioned ~.5 ~.02 ~.5
+# at lily_pad align xyz positioned ~.5 ~.02 ~.5
 # run from mechanics/right_click_detection/ray
 
 # spawn an interaction if needed

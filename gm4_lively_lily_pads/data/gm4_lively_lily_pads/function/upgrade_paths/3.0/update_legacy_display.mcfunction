@@ -1,11 +1,12 @@
 # upgrades and then kills legacy lilyPadLight
-# @s = block display, tag=lilyPadLight
+# @s = old block display, tag=lilyPadLight
 # at @s align xyz positioned ~.5 ~.02 ~.5
 # run from upgrade_paths/3.0
 
-# candles and coral need this string info
-data modify storage gm4_llp:temp SelectedItem set from entity @s block_state.Name
-execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4_llp:temp SelectedItem
+# block_state.Name needed for coral fan and candle type info
+data modify storage gm4_llp:temp DisplayType set from entity @s block_state.Name
+# string manipulation for candle_type, step 1 (step 2 in upgrade_paths/3.0/upgrade_candle)
+execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4_llp:temp DisplayType
 
 ## Select Type
 execute if data entity @s {block_state:{Name:"minecraft:torch"}} run function gm4_lively_lily_pads:mechanics/interactions/placement/torch
@@ -18,7 +19,6 @@ execute if data entity @s {block_state:{Name:"minecraft:spore_blossom"}} run fun
 
 execute if data entity @s block_state.Properties.candles run function gm4_lively_lily_pads:upgrade_paths/3.0/upgrade_candle with storage gm4_llp:temp
 
-# coral fans and dead coral fans unfortunately need a command each. I did a bad job before
 execute if data entity @s {block_state:{Name:"minecraft:brain_coral_fan"}} run function gm4_lively_lily_pads:mechanics/interactions/placement/coral_fan with storage gm4_llp:temp
 execute if data entity @s {block_state:{Name:"minecraft:bubble_coral_fan"}} run function gm4_lively_lily_pads:mechanics/interactions/placement/coral_fan with storage gm4_llp:temp
 execute if data entity @s {block_state:{Name:"minecraft:fire_coral_fan"}} run function gm4_lively_lily_pads:mechanics/interactions/placement/coral_fan with storage gm4_llp:temp

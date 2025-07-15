@@ -6,6 +6,7 @@
 # visuals
 particle scrape ~ ~.1 ~ 0 0 0 0 1
 
+# refresh timer
 scoreboard players set $timer gm4_llp.data 10
 
 # kill rcd if uneeded
@@ -13,7 +14,7 @@ execute unless entity @a[tag=gm4_llp_holding_item,distance=..6] run return run k
 execute unless block ~ ~ ~ lily_pad run return run kill @s
 execute if entity @e[type=block_display,tag=gm4_llp_display,distance=..0.1] run return run kill @s
 
-# kill if multiple interaction with the same id, and therefore belong to the same player
+# kill if multiple interaction with the same id, which therefore belong to the same player
 tag @s add gm4_llp.rcd_to_check
 scoreboard players set $duplicate_exists gm4_llp.data 0
 execute as @e[type=interaction,tag=gm4_llp_placement_rcd,tag=!gm4_llp.rcd_to_check,distance=0.1..16] \

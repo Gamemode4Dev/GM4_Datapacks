@@ -1,9 +1,7 @@
 # updates light blocks
 # @s = candle block display
 # at @s
-# run from mechanics/interactions/candle_rc/modify \
-  & mechanics/interactions/add_candle/modify \
-  & mechanics/particles/candle_count
+# run from mechanics/interactions/candle_rc/modify and mechanics/interactions/add_candle/modify and mechanics/particles/candle_count
 
 execute if block ~ ~1 ~ light run setblock ~ ~1 ~ air
 execute if data entity @s {block_state:{Properties:{candles:"4"}}} run setblock ~ ~1 ~ light[level=12] keep

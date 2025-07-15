@@ -1,9 +1,8 @@
 # places torch displays
-# @s = placement rcd (upgrade path different)
-# lily_pad align xyz positioned ~.5 ~.02 ~.5
-# run from mechanics/interactions/placement/found & upgrade_paths/3.0/update_legacy_display
+# @s = placement rcd or old block display if upgrade path
+# at lily_pad align xyz positioned ~.5 ~.02 ~.5
+# run from mechanics/interactions/placement/found and upgrade_paths/3.0/update_legacy_display
 
-# summon
 summon minecraft:block_display ~ ~ ~ {\
   Tags:["gm4_llp_display","gm4_llp_light","gm4_llp_light.14","gm4_llp_wood_sound","gm4_llp_smoke_torch","smithed.entity"],\
   block_state:{\

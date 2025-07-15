@@ -1,5 +1,5 @@
 # cleans up
-# @s = type=block_display, tag=gm4_llp_display
+# @s = gm4_llp_display block_display
 # at @s
 # run from main
 

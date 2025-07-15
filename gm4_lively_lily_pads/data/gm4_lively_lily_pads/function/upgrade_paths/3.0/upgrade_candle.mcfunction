@@ -1,10 +1,11 @@
 # string manipulation and data transfer from legacy candles
 # @s = block display, tag=lilyPadLight
 # at @s align xyz positioned ~.5 ~.02 ~.5
+# with {str_len}
 # run from upgrade_paths/3.0/update_legacy_display
 
-# string manipulation step 2
-$data modify storage gm4_llp:temp string set string storage gm4_llp:temp SelectedItem 10 $(str_len)
+# string manipulation for candle_type, step 2
+$data modify storage gm4_llp:temp candle_type set string storage gm4_llp:temp DisplayType 10 $(str_len)
 # now we can summon new display
 function gm4_lively_lily_pads:mechanics/interactions/placement/candles with storage gm4_llp:temp
 

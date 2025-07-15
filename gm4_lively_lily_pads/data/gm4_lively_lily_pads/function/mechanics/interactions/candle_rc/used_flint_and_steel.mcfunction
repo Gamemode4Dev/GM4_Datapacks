@@ -1,9 +1,10 @@
 # calculates damage for flint and steel
 # @s = player
+# at @s
 # run from mechanics/interactions/candle_rc/interact_rcd
 
 # sound
-playsound minecraft:item.flintandsteel.use player @a[distance=..16]
+playsound minecraft:item.flintandsteel.use player @a[distance=..16] ~ ~ ~
 
 # return if creative
 execute if entity @s[gamemode=creative] run return 1

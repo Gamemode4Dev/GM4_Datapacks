@@ -2,7 +2,6 @@
 # at @s
 # run from player/as
 
-# tag
 tag @s add gm4_llp_holding_item
 
 # raycast for lily_pad

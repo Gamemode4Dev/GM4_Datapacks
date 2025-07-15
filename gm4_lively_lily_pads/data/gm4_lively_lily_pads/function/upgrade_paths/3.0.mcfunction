@@ -1,8 +1,9 @@
 # upgrade path from pre-gm4 LLP
 # @s = player
 # at @s
+# run via upgrade paths util
 
-# kill old not useful
+# kill old non-useful entities
 kill @e[type=minecraft:interaction,tag=lilyPadInt]
 kill @e[type=minecraft:block_display,tag=lilyPadLight2]
 

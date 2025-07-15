@@ -1,5 +1,5 @@
 # add candle interact logic
-# @s = player who wants to add a candle
+# @s = player who wants to add a candle of same type
 # at @s
 # run from advancement: add_candle_rcd
 
@@ -8,11 +8,9 @@ advancement revoke @s only gm4_lively_lily_pads:add_candle_rcd
 # return if adventure
 execute if entity @s[gamemode=adventure] run return fail
 
-# store item
-data modify storage gm4_llp:temp SelectedItem set from entity @s SelectedItem.id
-
-# string manipulation step 1
-execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4_llp:temp SelectedItem
+# string manipulation for candle_type, step 1 (step 2 in mechanics/interactions/add_candle/ray_init)
+data modify storage gm4_llp:temp CandleType set from entity @s SelectedItem.id
+execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4_llp:temp CandleType
 
 # raycast
 scoreboard players reset $minus_one gm4_llp.data

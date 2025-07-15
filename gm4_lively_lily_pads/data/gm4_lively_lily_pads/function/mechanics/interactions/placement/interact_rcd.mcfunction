@@ -5,14 +5,13 @@
 
 advancement revoke @s only gm4_lively_lily_pads:placement_rcd
 
-## breif check to enable Upgrade_Path 3.0
+# breif check to enable Upgrade_Path 3.0
 execute if entity @e[type=minecraft:interaction,tag=lilyPadInt,limit=1] run scoreboard players set lively_lily_pads gm4_earliest_version 0
 
 # return if adventure
 execute if entity @s[gamemode=adventure] run return fail
 
 # item information
-data modify storage gm4_llp:temp SelectedItem set from entity @s SelectedItem.id
 execute if items entity @s weapon.mainhand #gm4_lively_lily_pads:coral_fan run \
   scoreboard players set $item_type gm4_llp.data 1
 execute if items entity @s weapon.mainhand #gm4_lively_lily_pads:dead_coral_fan run \
@@ -34,8 +33,9 @@ execute if items entity @s weapon.mainhand minecraft:redstone_torch run \
 execute if items entity @s weapon.mainhand minecraft:spore_blossom run \
   scoreboard players set $item_type gm4_llp.data 10
 
-# string manipulation step 1
-execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4_llp:temp SelectedItem
+# string manipulation for candle_type, step 1 (step 2 in mechanics/interactions/placement/found)
+data modify storage gm4_llp:temp DisplayType set from entity @s SelectedItem.id
+execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4_llp:temp DisplayType
 
 # need to raycast for lily pad with a placement rcd on it
 scoreboard players reset $minus_one gm4_llp.data

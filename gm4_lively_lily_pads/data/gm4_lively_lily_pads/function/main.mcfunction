@@ -1,4 +1,3 @@
-
 schedule function gm4_lively_lily_pads:main 16t
 
 # execute as player

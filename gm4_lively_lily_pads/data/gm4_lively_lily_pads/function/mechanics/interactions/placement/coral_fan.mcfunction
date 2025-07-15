@@ -1,14 +1,13 @@
 # places coral_fan displays
-# @s = placement rcd (upgrade path different)
-# lily_pad align xyz positioned ~.5 ~.02 ~.5
-# with {SelectedItem}
-# run from mechanics/interactions/placement/found & upgrade_paths/3.0/update_legacy_display
+# @s = placement rcd or old block display if upgrade path
+# at lily_pad align xyz positioned ~.5 ~.02 ~.5
+# with {DisplayType}
+# run from mechanics/interactions/placement/found and upgrade_paths/3.0/update_legacy_display
 
-# summon
 $summon minecraft:block_display ~ ~ ~ {\
   Tags:["gm4_llp_display","gm4_llp_wet_grass_sound","smithed.entity"],\
   block_state:{\
-    Name:"$(SelectedItem)"\
+    Name:"$(DisplayType)"\
   },\
   transformation:{\
     scale:[0.5f,0.6f,0.5f],\

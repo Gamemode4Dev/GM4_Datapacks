@@ -3,7 +3,7 @@ execute unless score lively_lily_pads gm4_earliest_version < lively_lily_pads gm
 scoreboard players set lively_lily_pads gm4_modules 1
 
 # detect pre-gm4 lively lily pads
-  # We do this in mechanics/placement/interact_rcd
+# | We do this in mechanics/placement/interact_rcd
 
 scoreboard objectives add gm4_llp.data dummy
 scoreboard objectives add gm4_llp.id dummy
