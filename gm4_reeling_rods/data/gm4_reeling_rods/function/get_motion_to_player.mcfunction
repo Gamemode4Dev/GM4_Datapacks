@@ -1,4 +1,4 @@
-# Gets motion vector to launch item to player. X and Z motion is 10% the block distance between the player and item. Y motion uses the sum of the squares of position deltas as a lookup table key, the value of which is added to the Y position delta to get the Y motion.
+# Gets motion vector to launch entity to player. X and Z motion is 10% the block distance between the player and current position. Y motion uses the sum of the squares of position deltas as a lookup table key, the value of which is added to the Y position delta to get the Y motion.
 # @s = entity with items to be yoinked
 # at bobber in @s (most of the time)
 # run from pull_items
