@@ -23,46 +23,6 @@ def beet_default(ctx: Context):
         non_dismountable_entities.append(entity_type)
     ctx.meta['dismountable_entities'] = dismountable_entities
     ctx.meta['non_dismountable_entities'] = non_dismountable_entities
-'''
-My goal for right now is to go to the maximum scope and then have things cut back.
-Push this idea as far as I can, then reign it in.
-
-    Hand & Armor Yoinking
-        Treated as an action. If an entity is in one of the tags, don't list them separately in the csv
-        
-        Specific Entities
-            Villagers:
-                Does the armor theft cause reputational damage to player?
-                Currently, no. Easy to change though
-            Illagers:
-                Can have armor on them through commands (not dispensed), but doesn't render
-                Probably shouldn't theft armor that can't be applied by players, that's the realm of datapackers
-                Using hand item theft function
-                - CANT STEAL PILLAGER BANNER. Is that bad?
-        
-        Nugget idea?
-            Try to use drop chances for armor and if it fails drop armor material?
-            What about datapack armor?... I worry about compatibility
-            Probably want to implement drop chances one way though
-        Drowned Trident Theft
-            Super easy. Just lure them on land and then yoink it
-            Probably want to balance that
-        Drop Chances
-            Should implement for balance
-            Maybe just have gear break if the drop chance fails?
-            That's the best idea so far I think
-
-    \\ ---[ REJECTED FOR A REASON ]--- \\
-        Enderman :
-            Steal held block
-            ISSUE: Block state stored, not item data.
-            Could setblock with the block state, then get drop from breaking
-            Could map block type to item, but that's far too much work and not maintainable
-        Pufferfish :
-            Puff up a bit
-            ISSUE: Setting PuffState has issues. Set once is fine. Once it deflates a bit, setting again flashes and then reverts. 
-            Probably an MC bug, should make an issue for it if it doesn't exist
-'''
 
 def create_lookup_file(ctx: Context):
     ctx.data["gm4_reeling_rods:set_lookup_table"] = Function(  
@@ -108,7 +68,5 @@ def create_bit_advancements(ctx: Context):
                 "execute if entity @s[gamemode=adventure] run return fail\n",
                 "data modify storage gm4_reeling_rods:temp bit_data set value {bit_score:\"" + f"gm4_reeling_rods.id_bit.{bit}={value}\", bit:\"{bit}\"" + "}",
                 "data modify storage gm4_reeling_rods:temp bit_data.UUID set from entity @s UUID",
-                "tag @s add gm4_reeling_rods.player",
-                "function gm4_reeling_rods:player/received_bit with storage gm4_reeling_rods:temp bit_data",
-                "tag @s remove gm4_reeling_rods.player"
+                "function gm4_reeling_rods:player/received_bit with storage gm4_reeling_rods:temp bit_data"
             ])
