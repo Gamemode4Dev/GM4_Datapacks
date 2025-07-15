@@ -1,0 +1,73 @@
+[
+    {
+        "condition": "minecraft:inverted",
+        "term": {
+            "condition": "minecraft:location_check",
+            "offsetY": -1,
+            "predicate": {
+                "block": {
+                    "blocks": "#gm4:no_collision"
+                }
+            }
+        }
+    },
+    {
+        "condition": "minecraft:inverted",
+        "term": {
+            "condition": "minecraft:any_of",
+            "terms": [
+                {
+                    "condition": "minecraft:location_check",
+                    "offsetY": 1,
+                    "predicate": {
+                        "fluid": {
+                            "fluids": "#minecraft:lava"
+                        }
+                    }
+                },
+                {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "fluid": {
+                            "fluids": "#minecraft:lava"
+                        }
+                    }
+                },
+                {
+                    "condition": "minecraft:location_check",
+                    "offsetY": 1,
+                    "predicate": {
+                        "fluid": {
+                            "fluids": "#minecraft:water"
+                        }
+                    }
+                },
+                {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "fluid": {
+                            "fluids": "#minecraft:water"
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "condition": "minecraft:location_check",
+        "offsetY": 1,
+        "predicate": {
+            "block": {
+                "blocks": "#gm4:no_collision"
+            }
+        }
+    },
+    {
+        "condition": "minecraft:location_check",
+        "predicate": {
+            "block": {
+                "blocks": "#gm4:no_collision"
+            }
+        }
+    }
+]
