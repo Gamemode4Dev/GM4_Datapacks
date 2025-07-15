@@ -10,6 +10,6 @@ execute store result score $showDeathMessages gm4_mu_data run gamerule showDeath
 gamerule showDeathMessages false
 damage @s 1.0 in_fire
 tag @s add gm4_mu_self
-execute at @s unless entity @e[type=player,tag=gm4_mu_self,distance=..0.1,limit=1] run tellraw @a ["",{"translate":"text.gm4.monsters_unbound.death.pearlescent_elite_laser","fallback":"%s was seen by %s",with:[{"selector":"@s"},{"selector":"@e[type=#gm4_monsters_unbound:elite_types,tag=gm4_mu_elite.pearlescent,distance=..32,limit=1]"}]}]
+execute if score $showDeathMessages gm4_mu_data matches 1 at @s unless entity @e[type=player,tag=gm4_mu_self,distance=..0.1,limit=1] run tellraw @a ["",{"translate":"text.gm4.monsters_unbound.death.pearlescent_elite_laser","fallback":"%s was seen by %s",with:[{"selector":"@s"},{"selector":"@e[type=#gm4_monsters_unbound:elite_types,tag=gm4_mu_elite.pearlescent,distance=..32,limit=1]"}]}]
 tag @s remove gm4_mu_self
 execute if score $showDeathMessages gm4_mu_data matches 1 run gamerule showDeathMessages true

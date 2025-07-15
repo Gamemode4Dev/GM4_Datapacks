@@ -12,5 +12,5 @@ tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"Custom Death Message:","color":"
 execute store result score $showDeathMessages gm4_sr_data run gamerule showDeathMessages
 gamerule showDeathMessages false
 kill @s
-tellraw @a ["",{"selector":"@s"},{"translate":"text.gm4.survival_refightalized.death","fallback":" ran out of health"}]
+execute if score $showDeathMessages gm4_sr_data matches 1 run tellraw @a ["",{"selector":"@s"},{"translate":"text.gm4.survival_refightalized.death","fallback":" ran out of health"}]
 execute if score $showDeathMessages gm4_sr_data matches 1 run gamerule showDeathMessages true

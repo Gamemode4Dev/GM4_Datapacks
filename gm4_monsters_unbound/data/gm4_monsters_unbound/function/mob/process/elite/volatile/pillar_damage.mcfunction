@@ -10,6 +10,6 @@ execute store result score $showDeathMessages gm4_mu_data run gamerule showDeath
 gamerule showDeathMessages false
 damage @s 9.0 explosion
 tag @s add gm4_mu_self
-execute at @s unless entity @e[type=player,tag=gm4_mu_self,distance=..0.1,limit=1] run tellraw @a ["",{"translate":"text.gm4.monsters_unbound.death.volatile_elite_meteorite","fallback":"%s was struck by a meteorite",with:[{"selector":"@s"}]}]
+execute if score $showDeathMessages gm4_mu_data matches 1 at @s unless entity @e[type=player,tag=gm4_mu_self,distance=..0.1,limit=1] run tellraw @a ["",{"translate":"text.gm4.monsters_unbound.death.volatile_elite_meteorite","fallback":"%s was struck by a meteorite",with:[{"selector":"@s"}]}]
 tag @s remove gm4_mu_self
 execute if score $showDeathMessages gm4_mu_data matches 1 run gamerule showDeathMessages true

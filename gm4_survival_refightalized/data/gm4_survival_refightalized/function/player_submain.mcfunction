@@ -16,9 +16,6 @@ execute as @a[scores={gm4_sr_stat.deaths=1..}] run function gm4_survival_refight
 scoreboard players set @a gm4_sr_stat.armor_recharge_change 0
 scoreboard players set @a gm4_sr_stat.regeneration_rate_change 0
 
-# function tag call for expansions to keep clocks sync'd
-function #gm4_survival_refightalized:player_submain
-
 # armor recharge timer
 execute as @a[gamemode=!spectator,tag=gm4_sr_armor.reduction] run function gm4_survival_refightalized:player/armor/timer
 # health regen timer
