@@ -8,7 +8,6 @@ scoreboard players set $food_processed gm4_horse_data 0
 item replace block 29999998 1 7134 container.0 from entity @s weapon.mainhand
 data modify storage gm4_horsemanship:temp item_id set from block 29999998 1 7134 Items[{Slot:0b}].id
 execute if score $food_processed gm4_horse_data matches 0 if data storage gm4_horsemanship:temp {item_id:"minecraft:short_grass"} on vehicle at @s run function gm4_horsemanship:need/food/type/short_grass
-execute if score $food_processed gm4_horse_data matches 0 if data storage gm4_horsemanship:temp {item_id:"minecraft:carrot"} on vehicle at @s run function gm4_horsemanship:need/food/type/carrot
 execute if score $food_processed gm4_horse_data matches 0 if data storage gm4_horsemanship:temp {item_id:"minecraft:sweet_berries"} on vehicle at @s run function gm4_horsemanship:need/food/type/sweet_berries
 execute if score $food_processed gm4_horse_data matches 0 if data storage gm4_horsemanship:temp {item_id:"minecraft:glow_berries"} on vehicle at @s run function gm4_horsemanship:need/food/type/glow_berries
 execute if score $food_processed gm4_horse_data matches 0 if data storage gm4_horsemanship:temp {item_id:"minecraft:chorus_fruit"} on vehicle at @s run function gm4_horsemanship:need/food/type/chorus_fruit

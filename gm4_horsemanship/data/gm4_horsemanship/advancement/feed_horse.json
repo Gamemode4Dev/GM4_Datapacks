@@ -42,6 +42,27 @@
         ]
       }
     },
+    "carrot": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "player": [],
+        "item": {
+          "items": [
+            "minecraft:carrot"
+          ]
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#gm4_horsemanship:trainable",
+              "nbt": "{Tags:[\"gm4_horse\"]}"
+            }
+          }
+        ]
+      }
+    },
     "enchanted_golden_apple": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
@@ -152,6 +173,7 @@
     [
       "apple",
       "golden_apple",
+      "carrot",
       "enchanted_golden_apple",
       "golden_carrot",
       "sugar",
