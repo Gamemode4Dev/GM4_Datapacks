@@ -1,5 +1,5 @@
 {
-  "last_commit": "8a817d4a3ad60e797ba3c4fac1a0137509d87e34",
+  "last_commit": "28bd5a134c22674edfc55a8c07174d01095e61a6",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1822,8 +1822,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.8.4",
-      "hash": "72261492533a6e42ca51a3b9bd0beb5e163f1760",
+      "version": "1.8.5",
+      "hash": "2691d672f9b1e8f4daf5ce77603c4ab295a57db5",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -2355,8 +2355,8 @@
     {
       "id": "gm4_soul_glass",
       "name": "Soul Glass",
-      "version": "1.5.1",
-      "hash": "316434c1451d6b1bac6363fe90b2366b14b029b4",
+      "version": "1.5.2",
+      "hash": "a2684c47a8ef01006306390099bdffeb7be9fc82",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Soul_Glass",
       "credits": {
@@ -2378,7 +2378,7 @@
         "1.21.7"
       ],
       "hidden": false,
-      "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
+      "important_note": "On versions <1.21, Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "Hi8fkYoI",
@@ -3024,8 +3024,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.2",
-      "hash": "04e93f6429e12c0838cf3e5edee48c90130446b6",
+      "version": "1.4.3",
+      "hash": "0f5d69797e6c98774baf47ed1ede92d29578b146",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3237,7 +3237,7 @@
     "lib_player_motion": {
       "id": "gm4_player_motion",
       "name": "Gamemode 4 Player Motion",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "hash": "e01c038d89650476d4c3fea5cc675b691f30d4a9",
       "video_link": "",
       "wiki_link": "",
