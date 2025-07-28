@@ -1,0 +1,13 @@
+{
+  "function": "minecraft:set_attributes",
+  "modifiers": [
+    {
+      "attribute": "minecraft:gravity",
+      "id": "gm4_scuba_gear:wetsuit_buoyancy",
+      "amount": 1.2,
+      "operation": "add_multiplied_total",
+      "slot": "legs"
+    }
+  ],
+  "replace": false
+}
