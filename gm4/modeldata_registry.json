@@ -992,6 +992,9 @@
     "lightning_rod": {
       "gm4_lightning_in_a_bottle:guidebook_icon/lightning_in_a_bottle": 1
     },
+    "lily_pad": {
+      "gm4_lively_lily_pads:guidebook_icon/lively_lily_pads": 1
+    },
     "lime_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/lime": 300
     },
