@@ -1,5 +1,5 @@
 {
-  "last_commit": "28bd5a134c22674edfc55a8c07174d01095e61a6",
+  "last_commit": "e1e950180ee71882de13fef295cb9e1ea1fe1520",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1262,8 +1262,8 @@
     {
       "id": "gm4_holographic_tags",
       "name": "Holographic Tags",
-      "version": "1.5.1",
-      "hash": "e9084f97c2f2c4a3f9213bd73e1316d591b8df86",
+      "version": "1.5.2",
+      "hash": "7ab2095d7fd4eda9ac0cd7f588c58206d0a6f469",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Holographic_Tags",
       "credits": {
@@ -1822,8 +1822,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.8.5",
-      "hash": "2691d672f9b1e8f4daf5ce77603c4ab295a57db5",
+      "version": "1.8.6",
+      "hash": "b18e7aaefb257298db7a67defbedcb984431caef",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -3237,7 +3237,7 @@
     "lib_player_motion": {
       "id": "gm4_player_motion",
       "name": "Gamemode 4 Player Motion",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "hash": "e01c038d89650476d4c3fea5cc675b691f30d4a9",
       "video_link": "",
       "wiki_link": "",
