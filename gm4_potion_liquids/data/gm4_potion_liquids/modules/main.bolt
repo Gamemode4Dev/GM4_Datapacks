@@ -1,0 +1,128 @@
+from gm4_liquid_tanks:liquid_wrappers import Liquid
+from functools import partial
+from gm4.plugins.player_heads import Skin
+import numpy as np
+from PIL import Image, ImageChops, ImageColor
+
+potion_liquid = Liquid(capacity=300)
+base_potion = potion_liquid.standard_unit('glass_bottle', 1, f_name="base_potion")
+potion_liquid.standard_unit('glass_bottle', 3, f_name="long_potion") # register standard unit
+long_potion = partial(potion_liquid.item_drain, output='glass_bottle', value=3) # long potions cannot be filled
+
+from beet import JsonFile
+effect_colors = JsonFile(source_path="gm4_potion_liquids/effect_colors.json").data
+
+class_defs = {}
+
+untinted_skin = Skin(source_path="gm4_potion_liquids/untint_skin.png")
+
+from csv import DictReader
+with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
+    potion_def_reader = DictReader(csvfile)
+    for row in potion_def_reader:
+        if row["potion_id"] in ("water"):
+            continue # skip this potion type
+        
+        class_key = (row["effect_id"], row["effect_amplifier"])
+        if row["effect_id"]=="": # effect-less potions each get their own tank type
+            class_key = (row["potion_id"])
+        # setup new liquid type if necessary and add to the dict
+        if class_key not in class_defs:
+            # @potion_liquid # we execute the class decorator later after setting up all the bolt stuff
+            class PotionLiquidClass:
+                id = row["potion_id"].removeprefix("long_")
+                name = row["potion_id"].removeprefix("long_").replace("_"," ").title()+" Potion"
+
+                _generators = []
+            if row["potion_id"].startswith("strong"):
+                PotionLiquidClass.skin = "liquids/"+row["potion_id"].removeprefix("strong_")
+
+            potion_liquid.struc = PotionLiquidClass # programatically going around the decorators is odd,
+                                                    # so we manually set this here so the handler 
+                                                    # knows the right classdef to put mcfunction into
+            potion_liquid.init()
+
+            class_defs[class_key] = PotionLiquidClass
+        this_potion_class = class_defs[class_key]
+        potion_liquid.struc = this_potion_class
+
+        # add this potion to the liquid type
+        if row["potion_id"].startswith("long"):
+            this_potion_unit = long_potion
+        else:
+            this_potion_unit = base_potion
+        this_potion_unit(f"minecraft:potion[potion_contents={{potion:\"{row['potion_id']}\"}}]")
+
+        # add this potion's util_below feature
+        if not row["potion_id"].startswith("long") and not row["effect_id"]=="":
+            def dispense_potion(row):
+                effects = row["effect_id"].split("+")
+                amplifiers = map(int, row["effect_amplifier"].split("+"))
+                inline_predicate = {
+                    "condition":"minecraft:entity_properties",
+                    "entity":"this",
+                    "predicate":{
+                        "effects":{}
+                        # {   e:{} for e in effects  } # dict comprehension not supported by bolt
+                    }
+                }
+                for e in effects:
+                    inline_predicate["predicate"]["effects"][e] = {}
+
+                m, s = row["effect_duration"].split(":")
+                duration = max(int(m)*60 + round(float(s)), 1)
+                execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+                    unless entity @s[gamemode=spectator]
+                    unless predicate inline_predicate
+                    run function f"gm4_potion_liquids:util/dispense/{row["potion_id"]}":
+                        for e, a in zip(effects, amplifiers):
+                            effect give @s e duration (a-1)
+                        scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
+                        playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
+            potion_liquid.util_below(partial(dispense_potion, row))
+        
+        # create this potion's skin texture if needed
+        skin_id = this_potion_class.id.removeprefix("strong_").removeprefix("long_")
+        if skin_id not in ctx.data["gm4_potion_liquids"][Skin].generate_tree()["liquids"]:
+            # compute the potion color for any mixed potions (a weighted average of their colors)
+            tint_colors = np.empty(shape=(3,0))
+            for effect_id in row["effect_id"].split("+"):
+                rgb = np.array(ImageColor.getrgb(effect_colors[effect_id][0])).reshape((-1,1))
+                tint_colors = np.append(tint_colors, rgb, axis=1)
+            tint_weights = list(map(int, row["effect_amplifier"].split("+")))
+            tint_color = tuple(map(int, np.average(tint_colors, weights=tint_weights, axis=1)))
+            # print('#%02x%02x%02x' % tint_color)
+
+            tint_image = Image.new("RGBA", untinted_skin.image.size, tint_color)
+            ctx.data[f"gm4_potion_liquids:liquids/{skin_id}"] = Skin(ImageChops.multiply(tint_image, untinted_skin.image))
+
+# apply the liquid tanks decorator wrapper
+for liquid_class in class_defs.values():
+    potion_liquid(liquid_class)
+
+
+# Potions added by this module
+potion_liquid.struc = Liquid # return decorator to normal operation
+@potion_liquid
+class FloatingPotion:
+    id = "floating"
+    name = "Floating Potion"
+
+    potion_liquid.init()
+    @base_potion("minecraft:potion[custom_data~{gm4_potion_liquids:{potion:'floating'}}]")
+    def floating_potion():
+        loot replace entity 344d47-4-4-4-f04ce104d weapon.mainhand loot gm4_potion_liquids:floating_potion
+
+    @potion_liquid.util_below
+    def dispense_float_potion():
+        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+            unless entity @s[gamemode=spectator]
+            unless predicate {
+                    "condition":"minecraft:entity_properties",
+                    "entity":"this",
+                    "predicate":{"effects":{"levitation":{}}}
+                }
+            run function gm4_potion_liquids:util/dispense/floating:
+                effect give @s levitation 45 2
+                scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
+                playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
