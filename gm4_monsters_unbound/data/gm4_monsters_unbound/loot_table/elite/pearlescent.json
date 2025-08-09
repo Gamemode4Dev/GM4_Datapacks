@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:pearlescent_froglight",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/elite_headwear/pearlescent",
+                "enchantment_glint_override": false,
+                "enchantments": {
+                  "binding_curse": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
