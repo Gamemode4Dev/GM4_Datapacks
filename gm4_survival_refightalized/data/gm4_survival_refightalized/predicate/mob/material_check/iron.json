@@ -1,0 +1,36 @@
+[
+  {
+    "condition": "minecraft:any_of",
+    "terms": [
+      {
+        "condition": "minecraft:all_of",
+        "terms": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_survival_refightalized:mob/underground"
+          },
+          {
+            "condition": "minecraft:random_chance",
+            "chance": 0.55
+          }
+        ]
+      },
+      {
+        "condition": "minecraft:all_of",
+        "terms": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "gm4_survival_refightalized:mob/underground"
+            }
+          },
+          {
+            "condition": "minecraft:random_chance",
+            "chance": 0.35
+          }
+        ]
+      }
+    ]
+  }
+]

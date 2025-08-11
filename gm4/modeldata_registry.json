@@ -50,6 +50,9 @@
     "axolotl_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
     },
+    "azalea_leaves": {
+      "gm4_monsters_unbound:item/spore/default": 1
+    },
     "bamboo_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_bamboo_hanging_sign": 1,
       "gm4_trapped_signs:item/trapped_bamboo_hanging_sign": 2
@@ -170,6 +173,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "chainmail_chestplate": {
+      "gm4_monsters_unbound:guidebook_icon/monsters_unbound": 1,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_iacio_shamir:shamir/iacio": 122,
@@ -188,6 +192,9 @@
     "cherry_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_cherry_hanging_sign": 1,
       "gm4_trapped_signs:item/trapped_cherry_hanging_sign": 2
+    },
+    "cherry_leaves": {
+      "gm4_monsters_unbound:item/spore/cherry": 1
     },
     "cherry_sign": {
       "gm4_trapped_signs:item/trapped_cherry_sign": 1,
@@ -579,6 +586,9 @@
       "gm4_animi_shamir:shamir/animi": 124,
       "gm4_orb_of_ankou:guidebook_icon/orb_of_ankou": 200
     },
+    "flowering_azalea_leaves": {
+      "gm4_monsters_unbound:item/spore/flowering": 1
+    },
     "furnace": {
       "gm4_smelteries:gui/advancement/smelteries": 1,
       "gm4_forming_press:guidebook_icon/forming_press": 2,
@@ -962,6 +972,7 @@
     },
     "leather_chestplate": {
       "gm4_combat_expanded:gui/advancement/combat_expanded_identify": 1,
+      "gm4_survival_refightalized:guidebook_icon/survival_refightalized": 2,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_iacio_shamir:shamir/iacio": 122,
@@ -994,6 +1005,9 @@
     },
     "lime_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/lime": 300
+    },
+    "lime_glazed_terracotta": {
+      "gm4_monsters_unbound:item/elite_headwear/mending": 1
     },
     "lingering_potion": {
       "gm4_midnight_menaces:guidebook_icon/illusioner_nights": 1,
@@ -1229,9 +1243,15 @@
     "oxidized_cut_copper": {
       "gm4_tinkering_compressors:block/tinkering_compressor_plate": 1
     },
+    "packed_ice": {
+      "gm4_monsters_unbound:item/elite_headwear/glacial": 1
+    },
     "paper": {
       "gm4_book_binders:item/enchanted_page": 1,
       "gm4_book_binders:gui/advancement/book_binders_debind": 2
+    },
+    "pearlescent_froglight": {
+      "gm4_monsters_unbound:item/elite_headwear/pearlescent": 1
     },
     "phantom_membrane": {
       "gm4_midnight_menaces:guidebook_icon/enlarging_phantoms": 1
