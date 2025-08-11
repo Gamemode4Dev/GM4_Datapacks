@@ -1,0 +1,35 @@
+[
+  {
+    "condition": "minecraft:any_of",
+    "terms": [
+      {
+        "condition": "minecraft:location_check",
+        "predicate": {
+          "biomes": "minecraft:lush_caves"
+        }
+      },
+      {
+        "condition": "minecraft:all_of",
+        "terms": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:reference",
+              "name": "gm4_survival_refightalized:mob/underground"
+            }
+          },
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "biomes": [
+                "minecraft:sunflower_plains",
+                "minecraft:flower_forest",
+                "minecraft:cherry_grove"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

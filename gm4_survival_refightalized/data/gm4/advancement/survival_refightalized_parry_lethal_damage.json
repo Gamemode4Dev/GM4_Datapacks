@@ -1,0 +1,27 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:shield",
+            "components": {
+              "minecraft:enchantment_glint_override": true
+            }
+        },
+        "title": {
+            "translate": "advancement.gm4.survival_refightalized.parry_lethal_damage.title",
+            "fallback": "Not Today, Either"
+        },
+        "description": {
+            "translate": "advancement.gm4.survival_refightalized.parry_lethal_damage.description",
+            "fallback": "Block lethal damage with a Shield Parry",
+            "color": "gray"
+        },
+        "frame": "challenge",
+        "hidden": true
+    },
+    "parent": "gm4:survival_refightalized_parry",
+    "criteria": {
+        "full_set": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}
