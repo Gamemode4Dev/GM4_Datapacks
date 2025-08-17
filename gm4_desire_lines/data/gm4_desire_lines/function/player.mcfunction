@@ -10,7 +10,7 @@ execute unless predicate gm4_desire_lines:is_affected run return fail
 scoreboard players operation $probability gm4_desire_lines = #base_probability gm4_desire_lines
 execute if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sneaking":true}}} run scoreboard players operation $probability gm4_desire_lines += #sneak_penality gm4_desire_lines
 execute if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"flags":{"is_sprinting":true}}} run scoreboard players operation $probability gm4_desire_lines += #sprint_penalty gm4_desire_lines
-execute if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"movement":{"vertical_speed":{"min":2}}}} run scoreboard players operation $probability gm4_desire_lines += #impact_penalty gm4_desire_lines
+execute if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"movement":{"vertical_speed":{"min":2}}}} if predicate gm4_desire_lines:feather_falling_fail run scoreboard players operation $probability gm4_desire_lines += #impact_penalty gm4_desire_lines
 function #gm4_desire_lines:expansion
 
 # | NOTE: if you are writing an expansion, do NOT 'set' $probability, as the order in which expansions are called is arbitrary.
