@@ -5,5 +5,4 @@ from pathlib import Path
 
 
 def beet_default(ctx: Context):
-    print(Path.cwd())
     ctx.data[Module]['gm4_liquid_tanks:liquid_wrappers'] = Module(source_path=Path("gm4_liquid_tanks/data/gm4_liquid_tanks/modules/liquid_wrappers.bolt"))
