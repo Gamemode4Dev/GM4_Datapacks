@@ -115,7 +115,10 @@
                   "minecraft:enchantments": [
                     {
                       "enchantments": "minecraft:feather_falling",
-                      "levels": 4
+                      "levels": {
+                        "min": 4,
+                        "max": 255
+                      }
                     }
                   ]
                 }
