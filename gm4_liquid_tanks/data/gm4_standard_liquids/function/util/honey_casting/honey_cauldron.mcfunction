@@ -4,7 +4,7 @@
 execute if score @s gm4_lt_util matches 4.. run scoreboard players remove @s gm4_lt_value 4
 execute if score @s gm4_lt_util matches 4.. run summon item_display ~0.5 ~ ~0.5 :
     Tags:["gm4_lt_honey_display","gm4_no_edit"]
-    CustomName:'"gm4_lt_honey_display"'
+    CustomName:"gm4_lt_honey_display"
     item:
         id: "minecraft:honey_block"
         count: 1
