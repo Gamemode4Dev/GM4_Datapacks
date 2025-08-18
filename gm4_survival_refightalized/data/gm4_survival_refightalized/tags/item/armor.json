@@ -1,0 +1,30 @@
+{
+  "values": [
+    "chainmail_boots",
+    "chainmail_chestplate",
+    "chainmail_helmet",
+    "chainmail_leggings",
+    "diamond_boots",
+    "diamond_chestplate",
+    "diamond_helmet",
+    "diamond_leggings",
+    "golden_boots",
+    "golden_chestplate",
+    "golden_helmet",
+    "golden_leggings",
+    "iron_boots",
+    "iron_chestplate",
+    "iron_helmet",
+    "iron_leggings",
+    "leather_boots",
+    "leather_chestplate",
+    "leather_helmet",
+    "leather_leggings",
+    "netherite_boots",
+    "netherite_chestplate",
+    "netherite_helmet",
+    "netherite_leggings",
+    "player_head",
+    "turtle_helmet"
+  ]
+}

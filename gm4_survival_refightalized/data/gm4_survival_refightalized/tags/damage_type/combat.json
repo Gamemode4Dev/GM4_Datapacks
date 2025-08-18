@@ -1,0 +1,33 @@
+{
+    "values": [
+        "minecraft:arrow",
+        "minecraft:bad_respawn_point",
+        "minecraft:dragon_breath",
+        "minecraft:falling_anvil",
+        "minecraft:falling_block",
+        "minecraft:falling_stalactite",
+        "minecraft:explosion",
+        "minecraft:hot_floor",
+        "minecraft:in_fire",
+        "minecraft:fireball",
+        "minecraft:lava",
+        "minecraft:magic",
+        "minecraft:fireworks",
+        "minecraft:indirect_magic",
+        "minecraft:lightning_bolt",
+        "minecraft:mob_attack_no_aggro",
+        "minecraft:out_of_world",
+        "minecraft:mob_attack",
+        "minecraft:mob_projectile",
+        "minecraft:player_attack",
+        "minecraft:player_explosion",
+        "minecraft:sonic_boom",
+        "minecraft:sting",
+        "minecraft:thorns",
+        "minecraft:thrown",
+        "minecraft:trident",
+        "minecraft:unattributed_fireball",
+        "minecraft:wither",
+        "minecraft:wither_skull"
+    ]
+}

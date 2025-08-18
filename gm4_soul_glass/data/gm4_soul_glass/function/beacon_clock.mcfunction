@@ -1,5 +1,5 @@
-#@s = none
-#run from beacon_clock (on it's own clock)
+# @s = none
+# run from beacon_clock (on it's own clock)
 
 execute as @e[type=marker,tag=gm4_soul_glass] at @s run function gm4_soul_glass:process
 
