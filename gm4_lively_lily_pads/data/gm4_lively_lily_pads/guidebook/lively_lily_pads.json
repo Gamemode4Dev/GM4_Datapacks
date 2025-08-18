@@ -47,7 +47,9 @@
           {
             "translate": "text.gm4.guidebook.lively_lily_pads.description",
             "fallback": "While holding a supported item and looking at a lily pad, simply right click on the green particles to place it down.\nCandles will need lighting."
-          },
+          }
+        ],
+        [
           {
             "translate": "text.gm4.guidebook.lively_lily_pads.item_list",
             "fallback": "§nSupported Items:§r\n\nCandles\nLanterns\nTorches\nCoral Fans\nCactus Flower\nSpore Blossom"
