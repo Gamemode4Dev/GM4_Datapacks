@@ -1,5 +1,5 @@
 {
-  "last_commit": "3ca984fa7dd380ff1532278e5d4133fe88396aeb",
+  "last_commit": "4e144873af874c72876f1a7c858478fef0ac1d3f",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1633,8 +1633,8 @@
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.7.1",
-      "hash": "c6e0d765dd7dfe1ec23feac15cd0cf60d33428ea",
+      "version": "1.7.2",
+      "hash": "628b23b43442d8407a06965ff90ea9a2beeda9de",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -1909,8 +1909,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.8.8",
-      "hash": "9197801a9b171a864118dc7d21e0248bbc407011",
+      "version": "1.8.9",
+      "hash": "ff802954abcd204349906ea7d49d495a8aecbca4",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -3397,7 +3397,7 @@
     "lib_player_motion": {
       "id": "gm4_player_motion",
       "name": "Gamemode 4 Player Motion",
-      "version": "1.0.8",
+      "version": "1.0.9",
       "hash": "e01c038d89650476d4c3fea5cc675b691f30d4a9",
       "video_link": "",
       "wiki_link": "",
