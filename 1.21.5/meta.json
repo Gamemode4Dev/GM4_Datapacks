@@ -1,5 +1,5 @@
 {
-  "last_commit": "4e144873af874c72876f1a7c858478fef0ac1d3f",
+  "last_commit": "cab5659c1b8625a213cf161e58cedb9db19f3d3b",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -690,8 +690,8 @@
     {
       "id": "gm4_desire_lines",
       "name": "Desire Lines",
-      "version": "1.6.1",
-      "hash": "39a939f45af2d2f387b19d7cacb7bb11c9616671",
+      "version": "1.6.2",
+      "hash": "87e2c74e086987f4454c3f8adf60a1e8ce9dc9f9",
       "video_link": "https://www.youtube.com/watch?v=wmGaatfekfs",
       "wiki_link": "https://wiki.gm4.co/wiki/Desire_Lines",
       "credits": {
@@ -1909,8 +1909,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.8.9",
-      "hash": "ff802954abcd204349906ea7d49d495a8aecbca4",
+      "version": "1.8.10",
+      "hash": "6e152e025f16283e5c7f208aa1aa0dc40bfb4293",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -3397,7 +3397,7 @@
     "lib_player_motion": {
       "id": "gm4_player_motion",
       "name": "Gamemode 4 Player Motion",
-      "version": "1.0.9",
+      "version": "1.0.10",
       "hash": "e01c038d89650476d4c3fea5cc675b691f30d4a9",
       "video_link": "",
       "wiki_link": "",
