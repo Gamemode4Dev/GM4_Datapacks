@@ -1,7 +1,7 @@
 # cleans up
 # @s = gm4_llp_display block_display
 # at @s
-# run from main
+# run from main and mechanics/interactions/punch_candle/ray
 
 # delete light
 execute if entity @s[tag=gm4_llp_light] run fill ~ ~1 ~ ~ ~1 ~ air replace light
