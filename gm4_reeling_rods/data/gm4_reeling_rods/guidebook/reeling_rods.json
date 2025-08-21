@@ -49,6 +49,40 @@
           }
         ]
       }
+    },
+    "obtain_reeling_book": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:enchanted_book",
+            "predicates": {
+              "minecraft:stored_enchantments": [
+                {
+                  "enchantments": "gm4_reeling_rods:reeling"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "obtain_barbed_book": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:enchanted_book",
+            "predicates": {
+              "minecraft:stored_enchantments": [
+                {
+                  "enchantments": "gm4_reeling_rods:barbed"
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   },
   "sections": [
@@ -77,14 +111,15 @@
       "enable": [],
       "requirements": [
         [
-          "obtain_reeling_rod"
+          "obtain_reeling_rod",
+          "obtain_reeling_book"
         ]
       ],
       "pages": [
         [
           {
             "translate": "text.gm4.guidebook.reeling_rods.reeling",
-            "fallback": "Reeling is an enchantment that revolves around stealing from entities. Pull the chest from chest boats and so much more!"
+            "fallback": "Reeling is a fishing rod enchantment that revolves around stealing from entities. Pull the chest from chest boats and so much more!"
           }
         ]
       ]
@@ -94,7 +129,8 @@
       "enable": [],
       "requirements": [
         [
-          "obtain_barbed_rod"
+          "obtain_barbed_rod",
+          "obtain_barbed_book"
         ]
       ],
       "pages": [
