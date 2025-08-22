@@ -101,7 +101,7 @@
           },
           {
             "translate": "text.gm4.guidebook.reeling_rods.description",
-            "fallback": "All fishing rods have extra abilities when hooking Paintings, Item Frames, Leash Knots, Shulkers and End Crystals. Hooking any entity will also dismount them from their vehicle."
+            "fallback": "Fishing rods can be useful tools for (accidental) home re-decoration: Paintings and Item Frames can be ripped of walls, whilst leashes and Shulkers are moved around with ease."
           }
         ]
       ]
@@ -119,7 +119,7 @@
         [
           {
             "translate": "text.gm4.guidebook.reeling_rods.reeling",
-            "fallback": "Reeling is a fishing rod enchantment that revolves around stealing from entities. Pull the chest from chest boats and so much more!"
+            "fallback": "When enchanted with Reeling, a fishing rod becomes a sneaky tool for disassembly and thievery. Take a Villager's wares or un-boat a chest boat chest."
           }
         ]
       ]
@@ -137,7 +137,7 @@
         [
           {
             "translate": "text.gm4.guidebook.reeling_rods.barbed",
-            "fallback": "Barbed turns a fishing rod into a lethal weapon. With 5 levels, it applies a scratching damage to the hooked mob and then bleeding damage."
+            "fallback": "Barbed turns a fishing rod into a lethal weapon. Throw your bobber at foes to scratch them up! Higher levels cause more damage over time."
           }
         ]
       ]
