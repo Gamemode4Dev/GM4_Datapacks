@@ -22,8 +22,8 @@ meta:
         - gm4_end_fishing
         - gm4_live_catch
       notes: []
-    #modrinth:
-      #project_id: 
+    modrinth:
+      project_id: MWPuloVL
     #smithed:
       #pack_id: 
     #planetminecraft:
