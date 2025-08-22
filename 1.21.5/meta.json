@@ -1,5 +1,5 @@
 {
-  "last_commit": "eb271b153a613a38dfa8c9a9ec0b99618ef310c7",
+  "last_commit": "0bdc20cfc4bda0e2f09aac5215d088154c3c1f19",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1909,8 +1909,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.8.11",
-      "hash": "cedb7e70995c7fa7546a929b28f74d9599f74c9d",
+      "version": "1.8.12",
+      "hash": "ae1d64123f13b64a2b658e9250f0e086d0c8bafc",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -3397,8 +3397,8 @@
     "lib_player_motion": {
       "id": "gm4_player_motion",
       "name": "Gamemode 4 Player Motion",
-      "version": "1.0.11",
-      "hash": "e01c038d89650476d4c3fea5cc675b691f30d4a9",
+      "version": "1.0.12",
+      "hash": "6864ac89ec67305dea3f8424c09d35ac08dc0316",
       "video_link": "",
       "wiki_link": "",
       "credits": {
