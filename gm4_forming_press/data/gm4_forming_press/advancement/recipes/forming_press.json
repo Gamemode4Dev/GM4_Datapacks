@@ -1,0 +1,37 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+      "has_the_recipe": {
+        "trigger": "minecraft:recipe_unlocked",
+        "conditions": {
+          "recipe": "gm4_forming_press:forming_press"
+        }
+      },
+      "has_materials": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "minecraft:cobblestone",
+                "minecraft:repeater",
+                "minecraft:piston",
+                "minecraft:furnace"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "has_the_recipe",
+        "has_materials"
+      ]
+    ],
+    "rewards": {
+      "recipes": [
+        "gm4_forming_press:forming_press"
+      ]
+    }
+  }

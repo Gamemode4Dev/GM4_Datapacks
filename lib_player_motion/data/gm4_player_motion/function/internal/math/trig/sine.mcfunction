@@ -1,0 +1,3 @@
+$execute store result score $sine gm4_player_motion.internal.math run data get storage gm4_player_motion:sine arr[$(angle)]
+execute if score $negative_sine gm4_player_motion.internal.math matches 1 run scoreboard players operation $sine gm4_player_motion.internal.math *= #constant.-1 gm4_player_motion.internal.const
+$execute store result score $cosine gm4_player_motion.internal.math run data get storage gm4_player_motion:cosine arr[$(angle)]

@@ -1,5 +1,5 @@
-#@s = soul glass AEC
-#run from effects/check
+# @s = gm4_soul_glass marker
+# run from effect/check
 
 data modify storage gm4_soul_glass:temp effect set from block ~ ~-1 ~ primary_effect
 function gm4_soul_glass:effect/obtain_numeric_primary_id

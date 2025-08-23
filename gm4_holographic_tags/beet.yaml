@@ -1,6 +1,6 @@
 id: gm4_holographic_tags
 name: Holographic Tags
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -28,7 +28,9 @@ meta:
     wiki: https://wiki.gm4.co/wiki/Holographic_Tags
     credits:
       Creator:
-        - BluePsychoRanger
+        - BPR
+      Updated by:
+        - Bloo
       Inspired by:
         - SethBling
       Icon Design:

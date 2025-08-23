@@ -9,7 +9,7 @@ class PneumaTemplate(TemplateOptions):
     """model template to generate the models for shards and essences"""
     name = "pneuma"
 
-    def process(self, config: ModelData, models_container: NamespaceProxy[Model]):
+    def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]):
         pneuma = config.reference.split("/")[-1] # eg agile, anchoring ect...
         shard = models_container[f"gm4_orb_of_ankou:item/shards/{pneuma}"] = Model({
             "parent": "item/generated",

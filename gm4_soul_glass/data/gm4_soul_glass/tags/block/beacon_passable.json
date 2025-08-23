@@ -49,6 +49,7 @@
         "minecraft:dragon_egg",
         "minecraft:dragon_head",
         "minecraft:dragon_wall_head",
+        { "id": "minecraft:dried_ghast", "required": false },
         "minecraft:enchanting_table",
         "minecraft:end_portal_frame",
         "minecraft:end_rod",

@@ -50,9 +50,9 @@
           },
           {
             "text": "autumn",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -61,7 +61,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "autumn"
             }
@@ -71,9 +71,9 @@
           },
           {
             "text": "blossom",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -82,7 +82,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "blossom"
             }
@@ -92,9 +92,9 @@
           },
           {
             "text": "spring",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -103,7 +103,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "spring"
             }
@@ -113,9 +113,9 @@
           },
           {
             "text": "winter",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -124,7 +124,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "winter"
             }
@@ -134,9 +134,9 @@
           },
           {
             "text": "barrier",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -145,7 +145,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "barrier"
             }
@@ -157,9 +157,9 @@
           },
           {
             "text": "bubbles",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -168,7 +168,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "bubbles"
             }
@@ -178,9 +178,9 @@
           },
           {
             "text": "cloud",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -189,7 +189,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "cloud"
             }
@@ -199,9 +199,9 @@
           },
           {
             "text": "drip",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -210,7 +210,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "drip"
             }
@@ -220,9 +220,9 @@
           },
           {
             "text": "enchant",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -231,7 +231,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "enchant"
             }
@@ -241,9 +241,9 @@
           },
           {
             "text": "ender",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -252,7 +252,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "ender"
             }
@@ -262,9 +262,9 @@
           },
           {
             "text": "fiesta",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -273,7 +273,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "fiesta"
             }
@@ -283,9 +283,9 @@
           },
           {
             "text": "fireflies",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -294,7 +294,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "fireflies"
             }
@@ -304,9 +304,9 @@
           },
           {
             "text": "flame",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -315,7 +315,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "flame"
             }
@@ -325,9 +325,9 @@
           },
           {
             "text": "growing",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -336,7 +336,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "growing"
             }
@@ -346,9 +346,9 @@
           },
           {
             "text": "heart",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -357,7 +357,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "heart"
             }
@@ -369,9 +369,9 @@
           },
           {
             "text": "lava",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -380,7 +380,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "lava"
             }
@@ -390,9 +390,9 @@
           },
           {
             "text": "note",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -401,7 +401,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "note"
             }
@@ -411,9 +411,9 @@
           },
           {
             "text": "ash",
-            "hoverEvent": {
+            "hover_event": {
               "action": "show_text",
-              "contents": [
+              "value": [
                 {
                   "translate": "text.gm4.guidebook.better_armour_stands.copy_code",
                   "fallback": "Click to copy",
@@ -422,7 +422,7 @@
                 }
               ]
             },
-            "clickEvent": {
+            "click_event": {
               "action": "copy_to_clipboard",
               "value": "ash"
             }

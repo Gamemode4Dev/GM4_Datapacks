@@ -1,0 +1,34 @@
+id: gm4_blossoming_pots
+name: Blossoming Pots
+version: 3.3.X
+
+data_pack:
+  load: .
+
+resource_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [main]
+    website:
+      description: Greatly expands the selection of potable plants. Use Decorated Pots as abnormally large flower pots. Decorate in Style!
+      recommended: []
+      notes: []
+    modrinth:
+      project_id: wOnn6VDU
+    smithed:
+      pack_id: gm4_blossoming_pots
+    planetminecraft:
+      uid: 6135276
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Blossoming_Pots
+    credits:
+      Creator:
+        - runcows
+      Icon Design:
+        - runcows

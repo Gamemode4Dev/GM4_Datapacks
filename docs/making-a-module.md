@@ -91,7 +91,7 @@ meta:
       Creator:
         - Sparks
       Textures by:
-        - kyrkis
+        - Kyrius
 
   modrinth: # This section is only necessary when publishing to Modrinth
     project_id: itk6Zfe2
@@ -109,7 +109,7 @@ If all required dependencies are present, Lantern Load will call `init.mcfunctio
 #### Logging
 Messages can be logged during the load process. This can be done by appending to the `queue` field in the `gm4:log` storage. Here are a few examples:
 ```mcfunction
-data modify storage gm4:log queue append value {type:"text",message:'{"text":"We've been attempting to contact you about your car's extended warranty"}'}
+data modify storage gm4:log queue append value {type:"text",message:{text:"We've been attempting to contact you about your car's extended warranty"}}
 data modify storage gm4:log queue append value {type:"install",module:"Bat Grenades"}
 ```
 

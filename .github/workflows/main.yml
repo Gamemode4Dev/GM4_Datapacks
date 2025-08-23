@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  VERSION: '1.21'
+  VERSION: '1.21.5'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
 
 jobs:
@@ -29,30 +29,15 @@ jobs:
         if: github.event_name == 'pull_request'
         run: git fetch origin ${{ github.base_ref }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v3
         with:
-          python-version: '3.10'
-
-      - name: Install Poetry
-        uses: snok/install-poetry@v1.2.1
-        with:
-          virtualenvs-in-project: true
-
-      - name: Setup cache
-        id: cached-poetry-dependencies
-        uses: actions/cache@v4
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-
-      - name: Install dependencies
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-        run: poetry install
+          version: '0.5.4'
+          enable-cache: true
 
       - name: Build and publish all modules
         if: github.event_name != 'pull_request'
-        run: poetry run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
+        run: uv run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
         env:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
@@ -61,7 +46,7 @@ jobs:
 
       - name: Build all modules for pull request
         if: github.event_name == 'pull_request'
-        run: poetry run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
+        run: uv run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
         env:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
@@ -104,42 +89,31 @@ jobs:
           # https://fabricmc.net/use/server/
           # https://modrinth.com/mod/fabric-api/versions
           # https://modrinth.com/mod/packtest/versions
-          - version: '1.21.1'
-            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/1.21.1/0.16.5/1.0.1/server/jar
-            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/WTaAx4ah/fabric-api-0.105.0%2B1.21.1.jar
-            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/x9txtivi/packtest-1.8-mc1.21.1.jar
-          - version: '1.21.3'
-            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/1.21.3/0.16.7/1.0.1/server/jar
-            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/dhD4I4lJ/fabric-api-0.106.1%2B1.21.3.jar
-            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/wjOUK14F/packtest-1.9-mc1.21.2.jar
+          - version: '1.21.5'
+            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/1.21.5/0.16.13/1.0.3/server/jar
+            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/FZ4q3wQK/fabric-api-0.119.9%2B1.21.5.jar
+            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/Swh7th09/packtest-2.1-mc1.21.5.jar
+          - version: '1.21.7' 
+            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/1.21.7/0.16.14/1.0.3/server/jar
+            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/sLmbxWpX/fabric-api-0.128.1%2B1.21.7.jar
+            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/PAYctH3X/packtest-2.2-mc1.21.7.jar
+          - version: '1.21.8' 
+            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/1.21.7/0.16.14/1.0.3/server/jar
+            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/sLmbxWpX/fabric-api-0.128.1%2B1.21.7.jar
+            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/PAYctH3X/packtest-2.2-mc1.21.7.jar
     name: 'test-${{ matrix.version }}'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v5
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v3
         with:
-          python-version: '3.10'
-
-      - name: Install Poetry
-        uses: snok/install-poetry@v1.2.1
-        with:
-          virtualenvs-in-project: true
-
-      - name: Setup cache
-        id: cached-poetry-dependencies
-        uses: actions/cache@v4
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-
-      - name: Install dependencies
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-        run: poetry install
+          version: '0.5.4'
+          enable-cache: true
 
       - name: Build all modules for tests
-        run: poetry run beet -p beet-test.yaml -l ${{ env.LOG_LEVEL }} build
+        run: uv run beet -p beet-test.yaml -l ${{ env.LOG_LEVEL }} build
         env:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 

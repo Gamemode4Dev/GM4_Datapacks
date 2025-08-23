@@ -1,12 +1,17 @@
 id: gm4_guidebook
 name: Guidebook
-version: 3.0.X
+version: 3.1.X
 
 data_pack:
   load: .
 
 resource_pack:
   load: .
+  overlays:
+    - formats:
+        min_inclusive: 0
+        max_inclusive: 42
+      directory: backport_42
   
 require:
   - bolt
@@ -18,10 +23,9 @@ pipeline:
 
 meta:
   gm4:
-    minecraft: []
     versioning:
       required:
-        lib_forceload: 1.4.0
+        lib_forceload: 1.5.0
       schedule_loops: 
         - main
         - tick
@@ -51,5 +55,5 @@ meta:
     wiki: https://wiki.gm4.co/wiki/Guidebook
     credits:
       Creators:
-        - BluePsychoRanger
+        - BPR
         - JP12

@@ -6,7 +6,7 @@
 scoreboard players set $found gm4_guide 1
 
 # summon marker
-execute unless entity @e[type=marker,tag=gm4_guide_lectern,distance=..0.5,limit=1] run summon marker ~ ~ ~ {CustomName:'"gm4_guide_lectern"',Tags:["gm4_guide_lectern"]}
+execute unless entity @e[type=marker,tag=gm4_guide_lectern,distance=..0.5,limit=1] run summon marker ~ ~ ~ {CustomName:"gm4_guide_lectern",Tags:["gm4_guide_lectern"]}
 
 # replace book with lectern book
 execute store result score $trigger gm4_guide run data get block ~ ~ ~ Book.components."minecraft:custom_data".gm4_guidebook.trigger

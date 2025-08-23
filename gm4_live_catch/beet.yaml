@@ -1,6 +1,6 @@
 id: gm4_live_catch
 name: Live Catch
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -24,6 +24,6 @@ meta:
     wiki: https://wiki.gm4.co/wiki/Live_Catch
     credits:
       Creator:
-        - MichaelMiner137
+        - Modulorium
       Icon Design:
-        - BluePsychoRanger
+        - BPR

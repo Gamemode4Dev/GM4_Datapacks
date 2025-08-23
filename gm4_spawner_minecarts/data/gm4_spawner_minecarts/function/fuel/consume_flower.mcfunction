@@ -27,7 +27,7 @@ execute if block ~ ~ ~ lily_of_the_valley if score lily_of_the_valley gm4_sm_flo
 execute if block ~ ~ ~ lily_of_the_valley if score lily_of_the_valley gm4_sm_flowers matches 0 run function gm4_spawner_minecarts:fuel/consume_normal_flower
 
 #summon pretty entity line
-summon area_effect_cloud ~ ~ ~ {Tags:["gm4_spawner_minecart_decorative_particle","gm4_unrotated_particle_cloud"],Duration:200,Particle:{type:"minecraft:block",block_state:"minecraft:air"},CustomName:'"Spawner Minecart Decorative Particle"'}
+summon area_effect_cloud ~ ~ ~ {Radius:0.0f,Tags:["gm4_spawner_minecart_decorative_particle","gm4_unrotated_particle_cloud"],Duration:200,custom_particle:{type:"minecraft:block",block_state:"minecraft:air"},CustomName:"Spawner Minecart Decorative Particle"}
 teleport @e[type=area_effect_cloud,tag=gm4_unrotated_particle_cloud,limit=1] ~ ~ ~ facing entity @e[type=spawner_minecart,tag=gm4_processing_spawner,limit=1] eyes
 tag @e[type=area_effect_cloud,tag=gm4_unrotated_particle_cloud] remove gm4_unrotated_particle_cloud
 

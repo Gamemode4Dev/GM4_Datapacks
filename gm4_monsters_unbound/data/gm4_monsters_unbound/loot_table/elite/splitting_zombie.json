@@ -1,0 +1,28 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:spawner",
+          "functions": [
+            {
+              "function": "minecraft:set_custom_data",
+              "tag": "{gm4_mu_elite_on_death:{name:splitting_zombie,id:3}}"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "enchantment_glint_override": false,
+                "enchantments": {
+                  "binding_curse": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

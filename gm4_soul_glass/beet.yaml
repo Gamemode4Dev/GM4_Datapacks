@@ -1,14 +1,9 @@
 id: gm4_soul_glass
 name: Soul Glass
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 0
-        max_inclusive: 48
-      directory: overlay_48
 
 pipeline:
   - gm4.plugins.extend.module
@@ -18,7 +13,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_machines: 1.3.0
+        lib_machines: 1.4.0
       schedule_loops: 
         - main
         - beacon_clock
@@ -33,14 +28,14 @@ meta:
       description: Reverse the effects of beacons with corrupting glass! But be careful, a poison Beacon may sound great at first, but is incredibly painful in pratice.
       recommended: []
       notes:
-        - Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.
+        - On versions <1.21, Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.
     modrinth:
       project_id: Hi8fkYoI
     video: null
     wiki: https://wiki.gm4.co/wiki/Soul_Glass
     credits:
       Creators:
-        - BluePsychoRanger
+        - BPR
         - Denniss
         - Lue
       Icon Design:

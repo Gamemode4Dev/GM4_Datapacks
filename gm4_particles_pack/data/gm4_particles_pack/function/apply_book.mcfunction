@@ -23,7 +23,7 @@ execute if data storage gm4_better_armour_stands:temp {pages:[{raw:"cloud"}]} st
 execute if data storage gm4_better_armour_stands:temp {pages:[{raw:"bubbles"}]} store success score $valid_code gm4_bas_data run scoreboard players set @s gm4_particle 101
 
 execute if score @s gm4_particle matches 100.. run kill @e[type=area_effect_cloud,tag=gm4_particles_pack_cloud,distance=..1,limit=1,sort=nearest]
-execute if score @s gm4_particle matches 100 run summon area_effect_cloud ~ ~ ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:{type:"minecraft:cloud"},Tags:["gm4_particles_pack_cloud"]}
-execute if score @s gm4_particle matches 101 run summon area_effect_cloud ~ ~ ~ {Duration:2147483647,Radius:1,RadiusOnUse:0,Particle:{type:"minecraft:bubble"},Tags:["gm4_particles_pack_cloud"]}
+execute if score @s gm4_particle matches 100 run summon area_effect_cloud ~ ~ ~ {Duration:-1,Radius:1,RadiusOnUse:0,custom_particle:{type:"minecraft:cloud"},Tags:["gm4_particles_pack_cloud"]}
+execute if score @s gm4_particle matches 101 run summon area_effect_cloud ~ ~ ~ {Duration:-1,Radius:1,RadiusOnUse:0,custom_particle:{type:"minecraft:bubble"},Tags:["gm4_particles_pack_cloud"]}
 
 data merge entity @s[scores={gm4_particle=1..}] {Invisible:1b,NoGravity:1b}

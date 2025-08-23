@@ -82,7 +82,7 @@ pipeline:
       - gm4.plugins.output.release_resource_pack
       - gm4.plugins.write_mcmeta
       - gm4.plugins.manifest.update_patch
-      - gm4.plugins.resource_pack.pad_model_overrides
+      - gm4.plugins.resource_pack.pad_item_def_range_dispatch
     meta:
       pack_scan: resource_pack
 

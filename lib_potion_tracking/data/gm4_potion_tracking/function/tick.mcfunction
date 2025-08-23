@@ -4,4 +4,4 @@
 # run from gm4_potion_tracking-1.0:resolve_tick
 
 # execute as all potions
-execute as @e[type=potion] run function gm4_potion_tracking:potion
+execute as @e[type=#gm4_potion_tracking:potion] run function gm4_potion_tracking:potion

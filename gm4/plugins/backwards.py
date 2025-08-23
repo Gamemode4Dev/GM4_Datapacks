@@ -1,7 +1,7 @@
-import re
 import logging
-from typing import Any
-from beet import Context, TextFileBase, Recipe
+from typing import Any, Tuple, Callable
+from beet import Context, Pack, NamespaceFile, ItemModel
+from beet.core.utils import SupportedFormats
 
 logger = logging.getLogger("gm4.backwards")
 
@@ -9,103 +9,78 @@ logger = logging.getLogger("gm4.backwards")
 def beet_default(ctx: Context):
   yield
 
-  rewrite_attributes(ctx)
-  rewrite_recipes(ctx)
+  # edited item model definition - replaced head with player_head
+  backport(ctx.assets, 63, playerhead_models_1_21_5)
 
 
-ATTRIBUTES_RENAMES = {
-  "minecraft:armor": "minecraft:generic.armor",
-  "minecraft:armor_toughness": "minecraft:generic.armor_toughness",
-  "minecraft:attack_damage": "minecraft:generic.attack_damage",
-  "minecraft:attack_knockback": "minecraft:generic.attack_knockback",
-  "minecraft:attack_speed": "minecraft:generic.attack_speed",
-  "minecraft:block_break_speed": "minecraft:player.block_break_speed",
-  "minecraft:block_interaction_range": "minecraft:player.block_interaction_range",
-  "minecraft:burning_time": "minecraft:generic.burning_time",
-  "minecraft:explosion_knockback_resistance": "minecraft:generic.explosion_knockback_resistance",
-  "minecraft:entity_interaction_range": "minecraft:player.entity_interaction_range",
-  "minecraft:fall_damage_multiplier": "minecraft:generic.fall_damage_multiplier",
-  "minecraft:flying_speed": "minecraft:generic.flying_speed",
-  "minecraft:follow_range": "minecraft:generic.follow_range",
-  "minecraft:gravity": "minecraft:generic.gravity",
-  "minecraft:jump_strength": "minecraft:generic.jump_strength",
-  "minecraft:knockback_resistance": "minecraft:generic.knockback_resistance",
-  # We only use "minecraft:luck" as a potion/effect, never as attribute
-  # "minecraft:luck": "minecraft:generic.luck",
-  "minecraft:max_absorption": "minecraft:generic.max_absorption",
-  "minecraft:max_health": "minecraft:generic.max_health",
-  "minecraft:mining_efficiency": "minecraft:player.mining_efficiency",
-  "minecraft:movement_efficiency": "minecraft:generic.movement_efficiency",
-  "minecraft:movement_speed": "minecraft:generic.movement_speed",
-  "minecraft:oxygen_bonus": "minecraft:generic.oxygen_bonus",
-  "minecraft:safe_fall_distance": "minecraft:generic.safe_fall_distance",
-  "minecraft:scale": "minecraft:generic.scale",
-  "minecraft:sneaking_speed": "minecraft:player.sneaking_speed",
-  "minecraft:spawn_reinforcements": "minecraft:zombie.spawn_reinforcements",
-  "minecraft:step_height": "minecraft:generic.step_height",
-  "minecraft:submerged_mining_speed": "minecraft:player.submerged_mining_speed",
-  "minecraft:sweeping_damage_ratio": "minecraft:player.sweeping_damage_ratio",
-  "minecraft:water_movement_efficiency": "minecraft:generic.water_movement_efficiency",
-}
+def playerhead_models_1_21_5(id: str, resource: NamespaceFile):
+  if not isinstance(resource, ItemModel):
+    return None
+  overlay = resource.copy()
+  json = overlay.data
+  if id=="minecraft:player_head":
+    def recursive_replace(compound: dict[str,Any]):
+      for key, val in compound.items():
+        # recurse down the tree
+        if isinstance(val, list):
+          for subval in val: # type: ignore
+            if isinstance(subval, dict):
+              recursive_replace(subval) # type: ignore
+        elif isinstance(val, dict):
+          recursive_replace(val) # type: ignore
+          # then replace matching compounds
+          match val:
+            case {
+              "type": "minecraft:special",
+              "model": {
+                  "type": "minecraft:player_head"
+              }
+            }:
+              compound[key]["model"]["type"] = "minecraft:head"
+              compound[key]["model"]["kind"] = "player"
+            case _: # type: ignore
+              pass
 
-# Removes the generic. and other prefixes from attribute IDs
-def rewrite_attributes(ctx: Context):
-  for id, resource in ctx.data.all():
-    if isinstance(resource, TextFileBase):
-      resource.source_stop
-      overlay_text = resource.text
-      for src_attribute, overlay_attribute in ATTRIBUTES_RENAMES.items():
-        overlay_text = re.sub("\\b" + src_attribute + "\\b", overlay_attribute, overlay_text)
-      if overlay_text != resource.text:
-        overlay_resource = resource.copy()
-        overlay_resource.text = overlay_text
-        overlay = ctx.data.overlays["overlay_48"]
-        overlay.supported_formats = { "min_inclusive": 48, "max_inclusive": 48 }
-        overlay[id] = overlay_resource
+    recursive_replace(json)
+    return overlay
+  return None
 
 
-# Rewrites the recipe ingredients to the old {"item": "..."} format
-def rewrite_recipes(ctx: Context):
-  
-  def rewrite_ingredient(ingr: str | list[str]) -> Any:
-    if isinstance(ingr, list):
-      return [rewrite_ingredient(item) for item in ingr]
-    if ingr.startswith("#"):
-      return { "tag": ingr[1:] }
-    return { "item": ingr }
-  
-  def rewrite_recipe(id: str, resource: Recipe):
-    # If an overlay already exists for this recipe, us the contents of that
-    # TODO: generalize this for all rewrite functions and handle multiple overlays
-    for overlay in ctx.data.overlays.values():
-      if id in overlay.recipes:
-        resource = overlay.recipes[id]
-        break
+def backport(pack: Pack[Any], format: int, run: Callable[[str, NamespaceFile], NamespaceFile | None]):
+  resources: dict[Tuple[type[NamespaceFile], str], NamespaceFile] = dict()
 
-    overlay_resource = resource.copy()
-    data = overlay_resource.data
+  for file_type in pack.resolve_scope_map().values():
+    proxy = pack[file_type]
+    for path in proxy.keys():
+      resources[(file_type, path)] = proxy[path]
 
-    if "crafting_transmute" in data["type"]:
-      logger.warning(f"Cannot backport crafting_transmute recipe {id}")
-      return
+  for overlay in pack.overlays.values():
+    overlay_formats = overlay.supported_formats or overlay.pack_format
+    if check_formats(overlay_formats, format):
+      for file_type in overlay.resolve_scope_map().values():
+        proxy = overlay[file_type]
+        for path in proxy.keys():
+          resources[(file_type, path)] = proxy[path]
 
-    if "base" in data:
-      data["base"] = rewrite_ingredient(data["base"])
-    if "addition" in data:
-      data["addition"] = rewrite_ingredient(data["addition"])
-    if "ingredient" in data:
-      data["ingredient"] = rewrite_ingredient(data["ingredient"])
-    if "ingredients" in data:
-      data["ingredients"] = [rewrite_ingredient(ingr) for ingr in data["ingredients"]]
-    if "key" in data:
-      data["key"] = {k: rewrite_ingredient(ingr) for k, ingr in data["key"].items()}
-
-    overlay = ctx.data.overlays["overlay_48"]
-    overlay.supported_formats = { "min_inclusive": 48, "max_inclusive": 48 }
-    overlay[id] = overlay_resource
-
-  for id, resource in ctx.data.recipes.items():
+  for (file_type, path), resource in resources.items():
     try:
-      rewrite_recipe(id, resource)
+      new_resource = run(path, resource)
     except BaseException as e:
-      logger.error(f"Failed to backport recipe {id}: {e}")
+      e.add_note(f"Failed to backport[{run.__name__}] {file_type.snake_name} {path}")
+      raise e
+    if new_resource:
+      overlay = pack.overlays[f"backport_{format}"]
+      overlay.supported_formats = { "min_inclusive": 0, "max_inclusive": format }
+      overlay[path] = new_resource
+
+
+def check_formats(supported: SupportedFormats, format: int):
+  match supported:
+    case int(value):
+      return value == format
+    case [min, max]:
+      return min <= format <= max
+    case { "min_inclusive": min, "max_inclusive": max }:
+      return min <= format <= max
+    case _:
+      raise ValueError(f"Unknown supported_formats structure {supported}")

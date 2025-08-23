@@ -2,7 +2,7 @@
 #run from process
 
 tag @s add gm4_processing_spawner
-summon area_effect_cloud ~-4 ~ ~-4 {Duration:10,CustomName:'"gm4_spawner_flower_checker"',Tags:["gm4_spawner_flower_checker"]}
+summon area_effect_cloud ~-4 ~ ~-4 {Radius:0.0f,custom_particle:{type:"minecraft:block",block_state:"minecraft:air"},Duration:10,CustomName:"gm4_spawner_flower_checker",Tags:["gm4_spawner_flower_checker"]}
 
 #calculate random position
 execute store result score randomX gm4_spawner_fuel run data get entity @e[tag=gm4_spawner_flower_checker,limit=1] UUID[0]

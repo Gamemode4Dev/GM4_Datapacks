@@ -19,7 +19,7 @@ entity.gm4.severed_soul,Severed Soul\u00A7
 entity.gm4.wandering_tear,Wandering Tear\u00A7
 entity.gm4.withering_magic,Withering Magic
 item.gm4.orb_of_ankou,Orb of Ankou
-item.gm4.shamir.corripio,Corripio
+item.gm4.shamir.corripio,Corripio Shamir
 item.gm4.soul_essence,Soul Essence
 item.gm4.soul_shard,Soul Shard
 text.gm4.orb_of_ankou.empty,Empty
@@ -90,8 +90,9 @@ text.gm4.guidebook.orb_of_ankou.note.volatile,Creates explosion if damaged below
 text.gm4.guidebook.orb_of_ankou.offensive_pneumas,The following pneumas activate upon dealing damage:
 text.gm4.guidebook.orb_of_ankou.note.blasting,Shoots fireballs when shooting a crossbow with blaze powder in the inventory
 text.gm4.guidebook.orb_of_ankou.note.depriving,Applies Hunger to attacked targets; Applies Weakness to attacked mobs
-text.gm4.guidebook.orb_of_ankou.note.freezing,Applies Slowness to attacked targets
+text.gm4.guidebook.orb_of_ankou.note.freezing,Applies Slowness to arrows shot from bows
 text.gm4.guidebook.orb_of_ankou.note.hawkeye,Doubles the damage of arrows shot from bows; Arrows shot from bows will have Piercing I
+text.gm4.guidebook.orb_of_ankou.note.tranquilizing,Applies Poison to arrows shot from bows
 text.gm4.guidebook.orb_of_ankou.note.venomous,Applies Poison to attacked target
 text.gm4.guidebook.orb_of_ankou.note.withering,Applies Wither to attacked target
 text.gm4.guidebook.orb_of_ankou.passive_pneumas,"The following pneumas are passive, activating automatically:"

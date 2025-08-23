@@ -3,7 +3,7 @@
 # run from gm4_falling_stars:event
 
 # summon falling star
-summon shulker_bullet ~ ~ ~ {Motion:[0.0d,0.0d,0.0d],Tags:["gm4_falling_star","gm4_new_falling_star"],CustomName:'{"translate":"entity.gm4.falling_star","fallback":"Falling Star"}',Steps:0,Passengers:[{id:"potion",Tags:["gm4_falling_star"],CustomName:'"Falling Star"',Item:{count:1,id:"splash_potion",components:{"minecraft:potion_contents":{potion:"thick",custom_color:16777215,custom_effects:[{id:'minecraft:levitation',amplifier:0,duration:300}]}}}},{id:"area_effect_cloud",Tags:["gm4_falling_star"],Duration:600,CustomName:'"gm4_falling_star_particle"',Radius:0.5f,Particle:{type:"minecraft:end_rod"}},{id:"item",Age:3600,Tags:["gm4_falling_star","gm4_falling_stars_item"],Item:{count:1,id:"minecraft:end_stone"}}]}
+summon shulker_bullet ~ ~ ~ {Motion:[0.0d,0.0d,0.0d],Tags:["gm4_falling_star","gm4_new_falling_star"],CustomName:{"translate":"entity.gm4.falling_star","fallback":"Falling Star"},Steps:0,Passengers:[{id:"splash_potion",Tags:["gm4_falling_star"],CustomName:"Falling Star",Item:{count:1,id:"splash_potion",components:{"minecraft:potion_contents":{potion:"thick",custom_color:16777215,custom_effects:[{id:"minecraft:levitation",amplifier:0,duration:300}]}}}},{id:"area_effect_cloud",Tags:["gm4_falling_star"],Duration:600,CustomName:"gm4_falling_star_particle",Radius:0.5f,custom_particle:{type:"minecraft:end_rod"}},{id:"item",Age:3600,Tags:["gm4_falling_star","gm4_falling_stars_item"],Item:{count:1,id:"minecraft:end_stone"}}]}
 
 # set random motion vector
 data modify storage gm4_falling_stars:motion temp.uuid set from entity @e[type=shulker_bullet,tag=gm4_new_falling_star,limit=1] UUID

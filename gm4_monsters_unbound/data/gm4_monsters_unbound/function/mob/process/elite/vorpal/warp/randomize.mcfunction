@@ -1,0 +1,9 @@
+# get random teleport location
+# @s = marker
+# at @s
+# run from clocks/elite/vorpal/warp/spawn_marker
+
+execute store result score $randomX gm4_mu_data run random value 0..12
+execute store result score $randomZ gm4_mu_data run random value 0..12
+
+execute at @s run function gm4_monsters_unbound:mob/process/elite/vorpal/warp/tp_marker
