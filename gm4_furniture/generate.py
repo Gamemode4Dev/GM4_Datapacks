@@ -90,6 +90,7 @@ def generate_furniture_data(ctx, furniture_set, set_name):
 
         # get custom_model_data index
         custom_model_data = "block/furniture/" + set_name + "/" + row['technical_id'].replace(".","/")
+        item_model = "gm4_furniture:" + set_name + "/" + row['technical_id'].replace(".","/")
 
         # add index to model_data
         ctx.meta["gm4"].setdefault("model_data", []).append({
@@ -116,6 +117,7 @@ def generate_furniture_data(ctx, furniture_set, set_name):
                 "technical_id": row['technical_id'],
                 "display_name": row['display_name'],
                 "custom_model_data": custom_model_data,
+                "item_model": item_model,
                 "block_id": row['block_id'],
                 "sittable": row['sittable'],
                 "wall_only": str(int(row['wall_only'] == 'TRUE')),

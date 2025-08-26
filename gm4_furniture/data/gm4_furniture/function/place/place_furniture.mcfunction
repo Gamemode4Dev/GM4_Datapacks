@@ -6,7 +6,7 @@ advancement revoke @s only gm4_furniture:place_furniture
 
 # get item data
 execute store success score $mainhand gm4_furniture_data run data modify storage gm4_furniture:temp furniture_data set from entity @s SelectedItem.components."minecraft:custom_data".gm4_furniture 
-execute if score $mainhand gm4_furniture_data matches 0 run data modify storage gm4_furniture:temp furniture_data set from entity @s Inventory[{Slot:-106b}].components."minecraft:custom_data".gm4_furniture 
+execute if score $mainhand gm4_furniture_data matches 0 run data modify storage gm4_furniture:temp furniture_data set from entity @s equipment.offhand.components."minecraft:custom_data".gm4_furniture 
 
 # get rotation of player
 # key: direction of player
