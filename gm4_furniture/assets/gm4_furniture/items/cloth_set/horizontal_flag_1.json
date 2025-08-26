@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "gm4_furniture:block/furniture/cloth_set/horizontal_flag_1",
+    "tints": [
+      {
+        "type": "minecraft:dye",
+        "default": -393217
+      }
+    ]
+  }
+}

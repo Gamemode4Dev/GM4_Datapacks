@@ -1,13 +1,11 @@
 {
   "env": {
-    "gameVersion": "1.21.3",
+    "gameVersion": "1.21.6",
     "exclude": [
-      ".beet_cache/",
-      ".vscode/",
-      ".github/",
-      "docs/",
-      "out/",
-      "release/"
+      ".*/**",
+      "docs/**",
+      "out/**",
+      "release/**"
     ],
     "mcmetaSummaryOverrides": {
       "commands": {

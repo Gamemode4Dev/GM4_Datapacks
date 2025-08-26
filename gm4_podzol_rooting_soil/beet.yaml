@@ -1,6 +1,6 @@
 id: gm4_podzol_rooting_soil
 name: Podzol Rooting Soil
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -22,5 +22,7 @@ meta:
     credits:
       Creator:
         - Bloo
+      Updated by:
+        - Misode
       Icon Design:
-        - BluePsychoRanger
+        - BPR

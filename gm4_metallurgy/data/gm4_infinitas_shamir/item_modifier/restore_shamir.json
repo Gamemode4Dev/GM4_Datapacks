@@ -27,14 +27,8 @@
         "color": "#467A1B"
       },
       {
-        "translate": "item.gm4.metallurgy.shamir",
-        "fallback": "Shamir",
-        "italic": false,
-        "color": "aqua"
-      },
-      {
         "translate": "item.gm4.shamir.infinitas",
-        "fallback": "Infinitas",
+        "fallback": "Infinitas Shamir",
         "italic": false,
         "color": "gray"
       }

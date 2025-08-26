@@ -5,19 +5,23 @@
     },
     {
         "name": "Andante",
-        "links": ["https://twitter.com/andantett"]
+        "links": ["https://bsky.app/profile/andante.dev"]
     },
     {
         "name": "Bloo",
-        "links": ["https://twitter.com/Bloo_dev"]
+        "links": ["https://bsky.app/profile/bloo.boo"]
     },
     {
-        "name": "BluePsychoRanger",
-        "links": ["https://twitter.com/BluPsychoRanger"]
+        "name": "BPR",
+        "links": ["https://bsky.app/profile/bpr02.com"]
     },
     {
         "name": "Bunnygamers",
-        "links": ["https://twitter.com/BunnygamersMC"]
+        "links": ["https://bsky.app/profile/bunnygamers.bsky.social"]
+    },
+    {
+        "name": "catter1",
+        "links": ["https://bsky.app/profile/catter.dev"]
     },
     {
         "name": "Chopper2112",
@@ -25,7 +29,7 @@
     },
     {
         "name": "Denniss",
-        "links": ["https://twitter.com/Dennis2p_"]
+        "links": ["https://github.com/Dennis-0"]
     },
     {
         "name": "DuckJr",
@@ -49,7 +53,7 @@
     },
     {
         "name": "Kroppeb",
-        "links": ["https://twitter.com/kroppeb"]
+        "links": ["https://tech.lgbt/@Kroppeb"]
     },
     {
         "name": "Kruthers",
@@ -57,19 +61,19 @@
     },
     {
         "name": "Kyrius",
-        "links": ["http://discordapp.com/users/287287322360414218"]
+        "links": ["https://bsky.app/profile/kyriuspixels.bsky.social"]
     },
     {
         "name": "Lue",
         "links": ["https://github.com/Luexa"]
     },
     {
-        "name": "MichaelMiner137",
-        "links": ["https://linktr.ee/MichaelMiner137"]
+        "name": "Modulorium",
+        "links": ["https://www.modulorium.dev"]
     },
     {
         "name": "Misode",
-        "links": ["https://twitter.com/misode_"]
+        "links": ["https://bsky.app/profile/misode.dev"]
     },
     {
         "name": "Memo",
@@ -78,6 +82,10 @@
     {
         "name": "Nik3141",
         "links": ["https://youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"]
+    },
+    {
+        "name": "runcows",
+        "links": ["https://bsky.app/profile/runcows.bsky.social"]
     },
     {
         "name": "Scommander",
@@ -93,19 +101,19 @@
     },
     {
         "name": "SirSheepe",
-        "links": ["https://twitter.com/SirSheepe"]
+        "links": ["https://bsky.app/profile/sirsheepe.bsky.social"]
     },
     {
         "name": "Sparks",
-        "links": ["https://twitter.com/SelcouthSparks"]
+        "links": ["https://bsky.app/profile/selcouthsparks.bsky.social"]
     },
     {
         "name": "SpecialBuilder32",
-        "links": ["https://twitter.com/SpecialBuilder"]
+        "links": ["https://bsky.app/profile/specialbuilder32.bsky.social"]
     },
     {
         "name": "Thanathor",
-        "links": ["https://twitter.com/The_Thanathor"]
+        "links": ["https://bsky.app/profile/thanathor.bsky.social"]
     },
     {
         "name": "The8BitMonkey",
@@ -122,5 +130,9 @@
     {
         "name": "Venomousbirds",
         "links": ["https://venomousbirds.artstation.com/"]
+    },
+    {
+        "name": "MulverineX",
+        "links": ["https://modrinth.com/user/MulverineX"]
     }
 ]

@@ -1,6 +1,6 @@
 id: gm4_sweethearts
 name: Sweethearts
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -30,7 +30,7 @@ meta:
       Creator:
         - The8BitMonkey
       Updated by:
-        - BluePsychoRanger
+        - BPR
         - Thanathor
       Icon Design:
         - DuckJr

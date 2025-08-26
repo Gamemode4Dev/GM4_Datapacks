@@ -76,7 +76,7 @@
                         {
                             "function": "set_components",
                             "components": {
-                                "minecraft:custom_name": "{\"text\":\"Lingering Potion of Blindness\",\"italic\":false}",
+                                "minecraft:custom_name": {"text":"Lingering Potion of Blindness","italic":false},
                                 "minecraft:potion_contents": {
                                     "potion": "minecraft:mundane",
                                     "custom_effects": [

@@ -30,7 +30,8 @@
                       "signature": "gm4_furniture"
                     }
                   ]
-                }
+                },
+                "!minecraft:equippable": {}
               }
             },
             {

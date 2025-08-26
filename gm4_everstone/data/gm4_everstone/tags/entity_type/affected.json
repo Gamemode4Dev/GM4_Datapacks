@@ -9,6 +9,7 @@
         "minecraft:donkey",
         "minecraft:fox",
         "minecraft:goat",
+        { "id": "minecraft:happy_ghast", "required": false },
         "minecraft:hoglin",
         "minecraft:horse",
         "minecraft:llama",
@@ -28,6 +29,6 @@
         "minecraft:villager",
         "minecraft:wolf",
         "minecraft:zombie_horse",
-        "#gm4_everstone:aging_mob"
+        "#gm4_everstone:force_age_lock"
     ]
 }

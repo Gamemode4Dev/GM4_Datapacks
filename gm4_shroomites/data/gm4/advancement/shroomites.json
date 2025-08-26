@@ -3,7 +3,11 @@
         "icon": {
             "id": "minecraft:red_mushroom",
             "components": {
-                "minecraft:custom_model_data": 3240001
+                "minecraft:custom_model_data": {
+                    "floats": [
+                        3240001
+                    ]
+                }
             }
         },
         "title": "Things are grim indeed...",

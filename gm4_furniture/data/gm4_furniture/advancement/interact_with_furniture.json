@@ -17,11 +17,6 @@
       }
     }
   },
-  "requirements": [
-    [
-      "interact_with_furniture"
-    ]
-  ],
   "rewards": {
     "function": "gm4_furniture:interact/detect"
   }

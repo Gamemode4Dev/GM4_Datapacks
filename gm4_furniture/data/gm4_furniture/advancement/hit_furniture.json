@@ -33,11 +33,6 @@
       }
     }
   },
-  "requirements": [
-    [
-      "hit_furniture"
-    ]
-  ],
   "rewards": {
     "function": "gm4_furniture:break/detect_hit"
   }

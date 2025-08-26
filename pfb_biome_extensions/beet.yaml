@@ -1,7 +1,2 @@
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 0
-        max_inclusive: 48
-      directory: overlay_48

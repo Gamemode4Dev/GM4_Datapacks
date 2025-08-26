@@ -4,7 +4,7 @@
 # run from aging/age_mobs
 
 # get random value
-summon marker ~ ~ ~ {CustomName:'"gm4_everstone_random"',Tags:["gm4_everstone_random"]}
+summon marker ~ ~ ~ {CustomName:"gm4_everstone_random",Tags:["gm4_everstone_random"]}
 execute store result score $random gm4_es_data run data get entity @e[type=marker,tag=gm4_everstone_random,distance=0,limit=1] UUID[3]
 kill @e[type=marker,tag=gm4_everstone_random]
 
