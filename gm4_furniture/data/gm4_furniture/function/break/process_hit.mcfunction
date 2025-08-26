@@ -4,7 +4,7 @@
 # run from break/find_main
 
 # if player is holding the paintbrush instead grab the color and stop this function
-execute if score $get_color gm4_furniture_data matches 1 if entity @s[tag=gm4_furniture.painted] run return run function gm4_furniture:break/get_color
+execute if score $get_color gm4_furniture_data matches 1 if entity @s[tag=gm4_furniture.dyable] run return run function gm4_furniture:break/get_color
 
 # check how much time has passed since the last hit (or ignore that if the player was in creative)
 execute store result score $hit gm4_furniture_last_hit run time query gametime
