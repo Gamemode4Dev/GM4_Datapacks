@@ -8,7 +8,8 @@ conversions = {
     "wool": "white_wool",
     "bed": "white_bed",
     "carpet": "white_carpet",
-    "shulker_box": "shulker_box"
+    "shulker_box": "shulker_box",
+    "harness": "white_harness"
 }
 
 for from_id, to_id in conversions.items():
