@@ -1,5 +1,5 @@
 {
-  "last_commit": "0bdc20cfc4bda0e2f09aac5215d088154c3c1f19",
+  "last_commit": "9a0765537b220334a7aea0c6ab17f0099c4cf796",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2232,6 +2232,42 @@
       "pmc_link": null
     },
     {
+      "id": "gm4_reeling_rods",
+      "name": "Reeling Rods",
+      "version": "1.0.0",
+      "hash": "9a6be64d3706dd8c1c055974754394d4f120abc7",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Reeling_Rods",
+      "credits": {
+        "Creators": [
+          "runcows",
+          "Bloo"
+        ],
+        "Icon Design": [
+          "runcows"
+        ]
+      },
+      "requires": [],
+      "description": "Reel in more than just fish with these rods! Yoink the chest from the chest boat and more!",
+      "recommends": [
+        "gm4_end_fishing",
+        "gm4_live_catch"
+      ],
+      "minecraft": [
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2025-08-26",
+      "modrinth_id": "MWPuloVL",
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    {
       "id": "gm4_relocators",
       "name": "Relocators",
       "version": "2.5.1",
@@ -3177,8 +3213,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.5",
-      "hash": "cc54a19de87e6fbe6b0632eab39afe8e5e1c83d0",
+      "version": "1.4.6",
+      "hash": "8d485b515d93af344b93d6cb7bc8d6fe73516f4d",
       "video_link": "",
       "wiki_link": "",
       "credits": {
