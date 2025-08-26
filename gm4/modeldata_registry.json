@@ -534,6 +534,7 @@
     "fishing_rod": {
       "gm4_end_fishing:gui/advancement/end_fishing": 1,
       "gm4_end_fishing:guidebook_icon/end_fishing": 2,
+      "gm4_reeling_rods:guidebook_icon/reeling_rods": 3,
       "gm4_metallurgy:shamir/hypexperia": 110,
       "gm4_animi_shamir:shamir/animi": 124
     },
