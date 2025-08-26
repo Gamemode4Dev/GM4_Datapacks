@@ -332,13 +332,13 @@
     },
     "gm4_standard_liquids:liquids/water": {
       "uuid": [
-        -1941625481,
-        -1189919143,
-        -1856028413,
-        292031945
+        -2087209360,
+        1395149785,
+        -1312941628,
+        -799708652
       ],
-      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjlmNmE1YzkwYTBjNzQ5ODIzMDJhYTAzZTA1ZjY2YzU1MjU0Njg2Njc0ZWQ2YzYxM2ExNGU5YTc4YjUyODU3Mid9fX0=",
-      "hash": "c369923e91875ec06c1e738a4e5f493ac4a4e39f",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTllNDg5MGZkZjNiMTZlYjE2NjZlMDA5NmE2YjA0MDhiNTY2YzE4MzRiZjMyNTcwYjFkZWIxNjU4MzczOWUxZSd9fX0=",
+      "hash": "04b5cd8c45121fe3d18037c26863f84b10967124",
       "parent_module": "gm4_liquid_tanks"
     },
     "gm4_liquid_tanks:liquid_tank": {
@@ -574,13 +574,13 @@
     },
     "gm4_potion_liquids:liquids/night_vision": {
       "uuid": [
-        -204117879,
-        -2079899123,
-        -2081002561,
-        -548998159
+        1591024166,
+        -1403895054,
+        -1150690056,
+        -208826299
       ],
-      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWIwZmIwNDRkZTBiZTI1MGYxYjMyZWFiM2MyMmQzZjcyNTI4MmE1ODdlNjE3YTkwMWRhYzA2MTg0MDM5NzExMyd9fX0=",
-      "hash": "a99241e69f731f2194de8e41bea2f094d7c6b5a1",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ3ZTUxOWU3ODMxMTNkNzY0MWVhZGQ5NzFjYzZkNDE2Y2E2M2Q4MmY3MDdhNzE5NjBmYjQ5YzMzNzQ1ODJjNSd9fX0=",
+      "hash": "2710022ddb4c3944ea4a20d579867f8b49ec041e",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/poison": {
@@ -1036,13 +1036,13 @@
     },
     "gm4_standard_liquids:liquids/ominous_bottle": {
       "uuid": [
-        -1607256772,
-        -1802877405,
-        -1710626675,
-        1156078594
+        -421500789,
+        -352567252,
+        -1207743241,
+        -1662338326
       ],
-      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2FmMGRkOGVmZmZjZjRhNWQ5ZGQ0NWFkYjkwYmZhYmE4MWIxODg0ZjEyNGNmNTIxODFiMzJmNTc0MTU4MWYzMyd9fX0=",
-      "hash": "723eccaa1ce2eef198fe21d2765e1a5c6ccc7695",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNkOGI2YzYzMjE2ZTViYjYxYzg4ZGQwNTUwNjg3YmMxNDZmODY3NjdkMTA5YzVmMjk0MjY2NmY1MTI4MDQxMyd9fX0=",
+      "hash": "73367ae720fb1df246057aaccb4ff07e298e1869",
       "parent_module": "gm4_liquid_tanks"
     }
   },
