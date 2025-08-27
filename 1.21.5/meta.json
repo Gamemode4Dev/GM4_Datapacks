@@ -1,5 +1,5 @@
 {
-  "last_commit": "6ee488c8e3935b2643400857f2f31f718ba0198d",
+  "last_commit": "aed600afb70b97b4a91ec0c6504c8873dd2ebdac",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2234,8 +2234,8 @@
     {
       "id": "gm4_reeling_rods",
       "name": "Reeling Rods",
-      "version": "1.0.0",
-      "hash": "9a6be64d3706dd8c1c055974754394d4f120abc7",
+      "version": "1.0.1",
+      "hash": "0161786a93839762b5c37333e952033d291112c7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Reeling_Rods",
       "credits": {
@@ -3213,8 +3213,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.7",
-      "hash": "5df6a3a0b38d3cf020fd35380d003c1fd04483a9",
+      "version": "1.4.8",
+      "hash": "85c6d9392d78bf22e7a9a2ee909b2f632610a6c9",
       "video_link": "",
       "wiki_link": "",
       "credits": {
