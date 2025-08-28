@@ -1,5 +1,5 @@
 # resolve which furniture was interacted with
-# @s = furniture's interacted interaction entity 
+# @s = interacted furniture's item display
 # at @s
 # run from interact/custom/process
 # with {furniture_id}

@@ -3,7 +3,7 @@
 	"texture_size": [32, 32],
 	"textures": {
 		"2": "gm4_furniture:block/furniture/misc/candle_1",
-		"3": "gm4_furniture:block/furniture/misc/candle_wick_1",
+		"3": "gm4_furniture:block/furniture/misc/candle_fire_1",
 		"4": "gm4_furniture:block/furniture/metal_set/iron/3_candelabra_1",
 		"particle": "gm4_furniture:block/furniture/metal_set/iron/3_candelabra_1"
 	},

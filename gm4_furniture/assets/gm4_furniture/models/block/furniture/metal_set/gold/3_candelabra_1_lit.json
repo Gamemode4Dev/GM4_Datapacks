@@ -3,9 +3,9 @@
 	"texture_size": [32, 32],
 	"textures": {
 		"2": "gm4_furniture:block/furniture/misc/candle_1",
-		"3": "gm4_furniture:block/furniture/misc/candle_wick_1",
-		"4": "gm4_furniture:block/furniture/metal_set/iron/3_candelabra_1",
-		"particle": "gm4_furniture:block/furniture/metal_set/iron/3_candelabra_1"
+		"3": "gm4_furniture:block/furniture/misc/candle_fire_1",
+		"4": "gm4_furniture:block/furniture/metal_set/gold/3_candelabra_1",
+		"particle": "gm4_furniture:block/furniture/metal_set/gold/3_candelabra_1"
 	},
 	"elements": [
 		{
@@ -129,8 +129,8 @@
 			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 17.25, 8], "rescale": true},
 			"faces": {
-				"north": {"uv": [4, 0, 7, 4], "texture": "#3"},
-				"south": {"uv": [4, 0, 7, 4], "texture": "#3"}
+				"north": {"uv": [8, 0, 11, 4], "texture": "#3"},
+				"south": {"uv": [8, 0, 11, 4], "texture": "#3"}
 			}
 		},
 		{
@@ -163,8 +163,8 @@
 			"shade": false,
 			"rotation": {"angle": -45, "axis": "y", "origin": [13, 16.25, 8], "rescale": true},
 			"faces": {
-				"north": {"uv": [4, 0, 7, 4], "texture": "#3"},
-				"south": {"uv": [4, 0, 7, 4], "texture": "#3"}
+				"north": {"uv": [0, 0, 3, 4], "texture": "#3"},
+				"south": {"uv": [0, 0, 3, 4], "texture": "#3"}
 			}
 		},
 		{
@@ -173,8 +173,8 @@
 			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [13, 16.25, 8], "rescale": true},
 			"faces": {
-				"north": {"uv": [12, 0, 15, 4], "texture": "#3"},
-				"south": {"uv": [12, 0, 15, 4], "texture": "#3"}
+				"north": {"uv": [8, 0, 11, 4], "texture": "#3"},
+				"south": {"uv": [8, 0, 11, 4], "texture": "#3"}
 			}
 		},
 		{
@@ -217,8 +217,8 @@
 			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [3, 16.25, 8], "rescale": true},
 			"faces": {
-				"north": {"uv": [12, 0, 15, 4], "texture": "#3"},
-				"south": {"uv": [12, 0, 15, 4], "texture": "#3"}
+				"north": {"uv": [8, 0, 11, 4], "texture": "#3"},
+				"south": {"uv": [8, 0, 11, 4], "texture": "#3"}
 			}
 		},
 		{
@@ -227,8 +227,8 @@
 			"shade": false,
 			"rotation": {"angle": -45, "axis": "y", "origin": [8, 17.25, 8], "rescale": true},
 			"faces": {
-				"north": {"uv": [0, 0, 3, 4], "texture": "#3"},
-				"south": {"uv": [0, 0, 3, 4], "texture": "#3"}
+				"north": {"uv": [4, 0, 7, 4], "texture": "#3"},
+				"south": {"uv": [4, 0, 7, 4], "texture": "#3"}
 			}
 		},
 		{

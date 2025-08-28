@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"0": "gm4_furniture:block/furniture/misc/candle_wick_1",
+		"0": "gm4_furniture:block/furniture/misc/candle_fire_1",
 		"1": "gm4_furniture:block/furniture/misc/candle_1",
 		"2": "gm4_furniture:block/furniture/wood_set/plain/light_1",
 		"particle": "gm4_furniture:block/furniture/wood_set/plain/light_1"

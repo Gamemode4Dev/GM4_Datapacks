@@ -1,5 +1,5 @@
 # 2% chance to play an animal sound
-# @s = furniture's interacted interaction entity 
+# @s = interacted furniture's item display
 # at @s
 # run from interact/custom/resolve_function
 
