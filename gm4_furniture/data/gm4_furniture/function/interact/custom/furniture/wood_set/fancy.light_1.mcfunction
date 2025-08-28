@@ -11,5 +11,7 @@ execute if score $lit gm4_furniture_data matches 1 run setblock ~ ~ ~ light[leve
 execute if score $lit gm4_furniture_data matches 0 run setblock ~ ~ ~ light[level=12]
 #execute if score $lit gm4_furniture_data matches 0 run data modify entity @s item.components."minecraft:item_model" set value ""
 
+playsound block.dispenser.fail block @a[distance=..16]
+
 ## NEEDS MODELS
 # | One with emissive texture, one without
