@@ -1,7 +1,9 @@
 # calculates damage for flint and steel
-# @s = player
+# @s = player who ignited candle
 # at @s
 # run from mechanics/interactions/candle_rc/interact_rcd
+
+scoreboard players reset $ignited gm4_llp.data
 
 # sound
 playsound minecraft:item.flintandsteel.use player @a[distance=..16] ~ ~ ~
