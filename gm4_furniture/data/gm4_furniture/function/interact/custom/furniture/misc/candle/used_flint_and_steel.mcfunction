@@ -1,5 +1,5 @@
 # calculates damage for flint and steel
-# @s = player
+# @s = player who ignited candle
 # at @s
 # run from interact/detect
 
