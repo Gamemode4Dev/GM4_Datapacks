@@ -3,6 +3,8 @@
 # at @s
 # run from interact/detect
 
+scoreboard players reset $ignited_candle gm4_furniture_data
+
 # sound
 playsound minecraft:item.flintandsteel.use player @a[distance=..16]
 
