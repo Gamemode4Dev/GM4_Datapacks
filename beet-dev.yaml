@@ -36,7 +36,7 @@ pipeline:
     directory: resource_pack
     pipeline:
       - resource_pack.dev_description
-  - gm4.plugins.resource_pack.pad_model_overrides
+  - gm4.plugins.resource_pack.pad_item_def_range_dispatch
   - gm4.plugins.resource_pack.link_resource_pack
   - gm4.plugins.output.resource_pack
   - gm4.plugins.resource_pack.dump_registry
