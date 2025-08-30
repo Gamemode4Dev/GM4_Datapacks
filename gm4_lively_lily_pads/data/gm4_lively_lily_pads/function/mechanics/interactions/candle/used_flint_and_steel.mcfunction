@@ -1,7 +1,7 @@
 # calculates damage for flint and steel
 # @s = player who ignited candle
 # at @s
-# run from mechanics/interactions/candle_rc/interact_rcd
+# run from mechanics/interactions/candle/interact_rcd
 
 scoreboard players reset $ignited gm4_llp.data
 

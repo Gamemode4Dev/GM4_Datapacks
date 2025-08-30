@@ -1,11 +1,13 @@
 # placement decision
 # @s = placement rcd
-# at lily_pad align xyz positioned ~.5 ~.02 ~.5
-# with {str_len}
-# run from mechanics/interactions/placement/ray
+# at @s
+# run from mechanics/interactions/placement/interact_rcd
 
-# string manipulation for candle_type, step 2
-$data modify storage gm4_llp:temp candle_type set string storage gm4_llp:temp DisplayType 10 $(str_len)
+# clean
+data remove entity @s interaction
+
+# fail if adventure
+execute if score $adventure gm4_llp.data matches 1 run return run scoreboard players reset $adventure gm4_llp.data
 
 # select type
 execute if score $item_type gm4_llp.data matches 1 run function gm4_lively_lily_pads:mechanics/interactions/placement/coral_fan with storage gm4_llp:temp

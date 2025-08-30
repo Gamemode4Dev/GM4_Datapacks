@@ -1,7 +1,7 @@
 {
   "criteria": {
     "requirement": {
-      "trigger": "minecraft:player_interacted_with_entity",
+      "trigger": "minecraft:player_hurt_entity",
       "conditions": {
         "entity": [
           {
@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:interaction",
-              "nbt": "{Tags:[\"gm4_llp_candle_rcd\"]}"
+              "nbt": "{Tags:[\"gm4_llp_placement_rcd\"]}"
             }
           }
         ]
@@ -17,6 +17,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_lively_lily_pads:mechanics/interactions/candle/interact_rcd"
+    "function": "gm4_lively_lily_pads:mechanics/attacks/placement/hit_rcd"
   }
 }

@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "type": "minecraft:interaction",
-              "nbt": "{Tags:[\"gm4_llp_generic_candle_rcd\"]}"
+              "nbt": "{Tags:[\"gm4_llp_candle_rcd\"]}"
             }
           }
         ]
@@ -17,6 +17,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_lively_lily_pads:mechanics/interactions/punch_candle/hit_rcd"
+    "function": "gm4_lively_lily_pads:mechanics/attacks/candle/hit_rcd"
   }
 }

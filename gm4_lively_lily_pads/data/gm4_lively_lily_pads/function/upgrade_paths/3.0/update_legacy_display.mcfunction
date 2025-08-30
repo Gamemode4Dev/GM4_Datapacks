@@ -5,8 +5,6 @@
 
 # block_state.Name needed for coral fan and candle type info
 data modify storage gm4_llp:temp DisplayType set from entity @s block_state.Name
-# string manipulation for candle_type, step 1 (step 2 in upgrade_paths/3.0/upgrade_candle)
-execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4_llp:temp DisplayType
 
 ## Select Type
 execute if data entity @s {block_state:{Name:"minecraft:torch"}} run function gm4_lively_lily_pads:mechanics/interactions/placement/torch

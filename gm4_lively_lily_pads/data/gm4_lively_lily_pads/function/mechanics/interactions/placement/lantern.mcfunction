@@ -1,7 +1,7 @@
 # places lantern displays
 # @s = placement rcd or old block display if upgrade path
 # at lily_pad align xyz positioned ~.5 ~.02 ~.5
-# run from mechanics/interactions/placement/found and upgrade_paths/3.0/update_legacy_display
+# run from mechanics/interactions/placement/process_interaction and upgrade_paths/3.0/update_legacy_display
 
 summon minecraft:block_display ~ ~ ~ {\
   Tags:["gm4_llp_display","gm4_llp_light","gm4_llp_light.14","gm4_llp_lantern_sound","smithed.entity"],\

@@ -1,15 +1,15 @@
 # place interaction logic
 # @s = player who right clicked on interaction holding a supported item
 # at @s
-# run from advancement: gm4_lively_lily_pads:placement_rcd
+# run from advancement: placement_rcd
 
 advancement revoke @s only gm4_lively_lily_pads:placement_rcd
 
 # breif check to enable Upgrade_Path 3.0
 execute if entity @e[type=minecraft:interaction,tag=lilyPadInt,limit=1] run scoreboard players set lively_lily_pads gm4_earliest_version 0
 
-# return if adventure
-execute if entity @s[gamemode=adventure] run return fail
+# gamemode flags
+execute if entity @s[gamemode=adventure] run scoreboard players set $adventure gm4_llp.data 1
 
 # item information
 execute if items entity @s weapon.mainhand #gm4_lively_lily_pads:coral_fan run \
@@ -33,14 +33,12 @@ execute if items entity @s weapon.mainhand minecraft:redstone_torch run \
 execute if items entity @s weapon.mainhand minecraft:spore_blossom run \
   scoreboard players set $item_type gm4_llp.data 10
 
-# string manipulation for candle_type, step 1 (step 2 in mechanics/interactions/placement/found)
+# store item id
 data modify storage gm4_llp:temp DisplayType set from entity @s SelectedItem.id
-execute store result storage gm4_llp:temp str_len int 1 run data get storage gm4_llp:temp DisplayType
 
-# need to raycast for lily pad with a placement rcd on it
-scoreboard players reset $minus_one gm4_llp.data
-execute store result score $ray gm4_llp.data run attribute @s minecraft:entity_interaction_range get 10
-execute anchored eyes positioned ^ ^ ^ run function gm4_lively_lily_pads:mechanics/interactions/placement/ray
+# process interaction
+execute as @e[type=interaction,tag=gm4_llp_placement_rcd,distance=..8] if data entity @s interaction at @s run function gm4_lively_lily_pads:mechanics/interactions/placement/process_interaction
 
 # minus one on player mainhand if successful
 execute if entity @s[gamemode=!creative] if score $minus_one gm4_llp.data matches 1 run item modify entity @s weapon.mainhand {function:"minecraft:set_count",count:-1,add:1b}
+scoreboard players reset $minus_one gm4_llp.data
