@@ -1,0 +1,115 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:alternatives",
+                    "children": [
+                        {
+                            "type": "minecraft:item",
+                            "name": "minecraft:diamond_chestplate",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "gm4_survival_refightalized:mob/material_check/diamond"
+                                },
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$armor_tier"
+                                        },
+                                        "score": "gm4_sr_data"
+                                    },
+                                    "range": {
+                                        "min": 2
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:item",
+                            "name": "golden_chestplate",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "gm4_survival_refightalized:mob/material_check/golden"
+                                },
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$armor_tier"
+                                        },
+                                        "score": "gm4_sr_data"
+                                    },
+                                    "range": {
+                                        "min": 1
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:item",
+                            "name": "iron_chestplate",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "gm4_survival_refightalized:mob/material_check/iron"
+                                },
+                                {
+                                    "condition": "minecraft:value_check",
+                                    "value": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$armor_tier"
+                                        },
+                                        "score": "gm4_sr_data"
+                                    },
+                                    "range": {
+                                        "min": 1
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:item",
+                            "name": "chainmail_chestplate",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "gm4_survival_refightalized:mob/material_check/chainmail"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:item",
+                            "name": "leather_chestplate"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "condition": "minecraft:random_chance",
+                            "chance": {
+                                "type": "minecraft:score",
+                                "target": {
+                                    "type": "minecraft:fixed",
+                                    "name": "$armor_chance"
+                                },
+                                "score": "gm4_sr_data",
+                                "scale": 0.05
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

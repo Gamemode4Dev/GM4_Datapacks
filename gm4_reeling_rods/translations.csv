@@ -1,0 +1,8 @@
+key,en_us
+gm4.reeling_rods.enchantment.reeling,"Reeling"
+gm4.reeling_rods.enchantment.barbed,"Barbed"
+text.gm4.reeling_rods.death.bleeding,"%s succumbed to their injuries"
+text.gm4.reeling_rods.death.scratch,"%s was scratched to death by %s"
+text.gm4.guidebook.reeling_rods.description,"All fishing rods have extra abilities when hooking Paintings, Item Frames, Leash Knots, Shulkers and End Crystals. Hooking any entity will also dismount them from their vehicle."
+text.gm4.guidebook.reeling_rods.reeling,"Reeling is a fishing rod enchantment that revolves around stealing from entities. Pull the chest from chest boats and so much more!"
+text.gm4.guidebook.reeling_rods.barbed,"Barbed turns a fishing rod into a lethal weapon. With 5 levels, it applies a scratching damage to the hooked mob and then bleeding damage."
