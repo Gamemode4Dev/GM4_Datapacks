@@ -16,6 +16,10 @@ function gm4_monsters_unbound:mob/init/mob_type
 
 tag @s add gm4_mu_processed
 
+# heal to max health
+effect give @s[type=#minecraft:undead] instant_damage 1 20 true
+effect give @s[type=!#minecraft:undead] instant_health 1 20 true
+
 # process any spawned mobs (uses sr instead of mu to be compatible with survival_refightalized)
 execute if score $mob_extras gm4_sr_data matches 1.. unless entity @s[tag=gm4_sr_extra_mob] as @e[type=#gm4_monsters_unbound:modify,tag=gm4_sr_extra_mob] at @s run function gm4_monsters_unbound:mob/init/initialize
 tag @s remove gm4_sr_extra_mob
