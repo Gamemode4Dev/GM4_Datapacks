@@ -9,21 +9,24 @@ scoreboard objectives add gm4_mu_generation dummy
 scoreboard objectives add gm4_mu_frozen_time dummy
 scoreboard objectives add gm4_mu_feared_time dummy
 scoreboard objectives add gm4_mu_keep_tick dummy
+scoreboard objectives add gm4_mu_config dummy
+# add sr_data for compatibility
+scoreboard objectives add gm4_sr_data dummy
 
 # configs
-execute unless score $spawn_phantoms gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $spawn_phantoms gm4_sr_config 1
+execute unless score $spawn_phantoms gm4_mu_config matches -2147483648..2147483647 run scoreboard players set $spawn_phantoms gm4_mu_config 1
 
 # disable natural phantom spawning
 execute unless score $phantoms_disabled gm4_mu_data matches 1 run gamerule doInsomnia false
 execute unless score $phantoms_disabled gm4_mu_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:{"text":"[INFO] Monsters Unbound changed gamerule doInsomnia to false"}}
 scoreboard players set $phantoms_disabled gm4_mu_data 1
 execute store result score $doinsomnia gm4_mu_data run gamerule doInsomnia
-execute if score $spawn_phantoms gm4_sr_config matches 1 if score $doinsomnia gm4_mu_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:[{"text":"[WARN]","color":"red"},{"text":" Monsters Unbound requires doInsomnia to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule doInsomnia false"}}]}
+execute if score $spawn_phantoms gm4_mu_config matches 1 if score $doinsomnia gm4_mu_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:[{"text":"[WARN]","color":"red"},{"text":" Monsters Unbound requires doInsomnia to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule doInsomnia false"}}]}
 
 # mob caps
-execute unless score $mob_limit.husk_army gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $mob_limit.husk_army gm4_sr_config 128
-execute unless score $mob_limit.spore_zombie gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $mob_limit.spore_zombie gm4_sr_config 128
-execute unless score $mob_limit.phantom gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $mob_limit.phantom gm4_sr_config 48
+execute unless score $mob_limit.husk_army gm4_mu_config matches -2147483648..2147483647 run scoreboard players set $mob_limit.husk_army gm4_mu_config 128
+execute unless score $mob_limit.spore_zombie gm4_mu_config matches -2147483648..2147483647 run scoreboard players set $mob_limit.spore_zombie gm4_mu_config 128
+execute unless score $mob_limit.phantom gm4_mu_config matches -2147483648..2147483647 run scoreboard players set $mob_limit.phantom gm4_mu_config 48
 
 # elite teams
 team add gm4_mu_elite.glacial
