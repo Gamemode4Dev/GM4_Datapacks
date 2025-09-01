@@ -5,8 +5,8 @@
 
 advancement revoke @s only gm4_lively_lily_pads:placement_rcd
 
-# breif check to enable Upgrade_Path 3.0
-execute if entity @e[type=minecraft:interaction,tag=lilyPadInt,limit=1] run scoreboard players set lively_lily_pads gm4_earliest_version 0
+# brief check to enable Upgrade_Path 3.0
+execute if entity @e[type=minecraft:interaction,tag=lilyPadInt,limit=1,distance=..64] run scoreboard players set lively_lily_pads gm4_earliest_version 0
 
 # gamemode flags
 execute if entity @s[gamemode=adventure] run scoreboard players set $adventure gm4_llp.data 1
@@ -40,5 +40,5 @@ data modify storage gm4_llp:temp DisplayType set from entity @s SelectedItem.id
 execute as @e[type=interaction,tag=gm4_llp_placement_rcd,distance=..8] if data entity @s interaction at @s run function gm4_lively_lily_pads:mechanics/interactions/placement/process_interaction
 
 # minus one on player mainhand if successful
-execute if entity @s[gamemode=!creative] if score $minus_one gm4_llp.data matches 1 run item modify entity @s weapon.mainhand {function:"minecraft:set_count",count:-1,add:1b}
-scoreboard players reset $minus_one gm4_llp.data
+execute if entity @s[gamemode=!creative] if score $placement_success gm4_llp.data matches 1 run item modify entity @s weapon.mainhand {function:"minecraft:set_count",count:-1,add:1b}
+scoreboard players reset $placement_success gm4_llp.data

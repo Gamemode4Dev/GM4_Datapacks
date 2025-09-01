@@ -1,4 +1,4 @@
-# handles particles and light_block refeshing
+# handles particles and light_block refreshing
 
 schedule function gm4_lively_lily_pads:tick 8t
 

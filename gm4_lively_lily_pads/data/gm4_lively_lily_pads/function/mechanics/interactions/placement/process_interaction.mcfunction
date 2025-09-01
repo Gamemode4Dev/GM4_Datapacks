@@ -22,7 +22,7 @@ execute if score $item_type gm4_llp.data matches 9 run function gm4_lively_lily_
 execute if score $item_type gm4_llp.data matches 10 run function gm4_lively_lily_pads:mechanics/interactions/placement/spore_blossom
 
 # set flag
-scoreboard players set $minus_one gm4_llp.data 1
+scoreboard players set $placement_success gm4_llp.data 1
 
 # remove placement rcd
 kill @s

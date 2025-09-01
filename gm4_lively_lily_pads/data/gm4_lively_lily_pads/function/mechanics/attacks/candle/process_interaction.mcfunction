@@ -9,7 +9,7 @@ data remove entity @s attack
 execute if score $adventure gm4_llp.data matches 1 run return run scoreboard players reset $adventure gm4_llp.data
 
 # break candle
-execute as @e[type=block_display,tag=gm4_llp_candle,distance=..0.1,limit=1] run function gm4_lively_lily_pads:mechanics/cleanup/kill
+execute align xyz as @e[type=block_display,tag=gm4_llp_candle,dx=0,limit=1] at @s run function gm4_lively_lily_pads:mechanics/cleanup/kill
 
 # reset creative score, was checked in mechanics/cleanup/kill
 scoreboard players reset $creative gm4_llp.data

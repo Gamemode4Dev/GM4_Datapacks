@@ -11,7 +11,7 @@ execute if score $different_candle gm4_llp.data matches 1 run return fail
 execute if data entity @s {block_state:{Properties:{candles:"4"}}} run return fail
 
 # set flag to remove item
-scoreboard players set $minus_one gm4_llp.data 1
+scoreboard players set $placement_success gm4_llp.data 1
 
 # sound
 playsound minecraft:block.candle.place block @a[distance=..16] ~ ~ ~
