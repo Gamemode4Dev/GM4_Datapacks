@@ -46,7 +46,7 @@
           },
           {
             "translate": "text.gm4.guidebook.lively_lily_pads.description",
-            "fallback": "Simply right click lily pads with decorations to add them on top! \nCandles will need lighting."
+            "fallback": "Simply right click the particles on lily pads with decorations to add them on top!\nCandles will need lighting."
           }
         ],
         [
