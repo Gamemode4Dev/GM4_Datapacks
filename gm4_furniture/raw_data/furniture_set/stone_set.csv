@@ -4,3 +4,5 @@ stone_bricks,8,bee_nest,1,1,statues.bee,Stone Bee Statue,barrier,1,1,1,0,FALSE,F
 stone_bricks,8,pufferfish_bucket,1,1,statues.pufferfish,Stone Pufferfish Statue,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
 stone_bricks,8,axolotl_bucket,1,1,statues.axolotl,Stone Axolotl Statue,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
 stone_bricks,8,jukebox,1,1,statues.allay,Stone Allay Statue,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,slime_block,1,1,statues.slime,Stone Slime Statue,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,egg,1,1,statues.chicken,Stone Chicken Statue,barrier,1,1,1,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
