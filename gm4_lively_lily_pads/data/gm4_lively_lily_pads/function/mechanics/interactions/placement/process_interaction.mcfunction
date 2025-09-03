@@ -6,8 +6,9 @@
 # clean
 data remove entity @s interaction
 
-# fail if adventure
+# fail conditions
 execute if score $adventure gm4_llp.data matches 1 run return run scoreboard players reset $adventure gm4_llp.data
+execute if score $not_holding_item gm4_llp.data matches 1 run return run scoreboard players reset $not_holding_item gm4_llp.data
 
 # select type
 execute if score $item_type gm4_llp.data matches 1 run function gm4_lively_lily_pads:mechanics/interactions/placement/coral_fan with storage gm4_llp:temp

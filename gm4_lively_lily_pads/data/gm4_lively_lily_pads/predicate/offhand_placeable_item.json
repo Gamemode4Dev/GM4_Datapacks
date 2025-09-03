@@ -3,8 +3,8 @@
   "entity": "this",
   "predicate": {
     "equipment": {
-      "mainhand": {
-        "items": "#gm4_lively_lily_pads:supported_item"
+      "offhand": {
+        "items": "#gm4_lively_lily_pads:placeable_item"
       }
     }
   }

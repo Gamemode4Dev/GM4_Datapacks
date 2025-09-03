@@ -1,7 +1,7 @@
 # fire charge use logic
 # @s = player who ignited candle
 # at @s
-# run from mechanics/interactions/candle/interact_rcd
+# run from mechanics/interactions/candle/find_igniter
 
 scoreboard players reset $ignited gm4_llp.data
 

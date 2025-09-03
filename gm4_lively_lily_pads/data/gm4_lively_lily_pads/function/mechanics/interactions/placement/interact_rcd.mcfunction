@@ -12,33 +12,16 @@ execute if entity @e[type=minecraft:interaction,tag=lilyPadInt,limit=1,distance=
 execute if entity @s[gamemode=adventure] run scoreboard players set $adventure gm4_llp.data 1
 
 # item information
-execute if items entity @s weapon.mainhand #gm4_lively_lily_pads:coral_fan run \
-  scoreboard players set $item_type gm4_llp.data 1
-execute if items entity @s weapon.mainhand #gm4_lively_lily_pads:dead_coral_fan run \
-  scoreboard players set $item_type gm4_llp.data 2
-execute if items entity @s weapon.mainhand minecraft:torch run \
-  scoreboard players set $item_type gm4_llp.data 3
-execute if items entity @s weapon.mainhand minecraft:lantern run \
-  scoreboard players set $item_type gm4_llp.data 4
-execute if items entity @s weapon.mainhand minecraft:soul_torch run \
-  scoreboard players set $item_type gm4_llp.data 5
-execute if items entity @s weapon.mainhand minecraft:soul_lantern run \
-  scoreboard players set $item_type gm4_llp.data 6
-execute if items entity @s weapon.mainhand #minecraft:candles run \
-  scoreboard players set $item_type gm4_llp.data 7
-execute if items entity @s weapon.mainhand minecraft:cactus_flower run \
-  scoreboard players set $item_type gm4_llp.data 8
-execute if items entity @s weapon.mainhand minecraft:redstone_torch run \
-  scoreboard players set $item_type gm4_llp.data 9
-execute if items entity @s weapon.mainhand minecraft:spore_blossom run \
-  scoreboard players set $item_type gm4_llp.data 10
-
-# store item id
-data modify storage gm4_llp:temp DisplayType set from entity @s SelectedItem.id
+execute store success score $mainhand gm4_llp.data if predicate gm4_lively_lily_pads:mainhand_placeable_item run function gm4_lively_lily_pads:mechanics/interactions/placement/get_mainhand_data
+execute store success score $offhand gm4_llp.data if score $mainhand gm4_llp.data matches 0 if predicate gm4_lively_lily_pads:offhand_placeable_item run function gm4_lively_lily_pads:mechanics/interactions/placement/get_offhand_data
+execute if score $mainhand gm4_llp.data matches 0 if score $offhand gm4_llp.data matches 0 run scoreboard players set $not_holding_item gm4_llp.data 1
 
 # process interaction
 execute as @e[type=interaction,tag=gm4_llp_placement_rcd,distance=..8] if data entity @s interaction at @s run function gm4_lively_lily_pads:mechanics/interactions/placement/process_interaction
 
-# minus one on player mainhand if successful
-execute if entity @s[gamemode=!creative] if score $placement_success gm4_llp.data matches 1 run item modify entity @s weapon.mainhand {function:"minecraft:set_count",count:-1,add:1b}
+# remove item if successful
+execute if score $placement_success gm4_llp.data matches 1 if score $mainhand gm4_llp.data matches 1 if entity @s[gamemode=!creative] run item modify entity @s weapon.mainhand {function:"minecraft:set_count",count:-1,add:1b}
+execute if score $placement_success gm4_llp.data matches 1 if score $offhand gm4_llp.data matches 1 if entity @s[gamemode=!creative] run item modify entity @s weapon.offhand {function:"minecraft:set_count",count:-1,add:1b}
+
+# reset
 scoreboard players reset $placement_success gm4_llp.data

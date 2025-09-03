@@ -12,9 +12,6 @@
             }
           }
         ],
-        "item": {
-          "items": "#gm4_lively_lily_pads:supported_item"
-        },
         "entity": [
           {
             "condition": "minecraft:entity_properties",
