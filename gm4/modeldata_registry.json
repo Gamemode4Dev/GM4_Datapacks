@@ -1015,7 +1015,13 @@
       "gm4_furniture:block/furniture/furniture_station": 67,
       "gm4_furniture:block/furniture/metal_set/iron/lantern_1": 68,
       "gm4_furniture:block/furniture/stone_set/statues/slime": 69,
-      "gm4_furniture:block/furniture/stone_set/statues/chicken": 70
+      "gm4_furniture:block/furniture/stone_set/statues/chicken": 70,
+      "gm4_furniture:block/furniture/wood_set/medieval/1x1_table_1": 71,
+      "gm4_furniture:block/furniture/wood_set/medieval/2x2_table_1": 72,
+      "gm4_furniture:block/furniture/wood_set/medieval/bench_1": 73,
+      "gm4_furniture:block/furniture/wood_set/medieval/chair_1": 74,
+      "gm4_furniture:block/furniture/wood_set/medieval/stool_1": 75,
+      "gm4_furniture:block/furniture/wood_set/medieval/light_1": 76
     },
     "leather_leggings": {
       "gm4_washing_tanks:guidebook_icon/washing_tanks": 1,
@@ -1372,6 +1378,12 @@
       "gm4_furniture:block/furniture/metal_set/iron/lantern_1": 68,
       "gm4_furniture:block/furniture/stone_set/statues/slime": 69,
       "gm4_furniture:block/furniture/stone_set/statues/chicken": 70,
+      "gm4_furniture:block/furniture/wood_set/medieval/1x1_table_1": 71,
+      "gm4_furniture:block/furniture/wood_set/medieval/2x2_table_1": 72,
+      "gm4_furniture:block/furniture/wood_set/medieval/bench_1": 73,
+      "gm4_furniture:block/furniture/wood_set/medieval/chair_1": 74,
+      "gm4_furniture:block/furniture/wood_set/medieval/stool_1": 75,
+      "gm4_furniture:block/furniture/wood_set/medieval/light_1": 76,
       "gm4_metallurgy:shamir/infinitas": 100,
       "gm4_metallurgy:shamir/sensus": 101,
       "gm4_weighted_armour:shamir/helious": 103,
