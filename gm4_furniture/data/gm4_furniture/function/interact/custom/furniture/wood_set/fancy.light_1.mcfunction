@@ -6,10 +6,12 @@
 execute store success score $lit gm4_furniture_data if block ~ ~ ~ light[level=12]
 
 execute if score $lit gm4_furniture_data matches 1 run setblock ~ ~ ~ light[level=0]
-#execute if score $lit gm4_furniture_data matches 1 run data modify entity @s item.components."minecraft:item_model" set value ""
+execute if score $lit gm4_furniture_data matches 1 run data modify entity @s item.components merge value \
+  {"minecraft:item_model":"gm4_furniture:wood_set/fancy/light_1","minecraft:custom_data":{gm4_furniture:{block_id:"light[level=0]"}}}
 
 execute if score $lit gm4_furniture_data matches 0 run setblock ~ ~ ~ light[level=12]
-#execute if score $lit gm4_furniture_data matches 0 run data modify entity @s item.components."minecraft:item_model" set value ""
+execute if score $lit gm4_furniture_data matches 0 run data modify entity @s item.components merge value \
+  {"minecraft:item_model":"gm4_furniture:wood_set/fancy/light_1","minecraft:custom_data":{gm4_furniture:{block_id:"light[level=12]"}}}
 
 playsound block.dispenser.fail block @a[distance=..16]
 

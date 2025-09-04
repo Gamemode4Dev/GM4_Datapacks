@@ -21,7 +21,7 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": "{gm4_furniture:{furniture_id:\"{{ category }}/{{ technical_id }}\",color:16383998}}"
+                            "tag": "{gm4_furniture:{furniture_id:\"{{ category }}/{{ technical_id }}\",block_id:\"{{ block_id }}\"}}"
                         },
                         {
                             "function": "minecraft:set_components",

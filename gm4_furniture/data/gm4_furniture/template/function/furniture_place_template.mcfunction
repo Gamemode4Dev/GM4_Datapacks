@@ -36,21 +36,24 @@ execute if score $ceiling_only gm4_furniture_data matches 1 if block ~ ~1 ~ #gm4
 
 # wall placed furniture is not allowed to have depth, if any size is bigger than 1 check if there is space
 scoreboard players set $placement_blocked gm4_furniture_data 0
+execute store success score $existing_interaction gm4_furniture_data positioned ~ ~-0.5001 ~ store result score $check_id gm4_furniture_id run scoreboard players get @e[type=interaction,tag=gm4_furniture.interaction,distance=..0.1,limit=1] gm4_furniture_id
+execute if score $existing_interaction gm4_furniture_data matches 1 run scoreboard players set $valid_placement gm4_furniture_data 0
 execute if score $valid_placement gm4_furniture_data matches 1 if score $length gm4_furniture_data matches 2.. run function gm4_furniture:place/check_size/length_prep
 summon marker ~ ~ ~ {Tags:["gm4_furniture","gm4_furniture.marked_block","gm4_furniture.middle"]}
 setblock ~ ~ ~ air
 execute if score $valid_placement gm4_furniture_data matches 1 if score $depth gm4_furniture_data matches 2.. run function gm4_furniture:place/check_size/depth_prep
 execute if score $valid_placement gm4_furniture_data matches 1 if score $height gm4_furniture_data matches 2.. run function gm4_furniture:place/check_size/height_prep
-kill @e[type=marker,tag=gm4_furniture.middle,distance=..2,limit=1,sort=nearest]
+kill @n[type=marker,tag=gm4_furniture.middle,distance=..2]
 execute if score $placement_blocked gm4_furniture_data matches 1 run scoreboard players set $valid_placement gm4_furniture_data 0
 execute if score $placement_blocked gm4_furniture_data matches 1 run kill @e[type=marker,tag=gm4_furniture.marked_block]
 
 # if placement is not valid cancel placement
 execute if score $valid_placement gm4_furniture_data matches 0 run loot spawn ~ ~ ~ loot gm4_furniture:furniture/{{ category }}/{{ technical_id }}
+execute if score $existing_interaction gm4_furniture_data matches 1 as @e[type=item_display,tag=gm4_furniture.display,distance=..8] if score @s gm4_furniture_id = $check_id gm4_furniture_id run function gm4_furniture:place/replace_furniture_block with entity @s item.components."minecraft:custom_data".gm4_furniture
 execute if score $valid_placement gm4_furniture_data matches 0 run return run data modify entity @n[type=item,nbt={Age:0s},distance=..0.1] Item.components."minecraft:dyed_color" set from storage gm4_furniture:temp furniture_data.color
 
 # spawn the furniture
-summon item_display ~ ~-0.4999 ~ {Tags:["gm4_furniture","gm4_furniture.display","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:"gm4_furniture_display.{{ category }}.{{ technical_id }}",item:{id:"leather_horse_armor",count:1,components:{"minecraft:custom_data":{gm4_furniture:{furniture_id:"{{ category }}/{{ technical_id }}"}},"minecraft:custom_model_data":"{{ custom_model_data }}","minecraft:item_model":"{{ item_model }}"}},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[{{ scale }}f,{{ scale }}f,{{ scale }}f]}}
+summon item_display ~ ~-0.4999 ~ {Tags:["gm4_furniture","gm4_furniture.display","smithed.entity","smithed.strict","gm4_new_furniture"],CustomName:"gm4_furniture_display.{{ category }}.{{ technical_id }}",item:{id:"leather_horse_armor",count:1,components:{"minecraft:custom_data":{gm4_furniture:{furniture_id:"{{ category }}/{{ technical_id }}",block_id:"{{ block_id }}"}},"minecraft:custom_model_data":"{{ custom_model_data }}","minecraft:item_model":"{{ item_model }}"}},item_display:head,Rotation:[0.0f,0.0f],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,0f],scale:[{{ scale }}f,{{ scale }}f,{{ scale }}f]}}
 execute if score $dyable gm4_furniture_data matches 1 positioned ~ ~-0.4999 ~ run data modify entity @n[type=minecraft:item_display,tag=gm4_new_furniture,tag=gm4_furniture.display,distance=..0.1] item.components."minecraft:dyed_color" set from storage gm4_furniture:temp furniture_data.color
 summon interaction ~-0.0001 ~-0.5001 ~-0.0001 {Tags:["gm4_furniture","gm4_furniture.interaction","gm4_furniture.main","smithed.entity","smithed.strict","gm4_new_furniture"],height:1.0003f,width:1.0003f,response:1b}
 setblock ~ ~ ~ {{ block_id }}

@@ -6,3 +6,5 @@ execute as @e[type=interaction,tag=gm4_furniture.on_ceiling] at @s if block ^ ^1
 # break if wither nearby furniture
 execute as @e[type=wither] unless data entity @s NoAI if data entity @s {Invul:0} \
   at @s as @e[type=interaction,tag=gm4_furniture.main,distance=..3] at @s run function gm4_furniture:break/lost_connection
+# break if non-furniture block inside furniture
+execute as @e[type=interaction,tag=gm4_furniture.interaction] at @s unless block ~ ~0.1 ~ #gm4_furniture:furniture_blocks run function gm4_furniture:break/destroy_find_main
