@@ -1021,7 +1021,13 @@
       "gm4_furniture:block/furniture/wood_set/medieval/bench_1": 73,
       "gm4_furniture:block/furniture/wood_set/medieval/chair_1": 74,
       "gm4_furniture:block/furniture/wood_set/medieval/stool_1": 75,
-      "gm4_furniture:block/furniture/wood_set/medieval/light_1": 76
+      "gm4_furniture:block/furniture/wood_set/medieval/light_1": 76,
+      "gm4_furniture:block/furniture/metal_set/iron/desk_lamp": 77,
+      "gm4_furniture:block/furniture/metal_set/iron/foldable_chair": 78,
+      "gm4_furniture:block/furniture/metal_set/iron/spotlight": 79,
+      "gm4_furniture:block/furniture/stone_set/lantern_1": 80,
+      "gm4_furniture:block/furniture/stone_set/lantern_2": 81,
+      "gm4_furniture:block/furniture/stone_set/lantern_big_1": 82
     },
     "leather_leggings": {
       "gm4_washing_tanks:guidebook_icon/washing_tanks": 1,
@@ -1384,6 +1390,12 @@
       "gm4_furniture:block/furniture/wood_set/medieval/chair_1": 74,
       "gm4_furniture:block/furniture/wood_set/medieval/stool_1": 75,
       "gm4_furniture:block/furniture/wood_set/medieval/light_1": 76,
+      "gm4_furniture:block/furniture/metal_set/iron/desk_lamp": 77,
+      "gm4_furniture:block/furniture/metal_set/iron/foldable_chair": 78,
+      "gm4_furniture:block/furniture/metal_set/iron/spotlight": 79,
+      "gm4_furniture:block/furniture/stone_set/lantern_1": 80,
+      "gm4_furniture:block/furniture/stone_set/lantern_2": 81,
+      "gm4_furniture:block/furniture/stone_set/lantern_big_1": 82,
       "gm4_metallurgy:shamir/infinitas": 100,
       "gm4_metallurgy:shamir/sensus": 101,
       "gm4_weighted_armour:shamir/helious": 103,

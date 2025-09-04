@@ -129,7 +129,8 @@ def generate_furniture_data(ctx, furniture_set, set_name):
                 "table": str(int(row['table'] == 'TRUE')),
                 "scale": row['scale'],
                 "allow_diagonal_placement": str(int(row['diag'] == 'TRUE')),
-                "custom_interaction": str(int(row['custom'] == 'TRUE'))
+                "custom_interaction": str(int(row['custom_interaction'] == 'TRUE')),
+                "custom_placement" : str(int(row['custom_placement'] == 'TRUE'))
             }
         }
 
