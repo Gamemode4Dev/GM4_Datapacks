@@ -122,7 +122,7 @@ def generate_furniture_data(ctx, furniture_set, set_name):
                 "sittable": row['sittable'],
                 "wall_only": str(int(row['wall_only'] == 'TRUE')),
                 "ceiling_only": str(int(row['ceiling_only'] == 'TRUE')),
-                "dyable": str(int(row['dyable'] == 'TRUE')),
+                "dyeable": str(int(row['dyeable'] == 'TRUE')),
                 "length": row['length'],
                 "depth": row['depth'],
                 "height": row['height'],

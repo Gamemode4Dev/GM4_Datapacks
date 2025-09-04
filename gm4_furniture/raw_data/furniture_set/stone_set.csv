@@ -1,4 +1,4 @@
-craft_item_1_id,craft_item_1_count,craft_item_2_id,craft_item_2_count,craft_result_count,technical_id,display_name,block_id,length,depth,height,custom_placement,sittable,dyable,wall_only,ceiling_only,table,scale,diag,custom_interaction
+craft_item_1_id,craft_item_1_count,craft_item_2_id,craft_item_2_count,craft_result_count,technical_id,display_name,block_id,length,depth,height,custom_placement,sittable,dyeable,wall_only,ceiling_only,table,scale,diag,custom_interaction
 stone_bricks,8,tadpole_bucket,1,1,statues.frog,Stone Frog Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
 stone_bricks,8,bee_nest,1,1,statues.bee,Stone Bee Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
 stone_bricks,8,pufferfish_bucket,1,1,statues.pufferfish,Stone Pufferfish Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE

@@ -15,7 +15,7 @@
                             "conditions": [
                                 {
                                     "condition": "minecraft:random_chance",
-                                    "chance": {{ dyable }}
+                                    "chance": {{ dyeable }}
                                 }
                             ]
                         },

@@ -8,7 +8,7 @@
 scoreboard players set $valid_placement gm4_furniture_data 1
 
 # set variables
-scoreboard players set $dyable gm4_furniture_data {{ dyable }}
+scoreboard players set $dyeable gm4_furniture_data {{ dyeable }}
 scoreboard players set $table gm4_furniture_data {{ table }}
 scoreboard players set $custom_interaction gm4_furniture_data {{ custom_interaction }}
 scoreboard players set $custom_placement gm4_furniture_data {{ custom_placement }}
@@ -72,9 +72,9 @@ execute if score $custom_interaction gm4_furniture_data matches 1 run tag @e[typ
 # if furniture is a table reduce interaction height
 execute if score $table gm4_furniture_data matches 1 as @e[type=interaction,tag=gm4_new_furniture,distance=..8] run data modify entity @s height set value 1f
 
-# if furniture is dyable set to basic white
-execute if score $dyable gm4_furniture_data matches 1 positioned ~ ~-0.4999 ~ run data modify entity @n[type=minecraft:item_display,tag=gm4_new_furniture,tag=gm4_furniture.display,distance=..0.1] item.components."minecraft:dyed_color" set from storage gm4_furniture:temp furniture_data.color
-execute if score $dyable gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture,distance=..8] add gm4_furniture.dyable
+# if furniture is dyeable set to basic white
+execute if score $dyeable gm4_furniture_data matches 1 positioned ~ ~-0.4999 ~ run data modify entity @n[type=minecraft:item_display,tag=gm4_new_furniture,tag=gm4_furniture.display,distance=..0.1] item.components."minecraft:dyed_color" set from storage gm4_furniture:temp furniture_data.color
+execute if score $dyeable gm4_furniture_data matches 1 run tag @e[type=interaction,tag=gm4_new_furniture,distance=..8] add gm4_furniture.dyeable
 
 # if furniture is sittable spawn sitting item_displays at appropiate locations and add tag
 scoreboard players set @e[type=interaction,tag=gm4_new_furniture,distance=..8] gm4_furniture_sit_height {{ sittable }}

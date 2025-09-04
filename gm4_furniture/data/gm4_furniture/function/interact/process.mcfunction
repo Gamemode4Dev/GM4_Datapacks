@@ -16,7 +16,7 @@ execute if score $interaction_processed gm4_furniture_data matches 0 if entity @
 execute if score $interaction_processed gm4_furniture_data matches 0 if entity @s[tag=gm4_furniture.swap_tool] align xyz run function gm4_furniture:interact/furniture_station/swap_tool
 
 # check for painting
-execute if score $interaction_processed gm4_furniture_data matches 0 if entity @s[tag=gm4_furniture.dyable] if entity @p[tag=gm4_furniture_target,predicate=gm4_furniture:holding_paintbrush] run function gm4_furniture:interact/paint/detect
+execute if score $interaction_processed gm4_furniture_data matches 0 if entity @s[tag=gm4_furniture.dyeable] if entity @p[tag=gm4_furniture_target,predicate=gm4_furniture:holding_paintbrush] run function gm4_furniture:interact/paint/detect
 
 # check for sitting
 execute if score $interaction_processed gm4_furniture_data matches 0 if entity @s[scores={gm4_furniture_sit_height=1..}] if entity @p[tag=gm4_furniture_target,predicate=!gm4_furniture:is_sneaking] positioned ~-0.4999 ~0.0001 ~-0.4999 run function gm4_furniture:interact/sit/find_seat
