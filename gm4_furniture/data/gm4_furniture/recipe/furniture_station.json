@@ -15,7 +15,7 @@
     "id": "minecraft:player_head",
     "components": {
       "minecraft:custom_data": "{gm4_furniture:{furniture_id:\"furniture_station\"}}",
-      "minecraft:custom_model_data": "block/furniture/furniture_station",
+      "minecraft:item_model": "gm4_furniture:furniture_station",
       "minecraft:profile": {
         "id": [
           -308545246,

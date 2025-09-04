@@ -15,7 +15,6 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "block/furniture/furniture_station",
                 "minecraft:profile": {
                   "id": [
                     -308545246,

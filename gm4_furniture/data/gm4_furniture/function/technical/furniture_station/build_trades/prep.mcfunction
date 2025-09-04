@@ -13,10 +13,10 @@ scoreboard players operation $trade_index gm4_furniture_data = @s gm4_furniture_
 data modify storage gm4_furniture:temp trade_data set from storage gm4_furniture:data furniture_station
 execute if score $trade_index gm4_furniture_data matches 1.. run function gm4_furniture:technical/furniture_station/build_trades/get_trade_data
 
-# change the displayed tools custom_model_data
-execute align xyz run data modify entity @e[type=item_display,tag=gm4_furniture.tool_main,dx=0,dy=0,dz=0,limit=1] item.components."minecraft:custom_model_data" set from storage gm4_furniture:temp trade_data[0]."minecraft:custom_model_data"
-execute align xyz run data modify entity @e[type=item_display,tag=gm4_furniture.tool_next,dx=0,dy=0,dz=0,limit=1] item.components."minecraft:custom_model_data" set from storage gm4_furniture:temp trade_data[1]."minecraft:custom_model_data"
-execute align xyz run data modify entity @e[type=item_display,tag=gm4_furniture.tool_prev,dx=0,dy=0,dz=0,limit=1] item.components."minecraft:custom_model_data" set from storage gm4_furniture:temp trade_data[-1]."minecraft:custom_model_data"
+# change the displayed tools item_model
+execute align xyz run data modify entity @e[type=item_display,tag=gm4_furniture.tool_main,dx=0,dy=0,dz=0,limit=1] item.components."minecraft:item_model" set from storage gm4_furniture:temp trade_data[0]."minecraft:item_model"
+execute align xyz run data modify entity @e[type=item_display,tag=gm4_furniture.tool_next,dx=0,dy=0,dz=0,limit=1] item.components."minecraft:item_model" set from storage gm4_furniture:temp trade_data[1]."minecraft:item_model"
+execute align xyz run data modify entity @e[type=item_display,tag=gm4_furniture.tool_prev,dx=0,dy=0,dz=0,limit=1] item.components."minecraft:item_model" set from storage gm4_furniture:temp trade_data[-1]."minecraft:item_model"
 
 # build the trades from trade_data
 data modify storage gm4_furniture:temp trade_data set from storage gm4_furniture:temp trade_data[0].trades
