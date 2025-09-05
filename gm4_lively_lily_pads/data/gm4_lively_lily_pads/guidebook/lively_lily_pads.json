@@ -18,12 +18,12 @@
         ]
       }
     },
-    "obtain_supported_item": {
+    "obtain_placeable_item": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "#gm4_lively_lily_pads:supported_item"
+            "items": "#gm4_lively_lily_pads:placeable_item"
           }
         ]
       }
@@ -36,7 +36,7 @@
       "requirements": [
         [
           "obtain_pad",
-          "obtain_supported_item"
+          "obtain_placeable_item"
         ]
       ],
       "pages": [
