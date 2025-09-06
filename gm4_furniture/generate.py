@@ -70,7 +70,7 @@ def generate_trade_data(ctx, furniture_set, set_name):
     new_trades_list = '\n'.join(new_trades_list)
 
     # add command to append the main furniture_station storage with the newly created new_trades
-    new_trades_append = "data modify storage gm4_furniture:data furniture_station append from storage gm4_furniture:temp new_trades." + set_name
+    new_trades_append = "data modify storage gm4_furniture:data furniture_station prepend from storage gm4_furniture:temp new_trades." + set_name
 
     # return the created commands
     return(new_trades_init,new_trades_list,new_trades_append)
