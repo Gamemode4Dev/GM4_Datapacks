@@ -72,12 +72,6 @@ def generate_trade_data(ctx, furniture_set, set_name):
     # add command to append the main furniture_station storage with the newly created new_trades
     new_trades_append = "data modify storage gm4_furniture:data furniture_station append from storage gm4_furniture:temp new_trades." + set_name
 
-    # add index to model_data
-    # ctx.meta["gm4"].setdefault("model_data", []).append({
-    #     "item": "command_block",
-    #     "reference": "item/furniture/set_tool/" + set_name
-    # })
-
     # return the created commands
     return(new_trades_init,new_trades_list,new_trades_append)
 
@@ -90,11 +84,6 @@ def generate_furniture_data(ctx, furniture_set, set_name):
 
         # set item model
         item_model = "gm4_furniture:" + set_name + "/" + row['technical_id'].replace(".","/")
-
-        # add index to model_data
-        # ctx.meta["gm4"].setdefault("model_data", []).append({
-        #     "item": ["leather_horse_armor", "player_head"]
-        # })
 
         # build placement function and loot table for furniture piece
         subproject_config = {
