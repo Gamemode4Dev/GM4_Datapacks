@@ -1,9 +1,7 @@
-# fire charge use logic
+# offhand fire charge use logic
 # @s = player who ignited candle
 # at @s
-# run from interact/detect
-
-scoreboard players reset $ignited_candle gm4_furniture_data
+# run from interact/custom/furniture/misc/candle/find_igniter
 
 # sound
 playsound minecraft:item.firecharge.use player @a[distance=..16]
@@ -12,4 +10,4 @@ playsound minecraft:item.firecharge.use player @a[distance=..16]
 execute if entity @s[gamemode=creative] run return 1
 
 # use item
-item modify entity @s weapon.mainhand {function:"minecraft:set_count",count:-1,add:1b}
+item modify entity @s weapon.offhand {function:"minecraft:set_count",count:-1,add:1b}

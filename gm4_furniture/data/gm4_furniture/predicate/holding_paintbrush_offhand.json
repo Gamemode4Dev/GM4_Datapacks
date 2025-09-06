@@ -1,0 +1,16 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "offhand": {
+                "items": [
+                    "minecraft:leather_horse_armor"
+                ],
+                "components": {
+                  "minecraft:custom_data": "{gm4_furniture:paintbrush}"
+                }
+            }
+        }
+    }
+}

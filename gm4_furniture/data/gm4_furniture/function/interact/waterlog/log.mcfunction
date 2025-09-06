@@ -1,9 +1,10 @@
 # waterlog this part of the furniture
-# @s = furniture's interacted interaction entity
-# at @s
+# @s = player holding bucket
+# at furniture's interacted interaction entity
 # run from interact/waterlog/check
 
-item replace entity @p[tag=gm4_furniture_target,gamemode=!creative] weapon.mainhand with bucket
+execute if score $mainhand_bucket gm4_furniture_data matches 1 run item replace entity @s[gamemode=!creative] weapon.mainhand with bucket
+execute if score $mainhand_bucket gm4_furniture_data matches 0 run item replace entity @s[gamemode=!creative] weapon.offhand with bucket
 
 scoreboard players set $waterlog_completed gm4_furniture_data 0
 execute store success score $waterlog_completed gm4_furniture_data run fill ~ ~ ~ ~ ~ ~ light[level=0,waterlogged=true] replace light[level=0]

@@ -12,7 +12,6 @@ execute if entity @s[tag=gm4_furniture.prev] run scoreboard players remove @e[ty
 execute as @e[type=villager,tag=gm4_furniture.furniture_station,dx=0,dy=0,dz=0,limit=1] at @s run function gm4_furniture:technical/furniture_station/build_trades/prep
 
 # store new index on main interaction entity
-scoreboard players operation $check_id gm4_furniture_id = @s gm4_furniture_id
 execute as @e[type=interaction,tag=gm4_furniture.main,distance=..8] if score @s gm4_furniture_id = $check_id gm4_furniture_id run scoreboard players operation @s gm4_furniture_index = $store_index gm4_furniture_data
 
 # mark interaction as resolved

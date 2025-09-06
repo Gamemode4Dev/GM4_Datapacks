@@ -5,8 +5,11 @@
         "equipment": {
             "mainhand": {
                 "items": [
-                    "minecraft:water_bucket"
-                ]
+                    "minecraft:leather_horse_armor"
+                ],
+                "components": {
+                  "minecraft:custom_data": "{gm4_furniture:paintbrush}"
+                }
             }
         }
     }
