@@ -12,3 +12,4 @@ execute if score $ignited_candle gm4_furniture_data matches 1 run return run set
 # extinguish
 data modify entity @s item.components merge value {"minecraft:item_model":"gm4_furniture:wood_set/oak/light_1","minecraft:custom_data":{gm4_furniture:{block_id:"light[level=0]"}}}
 setblock ~ ~ ~ light[level=0]
+playsound block.candle.extinguish block @a[distance=..16]
