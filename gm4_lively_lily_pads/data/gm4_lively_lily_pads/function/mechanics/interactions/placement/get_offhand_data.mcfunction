@@ -3,6 +3,8 @@
 # at @s
 # run from mechanics/interactions/placement/interact_rcd
 
+scoreboard players set $offhand gm4_llp.data 1
+
 data modify storage gm4_llp:temp DisplayType set from entity @s equipment.offhand.id
 
 execute if items entity @s weapon.offhand #gm4_lively_lily_pads:coral_fan run \

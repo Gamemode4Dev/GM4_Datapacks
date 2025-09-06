@@ -9,10 +9,10 @@ advancement revoke @s only gm4_lively_lily_pads:candle_rcd
 execute if entity @s[gamemode=adventure] run scoreboard players set $adventure gm4_llp.data 1
 
 # item information
-execute store success score $mainhand gm4_llp.data if items entity @s weapon.mainhand #gm4_lively_lily_pads:candle_interactable run function gm4_lively_lily_pads:mechanics/interactions/candle/get_mainhand_data
-execute store success score $offhand gm4_llp.data if score $mainhand gm4_llp.data matches 0 if items entity @s weapon.offhand #gm4_lively_lily_pads:candle_interactable run function gm4_lively_lily_pads:mechanics/interactions/candle/get_offhand_data
-execute if score $mainhand gm4_llp.data matches 0 if score $offhand gm4_llp.data matches 0 run scoreboard players set $holding_lighter gm4_llp.data 0
-execute if score $mainhand gm4_llp.data matches 0 if score $offhand gm4_llp.data matches 0 run scoreboard players set $holding_candle gm4_llp.data 0
+execute if items entity @s weapon.mainhand #gm4_lively_lily_pads:candle_interactable run function gm4_lively_lily_pads:mechanics/interactions/candle/get_mainhand_data
+execute unless score $mainhand gm4_llp.data matches 1 if items entity @s weapon.offhand #gm4_lively_lily_pads:candle_interactable run function gm4_lively_lily_pads:mechanics/interactions/candle/get_offhand_data
+execute unless score $mainhand gm4_llp.data matches 1 unless score $offhand gm4_llp.data matches 1 run scoreboard players set $holding_lighter gm4_llp.data 0
+execute unless score $mainhand gm4_llp.data matches 1 unless score $offhand gm4_llp.data matches 1 run scoreboard players set $holding_candle gm4_llp.data 0
 
 # find interaction
 execute as @e[type=interaction,tag=gm4_llp_candle_rcd,distance=..8] if data entity @s interaction at @s run function gm4_lively_lily_pads:mechanics/interactions/candle/process_interaction
@@ -24,3 +24,5 @@ execute if score $placement_success gm4_llp.data matches 1 if score $offhand gm4
 
 # reset
 scoreboard players reset $placement_success gm4_llp.data
+scoreboard players reset $mainhand gm4_llp.data
+scoreboard players reset $offhand gm4_llp.data

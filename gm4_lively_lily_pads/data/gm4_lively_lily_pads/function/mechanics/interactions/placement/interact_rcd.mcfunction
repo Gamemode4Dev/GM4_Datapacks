@@ -12,9 +12,9 @@ execute if entity @e[type=minecraft:interaction,tag=lilyPadInt,limit=1,distance=
 execute if entity @s[gamemode=adventure] run scoreboard players set $adventure gm4_llp.data 1
 
 # item information
-execute store success score $mainhand gm4_llp.data if predicate gm4_lively_lily_pads:mainhand_placeable_item run function gm4_lively_lily_pads:mechanics/interactions/placement/get_mainhand_data
-execute store success score $offhand gm4_llp.data if score $mainhand gm4_llp.data matches 0 if predicate gm4_lively_lily_pads:offhand_placeable_item run function gm4_lively_lily_pads:mechanics/interactions/placement/get_offhand_data
-execute if score $mainhand gm4_llp.data matches 0 if score $offhand gm4_llp.data matches 0 run scoreboard players set $not_holding_item gm4_llp.data 1
+execute if predicate gm4_lively_lily_pads:mainhand_placeable_item run function gm4_lively_lily_pads:mechanics/interactions/placement/get_mainhand_data
+execute unless score $mainhand gm4_llp.data matches 1 if predicate gm4_lively_lily_pads:offhand_placeable_item run function gm4_lively_lily_pads:mechanics/interactions/placement/get_offhand_data
+execute unless score $mainhand gm4_llp.data matches 1 unless score $offhand gm4_llp.data matches 1 run scoreboard players set $not_holding_item gm4_llp.data 1
 
 # process interaction
 execute as @e[type=interaction,tag=gm4_llp_placement_rcd,distance=..8] if data entity @s interaction at @s run function gm4_lively_lily_pads:mechanics/interactions/placement/process_interaction
@@ -25,3 +25,5 @@ execute if score $placement_success gm4_llp.data matches 1 if score $offhand gm4
 
 # reset
 scoreboard players reset $placement_success gm4_llp.data
+scoreboard players reset $mainhand gm4_llp.data
+scoreboard players reset $offhand gm4_llp.data
