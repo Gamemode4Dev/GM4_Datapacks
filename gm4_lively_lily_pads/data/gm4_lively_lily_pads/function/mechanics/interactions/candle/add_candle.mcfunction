@@ -8,7 +8,7 @@ execute store success score $different_candle gm4_llp.data run data modify stora
 execute if score $different_candle gm4_llp.data matches 1 run return fail
 
 # fail if 4 candles already
-execute if data entity @s {block_state:{Properties:{candles:"4"}}} run return fail
+execute if data entity @s {block_state:{Properties:{candles:"4"}}} run return 1
 
 # set flag to remove item
 scoreboard players set $placement_success gm4_llp.data 1
@@ -23,3 +23,5 @@ execute if data entity @s {block_state:{Properties:{candles:"1"}}} run data modi
 
 # update light blocks if needed
 execute if entity @s[tag=gm4_llp_lit_candle] run function gm4_lively_lily_pads:mechanics/interactions/candle/update_light_blocks
+
+return 1

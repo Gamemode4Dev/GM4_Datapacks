@@ -11,3 +11,4 @@ execute if score $ignited gm4_llp.data matches 0 run return fail
 # light
 tag @s add gm4_llp_lit_candle
 function gm4_lively_lily_pads:mechanics/interactions/candle/update_light_blocks
+return 1

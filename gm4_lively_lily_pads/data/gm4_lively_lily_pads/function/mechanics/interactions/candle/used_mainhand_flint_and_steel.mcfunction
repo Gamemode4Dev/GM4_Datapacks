@@ -3,8 +3,6 @@
 # at @s
 # run from mechanics/interactions/candle/find_igniter
 
-scoreboard players reset $ignited gm4_llp.data
-
 # sound
 playsound minecraft:item.flintandsteel.use player @a[distance=..16] ~ ~ ~
 
