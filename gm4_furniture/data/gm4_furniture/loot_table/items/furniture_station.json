@@ -15,6 +15,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
+                "minecraft:item_model":"gm4_furniture:furniture_station",
                 "minecraft:profile": {
                   "id": [
                     -308545246,
