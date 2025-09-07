@@ -2,7 +2,7 @@
 # @s = furniture reactivation interaction entity
 # at @s
 # run from interact/process
-# run frin interact/furniture_station/swap_tool
+# run from interact/furniture_station/swap_tool
 
 # turn tool upright
 execute align xyz run data merge entity @e[type=item_display,tag=gm4_furniture.tool_main,dx=0,dy=0,dz=0,limit=1] {interpolation_duration:5,start_interpolation:-1,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.6f,0f],scale:[1f,1f,1f]}}
