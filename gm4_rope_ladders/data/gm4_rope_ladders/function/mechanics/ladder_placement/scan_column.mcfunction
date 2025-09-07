@@ -1,7 +1,7 @@
 # scans downward until it finds a valid location to place a ladder
 # @s = interacted rcd
 # at location of ladder block, moving downward
-# run from function: gm4_rope_ladders:mechanics/ladder_placement/find_ladder
+# run from function: gm4_rope_ladders:mechanics/ladder_placement/find_ladder and self
 
 # detect if ladder placement is valid
 execute if block ~ ~ ~ #gm4:replaceable run return run function gm4_rope_ladders:mechanics/ladder_placement/place_ladder

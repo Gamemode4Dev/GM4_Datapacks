@@ -1,5 +1,7 @@
 # loops as long as a rcd interaction exists
-# run from function: gm4_rope_ladders:mechanics/right_click_detection/rcd_manager/spawn_rcd
+# @s = unspecified
+# at unspecified
+# run from function: gm4_rope_ladders:mechanics/right_click_detection/rcd_manager/spawn_rcd and self
 
 # reset scoreboard
 scoreboard players remove $rcd_found gm4_rol_data 1
