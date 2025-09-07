@@ -3,12 +3,9 @@
 # at @s
 # run from mechanics/interactions/placement/interact_rcd
 
-# fail if different gametime or different player
+# fail if different gametime
 execute store result score $check_gametime gm4_llp.data run data get entity @s interaction.timestamp 1
 execute unless score $gametime gm4_llp.data = $check_gametime gm4_llp.data run return run data remove entity @s interaction
-
-execute store success score $different_UUID gm4_llp.data run data modify storage gm4_llp:temp UUID set from entity @s interaction.player
-execute if score $different_UUID gm4_llp.data matches 1 run return fail
 
 # clean
 data remove entity @s interaction
