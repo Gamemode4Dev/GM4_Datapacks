@@ -1,5 +1,5 @@
 # places a ladder when the scan finds a valid location (in water)
-# @s = player that interacts with a rcd interaction while holding ladder
+# @s = interacted rcd
 # at location of valid spot for ladder placement (in water)
 # run from function: gm4_rope_ladders:mechanics/ladder_placement/place_ladder
 
