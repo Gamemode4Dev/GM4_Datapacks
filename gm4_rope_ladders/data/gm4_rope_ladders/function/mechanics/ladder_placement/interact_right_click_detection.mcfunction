@@ -5,6 +5,9 @@
 # revoke advancement
 advancement revoke @s only gm4_rope_ladders:right_click_detection
 
+# fail if adventure mode
+execute if entity @s[gamemode=adventure] run return fail
+
 # reset
 scoreboard players set $ladder_placed gm4_rol_data 0
 scoreboard players set $loop gm4_rol_data 0
