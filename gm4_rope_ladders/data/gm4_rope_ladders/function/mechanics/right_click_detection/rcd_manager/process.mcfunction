@@ -1,4 +1,4 @@
-# processes the "right click detection" interaction so that it is despawned when unneeded
+# processes the rcd interaction so that it is despawned when unneeded
 # run from function: gm4_rope_ladders:mechanics/right_click_detection/rcd_manager/loop
 
 scoreboard players set $rcd_found gm4_rol_data 1

@@ -1,4 +1,4 @@
-# spawns a baby interaction that handles right click detection
+# spawns a interaction that handles right click detection
 # @s = player holding ladder
 # at position of ladder block, align xyz positioned ~.5 ~ ~.5 (varies based on rotation)
 # run from function: gm4_rope_ladders:mechanics/right_click_detection/detect_ladder_raycast/found

@@ -1,4 +1,4 @@
-# loops as long as a "right click detection" interaction exists
+# loops as long as a rcd interaction exists
 # run from function: gm4_rope_ladders:mechanics/right_click_detection/rcd_manager/spawn_rcd
 
 # reset scoreboard

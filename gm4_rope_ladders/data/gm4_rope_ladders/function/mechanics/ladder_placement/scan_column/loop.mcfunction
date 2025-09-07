@@ -1,10 +1,10 @@
 # scans downward until it finds a valid location to place a ladder
-# @s = player that interacts with a "right click detection" villager while holding ladder
+# @s = player that interacts with a rcd interaction while holding ladder
 # at location of ladder block, moving downward
 # run from function: gm4_rope_ladders:mechanics/ladder_placement/scan_column/init
 
 # detect if ladder placement is valid
-execute if block ~ ~ ~ #gm4:replaceable run function gm4_rope_ladders:mechanics/ladder_placement/scan_column/found
+execute if block ~ ~ ~ #gm4:replaceable run return run function gm4_rope_ladders:mechanics/ladder_placement/place_ladder
 
 # loop
 scoreboard players add $loop gm4_rol_data 1
