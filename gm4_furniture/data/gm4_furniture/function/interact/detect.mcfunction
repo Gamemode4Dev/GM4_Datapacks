@@ -3,9 +3,8 @@
 # at @s
 advancement revoke @s only gm4_furniture:interact_with_furniture
 
-# store gametime and UUID
+# store gametime
 execute store result score $gametime gm4_furniture_data run time query gametime
-data modify storage gm4_furniture:temp UUID set from entity @s UUID
 
 # item data
 # | candle lighting
