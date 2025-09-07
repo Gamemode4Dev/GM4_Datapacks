@@ -2,11 +2,13 @@
 # at @s
 # run from mechanics/attacks/placement/hit_rcd
 
+# fail if different gametime
+execute store result score $gametime gm4_llp.data run time query gametime
+execute store result score $check_gametime gm4_llp.data run data get entity @s attack.timestamp 1
+execute unless score $gametime gm4_llp.data = $check_gametime gm4_llp.data run return run data remove entity @s attack
+
 # clean
 data remove entity @s attack
-
-# fail if adventure
-execute if score $adventure gm4_llp.data matches 1 run return run scoreboard players reset $adventure gm4_llp.data
 
 # kill placement rcd
 kill @s

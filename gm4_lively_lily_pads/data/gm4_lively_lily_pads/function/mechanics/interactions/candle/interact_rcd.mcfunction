@@ -5,9 +5,8 @@
 
 advancement revoke @s only gm4_lively_lily_pads:candle_rcd
 
-# scores and player data
-execute if entity @s[gamemode=adventure] run scoreboard players set $adventure gm4_llp.data 1
-execute store result score $gametime gm4_llp.data run time query gametime
+# adventure fail
+execute if entity @s[gamemode=adventure] run return fail
 
 # item information
 execute store result score $mainhand gm4_llp.data store result score $offhand gm4_llp.data \
