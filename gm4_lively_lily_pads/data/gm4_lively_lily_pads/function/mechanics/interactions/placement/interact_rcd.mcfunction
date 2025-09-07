@@ -8,8 +8,10 @@ advancement revoke @s only gm4_lively_lily_pads:placement_rcd
 # brief check to enable Upgrade_Path 3.0
 execute if entity @e[type=minecraft:interaction,tag=lilyPadInt,limit=1,distance=..64] run scoreboard players set lively_lily_pads gm4_earliest_version 0
 
-# gamemode flags
+# scores and player data
 execute if entity @s[gamemode=adventure] run scoreboard players set $adventure gm4_llp.data 1
+execute store result score $gametime gm4_llp.data run time query gametime
+data modify storage gm4_llp:temp UUID set from entity @s UUID
 
 # item information
 execute if predicate gm4_lively_lily_pads:mainhand_placeable_item run function gm4_lively_lily_pads:mechanics/interactions/placement/get_mainhand_data

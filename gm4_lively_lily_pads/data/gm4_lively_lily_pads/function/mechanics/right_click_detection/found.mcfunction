@@ -3,6 +3,9 @@
 # at lily_pad align xyz
 # run from mechanics/right_click_detection/ray
 
+# visuals
+ particle scrape ~.5 ~.12 ~.5 0 0 0 0 1
+
 # spawn an interaction if needed
 scoreboard players operation $player gm4_llp.id = @s gm4_llp.id
 execute unless entity @e[type=interaction,tag=gm4_llp_placement_rcd,dx=0,limit=1] positioned ~.5 ~.02 ~.5 \

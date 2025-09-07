@@ -3,9 +3,6 @@
 # at @s
 # run from mechanics/right_click_detection/loop
 
-# visuals
-particle scrape ~ ~.1 ~ 0 0 0 0 1
-
 # refresh timer
 scoreboard players set $timer gm4_llp.data 10
 
@@ -16,6 +13,6 @@ execute align xyz if entity @e[type=block_display,tag=gm4_llp_display,dx=0] run 
 
 # kill if multiple interaction with the same id, which therefore belong to the same player
 scoreboard players set $duplicate_exists gm4_llp.data 0
-execute store result score $check_id gm4_llp.id run scoreboard players get @s gm4_llp.id
+scoreboard players operation $check_id gm4_llp.id = @s gm4_llp.id
 execute as @e[type=interaction,tag=gm4_llp_placement_rcd,distance=0.1..16] if score @s gm4_llp.id = $check_id gm4_llp.id run scoreboard players set $duplicate_exists gm4_llp.data 1
 execute if score $duplicate_exists gm4_llp.data matches 1 run kill @s

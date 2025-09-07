@@ -5,6 +5,10 @@
       "conditions": {
         "player": [
           {
+            "condition": "minecraft:reference",
+            "name": "gm4_lively_lily_pads:holding_placeable_item"
+          },
+          {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
