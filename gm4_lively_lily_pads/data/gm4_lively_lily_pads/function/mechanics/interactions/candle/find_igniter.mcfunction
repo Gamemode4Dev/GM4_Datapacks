@@ -1,4 +1,3 @@
-# process candle ignition item modification
 # @s = player who ignited candle
 # at @s
 # run from mechanics/interactions/candle/interact_rcd
