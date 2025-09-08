@@ -5,9 +5,6 @@
 
 advancement revoke @s only gm4_lively_lily_pads:candle_rcd
 
-# adventure fail
-execute if entity @s[gamemode=adventure] run return fail
-
 # reset
 scoreboard players set $mainhand gm4_llp.data 0
 scoreboard players set $offhand gm4_llp.data 0

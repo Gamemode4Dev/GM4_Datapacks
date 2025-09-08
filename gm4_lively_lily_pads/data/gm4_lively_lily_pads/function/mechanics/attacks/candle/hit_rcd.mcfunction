@@ -5,8 +5,7 @@
 
 advancement revoke @s only gm4_lively_lily_pads:punch_candle_rcd
 
-# check gamemode
-execute if entity @s[gamemode=adventure] run return fail
+# set creative flag
 execute if entity @s[gamemode=creative] run scoreboard players set $creative gm4_llp.data 1
 
 # process interaction

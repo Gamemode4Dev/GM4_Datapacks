@@ -12,6 +12,13 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
+              "type_specific": {
+                "type": "minecraft:player",
+                "gamemode": [
+                  "survival",
+                  "creative"
+                ]
+              },
               "nbt": "{Tags:[\"gm4_llp_holding_item\"]}"
             }
           }
