@@ -1,5 +1,5 @@
 {
-  "last_commit": "aed600afb70b97b4a91ec0c6504c8873dd2ebdac",
+  "last_commit": "3747be21bc1f456e3e4b1564afa6e7f257021ef8",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2264,7 +2264,7 @@
       "search_keywords": [],
       "publish_date": "2025-08-26",
       "modrinth_id": "MWPuloVL",
-      "smithed_link": null,
+      "smithed_link": "gm4_reeling_rods",
       "pmc_link": null
     },
     {
@@ -3213,8 +3213,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.8",
-      "hash": "85c6d9392d78bf22e7a9a2ee909b2f632610a6c9",
+      "version": "1.4.9",
+      "hash": "71df6b8dc92e1bf0cfe8e0ac8210b8c80bba4dbb",
       "video_link": "",
       "wiki_link": "",
       "credits": {
