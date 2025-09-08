@@ -3,13 +3,15 @@
 # at @s
 # run from mechanics/interactions/placement/interact_rcd
 
-# fail if different gametime
+# store time to check
 execute store result score $gametime gm4_llp.data run time query gametime
 execute store result score $check_gametime gm4_llp.data run data get entity @s interaction.timestamp 1
-execute unless score $gametime gm4_llp.data = $check_gametime gm4_llp.data run return run data remove entity @s interaction
 
 # clean
 data remove entity @s interaction
+
+# fail if old interaction
+execute unless score $gametime gm4_llp.data = $check_gametime gm4_llp.data run return fail
 
 # select type
 execute if score $item_type gm4_llp.data matches 1 run function gm4_lively_lily_pads:mechanics/interactions/placement/coral_fan with storage gm4_llp:temp
