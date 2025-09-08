@@ -24,8 +24,8 @@ meta:
       notes: []
     modrinth:
       project_id: MWPuloVL
-    #smithed:
-      #pack_id: 
+    smithed:
+      pack_id: gm4_reeling_rods
     #planetminecraft:
       #uid: 
     video: null
