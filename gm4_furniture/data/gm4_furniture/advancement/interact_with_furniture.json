@@ -3,7 +3,21 @@
     "interact_with_furniture": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "player": [],
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "minecraft:player",
+                "gamemode": [
+                  "survival",
+                  "creative"
+                ]
+              }
+            }
+          }
+        ],
         "entity": [
           {
             "condition": "minecraft:entity_properties",
