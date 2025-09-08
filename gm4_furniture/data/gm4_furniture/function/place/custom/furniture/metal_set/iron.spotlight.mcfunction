@@ -1,7 +1,7 @@
 # custom placement
 # @s = player who placed the furniture player head
 # at the center of the placed block rotated along axis to face towards player or away from the wall
-# run from place/custom/resolve_id
+# run from place/furniture/metal_set/iron.spotlight (generated)
 
 # set main display to base
 data modify entity @n[type=item_display,tag=gm4_new_furniture,tag=gm4_furniture.display,limit=1,distance=..1] item.components merge value {"minecraft:item_model":"gm4_furniture:metal_set/iron/spotlight/default/base","custom_data":{gm4_furniture:{lit:1}}}
@@ -17,5 +17,3 @@ execute if predicate gm4_furniture:is_sneaking run summon item_display ~ ~0.0625
 # rotate
 rotate @n[type=item_display,tag=gm4_furniture.display_2,tag=gm4_new_furniture,distance=..1] facing entity @s eyes
 rotate @n[type=item_display,tag=gm4_furniture.display_3,tag=gm4_new_furniture,distance=..1] facing entity @s eyes
-# assign ids to additional displays
-execute as @e[type=item_display,tag=gm4_furniture.additional_display,tag=gm4_new_furniture,distance=..1] store result score @s gm4_furniture_id run scoreboard players get @n[type=item_display,tag=gm4_new_furniture,tag=gm4_furniture.display,limit=1,distance=..1] gm4_furniture_id

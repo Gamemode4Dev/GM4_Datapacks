@@ -83,8 +83,7 @@ scoreboard players set @e[type=interaction,tag=gm4_new_furniture,distance=..8] g
 execute if score $rotation gm4_furniture_data matches 2.. as @e[tag=gm4_new_furniture,distance=..8] run data modify entity @s Rotation set from storage gm4_furniture:data Rotation
 
 # custom placement
-execute if score $custom_placement gm4_furniture_data matches 1 run function gm4_furniture:place/custom/resolve_id {furniture_id:"{{ category }}/{{ technical_id }}"}
-
+execute if score $custom_placement gm4_furniture_data matches 1 run function gm4_furniture:place/custom/furniture/{{ category }}/{{ technical_id }}
 
 # mark block as placed and set id
 playsound minecraft:block.barrel.close block @a[distance=..6] ~ ~ ~ 1 1.6
