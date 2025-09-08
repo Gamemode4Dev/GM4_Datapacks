@@ -3,14 +3,17 @@
 # at @s
 # run from interact/detect
 
-# fail if different gametime
+# store time to check
 execute store result score $gametime gm4_furniture_data run time query gametime
 execute store result score $check_gametime gm4_furniture_data run data get entity @s interaction.timestamp 1
-execute unless score $gametime gm4_furniture_data = $check_gametime gm4_furniture_data run return run data remove entity @s interaction
 
 # clean
 data remove entity @s interaction
 
+# fail if old interaction
+execute unless score $gametime gm4_furniture_data = $check_gametime gm4_furniture_data run return fail
+
+# store interaction id
 scoreboard players operation $check_id gm4_furniture_id = @s gm4_furniture_id
 
 # first successful interaction will be used, any lower down this list will be ignored
