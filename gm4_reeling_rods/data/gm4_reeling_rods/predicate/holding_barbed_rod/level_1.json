@@ -1,0 +1,18 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "slots": {
+            "weapon.*": {
+                "predicates": {
+                    "minecraft:enchantments": [
+                        {
+                            "enchantments": "gm4_reeling_rods:barbed",
+                            "levels": 1
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -17,3 +17,9 @@ spruce_planks,12,air,0,1,spruce.bench_1,Spruce Bench,barrier,3,1,1,FALSE,50,FALS
 spruce_planks,4,air,0,1,spruce.chair_1,Spruce Chair,barrier,1,1,1,FALSE,50,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
 spruce_planks,4,air,0,1,spruce.stool_1,Spruce Stool,barrier,1,1,1,FALSE,75,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
 spruce_planks,1,torch,1,1,spruce.light_1,Spruce Torch Sconce,light[level=14],1,1,1,FALSE,0,FALSE,TRUE,FALSE,FALSE,1,FALSE,FALSE
+cherry_planks,4,white_wool,1,1,cherry.1x1_table_1,Small Cherry Table,barrier,1,1,1,FALSE,0,TRUE,FALSE,FALSE,TRUE,1,FALSE,FALSE
+cherry_planks,16,white_wool,4,1,cherry.2x2_table_1,Large Cherry Table,barrier,2,2,1,FALSE,0,TRUE,FALSE,FALSE,TRUE,1,FALSE,FALSE
+cherry_planks,12,white_wool,3,1,cherry.bench_1,Cherry Bench,barrier,3,1,1,FALSE,50,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+cherry_planks,4,white_wool,1,1,cherry.chair_1,Cherry Chair,barrier,1,1,1,FALSE,50,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+cherry_planks,4,white_wool,1,1,cherry.stool_1,Cherry Stool,barrier,1,1,1,FALSE,40,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+cherry_planks,1,lantern,1,1,cherry.light_1,Cherry Flower Lamp,barrier,1,1,1,FALSE,0,TRUE,FALSE,TRUE,FALSE,1,FALSE,FALSE

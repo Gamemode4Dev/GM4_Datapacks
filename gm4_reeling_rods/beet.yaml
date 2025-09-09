@@ -1,0 +1,38 @@
+id: gm4_reeling_rods
+name: Reeling Rods
+version: 1.0.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - generate_files
+  - gm4.plugins.extend.module
+
+require:
+  - bolt
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [tick]
+    website:
+      description: Reel in more than just fish with these rods! Yoink the chest from the chest boat and more!
+      recommended: 
+        - gm4_end_fishing
+        - gm4_live_catch
+      notes: []
+    modrinth:
+      project_id: MWPuloVL
+    smithed:
+      pack_id: gm4_reeling_rods
+    #planetminecraft:
+      #uid: 
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Reeling_Rods
+    credits:
+      Creators:
+        - runcows
+        - Bloo
+      Icon Design:
+        - runcows
