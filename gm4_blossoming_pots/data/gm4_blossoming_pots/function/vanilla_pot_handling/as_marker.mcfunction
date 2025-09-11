@@ -3,9 +3,8 @@
 # at @s align xyz positioned ~.5 ~.5 ~.5
 # run from vanilla_pot_handling/raycast
 
-#check block location for tagged display or perma marker?
-execute \
-    unless entity @e[type=minecraft:block_display,tag=gm4_blossoming_pots.display.flower_pot,distance=..0.1,limit=1] \
+#check block location for tagged display
+execute unless entity @e[type=minecraft:block_display,tag=gm4_blossoming_pots.display.flower_pot,distance=..0.1,limit=1] \
     run return run kill @s
 # if not found, return,     let the player place their vanilla pots in peace
 # else 
