@@ -1,5 +1,6 @@
 # Sets command storage for decorated pot plants
-# @s = null
+# @s = unspecified
+# at unspecified
 # run from init
 
 
