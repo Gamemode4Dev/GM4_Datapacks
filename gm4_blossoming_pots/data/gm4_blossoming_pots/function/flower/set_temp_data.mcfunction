@@ -6,7 +6,7 @@
 
 $data modify storage gm4_blossoming_pots:flower_pots temp.data set value {\
   view_range:0.7935f,\
-  Tags:["gm4_blossoming_pots.display.flower_pot","gm4_blossoming_pots.display.flower_pot.$(display_number)","smithed.entity"],\
+  Tags:["gm4_blossoming_pots.display.flower_pot","gm4_blossoming_pots.display.flower_pot.$(display_number)","smithed.entity","smithed.strict"],\
   Rotation:[$(rotation)f,0f],\
   data:{gm4_blossoming_pots:{Item:{id:"$(id)"}}}\
 }
