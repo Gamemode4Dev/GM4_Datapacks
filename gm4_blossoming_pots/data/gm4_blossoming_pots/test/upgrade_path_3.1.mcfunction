@@ -17,9 +17,6 @@ setblock ~2 ~1 ~ flower_pot
 execute align xyz run summon block_display ~2.5 ~1.0 ~0.5 {Tags:["rc_blossoming_pots.flowerPotPlant","rc_blossoming_pots.flowerPotPlant0"],block_state:{Name:"minecraft:cocoa"},transformation:{translation:[-0.25f,0.2435f,-0.25f],left_rotation:[0f,0f,0f,1f],scale:[0.5f,0.5f,0.5f],right_rotation:[0f,0f,0f,1f]}}
 execute align xyz run summon marker ~2.5 ~1.0 ~0.5 {Tags:["rc_blossoming_pots.flowerPot"],data:{id:"minecraft:cocoa_beans",count:3,full:1}}
 
-
-await delay 2s
-
 function gm4_blossoming_pots:upgrade_paths/3.1
 
 assert entity @e[type=block_display,tag=gm4_blossoming_pots.display.decorated_pot,dx=2,dy=2,dz=2]
