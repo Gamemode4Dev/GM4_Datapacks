@@ -4,6 +4,10 @@ schedule function gm4_monsters_unbound:main 16t
 # if survival_refightalized is installed the modification is instead started from there
 execute unless score gm4_survival_refightalized load.status matches 1.. as @e[type=#gm4_monsters_unbound:modify,tag=!smithed.entity,tag=!gm4_mu_processed,nbt=!{PersistenceRequired:1b}] at @s run function gm4_monsters_unbound:mob/init/check_mob
 
+# phantoms drown under water
+# if survival_refightalized is installed this happens from there instead
+execute unless score gm4_survival_refightalized load.status matches 1.. as @e[type=phantom,tag=!smithed.entity] at @s if block ~ ~ ~ #gm4:water run damage @s 2 drown
+
 # process cloaked creepers
 execute as @e[type=creeper,tag=gm4_mu_cloaked_creeper] at @s if entity @a[gamemode=!spectator,gamemode=!creative,distance=..3.1] run function gm4_monsters_unbound:mob/process/cloaked_creeper
 
