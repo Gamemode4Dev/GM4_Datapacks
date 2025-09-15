@@ -18,6 +18,8 @@ await delay 2s
 dummy @s use block ~.5 ~1 ~2
 # any_block_use isnt triggering for   dummy @s use block
 advancement grant @s only gm4_blossoming_pots:interact_with_flower_pot
+# ADDED DELAY
+await delay 2s
 await not entity @e[type=block_display,tag=gm4_blossoming_pots.display.flower_pot,dx=2,dy=2,dz=2]
 await items entity @s weapon.mainhand oak_leaves
 
