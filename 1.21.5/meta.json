@@ -1,5 +1,5 @@
 {
-  "last_commit": "3747be21bc1f456e3e4b1564afa6e7f257021ef8",
+  "last_commit": "3f2c2ed2b1541bf3fb99252c504c15fa54c954bb",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2234,8 +2234,8 @@
     {
       "id": "gm4_reeling_rods",
       "name": "Reeling Rods",
-      "version": "1.0.1",
-      "hash": "0161786a93839762b5c37333e952033d291112c7",
+      "version": "1.0.2",
+      "hash": "3e08f7b29764d38bbf04c71a433d815aafbda6f8",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Reeling_Rods",
       "credits": {
@@ -2248,7 +2248,7 @@
         ]
       },
       "requires": [],
-      "description": "Reel in more than just fish with these rods! Yoink the chest from the chest boat and more!",
+      "description": "Steal Villager's wares, scratch up your foes! Fishing rods have never been more useful!",
       "recommends": [
         "gm4_end_fishing",
         "gm4_live_catch"
@@ -3213,8 +3213,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.9",
-      "hash": "71df6b8dc92e1bf0cfe8e0ac8210b8c80bba4dbb",
+      "version": "1.4.10",
+      "hash": "6dbc3208c4443fc3df377020d065716742a4c37c",
       "video_link": "",
       "wiki_link": "",
       "credits": {
