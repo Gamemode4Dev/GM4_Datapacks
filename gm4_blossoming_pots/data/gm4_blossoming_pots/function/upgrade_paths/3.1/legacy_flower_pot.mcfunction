@@ -31,7 +31,7 @@ function gm4_blossoming_pots:upgrade_paths/3.1/check_legacy_flower_pot_in_storag
 data modify storage gm4_blossoming_pots:flower_pots temp.legacy.count set value 1
 
 # if legacy plant IS NOT in modern storage, clean up @s and drop items using legacy storage
-execute unless score $legacy_in_storage gm4_blossoming_pots.misc matches 1 positioned ~ ~.5 ~ run function gm4_blossoming_pots:upgrade_paths/3.1/drop_legacy_items with storage gm4_blossoming_pots:flower_pots temp.legacy
+execute unless score $legacy_in_storage gm4_blossoming_pots.misc matches 1 run function gm4_blossoming_pots:upgrade_paths/3.1/drop_legacy_items with storage gm4_blossoming_pots:flower_pots temp.legacy
 execute unless score $legacy_in_storage gm4_blossoming_pots.misc matches 1 run return run kill @s
 
 # if legacy plant IS in modern storage, summon new displays using @s as a temp entity
