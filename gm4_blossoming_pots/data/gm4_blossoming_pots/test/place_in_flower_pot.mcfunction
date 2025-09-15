@@ -4,22 +4,22 @@
 
 # place
 setblock ~ ~1 ~2 flower_pot
-give @s oak_leaves 1
+item replace entity @s weapon.mainhand with oak_leaves
 rotate @s facing ~.5 ~ ~2
+# <-- you're next, mr rotate command
 dummy @s use block ~.5 ~1 ~2
 # any_block_use isnt triggering for   dummy @s use block
 advancement grant @s only gm4_blossoming_pots:interact_with_flower_pot
 await entity @e[type=block_display,tag=gm4_blossoming_pots.display.flower_pot,dx=2,dy=2,dz=2]
-assert not items entity @s weapon.mainhand oak_leaves
+assert not items entity @s weapon.mainhand *
 
 await delay 2s
 
 # remove
+assert not items entity @s weapon.mainhand *
 dummy @s use block ~.5 ~1 ~2
 # any_block_use isnt triggering for   dummy @s use block
 advancement grant @s only gm4_blossoming_pots:interact_with_flower_pot
-# ADDED DELAY
-await delay 2s
 await not entity @e[type=block_display,tag=gm4_blossoming_pots.display.flower_pot,dx=2,dy=2,dz=2]
 await items entity @s weapon.mainhand oak_leaves
 
