@@ -16,6 +16,7 @@ await delay 2s
 
 # remove
 #assert not items entity @s weapon.mainhand *     <---- FAILING???
+function gm4_blossoming_pots:say_item with entity @s SelectedItem
 clear @s *
 dummy @s use block ~.5 ~1 ~2
 # any_block_use isnt triggering for   dummy @s use block
