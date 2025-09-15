@@ -14,10 +14,9 @@ assert not items entity @s weapon.mainhand *
 
 await delay 2s
 
-# remove
-#assert not items entity @s weapon.mainhand *     <---- FAILING???
-function gm4_blossoming_pots:say_item with entity @s SelectedItem
-clear @s *
+# remove custom plant
+# | need to clear guidebook from mainhand...
+clear @s written_book
 dummy @s use block ~.5 ~1 ~2
 # any_block_use isnt triggering for   dummy @s use block
 advancement grant @s only gm4_blossoming_pots:interact_with_flower_pot
