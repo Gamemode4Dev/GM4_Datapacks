@@ -6,7 +6,6 @@
 setblock ~ ~1 ~2 flower_pot
 item replace entity @s weapon.mainhand with red_tulip
 rotate @s facing ~.5 ~ ~2 
-# <-- you're next, mr rotate command
 dummy @s use block ~.5 ~1 ~2
 # any_block_use isnt triggering for   dummy @s use block
 advancement grant @s only gm4_blossoming_pots:interact_with_vanilla_flower_pot
