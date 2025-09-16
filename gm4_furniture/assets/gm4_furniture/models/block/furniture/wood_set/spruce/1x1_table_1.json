@@ -109,19 +109,5 @@
 			"translation": [0, 0, -3.25],
 			"scale": [0.5, 0.5, 0.5]
 		}
-	},
-	"groups": [
-		{
-			"name": "Bulky",
-			"origin": [-7, 26, -1],
-			"color": 0,
-			"children": [0, 1, 2]
-		},
-		{
-			"name": "Base",
-			"origin": [8, 8, 8],
-			"color": 0,
-			"children": [3, 4]
-		}
-	]
+	}
 }
