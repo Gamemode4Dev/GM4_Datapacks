@@ -10,8 +10,10 @@ scoreboard objectives add gm4_mu_frozen_time dummy
 scoreboard objectives add gm4_mu_feared_time dummy
 scoreboard objectives add gm4_mu_keep_tick dummy
 scoreboard objectives add gm4_mu_config dummy
-# add sr_data for compatibility
+# add Survival Refightalized objectives for compatibility
 scoreboard objectives add gm4_sr_data dummy
+scoreboard objectives add gm4_sr_arrow.damage_change dummy
+scoreboard objectives add gm4_sr_arrow.fire_delay dummy
 
 # configs
 execute unless score $spawn_phantoms gm4_mu_config matches -2147483648..2147483647 run scoreboard players set $spawn_phantoms gm4_mu_config 1
