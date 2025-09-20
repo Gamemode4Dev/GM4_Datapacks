@@ -19,6 +19,7 @@ scoreboard players operation $damage_total gm4_sr_data = @s gm4_sr_stat.damage_r
 
 # first check the resistance level besides from this module
 # if this results in 100% damage reduction skip the rest of this function
+scoreboard players set $resistance_damage_reduction gm4_sr_data 0
 execute if data storage gm4_survival_refightalized:temp active_effects[{id:"minecraft:resistance"}].hidden_effect.duration store result score $resistance_damage_reduction gm4_sr_data run data get storage gm4_survival_refightalized:temp active_effects[{id:"minecraft:resistance"}].hidden_effect.amplifier 20
 execute if score $resistance_damage_reduction gm4_sr_data matches 1.. run scoreboard players add $resistance_damage_reduction gm4_sr_data 20
 execute if score $resistance_damage_reduction gm4_sr_data matches 100.. run tellraw @s[tag=gm4_sr_dev.damage_log] [{text:"Blocked by Resistance",color:"gray"}]

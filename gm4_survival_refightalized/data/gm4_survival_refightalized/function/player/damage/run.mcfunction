@@ -51,8 +51,8 @@ execute if score $damage_armor gm4_sr_data matches 1.. run scoreboard players op
 # apply durability damage to armor unless it was armor piercing damage
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={armor_piercing=false,armor_piercing_mob=false}}] run function gm4_survival_refightalized:player/armor/durability/check
 
-# apply health regeneration timer, /5 if damage was non-combat, 0 if damage did not apply to health
-execute if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] run scoreboard players operation $set gm4_sr_health.regeneration_timer /= #5 gm4_sr_data
+# apply health regeneration timer, use rapid_regen if damage was non-combat, 0 if damage did not apply to health
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] run scoreboard players operation $set gm4_sr_health.regeneration_timer = $rapid_regen_timer gm4_sr_config
 execute if score $damage_health gm4_sr_data matches 1.. run scoreboard players operation @s gm4_sr_health.regeneration_timer > $set gm4_sr_health.regeneration_timer
 scoreboard players operation @s[scores={gm4_sr_stat.damage_taken=1..}] gm4_sr_health.regeneration_timer > $set gm4_sr_health.regeneration_timer
 

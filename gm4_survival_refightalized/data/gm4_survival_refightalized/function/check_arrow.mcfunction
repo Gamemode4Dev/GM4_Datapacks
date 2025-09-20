@@ -10,4 +10,4 @@ execute store result score $arrow_damage gm4_sr_data run data get entity @s dama
 tag @s add gm4_sr_current_arrow
 execute on origin if entity @s[type=#gm4_survival_refightalized:can_fire_arrows] run function gm4_survival_refightalized:mob/process/arrow/run
 tag @s remove gm4_sr_current_arrow
-execute unless score $arrow_damage gm4_sr_data matches 20 store result entity @s damage double 0.1 run scoreboard players get $arrow_damage gm4_sr_data
+execute store result entity @s damage double 0.1 run scoreboard players get $arrow_damage gm4_sr_data

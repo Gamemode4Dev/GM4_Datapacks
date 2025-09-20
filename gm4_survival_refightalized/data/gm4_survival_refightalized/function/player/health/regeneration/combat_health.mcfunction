@@ -8,4 +8,5 @@ execute unless score @s gm4_sr_stat.current_health < @s gm4_sr_stat.max_health r
 
 # base restore 10 (half a heart), call function tag for expansions
 scoreboard players add @s gm4_sr_health.restoration 10
+scoreboard players operation @s gm4_sr_health.regeneration_timer = $rapid_regen_timer gm4_sr_config
 function #gm4_survival_refightalized:health_regeneration

@@ -1,5 +1,5 @@
 # modify shot arrows
-# @s = arrow
+# @s = arrow origin
 # at unspecified
 # run from check_arrow
 
