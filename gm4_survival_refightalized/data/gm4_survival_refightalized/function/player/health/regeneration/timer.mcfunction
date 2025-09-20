@@ -4,7 +4,7 @@
 # run from player_submain
 
 # gm4_sr_stat.regeneration_rate_change is normally 0, but can be changed by expansions
-scoreboard players set @a gm4_sr_stat.regeneration_rate_change 0
+scoreboard players set @s gm4_sr_stat.regeneration_rate_change 0
 function #gm4_survival_refightalized:health_regeneration_timer
 
 scoreboard players set $regeneration_timer gm4_sr_data 100
