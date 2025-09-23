@@ -115,7 +115,7 @@
 		},
 		"gui": {
 			"rotation": [30, -135, 0],
-			"translation": [0, 2.25, 0]
+			"translation": [4, -2, 0]
 		},
 		"fixed": {
 			"rotation": [-90, 0, 0],
