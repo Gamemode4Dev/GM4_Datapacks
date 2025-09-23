@@ -178,7 +178,7 @@
 			"scale": [0.4, 0.4, 0.4]
 		},
 		"firstperson_lefthand": {
-			"rotation": [0, -135, 0],
+			"rotation": [0, 45, 0],
 			"scale": [0.4, 0.4, 0.4]
 		},
 		"ground": {
@@ -194,25 +194,5 @@
 			"translation": [0, 0, -3.25],
 			"scale": [0.5, 0.5, 0.5]
 		}
-	},
-	"groups": [
-		{
-			"name": "Legs",
-			"origin": [8, 8, 8],
-			"color": 0,
-			"children": [0, 1, 2, 3]
-		},
-		{
-			"name": "Panels",
-			"origin": [8, 8, 8],
-			"color": 0,
-			"children": [4, 5, 6]
-		},
-		{
-			"name": "diagonals",
-			"origin": [8, 8, 8],
-			"color": 0,
-			"children": [7, 8, 9, 10]
-		}
-	]
+	}
 }
