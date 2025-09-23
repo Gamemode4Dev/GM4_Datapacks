@@ -17,7 +17,7 @@ Read more about all the options on the [Wiki](https://wiki.gm4.co/Better_Armour_
 
 ### Credits
 - Creator: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
-- Updated by: [Misode](https://bsky.app/profile/misode.dev)
+- Updated by: [Misode](https://bsky.app/profile/misode.dev), [kindabland](https://github.com/kindabland)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---

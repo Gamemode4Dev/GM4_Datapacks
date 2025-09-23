@@ -1,5 +1,5 @@
 {
-  "last_commit": "4dcd6a8e0def51bab43c0e641a4c6e815b2bc788",
+  "last_commit": "bb2c663051d71919dc66442f52c35624b9cce83f",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1975,8 +1975,8 @@
     {
       "id": "gm4_particles_pack",
       "name": "Particles Pack",
-      "version": "1.7.1",
-      "hash": "d89b8f2f64cf484b7e9d76664c5cb28c2cab30ce",
+      "version": "1.7.2",
+      "hash": "46bb4ca893694199adfe5b55e8357710a2357dbd",
       "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=238s",
       "wiki_link": "https://wiki.gm4.co/wiki/Particles_Pack",
       "credits": {
@@ -1984,7 +1984,8 @@
           "Sparks"
         ],
         "Updated by": [
-          "Misode"
+          "Misode",
+          "kindabland"
         ],
         "Icon Design": [
           "DuckJr"
@@ -3658,6 +3659,12 @@
       "name": "JP12",
       "links": [
         "https://github.com/jpeterik12"
+      ]
+    },
+    "kindabland": {
+      "name": "kindabland",
+      "links": [
+        "https://github.com/kindabland"
       ]
     },
     "Kroppeb": {
