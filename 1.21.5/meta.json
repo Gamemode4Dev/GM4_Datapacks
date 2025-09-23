@@ -1,5 +1,5 @@
 {
-  "last_commit": "3f2c2ed2b1541bf3fb99252c504c15fa54c954bb",
+  "last_commit": "4dcd6a8e0def51bab43c0e641a4c6e815b2bc788",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1555,6 +1555,38 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "uSXn7pVW",
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_lively_lily_pads",
+      "name": "Lively Lily Pads",
+      "version": "3.0.0",
+      "hash": "797a7f89b80b45e392d923b4b31ac71688a2ffb2",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Lively_Lily_Pads",
+      "credits": {
+        "Creator": [
+          "runcows"
+        ],
+        "Icon Design": [
+          "runcows"
+        ]
+      },
+      "requires": [],
+      "description": "Place decorations on Lily Pads!",
+      "recommends": [],
+      "minecraft": [
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2025-09-23",
+      "modrinth_id": "7wnTwrbr",
       "smithed_link": null,
       "pmc_link": null
     },
@@ -3213,8 +3245,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.10",
-      "hash": "6dbc3208c4443fc3df377020d065716742a4c37c",
+      "version": "1.4.11",
+      "hash": "ba5930f30c21bfd7c092835ce294d872d00d527a",
       "video_link": "",
       "wiki_link": "",
       "credits": {
