@@ -1,0 +1,13 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:reference",
+      "name": "gm4_lively_lily_pads:mainhand_placeable_item"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "gm4_lively_lily_pads:offhand_placeable_item"
+    }
+  ]
+}
