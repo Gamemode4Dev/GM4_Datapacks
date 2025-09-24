@@ -2,4 +2,4 @@
 #run from liquid_tanks:item_process
 
 #experience tank
-execute if entity @s[tag=gm4_lt_experience] if data storage gm4_liquid_tanks:temp/tank {input_slot:{components:{"minecraft:enchantments":{"minecraft:mending":1}}}} run function gm4_mending_tanks:check_item
+execute if entity @s[tag=gm4_lt_experience] if items block ~ ~ ~ container.0 *[minecraft:enchantments~[{enchantments:["minecraft:mending"]}]] run function gm4_mending_tanks:check_item

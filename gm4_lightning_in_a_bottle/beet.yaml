@@ -8,12 +8,19 @@ data_pack:
 resource_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
+  - gm4_liquid_tanks.bolt_liquid_wrappers
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_brewing
   - gm4.plugins.include.lib_potion_tracking
 
 meta:
+  bolt:
+    entrypoint:
+      gm4_lightning_in_a_bottle:liquid_tanks/liquid_features
   gm4:
     versioning:
       required:
