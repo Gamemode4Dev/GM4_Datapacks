@@ -7,10 +7,10 @@
 # steal
 data modify storage gm4_reeling_rods:temp item_data set value {}
 data modify storage gm4_reeling_rods:temp item_data.Item set value {id:"minecraft:chest",count:1}
+data modify storage gm4_reeling_rods:temp entity_data set from entity @s
 execute positioned ~ ~0.3 ~ run function gm4_reeling_rods:pull_items
 
 # replace with boat
-data modify storage gm4_reeling_rods:temp entity_data set from entity @s
 data remove storage gm4_reeling_rods:temp entity_data.UUID
 data remove storage gm4_reeling_rods:temp entity_data.Passengers
 $data modify storage gm4_reeling_rods:temp entity_type set value "$(boat_type)"
