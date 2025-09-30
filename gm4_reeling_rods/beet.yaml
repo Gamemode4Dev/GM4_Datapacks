@@ -22,6 +22,10 @@ meta:
         - gm4_end_fishing
         - gm4_live_catch
       notes: []
+      search_keywords: 
+        - barbed
+        - fishing
+        - enchantment
     modrinth:
       project_id: MWPuloVL
     smithed:

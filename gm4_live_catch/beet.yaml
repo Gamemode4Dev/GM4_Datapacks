@@ -20,6 +20,8 @@ meta:
         - gm4_end_fishing
         - gm4_reeling_rods
       notes: []
+      search_keywords: 
+        - fishing
     modrinth:
       project_id: uSXn7pVW
     video: null
