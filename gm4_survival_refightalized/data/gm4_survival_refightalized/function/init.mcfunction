@@ -44,7 +44,8 @@ scoreboard objectives add gm4_sr_shield.timer dummy
 
 # configs
 execute unless score $natural_regen gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $natural_regen gm4_sr_config 1
-execute unless score $combat_regen_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $combat_regen_timer gm4_sr_config 1250
+execute unless score $combat_regen_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $combat_regen_timer gm4_sr_config 3750
+execute unless score $rapid_regen_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $rapid_regen_timer gm4_sr_config 1250
 execute unless score $armor_recharge_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $armor_recharge_timer gm4_sr_config 625
 
 # swap natural regeneration to module's system

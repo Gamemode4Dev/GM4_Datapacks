@@ -11,10 +11,10 @@ execute if predicate gm4_monsters_unbound:biome/toxic if predicate {condition:"m
 # burned
 execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_monsters_unbound:biome/burned] store success score $mob_extras gm4_sr_data run summon enderman ~.05 ~ ~ {Tags:["gm4_sr_extra_mob"]}
 execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_monsters_unbound:biome/burned] store success score $mob_extras gm4_sr_data run summon enderman ~-.05 ~ ~.05 {Tags:["gm4_sr_extra_mob"]}
-# growth 
+# growth
 execute if predicate gm4_monsters_unbound:biome/growth run function gm4_monsters_unbound:mob/init/mob_type/enderman/growth
 # underground
-execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_survival_refightalized:mob/underground] if predicate {condition:"minecraft:random_chance",chance:0.15} run function gm4_monsters_unbound:mob/init/mob_type/enderman/underground
+execute if entity @s[tag=!gm4_sr_extra_mob,predicate=gm4_monsters_unbound:technical/underground] if predicate {condition:"minecraft:random_chance",chance:0.15} run function gm4_monsters_unbound:mob/init/mob_type/enderman/underground
 # dripstone caves
 execute if biome ~ ~ ~ dripstone_caves if block ~.875 ~ ~.875 #gm4:no_collision if block ~.875 ~ ~-.875 #gm4:no_collision if block ~-.875 ~ ~.875 #gm4:no_collision if block ~-.875 ~ ~-.875 #gm4:no_collision run function gm4_monsters_unbound:mob/init/mob_type/enderman/dripstone_caves
 

@@ -13,13 +13,13 @@ attribute @s minecraft:attack_knockback modifier add gm4_monsters_unbound:elite_
 attribute @s minecraft:water_movement_efficiency modifier add gm4_monsters_unbound:elite_buff.giant 0.85 add_value
 attribute @s minecraft:movement_speed modifier add gm4_monsters_unbound:elite_buff.giant -0.35 add_multiplied_total
 
-attribute @s[type=#gm4_survival_refightalized:skeleton_types] minecraft:scale modifier add gm4_monsters_unbound:elite_buff.giant_size 0.507537 add_multiplied_total
-attribute @s[type=!#gm4_survival_refightalized:skeleton_types] minecraft:scale modifier add gm4_monsters_unbound:elite_buff.giant_size 0.538461 add_multiplied_total
+attribute @s[type=#gm4_monsters_unbound:skeleton_types] minecraft:scale modifier add gm4_monsters_unbound:elite_buff.giant_size 0.507537 add_multiplied_total
+attribute @s[type=!#gm4_monsters_unbound:skeleton_types] minecraft:scale modifier add gm4_monsters_unbound:elite_buff.giant_size 0.538461 add_multiplied_total
 
-enchant @s[type=#gm4_survival_refightalized:skeleton_types] punch 2
-enchant @s[type=#gm4_survival_refightalized:skeleton_types] power 1
+enchant @s[type=#gm4_monsters_unbound:skeleton_types] punch 2
+enchant @s[type=#gm4_monsters_unbound:skeleton_types] power 1
 
-scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_arrow.fire_delay 7
+scoreboard players set @s[type=#gm4_monsters_unbound:skeleton_types] gm4_sr_arrow.fire_delay 7
 
 item replace entity @s armor.head with cobblestone[enchantment_glint_override=false,minecraft:enchantments={projectile_protection:5,binding_curse:1}] 1 
 data modify entity @s drop_chances.head set value 0
