@@ -4,6 +4,5 @@
 # with {id, count}
 # run from flower/as_player
 
-
 scoreboard players set $signal_give_back gm4_blossoming_pots.misc 0
-$execute at @s run summon minecraft:item ~ ~ ~ {Item:{id:"$(id)",count:$(count)}}
+$execute at @s run summon minecraft:item ~ ~ ~ {Item:{id:"$(id)",count:1}}
