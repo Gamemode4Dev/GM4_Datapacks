@@ -16,7 +16,9 @@ meta:
         template: advancement
     website:
       description: Catch live fish when fishing! But watch out for Pufferfish, those might make for a nasty surprise!
-      recommended: []
+      recommended: 
+        - gm4_end_fishing
+        - gm4_reeling_rods
       notes: []
     modrinth:
       project_id: uSXn7pVW

@@ -14,7 +14,8 @@ meta:
       schedule_loops: [main,tick]
     website:
       description: Place decorations on Lily Pads!
-      recommended: []
+      recommended: 
+        - gm4_blossoming_pots
       notes: []
     modrinth:
       project_id: 7wnTwrbr
