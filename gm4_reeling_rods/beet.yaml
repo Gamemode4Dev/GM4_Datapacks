@@ -17,15 +17,15 @@ meta:
     versioning:
       schedule_loops: [tick]
     website:
-      description: Reel in more than just fish with these rods! Yoink the chest from the chest boat and more!
+      description: Steal Villager's wares, scratch up your foes! Fishing rods have never been more useful!
       recommended: 
         - gm4_end_fishing
         - gm4_live_catch
       notes: []
     modrinth:
       project_id: MWPuloVL
-    #smithed:
-      #pack_id: 
+    smithed:
+      pack_id: gm4_reeling_rods
     #planetminecraft:
       #uid: 
     video: null

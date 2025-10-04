@@ -9,5 +9,5 @@ function gm4_reeling_rods:summon_item with storage gm4_reeling_rods:temp
 execute unless data entity @s Items[] run return 0
 
 # Entities with Items tag
-data modify storage gm4_reeling_rods:temp motion_vector set from storage gm4_reeling_rods:temp entity_data.Motion
+data modify storage gm4_reeling_rods:temp motion_vector set from storage gm4_reeling_rods:temp item_data.Motion
 function gm4_reeling_rods:reeling/empty_container_entity
