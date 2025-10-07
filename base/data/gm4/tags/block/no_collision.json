@@ -27,6 +27,7 @@
     "minecraft:cave_vines_plant",
     "minecraft:cherry_sapling",
     "minecraft:cobweb",
+    {"id": "minecraft:copper_torch", "required": false},
     "minecraft:crimson_fungus",
     "minecraft:crimson_roots",
     "minecraft:dark_oak_sapling",
