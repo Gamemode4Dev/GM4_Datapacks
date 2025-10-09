@@ -13,6 +13,7 @@ execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:items/buc
 execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/torch] run function gm4_crossbow_cartridges:projectile/torch
 execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/redstone_torch] run function gm4_crossbow_cartridges:projectile/redstone_torch
 execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/soul_torch] run function gm4_crossbow_cartridges:projectile/soul_torch
+execute if entity @s[tag=!gm4_cb_use,gamemode=!adventure,predicate=gm4_crossbow_cartridges:items/copper_torch] run function gm4_crossbow_cartridges:projectile/copper_torch
 
 # potions
 execute if entity @s[tag=!gm4_cb_use,predicate=gm4_crossbow_cartridges:items/potions] run function gm4_crossbow_cartridges:projectile/potions
