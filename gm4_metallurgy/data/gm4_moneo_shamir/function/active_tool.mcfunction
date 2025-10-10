@@ -16,5 +16,6 @@ execute if score $tool_max_damage gm4_ml_data matches 131 run function gm4_moneo
 execute if score $tool_max_damage gm4_ml_data matches 250 run function gm4_moneo_shamir:tools/materials/iron
 execute if score $tool_max_damage gm4_ml_data matches 1561 run function gm4_moneo_shamir:tools/materials/diamond
 execute if score $tool_max_damage gm4_ml_data matches 2031 run function gm4_moneo_shamir:tools/materials/netherite
-execute if score $tool_max_damage gm4_ml_data matches 33 run function gm4_moneo_shamir:tools/materials/gold
+# | gold used to be listed as 33 max damage, this is kept for compatibility with old items
+execute if score $tool_max_damage gm4_ml_data matches 32..33 run function gm4_moneo_shamir:tools/materials/gold
 execute if score $tool_max_damage gm4_ml_data matches 237 run function gm4_moneo_shamir:tools/shears
