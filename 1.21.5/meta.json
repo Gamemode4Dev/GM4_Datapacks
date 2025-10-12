@@ -1,5 +1,5 @@
 {
-  "last_commit": "ddc53e052a10cca0c505971eff77dbc189cdf8a8",
+  "last_commit": "274da655b83d1fe607d98a795c7a11a5eb07798f",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1587,7 +1587,7 @@
       "search_keywords": [],
       "publish_date": "2025-09-23",
       "modrinth_id": "7wnTwrbr",
-      "smithed_link": null,
+      "smithed_link": "gm4_lively_lily_pads",
       "pmc_link": null
     },
     {
