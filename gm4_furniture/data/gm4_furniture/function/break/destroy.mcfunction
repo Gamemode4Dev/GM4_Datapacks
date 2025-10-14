@@ -16,7 +16,7 @@ execute as @e[type=interaction,tag=gm4_furniture,distance=..8] if score @s gm4_f
 # kill item displays
 execute as @e[type=item_display,tag=gm4_furniture,distance=..8] if score @s gm4_furniture_id = $check_id gm4_furniture_id run kill @s
 
-# kill item displays
+# kill markers
 execute as @e[type=marker,tag=gm4_furniture,distance=..8] if score @s gm4_furniture_id = $check_id gm4_furniture_id run kill @s
 
 # if the broken furniture was a furniture station run some extra code

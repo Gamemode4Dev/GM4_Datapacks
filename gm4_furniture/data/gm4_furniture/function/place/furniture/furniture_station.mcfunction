@@ -33,7 +33,7 @@ execute positioned ~ ~999.5001 ~ summon villager run function gm4_furniture:tech
 # build furniture station
 execute unless block ~ ~1 ~ water[level=0] run setblock ~ ~1 ~ light[level=0]
 execute if block ~ ~1 ~ water[level=0] run setblock ~ ~1 ~ light[level=0,waterlogged=true]
-execute store result score @e[type=interaction,tag=gm4_new_furniture] gm4_furniture_id run scoreboard players add $next_id gm4_furniture_id 1
+execute store result score @e[tag=gm4_new_furniture,distance=..4] gm4_furniture_id run scoreboard players add $next_id gm4_furniture_id 1
 execute store result score @e[type=villager,tag=gm4_new_furniture] gm4_furniture_id run scoreboard players get $next_id gm4_furniture_id
 
 # rotate furniture_station depending on rotation set by player (if rotation is 1 default rotation can be kept)
@@ -43,4 +43,5 @@ execute if score $rotation gm4_furniture_data matches 4 as @e[tag=gm4_new_furnit
 
 # mark block as placed
 playsound minecraft:block.barrel.close block @a[distance=..6] ~ ~ ~ 1 1.6
-tag @e[distance=..2] remove gm4_new_furniture
+tag @e[distance=..4] remove gm4_new_furniture
+execute positioned ~ ~999.5001 ~ run tag @e[distance=..4] remove gm4_new_furniture
