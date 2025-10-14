@@ -5,5 +5,4 @@
 # revoke to handle username changes
 advancement revoke @s only gm4_rope_ladders:id_init
 
-scoreboard players operation @s gm4_rol_id = $next gm4_rol_id
-scoreboard players add $next gm4_rol_id 1
+execute store result score @s gm4_rol_id run scoreboard players add $next gm4_rol_id 1
