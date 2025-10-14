@@ -6,7 +6,7 @@
 scoreboard players set $rcd_found gm4_rol_data 1
 
 # kill rcd if uneeded
-execute unless entity @p[tag=gm4_rol_holding_ladder,distance=..5] run return run kill @s
+execute unless entity @a[tag=gm4_rol_holding_ladder,distance=..5,limit=1] run return run kill @s
 execute unless block ~ ~ ~ ladder run return run kill @s
 execute if block ~ ~-1 ~ ladder unless block ~ ~1 ~ #minecraft:air run return run kill @s
 
