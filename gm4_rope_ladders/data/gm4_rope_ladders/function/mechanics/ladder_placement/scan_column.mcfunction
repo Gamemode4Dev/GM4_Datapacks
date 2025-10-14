@@ -8,4 +8,4 @@ execute if block ~ ~ ~ #gm4:replaceable run return run function gm4_rope_ladders
 
 # loop
 scoreboard players add $loop gm4_rol_data 1
-execute if score $loop gm4_rol_data matches 0..511 unless score $ladder_placed gm4_rol_data matches 1 if block ~ ~-1 ~ #gm4_rope_ladders:ladder_scan positioned ~ ~-1 ~ run function gm4_rope_ladders:mechanics/ladder_placement/scan_column
+execute if score $loop gm4_rol_data matches 0..511 if block ~ ~-1 ~ #gm4_rope_ladders:ladder_scan positioned ~ ~-1 ~ run function gm4_rope_ladders:mechanics/ladder_placement/scan_column
