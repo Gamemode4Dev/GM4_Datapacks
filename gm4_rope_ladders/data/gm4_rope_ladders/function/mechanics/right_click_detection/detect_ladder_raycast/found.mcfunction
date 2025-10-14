@@ -3,8 +3,7 @@
 # at position of ladder block, align xyz positioned ~.5 ~ ~.5
 # run from function: gm4_rope_ladders:mechanics/right_click_detection/detect_ladder_raycast/ray
 
-# set scores
-scoreboard players set $found_ladder gm4_rol_data 1
+# store player id
 scoreboard players operation $player gm4_rol_id = @s gm4_rol_id
 
 # visuals
