@@ -1,5 +1,5 @@
 {
-  "last_commit": "274da655b83d1fe607d98a795c7a11a5eb07798f",
+  "last_commit": "8db7bdc096ea1b784abb0b6dad4b0ddc31df5845",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -321,7 +321,9 @@
       },
       "requires": [],
       "description": "Greatly expands the selection of potable plants. Use Decorated Pots as abnormally large flower pots. Decorate in Style!",
-      "recommends": [],
+      "recommends": [
+        "gm4_lively_lily_pads"
+      ],
       "minecraft": [
         "1.21.5",
         "1.21.6",
@@ -330,7 +332,10 @@
       ],
       "hidden": false,
       "important_note": null,
-      "search_keywords": [],
+      "search_keywords": [
+        "flowering",
+        "plant"
+      ],
       "publish_date": "2025-02-09",
       "modrinth_id": "wOnn6VDU",
       "smithed_link": "gm4_blossoming_pots",
@@ -982,7 +987,9 @@
       "requires": [],
       "description": "Catch rare loot by fishing in the end void! The void holds many riches, from End City loot and Elytra to weapons that once belonged to explorers time forgot, collect them all!",
       "recommends": [
-        "gm4_resource_pack"
+        "gm4_resource_pack",
+        "gm4_reeling_rods",
+        "gm4_live_catch"
       ],
       "minecraft": [
         "1.21.5",
@@ -1543,7 +1550,10 @@
       },
       "requires": [],
       "description": "Catch live fish when fishing! But watch out for Pufferfish, those might make for a nasty surprise!",
-      "recommends": [],
+      "recommends": [
+        "gm4_end_fishing",
+        "gm4_reeling_rods"
+      ],
       "minecraft": [
         "1.21.5",
         "1.21.6",
@@ -1552,7 +1562,9 @@
       ],
       "hidden": false,
       "important_note": null,
-      "search_keywords": [],
+      "search_keywords": [
+        "fishing"
+      ],
       "publish_date": "2023-07-10",
       "modrinth_id": "uSXn7pVW",
       "smithed_link": null,
@@ -1561,8 +1573,8 @@
     {
       "id": "gm4_lively_lily_pads",
       "name": "Lively Lily Pads",
-      "version": "3.0.0",
-      "hash": "797a7f89b80b45e392d923b4b31ac71688a2ffb2",
+      "version": "3.0.1",
+      "hash": "ef47922bad4bd55cee73499e619cd4c935ca1a19",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lively_Lily_Pads",
       "credits": {
@@ -1575,7 +1587,9 @@
       },
       "requires": [],
       "description": "Place decorations on Lily Pads!",
-      "recommends": [],
+      "recommends": [
+        "gm4_blossoming_pots"
+      ],
       "minecraft": [
         "1.21.5",
         "1.21.6",
@@ -1584,7 +1598,13 @@
       ],
       "hidden": false,
       "important_note": null,
-      "search_keywords": [],
+      "search_keywords": [
+        "candle",
+        "plant",
+        "coral",
+        "spore",
+        "lantern"
+      ],
       "publish_date": "2025-09-23",
       "modrinth_id": "7wnTwrbr",
       "smithed_link": "gm4_lively_lily_pads",
@@ -2267,8 +2287,8 @@
     {
       "id": "gm4_reeling_rods",
       "name": "Reeling Rods",
-      "version": "1.0.3",
-      "hash": "a169643225f24f4767b5e207a0ce2e6948d2ef24",
+      "version": "1.0.4",
+      "hash": "6731bef147ec0fdd31aeae3357f3d15541cffc6d",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Reeling_Rods",
       "credits": {
@@ -2294,7 +2314,11 @@
       ],
       "hidden": false,
       "important_note": null,
-      "search_keywords": [],
+      "search_keywords": [
+        "barbed",
+        "fishing",
+        "enchantment"
+      ],
       "publish_date": "2025-08-26",
       "modrinth_id": "MWPuloVL",
       "smithed_link": "gm4_reeling_rods",

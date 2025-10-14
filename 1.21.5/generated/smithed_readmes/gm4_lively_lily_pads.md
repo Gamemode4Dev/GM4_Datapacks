@@ -2,6 +2,8 @@
 
 Place decorations on lily pads! <!--$pmc:headerSize-->
 
+<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_lively_lily_pads/images/lively_lily_pads.webp" alt="A spore blossom being placed on a lily pad" width="350"/>  <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
+
 ### Features
 Place the following on lily pads:
 - Candles*
