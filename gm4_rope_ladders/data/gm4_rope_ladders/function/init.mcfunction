@@ -5,7 +5,6 @@ scoreboard players set rope_ladders gm4_modules 1
 scoreboard objectives add gm4_rol_data dummy
 scoreboard objectives add gm4_rol_break_ladder minecraft.mined:minecraft.ladder
 scoreboard objectives add gm4_rol_id dummy
-execute unless score $next gm4_rol_id matches 0.. run scoreboard players set $next gm4_rol_id 0
 
 
 schedule function gm4_rope_ladders:main 10t
