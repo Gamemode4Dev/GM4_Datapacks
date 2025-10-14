@@ -1,5 +1,5 @@
 {
-  "last_commit": "8db7bdc096ea1b784abb0b6dad4b0ddc31df5845",
+  "last_commit": "bd51befc6f93f718a41fa9918e75e25d1e74c000",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2371,13 +2371,16 @@
     {
       "id": "gm4_rope_ladders",
       "name": "Rope Ladders",
-      "version": "1.5.1",
-      "hash": "d1d428dc7838f0e2e01911b9113a36b2538562a9",
+      "version": "1.5.2",
+      "hash": "1451bd58f08cbe9b78f806362841f6ec257c27b3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Rope_Ladders",
       "credits": {
         "Creator": [
           "Modulorium"
+        ],
+        "Updated By": [
+          "runcows"
         ],
         "Icon Design": [
           "BPR"
@@ -3270,8 +3273,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.12",
-      "hash": "6397175fa6eaefcaf387b31a2fb48571ea53d21c",
+      "version": "1.4.13",
+      "hash": "b261932dd7a730401a4ff183b0cc0b9c9e4a5e78",
       "video_link": "",
       "wiki_link": "",
       "credits": {

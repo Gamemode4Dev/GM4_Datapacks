@@ -14,6 +14,7 @@ Ever wanted to place unsupported ladders? This modular data pack allows you to e
 
 ### Credits
 - Creator: [Modulorium](https://www.modulorium.dev)
+- Updated By: [runcows](https://bsky.app/profile/runcows.bsky.social)
 - Icon Design: [BPR](https://bsky.app/profile/bpr02.com)
 
 ---
