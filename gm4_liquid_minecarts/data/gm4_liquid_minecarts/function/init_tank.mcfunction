@@ -2,7 +2,7 @@
 #run from try_to_unload
 
 #summon item_display
-summon item_display ~ ~-0.5 ~ {CustomName:"gm4_liquid_tank_liquid_display",Tags:["gm4_liquid_tank_liquid_display","smithed.entity","smithed.strict","gm4_lm_needs_texture"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation: [0f,0f,0f,1f],translation:[0f,0.2185f,0f],scale:[0.83,0.83,0.83]},item_display:head}
+summon item_display ~ ~ ~ {CustomName:"gm4_liquid_tank_liquid_display",Tags:["gm4_liquid_tank_liquid_display","smithed.entity","smithed.strict","gm4_lm_needs_texture"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation: [0f,0f,0f,1f],translation:[0f,0.2185f,0f],scale:[0.83,0.83,0.83]},item_display:head}
 data modify entity @e[type=item_display,tag=gm4_lm_needs_texture,limit=1,sort=nearest] item set from entity @s Passengers[0].item.components."minecraft:custom_data".gm4_liquid_minecarts.tank.texture
 data modify entity @e[type=marker,tag=gm4_liquid_tank,limit=1,sort=nearest,distance=..0.1] data.gm4_liquid_tanks.liquid_tag set from entity @s Passengers[0].item.components."minecraft:custom_data".gm4_liquid_minecarts.liquid_tag
 tag @e[type=item_display] remove gm4_lm_needs_texture
