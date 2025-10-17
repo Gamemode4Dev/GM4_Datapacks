@@ -9,7 +9,9 @@ conversions = {
     "bed": "white_bed",
     "carpet": "white_carpet",
     "shulker_box": "shulker_box",
-    # "harness": "white_harness" # Added in 1.21.6
+    # "harness": "white_harness" # Added in 1.21.6,
+    "bundle": "bundle",
+    "candle": "candle"
 }
 
 for from_id, to_id in conversions.items():
