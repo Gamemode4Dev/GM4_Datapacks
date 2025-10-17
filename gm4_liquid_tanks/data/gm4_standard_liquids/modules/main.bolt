@@ -87,11 +87,13 @@ class Experience:
     capacity = 5345
 
     liquid.init()
+
     @liquid.item_fill('glass_bottle', 'experience_bottle', 9)
     def experience_bottle():
         item replace entity 344d47-4-4-4-f04ce104d weapon.mainhand with minecraft:experience_bottle
         yield
         execute if score $smart_success gm4_lt_value matches 1 run advancement grant @a[distance=..4,gamemode=!spectator] only gm4:standard_liquids
+                                                                                        
     liquid.item_drain('enchanted_book', 'book', 7)
     liquid.item_drain('paper[custom_data~{gm4_book_binders:{item:"enchanted_page"}}]', 'paper', 5)
 
@@ -105,6 +107,7 @@ class Ink:
 
     liquid.init()
     liquid.item_drain('ink_sac', 'air', 1)
+
     @bottle('minecraft:potion[custom_data~{gm4_standard_liquids:{potion:"blindness"}}]')
     def ink_bottle():
         loot replace entity 344d47-4-4-4-f04ce104d weapon.mainhand loot gm4_standard_liquids:ink_bottle
@@ -121,6 +124,7 @@ class GlowInk:
 
     liquid.init()
     liquid.item_drain('glow_ink_sac', 'air', 1)
+    
     @bottle('minecraft:potion[custom_data~{gm4_standard_liquids:{potion:"glowing"}}]')
     def glow_ink_bottle():
         loot replace entity 344d47-4-4-4-f04ce104d weapon.mainhand loot gm4_standard_liquids:glow_ink_bottle

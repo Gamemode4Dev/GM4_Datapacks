@@ -32,6 +32,7 @@ execute unless score $level_calc gm4_lt_util matches 0 playsound minecraft:entit
 from itertools import product, count
 c = count(0)
 for offset in product([0, -0.05, 0.05], repeat=2):
+# summons 5 xp orbs at different locations, for a "bigger" looking withdrawl
     if 0 not in offset:
         continue
     dx, dz = offset

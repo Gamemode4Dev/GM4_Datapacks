@@ -2,7 +2,6 @@
 #run from main
 
 #item processing
-# data modify storage gm4_liquid_tanks:temp/tank input_slot merge from block ~ ~ ~ Items[{Slot:0b}]
 execute if items block ~ ~ ~ container.0 * run function gm4_liquid_tanks:item_process
 
 #last item action resetting (requires updated tank data, so no refrence to storage)
