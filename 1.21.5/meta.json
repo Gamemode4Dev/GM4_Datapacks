@@ -1,5 +1,5 @@
 {
-  "last_commit": "bd51befc6f93f718a41fa9918e75e25d1e74c000",
+  "last_commit": "f448a5e959fda8259c3b64fc9815fd403871245b",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -76,8 +76,8 @@
     {
       "id": "gm4_audere_shamir",
       "name": "Audere Shamir",
-      "version": "1.5.1",
-      "hash": "0687fd330dd90f3faebe40328d5a8233eb22a17b",
+      "version": "1.5.2",
+      "hash": "2477348fe43900da9aff08f2834909a28631e28a",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Audere_Shamir",
       "credits": {
@@ -1685,8 +1685,8 @@
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.7.2",
-      "hash": "628b23b43442d8407a06965ff90ea9a2beeda9de",
+      "version": "1.7.3",
+      "hash": "3afc375d02fd8953fb40007c39833d8f7240f05f",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
