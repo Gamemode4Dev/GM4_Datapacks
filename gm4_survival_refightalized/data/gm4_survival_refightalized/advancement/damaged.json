@@ -69,6 +69,25 @@
         }
       }
     },
+    "bypasses_shield": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:bypasses_shield",
+                "expected": true
+              },
+              {
+                "id": "gm4_survival_refightalized:ignore",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    },
     "is_fire": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
@@ -196,6 +215,7 @@
       "armor_piercing",
       "armor_piercing_mob",
       "bypasses_enchantments",
+      "bypasses_shield",
       "is_fire",
       "is_fall",
       "is_explosion",

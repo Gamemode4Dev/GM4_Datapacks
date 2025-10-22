@@ -21,7 +21,7 @@ execute if score $on_paper gm4_sr_data matches 1 run scoreboard players operatio
 execute if score $on_paper gm4_sr_data matches 1 run scoreboard players operation @s gm4_sr_stat.damage_resisted /= #512 gm4_sr_data
 
 # disable shield if damage was blocked, don't run the rest of this function
-execute unless score @s[scores={gm4_sr_shield.timer=1..2,gm4_sr_shield.use_ticks=1..}] gm4_sr_stat.damage_taken matches 1.. unless score @s gm4_sr_stat.damage_absorbed matches 1.. run return run function gm4_survival_refightalized:player/damage/shield/blocked_damage
+execute unless score @s[scores={gm4_sr_shield.timer=1..2,gm4_sr_shield.use_ticks=1..},advancements={gm4_survival_refightalized:damaged={bypasses_shield=false}}] gm4_sr_stat.damage_taken matches 1.. unless score @s gm4_sr_stat.damage_absorbed matches 1.. run return run function gm4_survival_refightalized:player/damage/shield/blocked_damage
 
 # cave spider / witch poison reduction
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={cave_spider=true}}] run function gm4_survival_refightalized:player/damage/cave_spider_poison_reduction
