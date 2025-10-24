@@ -19,5 +19,6 @@ execute if entity @s[type=enderman] run return run function gm4_survival_refight
 execute if entity @s[type=wither_skeleton] run return run function gm4_survival_refightalized:mob/init/mob_type/wither_skeleton
 execute if entity @s[type=phantom] run return run function gm4_survival_refightalized:mob/init/mob_type/phantom
 execute if entity @s[type=piglin] run return run function gm4_survival_refightalized:mob/init/mob_type/piglin
+execute if entity @s[type=piglin_brute] run return run function gm4_survival_refightalized:mob/init/mob_type/piglin_brute
 execute if entity @s[type=zombified_piglin] run return run function gm4_survival_refightalized:mob/init/mob_type/zombified_piglin
 execute if entity @s[type=silverfish] run return run function gm4_survival_refightalized:mob/init/mob_type/silverfish

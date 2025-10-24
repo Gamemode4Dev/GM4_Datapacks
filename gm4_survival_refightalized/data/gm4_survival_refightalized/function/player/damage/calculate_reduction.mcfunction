@@ -3,6 +3,10 @@
 # at @s
 # run from player/damage/run
 
+# add a 10 tick delay before damage can be calculated again
+execute if score @s gm4_sr_armor.hit_cooldown matches 1.. run return run tellraw @s[tag=gm4_sr_dev.damage_log] {"text":"Recent damage invulnerability","color":"white"}
+scoreboard players set @s gm4_sr_armor.hit_cooldown 10
+
 # grab active effects to check for resistance later - can be skipped if this was already done for cave spider / witch poison reduction
 execute unless data storage gm4_survival_refightalized:temp active_effects run data modify storage gm4_survival_refightalized:temp active_effects set from entity @s active_effects
 
