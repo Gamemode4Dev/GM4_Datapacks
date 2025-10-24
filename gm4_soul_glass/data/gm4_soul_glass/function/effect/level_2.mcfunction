@@ -1,5 +1,5 @@
-#@s = soul glass AEC with level 1 beacon below it
-#run from effects/check
+# @s = gm4_soul_glass marker with level 2 beacon below it
+# run from effect/check
 
 execute if score @s gm4_sg_primary matches 1 run effect give @a[dx=60,dy=316,dz=60,gamemode=!spectator] minecraft:slowness 13 0
 execute if score @s gm4_sg_primary matches 3 run effect give @a[dx=60,dy=316,dz=60,gamemode=!spectator] minecraft:mining_fatigue 13 0

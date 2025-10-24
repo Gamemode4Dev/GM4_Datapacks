@@ -1,5 +1,5 @@
-#@s = soul glass AEC
-#run from beacon_clock
+# @s = gm4_soul_glass marker
+# run from beacon_clock
 
 execute if data block ~ ~-1 ~ primary_effect run function gm4_soul_glass:effect/update_effects
 

@@ -28,7 +28,7 @@ meta:
       description: Reverse the effects of beacons with corrupting glass! But be careful, a poison Beacon may sound great at first, but is incredibly painful in pratice.
       recommended: []
       notes:
-        - Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.
+        - On versions <1.21, Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.
     modrinth:
       project_id: Hi8fkYoI
     video: null

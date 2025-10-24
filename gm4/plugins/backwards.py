@@ -1,13 +1,49 @@
 import logging
 from typing import Any, Tuple, Callable
-from beet import Context, Pack, NamespaceFile
+from beet import Context, Pack, NamespaceFile, ItemModel
 from beet.core.utils import SupportedFormats
 
 logger = logging.getLogger("gm4.backwards")
 
 # Generates overlays to support older versions
 def beet_default(ctx: Context):
-  pass
+  yield
+
+  # edited item model definition - replaced head with player_head
+  backport(ctx.assets, 63, playerhead_models_1_21_5)
+
+
+def playerhead_models_1_21_5(id: str, resource: NamespaceFile):
+  if not isinstance(resource, ItemModel):
+    return None
+  overlay = resource.copy()
+  json = overlay.data
+  if id=="minecraft:player_head":
+    def recursive_replace(compound: dict[str,Any]):
+      for key, val in compound.items():
+        # recurse down the tree
+        if isinstance(val, list):
+          for subval in val: # type: ignore
+            if isinstance(subval, dict):
+              recursive_replace(subval) # type: ignore
+        elif isinstance(val, dict):
+          recursive_replace(val) # type: ignore
+          # then replace matching compounds
+          match val:
+            case {
+              "type": "minecraft:special",
+              "model": {
+                  "type": "minecraft:player_head"
+              }
+            }:
+              compound[key]["model"]["type"] = "minecraft:head"
+              compound[key]["model"]["kind"] = "player"
+            case _: # type: ignore
+              pass
+
+    recursive_replace(json)
+    return overlay
+  return None
 
 
 def backport(pack: Pack[Any], format: int, run: Callable[[str, NamespaceFile], NamespaceFile | None]):

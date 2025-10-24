@@ -9,9 +9,10 @@ execute if score @s gm4_particle matches 4 run particle minecraft:end_rod ~ ~ ~ 
 execute if score @s gm4_particle matches 7 run particle minecraft:happy_villager ~ ~.3 ~ 2 .2 2 0 1
 execute if score @s gm4_particle matches 8 run particle minecraft:dripping_water ~ ~1 ~ 0.04 0 0.04 1 1
 execute if score @s gm4_particle matches 9 run particle minecraft:falling_dust{block_state:"minecraft:snow"} ~ ~4 ~ 2 1 2 0 5
-execute if score @s gm4_particle matches 10 run particle minecraft:falling_dust{block_state:"minecraft:pink_wool"} ~ ~4 ~ 2 1 2 0 5
-execute if score @s gm4_particle matches 11 run particle minecraft:falling_dust{block_state:"minecraft:orange_wool"} ~ ~4 ~ 2 1 2 0 2
-execute if score @s gm4_particle matches 11 run particle minecraft:falling_dust{block_state:"minecraft:brown_wool"} ~ ~4 ~ 2 1 2 0 3
+execute if score @s gm4_particle matches 10 run particle minecraft:cherry_leaves ~ ~4 ~ 2 1 2 0 3
+execute if score @s gm4_particle matches 11 run particle minecraft:tinted_leaves{color:[0.788,0.369,0.047,1.00]} ~ ~4 ~ 2 1 2 0 1
+execute if score @s gm4_particle matches 11 run particle minecraft:tinted_leaves{color:[0.980,0.753,0.000,1.00]} ~ ~4 ~ 2 1 2 0 1
+execute if score @s gm4_particle matches 11 run particle minecraft:tinted_leaves{color:[0.722,0.145,0.027,1.00]} ~ ~4 ~ 2 1 2 0 1
 execute if score @s gm4_particle matches 12 run particle minecraft:falling_dust{block_state:"minecraft:lime_wool"} ~ ~4 ~ 2 1 2 0 5
 execute if score @s gm4_particle matches 13 run particle minecraft:falling_dust{block_state:"minecraft:black_wool"} ~ ~4 ~ 2 1 2 0 5
 execute if score @s gm4_particle matches 14 run particle minecraft:lava ~ ~ ~ 2 0 2 0 5

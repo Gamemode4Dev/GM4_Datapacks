@@ -1,0 +1,146 @@
+{
+  "id": "reeling_rods",
+  "name": "Reeling Rods",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:fishing_rod"
+  },
+  "criteria": {
+    "obtain_fishing_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:fishing_rod"
+          }
+        ]
+      }
+    },
+    "obtain_reeling_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:fishing_rod",
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "gm4_reeling_rods:reeling"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "obtain_barbed_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:fishing_rod",
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "gm4_reeling_rods:barbed"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "obtain_reeling_book": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:enchanted_book",
+            "predicates": {
+              "minecraft:stored_enchantments": [
+                {
+                  "enchantments": "gm4_reeling_rods:reeling"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "obtain_barbed_book": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:enchanted_book",
+            "predicates": {
+              "minecraft:stored_enchantments": [
+                {
+                  "enchantments": "gm4_reeling_rods:barbed"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_fishing_rod"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.reeling_rods.description",
+            "fallback": "Fishing rods can be useful tools for (accidental) home re-decoration: Paintings and Item Frames can be ripped of walls, whilst leashes and Shulkers are moved around with ease."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "reeling",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_reeling_rod",
+          "obtain_reeling_book"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.reeling_rods.reeling",
+            "fallback": "When enchanted with Reeling, a fishing rod becomes a sneaky tool for disassembly and thievery. Take a Villager's wares or un-boat a chest boat chest."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "barbed",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_barbed_rod",
+          "obtain_barbed_book"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.reeling_rods.barbed",
+            "fallback": "Barbed turns a fishing rod into a lethal weapon. Throw your bobber at foes to scratch them up! Higher levels cause more damage over time."
+          }
+        ]
+      ]
+    }
+  ]
+}

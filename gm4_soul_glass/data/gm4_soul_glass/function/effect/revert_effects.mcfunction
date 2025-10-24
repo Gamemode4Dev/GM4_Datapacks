@@ -1,5 +1,5 @@
-#@s = soul glass AEC
-#run from effects/check
+# @s = gm4_soul_glass marker
+# run from effect/check
 
 execute store result block ~ ~-1 ~ primary_effect int 1 run scoreboard players get @s gm4_sg_primary
 execute store result block ~ ~-1 ~ secondary_effect int 1 run scoreboard players get @s gm4_sg_secondary

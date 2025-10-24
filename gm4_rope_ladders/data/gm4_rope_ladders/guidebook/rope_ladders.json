@@ -58,7 +58,7 @@
         ],
         [
           {
-            "translate": "text.gm4.guidebook.potion_swords.breaking",
+            "translate": "text.gm4.guidebook.rope_ladders.breaking",
             "fallback": "Breaking a ladder at the top of a rope ladder will break all other rope ladders below, causing the items to appear at the top of the ladder that was broken."
           }
         ]

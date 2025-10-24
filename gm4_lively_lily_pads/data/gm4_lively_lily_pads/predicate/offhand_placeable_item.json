@@ -1,0 +1,11 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "equipment": {
+      "offhand": {
+        "items": "#gm4_lively_lily_pads:placeable_item"
+      }
+    }
+  }
+}

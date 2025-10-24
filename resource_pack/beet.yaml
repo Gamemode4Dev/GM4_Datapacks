@@ -9,8 +9,8 @@ resource_pack:
   overlays:
     - formats:
         min_inclusive: 0
-        max_inclusive: 42
-      directory: backport_42
+        max_inclusive: 63
+      directory: backport_63
       
 pipeline:
   - dev_warning

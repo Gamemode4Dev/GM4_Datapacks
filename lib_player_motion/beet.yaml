@@ -1,6 +1,6 @@
 id: gm4_player_motion
 name: Gamemode 4 Player Motion
-version: 1.0.0
+version: 1.0.X
 
 data_pack:
   load: 

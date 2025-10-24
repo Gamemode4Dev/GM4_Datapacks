@@ -5,7 +5,8 @@
 
 # place marker on first trunk block
 scoreboard players set $success gm4_arb_data 0
-execute as @e[type=item,limit=1,distance=..5,sort=nearest,nbt={Age:0s}] at @s run function gm4_arborenda_shamir:player/check_block_drop
+execute as @e[type=item,limit=1,distance=..5,sort=nearest,nbt={Age:0s}] at @s store success score $success gm4_arb_data \
+  if items entity @s container.* #gm4_arborenda_shamir:trunks align xyz run summon marker ~0.5 ~0.5 ~0.5 {Tags:[gm4_arborenda_trunk_source,gm4_arborenda_trunk,gm4_arborenda_init]}
 
 # identify axe (used for enchantment support)
 execute if score $success gm4_arb_data matches 1 run function gm4_arborenda_shamir:player/analyze_axe

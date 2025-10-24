@@ -1,7 +1,7 @@
-# destroys the trapped_sign
-# @s = trapped_sign marker
+# destroys the soul glass
+# @s = gm4_soul_glass marker
 # located at @s
-# run from gm4_smelteries:machine/verify_destroy
+# run from gm4_soul_glass:machine/verify_destroy
 
 # restore beacon effect
 execute if score @s gm4_sg_primary matches 1 run data modify block ~ ~-1 ~ primary_effect set value "minecraft:speed"

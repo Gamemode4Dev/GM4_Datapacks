@@ -5,25 +5,36 @@
       "conditions": {
         "player": [
           {
+            "condition": "minecraft:reference",
+            "name": "gm4_rope_ladders:holding_ladder"
+          },
+          {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_rol_holding_ladder\"]}"
+              "type_specific": {
+                "type": "minecraft:player",
+                "gamemode": [
+                  "survival",
+                  "creative"
+                ]
+              }
             }
           }
         ],
-        "item": {
-          "items": [
-            "minecraft:ladder"
-          ]
-        },
         "entity": [
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:interaction",
-              "nbt": "{Tags:[\"gm4_rol_rcd_ladder\"]}"
+              "type": "minecraft:interaction"
+            }
+          },
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "gm4_rol_id": {}
             }
           }
         ]

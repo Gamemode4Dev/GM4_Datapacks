@@ -1,0 +1,6 @@
+{
+  "values": [
+    { "id": "minecraft:happy_ghast", "required": false },
+    "minecraft:wolf"
+  ]
+}
