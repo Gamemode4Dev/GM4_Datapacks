@@ -1,5 +1,5 @@
 {
-  "last_commit": "f448a5e959fda8259c3b64fc9815fd403871245b",
+  "last_commit": "85727c6370dd0795ad0e84073310a793659d0ab1",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1685,8 +1685,8 @@
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.7.3",
-      "hash": "3afc375d02fd8953fb40007c39833d8f7240f05f",
+      "version": "1.7.4",
+      "hash": "2c2051b2887fef5a40c4c85ee5d1edaca79e8592",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -2327,8 +2327,8 @@
     {
       "id": "gm4_relocators",
       "name": "Relocators",
-      "version": "2.5.1",
-      "hash": "d5401f1060e4c624aad984ce03291d74cdbdd7bc",
+      "version": "2.5.2",
+      "hash": "63f350b5cffb30e2c5ab19cc031cc20c3f3c134b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Relocators",
       "credits": {
