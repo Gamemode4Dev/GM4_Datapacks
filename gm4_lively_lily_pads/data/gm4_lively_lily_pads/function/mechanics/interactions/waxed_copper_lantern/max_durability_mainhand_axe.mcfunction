@@ -3,7 +3,6 @@
 # at @s
 # run from mechanics/interactions/waxed_copper_lantern/used_mainhand_axe
 
-# fail if max damage
 execute if items entity @s weapon.mainhand golden_axe[damage=32] run return 1
 execute if items entity @s weapon.mainhand wooden_axe[damage=59] run return 1
 execute if items entity @s weapon.mainhand stone_axe[damage=131] run return 1

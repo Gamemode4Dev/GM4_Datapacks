@@ -3,7 +3,6 @@
 # at @s
 # run from mechanics/interactions/waxed_copper_lantern/used_offhand_axe
 
-# fail if max damage
 execute if items entity @s weapon.offhand golden_axe[damage=32] run return 1
 execute if items entity @s weapon.offhand wooden_axe[damage=59] run return 1
 execute if items entity @s weapon.offhand stone_axe[damage=131] run return 1
