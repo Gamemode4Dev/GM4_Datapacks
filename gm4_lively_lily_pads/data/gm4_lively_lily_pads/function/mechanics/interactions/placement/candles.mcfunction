@@ -19,7 +19,7 @@ $summon minecraft:block_display ~ ~ ~ {\
     right_rotation:[0f,0f,0f,1f]\
   }\
 }
-summon minecraft:interaction ~ ~ ~ {width:0.4f,height:0.4f,response:1b,Tags:["gm4_llp_candle_rcd","smithed.entity","smithed.strict"]}
+summon minecraft:interaction ~ ~ ~ {width:0.4f,height:0.4f,response:1b,Tags:["gm4_llp_candle_rcd","gm4_llp_perma_rcd","smithed.entity","smithed.strict"]}
 
 # sound
 playsound minecraft:block.candle.place block @a[distance=..16] ~ ~ ~

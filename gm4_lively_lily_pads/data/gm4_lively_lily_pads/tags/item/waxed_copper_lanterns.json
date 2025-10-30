@@ -1,0 +1,8 @@
+{
+  "values": [
+    {"id": "minecraft:waxed_copper_lantern", "required": false},
+    {"id": "minecraft:waxed_exposed_copper_lantern", "required": false},
+    {"id": "minecraft:waxed_weathered_copper_lantern", "required": false},
+    {"id": "minecraft:waxed_oxidized_copper_lantern", "required": false}
+  ]
+}
