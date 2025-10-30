@@ -6,7 +6,7 @@
 # this is only run once per entity every 8 ticks (0.4 seconds)
 # with a 1/6500 chance every 0.4 seconds, in 30 minutes there will be a ~50% chance of oxidization
 execute store result score $rand gm4_llp.data run random value 1..6500
-execute if score $rand gm4_llp.data matches 2..6500 run return fail
+execute if score $rand gm4_llp.data matches 2.. run return fail
 
 # oxidize
 execute if data entity @s {block_state:{Name:"minecraft:copper_lantern"}} run return run data modify entity @s block_state.Name set value "minecraft:exposed_copper_lantern"
