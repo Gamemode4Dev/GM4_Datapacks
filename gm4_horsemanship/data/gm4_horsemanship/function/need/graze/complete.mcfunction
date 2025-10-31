@@ -4,17 +4,9 @@
 # run from need/graze/tick
 
 tag @s remove gm4_horse.grazing
-tag @s remove gm4_horse.force_graze
 
 # if this is a baby horse accelerate its growth by 10% (same effect as on sheep)
 execute if entity @s[tag=gm4_horse.foal] run function gm4_horsemanship:need/graze/foal
-
-# if block was hay bale grant more score and don't run rest
-execute if block ~ ~-1 ~ hay_block run return run function gm4_horsemanship:need/graze/hay_block
-
-# if this is a gm4_horse fill its grazing needs
-execute if entity @s[tag=gm4_horse.tamed] run scoreboard players add @s gm4_horse_need.graze 360
-scoreboard players operation @s[tag=gm4_horse.tamed] gm4_horse_need.graze < $need_cap.graze gm4_horse_data
 
 # break grass (block) if mobGriefing is enabled
 # horses can only eat grass or grass blocks but not flowers or tall grass, similar to sheep

@@ -8,8 +8,6 @@ tag @s add gm4_horse_check_player
 execute as @e[type=#gm4_horsemanship:trainable,distance=..8] run function gm4_horsemanship:need/food/check_horse
 tag @s remove gm4_horse_check_player
 
-execute as @e[type=#gm4_horsemanship:trainable,tag=gm4_horse_target,distance=..8,limit=1] run scoreboard players operation @s[tag=gm4_horse.tamed] gm4_horse_need.fed_treat = $need_cap.fed_treat gm4_horse_data
-
 # check advancement criteria to find used food item
 scoreboard players set $food_processed gm4_horse_data 0
 execute if score $food_processed gm4_horse_data matches 0 if entity @s[advancements={gm4_horsemanship:feed_horse={apple=true}}] as @e[type=#gm4_horsemanship:trainable,tag=gm4_horse_target,distance=..8,limit=1] at @s run function gm4_horsemanship:need/food/type/apple
