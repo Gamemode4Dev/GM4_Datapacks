@@ -5,11 +5,9 @@ execute as @e[type=#gm4_horsemanship:trainable,tag=!gm4_horse,tag=!smithed.entit
 
 # horse processing
 execute as @e[type=#gm4_horsemanship:trainable,tag=gm4_horse.tamed] at @s run function gm4_horsemanship:horse_processing/general
-execute as @e[type=#gm4_horsemanship:trainable,tag=gm4_horse.foal] at @s run function gm4_horsemanship:horse_processing/foal
-scoreboard players reset @a gm4_horse_riding
 
 # horse grazing
 execute as @e[type=#gm4_horsemanship:trainable,tag=!gm4_horse.grazing,nbt={EatingHaystack:1b}] run function gm4_horsemanship:need/graze/start
 
-# TEMP DEV COMMAND - TODO: remove
+# Dev log
 execute as @a[tag=gm4_horse_dev] at @s as @e[type=#gm4_horsemanship:trainable,limit=1,sort=nearest] run function gm4_horsemanship:dev/log

@@ -22,7 +22,5 @@ data remove storage gm4_horsemanship:temp item_id
 execute on vehicle at @s run playsound entity.horse.eat neutral @a ~ ~ ~ 1 1
 item modify entity @s[gamemode=!creative] weapon.mainhand {"function": "minecraft:set_count","count":-1,"add":true}
 
-execute on vehicle run scoreboard players operation @s[tag=gm4_horse.tamed] gm4_horse_need.fed_treat = $need_cap.fed_treat gm4_horse_data
-
 # restore player location
 function gm4_horsemanship:riding/restore_location/prep
