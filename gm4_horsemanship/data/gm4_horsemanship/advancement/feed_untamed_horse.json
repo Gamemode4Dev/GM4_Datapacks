@@ -1,0 +1,267 @@
+{
+    "criteria": {
+        "baked_potato": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "player": [],
+                "item": {
+                    "items": [
+                        "minecraft:baked_potato"
+                    ]
+                },
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "#gm4_horsemanship:trainable",
+                            "nbt": "{Tags:[\"gm4_horse\"]}"
+                        }
+                    },
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "beetroot": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "player": [],
+                "item": {
+                    "items": [
+                        "minecraft:beetroot"
+                    ]
+                },
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "#gm4_horsemanship:trainable",
+                            "nbt": "{Tags:[\"gm4_horse\"]}"
+                        }
+                    },
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "bread": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "player": [],
+                "item": {
+                    "items": [
+                        "minecraft:bread"
+                    ]
+                },
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "#gm4_horsemanship:trainable",
+                            "nbt": "{Tags:[\"gm4_horse\"]}"
+                        }
+                    },
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "chorus_fruit": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "player": [],
+                "item": {
+                    "items": [
+                        "minecraft:chorus_fruit"
+                    ]
+                },
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "#gm4_horsemanship:trainable",
+                            "nbt": "{Tags:[\"gm4_horse\"]}"
+                        }
+                    },
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "dried_kelp": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "player": [],
+                "item": {
+                    "items": [
+                        "minecraft:dried_kelp"
+                    ]
+                },
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "#gm4_horsemanship:trainable",
+                            "nbt": "{Tags:[\"gm4_horse\"]}"
+                        }
+                    },
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "glow_berries": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "player": [],
+                "item": {
+                    "items": [
+                        "minecraft:glow_berries"
+                    ]
+                },
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "#gm4_horsemanship:trainable",
+                            "nbt": "{Tags:[\"gm4_horse\"]}"
+                        }
+                    },
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "melon_slice": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "player": [],
+                "item": {
+                    "items": [
+                        "minecraft:melon_slice"
+                    ]
+                },
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "#gm4_horsemanship:trainable",
+                            "nbt": "{Tags:[\"gm4_horse\"]}"
+                        }
+                    },
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "sweet_berries": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "player": [],
+                "item": {
+                    "items": [
+                        "minecraft:sweet_berries"
+                    ]
+                },
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "type": "#gm4_horsemanship:trainable",
+                            "nbt": "{Tags:[\"gm4_horse\"]}"
+                        }
+                    },
+                    {
+                        "condition": "minecraft:inverted",
+                        "term": {
+                            "condition": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        [
+            "baked_potato",
+            "beetroot",
+            "bread",
+            "chorus_fruit",
+            "dried_kelp",
+            "glow_berries",
+            "melon_slice",
+            "sweet_berries"
+        ]
+    ],
+    "rewards": {
+        "function": "gm4_horsemanship:need/food/feed_added_food_untamed"
+    }
+}
