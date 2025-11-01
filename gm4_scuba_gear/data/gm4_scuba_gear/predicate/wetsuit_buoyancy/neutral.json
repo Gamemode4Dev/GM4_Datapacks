@@ -1,0 +1,51 @@
+[
+  {
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "fluid": {
+        "fluids": "#minecraft:water"
+      }
+    }
+  },
+  {
+    "condition": "minecraft:any_of",
+    "terms": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "input": {
+              "jump": false,
+              "sneak": false
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "input": {
+              "jump": true,
+              "sneak": true
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "nbt": "{Tags:[\"gm4_sg_buoyancy_neutral\"]}"
+      }
+    }
+  }
+]

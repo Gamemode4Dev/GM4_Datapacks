@@ -1,29 +1,29 @@
 {
-    "type": "minecraft:generic",
-    "pools": [
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 8,
+      "entries": [
         {
-            "rolls": 8,
-            "entries": [
-                {
-                    "type": "minecraft:loot_table",
-                    "value": "gm4:air"
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:loot_table",
-                    "value": "gm4_scuba_gear:items/scuba_tank",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": 1
-                        }
-                    ]
-                }
-            ]
+          "type": "minecraft:loot_table",
+          "value": "gm4:air"
         }
-    ]
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_scuba_gear:items/scuba_tank",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
