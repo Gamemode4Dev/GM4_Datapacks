@@ -1,5 +1,5 @@
 {
-  "last_commit": "8929c64c65297119c00c43168b3725e6353a3159",
+  "last_commit": "23b086275d076c1eed617fdb277825e65f1cbf86",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1685,8 +1685,8 @@
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.7.4",
-      "hash": "2c2051b2887fef5a40c4c85ee5d1edaca79e8592",
+      "version": "1.7.5",
+      "hash": "8cacc68b40adc0cd66ea5f3ff4b8bac89d10bf83",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -1961,8 +1961,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.8.12",
-      "hash": "ae1d64123f13b64a2b658e9250f0e086d0c8bafc",
+      "version": "1.8.13",
+      "hash": "83e4ca84319ec65d1012536fcc5160667a588eab",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
