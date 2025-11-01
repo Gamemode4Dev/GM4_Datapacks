@@ -1,5 +1,5 @@
 {
-  "last_commit": "85727c6370dd0795ad0e84073310a793659d0ab1",
+  "last_commit": "8929c64c65297119c00c43168b3725e6353a3159",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1536,8 +1536,8 @@
     {
       "id": "gm4_live_catch",
       "name": "Live Catch",
-      "version": "1.5.1",
-      "hash": "af3a6c55c179663b4359c4f027396eaf1afd907a",
+      "version": "1.5.2",
+      "hash": "2bf7014597cb036e07721df801ba07f7dabc87a1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Live_Catch",
       "credits": {
