@@ -10,6 +10,8 @@ resource_pack:
     - formats:
         min_inclusive: 0
         max_inclusive: 63
+      min_format: 0
+      max_format: 63
       directory: backport_63
       
 pipeline:
