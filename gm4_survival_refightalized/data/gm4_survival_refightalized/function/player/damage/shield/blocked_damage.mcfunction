@@ -22,7 +22,7 @@ execute if score @s gm4_sr_shield.use_ticks <= $parry_ticks gm4_sr_data unless s
 
 # disable shield
 tag @s add gm4_sr_target
-execute at @s anchored eyes positioned ^ ^ ^1 summon armor_stand run return run function gm4_survival_refightalized:player/damage/shield/disable
+execute at @s anchored eyes positioned ^ ^ ^1 summon armor_stand run function gm4_survival_refightalized:player/damage/shield/disable
 tag @s remove gm4_sr_target
 
 # dev damage log
