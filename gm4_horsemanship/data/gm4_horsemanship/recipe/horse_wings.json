@@ -55,7 +55,9 @@
             },
             "custom_data": {
                 "gm4_horsemanship": {
-                    "glider": {}
+                    "glider": {
+                        "grounded": 1
+                    }
                 }
             },
             "minecraft:lore": [],

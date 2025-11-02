@@ -16,6 +16,7 @@ meta:
         lib_forceload: 1.1.0
       schedule_loops:
       - main
+      - tick
     website:
       description: Form a bond with your horses
       recommended: []
