@@ -4,4 +4,4 @@
 advancement revoke @s only gm4_horsemanship:start_riding_horse
 
 # check for food
-execute if predicate gm4_horsemanship:holding_food run function gm4_horsemanship:need/food/feed_added_food
+execute if predicate gm4_horsemanship:holding_food run function gm4_horsemanship:horse_processing/food/feed_added_food

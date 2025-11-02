@@ -262,6 +262,6 @@
         ]
     ],
     "rewards": {
-        "function": "gm4_horsemanship:need/food/feed_added_food_untamed"
+        "function": "gm4_horsemanship:horse_processing/food/feed_added_food_untamed"
     }
 }

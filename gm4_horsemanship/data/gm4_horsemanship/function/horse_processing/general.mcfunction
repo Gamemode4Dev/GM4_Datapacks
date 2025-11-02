@@ -1,5 +1,5 @@
 # process gm4 horses, variants, donkeys and mules
-# @s = gm4_horse
+# @s = tamed gm4_horse
 # at @s
 # run from main
 
@@ -40,8 +40,8 @@ execute if score $on_ground gm4_horse_data matches 1 if score $riding gm4_horse_
 execute if score $on_ground gm4_horse_data matches 1 if score $mounted gm4_horse_data matches 0 run scoreboard players operation @s gm4_horse.stamina += @s gm4_horse.level
 scoreboard players operation @s gm4_horse.stamina < @s gm4_horse.stamina_cap
 # tired
-execute if score @s[tag=!gm4_horse.tired] gm4_horse.stamina matches 0 run function gm4_horsemanship:riding/stamina/tired
-execute if score @s[tag=gm4_horse.tired] gm4_horse.stamina matches 30.. run function gm4_horsemanship:riding/stamina/rested
+execute if score @s[tag=!gm4_horse.tired] gm4_horse.stamina matches 0 run function gm4_horsemanship:horse_processing/stamina/tired
+execute if score @s[tag=gm4_horse.tired] gm4_horse.stamina matches 30.. run function gm4_horsemanship:horse_processing/stamina/rested
 # effects
 execute if entity @s[tag=gm4_horse.tired] run particle entity_effect{color:[0.290,0.259,0.090,0.75]} ~ ~1 ~ 0.5 0.5 0.5 1 4 normal
 scoreboard players add $sfx_clock gm4_horse_data 1
@@ -51,7 +51,7 @@ execute if score $sfx_clock gm4_horse_data matches 1 if score @s gm4_horse.stami
 execute if score $sfx_clock gm4_horse_data matches 2 if score @s gm4_horse.stamina matches ..30 run playsound entity.horse.breathe neutral @a ~ ~ ~ 1 0.95
 
 # stop grazing if horse is being ridden
-execute if score $riding gm4_horse_data matches 1 if entity @s[nbt={EatingHaystack:1b}] run function gm4_horsemanship:need/graze/cancel
+execute if score $riding gm4_horse_data matches 1 if entity @s[nbt={EatingHaystack:1b}] run function gm4_horsemanship:horse_processing/graze/cancel
 
 # reduce experience to next level as horse is being ridden
 execute if score $riding gm4_horse_data matches 1 run scoreboard players remove @s[tag=!gm4_horse.tired] gm4_horse.experience_to_level 1

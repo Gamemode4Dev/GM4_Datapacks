@@ -3,6 +3,7 @@
 # at @s
 # run from horse_processsing/general
 
+# ingore if max level
 execute if score @s gm4_horse.level matches 15.. run return 0
 
 # | Max Health

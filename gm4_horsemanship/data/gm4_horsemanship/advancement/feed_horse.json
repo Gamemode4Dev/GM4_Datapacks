@@ -182,6 +182,6 @@
     ]
   ],
   "rewards": {
-    "function": "gm4_horsemanship:need/food/feed_original_food"
+    "function": "gm4_horsemanship:horse_processing/food/feed_original_food"
   }
 }

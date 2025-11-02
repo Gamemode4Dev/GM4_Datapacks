@@ -1,11 +1,6 @@
+# process a player that just tamed a horse (or equivalent)
+# @s = player taming the horse
+# at @s
+advancement revoke @s only gm4_horsemanship:tame_horse
 
-tag @s add gm4_horse.tamed
-
-scoreboard players set @s gm4_horse.level 0
-scoreboard players set @s gm4_horse.experience_to_level 60
-scoreboard players set @s gm4_horse.stamina_cap 75
-scoreboard players operation @s gm4_horse.stamina = @s gm4_horse.stamina_cap
-
-# remove wild horse boost
-attribute @s max_health modifier remove gm4_horse.untamed
-attribute @s movement_speed modifier remove gm4_horse.untamed
+execute on vehicle if entity @s[type=#gm4_horsemanship:trainable,tag=gm4_horse,tag=!gm4_horse.tamed] run function gm4_horsemanship:level/tame_horse_init
