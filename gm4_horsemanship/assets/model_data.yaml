@@ -1,0 +1,4 @@
+model_data:
+  - item: feather
+    reference: item/glider_wing
+    template: generated
