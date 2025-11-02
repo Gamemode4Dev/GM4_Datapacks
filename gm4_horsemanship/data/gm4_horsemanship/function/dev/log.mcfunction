@@ -1,2 +1,0 @@
-
-title @p actionbar [{text:"| Tracked Horse: "},{selector:"@s"},{text:" Stamina: ","color":"gray"},{"score":{"name":"@s","objective":"gm4_horse.stamina"},"color":"white"},{text:"/"},{"score":{"name":"@s","objective":"gm4_horse.stamina_cap"}},{text:" XP: ","color":"gray"},{"score":{"name":"@s","objective":"gm4_horse.experience_to_level"},"color":"white"},{"text":" |"},{"score":{"name":"$pitch","objective":"gm4_horse_data"},"color":"white"}]

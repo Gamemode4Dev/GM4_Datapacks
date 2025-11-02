@@ -20,7 +20,6 @@ scoreboard players set #1000 gm4_horse_data 1000
 scoreboard players set #1405 gm4_horse_data 1405
 scoreboard players set #4216 gm4_horse_data 4216
 
-schedule function gm4_horsemanship:tick 1t
 schedule function gm4_horsemanship:main 1t
 
 #$moduleUpdateList

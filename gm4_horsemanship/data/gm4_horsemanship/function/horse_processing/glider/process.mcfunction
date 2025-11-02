@@ -1,3 +1,7 @@
+# process gm4_horses wearing a glider
+# @s = tamed gm4_horse
+# at @s
+# run from horse_processing/general
 
 # get stats from glider
 execute store result score $grounded gm4_horse_data run data get entity @s equipment.body.components."minecraft:custom_data".gm4_horsemanship.glider.grounded

@@ -2,6 +2,7 @@
 # @s = gm4_horse
 # at @s
 # run from horse_processing/general
+# run from any in horse_processing/food/type/
 
 execute store result score $max_health gm4_horse_data run attribute @s max_health get 100
 scoreboard players remove $max_health gm4_horse_data 101

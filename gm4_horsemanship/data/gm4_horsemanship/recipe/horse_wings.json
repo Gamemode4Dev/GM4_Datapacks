@@ -55,17 +55,12 @@
             },
             "custom_data": {
                 "gm4_horsemanship": {
-                    "glider": {
-                        "grounded": 1
-                    }
+                    "glider": {}
                 }
             },
             "minecraft:lore": [],
             "minecraft:max_stack_size": 1,
             "minecraft:rarity": "epic",
-            "minecraft:repairable": {
-                "items": "minecraft:phantom_membrane"
-            },
             "minecraft:tooltip_display": {
                 "hidden_components": [
                     "attribute_modifiers"
