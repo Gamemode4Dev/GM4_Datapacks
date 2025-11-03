@@ -4,17 +4,17 @@
 # run from player/damage/calculate_reduction
 
 # Formula:
-# Damage reduction percentage = (6 * armor_toughness + 2 * armor_toughness * damage) / (damage + 5 * armor_toughness)
+# Damage reduction percentage = (6 * armor_toughness + 3 * armor_toughness * damage) / (damage + 5 * armor_toughness)
 
 scoreboard players operation $armor_toughness.times_5 gm4_sr_data = $armor_toughness gm4_sr_data
 scoreboard players operation $armor_toughness.times_5 gm4_sr_data *= #5 gm4_sr_data
 
-# dividend = 6 * armor_toughness + 2 * armor_toughness * damage
+# dividend = 6 * armor_toughness + 3 * armor_toughness * damage
 scoreboard players operation $armor_toughness.dividend gm4_sr_data += $armor_toughness.times_5 gm4_sr_data
 scoreboard players operation $armor_toughness.dividend gm4_sr_data *= $armor_toughness gm4_sr_data
 scoreboard players operation $armor_toughness.dividend2 gm4_sr_data = $damage_total gm4_sr_data
 scoreboard players operation $armor_toughness.dividend2 gm4_sr_data *= $armor_toughness gm4_sr_data
-scoreboard players operation $armor_toughness.dividend2 gm4_sr_data *= #2 gm4_sr_data
+scoreboard players operation $armor_toughness.dividend2 gm4_sr_data *= #3 gm4_sr_data
 scoreboard players operation $armor_toughness.dividend gm4_sr_data += $armor_toughness.dividend2 gm4_sr_data
 
 # divisor = damage + 5 * armor_toughness

@@ -44,10 +44,11 @@ scoreboard objectives add gm4_sr_shield.use_ticks dummy
 scoreboard objectives add gm4_sr_shield.timer dummy
 
 # configs
-execute unless score $config_version gm4_sr_config matches 1.. run scoreboard players set $natural_regen gm4_sr_config 1
-execute unless score $config_version gm4_sr_config matches 1.. run scoreboard players set $combat_regen_timer gm4_sr_config 3750
-execute unless score $config_version gm4_sr_config matches 1.. run scoreboard players set $rapid_regen_timer gm4_sr_config 1250
-execute unless score $config_version gm4_sr_config matches 1.. run scoreboard players set $armor_recharge_timer gm4_sr_config 500
+execute unless score $config_version gm4_sr_config matches 2.. run scoreboard players set $natural_regen gm4_sr_config 1
+execute unless score $config_version gm4_sr_config matches 2.. run scoreboard players set $combat_regen_timer gm4_sr_config 1250
+execute unless score $config_version gm4_sr_config matches 2.. run scoreboard players set $rapid_regen_timer gm4_sr_config 250
+execute unless score $config_version gm4_sr_config matches 2.. run scoreboard players set $armor_recharge_timer gm4_sr_config 500
+# TODO
 scoreboard players set $config_version gm4_sr_data 1
 
 # swap natural regeneration to module's system
@@ -62,6 +63,7 @@ scoreboard players set #-128 gm4_sr_data -128
 scoreboard players set #0 gm4_sr_data 0
 scoreboard players set #1 gm4_sr_data 1
 scoreboard players set #2 gm4_sr_data 2
+scoreboard players set #3 gm4_sr_data 3
 scoreboard players set #5 gm4_sr_data 5
 scoreboard players set #8 gm4_sr_data 8
 scoreboard players set #10 gm4_sr_data 10

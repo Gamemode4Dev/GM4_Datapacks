@@ -34,9 +34,10 @@ tellraw @s[tag=gm4_sr_dev.damage_log,advancements={gm4_survival_refightalized:da
 execute if score @s gm4_sr_stat.armor matches 1.. run function gm4_survival_refightalized:player/damage/calculate_reduction
 execute unless score @s gm4_sr_stat.armor matches 1.. run tellraw @s[tag=gm4_sr_dev.damage_log] [{"text":"No Armor - Damage (x10): ","color":"gray"},{"score":{"name":"@s","objective":"gm4_sr_stat.damage_taken"},"color":"white"}]
 
-# set combat regeneration timers, allow to be altered by function call
+# set combat regeneration timers, allow to be altered by function call, use rapid_regen if damage was non-combat
 scoreboard players operation $set gm4_sr_armor.reduction_timer = $armor_recharge_timer gm4_sr_config
 scoreboard players operation $set gm4_sr_health.regeneration_timer = $combat_regen_timer gm4_sr_config
+execute if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] run scoreboard players operation $set gm4_sr_health.regeneration_timer = $rapid_regen_timer gm4_sr_config
 
 # function call
 # called after damage is calculated but before it is applied (unless there was no armor, then it is applied by the game)
@@ -51,8 +52,7 @@ execute if score $damage_armor gm4_sr_data matches 1.. run scoreboard players op
 # apply durability damage to armor unless it was armor piercing damage
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={armor_piercing=false,armor_piercing_mob=false}}] run function gm4_survival_refightalized:player/armor/durability/check
 
-# apply health regeneration timer, use rapid_regen if damage was non-combat, 0 if damage did not apply to health
-execute if entity @s[advancements={gm4_survival_refightalized:damaged={combat_damage=false}}] run scoreboard players operation $set gm4_sr_health.regeneration_timer = $rapid_regen_timer gm4_sr_config
+# apply health regeneration timer, 0 if damage did not apply to health
 execute if score $damage_health gm4_sr_data matches 1.. run scoreboard players operation @s gm4_sr_health.regeneration_timer > $set gm4_sr_health.regeneration_timer
 scoreboard players operation @s[scores={gm4_sr_stat.damage_taken=1..}] gm4_sr_health.regeneration_timer > $set gm4_sr_health.regeneration_timer
 
