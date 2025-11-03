@@ -1,5 +1,5 @@
 {
-  "last_commit": "23b086275d076c1eed617fdb277825e65f1cbf86",
+  "last_commit": "387993ad4fd669fb1cb8c399c30a0f7c4ebde4de",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -695,8 +695,8 @@
     {
       "id": "gm4_desire_lines",
       "name": "Desire Lines",
-      "version": "1.6.2",
-      "hash": "87e2c74e086987f4454c3f8adf60a1e8ce9dc9f9",
+      "version": "1.6.3",
+      "hash": "7bb4dad97c9a00047a3f1de4da72945776846756",
       "video_link": "https://www.youtube.com/watch?v=wmGaatfekfs",
       "wiki_link": "https://wiki.gm4.co/wiki/Desire_Lines",
       "credits": {
@@ -707,7 +707,7 @@
           "Bloo",
           "SpecialBuilder32",
           "Misode",
-          "Andante"
+          "dvitski"
         ],
         "Icon Design": [
           "JonPot"
@@ -2509,8 +2509,8 @@
     {
       "id": "gm4_smelteries",
       "name": "Smelteries",
-      "version": "1.8.1",
-      "hash": "9707e94ab71a18c58998f62bce2d44850df1b373",
+      "version": "1.8.2",
+      "hash": "2490ab72b56bdf2a372ac79c1b49ba3b381b8fea",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/smelteries",
       "credits": {
@@ -2518,7 +2518,7 @@
           "Bloo"
         ],
         "Updated By": [
-          "Andante",
+          "dvitski",
           "Kroppeb",
           "Misode",
           "SpecialBuilder32",
@@ -3618,10 +3618,10 @@
         "https://twitter.com/15Redstones"
       ]
     },
-    "Andante": {
-      "name": "Andante",
+    "dvitski": {
+      "name": "dvitski",
       "links": [
-        "https://bsky.app/profile/andante.dev"
+        "https://bsky.app/profile/dvitski.cc"
       ]
     },
     "Bloo": {
