@@ -48,8 +48,7 @@ execute unless score $config_version gm4_sr_config matches 2.. run scoreboard pl
 execute unless score $config_version gm4_sr_config matches 2.. run scoreboard players set $combat_regen_timer gm4_sr_config 1250
 execute unless score $config_version gm4_sr_config matches 2.. run scoreboard players set $rapid_regen_timer gm4_sr_config 250
 execute unless score $config_version gm4_sr_config matches 2.. run scoreboard players set $armor_recharge_timer gm4_sr_config 500
-# TODO
-scoreboard players set $config_version gm4_sr_data 1
+scoreboard players set $config_version gm4_sr_data 2
 
 # swap natural regeneration to module's system
 execute unless score $natural_regen_disabled gm4_sr_data matches 1 run gamerule naturalRegeneration false
