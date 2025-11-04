@@ -1,5 +1,5 @@
 {
-  "last_commit": "22d6c6e7de530c679ac332c64e55a00e82994736",
+  "last_commit": "ee9ac46243fb192950929b4a0753004516732b70",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1961,8 +1961,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.8.13",
-      "hash": "83e4ca84319ec65d1012536fcc5160667a588eab",
+      "version": "1.8.14",
+      "hash": "0093b26846d9ecc8ac702bbf188864a6c94aa108",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
