@@ -4,13 +4,6 @@ version: 1.8.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 0
-        max_inclusive: 81
-      min_format: 0
-      max_format: 81
-      directory: backport_81
 
 resource_pack:
   load: .
