@@ -4,5 +4,5 @@
 # run from main
 
 # summon lightning; snap to lightning rod if there is one below
-execute if block ~ ~-1 ~ lightning_rod align y run summon lightning_bolt ~ ~ ~
-execute unless block ~ ~-1 ~ lightning_rod run summon lightning_bolt ~ ~ ~
+execute if block ~ ~-1 ~ #gm4_lightning_in_a_bottle:lightning_rod align y run summon lightning_bolt ~ ~ ~
+execute unless block ~ ~-1 ~ #gm4_lightning_in_a_bottle:lightning_rod run summon lightning_bolt ~ ~ ~
