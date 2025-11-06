@@ -5,6 +5,4 @@
 
 item modify entity @s armor.legs gm4_scuba_gear:wetsuit_buoyancy/negative
 
-tag @s remove gm4_sg_buoyancy_negative
-tag @s remove gm4_sg_buoyancy_neutral
-tag @s add gm4_sg_buoyancy_positive
+scoreboard players set @s gm4_sg_buoyancy 1
