@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "g": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "item": {
+                    "items": "minecraft:carrot"
+                },
+                "entity": {
+                    "type": "minecraft:pig"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_lavish_livestock:feed/revoke_advancement"
+    }
+}
