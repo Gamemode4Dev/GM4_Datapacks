@@ -1,5 +1,5 @@
 {
-  "last_commit": "ee9ac46243fb192950929b4a0753004516732b70",
+  "last_commit": "a5cdad2ecb68cb5f70d748148d896a947befb87d",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -3123,8 +3123,8 @@
     {
       "id": "gm4_xp_storage",
       "name": "XP Storage",
-      "version": "1.7.1",
-      "hash": "4ff2d2141da28d7bec52d10cfb3f3ad13e543366",
+      "version": "1.7.2",
+      "hash": "1804383548572f772c9fad97dfd3c13fd7439d6f",
       "video_link": "https://www.youtube.com/watch?v=hgq-5waSpVU&index=11&list=PLpa6LLAKqMWbXt5VvxCc6H4mwI-qacdGA",
       "wiki_link": "https://wiki.gm4.co/wiki/XP_Storage",
       "credits": {
