@@ -5,5 +5,7 @@
 # run from horse_processing/food/feed_original_food
 
 tag @s add gm4_horse_check
-execute as @p[tag=gm4_horse_check_player] if predicate gm4_horsemanship:check_horse_looking_at run tag @e[type=#gm4_horsemanship:trainable,tag=gm4_horse_check,distance=..8,limit=1] add gm4_horse_target
+scoreboard players set $found_horse gm4_horse_data 0
+execute as @p[tag=gm4_horse_check_player] store success score $found_horse gm4_horse_data if predicate gm4_horsemanship:check_horse_looking_at
+execute if score $found_horse gm4_horse_data matches 1 run tag @s add gm4_horse_target
 tag @s remove gm4_horse_check

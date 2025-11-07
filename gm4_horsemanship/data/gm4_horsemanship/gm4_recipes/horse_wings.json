@@ -1,0 +1,20 @@
+{
+  "input": {
+    "type": "shapeless",
+    "ingredients": [
+      {
+        "item": "minecraft:iron_horse_armor"
+      },
+      {
+        "item": "minecraft:elytra"
+      }
+    ]
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_horsemanship:technical/horse_wing_fake",
+      "count": 1
+    }
+  }
+}

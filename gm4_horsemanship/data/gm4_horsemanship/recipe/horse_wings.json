@@ -3,12 +3,7 @@
     "category": "equipment",
     "ingredients": [
         "elytra",
-        [
-            "minecraft:diamond_horse_armor",
-            "minecraft:golden_horse_armor",
-            "minecraft:iron_horse_armor",
-            "minecraft:leather_horse_armor"
-        ]
+        "#gm4_horsemanship:horse_armor"
     ],
     "result": {
         "components": {
@@ -70,7 +65,7 @@
             },
             "minecraft:item_name": {
                 "translate": "gm4.horsemanship.item.horse_wings",
-                "fallback": "Horse Wings"
+                "fallback": "Pegasuit"
             },
             "minecraft:item_model": "minecraft:elytra"
         },

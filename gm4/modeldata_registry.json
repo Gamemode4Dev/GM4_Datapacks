@@ -1526,7 +1526,8 @@
     },
     "saddle": {
       "gm4_pig_tractors:gui/advancement/pig_tractors": 1,
-      "gm4_chairs:guidebook_icon/chairs": 2
+      "gm4_chairs:guidebook_icon/chairs": 2,
+      "gm4_horsemanship:guidebook_icon/horsemanship": 3
     },
     "salmon_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
