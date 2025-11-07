@@ -1,6 +1,6 @@
 # process horse being fed food
 # @s = gm4_horse
-# at @s
+# at unspecified
 # run from horse_processing/food/feed_added_food
 # run from horse_processing/food/feed_added_food_untamed
 

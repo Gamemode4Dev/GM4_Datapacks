@@ -2,6 +2,8 @@ id: gm4_horsemanship
 name: Horsemanship
 version: 1.0.X
 
+resource_pack:
+  load: .
 data_pack:
   load: .
 

@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:chest",
+    "pools": [
+        {
+            "bonus_rolls": 0,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:elytra",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "entity": "this",
+                            "name": {
+                                "translate": "gm4.horsemanship.item.horse_wings",
+                                "fallback": "Pegasuit",
+                                "italic": false
+                            }
+                        }
+                    ]
+                }
+            ],
+            "rolls": 1
+        }
+    ]
+}

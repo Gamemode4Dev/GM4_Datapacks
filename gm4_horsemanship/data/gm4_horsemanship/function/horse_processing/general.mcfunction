@@ -53,6 +53,12 @@ execute if score $sfx_clock gm4_horse_data matches 2 if score @s gm4_horse.stami
 # stop grazing if horse is being ridden
 execute if score $riding gm4_horse_data matches 1 if entity @s[nbt={EatingHaystack:1b}] run function gm4_horsemanship:horse_processing/graze/cancel
 
+# copy frost walking level on rider's boots
+execute store result score $stored_frost_walker_level gm4_horse_data run data get entity @s equipment.feet.components."minecraft:enchantments"."minecraft:frost_walker"
+execute on passengers run item replace block 29999998 1 7134 container.0 from entity @s[type=player] armor.feet
+execute store result score $set_frost_walker_level gm4_horse_data run data get block 29999998 1 7134 Items[0].components."minecraft:enchantments"."minecraft:frost_walker"
+execute unless score $stored_frost_walker_level gm4_horse_data = $set_frost_walker_level gm4_horse_data store result entity @s equipment.feet.components."minecraft:enchantments"."minecraft:frost_walker" int 1 run scoreboard players operation $stored_frost_walker_level gm4_horse_data = $set_frost_walker_level gm4_horse_data
+
 # reduce experience to next level as horse is being ridden
 execute if score $riding gm4_horse_data matches 1 run scoreboard players remove @s[tag=!gm4_horse.tired] gm4_horse.experience_to_level 1
 execute if score @s[tag=!gm4_horse.tired] gm4_horse.experience_to_level matches ..0 run function gm4_horsemanship:level/level_up

@@ -1,11 +1,11 @@
 # process horse being fed food
 # @s = gm4_horse
-# at @s
+# at unspecified
 # run from horse_processing/food/feed_added_food
 # run from horse_processing/food/feed_added_food_untamed
 
-# TODO
-say vwoop!
+tag @s add gm4_horse_warp_target
+schedule function gm4_horsemanship:horse_processing/food/chorus_warp/context 1t
 
 scoreboard players set $food_processed gm4_horse_data 1
 tag @s remove gm4_horse_target

@@ -1,6 +1,6 @@
 # cap health just below the real max health
 # @s = gm4_horse
-# at @s
+# at unspecified
 # run from horse_processing/general
 # run from any in horse_processing/food/type/
 
