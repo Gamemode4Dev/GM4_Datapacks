@@ -5,8 +5,4 @@ scoreboard players set lavish_livestock gm4_modules 1
 scoreboard objectives add gm4_lavish_livestock_data dummy
 scoreboard objectives add gm4_lavish_livestock_size dummy
 
-schedule function gm4_lavish_livestock:main 1t
-
-
-
 #$moduleUpdateList

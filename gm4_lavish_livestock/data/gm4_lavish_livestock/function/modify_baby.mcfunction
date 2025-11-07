@@ -1,5 +1,7 @@
-say found me!
-effect give @s absorption infinite 0 false
+# Sets the size of the newborn baby
+# @s = the newborn baby
+# at location of breeding site marker
+# run from gm4_lavish_livestock:pick_type
 
 scoreboard players operation @s gm4_lavish_livestock_size = $size gm4_lavish_livestock_size
 execute if score @s gm4_lavish_livestock_size matches 0..1 if predicate {condition:"minecraft:random_chance",chance:1} run scoreboard players add @s gm4_lavish_livestock_size 1
