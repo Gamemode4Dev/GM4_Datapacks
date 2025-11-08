@@ -2,7 +2,6 @@ execute unless score lavish_livestock gm4_modules matches 1 run data modify stor
 execute unless score lavish_livestock gm4_earliest_version < lavish_livestock gm4_modules run scoreboard players operation lavish_livestock gm4_earliest_version = lavish_livestock gm4_modules
 scoreboard players set lavish_livestock gm4_modules 1
 
-scoreboard objectives add gm4_lavish_livestock_data dummy
 scoreboard objectives add gm4_lavish_livestock_size dummy
 
 #$moduleUpdateList

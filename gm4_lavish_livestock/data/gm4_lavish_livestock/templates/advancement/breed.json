@@ -4,12 +4,12 @@
             "trigger": "minecraft:bred_animals",
             "conditions": {
                 "child": {
-                    "type": "pig"
+                    "type": "{{ entity_id }}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "gm4_lavish_livestock:revoke_advancement"
+        "function": "gm4_lavish_livestock:{{ entity_id }}/revoke_advancement"
     }
 }

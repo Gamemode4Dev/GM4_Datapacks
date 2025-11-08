@@ -8,7 +8,11 @@ data_pack:
 resource_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
+  - gm4_lavish_livestock.generate
   - gm4.plugins.extend.module
 
 meta:
@@ -16,18 +20,16 @@ meta:
     versioning:
       schedule_loops: []
     website:
-      description: Huh?
+      description: Selectively breed your livestock for increased yields! Commercialize your farming!
       recommended:
-        - gm4_enderman_support_class
-      notes:
-        - Modifies loot tables.
+        - gm4_pig_tractors
+        - metallurgy
     #modrinth: 
-    #  project_id: qWQqEQMY
+    #  project_id: 
     #smithed:
-    #  pack_id: gm4_bat_grenades
+    #  pack_id: 
     #planetminecraft: 
-    #  uid: 4293806
-    #video: https://www.youtube.com/watch?v=uUoEKtte1GQ
+    #  uid: 
     wiki: https://wiki.gm4.co/wiki/Lavish_Livestock
     credits:
       Creator:
