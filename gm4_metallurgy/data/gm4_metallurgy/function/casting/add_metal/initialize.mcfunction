@@ -2,7 +2,7 @@
 # runs from sustain_mould
 
 # determine ore type and primary metal amount
-data modify storage gm4_metallurgy:temp/item/ore gm4_metallurgy set from entity @e[type=item,tag=gm4_ml_in_animation,dx=0,dz=0,predicate=gm4_metallurgy:is_castable,nbt={OnGround:1b},limit=1] Item.components."minecraft:custom_data".gm4_metallurgy
+data modify storage gm4_metallurgy:temp/item/ore gm4_metallurgy set from entity @e[type=item,tag=gm4_ml_in_animation,dx=0,dz=0,predicate=gm4_metallurgy:is_castable,predicate=gm4_metallurgy:on_ground,limit=1] Item.components."minecraft:custom_data".gm4_metallurgy
 execute store result score $metal_amount gm4_ml_data run data get storage gm4_metallurgy:temp/item/ore gm4_metallurgy.metal.amount[0]
 execute if data storage gm4_metallurgy:temp/item/ore gm4_metallurgy{item:"obsidian_cast"} run scoreboard players set $is_obsidian_cast gm4_ml_data 1
 
@@ -25,4 +25,4 @@ scoreboard players reset $is_obsidian_cast gm4_ml_data
 data remove storage gm4_metallurgy:temp/item/ore gm4_metallurgy
 
 # make all ores on top jump
-execute as @e[type=item,tag=!gm4_ml_in_animation,dx=0,dz=0,predicate=gm4_metallurgy:is_castable,nbt={OnGround:1b},limit=1] run data merge entity @s {Motion:[0.0,0.35,0.0],PickupDelay:30,Tags:["gm4_ml_in_animation"]}
+execute as @e[type=item,tag=!gm4_ml_in_animation,dx=0,dz=0,predicate=gm4_metallurgy:is_castable,predicate=gm4_metallurgy:on_ground,limit=1] run data merge entity @s {Motion:[0.0,0.35,0.0],PickupDelay:30,Tags:["gm4_ml_in_animation"]}

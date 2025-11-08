@@ -11,5 +11,5 @@ scoreboard players add @e[type=armor_stand,tag=gm4_new_sand_ring] gm4_ml_ore_th 
 scoreboard players set @e[type=armor_stand,tag=gm4_new_sand_ring] gm4_ml_heat 30
 tag @e[type=armor_stand,tag=gm4_new_sand_ring] remove gm4_new_sand_ring
 
-kill @e[type=item,limit=1,dx=0,dy=0,dz=0,predicate=gm4_metallurgy:is_clay_ball,nbt={OnGround:1b}]
-kill @e[type=item,limit=1,dx=0,dy=0,dz=0,predicate=gm4_metallurgy:is_obsidian,nbt={OnGround:1b}]
+kill @e[type=item,limit=1,dx=0,dy=0,dz=0,predicate=gm4_metallurgy:is_clay_ball,predicate=gm4_metallurgy:on_ground]
+kill @e[type=item,limit=1,dx=0,dy=0,dz=0,predicate=gm4_metallurgy:is_obsidian,predicate=gm4_metallurgy:on_ground]
