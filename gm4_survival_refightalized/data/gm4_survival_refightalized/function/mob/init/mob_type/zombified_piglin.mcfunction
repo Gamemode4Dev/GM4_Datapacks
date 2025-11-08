@@ -5,12 +5,12 @@
 
 ## Stat Block (normal/hard diff)
 # health: 14 - 24
-# damage: 4.5 - 6 (armed), 1.5 - 3 (unarmed)
+# damage: 5.5 - 7 (armed), 2.5 - 4 (unarmed)
 # speed: 90 - 140%
 
 # base stat nerf
 attribute @s[tag=!gm4_sr_from_spawner] minecraft:max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -6 add_value
-attribute @s minecraft:attack_damage modifier add gm4_survival_refightalized:stat_change.base_nerf -3.5 add_value
+attribute @s minecraft:attack_damage modifier add gm4_survival_refightalized:stat_change.base_nerf -2.5 add_value
 attribute @s minecraft:movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.1 add_multiplied_base
 
 # max stat buffs

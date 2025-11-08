@@ -6,7 +6,7 @@
 # elites - don't get other modifiers - 5% of spawns
 execute store result score $nearby_elites gm4_mu_data if entity @e[type=#gm4_monsters_unbound:elite_types,tag=gm4_mu_elite,distance=..64]
 execute if score $nearby_elites gm4_mu_data matches ..3 if predicate {condition:"minecraft:random_chance",chance:0.05} run tag @s[tag=!gm4_sr_extra_mob] add gm4_mu_elite
-execute if entity @s[tag=gm4_mu_elite] run return run function gm4_monsters_unbound:mob/init/elite/pick
+execute if entity @s[tag=gm4_mu_elite,tag=!gm4_sr_from_spawner] run return run function gm4_monsters_unbound:mob/init/elite/pick
 
 # | Biome Modifiers
 # snowy

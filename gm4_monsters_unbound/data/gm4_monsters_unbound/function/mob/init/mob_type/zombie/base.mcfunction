@@ -4,8 +4,8 @@
 # run from mob/init/mob_type
 
 # elites - don't get other modifiers - 5% of spawns (replaces baby zombies)
-execute if entity @s[tag=gm4_sr_was_baby] store result score $nearby_elites gm4_mu_data if entity @e[type=#gm4_monsters_unbound:elite_types,tag=gm4_mu_elite,distance=..64]
-execute if entity @s[tag=gm4_sr_was_baby] if score $nearby_elites gm4_mu_data matches ..3 run return run function gm4_monsters_unbound:mob/init/elite/pick
+execute if entity @s[tag=gm4_sr_was_baby,tag=!gm4_sr_from_spawner] store result score $nearby_elites gm4_mu_data if entity @e[type=#gm4_monsters_unbound:elite_types,tag=gm4_mu_elite,distance=..64]
+execute if entity @s[tag=gm4_sr_was_baby,tag=!gm4_sr_from_spawner] if score $nearby_elites gm4_mu_data matches ..3 run return run function gm4_monsters_unbound:mob/init/elite/pick
 
 # | Biome Modifiers
 # snowy

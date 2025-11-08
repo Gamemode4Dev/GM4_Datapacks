@@ -6,6 +6,7 @@
 # /!\ This function only runs if Survival Refightalized is not installed
 
 scoreboard players reset $mob_extras gm4_sr_data
+tag @s add gm4_mu_processed
 
 # remove baby zombies except chicken jockeys (will be turned into Elites)
 scoreboard players set $was_baby gm4_mu_data 0
@@ -14,7 +15,6 @@ execute if score $was_baby gm4_mu_data matches 1 run tag @s add gm4_sr_was_baby
 
 function gm4_monsters_unbound:mob/init/mob_type
 
-tag @s add gm4_mu_processed
 
 # heal to max health
 effect give @s[type=#minecraft:undead] instant_damage 1 20 true
