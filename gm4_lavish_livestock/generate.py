@@ -16,7 +16,6 @@ def beet_default(ctx: Context):
 
     # for each wood type in the vanilla doors tag, render a copy of the "templates" directory with the appropriate wood-type
     for entity in entity_ids:
-        logger.info(f"adding entity type {entity}")
         subproject_config = {
             "data_pack": {
                 "load": [
