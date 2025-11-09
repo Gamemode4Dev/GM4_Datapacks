@@ -1,11 +1,11 @@
 # Sets the size of the newborn baby
 # @s = the newborn baby
 # at location of breeding site marker
-# run from gm4_lavish_livestock:{{ entity_id }}/cache_size
+# run from gm4_lavish_livestock:{{ entity_id }}/find_baby
 
 # get parent size and roll chance to increase in size
 scoreboard players operation @s gm4_lavish_livestock_size = $size gm4_lavish_livestock_size
-execute if score @s gm4_lavish_livestock_size matches 0..1 if predicate {condition:"minecraft:random_chance",chance:0.05} run scoreboard players add @s gm4_lavish_livestock_size 1
+execute if score @s gm4_lavish_livestock_size matches 0..1 if predicate {condition:"minecraft:random_chance",chance:1} run scoreboard players add @s gm4_lavish_livestock_size 1
 
 # if non-vanilla size: add loot table and tag entity (tag is for future-proofing only, it is not currently read)
 execute if score @s gm4_lavish_livestock_size matches 1.. run tag @s add gm4_lavish_livestock_{{ entity_id }}

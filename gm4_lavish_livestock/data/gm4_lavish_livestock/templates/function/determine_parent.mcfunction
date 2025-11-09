@@ -20,4 +20,4 @@ scoreboard players operation $size gm4_lavish_livestock_size = @s gm4_lavish_liv
 execute summon marker run function gm4_lavish_livestock:{{ entity_id }}/initialize_marker
 
 # delay for one tick until child is alive
-schedule function gm4_lavish_livestock:{{ entity_id }}/find_baby 1t
+schedule function gm4_lavish_livestock:{{ entity_id }}/find_marker 1t
