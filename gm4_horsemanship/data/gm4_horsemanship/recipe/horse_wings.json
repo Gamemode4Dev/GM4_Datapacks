@@ -41,7 +41,7 @@
             ],
             "minecraft:equippable": {
                 "allowed_entities": "#minecraft:can_wear_horse_armor",
-                "asset_id": "minecraft:elytra",
+                "asset_id": "gm4_horsemanship:wings",
                 "can_be_sheared": true,
                 "damage_on_hurt": false,
                 "equip_sound": "minecraft:entity.horse.armor",

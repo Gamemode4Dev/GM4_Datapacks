@@ -581,7 +581,8 @@
       "standard_liquids:gui/advancement/standard_liquids": 1
     },
     "feather": {
-      "gm4_horsemanship:item/glider_wing": 1
+      "gm4_horsemanship:item/horse_wings": 2,
+      "gm4_horsemanship:item/horse_winged": 3
     },
     "firework_rocket": {
       "gm4_phantom_scarecrows:gui/advancement/phantom_scarecrows": 1
