@@ -11,7 +11,7 @@ execute as @e[type=item,predicate=gm4_metallurgy:is_obsidian,predicate=gm4_metal
 
 # check for shamir on anvil
 scoreboard players reset found_item_on_anvil gm4_ml_data
-execute as @e[type=item,tag=!gm4_ml_smooshed,predicate=gm4_metallurgy:smooshing/valid_item] at @s if block ~ ~-1 ~ #minecraft:anvil run function gm4_metallurgy:smooshing/item_on_anvil
+execute as @e[type=item,tag=!gm4_ml_smooshed,predicate=gm4_metallurgy:on_ground,predicate=gm4_metallurgy:smooshing/has_shamir] at @s if block ~ ~-1 ~ #minecraft:anvil run function gm4_metallurgy:smooshing/item_on_anvil
 
 #============================== SHAMIR CLOCKING ================================
 #             (for shamirs that are included with the base module)
