@@ -1,7 +1,6 @@
 {
   "values": [
     "#minecraft:all_signs",
-    "minecraft:amethyst_cluster",
     {"id": "#minecraft:bars", "required": false},
     "#minecraft:campfires",
     "#minecraft:candles",
@@ -21,6 +20,7 @@
     "#minecraft:wall_signs",
     "#minecraft:walls",
     {"id": "#minecraft:wooden_shelves", "required": false},
+    "minecraft:amethyst_cluster",
     "minecraft:big_dripleaf",
     "minecraft:big_dripleaf_stem",
     "minecraft:black_stained_glass_pane",
