@@ -4,7 +4,7 @@
 # run from check_projectile
 
 tag @s add gm4_cb_use
-data modify storage gm4_crossbow_cartridges:temp projectile.UUID set from entity @s UUID
+data modify storage gm4_crossbow_cartridges:temp projectile.Owner set from entity @s UUID
 
 # replace arrow with small_fireball and copy data
 summon minecraft:small_fireball ~ ~ ~ {Tags:["gm4_cb_projectile","gm4_cb_fireball"]}
