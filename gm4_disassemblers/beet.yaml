@@ -17,6 +17,7 @@ data_pack:
       min_format: 81
       max_format: 88
       directory: empty
+
 resource_pack:
   load: .
 
