@@ -48,6 +48,7 @@
                 "shearing_sound": "minecraft:item.horse_armor.unequip",
                 "slot": "body"
             },
+            "minecraft:custom_model_data": "item/horse_wings",
             "custom_data": {
                 "gm4_horsemanship": {
                     "glider": {

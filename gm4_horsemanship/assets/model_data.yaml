@@ -1,5 +1,5 @@
 model_data:
-  - item: feather
+  - item: elytra
     reference: item/horse_wings
     template: custom
   - item: feather
