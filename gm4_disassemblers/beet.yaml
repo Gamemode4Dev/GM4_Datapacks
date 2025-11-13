@@ -26,7 +26,13 @@ meta:
         reference: item/disassembler
         model: block/disassembler
       - item: tnt
-        template: legacy_machine_block
+        template: block
+        transforms:
+          - name: item_display
+            origin: [0.5,1,0.5]
+            scale: [0.47, 0.47, 0.47]
+            translation: [0,-0.007,0]
+            display: head
         broadcast:
           - reference: block/disassembler
             textures:

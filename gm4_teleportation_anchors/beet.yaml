@@ -28,7 +28,13 @@ meta:
         model: block/teleportation_anchor
       - item: end_portal_frame
         reference: block/teleportation_anchor
-        template: legacy_machine_block
+        template: block
+        transforms:
+          - name: item_display
+            origin: [0.5,1,0.5]
+            scale: [0.47, 0.47, 0.47]
+            translation: [0,-0.007,0]
+            display: head
         textures:
           top: block/teleportation_anchor_top
           side: block/teleportation_anchor_side
