@@ -20,8 +20,8 @@ model_data:
     transforms:
       - name: item_display
         origin: [0.5, 1, 0.5]
-        scale: [0.438, 0.438, 0.438]
-        translation: [0, 0.1, 0]
+        scale: [0.47, 0.47, 0.47]
+        translation: [0, 0.093, 0]
   - item: chorus_flower
     template: smelteries:ore_display
     reference: block/ore_display/chorus_fruit
