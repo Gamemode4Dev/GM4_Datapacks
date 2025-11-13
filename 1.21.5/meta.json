@@ -1,5 +1,5 @@
 {
-  "last_commit": "a5cdad2ecb68cb5f70d748148d896a947befb87d",
+  "last_commit": "86245398dd36fef419b7134c0d89c5f176ac4c8e",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -307,8 +307,8 @@
     {
       "id": "gm4_blossoming_pots",
       "name": "Blossoming Pots",
-      "version": "3.3.2",
-      "hash": "ffcecdac881c1aa94fd216f4a89e190a83fbb447",
+      "version": "3.4.0",
+      "hash": "e37beb1609fa728701208753fb1cccf31f526b78",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Blossoming_Pots",
       "credits": {
