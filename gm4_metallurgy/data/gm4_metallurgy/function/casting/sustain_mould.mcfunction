@@ -12,7 +12,7 @@ execute if score @s gm4_ml_heat matches 1..89 unless block ~ ~-1 ~ #minecraft:sa
 execute unless score @s gm4_ml_heat matches 1..89 run function gm4_metallurgy:casting/destroy_mould
 
 # add metals if player desires to do so
-execute if score @s gm4_ml_heat matches 50..89 align xyz if entity @e[type=item,predicate=gm4_metallurgy:is_castable,nbt={OnGround:1b},dx=0,dy=0,dz=0] run function gm4_metallurgy:casting/add_metal/initialize
+execute if score @s gm4_ml_heat matches 50..89 align xyz if entity @e[type=item,predicate=gm4_metallurgy:is_castable,predicate=gm4_metallurgy:on_ground,dx=0,dy=0,dz=0] run function gm4_metallurgy:casting/add_metal/initialize
 
 # hot ring without metal
 execute if score @s[tag=!gm4_contains_metal] gm4_ml_heat matches 50..51 run item modify entity @s armor.head gm4_metallurgy:mould/hot_empty
