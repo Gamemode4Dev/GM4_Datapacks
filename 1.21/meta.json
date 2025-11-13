@@ -1,5 +1,5 @@
 {
-  "last_commit": "1e18a9943de711bf6427497eba427babf598f2ce",
+  "last_commit": "94d47f942c4468fc3bfdc738ac2aefed065a68cd",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -748,8 +748,8 @@
     {
       "id": "gm4_crossbow_cartridges",
       "name": "Crossbow Cartridges",
-      "version": "1.7.11",
-      "hash": "4c5bb4d0689e68aadfc22e87502c9fb0cc766e61",
+      "version": "1.7.12",
+      "hash": "8796a9347b825f7f85d8765a204853bf6d24b8bd",
       "video_link": "https://www.youtube.com/watch?v=XJiGvX7l-pI",
       "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
       "credits": {
@@ -1794,8 +1794,8 @@
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.6.18",
-      "hash": "bd64e0777001f23e818310601a8c94d104c5b083",
+      "version": "1.6.19",
+      "hash": "7306c548d0b2a7600098d4a47a618e119c3c58f2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -2038,8 +2038,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.7.24",
-      "hash": "82dfff3902abd574f1beb30d213f26013f0c5fae",
+      "version": "1.7.25",
+      "hash": "f94ba490e796ad4968cc96d4da3d305e4c924e69",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
