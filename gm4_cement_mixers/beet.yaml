@@ -5,6 +5,9 @@ version: 1.5.X
 data_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
   - gm4.plugins.extend.module
 
