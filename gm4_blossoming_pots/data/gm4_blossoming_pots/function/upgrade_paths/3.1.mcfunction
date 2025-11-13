@@ -1,7 +1,7 @@
-# Rough outline for upgrade path
+# Upgrade pre-gm4 blossoming pots entities
 # @s = player
 # at @s
-
+# run via upgrade paths util
 
 # upgrade legacy flower pots
 execute as @e[type=minecraft:marker,tag=rc_blossoming_pots.flowerPot] at @s \
