@@ -1,5 +1,5 @@
 {
-  "last_commit": "78bc585129115e1525d0fc0f5f6cc28c272775e3",
+  "last_commit": "c18830affa896a1760ddb01024e9a562c6003fc8",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1685,8 +1685,8 @@
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.7.5",
-      "hash": "8cacc68b40adc0cd66ea5f3ff4b8bac89d10bf83",
+      "version": "1.7.6",
+      "hash": "000936e3dc689371d20bcd507af086521ed8c7d6",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -2838,8 +2838,8 @@
     {
       "id": "gm4_tower_structures",
       "name": "Tower Structures",
-      "version": "3.5.3",
-      "hash": "9bbe257220aa4c306423e25c2035c7e820c8b867",
+      "version": "3.5.4",
+      "hash": "2121c59398c4c3101a27e279f03b0be05e3d94b5",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Tower_Structures",
       "credits": {
