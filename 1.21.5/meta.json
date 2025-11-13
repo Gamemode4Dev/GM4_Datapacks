@@ -1,5 +1,5 @@
 {
-  "last_commit": "86245398dd36fef419b7134c0d89c5f176ac4c8e",
+  "last_commit": "31090f063b2d0865466838f3c9cea2756c75edd6",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -657,8 +657,8 @@
     {
       "id": "gm4_dangerous_dungeons",
       "name": "Dangerous Dungeons",
-      "version": "2.5.1",
-      "hash": "a8945bd6c291f1cb20ae0c849ebde11105e5583a",
+      "version": "2.5.2",
+      "hash": "33bbafb43bb32e5a7891f3496a0e5f4a68678ace",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Dangerous_Dungeons",
       "credits": {
@@ -2838,8 +2838,8 @@
     {
       "id": "gm4_tower_structures",
       "name": "Tower Structures",
-      "version": "3.5.2",
-      "hash": "917b539e32b4eb8769982cbb1ea7c815af3acbb3",
+      "version": "3.5.3",
+      "hash": "9bbe257220aa4c306423e25c2035c7e820c8b867",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Tower_Structures",
       "credits": {
