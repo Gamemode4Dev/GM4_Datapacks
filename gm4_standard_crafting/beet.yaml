@@ -11,6 +11,12 @@ data_pack:
       min_format: 88
       max_format: 88
       directory: since_88
+    - formats:
+        min_inclusive: 81
+        max_inclusive: 88
+      min_format: 81
+      max_format: 88
+      directory: empty
 
 pipeline:
   - generate_recipes
