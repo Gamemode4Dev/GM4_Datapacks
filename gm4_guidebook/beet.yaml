@@ -7,11 +7,6 @@ data_pack:
 
 resource_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 0
-        max_inclusive: 42
-      directory: backport_42
   
 require:
   - bolt
