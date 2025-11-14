@@ -2,7 +2,5 @@ key,en_us
 advancement.gm4.spawner_minecarts.title,Don't Go Breaking My Cart
 advancement.gm4.spawner_minecarts.description,Capture a Monster Spawner
 text.gm4.guidebook.module_desc.spawner_minecarts,Pick up Spawners and move them wherever you want with Minecarts.
-text.gm4.guidebook.spawner_minecarts.description,Spawners can be picked up with Minecarts.\n\nOnce a spawner is in a minecart it cannot be ejected and requires charging to spawn mobs.
+text.gm4.guidebook.spawner_minecarts.description,Spawners can be picked up with Minecarts.\n\nOnce a spawner is in a minecart it cannot be ejected and has reduced spawn rates for all carts within a 9x8x9 area around the spawner.
 text.gm4.guidebook.spawner_minecarts.pick_up,"To capture a spawner, place a minecart under it, then a downwards piston above the spawner, and finally a redstone block above the piston."
-text.gm4.guidebook.spawner_minecarts.recharging,"Spawner minecarts require charge to spawn mobs. They passively charge over time.\n\nWhen on a powered rail, it will stop spawning mobs and start actively charging by consuming flowers in a 9x9 area."
-text.gm4.guidebook.spawner_minecarts.recharging_1,"Some flowers charge the spawner minecart twice as fast as others; this differs in each world.\n\nWhen a spawner minecart fully recharges, it will activate any detector rails it is on."
