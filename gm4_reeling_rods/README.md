@@ -2,8 +2,6 @@
 
 Reel in more than just fish with these rods. Yoink the chest from the chest boat, deal some damage, and more! <!--$pmc:headerSize-->
 
-<img src="images/reeling_rods.webp" alt="A player using Reeling on a Chest Minecart, a Sheep, and an Enderman" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
-
 ### Features
 - All fishing rods have extra abilities when hooking Paintings, Item Frames, Leash Knots, Shulkers and End Crystals. Hooking any entity will also dismount them from their vehicle.
 

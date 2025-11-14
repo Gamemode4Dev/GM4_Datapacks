@@ -1,6 +1,5 @@
 scoreboard objectives add gm4_stored_xp dummy
 scoreboard objectives add gm4_xp_calc dummy
-scoreboard objectives add gm4_xp_data dummy
 
 execute unless score xp_storage gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"XP Storage"}
 execute unless score xp_storage gm4_earliest_version < xp_storage gm4_modules run scoreboard players operation xp_storage gm4_earliest_version = xp_storage gm4_modules

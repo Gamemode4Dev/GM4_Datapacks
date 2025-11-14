@@ -3,6 +3,6 @@ execute unless score live_catch gm4_modules matches 1 run data modify storage gm
 execute unless score live_catch gm4_earliest_version < live_catch gm4_modules run scoreboard players operation live_catch gm4_earliest_version = live_catch gm4_modules
 scoreboard players set live_catch gm4_modules 1
 
-scoreboard objectives add gm4_live_catch.data dummy
+
 
 #$moduleUpdateList

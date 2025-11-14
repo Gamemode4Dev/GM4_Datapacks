@@ -5,9 +5,6 @@ execute in the_nether run function gm4_orb_of_ankou:nether_main
 
 ## PNEUMA STUFF ##
 
-# gazing
-effect give @a[gamemode=!spectator,tag=gm4_pneuma_gazing] night_vision 15 0 true
-
 # gliding
 effect give @a[gamemode=!spectator,tag=gm4_pneuma_gliding,scores={gm4_oa_swim=1..}] dolphins_grace 3 1 true
 scoreboard players reset @a gm4_oa_swim

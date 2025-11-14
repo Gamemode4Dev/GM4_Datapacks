@@ -17,12 +17,8 @@ meta:
       schedule_loops: [main]
     website:
       description: Greatly expands the selection of potable plants. Use Decorated Pots as abnormally large flower pots. Decorate in Style!
-      recommended: 
-        - gm4_lively_lily_pads
+      recommended: []
       notes: []
-      search_keywords: 
-        - flowering
-        - plant
     modrinth:
       project_id: wOnn6VDU
     smithed:
