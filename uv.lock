@@ -12,8 +12,13 @@ wheels = [
 
 [[package]]
 name = "beet"
+<<<<<<< HEAD
 version = "0.112.1"
 source = { registry = "https://pypi.org/simple" }
+=======
+version = "0.111.0"
+source = { git = "https://github.com/edayot/beet.git?rev=update_1_21_9#4304c0f7f37f6b7d268a6c96dd83dc96bfaa9bdb" }
+>>>>>>> 74df3a8ff (Revert "Merge branch 'update-1.21.9' of https://github.com/Gamemode4Dev/GM4_Datapacks into update-1.21.9")
 dependencies = [
     { name = "click" },
     { name = "click-help-colors" },
@@ -26,10 +31,13 @@ dependencies = [
     { name = "toml" },
     { name = "typing-extensions" },
 ]
+<<<<<<< HEAD
 sdist = { url = "https://files.pythonhosted.org/packages/b4/51/03ced57f81dd2be86a6d55ec99359eabcf017d5cf8929ef81731f87cef78/beet-0.112.1.tar.gz", hash = "sha256:9014049b804c3ca2766b7cdfea7e64120df952e92b67d22210c70000fe1b36a6", size = 93478 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/dd/fb/11619fd28c1c923a5237fbaf9bbbf8d35b5b6edbee9608698160c07de458/beet-0.112.1-py3-none-any.whl", hash = "sha256:c3085af65aacc88d2811b772e3c377c023dcc5a864eaa45ec739c2f71ce82cf2", size = 118280 },
 ]
+=======
+>>>>>>> 74df3a8ff (Revert "Merge branch 'update-1.21.9' of https://github.com/Gamemode4Dev/GM4_Datapacks into update-1.21.9")
 
 [[package]]
 name = "black"
@@ -199,7 +207,11 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+<<<<<<< HEAD
     { name = "beet", specifier = ">=0.112.1" },
+=======
+    { name = "beet", git = "https://github.com/edayot/beet.git?rev=update_1_21_9" },
+>>>>>>> 74df3a8ff (Revert "Merge branch 'update-1.21.9' of https://github.com/Gamemode4Dev/GM4_Datapacks into update-1.21.9")
     { name = "bolt", specifier = ">=0.49.2" },
     { name = "mecha", specifier = ">=0.99.0" },
     { name = "pillow", specifier = ">=10.0.0,<11.0.0" },
