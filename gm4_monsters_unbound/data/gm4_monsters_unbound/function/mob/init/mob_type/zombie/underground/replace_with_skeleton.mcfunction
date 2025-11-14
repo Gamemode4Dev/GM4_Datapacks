@@ -3,6 +3,7 @@
 # at @s
 # run from mob/init/mob_type/zombie/underground/pick
 
+# gm4_sr_melee_skeleton tag is to avoid survival_refightalized treating this skeleton as holding a bow
 summon skeleton ~.05 ~ ~ {Tags:["gm4_sr_extra_mob","gm4_sr_melee_skeleton"],HandItems:[{},{}]}
 summon skeleton ~ ~ ~ {Tags:["gm4_sr_extra_mob","gm4_sr_melee_skeleton"],HandItems:[{},{}]}
 tp @s ~ ~-2050 ~

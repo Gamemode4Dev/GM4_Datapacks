@@ -4,8 +4,8 @@
 # run from mob/init/mob_type
 
 # elites - don't get other modifiers - 5% of spawns (replaces baby zombies)
-execute if entity @s[tag=gm4_sr_was_baby] store result score $nearby_elites gm4_mu_data if entity @e[type=#gm4_monsters_unbound:elite_types,tag=gm4_mu_elite,distance=..64]
-execute if entity @s[tag=gm4_sr_was_baby] if score $nearby_elites gm4_mu_data matches ..3 run return run function gm4_monsters_unbound:mob/init/elite/pick
+execute if entity @s[tag=gm4_sr_was_baby,tag=!gm4_sr_from_spawner] store result score $nearby_elites gm4_mu_data if entity @e[type=#gm4_monsters_unbound:elite_types,tag=gm4_mu_elite,distance=..64]
+execute if entity @s[tag=gm4_sr_was_baby,tag=!gm4_sr_from_spawner] if score $nearby_elites gm4_mu_data matches ..3 run return run function gm4_monsters_unbound:mob/init/elite/pick
 
 # | Biome Modifiers
 # snowy
@@ -28,4 +28,4 @@ execute if entity @s[type=!zombie_villager,tag=!gm4_mu_spore_zombie,predicate=gm
 # dripstone caves
 execute if entity @s[tag=!gm4_sr_extra_mob] if biome ~ ~ ~ dripstone_caves run function gm4_monsters_unbound:mob/init/mob_type/zombie/dripstone_caves/try
 # underground (not dripstone caves)
-execute if predicate {condition:"all_of",terms:[{condition:"reference",name:"gm4_survival_refightalized:mob/underground"},{condition:"inverted",term:{condition:"location_check",predicate:{"biomes":"dripstone_caves"}}},{condition:"random_chance",chance:0.5}]} run function gm4_monsters_unbound:mob/init/mob_type/zombie/underground/pick
+execute if predicate {condition:"all_of",terms:[{condition:"reference",name:"gm4_monsters_unbound:technical/underground"},{condition:"inverted",term:{condition:"location_check",predicate:{"biomes":"dripstone_caves"}}},{condition:"random_chance",chance:0.5}]} run function gm4_monsters_unbound:mob/init/mob_type/zombie/underground/pick

@@ -3,7 +3,7 @@
 # at @s
 # run from mob/process/elite/zephyr/skeleton/arrow_burst
 
-# don't process this arrow
+# don't process this arrow in survival_refightalized
 tag @s add gm4_sr_arrow_checked
 
 # arrow deals half damage
