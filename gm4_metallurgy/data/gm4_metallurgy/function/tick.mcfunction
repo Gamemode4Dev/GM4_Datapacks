@@ -14,7 +14,7 @@ execute if score $hypexperia_active gm4_ml_data matches 1 run function gm4_hypex
 
 # vibro
 execute as @a[gamemode=!spectator,tag=gm4_has_vibro,predicate=gm4_vibro_shamir:sneak_on_ground] at @s run function gm4_vibro_shamir:jump
-scoreboard players reset @a[gamemode=!spectator,tag=gm4_has_vibro,predicate=!gm4_vibro_shamir:sneak_on_ground] gm4_vibro_sneak
+execute as @a[gamemode=!spectator,scores={gm4_vibro_sneak=1..},predicate=!gm4_vibro_shamir:sneak_on_ground] run function gm4_vibro_shamir:remove_jump
 scoreboard players reset @a gm4_vibro_fall
 scoreboard players reset @a gm4_vibro_hurt
 scoreboard players reset @a gm4_vibro_absorb
