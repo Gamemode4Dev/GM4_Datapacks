@@ -14,10 +14,7 @@ execute store result storage gm4_live_catch:temp/output Target.Motion[1] double 
 execute store result storage gm4_live_catch:temp/output Target.Motion[2] double 0.0001 run data get storage gm4_live_catch:temp/input Target.Motion[2] 15000
 
 # summon fish / store data
-execute store result score $salmon_size gm4_live_catch.data run random value 1..1000
-execute if score $salmon_size gm4_live_catch.data matches 1..316 run summon salmon ~ ~1 ~ {Health:1f,Tags:["gm4_lc_salmon_new"],type:"small"}
-execute if score $salmon_size gm4_live_catch.data matches 317..842 run summon salmon ~ ~1 ~ {Health:1f,Tags:["gm4_lc_salmon_new"],type:"medium"}
-execute if score $salmon_size gm4_live_catch.data matches 843..1000 run summon salmon ~ ~1 ~ {Health:1f,Tags:["gm4_lc_salmon_new"],type:"large"}
+summon salmon ~ ~1 ~ {Health:1f,Tags:["gm4_lc_salmon_new"]}
 data modify entity @e[type=salmon,limit=1,tag=gm4_lc_salmon_new] {} merge from storage gm4_live_catch:temp/output Target
 
 # remove 
