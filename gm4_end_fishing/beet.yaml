@@ -7,6 +7,11 @@ data_pack:
 
 resource_pack:
   load: .
+  overlays:
+    - formats:
+        min_inclusive: 0
+        max_inclusive: 42
+      directory: backport_42
 
 pipeline:
   - register_model_data
@@ -26,18 +31,18 @@ meta:
         reference: item/enderpuff
       - item: elytra
         reference: item/captains_wings
-        model:
-          - predicate: {broken: 0}
-            model: item/elytra/captains_wings
-          - predicate: {broken: 1}
-            model: item/elytra/broken_captains_wings
+        template:
+          name: condition
+          property: minecraft:broken
+          on_true: item/elytra/broken_captains_wings
+          on_false: item/elytra/captains_wings
       - item: elytra
         reference: item/ravaged_wings
-        model:
-          - predicate: {broken: 0}
-            model: item/elytra/ravaged_wings
-          - predicate: {broken: 1}
-            model: item/elytra/broken_ravaged_wings
+        template:
+          name: condition
+          property: minecraft:broken
+          on_true: item/elytra/broken_ravaged_wings
+          on_false: item/elytra/ravaged_wings
       - item: fishing_rod
         reference: gui/advancement/end_fishing
         template: advancement
