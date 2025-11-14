@@ -24,7 +24,7 @@
               },
               "equipment": {
                 "feet": {
-                  "items": "#gm4:boots",
+                  "items": "#minecraft:foot_armor",
                   "predicates": {
                     "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:'vibro'}}"
                   }

@@ -4,7 +4,7 @@
 # run from mob/process/elite/pearlescent/process
 
 playsound block.campfire.crackle hostile @a ~ ~ ~ 0.5 0.8
-particle flash ~ ~1.8 ~
+particle flash{color:0xffffffff} ~ ~1.8 ~
 
 execute on target run tag @s[type=player] add gm4_mu_target
 execute unless entity @p[tag=gm4_mu_target] run return 0

@@ -956,6 +956,39 @@
       "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzA1YTY0N2YzYmY2YzMzZGQwNWI5M2JkZTJiNzRlYzViOWE5YTMxODQxM2FlZWRkZGE3ZDFhYjk3NDVkZmE5OCd9fX0=",
       "hash": "b1173eacf6e07f062e2301d25669acc1a3a0ac20",
       "parent_module": "gm4_metallurgy"
+    },
+    "gm4_lightning_in_a_bottle:texture_connector_exposed": {
+      "uuid": [
+        1105086427,
+        -2014818885,
+        -2050456398,
+        1819890536
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjU0ZTFmZmZlNzNiMjljMGU1NzVhOTg2OTI3OTJhZTIxYzQwNDUzZmMxNDRiYjYxZjE4ZDBmZjhmMjY3N2IxMSd9fX0=",
+      "hash": "3ba0bc3626c0acf3c8c19ecd9801db477e5f4ef4",
+      "parent_module": "gm4_lightning_in_a_bottle"
+    },
+    "gm4_lightning_in_a_bottle:texture_connector_weathered": {
+      "uuid": [
+        -53579126,
+        -1276100194,
+        -1254675310,
+        1810892024
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTExYjlhYjJlZmY4ZDMzYzU3ZWUyMjVjYWQ5ZmNkMTFmN2JmN2I4MzI2YWJlMTVhOWQ1MzUwNjNmOTZkOGZjMCd9fX0=",
+      "hash": "4ae3138c18bcb10d5074aa45c403f7a2192a79b8",
+      "parent_module": "gm4_lightning_in_a_bottle"
+    },
+    "gm4_lightning_in_a_bottle:texture_connector_oxidized": {
+      "uuid": [
+        -1160792602,
+        948128354,
+        -1355641425,
+        1430620480
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDY1ZGQ5Njg5MzIyNDZjZjgwODA3Y2E2NmY4M2Y0MThjNjc5YTIzMjI5MDdiYmNkMWYxN2I4ZTQ3NWUwYzE4J319fQ==",
+      "hash": "0ec19a60309722db4e5d57cba06c29bc62d5051f",
+      "parent_module": "gm4_lightning_in_a_bottle"
     }
   },
   "nonnative_references": {

@@ -409,7 +409,7 @@
         [
           {
             "translate": "text.gm4.guidebook.standard_crafting.horse_armor",
-            "fallback": "Diamond, iron, and golden armor can be crafted"
+            "fallback": "Diamond, iron, copper, and golden armor can be crafted"
           },
           "\n",
           {
