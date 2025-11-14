@@ -21,12 +21,19 @@ meta:
       schedule_loops: [main,tick]
     website:
       description: Place decorations on Lily Pads!
-      recommended: []
+      recommended: 
+        - gm4_blossoming_pots
       notes: []
+      search_keywords: 
+        - candle
+        - plant
+        - coral
+        - spore
+        - lantern
     modrinth:
       project_id: 7wnTwrbr
-    #smithed:
-      #pack_id: gm4_lively_lily_pads
+    smithed:
+      pack_id: gm4_lively_lily_pads
     planetminecraft:
       uid: 6138391
     video: null
