@@ -1,5 +1,4 @@
 version = 1
-revision = 1
 requires-python = ">=3.10, <4.0"
 
 [[package]]
@@ -13,8 +12,8 @@ wheels = [
 
 [[package]]
 name = "beet"
-version = "0.112.0"
-source = { registry = "https://pypi.org/simple" }
+version = "0.111.0"
+source = { git = "https://github.com/edayot/beet.git?rev=update_1_21_9#4304c0f7f37f6b7d268a6c96dd83dc96bfaa9bdb" }
 dependencies = [
     { name = "click" },
     { name = "click-help-colors" },
@@ -26,10 +25,6 @@ dependencies = [
     { name = "pyyaml" },
     { name = "toml" },
     { name = "typing-extensions" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/1f/e9/2c890be2f96a4a05fe57b77dcfbf7de05a594ba6b9bd08493b4f31291800/beet-0.112.0.tar.gz", hash = "sha256:9732467adf7f33bc99077f58209dd41bd6e6fa18e13f3ae900f0be5994fcc86f", size = 93119 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/24/cd/a08fdd765d848943cd2608aaa86cd5fad6300c4256aac654e144d3f9ea31/beet-0.112.0-py3-none-any.whl", hash = "sha256:3768c0f619ae8df1444067a0b869ea93b38d667dfb6b895e237e081971e94e36", size = 117871 },
 ]
 
 [[package]]
@@ -148,7 +143,7 @@ name = "click"
 version = "8.1.7"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "colorama", marker = "platform_system == 'Windows'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz", hash = "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de", size = 336121 }
 wheels = [
@@ -200,7 +195,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "beet", specifier = ">=0.112.0" },
+    { name = "beet", git = "https://github.com/edayot/beet.git?rev=update_1_21_9" },
     { name = "bolt", specifier = ">=0.49.2" },
     { name = "mecha", specifier = ">=0.99.0" },
     { name = "pillow", specifier = ">=10.0.0,<11.0.0" },
