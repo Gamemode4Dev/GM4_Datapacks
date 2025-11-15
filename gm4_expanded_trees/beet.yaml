@@ -1,0 +1,20 @@
+id: gm4_expanded_trees
+name: Expanded Trees
+version: 1.0.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    website:
+      description: Adds giant and normal tree variants to any sapling that is missing one!
+      recommended:
+        - gm4_metallurgy
+    wiki: https://wiki.gm4.co/wiki/Expanded_Trees
+    credits:
+      Creator:
+        - Djoness
