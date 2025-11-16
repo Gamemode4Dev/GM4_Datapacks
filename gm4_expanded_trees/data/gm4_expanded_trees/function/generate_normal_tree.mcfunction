@@ -3,6 +3,9 @@
 # located at @s
 # run from generate_tree
 
+# mark sapling and clear the space
+function gm4_expanded_trees:mark_sapling
+
 # vanilla
 execute if entity @s[tag=gm4_oak_tree_sapling] store success score $tree_placed gm4_expanded_trees_data run place feature minecraft:oak
 execute if entity @s[tag=gm4_acacia_tree_sapling] store success score $tree_placed gm4_expanded_trees_data run place feature minecraft:acacia
