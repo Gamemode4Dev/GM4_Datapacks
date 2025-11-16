@@ -13,7 +13,7 @@ import yaml
 from beet import Context, InvalidProjectConfig, PluginOptions, TextFile, load_config, Function
 from beet.library.base import _dump_files  # type: ignore ; private method used to deterministicify pack dumping
 from nbtlib.contrib.minecraft import StructureFileData, StructureFile  # type: ignore ; no stub
-from pydantic.v1 import BaseModel, Extra
+from pydantic import BaseModel
 from repro_zipfile import ReproducibleZipFile  # type: ignore ; no stub
 
 from gm4.plugins.versioning import VersioningConfig
@@ -41,17 +41,17 @@ class SmithedConfig(PluginOptions):
 class PMCConfig(PluginOptions):
 	uid: int
 
-class ManifestConfig(PluginOptions, extra=Extra.ignore):
+class ManifestConfig(PluginOptions, extra="ignore"):
 	minecraft: list[str] = SUPPORTED_GAME_VERSIONS
-	versioning: Optional[VersioningConfig]
+	versioning: Optional[VersioningConfig] = None
 	# distribution
-	website: Optional[WebsiteConfig]
-	modrinth: Optional[ModrinthConfig]
-	smithed: Optional[SmithedConfig]
-	pmc: Optional[PMCConfig]
+	website: Optional[WebsiteConfig] = None
+	modrinth: Optional[ModrinthConfig] = None
+	smithed: Optional[SmithedConfig] = None
+	pmc: Optional[PMCConfig] = None
 	# promo
-	video: str|None
-	wiki: str|None
+	video: str|None = None
+	wiki: str|None = None
 	credits: CreditsModel
 
 # models for meta.json and cached manifest
@@ -102,7 +102,7 @@ def create(ctx: Context):
 		for pack_id in [p.name for p in sorted(ctx.directory.glob(glob))]:
 			try:
 				config = load_config(Path(pack_id) / "beet.yaml")
-				gm4_meta = ctx.validate("gm4", validator=ManifestConfig, options=config.meta["gm4"]) # manually parse config into models  
+				gm4_meta = ctx.validate("gm4", validator=ManifestConfig, options=config.meta["gm4"]) # manually parse config into models
 
 				manifest_section[pack_id] = ManifestModuleModel(
 					id = config.id,
@@ -142,7 +142,7 @@ def create(ctx: Context):
 	manifest.base = {"version": base_config["version"]}
 
 	# Cache the new manifest, so sub-pipelines can access it
-	ctx.cache["gm4_manifest"].json = manifest.dict()
+	ctx.cache["gm4_manifest"].json = manifest.model_dump()
 
 	# Read in the previous manifest, if found
 	version = os.getenv("VERSION", "1.21.5")
@@ -158,9 +158,9 @@ def create(ctx: Context):
 				sys.exit(1) # quit the build and mark the github action as failed
 			else:
 				logger.warning("No existing meta.json manifest file was located")
-		ctx.cache["previous_manifest"].json = ManifestFileModel(last_commit="",modules=[],libraries={},contributors=[]).dict()
+		ctx.cache["previous_manifest"].json = ManifestFileModel(last_commit="",modules=[],libraries={},contributors=[]).model_dump()
 
-	
+
 
 def update_patch(ctx: Context):
     """Checks the datapack files for changes from last build, and increments patch number"""
@@ -168,11 +168,11 @@ def update_patch(ctx: Context):
     logger = parent_logger.getChild("update_patch")
 
     # load current manifest from cache
-    this_manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+    this_manifest = ManifestCacheModel.model_validate(ctx.cache["gm4_manifest"].json)
     pack = ({e.id:e for e in (this_manifest.libraries|this_manifest.modules).values()})[ctx.project_id]
 
     # attempt to load prior meta.json manifest
-    last_manifest = ManifestFileModel.parse_obj(ctx.cache["previous_manifest"].json)
+    last_manifest = ManifestFileModel.model_validate(ctx.cache["previous_manifest"].json)
     released_modules: dict[str, ManifestModuleModel] = {m.id:m for m in last_manifest.modules if m.version}|{l.id:l for l in last_manifest.libraries.values()}
 
     # determine this modules status
@@ -214,7 +214,7 @@ def update_patch(ctx: Context):
         else: # no changes, keep the patch
              pack.version = released.version
 
-    ctx.cache["gm4_manifest"].json = this_manifest.dict()
+    ctx.cache["gm4_manifest"].json = this_manifest.model_dump()
 
 
 def write_meta(ctx: Context):
@@ -232,7 +232,7 @@ def write_meta(ctx: Context):
 
 def write_credits(ctx: Context):
 	"""Writes the credits metadata to CREDITS.md. and collects for README.md"""
-	manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+	manifest = ManifestCacheModel.model_validate(ctx.cache["gm4_manifest"].json)
 	contributors = manifest.contributors
 	module = manifest.modules.get(ctx.project_id)
 	credits = module.credits if module else {}
@@ -254,7 +254,7 @@ def write_credits(ctx: Context):
 				linked_credits[title].append(f"[{name}]({links[0]})")
 			else:
 				linked_credits[title].append(f"{name}")
-	
+
 	# format credits for CREDITS.md
 	text = "# Credits\n"
 	for title in linked_credits:
@@ -277,7 +277,7 @@ def write_update_function(init: Optional[Function], ctx: Context):
 	if not init:
 		return
 
-	manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+	manifest = ManifestCacheModel.model_validate(ctx.cache["gm4_manifest"].json)
 	modules = manifest.modules
 
 	score = f"{ctx.project_id.removeprefix('gm4_')} gm4_modules"
@@ -309,7 +309,7 @@ def write_update_function(init: Optional[Function], ctx: Context):
 
 def repro_structure_to_bytes(content: StructureFileData) -> bytes:
     """a modified Structure.to_bytes from beet, which ensures the GZip does not add
-       the current time.time to the nbt file header. 
+       the current time.time to the nbt file header.
        Used for deterministic pack builds and auto-patch detection"""
     dst = BytesIO()
     with GzipFile(fileobj=dst, mode="wb", mtime=0) as fileobj:
