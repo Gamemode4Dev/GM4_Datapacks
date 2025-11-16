@@ -7,9 +7,13 @@ data_pack:
 
 pipeline:
   - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_trees
 
 meta:
   gm4:
+    versioning:
+      required:
+        lib_trees: 1.3.0
     website:
       description: Adds giant and normal tree variants to any sapling that is missing one!
       recommended:
