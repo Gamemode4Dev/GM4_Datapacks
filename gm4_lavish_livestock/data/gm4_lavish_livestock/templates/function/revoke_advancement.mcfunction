@@ -14,7 +14,7 @@ execute as @e[type={{ entity_id }},distance=..10,limit=2,sort=nearest,nbt=!{InLo
 execute if score $parent_a gm4_lavish_livestock_size > $parent_b gm4_lavish_livestock_size run scoreboard players operation $parent_a gm4_lavish_livestock_size >< $parent_b gm4_lavish_livestock_size
 
 # if both parents are the same size, roll dice for size increase
-execute if score $parent_a gm4_lavish_livestock_size = $parent_b gm4_lavish_livestock_size if predicate {condition:"minecraft:random_chance",chance:0.05} run scoreboard players add $parent_a gm4_lavish_livestock_size 1
+execute if score $parent_a gm4_lavish_livestock_size = $parent_b gm4_lavish_livestock_size if predicate {condition:"minecraft:random_chance",chance:0.025} run scoreboard players add $parent_a gm4_lavish_livestock_size 1
 
 # store size onto marker and wait for baby to be born
 execute summon marker run function gm4_lavish_livestock:{{ entity_id }}/initialize_marker
