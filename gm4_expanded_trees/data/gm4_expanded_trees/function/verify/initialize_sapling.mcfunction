@@ -4,4 +4,4 @@
 # run from gm4_trees:sapling/summon marker via #gm4_trees:initialize_sapling
 
 # this module runs on vanilla saplings, so we want to check for no specific type
-execute unless data storage gm4_trees:temp sapling{type:{}} run function gm4_expanded_trees:initialize_sapling
+execute unless data storage gm4_trees:temp sapling{} run function gm4_expanded_trees:initialize_sapling
