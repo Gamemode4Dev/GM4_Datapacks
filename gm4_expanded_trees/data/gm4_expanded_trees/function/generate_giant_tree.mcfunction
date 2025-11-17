@@ -11,7 +11,7 @@ execute if entity @s[tag=gm4_pale_oak_tree_sapling] store success score $tree_pl
 execute if entity @s[tag=gm4_dark_oak_tree_sapling] store success score $tree_placed gm4_expanded_trees_data run place feature minecraft:dark_oak
 
 # expanded
-execute if entity @s[tag=gm4_oak_tree_sapling] store success score $tree_placed gm4_expanded_trees_data run place feature minecraft:mega_spruce
+execute if entity @s[tag=gm4_oak_tree_sapling] store success score $tree_placed gm4_expanded_trees_data run place feature gm4_expanded_trees:mega_oak
 execute if entity @s[tag=gm4_acacia_tree_sapling] store success score $tree_placed gm4_expanded_trees_data run place feature minecraft:mega_spruce
 execute if entity @s[tag=gm4_cherry_tree_sapling] store success score $tree_placed gm4_expanded_trees_data run place feature minecraft:mega_spruce
 execute if entity @s[tag=gm4_mangrove_tree_sapling] store success score $tree_placed gm4_expanded_trees_data run place feature minecraft:mega_spruce
