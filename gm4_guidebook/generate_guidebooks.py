@@ -25,7 +25,7 @@ from beet import (
 from beet.contrib.vanilla import Vanilla
 from beet.core.utils import TextComponent
 from PIL import Image, ImageDraw
-from pydantic.v1 import BaseModel
+from pydantic import BaseModel
 
 from gm4.plugins.player_heads import Skin
 
@@ -73,21 +73,21 @@ class Section(BaseModel):
 
 class Icon(BaseModel):
   id: str
-  components: Optional[dict[str, Any]]
+  components: Optional[dict[str, Any]] = None
 
 
 class Book(BaseModel):
   id: str
   name: str
   module_type: Literal["expansion", "base", "module"]
-  load_check: Optional[str]
-  base_module: Optional[str]
+  load_check: Optional[str] = None
+  base_module: Optional[str] = None
   icon: Icon
   criteria: dict[str, dict[Any, Any]]
   sections: list[Section]
   trigger_id: int = -1 # value set by triggers.json
-  description: Optional[str]
-  wiki_link: Optional[str]
+  description: Optional[str] = None
+  wiki_link: Optional[str] = None
 
 class GuidebookPages(JsonFileBase[Book]):
   """defines a custom beet filetype for guidebook pages"""
@@ -134,7 +134,7 @@ parse guidebook file and generate all files
 """
 def generate_files(ctx:Context, d: DataPack, overlay: bool = False):
   for book in [b.data for b in d[GuidebookPages].values()]:
-  
+
     # get trigger id, generate one if not already existing
     triggers_file = JsonFile(source_path="gm4_guidebook/triggers.json")
     triggers = triggers_file.data
@@ -184,7 +184,7 @@ def generate_files(ctx:Context, d: DataPack, overlay: bool = False):
           section, book.id, page_index, load_map)
       else:
         page_index += 1
-        
+
     # register and create advancement icons to resource pack
     if d is ctx.data: # don't run for overlays - its not needed
       ctx.meta['gm4'].setdefault('model_data',[]).append({
@@ -508,7 +508,7 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
 
 
 """
-Generates the book's header for the lectern 
+Generates the book's header for the lectern
 difference is change_page vs run_command click events
 """
 def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
@@ -805,7 +805,7 @@ Reads a loot table (custom item) and creates a JSON text component to display th
 """
 def loottable_to_display(loottable: str, data: dict[Any,Any], ctx: Context) -> tuple[TextComponent, TextComponent]:
   item = loottable.split(":")[1].split("/")[-1]
-  if "gm4" in loottable:	
+  if "gm4" in loottable:
     item = f"gm4.{item}"
   else:
     item = f"minecraft.{item}"
@@ -818,7 +818,7 @@ def loottable_to_display(loottable: str, data: dict[Any,Any], ctx: Context) -> t
     raise ValueError("Loot table has multiple entries")
   if "item" not in loot["pools"][0]["entries"][0]["type"]:
     raise ValueError("Loot table does not return an item")
-  
+
   # get item id, name, lore, and color
   entry: dict[Any, Any] = loot["pools"][0]["entries"][0]
   item_id: str = entry["name"]
@@ -1089,7 +1089,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
             ingr = r["input"]["key"][ingredient][0]
           else:
             ingr = r["input"]["key"][ingredient]
-          
+
           if "guidebook" in ingr:
             item["guidebook"] = ingr["guidebook"]
           if "guidebook" in ingr and "type" in ingr["guidebook"]:
@@ -1157,7 +1157,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
   # unknown
   else:
     raise ValueError(f'Unknown recipe type: {r["input"]["type"]}')
-  
+
   # get JSON for each ingredient
   d_ingredients: list[TextComponent] = []
   d_under: list[TextComponent] = []
@@ -1171,7 +1171,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
     output_type = r["output"]["type"]
   else:
     output_type = "normal"
-  
+
   res: dict[str, Any] = {}
   if output_type == "normal":
     res = r["output"]["result"]
@@ -1181,14 +1181,14 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
     raise NotImplementedError('output type "replace" is not yet implemented')  # TODO: support replace output type
   else:
     raise ValueError(f"Unknown output type: '{output_type}'")
-  
+
   # get display
   if "item" in res["type"]:
     res["id"] = res["name"]
     result, result_under = item_to_display(res, ctx)
   else:
     result, result_under = loottable_to_display(res["name"], res, ctx)
-  
+
   # show count
   res_count = ""
   if "count" in res and res["count"] > 1:
@@ -1619,32 +1619,32 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
     start = ""
   # standard tellraw message
   tellraw: list[TextComponent] = [
-    "", 
+    "",
     {
-      "translate": "text.gm4.guidebook.discovered", 
-      "fallback":"%1$s has discovered a guidebook page from %2$s", 
+      "translate": "text.gm4.guidebook.discovered",
+      "fallback":"%1$s has discovered a guidebook page from %2$s",
       "with": [
         {
           "selector":"@s" # player
         },
         {
           "text": f"[{book_name}]", # module name (never translated)
-          "color": "#4AA0C7", 
-          "hover_event": 
+          "color": "#4AA0C7",
+          "hover_event":
           {
-            "action": "show_text", 
+            "action": "show_text",
             "value": [
               {
                 "text": book_name, # module name
                 "color": "#4AA0C7"
-              }, 
+              },
               {
                 "text": "\n"
-              }, 
+              },
               {
                 "translate": f"text.gm4.guidebook.module_desc.{book_id}", # module description
                 "fallback": desc,
-                "italic": True, 
+                "italic": True,
                 "color": "gray"
               }
             ]
@@ -1662,10 +1662,10 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
   # grants other sections when this section is obtained
   if section.grants:
     reward.append([f"{start}advancement grant @s only gm4_guidebook:{book_id}/unlock/{grant}" for grant in section.grants])
-  
+
   # update the player's unlocked pages
   reward.append([f"{start}function gm4_guidebook:{book_id}/rewards/unlock/{section.name}"])
-  
+
   return reward
 
 
@@ -1727,7 +1727,7 @@ def generate_page_storage(book: Book, ctx: Context) -> any: # type: ignore
       for page in section.pages:
         hand_initial.append(stringify_page(page, book, ctx, False))
         lectern_initial.append(stringify_page(page, book, ctx, True))
-    elif len(section.enable) != 0 and len(section.requirements) == 0 and len(section.prerequisites) == 0:      
+    elif len(section.enable) != 0 and len(section.requirements) == 0 and len(section.prerequisites) == 0:
       raise ValueError(f'Section "{section.name}" in "{book.id}" has both module dependencies and requirements')
     else:
       for page_index, page in enumerate(section.pages):
@@ -1737,7 +1737,7 @@ def generate_page_storage(book: Book, ctx: Context) -> any: # type: ignore
         for module_check in section.enable:
           if module_check["load"] != -1:
             add_locked_page = False
-        
+
         if add_locked_page:
           if (section_index == 0):
             locked_text: list[dict[Any, Any]|str] = [{'insert':'title'},{'insert':'locked_text_title'}]
@@ -1777,7 +1777,7 @@ def generate_setup_storage_function(book: Book, ctx: Context, overlay: bool = Fa
   short_circuit = f"execute unless score {book.load_check} load.status matches 1.. run return 0"
   trigger_map = f"data modify storage gm4_guidebook:register trigger_map.{book.trigger_id} set value {'{'}name:\"{book.id}\",load:\"{book.load_check}\"{'}'}"
   page_storage = f"data modify storage gm4_guidebook:register pages.{book.id} set value {json.dumps(storage, ensure_ascii=False)}"
-  
+
   return Function([
     short_circuit,
     trigger_map,
@@ -1878,7 +1878,7 @@ def generate_toast_model(book: Book, ctx: Context) -> Model:
     return Model({
       "parent":"gm4_guidebook:item/guidebook"
     })
-  
+
   # round corners
   img = cast(Image.Image, icon.image) # FIXME why needs cast? # type: ignore
   mask = Image.new(mode='L', size=img.size)
@@ -1920,7 +1920,7 @@ def generate_toast_model(book: Book, ctx: Context) -> Model:
 """
 Clamps a value between to valid RGB decimal numbers
 """
-def clamp(x: int|float): 
+def clamp(x: int|float):
   return int(max(0, min(x, 255)))
 
 

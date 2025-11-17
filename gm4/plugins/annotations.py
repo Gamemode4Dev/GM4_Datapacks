@@ -12,7 +12,7 @@ from gm4.plugins.manifest import ManifestCacheModel, ManifestFileModel
 
 
 def beet_default(ctx: Context):
-    """Sets up a logging handlers to emit build log entries with the github action annotation format, 
+    """Sets up a logging handlers to emit build log entries with the github action annotation format,
         and create a summary with useful build information."""
     root_logger = logging.getLogger(None) # get root logger
 
@@ -28,7 +28,7 @@ def beet_default(ctx: Context):
 
     root_logger.handlers.clear() # clear the handler set by beet CLI toolchain
     root_logger.addHandler(ann_handler)
-    
+
     # summary handler holds onto certain records until the exit phase when it emits to a markdown summary
     sum_handler = SummaryHandler(1000, ctx.cache)
     logging.getLogger("gm4.output").addHandler(sum_handler)
@@ -47,12 +47,12 @@ LEVEL_CONVERSION = {
 }
 
 class AnnotationFormatter(logging.Formatter):
-    
+
     def format(self, record: logging.LogRecord) -> str:
 
         expl = record.getMessage().replace("\n", "%0A")
             # use urlencoded newline
-        
+
         level = LEVEL_CONVERSION.get(record.levelno, LEVEL_CONVERSION[logging.INFO])
 
         filename = None
@@ -61,14 +61,14 @@ class AnnotationFormatter(logging.Formatter):
 
         if getattr(record, "gh_annotate_skip", False): # disable annotations for any gm4 log events flagged manually
             return f"{level.capitalize()}: {record.name} {expl}" # formatted to resemble annotated entry
-        
+
         match = re.match(r"(.+):(\d+):(\d+)", getattr(record, "annotate", "")) # extract filename and location from mecha annotation
         if match:
             filename, line, col = match.groups()
             return f"::{level} file={filename},line={line},col={col},title={record.name}::{record.name} {expl}"
 
         return f"::{level} title={record.name}::{record.name} {expl}"
-        
+
 class SummaryHandler(logging.handlers.BufferingHandler):
     def __init__(self, capacity: int, beet_cache: ProjectCache):
         super().__init__(capacity)
@@ -78,8 +78,8 @@ class SummaryHandler(logging.handlers.BufferingHandler):
     def flush(self):
         summary_entries: dict[str, Any] = {}
 
-        this_manifest = ManifestCacheModel.parse_obj(self.beet_cache["gm4_manifest"].json)
-        last_manifest = ManifestFileModel.parse_obj(self.beet_cache["previous_manifest"].json)
+        this_manifest = ManifestCacheModel.model_validate(self.beet_cache["gm4_manifest"].json)
+        last_manifest = ManifestFileModel.model_validate(self.beet_cache["previous_manifest"].json)
 
         this_versions = {id: entry.version for id, entry in (this_manifest.modules | this_manifest.libraries).items()}
         last_versions = {id: entry.version for id, entry in ({e.id: e for e in last_manifest.modules} | last_manifest.libraries).items()}
@@ -107,7 +107,7 @@ class SummaryHandler(logging.handlers.BufferingHandler):
                     "ver_update": f"{last_version_num} → {this_version_num}",
                     "logs": [] # list of tuples ("smithed", log_message)
                 }
-            
+
             # append to logs
             summary_entries[module_id]["logs"].append((service, record.getMessage()))
 
@@ -120,7 +120,7 @@ class SummaryHandler(logging.handlers.BufferingHandler):
             nested_table += "</table></details>"
 
             table += f"\n {entry['name']} | {entry['ver_update']} | {nested_table}"
-        
+
         summary = "# :rocket: Build Deployment Summary :rocket:\n"+table
 
         if not self.summary_created:
@@ -131,7 +131,7 @@ class SummaryHandler(logging.handlers.BufferingHandler):
                 self.summary_created = True
         self.buffer.clear()
 
-    
+
 
 def add_module_dir_to_diagnostics(ctx: Context):
     """Sets up a logging record filter that prepends the proper module folder to mecha diagnostics"""
@@ -141,7 +141,7 @@ def add_module_dir_to_diagnostics(ctx: Context):
 
     yield
     mc_logger.removeFilter(local_filter) # clear the filter once done (after mecha)
-    
+
 
 def add_mecha_subproject_dir(record: logging.LogRecord, subproject_dir: str|Path = ""):
     if d:=getattr(record, "annotate"):

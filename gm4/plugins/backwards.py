@@ -56,7 +56,7 @@ def backport(pack: Pack[Any], format: int, run: Callable[[str, NamespaceFile], N
 
   for overlay in pack.overlays.values():
     overlay_formats = overlay.supported_formats or overlay.pack_format
-    if check_formats(overlay_formats, format):
+    if overlay_formats and check_formats(overlay_formats, format):
       for file_type in overlay.resolve_scope_map().values():
         proxy = overlay[file_type]
         for path in proxy.keys():

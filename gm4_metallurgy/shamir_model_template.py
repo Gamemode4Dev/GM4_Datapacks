@@ -60,7 +60,7 @@ TEXTURE_LOOKUP = { # what texture to use if the exact item name is not present
 
 class ShamirTemplate(TemplateOptions):
     """Model Template for generating models for shamirs on tools/armor"""
-    name = "shamir"
+    name: Literal["shamir"] = "shamir"
     texture_map = ["", "band"]
     textures_path: str = "" # directory of texture files to use for shamirs, falling back to the default metallurgy textures
     metal: Literal["aluminium", "barimium", "barium", "bismuth", "curies_bismium", "thorium"] # the metallurgy metal this shamir is made of
@@ -145,7 +145,7 @@ class ShamirTemplate(TemplateOptions):
                                     ret_pointers.extend(rec_pts)
                         case _:
                             pass
-                        
+
                 return ret_variants, ret_pointers
 
             # create texture variants, using the vanilla item definition as a template
@@ -177,21 +177,21 @@ class ShamirTemplate(TemplateOptions):
             else:
                 models.update({item: f"{models_loc}/{item}"})
 
-        config.model = MapOption(__root__=models)
+        config.model = MapOption(models)
         return ret_list
-    
+
     def get_item_def_entry(self, config: ModelData, item: str) -> None|JsonType:
         # TODO fill me out, replacing ComplexBypass
         return self._item_def_map.get(item)
-    
+
     def mutate_config(self, config: ModelData):
         expanded_items = set(chain.from_iterable([GROUP_LOOKUP.get(group, [group]) for group in config.item.entries()])) | {"player_head"}
-        config.item = ListOption(__root__=list(expanded_items))
-        config.model = MapOption(__root__={item: config.reference for item in expanded_items})
-        if isinstance(config.textures.__root__, list):
-            config.textures = MapOption(__root__={"band": f"gm4_metallurgy:item/band/{self.metal}_band"})
+        config.item = ListOption(list(expanded_items))
+        config.model = MapOption({item: config.reference for item in expanded_items})
+        if isinstance(config.textures.root, list):
+            config.textures = MapOption({"band": f"gm4_metallurgy:item/band/{self.metal}_band"})
         else: # isinstance(.., dict):
-            config.textures = MapOption(__root__={"band": f"gm4_metallurgy:item/band/{self.metal}_band"}|config.textures.__root__)
+            config.textures = MapOption({"band": f"gm4_metallurgy:item/band/{self.metal}_band"}|config.textures.root)
 
 def optifine_armor_properties_merging(pack: ResourcePack, path: str, current: OptifineProperties, conflict: OptifineProperties) -> bool:
     if not path.startswith("gm4_metallurgy:cit"): # only apply this rule to metallurgy files
