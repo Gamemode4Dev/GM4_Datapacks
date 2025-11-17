@@ -2,10 +2,10 @@ version: 1.8.0
 id: gm4
 
 data_pack:
-  load: 
+  load:
     data: data
 
-resource_pack: 
+resource_pack:
   load:
     assets: assets
 
@@ -30,3 +30,4 @@ meta:
   babelbox:
     load: assets/translations.csv
     namespace: gm4_translations
+    dialect: excel
