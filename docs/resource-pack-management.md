@@ -217,12 +217,27 @@ The following `base_model` config can be used:
 ```yaml
 model_data:
   - item: leather_boots
-    reference: "item/flippers"
+    reference: item/flippers
     template: generated_overlay
     base_model: 
       tints: 
         - type: minecraft:dye
           default: -14455863
+```
+Or alternatively with JSON:
+```yaml
+model_data:
+  - item: leather_boots
+    reference: item/flippers
+    template: generated_overlay
+    base_model: {
+      "tints": [
+        {
+          "type": "minecraft:dye",
+          "default": -14455863
+        }
+      ]
+    }
 ```
 
 ### `gui_fonts` Config
