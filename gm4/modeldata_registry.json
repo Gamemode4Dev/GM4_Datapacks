@@ -639,7 +639,6 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "golden_chestplate": {
-      "gm4_scuba_gear:item/scuba_tank": 1,
       "gm4_zauber_cauldrons:item/zauber_armor/health_boost": 2,
       "gm4_zauber_cauldrons:item/zauber_armor/attack_boost": 3,
       "gm4_zauber_cauldrons:item/zauber_armor/speed_boost": 4,
@@ -962,6 +961,7 @@
     },
     "leather_chestplate": {
       "gm4_combat_expanded:gui/advancement/combat_expanded_identify": 1,
+      "gm4_scuba_gear:item/scuba_tank": 2,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_iacio_shamir:shamir/iacio": 122,
@@ -969,6 +969,8 @@
     },
     "leather_helmet": {
       "gm4_tower_structures:item/pirate_hat": 2,
+      "gm4_scuba_gear:item/scuba_helmet": 9,
+      "gm4_scuba_gear:gui/advancement/scuba_gear": 48,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_animi_shamir:shamir/animi": 124

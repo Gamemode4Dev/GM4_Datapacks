@@ -38,18 +38,16 @@
                   }
                 },
                 "minecraft:custom_model_data": "item/flippers",
-                "minecraft:dyed_color": 2367281,
                 "!minecraft:enchantable": {},
                 "minecraft:enchantments": {
                   "gm4_scuba_gear:flippers": 1
                 },
                 "minecraft:enchantment_glint_override": false,
-                "minecraft:max_damage": 156,
-                "minecraft:tooltip_display": {
-                  "hidden_components": [
-                    "minecraft:dyed_color"
-                  ]
+                "minecraft:equippable": {
+                  "slot": "feet",
+                  "asset_id": "gm4_scuba_gear:scuba"
                 },
+                "minecraft:max_damage": 156,
                 "minecraft:lore": [
                   {
                     "translate": "item.modifiers.gm4.scuba_gear.on_land",

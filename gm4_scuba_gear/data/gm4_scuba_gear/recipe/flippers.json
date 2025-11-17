@@ -50,6 +50,10 @@
         "gm4_scuba_gear:flippers": 1
       },
       "minecraft:enchantment_glint_override": false,
+      "minecraft:equippable": {
+        "slot": "feet",
+        "asset_id": "gm4_scuba_gear:scuba"
+      },
       "minecraft:max_damage": 156,
       "minecraft:tooltip_display": {
         "hidden_components": [
