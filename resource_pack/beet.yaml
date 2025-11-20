@@ -8,9 +8,9 @@ resource_pack:
     # other files are inherited by the full-project build
   overlays:
     - formats:
-        min_inclusive: 0
+        min_inclusive: 1
         max_inclusive: 63
-      min_format: 0
+      min_format: 1
       max_format: 63
       directory: backport_63
       

@@ -68,8 +68,8 @@ def backport(pack: Pack[Any], format: int, run: Callable[[str, NamespaceFile], N
       raise e
     if new_resource:
       overlay = pack.overlays[f"backport_{format}"]
-      overlay.supported_formats = { "min_inclusive": 0, "max_inclusive": format }
-      overlay.min_format = 0
+      overlay.supported_formats = { "min_inclusive": 1, "max_inclusive": format }
+      overlay.min_format = 1
       overlay.max_format = format
       overlay[path] = new_resource
 
