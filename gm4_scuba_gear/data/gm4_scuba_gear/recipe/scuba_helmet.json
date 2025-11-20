@@ -14,7 +14,7 @@
     ]
   },
   "result": {
-    "id": "minecraft:player_head",
+    "id": "minecraft:leather_helmet",
     "components": {
       "minecraft:item_name": {
         "translate": "item.gm4.scuba_helmet",
@@ -43,8 +43,13 @@
           "item": "helmet"
         }
       },
-      "minecraft:custom_model_data": "item/scuba_helmet",
+      "minecraft:item_model": "gm4_scuba_gear:scuba_helmet",
       "!minecraft:enchantable": {},
+      "minecraft:equippable": {
+        "slot": "head",
+        "asset_id": "gm4_scuba_gear:scuba",
+        "camera_overlay": "gm4_scuba_gear:misc/scuba_helmet"
+      },
       "minecraft:max_damage": 132,
       "minecraft:max_stack_size": 1,
       "minecraft:profile": "$scuba_helmet",

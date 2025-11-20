@@ -36,18 +36,17 @@
                     "item": "tank"
                   }
                 },
-                "minecraft:custom_model_data": "item/scuba_tank",
+                "minecraft:item_model": "gm4_scuba_gear:scuba_tank",
                 "!minecraft:enchantable": {},
+                "minecraft:equippable": {
+                  "slot": "chest",
+                  "asset_id": "gm4_scuba_gear:scuba"
+                },
                 "minecraft:max_damage": 192,
                 "minecraft:tooltip_display": {
                   "hidden_components": [
-                    "minecraft:dyed_color",
-                    "minecraft:trim"
+                    "minecraft:dyed_color"
                   ]
-                },
-                "minecraft:trim": {
-                  "material": "minecraft:copper",
-                  "pattern": "minecraft:silence"
                 }
               }
             }
