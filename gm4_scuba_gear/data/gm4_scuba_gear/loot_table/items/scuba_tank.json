@@ -5,40 +5,49 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:golden_chestplate",
+          "name": "minecraft:leather_chestplate",
           "functions": [
             {
               "function": "minecraft:set_components",
               "components": {
+                "minecraft:item_name": {
+                  "translate": "item.gm4.scuba_tank",
+                  "fallback": "SCUBA Tank",
+                  "italic": false
+                },
                 "minecraft:attribute_modifiers": [
-                  {
-                    "type": "minecraft:movement_speed",
-                    "id": "gm4_scuba_gear:tank_movement_speed",
-                    "slot": "chest",
-                    "amount": -0.1,
-                    "operation": "add_multiplied_base"
-                  },
                   {
                     "type": "minecraft:armor",
                     "slot": "chest",
                     "id": "gm4_scuba_gear:tank_armor",
                     "amount": 4,
                     "operation": "add_value"
+                  },
+                  {
+                    "type": "minecraft:oxygen_bonus",
+                    "id": "gm4_scuba_gear:tank/oxygen_bonus",
+                    "amount": 16,
+                    "operation": "add_value",
+                    "slot": "chest"
                   }
                 ],
-                "minecraft:custom_model_data": "item/scuba_tank"
-              }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{gm4_scuba_gear:{item:'tank'}}"
-            },
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "translate": "item.gm4.scuba_tank",
-                "fallback": "SCUBA Tank",
-                "italic": false
+                "minecraft:custom_data": {
+                  "gm4_scuba_gear": {
+                    "item": "tank"
+                  }
+                },
+                "minecraft:item_model": "gm4_scuba_gear:scuba_tank",
+                "!minecraft:enchantable": {},
+                "minecraft:equippable": {
+                  "slot": "chest",
+                  "asset_id": "gm4_scuba_gear:scuba"
+                },
+                "minecraft:max_damage": 192,
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:dyed_color"
+                  ]
+                }
               }
             }
           ]

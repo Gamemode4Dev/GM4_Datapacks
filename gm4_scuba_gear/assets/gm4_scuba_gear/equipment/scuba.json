@@ -1,0 +1,26 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "gm4_scuba_gear:scuba"
+      },
+      {
+        "dyeable": {
+          "color_when_undyed": 2321353
+        },
+        "texture": "gm4_scuba_gear:scuba_overlay"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "gm4_scuba_gear:scuba"
+      },
+      {
+        "dyeable": {
+          "color_when_undyed": 2321353
+        },
+        "texture": "gm4_scuba_gear:scuba_overlay"
+      }
+    ]
+  }
+}
