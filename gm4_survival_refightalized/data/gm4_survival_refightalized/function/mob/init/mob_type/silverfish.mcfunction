@@ -9,7 +9,7 @@
 # speed: 80 - 120%
 
 # base stat nerf
-attribute @s minecraft:max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -7 add_value
+attribute @s[tag=!gm4_sr_from_spawner] minecraft:max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -7 add_value
 attribute @s minecraft:movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.2 add_multiplied_total
 
 # max stat buffs
@@ -17,7 +17,8 @@ scoreboard players set $mob_health gm4_sr_data 5
 scoreboard players set $mob_damage gm4_sr_data 15
 scoreboard players set $mob_speed gm4_sr_data 40
 
-# size changes
+# size changes (not if from spawner)
+execute if entity @s[tag=gm4_sr_from_spawner] run return 0
 execute store result score $size_change gm4_sr_data run random value 1..100
 # normal (+20% speed)
 execute if score $size_change gm4_sr_data matches ..50 run attribute @s minecraft:movement_speed modifier add gm4_survival_refightalized:stat_change.random_scale 0.2 add_multiplied_total
