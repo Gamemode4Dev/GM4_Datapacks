@@ -1,0 +1,76 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "equipment",
+    "ingredients": [
+        "elytra",
+        "#gm4_horsemanship:horse_armor"
+    ],
+    "result": {
+        "components": {
+            "!food": {},
+            "!consumable": {},
+            "minecraft:attribute_modifiers": [
+                {
+                    "type": "minecraft:gravity",
+                    "amount": 0,
+                    "id": "gm4_horsemanship:horse_wings",
+                    "operation": "add_multiplied_total",
+                    "slot": "body"
+                },
+                {
+                    "type": "minecraft:fall_damage_multiplier",
+                    "amount": -1,
+                    "id": "gm4_horsemanship:horse_wings",
+                    "operation": "add_multiplied_total",
+                    "slot": "body"
+                },
+                {
+                    "type": "minecraft:jump_strength",
+                    "amount": 0,
+                    "id": "gm4_horsemanship:horse_wings",
+                    "operation": "add_multiplied_total",
+                    "slot": "body"
+                },
+                {
+                    "type": "minecraft:movement_speed",
+                    "amount": 0,
+                    "id": "gm4_horsemanship:horse_wings",
+                    "operation": "add_multiplied_total",
+                    "slot": "body"
+                }
+            ],
+            "minecraft:equippable": {
+                "allowed_entities": "#minecraft:can_wear_horse_armor",
+                "asset_id": "gm4_horsemanship:wings",
+                "can_be_sheared": true,
+                "damage_on_hurt": false,
+                "equip_sound": "minecraft:entity.horse.armor",
+                "shearing_sound": "minecraft:item.horse_armor.unequip",
+                "slot": "body"
+            },
+            "minecraft:custom_model_data": "item/horse_wings",
+            "custom_data": {
+                "gm4_horsemanship": {
+                    "glider": {
+                        "grounded": 1
+                    }
+                }
+            },
+            "minecraft:lore": [],
+            "minecraft:max_stack_size": 1,
+            "minecraft:rarity": "epic",
+            "minecraft:tooltip_display": {
+                "hidden_components": [
+                    "attribute_modifiers"
+                ]
+            },
+            "minecraft:item_name": {
+                "translate": "gm4.horsemanship.item.horse_wings",
+                "fallback": "Pegasuit"
+            },
+            "minecraft:item_model": "minecraft:elytra"
+        },
+        "count": 1,
+        "id": "minecraft:poisonous_potato"
+    }
+}
