@@ -37,7 +37,7 @@
                     "item": "flippers"
                   }
                 },
-                "minecraft:custom_model_data": "item/flippers",
+                "minecraft:item_model": "gm4_scuba_gear:flippers",
                 "!minecraft:enchantable": {},
                 "minecraft:enchantments": {
                   "gm4_scuba_gear:flippers": 1

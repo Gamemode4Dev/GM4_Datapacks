@@ -44,7 +44,7 @@
                 },
                 "minecraft:max_damage": 132,
                 "minecraft:max_stack_size": 1,
-                "minecraft:custom_model_data": "item/scuba_helmet",
+                "minecraft:item_model": "gm4_scuba_gear:scuba_helmet",
                 "minecraft:profile": "$scuba_helmet",
                 "minecraft:rarity": "common"
               }

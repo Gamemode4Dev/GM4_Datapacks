@@ -43,7 +43,7 @@
           "item": "helmet"
         }
       },
-      "minecraft:custom_model_data": "item/scuba_helmet",
+      "minecraft:item_model": "gm4_scuba_gear:scuba_helmet",
       "!minecraft:enchantable": {},
       "minecraft:equippable": {
         "slot": "head",

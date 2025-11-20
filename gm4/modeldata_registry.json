@@ -948,7 +948,6 @@
     },
     "leather_boots": {
       "gm4_boots_of_ostara:item/boots_of_ostara": 1,
-      "gm4_scuba_gear:item/flippers": 2,
       "gm4_boots_of_ostara:gui/advancement/boots_of_ostara": 3,
       "gm4_boots_of_ostara:item/flippers_of_ostara": 4,
       "gm4_boots_of_ostara:guidebook_icon/boots_of_ostara": 5,
@@ -961,7 +960,6 @@
     },
     "leather_chestplate": {
       "gm4_combat_expanded:gui/advancement/combat_expanded_identify": 1,
-      "gm4_scuba_gear:item/scuba_tank": 2,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_iacio_shamir:shamir/iacio": 122,
@@ -969,15 +967,12 @@
     },
     "leather_helmet": {
       "gm4_tower_structures:item/pirate_hat": 2,
-      "gm4_scuba_gear:item/scuba_helmet": 9,
-      "gm4_scuba_gear:gui/advancement/scuba_gear": 48,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_animi_shamir:shamir/animi": 124
     },
     "leather_leggings": {
       "gm4_washing_tanks:guidebook_icon/washing_tanks": 1,
-      "gm4_scuba_gear:item/wetsuit": 2,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_animi_shamir:shamir/animi": 124
@@ -1260,7 +1255,6 @@
       "gm4_heart_canisters:gui/advancement/heart_canisters_max": 6,
       "gm4_heart_canisters:item/heart_canister_tier_1": 7,
       "gm4_heart_canisters:item/heart_canister_tier_2": 8,
-      "gm4_scuba_gear:item/scuba_helmet": 9,
       "gm4_heart_canisters:guidebook_icon/heart_canisters": 10,
       "gm4_zauber_cauldrons:item/crystal/speed": 12,
       "gm4_zauber_cauldrons:item/crystal/regeneration": 13,
@@ -1286,7 +1280,6 @@
       "gm4_tnt_landmines:item/tnt_landmine_crafting_table": 45,
       "gm4_tnt_landmines:item/tnt_landmine_netherrack": 46,
       "gm4_tnt_landmines:item/tnt_landmine_invisible": 47,
-      "gm4_scuba_gear:gui/advancement/scuba_gear": 48,
       "gm4_metallurgy:gui/advancement/metallurgy_blast_ore": 49,
       "gm4_metallurgy:gui/advancement/metallurgy_cast": 50,
       "gm4_relocators:gui/advancement/relocators": 51,

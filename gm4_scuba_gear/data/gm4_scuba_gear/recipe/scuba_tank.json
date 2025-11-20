@@ -44,7 +44,7 @@
           "item": "tank"
         }
       },
-      "minecraft:custom_model_data": "item/scuba_tank",
+      "minecraft:item_model": "gm4_scuba_gear:scuba_tank",
       "!minecraft:enchantable": {},
       "minecraft:equippable": {
         "slot": "chest",

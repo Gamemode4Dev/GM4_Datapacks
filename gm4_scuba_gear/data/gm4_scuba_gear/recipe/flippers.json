@@ -38,7 +38,7 @@
           "slot": "feet"
         }
       ],
-      "minecraft:custom_model_data": "item/flippers",
+      "minecraft:item_model": "gm4_scuba_gear:flippers",
       "minecraft:custom_data": {
         "gm4_scuba_gear": {
           "item": "flippers"

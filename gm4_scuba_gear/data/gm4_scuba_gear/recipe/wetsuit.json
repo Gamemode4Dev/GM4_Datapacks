@@ -31,7 +31,7 @@
           "item": "wetsuit"
         }
       },
-      "minecraft:custom_model_data": "item/wetsuit",
+      "minecraft:item_model": "gm4_scuba_gear:wetsuit",
       "minecraft:enchantments": {
         "gm4_scuba_gear:wetsuit": 1
       },
