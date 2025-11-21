@@ -68,7 +68,7 @@ from gm4.utils import (
 JsonType = dict[str,Any]
 
 CUSTOM_MODEL_PREFIX = 3420000
-MINECRAFT_REFERENECE_VERSION = "1.21.6"
+MINECRAFT_REFERENECE_VERSION = "1.21.9"
 
 parent_logger = logging.getLogger("gm4.resource_pack")
 

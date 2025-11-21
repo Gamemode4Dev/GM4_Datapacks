@@ -5,10 +5,16 @@
 scoreboard players add @s gm4_vibro_sneak 1
 
 # apply jump boost based on sneak number
-effect give @s[scores={gm4_vibro_sneak=1..5}] jump_boost 1 3 false
-effect give @s[scores={gm4_vibro_sneak=6..10}] jump_boost 1 5 false
-effect give @s[scores={gm4_vibro_sneak=11..15}] jump_boost 1 6 false
-effect give @s[scores={gm4_vibro_sneak=16..}] jump_boost 1 9 false
+attribute @s[scores={gm4_vibro_sneak=1}] jump_strength modifier add gm4_vibro_shamir:jump_boost 0.4 add_value
+
+attribute @s[scores={gm4_vibro_sneak=6}] jump_strength modifier remove gm4_vibro_shamir:jump_boost
+attribute @s[scores={gm4_vibro_sneak=6}] jump_strength modifier add gm4_vibro_shamir:jump_boost 0.6 add_value
+
+attribute @s[scores={gm4_vibro_sneak=11}] jump_strength modifier remove gm4_vibro_shamir:jump_boost
+attribute @s[scores={gm4_vibro_sneak=11}] jump_strength modifier add gm4_vibro_shamir:jump_boost 0.7 add_value
+
+attribute @s[scores={gm4_vibro_sneak=16}] jump_strength modifier remove gm4_vibro_shamir:jump_boost
+attribute @s[scores={gm4_vibro_sneak=16}] jump_strength modifier add gm4_vibro_shamir:jump_boost 1.0 add_value
 
 # playsound (A Major Scale)
 execute if score @s gm4_vibro_sneak matches 1 run playsound minecraft:block.stone.step block @a[distance=..8] ~ ~ ~ 0.6 1.189207

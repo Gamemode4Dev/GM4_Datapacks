@@ -11,6 +11,7 @@ execute if score @s gm4_use_axe_net matches 1.. run scoreboard players set $axe_
 execute if score @s gm4_use_axe_dia matches 1.. run scoreboard players set $axe_delay gm4_arb_data 6
 execute if score @s gm4_use_axe_gol matches 1.. run scoreboard players set $axe_delay gm4_arb_data 3
 execute if score @s gm4_use_axe_iro matches 1.. run scoreboard players set $axe_delay gm4_arb_data 8
+execute if score @s gm4_use_axe_cop matches 1.. run scoreboard players set $axe_delay gm4_arb_data 10
 execute if score @s gm4_use_axe_sto matches 1.. run scoreboard players set $axe_delay gm4_arb_data 13
 execute if score @s gm4_use_axe_woo matches 1.. run scoreboard players set $axe_delay gm4_arb_data 22
 

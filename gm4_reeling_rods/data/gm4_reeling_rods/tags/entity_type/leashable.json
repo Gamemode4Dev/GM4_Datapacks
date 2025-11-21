@@ -11,6 +11,7 @@
         "minecraft:camel",
         "minecraft:cat",
         "minecraft:chicken",
+        {"id": "minecraft:copper_golem", "required": false},
         "minecraft:cow",
         "minecraft:dolphin",
         "minecraft:donkey",

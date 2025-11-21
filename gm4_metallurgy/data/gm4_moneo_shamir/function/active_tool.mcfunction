@@ -13,6 +13,7 @@ execute if score $tool_max_damage gm4_ml_data matches 1561 if predicate gm4_mone
 # activate moneo
 execute if score $tool_max_damage gm4_ml_data matches 59 run function gm4_moneo_shamir:tools/materials/wood
 execute if score $tool_max_damage gm4_ml_data matches 131 run function gm4_moneo_shamir:tools/materials/stone
+execute if score $tool_max_damage gm4_ml_data matches 190 run function gm4_moneo_shamir:tools/materials/copper
 execute if score $tool_max_damage gm4_ml_data matches 250 run function gm4_moneo_shamir:tools/materials/iron
 execute if score $tool_max_damage gm4_ml_data matches 1561 run function gm4_moneo_shamir:tools/materials/diamond
 execute if score $tool_max_damage gm4_ml_data matches 2031 run function gm4_moneo_shamir:tools/materials/netherite

@@ -1,0 +1,6 @@
+{
+  "values": [
+    {"id": "minecraft:exposed_lightning_rod", "required": false},
+    {"id": "minecraft:waxed_exposed_lightning_rod", "required": false}
+  ]
+}
