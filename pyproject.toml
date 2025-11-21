@@ -25,7 +25,7 @@ dev-dependencies = [
 ]
 
 [tool.uv.sources]
-beet = { git = "https://github.com/edayot/beet.git", rev = "fix_format_2" }
+beet = { git = "https://github.com/misode/beet.git", rev = "fix-1.21.10" }
 
 [project.entry-points.beet]
 commands = "gm4.commands"
