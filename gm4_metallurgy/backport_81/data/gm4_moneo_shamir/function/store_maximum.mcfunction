@@ -12,11 +12,6 @@ execute if items entity @s contents minecraft:stone_pickaxe run data modify enti
 execute if items entity @s contents minecraft:stone_hoe run data modify entity @s Item.components."minecraft:custom_data".MaxDurability set value 131
 execute if items entity @s contents minecraft:stone_axe run data modify entity @s Item.components."minecraft:custom_data".MaxDurability set value 131
 
-execute if items entity @s contents minecraft:copper_shovel run data modify entity @s Item.components."minecraft:custom_data".MaxDurability set value 190
-execute if items entity @s contents minecraft:copper_pickaxe run data modify entity @s Item.components."minecraft:custom_data".MaxDurability set value 190
-execute if items entity @s contents minecraft:copper_hoe run data modify entity @s Item.components."minecraft:custom_data".MaxDurability set value 190
-execute if items entity @s contents minecraft:copper_axe run data modify entity @s Item.components."minecraft:custom_data".MaxDurability set value 190
-
 execute if items entity @s contents minecraft:iron_shovel run data modify entity @s Item.components."minecraft:custom_data".MaxDurability set value 250
 execute if items entity @s contents minecraft:iron_pickaxe run data modify entity @s Item.components."minecraft:custom_data".MaxDurability set value 250
 execute if items entity @s contents minecraft:iron_hoe run data modify entity @s Item.components."minecraft:custom_data".MaxDurability set value 250
