@@ -1297,6 +1297,7 @@
     },
     "oak_sapling": {
       "gm4_expanded_trees:guidebook_icon/expanded_trees": 1,
+      "gm4_towering_trees:guidebook_icon/towering_trees": 2,
       "gm4_apple_trees:item/apple_tree_sapling": 4
     },
     "oak_sign": {

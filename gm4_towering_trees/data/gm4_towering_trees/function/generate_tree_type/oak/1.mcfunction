@@ -9,6 +9,8 @@ execute unless score $blocks_moved gm4_towering_trees_data matches 375 run retur
 execute store result score $blocks_moved gm4_towering_trees_data positioned ~-8 ~3 ~-9 run clone ~ ~ ~ ~19 ~11 ~18 ~ ~ ~ filtered #gm4_towering_trees:tree_placeable move
 execute unless score $blocks_moved gm4_towering_trees_data matches 4560 run return fail
 
+place feature gm4_towering_trees:leaf_litter ~ ~1 ~
+
 execute store result score $tree_rotation gm4_towering_trees_data run random value 1..4
 execute if score $tree_rotation gm4_towering_trees_data matches 1 run place template gm4_towering_trees:oak/1 ~-8 ~ ~-9
 execute if score $tree_rotation gm4_towering_trees_data matches 2 run place template gm4_towering_trees:oak/1 ~9 ~ ~10 180
