@@ -13,4 +13,4 @@ execute positioned ~ ~ ~-1 if block ~ ~ ~ brewing_stand align xyz unless entity 
 
 # advance
 scoreboard players remove $ray gm4_count 1
-execute if score $ray gm4_count matches 0.. positioned ^ ^ ^0.013 run function gm4_brewing:mark_brewing_stand
+execute if score $ray gm4_count matches 0.. positioned ^ ^ ^0.013 run function gm4_brewing:mark_adjacent_brewing_stand
