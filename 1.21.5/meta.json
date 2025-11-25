@@ -1,5 +1,5 @@
 {
-  "last_commit": "fe890ad9e00b7c4dea584814abb8569d6730e4fd",
+  "last_commit": "82b5b37ec17a81894eea6473728c6749105d0d8e",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1821,8 +1821,8 @@
     {
       "id": "gm4_monsters_unbound",
       "name": "Monsters Unbound",
-      "version": "1.0.0",
-      "hash": "9baf75c13d2a4fca413a398555d61e9ac01b7ac7",
+      "version": "1.1.0",
+      "hash": "7fa4447b20219f5d13b39d40f56f75e31afda88c",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Monsters_Unbound",
       "credits": {
@@ -1837,11 +1837,11 @@
           "rednls"
         ]
       },
-      "requires": [
+      "requires": [],
+      "description": "Mobs gain special effects based on their biome.",
+      "recommends": [
         "gm4_survival_refightalized"
       ],
-      "description": "Mobs gain special effects based on their biome.",
-      "recommends": [],
       "minecraft": [
         "1.21.5",
         "1.21.6",
@@ -2732,8 +2732,8 @@
     {
       "id": "gm4_survival_refightalized",
       "name": "Survival Refightalized",
-      "version": "1.0.0",
-      "hash": "36826a763aa3bb89ef69c0a89e6cd41dac603d99",
+      "version": "1.1.0",
+      "hash": "b1d7fbf1c74b9bcd9336f25750fefc00b3c43ad9",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Survival_Refightalized",
       "credits": {
