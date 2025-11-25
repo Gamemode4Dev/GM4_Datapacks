@@ -1,5 +1,5 @@
 {
-  "last_commit": "f6d4824d0951374716a280f192cfeef537870953",
+  "last_commit": "fe890ad9e00b7c4dea584814abb8569d6730e4fd",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1410,8 +1410,8 @@
     {
       "id": "gm4_lightning_in_a_bottle",
       "name": "Lightning in a Bottle",
-      "version": "1.8.1",
-      "hash": "bd5f6eb8bce9ba050accf02dcc43ed060c194bb6",
+      "version": "1.8.2",
+      "hash": "f36129c568040a97fde62d3de7d09e73141826d4",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
       "credits": {
@@ -2211,8 +2211,8 @@
     {
       "id": "gm4_potion_liquids",
       "name": "Potion Liquids",
-      "version": "1.8.1",
-      "hash": "7cb0931ac5d49f15a446bea372c0c87c4fa47fdf",
+      "version": "1.8.2",
+      "hash": "d88636e19584067c5bd6c7ca19112ac3ad3e0c2b",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids",
       "credits": {
@@ -3160,8 +3160,8 @@
     {
       "id": "gm4_zauber_cauldrons",
       "name": "Zauber Cauldrons",
-      "version": "1.13.1",
-      "hash": "eb828c3e23568a8f2cb31c8c68a946ee1c2441ad",
+      "version": "1.13.2",
+      "hash": "5a6644a779cb58d3e2ed1221c2a07f8ffb830d82",
       "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
       "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
       "credits": {
@@ -3314,8 +3314,8 @@
     "lib_brewing": {
       "id": "gm4_brewing",
       "name": "Gamemode 4 Brewing",
-      "version": "1.4.0",
-      "hash": "eef65ba43feca3f5e86d7cd6af7ac4d7abc304a2",
+      "version": "1.4.1",
+      "hash": "93bf4ba9863bb5a6e1e399d4aa63ff6af48046c1",
       "video_link": "",
       "wiki_link": "",
       "credits": {
