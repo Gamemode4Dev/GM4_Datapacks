@@ -5,7 +5,7 @@
 
 ## Stat Block (normal/hard diff)
 # health: 40 - 55
-# damage: 5 - 8
+# damage: 5 - 9
 # speed: 90 - 125%
 
 # base stat nerf
@@ -14,5 +14,5 @@ attribute @s minecraft:movement_speed modifier add gm4_survival_refightalized:st
 
 # max stat buffs
 scoreboard players set $mob_health gm4_sr_data 15
-scoreboard players set $mob_damage gm4_sr_data 30
+scoreboard players set $mob_damage gm4_sr_data 40
 scoreboard players set $mob_speed gm4_sr_data 35

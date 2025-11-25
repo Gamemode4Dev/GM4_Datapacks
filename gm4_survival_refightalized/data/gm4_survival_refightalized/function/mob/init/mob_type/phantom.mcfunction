@@ -9,7 +9,7 @@
 # speed: 100%
 
 # base stat nerf
-attribute @s minecraft:max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -16 add_value
+attribute @s[tag=!gm4_sr_from_spawner] minecraft:max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -16 add_value
 attribute @s minecraft:attack_damage modifier add gm4_survival_refightalized:stat_change.base_nerf -0.5 add_value
 
 # max stat buffs

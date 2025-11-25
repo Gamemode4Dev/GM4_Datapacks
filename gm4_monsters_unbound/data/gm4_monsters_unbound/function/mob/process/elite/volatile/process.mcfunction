@@ -4,7 +4,7 @@
 # run from mob/process/elite/check_type
 
 scoreboard players set $has_target gm4_mu_data 0
-execute on target if entity @s[type=player] run scoreboard players set $has_target gm4_mu_data 1
+execute on target if entity @s[type=player,distance=..22] run scoreboard players set $has_target gm4_mu_data 1
 execute if score $has_target gm4_mu_data matches 0 run return 0
 
 scoreboard players add @s gm4_mu_timer 1

@@ -50,6 +50,34 @@
         }
       }
     },
+    "breaching": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "equipment": {
+              "mainhand": {
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantments": "minecraft:breach"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "type": {
+            "tags": [
+              {
+                "id": "gm4_survival_refightalized:ignore",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    },
     "bypasses_enchantments": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
@@ -58,6 +86,25 @@
             "tags": [
               {
                 "id": "minecraft:bypasses_enchantments",
+                "expected": true
+              },
+              {
+                "id": "gm4_survival_refightalized:ignore",
+                "expected": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    "bypasses_shield": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "type": {
+            "tags": [
+              {
+                "id": "minecraft:bypasses_shield",
                 "expected": true
               },
               {
@@ -195,7 +242,9 @@
       "combat_damage",
       "armor_piercing",
       "armor_piercing_mob",
+      "breaching",
       "bypasses_enchantments",
+      "bypasses_shield",
       "is_fire",
       "is_fall",
       "is_explosion",
