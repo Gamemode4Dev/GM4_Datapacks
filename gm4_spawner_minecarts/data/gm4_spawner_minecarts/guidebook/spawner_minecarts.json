@@ -29,26 +29,6 @@
           }
         ]
       }
-    },
-    "find_spawner_minecart": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "looking_at": {
-                  "type": "minecraft:spawner_minecart",
-                  "nbt": "{Tags:['gm4_spawner_minecart']}"
-                }
-              }
-            }
-          }
-        ]
-      }
     }
   },
   "sections": [
@@ -63,7 +43,7 @@
           },
           {
             "translate": "text.gm4.guidebook.spawner_minecarts.description",
-            "fallback": "Spawners can be picked up with Minecarts.\n\nOnce a spawner is in a minecart it cannot be ejected and requires charging to spawn mobs."
+            "fallback": "Spawners can be picked up with Minecarts.\n\nOnce a spawner is in a minecart it cannot be ejected and has reduced spawn rates for all carts within a 9x8x9 area around the spawner."
           }
         ]
       ]
@@ -86,32 +66,6 @@
             "fallback": "To capture a spawner, place a minecart under it, then a downwards piston above the spawner, and finally a redstone block above the piston."
           }
         ]
-      ]
-    },
-    {
-      "name": "recharging",
-      "enable": [],
-      "requirements": [
-        [
-          "find_spawner_minecart"
-        ]
-      ],
-      "pages": [
-        [
-          {
-            "translate": "text.gm4.guidebook.spawner_minecarts.recharging",
-            "fallback": "Spawner minecarts require charge to spawn mobs. They passively charge over time.\n\nWhen on a powered rail, it will stop spawning mobs and start actively charging by consuming flowers in a 9x9 area."
-          }
-        ],
-        [
-          {
-            "translate": "text.gm4.guidebook.spawner_minecarts.recharging_1",
-            "fallback": "Some flowers charge the spawner minecart twice as fast as others; this differs in each world.\n\nWhen a spawner minecart fully recharges, it will activate any detector rails it is on."
-          }
-        ]
-      ],
-      "grants": [
-        "pick_up"
       ]
     }
   ]
