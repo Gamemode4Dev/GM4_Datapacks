@@ -51,47 +51,5 @@
                 "italic": true
             }
         ]
-    },
-    {
-        "function": "minecraft:set_components",
-        "components": {
-            "minecraft:custom_model_data": "gm4_scuba_gear:item/flippers"
-        },
-        "conditions": [
-            {
-                "condition": "minecraft:value_check",
-                "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$boa_flippers"
-                    },
-                    "score": "gm4_crafting"
-                },
-                "range": 1
-            }
-        ]
-    },
-    {
-        "function": "minecraft:set_name",
-        "name": {
-            "translate": "item.gm4.flippers_of_ostara",
-            "fallback": "Flippers of Ostara",
-            "italic": false
-        },
-        "conditions": [
-            {
-                "condition": "minecraft:value_check",
-                "value": {
-                    "type": "minecraft:score",
-                    "target": {
-                        "type": "minecraft:fixed",
-                        "name": "$boa_flippers"
-                    },
-                    "score": "gm4_crafting"
-                },
-                "range": 1
-            }
-        ]
     }
 ]
