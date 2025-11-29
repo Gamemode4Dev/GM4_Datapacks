@@ -8,7 +8,7 @@
       },
       "equipment": {
         "feet": {
-          "items": "#gm4:boots",
+          "items": "#minecraft:foot_armor",
           "predicates": {
             "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'vecto'}}"
           }

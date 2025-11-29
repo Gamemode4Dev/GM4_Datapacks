@@ -2,10 +2,10 @@
 # @dummy ~1.5 ~1 ~0.5
 # @timeout 900
 
-item replace entity @s weapon.mainhand with blast_furnace
+item replace entity @s weapon.mainhand with furnace
 execute at @s run tp @s ~ ~ ~ facing ~ ~-1 ~1
 dummy @s use block ~1 ~ ~1 up
-assert block ~1 ~1 ~1 blast_furnace
+assert block ~1 ~1 ~1 furnace
 
 item replace block ~1 ~1 ~1 container.0 with soul_sand
 item replace block ~1 ~1 ~1 container.1 with coal

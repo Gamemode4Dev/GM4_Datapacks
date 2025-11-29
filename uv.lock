@@ -12,7 +12,7 @@ wheels = [
 
 [[package]]
 name = "beet"
-version = "0.110.1"
+version = "0.112.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -26,9 +26,9 @@ dependencies = [
     { name = "toml" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/af/88/fbda09a5a3bdc172567eac78495349c8970dc9722b40dbc7d8ed74e13b1f/beet-0.110.1.tar.gz", hash = "sha256:24f060d4fab5ec1b9b32413eba39f0fb4aec2a75ea0a1340d7b9c28cbedadc07", size = 91945 }
+sdist = { url = "https://files.pythonhosted.org/packages/b4/51/03ced57f81dd2be86a6d55ec99359eabcf017d5cf8929ef81731f87cef78/beet-0.112.1.tar.gz", hash = "sha256:9014049b804c3ca2766b7cdfea7e64120df952e92b67d22210c70000fe1b36a6", size = 93478 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/57/d9/5a1da1856b99fec0876b6da9a609cffecab6e5492d8edc7f769e7bfcee38/beet-0.110.1-py3-none-any.whl", hash = "sha256:93dc57ce3843cc559c38613371afd4925c8e391347c2e06e27fe7637aad8abe8", size = 116679 },
+    { url = "https://files.pythonhosted.org/packages/dd/fb/11619fd28c1c923a5237fbaf9bbbf8d35b5b6edbee9608698160c07de458/beet-0.112.1-py3-none-any.whl", hash = "sha256:c3085af65aacc88d2811b772e3c377c023dcc5a864eaa45ec739c2f71ce82cf2", size = 118280 },
 ]
 
 [[package]]
@@ -53,15 +53,15 @@ wheels = [
 
 [[package]]
 name = "bolt"
-version = "0.49.1"
+version = "0.49.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beet" },
     { name = "mecha" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/39/95/95561e424e41850389b1e4a03cde86d8ac367878b7aa677dc1ea5de5eedb/bolt-0.49.1.tar.gz", hash = "sha256:40cd165e6eb438161cc8cd91fbebc90672169ee7114a3a79d3351e127a08dec7", size = 53469 }
+sdist = { url = "https://files.pythonhosted.org/packages/20/38/afaf49e657d52f90b139aeb54f087b4e09749fa46d60043f6796916da2a8/bolt-0.49.2.tar.gz", hash = "sha256:3f957178aeeecdeaa1bb5e61345692a282e79ab929bf5db01cb459336e566180", size = 53560 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9c/61/a147da5f0278c2b299eed14c7ea4b55420307fbcf794fec8db8b6adface6/bolt-0.49.1-py3-none-any.whl", hash = "sha256:912496abb4ed2593db1e44ec6655685d63d0003ee7218a2740ce91ad8ad9e36e", size = 59364 },
+    { url = "https://files.pythonhosted.org/packages/fc/6d/54081d432e9c22163d994a82388c2c03f5568a24348697ce3db82215b45d/bolt-0.49.2-py3-none-any.whl", hash = "sha256:8f831a4fa9de127d7c6c4e973dd024da7231ec5ede74037db88578b93825891c", size = 59441 },
 ]
 
 [[package]]
@@ -199,9 +199,9 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "beet", specifier = ">=0.110.1" },
-    { name = "bolt", specifier = ">=0.49.1" },
-    { name = "mecha", specifier = ">=0.98.1" },
+    { name = "beet", specifier = ">=0.112.1" },
+    { name = "bolt", specifier = ">=0.49.2" },
+    { name = "mecha", specifier = ">=0.99.0" },
     { name = "pillow", specifier = ">=10.0.0,<11.0.0" },
     { name = "pydantic", specifier = ">=2.6.1,<3.0.0" },
     { name = "pyyaml", specifier = ">=6.0,<7.0" },
@@ -306,15 +306,15 @@ wheels = [
 
 [[package]]
 name = "mecha"
-version = "0.98.1"
+version = "0.99.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beet" },
     { name = "tokenstream" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/bf/58/aca9ea4f0c22581461de1776ced4cb0f1365c8c99a744acda69d05ccd7e7/mecha-0.98.1.tar.gz", hash = "sha256:f8e308f3c84efb8042ef3944b192402d8ee38021330866a18c70355d51272ba2", size = 137881 }
+sdist = { url = "https://files.pythonhosted.org/packages/0d/ed/86ad891d2873d6f2cef0d70ab20e4d3e4a2ad3a4e2b9e43a936546a49607/mecha-0.99.0.tar.gz", hash = "sha256:78b0493d9b2fa010e9083b071939c9359f0804492cd405e0473f88145951b8c6", size = 138433 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/af/47/0b558814ab9f8d40b2482200dcb5cc776d5cb47057751838902def8589ef/mecha-0.98.1-py3-none-any.whl", hash = "sha256:d0d953a585406f4027afc011464faa5ad4c6006b3d819d60308110fdd3f5816d", size = 164202 },
+    { url = "https://files.pythonhosted.org/packages/5e/fe/58a92a2267d63993e832e6326b37703e543830c8c657fccfbfd8b0dcb533/mecha-0.99.0-py3-none-any.whl", hash = "sha256:9d24fb45dfebe3e31d1631653ff5c409aa09ca11da67e9a442fe400276915f3d", size = 164746 },
 ]
 
 [[package]]
