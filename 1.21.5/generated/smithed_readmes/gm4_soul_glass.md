@@ -3,7 +3,7 @@
 Beacons need a bit more corruption. This data pack reverses their effects<!--$pmc:headerSize-->
 
 ### Features
-- Crafted by smelting Soul Sand in a Blast Furnace
+- Crafted by smelting Soul Sand in a Furnace
 - Applies an inverted effect when placed on-top of a Beacon
 - Beacon power can be disabled by either moving the glass block or turning off the beacon
 - For example: Speed becomes Slowness, Haste becomes Mining Fatigue
