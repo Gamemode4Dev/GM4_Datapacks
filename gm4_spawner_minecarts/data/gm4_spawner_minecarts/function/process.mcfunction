@@ -1,27 +1,13 @@
-# @s = spawner minecarts
+# process spawner minecarts
+# @s = spawner minecart
+# at @s
 # run from main
 
-# fix broken spawner minecarts, caused by MC-96131 (probably no longer required)
-scoreboard players add @s gm4_spawner_fuel 0
+# check nearby spawner minecarts, each gives a +25% chance to not reduce delay
+execute positioned ~-4.5 ~-4 ~-4.5 store result score $nearby_carts gm4_spawner_minecarts_data if entity @e[type=spawner_minecart,tag=gm4_spawner_minecart,dx=8,dy=7,dz=8]
+scoreboard players remove $nearby_carts gm4_spawner_minecarts_data 1
+execute unless predicate {condition:"random_chance",chance:{type:"score",score:"gm4_spawner_minecarts_data",target:{type:"fixed",name:"$nearby_carts"},scale:0.25}} run return fail
 
-# check if the spawner minecart is on powered activator rails
-# which enables refueling, otherwise it enables spawning
-scoreboard players set can_spawn gm4_spawner_data 0
-execute unless block ~.29 ~ ~ activator_rail[powered=true] unless block ~-.29 ~ ~ activator_rail[powered=true] unless block ~ ~ ~.29 activator_rail[powered=true] unless block ~ ~ ~-.29 activator_rail[powered=true] run scoreboard players set can_spawn gm4_spawner_data 1
-
-# attempt to refuel
-execute if score active_clock gm4_spawner_fuel matches 1 if score can_spawn gm4_spawner_data matches 0 if score @s gm4_spawner_fuel matches ..1999 run function gm4_spawner_minecarts:fuel/active_regeneration
-execute if score passive_clock gm4_spawner_fuel matches 1 if score @s gm4_spawner_fuel matches ..1999 run function gm4_spawner_minecarts:fuel/passive_regeneration
-execute if entity @s[tag=gm4_spawner_minecart_full] run function gm4_spawner_minecarts:fuel/detector_rail
-
-# remove fuel if a spawn happend
-execute store result score current_delay gm4_spawner_data run data get entity @s Delay
-execute if score @s gm4_spawner_data < current_delay gm4_spawner_data run scoreboard players remove @s gm4_spawner_fuel 10
-
-# enable or disable spawning
-execute if score @s gm4_spawner_data < current_delay gm4_spawner_data if score @s gm4_spawner_fuel matches ..0 run scoreboard players set can_spawn gm4_spawner_data 0
-execute if score can_spawn gm4_spawner_data matches 0 run data merge entity @s {RequiredPlayerRange:0s}
-execute if score can_spawn gm4_spawner_data matches 1 run data merge entity @s {RequiredPlayerRange:16s}
-
-# store delay to compare next cycle
-scoreboard players operation @s gm4_spawner_data = current_delay gm4_spawner_data
+execute store result score $delay gm4_spawner_minecarts_data run data get entity @s Delay
+execute store result entity @s Delay int 1 run scoreboard players add $delay gm4_spawner_minecarts_data 16
+particle angry_villager ~ ~ ~ 0.4 0.4 0.4 0 1
