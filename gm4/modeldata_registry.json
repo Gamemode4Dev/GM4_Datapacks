@@ -240,11 +240,76 @@
       "gm4_fulcio_shamir:shamir/fulcio": 115,
       "gm4_animi_shamir:shamir/animi": 124
     },
+    "copper_axe": {
+      "gm4_metallurgy:shamir/hypexperia": 110,
+      "gm4_metallurgy:shamir/arborenda": 112,
+      "gm4_metallurgy:shamir/moneo": 113,
+      "gm4_percurro_shamir:shamir/percurro": 117,
+      "gm4_audere_shamir:shamir/audere": 120,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
     "copper_block": {
       "gm4_auto_crafting:guidebook_icon/auto_crafting": 1
     },
+    "copper_boots": {
+      "gm4_weighted_armour:shamir/helious": 103,
+      "gm4_metallurgy:shamir/defuse": 106,
+      "gm4_desire_lines:shamir/celaro": 118,
+      "gm4_vecto_shamir:shamir/vecto": 121,
+      "gm4_metallurgy:shamir/vibro": 123,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
+    "copper_chestplate": {
+      "gm4_weighted_armour:shamir/helious": 103,
+      "gm4_metallurgy:shamir/defuse": 106,
+      "gm4_iacio_shamir:shamir/iacio": 122,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
+    "copper_helmet": {
+      "gm4_weighted_armour:shamir/helious": 103,
+      "gm4_metallurgy:shamir/defuse": 106,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
+    "copper_hoe": {
+      "gm4_metallurgy:shamir/gemini": 109,
+      "gm4_metallurgy:shamir/tinker": 111,
+      "gm4_metallurgy:shamir/moneo": 113,
+      "gm4_audere_shamir:shamir/audere": 120,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
+    "copper_leggings": {
+      "gm4_weighted_armour:shamir/helious": 103,
+      "gm4_metallurgy:shamir/defuse": 106,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
     "copper_ore": {
       "gm4_smelteries:block/ore_display/copper_ore": 2
+    },
+    "copper_pickaxe": {
+      "gm4_metallurgy:shamir/forterra": 107,
+      "gm4_metallurgy:shamir/hypexperia": 110,
+      "gm4_metallurgy:shamir/tinker": 111,
+      "gm4_metallurgy:shamir/moneo": 113,
+      "gm4_lumos_shamir:shamir/lumos": 114,
+      "gm4_audere_shamir:shamir/audere": 120,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
+    "copper_shovel": {
+      "gm4_metallurgy:shamir/hypexperia": 110,
+      "gm4_metallurgy:shamir/tinker": 111,
+      "gm4_metallurgy:shamir/moneo": 113,
+      "gm4_lumos_shamir:shamir/lumos": 114,
+      "gm4_audere_shamir:shamir/audere": 120,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
+    "copper_sword": {
+      "gm4_metallurgy:shamir/ender_bolt": 105,
+      "gm4_metallurgy:shamir/musical": 108,
+      "gm4_metallurgy:shamir/hypexperia": 110,
+      "gm4_metallurgy:shamir/tinker": 111,
+      "gm4_orb_of_ankou:shamir/corripio": 116,
+      "gm4_percurro_shamir:shamir/percurro": 117,
+      "gm4_animi_shamir:shamir/animi": 124
     },
     "crafting_table": {
       "gm4_custom_crafters:block/custom_crafter": 1,
@@ -1004,6 +1069,9 @@
     },
     "lightning_rod": {
       "gm4_lightning_in_a_bottle:guidebook_icon/lightning_in_a_bottle": 1
+    },
+    "lily_pad": {
+      "gm4_lively_lily_pads:guidebook_icon/lively_lily_pads": 1
     },
     "lime_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/lime": 300

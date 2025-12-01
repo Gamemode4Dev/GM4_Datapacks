@@ -1,6 +1,6 @@
 id: gm4_blossoming_pots
 name: Blossoming Pots
-version: 3.3.X
+version: 3.4.X
 
 data_pack:
   load: .
@@ -17,8 +17,12 @@ meta:
       schedule_loops: [main]
     website:
       description: Greatly expands the selection of potable plants. Use Decorated Pots as abnormally large flower pots. Decorate in Style!
-      recommended: []
+      recommended: 
+        - gm4_lively_lily_pads
       notes: []
+      search_keywords: 
+        - flowering
+        - plant
     modrinth:
       project_id: wOnn6VDU
     smithed:

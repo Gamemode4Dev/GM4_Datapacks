@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 import yaml
-from beet import Context, InvalidProjectConfig, PluginOptions, TextFile, load_config
+from beet import Context, InvalidProjectConfig, PluginOptions, TextFile, load_config, Function
 from beet.library.base import _dump_files  # type: ignore ; private method used to deterministicify pack dumping
 from nbtlib.contrib.minecraft import StructureFileData, StructureFile  # type: ignore ; no stub
 from pydantic.v1 import BaseModel, Extra
@@ -21,7 +21,7 @@ from gm4.utils import Version, run
 
 parent_logger = logging.getLogger("gm4.manifest")
 
-SUPPORTED_GAME_VERSIONS = ["1.21.5", "1.21.6", "1.21.7", "1.21.8"]
+SUPPORTED_GAME_VERSIONS = ["1.21.5", "1.21.6", "1.21.7", "1.21.8", "1.21.9", "1.21.10"]
 
 # config models for beet.yaml metas
 CreditsModel = dict[str, list[str]]
@@ -268,8 +268,13 @@ def write_credits(ctx: Context):
 
 def write_updates(ctx: Context):
 	"""Writes the module update commands to this module's init function."""
-	init = ctx.data.functions.get(f"{ctx.project_id}:init", None)
-	if init is None:
+	for overlay in ctx.data.overlays.values():
+		write_update_function(overlay.functions.get(f"{ctx.project_id}:init"), ctx)
+	write_update_function(ctx.data.functions.get(f"{ctx.project_id}:init"), ctx)
+
+
+def write_update_function(init: Optional[Function], ctx: Context):
+	if not init:
 		return
 
 	manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
@@ -286,7 +291,7 @@ def write_updates(ctx: Context):
 			last_i = i
 
 	init.lines.insert(last_i+1, f"data modify storage gm4:log versions append value {{id:\"{ctx.project_id}\",module:\"{ctx.project_name}\",version:\"{version}\"}}")
-        
+
 	# Remove the marker if it exists
 	if "#$moduleUpdateList" in init.lines:
 		init.lines.remove("#$moduleUpdateList")
@@ -300,7 +305,8 @@ def write_updates(ctx: Context):
 		version = Version(m.version).int_rep()
 		website = f"https://gm4.co/modules/{m.id[4:].replace('_','-')}"
 		init.lines.append(f"execute if score {m.id} load.status matches -1.. if score {m.id.removeprefix('gm4_')} gm4_modules matches ..{version - 1} run data modify storage gm4:log queue append value {{type:'outdated',module:'{m.name}',download:'{website}',render:{{'text':'{m.name}','click_event':{{'action':'open_url','url':'{website}'}},'hover_event':{{'action':'show_text','value':{{'text':'Click to visit {website}','color':'#4AA0C7'}}}}}}}}")
-	
+
+
 def repro_structure_to_bytes(content: StructureFileData) -> bytes:
     """a modified Structure.to_bytes from beet, which ensures the GZip does not add
        the current time.time to the nbt file header. 

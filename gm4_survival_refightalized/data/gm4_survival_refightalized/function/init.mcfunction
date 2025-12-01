@@ -33,6 +33,7 @@ scoreboard objectives add gm4_sr_stat.deaths deathCount
 scoreboard objectives add gm4_sr_armor.tier dummy
 scoreboard objectives add gm4_sr_armor.reduction dummy
 scoreboard objectives add gm4_sr_armor.reduction_timer dummy
+scoreboard objectives add gm4_sr_armor.hit_cooldown dummy
 
 scoreboard objectives add gm4_sr_arrow.fire_delay dummy
 scoreboard objectives add gm4_sr_arrow.fire_delay_left dummy
@@ -43,9 +44,11 @@ scoreboard objectives add gm4_sr_shield.use_ticks dummy
 scoreboard objectives add gm4_sr_shield.timer dummy
 
 # configs
-execute unless score $natural_regen gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $natural_regen gm4_sr_config 1
-execute unless score $combat_regen_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $combat_regen_timer gm4_sr_config 1250
-execute unless score $armor_recharge_timer gm4_sr_config matches -2147483648..2147483647 run scoreboard players set $armor_recharge_timer gm4_sr_config 625
+execute unless score $config_version gm4_sr_config matches 2.. run scoreboard players set $natural_regen gm4_sr_config 1
+execute unless score $config_version gm4_sr_config matches 2.. run scoreboard players set $combat_regen_timer gm4_sr_config 1250
+execute unless score $config_version gm4_sr_config matches 2.. run scoreboard players set $rapid_regen_timer gm4_sr_config 250
+execute unless score $config_version gm4_sr_config matches 2.. run scoreboard players set $armor_recharge_timer gm4_sr_config 500
+scoreboard players set $config_version gm4_sr_data 2
 
 # swap natural regeneration to module's system
 execute unless score $natural_regen_disabled gm4_sr_data matches 1 run gamerule naturalRegeneration false
@@ -56,22 +59,15 @@ execute if score $natural_regen gm4_sr_config matches 1 if score $naturalregener
 
 # constants
 scoreboard players set #-128 gm4_sr_data -128
-scoreboard players set #-50 gm4_sr_data -50
 scoreboard players set #0 gm4_sr_data 0
 scoreboard players set #1 gm4_sr_data 1
 scoreboard players set #2 gm4_sr_data 2
-scoreboard players set #4 gm4_sr_data 4
 scoreboard players set #5 gm4_sr_data 5
 scoreboard players set #8 gm4_sr_data 8
 scoreboard players set #10 gm4_sr_data 10
-scoreboard players set #20 gm4_sr_data 20
-scoreboard players set #25 gm4_sr_data 25
-scoreboard players set #50 gm4_sr_data 50
 scoreboard players set #60 gm4_sr_data 60
 scoreboard players set #80 gm4_sr_data 80
 scoreboard players set #100 gm4_sr_data 100
-scoreboard players set #300 gm4_sr_data 300
-scoreboard players set #1000 gm4_sr_data 1000
 scoreboard players set #1024 gm4_sr_data 1024
 
 # start clocks

@@ -21,7 +21,9 @@ scoreboard players set @s gm4_sr_shield.spam_detection 0
 
 # stop attacker for a bit
 tag @s add gm4_sr_parrier
-execute on attacker run function gm4_survival_refightalized:player/damage/shield/parry_effect
+execute store result storage gm4_survival_refightalized:temp parry.damage float 1 run attribute @s attack_damage get 1
+execute on attacker run function gm4_survival_refightalized:player/damage/shield/parry_effect with storage gm4_survival_refightalized:temp parry
+data remove storage gm4_survival_refightalized:temp parry
 tag @s remove gm4_sr_parrier
 
 # dev damage log

@@ -15,7 +15,7 @@
             "condition": "minecraft:inverted",
             "term": {
               "condition": "minecraft:reference",
-              "name": "gm4_survival_refightalized:mob/underground"
+              "name": "gm4_monsters_unbound:technical/underground"
             }
           },
           {

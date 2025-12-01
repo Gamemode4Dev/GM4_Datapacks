@@ -3,11 +3,12 @@
 # at @s
 # run from gm4_arborenda:player/chop
 
-# get max damage for material type
+# get max damage - 1 for material type
 execute if score @s gm4_use_axe_net matches 1.. run scoreboard players set $max_damage gm4_arb_data 2030
 execute if score @s gm4_use_axe_dia matches 1.. run scoreboard players set $max_damage gm4_arb_data 1560
-execute if score @s gm4_use_axe_gol matches 1.. run scoreboard players set $max_damage gm4_arb_data 32
+execute if score @s gm4_use_axe_gol matches 1.. run scoreboard players set $max_damage gm4_arb_data 31
 execute if score @s gm4_use_axe_iro matches 1.. run scoreboard players set $max_damage gm4_arb_data 249
+execute if score @s gm4_use_axe_cop matches 1.. run scoreboard players set $max_damage gm4_arb_data 189
 execute if score @s gm4_use_axe_sto matches 1.. run scoreboard players set $max_damage gm4_arb_data 130
 execute if score @s gm4_use_axe_woo matches 1.. run scoreboard players set $max_damage gm4_arb_data 58
 

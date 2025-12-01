@@ -53,7 +53,7 @@
           },
           {
             "translate": "text.gm4.guidebook.soul_glass.description",
-            "fallback": "Soul Sand can be smelted in a blast furnace to get Soul Glass.\n\nWhen placed directly over a beacon, soul glass will corrupt the effects."
+            "fallback": "Soul Sand can be smelted in a furnace to get Soul Glass.\n\nWhen placed directly over a beacon, soul glass will corrupt the effects."
           }
         ]
       ]
