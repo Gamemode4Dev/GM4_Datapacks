@@ -11,10 +11,10 @@ attribute @s minecraft:attack_damage modifier add gm4_monsters_unbound:elite_buf
 attribute @s minecraft:movement_speed modifier add gm4_monsters_unbound:elite_buff.fire -0.45 add_multiplied_total
 attribute @s minecraft:burning_time modifier add gm4_monsters_unbound:elite_buff.fire -1 add_multiplied_total
 
-enchant @s[type=#gm4_survival_refightalized:skeleton_types] flame
-scoreboard players set @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_arrow.damage_change -18
-scoreboard players add @s[type=#gm4_survival_refightalized:skeleton_types] gm4_sr_arrow.fire_delay 2
-item replace entity @s[type=!#gm4_survival_refightalized:skeleton_types] weapon.mainhand with blaze_rod[enchantments={fire_aspect:2}]
+enchant @s[type=#gm4_monsters_unbound:skeleton_types] flame
+scoreboard players set @s[type=#gm4_monsters_unbound:skeleton_types] gm4_sr_arrow.damage_change -18
+scoreboard players add @s[type=#gm4_monsters_unbound:skeleton_types] gm4_sr_arrow.fire_delay 2
+item replace entity @s[type=!#gm4_monsters_unbound:skeleton_types] weapon.mainhand with blaze_rod[enchantments={fire_aspect:2}]
 data modify entity @s drop_chances.mainhand set value 0
 
 item replace entity @s armor.head with magma_block[enchantments={binding_curse:1},enchantment_glint_override=false]

@@ -1,0 +1,32 @@
+{
+    "anvil_cost": 0,
+    "description": "gm4.survival_refightalized.trident_damage_reduction",
+    "effects": {
+        "minecraft:damage": [
+            {
+                "effect": {
+                    "type": "minecraft:add",
+                    "value": {
+                        "type": "minecraft:linear",
+                        "base": -1,
+                        "per_level_above_first": -1
+                    }
+                }
+            }
+        ]
+    },
+    "max_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "max_level": 5,
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "slots": [
+        "mainhand"
+    ],
+    "supported_items": "trident",
+    "weight": 1
+}
