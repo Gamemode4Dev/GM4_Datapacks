@@ -9,17 +9,7 @@
                     "children": [
                         {
                             "type": "minecraft:item",
-                            "name": "turtle_helmet",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "gm4_survival_refightalized:mob/material_check/turtle_helmet"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "minecraft:item",
-                            "name": "diamond_helmet",
+                            "name": "minecraft:diamond_chestplate",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -43,7 +33,7 @@
                         },
                         {
                             "type": "minecraft:item",
-                            "name": "golden_helmet",
+                            "name": "golden_chestplate",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -67,7 +57,7 @@
                         },
                         {
                             "type": "minecraft:item",
-                            "name": "iron_helmet",
+                            "name": "iron_chestplate",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -91,7 +81,7 @@
                         },
                         {
                             "type": "minecraft:item",
-                            "name": "chainmail_helmet",
+                            "name": "chainmail_chestplate",
                             "conditions": [
                                 {
                                     "condition": "minecraft:reference",
@@ -101,17 +91,7 @@
                         },
                         {
                             "type": "minecraft:item",
-                            "name": "copper_helmet",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "gm4_survival_refightalized:mob/material_check/copper"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "minecraft:item",
-                            "name": "leather_helmet"
+                            "name": "leather_chestplate"
                         }
                     ],
                     "conditions": [
