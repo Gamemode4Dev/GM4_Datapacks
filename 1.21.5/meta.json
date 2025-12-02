@@ -1,5 +1,5 @@
 {
-  "last_commit": "861016407099d091f090304d8ac69765dab4f14f",
+  "last_commit": "7e13c0a458a4f3c376354ae70847b462c405e5f4",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -733,8 +733,8 @@
     {
       "id": "gm4_desire_lines",
       "name": "Desire Lines",
-      "version": "1.6.5",
-      "hash": "cf7bff51d8d021a79fc98d258a7ad9caefc80c7a",
+      "version": "1.6.6",
+      "hash": "90602068d1a2e05173b14fa0f88c14c6ad0fc6eb",
       "video_link": "https://www.youtube.com/watch?v=wmGaatfekfs",
       "wiki_link": "https://wiki.gm4.co/wiki/Desire_Lines",
       "credits": {
@@ -775,8 +775,8 @@
     {
       "id": "gm4_disassemblers",
       "name": "Disassemblers",
-      "version": "2.5.2",
-      "hash": "ee1cd2ed729cd33aa33b18aba2fc6fab18bc020a",
+      "version": "2.5.3",
+      "hash": "2202c3f8b84b7e3a1e3898934c24c71e23d3f0a9",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Disassemblers",
       "credits": {
