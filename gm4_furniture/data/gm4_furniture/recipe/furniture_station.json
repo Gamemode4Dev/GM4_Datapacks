@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "PCP",
+    "PIP",
+    "P P"
+  ],
+  "key": {
+    "C": "minecraft:crafting_table",
+    "I": "minecraft:iron_ingot",
+    "P": "#minecraft:planks"
+  },
+  "result": {
+    "id": "minecraft:player_head",
+    "components": {
+      "minecraft:custom_data": "{gm4_furniture:{furniture_id:\"furniture_station\"}}",
+      "minecraft:item_model": "gm4_furniture:furniture_station",
+      "minecraft:profile": {
+        "id": [
+          -308545246,
+          403555340,
+          412409013,
+          -705374452
+        ],
+        "properties": [
+          {
+            "name": "furniture_station",
+            "value": "ewogICJ0aW1lc3RhbXAiIDogMTY5Mjg3NTg0Njc2OCwKICAicHJvZmlsZUlkIiA6ICJhNWZlYWViNDdhYjA0ZDZiYTk2ZjMyOGJjMDQ3MDZjMyIsCiAgInByb2ZpbGVOYW1lIiA6ICJYeW5kcmEyIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzMzMDU1YjMzMGVmZTY0ZTQxMmQxZDc4MTE5MTM5YzRkMTA3YjZlMDdkNmUyMGU5MTVkYWE5MjFlYTgzMDgwMiIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9",
+            "signature": "gm4_furniture"
+          }
+        ]
+      },
+      "minecraft:item_name": {
+        "translate": "item.gm4_furniture.furniture_station",
+        "fallback": "Furniture Station",
+        "color": "white",
+        "italic": false
+      },
+      "!minecraft:equippable": {}
+    }
+  },
+  "show_notification": true
+}
