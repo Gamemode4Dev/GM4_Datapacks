@@ -1,0 +1,8 @@
+{
+    "values": [
+        "#minecraft:replaceable_by_trees",
+        "#air",
+        "#minecraft:logs",
+        "#gm4_towering_trees:supported_sapling"
+    ]
+}
