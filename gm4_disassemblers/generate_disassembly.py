@@ -55,6 +55,7 @@ ITEMS = {
   "shears": 239,
   "fishing_rod": 65,
   "flint_and_steel": 65,
+  "shield": 336,
 }
 
 
@@ -94,7 +95,9 @@ def beet_default(ctx: Context):
         })
         continue
 
-      if ingredient.startswith("#"):
+      if "wooden_tool_materials" in ingredient:
+        entry: Any = {"type": "minecraft:item", "name": "minecraft:stick"}
+      elif ingredient.startswith("#"):
         entry: Any = {"type": "minecraft:tag", "name": ingredient[1:], "expand": True}
       else:
         entry: Any = {"type": "minecraft:item", "name": ingredient}
