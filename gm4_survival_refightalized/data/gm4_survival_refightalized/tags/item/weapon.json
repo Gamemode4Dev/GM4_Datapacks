@@ -2,7 +2,7 @@
   "values": [
     {"id": "copper_axe", "required": false},
     {"id": "copper_pickaxe", "required": false},
-    {"id": "coppper_shovel", "required": false},
+    {"id": "copper_shovel", "required": false},
     {"id": "copper_sword", "required": false},
     "diamond_axe",
     "diamond_pickaxe",
