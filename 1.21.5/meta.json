@@ -1,5 +1,5 @@
 {
-  "last_commit": "057ef363dbc64ee8db05263f588b665544aa8851",
+  "last_commit": "861016407099d091f090304d8ac69765dab4f14f",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1878,8 +1878,8 @@
     {
       "id": "gm4_mob_curing",
       "name": "Mob Curing",
-      "version": "1.8.2",
-      "hash": "f1884c273b2b0ad0ab3cb4d1b3a8a6cf838634a9",
+      "version": "1.8.3",
+      "hash": "62f61c171533d72a3287c799b79b094083b50804",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mob_Curing",
       "credits": {
