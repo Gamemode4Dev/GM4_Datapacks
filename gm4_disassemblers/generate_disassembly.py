@@ -55,6 +55,7 @@ ITEMS = {
   "shears": 239,
   "fishing_rod": 65,
   "flint_and_steel": 65,
+  "shield": 336,
 }
 
 
@@ -98,6 +99,8 @@ def beet_default(ctx: Context):
         entry: Any = {"type": "minecraft:tag", "name": ingredient[1:], "expand": True}
       else:
         entry: Any = {"type": "minecraft:item", "name": ingredient}
+      if "wooden_tool_materials" in entry["name"]:
+        entry: Any = {"type": "minecraft:item", "name": "minecraft:stick"}
 
       entry["conditions"] = [{
         "condition": "value_check",
