@@ -95,12 +95,12 @@ def beet_default(ctx: Context):
         })
         continue
 
-      if ingredient.startswith("#"):
+      if "wooden_tool_materials" in ingredient:
+        entry: Any = {"type": "minecraft:item", "name": "minecraft:stick"}
+      elif ingredient.startswith("#"):
         entry: Any = {"type": "minecraft:tag", "name": ingredient[1:], "expand": True}
       else:
         entry: Any = {"type": "minecraft:item", "name": ingredient}
-      if "wooden_tool_materials" in entry["name"]:
-        entry: Any = {"type": "minecraft:item", "name": "minecraft:stick"}
 
       entry["conditions"] = [{
         "condition": "value_check",
