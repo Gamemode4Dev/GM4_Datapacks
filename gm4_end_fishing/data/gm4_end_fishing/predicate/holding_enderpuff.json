@@ -4,7 +4,7 @@
   "predicate": {
     "slots": {
       "weapon.*": {
-            "items": "#gm4_end_fishing:enderpuff",
+        "items": "#gm4_end_fishing:enderpuff",
         "predicates": {
           "minecraft:custom_data": "{gm4_end_fishing:{enderpuff:1b}}"
         }
