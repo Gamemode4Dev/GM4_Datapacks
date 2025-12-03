@@ -119,8 +119,8 @@ def beet_default(ctx: Context, opts: ManifestConfig):
         })
 
     # Modrinth Youtube Video Embed
-    if (vid_url:=ctx.meta['gm4']['video']) is not None:
-        embed_url = re.sub(r'https:\/\/www.youtube.com\/watch\?v=(\w+)', r'https://www.youtube.com/embed/\1', vid_url)
+    if 'video' in ctx.meta['gm4'] and ctx.meta['gm4']['video'] is not None:
+        embed_url = re.sub(r'https:\/\/www.youtube.com\/watch\?v=(\w+)', r'https://www.youtube.com/embed/\1', ctx.meta['gm4']['video'])
 
         site_replacements["modrinth"].update({
             r"(.+)<!-- *\$modrinth:replaceWithVideo[ -]+?>" : (

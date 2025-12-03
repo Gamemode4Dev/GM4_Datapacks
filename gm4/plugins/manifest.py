@@ -50,7 +50,7 @@ class ManifestConfig(PluginOptions, extra=Extra.ignore):
 	smithed: Optional[SmithedConfig]
 	pmc: Optional[PMCConfig]
 	# promo
-	video: str|None
+	video: Optional[str]
 	wiki: str|None
 	credits: CreditsModel
 
@@ -61,7 +61,7 @@ class ManifestModuleModel(BaseModel):
 	name: str
 	version: str
 	hash: str
-	video_link: str = ""
+	video_link: Optional[str]
 	wiki_link: str = ""
 	credits: CreditsModel
 	requires: list[str] = []
@@ -109,7 +109,7 @@ def create(ctx: Context):
 					name = config.name,
 					version = config.version,
 					hash = "",
-					video_link = gm4_meta.video or "",
+					video_link = gm4_meta.video if gm4_meta.video else None,
 					wiki_link = gm4_meta.wiki or "",
 					credits = gm4_meta.credits,
 					requires = [e for e in gm4_meta.versioning.required.keys() if not e.startswith("lib")] if gm4_meta.versioning else [],
