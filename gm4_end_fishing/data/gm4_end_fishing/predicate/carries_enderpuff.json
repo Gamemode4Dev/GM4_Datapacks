@@ -7,7 +7,7 @@
       "predicate": {
         "slots": {
           "container.*": {
-            "items": "minecraft:player_head",
+            "items": "#gm4_end_fishing:enderpuff",
             "predicates": {
               "minecraft:custom_data": "{gm4_end_fishing:{enderpuff:1b}}"
             }
@@ -21,7 +21,7 @@
       "predicate": {
         "slots": {
           "armor.*": {
-            "items": "minecraft:player_head",
+            "items": "#gm4_end_fishing:enderpuff",
             "predicates": {
               "minecraft:custom_data": "{gm4_end_fishing:{enderpuff:1b}}"
             }
@@ -35,7 +35,7 @@
       "predicate": {
         "slots": {
           "player.cursor": {
-            "items": "minecraft:player_head",
+            "items": "#gm4_end_fishing:enderpuff",
             "predicates": {
               "minecraft:custom_data": "{gm4_end_fishing:{enderpuff:1b}}"
             }
@@ -49,7 +49,7 @@
       "predicate": {
         "slots": {
           "player.crafting.*": {
-            "items": "minecraft:player_head",
+            "items": "#gm4_end_fishing:enderpuff",
             "predicates": {
               "minecraft:custom_data": "{gm4_end_fishing:{enderpuff:1b}}"
             }
@@ -63,7 +63,7 @@
       "predicate": {
         "slots": {
           "weapon.*": {
-            "items": "minecraft:player_head",
+            "items": "#gm4_end_fishing:enderpuff",
             "predicates": {
               "minecraft:custom_data": "{gm4_end_fishing:{enderpuff:1b}}"
             }
