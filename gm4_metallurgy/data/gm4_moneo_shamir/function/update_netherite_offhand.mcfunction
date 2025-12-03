@@ -1,4 +1,5 @@
 # @s = player holding a netherite moneo tool that has the wrong MaxDurability
+# at @s
 # run from active_tool_offhand
 
 # item modifier

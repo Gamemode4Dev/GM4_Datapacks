@@ -1,4 +1,5 @@
 # @s = players holding a moneo tool
+# at @s
 # run from shamir_in_hand
 
 scoreboard players set $tool_current_damage gm4_ml_data 0
