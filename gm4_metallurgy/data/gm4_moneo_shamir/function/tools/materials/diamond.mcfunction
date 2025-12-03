@@ -1,6 +1,6 @@
 # @s = player holding the moneo tool
 # at @s
-# run from active_tool
+# run from active_tool and active_tool_offhand
 
 scoreboard players operation $tool_max_damage gm4_ml_data -= $tool_current_damage gm4_ml_data
 
