@@ -24,7 +24,7 @@ def beet_default(ctx: Context):
 			ctx.project_name,
 			"\n",
 			{
-				"text": f"Gamemode 4 (1.21.5 - 1.21.9)",
+				"text": f"Gamemode 4 (1.21.5 - 1.21.11)",
 				"color": "#4AA0C7"
 			}
 		]
