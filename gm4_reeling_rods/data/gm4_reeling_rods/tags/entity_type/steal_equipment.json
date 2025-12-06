@@ -5,6 +5,7 @@
     "minecraft:drowned",
     "minecraft:husk",
     {"id": "minecraft:mannequin", "required": false},
+    {"id": "minecraft:parched", "required": false},
     "minecraft:piglin",
     "minecraft:piglin_brute",
     "minecraft:player",
