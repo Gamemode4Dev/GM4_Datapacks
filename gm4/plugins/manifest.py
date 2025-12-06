@@ -21,7 +21,7 @@ from gm4.utils import Version, run
 
 parent_logger = logging.getLogger("gm4.manifest")
 
-SUPPORTED_GAME_VERSIONS = ["1.21.5", "1.21.6", "1.21.7", "1.21.8", "1.21.9", "1.21.10"]
+SUPPORTED_GAME_VERSIONS = ["1.21.5", "1.21.6", "1.21.7", "1.21.8", "1.21.9", "1.21.10", "1.21.11"]
 
 # config models for beet.yaml metas
 CreditsModel = dict[str, list[str]]

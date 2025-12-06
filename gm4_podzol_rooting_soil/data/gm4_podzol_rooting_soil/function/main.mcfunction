@@ -2,7 +2,7 @@
 schedule function gm4_podzol_rooting_soil:main 400t
 
 # query random tick speed
-execute store result score random_tick_speed gm4_podzol_data run gamerule randomTickSpeed
+execute store result score random_tick_speed gm4_podzol_data run gamerule random_tick_speed
 
 # prepare lööp
 scoreboard players add last_uuid gm4_podzol_data 11

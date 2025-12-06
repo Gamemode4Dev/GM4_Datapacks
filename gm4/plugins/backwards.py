@@ -1,6 +1,7 @@
 import logging
+import re
 from typing import Any, Tuple, Callable
-from beet import Context, Pack, NamespaceFile, ItemModel
+from beet import Context, Pack, NamespaceFile, ItemModel, Function
 
 logger = logging.getLogger("gm4.backwards")
 
@@ -11,38 +12,65 @@ def beet_default(ctx: Context):
   # edited item model definition - replaced head with player_head
   backport(ctx.assets, 63, playerhead_models_1_21_5)
 
+  # renamed gamerules
+  backport(ctx.data, 92, rename_gamerules)
+
 
 def playerhead_models_1_21_5(id: str, resource: NamespaceFile):
   if not isinstance(resource, ItemModel):
     return None
-  overlay = resource.copy()
-  json = overlay.data
-  if id=="minecraft:player_head":
-    def recursive_replace(compound: dict[str,Any]):
-      for key, val in compound.items():
-        # recurse down the tree
-        if isinstance(val, list):
-          for subval in val: # type: ignore
-            if isinstance(subval, dict):
-              recursive_replace(subval) # type: ignore
-        elif isinstance(val, dict):
-          recursive_replace(val) # type: ignore
-          # then replace matching compounds
-          match val:
-            case {
-              "type": "minecraft:special",
-              "model": {
-                  "type": "minecraft:player_head"
-              }
-            }:
-              compound[key]["model"]["type"] = "minecraft:head"
-              compound[key]["model"]["kind"] = "player"
-            case _: # type: ignore
-              pass
+  if id != "minecraft:player_head":
+    return None
 
-    recursive_replace(json)
-    return overlay
-  return None
+  def recursive_replace(compound: dict[str,Any]):
+    for key, val in compound.items():
+      # recurse down the tree
+      if isinstance(val, list):
+        for subval in val: # type: ignore
+          if isinstance(subval, dict):
+            recursive_replace(subval) # type: ignore
+      elif isinstance(val, dict):
+        recursive_replace(val) # type: ignore
+        # then replace matching compounds
+        match val:
+          case {
+            "type": "minecraft:special",
+            "model": {
+                "type": "minecraft:player_head"
+            }
+          }:
+            compound[key]["model"]["type"] = "minecraft:head"
+            compound[key]["model"]["kind"] = "player"
+          case _: # type: ignore
+            pass
+
+  overlay = resource.copy()
+  recursive_replace(overlay.data)
+  return overlay
+
+
+# Only gamerules that are actually used are replaced
+GAMERULES_RENAMES = {
+  "command_block_output": "commandBlockOutput",
+  "spawn_phantoms": "doInsomnia",
+  "natural_health_regeneration": "naturalRegeneration",
+  "random_tick_speed": "randomTickSpeed",
+  "send_command_feedback": "sendCommandFeedback",
+  "show_death_messages": "showDeathMessages",
+}
+
+
+def rename_gamerules(id: str, resource: NamespaceFile):
+  if not isinstance(resource, Function):
+    return None
+  text = resource.text
+  for new_gamerule, old_gamerule in GAMERULES_RENAMES.items():
+    text = re.sub(f"gamerule (minecraft:)?{new_gamerule}\\b", f"gamerule {old_gamerule}", text)
+  if text == resource.text:
+    return None
+  overlay = resource.copy()
+  overlay.text = text
+  return overlay
 
 
 def backport(pack: Pack[Any], format: int, run: Callable[[str, NamespaceFile], NamespaceFile | None]):
