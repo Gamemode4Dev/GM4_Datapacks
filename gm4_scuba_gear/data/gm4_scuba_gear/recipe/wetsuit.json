@@ -1,0 +1,78 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "KCK",
+    "K K",
+    "K K"
+  ],
+  "key": {
+    "C": [
+      "minecraft:copper_ingot"
+    ],
+    "K": [
+      "minecraft:dried_kelp"
+    ]
+  },
+  "result": {
+    "id": "minecraft:leather_leggings",
+    "components": {
+      "minecraft:item_name": {
+        "translate": "item.gm4.wetsuit",
+        "fallback": "Wetsuit",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:max_damage": 180,
+      "!minecraft:enchantable": {},
+      "minecraft:dyed_color": 2367281,
+      "minecraft:custom_data": {
+        "gm4_scuba_gear": {
+          "item": "wetsuit"
+        }
+      },
+      "minecraft:item_model": "gm4_scuba_gear:wetsuit",
+      "minecraft:enchantments": {
+        "gm4_scuba_gear:wetsuit": 1
+      },
+      "minecraft:enchantment_glint_override": false,
+      "minecraft:equippable": {
+        "slot": "legs",
+        "asset_id": "gm4_scuba_gear:scuba"
+      },
+      "minecraft:rarity": "common",
+      "minecraft:tooltip_display": {
+        "hidden_components": [
+          "minecraft:dyed_color"
+        ]
+      },
+      "minecraft:lore": [
+        {
+          "translate": "item.modifiers.gm4.scuba_gear.in_water",
+          "fallback": "When in Water:",
+          "color": "gray",
+          "italic": false
+        },
+        {
+          "translate": "item.modifiers.gm4.scuba_gear.neutral_buoyancy",
+          "fallback": "Neutral Buoyancy",
+          "color": "blue",
+          "italic": false
+        },
+        {
+          "translate": "attribute.modifier.plus.1",
+          "with": [
+            "20",
+            {
+              "translate": "item.modifiers.gm4.scuba_gear.vertical_swimming_speed",
+              "fallback": "Vertical Swimming Speed"
+            }
+          ],
+          "color": "blue",
+          "italic": false
+        }
+      ]
+    },
+    "count": 1
+  }
+}
