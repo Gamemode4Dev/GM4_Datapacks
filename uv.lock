@@ -201,7 +201,7 @@ dev = [
 requires-dist = [
     { name = "beet", specifier = ">=0.112.1" },
     { name = "bolt", specifier = ">=0.49.2" },
-    { name = "mecha", specifier = ">=0.99.0" },
+    { name = "mecha", specifier = ">=0.101.0" },
     { name = "pillow", specifier = ">=10.0.0,<11.0.0" },
     { name = "pydantic", specifier = ">=2.6.1,<3.0.0" },
     { name = "pyyaml", specifier = ">=6.0,<7.0" },
@@ -306,15 +306,15 @@ wheels = [
 
 [[package]]
 name = "mecha"
-version = "0.99.0"
+version = "0.101.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beet" },
     { name = "tokenstream" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/0d/ed/86ad891d2873d6f2cef0d70ab20e4d3e4a2ad3a4e2b9e43a936546a49607/mecha-0.99.0.tar.gz", hash = "sha256:78b0493d9b2fa010e9083b071939c9359f0804492cd405e0473f88145951b8c6", size = 138433 }
+sdist = { url = "https://files.pythonhosted.org/packages/00/40/d0e25c36a6793bff6fa9ced487ee81fc69acae06838154cb2804b8388192/mecha-0.101.0.tar.gz", hash = "sha256:3fcf91c0ad9b73f43728df74ad9da9b311bcc15e8594167be1c47cb862e8ce43", size = 139327 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5e/fe/58a92a2267d63993e832e6326b37703e543830c8c657fccfbfd8b0dcb533/mecha-0.99.0-py3-none-any.whl", hash = "sha256:9d24fb45dfebe3e31d1631653ff5c409aa09ca11da67e9a442fe400276915f3d", size = 164746 },
+    { url = "https://files.pythonhosted.org/packages/8a/e4/848841f9a2523d63f22e967bf57cb5e398eb3e2e920d9acb726eb4c1ebd9/mecha-0.101.0-py3-none-any.whl", hash = "sha256:be66abc4c91957f4ff37dd85af7c19500dc8cdb899118c1d0c5254ac87b5e35a", size = 165726 },
 ]
 
 [[package]]
