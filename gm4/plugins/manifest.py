@@ -50,7 +50,7 @@ class ManifestConfig(PluginOptions, extra=Extra.ignore):
 	smithed: Optional[SmithedConfig]
 	pmc: Optional[PMCConfig]
 	# promo
-	video: Optional[str]
+	video: str|None
 	wiki: str|None
 	credits: CreditsModel
 
@@ -61,7 +61,7 @@ class ManifestModuleModel(BaseModel):
 	name: str
 	version: str
 	hash: str
-	video_link: Optional[str]
+	video_link: str|None = ""
 	wiki_link: str = ""
 	credits: CreditsModel
 	requires: list[str] = []
