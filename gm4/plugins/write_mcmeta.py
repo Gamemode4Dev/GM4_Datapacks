@@ -10,14 +10,14 @@ def beet_default(ctx: Context):
 	manifest_entry = {v.id:v for v in (manifest.modules|manifest.libraries).values()}.get(ctx.project_id, NoneAttribute())
 
 	ctx.data.pack_format = 71
-	ctx.data.supported_formats = {"min_inclusive": 71, "max_inclusive": 88}
+	ctx.data.supported_formats = {"min_inclusive": 71, "max_inclusive": 94}
 	ctx.data.min_format = 71
-	ctx.data.max_format = (88, 0)
+	ctx.data.max_format = (94, 0)
 
 	ctx.assets.pack_format = 55
-	ctx.assets.supported_formats = {"min_inclusive": 55, "max_inclusive": 69}
+	ctx.assets.supported_formats = {"min_inclusive": 55, "max_inclusive": 75}
 	ctx.assets.min_format = 55
-	ctx.assets.max_format = (69, 0)
+	ctx.assets.max_format = (75, 0)
 
 	for pack in ctx.packs:
 		pack.description = [
