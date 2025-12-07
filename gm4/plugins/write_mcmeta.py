@@ -12,19 +12,19 @@ def beet_default(ctx: Context):
 	ctx.data.pack_format = 71
 	ctx.data.supported_formats = {"min_inclusive": 71, "max_inclusive": 94}
 	ctx.data.min_format = 71
-	ctx.data.max_format = (94, 0)
+	ctx.data.max_format = 94
 
 	ctx.assets.pack_format = 55
 	ctx.assets.supported_formats = {"min_inclusive": 55, "max_inclusive": 75}
 	ctx.assets.min_format = 55
-	ctx.assets.max_format = (75, 0)
+	ctx.assets.max_format = 75
 
 	for pack in ctx.packs:
 		pack.description = [
 			ctx.project_name,
 			"\n",
 			{
-				"text": f"Gamemode 4 (1.21.5 - 1.21.11)",
+				"text": f"Gamemode 4 (1.21.5+)",
 				"color": "#4AA0C7"
 			}
 		]

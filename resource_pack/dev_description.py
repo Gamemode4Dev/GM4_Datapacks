@@ -11,4 +11,4 @@ def beet_default(ctx: Context):
     ctx.assets.supported_formats = {"min_inclusive": 55, "max_inclusive": 75}
     ctx.assets.pack_format = 55
     ctx.assets.min_format = 55
-    ctx.assets.max_format = (75, 0)
+    ctx.assets.max_format = 75
