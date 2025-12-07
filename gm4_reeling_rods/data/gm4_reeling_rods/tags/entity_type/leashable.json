@@ -9,6 +9,7 @@
         "minecraft:axolotl",
         "minecraft:bee",
         "minecraft:camel",
+        {"id": "minecraft:camel_husk", "required": false},
         "minecraft:cat",
         "minecraft:chicken",
         {"id": "minecraft:copper_golem", "required": false},

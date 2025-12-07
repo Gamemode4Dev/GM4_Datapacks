@@ -1,6 +1,7 @@
 {
     "values": [
         "minecraft:bogged",
+        {"id": "minecraft:parched", "required": false},
         "minecraft:skeleton",
         "minecraft:stray",
         "minecraft:wither_skeleton"
