@@ -27,3 +27,9 @@ execute if items entity @s weapon.mainhand minecraft:redstone_torch run \
   scoreboard players set $item_type gm4_llp.data 9
 execute if items entity @s weapon.mainhand minecraft:spore_blossom run \
   scoreboard players set $item_type gm4_llp.data 10
+execute if items entity @s weapon.mainhand #gm4_lively_lily_pads:copper_lanterns run \
+  scoreboard players set $item_type gm4_llp.data 11
+execute if items entity @s weapon.mainhand #gm4_lively_lily_pads:waxed_copper_lanterns run \
+  scoreboard players set $item_type gm4_llp.data 12
+execute if items entity @s weapon.mainhand minecraft:copper_torch run \
+  scoreboard players set $item_type gm4_llp.data 13
