@@ -1,5 +1,5 @@
 {
-  "last_commit": "ff619435fc03585f732d656b77227abbab03c96c",
+  "last_commit": "47c1e941c78c79c56e94b3df7d51389c74b0040e",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2876,8 +2876,8 @@
     {
       "id": "gm4_survival_refightalized",
       "name": "Survival Refightalized",
-      "version": "1.1.1",
-      "hash": "5bcd7c6564d2b676cd4bf9f60367eacd45180b27",
+      "version": "1.1.2",
+      "hash": "f12640b4f14dc229b74f6a32752ff27377890993",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Survival_Refightalized",
       "credits": {
