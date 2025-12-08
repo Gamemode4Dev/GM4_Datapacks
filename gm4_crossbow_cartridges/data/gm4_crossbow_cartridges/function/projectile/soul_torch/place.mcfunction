@@ -8,3 +8,6 @@ execute positioned ~ ~ ~.1 if predicate gm4_crossbow_cartridges:check_block/sout
 execute positioned ~-.1 ~ ~ if predicate gm4_crossbow_cartridges:check_block/west run setblock ~.15 ~ ~ minecraft:soul_wall_torch[facing=east]
 execute positioned ~ ~ ~-.1 if predicate gm4_crossbow_cartridges:check_block/north run setblock ~ ~ ~.15 minecraft:soul_wall_torch[facing=south]
 execute positioned ~ ~-.1 ~ if predicate gm4_crossbow_cartridges:check_block/below run setblock ~ ~.15 ~ minecraft:soul_torch
+
+# place block sound
+execute if block ~ ~ ~ #gm4_crossbow_cartridges:torch run playsound minecraft:block.wood.place block @a[distance=..15]
