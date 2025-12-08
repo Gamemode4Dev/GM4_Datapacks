@@ -10,7 +10,7 @@ Stand on top of an Ender Chest to store Experience, stand below to retrieve it!<
 - There is no practical limit to the max XP stored!
 
 ### More Info
-[<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=hgq-5waSpVU&index=11&list=PLpa6LLAKqMWbXt5VvxCc6H4mwI-qacdGA)
+[<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=hgq-5waSpVU)
 
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/XP_Storage)
 
