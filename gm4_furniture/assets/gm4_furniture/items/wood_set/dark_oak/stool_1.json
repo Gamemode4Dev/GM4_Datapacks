@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "gm4_furniture:block/furniture/wood_set/dark_oak/stool_1",
+    "tints": [
+      {
+        "type": "minecraft:dye",
+        "default": -393217
+      }
+    ]
+  }
+}
