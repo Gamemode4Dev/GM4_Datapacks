@@ -6,6 +6,7 @@
         "minecraft:drowned",
         "minecraft:enderman",
         "minecraft:husk",
+        {"id": "minecraft:parched", "required": false},
         "minecraft:phantom",
         "minecraft:piglin",
         "minecraft:silverfish",

@@ -19,11 +19,11 @@ scoreboard objectives add gm4_sr_arrow.fire_delay dummy
 execute unless score $spawn_phantoms gm4_mu_config matches -2147483648..2147483647 run scoreboard players set $spawn_phantoms gm4_mu_config 1
 
 # disable natural phantom spawning
-execute unless score $phantoms_disabled gm4_mu_data matches 1 run gamerule doInsomnia false
-execute unless score $phantoms_disabled gm4_mu_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:{"text":"[INFO] Monsters Unbound changed gamerule doInsomnia to false"}}
+execute unless score $phantoms_disabled gm4_mu_data matches 1 run gamerule spawn_phantoms false
+execute unless score $phantoms_disabled gm4_mu_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:{"text":"[INFO] Monsters Unbound changed gamerule spawn_phantoms to false"}}
 scoreboard players set $phantoms_disabled gm4_mu_data 1
-execute store result score $doinsomnia gm4_mu_data run gamerule doInsomnia
-execute if score $spawn_phantoms gm4_mu_config matches 1 if score $doinsomnia gm4_mu_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:[{"text":"[WARN]","color":"red"},{"text":" Monsters Unbound requires doInsomnia to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule doInsomnia false"}}]}
+execute store result score $doinsomnia gm4_mu_data run gamerule spawn_phantoms
+execute if score $spawn_phantoms gm4_mu_config matches 1 if score $doinsomnia gm4_mu_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:[{"text":"[WARN]","color":"red"},{"text":" Monsters Unbound requires minecraft:spawn_phantoms to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule spawn_phantoms false"}}]}
 
 # mob caps
 execute unless score $mob_limit.husk_army gm4_mu_config matches -2147483648..2147483647 run scoreboard players set $mob_limit.husk_army gm4_mu_config 128

@@ -17,6 +17,7 @@
         "minecraft:horse",
         "minecraft:mooshroom",
         "minecraft:mule",
+        {"id": "minecraft:nautilus", "required": false},
         "minecraft:ocelot",
         "minecraft:parrot",
         "minecraft:pig",
