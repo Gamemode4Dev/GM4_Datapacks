@@ -1,5 +1,5 @@
 {
-  "last_commit": "4e26709acf991bcba610ea14567e12cf4fe52571",
+  "last_commit": "1113349e83baaba3a6150c1ccb464217f295272b",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2791,8 +2791,8 @@
     {
       "id": "gm4_spawner_minecarts",
       "name": "Spawner Minecarts",
-      "version": "2.7.3",
-      "hash": "7da2ab80de41ee519622259618f42d34c5bf0ed0",
+      "version": "3.0.0",
+      "hash": "a4d4e553244fc37a8291fb567a499d7460cd5efa",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Spawner_Minecarts",
       "credits": {
@@ -3528,8 +3528,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.16",
-      "hash": "4bfe4f7c15c21d8d78155eb7ac0e17a07f6e7149",
+      "version": "1.4.17",
+      "hash": "78b369a37cab27f4d82c4bf3bba05acf4d796fb7",
       "video_link": "",
       "wiki_link": "",
       "credits": {
