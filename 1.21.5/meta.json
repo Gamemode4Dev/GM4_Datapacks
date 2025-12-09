@@ -1,5 +1,5 @@
 {
-  "last_commit": "1de27815be1a8d27e320562e9b2ee9d95f0c1c1b",
+  "last_commit": "9e594dc33f3e236ffd92471cc82f5037a1178961",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -752,8 +752,8 @@
     {
       "id": "gm4_desire_lines",
       "name": "Desire Lines",
-      "version": "1.6.7",
-      "hash": "15d412c188dc0e2969dee5265d42c49a52f1f2b2",
+      "version": "1.6.8",
+      "hash": "bb15c7511427b983149e94fce908215ecf67f3be",
       "video_link": "https://www.youtube.com/watch?v=wmGaatfekfs",
       "wiki_link": "https://wiki.gm4.co/wiki/Desire_Lines",
       "credits": {
