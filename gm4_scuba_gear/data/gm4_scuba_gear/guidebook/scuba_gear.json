@@ -6,38 +6,25 @@
     "id": "minecraft:horn_coral"
   },
   "criteria": {
-    "obtain_scute": {
+    "obtain_copper": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:turtle_scute"
+              "minecraft:copper_ingot"
             ]
           }
         ]
       }
     },
-    "obtain_water_breathing": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:potion",
-            "predicates": {
-              "minecraft:potion_contents": "minecraft:water_breathing"
-            }
-          }
-        ]
-      }
-    },
-    "obtain_turtle_helmet": {
+    "obtain_dried_kelp": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:turtle_helmet"
+              "minecraft:dried_kelp"
             ]
           }
         ]
@@ -64,10 +51,25 @@
         "items": [
           {
             "items": [
-              "minecraft:golden_chestplate"
+              "minecraft:leather_chestplate"
             ],
             "predicates": {
               "minecraft:custom_data": "{gm4_scuba_gear:{item:\"tank\"}}"
+            }
+          }
+        ]
+      }
+    },
+    "obtain_wetsuit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:leather_leggings"
+            ],
+            "predicates": {
+              "minecraft:custom_data": "{gm4_scuba_gear:{item:\"wetsuit\"}}"
             }
           }
         ]
@@ -101,7 +103,7 @@
           },
           {
             "translate": "text.gm4.guidebook.scuba_gear.description",
-            "fallback": "SCUBA Gear can be crafted in a Custom Crafter to aid in ocean travel.\n\nScutes and gold are main components for each piece."
+            "fallback": "SCUBA Gear can be crafted to aid in ocean travel.\n\nCopper and dried kelp are main components for each piece."
           }
         ]
       ]
@@ -111,7 +113,7 @@
       "enable": [],
       "requirements": [
         [
-          "obtain_scute"
+          "obtain_dried_kelp"
         ]
       ],
       "pages": [
@@ -129,11 +131,33 @@
       ]
     },
     {
+      "name": "crafting_wetsuit",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_dried_kelp"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.scuba_gear.crafting_wetsuit",
+            "fallback": "The Wetsuit can be crafted with the following recipe:"
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_scuba_gear:wetsuit"
+          }
+        ] 
+      ]
+    },
+    {
       "name": "crafting_scuba_helmet",
       "enable": [],
       "requirements": [
         [
-          "obtain_turtle_helmet"
+          "obtain_copper"
         ]
       ],
       "pages": [
@@ -155,10 +179,7 @@
       "enable": [],
       "requirements": [
         [
-          "obtain_scute"
-        ],
-        [
-          "obtain_water_breathing"
+          "obtain_copper"
         ]
       ],
       "pages": [
@@ -171,12 +192,6 @@
           {
             "insert": "recipe",
             "recipe": "gm4_scuba_gear:scuba_tank"
-          }
-        ],
-        [
-          {
-            "translate": "text.gm4.guidebook.scuba_gear.scuba_tank_extended",
-            "fallback": "An extended water breathing potion can be used to craft the tank, but it won't provide any extra benefits.\n\nA SCUBA tank and helmet must be used in conjunction."
           }
         ]
       ]
@@ -199,11 +214,27 @@
       ]
     },
     {
+      "name": "usage_wetsuit",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_wetsuit"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.scuba_gear.usage_wetsuit",
+            "fallback": "The Wetsuit allows the user to swim up or down much faster, and maintains their current depth."
+          }
+        ]
+      ]
+    },
+    {
       "name": "usage_scuba_tank",
       "enable": [],
       "requirements": [
         [
-          "obtain_scuba_helmet",
           "obtain_scuba_tank"
         ]
       ],
@@ -211,7 +242,24 @@
         [
           {
             "translate": "text.gm4.guidebook.scuba_gear.usage_scuba_tank",
-            "fallback": "Wearing both the scuba tank and helmet will grant 4 minutes of Conduit Power when underwater."
+            "fallback": "Wearing the scuba tank adds 4 minutes of underwater breathing time."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "usage_scuba_helmet",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_scuba_helmet"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.scuba_gear.usage_scuba_helmet",
+            "fallback": "Wearing the scuba helmet increases underwater mining speed by 6 times."
           }
         ]
       ]

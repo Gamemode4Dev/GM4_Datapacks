@@ -5,42 +5,48 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:player_head",
+          "name": "minecraft:leather_helmet",
           "functions": [
             {
               "function": "minecraft:set_components",
               "components": {
+                "minecraft:item_name": {
+                  "translate": "item.gm4.scuba_helmet",
+                  "fallback": "SCUBA Helmet",
+                  "italic": false
+                },
                 "minecraft:attribute_modifiers": [
                   {
                     "type": "minecraft:armor",
-                    "id": "gm4_scuba_gear:helmet_armor",
+                    "id": "minecraft:armor.helmet",
                     "slot": "head",
-                    "amount": 2,
+                    "amount": 3,
                     "operation": "add_value"
                   },
                   {
-                    "type": "minecraft:attack_speed",
-                    "id": "gm4_scuba_gear:helmet_attack_speed",
+                    "type": "minecraft:submerged_mining_speed",
+                    "id": "gm4_scuba_gear:scuba_helmet/submerged_mining_speed",
                     "slot": "head",
-                    "amount": -0.5,
-                    "operation": "add_value"
+                    "amount": 5,
+                    "operation": "add_multiplied_total"
                   }
                 ],
-                "minecraft:custom_model_data": "item/scuba_helmet",
-                "minecraft:profile": "$scuba_helmet"
-              }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{gm4_scuba_gear:{item:'helmet'}}"
-            },
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "translate": "item.gm4.scuba_helmet",
-                "fallback": "SCUBA Helmet",
-                "italic": false,
-                "color": "white"
+                "minecraft:custom_data": {
+                  "gm4_scuba_gear": {
+                    "item": "helmet"
+                  }
+                },
+                "!minecraft:enchantable": {},
+                "minecraft:equippable": {
+                  "slot": "head",
+                  "asset_id": "gm4_scuba_gear:scuba",
+                  "camera_overlay": "gm4_scuba_gear:misc/scuba_helmet"
+                },
+                "minecraft:max_damage": 132,
+                "minecraft:max_stack_size": 1,
+                "minecraft:item_model": "gm4_scuba_gear:scuba_helmet",
+                "minecraft:profile": "$scuba_helmet",
+                "minecraft:rarity": "common"
               }
             }
           ]
