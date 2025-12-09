@@ -3,4 +3,4 @@
 # located at @s
 # run from #gm4_machines:destroy
 
-execute if entity @s[tag=gm4_liquid_minecart_stand] run function gm4_liquid_minecarts:machine/destroy_cart
+execute if entity @s[tag=gm4_liquid_minecart_display] run function gm4_liquid_minecarts:machine/destroy_cart

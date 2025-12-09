@@ -222,24 +222,24 @@
     },
     "gm4_standard_liquids:liquids/beetroot_soup": {
       "uuid": [
-        2130271109,
-        -1138636291,
-        -1614258018,
-        -889714317
+        76960881,
+        2041792394,
+        -1393666914,
+        2103407100
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0OTgxODE5OTY3NDIsInByb2ZpbGVJZCI6IjIyODQ0MGU4NzJjODRkYzc4MzQ4YjI3NzU4NTAzNGM4IiwicHJvZmlsZU5hbWUiOiJTcGVjaWFsQnVpbGRlcjMyIiwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzRkOTM0ZWRiMzRjM2IxNmRlZWNmMjRkZjhmMTc1NTQyZDAxZWMwNTJmZWZkOTEzNjI4MWJiNmE2Y2E3ZDdkIn19fQ==",
-      "hash": "0b525ed39dd0d1843e12571b0a61afaa8c1dd61d",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTI0MjRjYjQxNDY2ZmFlNjk5ZjgyNjk2NTJkOGQxYjBjZjgzZjBkMmFkZDBkNjUzZjA5ZTlkMzFiMmY5YTk0OCd9fX0=",
+      "hash": "3bbbd041e4ddc003e7f6447fad8f2a2b9391a0ef",
       "parent_module": "gm4_liquid_tanks"
     },
     "gm4_standard_liquids:liquids/experience": {
       "uuid": [
-        -1627825275,
-        -1138636289,
-        -1614258018,
-        -889714317
+        -745806368,
+        -1045543603,
+        -1458236618,
+        515537139
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDc3NzA2NjksInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzNlYTI4YzJkYzZjOWQyMjdhNWNmNDM1MTI5ZDgwNjVkMzJiYjY0NDk5N2QzNTllNzQ4YTRjYzE0NWEzNjlhIn19fQ==",
-      "hash": "f134750e86467a561efbf6596eac6ef6c2250e9e",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNiMGNmY2FjMDJiM2E3ZjZkZWI4N2E4YWZjZDgxYTUyMzdlMWNlNWVlMWI5NWMzNWVhM2U3NDkxMDNiNjc0ZCd9fX0=",
+      "hash": "d3d8dcc50faf62ea44e33377f860f2fb923be0bb",
       "parent_module": "gm4_liquid_tanks"
     },
     "gm4_standard_liquids:liquids/glow_ink": {
@@ -255,13 +255,13 @@
     },
     "gm4_standard_liquids:liquids/honey": {
       "uuid": [
-        -782351782,
-        542655898,
-        -1075183804,
-        1293758076
+        1093018679,
+        -1629534446,
+        -2052300824,
+        -1187268546
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE1ODYwNDAzNDcxNzIsInByb2ZpbGVJZCI6IjIyODQ0MGU4NzJjODRkYzc4MzQ4YjI3NzU4NTAzNGM4IiwicHJvZmlsZU5hbWUiOiJTcGVjaWFsQnVpbGRlcjMyIiwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2QyZDBlZDU3ZGQwNWYxMGExNTk5ZDFkNWY2Mzg0ZGMxYzgzNWM5ZWVmYWQ5MDFjNTdkZDkxZDg1YWM5MWFjZWIifX19",
-      "hash": "bf4bf3d81779e1730e814155fea4ceb2e2890f4b",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhhYzUxZTBjNWM5MWNmOGNlN2RiMjAyYmY5MWIxNmFkOTQ3NDkwODU0YWM3MjUyMjNmMGIwNDU0MGE1NWYyMCd9fX0=",
+      "hash": "ea675cd17ceb3e5913936bd1fb39b9a239ee7f22",
       "parent_module": "gm4_liquid_tanks"
     },
     "gm4_standard_liquids:liquids/ink": {
@@ -277,68 +277,68 @@
     },
     "gm4_standard_liquids:liquids/lava": {
       "uuid": [
-        2130271109,
-        -1138636289,
-        -1614258018,
-        -889714317
+        2084309355,
+        294864792,
+        -1353120517,
+        -2139917050
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDM2NDg0MTcsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2YyNWJmOTlmYjdlMmQwZTFhZDQ1MDgyNGUyMmQzNDllNjc3Zjk2YzNkOWFmZjcyMTVlNDdiNjU3N2EzMmI4YyJ9fX0=",
-      "hash": "588d85e79b4830887785c6e1aa2f8973c1d6d61a",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2M5OTkzMzI2M2ZjYmNhOGJlYTI1Yjc1MjU1Y2Y4M2E3NTc4MWZiOTkxY2RlYTBmODA0M2RhZjQzMTgxODE1MSd9fX0=",
+      "hash": "2faed9fa93d0cfd9286096e7965571c1adf9d4d6",
       "parent_module": "gm4_liquid_tanks"
     },
     "gm4_standard_liquids:liquids/milk": {
       "uuid": [
-        2130271365,
-        -1138636289,
-        -1614258018,
-        -889714317
+        -1652105090,
+        -613725561,
+        -1717347128,
+        1926135093
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDQxMzEyNjcsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ExYTk2M2I1ZjYwM2IxODYyY2VhZjg1MGYxN2QzNWFhMjcxMzBiODQ2NjY0ZDJkYTlmZWRkYTMzMDQwIn19fQ==",
-      "hash": "eafb08939b532be53f9c352c67ad83c78eaeaac5",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDMyODNiOTRjYzhiYWM3YTVkNDQ4ZDUyMTQ0MmFkNDY1MjY1MjM1NzYzYTNmYTJhMGIyODdiMGRiOTIyOWQ4Yyd9fX0=",
+      "hash": "70a5421e48597699dd6284381b07e81e978ff42a",
       "parent_module": "gm4_liquid_tanks"
     },
     "gm4_standard_liquids:liquids/mushroom_stew": {
       "uuid": [
-        2130271109,
-        -1138636289,
-        -1614258018,
-        -889714316
+        -851826350,
+        -819969624,
+        -1341610165,
+        -2102026501
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDYwMDU2MjksInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2VmZTg5ZjEyZjA2N2ViMzlmYTlkZGY4N2U3ZmZiYmRlZmZjZDAyZjVjMThjYjIyNjFkMGY0NDk4YjgxYjQxNyJ9fX0=",
-      "hash": "141b57ceeec8fde8aed9b3768cd36fde5fc9afed",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmVlMmMwMjBiYzg2NTBhYWFlN2NkYzhjY2VmYjRhYWI3ZGRkOGNlMjhlYTlmOWJkMDQ0OGIxMWY0Y2M1OGRiZCd9fX0=",
+      "hash": "ab5933443964922f4cfcaf186ba2a62981a243cf",
       "parent_module": "gm4_liquid_tanks"
     },
     "gm4_standard_liquids:liquids/powder_snow": {
       "uuid": [
-        2130271365,
-        -1134446289,
-        -1614258018,
-        -889714317
+        793744989,
+        -1949546447,
+        -1499784649,
+        2041283293
       ],
-      "value": "ewogICJ0aW1lc3RhbXAiIDogMTYyNzMyNzg2NzMwNSwKICAicHJvZmlsZUlkIiA6ICIyMjg0NDBlODcyYzg0ZGM3ODM0OGIyNzc1ODUwMzRjOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJTcGVjaWFsQnVpbGRlcjMyIiwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2I0YTVhMDQxZTI0YWQ5NWY5ZmFkYTVhZTZiNjc1ZjBhYmU4NWI3OGIxZDhmNGUxNTI5Mzg1NDJjZDE2ZWY5YzUiCiAgICB9CiAgfQp9",
-      "hash": "8b62fad2106a97540a63ef6a3a727606e2d98050",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDBiYWVkOWYwYjJhOGM3NTM0YTk0MTY1MjAzYThkZjJlY2JmY2Q2ZDNmZmM2ZjY3ZmVkZTNkYTQ2YzZlMzA2ZSd9fX0=",
+      "hash": "e01a0deac23275e98e459e5d8b721c4819574d88",
       "parent_module": "gm4_liquid_tanks"
     },
     "gm4_standard_liquids:liquids/rabbit_stew": {
       "uuid": [
-        2130271365,
-        -1138636289,
-        -1614258019,
-        -889714317
+        -898957329,
+        1308640890,
+        -1080612430,
+        1170134979
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDYwNjgzODksInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2UwNTJkZWRmN2ZmNDk1MDQ3MjNmMDRhZGViMzRmNjlkYTI4OTJhMmI3YzM3NTRmZWZhYjBkNzgxODg1NzVjIn19fQ==",
-      "hash": "910753ae085f1790cb1f2695d2cd6e683663bdf5",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTA1OWJlZWJmOTVlZTQzYzc1NDcyOWZlNmYzYWU5OWUxYzYwZTQ2ODJjNGUyZDZjZDJiYTQwNzBjZTlhZjBlOCd9fX0=",
+      "hash": "f3b45e34be5a61311f53ec938b90cb8956d522de",
       "parent_module": "gm4_liquid_tanks"
     },
     "gm4_standard_liquids:liquids/water": {
       "uuid": [
-        2130271109,
-        -1138570753,
-        -1614258018,
-        -889714317
+        -2087209360,
+        1395149785,
+        -1312941628,
+        -799708652
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDQ4ODY3MTgsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzYzMWY5MjQwYjE2NmJhOGViMWY2YmU0MzVjZGI3NDg2YTM5YzQzYTdjMWQzZDM2ZTQ5NzgzYWU0NTI2ZDNiNDMifX19",
-      "hash": "1694f345f7b9d5a71e35c6eb93e7719eaa6ca0e1",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTllNDg5MGZkZjNiMTZlYjE2NjZlMDA5NmE2YjA0MDhiNTY2YzE4MzRiZjMyNTcwYjFkZWIxNjU4MzczOWUxZSd9fX0=",
+      "hash": "04b5cd8c45121fe3d18037c26863f84b10967124",
       "parent_module": "gm4_liquid_tanks"
     },
     "gm4_liquid_tanks:liquid_tank": {
@@ -497,189 +497,189 @@
     },
     "gm4_potion_liquids:liquids/fire_resistance": {
       "uuid": [
-        2130271109,
-        -1138636321,
-        -1614258018,
-        -889714317
+        2130832668,
+        -69843189,
+        -1628986667,
+        -1615730322
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDY4MTUxNTgsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2M2NjE2NmM2MzA3NTE5NTEyMzVjNDRmNjNlYWViZTgzNDYyMWU1MWNhOWI3NmEyODc2ODA4YThjMzAyMGE0In19fQ==",
-      "hash": "6732c502a669d62686b0431dcda4d1f9c9f50ad3",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDI5ZmE3YjFmNDZhMjgzNjgwOTlmMjA4ZmU5NGQ3NzY2NzdkZTUyZWNkMjY0YjhmOTI4MzdjODQ5ZDZmN2NjNCd9fX0=",
+      "hash": "2398626d300f895b4d62aabfefae73e77370be52",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/floating": {
       "uuid": [
-        2117688197,
-        -1138636289,
-        -1614258018,
-        -889714317
+        32752701,
+        1442140104,
+        -2121835220,
+        212039422
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0OTkwMjE1NzczMzQsInByb2ZpbGVJZCI6IjIyODQ0MGU4NzJjODRkYzc4MzQ4YjI3NzU4NTAzNGM4IiwicHJvZmlsZU5hbWUiOiJTcGVjaWFsQnVpbGRlcjMyIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82YzNiYjZjMjM2YzdjZTZiMzA1YWQ4M2QwMzBmOGJlNmVmOGExMzFkNjVhMTBiZmIxZWQ3OTk0OGY0NWZkMCJ9fX0=",
-      "hash": "ada74ae3cffd6b22ee31b6408ddfa150c7d9259b",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmZiNjAxOGVjNzM4NWU4YTE5MTE3OWRjOWE1M2Y4MGY5NGQ4MjIzZWQ5YWEwNDgwMDcyNzdiNzUzMGNlZjgwZCd9fX0=",
+      "hash": "c54b1eb1be2154c9ae542ee87bfd1efa101457c6",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/harming": {
       "uuid": [
-        2130271109,
-        -1138638081,
-        -1614258018,
-        -889714317
+        -1211340845,
+        -910802362,
+        -2144368484,
+        -211827793
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDcxNjQyNDAsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzI2MjkyYmYwNzk0N2IxNjQ3ZmFlNGJjYjc2NzVmOWNhZGJiZDY1MDczMjIzNDM0M2RiZGY2YzA0MTRkYiJ9fX0=",
-      "hash": "05c15f4de45fbb21d7955ee586aaeb12d49c85ba",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2Y4MGUyMjc1N2UxZTUzM2RkMGI3ZTRlZTU2YTE3OWJlYmJlN2RmODE4NzRkMzVmNTkyZDQ1YmM1YWZiNjRhMyd9fX0=",
+      "hash": "c2f87b8817311d26cbd31b1e064105ba98ccf71a",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/healing": {
       "uuid": [
-        2130271109,
-        -1138636289,
-        -1614258018,
-        -889714315
+        -575407116,
+        -2057942971,
+        -1081937529,
+        601872280
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDYzOTQ3MTEsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzliYTZjZjQzODg0YjJjZmMyNDU0NGNmYTVmNmZjNzViY2M3OGE2YWM1NjhmYTE5OGY2NDVkZDkxNWM4Y2FlMzcifX19",
-      "hash": "f220279aa6f99f65812f6a902bcba8960c5c972f",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWVkZDU2OWQ1MTM2YThlNzRjM2IyZTliYjdjZTI4NDk4OTFlNTc2ZGFkNjkyNjQwNWNhY2I4ODdhNjk5NWJmNCd9fX0=",
+      "hash": "73a0fdf1bfec33b5ab2fe0621ba35a08b988c749",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/invisibility": {
       "uuid": [
-        2130271109,
-        -1138636289,
-        -1614258029,
-        -889714317
+        -332185350,
+        1698318266,
+        -1646469451,
+        1142033314
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDcwODQ2MTQsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2YxOWUyNGI1N2UxN2I1NGYzZmFhOTcxMGM4ZGZjNTUxMTRhNzE5YjE0YWYwOWE0ZDFjMDRiMTY2MTQ0ZWY2YiJ9fX0=",
-      "hash": "db79e0e780d1c4bbcba5139a277d4d48e91864f8",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjk5OTU0NTAxOTY5MDQ3ZjE4NjQ3NjFhN2Q4ZWFiNzJmMjIwM2JiYzBmZGFiY2FiNjJjOWUxZDU3M2YxN2ZlOSd9fX0=",
+      "hash": "684edcc54546a42d94e7775ceec3ce2ea37f6ac6",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/leaping": {
       "uuid": [
-        2130271109,
-        -1407071745,
-        -1614258018,
-        -889714317
+        822748764,
+        -913751735,
+        -2104548355,
+        1076203816
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDY5NDYzMjksInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2RjMzE2NmFkZTk1NTA2Y2VmZDhjNTdiMWVlNWY4MTNiNTNhOWZjMTliYTEzNDhjYTE2NmE2YjBjZmEwMzAifX19",
-      "hash": "1bc7967fa145ed25195c8741146123eb13da1cf4",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjJmZTE2ZWFjMDFhNjIyZmE0YTg0ZTYwMDM5MzBiY2E1ZjBiZmZhOThhYTMxOWJmMGRlN2U4YmQ4ZjMwYjAwZid9fX0=",
+      "hash": "58419073ee28986d29008da1d7bd8d342c34f8e8",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/luck": {
       "uuid": [
-        579092712,
-        -1832366649,
-        -2142784905,
-        1481188552
+        1998983973,
+        799228293,
+        -1480289059,
+        -30160010
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE1NTE4MjQwMTMxMzAsInByb2ZpbGVJZCI6IjIyODQ0MGU4NzJjODRkYzc4MzQ4YjI3NzU4NTAzNGM4IiwicHJvZmlsZU5hbWUiOiJTcGVjaWFsQnVpbGRlcjMyIiwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzg5NGY2ZTRkZmU4Y2E2ZjVjOTg5YjZlNjAyMWM4YTgzMjQzYjgzYTdkYzI1OWI4NmI2ZGNiZmE0OGMxOTQ3ZGEifX19",
-      "hash": "9ceb508d017553e5ef1fd90251c1b7dc38efd589",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTg4ODJmMmQzNzM2YmM5YWYxMTMxMDQxYTg3OTc4ZDg1NGUxNTk1MjE1ODU5YjEwM2Q3ZjY0M2U1ZTZiMTk5OCd9fX0=",
+      "hash": "be8cd5206b554f01bb1ddbe3a3296f1e076bf81a",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/night_vision": {
       "uuid": [
-        2130271117,
-        -1138636289,
-        -1614258018,
-        -889714317
+        1591024166,
+        -1403895054,
+        -1150690056,
+        -208826299
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDczMzU2MDIsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2I2NmY2MmE3ZWEyNjcwMjBhNjYyYWI1ZTI1ZWFlMzdjNTM2Yzc2N2QwNDYyZWE1MDIyZTVhZmQ1ODQzODYxIn19fQ==",
-      "hash": "c1119145018d5828566343e08f72fb7ae7755c0d",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ3ZTUxOWU3ODMxMTNkNzY0MWVhZGQ5NzFjYzZkNDE2Y2E2M2Q4MmY3MDdhNzE5NjBmYjQ5YzMzNzQ1ODJjNSd9fX0=",
+      "hash": "2710022ddb4c3944ea4a20d579867f8b49ec041e",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/poison": {
       "uuid": [
-        1056529285,
-        -1138636289,
-        -1614258018,
-        -889714317
+        809108775,
+        -1144238335,
+        -1966668314,
+        1676984478
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDY4ODg4NzIsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzY2MWU3NWExMWEwNzBmNTgyMWMxYmJlOTkxMTJiZGJjYWVjY2IyZDQ3Njg2OWQ3N2ExYzJkZDlmZjY0MDM3In19fQ==",
-      "hash": "1dfb6eb69659931881db3720790033684d94537b",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY2OWViYmU5NTk3NzQzZmI3ODUzODA1YTk3MTU3ZWVmMTlhZTEwOGI5NWFhZGM0MjI2ZTQ4ZjQyN2FjMmFiNSd9fX0=",
+      "hash": "3f8a4881a694f447f79fff06d4afd42b6ab71626",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/regeneration": {
       "uuid": [
-        2130271113,
-        -1138636289,
-        -1614258018,
-        -889714317
+        175112486,
+        -350270963,
+        -1804632664,
+        -1472362007
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDYxNzA4MTcsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzI2YzljOTNjNjRlZmYzMzE4MzFmNDkyY2E2Nzc1YWJjY2VkM2RjZDhmZWExOWEzMmM0OTM4NjRkYjFlMWMifX19",
-      "hash": "931c9059971edb2f2aada7c0c048e4ad59fb9086",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTM2OTEzNmNlMGU5MjZhZjg5MTUzNGNlNGI1OGY4NDVmODFlNWRiYTNhZGNlMzA4NzE0YzdjZmZjNmUxZTgyZSd9fX0=",
+      "hash": "af5e903c6b94e36e3a38feb99e6edf9be9640408",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/slow_falling": {
       "uuid": [
-        579092712,
-        1925725639,
-        -2092432809,
-        408565448
+        1401295760,
+        -1001370020,
+        -1237459354,
+        -1996662618
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE1NTE4MjI2MTE5MDQsInByb2ZpbGVJZCI6IjIyODQ0MGU4NzJjODRkYzc4MzQ4YjI3NzU4NTAzNGM4IiwicHJvZmlsZU5hbWUiOiJTcGVjaWFsQnVpbGRlcjMyIiwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2UzNmJhMjRkZWQ5ODYxYzM2OWFlOGEzMGUzMTE5NWFjYTFkOGI4MDgzZjQzNTFkYjdjYWM4OTg5NDBhMDNlZWUifX19",
-      "hash": "b7f50e36e9f6b12d18ff317c34dbf4d5157b4ebc",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGIwNmUxYjgwOGJiZGE1ZjYxYzc5MjdiYTA2N2ViMDQ4ZDFmY2I3MmEyY2E4OThiOWY3YWQxMDY4YzY0MGM2Yyd9fX0=",
+      "hash": "12881ca86bfcfd8a67c0b09f8233c7625aae5990",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/slowness": {
       "uuid": [
-        2115591045,
-        -1138636289,
-        -1614258018,
-        -889714317
+        2073042102,
+        -128102461,
+        -1871962475,
+        708373893
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDc1NzI0MDgsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzI4NTdjZWZhOTYzZmI5NWYyNTg4ZDU5ZTNlMGI5YjM5ZmE3YjYxMGVkODNjMTU0NmZmYTk3MjlmN2Q3ZWNiIn19fQ==",
-      "hash": "accf99584a50e5038d5b2fb0749a32f8286a3f5f",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWNiM2E4ZTUwNTkxZGE4NTk3NWI3NDU0NjcxMmZmMzc2YTZiMWNjZmI5M2EyNDQ0ZjEwZDdkZTA4MTc2NmFkZid9fX0=",
+      "hash": "5a88aa4ac65d59cc33d81f9d8e35856f6b2305cb",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/strength": {
       "uuid": [
-        2063162245,
-        -1138636289,
-        -1614258018,
-        -889714317
+        -1380259552,
+        1048462685,
+        -2136230086,
+        -2011000224
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDY3NTE4NTAsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Y5NGE3YjJmZDc5MzYxNzdjNjI2ZDllYWQwZWY0MzRmMjNmNmViNmQyYzAzNDgwZGE2MDRlZWIyMWRjZiJ9fX0=",
-      "hash": "28876ce65f42a0af76d70f581ee069e04d97fe34",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmFkOWJlMjY2Y2JlM2RmYTFlMWMwNzdjNjRlZDA3MjllZjEwNDFkZDZkZTFmYzViOTcwMTBiZDdmM2RjMzkyOSd9fX0=",
+      "hash": "72b5105c05c916ea7b8e57fa07dc19b4edfb84a3",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/swiftness": {
       "uuid": [
-        2130271221,
-        -1138636289,
-        -1614258018,
-        -889714317
+        628694958,
+        -4831928,
+        -1207352243,
+        134819399
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDc2MjgyNjQsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzU1N2FhOWExMTBmOTEwOGE3MWI2MzI5ODhhMzM4MzQ1OGY0NDVlYjJlYjBmMDM4ZjE3ZDQ5OGU0YmNiYTJhZCJ9fX0=",
-      "hash": "c6ea288e229fb974fab0b23ce175e8839b4139ba",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODE3MGJhYWJhYjg3YzhmM2YyMjkzYjQyZjY4ZmI2M2RiZGQ1ODhjNzhjMDllNzcyNTI1YjVjODUxYjJiNDEzNSd9fX0=",
+      "hash": "c81b184c72db50cb84ccc27a6e9ea758a9886167",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/turtle_master": {
       "uuid": [
-        579092712,
-        1923632407,
-        -2041990537,
-        944780488
+        363269321,
+        1718175205,
+        -1985643155,
+        497739307
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE1NTE3MTgxMDc4NjMsInByb2ZpbGVJZCI6IjIyODQ0MGU4NzJjODRkYzc4MzQ4YjI3NzU4NTAzNGM4IiwicHJvZmlsZU5hbWUiOiJTcGVjaWFsQnVpbGRlcjMyIiwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzVhODlmM2Q3MGNhYmYyYTEwM2Y3MDYwZDU0NTA0NDhjMDM3YjZjMWM3MjBkM2U5OGViOTViZmY0NzAwNjdhNTIifX19",
-      "hash": "99c8b4b191e5ce116a1c9f08a24f1fd635ebc7b0",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTc0Zjk5NzNhZDhmZjQ0MThhNWFmNjI4MWM3NDEyYTRjYmNhNmQzMGYzMGMxYWY5M2M2Mzc3Zjc4YzNhZTczJ319fQ==",
+      "hash": "69f1773d5c561a8616901a3d62bc00c62b3bdea0",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/water_breathing": {
       "uuid": [
-        2130271109,
-        -1138624001,
-        -1614258018,
-        -889714317
+        2087529956,
+        -762951532,
+        -2088462039,
+        585618953
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDc2OTI3OTMsInByb2ZpbGVJZCI6IjYzY2JkZjhkNDg4OTQ3NWY5NDQxMjk3ZTRhM2Q1NjczIiwicHJvZmlsZU5hbWUiOiJWZWxlVCIsImlzUHVibGljIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDc3YTdjMjEzNjc3NWE0ZWI0ZGUzMWU3MTViZWM2Y2M2NTdhN2Q2NmI0OGEzYmE1MjczMzI5MmM2ZTMyMmZhZSJ9fX0=",
-      "hash": "961dba309a6e645023d3d38d15d8e7c99ad4b2eb",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGFkZmFlNTE0OWNkMDViN2RkODYwOWYwMDIzMWQyODhiZTAyOWRlZmFmMTc3YzNiY2M3NTNhNjM2YzFiMGI1OSd9fX0=",
+      "hash": "965aaf4a242305a774eded7eea9a831d396ac107",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_potion_liquids:liquids/weakness": {
       "uuid": [
-        2130271109,
-        -1138644481,
-        -1614258018,
-        -889714317
+        1194584133,
+        959795039,
+        -2040976206,
+        1339213576
       ],
-      "value": "eyJ0aW1lc3RhbXAiOjE0MjkzNDc0MTQ0NjEsInByb2ZpbGVJZCI6IjZjZjU0M2E2MGVlOTQzN2NiNjE0YzdiOTRkZTVjNWI3IiwicHJvZmlsZU5hbWUiOiJNcnNNYWtpc3RlaW4iLCJpc1B1YmxpYyI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2NjYWM2NzI4NGNhNjM5MGY4ZDI4NDYwNjI3ZmZjNTg3YmI5ODk1MmQ3NDk4MzE2OWMwMWY5YjkwZmQ3MjVjIn19fQ==",
-      "hash": "c1aaf2d7ab03cdb274583cc5ca1eada5bed7c38c",
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTQ1YjZhYzVmZjU4MzVjNzc3ZjAxMzdlZGY1ZDBlMjg4OGVkNjg2MTE5NTMxNmQ3MjhlNDRkZWVkOGM2NDJmMCd9fX0=",
+      "hash": "ff283cb7ab9bd87333fc675a7791bde5180a7f79",
       "parent_module": "gm4_potion_liquids"
     },
     "gm4_relocators:relocator_empty": {
@@ -989,11 +989,118 @@
       "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDY1ZGQ5Njg5MzIyNDZjZjgwODA3Y2E2NmY4M2Y0MThjNjc5YTIzMjI5MDdiYmNkMWYxN2I4ZTQ3NWUwYzE4J319fQ==",
       "hash": "0ec19a60309722db4e5d57cba06c29bc62d5051f",
       "parent_module": "gm4_lightning_in_a_bottle"
+    },
+    "gm4_potion_liquids:liquids/infested": {
+      "uuid": [
+        -1996504295,
+        1552826831,
+        -2054795441,
+        -1569665209
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTM1ZGFiNjQzOGFmZjA1M2VmZDI0NjMzOWZkMjAxNjJmMzViZmJmMjg4MGFiNGVkNmI4NmFmMDllNTQwOTZiMyd9fX0=",
+      "hash": "50aa38faf483a78bd9a33a437d30713901459ec9",
+      "parent_module": "gm4_potion_liquids"
+    },
+    "gm4_potion_liquids:liquids/oozing": {
+      "uuid": [
+        -783904090,
+        1232292212,
+        -1545737453,
+        -1152375565
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjEyYTBkN2E5YmMzYzczZjQwNTZhYWY3N2FmMmFhNzBmNmRjMjk2MGY2NjRmMjdlZWNjMzVkM2Y2NzMyMDcyOCd9fX0=",
+      "hash": "a8e2a88fb261b67b80278dade5546dc13a789f64",
+      "parent_module": "gm4_potion_liquids"
+    },
+    "gm4_potion_liquids:liquids/weaving": {
+      "uuid": [
+        842038238,
+        472862371,
+        -1885580302,
+        123777373
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjNlZDM4MWU0MWVmOWJlOWE4OGY5ZGYzOTAzMmJhOGY3OTliYjBiYmM1ODU2ZTk5YzI0YTU3MGFjMjI1OWY1Yyd9fX0=",
+      "hash": "fb4b712349e985159d1b5dbf20c2ed56f6a47262",
+      "parent_module": "gm4_potion_liquids"
+    },
+    "gm4_potion_liquids:liquids/wind_charged": {
+      "uuid": [
+        -1085379822,
+        1256014354,
+        -2139157479,
+        -487046405
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODJiYTI0NDYzY2FjYTc5MjAzNGVkMGNhNzc4YTUwM2M1OWU1ZTg4YjU2ODBhMTIxM2UxNmIwZmFhZWE5YzMwOSd9fX0=",
+      "hash": "8d5ed9cbae9e0fc0191d9c140e33adfdd2905ace",
+      "parent_module": "gm4_potion_liquids"
+    },
+    "gm4_potion_liquids:liquids/awkward": {
+      "uuid": [
+        594379978,
+        -2079439988,
+        -2142727791,
+        2046532997
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjc2ZTI2ZmRmZGU4YmY5ZjY0MWM0YjdlZDViNmY3NjNhZmFiZDM5OGIzZjc5MjRhOTViYzA4YjM4N2FhM2MxJ319fQ==",
+      "hash": "4a3fbe092f343e239311835b44cadd819686e558",
+      "parent_module": "gm4_potion_liquids"
+    },
+    "gm4_potion_liquids:liquids/mundane": {
+      "uuid": [
+        594379978,
+        -2079439988,
+        -2142727791,
+        2046532997
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjc2ZTI2ZmRmZGU4YmY5ZjY0MWM0YjdlZDViNmY3NjNhZmFiZDM5OGIzZjc5MjRhOTViYzA4YjM4N2FhM2MxJ319fQ==",
+      "hash": "4a3fbe092f343e239311835b44cadd819686e558",
+      "parent_module": "gm4_potion_liquids"
+    },
+    "gm4_potion_liquids:liquids/thick": {
+      "uuid": [
+        594379978,
+        -2079439988,
+        -2142727791,
+        2046532997
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjc2ZTI2ZmRmZGU4YmY5ZjY0MWM0YjdlZDViNmY3NjNhZmFiZDM5OGIzZjc5MjRhOTViYzA4YjM4N2FhM2MxJ319fQ==",
+      "hash": "4a3fbe092f343e239311835b44cadd819686e558",
+      "parent_module": "gm4_potion_liquids"
+    },
+    "gm4_standard_liquids:liquids/ominous_bottle": {
+      "uuid": [
+        -421500789,
+        -352567252,
+        -1207743241,
+        -1662338326
+      ],
+      "value": "eyd0ZXh0dXJlcyc6IHsnU0tJTic6IHsndXJsJzogJ2h0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNkOGI2YzYzMjE2ZTViYjYxYzg4ZGQwNTUwNjg3YmMxNDZmODY3NjdkMTA5YzVmMjk0MjY2NmY1MTI4MDQxMyd9fX0=",
+      "hash": "73367ae720fb1df246057aaccb4ff07e298e1869",
+      "parent_module": "gm4_liquid_tanks"
     }
   },
   "nonnative_references": {
     "gm4_tinkering_compressors": [
       "gm4_metallurgy:band/curies_bismium"
+    ],
+    "gm4_vecto_shamir": [
+      "gm4_metallurgy:band/bismuth"
+    ],
+    "gm4_weighted_armour": [
+      "gm4_metallurgy:band/aluminium"
+    ],
+    "gm4_zauber_liquids": [
+      "gm4_potion_liquids:liquids/harming",
+      "gm4_potion_liquids:liquids/healing",
+      "gm4_potion_liquids:liquids/leaping",
+      "gm4_potion_liquids:liquids/harming",
+      "gm4_potion_liquids:liquids/poison",
+      "gm4_potion_liquids:liquids/regeneration",
+      "gm4_potion_liquids:liquids/strength",
+      "gm4_potion_liquids:liquids/swiftness"
+    ],
+    "gm4_audere_shamir": [
+      "gm4_metallurgy:band/barium"
     ],
     "gm4_auto_crafting": [
       "gm4_custom_crafters:custom_crafter"
