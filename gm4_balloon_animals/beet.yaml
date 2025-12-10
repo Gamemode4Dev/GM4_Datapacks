@@ -27,6 +27,8 @@ meta:
     credits:
       Creator:
         - TheEpyonProject
+      Icon Design:
+        - Hozz
     model_data:
       - item: lead
         reference: gui/advancement/balloon_animals
