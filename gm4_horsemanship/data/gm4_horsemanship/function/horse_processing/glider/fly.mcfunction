@@ -20,3 +20,6 @@ summon item_display ~ ~ ~ {teleport_duration:1,Tags:["gm4_horse.glider_wing","gm
 execute as @e[type=item_display,tag=gm4_horse.new_glider_wing,distance=..0.1] run function gm4_horsemanship:horse_processing/glider/wing/init
 data remove storage gm4_horsemanship:temp scale
 tag @s remove gm4_horse.target
+
+# advancement
+execute on passengers run advancement grant @s only gm4:horse_takes_flight
