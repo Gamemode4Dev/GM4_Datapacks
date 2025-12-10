@@ -1,0 +1,8 @@
+{
+    "values": [
+        "#minecraft:replaceable_by_trees",
+        "#air",
+        "#minecraft:logs",
+        "#minecraft:saplings"
+    ]
+}
