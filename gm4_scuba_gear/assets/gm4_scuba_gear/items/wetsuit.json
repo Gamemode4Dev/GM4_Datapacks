@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "gm4_scuba_gear:item/wetsuit",
+    "tints": [
+      {
+        "type": "minecraft:dye",
+        "default": -14455863
+      }
+    ]
+  }
+}
