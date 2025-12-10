@@ -22,7 +22,8 @@ meta:
     website:
       description: Form a bond with your horses
       recommended: []
-      notes: []
+      notes:
+        - Resourcepack is required for this module to work.
     video: null
     wiki: https://wiki.gm4.co/wiki/Horsemanship
     credits:
