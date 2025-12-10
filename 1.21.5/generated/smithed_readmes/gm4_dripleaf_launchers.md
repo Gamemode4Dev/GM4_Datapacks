@@ -11,6 +11,7 @@ Who wants to find the nearest cliff to deploy their Elytra? Use the power of nat
 
 ### Credits
 - Creator: [Thanathor](https://bsky.app/profile/thanathor.bsky.social)
+- Icon Design: Hozz
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

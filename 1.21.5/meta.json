@@ -1,5 +1,5 @@
 {
-  "last_commit": "d4d00beefd639d80345ad9c20647606f540dcd12",
+  "last_commit": "6a71b61ffa87499a7bb959a37d956a61a09615ad",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -119,13 +119,16 @@
     {
       "id": "gm4_balloon_animals",
       "name": "Balloon Animals",
-      "version": "1.3.3",
-      "hash": "62b65c65bce6043cd7d7e2bdbd690fbd64bfc626",
+      "version": "1.3.4",
+      "hash": "fe9e53a8ca4e1a6d9d573d00505816fceed04bca",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Balloon_Animals",
       "credits": {
         "Creator": [
           "TheEpyonProject"
+        ],
+        "Icon Design": [
+          "Hozz"
         ]
       },
       "requires": [],
@@ -409,13 +412,16 @@
     {
       "id": "gm4_bookshelf_inspector",
       "name": "Bookshelf Inspector",
-      "version": "1.4.3",
-      "hash": "164f598d8dbe2c8a359303979ef35fa947083b8c",
+      "version": "1.4.4",
+      "hash": "a614aaaec1006167a6b76b3ac95b214253cd26d2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Bookshelf_Inspector",
       "credits": {
         "Creator": [
           "Thanathor"
+        ],
+        "Icon Design": [
+          "Hozz"
         ]
       },
       "requires": [],
@@ -962,13 +968,16 @@
     {
       "id": "gm4_dripleaf_launchers",
       "name": "Dripleaf Launchers",
-      "version": "1.4.3",
-      "hash": "5962aae871544e7d9c248c4dbe57bbd02a6ad060",
+      "version": "1.4.4",
+      "hash": "092731a45f5490b6e07aa62b216cc7a9a8e62647",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Launchers",
       "credits": {
         "Creator": [
           "Thanathor"
+        ],
+        "Icon Design": [
+          "Hozz"
         ]
       },
       "requires": [],
@@ -1313,14 +1322,17 @@
     {
       "id": "gm4_guidebook",
       "name": "Guidebook",
-      "version": "3.1.3",
-      "hash": "c406746a85fb6e34e66f4f340b785f37c69dd71a",
+      "version": "3.1.4",
+      "hash": "bc69b981bb59d5052a57bee382d648737ac62b43",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",
       "credits": {
         "Creators": [
           "BPR",
           "JP12"
+        ],
+        "Icon Design": [
+          "Hozz"
         ]
       },
       "requires": [],
@@ -2948,8 +2960,8 @@
     {
       "id": "gm4_survival_refightalized",
       "name": "Survival Refightalized",
-      "version": "1.1.3",
-      "hash": "0fb70d13276d61104623fc48bfdf0753df42fc1b",
+      "version": "1.1.4",
+      "hash": "848a2797ab37071686a0bc8ec4df9b8e239db8e8",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Survival_Refightalized",
       "credits": {
@@ -3528,8 +3540,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.17",
-      "hash": "78b369a37cab27f4d82c4bf3bba05acf4d796fb7",
+      "version": "1.4.18",
+      "hash": "fa3d6f5a9beb356768f20061ebf8a374051761de",
       "video_link": "",
       "wiki_link": "",
       "credits": {

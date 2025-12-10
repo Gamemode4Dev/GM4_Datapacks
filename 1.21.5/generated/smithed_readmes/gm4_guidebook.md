@@ -11,6 +11,7 @@ Adds a dynamic guidebook to discover the mechanics of Gamemode 4!<!--$pmc:header
 
 ### Credits
 - Creators: [BPR](https://bsky.app/profile/bpr02.com), [JP12](https://github.com/jpeterik12)
+- Icon Design: Hozz
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>
