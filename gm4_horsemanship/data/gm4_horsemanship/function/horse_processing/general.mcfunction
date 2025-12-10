@@ -31,9 +31,8 @@ execute if items entity @s[tag=!gm4_horse.glider_disabled] armor.body *[custom_d
 ## | Stamina
 # cap of 75 - 450 depending on level
 # riding = -1
-# swimming = -1
 execute if score $riding gm4_horse_data matches 1 run scoreboard players remove @s[scores={gm4_horse.stamina=1..}] gm4_horse.stamina 1
-execute if entity @s[tag=gm4_horse.swimming] run scoreboard players remove @s[scores={gm4_horse.stamina=1..}] gm4_horse.stamina 1
+execute if block ~ ~ ~ #gm4:water run scoreboard players remove @s[scores={gm4_horse.stamina=1..}] gm4_horse.stamina 1
 # mounted = +1
 # unmounted = +1 +level
 execute if score $on_ground gm4_horse_data matches 1 if score $riding gm4_horse_data matches 0 run scoreboard players add @s gm4_horse.stamina 1
