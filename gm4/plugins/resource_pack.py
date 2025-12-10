@@ -68,7 +68,7 @@ from gm4.utils import (
 JsonType = dict[str,Any]
 
 CUSTOM_MODEL_PREFIX = 3420000
-MINECRAFT_REFERENECE_VERSION = "1.21.6"
+MINECRAFT_REFERENECE_VERSION = "1.21.9"
 
 parent_logger = logging.getLogger("gm4.resource_pack")
 
@@ -81,6 +81,7 @@ class ModelData(BaseModel):
     template: 'str|TemplateOptions' = "custom"
     transforms: Optional[list['TransformOptions']]
     textures: MapOption[str] = [] # defaults to same value as reference         #type:ignore ; the validator handles the default value
+    base_model: Optional[JsonType]
 
     @validator('model', pre=True, always=True) # type: ignore ; v1 validator behaves strangely with type checking
     def default_model(cls, model: Any, values: JsonType) -> dict[str, str]:
@@ -155,6 +156,7 @@ class NestedModelData(BaseModel):
     template: Optional['str|TemplateOptions'] = "custom"
     transforms: Optional[list['TransformOptions']]
     textures: Optional[MapOption[str]]
+    base_model: Optional[JsonType]
     broadcast: Optional[list['NestedModelData']] = []
 
     def collapse_broadcast(self) -> list['NestedModelData']:
@@ -504,6 +506,9 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                     }
                 else:
                     model_json = m
+                
+                if model.base_model:
+                    model_json.update(model.base_model)
             
                 itemdef_entries.append({
                     "threshold": self.cmd_prefix+self.retrieve_index(model.reference)[0],

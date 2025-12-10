@@ -1,7 +1,7 @@
 # Steal Saddle
 # @s = #gm4_reeling_rods:steal_saddle
 # at bobber in @s
-# run from hooked_entity/select_type
+# run from hooked_entity/select_type and reeling/stealable/steal_body_and_saddle
 
 # fails
 execute unless data entity @s equipment.saddle run return fail

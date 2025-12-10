@@ -12,5 +12,7 @@ dummy @s use entity @e[tag=gm4_book_binder,distance=..3,limit=1]
 
 await entity @s[advancements={gm4:book_binders_debind=true}]
 
+tp @e[type=item,dx=2,dy=2,dz=2] @s
+
 await items entity @s container.* minecraft:paper[enchantments={silk_touch:1},custom_data~{gm4_book_binders:{item:"enchanted_page"}}]
 assert items entity @s container.* minecraft:paper[enchantments={efficiency:3},custom_data~{gm4_book_binders:{item:"enchanted_page"}}]

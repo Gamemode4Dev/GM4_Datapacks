@@ -8,11 +8,11 @@ advancement revoke @s only gm4_blossoming_pots:interact_with_vanilla_flower_pot
 
 # run upgrade paths if needed
 execute if score blossoming_pots gm4_earliest_version matches 0 \
-    as @e[type=minecraft:block_display,tag=rc_blossoming_pots.decorPotPlant0,distance=..10] at @s \
-    run function gm4_blossoming_pots:upgrade_paths/3.1/legacy_decorated_pot
+    as @e[type=minecraft:block_display,tag=rc_blossoming_pots.decorPotPlant0,distance=..10] at @s run function gm4_blossoming_pots:upgrade_paths/3.1/legacy_decorated_pot
 execute if score blossoming_pots gm4_earliest_version matches 0 \
-    as @e[type=minecraft:marker,tag=rc_blossoming_pots.flowerPot,distance=..10] at @s \
-    run function gm4_blossoming_pots:upgrade_paths/3.1/legacy_flower_pot
+    as @e[type=minecraft:marker,tag=rc_blossoming_pots.flowerPot,distance=..10] at @s run function gm4_blossoming_pots:upgrade_paths/3.1/legacy_flower_pot
+execute if score blossoming_pots gm4_earliest_version matches ..304000 \
+    as @e[type=minecraft:marker,tag=gm4_blossoming_pots.data.flower_pot,distance=..10] at @s run function gm4_blossoming_pots:upgrade_paths/3.4/remove_perma_marker
 
 # Reset temp
 data remove storage gm4_blossoming_pots:flower_pots temp

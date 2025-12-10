@@ -2,13 +2,13 @@
   "input": {
     "type": "shaped",
     "recipe": [
-      "OSO",
+      "CSC",
       "ABA",
-      "OSO"
+      "CSC"
     ],
     "key": {
-      "O": {
-        "item": "minecraft:obsidian"
+      "C": {
+        "item": "minecraft:crying_obsidian"
       },
       "S": {
         "item": "minecraft:shulker_shell"

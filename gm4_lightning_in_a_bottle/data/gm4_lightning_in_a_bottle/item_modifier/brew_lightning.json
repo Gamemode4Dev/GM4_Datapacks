@@ -12,6 +12,10 @@
       "modifier": {
         "function": "minecraft:reference",
         "name": "gm4_lightning_in_a_bottle:lingering_bottle_of_lightning"
+      },
+      "on_pass": {
+        "function": "minecraft:reference",
+        "name": "gm4_lightning_in_a_bottle:lingering_bottle_of_lightning"
       }
     },
     {
@@ -27,6 +31,10 @@
       "modifier": {
         "function": "minecraft:reference",
         "name": "gm4_lightning_in_a_bottle:splash_bottle_of_lightning"
+      },
+      "on_pass": {
+        "function": "minecraft:reference",
+        "name": "gm4_lightning_in_a_bottle:splash_bottle_of_lightning"
       }
     },
     {
@@ -40,6 +48,10 @@
         }
       },
       "modifier": {
+        "function": "minecraft:reference",
+        "name": "gm4_lightning_in_a_bottle:bottle_of_lightning"
+      },
+      "on_pass": {
         "function": "minecraft:reference",
         "name": "gm4_lightning_in_a_bottle:bottle_of_lightning"
       }

@@ -7,4 +7,4 @@
 scoreboard players remove $probability gm4_desire_lines 1000
 
 # secondary celaro effect: invisibility inside foliage
-execute if predicate gm4_celaro_shamir:stealth_active run effect give @s invisibility 1 0 true
+execute at @s if predicate gm4_celaro_shamir:stealth_active run effect give @s invisibility 1 0 true

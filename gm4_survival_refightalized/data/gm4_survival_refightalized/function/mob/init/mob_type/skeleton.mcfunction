@@ -9,7 +9,7 @@
 # speed: 75 - 105%
 
 # base stat nerf
-attribute @s minecraft:max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -11 add_value
+attribute @s[tag=!gm4_sr_from_spawner] minecraft:max_health modifier add gm4_survival_refightalized:stat_change.base_nerf -11 add_value
 attribute @s minecraft:movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.25 add_multiplied_base
 
 # max stat buffs
@@ -22,9 +22,10 @@ tag @s add gm4_sr_check_damage_cap
 
 # arrow damage - only set if it was not preset at spawning
 execute unless score @s gm4_sr_arrow.damage_change matches -2147483648..2147483647 store result score @s gm4_sr_arrow.damage_change run random value -4..4
-execute unless score @s gm4_sr_arrow.fire_delay matches -2147483648..2147483647 store result score @s gm4_sr_arrow.damage_change run random value -4..4
+execute unless score @s gm4_sr_arrow.fire_delay matches -2147483648..2147483647 store result score @s gm4_sr_arrow.fire_delay run random value 2..4
 
 # set weapon
+execute if entity @s[tag=gm4_sr_from_spawner] run return 0
 loot replace entity @s[tag=!gm4_sr_melee_skeleton] weapon.mainhand loot gm4_survival_refightalized:mob/skeleton/weapon
 
 # set armor

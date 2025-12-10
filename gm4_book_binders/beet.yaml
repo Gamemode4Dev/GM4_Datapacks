@@ -4,6 +4,13 @@ version: 1.5.X
 
 data_pack:
   load: .
+  overlays:
+    - formats:
+        min_inclusive: 1
+        max_inclusive: 88
+      min_format: 1
+      max_format: 88
+      directory: backport_88
 
 require:
   - bolt
@@ -41,7 +48,6 @@ meta:
       notes: []
     modrinth:
       project_id: oIqNf2N4
-    video: null
     wiki: https://wiki.gm4.co/wiki/Book_Binders
     credits:
       Creators:

@@ -82,7 +82,7 @@ meta:
         - shamir
         - enderpuff
 
-    # Either null or a link to the YouTube video
+    # Either null or a link to the YouTube video. Not needed if there is no video
     video: null
     # Either null or a link to the wiki page
     wiki: https://wiki.gm4.co/wiki/Disassemblers

@@ -5,34 +5,35 @@
 
 ## Stat Block (normal/hard diff)
 # health: 22 - 36
-# damage: 6.5 - 8.5 (armed), 0.5 - 2.5 (unarmed)
+# damage: 7.5 - 8.5 (armed), 1.5 - 2.5 (unarmed)
 # speed: 95 - 120%
 
 # base stat nerf
-attribute @s minecraft:max_health modifier add gm4_survival_refightalized:stat_change.base_buff 2 add_value
-attribute @s minecraft:attack_damage modifier add gm4_survival_refightalized:stat_change.base_nerf -1.5 add_value
+attribute @s[tag=!gm4_sr_from_spawner] minecraft:max_health modifier add gm4_survival_refightalized:stat_change.base_buff 2 add_value
+attribute @s minecraft:attack_damage modifier add gm4_survival_refightalized:stat_change.base_nerf -0.5 add_value
 attribute @s minecraft:movement_speed modifier add gm4_survival_refightalized:stat_change.base_nerf -0.05 add_multiplied_base
 
 # max stat buffs
 scoreboard players set $mob_health gm4_sr_data 14
-scoreboard players set $mob_damage gm4_sr_data 20
+scoreboard players set $mob_damage gm4_sr_data 10
 scoreboard players set $mob_speed gm4_sr_data 25
 # max damage mob is allowed to deal in one hit (to deal with weapons)
-scoreboard players set @s gm4_sr_mob.damage_cap 85
+scoreboard players set @s gm4_sr_mob.damage_cap 95
 tag @s add gm4_sr_check_damage_cap
 
 # knockback resistance
 attribute @s minecraft:knockback_resistance modifier add gm4_survival_refightalized:stat_change.kb_resist 0.666 add_value
 
+# shoot arrows slower and weaker
+scoreboard players set @s gm4_sr_arrow.fire_delay 4
+execute store result score @s gm4_sr_arrow.damage_change run random value -6..0
+
 # set weapon
+execute if entity @s[tag=gm4_sr_from_spawner] run return 0
 loot replace entity @s weapon.mainhand loot gm4_survival_refightalized:mob/wither_skeleton/weapon
 
 # withering arrow if a bow is held
 execute if items entity @s weapon.mainhand bow run loot replace entity @s weapon.offhand loot gm4_survival_refightalized:mob/wither_skeleton/arrow
-
-# shoot arrows slower and weaker
-scoreboard players set @s gm4_sr_arrow.fire_delay 4
-execute store result score @s gm4_sr_arrow.damage_change run random value -6..0
 
 # set armor
 scoreboard players set $override_equipment gm4_sr_data 0

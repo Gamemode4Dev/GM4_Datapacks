@@ -4,6 +4,13 @@ version: 1.0.X
 
 data_pack:
   load: .
+  overlays:
+    - formats:
+        min_inclusive: 1
+        max_inclusive: 88
+      min_format: 1
+      max_format: 88
+      directory: backport_88
 
 pipeline:
   - generate_files
@@ -32,7 +39,6 @@ meta:
       pack_id: gm4_reeling_rods
     planetminecraft:
       uid: 6733043
-    video: null
     wiki: https://wiki.gm4.co/wiki/Reeling_Rods
     credits:
       Creators:

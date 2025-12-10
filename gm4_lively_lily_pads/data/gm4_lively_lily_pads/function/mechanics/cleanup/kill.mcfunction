@@ -1,7 +1,7 @@
 # cleans up block display and drops item if needed
 # @s = gm4_llp_display block_display
 # at @s
-# run from main and mechanics/attacks/candle/process_interaction
+# run from main and mechanics/attacks/perma/process_interaction
 
 # delete light
 execute if entity @s[tag=gm4_llp_light] run fill ~ ~1 ~ ~ ~1 ~ air replace light
@@ -26,5 +26,5 @@ execute if entity @s[tag=gm4_llp_spore_blossom_sound] run playsound minecraft:bl
 execute if entity @s[tag=gm4_llp_cactus_flower_sound] run playsound minecraft:block.cactus_flower.break block @a[distance=..16] ~ ~ ~
 
 # kill entities
-kill @e[type=minecraft:interaction,tag=gm4_llp_candle_rcd,limit=1,distance=..0.1]
+kill @e[type=minecraft:interaction,tag=gm4_llp_perma_rcd,limit=1,distance=..0.1]
 kill @s

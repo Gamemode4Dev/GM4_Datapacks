@@ -9,6 +9,7 @@ def beet_default(ctx: Context):
   item_tags = [
     id.removeprefix("minecraft:")
     for id in item_tags
+    if "enchantable/sword" not in id
   ]
 
   for id in item_tags:

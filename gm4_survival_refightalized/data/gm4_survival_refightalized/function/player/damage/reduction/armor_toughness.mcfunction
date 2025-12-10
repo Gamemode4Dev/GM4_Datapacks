@@ -4,21 +4,28 @@
 # run from player/damage/calculate_reduction
 
 # Formula:
-# Damage reduction percentage = (damage * armor_toughness * 50) / ( damage * armor_toughness + 3500 )
+# Damage reduction percentage = (6 * armor_toughness + 2 * armor_toughness * damage) / (damage + 5 * armor_toughness)
 
-# dividend = damage * armor_toughness * 50
-scoreboard players operation $armor_toughness.dividend gm4_sr_data = $damage_total gm4_sr_data
+scoreboard players operation $armor_toughness.times_5 gm4_sr_data = $armor_toughness gm4_sr_data
+scoreboard players operation $armor_toughness.times_5 gm4_sr_data *= #5 gm4_sr_data
+
+# dividend = 6 * armor_toughness + 2 * armor_toughness * damage
+scoreboard players operation $armor_toughness.dividend gm4_sr_data += $armor_toughness.times_5 gm4_sr_data
 scoreboard players operation $armor_toughness.dividend gm4_sr_data *= $armor_toughness gm4_sr_data
-scoreboard players operation $armor_toughness.dividend gm4_sr_data *= #50 gm4_sr_data
+scoreboard players operation $armor_toughness.dividend2 gm4_sr_data = $damage_total gm4_sr_data
+scoreboard players operation $armor_toughness.dividend2 gm4_sr_data *= $armor_toughness gm4_sr_data
+scoreboard players operation $armor_toughness.dividend2 gm4_sr_data *= #2 gm4_sr_data
+scoreboard players operation $armor_toughness.dividend gm4_sr_data += $armor_toughness.dividend2 gm4_sr_data
 
-# divisor = damage * armor_toughness + 3500
+# divisor = damage + 5 * armor_toughness
 scoreboard players operation $armor_toughness.divisor gm4_sr_data = $damage_total gm4_sr_data
-scoreboard players operation $armor_toughness.divisor gm4_sr_data *= $armor_toughness gm4_sr_data
-scoreboard players add $armor_toughness.divisor gm4_sr_data 3500
+scoreboard players operation $armor_toughness.divisor gm4_sr_data += $armor_toughness.times_5 gm4_sr_data
 
-# dividend / divisor (this rounds down!), can max reduce damage by 25%
+# dividend / divisor (this rounds down!), can max reduce damage by 2x armor_toughness
 scoreboard players operation $armor_toughness.dividend gm4_sr_data /= $armor_toughness.divisor gm4_sr_data
-scoreboard players operation $armor_toughness.dividend gm4_sr_data < #25 gm4_sr_data
+scoreboard players operation $armor_toughness.max_reduction gm4_sr_data = $armor_toughness gm4_sr_data
+scoreboard players operation $armor_toughness.max_reduction gm4_sr_data *= #2 gm4_sr_data
+scoreboard players operation $armor_toughness.dividend gm4_sr_data < $armor_toughness.max_reduction gm4_sr_data
 
 # get damage reduction
 scoreboard players operation $armor_toughness_effect gm4_sr_data = $damage_total gm4_sr_data
