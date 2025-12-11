@@ -30,10 +30,7 @@ jobs:
         run: git fetch origin ${{ github.base_ref }}
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@v3
-        with:
-          version: '0.5.4'
-          enable-cache: true
+        uses: astral-sh/setup-uv@v7
 
       - name: Build and publish all modules
         if: github.event_name != 'pull_request'

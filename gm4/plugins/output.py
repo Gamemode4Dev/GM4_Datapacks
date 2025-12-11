@@ -25,7 +25,7 @@ def beet_default(ctx: Context):
 	out_dir = Path("out")
 
 	yield # wait for exit phase, after other plugins cleanup
-	
+
 	ctx.data.save(
 		path=out_dir / f"{ctx.project_id}_{version.replace('.', '_')}",
 		overwrite=True,
@@ -73,7 +73,7 @@ def release(ctx: Context):
 	"""
 	Saves the zipped datapack and metadata to the ./release/{version} folder.
 		Should be first in pipeline to properly wrap all other plugins cleanup phases
-	
+
 	If the module has the `version` and `meta.modrinth.project_id` fields, and
 	`BEET_MODRINTH_TOKEN` environment variable is set, will try to publish a
 	new version to Modrinth if it doesn't already exist.
@@ -90,7 +90,7 @@ def release(ctx: Context):
 	file_name = f"{corrected_project_id}_{version_dir.replace('.', '_')}.zip"
 
 	yield # wait for exit phase, after other plugins cleanup
-	
+
 	ctx.data.save(
 		path=release_dir / file_name,
 		overwrite=True,
@@ -103,7 +103,7 @@ def release(ctx: Context):
 	os.makedirs(pack_icon_dir, exist_ok=True)
 	if "pack.png" in ctx.data.extra:
 		ctx.data.extra["pack.png"].dump(pack_icon_dir, f"{corrected_project_id}.png")
-	
+
 	smithed_readme_dir = generated_dir / "smithed_readmes"
 	os.makedirs(smithed_readme_dir, exist_ok=True)
 	if "smithed_readme" in ctx.meta:
@@ -200,7 +200,7 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
 	auth_token = os.getenv(SMITHED_AUTH_KEY, None)
 	logger = parent_logger.getChild(f"smithed.{ctx.project_id}")
 	mc_version_dir = os.getenv("VERSION", "1.21.5")
-	manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+	manifest = ManifestCacheModel.model_validate(ctx.cache["gm4_manifest"].json)
 	project_id = stem if (stem:=ctx.directory.stem).startswith("lib") else ctx.project_id
 
 	if config.smithed and auth_token:
@@ -214,7 +214,7 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
 			else:
 				logger.warning(f"Failed to get project: {res.status_code} {res.text}")
 			return
-		
+
 		project_data = res.json()
 
 		# update description and pack image
@@ -307,10 +307,10 @@ def clear_release(ctx: Context):
 
 def readmes(ctx: Context):
 	"""Saves all READMEs intended for download sites to the ./out/readmes folder."""
-	
+
 	readme_dir = Path("out/readmes")
 	base_path = readme_dir / ctx.project_id
-	
+
 	if "README.md" in ctx.data.extra:
 		os.makedirs(base_path, exist_ok=True)
 		ctx.data.extra["README.md"].dump(base_path, "GM4_README.md")

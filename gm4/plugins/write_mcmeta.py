@@ -6,7 +6,7 @@ def beet_default(ctx: Context):
 	"""Writes the pack.mcmeta based on the module name and version."""
 	yield # wait for exit phase
 
-	manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+	manifest = ManifestCacheModel.model_validate(ctx.cache["gm4_manifest"].json)
 	manifest_entry = {v.id:v for v in (manifest.modules|manifest.libraries).values()}.get(ctx.project_id, NoneAttribute())
 
 	ctx.data.pack_format = 71
