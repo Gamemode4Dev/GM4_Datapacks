@@ -24,9 +24,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:lightning_rod"
-            ]
+            "items": "#gm4_lightning_in_a_bottle:lightning_rod"
           }
         ]
       }

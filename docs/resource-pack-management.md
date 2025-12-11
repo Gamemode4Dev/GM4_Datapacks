@@ -196,6 +196,50 @@ model_data:
       - reference: item/lump/thorianite
 ```
 
+- `base_model` (optional), a json (or yaml) object that will be merged into the base model's custom model data definition. This used when specific control over the minecraft base item model is required (e.g. adding a tints field for leather armor). The `base_model` json object will be merged into the `model` json object, overwriting existing fields.
+E.g. to acheive the following custom model data:
+```json
+{
+  "threshold": 3420002,
+  "model": {
+    "type": "minecraft:model",
+    "model": "gm4_scuba_gear:item/flippers",
+    "tints": [
+      {
+        "type": "minecraft:dye",
+        "default": -14455863
+      }
+    ]
+  }
+}
+```
+The following `base_model` config can be used:
+```yaml
+model_data:
+  - item: leather_boots
+    reference: item/flippers
+    template: generated_overlay
+    base_model: 
+      tints: 
+        - type: minecraft:dye
+          default: -14455863
+```
+Or alternatively with JSON:
+```yaml
+model_data:
+  - item: leather_boots
+    reference: item/flippers
+    template: generated_overlay
+    base_model: {
+      "tints": [
+        {
+          "type": "minecraft:dye",
+          "default": -14455863
+        }
+      ]
+    }
+```
+
 ### `gui_fonts` Config
 Custom textured GUIs using fonts can easily be setup using the `meta.gm4.gui_fonts` entry of `beet.yaml` or the `gui_fonts` entry of `model_data.yaml`. These will create a translation that displays a given image texture inside a container, like a dropper or hopper. Empty images of the correct size are available in the `base` to use as a starting point for custom GUIs. 
 

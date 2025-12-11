@@ -15,6 +15,7 @@
         "minecraft:llama",
         "minecraft:mooshroom",
         "minecraft:mule",
+        {"id": "minecraft:nautilus", "required": false},
         "minecraft:ocelot",
         "minecraft:panda",
         "minecraft:pig",

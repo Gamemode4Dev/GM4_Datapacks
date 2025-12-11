@@ -1,6 +1,7 @@
 {
   "values": [
     "minecraft:camel",
+    {"id": "minecraft:camel_husk", "required": false},
     "minecraft:pig",
     "minecraft:skeleton_horse",
     "minecraft:strider",

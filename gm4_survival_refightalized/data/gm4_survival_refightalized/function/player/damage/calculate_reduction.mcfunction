@@ -3,6 +3,10 @@
 # at @s
 # run from player/damage/run
 
+# add a 10 tick delay before damage can be calculated again
+execute if score @s gm4_sr_armor.hit_cooldown matches 1.. run return run tellraw @s[tag=gm4_sr_dev.damage_log] {"text":"Recent damage invulnerability","color":"white"}
+scoreboard players set @s gm4_sr_armor.hit_cooldown 10
+
 # grab active effects to check for resistance later - can be skipped if this was already done for cave spider / witch poison reduction
 execute unless data storage gm4_survival_refightalized:temp active_effects run data modify storage gm4_survival_refightalized:temp active_effects set from entity @s active_effects
 
@@ -19,16 +23,18 @@ scoreboard players operation $damage_total gm4_sr_data = @s gm4_sr_stat.damage_r
 
 # first check the resistance level besides from this module
 # if this results in 100% damage reduction skip the rest of this function
-execute store success score $resistance_damage_reduction gm4_sr_data if data storage gm4_survival_refightalized:temp active_effects[{id:"minecraft:resistance"}].hidden_effect.duration
-execute if score $resistance_damage_reduction gm4_sr_data matches 1 store result score $resistance_damage_reduction gm4_sr_data run data get storage gm4_survival_refightalized:temp active_effects[{id:"minecraft:resistance"}].hidden_effect.amplifier 20
+scoreboard players set $resistance_damage_reduction gm4_sr_data 0
+execute if data storage gm4_survival_refightalized:temp active_effects[{id:"minecraft:resistance"}].hidden_effect.duration store result score $resistance_damage_reduction gm4_sr_data run data get storage gm4_survival_refightalized:temp active_effects[{id:"minecraft:resistance"}].hidden_effect.amplifier 20
 execute if score $resistance_damage_reduction gm4_sr_data matches 1.. run scoreboard players add $resistance_damage_reduction gm4_sr_data 20
+execute if score $resistance_damage_reduction gm4_sr_data matches 100.. run tellraw @s[tag=gm4_sr_dev.damage_log] [{text:"Blocked by Resistance",color:"gray"}]
+execute if score $resistance_damage_reduction gm4_sr_data matches 100.. run scoreboard players set $damage_total gm4_sr_data 0
 execute unless score $resistance_damage_reduction gm4_sr_data matches 0..99 run return run data remove storage gm4_survival_refightalized:temp active_effects
 
 # | Reduce damage taken based on
 # /!\ order for these is important!
 # 1. armor toughness (only if player still has armor)
 execute store result score $armor_toughness gm4_sr_data run attribute @s minecraft:armor_toughness get
-execute if score $armor_toughness gm4_sr_data matches 1.. if score @s gm4_sr_stat.armor matches 1.. run function gm4_survival_refightalized:player/damage/reduction/armor_toughness
+execute if score $armor_toughness gm4_sr_data matches 1.. if score @s[advancements={gm4_survival_refightalized:damaged={armor_piercing=false,armor_piercing_mob=false}}] gm4_sr_stat.armor matches 1.. run function gm4_survival_refightalized:player/damage/reduction/armor_toughness
 
 # 2. enchantments
 execute if entity @s[advancements={gm4_survival_refightalized:damaged={bypasses_enchantments=false}}] run function gm4_survival_refightalized:player/damage/reduction/enchantments/run

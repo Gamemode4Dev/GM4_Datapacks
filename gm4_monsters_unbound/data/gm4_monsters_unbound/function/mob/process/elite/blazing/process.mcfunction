@@ -10,5 +10,5 @@ execute if score $has_target gm4_mu_data matches 0 run scoreboard players set @s
 scoreboard players set @s[scores={gm4_mu_timer=10..}] gm4_mu_timer 0
 
 execute if score @s gm4_mu_timer matches 3 anchored eyes positioned ^ ^-0.25 ^ on target facing entity @s eyes rotated ~ -75 summon block_display run function gm4_monsters_unbound:mob/process/elite/blazing/init_flare
-execute if score @s[type=#gm4_survival_refightalized:zombie_types] gm4_mu_timer matches 4 anchored eyes positioned ^ ^-0.25 ^ on target facing entity @s eyes rotated ~90 -75 summon block_display run function gm4_monsters_unbound:mob/process/elite/blazing/init_flare
-execute if score @s[type=#gm4_survival_refightalized:zombie_types] gm4_mu_timer matches 5 anchored eyes positioned ^ ^-0.25 ^ on target facing entity @s eyes rotated ~-90 -75 summon block_display run function gm4_monsters_unbound:mob/process/elite/blazing/init_flare
+execute if score @s[type=#gm4_monsters_unbound:zombie_types] gm4_mu_timer matches 4 anchored eyes positioned ^ ^-0.25 ^ on target facing entity @s eyes rotated ~90 -75 summon block_display run function gm4_monsters_unbound:mob/process/elite/blazing/init_flare
+execute if score @s[type=#gm4_monsters_unbound:zombie_types] gm4_mu_timer matches 5 anchored eyes positioned ^ ^-0.25 ^ on target facing entity @s eyes rotated ~-90 -75 summon block_display run function gm4_monsters_unbound:mob/process/elite/blazing/init_flare

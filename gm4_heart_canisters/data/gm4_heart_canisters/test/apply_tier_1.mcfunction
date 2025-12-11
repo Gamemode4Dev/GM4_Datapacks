@@ -1,4 +1,5 @@
 # @dummy
+# @optional
 
 loot give @s loot gm4_heart_canisters:items/tier_1_heart_canister
 

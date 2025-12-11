@@ -40,6 +40,7 @@ ALL_ENCHANTMENTS = [
     "luck_of_the_sea",
     "efficiency",
     "quick_charge",
+    "lunge",
     "lure",
     "respiration",
     "aqua_affinity",

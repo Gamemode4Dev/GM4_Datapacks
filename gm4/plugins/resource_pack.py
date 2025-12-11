@@ -67,7 +67,7 @@ from gm4.utils import (
 JsonType = dict[str,Any]
 
 CUSTOM_MODEL_PREFIX = 3420000
-MINECRAFT_REFERENECE_VERSION = "1.21.6"
+MINECRAFT_REFERENECE_VERSION = "1.21.9"
 
 parent_logger = logging.getLogger("gm4.resource_pack")
 
@@ -80,6 +80,7 @@ class ModelData(BaseModel):
     template: Annotated[str | TemplateOptions, TemplateOptionsValidator] = Field(default="custom", validate_default=True)
     transforms: Optional[list[Annotated[str | TransformOptions, TransformOptionsValidator]]] = None
     textures: MapOption[str] = Field(default_factory=list, validate_default=True) # defaults to same value as reference         #type:ignore ; the validator handles the default value
+    base_model: Optional[JsonType]
 
     @field_validator('model', mode="before")
     @classmethod
@@ -134,6 +135,7 @@ class NestedModelData(BaseModel):
     template: Optional[str | TemplateOptions] = "custom"
     transforms: Optional[list[str | TransformOptions]] = None
     textures: Optional[MapOption[str]] = None
+    base_model: Optional[JsonType]
     broadcast: Optional[list['NestedModelData']] = []
 
     def collapse_broadcast(self) -> list['NestedModelData']:
@@ -463,8 +465,11 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                         "model": m
                     }
                 else:
-                    model_json = m  # type: ignore
-
+                    model_json = m
+                
+                if model.base_model:
+                    model_json.update(model.base_model)
+            
                 itemdef_entries.append({
                     "threshold": self.cmd_prefix+self.retrieve_index(model.reference)[0],
                     "model": model_json

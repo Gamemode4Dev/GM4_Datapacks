@@ -12,8 +12,8 @@ from gm4.utils import add_namespace, MapOption
 
 parent_logger = logging.getLogger("gm4."+__name__)
 
-TOOL_MATERIALS = ["wooden", "stone", "iron", "golden", "diamond", "netherite"]
-ARMOR_MATERIALS = ["leather", "chainmail", "iron", "golden", "diamond", "netherite"]
+TOOL_MATERIALS = ["wooden", "stone", "copper", "iron", "golden", "diamond", "netherite"]
+ARMOR_MATERIALS = ["leather", "copper", "chainmail", "iron", "golden", "diamond", "netherite"]
 TOOLS = ["axe", "hoe", "pickaxe", "shovel"]
 ARMOR = ["boots", "chestplate", "helmet", "leggings"]
 BUCKETABLE = ["water", "lava", "milk", "powder_snow", "cod", "salmon", "pufferfish", "tropical_fish", "tadpole", "axolotl"]
@@ -221,7 +221,7 @@ def beet_default(ctx: Context):
     # bind context object to a ClassVar so it can be accessed later during template processing
     ShamirTemplate.bound_ctx = ctx
     vanilla = ctx.inject(Vanilla)
-    vanilla.minecraft_version = '1.21.5'
+    vanilla.minecraft_version = '1.21.9'
     ShamirTemplate.vanilla_models_jar = vanilla.mount("assets/minecraft/items")
     merge_policy(ctx)
 

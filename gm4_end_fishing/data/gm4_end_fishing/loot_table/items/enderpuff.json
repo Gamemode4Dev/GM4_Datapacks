@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:player_head",
+          "name": "minecraft:poisonous_potato",
           "functions": [
             {
               "function": "minecraft:set_name",
@@ -20,7 +20,9 @@
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": "item/enderpuff",
-                "minecraft:profile": "$enderpuff"
+                "minecraft:profile": "$enderpuff",
+                "minecraft:item_model": "minecraft:player_head",
+                "!minecraft:consumable": {}
               }
             },
             {

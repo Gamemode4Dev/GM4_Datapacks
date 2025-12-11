@@ -1,8 +1,8 @@
 schedule function gm4_guidebook:tick 1t
 
-# if a player is holding the guidebook, turn off sendCommandFeedback
-execute if score $sendCommandFeedback gm4_guide_config matches 1 run gamerule sendCommandFeedback true
-execute if score $forceCommandFeedback gm4_guide_config matches 0 if entity @a[predicate=gm4_guidebook:holding_book,limit=1] run gamerule sendCommandFeedback false
+# if a player is holding the guidebook, turn off minecraft:send_command_feedback
+execute if score $sendCommandFeedback gm4_guide_config matches 1 run gamerule send_command_feedback true
+execute if score $forceCommandFeedback gm4_guide_config matches 0 if entity @a[predicate=gm4_guidebook:holding_book,limit=1] run gamerule send_command_feedback false
 
 # jump to prev section
 execute as @a[scores={gm4_guide_prev=1..}] run function gm4_guidebook:hand/prev_section/search

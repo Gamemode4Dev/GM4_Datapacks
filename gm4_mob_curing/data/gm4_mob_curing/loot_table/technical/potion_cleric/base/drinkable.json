@@ -43,6 +43,17 @@
           "functions": [
             {
               "function": "minecraft:set_potion",
+              "id": "minecraft:infested"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
               "id": "minecraft:invisibility"
             }
           ]
@@ -91,6 +102,17 @@
             {
               "function": "minecraft:set_potion",
               "id": "minecraft:night_vision"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:oozing"
             }
           ]
         },
@@ -168,6 +190,39 @@
             {
               "function": "minecraft:set_potion",
               "id": "minecraft:water_breathing"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:weakness"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:weaving"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:wind_charged"
             }
           ]
         },

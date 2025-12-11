@@ -8,10 +8,10 @@ fill ~ ~-0.06 ~ ~ ~-0.06 ~ coarse_dirt replace dirt
 fill ~ ~-0.06 ~ ~ ~-0.06 ~ dirt replace grass_block
 fill ~ ~ ~ ~ ~ ~ air replace snow[layers=1]
 fill ~ ~ ~ ~ ~ ~ snow[layers=1] replace snow[layers=2]
-fill ~ ~-0.06 ~ ~ ~-0.06 ~ frosted_ice[age=1] replace frosted_ice[age=0]
-fill ~ ~-0.06 ~ ~ ~-0.06 ~ frosted_ice[age=2] replace frosted_ice[age=1]
-fill ~ ~-0.06 ~ ~ ~-0.06 ~ frosted_ice[age=3] replace frosted_ice[age=2]
 fill ~ ~-0.06 ~ ~ ~-0.06 ~ water replace frosted_ice[age=3]
+fill ~ ~-0.06 ~ ~ ~-0.06 ~ frosted_ice[age=3] replace frosted_ice[age=2]
+fill ~ ~-0.06 ~ ~ ~-0.06 ~ frosted_ice[age=2] replace frosted_ice[age=1]
+fill ~ ~-0.06 ~ ~ ~-0.06 ~ frosted_ice[age=1] replace frosted_ice[age=0]
 
 # remove foliage
 execute if block ~ ~ ~ #gm4:foliage unless block ~ ~ ~ moss_carpet run setblock ~ ~ ~ air destroy
