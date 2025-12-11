@@ -2,16 +2,15 @@
   "input": {
     "type": "shaped",
     "recipe": [
-      "S S",
-      "R R",
-      "R R"
+      "C C",
+      "K K"
     ],
     "key": {
-      "S": {
-        "item": "minecraft:turtle_scute"
+      "C": {
+        "item": "minecraft:copper_ingot"
       },
-      "R": {
-        "item": "minecraft:rabbit_hide"
+      "K": {
+        "item": "minecraft:dried_kelp"
       }
     }
   },
@@ -21,7 +20,7 @@
       "name": "gm4_scuba_gear:items/flippers",
       "count": 1,
       "guidebook": {
-        "display_color": 11009871
+        "display_color": 2367281
       }
     }
   }

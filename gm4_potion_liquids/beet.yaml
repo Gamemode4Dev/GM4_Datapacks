@@ -1,19 +1,27 @@
 id: gm4_potion_liquids
 name: Potion Liquids
-version: 1.8.X
+version: 1.9.X
 
 data_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
+  - gm4_liquid_tanks.override_formatting
+  - gm4_liquid_tanks.bolt_liquid_wrappers
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_brewing
 
 meta:
+  bolt:
+    entrypoint: 
+      - gm4_potion_liquids:main
   gm4:
     versioning:
       required:
-        gm4_liquid_tanks: 2.7.0
+        gm4_liquid_tanks: 3.0.0
         lib_brewing: 1.4.0
     model_data:
       - item: potion

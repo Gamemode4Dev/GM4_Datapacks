@@ -9,6 +9,6 @@ execute store result score @s gm4_lt_max run data get storage gm4_relocators:tem
 scoreboard players set @s gm4_lt_disp_val 0
 function #gm4_liquid_tanks:relocate/restore_liquid
 
-execute unless entity @s[tag=gm4_lt_empty] run summon armor_stand ~ ~-.95 ~ {CustomName:"gm4_liquid_tank_display",Tags:["gm4_no_edit","gm4_liquid_tank_display","smithed.entity","smithed.strict","gm4_new_display"],NoGravity:1b,Marker:1b,Silent:1b,Invisible:1b,Invulnerable:1b,Small:1b,Silent:1b,DisabledSlots:4144959,HasVisualFire:1b,equipment:{head:{id:"player_head",count:1}}}
-data modify entity @e[type=armor_stand,tag=gm4_new_display,distance=..1,limit=1] {} merge from storage gm4_relocators:temp gm4_relocation.entity_data.display
+summon item_display ~ ~ ~ {CustomName: "gm4_liquid_tank_liquid_display",Tags: ["gm4_liquid_tank_liquid_display","smithed.entity","smithed.strict","gm4_new_display"],transformation:{left_rotation: [0f,0f,0f,1f],right_rotation: [0f,0f,0f,1f],translation: [0f,0.2185f,0f],scale: [0.83, 0.83, 0.83]},item_display: head}
+data modify entity @e[type=item_display,tag=gm4_new_display,distance=..1,limit=1] {} merge from storage gm4_relocators:temp gm4_relocation.entity_data.liquid_display
 function gm4_liquid_tanks:liquid_value_update

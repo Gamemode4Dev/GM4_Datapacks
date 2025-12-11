@@ -1,0 +1,48 @@
+{
+  "description": "",
+  "exclusive_set": "minecraft:depth_strider",
+  "supported_items": "minecraft:leather_boots",
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "feet"
+  ],
+  "effects": {
+    "minecraft:location_changed": [
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "location": {
+                  "fluid": {
+                    "fluids": "#minecraft:water"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "effect": {
+          "type": "minecraft:attribute",
+          "attribute": "minecraft:movement_speed",
+          "id": "gm4_scuba_gear:flippers/on_land",
+          "amount": -0.25,
+          "operation": "add_multiplied_base"
+        }
+      }
+    ]
+  }
+}

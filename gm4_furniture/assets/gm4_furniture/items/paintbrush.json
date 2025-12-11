@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "gm4_furniture:item/furniture/paintbrush",
+    "tints": [
+      {
+        "type": "minecraft:dye",
+        "default": -6791361
+      }
+    ]
+  }
+}
