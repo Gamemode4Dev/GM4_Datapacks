@@ -151,9 +151,9 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "beet", specifier = ">=0.113.0b6" },
+    { name = "beet", specifier = ">=0.113.0b10" },
     { name = "bolt", specifier = ">=0.50.0b2" },
-    { name = "mecha", specifier = ">=0.100.0b5" },
+    { name = "mecha", specifier = ">=0.102.0b2" },
     { name = "repro-zipfile", specifier = ">=0.1.0" },
     { name = "requests", specifier = ">=2.28.1" },
 ]
