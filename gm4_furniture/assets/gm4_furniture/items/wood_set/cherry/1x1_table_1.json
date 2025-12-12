@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "gm4_furniture:block/furniture/wood_set/cherry/1x1_table_1",
+    "tints": [
+      {
+        "type": "minecraft:dye",
+        "default": -393217
+      }
+    ]
+  }
+}
