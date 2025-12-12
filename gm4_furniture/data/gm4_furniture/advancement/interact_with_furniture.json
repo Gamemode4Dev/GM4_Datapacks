@@ -12,6 +12,7 @@
                 "type": "minecraft:player",
                 "gamemode": [
                   "survival",
+                  "adventure",
                   "creative"
                 ]
               }
