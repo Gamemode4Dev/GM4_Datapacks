@@ -6,11 +6,10 @@ data_pack:
   load: .
 
 require:
-  - gm4_timelines.plugins.timelines
+  - gm4_timelines.plugins.generate
 
 pipeline:
   - gm4.plugins.extend.module
-  - gm4_timelines.plugins.generate
 
 meta:
   gm4:

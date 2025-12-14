@@ -1,0 +1,13 @@
+{
+    "tracks": {
+        "minecraft:audio/firefly_bush_sounds": {
+            "keyframes": [
+                {
+                    "ticks": 2400,
+                    "value": true
+                }
+            ],
+            "modifier": "or"
+        }
+    }
+}

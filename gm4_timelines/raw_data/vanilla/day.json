@@ -1,30 +1,6 @@
 {
   "period_ticks": 24000,
   "tracks": {
-    "minecraft:gameplay/villager_activity": {
-      "keyframes": [
-        {
-          "ticks": 10,
-          "value": "minecraft:work"
-        },
-        {
-          "ticks": 2000,
-          "value": "minecraft:work"
-        },
-        {
-          "ticks": 9000,
-          "value": "minecraft:work"
-        },
-        {
-          "ticks": 11000,
-          "value": "minecraft:work"
-        },
-        {
-          "ticks": 12000,
-          "value": "minecraft:work"
-        }
-      ]
-    },
     "minecraft:audio/firefly_bush_sounds": {
       "keyframes": [
         {
