@@ -1,0 +1,26 @@
+id: gm4_timelines
+name: Timelines
+version: 1.0.X
+
+data_pack:
+  load: .
+
+require:
+  - gm4_timelines.plugins.timelines
+
+pipeline:
+  - gm4.plugins.extend.module
+  - gm4_timelines.plugins.generate
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [main]
+    website:
+      description: Timelines!
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Timelines
+    credits:
+      Creator:
+        - Djones
+        - Kyrius
