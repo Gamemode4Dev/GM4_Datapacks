@@ -98,6 +98,7 @@
           "value": 0.26666668
         }
       ],
+      "ease": "linear",
       "modifier": "multiply"
     },
     "minecraft:gameplay/turtle_egg_hatch_chance": {
@@ -133,9 +134,10 @@
           "value": -15132378
         }
       ],
-      "modifier": "multiply"
+      "modifier": "override"
     },
     "minecraft:visual/fog_color": {
+      "ease": "in_out_sine",
       "keyframes": [
         {
           "ticks": 133,
@@ -154,17 +156,10 @@
           "value": "#0f0f16"
         }
       ],
-      "modifier": "multiply"
+      "modifier": "override"
     },
     "minecraft:visual/moon_angle": {
-      "ease": {
-        "cubic_bezier": [
-          0.362,
-          0.241,
-          0.638,
-          0.759
-        ]
-      },
+      "ease": "linear",
       "keyframes": [
         {
           "ticks": 6000,
@@ -195,7 +190,7 @@
           "value": "#000000"
         }
       ],
-      "modifier": "multiply"
+      "modifier": "override"
     },
     "minecraft:visual/sky_light_color": {
       "keyframes": [
@@ -216,7 +211,8 @@
           "value": "#7a7aff"
         }
       ],
-      "modifier": "multiply"
+      "ease": "in_out_sine",
+      "modifier": "override"
     },
     "minecraft:visual/sky_light_factor": {
       "keyframes": [
@@ -237,17 +233,11 @@
           "value": 0.24
         }
       ],
+      "ease": "linear",
       "modifier": "multiply"
     },
     "minecraft:visual/star_angle": {
-      "ease": {
-        "cubic_bezier": [
-          0.362,
-          0.241,
-          0.638,
-          0.759
-        ]
-      },
+      "ease": "linear",
       "keyframes": [
         {
           "ticks": 6000,
@@ -310,17 +300,11 @@
           "value": 0.101
         }
       ],
-      "modifier": "maximum"
+      "ease": "in_out_sine",
+      "modifier": "override"
     },
     "minecraft:visual/sun_angle": {
-      "ease": {
-        "cubic_bezier": [
-          0.362,
-          0.241,
-          0.638,
-          0.759
-        ]
-      },
+      "ease": "linear",
       "keyframes": [
         {
           "ticks": 6000,
@@ -333,6 +317,8 @@
       ]
     },
     "minecraft:visual/sunrise_sunset_color": {
+      "ease": "in_out_sine",
+      "modifier": "override",
       "keyframes": [
         {
           "ticks": 71,
