@@ -80,6 +80,8 @@
       "modifier": "or"
     },
     "minecraft:gameplay/sky_light_level": {
+      "ease": "linear",
+      "modifier": "multiply",
       "keyframes": [
         {
           "ticks": 133,
@@ -97,9 +99,7 @@
           "ticks": 22330,
           "value": 0.26666668
         }
-      ],
-      "ease": "linear",
-      "modifier": "multiply"
+      ]
     },
     "minecraft:gameplay/turtle_egg_hatch_chance": {
       "ease": "constant",
@@ -116,6 +116,7 @@
       "modifier": "maximum"
     },
     "minecraft:visual/cloud_color": {
+      "modifier": "override",
       "keyframes": [
         {
           "ticks": 133,
@@ -133,61 +134,61 @@
           "ticks": 22330,
           "value": -15132378
         }
-      ],
-      "modifier": "override"
+      ]
     },
     "minecraft:visual/cloud_fog_end_distance": {
       "ease": "linear",
+      "modifier": "multiply",
       "keyframes": [
         {
           "ticks": 0,
           "value": 2048
         }
-      ],
-      "modifier": "override"
+      ]
     },
     "minecraft:visual/cloud_height": {
       "ease": "linear",
+      "modifier": "multiply",
       "keyframes": [
         {
           "ticks": 0,
           "value": 192.33
         }
-      ],
-      "modifier": "multiply"
+      ]
     },
     "minecraft:visual/fog_end_distance": {
       "ease": "in_out_sine",
+      "modifier": "multiply",
       "keyframes": [
         {
           "ticks": 0,
           "value": 1024
         }
-      ],
-      "modifier": "override"
+      ]
     },
     "minecraft:visual/fog_start_distance": {
       "ease": "in_out_sine",
+      "modifier": "multiply",
       "keyframes": [
         {
           "ticks": 0,
           "value": 0
         }
-      ],
-      "modifier": "override"
+      ]
     },
     "minecraft:visual/sky_fog_end_distance": {
       "ease": "in_out_sine",
+      "modifier": "multiply",
       "keyframes": [
         {
           "ticks": 0,
           "value": 512
         }
-      ],
-      "modifier": "override"
+      ]
     },
     "minecraft:visual/fog_color": {
       "ease": "in_out_sine",
+      "modifier": "override",
       "keyframes": [
         {
           "ticks": 133,
@@ -205,8 +206,7 @@
           "ticks": 22330,
           "value": "#0f0f16"
         }
-      ],
-      "modifier": "override"
+      ]
     },
     "minecraft:visual/moon_angle": {
       "ease": "linear",
@@ -222,6 +222,7 @@
       ]
     },
     "minecraft:visual/sky_color": {
+      "modifier": "override",
       "keyframes": [
         {
           "ticks": 133,
@@ -239,10 +240,11 @@
           "ticks": 22330,
           "value": "#000000"
         }
-      ],
-      "modifier": "override"
+      ]
     },
     "minecraft:visual/sky_light_color": {
+      "ease": "in_out_sine",
+      "modifier": "override",
       "keyframes": [
         {
           "ticks": 730,
@@ -260,11 +262,11 @@
           "ticks": 22860,
           "value": "#7a7aff"
         }
-      ],
-      "ease": "in_out_sine",
-      "modifier": "override"
+      ]
     },
     "minecraft:visual/sky_light_factor": {
+      "ease": "linear",
+      "modifier": "multiply",
       "keyframes": [
         {
           "ticks": 730,
@@ -282,9 +284,7 @@
           "ticks": 22860,
           "value": 0.24
         }
-      ],
-      "ease": "linear",
-      "modifier": "multiply"
+      ]
     },
     "minecraft:visual/star_angle": {
       "ease": "linear",
@@ -300,6 +300,8 @@
       ]
     },
     "minecraft:visual/star_brightness": {
+      "ease": "in_out_sine",
+      "modifier": "override",
       "keyframes": [
         {
           "ticks": 92,
@@ -349,9 +351,7 @@
           "ticks": 23758,
           "value": 0.101
         }
-      ],
-      "ease": "in_out_sine",
-      "modifier": "override"
+      ]
     },
     "minecraft:visual/sun_angle": {
       "ease": "linear",
