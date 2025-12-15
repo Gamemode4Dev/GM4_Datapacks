@@ -1,3 +1,9 @@
 {
-    "tracks": {}
+    "settings": {
+        "weight": 500,
+        "moon_phase": ["new_moon"],
+        "in_type": "clear",
+        "out_type": "foggy"
+    },
+    "schedule": []
 }

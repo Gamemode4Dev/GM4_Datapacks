@@ -1,0 +1,228 @@
+{
+    "settings": {
+        "weight": 500,
+        "moon_phase": ["new_moon", "full_moon"],
+        "in_type": "clear",
+        "out_type": "foggy"
+    },
+    "schedule": [
+        {
+            "time": 0,
+            "effects": {
+                "visual/sun_angle": 0,
+                "visual/moon_angle": 180,
+                "visual/star_angle": 0,
+                "visual/star_brightness": 0,
+                "visual/sky_light_factor": 1,
+                "visual/sky_light_color": "#fffedd",
+                "visual/sky_color": "#3888f0",
+                "visual/sunrise_sunset_color": "#00ffaa88",
+                "visual/fog_color": "#cbfdf2",
+                "visual/fog_end_distance": 500,
+                "visual/fog_start_distance": 50,
+                "visual/sky_fog_end_distance": 0.25,
+                "visual/cloud_color": "#00ffffff",
+                "visual/cloud_fog_end_distance": 0,
+                "visual/cloud_height": 1.5
+            },
+            "functions": [
+                "weather/rain"
+            ]
+        },
+        {
+            "time": 15000,
+            "effects": {
+                "visual/sunrise_sunset_color": "#00ffaa88"
+            }
+        },
+        {
+            "time": 16000,
+            "effects": {
+                "visual/sky_color": "#3888f0"
+            }
+        },
+        {
+            "time": 18000,
+            "effects": {
+                "visual/star_brightness": 0,
+                "visual/sky_light_color": "#fffedd",
+                "visual/fog_color": "#a0e5e5"
+            }
+        },
+        {
+            "time": 22000,
+            "effects": {
+                "visual/sky_light_factor": 1,
+                "visual/sky_color": "#2c5cb4",
+                "visual/sunrise_sunset_color": "#ffffaa88",
+                "visual/fog_color": "#d19f76"
+            }
+        },
+        {
+            "time": 24000,
+            "effects": {
+                "visual/star_angle": 90,
+                "visual/sky_light_color": "#f86d54",
+                "visual/sunrise_sunset_color": "#ffee8855"
+            }
+        },
+        {
+            "time": 25000,
+            "effects": {
+                "visual/sky_light_factor": 0.8
+            }
+        },
+        {
+            "time": 26000,
+            "effects": {
+                "visual/sky_light_factor": 0.2,
+                "visual/sky_light_color": "#14046b",
+                "visual/sky_color": "#041230",
+                "visual/sunrise_sunset_color": "#002200ff",
+                "visual/fog_color": "#202533"
+            }
+        },
+        {
+            "time": 28000,
+            "effects": {
+                "visual/sun_angle": 105,
+                "visual/star_brightness": 1,
+                "visual/sky_light_factor": 0,
+                "visual/sky_color": "#020918",
+                "visual/fog_color": "#000000"
+            }
+        },
+        {
+            "time": 32000,
+            "effects": {
+                "visual/star_angle": 180,
+                "visual/cloud_height": 2
+            }
+        },
+        {
+            "time": 36000,
+            "effects": {
+                "visual/star_brightness": 1,
+                "visual/fog_end_distance": 500
+            }
+        },
+        {
+            "time": 40000,
+            "effects": {
+                "visual/sky_light_factor": 0,
+                "visual/cloud_color": "#00ffffff",
+                "visual/cloud_fog_end_distance": 0
+            }
+        },
+        {
+            "time": 42000,
+            "effects": {
+                "visual/sky_light_color": "#14046b",
+                "visual/fog_color": "#000000"
+            }
+        },
+        {
+            "time": 44000,
+            "effects": {
+                "visual/sun_angle": 255
+            }
+        },
+        {
+            "time": 45000,
+            "effects": {
+                "visual/sunrise_sunset_color": "#00220055",
+                "visual/fog_start_distance": 50,
+                "visual/sky_fog_end_distance": 0.25,
+                "visual/cloud_color": "#11ff66aa"
+            }
+        },
+        {
+            "time": 46000,
+            "effects": {
+                "visual/sky_light_factor": 0.2,
+                "visual/sky_color": "#020918"
+            }
+        },
+        {
+            "time": 47000,
+            "effects": {
+                "visual/fog_color": "#556572",
+                "visual/cloud_fog_end_distance": 0.5
+            }
+        },
+        {
+            "time": 48000,
+            "effects": {
+                "visual/star_angle": 270,
+                "visual/sunrise_sunset_color": "#ffee8822",
+                "visual/fog_color": "#f8d78e",
+                "visual/fog_end_distance": 200,
+                "visual/fog_start_distance": 0
+            }
+        },
+        {
+            "time": 49000,
+            "effects": {
+                "visual/sky_light_factor": 0.65,
+                "visual/sky_light_color": "#f7ad68"
+            }
+        },
+        {
+            "time": 50000,
+            "effects": {
+                "visual/cloud_color": "#66ff9966"
+            }
+        },
+        {
+            "time": 51000,
+            "effects": {
+                "visual/sky_color": "#315aa5"
+            }
+        },
+        {
+            "time": 52000,
+            "effects": {
+                "visual/star_brightness": 0,
+                "visual/sky_color": "#9ad7fa",
+                "visual/sunrise_sunset_color": "#00ffaa88",
+                "visual/fog_color": "#9ed6d6",
+                "visual/cloud_color": "#55ddddff"
+            }
+        },
+        {
+            "time": 53000,
+            "effects": {
+                "visual/sky_light_factor": 1
+            }
+        },
+        {
+            "time": 54000,
+            "effects": {
+                "visual/sky_light_color": "#c2dee0"
+            }
+        },
+        {
+            "time": 70000,
+            "effects": {
+                "visual/sky_fog_end_distance": 0.1
+            }
+        },
+        {
+            "time": 72000,
+            "effects": {
+                "visual/sun_angle": 360,
+                "visual/star_angle": 360,
+                "visual/sky_light_color": "#e1f0fc",
+                "visual/sky_color": "#76b2d4",
+                "visual/sunrise_sunset_color": "#00ffaa88",
+                "visual/fog_color": "#b9dbd4",
+                "visual/fog_end_distance": 100,
+                "visual/fog_start_distance": -10,
+                "visual/sky_fog_end_distance": 0.1,
+                "visual/cloud_color": "#55ddddff",
+                "visual/cloud_fog_end_distance": 0.05,
+                "visual/cloud_height": 0.6
+            }
+        }
+    ]
+}
