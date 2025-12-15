@@ -6,7 +6,7 @@ from beet import Context, JsonFile, NamespaceFileScope
 from typing import TypedDict, ClassVar, Dict, List, Any
 
 TICK_FACTOR_VANILLA: int = 30
-TICK_OFFSET_VANILLA: int = 12000
+TICK_OFFSET_VANILLA: int = 12000 # <- set to 30, we don't offset
 TICK_FACTOR_CUSTOM: int = 300
 FOLDER_PATH: str = "gm4_timelines/raw_data/"
 

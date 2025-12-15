@@ -1,7 +1,7 @@
 {
     "settings": {
         "weight": 500,
-        "moon_phase": "full_moon",
+        "moon_phase": ["full_moon"],
         "in_type": "clear",
         "out_type": "foggy"
     },
@@ -11,7 +11,10 @@
             "effects": {
                 "audio/firefly_bush_sounds": true,
                 "visual/star_brightness": 0.7
-            }
+            },
+            "functions": [
+                "weather/rain"
+            ]
         },
         {
             "time": 1800,
