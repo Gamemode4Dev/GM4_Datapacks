@@ -5,11 +5,11 @@ from pathlib import Path
 import json
 import copy
 
-TICK_FACTOR: int = 3
-TICK_OFFSET: int = -6000
-DAY_DURATION_TICKS = 24000
+TICK_FACTOR: int = 1
+TICK_OFFSET: int = 0
+DAY_DURATION_TICKS: int = 24000
 FOLDER_PATH: Path = Path("gm4_timelines/raw_data")
-SLIME_VALUES = {
+SLIME_VALUES: Dict[str, float] = {
     "full_moon": 0.5,
     "waning_gibbous": 0.375,
     "third_quarter": 0.25,
@@ -29,9 +29,9 @@ class Keyframe(BaseModel):
     value: Any
 
 class Track(BaseModel):
-    keyframes: List[Keyframe] = []
     modifier: Optional[str] = None
     ease: Optional[Any] = None
+    keyframes: List[Keyframe] = []
 
 class TimelineData(BaseModel):
     period_ticks: int
@@ -59,21 +59,43 @@ def beet_default(ctx: Context) -> None:
     # We register Timeline to Beet here since it doesn't support it yet, when it does this can be removed
     ctx.data.extend_namespace += [Timeline]
 
-    vanilla_folder = FOLDER_PATH / "vanilla"
+    default_file = FOLDER_PATH / "default.json"
 
-    for file_path in vanilla_folder.glob("*.json"):
-        with file_path.open("r", encoding="utf-8") as f:
-            data_dict: Dict[str, Any] = json.load(f)
-        data = TimelineData(**data_dict)
+    with default_file.open("r", encoding="utf-8") as f:
+        data_dict = json.load(f)
+    data = TimelineData(**data_dict)
 
-        # factor and offset the ticks so it matches the new daytime
-        data = factor_ticks(data)
+    # factor and offset the ticks so it matches the new daytime
+    # data = factor_ticks(data)
 
-        file_name = file_path.stem
-        if file_name == "day":
-            data = register_days(ctx, data)
+    data = register_days(ctx, data)
 
-        ctx.data[f"minecraft:{file_name}"] = Timeline(data.model_dump())
+    data = remove_null_entries(data)
+
+    ctx.data["minecraft:day"] = Timeline(data.model_dump())
+
+
+
+def remove_null_entries(data: TimelineData) -> TimelineData:
+    """
+    Remove 'modifier' and/or 'ease' keys from each track
+    if their value is null.
+
+    Args:
+        data: Timeline data whose entries will be removed.
+
+    Returns:
+        modified TimelineData instance.
+    """
+    result = copy.deepcopy(data)
+
+    for _, track_data in result.tracks.items():
+        if getattr(track_data, "modifier", None) is None:
+            delattr(track_data, "modifier")
+        if getattr(track_data, "ease", None) is None:
+            delattr(track_data, "ease")
+
+    return result
 
 
 
@@ -90,16 +112,15 @@ def factor_ticks(data: TimelineData) -> TimelineData:
         TimelineData instance with modified tick values.
     """
     factored_data = copy.deepcopy(data)
-    period = factored_data.period_ticks
 
     # offset and scale the ticks
     for track in factored_data.tracks.values():
         for kf in track.keyframes:
-            kf.ticks = ((kf.ticks + TICK_OFFSET) % period) * TICK_FACTOR
+            kf.ticks = ((kf.ticks + TICK_OFFSET) % DAY_DURATION_TICKS) * TICK_FACTOR
         track.keyframes.sort(key=lambda k: k.ticks)
 
     # scale the period
-    factored_data.period_ticks = period * TICK_FACTOR
+    factored_data.period_ticks = DAY_DURATION_TICKS * TICK_FACTOR
 
     return factored_data
 

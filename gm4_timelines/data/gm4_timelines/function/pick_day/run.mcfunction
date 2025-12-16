@@ -24,4 +24,4 @@ execute if data storage gm4_timelines:temp picked_day{moon_phase:"waxing_gibbous
 data modify storage gm4_timelines:data last_day.out_type set from storage gm4_timelines:temp picked_day.out_type
 
 function gm4_timelines:pick_day/eval_day with storage gm4_timelines:temp picked_day
-scoreboard players set $daytime_left gm4_timelines.data 72000
+execute store result score $daytime_left gm4_timelines.data run data get storage gm4_timelines:data day_duration
