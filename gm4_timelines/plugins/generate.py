@@ -72,6 +72,8 @@ def beet_default(ctx: Context) -> None:
 
     data = remove_null_entries(data)
 
+    data = shift_ticks(data, 6000)
+
     ctx.data["minecraft:day"] = Timeline(data.model_dump())
 
 
@@ -99,28 +101,28 @@ def remove_null_entries(data: TimelineData) -> TimelineData:
 
 
 
-def factor_ticks(data: TimelineData) -> TimelineData:
+def shift_ticks(data: TimelineData, shift: int) -> TimelineData:
     """
-    Each keyframe tick is shifted by a fixed offset, wrapped to the original
-    period, and then multiplied by the tick factor. The timeline period
-    itself is also scaled accordingly.
+    Each keyframe tick is shifted by a fixed offset, the timeline period
+    itself is also increased accordingly. This is to make sure day definitions
+    start at noon (aka daytime = 6000)
 
     Args:
         data: Timeline data whose ticks will be modified.
+        shift: ticks to shift ticks and period by
 
     Returns:
-        TimelineData instance with modified tick values.
+        TimelineData instance with shifted tick values.
     """
     factored_data = copy.deepcopy(data)
 
-    # offset and scale the ticks
+    # shift the ticks
     for track in factored_data.tracks.values():
         for kf in track.keyframes:
-            kf.ticks = ((kf.ticks + TICK_OFFSET) % DAY_DURATION_TICKS) * TICK_FACTOR
-        track.keyframes.sort(key=lambda k: k.ticks)
+            kf.ticks += shift
 
-    # scale the period
-    factored_data.period_ticks = DAY_DURATION_TICKS * TICK_FACTOR
+    # shift the period
+    factored_data.period_ticks += shift
 
     return factored_data
 
@@ -167,7 +169,7 @@ def process_day_files(
     Returns:
         TimelineData instance representing the concatenated day timeline.
     """
-    function_data: List[Dict[str, Any]] = []
+    function_data: dict[str, Any] = {}
     full_timeline = TimelineData(period_ticks=0, tracks={})
 
     # loop over day definitions
@@ -179,14 +181,16 @@ def process_day_files(
         # loop over supported moon phases
         moon_phases = day_data.settings.get("moon_phase", [])
         for moon_phase in moon_phases:
+
             day_build, functions = register_day(default_data, day_data, moon_phase)
+
             full_timeline = append_to_timeline(full_timeline, day_build)
 
-            function_data.append({
-                "moon_phase": moon_phase,
-                "in_type": day_data.settings['in_type'],
-                "out_type": day_data.settings['out_type'],
-                "weight": day_data.settings['weight'],
+            function_moon_phase = function_data.setdefault(moon_phase, {})
+            function_entries = function_moon_phase.setdefault(day_data.settings["in_type"], [])
+            function_entries.append({
+                "out_type": day_data.settings["out_type"],
+                "weight": day_data.settings["weight"],
                 "start_time": full_timeline.period_ticks,
                 "functions": functions,
                 "dev": is_dev
@@ -315,3 +319,30 @@ def append_to_timeline(full_timeline: TimelineData, new_data: TimelineData) -> T
             )
 
     return full_timeline
+
+
+## This isn't used rn, but just kept in case
+# def factor_ticks(data: TimelineData) -> TimelineData:
+#     """
+#     Each keyframe tick is shifted by a fixed offset, wrapped to the original
+#     period, and then multiplied by the tick factor. The timeline period
+#     itself is also scaled accordingly.
+
+#     Args:
+#         data: Timeline data whose ticks will be modified.
+
+#     Returns:
+#         TimelineData instance with modified tick values.
+#     """
+#     factored_data = copy.deepcopy(data)
+
+#     # offset and scale the ticks
+#     for track in factored_data.tracks.values():
+#         for kf in track.keyframes:
+#             kf.ticks = ((kf.ticks + TICK_OFFSET) % DAY_DURATION_TICKS) * TICK_FACTOR
+#         track.keyframes.sort(key=lambda k: k.ticks)
+
+#     # scale the period
+#     factored_data.period_ticks = DAY_DURATION_TICKS * TICK_FACTOR
+
+#     return factored_data
