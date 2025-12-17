@@ -1,0 +1,2 @@
+
+$time set $(time)

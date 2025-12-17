@@ -5,8 +5,7 @@ from pathlib import Path
 import json
 import copy
 
-TICK_FACTOR: int = 1
-TICK_OFFSET: int = 0
+TICK_OFFSET: int = 6000
 DAY_DURATION_TICKS: int = 24000
 FOLDER_PATH: Path = Path("gm4_timelines/raw_data")
 SLIME_VALUES: Dict[str, float] = {
@@ -67,12 +66,10 @@ def beet_default(ctx: Context) -> None:
 
     # factor and offset the ticks so it matches the new daytime
     # data = factor_ticks(data)
-
+    
     data = register_days(ctx, data)
 
     data = remove_null_entries(data)
-
-    data = shift_ticks(data, 6000)
 
     ctx.data["minecraft:day"] = Timeline(data.model_dump())
 
@@ -101,33 +98,6 @@ def remove_null_entries(data: TimelineData) -> TimelineData:
 
 
 
-def shift_ticks(data: TimelineData, shift: int) -> TimelineData:
-    """
-    Each keyframe tick is shifted by a fixed offset, the timeline period
-    itself is also increased accordingly. This is to make sure day definitions
-    start at noon (aka daytime = 6000)
-
-    Args:
-        data: Timeline data whose ticks will be modified.
-        shift: ticks to shift ticks and period by
-
-    Returns:
-        TimelineData instance with shifted tick values.
-    """
-    factored_data = copy.deepcopy(data)
-
-    # shift the ticks
-    for track in factored_data.tracks.values():
-        for kf in track.keyframes:
-            kf.ticks += shift
-
-    # shift the period
-    factored_data.period_ticks += shift
-
-    return factored_data
-
-
-
 def register_days(ctx: Context, data: TimelineData) -> TimelineData:
     """
     Load day definition files from either dev or days folder. Build combined
@@ -143,7 +113,7 @@ def register_days(ctx: Context, data: TimelineData) -> TimelineData:
     dev_files = list(dev_folder.glob("*.json"))
 
     if dev_files:
-        return process_day_files(ctx, dev_folder, data, is_dev=True)
+        return process_day_files(ctx, dev_folder, data)
     else:
         days_folder = FOLDER_PATH / "days"
         return process_day_files(ctx, days_folder, data)
@@ -153,8 +123,7 @@ def register_days(ctx: Context, data: TimelineData) -> TimelineData:
 def process_day_files(
         ctx: Context,
         folder_path: Path,
-        default_data: TimelineData,
-        is_dev: bool = False
+        default_data: TimelineData
         ) -> TimelineData:
     """
     Load each day definition from provided folder and build a timeline for them.
@@ -164,13 +133,14 @@ def process_day_files(
     Args:
         folder_path: Directory containing day definition JSON files.
         default_data: Default timeline used as a base for each day.
-        is_dev (default = False): Whether the day data comes from the development folder.
 
     Returns:
         TimelineData instance representing the concatenated day timeline.
     """
     function_data: dict[str, Any] = {}
-    full_timeline = TimelineData(period_ticks=0, tracks={})
+
+    # start with day 0 (first 600 ticks)
+    full_timeline = build_day_zero(default_data)
 
     # loop over day definitions
     for file_path in folder_path.glob("*.json"):
@@ -189,24 +159,60 @@ def process_day_files(
             function_moon_phase = function_data.setdefault(moon_phase, {})
             function_entries = function_moon_phase.setdefault(day_data.settings["in_type"], [])
             function_entries.append({
+                "moon_phase": moon_phase,
+                "in_type": day_data.settings["in_type"],
                 "out_type": day_data.settings["out_type"],
                 "weight": day_data.settings["weight"],
                 "start_time": full_timeline.period_ticks,
-                "functions": functions,
-                "dev": is_dev
+                "functions": functions
             })
 
             full_timeline.period_ticks += day_build.period_ticks
 
     # create function
-    day_duration = DAY_DURATION_TICKS * TICK_FACTOR
+    func: dict[str, Any] = {"duration":DAY_DURATION_TICKS,"offset":TICK_OFFSET,"registry":function_data}
     ctx.data["gm4_timelines:register/days"] = Function([
         "# register days",
         "# generated from generate.py",
         "",
-        f'data modify storage gm4_timelines:data day_duration set value {day_duration}',
-        f'data modify storage gm4_timelines:data day_registry set value {function_data}',
+        f'data modify storage gm4_timelines:data day_data set value {func}',
     ])
+
+    return full_timeline
+
+
+
+def build_day_zero(default_data: TimelineData) -> TimelineData:
+    """
+    Build the first ticks from daytime = 0 to daytime = TICK_OFFSET, this uses the
+    default day
+
+    Args:
+        default_data: Default timeline used as a base for the first few ticks.
+
+    Returns:
+        TimelineData instance representing the day timeline.
+    """
+    day_zero = copy.deepcopy(default_data)
+    start_tick = DAY_DURATION_TICKS - TICK_OFFSET
+
+    # get only the last TICK_OFFSET ticks from the default timeline
+    for track in day_zero.tracks.values():
+        new_keyframes: list[Keyframe] = []
+
+        for kf in track.keyframes:
+            if kf.ticks >= start_tick:
+                new_keyframes.append(
+                    Keyframe(
+                        ticks=kf.ticks - start_tick,
+                        value=copy.deepcopy(kf.value),
+                    )
+                )
+        track.keyframes = new_keyframes
+
+    # add this start to the full_timeline
+    full_timeline = append_to_timeline(TimelineData(period_ticks=0, tracks={}),day_zero)
+    full_timeline.period_ticks += TICK_OFFSET
 
     return full_timeline
 
@@ -319,30 +325,3 @@ def append_to_timeline(full_timeline: TimelineData, new_data: TimelineData) -> T
             )
 
     return full_timeline
-
-
-## This isn't used rn, but just kept in case
-# def factor_ticks(data: TimelineData) -> TimelineData:
-#     """
-#     Each keyframe tick is shifted by a fixed offset, wrapped to the original
-#     period, and then multiplied by the tick factor. The timeline period
-#     itself is also scaled accordingly.
-
-#     Args:
-#         data: Timeline data whose ticks will be modified.
-
-#     Returns:
-#         TimelineData instance with modified tick values.
-#     """
-#     factored_data = copy.deepcopy(data)
-
-#     # offset and scale the ticks
-#     for track in factored_data.tracks.values():
-#         for kf in track.keyframes:
-#             kf.ticks = ((kf.ticks + TICK_OFFSET) % DAY_DURATION_TICKS) * TICK_FACTOR
-#         track.keyframes.sort(key=lambda k: k.ticks)
-
-#     # scale the period
-#     factored_data.period_ticks = DAY_DURATION_TICKS * TICK_FACTOR
-
-#     return factored_data

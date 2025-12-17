@@ -1,27 +1,33 @@
 
-scoreboard players set $previous_time gm4_timelines.data 0
 
-scoreboard players set $total_weight gm4_timelines.data 0
+# check how the days have changed
+scoreboard players operation $index_change gm4_timelines.data = $day.current gm4_timelines.data
+scoreboard players operation $index_change gm4_timelines.data -= $day.active gm4_timelines.data
 
-data modify storage gm4_timelines:temp possible_days set value []
-data modify storage gm4_timelines:temp all_days set from storage gm4_timelines:data day_registry
+scoreboard players operation $day_index gm4_timelines.data = $day.game gm4_timelines.data
+scoreboard players operation $day_index gm4_timelines.data += $index_change gm4_timelines.data
 
-function gm4_timelines:pick_day/loop
+# check what day index should be used
+execute store result storage gm4_timelines:temp day.index int 1 run scoreboard players get $day_index gm4_timelines.data
+data remove storage gm4_timelines:data active_day
+function gm4_timelines:pick_day/eval_day_from_dayline with storage gm4_timelines:temp day
 
-# TODO: pick properly
-data modify storage gm4_timelines:temp picked_day set from storage gm4_timelines:temp possible_days[0]
-execute unless data storage gm4_timelines:temp possible_days[0] run function gm4_timelines:pick_day/no_valid_day
+# if that index does not yet exist try to extend the dayline to it
+execute unless data storage gm4_timelines:data active_day run function gm4_timelines:pick_day/build_dayline/run
 
-# TODO: do this better
-execute if data storage gm4_timelines:temp picked_day{moon_phase:"full_moon"} run data modify storage gm4_timelines:data last_day.next_moon_phase set value "waning_gibbous"
-execute if data storage gm4_timelines:temp picked_day{moon_phase:"waning_gibbous"} run data modify storage gm4_timelines:data last_day.next_moon_phase set value "third_quarter"
-execute if data storage gm4_timelines:temp picked_day{moon_phase:"third_quarter"} run data modify storage gm4_timelines:data last_day.next_moon_phase set value "waning_crescent"
-execute if data storage gm4_timelines:temp picked_day{moon_phase:"waning_crescent"} run data modify storage gm4_timelines:data last_day.next_moon_phase set value "new_moon"
-execute if data storage gm4_timelines:temp picked_day{moon_phase:"new_moon"} run data modify storage gm4_timelines:data last_day.next_moon_phase set value "waxing_crescent"
-execute if data storage gm4_timelines:temp picked_day{moon_phase:"waxing_crescent"} run data modify storage gm4_timelines:data last_day.next_moon_phase set value "first_quarter"
-execute if data storage gm4_timelines:temp picked_day{moon_phase:"first_quarter"} run data modify storage gm4_timelines:data last_day.next_moon_phase set value "waxing_gibbous"
-execute if data storage gm4_timelines:temp picked_day{moon_phase:"waxing_gibbous"} run data modify storage gm4_timelines:data last_day.next_moon_phase set value "full_moon"
-data modify storage gm4_timelines:data last_day.out_type set from storage gm4_timelines:temp picked_day.out_type
+# move time as needed
+execute store result score $set_time gm4_timelines.data run data get storage gm4_timelines:data active_day.start_time
+scoreboard players operation $add_time gm4_timelines.data = $daytime.real gm4_timelines.data
+scoreboard players operation $add_time gm4_timelines.data -= #day.offset gm4_timelines.data
+scoreboard players operation $add_time gm4_timelines.data %= #day.duration gm4_timelines.data
+scoreboard players operation $set_time gm4_timelines.data += $add_time gm4_timelines.data
+execute store result storage gm4_timelines:temp change.time int 1 run scoreboard players get $set_time gm4_timelines.data
+function gm4_timelines:pick_day/eval_time with storage gm4_timelines:temp change
+data remove storage gm4_timelines:temp change
 
-function gm4_timelines:pick_day/eval_day with storage gm4_timelines:temp picked_day
-execute store result score $daytime_left gm4_timelines.data run data get storage gm4_timelines:data day_duration
+# mark this as the active day
+execute store result score $day.active gm4_timelines.data run data get storage gm4_timelines:data active_day.start_time
+scoreboard players operation $day.active gm4_timelines.data -= #day.offset gm4_timelines.data
+scoreboard players operation $day.active gm4_timelines.data /= #day.duration gm4_timelines.data
+# move the game day so we remember what day we're actually at
+scoreboard players operation $day.game gm4_timelines.data += $index_change gm4_timelines.data

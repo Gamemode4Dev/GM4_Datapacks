@@ -1,16 +1,14 @@
-schedule function gm4_timelines:main 16t
+schedule function gm4_timelines:main 1t
 
-execute store result score $daytime gm4_timelines.data run time query daytime
-execute store result score $day gm4_timelines.data run time query day
-scoreboard players operation $current_time gm4_timelines.data = $day gm4_timelines.data
-scoreboard players operation $current_time gm4_timelines.data *= #24000 gm4_timelines.data
-scoreboard players operation $current_time gm4_timelines.data += $daytime gm4_timelines.data
+execute store result score $day.real gm4_timelines.data run time query day
+execute store result score $daytime.real gm4_timelines.data run time query daytime
 
-scoreboard players operation $time_passed gm4_timelines.data = $current_time gm4_timelines.data
-scoreboard players operation $time_passed gm4_timelines.data -= $previous_time gm4_timelines.data
+scoreboard players operation $day.current gm4_timelines.data = $day.real gm4_timelines.data
+scoreboard players operation $day.current gm4_timelines.data *= #24000 gm4_timelines.data
+scoreboard players operation $day.current gm4_timelines.data += $daytime.real gm4_timelines.data
+scoreboard players operation $day.current gm4_timelines.data -= #day.offset gm4_timelines.data
+scoreboard players operation $daytime.current gm4_timelines.data = $day.current gm4_timelines.data
+scoreboard players operation $day.current gm4_timelines.data /= #day.duration gm4_timelines.data
+scoreboard players operation $daytime.current gm4_timelines.data %= #day.duration gm4_timelines.data
 
-scoreboard players operation $previous_time gm4_timelines.data = $current_time gm4_timelines.data
-
-scoreboard players operation $daytime_left gm4_timelines.data -= $time_passed gm4_timelines.data
-
-execute unless score $daytime_left gm4_timelines.data matches 1.. run function gm4_timelines:pick_day/run
+execute unless score $day.active gm4_timelines.data = $day.current gm4_timelines.data run function gm4_timelines:pick_day/run
