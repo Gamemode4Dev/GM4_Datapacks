@@ -54,7 +54,7 @@ from mecha import (
     rule,
 )
 from nbtlib import String  # type: ignore ; nbtlib missing stubfile
-from pydantic import BaseModel, BeforeValidator, Field, TypeAdapter, ValidationError, ValidationInfo, field_validator
+from pydantic import BaseModel, Field, TypeAdapter, ValidationError, ValidationInfo, field_validator
 from tokenstream import set_location
 
 from gm4.utils import (
@@ -76,10 +76,10 @@ class ModelData(BaseModel):
     """A complete config for a single model"""
     item: ListOption[str]
     reference: str
-    model: 'MapOption[str]' = Field(default="", validate_default=True) # defaults to same value as 'reference'      #type:ignore ; the validator handles the default value
-    template: Annotated[str | TemplateOptions, TemplateOptionsValidator] = Field(default="custom", validate_default=True)
-    transforms: Optional[list[Annotated[str | TransformOptions, TransformOptionsValidator]]] = None
-    textures: MapOption[str] = Field(default_factory=list, validate_default=True) # defaults to same value as reference         #type:ignore ; the validator handles the default value
+    model: 'MapOption[str]' = Field(default="", validate_default=True)
+    template: TemplateOptions = Field(default="custom", validate_default=True)
+    transforms: list[TransformOptions] = Field(default_factory=list, validate_default=True)
+    textures: MapOption[str] = Field(default_factory=list, validate_default=True)
     base_model: Optional[JsonType] = None
 
     @field_validator('model', mode="before")
@@ -96,6 +96,21 @@ class ModelData(BaseModel):
         if isinstance(model, dict) and set(model.keys())!=set(info.data['item'].entries()): # make sure the map keys match the item types       # type: ignore ; model is Unknown type
             raise ValueError("dict keys do not match values in 'item'")
         return model # model is already a mapped dict, of the same length as item      # type: ignore
+
+    @field_validator("template", mode="before")
+    @classmethod
+    def template_validator(cls, template: Any) -> TemplateOptions:
+        return downcast(TemplateOptions, "name", template)
+
+    @field_validator("transforms", mode="before")
+    @classmethod
+    def transforms_validator(cls, transforms: Any) -> list[TransformOptions]:
+        if not transforms:
+            return []
+        return [
+            downcast(TransformOptions, "name", transform)
+            for transform in transforms
+        ]
 
     @field_validator('textures', mode="before")
     @classmethod
@@ -124,7 +139,7 @@ class ModelData(BaseModel):
                 ret_dict["textures"] = [add_namespace(t, namespace) for t in self.textures.entries()]
             else: # isinstance(self.textures.root, dict):
                 ret_dict["textures"] = {k: add_namespace(v, namespace) for k, v in self.textures.items()}
-        ret_dict["template"] = self.template.add_namespace(namespace)  # type: ignore
+        ret_dict["template"] = self.template.add_namespace(namespace)
         return ModelData.model_validate(ret_dict)
 
 class NestedModelData(BaseModel):
@@ -155,8 +170,13 @@ class NestedModelData(BaseModel):
 class GuiFont(BaseModel):
     """config for a single container gui using custom fonts"""
     translation: str
-    container: Annotated[str | ContainerGuiOptions, ContainerGuiOptionsValidator]
+    container: ContainerGuiOptions = Field(validate_default=True)
     texture: str
+
+    @field_validator("container", mode="before")
+    @classmethod
+    def container_validator(cls, container: Any) -> ContainerGuiOptions:
+        return downcast(ContainerGuiOptions, "container", container)
 
     def add_namespace(self, namespace: str) -> 'GuiFont':
         """returns a new GuiFont with the texture field namespaced"""
@@ -177,7 +197,7 @@ class FlatResourcePackOptions(BaseModel):
 
     def template_mutations(self):
         for m in self.model_data:
-            m.template.mutate_config(m)  # type: ignore
+            m.template.mutate_config(m)
 
 class ResourcePackOptions(PluginOptions, extra="ignore"):
     model_data: list[NestedModelData] = []
@@ -210,8 +230,6 @@ def downcast[T](base: type[T], discriminator: str, x: Any) -> Any:
         Annotated[Union[*subclasses.values()], Field(discriminator=discriminator)]
     ).validate_python({discriminator: x} if isinstance(x, str) else x)
 
-TemplateOptionsValidator = BeforeValidator(lambda x: downcast(TemplateOptions, "name", x))
-
 class TemplateOptions(BaseModel, extra="allow"):
     """A pydantic model to extend for configured model templates, which generate model files for common"""
     default_transforms: ClassVar[list['TransformOptions']] = []
@@ -224,13 +242,12 @@ class TemplateOptions(BaseModel, extra="allow"):
         """Processes the template, and applies transforms"""
         if self.texture_map and config.textures and isinstance(config.textures.root, list):
             config = ModelData(**config.model_dump(serialize_as_any=True) | {"textures": dict(zip(self.texture_map, config.textures.entries()))})
-        for output_model in self.create_models(config, models_container): # for each returned pointer, add transforms as needed
-            if self.default_transforms:
-                for transform in self.default_transforms:
-                    transform.apply_transform(output_model)
-            if config.transforms:
-                for transform in config.transforms:
-                    transform.apply_transform(output_model)  # type: ignore
+        for output_model in self.create_models(config, models_container):
+            # for each returned pointer, add transforms as needed
+            for transform in self.default_transforms:
+                transform.apply_transform(output_model)
+            for transform in config.transforms:
+                transform.apply_transform(output_model)
 
     def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
         """Overridden to create and mount the model object, and return pointers to them"""
@@ -248,8 +265,6 @@ class TemplateOptions(BaseModel, extra="allow"):
         """Overridden to let a template mutate/mangle root level fields of ModelData"""
         pass
 
-TransformOptionsValidator = BeforeValidator(lambda x: downcast(TransformOptions, "name", x))
-
 class TransformOptions(BaseModel, extra="allow"):
     """A pydantic model to extend for configured model transformers, which add model offset/scale ect.. to model files"""
 
@@ -259,8 +274,6 @@ class TransformOptions(BaseModel, extra="allow"):
     def apply_transform(self, model: Model) -> None:
         """Modifies the given model, applying transformation data to the display compound"""
         raise NotImplementedError()
-
-ContainerGuiOptionsValidator = BeforeValidator(lambda x: downcast(ContainerGuiOptions, "container", x))
 
 class ContainerGuiOptions(BaseModel, extra="allow"):
     """a pydantic model to extend for container gui fonts"""
@@ -457,7 +470,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             itemdef_entries: list[Any] = new_itemdef["model"]["entries"]
 
             for model in models:
-                if not (m:=model.template.get_item_def_entry(model, item_id)):  # type: ignore
+                if not (m:=model.template.get_item_def_entry(model, item_id)):
                     # no special handling, just point to model file by name
                     m = model.model[item_id] # model string for this particular item id
                     model_json: JsonType = {
@@ -468,7 +481,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                     model_json = m
                 
                 if model.base_model:
-                    model_json.update(model.base_model) # type: ignore
+                    model_json.update(model.base_model)
             
                 itemdef_entries.append({
                     "threshold": self.cmd_prefix+self.retrieve_index(model.reference)[0],
@@ -578,7 +591,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
         """Create individual models for each item/block according to its config"""
         for model in self.opts.model_data:
             # generate model and mount to the pack
-            model.template.generate_model(model, self.ctx.assets.models)  # type: ignore
+            model.template.generate_model(model, self.ctx.assets.models)
 
     def lint_model_textures(self):
         """Checks model files to ensure referenced textures exist"""
@@ -592,7 +605,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     #== Font-Gui file generation ==#
     def generate_gui_fonts(self):
         for gui in self.opts.gui_fonts:
-            translation, providers = gui.container.process(gui, self.ctx.cache["gui_font_counter"])  # type: ignore
+            translation, providers = gui.container.process(gui, self.ctx.cache["gui_font_counter"])
             self.ctx.generate("gm4:en_us", merge=Language({
                 gui.translation: translation
             }))
@@ -984,7 +997,7 @@ class ItemDisplayModel(TransformOptions):
     def apply_transform(self, model: Model):
         model.data.setdefault("display", {})[self.display] = {
             "rotation": list(-1*np.array(self.rotation)),
-            "translation": list(16 * (np.array([-0.5,0.5,-0.5])+(np.array(self.origin)*np.array([1,-1,1]))-np.array(self.translation)) / np.array(self.scale)), # type: ignore ; self.origin*[1,-1,1] is faulty interpreted by type checker as ndarray[bool_]
+            "translation": list(16 * (np.array([-0.5,0.5,-0.5])+(np.array(self.origin)*np.array([1,-1,1]))-np.array(self.translation)) / np.array(self.scale)),
             "scale": list(1/np.array(self.scale)*1.006)
         }
 
