@@ -108,10 +108,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@v3
-        with:
-          version: '0.5.4'
-          enable-cache: true
+        uses: astral-sh/setup-uv@v7
 
       - name: Build all modules for tests
         run: uv run beet -p beet-test.yaml -l ${{ env.LOG_LEVEL }} build
