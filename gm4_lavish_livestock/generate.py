@@ -14,7 +14,7 @@ def beet_default(ctx: Context):
     # prepare list of supported entities
     entity_ids = [e.get('entity_id', "").removeprefix('minecraft:').strip() for e in csv]
 
-    # for each wood type in the vanilla doors tag, render a copy of the "templates" directory with the appropriate wood-type
+    # for each supported entity, render a copy of the "templates" directory with the appropriate entity-id
     for entity in entity_ids:
         subproject_config = {
             "data_pack": {

@@ -4,4 +4,4 @@ Selectively breed your livestock for increased yields! Commercialize your farmin
 
 ### Features
 - Breeding livestock may result in offspring that is abnormally large
-- Larger individuals drop more loot
+- Larger livestock drops more loot
