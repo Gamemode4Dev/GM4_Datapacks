@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:context",
+                    "target": "this"
+                },
+                "score": "gm4_lavish_livestock_size",
+                "scale": 2.5
+            },
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "value": "minecraft:entities/{{ entity_id }}"
+                }
+            ]
+        }
+    ],
+    "random_sequence": "minecraft:entities/{{ entity_id }}"
+}
