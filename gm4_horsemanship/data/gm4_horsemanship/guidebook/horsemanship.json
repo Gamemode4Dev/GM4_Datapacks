@@ -1,0 +1,60 @@
+{
+  "id": "horsemanship",
+  "name": "Horsemanship",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:saddle"
+  },
+  "criteria": {
+    "ride_horse": {
+      "trigger": "minecraft:started_riding",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "vehicle": {
+                "type": "#gm4_horsemanship:trainable",
+                "nbt": "{Tags:[\"gm4_horse\"]}"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "ride_horse"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.horsemanship.description",
+            "fallback": "Horses can level up, indicated by their amount of hearts. Horses start at 5 hearts and will gain 1 for every level, up to a total of 20.\n\nWearing Frost Walker will also apply to any Horse you ride."
+          }
+        ],
+        [
+          {
+            "translate": "text.gm4.guidebook.horsemanship.description_2",
+            "fallback": "A pegasuit allows your Horse to fly by looking up or down while riding."
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_horsemanship:horse_wings"
+          }
+        ]
+      ]
+    }
+  ]
+}
