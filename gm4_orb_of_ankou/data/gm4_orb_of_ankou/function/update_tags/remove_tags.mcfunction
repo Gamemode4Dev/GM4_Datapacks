@@ -31,6 +31,7 @@ tag @s remove gm4_pneuma_soaring
 tag @s remove gm4_pneuma_striding
 tag @s remove gm4_pneuma_synergetic
 tag @s remove gm4_pneuma_tranquilizing
+tag @s remove gm4_pneuma_debilitate
 tag @s remove gm4_pneuma_vanishing
 tag @s remove gm4_pneuma_volatile
 tag @s remove gm4_pneuma_withering
