@@ -1,5 +1,5 @@
 {
-  "last_commit": "6a71b61ffa87499a7bb959a37d956a61a09615ad",
+  "last_commit": "dc659e39063f57381fb15d0a62acb34606a4571a",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1527,6 +1527,41 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "ljOfYHJv",
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_lavish_livestock",
+      "name": "Lavish Livestock",
+      "version": "1.0.0",
+      "hash": "ba4677cff697ea66aa14582373607d6ba29d7dfe",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ]
+      },
+      "requires": [],
+      "description": "Selectively breed your livestock for increased yields! Commercialize your farming!",
+      "recommends": [
+        "gm4_pig_tractors",
+        "metallurgy"
+      ],
+      "minecraft": [
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8",
+        "1.21.9",
+        "1.21.10",
+        "1.21.11"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2025-12-20",
+      "modrinth_id": null,
       "smithed_link": null,
       "pmc_link": null
     },
@@ -3540,8 +3575,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.18",
-      "hash": "fa3d6f5a9beb356768f20061ebf8a374051761de",
+      "version": "1.4.19",
+      "hash": "bfee3d19a9d7b3c401e59310be998b1262240f21",
       "video_link": "",
       "wiki_link": "",
       "credits": {
