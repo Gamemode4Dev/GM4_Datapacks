@@ -1,0 +1,32 @@
+{
+  "values": [
+    {"id": "copper_axe", "required": false},
+    {"id": "copper_pickaxe", "required": false},
+    {"id": "copper_shovel", "required": false},
+    {"id": "copper_sword", "required": false},
+    "diamond_axe",
+    "diamond_pickaxe",
+    "diamond_shovel",
+    "diamond_sword",
+    "golden_axe",
+    "golden_pickaxe",
+    "golden_shovel",
+    "golden_sword",
+    "iron_axe",
+    "iron_pickaxe",
+    "iron_shovel",
+    "iron_sword",
+    "netherite_axe",
+    "netherite_pickaxe",
+    "netherite_shovel",
+    "netherite_sword",
+    "stone_axe",
+    "stone_pickaxe",
+    "stone_shovel",
+    "stone_sword",
+    "wooden_axe",
+    "wooden_pickaxe",
+    "wooden_shovel",
+    "wooden_sword"
+  ]
+}

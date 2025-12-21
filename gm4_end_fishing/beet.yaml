@@ -55,10 +55,11 @@ meta:
       description: Catch rare loot by fishing in the end void! The void holds many riches, from End City loot and Elytra to weapons that once belonged to explorers time forgot, collect them all!
       recommended:
         - gm4_resource_pack
+        - gm4_reeling_rods
+        - gm4_live_catch
       notes: []
     modrinth:
       project_id: BbEwao9o
-    video: null
     wiki: https://wiki.gm4.co/wiki/End_Fishing
     credits:
       Creator:

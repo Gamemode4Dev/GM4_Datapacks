@@ -1,0 +1,46 @@
+key,en_us
+advancement.gm4.monsters_unbound.elite_kill.title,Elite Hunter
+advancement.gm4.monsters_unbound.elite_kill.description,Kill any Elite monster
+advancement.gm4.monsters_unbound.elite_kill_all.title,Elites Hunted
+advancement.gm4.monsters_unbound.elite_kill_all.description,Kill one of every Elite monster
+item.gm4.monsters_unbound.zombie_spore,Zombie Spore
+text.gm4.monsters_unbound.elite_name.glacial,Glacial 
+text.gm4.monsters_unbound.elite_name.slate,Slate 
+text.gm4.monsters_unbound.elite_name.blazing,Blazing 
+text.gm4.monsters_unbound.elite_name.zephyr,Zephyr 
+text.gm4.monsters_unbound.elite_name.gargantuan,Gargantuan 
+text.gm4.monsters_unbound.elite_name.vorpal,Vorpal 
+text.gm4.monsters_unbound.elite_name.splitting,Splitting 
+text.gm4.monsters_unbound.elite_name.split,Split 
+text.gm4.monsters_unbound.elite_name.volatile,Volatile 
+text.gm4.monsters_unbound.elite_name.pearlescent,Pearlescent 
+text.gm4.guidebook.module_desc.monsters_unbound,Mobs gain special effects based on their biome.
+text.gm4.guidebook.monsters_unbound.description.biomes,Mobs spawned in different biomes have special modifiers.\n\nSome areas and biomes spawn different mobs than usual.
+text.gm4.guidebook.monsters_unbound.description.underground,Mobs spawned underground are generally stronger and can have varying buffs and potion effects.
+text.gm4.guidebook.monsters_unbound.burned,burned
+text.gm4.guidebook.monsters_unbound.description.burned,Mobs spawned in a %s biome are weaker but faster.\n\nHusks spawn in large groups.
+text.gm4.guidebook.monsters_unbound.description.dripstone_caves,"More Spiders are found in Dripstone Caves, and Skeletons may wield pickaxes.\n\nSome Dripstone may be trapped and drop a mob when walked below."
+text.gm4.guidebook.monsters_unbound.flowering,flowering
+text.gm4.guidebook.monsters_unbound.description.flowering,"In %s biomes Spore Zombies can be found, these drop a respawning Spore on death. Spores are susceptible to fire.\n\nCreepers are weaker but invisible."
+text.gm4.guidebook.monsters_unbound.growth,growth
+text.gm4.guidebook.monsters_unbound.description.growth,Mobs spawned in a %s biome are faster.\n\nSkeletons usually use melee weapons.\n\nMore Spiders are found here
+text.gm4.guidebook.monsters_unbound.mountainous,mountainous
+text.gm4.guidebook.monsters_unbound.description.mountainous,Phantoms can spawn in %s biomes.\n\nCreepers have more health.\n\nSpiders are faster
+text.gm4.guidebook.monsters_unbound.snowy,snowy
+text.gm4.guidebook.monsters_unbound.description.snowy,Mobs can ambush the player from snow in %s biomes.\n\nMobs can apply slowness.\n\nSpiders can be Gargantuan Elites.
+text.gm4.guidebook.monsters_unbound.toxic,toxic
+text.gm4.guidebook.monsters_unbound.description.toxic,Mobs spawned in a %s biome can apply various negative effects.\n\nMore Witches are found here.
+text.gm4.guidebook.monsters_unbound.description.warm_ocean,Drowned spawned in a Warm Ocean are much more powerful and have a larger chance to spawn wielding a Trident.
+text.gm4.guidebook.monsters_unbound.description.elites,Zombies that spawn as babies or as leaders are replaced with a random Elite variant.\n\nSkeletons have a static 5% chance to be an Elite.
+text.gm4.guidebook.monsters_unbound.description.elite_zephyr,"Zephyr Elites can charge a powerful wind-charged attack. Damaging them during the charge time dissipates the charge. Zephyr Zombies will rush the player, Zephyr Skeletons fire a burst of arrows."
+text.gm4.guidebook.monsters_unbound.description.elite_blazing,Blazing Elites are slow and immune to burning. Their attacks deal little damage but have Fire Aspect II or Flame. Occasionally will spawn slow moving homing projectiles that explode on contact.
+text.gm4.guidebook.monsters_unbound.description.elite_gargantuan,Gargantuan Elites are much bigger and gain stats based on their missing health. Will occasionally perform an AoE stomp attack.
+text.gm4.guidebook.monsters_unbound.description.elite_glacial,Glacial Elites leave a sphere of frozen energy on death. This sphere explodes after 2 seconds freezing any entity inside for 3 seconds.
+text.gm4.guidebook.monsters_unbound.description.elite_mending,"Mending Elites will heal other undead mobs in their line of sight, this will never target other Mending Elites."
+text.gm4.guidebook.monsters_unbound.description.elite_pearlescent,"Pearescent Elites can shoot damaging lasers from their eyes, the laser is blocked by terrain."
+text.gm4.guidebook.monsters_unbound.description.elite_splitting,Splitting Elites split into 6 smaller and weaker versions of itself on death.
+text.gm4.guidebook.monsters_unbound.description.elite_volatile,"Volatile Elites create randomly targeted purple beams of energy around them that explode after a delay, dealing heavy magic damage."
+text.gm4.guidebook.monsters_unbound.description.elite_vorpal,"Vorpal Elites teleport randomly on getting hit. On death a homing skull will track the nearest player and apply Fear, which blinds and slows interactions."
+text.gm4.monsters_unbound.death.pearlescent_elite_laser,"%s was seen by %s"
+text.gm4.monsters_unbound.death.volatile_elite_meteorite,"%s was struck by a meteorite"
+text.gm4.monsters_unbound.death.blazing_elite_flare,"%s was blown up by a Blazing Flare"

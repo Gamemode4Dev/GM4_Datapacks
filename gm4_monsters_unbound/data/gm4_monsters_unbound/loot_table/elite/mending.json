@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lime_glazed_terracotta",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_model_data": "item/elite_headwear/mending",
+                "enchantment_glint_override": false,
+                "enchantments": {
+                  "binding_curse": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

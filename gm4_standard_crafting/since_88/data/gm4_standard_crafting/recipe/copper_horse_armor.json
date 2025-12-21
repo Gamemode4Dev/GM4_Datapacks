@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "  I",
+    "ILI",
+    "I I"
+  ],
+  "key": {
+    "I": "minecraft:copper_ingot",
+    "L": "minecraft:leather"
+  },
+  "result": {
+    "id": "minecraft:copper_horse_armor"
+  }
+}

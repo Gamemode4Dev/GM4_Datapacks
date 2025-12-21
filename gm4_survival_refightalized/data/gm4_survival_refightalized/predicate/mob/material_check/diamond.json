@@ -1,0 +1,20 @@
+[
+  {
+    "condition": "minecraft:value_check",
+    "value": {
+      "type": "minecraft:score",
+      "target": {
+        "type": "minecraft:fixed",
+        "name": "$difficulty"
+      },
+      "score": "gm4_sr_data"
+    },
+    "range": {
+      "min": 25
+    }
+  },
+  {
+    "condition": "minecraft:random_chance",
+    "chance": 0.0075
+  }
+]

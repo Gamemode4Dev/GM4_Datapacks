@@ -1,0 +1,44 @@
+id: gm4_lively_lily_pads
+name: Lively Lily Pads
+version: 3.1.X
+
+data_pack:
+  load: .
+  overlays:
+    - formats:
+        min_inclusive: 1
+        max_inclusive: 81
+      min_format: 1
+      max_format: 81
+      directory: backport_81
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [main,tick]
+    website:
+      description: Place decorations on Lily Pads!
+      recommended: 
+        - gm4_blossoming_pots
+      notes: []
+      search_keywords: 
+        - candle
+        - plant
+        - coral
+        - spore
+        - lantern
+    modrinth:
+      project_id: 7wnTwrbr
+    smithed:
+      pack_id: gm4_lively_lily_pads
+    planetminecraft:
+      uid: 6138391
+    wiki: https://wiki.gm4.co/wiki/Lively_Lily_Pads
+    credits:
+      Creator:
+        - runcows
+      Icon Design:
+        - runcows

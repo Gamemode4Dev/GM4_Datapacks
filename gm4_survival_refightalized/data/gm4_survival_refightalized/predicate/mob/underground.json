@@ -1,0 +1,22 @@
+[
+  {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "block": {
+          "blocks": "#gm4:water"
+        }
+      }
+    }
+  },
+  {
+    "condition": "minecraft:location_check",
+    "offsetY": 1,
+    "predicate": {
+      "light": {
+        "light": 0
+      }
+    }
+  }
+]

@@ -1,5 +1,6 @@
 # Sets command storage for decorated pot plants
-# @s = null
+# @s = unspecified
+# at unspecified
 # run from init
 
 
@@ -1364,8 +1365,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:dark_oak_saplin
         }\
     ]\
 }
-# mangrove propagule doesn't have another stage for vanilla tweaks, but im adding support now incase VT adds it in the future
-    # lighting bug also affects the default mangrove propagule, so it gets rotated immediately to 0
+
+# lighting bug also affects the default mangrove propagule, so it gets rotated immediately to 0
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_propagule set value {\
     place_sound:"minecraft:item.bone_meal.use",\
     maximum:2,\
@@ -1388,7 +1389,9 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:mangrove_propag
             block_state:{\
                 Name:"minecraft:mangrove_propagule",\
                 Properties:{\
-                    stage:"1"\
+                    stage:"1",\
+                    age:"4",\
+                    hanging:"false"\
                 }\
             },\
             transformation:{\

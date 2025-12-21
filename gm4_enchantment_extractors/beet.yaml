@@ -4,6 +4,13 @@ version: 2.5.X
 
 data_pack:
   load: .
+  overlays:
+    - formats:
+        min_inclusive: 94
+        max_inclusive: 94
+      min_format: 94
+      max_format: 94
+      directory: since_94
 
 resource_pack:
   load: .

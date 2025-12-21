@@ -68,6 +68,7 @@ from gm4.utils import (
 JsonType = dict[str,Any]
 
 CUSTOM_MODEL_PREFIX = 3420000
+MINECRAFT_REFERENECE_VERSION = "1.21.9"
 
 parent_logger = logging.getLogger("gm4.resource_pack")
 
@@ -80,6 +81,7 @@ class ModelData(BaseModel):
     template: 'str|TemplateOptions' = "custom"
     transforms: Optional[list['TransformOptions']]
     textures: MapOption[str] = [] # defaults to same value as reference         #type:ignore ; the validator handles the default value
+    base_model: Optional[JsonType]
 
     @validator('model', pre=True, always=True) # type: ignore ; v1 validator behaves strangely with type checking
     def default_model(cls, model: Any, values: JsonType) -> dict[str, str]:
@@ -154,6 +156,7 @@ class NestedModelData(BaseModel):
     template: Optional['str|TemplateOptions'] = "custom"
     transforms: Optional[list['TransformOptions']]
     textures: Optional[MapOption[str]]
+    base_model: Optional[JsonType]
     broadcast: Optional[list['NestedModelData']] = []
 
     def collapse_broadcast(self) -> list['NestedModelData']:
@@ -330,7 +333,7 @@ def beet_default(ctx: Context):
 
     # attach context to template classes
     VanillaTemplate.vanilla = Vanilla(ctx)
-    VanillaTemplate.vanilla.minecraft_version = '1.21.5'
+    VanillaTemplate.vanilla.minecraft_version = MINECRAFT_REFERENECE_VERSION
     VanillaTemplate.vanilla_jar = VanillaTemplate.vanilla.mount("assets/minecraft/items")
 
     yield
@@ -471,7 +474,7 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
     def generate_item_definitions(self):
         """Generates item-model-definition files in the 'minecraft' namespace, adding range_dispatch entries for each custom_model_data value"""
         vanilla = self.ctx.inject(Vanilla)
-        vanilla.minecraft_version = '1.21.5'
+        vanilla.minecraft_version = MINECRAFT_REFERENECE_VERSION
         vanilla_item_defs_jar = vanilla.mount("assets/minecraft/items")
         # group models by item id
         for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
@@ -503,6 +506,9 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                     }
                 else:
                     model_json = m
+                
+                if model.base_model:
+                    model_json.update(model.base_model)
             
                 itemdef_entries.append({
                     "threshold": self.cmd_prefix+self.retrieve_index(model.reference)[0],
@@ -667,7 +673,7 @@ class TranslationLinter(Reducer):
         self.ctx = ctx
         self.mecha_database = ctx.inject(Mecha).database
         vanilla = ctx.inject(Vanilla)
-        vanilla.minecraft_version = '1.21.5'
+        vanilla.minecraft_version = MINECRAFT_REFERENECE_VERSION
         vanilla_lang = vanilla.mount("assets/minecraft/lang/en_us.json")
         self.vanilla_keys = set(vanilla_lang.assets.languages["minecraft:en_us"].data.keys())
         self.total_keys: set[str] = set()

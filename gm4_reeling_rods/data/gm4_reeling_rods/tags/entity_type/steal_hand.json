@@ -1,0 +1,14 @@
+{
+  "values": [
+    "minecraft:allay",
+    {"id": "minecraft:copper_golem", "required": false},
+    "minecraft:fox",
+    "minecraft:illusioner",
+    "minecraft:panda",
+    "minecraft:pillager",
+    "minecraft:vex",
+    "minecraft:vindicator",
+    "minecraft:wandering_trader",
+    "minecraft:witch"
+  ]
+}
