@@ -4,7 +4,7 @@ version: 3.4.X
 description: A dropper-based custom crafter for custom item crafting purposes.
 
 data_pack:
-  load: 
+  load:
     data: data
 
 resource_pack:
@@ -32,17 +32,17 @@ pipeline:
 meta:
   gm4:
     versioning:
-      required: 
+      required:
         lib_machines: 1.4.0
         lib_forceload: 1.5.0
       schedule_loops: [main]
       extra_version_injections:
-        functions: 
+        functions:
           - versioning/check_item_tags
           - check_recipes
           - machine/verify_destroy
           - machine/verify_place_down
-        advancements: 
+        advancements:
           - create_custom_crafter
     model_data:
       - item: player_head
@@ -71,7 +71,7 @@ meta:
               side: block/custom_crafter_side
       - item: crafting_table
         reference: gui/advancement/custom_crafters
-        template: 
+        template:
           name: advancement
           forward: block/custom_crafter
     gui_fonts:
@@ -92,5 +92,6 @@ meta:
     nbt_compact: True
     cmd_compact: True
   babelbox:
-      load: assets/translations.csv
-      namespace: gm4_translations
+    load: assets/translations.csv
+    namespace: gm4_translations
+    dialect: excel
