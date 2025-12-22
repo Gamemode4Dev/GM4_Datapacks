@@ -8,11 +8,16 @@ logger = logging.getLogger(__name__)
 
 def beet_default(ctx: Context):
 
-    # load csv
-    csv = CSV.from_file(Path('gm4_lavish_livestock', 'raw', 'livestock.csv'))
-
     # prepare list of supported entities
-    entity_ids = [e.get('entity_id', "").removeprefix('minecraft:').strip() for e in csv]
+    entity_ids = [
+        "chicken",
+        "cow",
+        "hoglin",
+        "mooshroom",
+        "pig",
+        "rabbit",
+        "sheep"
+    ]
 
     # for each supported entity, render a copy of the "templates" directory with the appropriate entity-id
     for entity in entity_ids:
