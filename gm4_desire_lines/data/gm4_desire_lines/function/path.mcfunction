@@ -14,7 +14,8 @@ fill ~ ~-0.06 ~ ~ ~-0.06 ~ frosted_ice[age=2] replace frosted_ice[age=1]
 fill ~ ~-0.06 ~ ~ ~-0.06 ~ frosted_ice[age=1] replace frosted_ice[age=0]
 
 # remove foliage
-execute if block ~ ~ ~ #gm4:foliage unless block ~ ~ ~ moss_carpet run setblock ~ ~ ~ air destroy
+execute if block ~ ~ ~ #gm4:foliage unless block ~ ~ ~ moss_carpet if block ~ ~ ~ #flowers if score ?break_flowers gm4_desire_lines matches 1 run setblock ~ ~ ~ air destroy
+execute if block ~ ~ ~ #gm4:foliage unless block ~ ~ ~ moss_carpet if block ~ ~ ~ #gm4:grass if score ?break_grass gm4_desire_lines matches 1 run setblock ~ ~ ~ air destroy
 
 # advancement check
 execute if block ~ ~-0.07 ~ coarse_dirt run scoreboard players add @s gm4_dl_affcoarse 1
