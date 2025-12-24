@@ -8,6 +8,9 @@ data_pack:
 resource_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
   - gm4_furniture.generate
   - gm4.plugins.extend.module
