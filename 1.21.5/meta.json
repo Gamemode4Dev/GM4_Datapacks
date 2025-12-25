@@ -1,5 +1,5 @@
 {
-  "last_commit": "dc659e39063f57381fb15d0a62acb34606a4571a",
+  "last_commit": "64003be8580674d4f6a2ce84ed8a0a7e2719c428",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -334,8 +334,8 @@
     {
       "id": "gm4_blossoming_pots",
       "name": "Blossoming Pots",
-      "version": "3.4.2",
-      "hash": "c8e4c5824a7ce135e664734203c480d040eb4536",
+      "version": "3.4.3",
+      "hash": "018aed3074b45c7d660fbf902d08bc2f74833f26",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Blossoming_Pots",
       "credits": {
@@ -1533,7 +1533,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "hash": "ba4677cff697ea66aa14582373607d6ba29d7dfe",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -1743,8 +1743,8 @@
     {
       "id": "gm4_lively_lily_pads",
       "name": "Lively Lily Pads",
-      "version": "3.1.1",
-      "hash": "60689d485f450cbf158441cd3faa4bdb5933c1a1",
+      "version": "3.1.2",
+      "hash": "b4bc6c3956f738f65ffb0c6720c27eacbf24959f",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lively_Lily_Pads",
       "credits": {
@@ -3575,8 +3575,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.19",
-      "hash": "bfee3d19a9d7b3c401e59310be998b1262240f21",
+      "version": "1.4.20",
+      "hash": "b9f212be0cdab571458b51405ed6a83accafeae4",
       "video_link": "",
       "wiki_link": "",
       "credits": {
