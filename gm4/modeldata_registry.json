@@ -1695,7 +1695,8 @@
       "gm4_metallurgy:shamir/infinitas": 100
     },
     "wheat": {
-      "gm4_mysterious_midnights:guidebook_icon/harvest_moons": 1
+      "gm4_mysterious_midnights:guidebook_icon/harvest_moons": 1,
+      "gm4_lavish_livestock:guidebook_icon/lavish_livestock": 2
     },
     "white_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/white": 300

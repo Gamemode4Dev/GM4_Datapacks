@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "breed_pigs": {
+        "breed_{{ entity_id }}s": {
             "trigger": "minecraft:bred_animals",
             "conditions": {
                 "child": {
