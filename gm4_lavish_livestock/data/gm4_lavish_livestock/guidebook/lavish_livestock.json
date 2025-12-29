@@ -43,14 +43,20 @@
             "fallback":"Livestock",
             "underlined":true
           },
-          {
-            "text":"\n\n"
-          },
-          {
-            "translate":"text.gm4.guidebook.lavish_livestock.list",
-            "fallback": "Chicken\nCow\nHoglin\nMooshroom\nPig\nRabbit\nSheep",
-            "underlined":false
-          }
+          {"text":"\n\n"},
+          {"translate":"entity.minecraft.chicken", "underlined":false},
+          {"text":"\n"},
+          {"translate":"entity.minecraft.cow", "underlined":false},
+          {"text":"\n"},
+          {"translate":"entity.minecraft.hoglin", "underlined":false},
+          {"text":"\n"},
+          {"translate":"entity.minecraft.mooshroom", "underlined":false},
+          {"text":"\n"},
+          {"translate":"entity.minecraft.pig", "underlined":false},
+          {"text":"\n"},
+          {"translate":"entity.minecraft.rabbit", "underlined":false},
+          {"text":"\n"},
+          {"translate":"entity.minecraft.sheep", "underlined":false}
         ]
       ]
     }
