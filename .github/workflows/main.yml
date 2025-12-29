@@ -101,6 +101,10 @@ jobs:
             fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/1.21.10/0.18.1/1.1.0/server/jar
             fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/dQ3p80zK/fabric-api-0.138.3%2B1.21.10.jar
             packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/11yGLsYO/packtest-2.3-beta1-mc1.21.10.jar
+          - version: '1.21.11'
+            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/1.21.11-rc2/0.18.1/1.1.0/server/jar
+            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/RDb9rvBm/fabric-api-0.139.4%2B1.21.11.jar
+            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/GN6fvTsW/packtest-2.4-beta2-mc1.21.11.jar
     name: 'test-${{ matrix.version }}'
     runs-on: ubuntu-24.04
     steps:

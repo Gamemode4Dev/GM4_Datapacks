@@ -5,6 +5,7 @@
 
 execute if items block 29999998 1 7134 container.3 leather_boots run return 65
 execute if items block 29999998 1 7134 container.3 golden_boots run return 91
+execute if items block 29999998 1 7134 container.3 copper_boots run return 143
 execute if items block 29999998 1 7134 container.3 chainmail_boots run return 195
 execute if items block 29999998 1 7134 container.3 iron_boots run return 195
 execute if items block 29999998 1 7134 container.3 diamond_boots run return 429

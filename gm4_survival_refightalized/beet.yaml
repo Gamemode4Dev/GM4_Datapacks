@@ -4,6 +4,13 @@ version: 1.1.X
 
 data_pack:
   load: .
+  overlays:
+    - formats:
+        min_inclusive: 1
+        max_inclusive: 81
+      min_format: 1
+      max_format: 81
+      directory: backport_81
 
 resource_pack:
   load: .
@@ -27,7 +34,6 @@ meta:
       description: A reworked survival experience with more varied mobs and new armor and shield mechanics.
       recommended:
         - gm4_monsters_unbound
-    video: null
     wiki: https://wiki.gm4.co/wiki/Survival_Refightalized
     credits:
       Creator:

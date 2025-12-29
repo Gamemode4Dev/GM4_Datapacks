@@ -15,6 +15,7 @@ data_pack:
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.pfb_biome_extensions
+  - gm4_cooler_caves.fix_overlays
 
 meta:
   gm4:

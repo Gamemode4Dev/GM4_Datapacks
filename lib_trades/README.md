@@ -56,7 +56,7 @@ Details on how to load trades can found in the *Loading Trades* section below. O
 To load trades, a function that spawns trade options must be provided (splitting your trades over multiple functions is allowed, as long as all trade options are spawned within the same tick). "Loading Trades" equates to calling this function.<br>
 
 For each trade option a `trader_llama` entity must be spawned, the following NBT is recommended as a base:<br>
-```summon trader_llama ~ 0 ~ {Silent:1b,NoGravity:1b,Invulnerable:1b,ChestedHorse:1b,Variant:0,Strength:1,DespawnDelay:1,Tags:["gm4_trade_option"],Items:[{},{},{}]}```<br>
+```summon trader_llama ~ 0 ~ {Silent:1b,NoGravity:1b,Invulnerable:1b,ChestedHorse:1b,Variant:0,Strength:1,DespawnDelay:1,Tags:["gm4_trade_option"],Items:[]}```<br>
 
 The tag `gm4_trade_option` is mandatory and is used by the library to identify available trade options. If the llama has to be targeted again after being spawned in (e.g. for populating its inventory using `/loot` or `/item replace`), the addition of a temporary tag is recommended.
 

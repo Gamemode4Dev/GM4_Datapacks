@@ -6,7 +6,7 @@
     "chainmail_leggings",
     {"id": "copper_boots", "required": false},
     {"id": "copper_chestplate", "required": false},
-    {"id": "coppper_helmet", "required": false},
+    {"id": "copper_helmet", "required": false},
     {"id": "copper_leggings", "required": false},
     "diamond_boots",
     "diamond_chestplate",

@@ -91,6 +91,16 @@
                         },
                         {
                             "type": "minecraft:item",
+                            "name": "copper_boots",
+                            "conditions": [
+                                {
+                                    "condition": "minecraft:reference",
+                                    "name": "gm4_survival_refightalized:mob/material_check/copper"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "minecraft:item",
                             "name": "leather_boots"
                         }
                     ],
