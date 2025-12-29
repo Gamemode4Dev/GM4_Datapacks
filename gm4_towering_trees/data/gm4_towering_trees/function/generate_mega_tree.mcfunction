@@ -9,7 +9,7 @@ execute if entity @s[tag=gm4_dark_oak_tree_sapling] store success score $tree_pl
 
 # towering
 execute if entity @s[tag=gm4_oak_tree_sapling] run function gm4_towering_trees:generate_tree_type/oak/pick_variant
-execute if entity @s[tag=gm4_acacia_tree_sapling] run function gm4_towering_trees:generate_tree_type/oak/pick_variant
-execute if entity @s[tag=gm4_cherry_tree_sapling] run function gm4_towering_trees:generate_tree_type/oak/pick_variant
-execute if entity @s[tag=gm4_mangrove_tree_sapling] run function gm4_towering_trees:generate_tree_type/oak/pick_variant
-execute if entity @s[tag=gm4_birch_tree_sapling] run function gm4_towering_trees:generate_tree_type/oak/pick_variant
+execute if entity @s[tag=gm4_acacia_tree_sapling] run function gm4_towering_trees:generate_tree_type/acacia/pick_variant
+execute if entity @s[tag=gm4_cherry_tree_sapling] run function gm4_towering_trees:generate_tree_type/cherry/pick_variant
+execute if entity @s[tag=gm4_mangrove_tree_sapling] run function gm4_towering_trees:generate_tree_type/mangrove/pick_variant
+execute if entity @s[tag=gm4_birch_tree_sapling] run function gm4_towering_trees:generate_tree_type/birch/pick_variant

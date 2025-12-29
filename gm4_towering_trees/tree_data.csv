@@ -1,0 +1,24 @@
+type,variant,size_x,size_y,size_z,base_x_offset,base_z_offset,branch_start_height,feature
+oak,a,19,14,18,8,9,3,place feature gm4_towering_trees:leaf_litter ~ ~1 ~
+oak,b,14,15,14,6,6,3,place feature gm4_towering_trees:leaf_litter ~ ~1 ~
+oak,c,18,15,19,8,8,4,place feature gm4_towering_trees:leaf_litter ~ ~1 ~
+oak,d,18,16,19,8,8,4,place feature gm4_towering_trees:leaf_litter ~ ~1 ~
+oak,e,14,13,14,6,6,3,place feature gm4_towering_trees:leaf_litter ~ ~1 ~
+acacia,a,16,21,14,7,6,15,
+acacia,b,12,18,13,5,6,14,
+acacia,c,13,22,16,6,6,17,
+acacia,d,15,21,13,6,6,17,
+acacia,e,13,23,14,7,6,19,
+birch,a,10,30,10,4,4,12,
+birch,b,10,28,10,4,4,8,
+birch,c,10,33,10,4,4,13,
+birch,d,10,32,10,4,4,12,
+birch,e,10,30,10,4,4,10,
+birch,f,10,28,10,4,4,10,
+cherry,a,24,15,17,12,7,5,place feature gm4_towering_trees:pink_petals ~ ~1 ~
+cherry,b,27,17,17,14,8,5,place feature gm4_towering_trees:pink_petals ~ ~1 ~
+cherry,c,24,17,16,15,7,5,place feature gm4_towering_trees:pink_petals ~ ~1 ~
+mangrove,a,14,33,12,4,7,16,function gm4_towering_trees:generate_tree_type/mangrove/extra
+mangrove,b,15,29,12,6,5,13,function gm4_towering_trees:generate_tree_type/mangrove/extra
+mangrove,c,15,30,13,4,5,14,function gm4_towering_trees:generate_tree_type/mangrove/extra
+mangrove,d,15,28,12,7,4,14,function gm4_towering_trees:generate_tree_type/mangrove/extra
