@@ -4,7 +4,7 @@
 # run from generate_tree_type/{{type}}/pick_variant
 
 # check trunk
-execute store result score $blocks_moved gm4_towering_trees_data positioned ~ ~ ~ run clone ~ ~ ~ ~1 ~{{check_1_height}} ~1 ~ ~ ~ filtered #gm4_towering_trees:tree_placeable move
+execute store result score $blocks_moved gm4_towering_trees_data positioned ~ ~ ~ run clone ~ ~ ~ ~{{is_mega}} ~{{check_1_height}} ~{{is_mega}} ~ ~ ~ filtered #gm4_towering_trees:tree_placeable move
 execute unless score $blocks_moved gm4_towering_trees_data matches {{check_1_count}} run return fail
 
 # check box 2

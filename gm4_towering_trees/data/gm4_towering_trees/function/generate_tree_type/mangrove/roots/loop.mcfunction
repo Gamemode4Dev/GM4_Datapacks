@@ -6,7 +6,8 @@ execute unless score $max_length gm4_towering_trees_data matches 1.. run return 
 
 # fill with (muddy) roots
 fill ~ ~ ~ ~ ~ ~ muddy_mangrove_roots replace mud
-execute unless block ~ ~ ~ muddy_mangrove_roots run setblock ~ ~ ~ mangrove_roots
+execute if score $waterlogged gm4_towering_trees_data matches 0 unless block ~ ~ ~ muddy_mangrove_roots run setblock ~ ~ ~ mangrove_roots
+execute if score $waterlogged gm4_towering_trees_data matches 1 unless block ~ ~ ~ muddy_mangrove_roots run setblock ~ ~ ~ mangrove_roots[waterlogged=true]
 
 # random carpets
 execute if predicate {condition:"random_chance",chance:0.5} run fill ~ ~1 ~ ~ ~1 ~ moss_carpet replace #air

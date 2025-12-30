@@ -35,16 +35,21 @@ def generate_tree_files(ctx: Context, tree_data: CSV):
         base_x_offset: int = int(tree['base_x_offset']) * -1
         base_z_offset: int = int(tree['base_z_offset']) * -1
         branch_height: int = int(tree['branch_start_height']) - 1
+        is_mega: int = int(tree["is_mega"])
 
         tree_type = tree['type']
         type_variant = tree['variant']
 
         variant_entry = variant_randomizer.setdefault(
             tree_type,
-            {"count": 0, "variants": []}
+            {"count": 0, "variants": [], "ground_replacement": "execute if score $tree_placed gm4_towering_trees_data matches 1 run fill ~ ~-1 ~ ~1 ~-1 ~1 dirt replace grass_block"}
         )
         variant_entry["count"] += 1
         variant_entry["variants"].append(type_variant)
+        if tree_type == "mangrove":
+            variant_entry["ground_replacement"] = "# mangrove trees do not replace the ground since they are placed in the air"
+        if is_mega == 0:
+            variant_entry["ground_replacement"] = "execute if score $tree_placed gm4_towering_trees_data matches 1 run fill ~ ~-1 ~ ~ ~-1 ~ dirt replace grass_block"
 
         subproject_config = {
             "data_pack": {
@@ -61,8 +66,9 @@ def generate_tree_files(ctx: Context, tree_data: CSV):
                 "type": tree_type,
                 "variant": type_variant,
                 "branch_height": branch_height,
+                "is_mega": is_mega,
                 "check_1_height": size_y - 1,
-                "check_1_count": 2 * size_y * 2,
+                "check_1_count": size_y * (is_mega + 1)**2,
                 "check_2_x": size_x - 1,
                 "check_2_height": size_y - branch_height - 1,
                 "check_2_z": size_z - 1,
@@ -70,23 +76,18 @@ def generate_tree_files(ctx: Context, tree_data: CSV):
                 "feature": tree['feature'],
                 "x_offset": base_x_offset,
                 "z_offset": base_z_offset,
-                "x_offset_180": base_x_offset * -1 + 1,
-                "z_offset_180": base_z_offset * -1 + 1,
-                "x_offset_c90": base_z_offset * -1 + 1,
+                "x_offset_180": base_x_offset * -1 + is_mega,
+                "z_offset_180": base_z_offset * -1 + is_mega,
+                "x_offset_c90": base_z_offset * -1 + is_mega,
                 "z_offset_c90": base_x_offset,
                 "x_offset_cc90": base_z_offset,
-                "z_offset_cc90": base_x_offset * -1 + 1
+                "z_offset_cc90": base_x_offset * -1 + is_mega
             }
         }
         ctx.require(subproject(subproject_config))
 
 
     for type, data in variant_randomizer.items():
-
-        if type == "mangrove":
-            ground_replacement = "# mangrove trees do not replace the ground since they are placed in the air"
-        else:
-            ground_replacement = "execute if score $tree_placed gm4_towering_trees_data matches 1 run fill ~ ~-1 ~ ~1 ~-1 ~1 dirt replace grass_block"
 
         functions: str = ""
         index = 0
@@ -108,7 +109,7 @@ def generate_tree_files(ctx: Context, tree_data: CSV):
             "meta": {
                 "variant_count": data["count"],
                 "functions": functions,
-                "ground_replacement": ground_replacement
+                "ground_replacement": data["ground_replacement"]
             }
         }
         ctx.require(subproject(subproject_config))
