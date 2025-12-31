@@ -48,31 +48,51 @@
       "ease": "in_out_sine",
       "keyframes": [
         {
-          "ticks": 0,
+          "ticks": 5373,
           "value": 0
         },
         {
-          "ticks": 3500,
-          "value": 0
+          "ticks": 5732,
+          "value": 0.016
         },
         {
-          "ticks": 7000,
-          "value": 0.75
+          "ticks": 5959,
+          "value": 0.044
         },
         {
-          "ticks": 12000,
-          "value": 0.6
+          "ticks": 6399,
+          "value": 0.143
         },
         {
-          "ticks": 17000,
-          "value": 0.75
+          "ticks": 6729,
+          "value": 0.258
         },
         {
-          "ticks": 20500,
-          "value": 0
+          "ticks": 7228,
+          "value": 0.5
         },
         {
-          "ticks": 24000,
+          "ticks": 16772,
+          "value": 0.5
+        },
+        {
+          "ticks": 17032,
+          "value": 0.364
+        },
+        {
+          "ticks": 17356,
+          "value": 0.225
+        },
+        {
+          "ticks": 17758,
+          "value": 0.101
+        },
+        {
+          "ticks": 18092,
+          "value": 0.037
+        },
+        {
+          "ticks": 18627,
           "value": 0
         }
       ]
@@ -84,26 +104,6 @@
         {
           "ticks": 0,
           "value": "#3888f0"
-        },
-        {
-          "ticks": 4000,
-          "value": "#3888f0"
-        },
-        {
-          "ticks": 6000,
-          "value": "#142e5f"
-        },
-        {
-          "ticks": 6500,
-          "value": "#0b1738"
-        },
-        {
-          "ticks": 7000,
-          "value": "#02040a"
-        },
-        {
-          "ticks": 18000,
-          "value": "#02040a"
         }
       ]
     },
@@ -113,19 +113,7 @@
       "keyframes": [
         {
           "ticks": 0,
-          "value": "#00ffc955"
-        },
-        {
-          "ticks": 3750,
-          "value": "#00ffc955"
-        },
-        {
-          "ticks": 5500,
-          "value": "#ffdf7b4d"
-        },
-        {
-          "ticks": 7000,
-          "value": "#005a3388"
+          "value": "#00ffe533"
         }
       ]
     },
@@ -136,26 +124,6 @@
         {
           "ticks": 0,
           "value": "#fffadd"
-        },
-        {
-          "ticks": 4000,
-          "value": "#fffadd"
-        },
-        {
-          "ticks": 5250,
-          "value": "#5a362b"
-        },
-        {
-          "ticks": 6500,
-          "value": "#010207"
-        },
-        {
-          "ticks": 7500,
-          "value": "#03090e"
-        },
-        {
-          "ticks": 18000,
-          "value": "#03090e"
         }
       ]
     },
@@ -174,15 +142,7 @@
       "keyframes": [
         {
           "ticks": 0,
-          "value": "#090810"
-        },
-        {
-          "ticks": 6000,
-          "value": "#090810"
-        },
-        {
-          "ticks": 12000,
-          "value": "#090810"
+          "value": "#090b0f"
         }
       ]
     },
@@ -191,15 +151,7 @@
       "keyframes": [
         {
           "ticks": 0,
-          "value": "#ffc56e"
-        },
-        {
-          "ticks": 6000,
-          "value": "#ffc56e"
-        },
-        {
-          "ticks": 12000,
-          "value": "#ffc56e"
+          "value": "#040408"
         }
       ]
     },
@@ -214,12 +166,12 @@
       ]
     },
     "minecraft:visual/cloud_fog_end_distance": {
-      "modifier": "override",
+      "modifier": "multiply",
       "ease": "linear",
       "keyframes": [
         {
           "ticks": 0,
-          "value": 2048
+          "value": 1
         }
       ]
     },
@@ -229,7 +181,7 @@
       "keyframes": [
         {
           "ticks": 0,
-          "value": "#00ffffff"
+          "value": "#ccffffff"
         }
       ]
     },
@@ -239,65 +191,37 @@
       "keyframes": [
         {
           "ticks": 0,
-          "value": "#cbfdf2"
-        },
-        {
-          "ticks": 4000,
-          "value": "#cbfdf2"
-        },
-        {
-          "ticks": 5500,
-          "value": "#475575"
-        },
-        {
-          "ticks": 7000,
-          "value": "#020307"
-        },
-        {
-          "ticks": 16000,
-          "value": "#020307"
+          "value": "#c0d8ff"
         }
       ]
     },
     "minecraft:visual/fog_start_distance": {
-      "modifier": "override",
+      "modifier": "multiply",
       "ease": "in_out_sine",
       "keyframes": [
         {
           "ticks": 0,
-          "value": 64
+          "value": 1
         }
       ]
     },
     "minecraft:visual/fog_end_distance": {
-      "modifier": "override",
+      "modifier": "multiply",
       "ease": "in_out_sine",
       "keyframes": [
         {
           "ticks": 0,
-          "value": 512
+          "value": 1
         }
       ]
     },
     "minecraft:visual/sky_fog_end_distance": {
-      "modifier": "override",
+      "modifier": "multiply",
       "ease": "in_out_sine",
       "keyframes": [
         {
           "ticks": 0,
-          "value": 512
-        },
-        {
-          "ticks": 4000,
-          "value": 64
-        },
-        {
-          "ticks": 7000,
-          "value": 64
-        },
-        {
-          "ticks": 19000,
-          "value": 64
+          "value": 1
         }
       ]
     },

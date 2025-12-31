@@ -24,42 +24,6 @@
                     }
                 }
             ]
-        },
-        "minecraft:visual/cloud_fog_end_distance": {
-            "ease": "linear",
-            "keyframes": [
-                {
-                    "ticks": 0,
-                    "value": 2048
-                }
-            ]
-        },
-        "minecraft:visual/fog_end_distance": {
-            "ease": "in_out_sine",
-            "keyframes": [
-                {
-                    "ticks": 0,
-                    "value": 1024
-                }
-            ]
-        },
-        "minecraft:visual/fog_start_distance": {
-            "ease": "in_out_sine",
-            "keyframes": [
-                {
-                    "ticks": 0,
-                    "value": 0
-                }
-            ]
-        },
-        "minecraft:visual/sky_fog_end_distance": {
-            "ease": "in_out_sine",
-            "keyframes": [
-                {
-                    "ticks": 0,
-                    "value": 512
-                }
-            ]
         }
     }
 }
