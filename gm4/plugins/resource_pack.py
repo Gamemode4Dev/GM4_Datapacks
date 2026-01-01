@@ -225,6 +225,8 @@ class TranslationLinterOptions(PluginOptions, extra="ignore"):
 
 #== Configurable Base Classes ==#
 def downcast[T](base: type[T], discriminator: str, x: Any) -> Any:
+    """Looks up and returns the proper subclass for config resolution
+    i.e. TemplateOptions converts to BlankTemplate/VanillaTemplate ect... based upon its name id"""
     subclasses = {cls.__name__: cls for cls in base.__subclasses__()}
     return TypeAdapter[T](
         Annotated[Union[*subclasses.values()], Field(discriminator=discriminator)]
