@@ -28,7 +28,7 @@ class OreDisplayTemplate(TemplateOptions):
         return [m]
 
 class FurnaceContainerGui(CenteredContainerGui, ContainerGuiOptions):
-    container: Literal["furnace"] = "furnace"
+    container: Literal["furnace"] = "furnace" # type: ignore ; Inheriting CenteredContainerGui overwrites a Literal "_centered" -> "furnace"
 
 def beet_default(ctx: Context):
     pass
