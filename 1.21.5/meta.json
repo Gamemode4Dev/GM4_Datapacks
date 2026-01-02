@@ -1,5 +1,5 @@
 {
-  "last_commit": "64003be8580674d4f6a2ce84ed8a0a7e2719c428",
+  "last_commit": "561f071dd06fd45d32595c06ea0160ccd1092791",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1533,7 +1533,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "hash": "ba4677cff697ea66aa14582373607d6ba29d7dfe",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -3231,8 +3231,8 @@
     {
       "id": "gm4_vecto_shamir",
       "name": "Vecto Shamir",
-      "version": "1.6.3",
-      "hash": "bb4ccd09c35d987acafc6c352202fa4750e83632",
+      "version": "1.6.4",
+      "hash": "ffa559203a508e9ad84f08b21ff38111e4270296",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vecto_Shamir",
       "credits": {
@@ -3246,7 +3246,7 @@
       "requires": [
         "gm4_metallurgy"
       ],
-      "description": "Adds the 'Vecto' Shamir to Metallury. Summon a Boat or Minecart out of thin air when in need, no more wasting an inventory slot!",
+      "description": "Adds the 'Vecto' Shamir to Metallurgy. Summon a Boat or Minecart out of thin air when in need, no more wasting an inventory slot!",
       "recommends": [],
       "minecraft": [
         "1.21.5",
@@ -3575,8 +3575,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.20",
-      "hash": "b9f212be0cdab571458b51405ed6a83accafeae4",
+      "version": "1.4.21",
+      "hash": "e68cfb5b8124ec2394fba05799df4b84c08c10c8",
       "video_link": "",
       "wiki_link": "",
       "credits": {
