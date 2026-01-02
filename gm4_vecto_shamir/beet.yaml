@@ -26,7 +26,7 @@ meta:
           metal: bismuth
           textures_path: gm4_metallurgy:item/shamir/bismuth
     website:
-      description: Adds the 'Vecto' Shamir to Metallury. Summon a Boat or Minecart out of thin air when in need, no more wasting an inventory slot!
+      description: Adds the 'Vecto' Shamir to Metallurgy. Summon a Boat or Minecart out of thin air when in need, no more wasting an inventory slot!
       recommended: []
       notes: []
     modrinth:
