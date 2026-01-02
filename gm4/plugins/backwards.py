@@ -73,9 +73,7 @@ def on_shelf_models_1_21_9(id: str, resource: NamespaceFile):
 
   overlay = resource.copy()
   recursive_replace(overlay.data)
-  if overlay != resource:
-    return overlay
-  return None
+  return overlay if overlay != resource else None
 
 
 # Only gamerules that are actually used are replaced
