@@ -1,7 +1,7 @@
 {
   "criteria": {
-    "change_inventory": {
-      "trigger": "minecraft:changed_dimension"
+    "join": {
+      "trigger": "minecraft:tick"
     }
   },
   "rewards": {
