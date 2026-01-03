@@ -1,5 +1,5 @@
 {
-  "last_commit": "1ad802ab40dc68cfb7ccb00c63a9c3f080e33546",
+  "last_commit": "139bdddf3e9b4a38e8177ccf401cc037eb5ef1eb",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -41,8 +41,8 @@
     {
       "id": "gm4_apple_trees",
       "name": "Apple Trees",
-      "version": "2.5.4",
-      "hash": "fba5c6775865ee4b69fb90c1e9b212449cf1e501",
+      "version": "2.5.5",
+      "hash": "09df4d3eec12f4b78a9a49397ffb7e5a0c7428ee",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Apple_Trees",
       "credits": {
@@ -1533,7 +1533,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "hash": "ba4677cff697ea66aa14582373607d6ba29d7dfe",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
