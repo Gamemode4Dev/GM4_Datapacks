@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "change_inventory": {
+    "change_dimension": {
       "trigger": "minecraft:changed_dimension"
     }
   },

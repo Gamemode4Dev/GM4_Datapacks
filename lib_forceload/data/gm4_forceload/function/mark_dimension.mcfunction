@@ -1,7 +1,7 @@
 # @s = player who changed dimensions or joined for the first time
-# run from advancements "dimension_marking" and "join"
+# run from advancements "change_dimension" and "join"
 
-advancement revoke @s only gm4_forceload:dimension_marking
+advancement revoke @s only gm4_forceload:change_dimension
 
 # exit if the dimension is already initialized
 execute if block 29999998 1 7133 birch_wall_sign run return 0
