@@ -22,6 +22,7 @@ pipeline:
   - legacy_item_sheet
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_forceload
+  - gm4_guidebook.fix_overlays
 
 meta:
   gm4:
