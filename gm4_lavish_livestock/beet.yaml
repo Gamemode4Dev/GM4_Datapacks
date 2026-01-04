@@ -16,6 +16,14 @@ pipeline:
   - gm4.plugins.extend.module
 
 meta:
+  animals:
+    - chicken
+    - cow
+    - hoglin
+    - mooshroom
+    - pig
+    - rabbit
+    - sheep
   gm4:
     versioning:
       schedule_loops: []
