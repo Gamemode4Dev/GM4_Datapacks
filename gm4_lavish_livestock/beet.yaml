@@ -16,7 +16,7 @@ pipeline:
   - gm4.plugins.extend.module
 
 meta:
-  animals:
+  livestock:
     - chicken
     - cow
     - hoglin

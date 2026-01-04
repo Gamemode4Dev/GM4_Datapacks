@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 def beet_default(ctx: Context):
     # List of supported animals defined in beet.yaml as well as the guidebook page
     # for each supported entity, render a copy of the "templates" directory with the appropriate entity-id
-    for entity in ctx.meta['animals']:
+    for entity in ctx.meta['livestock']:
         subproject_config = {
             "data_pack": {
                 "load": [
