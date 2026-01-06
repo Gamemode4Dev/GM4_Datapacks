@@ -1,0 +1,22 @@
+check = []
+for x in range(-4,5):
+    for y in range(1,8):
+        for z in range(-4,5):
+            check.append(
+                {
+                    "condition": "minecraft:location_check",
+                    "offsetX": x,
+                    "offsetY": y,
+                    "offsetZ": z,
+                    "predicate": {
+                        "block": {
+                            "blocks": "#gm4_apple_trees:tree_placeable"
+                        }
+                    }
+                }
+            )
+
+{
+    "condition": "minecraft:all_of",
+    "terms": check
+}

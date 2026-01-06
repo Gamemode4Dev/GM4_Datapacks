@@ -2,6 +2,7 @@
         "parent": "gm4_relocators:item/relocator_base",
         "textures": {
                 "outer": "gm4_relocators:item/relocator_outer",
-                "core": "gm4_relocators:item/relocator_core"
+                "core": "gm4_relocators:item/relocator_core",
+                "particle": "gm4_relocators:item/relocator_outer"
         }
 }
