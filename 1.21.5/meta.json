@@ -1,5 +1,5 @@
 {
-  "last_commit": "c676c50075e2a57c26d396eee85f0a94b173b84c",
+  "last_commit": "b2dbd30a2847a261288df775bfb17c28bbdfe270",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1533,8 +1533,8 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.8",
-      "hash": "ba4677cff697ea66aa14582373607d6ba29d7dfe",
+      "version": "1.0.9",
+      "hash": "e453de1b265c4a74ac13a49a86df85c20136b38d",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
       "credits": {
@@ -3575,8 +3575,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.24",
-      "hash": "223e5c44ca7e2b131c1a7466c881e3142790fcbb",
+      "version": "1.4.25",
+      "hash": "50e15e09a9ae05d8241dd0220273bbd37e059067",
       "video_link": "",
       "wiki_link": "",
       "credits": {
