@@ -1,5 +1,5 @@
 {
-  "last_commit": "b2dbd30a2847a261288df775bfb17c28bbdfe270",
+  "last_commit": "c97e4805494b4dec63c6a0a694e5acaafc7250b1",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -529,8 +529,8 @@
     {
       "id": "gm4_cement_mixers",
       "name": "Cement Mixers",
-      "version": "1.5.3",
-      "hash": "ce463f0ace2b2adbf2dd60bbf43a2df1d0e451d1",
+      "version": "1.5.4",
+      "hash": "c681fc072243cf1bbc7636a3a72ba7e5c9c35725",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Cement_Mixers",
       "credits": {
@@ -1533,7 +1533,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.9",
+      "version": "1.0.10",
       "hash": "e453de1b265c4a74ac13a49a86df85c20136b38d",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -1568,8 +1568,8 @@
     {
       "id": "gm4_lightning_in_a_bottle",
       "name": "Lightning in a Bottle",
-      "version": "1.8.5",
-      "hash": "fdc8748c5141c95ad34b7a5afdc3d5d37d6c6e99",
+      "version": "1.8.6",
+      "hash": "1f672ce10f345f234a018923401c265797bf1c76",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
       "credits": {
@@ -1610,8 +1610,8 @@
     {
       "id": "gm4_liquid_minecarts",
       "name": "Liquid Minecarts",
-      "version": "1.7.4",
-      "hash": "cfea8c9556d809fb7eadea09ab0f976fe00ef40a",
+      "version": "1.8.0",
+      "hash": "7339c2437b07f68cdfc6f38dd8c3cc59a0d43618",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts",
       "credits": {
@@ -1653,8 +1653,8 @@
     {
       "id": "gm4_liquid_tanks",
       "name": "Liquid Tanks",
-      "version": "2.7.4",
-      "hash": "16688948216a3e59bc8f9d0e1812ad2e19a84bbf",
+      "version": "3.0.0",
+      "hash": "4b6d0e4e040d2a3d19c51242133bd831c92b4325",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
       "credits": {
@@ -1827,8 +1827,8 @@
     {
       "id": "gm4_mending_tanks",
       "name": "Mending Tanks",
-      "version": "1.6.3",
-      "hash": "0956c64cb72f2f3184692d5cffffb27fafb9fa76",
+      "version": "1.6.4",
+      "hash": "e77aca1b03b4e1149626868aa31d0eb22efd55e9",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Mending_Tanks",
       "credits": {
@@ -2432,8 +2432,8 @@
     {
       "id": "gm4_potion_liquids",
       "name": "Potion Liquids",
-      "version": "1.8.4",
-      "hash": "ff63e35997951cef15a60c1fa82f1f379e349bed",
+      "version": "1.9.0",
+      "hash": "b05f0e159cb5f19a83baa8bc9d65f22988a1cc26",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids",
       "credits": {
@@ -3346,8 +3346,8 @@
     {
       "id": "gm4_washing_tanks",
       "name": "Washing Tanks",
-      "version": "1.5.3",
-      "hash": "10f83d5bbeaf942eb81e2d7fd38edeb5ec82dc7c",
+      "version": "1.5.4",
+      "hash": "eba4d32109d0550d37a4acc95a304b0327b7ddac",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Washing_Tanks",
       "credits": {
@@ -3498,8 +3498,8 @@
     {
       "id": "gm4_zauber_liquids",
       "name": "Zauber Liquids",
-      "version": "1.9.3",
-      "hash": "48f7960754b44438789b50fff35fb847ff24ee1d",
+      "version": "1.9.4",
+      "hash": "250f7d5cfdf3155dab55f29d04712e8ddbcd8e80",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids",
       "credits": {
@@ -3575,8 +3575,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.25",
-      "hash": "50e15e09a9ae05d8241dd0220273bbd37e059067",
+      "version": "1.4.26",
+      "hash": "b3c1104764175d45a50de23b8341b0782b7238ff",
       "video_link": "",
       "wiki_link": "",
       "credits": {
