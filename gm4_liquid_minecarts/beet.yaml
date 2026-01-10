@@ -1,6 +1,6 @@
 id: gm4_liquid_minecarts
 name: Liquid Minecarts
-version: 1.7.X
+version: 1.8.X
 
 data_pack:
   load: .
@@ -16,7 +16,7 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_liquid_tanks: 2.7.0
+        gm4_liquid_tanks: 3.0.0
         lib_machines: 1.4.0
       schedule_loops: [main]
     model_data:
