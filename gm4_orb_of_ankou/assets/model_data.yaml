@@ -44,6 +44,7 @@ model_data:
       - reference: pneuma/feigning
       - reference: pneuma/shrieking
       - reference: pneuma/tranquilizing
+      - reference: pneuma/debilitate
   - item: swords
     reference: shamir/corripio
     template:

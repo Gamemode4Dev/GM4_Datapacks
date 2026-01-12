@@ -51,11 +51,11 @@ execute unless score $config_version gm4_sr_config matches 2.. run scoreboard pl
 scoreboard players set $config_version gm4_sr_data 2
 
 # swap natural regeneration to module's system
-execute unless score $natural_regen_disabled gm4_sr_data matches 1 run gamerule naturalRegeneration false
-execute unless score $natural_regen_disabled gm4_sr_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:{"text":"[INFO] Survival Refightalized changed gamerule naturalRegeneration to false"}}
+execute unless score $natural_regen_disabled gm4_sr_data matches 1 run gamerule natural_health_regeneration false
+execute unless score $natural_regen_disabled gm4_sr_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:{"text":"[INFO] Survival Refightalized changed gamerule natural_health_regeneration to false"}}
 scoreboard players set $natural_regen_disabled gm4_sr_data 1
-execute store result score $naturalregeneration gm4_sr_data run gamerule naturalRegeneration
-execute if score $natural_regen gm4_sr_config matches 1 if score $naturalregeneration gm4_sr_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:[{"text":"[WARN]","color":"red"},{"text":" Survival Refightalized requires naturalRegeneration to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule naturalRegeneration false"}}]}
+execute store result score $naturalregeneration gm4_sr_data run gamerule natural_health_regeneration
+execute if score $natural_regen gm4_sr_config matches 1 if score $naturalregeneration gm4_sr_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:[{"text":"[WARN]","color":"red"},{"text":" Survival Refightalized requires minecraft:natural_health_regeneration to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule natural_health_regeneration false"}}]}
 
 # constants
 scoreboard players set #-128 gm4_sr_data -128

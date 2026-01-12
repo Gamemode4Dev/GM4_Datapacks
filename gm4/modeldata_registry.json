@@ -122,7 +122,8 @@
       "gm4_orb_of_ankou:pneuma/shrieking": 235,
       "gm4_orb_of_ankou:pneuma/dashing": 236,
       "gm4_orb_of_ankou:pneuma/sniffing": 237,
-      "gm4_orb_of_ankou:pneuma/tranquilizing": 238
+      "gm4_orb_of_ankou:pneuma/tranquilizing": 238,
+      "gm4_orb_of_ankou:pneuma/debilitate": 239
     },
     "blaze_powder": {
       "gm4_mysterious_midnights:guidebook_icon/nightmare_nights": 1
@@ -644,7 +645,8 @@
       "gm4_orb_of_ankou:pneuma/shrieking": 235,
       "gm4_orb_of_ankou:pneuma/dashing": 236,
       "gm4_orb_of_ankou:pneuma/sniffing": 237,
-      "gm4_orb_of_ankou:pneuma/tranquilizing": 238
+      "gm4_orb_of_ankou:pneuma/tranquilizing": 238,
+      "gm4_orb_of_ankou:pneuma/debilitate": 239
     },
     "flint_and_steel": {
       "gm4_orb_of_ankou:gui/advancement/orb_of_ankou_soul_forge": 1,
@@ -1695,7 +1697,8 @@
       "gm4_metallurgy:shamir/infinitas": 100
     },
     "wheat": {
-      "gm4_mysterious_midnights:guidebook_icon/harvest_moons": 1
+      "gm4_mysterious_midnights:guidebook_icon/harvest_moons": 1,
+      "gm4_lavish_livestock:guidebook_icon/lavish_livestock": 2
     },
     "white_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/white": 300

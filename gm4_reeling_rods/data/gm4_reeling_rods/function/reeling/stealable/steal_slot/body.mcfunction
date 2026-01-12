@@ -1,7 +1,7 @@
 # Steal Body
 # @s = wolf, llama or horse
 # at bobber in @s
-# run from hooked_entity/select_type & reeling/llama & reeling/horse
+# run from hooked_entity/select_type & reeling/llama & reeling/stealable/steal_body_and_saddle
 
 # fails
 execute unless data entity @s equipment.body run return fail

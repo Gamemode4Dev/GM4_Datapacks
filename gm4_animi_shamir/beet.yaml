@@ -35,7 +35,6 @@ meta:
         - Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.
     modrinth:
       project_id: bPnAELDm
-    video: null
     wiki: https://wiki.gm4.co/wiki/Metallurgy/Animi_Shamir
     credits:
       Creator:

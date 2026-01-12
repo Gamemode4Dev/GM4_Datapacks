@@ -1,8 +1,10 @@
 {
     "values": [
         "minecraft:bogged",
+        {"id": "minecraft:camel_husk", "required": false},
         "minecraft:drowned",
         "minecraft:husk",
+        {"id": "minecraft:parched", "required": false},
         "minecraft:phantom",
         "minecraft:skeleton",
         "minecraft:skeleton_horse",
@@ -13,6 +15,7 @@
         "minecraft:zombie",
         "minecraft:zombie_horse",
         "minecraft:zombie_villager",
+        {"id": "minecraft:zombie_nautilus", "required": false},
         "minecraft:zombified_piglin"
     ]
 }

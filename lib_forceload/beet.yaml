@@ -14,7 +14,7 @@ meta:
   gm4:
     versioning:
       extra_version_injections:
-        advancements: [dimension_marking]
+        advancements: [change_dimension, join]
     smithed:
       pack_id: gm4_lib_forceload
     credits:
