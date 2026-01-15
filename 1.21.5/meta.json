@@ -1,5 +1,5 @@
 {
-  "last_commit": "8062d4187120265d8efe68594fd6d664dbe13634",
+  "last_commit": "d41cb45b2d624c5f748743ba603d6600b0c16556",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -681,8 +681,8 @@
     {
       "id": "gm4_crossbow_cartridges",
       "name": "Crossbow Cartridges",
-      "version": "1.8.4",
-      "hash": "b1399020c961ec8796c3bf58ef9dcf397fca0029",
+      "version": "1.8.5",
+      "hash": "18da933c86efb7b61ac4d40eba1459af741881e4",
       "video_link": "https://www.youtube.com/watch?v=XJiGvX7l-pI",
       "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
       "credits": {
@@ -1533,7 +1533,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.11",
+      "version": "1.0.12",
       "hash": "e453de1b265c4a74ac13a49a86df85c20136b38d",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
