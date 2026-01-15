@@ -1,5 +1,5 @@
 {
-  "last_commit": "c97e4805494b4dec63c6a0a694e5acaafc7250b1",
+  "last_commit": "8062d4187120265d8efe68594fd6d664dbe13634",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1533,7 +1533,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.10",
+      "version": "1.0.11",
       "hash": "e453de1b265c4a74ac13a49a86df85c20136b38d",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -4016,6 +4016,10 @@
       "links": [
         "https://twitter.com/FyidRants"
       ]
+    },
+    "Hozz": {
+      "name": "Hozz",
+      "links": []
     },
     "JP12": {
       "name": "JP12",
