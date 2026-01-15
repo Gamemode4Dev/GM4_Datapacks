@@ -7,9 +7,9 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
-    "beet>=0.113.0b10",
-    "mecha>=0.102.0b2",
-    "bolt>=0.50.0b2",
+    "beet>=0.113.0",
+    "mecha>=0.102.0",
+    "bolt>=0.50.0",
     "requests>=2.28.1",
     "repro-zipfile>=0.1.0",
 ]
