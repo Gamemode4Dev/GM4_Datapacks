@@ -52,6 +52,7 @@ def playerhead_models_1_21_5(id: str, resource: NamespaceFile):
 # Only gamerules that are actually used are replaced
 GAMERULES_RENAMES = {
   "command_block_output": "commandBlockOutput",
+  "mob_griefing": "mobGriefing",
   "spawn_phantoms": "doInsomnia",
   "natural_health_regeneration": "naturalRegeneration",
   "random_tick_speed": "randomTickSpeed",
