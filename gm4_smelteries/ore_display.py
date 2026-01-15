@@ -23,6 +23,7 @@ class OreDisplayTemplate(TemplateOptions):
             "textures":{
                 "top": f"gm4_smelteries:block/ore_display/{reference}_top",
                 "side": f"gm4_smelteries:block/ore_display/{reference}_side",
+                "particle": f"gm4_smelteries:block/ore_display/{reference}_side",
             }
         })
         return [m]

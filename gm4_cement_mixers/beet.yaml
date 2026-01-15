@@ -5,6 +5,9 @@ version: 1.5.X
 data_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
   - gm4.plugins.extend.module
 
@@ -12,7 +15,7 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_liquid_tanks: 2.7.0
+        gm4_liquid_tanks: 3.0.0
     website:
       description: Allows Liquid Tanks to convert Concrete Powder items into Concrete, at the cost of ⅓ of a Bucket of Water per Concrete Powder.
       recommended: []
