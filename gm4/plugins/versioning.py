@@ -11,6 +11,7 @@ class VersionInjectionConfig(PluginOptions):
     advancements: list[str] = []
 
 class VersioningConfig(PluginOptions, extra=Extra.ignore):
+    environment_checks: list[str] = []
     schedule_loops: list[str] = []
     required: dict[str, str] = {}
     extra_version_injections: VersionInjectionConfig = Field(default=VersionInjectionConfig())
@@ -55,6 +56,26 @@ def modules(ctx: Context, opts: VersioningConfig):
         log_data = f"{{type:\"version_conflict\",module:\"{ctx.project_name}\",id:\"{ctx.project_id}\",require:\"{dep_name}\",require_id:\"{dep_id}\",require_ver:\"{dep_ver}\"}}"
         lines.append(f"execute if score {dep_id} load.status matches 1.. unless score {dep_id} load.status matches {dep_ver.major} run data modify storage gm4:log queue append value {log_data}")
         lines.append(f"execute if score {dep_id} load.status matches {dep_ver.major} unless score {dep_id}_minor load.status matches {dep_ver.minor}.. run data modify storage gm4:log queue append value {log_data}")
+
+    # add required environment checks
+    for namespaced_environment_check in opts.environment_checks:
+        match namespaced_environment_check.split(":"):
+            case [check]:  # if no namespace is given, assume current project's namespace
+                namespace = ctx.project_id
+            case [namespace, check]:
+                pass
+            case _:
+                raise ValueError(f"{namespaced_environment_check} is not a valid environment check name")
+        if namespace == "gm4" or namespace.startswith("lib_"):  # base and libraries need versioned namespaces
+            parsed_version = Version(dependencies[namespace])
+            line = f"if function {namespace}-{parsed_version.major}.{parsed_version.minor}:environment_check/{check} "
+        else:
+            line = f"if function {namespace}:environment_check/{check} "
+
+        lines[0] += line
+        lines[1] += line
+        log_data = f"{{type:\"environment_check_failed\",module:\"{ctx.project_name}\",id:\"{ctx.project_id}\",environment_check:\"{namespace}:{check}\",probable_cause:{{\"nbt\":\"result.{check}.probable_cause\",\"storage\":\"{namespace}:environment_checks\"}}}}"
+        lines.append(f"execute unless data storage {namespace}:environment_checks result.{check}.passed run data modify storage gm4:log queue append value {log_data}")
 
     # finalize startup check
     module_ver = Version(ctx.project_version)
