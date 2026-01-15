@@ -44,12 +44,12 @@
         "links":[]
     },
     {
-        "name":"Hozz",
-        "links":[]
-    },
-    {
         "name": "Fyid",
         "links": ["https://twitter.com/FyidRants"]
+    },
+    {
+        "name":"Hozz",
+        "links":[]
     },
     {
         "name": "JP12",
