@@ -1,11 +1,11 @@
 {
     "values": [
-        "oak_sapling",
-        "birch_sapling",
         "acacia_sapling",
-        "dark_oak_sapling",
+        "birch_sapling",
         "cherry_sapling",
-        "pale_oak_sapling",
-        "mangrove_propagule"
+        "dark_oak_sapling",
+        "mangrove_propagule",
+        "oak_sapling",
+        "pale_oak_sapling"
     ]
 }

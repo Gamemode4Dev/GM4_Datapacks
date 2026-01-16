@@ -11,15 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "oak_sapling",
-              "birch_sapling",
-              "acacia_sapling",
-              "dark_oak_sapling",
-              "cherry_sapling",
-              "pale_oak_sapling",
-              "mangrove_propagule"
-            ]
+            "items": "#gm4_towering_trees:supported_sapling"
           }
         ]
       }
@@ -41,7 +33,7 @@
           },
           {
             "translate": "text.gm4.guidebook.towering_trees.description",
-            "fallback": "Oak, Birch, Acacia, Cheery and Mangrove trees have mega (2x2) variants.\n\nDark Oak and Pale Oak have small variants."
+            "fallback": "Oak, Birch, Acacia, Cherry and Mangrove trees have mega (2x2) variants.\n\nDark Oak and Pale Oak have small variants."
           }
         ]
       ]

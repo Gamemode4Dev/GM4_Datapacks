@@ -2,7 +2,6 @@
 # @s = player that just placed a custom sapling
 # at @s
 # run from advancement gm4_trees:place_sapling
-# run from sapling/resolve_place_sapling
 
 advancement revoke @s only gm4_trees:place_sapling
 
