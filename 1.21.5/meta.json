@@ -1,5 +1,5 @@
 {
-  "last_commit": "cd4b607fd110b0fa96438d18d8915b7b2e269abc",
+  "last_commit": "fbe287d26cbe6eaf5aa1bfd1cac07bc64b6be288",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -412,13 +412,13 @@
     {
       "id": "gm4_bookshelf_inspector",
       "name": "Bookshelf Inspector",
-      "version": "1.4.5",
-      "hash": "617ff5bca80a196e8dd64cdffbe23078ce6f1cd4",
+      "version": "1.4.6",
+      "hash": "88f279de00beabcfa06f2410df258deab5621c81",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Bookshelf_Inspector",
       "credits": {
         "Creator": [
-          "Thanathor"
+          "Djones"
         ],
         "Icon Design": [
           "Hozz"
@@ -968,13 +968,13 @@
     {
       "id": "gm4_dripleaf_launchers",
       "name": "Dripleaf Launchers",
-      "version": "1.4.5",
-      "hash": "0e8a50ccc6436086526a75e36469212fc02fea0f",
+      "version": "1.4.6",
+      "hash": "c4f8ac548375b261dda016804b51eccdc992db25",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Launchers",
       "credits": {
         "Creator": [
-          "Thanathor"
+          "Djones"
         ],
         "Icon Design": [
           "Hozz"
@@ -1533,7 +1533,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.13",
+      "version": "1.0.14",
       "hash": "1b3a67f554abb1e9fdbc6ba82a118e8a9151149b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -2009,13 +2009,13 @@
     {
       "id": "gm4_monsters_unbound",
       "name": "Monsters Unbound",
-      "version": "1.1.4",
-      "hash": "b293e6b5ca066ad2eda64b481d83877a4937a18f",
+      "version": "1.1.5",
+      "hash": "0f7b0032e95ea94e8e4b474ddbcec26e6e56071f",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Monsters_Unbound",
       "credits": {
         "Creator": [
-          "Thanathor"
+          "Djones"
         ],
         "Icon Design": [
           "Hozz"
@@ -2682,13 +2682,13 @@
     {
       "id": "gm4_shapeless_portals",
       "name": "Shapeless Portals",
-      "version": "1.3.4",
-      "hash": "db49a5b5f0e8ed59001820b64174dc2347e47fdd",
+      "version": "1.3.5",
+      "hash": "f65cf2bb96e654a51479fa4cbb240b598a2e2b81",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Shapeless_Portals",
       "credits": {
         "Creator": [
-          "Thanathor"
+          "Djones"
         ],
         "Icon Design": [
           "Hozz"
@@ -2995,13 +2995,13 @@
     {
       "id": "gm4_survival_refightalized",
       "name": "Survival Refightalized",
-      "version": "1.1.6",
-      "hash": "8c736a20c22ae0071c359e9061e8b6f8a2b0f0e0",
+      "version": "1.1.7",
+      "hash": "3225cc6e84333974448b70c9773c9fa41d702daf",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Survival_Refightalized",
       "credits": {
         "Creator": [
-          "Thanathor"
+          "Djones"
         ],
         "Icon Design": [
           "Hozz"
@@ -3032,8 +3032,8 @@
     {
       "id": "gm4_sweethearts",
       "name": "Sweethearts",
-      "version": "1.6.4",
-      "hash": "c9e6aeaa5ccf5d71cb27cd8ff7106abebfc6129d",
+      "version": "1.6.5",
+      "hash": "3d79a304abfc324b2e3bea160fd9280bd36943bd",
       "video_link": "https://www.youtube.com/watch?v=mcopNZzY2dA",
       "wiki_link": "https://wiki.gm4.co/wiki/Sweethearts",
       "credits": {
@@ -3042,7 +3042,7 @@
         ],
         "Updated by": [
           "BPR",
-          "Thanathor"
+          "Djones"
         ],
         "Icon Design": [
           "DuckJr"
@@ -3308,13 +3308,13 @@
     {
       "id": "gm4_vigere_shamir",
       "name": "Vigere Shamir",
-      "version": "1.5.4",
-      "hash": "6453528248e88ecfd298586128064a2b035230c9",
+      "version": "1.5.5",
+      "hash": "227fe876db1ae514ee6d200bc0591eb65eb16fad",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vigere_Shamir",
       "credits": {
         "Creator": [
-          "Thanathor",
+          "Djones",
           "TheEpyonProject"
         ],
         "Icon Design": [
@@ -3995,6 +3995,12 @@
         "https://github.com/Dennis-0"
       ]
     },
+    "Djones": {
+      "name": "Djones",
+      "links": [
+        "https://bsky.app/profile/thanathor.bsky.social"
+      ]
+    },
     "DuckJr": {
       "name": "DuckJr",
       "links": [
@@ -4121,12 +4127,6 @@
       "name": "SpecialBuilder32",
       "links": [
         "https://bsky.app/profile/specialbuilder32.bsky.social"
-      ]
-    },
-    "Thanathor": {
-      "name": "Thanathor",
-      "links": [
-        "https://bsky.app/profile/thanathor.bsky.social"
       ]
     },
     "The8BitMonkey": {

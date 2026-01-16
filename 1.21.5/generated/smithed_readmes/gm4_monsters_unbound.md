@@ -17,7 +17,7 @@ A full list of all modifiers to mobs, weapons and armor can be found at the [Wik
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Monsters_Unbound)
 
 ### Credits
-- Creator: [Thanathor](https://bsky.app/profile/thanathor.bsky.social)
+- Creator: [Djones](https://bsky.app/profile/thanathor.bsky.social)
 - Icon Design: Hozz
 - Textures: [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social), rednls
 

@@ -16,7 +16,7 @@ A full detailed list of all mechanics can be found at the [Wiki](https://wiki.gm
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Survival_Refightalized)
 
 ### Credits
-- Creator: [Thanathor](https://bsky.app/profile/thanathor.bsky.social)
+- Creator: [Djones](https://bsky.app/profile/thanathor.bsky.social)
 - Icon Design: Hozz
 
 ---
