@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:leather_horse_armor",
+    {"id":"minecraft:copper_horse_armor","required":false},
+    "minecraft:iron_horse_armor",
+    "minecraft:golden_horse_armor",
+    "minecraft:diamond_horse_armor",
+    {"id":"minecraft:netherite_horse_armor","required":false}
+  ]
+}
