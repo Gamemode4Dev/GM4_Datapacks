@@ -32,6 +32,10 @@
         "links": ["https://github.com/Dennis-0"]
     },
     {
+        "name": "Djones",
+        "links": ["https://bsky.app/profile/thanathor.bsky.social"]
+    },
+    {
         "name": "DuckJr",
         "links": ["https://twitter.com/DuckJr94"]
     },
@@ -118,10 +122,6 @@
     {
         "name": "SpecialBuilder32",
         "links": ["https://bsky.app/profile/specialbuilder32.bsky.social"]
-    },
-    {
-        "name": "Thanathor",
-        "links": ["https://bsky.app/profile/thanathor.bsky.social"]
     },
     {
         "name": "The8BitMonkey",
