@@ -1,0 +1,44 @@
+id: gm4_furniture
+name: Furniture
+version: 1.2.X
+
+data_pack:
+  load: .
+
+resource_pack:
+  load: .
+
+require:
+  - bolt
+
+pipeline:
+  - gm4_furniture.generate
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_custom_crafters
+  - gm4.plugins.include.lib_forceload
+
+meta:
+  gm4:
+    versioning:
+      required:
+        lib_forceload: 1.5.0
+        lib_custom_crafters: 3.4.0
+      schedule_loops:
+        - main
+        - slow_clock
+    gui_fonts:
+      - translation: gui.gm4.furniture_station
+        container: furniture_station
+        texture: gui/container/furniture_station
+    website:
+      description: Furniture!
+      recommended: []
+      notes:
+        - Resourcepack is required for this module to work.
+    video: null
+    wiki: https://wiki.gm4.co/wiki/Furniture
+    credits:
+      Creator:
+        - Thanathor
+      Textures by:
+        - Kyrius
