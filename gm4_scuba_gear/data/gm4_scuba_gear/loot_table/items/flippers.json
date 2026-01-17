@@ -10,41 +10,64 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:dyed_color": 11009871,
-                "minecraft:tooltip_display": {
-                  "hidden_components": [
-                    "minecraft:dyed_color"
-                  ]
+                "minecraft:item_name": {
+                  "translate": "item.gm4.flippers",
+                  "fallback": "Flippers",
+                  "color": "white",
+                  "italic": false
                 },
                 "minecraft:attribute_modifiers": [
                   {
                     "type": "minecraft:armor",
-                    "id": "gm4_scuba_gear:flippers_armor",
-                    "slot": "feet",
+                    "id": "minecraft:generic.armor",
                     "amount": 1,
-                    "operation": "add_value"
+                    "operation": "add_value",
+                    "slot": "feet"
                   },
                   {
-                    "type": "minecraft:movement_speed",
-                    "id": "gm4_scuba_gear:flippers_movement_speed",
-                    "slot": "feet",
-                    "amount": -0.4,
-                    "operation": "add_multiplied_base"
+                    "type": "minecraft:water_movement_efficiency",
+                    "id": "gm4_scuba_gear:flippers/water_movement_efficiency",
+                    "amount": 1,
+                    "operation": "add_value",
+                    "slot": "feet"
                   }
                 ],
-                "minecraft:custom_model_data": "item/flippers"
-              }
-            },
-            {
-              "function": "minecraft:set_custom_data",
-              "tag": "{gm4_scuba_gear:{item:'flippers'}}"
-            },
-            {
-              "function": "minecraft:set_name",
-              "name": {
-                "translate": "item.gm4.flippers",
-                "fallback": "Flippers",
-                "italic": false
+                "minecraft:custom_data": {
+                  "gm4_scuba_gear": {
+                    "item": "flippers"
+                  }
+                },
+                "minecraft:item_model": "gm4_scuba_gear:flippers",
+                "!minecraft:enchantable": {},
+                "minecraft:enchantments": {
+                  "gm4_scuba_gear:flippers": 1
+                },
+                "minecraft:enchantment_glint_override": false,
+                "minecraft:equippable": {
+                  "slot": "feet",
+                  "asset_id": "gm4_scuba_gear:scuba"
+                },
+                "minecraft:max_damage": 156,
+                "minecraft:lore": [
+                  {
+                    "translate": "item.modifiers.gm4.scuba_gear.on_land",
+                    "fallback": "When on Land:",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "translate": "attribute.modifier.take.1",
+                    "with": [
+                      "25",
+                      {
+                        "translate": "attribute.name.generic.movement_speed",
+                        "fallback": "Speed"
+                      }
+                    ],
+                    "color": "red",
+                    "italic": false
+                  }
+                ]
               }
             }
           ]
