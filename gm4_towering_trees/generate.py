@@ -29,13 +29,13 @@ def generate_tree_files(ctx: Context, tree_data: CSV):
 
     for tree in tree_data:
 
-        size_x: int = int(tree['size_x'])
-        size_y: int = int(tree['size_y'])
-        size_z: int = int(tree['size_z'])
-        base_x_offset: int = int(tree['base_x_offset']) * -1
-        base_z_offset: int = int(tree['base_z_offset']) * -1
-        branch_height: int = int(tree['branch_start_height']) - 1
-        is_mega: int = int(tree["is_mega"])
+        size_x: int = tree['size_x'].as_integer()
+        size_y: int = tree['size_y'].as_integer()
+        size_z: int = tree['size_z'].as_integer()
+        base_x_offset: int = tree['base_x_offset'].as_integer() * -1
+        base_z_offset: int = tree['base_z_offset'].as_integer() * -1
+        branch_height: int = tree['branch_start_height'].as_integer() - 1
+        is_mega: int = tree["is_mega"].as_integer()
 
         tree_type = tree['type']
         type_variant = tree['variant']
