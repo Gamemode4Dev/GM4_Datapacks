@@ -10,8 +10,9 @@ execute if block ~ ~ ~ minecraft:spruce_sapling run setblock ~ ~ ~ minecraft:spr
 execute if block ~ ~ ~ minecraft:jungle_sapling run setblock ~ ~ ~ minecraft:jungle_sapling[stage=0]
 execute if block ~ ~ ~ minecraft:acacia_sapling run setblock ~ ~ ~ minecraft:acacia_sapling[stage=0]
 execute if block ~ ~ ~ minecraft:dark_oak_sapling run setblock ~ ~ ~ minecraft:dark_oak_sapling[stage=0]
-execute if block ~ ~ ~ minecraft:mangrove_propagule[waterlogged=false] run setblock ~ ~ ~ minecraft:mangrove_propagule[stage=0,waterlogged=false]
-execute if block ~ ~ ~ minecraft:mangrove_propagule[waterlogged=true] run setblock ~ ~ ~ minecraft:mangrove_propagule[stage=0,waterlogged=true]
+execute if block ~ ~ ~ minecraft:pale_oak_sapling run setblock ~ ~ ~ minecraft:pale_oak_sapling[stage=0]
+execute if block ~ ~ ~ minecraft:mangrove_propagule[waterlogged=false,hanging=false,age=4] run setblock ~ ~ ~ minecraft:mangrove_propagule[stage=0,age=4,waterlogged=false]
+execute if block ~ ~ ~ minecraft:mangrove_propagule[waterlogged=true,hanging=false,age=4] run setblock ~ ~ ~ minecraft:mangrove_propagule[stage=0,age=4,waterlogged=true]
 execute if block ~ ~ ~ minecraft:cherry_sapling run setblock ~ ~ ~ minecraft:cherry_sapling[stage=0]
 
 # advance stage of custom sapling, if stage is large enough, grow the tree

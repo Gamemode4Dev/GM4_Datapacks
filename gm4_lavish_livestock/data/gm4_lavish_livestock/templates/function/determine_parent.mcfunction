@@ -7,5 +7,5 @@
 scoreboard players add @s gm4_lavish_livestock_size 0
 
 # store size of parent into fixed fake player (only one of these triggers, the other one triggers for the other parent)
-execute unless score $parent_a gm4_lavish_livestock_size matches -2147483648..2147483647 run return run scoreboard players operation $parent_a gm4_lavish_livestock_size = @s gm4_lavish_livestock_size
-execute unless score $parent_b gm4_lavish_livestock_size matches -2147483648..2147483647 run return run scoreboard players operation $parent_b gm4_lavish_livestock_size = @s gm4_lavish_livestock_size
+execute if score $parent_a gm4_lavish_livestock_size matches -1 run return run scoreboard players operation $parent_a gm4_lavish_livestock_size = @s gm4_lavish_livestock_size
+execute if score $parent_b gm4_lavish_livestock_size matches -1 run return run scoreboard players operation $parent_b gm4_lavish_livestock_size = @s gm4_lavish_livestock_size

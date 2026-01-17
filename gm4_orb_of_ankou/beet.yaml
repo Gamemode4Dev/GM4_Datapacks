@@ -11,6 +11,12 @@ data_pack:
       min_format: 1
       max_format: 71
       directory: backport_71
+    - formats:
+        min_inclusive: 1
+        max_inclusive: 88
+      min_format: 1
+      max_format: 88
+      directory: backport_88
 
 resource_pack:
   load:

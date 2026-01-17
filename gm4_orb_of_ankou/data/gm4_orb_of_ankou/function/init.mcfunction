@@ -28,6 +28,7 @@ scoreboard objectives add gm4_oa_swim minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add gm4_oa_bow_hawkeye minecraft.used:minecraft.bow
 scoreboard objectives add gm4_oa_bow_freezing minecraft.used:minecraft.bow
 scoreboard objectives add gm4_oa_bow_tranquilizing minecraft.used:minecraft.bow
+scoreboard objectives add gm4_oa_bow_debilitate minecraft.used:minecraft.bow
 
 # start module
 execute unless score orb_of_ankou gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Orb of Ankou"}

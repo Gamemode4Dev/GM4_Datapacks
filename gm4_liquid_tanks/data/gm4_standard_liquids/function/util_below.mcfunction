@@ -24,8 +24,8 @@ execute if score @s[tag=gm4_lt_ink] gm4_lt_value matches 1.. as @e[team=!invalid
 execute if score @s[tag=gm4_lt_glow_ink] gm4_lt_value matches 1.. as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{active_effects:[{id:'minecraft:glowing'}]}] run function gm4_standard_liquids:util/liquid_dispensing/glow_ink
 
 #player withdrawing experience
-execute if score $schedule_withdraw_exp gm4_lt_util matches 2.. run schedule clear gm4_standard_liquids:util/scheduled_withdraw_exp
+execute if score $schedule_withdraw_exp gm4_lt_util matches 2.. run schedule clear gm4_standard_liquids:util/experience/scheduled_withdraw
 execute if entity @s[tag=gm4_lt_experience] positioned ~0.5 ~-1 ~0.5 if entity @a[distance=..0.5,gamemode=!spectator] run scoreboard players set $schedule_withdraw_exp gm4_lt_util 1
-execute if entity @s[tag=gm4_lt_experience] positioned ~0.5 ~-1 ~0.5 if entity @a[distance=..0.5,gamemode=!spectator] run schedule function gm4_standard_liquids:util/scheduled_withdraw_exp 1t
+execute if entity @s[tag=gm4_lt_experience] positioned ~0.5 ~-1 ~0.5 if entity @a[distance=..0.5,gamemode=!spectator] run schedule function gm4_standard_liquids:util/experience/scheduled_withdraw 1t
 
-tag @s remove gm4_processing_tank
+# tag @s remove gm4_processing_tank # this line is now added by main.bolt

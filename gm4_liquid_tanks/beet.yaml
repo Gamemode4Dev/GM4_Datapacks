@@ -1,6 +1,6 @@
 id: gm4_liquid_tanks
 name: Liquid Tanks
-version: 2.7.X
+version: 3.0.X
 
 data_pack:
   load: .
@@ -8,12 +8,19 @@ data_pack:
 resource_pack:
   load: .
 
+require:
+  - bolt
+
 pipeline:
+  - override_formatting
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
   - gm4.plugins.include.lib_custom_crafters
 
 meta:
+  bolt:
+    entrypoint:
+      - gm4_standard_liquids:main
   gm4:
     versioning:
       required:

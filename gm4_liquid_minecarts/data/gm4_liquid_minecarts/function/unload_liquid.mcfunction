@@ -19,4 +19,4 @@ playsound minecraft:block.brewing_stand.brew block @a ~ ~ ~ 1.0 1.5
 
 #if cart is empty, reset cart
 execute if score @s gm4_lt_value matches 0 run tag @s add gm4_liquid_minecart_empty
-execute if score @s gm4_lt_value matches 0 as @e[type=armor_stand,limit=1,sort=nearest,tag=gm4_liquid_minecart_stand] run function gm4_liquid_minecarts:set_empty_data
+execute if score @s gm4_lt_value matches 0 as @e[type=item_display,limit=1,sort=nearest,tag=gm4_liquid_minecart_display] run function gm4_liquid_minecarts:set_empty_data

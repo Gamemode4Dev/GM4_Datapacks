@@ -9,7 +9,7 @@
                     "name": "potion",
                     "functions": [
                         {
-                            "function": "set_components",
+                            "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_model_data": "gm4_standard_liquids:item/ink_bottle",
                                 "minecraft:potion_contents": {
@@ -25,16 +25,17 @@
                             }
                         },
                         {
-                            "function": "set_custom_data",
+                            "function": "minecraft:set_custom_data",
                             "tag": "{gm4_standard_liquids:{potion:'blindness'}}"
                         },
                         {
-                            "function": "set_name",
+                            "function": "minecraft:set_name",
                             "name": {
                                 "translate": "item.gm4.ink_bottle",
                                 "fallback": "Ink Bottle",
                                 "italic": false
-                            }
+                            },
+                            "target": "item_name"
                         }
                     ]
                 }

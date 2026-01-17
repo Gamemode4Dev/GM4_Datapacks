@@ -7,6 +7,13 @@ data_pack:
 
 resource_pack:
   load: .
+  overlays:
+    - formats:
+        min_inclusive: 1
+        max_inclusive: 64
+      min_format: 1
+      max_format: 64
+      directory: backport_64
   
 require:
   - bolt
@@ -15,6 +22,7 @@ pipeline:
   - legacy_item_sheet
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_forceload
+  - gm4_guidebook.fix_overlays
 
 meta:
   gm4:
