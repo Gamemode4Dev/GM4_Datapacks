@@ -1,226 +1,154 @@
 [
     {
         "name": "15Redstones",
-        "links": [
-            "https://twitter.com/15Redstones"
-        ]
+        "links": ["https://twitter.com/15Redstones"]
     },
     {
         "name": "dvitski",
-        "links": [
-            "https://bsky.app/profile/dvitski.cc"
-        ]
+        "links": ["https://bsky.app/profile/dvitski.cc"]
     },
     {
         "name": "Bloo",
-        "links": [
-            "https://bsky.app/profile/bloo.boo"
-        ]
+        "links": ["https://bsky.app/profile/bloo.boo"]
     },
     {
         "name": "BPR",
-        "links": [
-            "https://bsky.app/profile/bpr02.com"
-        ]
+        "links": ["https://bsky.app/profile/bpr02.com"]
     },
     {
         "name": "Bunnygamers",
-        "links": [
-            "https://bsky.app/profile/bunnygamers.bsky.social"
-        ]
+        "links": ["https://bsky.app/profile/bunnygamers.bsky.social"]
     },
     {
         "name": "catter1",
-        "links": [
-            "https://bsky.app/profile/catter.dev"
-        ]
+        "links": ["https://bsky.app/profile/catter.dev"]
     },
     {
         "name": "Chopper2112",
-        "links": [
-            "https://twitter.com/TheChopper2112"
-        ]
+        "links": ["https://twitter.com/TheChopper2112"]
     },
     {
         "name": "Denniss",
-        "links": [
-            "https://github.com/Dennis-0"
-        ]
+        "links": ["https://github.com/Dennis-0"]
     },
     {
         "name": "Dinoguin_Jess",
-        "links": [
-            "https://github.com/Dinoguin-Jess"
-        ]
+        "links": ["https://github.com/Dinoguin-Jess"]
     },
     {
         "name": "Djones",
-        "links": [
-            "https://bsky.app/profile/thanathor.bsky.social"
-        ]
+        "links": ["https://bsky.app/profile/thanathor.bsky.social"]
     },
     {
         "name": "DuckJr",
-        "links": [
-            "https://twitter.com/DuckJr94"
-        ]
+        "links": ["https://twitter.com/DuckJr94"]
     },
     {
         "name": "Energyxxer",
-        "links": [
-            "https://youtube.com/user/Energyxxer"
-        ]
+        "links": ["https://youtube.com/user/Energyxxer"]
     },
     {
-        "name": "foodiebonus",
-        "links": []
+        "name":"foodiebonus",
+        "links":[]
     },
     {
         "name": "Fyid",
-        "links": [
-            "https://twitter.com/FyidRants"
-        ]
+        "links": ["https://twitter.com/FyidRants"]
     },
     {
-        "name": "Hozz",
-        "links": []
+        "name":"Hozz",
+        "links":[]
     },
     {
         "name": "JP12",
-        "links": [
-            "https://github.com/jpeterik12"
-        ]
+        "links": ["https://github.com/jpeterik12"]
     },
     {
         "name": "kindabland",
-        "links": [
-            "https://github.com/kindabland"
-        ]
+        "links": ["https://github.com/kindabland"]
     },
     {
         "name": "Kroppeb",
-        "links": [
-            "https://tech.lgbt/@Kroppeb"
-        ]
+        "links": ["https://tech.lgbt/@Kroppeb"]
     },
     {
         "name": "Kruthers",
-        "links": [
-            "https://twitter.com/Pandakruthers"
-        ]
+        "links": ["https://twitter.com/Pandakruthers"]
     },
     {
         "name": "Kyrius",
-        "links": [
-            "https://bsky.app/profile/kyriuspixels.bsky.social"
-        ]
+        "links": ["https://bsky.app/profile/kyriuspixels.bsky.social"]
     },
     {
         "name": "Lue",
-        "links": [
-            "https://github.com/Luexa"
-        ]
+        "links": ["https://github.com/Luexa"]
     },
     {
         "name": "Lune6",
-        "links": [
-            "https://bsky.app/profile/lune6.bsky.social"
-        ]
+        "links": ["https://bsky.app/profile/lune6.bsky.social"]
     },
     {
         "name": "Modulorium",
-        "links": [
-            "https://www.modulorium.dev"
-        ]
+        "links": ["https://www.modulorium.dev"]
     },
     {
         "name": "Misode",
-        "links": [
-            "https://bsky.app/profile/misode.dev"
-        ]
+        "links": ["https://bsky.app/profile/misode.dev"]
     },
     {
         "name": "Memo",
-        "links": [
-            "https://linktr.ee/miraku_memo"
-        ]
+        "links": ["https://linktr.ee/miraku_memo"]
     },
     {
         "name": "Nik3141",
-        "links": [
-            "https://youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"
-        ]
+        "links": ["https://youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"]
     },
     {
         "name": "runcows",
-        "links": [
-            "https://bsky.app/profile/runcows.bsky.social"
-        ]
+        "links": ["https://bsky.app/profile/runcows.bsky.social"]
     },
     {
         "name": "Scommander",
-        "links": [
-            "https://github.com/Scommander"
-        ]
+        "links": ["https://github.com/Scommander"]
     },
     {
         "name": "SethBling",
-        "links": [
-            "https://youtube.com/user/SethBling"
-        ]
+        "links": ["https://youtube.com/user/SethBling"]
     },
     {
         "name": "SiberianHat",
-        "links": [
-            "https://twitter.com/SiberianHat"
-        ]
+        "links": ["https://twitter.com/SiberianHat"]
     },
     {
         "name": "SirSheepe",
-        "links": [
-            "https://bsky.app/profile/sirsheepe.bsky.social"
-        ]
+        "links": ["https://bsky.app/profile/sirsheepe.bsky.social"]
     },
     {
         "name": "Sparks",
-        "links": [
-            "https://bsky.app/profile/selcouthsparks.bsky.social"
-        ]
+        "links": ["https://bsky.app/profile/selcouthsparks.bsky.social"]
     },
     {
         "name": "SpecialBuilder32",
-        "links": [
-            "https://bsky.app/profile/specialbuilder32.bsky.social"
-        ]
+        "links": ["https://bsky.app/profile/specialbuilder32.bsky.social"]
     },
     {
         "name": "The8BitMonkey",
-        "links": [
-            "https://youtube.com/the8bitmonkey"
-        ]
+        "links": ["https://youtube.com/the8bitmonkey"]
     },
     {
         "name": "torbray",
-        "links": [
-            "https://twitter.com/torbray00"
-        ]
+        "links": ["https://twitter.com/torbray00"]
     },
     {
         "name": "Wumpacraft",
-        "links": [
-            "https://twitter.com/wumpacraft"
-        ]
+        "links": ["https://twitter.com/wumpacraft"]
     },
     {
         "name": "Venomousbirds",
-        "links": [
-            "https://venomousbirds.artstation.com/"
-        ]
+        "links": ["https://venomousbirds.artstation.com/"]
     },
     {
         "name": "MulverineX",
-        "links": [
-            "https://modrinth.com/user/MulverineX"
-        ]
+        "links": ["https://modrinth.com/user/MulverineX"]
     }
 ]
