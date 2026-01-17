@@ -1298,6 +1298,7 @@
       "gm4_desire_lines:gui/advancement/desire_lines_8000": 1
     },
     "oak_sapling": {
+      "gm4_towering_trees:guidebook_icon/towering_trees": 1,
       "gm4_apple_trees:item/apple_tree_sapling": 4
     },
     "oak_sign": {
