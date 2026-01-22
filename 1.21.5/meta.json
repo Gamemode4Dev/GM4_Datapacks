@@ -1,5 +1,5 @@
 {
-  "last_commit": "b33457fabfc1fddf9f5ec56a2e2ddb06b66b5a2a",
+  "last_commit": "45b19a431c28b06942b55e906d4b663b2226dd9b",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1533,7 +1533,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.15",
+      "version": "1.0.16",
       "hash": "1b3a67f554abb1e9fdbc6ba82a118e8a9151149b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -1743,8 +1743,8 @@
     {
       "id": "gm4_lively_lily_pads",
       "name": "Lively Lily Pads",
-      "version": "3.1.3",
-      "hash": "c8740a3db4d076b176303b3fd46ad16a7d7c5682",
+      "version": "3.1.4",
+      "hash": "09a6103374b75fabd0715e913c48a741d5bfa16c",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lively_Lily_Pads",
       "credits": {
