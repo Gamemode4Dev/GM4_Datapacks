@@ -1,0 +1,28 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:tool": {
+                "rules": [
+                    {
+                        "blocks": "#minecraft:mineable/pickaxe",
+                        "speed": 6.0,
+                        "correct_for_drops": true
+                    },
+                    {
+                        "blocks": "#minecraft:mineable/shovel",
+                        "speed": 6.0,
+                        "correct_for_drops": true
+                    }
+                ],
+                "damage_per_block": 1,
+                "default_mining_speed": 1.0
+            },
+            "minecraft:custom_data": {
+                "gm4_blasting_maces": {
+                    "has_tool": true
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,24 @@
+id: gm4_blasting_maces
+name: Blasting Maces
+version: 1.0.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [tick]
+    website:
+      description: Dig a hole like a mole!
+      recommended:
+        - gm4_resource_pack
+      notes: []
+    video: null
+    wiki: null
+    credits:
+      Creator:
+        - Drodo

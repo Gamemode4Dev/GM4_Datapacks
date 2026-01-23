@@ -1,0 +1,13 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "!minecraft:tool": {},
+            "minecraft:custom_data": {
+                "gm4_blasting_maces": {
+                    "has_tool": false
+                }
+            }
+        }
+    }
+]
