@@ -8,7 +8,10 @@
                 "predicates": {
                     "minecraft:enchantments": [
                         {
-                            "enchantments": "gm4_blasting_maces:blasting"
+                            "enchantments": "gm4_blasting_maces:blasting",
+                            "levels": {
+                                "min": 1
+                            }
                         }
                     ]
                 }

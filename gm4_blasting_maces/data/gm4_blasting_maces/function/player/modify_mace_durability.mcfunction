@@ -3,8 +3,14 @@
 # at @s
 # run from gm4_blasting_maces:player/blast
 
-# get max damage - 1 for mace (durability 500)
-scoreboard players set $max_damage gm4_blast_data 499
+# skip if mace is unbreakable
+execute if data storage gm4_blasting_maces:temp tool.components."minecraft:unbreakable" run return 0
+
+# get max damage
+execute store success score $has_max_damage gm4_blast_data run data get storage gm4_blasting_maces:temp tool.components."minecraft:max_damage"
+execute if score $has_max_damage gm4_blast_data matches 1 store result score $max_damage gm4_blast_data run data get storage gm4_blasting_maces:temp tool.components."minecraft:max_damage"
+execute if score $has_max_damage gm4_blast_data matches 0 run scoreboard players set $max_damage gm4_blast_data 500
+scoreboard players remove $max_damage gm4_blast_data 1
 
 # get unbreaking level (increases durability by reducing damage chance)
 execute store result score $unbreaking_level gm4_blast_data run data get storage gm4_blasting_maces:temp tool.components."minecraft:enchantments"."minecraft:unbreaking"
