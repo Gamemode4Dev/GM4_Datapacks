@@ -1,13 +1,41 @@
-# Routes to the correct 5x5 vertical plane based on the player's yaw
+# Mines a 5x5 vertical wall perpendicular to the player's facing direction, excluding the center
 # @s = player with blasting mace
 # at marker (center of broken block)
 # run from gm4_blasting_maces:mining/detonate
 
-# north/south (facing +/-Z direction, mine X-Y plane)
-execute if score @s gm4_blast_yaw matches -45..44 run function gm4_blasting_maces:mining/vertical_xy_5x5
-execute if score @s gm4_blast_yaw matches 135..180 run function gm4_blasting_maces:mining/vertical_xy_5x5
-execute if score @s gm4_blast_yaw matches -180..-135 run function gm4_blasting_maces:mining/vertical_xy_5x5
+# use local coordinates with player's yaw (^left ^up ^forward)
+# rotated ~ 0 ensures horizontal plane for left/right movement
 
-# east/west (facing +/-X direction, mine Z-Y plane)
-execute if score @s gm4_blast_yaw matches 45..134 run function gm4_blasting_maces:mining/vertical_zy_5x5
-execute if score @s gm4_blast_yaw matches -134..-46 run function gm4_blasting_maces:mining/vertical_zy_5x5
+# row y-1
+execute rotated as @s rotated ~ 0 positioned ^-2 ^-1 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^-1 ^-1 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^0 ^-1 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^1 ^-1 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^2 ^-1 ^0 run function gm4_blasting_maces:mining/destroy_block
+
+# row y0 (center row, skip center block)
+execute rotated as @s rotated ~ 0 positioned ^-2 ^0 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^-1 ^0 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^1 ^0 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^2 ^0 ^0 run function gm4_blasting_maces:mining/destroy_block
+
+# row y+1
+execute rotated as @s rotated ~ 0 positioned ^-2 ^1 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^-1 ^1 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^0 ^1 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^1 ^1 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^2 ^1 ^0 run function gm4_blasting_maces:mining/destroy_block
+
+# row y+2
+execute rotated as @s rotated ~ 0 positioned ^-2 ^2 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^-1 ^2 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^0 ^2 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^1 ^2 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^2 ^2 ^0 run function gm4_blasting_maces:mining/destroy_block
+
+# row y+3
+execute rotated as @s rotated ~ 0 positioned ^-2 ^3 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^-1 ^3 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^0 ^3 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^1 ^3 ^0 run function gm4_blasting_maces:mining/destroy_block
+execute rotated as @s rotated ~ 0 positioned ^2 ^3 ^0 run function gm4_blasting_maces:mining/destroy_block

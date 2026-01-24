@@ -1100,9 +1100,6 @@
     "lodestone": {
       "gm4_teleportation_anchors:gui/advancement/teleportation_anchor": 1
     },
-    "mace": {
-      "gm4_blasting_maces:guidebook_icon/blasting_maces": 1
-    },
     "magenta_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/magenta": 300
     },

@@ -10,12 +10,9 @@ scoreboard players set $success gm4_blast_data 0
 execute as @e[type=item,limit=1,distance=..8,sort=nearest,nbt={Age:0s}] at @s store success score $success gm4_blast_data \
   if items entity @s container.* #gm4_blasting_maces:breakable align xyz run summon marker ~0.5 ~0.5 ~0.5 {Tags:["gm4_blast_source","gm4_blast_marker","smithed.entity","smithed.strict"]}
 
-# if we found a valid block, analyze the mace and start mining
-execute if score $success gm4_blast_data matches 1 run function gm4_blasting_maces:player/analyze_mace
-
-# store player rotation for directional mining
-execute store result score @s gm4_blast_pitch run data get entity @s Rotation[1] 1
-execute store result score @s gm4_blast_yaw run data get entity @s Rotation[0] 1
+# if we found a valid block, save mace NBT and store player pitch for directional mining
+execute if score $success gm4_blast_data matches 1 run data modify storage gm4_blasting_maces:temp tool set from entity @s SelectedItem
+execute if score $success gm4_blast_data matches 1 store result score @s gm4_blast_pitch run data get entity @s Rotation[1] 1
 
 # perform directional detonation at marker location
 execute if score $success gm4_blast_data matches 1 at @e[type=marker,tag=gm4_blast_source,limit=1] run function gm4_blasting_maces:mining/detonate

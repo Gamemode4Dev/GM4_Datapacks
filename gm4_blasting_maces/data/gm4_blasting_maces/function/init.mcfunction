@@ -8,9 +8,8 @@ scoreboard objectives add gm4_blast_data dummy
 # scoreboard for tracking mace usage
 scoreboard objectives add gm4_blast_use_mace used:mace
 
-# scoreboards for player rotation
+# scoreboard for player pitch
 scoreboard objectives add gm4_blast_pitch dummy
-scoreboard objectives add gm4_blast_yaw dummy
 
 # schedule main loop
 schedule function gm4_blasting_maces:tick 1t
