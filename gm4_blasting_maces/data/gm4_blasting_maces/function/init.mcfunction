@@ -6,7 +6,7 @@ scoreboard players set blasting_maces gm4_modules 1
 scoreboard objectives add gm4_blast_data dummy
 
 # scoreboard for tracking mace usage
-scoreboard objectives add gm4_use_mace used:mace
+scoreboard objectives add gm4_blast_use_mace used:mace
 
 # scoreboards for player rotation
 scoreboard objectives add gm4_blast_pitch dummy
