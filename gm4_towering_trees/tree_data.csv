@@ -1,0 +1,45 @@
+type,variant,size_x,size_y,size_z,base_x_offset,base_z_offset,branch_start_height,feature,is_mega
+oak,a,19,14,18,8,9,3,place feature gm4_towering_trees:leaf_litter ~ ~1 ~,true
+oak,b,14,15,14,6,6,3,place feature gm4_towering_trees:leaf_litter ~ ~1 ~,true
+oak,c,18,15,19,8,8,4,place feature gm4_towering_trees:leaf_litter ~ ~1 ~,true
+oak,d,18,16,19,8,8,4,place feature gm4_towering_trees:leaf_litter ~ ~1 ~,true
+oak,e,14,13,14,6,6,3,place feature gm4_towering_trees:leaf_litter ~ ~1 ~,true
+acacia,a,16,21,14,7,6,15,#,true
+acacia,b,12,18,13,5,6,14,#,true
+acacia,c,13,22,16,6,6,17,#,true
+acacia,d,15,21,13,6,6,17,#,true
+acacia,e,13,23,14,7,6,19,#,true
+birch,a,10,30,10,4,4,12,#,true
+birch,b,10,28,10,4,4,8,#,true
+birch,c,10,33,10,4,4,13,#,true
+birch,d,10,32,10,4,4,12,#,true
+birch,e,10,30,10,4,4,10,#,true
+birch,f,10,28,10,4,4,10,#,true
+cherry,a,24,15,17,12,7,5,place feature gm4_towering_trees:pink_petals ~ ~1 ~,true
+cherry,b,27,17,17,14,8,5,place feature gm4_towering_trees:pink_petals ~ ~1 ~,true
+cherry,c,24,17,16,15,7,5,place feature gm4_towering_trees:pink_petals ~ ~1 ~,true
+cherry,d,29,19,17,12,8,4,place feature gm4_towering_trees:pink_petals ~ ~1 ~,true
+mangrove,a,16,33,14,5,8,16,function gm4_towering_trees:generate_tree_type/mangrove/extra,true
+mangrove,b,17,29,14,7,6,13,function gm4_towering_trees:generate_tree_type/mangrove/extra,true
+mangrove,c,17,30,15,5,6,14,function gm4_towering_trees:generate_tree_type/mangrove/extra,true
+mangrove,d,17,28,14,8,5,14,function gm4_towering_trees:generate_tree_type/mangrove/extra,true
+pale_oak,a,7,6,7,3,4,4,#,false
+pale_oak,b,7,7,7,3,3,5,#,false
+pale_oak,c,8,8,7,4,4,5,#,false
+pale_oak,d,8,9,7,4,3,7,#,false
+pale_oak,e,8,10,7,4,3,7,#,false
+pale_oak,f,7,7,7,4,3,5,#,false
+pale_oak,g,7,7,7,4,3,5,#,false
+pale_oak,h,7,8,8,4,4,6,#,false
+pale_oak,i,8,9,8,4,4,7,#,false
+pale_oak,j,7,10,8,3,3,8,#,false
+dark_oak,a,7,6,7,3,4,4,#,false
+dark_oak,b,7,7,7,3,3,5,#,false
+dark_oak,c,8,8,7,4,4,5,#,false
+dark_oak,d,8,9,7,4,3,7,#,false
+dark_oak,e,8,10,7,4,3,7,#,false
+dark_oak,f,7,7,7,4,3,5,#,false
+dark_oak,g,7,7,7,4,3,5,#,false
+dark_oak,h,7,8,8,4,4,6,#,false
+dark_oak,i,8,9,8,4,4,7,#,false
+dark_oak,j,7,10,8,3,3,8,#,false

@@ -1,0 +1,42 @@
+{
+  "id": "towering_trees",
+  "name": "Towering Trees",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:oak_sapling"
+  },
+  "criteria": {
+    "obtain_sapling": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#gm4_towering_trees:supported_sapling"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "towering_trees",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_sapling"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.towering_trees.description",
+            "fallback": "Oak, Birch, Acacia, Cherry and Mangrove trees have mega (2x2) variants.\n\nDark Oak and Pale Oak have small variants."
+          }
+        ]
+      ]
+    }
+  ]
+}
