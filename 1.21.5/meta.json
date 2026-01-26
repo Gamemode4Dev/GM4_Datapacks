@@ -1,5 +1,5 @@
 {
-  "last_commit": "45b19a431c28b06942b55e906d4b663b2226dd9b",
+  "last_commit": "d80a33569ed737b921197adef208b8781dc4c429",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1533,7 +1533,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.16",
+      "version": "1.0.17",
       "hash": "1b3a67f554abb1e9fdbc6ba82a118e8a9151149b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -3149,6 +3149,47 @@
       "pmc_link": null
     },
     {
+      "id": "gm4_towering_trees",
+      "name": "Towering Trees",
+      "version": "1.0.0",
+      "hash": "073857d03836fa46c296c453a4f8beff428f86b0",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Towering_Trees",
+      "credits": {
+        "Creator": [
+          "Djones",
+          "Kyrius"
+        ],
+        "Tree Structures": [
+          "BPR",
+          "rednls",
+          "Dinoguin_Jess",
+          "Lune6"
+        ]
+      },
+      "requires": [],
+      "description": "Adds mega and small tree variants to any sapling that is missing one!",
+      "recommends": [
+        "gm4_metallurgy"
+      ],
+      "minecraft": [
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8",
+        "1.21.9",
+        "1.21.10",
+        "1.21.11"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2026-01-26",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    {
       "id": "gm4_tunnel_bores",
       "name": "Tunnel Bores",
       "version": "1.6.6",
@@ -3575,8 +3616,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.27",
-      "hash": "f43d8e0f10b6a9fd9f4cf07dfdc7bb9d541454bf",
+      "version": "1.4.28",
+      "hash": "62788394b945969337d28f0551ade682069da269",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3995,6 +4036,12 @@
         "https://github.com/Dennis-0"
       ]
     },
+    "Dinoguin_Jess": {
+      "name": "Dinoguin_Jess",
+      "links": [
+        "https://github.com/Dinoguin-Jess"
+      ]
+    },
     "Djones": {
       "name": "Djones",
       "links": [
@@ -4061,6 +4108,12 @@
       "name": "Lue",
       "links": [
         "https://github.com/Luexa"
+      ]
+    },
+    "Lune6": {
+      "name": "Lune6",
+      "links": [
+        "https://bsky.app/profile/lune6.bsky.social"
       ]
     },
     "Modulorium": {
