@@ -1,0 +1,28 @@
+{
+  "input": {
+    "type": "shaped",
+    "recipe": [
+      "KCK",
+      "K K",
+      "K K"
+    ],
+    "key": {
+      "K": {
+        "item": "minecraft:dried_kelp"
+      },
+      "C": {
+        "item": "minecraft:copper_ingot"
+      }
+    }
+  },
+  "output": {
+    "result": {
+      "type": "loot_table",
+      "name": "gm4_scuba_gear:items/wetsuit",
+      "count": 1,
+      "guidebook": {
+        "display_color": 2367281
+      }
+    }
+  }
+}
