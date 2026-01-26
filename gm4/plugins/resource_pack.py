@@ -1005,7 +1005,7 @@ class ItemDisplayModel(TransformOptions):
 
 #== Convience Template/Transform Presets ==#
 class LegacyMachineArmorStand(BlockTemplate, TemplateOptions):
-    """An 'block' template preset with the 'item_display' transformer for the legacy small-armor-stand-head-slot of custom crafters"""
+    """An 'block' template preset with the 'item_display' transformer for the legacy small-armor-stand-head-slot of some machines"""
     default_transforms = [
         ItemDisplayModel(
             origin=[0.5, 1, 0.5],

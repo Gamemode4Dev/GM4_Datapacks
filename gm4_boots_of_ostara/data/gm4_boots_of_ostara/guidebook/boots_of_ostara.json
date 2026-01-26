@@ -61,7 +61,7 @@
           },
           {
             "translate": "text.gm4.guidebook.boot_of_ostara.description",
-            "fallback": "Boots of Ostara can be crafted to aid in the spreading of grass and moss.\n\nThe boots can be crafted in a Custom Crafter."
+            "fallback": "Boots of Ostara can be crafted to aid in the spreading of grass and moss.\n\nThe boots can be crafted in a crafting table."
           }
         ]
       ]

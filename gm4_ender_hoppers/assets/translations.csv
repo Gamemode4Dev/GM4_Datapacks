@@ -5,5 +5,5 @@ container.gm4.ender_hopper,Ender Hopper
 container.gm4.ender_hopper_minecart,Minecart with Ender Hopper
 text.gm4.guidebook.module_desc.ender_hoppers,Create special hoppers that teleport nearby items to them.
 text.gm4.guidebook.ender_hoppers.description,"Ender Hoppers teleport items to itself, even through walls.\n\nThey can also be combined with a minecart to create an Ender Hopper Minecart."
-text.gm4.guidebook.ender_hoppers.crafting,Ender Hoppers can be crafted in a Custom Crafter:
-text.gm4.guidebook.ender_hoppers.usage,"Ender Hoppers can pick up items in a range of 9x9 blocks, centered at itself and extending 3 blocks above itself.\n\nCombining a minecart with an ender hopper in a custom crafter yields an ender hopper minecart."
+text.gm4.guidebook.ender_hoppers.crafting,Ender Hoppers can be crafted in a crafting table:
+text.gm4.guidebook.ender_hoppers.usage,"Ender Hoppers can pick up items in a range of 9x9 blocks, centered at itself and extending 3 blocks above itself.\n\nCombining a minecart with an ender hopper yields an ender hopper minecart."

@@ -6,24 +6,6 @@
     "id": "minecraft:furnace"
   },
   "criteria": {
-    "open_custom_crafter": {
-      "trigger": "minecraft:default_block_use",
-      "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": [
-                  "minecraft:dropper"
-                ],
-                "nbt": "{CustomName:{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}}"
-              }
-            }
-          }
-        ]
-      }
-    },
     "obtain_furnace": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -71,11 +53,7 @@
     {
       "name": "description",
       "enable": [],
-      "requirements": [
-        [
-          "open_custom_crafter"
-        ]
-      ],
+      "requirements": [],
       "pages": [
         [
           {
@@ -93,9 +71,6 @@
       "enable": [],
       "requirements": [
         [
-          "open_custom_crafter"
-        ],
-        [
           "obtain_furnace"
         ],
         [
@@ -106,7 +81,7 @@
         [
           {
             "translate": "text.gm4.guidebook.smelteries.crafting",
-            "fallback": "A Smeltery can be crafted in a Custom Crafter:"
+            "fallback": "A Smeltery can be crafted in a crafting table:"
           },
           "\n",
           {

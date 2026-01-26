@@ -11,13 +11,11 @@ resource_pack:
 pipeline:
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
-  - gm4.plugins.include.lib_custom_crafters
 
 meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.4.0
         lib_machines: 1.4.0
       schedule_loops: [main]
     model_data:

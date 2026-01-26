@@ -7,8 +7,8 @@ advancement.gm4.teleportation_anchors_anchor.description,"Make a teleportation a
 advancement.gm4.teleportation_anchors_jammer.title,"Make Some Noise"
 advancement.gm4.teleportation_anchors_jammer.description,"Create a device to stop chorus in its tracks"
 text.gm4.guidebook.module_desc.teleportation_anchors,Suppress and control chorus-based teleportation!
-text.gm4.guidebook.teleportation_jammer.description,Teleportation Jammers and Anchors can be used to supress and control chorus-based teleportation.\n\nThey can be crafted in a Custom Crafter.
-text.gm4.guidebook.teleportation_anchors.crafting_jammer,A Teleportation Jammer can be crafted in a Custom Crafter:
+text.gm4.guidebook.teleportation_jammer.description,Teleportation Jammers and Anchors can be used to supress and control chorus-based teleportation.\n\nThey can be crafted in a crafting table.
+text.gm4.guidebook.teleportation_anchors.crafting_jammer,A Teleportation Jammer can be crafted in a crafting table:
 text.gm4.guidebook.teleportation_anchors.jamming,"A Teleportation Jammer is used to suppress chorus based teleportation.\n\nThis includes endermen, shulkers, chorus fruit, end gateways, and other random teleportation that doesn't require line-of-sight."
 text.gm4.guidebook.teleportation_anchors.jammer_effects,"When entities are jammed, any act of teleportation will cause them to jump back to their original location.\n\nWhen endermen are jammed, they are also prevented from picking up blocks."
 text.gm4.guidebook.teleportation_anchors.jammer_power,"In order for a TP Jammer to work, it needs to broadcast a signal through an end rod placed on top of it.\n\nChorus fruit must be placed inside the jammer as fuel. Five fruit is enough for two days."

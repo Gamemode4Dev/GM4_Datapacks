@@ -22,7 +22,7 @@ item.gm4.glow_ink_bottle,Glow Ink Bottle
 item.gm4.ink_bottle,Ink Bottle
 text.gm4.guidebook.module_desc.liquid_tanks,"Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!"
 text.gm4.guidebook.liquid_tanks.description,Liquid Tanks can store various liquids in bulk.\n\nThe first slot of the liquid tank acts as both the input and output of the liquid tank.
-text.gm4.guidebook.liqud_tanks.crafting,Liquid Tanks can be crafted in a Custom Crafter:
+text.gm4.guidebook.liqud_tanks.crafting,Liquid Tanks can be crafted in a crafting table:
 text.gm4.guidebook.module_desc.standard_liquids,"Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!"
 text.gm4.guidebook.standard_liquids.water,"Standard liquids can be stored by liquid tanks.\n\nWater Tank\n- Drains water buckets, water bottles\n- Fills buckets, bottles\n- Fills adjacent cauldrons"
 text.gm4.guidebook.standard_liquids.lava,Lava Tank\n- Drains lava buckets\n- Fills buckets\n- Fuels adjacent furnaces\n- Drains lava cauldrons\n- Fills adjacent cauldrons

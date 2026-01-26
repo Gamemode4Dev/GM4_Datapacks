@@ -36,7 +36,7 @@ All functions should start with a header comment that consists of:
     - a single function, if the function is run by `/function ...`: `# run from zauber_cauldrons:cauldron/create`.
     - a folder, if multiple functions call this function using `/function`: `# run from functions in gm4_pig_tractors:till/blocks/`.
     - a function from where it was scheduled: `# scheduled by zauber_cauldrons:cauldron/create`.
-    - a function and function-tag pair: `# run from gm4_custom_crafters-3.0:process_input/check_item via #gm4_custom_crafter:custom_item_checks`.
+    - a function and function-tag pair: `# run from gm4_trees-1.0:tick via #gm4_trees:destroy_leaf`.
     - an advancement reward: `# run from advancement damaged/armor/stall`
     - a combination of these, in which multiple lines may be used.
 

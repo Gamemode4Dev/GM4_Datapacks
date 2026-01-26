@@ -1,30 +1,11 @@
 {
   "id": "standard_crafting",
   "name": "Standard Crafting",
-  "module_type": "expansion",
-  "base_module": "custom_crafters",
+  "module_type": "module",
   "icon": {
     "id": "minecraft:crafting_table"
   },
   "criteria": {
-    "open_custom_crafter": {
-      "trigger": "minecraft:default_block_use",
-      "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": [
-                  "minecraft:dropper"
-                ],
-                "nbt": "{CustomName:{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}}"
-              }
-            }
-          }
-        ]
-      }
-    },
     "obtain_gravel": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -171,11 +152,7 @@
     {
       "name": "default_recipes",
       "enable": [],
-      "requirements": [
-        [
-          "open_custom_crafter"
-        ]
-      ],
+      "requirements": [],
       "pages": [
         [
           {
@@ -183,7 +160,7 @@
           },
           {
             "translate": "text.gm4.guidebook.standard_crafting.recipes",
-            "fallback": "The custom crafter can be used to perform some simple crafting operations.\n\nThe following recipes have been added."
+            "fallback": "The following recipes have been added to the crafting table."
           }
         ],
         [

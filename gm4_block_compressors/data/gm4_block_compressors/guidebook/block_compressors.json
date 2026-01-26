@@ -6,43 +6,6 @@
     "id": "minecraft:piston"
   },
   "criteria": {
-    "create_custom_crafter": {
-      "trigger": "minecraft:tick",
-      "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type_specific": {
-                "type": "player",
-                "advancements": {
-                  "gm4:custom_crafters": true
-                }
-              }
-            }
-          }
-        ]
-      }
-    },
-    "open_custom_crafter": {
-      "trigger": "minecraft:default_block_use",
-      "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": [
-                  "minecraft:dropper"
-                ],
-                "nbt": "{CustomName:{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}}"
-              }
-            }
-          }
-        ]
-      }
-    },
     "obtain_obsidian": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -105,12 +68,7 @@
     {
       "name": "description",
       "enable": [],
-      "requirements": [
-        [
-          "create_custom_crafter",
-          "open_custom_crafter"
-        ]
-      ],
+      "requirements": [],
       "pages": [
         [
           {
@@ -136,7 +94,7 @@
         [
           {
             "translate": "text.gm4.guidebook.block_compressors.crafting",
-            "fallback": "A Block Compressor can be crafted in a Custom Crafter:"
+            "fallback": "A Block Compressor can be crafted in a crafting table:"
           },
           "\n",
           {

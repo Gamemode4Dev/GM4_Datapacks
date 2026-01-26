@@ -58,7 +58,7 @@
           },
           {
             "translate": "text.gm4.guidebook.tunnel_bores.description",
-            "fallback": "Tunnel Bores can be crafted to aid in excavation. Piston Minecarts will break blocks and place rails, moving forward.\n\nThey can be crafted in a Custom Crafter."
+            "fallback": "Tunnel Bores can be crafted to aid in excavation. Piston Minecarts will break blocks and place rails, moving forward.\n\nThey can be crafted in a crafting table."
           }
         ]
       ]
