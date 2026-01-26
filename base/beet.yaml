@@ -8,7 +8,6 @@ data_pack:
 resource_pack:
   load:
     assets: assets
-    backport_72: backport_72
 
 require:
   - gm4.plugins.resource_pack

@@ -4,13 +4,6 @@ version: 1.5.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 1
-        max_inclusive: 71
-      min_format: 1
-      max_format: 71
-      directory: backport_71
 
 require:
   - bolt

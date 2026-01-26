@@ -4,13 +4,6 @@ version: 3.1.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 1
-        max_inclusive: 81
-      min_format: 1
-      max_format: 81
-      directory: backport_81
 
 pipeline:
   - gm4.plugins.extend.module
