@@ -28,8 +28,7 @@ meta:
         texture: gui/container/smeltery
     website:
       description: Build a Smeltery and double your ore output with this multi-block structure.
-      recommended:
-        - gm4_relocators
+      recommended: []
       notes: []
     modrinth:
       project_id: AHj8RSHk

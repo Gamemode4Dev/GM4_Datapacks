@@ -71,7 +71,6 @@ meta:
         - gm4_zauber_liquids
         - gm4_liquid_minecarts
         - gm4_cement_mixers
-        - gm4_relocators
       notes: []
     modrinth:
       project_id: h4BcuD3C

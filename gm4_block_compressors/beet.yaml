@@ -57,7 +57,6 @@ meta:
       description: Chest space won't be an issue with this module! Use a Block Compressor to compress stacks of items, turning a stack of items into a single item for long-term storage. Make sure to uncompress your items before using them again, though!
       recommended:
         - gm4_resource_pack
-        - gm4_relocators
         - gm4_standard_crafting
         - gm4_ender_hoppers
         - gm4_enchantment_extractors

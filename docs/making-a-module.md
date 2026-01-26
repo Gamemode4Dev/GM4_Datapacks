@@ -74,7 +74,7 @@ meta:
       # Any recommended modules
       recommended:
         - gm4_resource_pack
-        - gm4_relocators
+        - gm4_bat_grenades
       # Important notes for people when they download the module. This can be empty
       notes: []
       # Keywords used by gm4.co's search feature, may be omitted

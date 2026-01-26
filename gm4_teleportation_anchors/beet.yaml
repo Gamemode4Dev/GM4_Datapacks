@@ -58,7 +58,6 @@ meta:
       description: Suppress and control chorus-based teleportation!
       recommended:
         - gm4_orb_of_ankou
-        - gm4_relocators
         - gm4_zauber_cauldrons
       notes: []
     modrinth:
