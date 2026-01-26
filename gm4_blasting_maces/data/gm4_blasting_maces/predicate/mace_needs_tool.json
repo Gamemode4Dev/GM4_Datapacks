@@ -1,0 +1,18 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "slots": {
+            "weapon.*": {
+                "items": "minecraft:mace",
+                "predicates": {
+                    "minecraft:enchantments": [
+                        {
+                            "enchantments": "gm4_blasting_maces:blasting"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

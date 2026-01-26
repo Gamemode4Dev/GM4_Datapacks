@@ -1,0 +1,37 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+        {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "weapon.*": {
+                        "items": "minecraft:mace"
+                    }
+                }
+            }
+        },
+        {
+            "condition": "minecraft:inverted",
+            "term": {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "slots": {
+                        "weapon.*": {
+                            "items": "minecraft:mace",
+                            "predicates": {
+                                "minecraft:enchantments": [
+                                    {
+                                        "enchantments": "gm4_blasting_maces:blasting"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
