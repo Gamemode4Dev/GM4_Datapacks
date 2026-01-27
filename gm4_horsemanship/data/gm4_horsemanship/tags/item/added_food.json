@@ -1,13 +1,13 @@
 {
   "values": [
-    "minecraft:short_grass",
-    "minecraft:sweet_berries",
-    "minecraft:glow_berries",
-    "minecraft:chorus_fruit",
-    "minecraft:dried_kelp",
-    "minecraft:melon_slice",
+    "minecraft:baked_potato",
     "minecraft:beetroot",
     "minecraft:bread",
-    "minecraft:baked_potato"
+    "minecraft:chorus_fruit",
+    "minecraft:dried_kelp",
+    "minecraft:glow_berries",
+    "minecraft:melon_slice",
+    "minecraft:short_grass",
+    "minecraft:sweet_berries"
   ]
 }

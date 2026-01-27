@@ -1,6 +1,6 @@
 # Horsemanship<!--$headerTitle--><!--$pmc:delete-->
 
-Level up your Horses as you use them! Adds level-ups, stamina mechanics, additional foods and more!<!--$pmc:headerSize-->
+Level up your Horses as you use them! Adds level-ups, additional foods and more!<!--$pmc:headerSize-->
 
 <img src="images/horsemanship.png" alt="Horse in flight" height="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 

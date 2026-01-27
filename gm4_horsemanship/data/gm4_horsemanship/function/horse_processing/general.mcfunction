@@ -28,27 +28,6 @@ execute if score $in_love gm4_horse_data matches 1.. if score $mounted gm4_horse
 # wearing glider
 execute if items entity @s[tag=!gm4_horse.glider_disabled] armor.body *[custom_data~{gm4_horsemanship:{glider:{}}}] run function gm4_horsemanship:horse_processing/glider/process
 
-## | Stamina
-# cap of 75 - 450 depending on level
-# riding = -1
-execute if score $riding gm4_horse_data matches 1 run scoreboard players remove @s[scores={gm4_horse.stamina=1..}] gm4_horse.stamina 1
-execute if block ~ ~ ~ #gm4:water run scoreboard players remove @s[scores={gm4_horse.stamina=1..}] gm4_horse.stamina 1
-# mounted = +1
-# unmounted = +1 +level
-execute if score $on_ground gm4_horse_data matches 1 if score $riding gm4_horse_data matches 0 run scoreboard players add @s gm4_horse.stamina 1
-execute if score $on_ground gm4_horse_data matches 1 if score $mounted gm4_horse_data matches 0 run scoreboard players operation @s gm4_horse.stamina += @s gm4_horse.level
-scoreboard players operation @s gm4_horse.stamina < @s gm4_horse.stamina_cap
-# tired
-execute if score @s[tag=!gm4_horse.tired] gm4_horse.stamina matches 0 run function gm4_horsemanship:horse_processing/stamina/tired
-execute if score @s[tag=gm4_horse.tired] gm4_horse.stamina matches 30.. run function gm4_horsemanship:horse_processing/stamina/rested
-# effects
-execute if entity @s[tag=gm4_horse.tired] run particle entity_effect{color:[0.290,0.259,0.090,0.75]} ~ ~1 ~ 0.5 0.5 0.5 1 4 normal
-scoreboard players add $sfx_clock gm4_horse_data 1
-execute if score $sfx_clock gm4_horse_data matches 3.. run scoreboard players set $sfx_clock gm4_horse_data 0
-execute if score $sfx_clock gm4_horse_data matches 0 if score @s gm4_horse.stamina matches 0 run playsound entity.horse.breathe neutral @a ~ ~ ~ 1 0.95
-execute if score $sfx_clock gm4_horse_data matches 1 if score @s gm4_horse.stamina matches ..15 run playsound entity.horse.breathe neutral @a ~ ~ ~ 1 0.95
-execute if score $sfx_clock gm4_horse_data matches 2 if score @s gm4_horse.stamina matches ..30 run playsound entity.horse.breathe neutral @a ~ ~ ~ 1 0.95
-
 # stop grazing if horse is being ridden
 execute if score $riding gm4_horse_data matches 1 if entity @s[nbt={EatingHaystack:1b}] run function gm4_horsemanship:horse_processing/graze/cancel
 

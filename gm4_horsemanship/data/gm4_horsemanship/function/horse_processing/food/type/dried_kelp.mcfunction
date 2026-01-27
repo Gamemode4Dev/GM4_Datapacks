@@ -20,9 +20,3 @@ execute store result entity @s Health float 0.01 run scoreboard players get $hea
 function gm4_horsemanship:horse_processing/cap_health
 execute if score $age gm4_horse_data matches ..-1 run function gm4_horsemanship:horse_processing/food/add_age
 execute store result entity @s Temper int 1 run scoreboard players get $temper gm4_horse_data
-
-
-execute unless entity @s[tag=gm4_horse.tamed] run return 0
-scoreboard players operation $add_stamina gm4_horse_data = @s gm4_horse.level
-scoreboard players operation @s gm4_horse.stamina += $add_stamina gm4_horse_data
-scoreboard players operation @s gm4_horse.stamina < @s gm4_horse.stamina_cap

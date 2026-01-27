@@ -18,9 +18,6 @@ execute if score $pitch_level gm4_horse_data matches 1.. run scoreboard players 
 # if not riding ignore pitch
 execute if score $riding gm4_horse_data matches 0 run scoreboard players set $pitch_level gm4_horse_data 0
 
-# out of stamina (fall down)
-execute if entity @s[tag=gm4_horse.tired] run scoreboard players set $pitch_level gm4_horse_data 25
-
 # check for a jump
 execute on passengers if entity @s[type=player,predicate=gm4_horsemanship:jumping]
 

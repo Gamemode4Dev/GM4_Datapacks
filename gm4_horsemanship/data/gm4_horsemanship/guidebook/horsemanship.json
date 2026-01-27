@@ -22,6 +22,26 @@
           }
         ]
       }
+    },
+    "obtain_elytra": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:elytra"
+          }
+        ]
+      }
+    },
+    "obtain_added_food": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#gm4_horsemanship:added_food"
+          }
+        ]
+      }
     }
   },
   "sections": [
@@ -42,7 +62,21 @@
             "translate": "text.gm4.guidebook.horsemanship.description",
             "fallback": "Horses can level up, indicated by their amount of hearts. Horses start at 5 hearts and will gain 1 for every level, up to a total of 20.\n\nWearing Frost Walker will also apply to any Horse you ride."
           }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "ride_horse"
         ],
+        [
+          "obtain_elytra"
+        ]
+      ],
+      "pages": [
         [
           {
             "translate": "text.gm4.guidebook.horsemanship.description_2",
@@ -52,6 +86,26 @@
           {
             "insert": "recipe",
             "recipe": "gm4_horsemanship:horse_wings"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "ride_horse"
+        ],
+        [
+          "obtain_added_food"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.horsemanship.description_3",
+            "fallback": "Horses can be fed the following food items:\n- Baked Potato\n- Beetroot\n- Bread\n- Chorus Fruit\n- Dried Kelp\n- Glow Berries\n- Melon Slice\n- Short Grass\n- Sweet Berries"
           }
         ]
       ]
