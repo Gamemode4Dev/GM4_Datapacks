@@ -99,7 +99,7 @@
           "\n",
           {
             "insert": "recipe",
-            "recipe": "gm4_block_compressors:block_compressor"
+            "recipe": "gm4_block_compressors:compressor"
           }
         ]
       ],

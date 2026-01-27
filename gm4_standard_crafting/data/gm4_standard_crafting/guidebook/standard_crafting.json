@@ -257,7 +257,7 @@
           "\n\n\n",
           {
             "insert": "recipe",
-            "recipe": "gm4_standard_crafting:red_sand_dye"
+            "recipe": "gm4_standard_crafting:red_sand_from_red_dye"
           }
         ]
       ],

@@ -83,14 +83,14 @@
           "\n",
           {
             "insert": "recipe",
-            "recipe": "gm4_tunnel_bores:tunnel_bore"
+            "recipe": "gm4_tunnel_bores:piston_minecart"
           }
         ],
         [
           "\n\n",
           {
             "insert": "recipe",
-            "recipe": "gm4_tunnel_bores:tunnel_bore_from_furnace_minecart"
+            "recipe": "gm4_tunnel_bores:piston_minecart_from_furnace_minecart"
           }
         ]
       ]

@@ -1,6 +1,7 @@
 key,en_us
 text.gm4.guidebook.module_desc.standard_crafting,A crafting recipe pack that adds some nifty new recipes to the game.
-text.gm4.guidebook.standard_crafting.recipes,The following recipes have been added.
+text.gm4.guidebook.shapeless,Recipe is shapeless
+text.gm4.guidebook.standard_crafting.recipes,The following recipes have been added to the crafting table.
 text.gm4.guidebook.standard_crafting.stair_decraft,Stairs can be reverted to their base block
 text.gm4.guidebook.standard_crafting.slab_decraft,Slabs can be reverted to their base block
 text.gm4.guidebook.standard_crafting.sandstone_decraft,Any sandstone can be converted into sand
