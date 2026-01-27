@@ -8,8 +8,7 @@ scoreboard players operation @s gm4_horse.wing_timer += $movement_speed gm4_hors
 scoreboard players operation $period_x2 gm4_horse_data = #wing_period gm4_horse_data
 scoreboard players operation $period_x2 gm4_horse_data *= #2 gm4_horse_data
 
-# drain extra stamina, play sound on every flap
-execute if score @s[tag=gm4_horse.glider_wing.right] gm4_horse.wing_timer >= $period_x2 gm4_horse_data on vehicle run scoreboard players remove @s[scores={gm4_horse.stamina=1..}] gm4_horse.stamina 1
+# play sound on every flap
 execute if score @s[tag=gm4_horse.glider_wing.right] gm4_horse.wing_timer >= $period_x2 gm4_horse_data at @s run playsound minecraft:entity.phantom.flap neutral @a ~ ~ ~ 1 0.75
 execute if score @s gm4_horse.wing_timer >= $period_x2 gm4_horse_data run scoreboard players operation @s gm4_horse.wing_timer -= $period_x2 gm4_horse_data
 
