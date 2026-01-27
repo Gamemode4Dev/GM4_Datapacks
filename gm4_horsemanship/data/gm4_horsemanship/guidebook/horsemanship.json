@@ -1,0 +1,114 @@
+{
+  "id": "horsemanship",
+  "name": "Horsemanship",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:saddle"
+  },
+  "criteria": {
+    "ride_horse": {
+      "trigger": "minecraft:started_riding",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "vehicle": {
+                "type": "#gm4_horsemanship:trainable",
+                "nbt": "{Tags:[\"gm4_horse\"]}"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "obtain_elytra": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:elytra"
+          }
+        ]
+      }
+    },
+    "obtain_added_food": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#gm4_horsemanship:added_food"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "ride_horse"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.horsemanship.description",
+            "fallback": "Horses can level up, indicated by their amount of hearts. Horses start at 5 hearts and will gain 1 for every level, up to a total of 20.\n\nWearing Frost Walker will also apply to any Horse you ride."
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "ride_horse"
+        ],
+        [
+          "obtain_elytra"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.horsemanship.description_2",
+            "fallback": "A pegasuit allows your Horse to fly by looking up or down while riding."
+          },
+          "\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_horsemanship:horse_wings"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "description",
+      "enable": [],
+      "requirements": [
+        [
+          "ride_horse"
+        ],
+        [
+          "obtain_added_food"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "translate": "text.gm4.guidebook.horsemanship.description_3",
+            "fallback": "Horses can be fed the following food items:\n- Baked Potato\n- Beetroot\n- Bread\n- Chorus Fruit\n- Dried Kelp\n- Glow Berries\n- Melon Slice\n- Short Grass\n- Sweet Berries"
+          }
+        ]
+      ]
+    }
+  ]
+}
