@@ -12,7 +12,6 @@ pipeline:
       - beet.contrib.optifine
       - beet.contrib.babelbox
       - gm4_guidebook.generate_guidebooks.load_page_data
-      - gm4_guidebook.generate_guidebooks.load_custom_recipes
       - gm4.plugins.test.load_tests
     pipeline:
       - gm4.plugins.write_mcmeta

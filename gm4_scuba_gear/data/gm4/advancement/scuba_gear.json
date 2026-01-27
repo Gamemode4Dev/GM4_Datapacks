@@ -17,7 +17,7 @@
       "color": "gray"
     }
   },
-  "parent": "gm4:custom_crafters",
+  "parent": "gm4:root",
   "criteria": {
     "all_gear_equipped": {
       "trigger": "minecraft:inventory_changed",

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GPG",
+    "SGS",
+    "GGG"
+  ],
+  "key": {
+    "G": "minecraft:gold_ingot",
+    "P": "minecraft:potion",
+    "S": "minecraft:turtle_scute"
+  },
+  "result": {
+    "id": "minecraft:golden_chestplate",
+    "components": {
+      "minecraft:attribute_modifiers": [
+        {
+          "type": "minecraft:movement_speed",
+          "id": "gm4_scuba_gear:tank_movement_speed",
+          "slot": "chest",
+          "amount": -0.1,
+          "operation": "add_multiplied_base"
+        },
+        {
+          "type": "minecraft:armor",
+          "slot": "chest",
+          "id": "gm4_scuba_gear:tank_armor",
+          "amount": 4,
+          "operation": "add_value"
+        }
+      ],
+      "minecraft:custom_model_data": "item/scuba_tank",
+      "minecraft:custom_data": "{gm4_scuba_gear:{item:'tank'}}",
+      "minecraft:custom_name": {
+        "translate": "item.gm4.scuba_tank",
+        "fallback": "SCUBA Tank",
+        "italic": false
+      }
+    }
+  }
+}

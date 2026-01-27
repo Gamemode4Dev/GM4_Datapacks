@@ -44,7 +44,6 @@ pipeline:
       - beet.contrib.optifine
       - beet.contrib.babelbox
       - gm4_guidebook.generate_guidebooks.load_page_data
-      - gm4_guidebook.generate_guidebooks.load_custom_recipes
     pipeline:
       - gm4.plugins.manifest.write_credits
       - gm4.plugins.test.strip_tests

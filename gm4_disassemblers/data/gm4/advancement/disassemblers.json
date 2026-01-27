@@ -16,7 +16,7 @@
       "color": "gray"
     }
   },
-  "parent": "gm4:custom_crafters",
+  "parent": "gm4:root",
   "criteria": {
     "obtain_disassembler": {
       "trigger": "minecraft:inventory_changed",

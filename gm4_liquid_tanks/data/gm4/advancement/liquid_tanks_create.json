@@ -16,7 +16,7 @@
       "color": "gray"
     }
   },
-  "parent": "gm4:custom_crafters",
+  "parent": "gm4:root",
   "criteria": {
     "obtain_liquid_tank": {
       "trigger": "minecraft:inventory_changed",
