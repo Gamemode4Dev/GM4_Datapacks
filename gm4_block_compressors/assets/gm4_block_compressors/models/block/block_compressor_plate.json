@@ -1,6 +1,7 @@
 {
 	"parent": "gm4:block/plate",
 	"textures": {
-		"top": "gm4_block_compressors:block/block_compressor_plate"
+		"top": "gm4_block_compressors:block/block_compressor_plate",
+		"particle": "gm4_block_compressors:block/block_compressor_plate"
 	}
 }

@@ -5,6 +5,7 @@
 		"bottom": "minecraft:block/furnace_top",
 		"top": "gm4_block_compressors:block/block_compressor_top",
 		"front": "gm4_block_compressors:block/block_compressor_side",
-		"plate": "gm4_block_compressors:block/block_compressor_plate"
+		"plate": "gm4_block_compressors:block/block_compressor_plate",
+		"particle": "gm4_block_compressors:block/block_compressor_side"
 	}
 }

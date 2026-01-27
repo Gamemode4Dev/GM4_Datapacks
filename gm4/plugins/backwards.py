@@ -9,8 +9,11 @@ logger = logging.getLogger("gm4.backwards")
 def beet_default(ctx: Context):
   yield
 
-  # edited item model definition - replaced head with player_head
+  # edited item model definitions
+  # - replaced head with player_head
   backport(ctx.assets, 63, playerhead_models_1_21_5)
+  # - added on_shelf
+  backport(ctx.assets, 64, on_shelf_models_1_21_9)
 
   # renamed gamerules
   backport(ctx.data, 92, rename_gamerules)
@@ -47,6 +50,30 @@ def playerhead_models_1_21_5(id: str, resource: NamespaceFile):
   overlay = resource.copy()
   recursive_replace(overlay.data)
   return overlay
+
+def on_shelf_models_1_21_9(id: str, resource: NamespaceFile):
+  if not isinstance(resource, ItemModel):
+    return None
+  
+  def recursive_replace(compound: dict[str,Any]):
+    for key, val in compound.items():
+      # recurse down the tree
+      if key == "when":
+        if isinstance(compound[key], list) and "on_shelf" in val:
+          compound[key].remove("on_shelf")
+        elif isinstance(compound[key], str) and val == "on_shelf":
+          compound.pop(key)
+        continue
+      if isinstance(val, list):
+        for subval in val: # type: ignore
+          if isinstance(subval, dict):
+            recursive_replace(subval) # type: ignore
+      elif isinstance(val, dict):
+        recursive_replace(val) # type: ignore
+
+  overlay = resource.copy()
+  recursive_replace(overlay.data)
+  return overlay if overlay != resource else None
 
 
 # Only gamerules that are actually used are replaced

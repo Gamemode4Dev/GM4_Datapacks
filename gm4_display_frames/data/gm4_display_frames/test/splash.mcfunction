@@ -1,6 +1,5 @@
 # @template gm4:test_platform
 # @dummy ~ ~1 ~
-# @optional
 
 fill ~2 ~1 ~ ~2 ~1 ~2 gray_concrete
 give @s item_frame

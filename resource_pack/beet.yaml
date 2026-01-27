@@ -13,6 +13,18 @@ resource_pack:
       min_format: 1
       max_format: 63
       directory: backport_63
+    - formats:
+        min_inclusive: 1
+        max_inclusive: 64
+      min_format: 1
+      max_format: 64
+      directory: backport_64
+    - formats:
+        min_inclusive: 1
+        max_inclusive: 72
+      min_format: 1
+      max_format: 72
+      directory: backport_72
       
 pipeline:
   - dev_warning

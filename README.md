@@ -9,4 +9,4 @@
 ## Contributing
 Contributions are welcome! We use [Beet](https://mcbeet.dev) to build our modules. See [our documentation on how to get started](./docs/getting-started.md).
 
-Found a bug with one of our modules? You can [create an issue on GitHub](https://github.com/Gamemode4Dev/GM4_data packs/issues)!
+Found a bug with one of our modules? You can [create an issue on GitHub](https://github.com/Gamemode4Dev/GM4_Datapacks/issues)!

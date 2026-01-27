@@ -2,6 +2,9 @@ id: gm4_apple_trees
 name: Apple Trees
 version: 2.5.X
 
+require:
+  - bolt
+
 data_pack:
   load: .
 

@@ -1,4 +1,4 @@
-# run from load and mark_dimension
+# run from init_ow_chunk and mark_dimension
 
 forceload remove 29999999 7134
 forceload add 29999999 7134

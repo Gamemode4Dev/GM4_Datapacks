@@ -533,7 +533,7 @@
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/chain.png",
+            "file": "minecraft:item/iron_chain.png",
             "ascent": -32768,
             "height": -16,
             "chars": [
@@ -4519,7 +4519,7 @@
         },
         {
             "type": "bitmap",
-            "file": "minecraft:item/chain.png",
+            "file": "minecraft:item/iron_chain.png",
             "ascent": 8,
             "height": 16,
             "chars": [

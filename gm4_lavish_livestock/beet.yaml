@@ -1,0 +1,45 @@
+id: gm4_lavish_livestock
+name: Lavish Livestock
+version: 1.0.0
+
+data_pack:
+  load: .
+
+resource_pack:
+  load: .
+
+require:
+  - bolt
+
+pipeline:
+  - gm4_lavish_livestock.generate
+  - gm4.plugins.extend.module
+
+meta:
+  livestock:
+    - chicken
+    - cow
+    - hoglin
+    - mooshroom
+    - pig
+    - rabbit
+    - sheep
+  gm4:
+    versioning:
+      schedule_loops: []
+    website:
+      description: Selectively breed your livestock for increased yields! Commercialize your farming!
+      recommended:
+        - gm4_pig_tractors
+        - metallurgy
+    video: null
+    #modrinth: 
+    #  project_id: 
+    #smithed:
+    #  pack_id: 
+    #planetminecraft: 
+    #  uid: 
+    wiki: https://wiki.gm4.co/wiki/Lavish_Livestock
+    credits:
+      Creator:
+        - Bloo

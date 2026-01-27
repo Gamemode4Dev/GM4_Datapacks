@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"1": "gm4_monsters_unbound:item/spore/flowering"
+		"1": "gm4_monsters_unbound:item/spore/flowering",
+		"particle": "gm4_monsters_unbound:item/spore/flowering"
 	},
 	"elements": [
 		{

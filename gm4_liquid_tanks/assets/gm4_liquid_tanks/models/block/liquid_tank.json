@@ -2,7 +2,8 @@
 	"textures": {
 		"top": "gm4_liquid_tanks:block/liquid_tank_top",
 		"bottom": "gm4_liquid_tanks:block/liquid_tank_top",
-		"side": "gm4_liquid_tanks:block/liquid_tank_side"
+		"side": "gm4_liquid_tanks:block/liquid_tank_side",
+		"particle": "gm4_liquid_tanks:block/liquid_tank_side"
 	},
 	"elements": [
 		{

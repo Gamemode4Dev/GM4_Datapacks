@@ -12,7 +12,7 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_liquid_tanks: 2.7.0
+        gm4_liquid_tanks: 3.0.0
     website:
       description: Enables Liquid Tanks filled with Experience to repair tools with the mending enchant on them.
       recommended: []
