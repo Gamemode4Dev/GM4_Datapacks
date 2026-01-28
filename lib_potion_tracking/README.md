@@ -42,4 +42,4 @@ execute if data storage gm4_potion_tracking:temp entity_data.Item.components."mi
 ```
 
 ## License
-This library, and the contents of the `lib_potion_tracking` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_data packs), is licensed under the MIT License.
+This library, and the contents of the `lib_potion_tracking` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.

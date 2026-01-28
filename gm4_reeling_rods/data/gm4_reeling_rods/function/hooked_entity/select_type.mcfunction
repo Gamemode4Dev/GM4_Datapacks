@@ -1,7 +1,12 @@
-# Selects the right entity type or dismounts the entity.
+# Dispatch function for logic on hooked entity
 # @s = hooked entity
 # at bobber in entity
-# run from player/find_hooked_entity
+# run from #gm4_hooked_entity:on_hooked_entity
+
+# fails
+execute if entity @s[type=#gm4_reeling_rods:ignore] run return fail
+execute if entity @s[tag=smithed.entity] run return fail
+execute if data entity @s {Invulnerable:1b} run return fail
 
 # apply barbed damage
 execute if data storage gm4_reeling_rods:temp enchanted.barbed if data entity @s Health unless entity @s[type=player,gamemode=creative] \

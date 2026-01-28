@@ -42,4 +42,4 @@ The overworld dimension has a repeating command block running the function tag `
 The overworld dimension has a armour stand with the static uuid `344d47-4-4-4-f04ce104d`. This can be used with loot tables that utilize the `match_tool` predicate which require an entity with a mainhand slot. 
 
 ## License
-This library, and the contents of the `lib_forceload` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_data packs), is licensed under the MIT License.
+This library, and the contents of the `lib_forceload` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.

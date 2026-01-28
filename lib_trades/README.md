@@ -79,4 +79,4 @@ Registering trades is only necessary when naturally spawned Wandering Traders ar
 To register trades, the function that loads the trades must be added to the `#gm4_trades:register_trades` function tag.
 
 ## License
-This library, and the contents of the `lib_forceload` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_data packs), is licensed under the MIT License.
+This library, and the contents of the `lib_forceload` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.
