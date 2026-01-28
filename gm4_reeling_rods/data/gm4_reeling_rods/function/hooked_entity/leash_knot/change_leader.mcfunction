@@ -4,4 +4,4 @@
 # run from hooked_entity/leash_knot/action
 
 data remove entity @s leash
-data modify entity @s leash.UUID set from entity @p[tag=gm4_reeling_rods.player] UUID
+data modify entity @s leash.UUID set from entity @p[tag=gm4_hooked_entity.player] UUID

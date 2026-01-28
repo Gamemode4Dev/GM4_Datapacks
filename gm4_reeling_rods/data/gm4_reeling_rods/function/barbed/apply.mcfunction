@@ -7,7 +7,7 @@
 # immediate damage (amount scales with enchantment level)
 execute store result score $show_death_messages gm4_reeling_rods.barbed_damage_timer run gamerule show_death_messages
 gamerule show_death_messages false
-$damage @s $(damage) cactus by @p[tag=gm4_reeling_rods.player]
+$damage @s $(damage) cactus by @p[tag=gm4_hooked_entity.player]
 playsound minecraft:entity.player.attack.crit player @a[distance=..16] ~ ~ ~ 1 1.82
 
 # handle death (@e only selects entities which are alive)
