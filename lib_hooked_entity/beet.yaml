@@ -16,7 +16,7 @@ meta:
     versioning:
       schedule_loops: [tick]
     smithed:
-      pack_id: null
+      pack_id: gm4_lib_hooked_entity
     credits:
       Creator:
         - runcows
