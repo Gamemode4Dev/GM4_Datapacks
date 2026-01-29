@@ -55,7 +55,7 @@
     {
         "function": "minecraft:set_components",
         "components": {
-            "minecraft:custom_model_data": "gm4_scuba_gear:item/flippers"
+            "minecraft:custom_model_data": {"strings":["gm4_scuba_gear:item/flippers"]}
         },
         "conditions": [
             {

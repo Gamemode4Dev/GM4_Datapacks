@@ -1363,7 +1363,9 @@ def generate_display_advancement(book: Book, project_id: str) -> Advancement:
   icon = book.icon
   if icon.components is None:
     icon.components = dict()
-  icon.components["minecraft:custom_model_data"] = f"{project_id}:guidebook_icon/{book.id}"
+  icon.components["minecraft:custom_model_data"] = {
+    "strings": [f"{project_id}:guidebook_icon/{book.id}"]
+  }
   display = {
     "icon": {
       "id": icon.id,
