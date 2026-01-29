@@ -170,6 +170,18 @@
           }
         ]
       }
+    },
+    "obtain_bone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bone"
+            ]
+          }
+        ]
+      }
     }
   },
   "sections": [
@@ -479,6 +491,27 @@
           {
             "insert": "recipe",
             "recipe": "gm4_standard_crafting:dispenser"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "bone_block_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_bone"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:bone_block"
           }
         ]
       ],
