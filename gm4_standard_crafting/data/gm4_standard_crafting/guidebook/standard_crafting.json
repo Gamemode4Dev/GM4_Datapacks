@@ -158,6 +158,18 @@
           }
         ]
       }
+    },
+    "obtain_dropper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dropper"
+            ]
+          }
+        ]
+      }
     }
   },
   "sections": [
@@ -446,6 +458,27 @@
           {
             "insert": "recipe",
             "recipe": "gm4_standard_crafting:honeycomb"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "dispenser_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_dropper"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:dispenser"
           }
         ]
       ],

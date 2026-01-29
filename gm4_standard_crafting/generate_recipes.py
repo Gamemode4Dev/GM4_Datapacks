@@ -115,5 +115,7 @@ def beet_default(ctx: Context):
     slabs: list[str] = item_tags["minecraft:slabs"].data['values']
     recursive_apply(slabs, "slab_decraft", ["##","##"], 2)
 
-    for recipe in []:
+    for recipe in [
+        "dispenser"
+    ]:
         group_recipe(recipe)
