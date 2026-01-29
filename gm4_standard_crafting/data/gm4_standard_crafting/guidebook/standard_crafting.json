@@ -146,6 +146,18 @@
           }
         ]
       }
+    },
+    "obtain_honeycomb_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:honeycomb_block"
+            ]
+          }
+        ]
+      }
     }
   },
   "sections": [
@@ -413,6 +425,27 @@
           {
             "insert": "recipe",
             "recipe": "gm4_standard_crafting:enchanted_golden_apple"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "honeycomb_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_honeycomb_block"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:honeycomb"
           }
         ]
       ],
