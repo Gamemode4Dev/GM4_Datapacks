@@ -217,6 +217,18 @@
           }
         ]
       }
+    },
+    "obtain_cherry_leaves": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cherry_leaves"
+            ]
+          }
+        ]
+      }
     }
   },
   "sections": [
@@ -610,6 +622,27 @@
           {
             "insert": "recipe",
             "recipe": "gm4_standard_crafting:paper"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "pink_petals_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_cherry_leaves"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:pink_petals"
           }
         ]
       ],
