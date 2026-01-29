@@ -241,6 +241,30 @@
           }
         ]
       }
+    },
+    "obtain_iron_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_copper_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:copper_ingot"
+            ]
+          }
+        ]
+      }
     }
   },
   "sections": [
@@ -676,6 +700,48 @@
           {
             "insert": "recipe",
             "recipe": "gm4_standard_crafting:cherry_leaves"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "iron_chain_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_iron_ingot"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:iron_chain"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "copper_chain_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_copper_ingot"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:copper_chain"
           }
         ]
       ],
