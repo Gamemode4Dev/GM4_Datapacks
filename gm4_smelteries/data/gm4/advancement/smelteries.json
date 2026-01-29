@@ -3,7 +3,7 @@
         "icon": {
             "id": "furnace",
             "components": {
-                "minecraft:custom_model_data": "gui/advancement/smelteries"
+                "minecraft:custom_model_data": {"strings":["gm4_smelteries:gui/advancement/smelteries"]}
             }
         },
         "title": {

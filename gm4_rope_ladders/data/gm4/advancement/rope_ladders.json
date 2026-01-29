@@ -3,7 +3,7 @@
     "icon": {
       "id": "ladder",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/rope_ladders"
+        "minecraft:custom_model_data": {"strings":["gm4_rope_ladders:gui/advancement/rope_ladders"]}
       }
     },
     "title": {

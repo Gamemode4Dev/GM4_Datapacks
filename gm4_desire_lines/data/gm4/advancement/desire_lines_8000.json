@@ -3,7 +3,7 @@
     "icon": {
       "id": "oak_planks",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/desire_lines_8000"
+        "minecraft:custom_model_data": {"strings":["gm4_desire_lines:gui/advancement/desire_lines_8000"]}
       }
     },
     "title": {

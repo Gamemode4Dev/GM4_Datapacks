@@ -3,7 +3,7 @@
     "icon": {
       "id": "name_tag",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/holographic_tags"
+        "minecraft:custom_model_data": {"strings":["gm4_holographic_tags:gui/advancement/holographic_tags"]}
       }
     },
     "title": {

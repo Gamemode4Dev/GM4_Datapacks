@@ -3,7 +3,7 @@
         "icon": {
             "id": "minecraft:tripwire_hook",
             "components": {
-                "minecraft:custom_model_data": "gui/advancement/crossbow_cartridges_string"
+                "minecraft:custom_model_data": {"strings":["gm4_crossbow_cartridges:gui/advancement/crossbow_cartridges_string"]}
             }
         },
         "title": {

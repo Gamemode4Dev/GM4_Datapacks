@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:purpur_block",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/lightning_in_a_bottle_shulker"
+        "minecraft:custom_model_data": {"strings":["gm4_lightning_in_a_bottle:gui/advancement/lightning_in_a_bottle_shulker"]}
       }
     },
     "title": {

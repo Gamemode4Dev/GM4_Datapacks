@@ -34,7 +34,7 @@
           "operation": "add_multiplied_base"
         }
       ],
-      "minecraft:custom_model_data": "item/flippers",
+      "minecraft:custom_model_data": {"strings":["gm4_scuba_gear:item/flippers"]},
       "minecraft:custom_data": "{gm4_scuba_gear:{item:'flippers'}}",
       "minecraft:custom_name": {
         "translate": "item.gm4.flippers",

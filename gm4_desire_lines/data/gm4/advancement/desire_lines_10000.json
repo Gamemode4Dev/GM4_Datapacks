@@ -3,7 +3,7 @@
     "icon": {
       "id": "coarse_dirt",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/desire_lines_10000"
+        "minecraft:custom_model_data": {"strings":["gm4_desire_lines:gui/advancement/desire_lines_10000"]}
       }
     },
     "title": {

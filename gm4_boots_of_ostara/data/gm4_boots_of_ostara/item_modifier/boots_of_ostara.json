@@ -8,7 +8,7 @@
                     "minecraft:dyed_color"
                 ]
             },
-            "minecraft:custom_model_data": "item/boots_of_ostara"
+            "minecraft:custom_model_data": {"strings":["gm4_boots_of_ostara:item/boots_of_ostara"]}
         }
     },
     {
