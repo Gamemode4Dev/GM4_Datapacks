@@ -1,5 +1,5 @@
 {
-  "last_commit": "d80a33569ed737b921197adef208b8781dc4c429",
+  "last_commit": "8bd0a8cb64c961eb9dc6b68be9bf2ec4048f2185",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1533,7 +1533,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.17",
+      "version": "1.0.18",
       "hash": "1b3a67f554abb1e9fdbc6ba82a118e8a9151149b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -2514,8 +2514,8 @@
     {
       "id": "gm4_reeling_rods",
       "name": "Reeling Rods",
-      "version": "1.0.7",
-      "hash": "cec430c3d16caea5340aa75d3cac9a7d41111e14",
+      "version": "1.0.8",
+      "hash": "7b369f7d739725407999b8b1f23b7c8189878a8a",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Reeling_Rods",
       "credits": {
