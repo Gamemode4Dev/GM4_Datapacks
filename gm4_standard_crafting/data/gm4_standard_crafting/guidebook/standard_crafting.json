@@ -182,6 +182,29 @@
           }
         ]
       }
+    },
+    "obtain_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:logs"
+          }
+        ]
+      }
+    },
+    "obtain_bamboo_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bamboo_block",
+              "minecraft:stripped_bamboo_block"
+            ]
+          }
+        ]
+      }
     }
   },
   "sections": [
@@ -512,6 +535,48 @@
           {
             "insert": "recipe",
             "recipe": "gm4_standard_crafting:bone_block"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "log_chest_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_log"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:log_chest"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "bamboo_block_chest_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_bamboo_block"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:bamboo_block_chest"
           }
         ]
       ],

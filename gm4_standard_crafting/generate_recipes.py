@@ -116,6 +116,6 @@ def beet_default(ctx: Context):
     recursive_apply(slabs, "slab_decraft", ["##","##"], 2)
 
     for recipe in [
-        "dispenser", "bone_block"
+        "dispenser", "bone_block", "chest"
     ]:
         group_recipe(recipe)
