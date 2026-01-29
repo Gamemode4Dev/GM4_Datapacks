@@ -278,6 +278,19 @@
           }
         ]
       }
+    },
+    "obtain_green_dye_ingredients": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:blue_dye",
+              "minecraft:yellow_dye"
+            ]
+          }
+        ]
+      }
     }
   },
   "sections": [
@@ -776,6 +789,27 @@
           {
             "insert": "recipe",
             "recipe": "gm4_standard_crafting:brown_dye"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "green_dye_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_green_dye_ingredients"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:green_dye"
           }
         ]
       ],
