@@ -265,6 +265,19 @@
           }
         ]
       }
+    },
+    "obtain_brown_dye_ingredients": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:orange_dye",
+              "minecraft:black_dye"
+            ]
+          }
+        ]
+      }
     }
   },
   "sections": [
@@ -742,6 +755,27 @@
           {
             "insert": "recipe",
             "recipe": "gm4_standard_crafting:copper_chain"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "brown_dye_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_brown_dye_ingredients"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:brown_dye"
           }
         ]
       ],
