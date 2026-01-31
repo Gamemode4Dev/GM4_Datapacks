@@ -4,7 +4,7 @@
       "id": "elytra",
       "components": {
         "minecraft:damage": 432,
-        "minecraft:custom_model_data": "gui/advancement/end_fishing_phantom"
+        "minecraft:custom_model_data": {"strings":["gm4_end_fishing:gui/advancement/end_fishing_phantom"]}
       }
     },
     "title": {

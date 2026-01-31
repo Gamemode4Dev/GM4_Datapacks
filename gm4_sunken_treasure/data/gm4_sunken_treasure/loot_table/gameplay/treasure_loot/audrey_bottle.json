@@ -12,7 +12,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -55,7 +55,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -110,7 +110,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -195,7 +195,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -262,7 +262,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -323,7 +323,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -384,7 +384,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -439,7 +439,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -500,7 +500,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -555,7 +555,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -610,7 +610,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -671,7 +671,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -714,7 +714,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -775,7 +775,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -836,7 +836,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -903,7 +903,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -976,7 +976,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -1031,7 +1031,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -1092,7 +1092,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -1159,7 +1159,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {

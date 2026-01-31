@@ -3,7 +3,7 @@
         "icon": {
             "id": "minecraft:potion",
             "components": {
-                "minecraft:custom_model_data": "gui/advancement/zauber_cauldrons_drink_all_magicol"
+                "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_drink_all_magicol"]}
             }
         },
         "title": {

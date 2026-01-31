@@ -11,7 +11,7 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": "item/liquid_tank",
+                "minecraft:custom_model_data": {"strings":["gm4_liquid_tanks:item/liquid_tank"]},
                 "minecraft:profile": "$liquid_tank"
               }
             },

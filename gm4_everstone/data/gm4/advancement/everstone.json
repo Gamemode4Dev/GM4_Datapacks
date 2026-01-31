@@ -3,7 +3,7 @@
     "icon": {
       "id": "firework_star",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/everstones"
+        "minecraft:custom_model_data": {"strings":["gm4_everstone:gui/advancement/everstones"]}
       }
     },
     "title": {

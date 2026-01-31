@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:player_head",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/scuba_gear",
+        "minecraft:custom_model_data": {"strings":["gm4_scuba_gear:gui/advancement/scuba_gear"]},
         "minecraft:profile": "$scuba_helmet"
       }
     },
@@ -17,7 +17,7 @@
       "color": "gray"
     }
   },
-  "parent": "gm4:custom_crafters",
+  "parent": "gm4:root",
   "criteria": {
     "all_gear_equipped": {
       "trigger": "minecraft:inventory_changed",

@@ -3,7 +3,7 @@
     "icon": {
       "id": "poisonous_potato",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/chairs_sit"
+        "minecraft:custom_model_data": {"strings":["gm4_chairs:gui/advancement/chairs_sit"]}
       }
     },
     "title": {

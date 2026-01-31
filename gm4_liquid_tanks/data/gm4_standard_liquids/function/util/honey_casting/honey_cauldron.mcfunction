@@ -8,7 +8,7 @@ execute if score @s gm4_lt_util matches 4.. run summon item_display ~0.5 ~ ~0.5 
     item:
         id: "minecraft:honey_block"
         count: 1
-        components: {"minecraft:custom_model_data":"block/cast_honey_block"}
+        components: {"minecraft:custom_model_data":{"strings":["gm4_liquid_tanks:block/cast_honey_block"]}}
     transformation:
         left_rotation: [0,0,0,1]
         right_rotation: [0,0,0,1]

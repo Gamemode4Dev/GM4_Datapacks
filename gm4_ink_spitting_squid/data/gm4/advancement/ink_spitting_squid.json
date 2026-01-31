@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:ink_sac",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/ink_spitting_squid"
+        "minecraft:custom_model_data": {"strings":["gm4_ink_spitting_squid:gui/advancement/ink_spitting_squid"]}
       }
     },
     "title": {

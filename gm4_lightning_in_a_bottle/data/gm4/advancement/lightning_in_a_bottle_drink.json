@@ -4,7 +4,7 @@
       "id": "minecraft:potion",
       "components": {
         "minecraft:enchantment_glint_override": true,
-        "minecraft:custom_model_data": "gui/advancement/lightning_in_a_bottle_drink",
+        "minecraft:custom_model_data": {"strings":["gm4_lightning_in_a_bottle:gui/advancement/lightning_in_a_bottle_drink"]},
         "minecraft:potion_contents": {
           "custom_color": 11985402
         }

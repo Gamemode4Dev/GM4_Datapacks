@@ -20,7 +20,7 @@
                                     "minecraft:dyed_color"
                                   ]
                                 },
-                                "minecraft:custom_model_data": "item/pirate_hat"
+                                "minecraft:custom_model_data": {"strings":["gm4_tower_structures:item/pirate_hat"]}
                             }
                         },
                         {

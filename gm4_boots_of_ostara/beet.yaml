@@ -10,20 +10,16 @@ resource_pack:
 
 pipeline:
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_custom_crafters
 
 meta:
   gm4:
     versioning:
-      required:
-        lib_custom_crafters: 3.4.0
       schedule_loops: [main]
     model_data:
       - item: leather_boots
         template: generated_overlay
         broadcast:
           - reference: item/boots_of_ostara
-          - reference: item/flippers_of_ostara
       - item: leather_boots
         reference: gui/advancement/boots_of_ostara
         template:

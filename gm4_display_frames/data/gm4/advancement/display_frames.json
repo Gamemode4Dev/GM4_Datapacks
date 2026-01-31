@@ -3,7 +3,7 @@
         "icon": {
             "id": "minecraft:splash_potion",
             "components": {
-                "minecraft:custom_model_data": "gui/advancement/display_frames",
+                "minecraft:custom_model_data": {"strings":["gm4_display_frames:gui/advancement/display_frames"]},
                 "minecraft:potion_contents": "minecraft:invisibility"
             }
         },

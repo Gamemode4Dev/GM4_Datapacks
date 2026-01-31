@@ -3,7 +3,7 @@
     "icon": {
       "id": "poppy",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/sweethearts"
+        "minecraft:custom_model_data": {"strings":["gm4_sweethearts:gui/advancement/sweethearts"]}
       }
     },
     "title": {

@@ -19,7 +19,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/enderpuff",
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/enderpuff"]},
                 "minecraft:profile": "$enderpuff",
                 "minecraft:item_model": "minecraft:player_head",
                 "!minecraft:consumable": {}

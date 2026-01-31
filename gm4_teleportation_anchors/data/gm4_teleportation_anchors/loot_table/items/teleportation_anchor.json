@@ -11,7 +11,7 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": "item/teleportation_anchor",
+                "minecraft:custom_model_data": {"strings":["gm4_teleportation_anchors:item/teleportation_anchor"]},
                 "minecraft:profile": "$teleportation_anchor"
               }
             },

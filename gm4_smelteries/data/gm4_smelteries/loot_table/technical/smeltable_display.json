@@ -14,7 +14,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/gold_ore"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/gold_ore"]}
                                     }
                                 }
                             ],
@@ -36,7 +36,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/nether_gold_ore"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/nether_gold_ore"]}
                                     }
                                 }
                             ],
@@ -58,7 +58,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/deepslate_gold_ore"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/deepslate_gold_ore"]}
                                     }
                                 }
                             ],
@@ -80,7 +80,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/raw_gold"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/raw_gold"]}
                                     }
                                 }
                             ],
@@ -102,7 +102,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/iron_ore"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/iron_ore"]}
                                     }
                                 }
                             ],
@@ -124,7 +124,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/deepslate_iron_ore"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/deepslate_iron_ore"]}
                                     }
                                 }
                             ],
@@ -146,7 +146,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/raw_iron"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/raw_iron"]}
                                     }
                                 }
                             ],
@@ -168,7 +168,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/copper_ore"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/copper_ore"]}
                                     }
                                 }
                             ],
@@ -190,7 +190,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/deepslate_copper_ore"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/deepslate_copper_ore"]}
                                     }
                                 }
                             ],
@@ -212,7 +212,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/raw_copper"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/raw_copper"]}
                                     }
                                 }
                             ],
@@ -234,7 +234,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/sand"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/sand"]}
                                     }
                                 }
                             ],
@@ -256,7 +256,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/red_sand"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/red_sand"]}
                                     }
                                 }
                             ],
@@ -278,7 +278,7 @@
                                 {
                                     "function": "minecraft:set_components",
                                     "components": {
-                                      "minecraft:custom_model_data": "block/ore_display/chorus_fruit"
+                                      "minecraft:custom_model_data": {"strings":["gm4_smelteries:block/ore_display/chorus_fruit"]}
                                     }
                                 }
                             ],

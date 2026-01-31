@@ -41,7 +41,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/lump/baryte",
+                "minecraft:custom_model_data": {"strings":["gm4_metallurgy:item/lump/baryte"]},
                 "minecraft:profile": "$ore/barium"
               }
             },

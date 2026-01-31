@@ -3,7 +3,7 @@
         "icon": {
             "id": "tropical_fish_bucket",
             "components": {
-                "minecraft:custom_model_data": "gui/advancement/crossbow_cartridges_bucket"
+                "minecraft:custom_model_data": {"strings":["gm4_crossbow_cartridges:gui/advancement/crossbow_cartridges_bucket"]}
             }
         },
         "title": {

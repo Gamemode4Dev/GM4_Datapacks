@@ -3,7 +3,7 @@
     "icon": {
       "id": "gunpowder",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/bat_grenades"
+        "minecraft:custom_model_data": {"strings":["gm4_bat_grenades:gui/advancement/bat_grenades"]}
       }
     },
     "title": {

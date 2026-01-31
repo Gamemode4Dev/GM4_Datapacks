@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:golden_chestplate",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/zauber_cauldrons_full_armor"
+        "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_full_armor"]}
       }
     },
     "title": {

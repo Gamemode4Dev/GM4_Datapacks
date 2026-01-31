@@ -6,7 +6,7 @@
         "minecraft:enchantments": {
           "minecraft:mending": 1
         },
-        "minecraft:custom_model_data": "gui/advancement/book_binders_bind"
+        "minecraft:custom_model_data": {"strings":["gm4_book_binders:gui/advancement/book_binders_bind"]}
       }
     },
     "title": {

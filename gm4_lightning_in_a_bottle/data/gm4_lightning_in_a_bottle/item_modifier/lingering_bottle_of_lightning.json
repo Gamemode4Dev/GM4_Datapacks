@@ -32,7 +32,7 @@
     "function": "minecraft:set_components",
     "components": {
       "minecraft:enchantment_glint_override": true,
-      "minecraft:custom_model_data": "item/lingering_lightning_in_a_bottle",
+      "minecraft:custom_model_data": {"strings":["gm4_lightning_in_a_bottle:item/lingering_lightning_in_a_bottle"]},
       "minecraft:potion_contents": {
         "custom_color": 11985402,
         "custom_effects": [

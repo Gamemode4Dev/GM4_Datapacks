@@ -15,7 +15,7 @@ for enchantment in enchantments:
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/enchanted_page"
+                "minecraft:custom_model_data": {"strings":["gm4_book_binders:item/enchanted_page"]}
               }
             },
             {

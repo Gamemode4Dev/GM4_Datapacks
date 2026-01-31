@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:firework_rocket",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/phantom_scarecrows"
+        "minecraft:custom_model_data": {"strings":["gm4_phantom_scarecrows:gui/advancement/phantom_scarecrows"]}
       }
     },
     "title": {

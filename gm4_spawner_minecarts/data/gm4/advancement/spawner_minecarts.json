@@ -3,7 +3,7 @@
     "icon": {
       "id": "spawner",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/spawner_minecarts"
+        "minecraft:custom_model_data": {"strings":["gm4_spawner_minecarts:gui/advancement/spawner_minecarts"]}
       }
     },
     "title": {

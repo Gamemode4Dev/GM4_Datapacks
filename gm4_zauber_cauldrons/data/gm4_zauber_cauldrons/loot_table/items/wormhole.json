@@ -11,7 +11,7 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:enchantment_glint_override": true,
-                                "minecraft:custom_model_data": "item/wormhole_in_a_bottle",
+                                "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:item/wormhole_in_a_bottle"]},
                                 "minecraft:potion_contents": {
                                     "potion": "minecraft:thick",
                                     "custom_color": 8587123

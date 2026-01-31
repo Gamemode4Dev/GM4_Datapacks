@@ -10,7 +10,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "item/piston_minecart"
+                                "minecraft:custom_model_data": {"strings":["gm4_tunnel_bores:item/piston_minecart"]}
                             }
                         },
                         {

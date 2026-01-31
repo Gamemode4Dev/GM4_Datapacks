@@ -3,7 +3,7 @@
     "icon": {
       "id": "glass_bottle",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/zauber_cauldron_drink_multi_use_bottle"
+        "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:gui/advancement/zauber_cauldron_drink_multi_use_bottle"]}
       }
     },
     "title": {

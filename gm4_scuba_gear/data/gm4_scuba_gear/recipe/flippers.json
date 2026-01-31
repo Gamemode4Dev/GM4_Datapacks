@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S S",
+    "R R",
+    "R R"
+  ],
+  "key": {
+    "S": "minecraft:turtle_scute",
+    "R": "minecraft:rabbit_hide"
+  },
+  "result": {
+    "id": "minecraft:leather_boots",
+    "components": {
+      "minecraft:dyed_color": 11009871,
+      "minecraft:tooltip_display": {
+        "hidden_components": [
+          "minecraft:dyed_color"
+        ]
+      },
+      "minecraft:attribute_modifiers": [
+        {
+          "type": "minecraft:armor",
+          "id": "gm4_scuba_gear:flippers_armor",
+          "slot": "feet",
+          "amount": 1,
+          "operation": "add_value"
+        },
+        {
+          "type": "minecraft:movement_speed",
+          "id": "gm4_scuba_gear:flippers_movement_speed",
+          "slot": "feet",
+          "amount": -0.4,
+          "operation": "add_multiplied_base"
+        }
+      ],
+      "minecraft:custom_model_data": {"strings":["gm4_scuba_gear:item/flippers"]},
+      "minecraft:custom_data": "{gm4_scuba_gear:{item:'flippers'}}",
+      "minecraft:custom_name": {
+        "translate": "item.gm4.flippers",
+        "fallback": "Flippers",
+        "italic": false
+      }
+    }
+  }
+}

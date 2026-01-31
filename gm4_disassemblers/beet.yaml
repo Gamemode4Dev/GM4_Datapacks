@@ -4,25 +4,6 @@ version: 2.5.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 88
-        max_inclusive: 94
-      min_format: 88
-      max_format: 94
-      directory: since_88
-    - formats:
-        min_inclusive: 94
-        max_inclusive: 94
-      min_format: 94
-      max_format: 94
-      directory: since_94
-    - formats:
-        min_inclusive: 81
-        max_inclusive: 88
-      min_format: 81
-      max_format: 88
-      directory: empty
 
 resource_pack:
   load: .
@@ -31,13 +12,11 @@ pipeline:
   - gm4_disassemblers.generate_disassembly
   - gm4.plugins.extend.module
   - gm4.plugins.include.lib_machines
-  - gm4.plugins.include.lib_custom_crafters
 
 meta:
   gm4:
     versioning:
       required:
-        lib_custom_crafters: 3.4.0
         lib_machines: 1.4.0
       schedule_loops: [main]
     model_data:
@@ -78,7 +57,6 @@ meta:
       description: Break apart gold and iron tools and weapons for materials. Attach this to a mob farm to finally make use of those extra armour sets!
       recommended:
         - gm4_resource_pack
-        - gm4_relocators
         - gm4_standard_crafting
         - gm4_ender_hoppers
         - gm4_enchantment_extractors

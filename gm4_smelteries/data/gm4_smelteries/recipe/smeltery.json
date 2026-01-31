@@ -15,7 +15,7 @@
   "result": {
     "id": "minecraft:player_head",
     "components": {
-      "minecraft:custom_model_data": "item/smeltery",
+      "minecraft:custom_model_data": {"strings":["gm4_smelteries:item/smeltery"]},
       "minecraft:profile": "$smeltery",
       "minecraft:custom_data": "{gm4_machines:{id:'smeltery'}}",
       "minecraft:custom_name": {"translate":"block.gm4.smeltery","fallback":"Smeltery","color":"white","italic":false}
