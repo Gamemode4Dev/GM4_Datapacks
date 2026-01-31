@@ -1,6 +1,6 @@
 from beet import Context, subproject, Cache, Language, Function
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 from gm4.utils import CSV
 from gm4.plugins.resource_pack import ContainerGuiOptions, GuiFont
 
@@ -109,7 +109,7 @@ def generate_furniture_data(ctx: Context, furniture_set: CSV, set_name: str):
         }))
 
 class FurnitureStationGui(ContainerGuiOptions):
-    container = "furniture_station"
+    container: Literal["furniture_station"] = "furniture_station" # type: ignore
 
     def process(self, config: GuiFont, counter_cache: Cache) -> tuple[str, list[dict[str, Any]]]:
         u1 = self.next_unicode(counter_cache)
