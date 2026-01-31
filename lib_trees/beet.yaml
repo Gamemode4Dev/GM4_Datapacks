@@ -1,7 +1,7 @@
 id: gm4_trees
 name: Gamemode 4 Trees
-version: 1.3.X
-description: A mcfunction library that facilites the creation of custom trees.
+version: 1.4.X
+description: A mcfunction library that facilitates the creation of custom trees.
 
 data_pack:
   load: 

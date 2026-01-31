@@ -1,0 +1,9 @@
+key,en_us
+gm4.reeling_rods.enchantment.reeling,"Reeling"
+gm4.reeling_rods.enchantment.barbed,"Barbed"
+text.gm4.reeling_rods.death.bleeding,"%s succumbed to their injuries"
+text.gm4.reeling_rods.death.scratch,"%s was scratched to death by %s"
+text.gm4.guidebook.module_desc.reeling_rods,"Steal Villager's wares, scratch up your foes! Fishing rods have never been more useful!"
+text.gm4.guidebook.reeling_rods.description,"Fishing rods can be useful tools for (accidental) home re-decoration: Paintings and Item Frames can be ripped of walls, whilst leashes and Shulkers are moved around with ease."
+text.gm4.guidebook.reeling_rods.reeling,"When enchanted with Reeling, a fishing rod becomes a sneaky tool for disassembly and thievery. Take a Villager's wares or un-boat a chest boat chest."
+text.gm4.guidebook.reeling_rods.barbed,"Barbed turns a fishing rod into a lethal weapon. Throw your bobber at foes to scratch them up! Higher levels cause more damage over time."

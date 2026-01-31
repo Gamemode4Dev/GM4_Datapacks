@@ -466,6 +466,26 @@
             "fallback": " - %1$s*",
             "with": [
               {
+                "translate": "text.gm4.pneuma_debilitate",
+                "fallback": "Debilitate"
+              }
+            ],
+            "hover_event": {
+              "action": "show_text",
+              "value": [
+                {
+                  "translate": "text.gm4.guidebook.orb_of_ankou.note.debilitate",
+                  "fallback": "Applies Weakness to arrows shot from bows"
+                }
+              ]
+            }
+          },
+          "\n",
+          {
+            "translate": "text.gm4.guidebook.orb_of_ankou.pneuma_list",
+            "fallback": " - %1$s*",
+            "with": [
+              {
                 "translate": "text.gm4.pneuma_depriving",
                 "fallback": "Depriving"
               }

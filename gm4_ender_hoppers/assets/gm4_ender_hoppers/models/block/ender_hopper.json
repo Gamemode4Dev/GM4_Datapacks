@@ -2,7 +2,8 @@
 	"textures": {
 		"side": "gm4_ender_hoppers:block/ender_hopper_eye_side",
 		"top": "gm4_ender_hoppers:block/ender_hopper_eye_top",
-		"bottom": "gm4_ender_hoppers:block/ender_hopper_eye_bottom"	
+		"bottom": "gm4_ender_hoppers:block/ender_hopper_eye_bottom",
+		"particle": "gm4_ender_hoppers:block/ender_hopper_eye_side"
 	},
 		"elements": [
 		{

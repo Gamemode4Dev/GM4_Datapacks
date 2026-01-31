@@ -4,6 +4,13 @@ version: 1.7.X
 
 data_pack:
   load: .
+  overlays:
+    - formats:
+        min_inclusive: 1
+        max_inclusive: 81
+      min_format: 1
+      max_format: 81
+      directory: backport_81
 
 resource_pack:
   load: .
@@ -49,7 +56,6 @@ meta:
         - shamir
     modrinth:
       project_id: raWyrHxi
-    video: null
     wiki: https://wiki.gm4.co/wiki/Metallurgy
     credits:
       Creators:

@@ -1,14 +1,15 @@
 {
     "values": [
-        "minecraft:horse",
-        "minecraft:mule",
-        "minecraft:donkey",
         "minecraft:cat",
-        "minecraft:wolf",
+        "minecraft:donkey",
+        "minecraft:horse",
         "minecraft:llama",
+        "minecraft:mule",
+        {"id": "minecraft:nautilus", "required": false},
         "minecraft:parrot",
-        "minecraft:zombie_horse",
         "minecraft:skeleton_horse",
-        "minecraft:trader_llama"
+        "minecraft:trader_llama",
+        "minecraft:wolf",
+        "minecraft:zombie_horse"
     ]
 }

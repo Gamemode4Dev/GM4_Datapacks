@@ -50,6 +50,9 @@
     "axolotl_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100
     },
+    "azalea_leaves": {
+      "gm4_monsters_unbound:item/spore/default": 1
+    },
     "bamboo_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_bamboo_hanging_sign": 1,
       "gm4_trapped_signs:item/trapped_bamboo_hanging_sign": 2
@@ -119,7 +122,8 @@
       "gm4_orb_of_ankou:pneuma/shrieking": 235,
       "gm4_orb_of_ankou:pneuma/dashing": 236,
       "gm4_orb_of_ankou:pneuma/sniffing": 237,
-      "gm4_orb_of_ankou:pneuma/tranquilizing": 238
+      "gm4_orb_of_ankou:pneuma/tranquilizing": 238,
+      "gm4_orb_of_ankou:pneuma/debilitate": 239
     },
     "blaze_powder": {
       "gm4_mysterious_midnights:guidebook_icon/nightmare_nights": 1
@@ -170,6 +174,7 @@
       "gm4_animi_shamir:shamir/animi": 124
     },
     "chainmail_chestplate": {
+      "gm4_monsters_unbound:guidebook_icon/monsters_unbound": 1,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_iacio_shamir:shamir/iacio": 122,
@@ -188,6 +193,9 @@
     "cherry_hanging_sign": {
       "gm4_trapped_signs:item/secret_trapped_cherry_hanging_sign": 1,
       "gm4_trapped_signs:item/trapped_cherry_hanging_sign": 2
+    },
+    "cherry_leaves": {
+      "gm4_monsters_unbound:item/spore/cherry": 1
     },
     "cherry_sign": {
       "gm4_trapped_signs:item/trapped_cherry_sign": 1,
@@ -233,11 +241,76 @@
       "gm4_fulcio_shamir:shamir/fulcio": 115,
       "gm4_animi_shamir:shamir/animi": 124
     },
+    "copper_axe": {
+      "gm4_metallurgy:shamir/hypexperia": 110,
+      "gm4_metallurgy:shamir/arborenda": 112,
+      "gm4_metallurgy:shamir/moneo": 113,
+      "gm4_percurro_shamir:shamir/percurro": 117,
+      "gm4_audere_shamir:shamir/audere": 120,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
     "copper_block": {
       "gm4_auto_crafting:guidebook_icon/auto_crafting": 1
     },
+    "copper_boots": {
+      "gm4_weighted_armour:shamir/helious": 103,
+      "gm4_metallurgy:shamir/defuse": 106,
+      "gm4_desire_lines:shamir/celaro": 118,
+      "gm4_vecto_shamir:shamir/vecto": 121,
+      "gm4_metallurgy:shamir/vibro": 123,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
+    "copper_chestplate": {
+      "gm4_weighted_armour:shamir/helious": 103,
+      "gm4_metallurgy:shamir/defuse": 106,
+      "gm4_iacio_shamir:shamir/iacio": 122,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
+    "copper_helmet": {
+      "gm4_weighted_armour:shamir/helious": 103,
+      "gm4_metallurgy:shamir/defuse": 106,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
+    "copper_hoe": {
+      "gm4_metallurgy:shamir/gemini": 109,
+      "gm4_metallurgy:shamir/tinker": 111,
+      "gm4_metallurgy:shamir/moneo": 113,
+      "gm4_audere_shamir:shamir/audere": 120,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
+    "copper_leggings": {
+      "gm4_weighted_armour:shamir/helious": 103,
+      "gm4_metallurgy:shamir/defuse": 106,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
     "copper_ore": {
       "gm4_smelteries:block/ore_display/copper_ore": 2
+    },
+    "copper_pickaxe": {
+      "gm4_metallurgy:shamir/forterra": 107,
+      "gm4_metallurgy:shamir/hypexperia": 110,
+      "gm4_metallurgy:shamir/tinker": 111,
+      "gm4_metallurgy:shamir/moneo": 113,
+      "gm4_lumos_shamir:shamir/lumos": 114,
+      "gm4_audere_shamir:shamir/audere": 120,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
+    "copper_shovel": {
+      "gm4_metallurgy:shamir/hypexperia": 110,
+      "gm4_metallurgy:shamir/tinker": 111,
+      "gm4_metallurgy:shamir/moneo": 113,
+      "gm4_lumos_shamir:shamir/lumos": 114,
+      "gm4_audere_shamir:shamir/audere": 120,
+      "gm4_animi_shamir:shamir/animi": 124
+    },
+    "copper_sword": {
+      "gm4_metallurgy:shamir/ender_bolt": 105,
+      "gm4_metallurgy:shamir/musical": 108,
+      "gm4_metallurgy:shamir/hypexperia": 110,
+      "gm4_metallurgy:shamir/tinker": 111,
+      "gm4_orb_of_ankou:shamir/corripio": 116,
+      "gm4_percurro_shamir:shamir/percurro": 117,
+      "gm4_animi_shamir:shamir/animi": 124
     },
     "crafting_table": {
       "gm4_custom_crafters:block/custom_crafter": 1,
@@ -527,6 +600,7 @@
     "fishing_rod": {
       "gm4_end_fishing:gui/advancement/end_fishing": 1,
       "gm4_end_fishing:guidebook_icon/end_fishing": 2,
+      "gm4_reeling_rods:guidebook_icon/reeling_rods": 3,
       "gm4_metallurgy:shamir/hypexperia": 110,
       "gm4_animi_shamir:shamir/animi": 124
     },
@@ -571,13 +645,17 @@
       "gm4_orb_of_ankou:pneuma/shrieking": 235,
       "gm4_orb_of_ankou:pneuma/dashing": 236,
       "gm4_orb_of_ankou:pneuma/sniffing": 237,
-      "gm4_orb_of_ankou:pneuma/tranquilizing": 238
+      "gm4_orb_of_ankou:pneuma/tranquilizing": 238,
+      "gm4_orb_of_ankou:pneuma/debilitate": 239
     },
     "flint_and_steel": {
       "gm4_orb_of_ankou:gui/advancement/orb_of_ankou_soul_forge": 1,
       "gm4_better_fire:guidebook_icon/better_fire": 2,
       "gm4_animi_shamir:shamir/animi": 124,
       "gm4_orb_of_ankou:guidebook_icon/orb_of_ankou": 200
+    },
+    "flowering_azalea_leaves": {
+      "gm4_monsters_unbound:item/spore/flowering": 1
     },
     "furnace": {
       "gm4_smelteries:gui/advancement/smelteries": 1,
@@ -959,6 +1037,7 @@
     },
     "leather_chestplate": {
       "gm4_combat_expanded:gui/advancement/combat_expanded_identify": 1,
+      "gm4_survival_refightalized:guidebook_icon/survival_refightalized": 2,
       "gm4_weighted_armour:shamir/helious": 103,
       "gm4_metallurgy:shamir/defuse": 106,
       "gm4_iacio_shamir:shamir/iacio": 122,
@@ -989,8 +1068,14 @@
     "lightning_rod": {
       "gm4_lightning_in_a_bottle:guidebook_icon/lightning_in_a_bottle": 1
     },
+    "lily_pad": {
+      "gm4_lively_lily_pads:guidebook_icon/lively_lily_pads": 1
+    },
     "lime_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/lime": 300
+    },
+    "lime_glazed_terracotta": {
+      "gm4_monsters_unbound:item/elite_headwear/mending": 1
     },
     "lingering_potion": {
       "gm4_midnight_menaces:guidebook_icon/illusioner_nights": 1,
@@ -1210,6 +1295,7 @@
       "gm4_desire_lines:gui/advancement/desire_lines_8000": 1
     },
     "oak_sapling": {
+      "gm4_towering_trees:guidebook_icon/towering_trees": 1,
       "gm4_apple_trees:item/apple_tree_sapling": 4
     },
     "oak_sign": {
@@ -1226,9 +1312,15 @@
     "oxidized_cut_copper": {
       "gm4_tinkering_compressors:block/tinkering_compressor_plate": 1
     },
+    "packed_ice": {
+      "gm4_monsters_unbound:item/elite_headwear/glacial": 1
+    },
     "paper": {
       "gm4_book_binders:item/enchanted_page": 1,
       "gm4_book_binders:gui/advancement/book_binders_debind": 2
+    },
+    "pearlescent_froglight": {
+      "gm4_monsters_unbound:item/elite_headwear/pearlescent": 1
     },
     "phantom_membrane": {
       "gm4_midnight_menaces:guidebook_icon/enlarging_phantoms": 1
@@ -1601,7 +1693,8 @@
       "gm4_metallurgy:shamir/infinitas": 100
     },
     "wheat": {
-      "gm4_mysterious_midnights:guidebook_icon/harvest_moons": 1
+      "gm4_mysterious_midnights:guidebook_icon/harvest_moons": 1,
+      "gm4_lavish_livestock:guidebook_icon/lavish_livestock": 2
     },
     "white_concrete_powder": {
       "gm4_zauber_cauldrons:block/liquid_magicol/white": 300

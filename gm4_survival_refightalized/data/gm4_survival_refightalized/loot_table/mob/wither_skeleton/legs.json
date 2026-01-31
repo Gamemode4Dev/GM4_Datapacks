@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "iron_leggings",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_survival_refightalized:mob/material_check/iron"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "chainmail_leggings",
+              "conditions": [
+                {
+                  "condition": "minecraft:reference",
+                  "name": "gm4_survival_refightalized:mob/material_check/chainmail"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:loot_table",
+              "value": "gm4:empty"
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:random_chance",
+              "chance": 0.666
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

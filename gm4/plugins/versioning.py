@@ -1,7 +1,7 @@
 from beet import Context, Function, FunctionTag, PluginOptions, configurable
 from beet.contrib.rename_files import rename_files
 from beet.contrib.find_replace import find_replace
-from pydantic.v1 import Field, Extra
+from pydantic import Field
 import warnings
 from gm4.utils import Version, NoneAttribute
 import gm4.plugins.manifest # for ManifestCacheModel; a runtime circular dependency
@@ -10,7 +10,7 @@ class VersionInjectionConfig(PluginOptions):
     functions: list[str] = []
     advancements: list[str] = []
 
-class VersioningConfig(PluginOptions, extra=Extra.ignore):
+class VersioningConfig(PluginOptions, extra="ignore"):
     schedule_loops: list[str] = []
     required: dict[str, str] = {}
     extra_version_injections: VersionInjectionConfig = Field(default=VersionInjectionConfig())
@@ -23,7 +23,7 @@ def modules(ctx: Context, opts: VersioningConfig):
         - load:load.json"""
     ctx.cache["currently_building"].json = {"name": ctx.project_name, "id": ctx.project_id, "added_libs": []} # cache module's project id for access within library pipelines
     dependencies = opts.required
-    manifest = gm4.plugins.manifest.ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+    manifest = gm4.plugins.manifest.ManifestCacheModel.model_validate(ctx.cache["gm4_manifest"].json)
     lines = ["execute ", ""]
 
     # {{module_name}}.json tag
@@ -42,10 +42,10 @@ def modules(ctx: Context, opts: VersioningConfig):
         name_default_dict = {"name":"Gamemode 4 Base"} if dep_id == "gm4" else {"name":dep_id}
         manifest_entry = manifest.modules.get(dep_id)
         dep_name = manifest_entry.name if manifest_entry else name_default_dict["name"]
-        
+
         if dep_id not in manifest.modules and dep_id != "gm4":
             dep_id = manifest.libraries.get(dep_id, NoneAttribute()).id
-        
+
         # append to startup check
         lines[0] += f"if score {dep_id} load.status matches {dep_ver.major} if score {dep_id}_minor load.status matches {dep_ver.minor}.. "
 
@@ -96,7 +96,7 @@ def libraries(ctx: Context, opts: VersioningConfig):
         - load:{lib_name}/resolve_load.json
         - load:{lib_name}/dependencies.json"""
     dependencies = opts.required
-    manifest = gm4.plugins.manifest.ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+    manifest = gm4.plugins.manifest.ManifestCacheModel.model_validate(ctx.cache["gm4_manifest"].json)
     lib_ver = Version(ctx.project_version)
 
     # enumerate.mcfunction
@@ -112,7 +112,7 @@ def libraries(ctx: Context, opts: VersioningConfig):
 
         if dep_id not in manifest.modules:
             dep_id = manifest.libraries.get(dep_id, NoneAttribute()).id
-        
+
         dep_check_line += f"if score {dep_id} load.status matches {dep_ver.major} if score {dep_id}_minor load.status matches {dep_ver.minor}.. "
 
     dep_check_line += f"unless score {ctx.project_id} load.status matches {lib_ver.major}.. run scoreboard players set "
@@ -128,7 +128,7 @@ def libraries(ctx: Context, opts: VersioningConfig):
     for func in opts.schedule_loops:
         lines.append(f"execute unless score {ctx.project_id} load.status matches {lib_ver.major} run schedule clear {ctx.project_id}:{func}")
         lines.append(f"execute unless score {ctx.project_id}_minor load.status matches {lib_ver.minor} run schedule clear {ctx.project_id}:{func}")
-        
+
     ctx.data.functions[f"{ctx.project_id}:resolve_load"] = Function(lines)
 
     # load/tags {{ lib name }}.json
@@ -204,13 +204,13 @@ def base(ctx: Context, opts: VersioningConfig):
     # resolve_load.mcfunction
     lines = f"execute if score gm4 load.status matches {ver.major} if score gm4_minor load.status matches {ver.minor} run function gm4:load"
     ctx.data.functions[f"gm4:resolve_load"] = Function(lines)
-    
+
     # resolve_post_load.mcfunction
     lines = f"execute if score gm4 load.status matches {ver.major} if score gm4_minor load.status matches {ver.minor} run function gm4:post_load"
     ctx.data.functions[f"gm4:resolve_post_load"] = Function(lines)
 
     versioned_advancements(ctx, ver, opts.extra_version_injections.advancements, strict=True) #type:ignore
-    
+
     versioned_namespace(ctx, ver)
 
 def versioned_namespace(ctx: Context, version: Version):
@@ -228,13 +228,13 @@ def versioned_namespace(ctx: Context, version: Version):
         "find": f"(?<![#$])(?<!storage )(?<!storage\":\"){namespace}:([a-z0-9_/]+)", # NOTE because re module requires fixed-length look behind, storage-referencing json *must* use no spaces between "storage":"ns:loc"
         "replace": f"{versioned_namespace}:\\1"
     }))
-    
+
 
 def dependency_load_tags(ctx: Context, dependencies: dict[str, str]) -> FunctionTag:
     """Assembles dependency information into tag format. Ensures a pack's dependencies
     get processed by lantern load before the primary startup checks for the module itself"""
     dep_tag = FunctionTag()
-    manifest = gm4.plugins.manifest.ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+    manifest = gm4.plugins.manifest.ManifestCacheModel.model_validate(ctx.cache["gm4_manifest"].json)
     for dep_id in dependencies.keys():
         if dep_id not in manifest.modules: # retrieve "gm4_" prefixed id for libraries, which are named "lib_"
             lib = manifest.libraries.get(dep_id)
@@ -288,7 +288,7 @@ def warn_on_future_version(ctx: Context, dep_id: str, ver: Version):
     else:
         cache_compound = ctx.cache["gm4_manifest"].json["modules"]
     latest_dep_ver = Version(cache_compound.get(dep_id, {}).get("version", '0.0.0'))
-    
+
     if (latest_dep_ver.major == ver.major and latest_dep_ver.minor < ver.minor) or (latest_dep_ver.major < ver.major): # type: ignore
         message = f"{ctx.project_id} depends on a future version {dep_id} v{ver}, but the latest available is {latest_dep_ver}"
         warnings.warn(message)

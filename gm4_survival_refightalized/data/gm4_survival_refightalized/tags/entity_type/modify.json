@@ -1,0 +1,22 @@
+{
+    "values": [
+        "minecraft:bogged",
+        "minecraft:cave_spider",
+        "minecraft:creeper",
+        "minecraft:drowned",
+        "minecraft:enderman",
+        "minecraft:husk",
+        {"id": "minecraft:parched", "required": false},
+        "minecraft:phantom",
+        "minecraft:piglin",
+        "minecraft:piglin_brute",
+        "minecraft:silverfish",
+        "minecraft:skeleton",
+        "minecraft:spider",
+        "minecraft:stray",
+        "minecraft:wither_skeleton",
+        "minecraft:zombie",
+        "minecraft:zombie_villager",
+        "minecraft:zombified_piglin"
+    ]
+}

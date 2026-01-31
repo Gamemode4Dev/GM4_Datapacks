@@ -30,3 +30,8 @@ text.gm4.guidebook.standard_liquids.rabbit_stew_and_beetroot_soup,"Rabbit Stew T
 text.gm4.guidebook.standard_liquids.mushroom_stew_and_milk,Mushroom Stew Tank\n- Drains mushroom stew\n- Fills bowls\n- Milks mooshrooms\n- Feeds drinkers\n\nMilk Tank\n- Drains milk buckets\n- Fills buckets\n- Milks cows\n- Clear mob effects
 text.gm4.guidebook.standard_liquids.honey,"Honey Tanks\n- Drains honey bottles, honey blocks\n- Fills bottles\n- Casts honey blocks into cauldrons\n- Clears mob poison\n- Feeds drinkers"
 text.gm4.guidebook.standard_liquids.experience,"Experience Tanks\n- Drains bottles o' enchanting, enchanted books\n- Fills bottles\n- Absorbs experience orbs, experience points\n- Fills experience points"
+container.gm4.liquid_tank.ominous_bottle_0,Ominous I Tank
+container.gm4.liquid_tank.ominous_bottle_1,Ominous II Tank
+container.gm4.liquid_tank.ominous_bottle_2,Ominous III Tank
+container.gm4.liquid_tank.ominous_bottle_3,Ominous IV Tank
+container.gm4.liquid_tank.ominous_bottle_4,Ominous V Tank

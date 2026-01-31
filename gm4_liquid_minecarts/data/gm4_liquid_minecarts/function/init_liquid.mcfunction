@@ -1,7 +1,7 @@
 #@s = empty liquid minecart next to a liquid tank pointed at it containing liquid, at tank location
 #run from liquid_minecarts:try_to_load
 
-execute anchored feet facing entity @s feet positioned ^ ^ ^1 as @e[type=armor_stand,limit=1,sort=nearest,distance=..1,tag=gm4_liquid_minecart_stand] positioned ^ ^ ^-1 run function gm4_liquid_minecarts:copy_tank_data
+execute anchored feet facing entity @s feet positioned ^ ^ ^1 as @e[type=item_display,limit=1,sort=nearest,distance=..1,tag=gm4_liquid_minecart_display] positioned ^ ^ ^-1 run function gm4_liquid_minecarts:copy_tank_data
 tag @s remove gm4_liquid_minecart_empty
 
 #set tank max based on 40% of hopper max

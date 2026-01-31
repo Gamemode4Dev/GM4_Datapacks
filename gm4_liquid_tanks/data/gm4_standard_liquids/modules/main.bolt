@@ -1,0 +1,169 @@
+import re
+from gm4_liquid_tanks:liquid_wrappers import liquid
+
+bucket = liquid.standard_unit('bucket', 3)
+bowl = liquid.standard_unit('bowl', 1)
+bottle = liquid.standard_unit('glass_bottle', 1)
+
+@liquid
+class Lava:
+    id = 'lava'
+    name = 'Lava'
+    capacity = 300
+
+    liquid.init()
+    bucket('lava_bucket') # item_fill on a standard unit
+
+@liquid
+class Water:
+    id = 'water'
+    name = 'Water'
+    capacity = 300
+
+    liquid.init()
+    bucket('water_bucket')
+    bottle('minecraft:potion[potion_contents={potion:"water"}]')
+
+@liquid
+class Milk:
+    id = 'milk'
+    name = 'Milk'
+    capacity = 300
+
+    liquid.init()
+    bucket('milk_bucket')
+
+@liquid
+class PowderSnow:
+    id = 'powder_snow'
+    name = 'Powder Snow'
+    capacity = 300
+
+    liquid.init()
+    bucket('powder_snow_bucket')
+
+@liquid
+class MushroomStew:
+    id = 'mushroom_stew'
+    name = 'Mushroom Stew'
+    capacity = 300
+
+    liquid.init()
+    bowl('mushroom_stew')
+
+@liquid
+class RabbitStew:
+    id = 'rabbit_stew'
+    name = 'Rabbit Stew'
+    capacity = 300
+
+    liquid.init()
+    bowl('rabbit_stew')
+
+@liquid
+class BeetrootSoup:
+    id = 'beetroot_soup'
+    name = 'Beetroot Soup'
+    capacity = 300
+
+    liquid.init()
+    bowl('beetroot_soup')
+    liquid.item_drain('beetroot', 'air', 1)
+
+@liquid
+class Honey:
+    id = 'honey'
+    name = 'Honey'
+    capacity = 400
+
+    liquid.init()
+    bottle('honey_bottle')
+    liquid.item_drain('honey_block', 'air', 4)
+
+@liquid
+class Experience:
+    id = 'experience'
+    name = 'Experience'
+    capacity = 5345
+
+    liquid.init()
+
+    @liquid.item_fill('glass_bottle', 'experience_bottle', 9)
+    def experience_bottle():
+        item replace entity 344d47-4-4-4-f04ce104d weapon.mainhand with minecraft:experience_bottle
+        yield
+        execute if score $smart_success gm4_lt_value matches 1 run advancement grant @a[distance=..4,gamemode=!spectator] only gm4:standard_liquids
+                                                                                        
+    liquid.item_drain('enchanted_book', 'book', 7)
+    liquid.item_drain('paper[custom_data~{gm4_book_binders:{item:"enchanted_page"}}]', 'paper', 5)
+
+    #TODO I could add a custom naming rule here - more as an example than necessary - for enchanted_page
+
+@liquid
+class Ink:
+    id = 'ink'
+    name = 'Ink'
+    capacity = 300
+
+    liquid.init()
+    liquid.item_drain('ink_sac', 'air', 1)
+
+    @bottle('minecraft:potion[custom_data~{gm4_standard_liquids:{potion:"blindness"}}]')
+    def ink_bottle():
+        loot replace entity 344d47-4-4-4-f04ce104d weapon.mainhand loot gm4_standard_liquids:ink_bottle
+
+    @liquid.util_below
+    def dispense_ink():
+        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{active_effects:[{id:'minecraft:blindness'}]}] run function gm4_standard_liquids:util/liquid_dispensing/ink
+    
+@liquid
+class GlowInk:
+    id = 'glow_ink'
+    name = 'Glow Ink'
+    capacity = 300
+
+    liquid.init()
+    liquid.item_drain('glow_ink_sac', 'air', 1)
+    
+    @bottle('minecraft:potion[custom_data~{gm4_standard_liquids:{potion:"glowing"}}]')
+    def glow_ink_bottle():
+        loot replace entity 344d47-4-4-4-f04ce104d weapon.mainhand loot gm4_standard_liquids:glow_ink_bottle
+    
+    liquid.item_fill('item_frame', 'glow_item_frame', 1, reversable=False)
+
+    @liquid.util_below
+    def dispense_ink():
+        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{active_effects:[{id:'minecraft:glowing'}]}] run function gm4_standard_liquids:util/liquid_dispensing/glow_ink
+
+# tell bolt how to name different ominous bottles - they have the same item id so this is a special case
+def omnious_naming_scheme(input_name: str, output_name: str) -> str | bool:
+        m = re.match(r'ominous_bottle\[ominous_bottle_amplifier=(\d+)\]', output_name)
+        if m:
+            return f"ominous_bottle_{m.group(1)}"
+        return False
+liquid.naming_schemes.schemes.insert(0, omnious_naming_scheme)
+
+for lvl, numeral_lvl in zip((0,1,2,3,4), ("I", "II", "III", "IV", "V")):
+    @liquid
+    class OminousBottle:
+        id = f'ominous_bottle_{lvl}'
+        name = f'Ominous {numeral_lvl}'
+        capacity = 300
+        skin = 'liquids/ominous_bottle'
+
+        liquid.init()
+        bottle(f"ominous_bottle[ominous_bottle_amplifier={lvl}]")
+
+        @liquid.util_below
+        def dispense_omen():
+            execute
+                as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+                unless entity @s[gamemode=spectator]
+                if entity @s[nbt=!{active_effects:[{id:'minecraft:bad_omen'}]}]
+                run function f"gm4_standard_liquids:util/liquid_dispensing/ominous_bottle_{lvl}":
+                    effect give @s bad_omen 6000 (0+lvl)
+                    scoreboard players remove @e[type=marker,tag=gm4_liquid_tank,tag=gm4_processing_tank,distance=..8] gm4_lt_value 1
+                    playsound entity.player.swim block @a[distance=..8] ~ ~ ~ .5 1.5
+
+
+    

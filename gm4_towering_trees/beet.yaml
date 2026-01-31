@@ -1,0 +1,31 @@
+id: gm4_towering_trees
+name: Towering Trees
+version: 1.0.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4_towering_trees.generate
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_trees
+
+meta:
+  gm4:
+    versioning:
+      required:
+        lib_trees: 1.4.0
+    website:
+      description: Adds mega and small tree variants to any sapling that is missing one!
+      recommended:
+        - gm4_metallurgy
+    wiki: https://wiki.gm4.co/wiki/Towering_Trees
+    credits:
+      Creator:
+        - Djones
+        - Kyrius
+      Tree Structures:
+        - BPR
+        - rednls
+        - Dinoguin_Jess
+        - Lune6

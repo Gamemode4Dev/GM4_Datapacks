@@ -4,8 +4,8 @@
         "links": ["https://twitter.com/15Redstones"]
     },
     {
-        "name": "Andante",
-        "links": ["https://bsky.app/profile/andante.dev"]
+        "name": "dvitski",
+        "links": ["https://bsky.app/profile/dvitski.cc"]
     },
     {
         "name": "Bloo",
@@ -32,6 +32,14 @@
         "links": ["https://github.com/Dennis-0"]
     },
     {
+        "name": "Dinoguin_Jess",
+        "links": ["https://github.com/Dinoguin-Jess"]
+    },
+    {
+        "name": "Djones",
+        "links": ["https://bsky.app/profile/thanathor.bsky.social"]
+    },
+    {
         "name": "DuckJr",
         "links": ["https://twitter.com/DuckJr94"]
     },
@@ -48,8 +56,16 @@
         "links": ["https://twitter.com/FyidRants"]
     },
     {
+        "name":"Hozz",
+        "links":[]
+    },
+    {
         "name": "JP12",
         "links": ["https://github.com/jpeterik12"]
+    },
+    {
+        "name": "kindabland",
+        "links": ["https://github.com/kindabland"]
     },
     {
         "name": "Kroppeb",
@@ -66,6 +82,10 @@
     {
         "name": "Lue",
         "links": ["https://github.com/Luexa"]
+    },
+    {
+        "name": "Lune6",
+        "links": ["https://bsky.app/profile/lune6.bsky.social"]
     },
     {
         "name": "Modulorium",
@@ -110,10 +130,6 @@
     {
         "name": "SpecialBuilder32",
         "links": ["https://bsky.app/profile/specialbuilder32.bsky.social"]
-    },
-    {
-        "name": "Thanathor",
-        "links": ["https://bsky.app/profile/thanathor.bsky.social"]
     },
     {
         "name": "The8BitMonkey",

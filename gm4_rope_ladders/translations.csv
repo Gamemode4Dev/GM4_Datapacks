@@ -4,4 +4,4 @@ advancement.gm4.rope_ladders.description,Place a Rope Ladder
 text.gm4.guidebook.module_desc.rope_ladders,Climbing downward has never been easier!
 text.gm4.guidebook.rope_ladders.description,Ladders can be placed on other ladders to extend the ladder downward.
 text.gm4.guidebook.rope_ladders.extend_downwards,Looking at a ladder while holding ladders will cause particles to appear. Placing ladders on this particle will extend the ladder downwards.\n\nRope ladders will break if there are no other ladders above them.
-text.gm4.guidebook.potion_swords.breaking,"Breaking a ladder at the top of a rope ladder will break all other rope ladders below, causing the items to appear at the top of the ladder that was broken."
+text.gm4.guidebook.rope_ladders.breaking,"Breaking a ladder at the top of a rope ladder will break all other rope ladders below, causing the items to appear at the top of the ladder that was broken."

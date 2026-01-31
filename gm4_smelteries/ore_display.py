@@ -1,11 +1,12 @@
+from typing import Literal
 from beet import NamespaceProxy, Model, Context
 from gm4.plugins.resource_pack import TemplateOptions, ModelData, ItemDisplayModel, ensure_single_model_config, ContainerGuiOptions, CenteredContainerGui
 
 class OreDisplayTemplate(TemplateOptions):
     """setup a model template for the smeltable ores displayed by smeltries"""
-    name = "smelteries:ore_display"
+    name: Literal["smelteries:ore_display"] = "smelteries:ore_display"
     texture_map = ["top", "side"]
-    
+
     default_transforms = [
         ItemDisplayModel(
             origin=[0.5, 0.5, 0.5],
@@ -22,12 +23,13 @@ class OreDisplayTemplate(TemplateOptions):
             "textures":{
                 "top": f"gm4_smelteries:block/ore_display/{reference}_top",
                 "side": f"gm4_smelteries:block/ore_display/{reference}_side",
+                "particle": f"gm4_smelteries:block/ore_display/{reference}_side",
             }
         })
         return [m]
-    
+
 class FurnaceContainerGui(CenteredContainerGui, ContainerGuiOptions):
-    container = "furnace"
+    container: Literal["furnace"] = "furnace" # type: ignore ; Inheriting CenteredContainerGui overwrites a Literal "_centered" -> "furnace"
 
 def beet_default(ctx: Context):
     pass

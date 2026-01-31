@@ -1,6 +1,9 @@
 # @s = marker entity to forceload overworld
 # run from load
 
+tag @s add gm4_dimension
+data merge entity @s {CustomName:"minecraft:overworld"}
+
 function gm4_forceload:init_chunk
 setblock 29999998 1 7131 minecraft:repeating_command_block{auto:1b,Command:"function #gm4_forceload:command_block_tick"}
 summon armor_stand 29999999 0 7135 {UUID:[I;3427655,262148,262159,80613453],Invulnerable:1b,Invisible:1b,Marker:1b,Tags:["smithed.entity","smithed.strict"],CustomName:"lib_forceload_armorstand"}
@@ -9,4 +12,3 @@ summon armor_stand 29999999 0 7135 {UUID:[I;3427655,262148,262159,80613453],Invu
 scoreboard players add #max gm4_dimension 1
 scoreboard players operation @s gm4_dimension = #max gm4_dimension
 tp @s 29999999 0 7135
-tag @s remove gm4_new_dimension

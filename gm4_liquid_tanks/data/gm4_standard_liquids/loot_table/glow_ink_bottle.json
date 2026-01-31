@@ -9,7 +9,7 @@
                     "name": "potion",
                     "functions": [
                         {
-                            "function": "set_components",
+                            "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_model_data": "gm4_standard_liquids:item/glow_ink_bottle",
                                 "minecraft:potion_contents": {
@@ -30,16 +30,17 @@
                             }
                         },
                         {
-                            "function": "set_custom_data",
+                            "function": "minecraft:set_custom_data",
                             "tag": "{gm4_standard_liquids:{potion:'glowing'}}"
                         },
                         {
-                            "function": "set_name",
+                            "function": "minecraft:set_name",
                             "name": {
                                 "translate": "item.gm4.glow_ink_bottle",
                                 "fallback": "Glow Ink Bottle",
                                 "italic": false
-                            }
+                            },
+                            "target": "item_name"
                         }
                     ]
                 }

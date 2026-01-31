@@ -1,0 +1,17 @@
+{
+  "values": [
+    "#gm4_lively_lily_pads:copper_lanterns",
+    "#gm4_lively_lily_pads:coral_fan",
+    "#gm4_lively_lily_pads:dead_coral_fan",
+    "#gm4_lively_lily_pads:waxed_copper_lanterns",
+    "#minecraft:candles",
+    "minecraft:cactus_flower",
+    {"id": "minecraft:copper_torch", "required": false},
+    "minecraft:lantern",
+    "minecraft:redstone_torch",
+    "minecraft:torch",
+    "minecraft:soul_lantern",
+    "minecraft:soul_torch",
+    "minecraft:spore_blossom"
+  ]
+}

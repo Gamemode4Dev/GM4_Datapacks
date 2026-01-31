@@ -1,0 +1,64 @@
+{
+  "id": "lavish_livestock",
+  "name": "Lavish Livestock",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:wheat"
+  },
+  "criteria": {
+    "breed": {
+      "trigger": "minecraft:bred_animals",
+      "conditions": {
+        "child": {
+          "type": "#gm4_lavish_livestock:livestock"
+        }
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "display",
+      "enable": [],
+      "requirements": [
+        [
+          "breed"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "text":"\n"
+          },
+          {
+            "translate": "text.gm4.guidebook.lavish_livestock.description",
+            "fallback": "Breeding livestock may result in offspring that is abnormally large.\n\nLarger livestock drops more loot."
+          }
+        ],
+        [
+          {
+            "translate":"text.gm4.guidebook.lavish_livestock.list_header",
+            "fallback":"Livestock",
+            "underlined":true
+          },
+          {"text":"\n\n"},
+          {"translate":"entity.minecraft.chicken", "underlined":false},
+          {"text":"\n"},
+          {"translate":"entity.minecraft.cow", "underlined":false},
+          {"text":"\n"},
+          {"translate":"entity.minecraft.hoglin", "underlined":false},
+          {"text":"\n"},
+          {"translate":"entity.minecraft.mooshroom", "underlined":false},
+          {"text":"\n"},
+          {"translate":"entity.minecraft.pig", "underlined":false},
+          {"text":"\n"},
+          {"translate":"entity.minecraft.rabbit", "underlined":false},
+          {"text":"\n"},
+          {"translate":"entity.minecraft.sheep", "underlined":false}
+        ]
+      ]
+    }
+  ]
+}

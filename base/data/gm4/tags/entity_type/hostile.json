@@ -13,6 +13,7 @@
         "minecraft:hoglin",
         "minecraft:husk",
         "minecraft:magma_cube",
+        {"id": "minecraft:parched", "required": false},
         "minecraft:phantom",
         "minecraft:piglin_brute",
         "minecraft:pillager",

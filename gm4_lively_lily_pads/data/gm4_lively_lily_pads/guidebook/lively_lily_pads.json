@@ -1,0 +1,70 @@
+{
+  "id": "lively_lily_pads",
+  "name": "Lively Lily Pads",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:lily_pad"
+  },
+  "criteria": {
+    "obtain_pad": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:lily_pad"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_placeable_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#gm4_lively_lily_pads:placeable_item"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "display",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_pad",
+          "obtain_placeable_item"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.lively_lily_pads.description",
+            "fallback": "Simply right click the particles on lily pads with decorations to add them on top!\nCandles will need lighting."
+          }
+        ],
+        [
+          {
+            "translate":"text.gm4.guidebook.lively_lily_pads.item_list.header",
+            "fallback":"Decorations:",
+            "underlined":true
+          },
+          {
+            "text":"\n\n"
+          },
+          {
+            "translate": "text.gm4.guidebook.lively_lily_pads.item_list",
+            "fallback": "Candles\nLanterns\nTorches\nCoral Fans\nCactus Flower\nSpore Blossom",
+            "underlined":false
+          }
+        ]
+      ]
+    }
+  ]
+}

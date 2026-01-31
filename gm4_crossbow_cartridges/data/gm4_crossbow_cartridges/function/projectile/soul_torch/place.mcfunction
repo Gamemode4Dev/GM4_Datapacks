@@ -3,8 +3,12 @@
 # at @s
 # run from projectile/soul_torch/check
 
-execute positioned ~.05 ~ ~ if predicate gm4_crossbow_cartridges:check_block/east run setblock ~-.1 ~ ~ minecraft:soul_wall_torch[facing=west]
-execute positioned ~ ~ ~.05 if predicate gm4_crossbow_cartridges:check_block/south run setblock ~ ~ ~-.1 minecraft:soul_wall_torch[facing=north]
-execute positioned ~-.05 ~ ~ if predicate gm4_crossbow_cartridges:check_block/west run setblock ~.1 ~ ~ minecraft:soul_wall_torch[facing=east]
-execute positioned ~ ~ ~-.05 if predicate gm4_crossbow_cartridges:check_block/north run setblock ~ ~ ~.1 minecraft:soul_wall_torch[facing=south]
-execute positioned ~ ~-.05 ~ if predicate gm4_crossbow_cartridges:check_block/below run setblock ~ ~.1 ~ minecraft:soul_torch
+execute positioned ~.1 ~ ~ if predicate gm4_crossbow_cartridges:check_block/east run setblock ~-.15 ~ ~ minecraft:soul_wall_torch[facing=west]
+execute positioned ~ ~ ~.1 if predicate gm4_crossbow_cartridges:check_block/south run setblock ~ ~ ~-.15 minecraft:soul_wall_torch[facing=north]
+execute positioned ~-.1 ~ ~ if predicate gm4_crossbow_cartridges:check_block/west run setblock ~.15 ~ ~ minecraft:soul_wall_torch[facing=east]
+execute positioned ~ ~ ~-.1 if predicate gm4_crossbow_cartridges:check_block/north run setblock ~ ~ ~.15 minecraft:soul_wall_torch[facing=south]
+execute positioned ~ ~-.1 ~ if predicate gm4_crossbow_cartridges:check_block/below run setblock ~ ~.15 ~ minecraft:soul_torch
+
+# place block sound
+execute if block ~ ~ ~ #gm4_crossbow_cartridges:torch run scoreboard players set $torch_placed gm4_cb_misc 1
+execute if score $torch_placed gm4_cb_misc matches 1 run playsound minecraft:block.wood.place block @a[distance=..15]
