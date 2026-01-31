@@ -17,7 +17,7 @@
   "output": {
     "result": {
       "type": "loot_table",
-      "name": "gm4_scuba_gear:items/scuba_helmet",
+      "name": "gm4_scuba_gear:item/scuba_helmet",
       "count": 1
     }
   }

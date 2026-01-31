@@ -22,16 +22,17 @@
                   }
                 },
                 "minecraft:item_model": "gm4_scuba_gear:wetsuit",
+                "minecraft:equippable": {
+                  "slot": "legs",
+                  "asset_id": "gm4_scuba_gear:scuba",
+                  "equip_sound": "minecraft:intentionally_empty"
+                },
                 "minecraft:enchantments": {
                   "gm4_scuba_gear:wetsuit": 1
                 },
                 "minecraft:enchantment_glint_override": false,
                 "minecraft:max_damage": 180,
                 "!minecraft:enchantable": {},
-                "minecraft:equippable": {
-                  "slot": "legs",
-                  "asset_id": "gm4_scuba_gear:scuba"
-                },
                 "minecraft:lore": [
                   {
                     "translate": "item.modifiers.gm4.scuba_gear.in_water",

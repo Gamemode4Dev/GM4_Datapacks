@@ -21,7 +21,7 @@
     "type": "normal",
     "result": {
       "type": "loot_table",
-      "name": "gm4_scuba_gear:items/scuba_tank",
+      "name": "gm4_scuba_gear:item/scuba_tank",
       "count": 1
     }
   }

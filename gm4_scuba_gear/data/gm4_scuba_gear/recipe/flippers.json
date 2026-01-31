@@ -45,7 +45,9 @@
         }
       },
       "minecraft:dyed_color": 2367281,
-      "!minecraft:enchantable": {},
+      "minecraft:enchantable": {
+        "value": 8
+      },
       "minecraft:enchantments": {
         "gm4_scuba_gear:flippers": 1
       },

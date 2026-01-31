@@ -18,7 +18,7 @@
   "output": {
     "result": {
       "type": "loot_table",
-      "name": "gm4_scuba_gear:items/wetsuit",
+      "name": "gm4_scuba_gear:item/wetsuit",
       "count": 1,
       "guidebook": {
         "display_color": 2367281
