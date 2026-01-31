@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "gm4_standard_crafting:brown_dye"
+      }
+    },
+    "has_materials": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:orange_dye",
+              "minecraft:black_dye"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_materials"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gm4_standard_crafting:brown_dye"
+    ]
+  }
+}

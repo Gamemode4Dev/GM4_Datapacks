@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "PP",
+    "PP"
+  ],
+  "key": {
+    "P": "minecraft:pink_petals"
+  },
+  "result": {
+    "id": "minecraft:cherry_leaves",
+    "count": 1
+  }
+}
