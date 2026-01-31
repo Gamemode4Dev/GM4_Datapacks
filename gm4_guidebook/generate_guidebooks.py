@@ -853,7 +853,7 @@ def item_to_display(item: str, components: dict[str, Any] | None, ctx: Context) 
     "hover_event": {
       "action": "show_item",
       "id": item,
-      "components": components,
+      **({"components": components} if components else {}),
     }
   }
   slot_under: dict[Any, Any] = {
@@ -874,7 +874,7 @@ def item_to_display(item: str, components: dict[str, Any] | None, ctx: Context) 
     "hover_event": {
       "action": "show_item",
       "id": item,
-      "components": components or {},
+      **({"components": components} if components else {}),
     }
   }
   return slot, slot_under
@@ -1517,7 +1517,7 @@ def generate_unlock_function(section: Section, book_id: str, page_index: int, lo
 """
 Creates the page storage to store book info for a given module
 """
-def generate_page_storage(book: Book, ctx: Context) -> any: # type: ignore
+def generate_page_storage(book: Book, ctx: Context) -> dict[str, Any]:
   hand_initial:list[Any] = []
   hand_unlockable:dict[str,Any] = {}
   lectern_initial:list[Any] = [["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["",{"translate":"gui.gm4.guidebook.page.toc","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]]
@@ -1738,7 +1738,7 @@ def get_texture_color(texture: PngFile|None) -> str:
   # Find the colors that occur most often
   try:
     palette: list[int] = texture.image.convert('P', palette=Image.ADAPTIVE, colors=4).getpalette() # type: ignore ; PIL typing is weird
-  except ValueError as e:
+  except ValueError:
     return "#000000"
   if not palette:
     return "#000000"
