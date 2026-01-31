@@ -1,9 +1,9 @@
 {
   "display": {
     "icon": {
-      "id": "minecraft:player_head",
+      "id": "minecraft:leather_helmet",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/scuba_gear",
+        "minecraft:item_model": "gm4_scuba_gear:scuba_helmet",
         "minecraft:profile": "$scuba_helmet"
       }
     },

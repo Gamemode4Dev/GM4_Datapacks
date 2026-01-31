@@ -2,13 +2,20 @@ key,en_us
 item.gm4.flippers,Flippers
 item.gm4.scuba_helmet,SCUBA Helmet
 item.gm4.scuba_tank,SCUBA Tank
+item.gm4.wetsuit,Wetsuit
 advancement.gm4.scuba_gear.title,Things Are Going Swimmingly!
 advancement.gm4.scuba_gear.description,Suit up with a full set of SCUBA gear
 text.gm4.guidebook.module_desc.scuba_gear,Ease ocean exploration with craftable scuba gear!
-text.gm4.guidebook.scuba_gear.description,SCUBA Gear can be crafted in a Custom Crafter to aid in ocean travel.\n\nScutes and gold are main components for each piece.
+text.gm4.guidebook.scuba_gear.description,SCUBA Gear can be crafted to aid in ocean travel.\n\nCopper and dried kelp are main components for each piece.
 text.gm4.guidebook.scuba_gear.crafting_flippers,Flippers can be crafted with the following recipe:
 text.gm4.guidebook.scuba_gear.crafting_scuba_helmet,The SCUBA Helmet can be crafted with the following recipe:
 text.gm4.guidebook.scuba_gear.crafting_scuba_tank,The SCUBA Tank can be crafted with the following recipe:
-text.gm4.guidebook.scuba_gear.scuba_tank_extended,"An extended water breathing potion can be used to craft the tank, but it won't provide any extra benefits.\n\nA SCUBA tank and helmet must be used in conjunction."
+text.gm4.guidebook.scuba_gear.crafting_wetsuit,The Wetsuit can be crafted with the following recipe:
 text.gm4.guidebook.scuba_gear.usage_flippers,"Flippers allow the user to swim much faster, but land traversal is greatly slowed."
-text.gm4.guidebook.scuba_gear.usage_scuba_tank,Wearing both the scuba tank and helmet will grant 4 minutes of Conduit Power when underwater.
+text.gm4.guidebook.scuba_gear.usage_wetsuit,"The Wetsuit allows the user to swim up or down much faster, and maintains their current depth."
+text.gm4.guidebook.scuba_gear.usage_scuba_tank,Wearing the scuba tank adds 4 minutes of underwater breathing time.
+text.gm4.guidebook.scuba_gear.usage_scuba_helmet,Wearing the scuba helmet increases underwater mining speed by 6 times.
+item.modifiers.gm4.scuba_gear.in_water,"When in Water:"
+item.modifiers.gm4.scuba_gear.on_land,"When on Land:"
+item.modifiers.gm4.scuba_gear.neutral_buoyancy,"Neutral Buoyancy"
+item.modifiers.gm4.scuba_gear.vertical_swimming_speed,"Vertical Swimming Speed"
