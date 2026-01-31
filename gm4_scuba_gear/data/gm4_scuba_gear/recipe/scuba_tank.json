@@ -1,0 +1,62 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "C C",
+    "PCP",
+    "CCC"
+  ],
+  "key": {
+    "C": [
+      "minecraft:copper_ingot"
+    ],
+    "P": [
+      "minecraft:decorated_pot"
+    ]
+  },
+  "result": {
+    "id": "minecraft:leather_chestplate",
+    "components": {
+      "minecraft:item_name": {
+        "translate": "item.gm4.scuba_tank",
+        "fallback": "SCUBA Tank",
+        "color": "white",
+        "italic": false
+      },
+      "minecraft:attribute_modifiers": [
+        {
+          "type": "minecraft:armor",
+          "id": "gm4_scuba_gear:tank/armor",
+          "amount": 4,
+          "operation": "add_value",
+          "slot": "chest"
+        },
+        {
+          "type": "minecraft:oxygen_bonus",
+          "id": "gm4_scuba_gear:tank/oxygen_bonus",
+          "amount": 16,
+          "operation": "add_value",
+          "slot": "chest"
+        }
+      ],
+      "minecraft:custom_data": {
+        "gm4_scuba_gear": {
+          "item": "tank"
+        }
+      },
+      "minecraft:item_model": "gm4_scuba_gear:scuba_tank",
+      "!minecraft:enchantable": {},
+      "minecraft:equippable": {
+        "slot": "chest",
+        "asset_id": "gm4_scuba_gear:scuba"
+      },
+      "minecraft:max_damage": 192,
+      "minecraft:tooltip_display": {
+        "hidden_components": [
+          "minecraft:dyed_color"
+        ]
+      }
+    },
+    "count": 1
+  }
+}
