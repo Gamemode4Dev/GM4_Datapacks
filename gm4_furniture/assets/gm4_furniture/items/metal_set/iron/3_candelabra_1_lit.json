@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "gm4_furniture:block/furniture/metal_set/iron/3_candelabra_1_lit",
+    "tints": [
+      {
+        "type": "minecraft:dye",
+        "default": -393217
+      }
+    ]
+  }
+}
