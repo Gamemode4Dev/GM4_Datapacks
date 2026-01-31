@@ -4,16 +4,8 @@
 # run from gm4_apple_trees:sapling/generate_tree
 
 # pick a random tree shape 
-# FUTURE NOTE: replace with more performant loot table randomizer when spigot bug is fixed
-execute store result score $random gm4_apple_data run data get entity @s UUID[0]
-scoreboard players operation $tree_shape gm4_apple_data = $random gm4_apple_data
-scoreboard players operation $tree_shape gm4_apple_data %= #8 gm4_apple_data
-
-scoreboard players operation $random gm4_apple_data /= #8 gm4_apple_data
-scoreboard players operation $rotation gm4_apple_data = $random gm4_apple_data
-scoreboard players operation $rotation gm4_apple_data %= #4 gm4_apple_data
-
-# scoreboard players operation $height
+execute store result score $tree_shape gm4_apple_data run random value 0..7
+execute store result score $rotation gm4_apple_data run random value 0..3
 
 # place the chosen tree
 execute if score $tree_shape gm4_apple_data matches 0 if score $rotation gm4_apple_data matches 0 rotated ~ ~ run place template gm4_apple_trees:sapling_growth/apple_tree_short_1 ^-2 ^-1 ^-2 none
