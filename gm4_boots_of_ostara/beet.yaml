@@ -20,7 +20,6 @@ meta:
         template: generated_overlay
         broadcast:
           - reference: item/boots_of_ostara
-          - reference: item/flippers_of_ostara
       - item: leather_boots
         reference: gui/advancement/boots_of_ostara
         template:
