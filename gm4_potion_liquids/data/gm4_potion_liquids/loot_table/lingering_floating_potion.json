@@ -36,9 +36,9 @@
                             "function": "set_name",
                             "name": {
                                 "translate": "item.gm4.lingering_floating_potion",
-                                "fallback": "Lingering Potion of Floating",
-                                "italic": false
-                            }
+                                "fallback": "Lingering Potion of Floating"
+                            },
+                            "target": "item_name"
                         },
                         {
                             "function": "minecraft:set_lore",

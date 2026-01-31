@@ -1,3 +1,4 @@
+from typing import Literal
 from beet import Model, NamespaceProxy, Context
 from gm4.plugins.resource_pack import ModelData, TemplateOptions
 from gm4.utils import MapOption
@@ -7,7 +8,7 @@ def beet_default(ctx: Context):
 
 class PneumaTemplate(TemplateOptions):
     """model template to generate the models for shards and essences"""
-    name = "pneuma"
+    name: Literal["pneuma"] = "pneuma"
 
     def create_models(self, config: ModelData, models_container: NamespaceProxy[Model]):
         pneuma = config.reference.split("/")[-1] # eg agile, anchoring ect...
@@ -23,7 +24,7 @@ class PneumaTemplate(TemplateOptions):
                 "layer0": f"gm4_orb_of_ankou:item/essences/{pneuma}"
             }
         })
-        config.model = MapOption(__root__={
+        config.model = MapOption({
             "flint": f"gm4_orb_of_ankou:item/shards/{pneuma}",
             "black_dye": f"gm4_orb_of_ankou:item/essences/{pneuma}"
         })

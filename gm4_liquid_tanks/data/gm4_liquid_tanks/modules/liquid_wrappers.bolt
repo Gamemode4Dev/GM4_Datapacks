@@ -1,0 +1,323 @@
+from functools import wraps, partial
+import re
+from inspect import isgeneratorfunction
+
+from beet import Context
+from mecha import Mecha, AstItemStack
+from bolt.contrib.defer import Defer
+
+from gm4.utils import add_namespace
+
+from gm4_liquid_tanks.mcmeta_stacksize import retrieve_stacksizes
+unstackables, stackable_16, _ = retrieve_stacksizes(ctx.cache, "1.21.8")
+
+# function that generates no mcfunction
+def emptyfunc():
+    pass
+
+class Liquid:
+    """Base class providing decorators and infrastructure for adding Liquid Tanks liquids"""
+    id: str = None
+    capacity: int = None
+    name: str = None
+    skin: str = None # defaults to value of `liquids/id` if not otherwise set
+    _fields = ['id', 'capacity', 'name']
+    _generators = [] # functions that create mcfunction using bolt
+    _defer_counters = {
+        '_singleton_util_below_tail': 0,
+        '_singleton_util_below_head': 0
+    } # classvar for util_below cleanup defers
+   
+
+
+    def __init__(self, *args, **kwargs):
+        # create instance attributes (named defined by _fields) based on constructor
+        input_args = dict(zip(self._fields, args)) | kwargs
+        for field in self._fields:
+            if input_args.get(field, None):
+                setattr(self, field, input_args.get(field, None))
+        self.units = {} # reusable quantities shared amongst liquids
+        self.naming_schemes = NamingSchemes() # stores which function names are taken and generates new ones
+        self.struc = Liquid
+        self.mc = ctx.inject(Mecha)
+        self.defer = ctx.inject(Defer)
+
+    def __call__(self, cls):
+        """instance acts as decorator for defining new class-structures"""
+        @wraps(cls, updated=())
+        class DecoratedLiquid(cls, Liquid):
+            pass
+
+        # set unbound DecoratedLiquid class attributes
+        for field in self._fields:
+            if getattr(self, field, None):
+                setattr(DecoratedLiquid, field, getattr(self, field, None))
+
+        # use the skin file of "id" if not otherwise specified.
+        if not DecoratedLiquid.skin:
+            DecoratedLiquid.skin = "liquids/"+DecoratedLiquid.id
+
+        self.struc = DecoratedLiquid # link access to class variables through `self`
+        for fcn in DecoratedLiquid._generators:
+            fcn() # create the mcfunction 
+        DecoratedLiquid._generators.clear()
+
+        return DecoratedLiquid
+    
+    def init(self, fcn=emptyfunc):
+        @wraps(fcn)
+        def wrapped_fcn():
+            function ~/../liquid_init/{self.struc.id}:
+                data merge block ~ ~ ~ {CustomName:{"translate":"gm4.second","fallback":"%1$s","with":[{"translate":f"container.gm4.liquid_tank.{self.struc.id}","fallback":f"{self.struc.name} Tank"},[{"translate":"gui.gm4.liquid_tank","fallback":"","font":"gm4:container_gui","color":"white"},{"translate":f"container.gm4.liquid_tank.{self.struc.id}","fallback":f"{self.struc.name} Tank","font":"gm4:default","color":"#404040"}]]}}
+                summon item_display ~ ~ ~:
+                    CustomName: "gm4_liquid_tank_liquid_display"
+                    Tags: ["gm4_liquid_tank_liquid_display","smithed.entity","smithed.strict"]
+                    item: 
+                        id: player_head
+                        count:1b
+                        components:{
+                            "minecraft:profile": f"${(~/).split(':')[0]}:{self.struc.skin}"
+                        }
+                    transformation:
+                        left_rotation: [0f,0f,0f,1f]
+                        right_rotation: [0f,0f,0f,1f]
+                        translation: [0f,0.2185f,0f]
+                        scale: [0.83, 0.83, 0.83]
+                    item_display: head
+                data modify entity @s data.gm4_liquid_tanks.liquid_tag set value f"gm4_lt_{self.struc.id}"
+                scoreboard players set @s gm4_lt_max self.struc.capacity
+                tag @s add f'gm4_lt_{self.struc.id}'
+                tag @s remove gm4_lt_empty
+                fcn()
+            
+            append function ~/../remove_liquid_tags:
+                append function_tag gm4_liquid_tanks:remove_liquid_tags {"values": [(~/)]}
+                tag @s remove f'gm4_lt_{self.struc.id}'
+            
+            # add function-tag hooks
+            append function_tag gm4_liquid_tanks:tank_init {"values": [(~/../tank_init)]}
+            append function_tag gm4_liquid_tanks:item_fill {"values": [(~/../item_fill)]}
+            append function_tag gm4_liquid_tanks:item_drain {"values": [(~/../item_drain)]}
+            append function_tag gm4_liquid_tanks:util_below {"values": [(~/../util_below)]}
+            # append function_tag gm4_liquid_tanks:util_above {"values": [(~/../util_above)]}
+
+        # give nicer info about this wrapped function if not used as decorator
+        if fcn:
+            wrapped_fcn.__qualname__ = "Liquid.init"
+        else:
+             wrapped_fcn.__qualname__ = fcn.__qualname__
+
+        self.struc._generators.append(wrapped_fcn)
+        return wrapped_fcn
+    
+    @staticmethod
+    def _default_set_output(item:str):
+        item replace entity 344d47-4-4-4-f04ce104d weapon.mainhand with item
+    
+    
+    def item_fill(self, input: str, output: str, value: int, reversable: bool = True, ignore_standard_units: bool = False):
+        def dec_with_args(fcn, fcn_to_replace):
+            @wraps(fcn)
+            def wrapped_fcn():
+                output_id = output.split('[', 1)[0].removeprefix('minecraft:')
+                ns_output = add_namespace(output_id, "minecraft")
+
+                # retrieve max allowable stack size
+                if ns_output in unstackables:
+                    stack_limit = "1"
+                elif ns_output in stackable_16:
+                    stack_limit = "..16"
+                else:
+                    stack_limit = "..64" # FIXME this should remove that execute subcommand from the chain.. somehow
+
+                # retrieve name for generated function
+                if not isinstance(fcn, partial): # not Liquid._default_set_output:
+                    func_name = fcn.__name__
+                    self.naming_schemes.register(func_name, ~/../item_fill)
+                else:
+                    func_name = self.naming_schemes.retrieve_and_register(input, output, ~/../item_fill)
+
+                # transform any supplied mcfunction into generator
+                genfcn = self._multiple_mcfunction(fcn)
+
+                append function ~/../item_fill:
+                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if score $stack_size gm4_lt_value matches stack_limit if items block ~ ~ ~ container.0 input run function ~/{func_name}:
+                        scoreboard players set $item_value gm4_lt_value (-value)
+                        next(genfcn) # runs _default_set_output unless alternative is supplied
+                        function gm4_liquid_tanks:smart_item_fill
+                        tag @s add gm4_lt_fill
+                        next(genfcn)
+
+            # give nicer info about this wrapped function if not used as decorator
+            if isinstance(fcn, partial):
+                wrapped_fcn.__qualname__ = "Liquid.item_fill" 
+            else:
+                wrapped_fcn.__qualname__ = fcn.__qualname__
+
+            if fcn_to_replace in self.struc._generators:
+                self.struc._generators.remove(fcn_to_replace)
+            self.struc._generators.append(wrapped_fcn)
+            return wrapped_fcn
+        
+        # create reverse
+        if reversable:
+            self.item_drain(output, input, value)
+        
+        default_dec = dec_with_args(partial(self._default_set_output, item=output), None)
+
+        return_dec = partial(dec_with_args, fcn_to_replace=default_dec)
+        return return_dec
+    
+    def standard_unit(self, item: str, value: int, f_name: str = None):
+        if not f_name: # mcfunction name
+            f_name = item
+        self.units.update({(item, value): f_name})
+        # let unit act as an 'item_fill' decorator with input already set
+        def dispatch(output: str):
+            return partial(self.item_fill, input=item, value=value)(output=output)
+        return dispatch
+    
+
+    def item_drain(self, input: str, output: str, value: int):
+        def dec_with_args(fcn, fcn_to_replace):
+            @wraps(fcn)
+            def wrapped_fcn():
+                # see if we can reuse a standard unit
+                func_name = self.units.get((output, value), None)
+                if func_name:
+                    self.naming_schemes.register(func_name, ~/../item_drain)
+
+                # if not, retrive the name for the generated function
+                if not func_name:
+                    func_name = self.naming_schemes.retrieve_and_register(input, output, ~/../item_drain)
+
+                # transform any supplied mcfunction into generator
+                genfcn = self._multiple_mcfunction(fcn)
+
+                append function ~/../item_drain:
+                    execute if entity @s[tag=f'gm4_lt_{self.struc.id}'] if items block ~ ~ ~ container.0 input run function ~/{func_name}:
+                        scoreboard players set $item_value gm4_lt_value value
+                        next(genfcn) # runs _default_set_output unless alternative is supplied
+                        function gm4_liquid_tanks:smart_item_drain
+                        tag @s add gm4_lt_drain
+                
+                append function ~/../tank_init:
+                    execute if items block ~ ~ ~ container.0 input run function ~/../liquid_init/{self.struc.id}
+
+            # give nicer info about this wrapped function if not used as decorator
+            if isinstance(fcn, partial):
+                wrapped_fcn.__qualname__ = "Liquid.item_fill" 
+            else:
+                wrapped_fcn.__qualname__ = fcn.__qualname__
+
+            if fcn_to_replace in self.struc._generators:
+                self.struc._generators.remove(fcn_to_replace)
+            self.struc._generators.append(wrapped_fcn)
+            return wrapped_fcn
+        
+        default_dec = dec_with_args(partial(self._default_set_output, item=output), None)
+
+        return_dec = partial(dec_with_args, fcn_to_replace=default_dec)
+        return return_dec
+    
+    def util_below(self, fcn=emptyfunc):
+        # util below must always be used as a decorator - there is no "standard" interface
+            # util is designed to work alongside existing functions (and not entirely in bolt)
+        @wraps(fcn)
+        def wrapped_fcn():
+            # function header if needed
+            if ~/../util_below not in ctx.data.functions or "tag @s add gm4_processing_tank" not in ctx.data.functions[~/../util_below].lines:
+                Liquid._defer_counters['_singleton_util_below_head'] += 1
+                @self.defer
+                def _end_util_below():
+                    Liquid._defer_counters['_singleton_util_below_head'] -= 1
+                    if Liquid._defer_counters['_singleton_util_below_head'] <= 0: # only emit the commands if this is the last section of util_below
+                        prepend function ~/../util_below:
+                            tag @s add gm4_processing_tank
+                
+            # NOTE the function tail (tag remove processing_tank) cannot be removed easily by bolt, 
+            # so modules using both these wrappers and normal files will need to leave that line omitted
+
+            # add commands
+            append function ~/../util_below:
+                execute if score @s[tag=f'gm4_lt_{self.struc.id}'] gm4_lt_value matches 1.. expand:
+                    fcn()
+                @self.defer
+                def _end_util_below():
+                    Liquid._defer_counters['_singleton_util_below_tail'] -= 1
+                    if Liquid._defer_counters['_singleton_util_below_tail'] <= 0: # only emit the commands if this is the last section of util_below
+                        append function ~/../util_below:
+                            tag @s remove gm4_processing_tank
+
+        self.struc._generators.append(wrapped_fcn)
+        Liquid._defer_counters['_singleton_util_below_tail'] += 1
+        return wrapped_fcn        
+    
+    @staticmethod
+    def _multiple_mcfunction(fcn):
+        """Ensures the given function operates as a generator, allowing for multiple chunks of returned mcfunction"""
+        if isgeneratorfunction(fcn):
+            def accept_stopiteration(): # bolt does not have try/except yet, so this is an alternate implementation
+                fcninst = fcn()
+                while True:
+                    yield next(fcninst, None)
+            return accept_stopiteration()
+        else:
+            def genfunc():
+                yield fcn()
+                while True:
+                    yield None
+            return genfunc()
+    
+class NamingSchemes():
+    """Helper class for controlling how item_drain/ and item_fill/ functions are named"""
+    used_names: dict[str, set[str]] = {}
+
+    def __init__(self):
+        self.schemes = [
+            self.potion,
+            self.not_air,
+            self.output_name,
+            self.input_name,
+            self.combined_name
+            ]
+
+    def retrieve_and_register(self, input: str, output: str, location: str) -> str:
+        local_used_names = self.used_names.setdefault(location, set())
+        for scheme in self.schemes:
+            func_name = scheme(input, output)
+            if func_name and func_name not in local_used_names:
+                local_used_names.add(func_name)
+                return func_name
+        return "NULL" # FIXME error logging from bolt? How to
+    
+    def register(self, func_name: str, location: str):
+        local_used_names = self.used_names.setdefault(location, set())
+        local_used_names.add(func_name)
+
+    @staticmethod
+    def output_name(input_name: str, output_name: str) -> str:
+        return output_name.split('[', 1)[0].removeprefix('minecraft:')
+    
+    @staticmethod
+    def input_name(input_name: str, output_name: str) -> str:
+        return input_name.split('[', 1)[0].removeprefix('minecraft:')
+    
+    @staticmethod
+    def combined_name(input_name: str, output_name: str) -> str:
+        return f"{input_name.split('[', 1)[0].removeprefix('minecraft:')}_{output_name.split('[', 1)[0].removeprefix('minecraft:')}"
+
+    @staticmethod
+    def potion(input_name: str, output_name: str) -> str | bool:
+        m = re.match(r'.+?potion_contents=\{potion:\"(.+)\"\}', output_name)
+        if m:
+            return f"{m.group(1)}_potion"
+        return False
+    
+    @staticmethod
+    def not_air(input_name: str, output_name: str) -> str | bool:
+        if output_name == "air": 
+            return input_name # always name a clear item operation after what is being cleared
+        return False
+    
+liquid = Liquid() # common instance for most cases

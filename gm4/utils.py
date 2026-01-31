@@ -17,8 +17,7 @@ from mecha import (
     Mecha,
     rule,
 )
-from pydantic.v1 import validator  # type: ignore ; v1 validator behaves strangely with type checking
-from pydantic.v1.generics import GenericModel
+from pydantic import RootModel, field_validator
 from tokenstream import SourceLocation, set_location
 
 T = TypeVar('T')
@@ -55,7 +54,7 @@ class Version():
         if type(None) in map(type, [self.major, self.minor, self.patch]):
             warnings.warn(f"Version number was printed to string when one or more fields are not set")
         return f"{self.major}.{self.minor}.{self.patch}"
-    
+
     def int_rep(self) -> int:
         """returns integer representation of version, for use in datapack scoreboards"""
         if type(None) in map(type, [self.major, self.minor, self.patch]):
@@ -68,7 +67,7 @@ class Version():
         elif isinstance(other, Version):
             return self.major==other.major and self.minor==other.minor and self.patch==other.patch
         raise TypeError
-    
+
     def __lt__(self, other: object) -> bool:
         if isinstance(other, Version):
             if self.major is None or self.minor is None or self.patch is None \
@@ -84,12 +83,12 @@ class Version():
                         return True
             return False
         raise TypeError
-    
+
     def replace(self, **changes: Any):
         params = asdict(self) | changes
         params = {k:(v if v is not None else 'X') for k,v in params.items()}
         return Version(f"{params['major']}.{params['minor']}.{params['patch']}")
-    
+
 def nested_get(d: dict[str, Any], key: str) -> list[Any]:
     """Recursively traverses a string-keyed dict (like minecraft json files) for the specified key, returning all that exist
         returns empty list and throws no errors if key does not exist"""
@@ -110,29 +109,30 @@ class NoneAttribute():
     def __getattribute__(self, __name: str) -> None:
         return None
 
-class MapOption(GenericModel, Generic[T]):
+class MapOption(RootModel[list[T]|dict[str,T]], Generic[T]):
     """A union-like type of dict and list, supporting common methods for both
         - Written for use in resource_pack plugin's texture lists"""
-    __root__: list[T]|dict[str,T] = []
+    root: list[T]|dict[str,T] = []
 
     def entries(self) -> list[T]:
-        if isinstance(self.__root__, list):
-            return self.__root__
-        return list(self.__root__.values())
-    
+        if isinstance(self.root, list):
+            return self.root
+        return list(self.root.values())
+
     def __getitem__(self, key: str|int) -> T:
         if isinstance(key, int):
             return self.entries()[key]
-        if isinstance(self.__root__, list):
+        if isinstance(self.root, list):
             raise KeyError(f"MapOption has no mapping data keys. Could not retrieve {key}")
-        return self.__root__[key]
-    
+        return self.root[key]
+
     def items(self):
-        if isinstance(self.__root__, dict):
-            return self.__root__.items()
+        if isinstance(self.root, dict):
+            return self.root.items()
         raise KeyError("MapOption has no mapping data keys. Can not retrieve items()")
-    
-    @validator("__root__", pre=True)  # type: ignore ; v1 validator behaves strangely with type checking
+
+    @field_validator("root", mode="before")
+    @classmethod
     def validate_root(cls, value: list[T]|dict[str,T]|T) -> list[T]|dict[str,T]:
         if value is None:
             value = []
@@ -148,7 +148,7 @@ class InvokeOnJsonNbt:
     def __init__(self, ctx: Context):
         self.ctx = ctx
         raise RuntimeError("InvokeOnJsonNbt should not be directly instantiated. It is a mixin for MutatingReducers and should be interited instead")
-    
+
     @contextmanager
     def use_diagnostics(self, diagnostics: DiagnosticCollection) -> Iterator[None]:
         """Class is mixed into MutatingReducer, who does have this method. Passed here for type completion"""
@@ -157,7 +157,7 @@ class InvokeOnJsonNbt:
     def invoke(self, node: AbstractNode, *args: Any, **kwargs: Any) -> Any:
         """Class is mixed into MutatingReducer, who does have this method. Passed here for type completion"""
         raise NotImplementedError()
-    
+
 
     @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='nbt'))
     @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='tag'))
@@ -174,7 +174,7 @@ class InvokeOnJsonNbt:
                         yield set_location(replace(d, file=mc.database.current), node.value)
                     return replace(node, value="{}")
 
-                ## TEMP - trial on yielding children rather than using invoke				
+                ## TEMP - trial on yielding children rather than using invoke
                 # with self.use_diagnostics(captured_diagnostics:=DiagnosticCollection()):
                 # 	nbt = yield nbt # run all rules on child-node
                 # print(captured_diagnostics.exceptions)
@@ -189,12 +189,12 @@ class InvokeOnJsonNbt:
                 new_node = replace(node, value=AstJsonValue(value=processed_nbt))
                 if new_node != node:
                     return new_node
-                
+
         return node
 
 def propagate_location(obj: T, parent_location_obj: Any) -> T:
     """a set_location like function propagating diagnostic information for manually invoked rules"""
-    return set_location(obj, 
+    return set_location(obj,
         SourceLocation(pos=parent_location_obj.location.pos+obj.location.pos, lineno=parent_location_obj.location.lineno, colno=parent_location_obj.location.colno+obj.location.colno), # type: ignore
         SourceLocation(pos=parent_location_obj.location.pos+obj.end_location.pos, lineno=parent_location_obj.location.lineno, colno=parent_location_obj.location.colno+obj.end_location.colno) # type: ignore
     )
@@ -232,7 +232,7 @@ class CSVCell(str):
         if self.casefold() == 'false':
             return 0
         return int(self)  # default case, interpret as base 10
-    
+
     def as_bool(self) -> bool:
         """
         Interprets the string contained in this CSVCell as a boolean.
@@ -257,7 +257,7 @@ class CSVCell(str):
                 except ValueError:
                     pass  # not a number
                 raise ValueError(f"Couldn't interpret CSVCell contents ('{self}') as a boolean.")
-        
+
     def to_color_code(self, encoding: str) -> 'CSVCell':
         """
         Interprets the string contained in this CSVCell as a color code using the given encoding and returns a new CSVCell with that interpretation as its content.

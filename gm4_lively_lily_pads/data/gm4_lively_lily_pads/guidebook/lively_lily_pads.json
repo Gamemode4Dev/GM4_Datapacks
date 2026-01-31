@@ -51,8 +51,17 @@
         ],
         [
           {
+            "translate":"text.gm4.guidebook.lively_lily_pads.item_list.header",
+            "fallback":"Decorations:",
+            "underlined":true
+          },
+          {
+            "text":"\n\n"
+          },
+          {
             "translate": "text.gm4.guidebook.lively_lily_pads.item_list",
-            "fallback": "§nDecorations:§r\n\nCandles\nLanterns\nTorches\nCoral Fans\nCactus Flower\nSpore Blossom"
+            "fallback": "Candles\nLanterns\nTorches\nCoral Fans\nCactus Flower\nSpore Blossom",
+            "underlined":false
           }
         ]
       ]

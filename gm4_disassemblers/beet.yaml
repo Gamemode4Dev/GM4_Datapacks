@@ -7,10 +7,16 @@ data_pack:
   overlays:
     - formats:
         min_inclusive: 88
-        max_inclusive: 88
+        max_inclusive: 94
       min_format: 88
-      max_format: 88
+      max_format: 94
       directory: since_88
+    - formats:
+        min_inclusive: 94
+        max_inclusive: 94
+      min_format: 94
+      max_format: 94
+      directory: since_94
     - formats:
         min_inclusive: 81
         max_inclusive: 88
@@ -86,7 +92,6 @@ meta:
       notes: []
     modrinth:
       project_id: Cg5FQaTk
-    video: null
     wiki: https://wiki.gm4.co/wiki/Disassemblers
     credits:
       Creator:
