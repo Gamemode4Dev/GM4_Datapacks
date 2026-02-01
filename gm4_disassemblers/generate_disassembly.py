@@ -150,8 +150,6 @@ def beet_default(ctx: Context):
     }]
   }  
   for item in ITEMS:
-    if "spear" in item or "copper" in item:
-      continue
     caller["pools"][0]["entries"][0]["children"].append({
       "type": "minecraft:loot_table",
       "value": f'gm4_disassemblers:disassembleables/{item}',
