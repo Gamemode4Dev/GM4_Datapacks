@@ -3,6 +3,7 @@
 # at @s
 # run from #gm4_hooked_entity:pre_hook_on_player
 
+execute store success score $adventure gm4_reeling_rods.math if entity @s[gamemode=adventure]
 data remove storage gm4_reeling_rods:temp enchanted
 execute if predicate gm4_reeling_rods:holding_reeling_rod run data modify storage gm4_reeling_rods:temp enchanted.reeling set value 1
 execute if predicate gm4_reeling_rods:holding_barbed_rod/level_1 run data modify storage gm4_reeling_rods:temp enchanted.barbed set value {period: 31,damage:3}
