@@ -3,7 +3,7 @@
     "icon": {
       "id": "potion",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/potion_liquids",
+        "minecraft:custom_model_data": {"strings":["gm4_potion_liquids:gui/advancement/potion_liquids"]},
         "minecraft:potion_contents": {
           "custom_color": 13631487
         }

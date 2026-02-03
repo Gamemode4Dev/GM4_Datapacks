@@ -3,7 +3,7 @@
     "icon": {
       "id": "saddle",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/pig_tractors"
+        "minecraft:custom_model_data": {"strings":["gm4_pig_tractors:gui/advancement/pig_tractors"]}
       }
     },
     "title": {

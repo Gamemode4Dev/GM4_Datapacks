@@ -3,7 +3,7 @@
     "icon": {
       "id": "lead",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/balloon_animals"
+        "minecraft:custom_model_data": {"strings":["gm4_balloon_animals:gui/advancement/balloon_animals"]}
       }
     },
     "title": {

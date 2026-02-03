@@ -3,7 +3,7 @@
     "icon": {
       "id": "hopper_minecart",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/liquid_minecarts_create"
+        "minecraft:custom_model_data": {"strings":["gm4_liquid_minecarts:gui/advancement/liquid_minecarts_create"]}
       }
     },
     "title": {

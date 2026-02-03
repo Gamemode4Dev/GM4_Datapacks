@@ -77,7 +77,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/lump/bismutite",
+                "minecraft:custom_model_data": {"strings":["gm4_metallurgy:item/lump/bismutite"]},
                 "minecraft:profile": "$ore/bismuth"
               }
             },

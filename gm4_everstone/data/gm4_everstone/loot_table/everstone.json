@@ -15,7 +15,7 @@
               "function": "set_components",
               "components": {
                 "minecraft:enchantment_glint_override": true,
-                "minecraft:custom_model_data": "item/everstone"
+                "minecraft:custom_model_data": {"strings":["gm4_everstone:item/everstone"]}
               }
             },
             {

@@ -3,7 +3,7 @@
     "icon": {
       "id": "diamond_sword",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/end_fishing_swords"
+        "minecraft:custom_model_data": {"strings":["gm4_end_fishing:gui/advancement/end_fishing_swords"]}
       }
     },
     "title": {

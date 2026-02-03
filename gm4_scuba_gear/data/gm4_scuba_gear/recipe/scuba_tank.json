@@ -29,7 +29,7 @@
           "operation": "add_value"
         }
       ],
-      "minecraft:custom_model_data": "item/scuba_tank",
+      "minecraft:custom_model_data": {"strings":["gm4_scuba_gear:item/scuba_tank"]},
       "minecraft:custom_data": "{gm4_scuba_gear:{item:'tank'}}",
       "minecraft:custom_name": {
         "translate": "item.gm4.scuba_tank",

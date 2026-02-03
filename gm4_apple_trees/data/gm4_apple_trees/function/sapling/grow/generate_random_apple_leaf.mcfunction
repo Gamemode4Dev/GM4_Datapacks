@@ -3,10 +3,8 @@
 # positioned ^ ^ ^1
 # run from gm4_apple_trees:sapling/grow/generate_random_tree
 
-# pick a random facing direction shape 
-# FUTURE NOTE: replace with more performant loot table randomizer when spigot bug is fixed
-execute store result score $random gm4_apple_data run data get entity @s UUID[0]
-scoreboard players operation $random gm4_apple_data %= #4 gm4_apple_data
+# pick a random facing direction shape
+execute store result score $random gm4_apple_data run random value 0..3
 
 # place apple at given orientation
 execute if score $random gm4_apple_data matches 0 run place template gm4_apple_trees:sapling_growth/apple_leaf ~ ~-1 ~ none

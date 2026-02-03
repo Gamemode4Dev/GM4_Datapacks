@@ -4,7 +4,7 @@
       "id": "leather_boots",
       "components": {
         "minecraft:dyed_color": 3705899,
-        "minecraft:custom_model_data": "gui/advancement/boots_of_ostara"
+        "minecraft:custom_model_data": {"strings":["gm4_boots_of_ostara:gui/advancement/boots_of_ostara"]}
       }
     },
     "title": {

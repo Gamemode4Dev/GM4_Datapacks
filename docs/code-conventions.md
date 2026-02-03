@@ -6,7 +6,6 @@
   * [Function headers](#function-headers)
   * [Inline comments](#inline-comments)
 * [Smithed conventions](#smithed-conventions)
-  * [CMD prefixing](#cmd-prefixing)
   * [Tag specification](#tag-specification)
 
 ## Naming
@@ -36,7 +35,7 @@ All functions should start with a header comment that consists of:
     - a single function, if the function is run by `/function ...`: `# run from zauber_cauldrons:cauldron/create`.
     - a folder, if multiple functions call this function using `/function`: `# run from functions in gm4_pig_tractors:till/blocks/`.
     - a function from where it was scheduled: `# scheduled by zauber_cauldrons:cauldron/create`.
-    - a function and function-tag pair: `# run from gm4_trees-1.0:tick via #gm4_trees:destroy_leaf`.
+    - a function and function-tag pair: `# run from gm4_trees:tick via #gm4_trees:destroy_leaf`.
     - an advancement reward: `# run from advancement damaged/armor/stall`
     - a combination of these, in which multiple lines may be used.
 
@@ -50,9 +49,6 @@ kill @s
 
 ## Smithed conventions
 We follow the Smithed conventions in our data pack. For the full documentation, see the [Smithed Wiki](https://wiki.smithed.dev/conventions/).
-
-### CMD prefixing
-All the custom model data values in GM4 are prefixed with `3420000`. As a module developer you don't need to worry about this, it is handled by our resource pack plugin. <!-- TODO: link to resource pack docs -->
 
 ### Tag specification
 Smithed defines a set of standard entity `/tag`s to ensure compatibility between different packs:

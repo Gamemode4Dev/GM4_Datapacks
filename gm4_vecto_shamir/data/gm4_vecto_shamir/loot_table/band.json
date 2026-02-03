@@ -10,7 +10,7 @@
 						{
 							"function": "minecraft:set_components",
 							"components": {
-								"minecraft:custom_model_data": "shamir/vecto"
+								"minecraft:custom_model_data": {"strings":["gm4_vecto_shamir:shamir/vecto"]}
 							}
 						},
 						{

@@ -20,7 +20,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "item/apple_tree_sapling"
+                                "minecraft:custom_model_data": {"strings":["gm4_apple_trees:item/apple_tree_sapling"]}
                             }
                         },
                         {
