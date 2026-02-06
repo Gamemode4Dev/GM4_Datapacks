@@ -63,7 +63,7 @@ def beet_default(ctx: Context):
     # prepare list of door materials
     door_materials = [
         door.removeprefix("minecraft:").removesuffix("_door")
-        for door in resolve_blocktag(ctx, "1.21.5", "minecraft:mob_interactable_doors")
+        for door in resolve_blocktag(ctx, "1.21.11", "minecraft:mob_interactable_doors")
     ]
     # make list of wood types accessible for bolt
     ctx.meta['door_materials'] = door_materials
