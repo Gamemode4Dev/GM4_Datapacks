@@ -19,10 +19,10 @@
                         },
                         {
                             "function": "minecraft:set_name",
+                            "target": "item_name",
                             "name": {
                                 "translate": "item.gm4.tower_structures.pirate_sword",
-                                "fallback": "Pirate Sword",
-                                "italic": false
+                                "fallback": "Pirate Sword"
                             }
                         }
                     ]

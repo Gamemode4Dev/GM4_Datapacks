@@ -15,10 +15,10 @@
                   },
                   {
                     "function": "set_name",
+                    "target": "item_name",
                     "name": {
                       "translate": "item.gm4.bat_leather",
-                      "fallback": "Bat Leather",
-                      "italic": false
+                      "fallback": "Bat Leather"
                     }
                   },
                   {

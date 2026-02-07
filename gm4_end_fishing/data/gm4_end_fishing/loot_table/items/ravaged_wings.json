@@ -15,10 +15,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.end_fishing.ravaged_wings",
-                "fallback": "Ravaged Wings",
-                "italic": false
+                "fallback": "Ravaged Wings"
               }
             },
             {

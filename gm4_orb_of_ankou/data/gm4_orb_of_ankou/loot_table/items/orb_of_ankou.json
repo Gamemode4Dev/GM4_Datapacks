@@ -23,6 +23,7 @@
                                         "minecraft:firework_explosion"
                                     ]
                                 },
+                                "minecraft:rarity": "rare",
                                 "minecraft:damage_resistant": {
                                     "types": "#minecraft:is_fire"
                                 },
@@ -38,11 +39,10 @@
                         },
                         {
                             "function": "minecraft:set_name",
+                            "target": "item_name",
                             "name": {
                                 "translate": "item.gm4.orb_of_ankou",
-                                "fallback": "Orb of Ankou",
-                                "italic": false,
-                                "color": "aqua"
+                                "fallback": "Orb of Ankou"
                             }
                         },
                         {
