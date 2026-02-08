@@ -15,7 +15,3 @@ item modify entity @s[gamemode=!creative] weapon.mainhand gm4_calling_bell:minus
 # update player
 scoreboard players operation @s gm4_calling_bell = $day gm4_calling_bell
 advancement grant @s only gm4:calling_bell
-
-# set up trader
-function #gm4_trades:register_trades
-execute as @e[type=wandering_trader,tag=gm4_calling_bell_trader,tag=!gm4_trader,limit=1,sort=nearest] run function #gm4_trades:modify_external_trader

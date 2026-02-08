@@ -8,7 +8,6 @@ data_pack:
 pipeline:
   - gm4_balloon_animals.generate
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_trades
 
 require:
   - bolt
@@ -16,8 +15,6 @@ require:
 meta:
   gm4:
     versioning:
-      required:
-        lib_trades: 1.6.0
       schedule_loops: [main]
     website:
       description: Looking for exotic animals? This module makes some Wandering Traders sell cute baby animals!
