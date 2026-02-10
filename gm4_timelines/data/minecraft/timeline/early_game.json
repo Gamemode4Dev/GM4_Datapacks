@@ -1,0 +1,29 @@
+{
+    "tracks": {
+        "minecraft:gameplay/can_pillager_patrol_spawn": {
+            "keyframes": [
+                {
+                    "ticks": 0,
+                    "value": false
+                },
+                {
+                    "ticks": 120000,
+                    "value": true
+                }
+            ],
+            "modifier": "and"
+        },
+        "minecraft:gameplay/bed_rule": {
+            "modifier": "override",
+            "keyframes": [
+                {
+                    "ticks": 0,
+                    "value": {
+                        "can_sleep": "always",
+                        "can_set_spawn": "always"
+                    }
+                }
+            ]
+        }
+    }
+}

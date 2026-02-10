@@ -1,0 +1,9 @@
+{
+    "settings": {
+        "weight": 1,
+        "moon_phase": ["new_moon"],
+        "in_type": "clear",
+        "out_type": "foggy"
+    },
+    "schedule": []
+}
