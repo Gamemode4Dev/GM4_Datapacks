@@ -1,0 +1,13 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:reference",
+      "name": "gm4_furniture:holding_paintbrush_mainhand"
+    },
+    {
+      "condition": "minecraft:reference",
+      "name": "gm4_furniture:holding_paintbrush_offhand"
+    }
+  ]
+}

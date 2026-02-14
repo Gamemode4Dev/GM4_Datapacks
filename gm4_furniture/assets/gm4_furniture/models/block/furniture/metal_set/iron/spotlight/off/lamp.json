@@ -1,0 +1,7 @@
+{
+  "parent":"gm4_furniture:block/furniture/metal_set/iron/spotlight/default/lamp",
+  "textures":{
+    "0":"gm4_furniture:block/furniture/metal_set/iron/spotlight_off",
+		"particle": "gm4_furniture:block/furniture/metal_set/iron/spotlight_off"
+  }
+}

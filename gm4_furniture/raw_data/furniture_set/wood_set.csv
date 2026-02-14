@@ -1,0 +1,31 @@
+craft_item_1_id,craft_item_1_count,craft_item_2_id,craft_item_2_count,craft_result_count,technical_id,display_name,block_id,length,depth,height,custom_placement,sittable,dyeable,wall_only,ceiling_only,table,scale,diag,custom_interaction
+oak_planks,4,air,0,1,oak.1x1_table_1,Small Oak Table,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,TRUE,1,FALSE,FALSE
+oak_planks,16,air,0,1,oak.2x2_table_1,Large Oak Table,barrier,2,2,1,FALSE,0,FALSE,FALSE,FALSE,TRUE,1,FALSE,FALSE
+oak_planks,12,air,0,1,oak.bench_1,Oak Bench,barrier,3,1,1,FALSE,50,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+oak_planks,4,air,0,1,oak.chair_1,Oak Chair,barrier,1,1,1,FALSE,50,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+oak_planks,4,air,0,1,oak.stool_1,Oak Stool,barrier,1,1,1,FALSE,50,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+oak_planks,1,candle,1,1,oak.light_1,Oak Candle Holder,light[level=0],1,1,1,FALSE,0,TRUE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+dark_oak_planks,4,white_wool,1,1,dark_oak.1x1_table_1,Small Dark Oak Table,barrier,1,1,1,FALSE,0,TRUE,FALSE,FALSE,TRUE,1,FALSE,FALSE
+dark_oak_planks,16,white_wool,4,1,dark_oak.2x2_table_1,Large Dark Oak Table,barrier,2,2,1,FALSE,0,TRUE,FALSE,FALSE,TRUE,1,FALSE,FALSE
+dark_oak_planks,12,white_wool,3,1,dark_oak.bench_1,Dark Oak Bench,barrier,3,1,1,FALSE,50,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+dark_oak_planks,4,white_wool,1,1,dark_oak.chair_1,Dark Oak Chair,barrier,1,1,1,FALSE,50,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+dark_oak_planks,4,white_wool,1,1,dark_oak.stool_1,Dark Oak Stool,barrier,1,1,1,FALSE,50,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+dark_oak_planks,1,redstone_lamp,1,1,dark_oak.light_1,Dark Oak Lamp Shade,light[level=12],1,1,1,FALSE,0,TRUE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+spruce_planks,4,air,0,1,spruce.1x1_table_1,Small Spruce Table,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,TRUE,1,FALSE,FALSE
+spruce_planks,16,air,0,1,spruce.2x2_table_1,Large Spruce Table,barrier,2,2,1,FALSE,0,FALSE,FALSE,FALSE,TRUE,1,FALSE,FALSE
+spruce_planks,12,air,0,1,spruce.bench_1,Spruce Bench,barrier,3,1,1,FALSE,50,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+spruce_planks,4,air,0,1,spruce.chair_1,Spruce Chair,barrier,1,1,1,FALSE,50,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+spruce_planks,4,air,0,1,spruce.stool_1,Spruce Stool,barrier,1,1,1,FALSE,75,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+spruce_planks,1,torch,3,1,spruce.light_1,Spruce Torch Sconce,light[level=14],1,1,1,TRUE,0,FALSE,TRUE,FALSE,FALSE,1,FALSE,FALSE
+cherry_planks,4,white_wool,1,1,cherry.1x1_table_1,Small Cherry Table,barrier,1,1,1,FALSE,0,TRUE,FALSE,FALSE,TRUE,1,FALSE,FALSE
+cherry_planks,16,white_wool,4,1,cherry.2x2_table_1,Large Cherry Table,barrier,2,2,1,FALSE,0,TRUE,FALSE,FALSE,TRUE,1,FALSE,FALSE
+cherry_planks,12,white_wool,3,1,cherry.bench_1,Cherry Bench,barrier,3,1,1,FALSE,50,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+cherry_planks,4,white_wool,1,1,cherry.chair_1,Cherry Chair,barrier,1,1,1,FALSE,50,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+cherry_planks,4,white_wool,1,1,cherry.stool_1,Cherry Stool,barrier,1,1,1,FALSE,40,TRUE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+cherry_planks,1,glow_lichen,1,1,cherry.light_1,Cherry Fairy Lights,light[level=8],3,1,1,FALSE,0,TRUE,TRUE,FALSE,FALSE,1,FALSE,FALSE
+acacia_planks,4,air,0,1,acacia.1x1_table_1,Small Acacia Table,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,TRUE,1,FALSE,FALSE
+acacia_planks,16,air,0,1,acacia.2x2_table_1,Large Acacia Table,barrier,2,2,1,FALSE,0,FALSE,FALSE,FALSE,TRUE,1,FALSE,FALSE
+acacia_planks,12,air,0,1,acacia.bench_1,Acacia Bench,barrier,3,1,1,FALSE,65,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+acacia_planks,4,air,0,1,acacia.chair_1,Acacia Chair,barrier,1,1,1,FALSE,50,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+acacia_planks,4,air,0,1,acacia.stool_1,Acacia Stool,barrier,1,1,1,FALSE,50,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+acacia_planks,1,campfire,1,1,acacia.light_1,Acacia Campfire,light[level=15],1,1,2,TRUE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
