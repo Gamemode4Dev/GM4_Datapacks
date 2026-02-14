@@ -1,0 +1,6 @@
+use ::java::world::item::ItemStack
+
+dispatch minecraft:storage[gm4_dripleaf_filters:cache] to struct {
+  compare_id?: #[id="item"] string,
+  whitelisted_items?: [ItemStack] @ ..5,
+}

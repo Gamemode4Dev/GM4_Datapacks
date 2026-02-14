@@ -14,9 +14,6 @@ scoreboard players set #100 gm4_guide 100
 scoreboard players set #intro gm4_guide_pages 1
 scoreboard players reset $module_count gm4_guide
 
-#declare storage gm4_guidebook:temp
-#declare storage gm4_guidebook:register
-#declare storage gm4_guidebook:pages
 schedule function gm4_guidebook:update_storage/setup_markers 1t
 
 schedule function #gm4_guidebook:setup_storage 5t

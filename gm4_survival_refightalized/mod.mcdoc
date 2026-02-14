@@ -1,0 +1,30 @@
+use ::java::util::slot::SlottedItem
+use ::java::util::effect::MobEffectInstance
+
+dispatch minecraft:storage[gm4_survival_refightalized:temp] to struct {
+  picked_stat?: struct {
+    damage_capped?: float,
+    health?: float,
+    damage?: float,
+    speed?: float,
+  },
+  set?: struct {
+    armor_reduction?: float,
+    damage?: int,
+    absorption_reduction?: float,
+  },
+  parry?: struct {
+    damage?: float,
+  },
+  heal_player?: struct {
+    remove_health?: float,
+  },
+  reapply_resistance?: struct {
+    ...MobEffectInstance,
+    show_icon: (boolean | "true" | "false"),
+    duration_set: (int | "infinite"),
+  },
+  Items?: [SlottedItem<byte>],
+  Item?: SlottedItem<byte>,
+  active_effects: [MobEffectInstance],
+}
