@@ -10,7 +10,6 @@ resource_pack:
 
 pipeline:
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_forceload
   - gm4.plugins.include.lib_machines
 
 meta:
@@ -19,6 +18,8 @@ meta:
       required:
         lib_machines: 1.4.0
       schedule_loops: [main]
+    translation_linter_ignores:
+      - text.gm4.block_compressors.compressed
     model_data:
       - item: purpur_block
         reference: block/block_compressor_plate
