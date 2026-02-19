@@ -16,6 +16,18 @@
     "customResources": {
       "guidebook": {
         "category": "gm4_guidebook"
+      },
+      "templates/loot_table": {
+        "category": "loot_table"
+      },
+      "templates/worldgen/biome": {
+        "category": "worldgen/biome"
+      },
+      "templates/worldgen/configured_feature": {
+        "category": "worldgen/configured_feature"
+      },
+      "templates/worldgen/placed_feature": {
+        "category": "worldgen/placed_feature"
       }
     }
   }

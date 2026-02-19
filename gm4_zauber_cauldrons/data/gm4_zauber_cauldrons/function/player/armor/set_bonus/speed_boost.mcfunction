@@ -4,7 +4,7 @@
 # run from player/armor/apply_set_bonus
 
 # attribute
-attribute @s minecraft:generic.movement_speed modifier add minecraft:7a7ff3d6-8e01-4051-99fa-94c40b12fb9a 0.12 add_multiplied_base
+attribute @s minecraft:movement_speed modifier add minecraft:7a7ff3d6-8e01-4051-99fa-94c40b12fb9a 0.12 add_multiplied_base
 
 # sounds and visuals
 particle minecraft:entity_effect{color:[0.486,0.686,0.776,1.0]} ~.3 ~.8 ~.3 0 0 0 1 1

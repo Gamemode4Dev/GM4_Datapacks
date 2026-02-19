@@ -10,8 +10,9 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "item/crystal/{{effect}}",
+                                "minecraft:custom_model_data": {"strings":["item/crystal/{{effect}}"]},
                                 "minecraft:firework_explosion": {
+                                    "shape": "small_ball",
                                     "colors": [
                                         {{custom_potion_color}}
                                     ]

@@ -18,7 +18,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "item/zauber_armor/{{flavor}}"
+                                "minecraft:custom_model_data": {"strings":["item/zauber_armor/{{flavor}}"]}
                             }
                         },
                         {
@@ -43,14 +43,14 @@
                             "function": "minecraft:set_attributes",
                             "modifiers": [
                                 {
-                                    "attribute": "minecraft:generic.armor_toughness",
+                                    "attribute": "minecraft:armor_toughness",
                                     "id": "gm4_zauber_cauldrons:armor_toughness_{{slot}}",
                                     "amount": 3,
                                     "operation": "add_value",
                                     "slot": "{{slot}}"
                                 },
                                 {
-                                    "attribute": "minecraft:generic.armor",
+                                    "attribute": "minecraft:armor",
                                     "id": "gm4_zauber_cauldrons:armor_{{slot}}",
                                     "amount": {{armor_value}},
                                     "operation": "add_value",

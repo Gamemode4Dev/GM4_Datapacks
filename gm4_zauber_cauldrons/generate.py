@@ -18,37 +18,25 @@ def read_json(path: Path) -> Any:
 def beet_default(ctx: Context):
 
     # read raw data
-    armor_flavors: CSV = CSV.from_file(
-        Path('gm4_zauber_cauldrons', 'raw', 'armor_flavors.csv'))
-    armor_pieces: CSV = CSV.from_file(
-        Path('gm4_zauber_cauldrons', 'raw', 'armor_pieces.csv'))
-    crystal_effects: CSV = CSV.from_file(
-        Path('gm4_zauber_cauldrons', 'raw', 'crystal_effects.csv'))
-    crystal_lores: Any = read_json(
-        Path('gm4_zauber_cauldrons', 'raw', 'crystal_lores.json'))
-    flower_types: CSV = CSV.from_file(
-        Path('gm4_zauber_cauldrons', 'raw', 'flower_types.csv'))
-    magicol_colors: CSV = CSV.from_file(
-        Path('gm4_zauber_cauldrons', 'raw', 'magicol_colors.csv'))
-    potion_bottles: CSV = CSV.from_file(
-        Path('gm4_zauber_cauldrons', 'raw', 'potion_bottles.csv'))
-    potion_effects: CSV = CSV.from_file(
-        Path('gm4_zauber_cauldrons', 'raw', 'potion_effects.csv'))
-    potion_bottles: CSV = CSV.from_file(
-        Path('gm4_zauber_cauldrons', 'raw', 'potion_bottles.csv'))
-    potion_lores: Any = read_json(
-        Path('gm4_zauber_cauldrons', 'raw', 'potion_lores.json'))
-    weather_modifiers: CSV = CSV.from_file(
-        Path('gm4_zauber_cauldrons', 'raw', 'weather_modifiers.csv'))
+    raw = Path('gm4_zauber_cauldrons', 'raw')
+    armor_flavors: CSV = CSV.from_file(raw / 'armor_flavors.csv')
+    armor_pieces: CSV = CSV.from_file(raw / 'armor_pieces.csv')
+    crystal_effects: CSV = CSV.from_file(raw / 'crystal_effects.csv')
+    crystal_lores: Any = read_json(raw / 'crystal_lores.json')
+    flower_types: CSV = CSV.from_file(raw / 'flower_types.csv')
+    magicol_colors: CSV = CSV.from_file(raw / 'magicol_colors.csv')
+    potion_bottles: CSV = CSV.from_file(raw / 'potion_bottles.csv')
+    potion_effects: CSV = CSV.from_file(raw / 'potion_effects.csv')
+    potion_bottles: CSV = CSV.from_file(raw / 'potion_bottles.csv')
+    potion_lores: Any = read_json(raw / 'potion_lores.json')
+    weather_modifiers: CSV = CSV.from_file(raw / 'weather_modifiers.csv')
 
     # generate files
     generate_armor_recipes(ctx, armor_flavors, armor_pieces)
     generate_crystal_recipes(ctx, crystal_effects, crystal_lores, potion_effects)
     generate_potion_recipes(ctx, potion_effects, potion_bottles, potion_lores)
-    generate_magicol_recipes(ctx, weather_modifiers,
-                             magicol_colors, potion_bottles)
-    generate_zauber_biomes(ctx, weather_modifiers,
-                           magicol_colors, potion_bottles, flower_types)
+    generate_magicol_recipes(ctx, weather_modifiers, magicol_colors, potion_bottles)
+    generate_zauber_biomes(ctx, weather_modifiers, magicol_colors, potion_bottles, flower_types)
     generate_flower_features(ctx, flower_types)
 
     # make some csv data available to bolt later
@@ -79,14 +67,14 @@ def generate_armor_recipes(ctx: Context, armor_flavors: CSV, armor_pieces: CSV):
                 "data_pack": {
                     "load": [
                         {
-                            f"data/gm4_zauber_cauldrons/function/recipes/armor/{piece_data['piece']}/select_flavor.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/armor/select_flavor.mcfunction",
-                            f"data/gm4_zauber_cauldrons/function/recipes/armor/{piece_data['piece']}/{flavor_data['flavor']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/armor/craft_piece.mcfunction",
-                            f"data/gm4_zauber_cauldrons/loot_table/items/armor/{piece_data['piece']}/{flavor_data['flavor']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_armor.json"
+                            f"data/gm4_zauber_cauldrons/function/recipes/armor/{piece_data['piece']}/select_flavor.mcfunction": "data/gm4_zauber_cauldrons/templates/function/armor/select_flavor.mcfunction",
+                            f"data/gm4_zauber_cauldrons/function/recipes/armor/{piece_data['piece']}/{flavor_data['flavor']}.mcfunction": "data/gm4_zauber_cauldrons/templates/function/armor/craft_piece.mcfunction",
+                            f"data/gm4_zauber_cauldrons/loot_table/items/armor/{piece_data['piece']}/{flavor_data['flavor']}.json": "data/gm4_zauber_cauldrons/templates/loot_table/zauber_armor.json"
                         }
                     ],
                     "render": {
-                        "functions": "*",
-                        "loot_tables": "*"
+                        "function": "*",
+                        "loot_table": "*"
                     }
                 },
                 "meta": {
@@ -128,14 +116,14 @@ def generate_crystal_recipes(ctx: Context, crystal_effects: CSV, crystal_lores: 
             "data_pack": {
                 "load": [
                     {
-                        f"data/gm4_zauber_cauldrons/function/recipes/crystals/effects/{effect_data['effect']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/crystals/craft_crystal.mcfunction",
-                        f"data/gm4_zauber_cauldrons/loot_table/items/crystals/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_crystal.json",
-                        f"data/gm4_zauber_cauldrons/loot_table/technical/replace_offhand_crystal/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/replace_offhand_crystal.json"
+                        f"data/gm4_zauber_cauldrons/function/recipes/crystals/effects/{effect_data['effect']}.mcfunction": "data/gm4_zauber_cauldrons/templates/function/crystals/craft_crystal.mcfunction",
+                        f"data/gm4_zauber_cauldrons/loot_table/items/crystals/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_table/zauber_crystal.json",
+                        f"data/gm4_zauber_cauldrons/loot_table/technical/replace_offhand_crystal/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_table/replace_offhand_crystal.json"
                     }
                 ],
                 "render": {
-                    "functions": "*",
-                    "loot_tables": "*"
+                    "function": "*",
+                    "loot_table": "*"
                 }
             },
             "meta": {
@@ -159,14 +147,14 @@ def generate_potion_recipes(ctx: Context, potion_effects: CSV, potion_bottles: C
                 "data_pack": {
                     "load": [
                         {
-                            f"data/gm4_zauber_cauldrons/function/recipes/potions/{bottle_data['bottle']}/select_effect.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/potions/select_effect.mcfunction",
-                            f"data/gm4_zauber_cauldrons/function/recipes/potions/{bottle_data['bottle']}/{effect_data['effect']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/potions/craft_potion.mcfunction",
-                            f"data/gm4_zauber_cauldrons/loot_table/items/potions/{bottle_data['bottle']}/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/zauber_potion.json"
+                            f"data/gm4_zauber_cauldrons/function/recipes/potions/{bottle_data['bottle']}/select_effect.mcfunction": "data/gm4_zauber_cauldrons/templates/function/potions/select_effect.mcfunction",
+                            f"data/gm4_zauber_cauldrons/function/recipes/potions/{bottle_data['bottle']}/{effect_data['effect']}.mcfunction": "data/gm4_zauber_cauldrons/templates/function/potions/craft_potion.mcfunction",
+                            f"data/gm4_zauber_cauldrons/loot_table/items/potions/{bottle_data['bottle']}/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_table/zauber_potion.json"
                         }
                     ],
                     "render": {
-                        "functions": "*",
-                        "loot_tables": "*"
+                        "function": "*",
+                        "loot_table": "*"
                     }
                 },
                 "meta": {
@@ -201,16 +189,16 @@ def generate_magicol_recipes(ctx: Context, weather_modifiers: CSV, magicol_color
             "data_pack": {
                 "load": [
                     {
-                        f"data/gm4_zauber_cauldrons/function/recipes/magicol/{color_data['color']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/craft_liquid_magicol.mcfunction",
-                        f"data/gm4_zauber_cauldrons/function/recipes/magicol/bottled/{bottle_data['bottle']}/select_color.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/select_color.mcfunction",
-                        f"data/gm4_zauber_cauldrons/function/recipes/magicol/bottled/{bottle_data['bottle']}/{color_data['color']}/select_weather_modifier.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/select_weather_modifier.mcfunction",
-                        f"data/gm4_zauber_cauldrons/function/recipes/magicol/bottled/{bottle_data['bottle']}/{color_data['color']}/{modifier_data['modifier']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/magicol/craft_bottled_magicol.mcfunction",
-                        f"data/gm4_zauber_cauldrons/loot_table/items/bottled_magicol/{bottle_data['bottle']}/{color_data['color']}/{modifier_data['modifier']}.json": "data/gm4_zauber_cauldrons/templates/loot_tables/bottled_magicol.json"
+                        f"data/gm4_zauber_cauldrons/function/recipes/magicol/{color_data['color']}.mcfunction": "data/gm4_zauber_cauldrons/templates/function/magicol/craft_liquid_magicol.mcfunction",
+                        f"data/gm4_zauber_cauldrons/function/recipes/magicol/bottled/{bottle_data['bottle']}/select_color.mcfunction": "data/gm4_zauber_cauldrons/templates/function/magicol/select_color.mcfunction",
+                        f"data/gm4_zauber_cauldrons/function/recipes/magicol/bottled/{bottle_data['bottle']}/{color_data['color']}/select_weather_modifier.mcfunction": "data/gm4_zauber_cauldrons/templates/function/magicol/select_weather_modifier.mcfunction",
+                        f"data/gm4_zauber_cauldrons/function/recipes/magicol/bottled/{bottle_data['bottle']}/{color_data['color']}/{modifier_data['modifier']}.mcfunction": "data/gm4_zauber_cauldrons/templates/function/magicol/craft_bottled_magicol.mcfunction",
+                        f"data/gm4_zauber_cauldrons/loot_table/items/bottled_magicol/{bottle_data['bottle']}/{color_data['color']}/{modifier_data['modifier']}.json": "data/gm4_zauber_cauldrons/templates/loot_table/bottled_magicol.json"
                     }
                 ],
                 "render": {
-                    "functions": "*",
-                    "loot_tables": "*"
+                    "function": "*",
+                    "loot_table": "*"
                 }
             },
             "meta": {
@@ -261,13 +249,13 @@ def generate_zauber_biomes(ctx: Context, weather_modifiers: CSV, magicol_colors:
             "data_pack": {
                 "load": [
                     {
-                        f"data/gm4_zauber_cauldrons/function/bottled_magicol/{color_data['color']}/select_weather_modifier.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/bottled_magicol/select_weather_modifier.mcfunction",
-                        f"data/gm4_zauber_cauldrons/function/bottled_magicol/{color_data['color']}/{modifier_data['modifier']}.mcfunction": "data/gm4_zauber_cauldrons/templates/functions/bottled_magicol/color_biome.mcfunction",
+                        f"data/gm4_zauber_cauldrons/function/bottled_magicol/{color_data['color']}/select_weather_modifier.mcfunction": "data/gm4_zauber_cauldrons/templates/function/bottled_magicol/select_weather_modifier.mcfunction",
+                        f"data/gm4_zauber_cauldrons/function/bottled_magicol/{color_data['color']}/{modifier_data['modifier']}.mcfunction": "data/gm4_zauber_cauldrons/templates/function/bottled_magicol/color_biome.mcfunction",
                         f"data/gm4_zauber_cauldrons/worldgen/biome/{adjective}{modifier_data['modifier']}_{color_data['color']}_verzauberte_plains.json": "data/gm4_zauber_cauldrons/templates/worldgen/biome/verzauberte_plains.json"
                     }
                 ],
                 "render": {
-                    "functions": "*",
+                    "function": "*",
                     "worldgen_biomes": "*"
                 }
             },

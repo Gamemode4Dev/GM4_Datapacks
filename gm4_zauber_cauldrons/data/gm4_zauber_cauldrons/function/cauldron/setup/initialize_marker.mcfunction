@@ -4,7 +4,7 @@
 # ran from cauldron/setup/create or from upgrade path 1.10
 
 # set nbt
-data modify entity @s CustomName set value '"gm4_zauber_cauldron"'
+data modify entity @s CustomName set value "gm4_zauber_cauldron"
 
 # store cauldron position and dimension in nbt, this is only done once upon creation
 # store coordinates as integers, wormholes always teleport to the center of the target block

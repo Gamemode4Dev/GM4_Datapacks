@@ -10,9 +10,9 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
+                                "minecraft:custom_model_data": {"strings":["item/bottled_magicol/{{weather_modifier}}"]},
                                 "minecraft:potion_contents": {
-                                  "custom_color": {{custom_potion_color}},
-                                  "custom_effects": {{custom_potion_effects}}
+                                    "custom_color": {{potion_color}}
                                 },
                                 "minecraft:tooltip_display": {
                                     "hidden_components": [
@@ -23,12 +23,13 @@
                         },
                         {
                             "function": "minecraft:set_custom_data",
-                            "tag": "{gm4_zauber_cauldrons:{item:\"potion\",type:\"{{effect}}\",bottle:{multi_use:0b}}}"
+                            "tag": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"{{color}}\",weather_modifier:\"{{weather_modifier}}\",bottle:{multi_use:0b}}}"
                         },
                         {
                             "function": "minecraft:set_name",
                             "name": {
-                                "translate": "item.minecraft.potion.effect.{{effect_translate_name}}",
+                                "translate": "item.gm4.zauber_cauldrons.bottled_magicol.{{translate_name}}",
+                                "fallback": "{{translate_fallback}}",
                                 "italic": false
                             }
                         },
@@ -36,7 +37,7 @@
                             "function": "minecraft:set_name",
                             "entity": "this",
                             "name": {
-                                "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.{{bottle}}.{{effect_translate_name}}",
+                                "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.bottled_magicol.{{translate_name}}",
                                 "fallback": "{{soulution_translate_fallback}}",
                                 "italic": false
                             },
@@ -86,7 +87,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "item/soulution_potion/{{effect}}"
+                                "minecraft:custom_model_data": {"strings":["item/bottled_magicol_soulution/{{weather_modifier}}"]}
                             },
                             "conditions": [
                                 {
@@ -157,7 +158,22 @@
                         {
                             "function": "minecraft:set_lore",
                             "mode": "append",
-                            "lore": {{lore}}
+                            "lore": [
+                                {
+                                    "text": ""
+                                },
+                                {
+                                    "translate": "potion.whenDrank",
+                                    "color": "dark_purple",
+                                    "italic": false
+                                },
+                                {
+                                    "translate": "item.gm4.zauber_cauldrons.bottled_magicol.tint.{{color}}",
+                                    "fallback": "{{color_translate_fallback}}",
+                                    "color": "blue",
+                                    "italic": false
+                                }
+                            ]
                         }
                     ]
                 }

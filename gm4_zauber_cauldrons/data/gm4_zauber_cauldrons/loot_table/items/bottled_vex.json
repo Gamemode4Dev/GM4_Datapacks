@@ -34,10 +34,10 @@
                         },
                         {
                             "function": "minecraft:set_name",
+                            "target": "item_name",
                             "name": {
                                 "translate": "item.gm4.magic_in_a_bottle",
-                                "fallback": "Magic in a Bottle",
-                                "italic": false
+                                "fallback": "Magic in a Bottle"
                             }
                         }
                     ]

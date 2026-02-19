@@ -10,7 +10,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "item/crystal/{{effect}}",
+                                "minecraft:custom_model_data": {"strings":["item/crystal/{{effect}}"]},
                                 "minecraft:max_stack_size": 1,
                                 "minecraft:profile": "$crystal/{{effect}}"
                             }
