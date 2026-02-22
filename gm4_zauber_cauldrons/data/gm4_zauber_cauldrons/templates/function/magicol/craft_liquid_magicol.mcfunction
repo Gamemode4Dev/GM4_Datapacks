@@ -20,7 +20,7 @@ data modify entity @s data.gm4_zauber_cauldrons.liquid set value {id:"magicol",m
 data modify entity @s data.gm4_zauber_cauldrons.liquid.magicol.moon_phase set from storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{count:1,components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:"bottled_vex"}}}}].components.gm4_zauber_cauldrons.preferred_moon_phase
 
 # visuals
-summon minecraft:item_display ~ ~.0781 ~ {item:{id:"minecraft:{{color}}_concrete_powder",count:1,components:{"minecraft:custom_model_data":{strings:["block/liquid_magicol/{{color}}"]}}},item_display:"fixed",transformation:[1.984f,0f,0f,0f,0f,0f,0f,0f,0f,0f,1.984f,0f,0f,0f,0f,1f],Tags:["gm4_zc_liquid","gm4_zc_magicol","gm4_zc_{{color}}_magicol"]}
+summon minecraft:item_display ~ ~.0781 ~ {item:{id:"minecraft:{{color}}_concrete_powder",count:1,components:{"minecraft:custom_model_data":{strings:["gm4_zauber_cauldrons:block/liquid_magicol/{{color}}"]}}},item_display:"fixed",transformation:[1.984f,0f,0f,0f,0f,0f,0f,0f,0f,0f,1.984f,0f,0f,0f,0f,1f],Tags:["gm4_zc_liquid","gm4_zc_magicol","gm4_zc_{{color}}_magicol"]}
 
 # set flag
 scoreboard players set $recipe_success gm4_zc_data 1

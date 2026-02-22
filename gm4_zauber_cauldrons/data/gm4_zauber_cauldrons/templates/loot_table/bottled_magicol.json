@@ -10,7 +10,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": {"strings":["item/bottled_magicol/{{weather_modifier}}"]},
+                                "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:item/bottled_magicol/{{weather_modifier}}"]},
                                 "minecraft:potion_contents": {
                                     "custom_color": {{potion_color}}
                                 },
@@ -87,7 +87,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": {"strings":["item/bottled_magicol_soulution/{{weather_modifier}}"]}
+                                "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:item/bottled_magicol_soulution/{{weather_modifier}}"]}
                             },
                             "conditions": [
                                 {

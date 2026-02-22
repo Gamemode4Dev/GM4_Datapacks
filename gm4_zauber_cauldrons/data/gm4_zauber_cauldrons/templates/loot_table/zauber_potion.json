@@ -86,7 +86,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": {"strings":["item/soulution_potion/{{effect}}"]}
+                                "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:item/soulution_potion/{{effect}}"]}
                             },
                             "conditions": [
                                 {

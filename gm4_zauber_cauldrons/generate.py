@@ -117,8 +117,7 @@ def generate_crystal_recipes(ctx: Context, crystal_effects: CSV, crystal_lores: 
                 "load": [
                     {
                         f"data/gm4_zauber_cauldrons/function/recipes/crystals/effects/{effect_data['effect']}.mcfunction": "data/gm4_zauber_cauldrons/templates/function/crystals/craft_crystal.mcfunction",
-                        f"data/gm4_zauber_cauldrons/loot_table/items/crystals/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_table/zauber_crystal.json",
-                        f"data/gm4_zauber_cauldrons/loot_table/technical/replace_offhand_crystal/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_table/replace_offhand_crystal.json"
+                        f"data/gm4_zauber_cauldrons/loot_table/items/crystals/{effect_data['effect']}.json": "data/gm4_zauber_cauldrons/templates/loot_table/zauber_crystal.json"
                     }
                 ],
                 "render": {

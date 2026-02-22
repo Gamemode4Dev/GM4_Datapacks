@@ -18,7 +18,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": {"strings":["item/zauber_armor/{{flavor}}"]}
+                                "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:item/zauber_armor/{{flavor}}"]}
                             }
                         },
                         {
