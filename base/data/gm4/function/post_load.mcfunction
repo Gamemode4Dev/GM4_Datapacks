@@ -4,5 +4,5 @@ execute if data storage gm4:log queue[{type:"install"}] run data modify storage 
 
 function gm4:log_wait
 
-# discard environment check test results (done post-load so players can overwrite echecks pre-load)
-data remove storage gm4:environment_checks result
+function #gm4:evaluate_environment_checks
+schedule function gm4:await_environment_check_results 1t
