@@ -8,7 +8,7 @@
         },
         "title": {
             "translate": "advancement.gm4.horsemanship.horse_takes_flight.title",
-            "fallback": "Ride the Wind!"
+            "fallback": "When Horses Fly!"
         },
         "description": {
             "translate": "advancement.gm4.horsemanship.horse_takes_flight.description",

@@ -1,4 +1,7 @@
-
+# init this horse wing with needed data
+# @s = item_display
+# at @s
+# run from horse_processing/glider/fly
 
 execute store result entity @s transformation.scale[0] float 0.00002 run data get storage gm4_horsemanship:temp scale 100000
 execute store result entity @s transformation.scale[1] float 0.00002 run data get storage gm4_horsemanship:temp scale 100000

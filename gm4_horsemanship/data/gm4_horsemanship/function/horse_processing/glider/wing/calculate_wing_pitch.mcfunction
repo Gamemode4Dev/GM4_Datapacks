@@ -1,3 +1,7 @@
+# calculate the pitch the horse wing should have
+# @s = item_display
+# at unspecified
+# run from tick
 
 scoreboard players add @s gm4_horse.wing_timer 1
 execute on vehicle on passengers if entity @s[type=player] run scoreboard players operation $movement_speed gm4_horse_data = @s gm4_horse.horse_one_cm
