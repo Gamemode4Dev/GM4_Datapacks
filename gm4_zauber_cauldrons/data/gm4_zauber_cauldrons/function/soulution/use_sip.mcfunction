@@ -21,12 +21,6 @@
 # This function does not implement any sort of safeguard reagarding invalid sip amounts, i.e. the calling function must ensure there are still sips
 # left to be used on the soulution, e.g. by checking whether there were at least two sips remaining before the soulution was used.
 
-
-# remove first lore line
-# this line should hold sips/max line, and should be ignored as this line is dynamically generated 
-# and added by the item modifier gm4_zauber_cauldrons:soulution/update_sips
-data remove storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.components."minecraft:lore"[0]
-
 # subtract one sip
 scoreboard players remove $remaining_sips gm4_zc_data 1
 execute store result storage gm4_zauber_cauldrons:temp/item/multi_use_bottle Item.components."minecraft:custom_data".gm4_zauber_cauldrons.bottle.sips int 1 run scoreboard players get $remaining_sips gm4_zc_data
