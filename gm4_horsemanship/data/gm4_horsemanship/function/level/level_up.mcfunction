@@ -42,9 +42,9 @@ execute if score @s gm4_horse.level matches 13 run scoreboard players set @s gm4
 execute if score @s gm4_horse.level matches 14 run scoreboard players set @s gm4_horse.experience_to_level 6750
 
 # modify attributes from storage
-attribute @s max_health modifier remove gm4_horse.health
-attribute @s movement_speed modifier remove gm4_horse.speed
-attribute @s jump_strength modifier remove gm4_horse.jump
+attribute @s max_health modifier remove gm4_horse:health
+attribute @s movement_speed modifier remove gm4_horse:speed
+attribute @s jump_strength modifier remove gm4_horse:jump
 function gm4_horsemanship:level/level_up_eval with storage gm4_horsemanship:temp attribute
 data remove storage gm4_horsemanship:temp attribute
 
