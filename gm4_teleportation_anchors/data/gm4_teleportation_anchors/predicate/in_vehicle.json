@@ -15,7 +15,7 @@
       "entity": "this",
       "predicate": {
         "vehicle": {
-          "type": "#gm4:boats"
+          "type": "#minecraft:boat"
         }
       }
     }
