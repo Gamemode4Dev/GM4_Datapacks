@@ -4,7 +4,7 @@
 # run from player/armor/apply_set_bonus
 
 # attribute
-attribute @s minecraft:attack_damage modifier add minecraft:81b8020f-c7f4-41d9-b99b-7a8d6b2d5a90 1 add_value
+attribute @s minecraft:attack_damage modifier add gm4_zauber_cauldrons:attack_boost 1 add_value
 
 # sounds and visuals
 particle minecraft:entity_effect{color:[0.988,0.773,0.000,1.0]} ~.3 ~.8 ~.3 0 0 0 1 1

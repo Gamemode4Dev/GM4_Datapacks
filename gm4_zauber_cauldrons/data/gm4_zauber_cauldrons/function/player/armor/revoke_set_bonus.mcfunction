@@ -8,10 +8,10 @@ advancement revoke @s only gm4_zauber_cauldrons:equipment/has_full_armor
 advancement revoke @s only gm4_zauber_cauldrons:equipment/unequipped_armor
 
 # revoke set bonuses
-attribute @s minecraft:armor modifier remove minecraft:b29259d8-1ac4-4791-9552-b944910cd435
-attribute @s minecraft:attack_damage modifier remove minecraft:81b8020f-c7f4-41d9-b99b-7a8d6b2d5a90
-attribute @s minecraft:max_health modifier remove minecraft:591ea7a8-12f8-413f-80c9-9f80702c961b
-attribute @s minecraft:movement_speed modifier remove minecraft:7a7ff3d6-8e01-4051-99fa-94c40b12fb9a
+attribute @s minecraft:armor modifier remove gm4_zauber_cauldrons:armor_boost
+attribute @s minecraft:attack_damage modifier remove gm4_zauber_cauldrons:attack_boost
+attribute @s minecraft:max_health modifier remove gm4_zauber_cauldrons:health_boost
+attribute @s minecraft:movement_speed modifier remove gm4_zauber_cauldrons:speed_boost
 
 # sound
 playsound minecraft:block.beacon.deactivate player @a[distance=..4] ~ ~ ~ 0.3 0.1
