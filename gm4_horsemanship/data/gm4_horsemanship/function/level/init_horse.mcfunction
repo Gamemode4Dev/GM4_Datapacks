@@ -32,7 +32,7 @@ execute store result score @s gm4_horse.jump_strength_on_level run attribute @s 
 scoreboard players operation @s gm4_horse.jump_strength_on_level /= #45 gm4_horse_data
 scoreboard players add @s gm4_horse.jump_strength_on_level 2888
 
-execute store result storage gm4_horsemanship:temp attribute.jump_start float 0.00001 run attribute @s jump_strength base get 10000
+execute store result storage gm4_horsemanship:temp attribute.jump_start float 0.00001 run attribute @s jump_strength base get 100000
 
 # modify attributes from storage
 function gm4_horsemanship:level/init_horse_eval with storage gm4_horsemanship:temp attribute
