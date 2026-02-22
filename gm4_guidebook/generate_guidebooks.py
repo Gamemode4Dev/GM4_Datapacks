@@ -1499,6 +1499,18 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
         "score": "load.status"
       },
       "range": {"min": 1}
+    },
+    {
+      "condition": "minecraft:value_check",
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$ready"
+        },
+        "score": "gm4_guide"
+      },
+      "range": {"min": 1}
     }
   ]
 
