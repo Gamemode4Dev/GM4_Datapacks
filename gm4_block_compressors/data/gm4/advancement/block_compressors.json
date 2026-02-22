@@ -3,7 +3,7 @@
     "icon": {
       "id": "piston",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/block_compressors"
+        "minecraft:custom_model_data": {"strings":["gm4_block_compressors:gui/advancement/block_compressors"]}
       }
     },
     "title": {

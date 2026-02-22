@@ -1,0 +1,5 @@
+use ::java::util::slot::SlottedItem
+
+dispatch minecraft:storage[gm4_teleportation_anchors:data] to struct {
+  Items?: [SlottedItem<byte>]
+}

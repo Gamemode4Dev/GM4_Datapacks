@@ -7,13 +7,10 @@ data_pack:
 
 pipeline:
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_trades
 
 meta:
   gm4:
     versioning:
-      required:
-        lib_trades: 1.6.0
       schedule_loops:
         - tick
         - day_clock

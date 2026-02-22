@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:end_rod",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/teleportation_jammer"
+        "minecraft:custom_model_data": {"strings":["gm4_teleportation_anchors:gui/advancement/teleportation_jammer"]}
       }
     },
     "title": {

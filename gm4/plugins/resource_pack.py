@@ -1,12 +1,8 @@
 import csv
 import glob
 import logging
-import os
-import sys
 from copy import deepcopy
-from dataclasses import replace
 from functools import cache
-from fnmatch import fnmatch
 from itertools import cycle
 from typing import Annotated, Any, ClassVar, Literal, Optional, Union
 
@@ -17,7 +13,6 @@ from beet import (
     Font,
     ItemModel,
     InvalidOptions,
-    JsonFile,
     Language,
     ListOption,
     Model,
@@ -30,26 +25,10 @@ from beet.contrib.link import LinkManager
 from beet.contrib.vanilla import Vanilla, ClientJar
 from beet.core.utils import format_validation_error
 from mecha import (
-    AstChildren,
-    AstCommand,
-    AstItemComponent,
-    AstItemPredicateTestComponent,
-    AstJson,
     AstJsonObject,
-    AstJsonObjectEntry,
-    AstJsonObjectKey,
-    AstJsonValue,
     AstNbtCompound,
-    AstNbtCompoundEntry,
-    AstNbtCompoundKey,
-    AstNbtPath,
-    AstNbtPathKey,
-    AstNbtValue,
     Diagnostic,
-    DiagnosticCollection,
-    DiagnosticError,
     Mecha,
-    MutatingReducer,
     Reducer,
     rule,
 )
@@ -58,16 +37,13 @@ from pydantic import BaseModel, Field, TypeAdapter, ValidationError, ValidationI
 from tokenstream import set_location
 
 from gm4.utils import (
-    InvokeOnJsonNbt,
     MapOption,
     add_namespace,
-    propagate_location,
 )
 
 JsonType = dict[str,Any]
 
-CUSTOM_MODEL_PREFIX = 3420000
-MINECRAFT_REFERENECE_VERSION = "1.21.9"
+MINECRAFT_REFERENCE_VERSION = "1.21.11"
 
 parent_logger = logging.getLogger("gm4.resource_pack")
 
@@ -303,7 +279,6 @@ def beet_default(ctx: Context):
     tl = ctx.inject(TranslationLinter)
     ctx.require("mecha.contrib.json_files")
     # mecha register
-    ctx.inject(Mecha).transform.extend(rp)
     ctx.inject(Mecha).lint.extend(tl)
 
     logging.getLogger("beet.contrib.babelbox").addFilter(block_incomplete_translation)
@@ -311,7 +286,7 @@ def beet_default(ctx: Context):
 
     # attach context to template classes
     VanillaTemplate.vanilla = Vanilla(ctx)
-    VanillaTemplate.vanilla.minecraft_version = MINECRAFT_REFERENECE_VERSION
+    VanillaTemplate.vanilla.minecraft_version = MINECRAFT_REFERENCE_VERSION
     VanillaTemplate.vanilla_jar = VanillaTemplate.vanilla.mount("assets/minecraft/items")
 
     yield
@@ -323,7 +298,6 @@ def build(ctx: Context):
     rp = ctx.inject(GM4ResourcePack)
     rp.resolve_config()
     rp.generate_gui_fonts()
-    rp.update_modeldata_registry()
     rp.generate_model_files()
     rp.generate_item_definitions()
 
@@ -331,8 +305,6 @@ def build(ctx: Context):
         ctx.assets.icon = ctx.data.icon
 
 def setup(ctx: Context):
-    mount_registry(ctx)
-
     # init font counter
     ctx.cache["gui_font_counter"].json = {
         "__next__": ord("\u9000")
@@ -353,31 +325,6 @@ def setup(ctx: Context):
             keys.extend([row['key'] for row in reader]) # type: ignore ; csv only contains strings
     ctx.cache["translations"].json = {"keys": list(set(keys)), "backfill": babelbox_backfill}
 
-def mount_registry(ctx: Context):
-    ctx.cache["modeldata_registry"].json = JsonFile(source_path="gm4/modeldata_registry.json").data
-
-def dump_registry(ctx: Context):
-    registry = ctx.cache["modeldata_registry"].json
-    # sort registriy alphabetically and numerically
-    registry["items"] = dict(sorted(registry["items"].items()))
-    for item_id, ref_map in registry["items"].items():
-        registry["items"][item_id] = dict(sorted(ref_map.items(), key=lambda e: e[1]))
-
-    JsonFile(registry).dump(origin="", path="gm4/modeldata_registry.json")
-    ctx.cache["modeldata_registry"].delete()
-
-def pad_item_def_range_dispatch(ctx: Context):
-    for item_def in ctx.assets["minecraft"].item_models.values():
-        vanilla_item_def = item_def.data["model"]["fallback"]
-        entries: list[Any] = item_def.data["model"]["entries"]
-        prior_cmd = 1e8
-        for i, entry in reversed(list(enumerate(entries))):
-            if prior_cmd-(prior_cmd:=entry["threshold"]) > 1: # theres a gap to fill
-                entries.insert(i+1, {
-                    "threshold": prior_cmd+1,
-                    "model": vanilla_item_def
-                })
-
 def merge_policy(ctx: Context):
     ctx.assets.merge_policy.extend_namespace(ItemModel, item_definition_merging)
 
@@ -394,13 +341,11 @@ def link_resource_pack(ctx: Context):
 
     lm.data_pack = dp_dir # restore the DP link
 
-class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
+class GM4ResourcePack:
     """Service Object handling custom_model_data and generated item models"""
 
     def __init__(self, ctx: Context):
         self.ctx = ctx
-        self.cmd_prefix = CUSTOM_MODEL_PREFIX # enables value to be changed by other projects, like the public server
-        self.registry = ctx.cache["modeldata_registry"].json
         self.logger = parent_logger.getChild(ctx.project_id)
         self._opts = FlatResourcePackOptions(model_data=[], gui_fonts=[]) # unloaded config
         super().__init__()
@@ -417,59 +362,25 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
         self._opts.add_namespace(self.ctx.project_id)
         self._opts.template_mutations()
 
-    #== Custom Model Data registration and management ==#
-    def update_modeldata_registry(self):
-        """Updates shared modeldata_registry.json with entries from the beet.yaml"""
-        item_registry: dict[str, dict[str, int]] = self.registry.setdefault("items", {})
-
-        # add new references and assign values
-        for m in self.opts.model_data:
-            conflicts = False
-            i, err = self.retrieve_index(m.reference)
-            if not err: # existing index, is it available to assign to all items?
-                for item_id in m.item.entries():
-                    reg = item_registry.setdefault(item_id, {})
-                    used_idxs = {k: reg[k] for k in reg.keys() - {m.reference}}.values()
-                    if i in used_idxs:
-                        self.logger.warning(f"Failed to share existing custom_model_data for '{m.reference}' to '{item_id}'. A new value will be assigned for this reference; existing items may lose their texture!")
-                        conflicts = True
-                if not conflicts: # existing CMD is available to apply to any new items
-                    for item_id in [e for e in m.item.entries() if m.reference not in item_registry.get(e, {})]:
-                        self.set_index(item_id, i, m.reference)
-            if err or conflicts: # no existing index, or existing isn't available; get a new one
-                self.find_new_index(m.item.entries(), m.reference)
-
-        # remove unused references
-            # NOTE deleting modeldata is really only supported for development cycles. Once published, a cmd value should be permanent.
-            # Thus, a reference will only be removed if it is no longer present on *any* item in the beet.yaml
-        all_refs = {r.reference for r in self.opts.model_data if r.reference.startswith(self.ctx.project_id)}
-        for item_id, reg in item_registry.items():
-            for ref in list(reg.keys()):
-                if ref.startswith(self.ctx.project_id) and ref not in all_refs and self.ctx.project_id != 'gm4':
-                    self.logger.info(f"Removing undefined custom_model_data from {item_id} registry: '{ref}'")
-                    del reg[ref]
-
     def generate_item_definitions(self):
-        """Generates item-model-definition files in the 'minecraft' namespace, adding range_dispatch entries for each custom_model_data value"""
+        """Generates item-model-definition files in the 'minecraft' namespace, adding select cases for each custom_model_data value"""
         vanilla = self.ctx.inject(Vanilla)
-        vanilla.minecraft_version = MINECRAFT_REFERENECE_VERSION
+        vanilla.minecraft_version = MINECRAFT_REFERENCE_VERSION
         vanilla_item_defs_jar = vanilla.mount("assets/minecraft/items")
         # group models by item id
         for item_id in {i for m in self.opts.model_data for i in m.item.entries()}:
             models = filter(lambda m: item_id in m.item.entries(), self.opts.model_data) # with this item_id
-            models = sorted(models, key=lambda m: self.retrieve_index(m.reference)[0])
 
             vanilla_itemdef = vanilla_item_defs_jar.assets.item_models[f"minecraft:{item_id}"].data["model"]
 
             new_itemdef: dict[str, Any] = {
                 "model": {
-                    "type": "minecraft:range_dispatch",
+                    "type": "minecraft:select",
                     "property": "minecraft:custom_model_data",
-                    "entries": [],
+                    "cases": [],
                     "fallback": vanilla_itemdef
                 }
             }
-            itemdef_entries: list[Any] = new_itemdef["model"]["entries"]
 
             for model in models:
                 if not (m:=model.template.get_item_def_entry(model, item_id)):
@@ -485,108 +396,12 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                 if model.base_model:
                     model_json.update(model.base_model)
             
-                itemdef_entries.append({
-                    "threshold": self.cmd_prefix+self.retrieve_index(model.reference)[0],
+                new_itemdef["model"]["cases"].append({
+                    "when": model.reference,
                     "model": model_json
                 })
 
-            itemdef_entries.sort(key=lambda entry: entry["threshold"]) # sort entries ascending
             self.ctx.assets.item_models[f"minecraft:{item_id}"] = ItemModel(new_itemdef)
-
-    def retrieve_index(self, reference: str) -> tuple[int, KeyError|None]:
-        """retrieves the CMD value for the given reference"""
-        for reg in self.registry["items"].values():
-            if reference in reg:
-                return reg[reference], None
-        return -self.cmd_prefix, KeyError(f"{reference} has no asscioated index")
-
-    def find_new_index(self, item_ids: list[str], reference: str):
-        """finds the next available CMD value for the given items and applies it to the registry"""
-        try:
-            allocation_id = next(filter(lambda k: fnmatch(self.ctx.project_id, k), self.registry["allocations"].keys())) #type: ignore ; type checker thinks 'k' is _T@next, not str
-        except StopIteration:
-            allocation_id = None
-        l, u = self.registry["allocations"].get(allocation_id, (1,99))
-        available_indices = set(range(l, u+1))
-
-        for item_id in item_ids:
-            used_values = set(self.registry["items"].get(item_id, {}).values())
-            available_indices -= used_values
-
-        if not available_indices:
-            self.logger.warning("No Valid CMD is open for assignment! Your module may require a specially assigned value allocation if registering many CMD values.")
-            raise RuntimeError("Ran out of CMD values to assign!")
-
-        i = min(available_indices)
-        self.logger.info(f"Issuing new custom_model_data for '{reference}': {i}")
-        for item_id in item_ids:
-            self.set_index(item_id, i, reference)
-
-    def set_index(self, item_id: str, index: int, reference: str):
-        """sets the given cmd index on the item"""
-        if os.getenv("GITHUB_ACTIONS"):
-            self.logger.error(f"Model-Data cache is outdated. Github Actions cannot issue custom_model_data. Run the build locally and commit changes to modeldata_registry.json")
-            sys.exit(1) # stop the build and mark the github action as failed
-
-        self.registry.setdefault("items", {}).setdefault(item_id, {})[reference] = index
-        self.logger.info(f"Issuing custom_model_data {index} for {item_id}")
-
-
-    #== Mecha Transformer Rules ==#
-    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value="minecraft:custom_model_data"))
-    def json_substitutions(self, node: AstJsonObjectEntry, **kwargs: Any):
-        reference = node.value.evaluate()
-        if isinstance(reference, str):
-            index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
-            if exc:
-                yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
-            node = replace(node, value=AstJsonValue.from_value({ "floats": [index+self.cmd_prefix] }))
-        return node
-
-    @rule(AstJsonObject)
-    def json_substitutions_item_modifier(self, node: AstJsonObject, **kwargs: Any):
-        match node.evaluate():
-            case {"function": "minecraft:set_custom_model_data"}:
-                yield Diagnostic("error", "Item modifier set_custom_model_data is not supported", filename=kwargs.get("filename"), file=kwargs.get("file"))
-            case _: pass
-        return node
-
-    @rule(AstNbtCompoundEntry, key=AstNbtCompoundKey(value="minecraft:custom_model_data"))
-    def cmd_substitutions_nbt(self, node: AstNbtCompoundEntry, **kwargs: Any):
-        if isinstance(node.value, AstNbtValue) and isinstance(node.value.value, String):
-            index, exc = self.retrieve_index(add_namespace(node.value.value, self.ctx.project_id))
-            if exc:
-                yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
-            node = replace(node, value=AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] }))
-        return node
-
-    @rule(AstItemComponent)
-    @rule(AstItemPredicateTestComponent)
-    def cmd_substitutions_component(self, node: AstItemComponent | AstItemPredicateTestComponent, **kwargs: Any):
-        if node.value and node.key.get_canonical_value() == "minecraft:custom_model_data":
-            if isinstance(node.value, AstNbtValue) and isinstance(node.value.value, String):
-                index, exc = self.retrieve_index(add_namespace(node.value.value, self.ctx.project_id))
-                if exc:
-                    yield Diagnostic("error", str(exc), filename=kwargs.get("filename"), file=kwargs.get("file"))
-                node = replace(node, value=AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] }))
-        return node
-
-    @rule(AstCommand, identifier="data:modify:storage:target:targetPath:set:value:value")
-    @rule(AstCommand, identifier="data:modify:block:targetPos:targetPath:set:value:value")
-    @rule(AstCommand, identifier="data:modify:entity:target:targetPath:set:value:value")
-    def cmd_substitutions_datamodify(self, node: AstCommand):
-        ast_target, ast_target_path, ast_nbt = node.arguments
-        match ast_target_path, ast_nbt:
-            case AstNbtPath(components=[*_, AstNbtPathKey(value="minecraft:custom_model_data")]), AstNbtValue(value=String(reference)):
-                index, exc = self.retrieve_index(add_namespace(reference, self.ctx.project_id))
-                if exc:
-                    d = Diagnostic("error", str(exc))
-                    yield set_location(d, ast_nbt)
-                node = replace(node, arguments=AstChildren([ast_target, ast_target_path, AstNbtValue.from_value({ "floats": [index+self.cmd_prefix] })]))
-            case _:
-                pass
-        return node
-
 
     #== Model file generation ==#
     def generate_model_files(self):
@@ -616,22 +431,21 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
             }))
 
 def item_definition_merging(pack: ResourcePack, path: str, current: ItemModel, conflict: ItemModel) -> bool:
-    """ItemModel beet merge rule for combining range_dispatch properly"""
-    if current.data["model"].get("type") != "minecraft:range_dispatch" or conflict.data["model"].get("type") != "minecraft:range_dispatch":
-        parent_logger.warning(f"item model {path} was sent to merging but only one file uses 'range_dispatch'")
+    """ItemModel beet merge rule for combining select properly"""
+    if current.data["model"].get("type") != "minecraft:select" or conflict.data["model"].get("type") != "minecraft:select":
+        parent_logger.warning(f"item model {path} was sent to merging but only one file uses 'select'")
         return False
 
-    merged_entries: list[Any] = current.data["model"]["entries"]
-    merged_entries.extend(conflict.data["model"]["entries"])
-    merged_entries.sort(key=lambda entry: entry["threshold"])
+    merged_cases: list[Any] = current.data["model"]["cases"]
+    merged_cases.extend(conflict.data["model"]["cases"])
 
-    # remove duplicate entries - relying on each CMD to be unique already
+    # remove duplicate cases - relying on each CMD to be unique already
     seen_values: set[int] = set()
-    for entry in merged_entries.copy():
-        if (v:=entry["threshold"]) not in seen_values:
+    for entry in merged_cases.copy():
+        if (v:=entry["when"]) not in seen_values:
             seen_values.add(v)
         else: # otherwise its a duplicate
-            merged_entries.remove(entry)
+            merged_cases.remove(entry)
 
     return True
 
@@ -642,7 +456,7 @@ class TranslationLinter(Reducer):
         self.ctx = ctx
         self.mecha_database = ctx.inject(Mecha).database
         vanilla = ctx.inject(Vanilla)
-        vanilla.minecraft_version = MINECRAFT_REFERENECE_VERSION
+        vanilla.minecraft_version = MINECRAFT_REFERENCE_VERSION
         vanilla_lang = vanilla.mount("assets/minecraft/lang/en_us.json")
         self.vanilla_keys = set(vanilla_lang.assets.languages["minecraft:en_us"].data.keys())
         self.total_keys: set[str] = set()
@@ -653,19 +467,6 @@ class TranslationLinter(Reducer):
         self.backfill_values: dict[str, str] = {}
         self.ignored_keys: set[str] = set(ctx.validate("gm4", TranslationLinterOptions).translation_linter_ignores)
         super().__init__()
-
-    @rule(AstNbtValue)
-    def check_nbt_json(self, node: AstNbtValue):
-        mc = self.ctx.inject(Mecha)
-        if isinstance(node.value, (String, str)):
-            try:
-                json_ast = mc.parse(node.value, type=AstJson)
-                with self.use_diagnostics(collec:=DiagnosticCollection()):
-                    self.invoke(json_ast) # process new node with reducer rules
-                for exc in collec.exceptions:
-                    yield propagate_location(exc, node)
-            except DiagnosticError:
-                pass # string is not json
 
     @rule(AstNbtCompound)
     @rule(AstJsonObject)

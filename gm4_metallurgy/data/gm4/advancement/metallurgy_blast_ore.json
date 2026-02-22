@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:player_head",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/metallurgy_blast_ore",
+        "minecraft:custom_model_data": {"strings":["gm4_metallurgy:gui/advancement/metallurgy_blast_ore"]},
         "minecraft:profile": "$gm4_metallurgy:ore/aluminium"
       }
     },

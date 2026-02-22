@@ -1,0 +1,5 @@
+use ::java::world::item::ItemStack
+
+dispatch minecraft:storage[gm4_audere_shamir:temp/player/tool] to struct {
+  SelectedItem?: ItemStack,
+}

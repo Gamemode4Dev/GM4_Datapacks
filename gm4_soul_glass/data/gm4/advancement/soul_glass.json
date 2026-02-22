@@ -3,7 +3,7 @@
     "icon": {
       "id": "brown_stained_glass",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/soul_glass"
+        "minecraft:custom_model_data": {"strings":["gm4_soul_glass:gui/advancement/soul_glass"]}
       }
     },
     "title": {

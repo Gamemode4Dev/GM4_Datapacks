@@ -9,12 +9,10 @@
           "functions": [
             {
               "function": "minecraft:set_name",
-              "entity": "this",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.metallurgy.malachite_lump",
-                "fallback": "Malachite Lump",
-                "italic": false,
-                "color": "white"
+                "fallback": "Malachite Lump"
               }
             },
             {

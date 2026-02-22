@@ -1,6 +1,6 @@
 {
   "env": {
-    "gameVersion": "1.21.11",
+    "gameVersion": "Latest snapshot",
     "exclude": [
       ".*/**",
       "docs/**",

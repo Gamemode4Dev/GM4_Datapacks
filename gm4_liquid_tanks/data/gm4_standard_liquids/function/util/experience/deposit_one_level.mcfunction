@@ -33,7 +33,7 @@ function gm4_standard_liquids:util/experience/macro_experience with storage gm4_
 execute as @e[type=marker,tag=gm4_liquid_tank,limit=1,distance=..0.5] unless score @s gm4_lt_prior_val = @s gm4_lt_value run function gm4_liquid_tanks:liquid_value_update
 
 # vfx
-execute unless score $level_calc gm4_lt_util matches 0 playsound minecraft:entity.experience_orb.pickup block @s
+execute unless score $level_calc gm4_lt_util matches 0 run playsound minecraft:entity.experience_orb.pickup block @s
 function #gm4_liquid_tanks:level_report_check
 
 # reset accelerating clock

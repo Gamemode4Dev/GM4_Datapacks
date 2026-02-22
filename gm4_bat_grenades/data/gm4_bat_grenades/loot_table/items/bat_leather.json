@@ -10,15 +10,15 @@
                   {
                     "function": "set_components",
                     "components": {
-                      "minecraft:custom_model_data": "item/bat_leather"
+                      "minecraft:custom_model_data": {"strings":["gm4_bat_grenades:item/bat_leather"]}
                     }
                   },
                   {
                     "function": "set_name",
+                    "target": "item_name",
                     "name": {
                       "translate": "item.gm4.bat_leather",
-                      "fallback": "Bat Leather",
-                      "italic": false
+                      "fallback": "Bat Leather"
                     }
                   },
                   {

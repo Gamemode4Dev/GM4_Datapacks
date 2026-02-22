@@ -1,0 +1,19 @@
+use ::java::world::entity::mob::breedable::villager::Recipe
+
+dispatch minecraft:storage[gm4_balloon_animals:temp] to struct {
+  player?: struct {
+    uuid: #[uuid] int[] @ 4,
+  },
+  trader?: struct {
+    uuid: #[uuid] int[] @ 4,
+  },
+  temp_source?: [Recipe],
+  trades?: [Recipe],
+  trade?: Recipe,
+  gm4_balloon_animals?: BalloonAnimalsData,
+}
+
+dispatch mcdoc:custom_data[gm4_balloon_animals] to struct BalloonAnimalsData {
+  trade?: byte,
+  id?: int,
+}

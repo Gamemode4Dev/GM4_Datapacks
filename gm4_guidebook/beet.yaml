@@ -37,7 +37,6 @@ meta:
       - text.gm4.guidebook.prev
       - text.gm4.guidebook.refresh
       - text.gm4.guidebook.return_to_toc
-      - text.gm4.guidebook.table_of_contents
       - text.gm4.guidebook.undiscovered
       - text.gm4.guidebook.jump_to_section
     website:

@@ -12,7 +12,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -21,10 +21,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -55,7 +55,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -64,10 +64,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -110,7 +110,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -119,10 +119,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -195,7 +195,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -204,10 +204,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -262,7 +262,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -271,10 +271,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -323,7 +323,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -332,10 +332,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -384,7 +384,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -393,10 +393,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -439,7 +439,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -448,10 +448,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -500,7 +500,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -509,10 +509,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -555,7 +555,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -564,10 +564,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -610,7 +610,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -619,10 +619,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -671,7 +671,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -680,10 +680,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -714,7 +714,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -723,10 +723,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -775,7 +775,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -784,10 +784,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -836,7 +836,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -845,10 +845,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -903,7 +903,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -912,10 +912,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -976,7 +976,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -985,10 +985,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -1031,7 +1031,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -1040,10 +1040,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -1092,7 +1092,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -1101,10 +1101,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -1159,7 +1159,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/message_in_a_bottle"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/message_in_a_bottle"]}
               }
             },
             {
@@ -1168,10 +1168,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {

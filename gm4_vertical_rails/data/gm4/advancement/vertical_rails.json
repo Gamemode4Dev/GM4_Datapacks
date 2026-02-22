@@ -3,7 +3,7 @@
     "icon": {
       "id": "ladder",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/vertical_rails"
+        "minecraft:custom_model_data": {"strings":["gm4_vertical_rails:gui/advancement/vertical_rails"]}
       }
     },
     "title": {

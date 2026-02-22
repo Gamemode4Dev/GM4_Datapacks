@@ -9,7 +9,7 @@ from bolt.contrib.defer import Defer
 from gm4.utils import add_namespace
 
 from gm4_liquid_tanks.mcmeta_stacksize import retrieve_stacksizes
-unstackables, stackable_16, _ = retrieve_stacksizes(ctx.cache, "1.21.8")
+unstackables, stackable_16, _ = retrieve_stacksizes(ctx.cache, "1.21.11")
 
 # function that generates no mcfunction
 def emptyfunc():

@@ -3,7 +3,7 @@
     "icon": {
       "id": "tnt",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/disassemblers"
+        "minecraft:custom_model_data": {"strings":["gm4_disassemblers:gui/advancement/disassemblers"]}
       }
     },
     "title": {

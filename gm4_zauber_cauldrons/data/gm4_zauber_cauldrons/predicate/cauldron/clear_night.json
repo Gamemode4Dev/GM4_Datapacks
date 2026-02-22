@@ -3,6 +3,7 @@
     "terms": [
         {
             "condition": "minecraft:time_check",
+            "clock": "minecraft:overworld",
             "value": {
                 "min": 13000,
                 "max": 23000
