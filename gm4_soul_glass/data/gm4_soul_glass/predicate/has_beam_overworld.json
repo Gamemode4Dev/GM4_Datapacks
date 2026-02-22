@@ -1,0 +1,71 @@
+block_checks = []
+
+MIN = -63
+MAX = 320
+
+for y in range(MIN, MAX):
+  block_checks.append({
+    "condition": "minecraft:any_of",
+    "terms": [
+      {
+        "condition": "minecraft:location_check",
+        "predicate": {
+          "position": {
+            "y": {
+              "min": y
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetY": MAX-y,
+        "predicate": {
+          "block": {
+            "blocks": "#gm4_soul_glass:beacon_passable"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetY": MAX-y,
+        "predicate": {
+          "block": {
+            "state": {
+              "extended": "true"
+            },
+            "blocks": "#gm4_soul_glass:piston"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetY": MAX-y,
+        "predicate": {
+          "block": {
+            "state": {
+              "type": "bottom"
+            },
+            "blocks": "#minecraft:slabs"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "offsetY": MAX-y,
+        "predicate": {
+          "block": {
+            "state": {
+              "type": "top"
+            },
+            "blocks": "#minecraft:slabs"
+          }
+        }
+      }
+    ]
+  })
+
+{
+  "condition": "minecraft:all_of",
+  "terms": block_checks
+}
