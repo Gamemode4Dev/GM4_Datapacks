@@ -7,17 +7,17 @@
 execute if score @s gm4_horse.level matches 15.. run return 0
 
 # | Max Health
-execute store result score $health gm4_horse_data run attribute @s max_health modifier value get gm4_horse.health 10
+execute store result score $health gm4_horse_data run attribute @s max_health modifier value get gm4_horse:health 10
 scoreboard players add $health gm4_horse_data 20
 execute store result storage gm4_horsemanship:temp attribute.health float 0.1 run scoreboard players get $health gm4_horse_data
 
 # | Movement Speed
-execute store result score $speed gm4_horse_data run attribute @s movement_speed modifier value get gm4_horse.speed 100000
+execute store result score $speed gm4_horse_data run attribute @s movement_speed modifier value get gm4_horse:speed 100000
 scoreboard players operation $speed gm4_horse_data += @s gm4_horse.speed_on_level
 execute store result storage gm4_horsemanship:temp attribute.speed float 0.00001 run scoreboard players get $speed gm4_horse_data
 
 # | Jump Strength
-execute store result score $jump gm4_horse_data run attribute @s jump_strength modifier value get gm4_horse.jump 100000
+execute store result score $jump gm4_horse_data run attribute @s jump_strength modifier value get gm4_horse:jump 100000
 scoreboard players operation $jump gm4_horse_data += @s gm4_horse.jump_strength_on_level
 execute store result storage gm4_horsemanship:temp attribute.jump float 0.00001 run scoreboard players get $jump gm4_horse_data
 
