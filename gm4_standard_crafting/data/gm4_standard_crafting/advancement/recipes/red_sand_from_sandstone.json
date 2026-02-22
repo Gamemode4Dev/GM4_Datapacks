@@ -4,7 +4,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_standard_crafting:red_sand"
+        "recipe": "gm4_standard_crafting:red_sand_from_sandstone"
       }
     },
     "has_materials": {
@@ -31,7 +31,7 @@
   ],
   "rewards": {
     "recipes": [
-      "gm4_standard_crafting:red_sand"
+      "gm4_standard_crafting:red_sand_from_sandstone"
     ]
   }
 }

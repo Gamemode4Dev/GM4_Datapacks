@@ -395,7 +395,7 @@
           "\n",
           {
             "insert": "recipe",
-            "recipe": "gm4_standard_crafting:red_sand"
+            "recipe": "gm4_standard_crafting:red_sand_from_sandstone"
           }
         ],
         [
