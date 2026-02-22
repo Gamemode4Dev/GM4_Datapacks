@@ -15,7 +15,7 @@ execute unless score $read_coordinates gm4_zc_data matches 1 if predicate gm4_za
 scoreboard players reset $read_coordinates gm4_zc_data
 
 # backwards compatibility with old wormholes from below v1.10
-# earlist version is tracked by our upgrade paths framework
+# earliest version is tracked by our upgrade paths framework
 execute if score zauber_cauldrons gm4_earliest_version matches ..110000 run function gm4_zauber_cauldrons:player/wormhole_targeting/translate_numeric_dimension_id with storage gm4_zauber_cauldrons:temp/wormhole_targeting/destination cauldron_pos
 
 # affect player with resistance
