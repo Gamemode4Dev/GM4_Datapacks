@@ -206,18 +206,6 @@
         ]
       }
     },
-    "obtain_sugar_cane": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:sugar_cane"
-            ]
-          }
-        ]
-      }
-    },
     "obtain_cherry_leaves": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -663,27 +651,6 @@
           {
             "insert": "recipe",
             "recipe": "gm4_standard_crafting:bamboo_block_chest"
-          }
-        ]
-      ],
-      "prerequisites": [
-        "default_recipes"
-      ]
-    },
-    {
-      "name": "paper_recipe",
-      "enable": [],
-      "requirements": [
-        [
-          "obtain_sugar_cane"
-        ]
-      ],
-      "pages": [
-        [
-          "\n\n\n",
-          {
-            "insert": "recipe",
-            "recipe": "gm4_standard_crafting:paper"
           }
         ]
       ],
