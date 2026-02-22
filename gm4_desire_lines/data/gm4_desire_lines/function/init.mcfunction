@@ -5,7 +5,7 @@ scoreboard objectives add gm4_dl_affcoarse dummy
 scoreboard players set #base_probability gm4_desire_lines 1
 scoreboard players set #sneak_penality gm4_desire_lines -5
 scoreboard players set #sprint_penalty gm4_desire_lines 1
-scoreboard players set #impact_penalty gm4_desire_lines 14
+scoreboard players set #impact_penalty gm4_desire_lines 31
 
 # considerations
 # walking speed = 4.317 blocks/s ~ 5 ticks / block
