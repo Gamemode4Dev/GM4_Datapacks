@@ -4,7 +4,7 @@
 # run from player
 
 # check blocks
-execute if predicate gm4_desire_lines:can_coarse_dirt run fill ~ ~-0.06 ~ ~ ~-0.06 ~ coarse_dirt replace dirt
+execute positioned ~ ~-0.06 ~ if predicate gm4_desire_lines:can_coarse_dirt run fill ~ ~-0.06 ~ ~ ~-0.06 ~ coarse_dirt replace dirt
 fill ~ ~-0.06 ~ ~ ~-0.06 ~ dirt replace grass_block
 fill ~ ~ ~ ~ ~ ~ air replace snow[layers=1]
 fill ~ ~ ~ ~ ~ ~ snow[layers=1] replace snow[layers=2]
