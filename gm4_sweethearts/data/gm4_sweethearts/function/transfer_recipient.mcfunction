@@ -1,7 +1,7 @@
 # @s = player near a sneaking player holding flower
 # run from sneaking
 
-# tag player
+# tag player, for selection in death message of donor
 tag @s add gm4_sh_recipient
 
 # run donor transfer
@@ -38,7 +38,8 @@ attribute @s minecraft:max_health modifier add minecraft:17d25a01-e9ba-4c08-8a79
 effect give @s minecraft:instant_health 1 0 true
 
 # revert max health
-tag @s add gm4_sh_transfered
+tag @s add gm4_sh_revert_health
+schedule function gm4_sweethearts:delayed_revert 1t
 
 # visuals
 particle heart ~ ~2 ~ 0.2 0.2 0.2 1 2

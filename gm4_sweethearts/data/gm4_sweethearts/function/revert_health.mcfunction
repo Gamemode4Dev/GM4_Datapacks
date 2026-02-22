@@ -1,5 +1,5 @@
-# @s = player that received or donated health
-# run from check_transfer
+# @s = player that received health
+# run from delayed_revert
 
 # revert max health
 attribute @s minecraft:max_health modifier remove minecraft:2a0687d4-f85c-4b07-9310-beaa76ef6f7d
@@ -13,8 +13,6 @@ attribute @s minecraft:max_health modifier remove minecraft:4cb0a7c9-22f2-4a73-8
 attribute @s minecraft:max_health modifier remove minecraft:e565e188-bfb5-47c4-83bd-7e0babf62ccb
 attribute @s minecraft:max_health modifier remove minecraft:52ff177d-8222-4810-924f-f8bd44b43cfd
 
-attribute @s minecraft:max_health modifier remove minecraft:381e44f6-ebee-4f7c-9aff-8471a843c4b2
 attribute @s minecraft:max_health modifier remove minecraft:17d25a01-e9ba-4c08-8a79-ee8f72fb033d
 
-
-tag @s remove gm4_sh_transfered
+tag @s remove gm4_sh_revert_health
