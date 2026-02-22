@@ -19,7 +19,7 @@
                             "tag": "{gm4_zauber_cauldrons:{item:'bottled_vex'}}"
                         },
                         {
-                            "function": "minecraft:copy_nbt",
+                            "function": "minecraft:copy_custom_data",
                             "source": {
                                 "type": "minecraft:storage",
                                 "source": "gm4_zauber_cauldrons:temp/item/bottled_vex"
