@@ -1,4 +1,5 @@
 # @s = sneaking player holding flower
+# at @s
 # run from main
 
 tag @s add gm4_sh_donor

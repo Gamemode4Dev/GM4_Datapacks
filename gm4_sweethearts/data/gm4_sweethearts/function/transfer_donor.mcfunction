@@ -1,4 +1,5 @@
 # @s = sneaking player donating health
+# at @s
 # run from transfer_recipient
 
 # turn off death messages for potential death

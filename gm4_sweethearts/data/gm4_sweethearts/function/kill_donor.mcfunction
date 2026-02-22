@@ -1,4 +1,5 @@
 # @s = sneaking player donating health
+# at @s
 # run from transfer_donor
 
 advancement grant @s only gm4:sweethearts

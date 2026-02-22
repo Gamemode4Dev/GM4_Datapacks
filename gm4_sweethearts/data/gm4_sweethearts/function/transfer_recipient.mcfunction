@@ -1,5 +1,6 @@
 # @s = player near a sneaking player holding flower
-# run from sneaking
+# at @s
+# run from transferring
 
 # tag player, for selection in death message of donor
 tag @s add gm4_sh_recipient

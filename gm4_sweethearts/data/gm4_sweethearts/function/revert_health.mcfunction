@@ -1,4 +1,5 @@
-# @s = player that received health
+# @s = player that received health, tagged with gm4_sh_revert_health
+# at undefined
 # run from delayed_revert
 
 # revert max health
