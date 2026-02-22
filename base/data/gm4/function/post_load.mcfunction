@@ -4,5 +4,6 @@ execute if data storage gm4:log queue[{type:"install"}] run data modify storage 
 
 function gm4:log_wait
 
+say post load
 function #gm4:evaluate_environment_checks
 schedule function gm4:await_environment_check_results 1t
