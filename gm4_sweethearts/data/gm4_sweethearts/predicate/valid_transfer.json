@@ -1,14 +1,33 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "flags": {
-      "is_sneaking": true
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "flags": {
+          "is_sneaking": true
+        },
+        "equipment": {
+          "mainhand": {
+            "items": "#minecraft:small_flowers"
+          }
+        }
+      }
     },
-    "equipment": {
-      "mainhand": {
-        "items": "#minecraft:small_flowers"
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "flags": {
+          "is_sneaking": true
+        },
+        "equipment": {
+          "offhand": {
+            "items": "#minecraft:small_flowers"
+          }
+        }
       }
     }
-  }
+  ]
 }
