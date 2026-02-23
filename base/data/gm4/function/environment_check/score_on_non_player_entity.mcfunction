@@ -3,6 +3,5 @@
 # at unspecified
 # run from modules which require this environment check
 
-say non player score
 # start environment check as marker
 execute summon marker run function gm4:environment_check/score_on_non_player_entity/assign_score
