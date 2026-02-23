@@ -18,6 +18,7 @@ meta:
     versioning:
       required:
         lib_machines: 1.4.0
+        lib_forceload: 1.5.0
       schedule_loops: [main]
     model_data:
       - item: player_head
