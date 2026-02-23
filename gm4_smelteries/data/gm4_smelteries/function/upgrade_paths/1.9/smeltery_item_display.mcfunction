@@ -15,7 +15,8 @@ summon item_display ~ ~ ~ {\
 # copy data from armor stand
 execute rotated as @s run rotate @e[type=item_display,tag=gm4_smeltery_display,limit=1,distance=..0.01] ~ ~
 item replace entity @e[type=item_display,tag=gm4_smeltery_display,limit=1,distance=..0.01] contents from entity @s armor.head
-# copy entity version (we dont technically need to increment it)
-scoreboard players operation @e[type=item_display,tag=gm4_smeltery_display,limit=1,distance=..0.01] gm4_entity_version = @s gm4_entity_version
+# increment entity version (this function handles the marker as well)
+scoreboard players set @e[type=item_display,tag=gm4_smeltery_display,limit=1,distance=..0.01] gm4_entity_version 2
+scoreboard players set @e[type=marker,tag=gm4_smeltery,limit=1,distance=..0.01] gm4_entity_version 2
 
 kill @s

@@ -16,5 +16,5 @@ data remove storage gm4_smelteries:placement temp
 # mark block as placed
 playsound block.anvil.use block @a[distance=..4] ~ ~ ~ 1 0.8
 scoreboard players set $placed_block gm4_machine_data 1
-scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 1
+scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 2
 tag @e[distance=..3] remove gm4_new_machine
