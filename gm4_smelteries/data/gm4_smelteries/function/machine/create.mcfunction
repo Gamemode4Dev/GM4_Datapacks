@@ -4,10 +4,14 @@
 # run from gm4_smelteries:machine/verify_place_down
 
 # place block depending on rotation
-execute if score $single_rotation gm4_machine_data matches 1 run function gm4_smelteries:machine/rotate/south
-execute if score $single_rotation gm4_machine_data matches 2 run function gm4_smelteries:machine/rotate/west
-execute if score $single_rotation gm4_machine_data matches 3 run function gm4_smelteries:machine/rotate/north
-execute if score $single_rotation gm4_machine_data matches 4 run function gm4_smelteries:machine/rotate/east
+execute if score $single_rotation gm4_machine_data matches 1 run data modify storage gm4_smelteries:placement temp set value {facing:"south",Rotation:[0.0f,0.0f]}
+execute if score $single_rotation gm4_machine_data matches 2 run data modify storage gm4_smelteries:placement temp set value {facing:"west",Rotation:[90.0f,0.0f]}
+execute if score $single_rotation gm4_machine_data matches 3 run data modify storage gm4_smelteries:placement temp set value {facing:"north",Rotation:[180.0f,0.0f]}
+execute if score $single_rotation gm4_machine_data matches 4 run data modify storage gm4_smelteries:placement temp set value {facing:"east",Rotation:[-90.0f,0.0f]}
+
+function gm4_smelteries:machine/place_rotated with storage gm4_smelteries:placement temp
+
+data remove storage gm4_smelteries:placement temp
 
 # link cauldron stand to smeltery marker
 execute store result score $new gm4_smelt_id run data get entity @e[type=marker,distance=..0.1,tag=gm4_new_machine,limit=1] UUID[3]
