@@ -18,5 +18,5 @@ data remove storage gm4_disassemblers:temp placement
 # mark block as placed
 playsound minecraft:block.anvil.place master @a ~ ~ ~ 0.9 0.1
 scoreboard players set $placed_block gm4_machine_data 1
-scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 1
+scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 2
 tag @e[distance=..2] remove gm4_new_machine

@@ -1,6 +1,6 @@
 id: gm4_disassemblers
 name: Disassemblers
-version: 2.5.X
+version: 2.6.X
 
 data_pack:
   load: .
