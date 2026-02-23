@@ -4,11 +4,27 @@
 # run from gm4_smelteries:machine/create
 
 # place furnace
-$setblock ~ ~ ~ furnace[facing=$(facing)]{CustomName:{"translate":"gm4.second","fallback":"%1$s","with":[{"translate":"container.gm4.smeltery","fallback":"Smeltery"},[{"text":" ","font":"gm4:half_invert"},{"translate":"container.gm4.smeltery","fallback":"Smeltery","font":"gm4:half_invert"},{"translate":"container.gm4.smeltery","fallback":"Smeltery","font":"gm4:offscreen"},{"translate":"gui.gm4.smeltery","fallback":"","font":"gm4:container_gui","color":"white"},{"text":" ","font":"gm4:half_invert"},{"translate":"container.gm4.smeltery","fallback":"Smeltery","font":"gm4:half_invert"},{"translate":"container.gm4.smeltery","fallback":"Smeltery","font":"gm4:default","color":"#404040"}]]}}
+$setblock ~ ~ ~ furnace[facing=$(facing)]
+data merge block ~ ~ ~ {CustomName:{"translate":"gm4.second","fallback":"%1$s","with":[{"translate":"container.gm4.smeltery","fallback":"Smeltery"},[{"text":" ","font":"gm4:half_invert"},{"translate":"container.gm4.smeltery","fallback":"Smeltery","font":"gm4:half_invert"},{"translate":"container.gm4.smeltery","fallback":"Smeltery","font":"gm4:offscreen"},{"translate":"gui.gm4.smeltery","fallback":"","font":"gm4:container_gui","color":"white"},{"text":" ","font":"gm4:half_invert"},{"translate":"container.gm4.smeltery","fallback":"Smeltery","font":"gm4:half_invert"},{"translate":"container.gm4.smeltery","fallback":"Smeltery","font":"gm4:default","color":"#404040"}]]}}
 
-# summon cauldron display armor stand
-$execute positioned ^ ^ ^1 run summon armor_stand ~ ~-1.5 ~ {NoGravity:1b,Marker:1b,Invulnerable:1b,Invisible:1b,Silent:1b,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_smeltery_cauldron","gm4_machine_display","smithed.entity","smithed.strict","gm4_new_machine"],HasVisualFire:1b,CustomName:"gm4_smeltery_cauldron",Rotation:$(Rotation)}
+# summon cauldron display
+$summon item_display ~ ~ ~ {\
+  CustomName:"gm4_smeltery_cauldron",\
+  Tags:["gm4_no_edit","gm4_smeltery_cauldron","gm4_machine_display","smithed.entity","smithed.strict","gm4_new_machine"],\
+  item_display:head,\
+  brightness:{sky:15,block:15},\
+  Rotation:$(Rotation),\
+  transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.1875f,-1.0f],scale:[0.625,0.625,0.625]}\
+}
 
-# summon display armor stand and marker entity
-$summon armor_stand ~ ~-0.3 ~ {Small:1b,NoGravity:1b,Marker:1b,Invulnerable:1b,Invisible:1b,Silent:1b,DisabledSlots:4144959,Tags:["gm4_no_edit","gm4_smeltery_stand","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],HasVisualFire:1b,CustomName:"gm4_smeltery_stand",equipment:{head:{id:"minecraft:iron_block",count:1,components:{"minecraft:custom_model_data":{"strings":["gm4_smelteries:block/smeltery_unlit"]}}}},Rotation:$(Rotation)}
+# summon display and marker entity
+$summon item_display ~ ~ ~ {\
+  CustomName:"gm4_smeltery_display",\
+  Tags:["gm4_no_edit","gm4_smeltery_display","gm4_machine_display","smithed.entity","smithed.strict","gm4_new_machine"],\
+  item:{id:"minecraft:iron_block",count:1,components:{"minecraft:custom_model_data":{"strings":["gm4_smelteries:block/smeltery_unlit"]}}},\
+  item_display:head,\
+  brightness:{sky:15,block:15},\
+  Rotation:$(Rotation),\
+  transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.601f,0f],scale:[0.438,0.438,0.438]}\
+}
 $summon marker ~ ~ ~ {Tags:["gm4_smeltery","gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:"gm4_smeltery",Rotation:$(Rotation)}
