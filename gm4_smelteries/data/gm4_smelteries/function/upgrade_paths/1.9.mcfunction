@@ -1,5 +1,3 @@
-# @s = player
-# at @s
 # run via upgrade paths util
 
 execute as @e[type=minecraft:armor_stand,tag=gm4_smeltery_stand] at @s positioned ~ ~0.3 ~ \
