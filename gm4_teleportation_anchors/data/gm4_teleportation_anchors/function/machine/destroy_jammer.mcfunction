@@ -3,8 +3,9 @@
 # located at @s
 # run from gm4_teleportation_anchors:machine/verify_destroy
 
-# kill entities related to machine block (armor stand kill needed for legacy compat)
+# legacy armor stand cleanup - TODO: remove this when we stop supporting the upgrade path
 execute positioned ~ ~-0.4 ~ run kill @e[type=armor_stand,tag=gm4_teleportation_jammer_stand,limit=1,distance=..0.01]
+# kill entities related to machine block
 kill @e[type=item_display,tag=gm4_teleportation_jammer_display,limit=1,distance=..0.01]
 execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..1,nbt={Age:0s,Item:{id:"minecraft:dropper",count:1,components:{}}},limit=1,sort=nearest]
 kill @s
