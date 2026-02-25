@@ -24,10 +24,10 @@
             },
             {
               "function": "set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.everstone",
-                "fallback": "Everstone",
-                "italic": false
+                "fallback": "Everstone"
               }
             }
           ]

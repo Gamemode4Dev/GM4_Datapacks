@@ -288,9 +288,9 @@
                 "translate": "text.gm4.guidebook.monsters_unbound.burned",
                 "fallback": "burned",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.desert"
@@ -362,9 +362,9 @@
                 "translate": "text.gm4.guidebook.monsters_unbound.flowering",
                 "fallback": "flowering",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.sunflower_plains"
@@ -407,9 +407,9 @@
                 "translate": "text.gm4.guidebook.monsters_unbound.growth",
                 "fallback": "growth",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.snowy_taiga"
@@ -464,9 +464,9 @@
                 "translate": "text.gm4.guidebook.monsters_unbound.mountainous",
                 "fallback": "mountainous",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.snowy_slopes"
@@ -541,9 +541,9 @@
                 "translate": "text.gm4.guidebook.monsters_unbound.snowy",
                 "fallback": "snowy",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.snowy_plains"
@@ -614,9 +614,9 @@
                 "translate": "text.gm4.guidebook.monsters_unbound.toxic",
                 "fallback": "toxic",
                 "color": "blue",
-                "hoverEvent": {
+                "hover_event": {
                   "action": "show_text",
-                  "contents": [
+                  "value": [
                     "- ",
                     {
                       "translate": "biome.minecraft.swamp"

@@ -25,24 +25,10 @@ from beet.contrib.link import LinkManager
 from beet.contrib.vanilla import Vanilla, ClientJar
 from beet.core.utils import format_validation_error
 from mecha import (
-    AstCommand,
-    AstItemComponent,
-    AstItemPredicateTestComponent,
-    AstJson,
     AstJsonObject,
-    AstJsonObjectEntry,
-    AstJsonObjectKey,
     AstNbtCompound,
-    AstNbtCompoundEntry,
-    AstNbtCompoundKey,
-    AstNbtPath,
-    AstNbtPathKey,
-    AstNbtValue,
     Diagnostic,
-    DiagnosticCollection,
-    DiagnosticError,
     Mecha,
-    MutatingReducer,
     Reducer,
     rule,
 )
@@ -51,10 +37,8 @@ from pydantic import BaseModel, Field, TypeAdapter, ValidationError, ValidationI
 from tokenstream import set_location
 
 from gm4.utils import (
-    InvokeOnJsonNbt,
     MapOption,
     add_namespace,
-    propagate_location,
 )
 
 JsonType = dict[str,Any]
@@ -295,7 +279,6 @@ def beet_default(ctx: Context):
     tl = ctx.inject(TranslationLinter)
     ctx.require("mecha.contrib.json_files")
     # mecha register
-    ctx.inject(Mecha).transform.extend(rp)
     ctx.inject(Mecha).lint.extend(tl)
 
     logging.getLogger("beet.contrib.babelbox").addFilter(block_incomplete_translation)
@@ -358,7 +341,7 @@ def link_resource_pack(ctx: Context):
 
     lm.data_pack = dp_dir # restore the DP link
 
-class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
+class GM4ResourcePack:
     """Service Object handling custom_model_data and generated item models"""
 
     def __init__(self, ctx: Context):
@@ -419,42 +402,6 @@ class GM4ResourcePack(MutatingReducer, InvokeOnJsonNbt):
                 })
 
             self.ctx.assets.item_models[f"minecraft:{item_id}"] = ItemModel(new_itemdef)
-
-
-    #== Mecha Transformer Rules ==#
-    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value="minecraft:custom_model_data"))
-    def json_substitutions(self, node: AstJsonObjectEntry, **kwargs: Any):
-        # TODO: validate custom model data strings
-        return node
-
-    @rule(AstJsonObject)
-    def json_substitutions_item_modifier(self, node: AstJsonObject, **kwargs: Any):
-        # TODO: validate custom model data strings
-        return node
-
-    @rule(AstNbtCompoundEntry, key=AstNbtCompoundKey(value="minecraft:custom_model_data"))
-    def cmd_substitutions_nbt(self, node: AstNbtCompoundEntry, **kwargs: Any):
-        # TODO: validate custom model data strings
-        return node
-
-    @rule(AstItemComponent)
-    @rule(AstItemPredicateTestComponent)
-    def cmd_substitutions_component(self, node: AstItemComponent | AstItemPredicateTestComponent, **kwargs: Any):
-        # TODO: validate custom model data strings
-        return node
-
-    @rule(AstCommand, identifier="data:modify:storage:target:targetPath:set:value:value")
-    @rule(AstCommand, identifier="data:modify:block:targetPos:targetPath:set:value:value")
-    @rule(AstCommand, identifier="data:modify:entity:target:targetPath:set:value:value")
-    def cmd_substitutions_datamodify(self, node: AstCommand):
-        _ast_target, ast_target_path, ast_nbt = node.arguments
-        match ast_target_path, ast_nbt:
-            case AstNbtPath(components=[*_, AstNbtPathKey(value="minecraft:custom_model_data")]), AstNbtValue(value=String(_reference)):
-                pass # TODO: validate custom model data strings
-            case _:
-                pass
-        return node
-
 
     #== Model file generation ==#
     def generate_model_files(self):
@@ -520,19 +467,6 @@ class TranslationLinter(Reducer):
         self.backfill_values: dict[str, str] = {}
         self.ignored_keys: set[str] = set(ctx.validate("gm4", TranslationLinterOptions).translation_linter_ignores)
         super().__init__()
-
-    @rule(AstNbtValue)
-    def check_nbt_json(self, node: AstNbtValue):
-        mc = self.ctx.inject(Mecha)
-        if isinstance(node.value, (String, str)):
-            try:
-                json_ast = mc.parse(node.value, type=AstJson)
-                with self.use_diagnostics(collec:=DiagnosticCollection()):
-                    self.invoke(json_ast) # process new node with reducer rules
-                for exc in collec.exceptions:
-                    yield propagate_location(exc, node)
-            except DiagnosticError:
-                pass # string is not json
 
     @rule(AstNbtCompound)
     @rule(AstJsonObject)

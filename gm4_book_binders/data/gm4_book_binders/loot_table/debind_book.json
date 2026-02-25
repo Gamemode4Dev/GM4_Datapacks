@@ -25,11 +25,10 @@ for enchantment in enchantments:
             {
               "function": "minecraft:set_name",
               "entity": "this",
-              "target": "custom_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.enchanted_page",
-                "fallback": "Enchanted Page",
-                "italic": false
+                "fallback": "Enchanted Page"
               }
             },
             {

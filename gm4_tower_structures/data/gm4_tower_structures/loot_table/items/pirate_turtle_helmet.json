@@ -19,10 +19,10 @@
                         },
                         {
                             "function": "minecraft:set_name",
+                            "target": "item_name",
                             "name": {
                                 "translate": "item.gm4.tower_structures.pirate_turtle_helmet",
-                                "fallback": "Pirate Turtle Helmet",
-                                "italic": false
+                                "fallback": "Pirate Turtle Helmet"
                             }
                         }
                     ]

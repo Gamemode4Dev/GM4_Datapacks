@@ -9,10 +9,10 @@
                     "functions": [
                         {
                             "function": "minecraft:set_name",
+                            "target": "item_name",
                             "name": {
                                 "translate": "item.gm4.endermite_egg",
-                                "fallback": "Endermite Egg",
-                                "italic": false
+                                "fallback": "Endermite Egg"
                             }
                         },
                         {

@@ -27,10 +27,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "text.gm4.guidebook.title",
-                "fallback": "Gamemode 4 Guidebook",
-                "italic": false
+                "fallback": "Gamemode 4 Guidebook"
               }
             }
           ]

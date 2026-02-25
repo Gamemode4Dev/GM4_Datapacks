@@ -935,7 +935,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
             ingr = ingr[0]
           elif ingr.startswith("#"):
             vanilla = ctx.inject(Vanilla)
-            vanilla.minecraft_version = '1.21.5'
+            vanilla.minecraft_version = '1.21.11'
             ingr = get_item_from_tag(ingr, vanilla)
           ingredients.append(ingr)
 
@@ -968,7 +968,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
         ingr = ingr[0]
       elif ingr.startswith("#"):
         vanilla = ctx.inject(Vanilla)
-        vanilla.minecraft_version = '1.21.5'
+        vanilla.minecraft_version = '1.21.11'
         ingr = get_item_from_tag(ingr, vanilla)
       ingredients.append(ingr)
     while len(ingredients) < 9:

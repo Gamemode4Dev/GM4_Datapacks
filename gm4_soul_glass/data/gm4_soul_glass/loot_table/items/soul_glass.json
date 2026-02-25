@@ -20,10 +20,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.soul_glass",
-                "fallback": "Soul Glass",
-                "italic": false
+                "fallback": "Soul Glass"
               }
             }
           ]

@@ -21,10 +21,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -64,10 +64,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -119,10 +119,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -204,10 +204,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -271,10 +271,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -332,10 +332,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -393,10 +393,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -448,10 +448,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -509,10 +509,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -564,10 +564,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -619,10 +619,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -680,10 +680,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -723,10 +723,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -784,10 +784,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -845,10 +845,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -912,10 +912,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -985,10 +985,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -1040,10 +1040,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -1101,10 +1101,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {
@@ -1168,10 +1168,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.message_in_a_bottle",
-                "fallback": "Message in a Bottle",
-                "italic": false
+                "fallback": "Message in a Bottle"
               }
             },
             {

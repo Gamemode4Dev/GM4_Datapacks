@@ -1,0 +1,18 @@
+use ::java::util::text::Text
+
+dispatch minecraft:storage[gm4_holographic_tags:temp] to struct {
+  properties?: struct {
+    raw_text?: Text,
+    glowing?: boolean,
+    rotation?: [float] @ 2,
+    rotation_hologram?: [float] @ 2,
+    rotation_x_hologram?: int,
+    rotation_y_hologram?: int,
+    text?: string,
+    rotation_item_frame?: [float] @ 2,
+    rotation_x_item_frame?: int,
+    rotation_y_item_frame?: int,
+    rotation_x_differs?: int,
+    rotation_y_differs?: int,
+  },
+}

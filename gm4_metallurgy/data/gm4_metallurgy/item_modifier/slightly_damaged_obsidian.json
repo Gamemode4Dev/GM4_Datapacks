@@ -3,6 +3,7 @@
     "function": "minecraft:set_components",
     "components": {
       "minecraft:custom_model_data": {"strings":["gm4_metallurgy:item/slightly_damaged_obsidian"]},
+      "!minecraft:item_name": {},
       "!minecraft:custom_name": {},
       "!minecraft:profile": {}
     }

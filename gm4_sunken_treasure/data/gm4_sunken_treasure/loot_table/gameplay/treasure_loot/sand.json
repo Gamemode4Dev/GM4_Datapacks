@@ -87,10 +87,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.waders",
-                "fallback": "Waders",
-                "italic": false
+                "fallback": "Waders"
               }
             },
             {
@@ -222,10 +222,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "block.gm4.shipwreck_supply_chest",
-                "fallback": "Shipwreck Supply Chest",
-                "italic": false
+                "fallback": "Shipwreck Supply Chest"
               }
             }
           ]
@@ -246,10 +246,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "block.gm4.shipwreck_treasure_chest",
-                "fallback": "Shipwreck Treasure Chest",
-                "italic": false
+                "fallback": "Shipwreck Treasure Chest"
               }
             }
           ]
@@ -270,10 +270,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "block.gm4.treasure_chest",
-                "fallback": "Treasure Chest",
-                "italic": false
+                "fallback": "Treasure Chest"
               }
             }
           ]
