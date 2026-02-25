@@ -73,7 +73,7 @@ meta:
       schedule_loops: []
 
       # List of environment checks to include
-      environment_checks: [gm4:score_on_non_player_entity]
+      echecks: [gm4:score_on_non_player_entity]
     website:
       description: Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blocks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.
       recommended: []
@@ -93,7 +93,7 @@ meta:
 
 Multiple checks may be included and are executed in-order:
 ```yaml
-environment_checks: [gm4:score_on_non_player_entity, gm4_double_doors:bloo_is_not_online, lib_forceload:command_blocks_enabled]
+echecks: [gm4:score_on_non_player_entity, gm4_double_doors:bloo_is_not_online, lib_forceload:command_blocks_enabled]
 ```
 
 As shown above, environment checks are namespaced. If the namespace is omitted, the namespace of the parent module is used.
@@ -102,7 +102,7 @@ Environment checks are run on every reload, with each check only running once pe
 For testing purposes, environment checks may be bypassed by setting a positive test result before reloading data packs.
 To do this run
 ```mcfunction
-/data modify storage {namespace}:environment_checks result.{check name}.passed set value 1b
+/data modify storage {namespace}:echecks result.{check name}.passed set value 1b
 ```
 and run `/reload`.
 This has to be repeated before each reload.
@@ -124,17 +124,17 @@ Hence, you probably don't need to add these checks to your module if you already
 
 ### Creating New Environment Checks
 Modules may also introduce their own environment checks.
-Any functions contained directly within the `function/environment_check/` folder of a module are treated as environment checks and may be mentioned within 'beet.yaml`.
-Functions in subfolders within `function/environment_check/` are ignored and can therefore be used as helper functions.
+Any functions contained directly within the `function/echeck/` folder of a module are treated as environment checks and may be mentioned within 'beet.yaml`.
+Functions in subfolders within `function/echeck/` are ignored and can therefore be used as helper functions.
 
 To indicate a successful environment check include
 ```mcfunction
-data modify storage <namespace>:environment_checks result set value {<check name>: {passed: 1b}}
+data modify storage <namespace>:echecks result set value {<check name>: {passed: 1b}}
 ```
 within your check, replacing `<namespace>` and `<check name>` with the module's namespace and the new check's name (identical to the file name without the `.mcfunction` suffix) respectively.
 Optionally, a failed environment check can display a message to the user by including
 ```mcfunction
-data modify storage <namespace>:environment_checks result set value {<check name>: {probable_cause: "This may be caused by the programmer not expecting you to run this on a potato."}}
+data modify storage <namespace>:echecks result set value {<check name>: {probable_cause: "This may be caused by the programmer not expecting you to run this on a potato."}}
 ```
 within your check, once again replacing the `<namespace>` and `<check name>` with the module's and the new check's name respectively, as well as adding a more adequate message.
 
@@ -142,7 +142,7 @@ Multiple modules may require the same environment check during a single reload.
 To cut down on lag, you should ensure your environment check tries to use a previous test result -- from the same `/reload` period -- before deciding to re-run the test.
 This can be done using
 ```mcfunction
-execute unless data storage <namespace>:environment_checks result.<check name>
+execute unless data storage <namespace>:echecks result.<check name>
 ```
 You **must also clear all check results** in post-load.
 

@@ -1,6 +1,6 @@
 data merge storage gm4:log {queue:[],versions:[]}
-data modify storage gm4:log environment_checks set value []
-schedule clear gm4:await_environment_check_results
+data modify storage gm4:log echecks set value []
+schedule clear gm4:await_echeck_results
 data modify storage gm4:log queue append value {type:"text",message:{"text":"[GM4]: Checking for updates...","color":"#4AA0C7"}}
 
 scoreboard objectives add gm4_modules dummy

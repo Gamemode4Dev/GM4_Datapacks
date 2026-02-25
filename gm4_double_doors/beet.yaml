@@ -16,7 +16,7 @@ meta:
   gm4:
     versioning:
       schedule_loops: []
-      environment_checks: [gm4:score_on_non_player_entity]
+      echecks: [gm4:score_on_non_player_entity]
     website:
       description: Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blocks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.
       recommended: []

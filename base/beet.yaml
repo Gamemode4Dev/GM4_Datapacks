@@ -24,8 +24,6 @@ meta:
       extra_version_injections:
         advancements:
           - 'gm4:intro_song/play_song'
-        functions:
-          - 'gm4:environment_check/score_on_non_player_entity'
     model_data:
       - item: command_block
         reference: gm4:gui/advancement/root

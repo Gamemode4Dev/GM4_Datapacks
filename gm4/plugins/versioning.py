@@ -13,7 +13,7 @@ class VersionInjectionConfig(PluginOptions):
     advancements: list[str] = []
 
 class VersioningConfig(PluginOptions, extra="ignore"):
-    environment_checks: list[str] = []
+    echecks: list[str] = []
     schedule_loops: list[str] = []
     required: dict[str, str] = {}
     extra_version_injections: VersionInjectionConfig = Field(default=VersionInjectionConfig())
@@ -23,7 +23,7 @@ def modules(ctx: Context, opts: VersioningConfig):
     """Assembles version-functions for modules from dependency information:
         - load:{module_name}.json
         - {module_name}:load.mcfunction
-        - {module_name}:environment_checks.mcfunction
+        - {module_name}:echecks.mcfunction
         - load:load.json
     """
     ctx.cache["currently_building"].json = {"name": ctx.project_name, "id": ctx.project_id, "added_libs": []} # cache module's project id for access within library pipelines
@@ -63,9 +63,9 @@ def modules(ctx: Context, opts: VersioningConfig):
         log_message_commands.append(f"execute if score {dep_id} load.status matches {dep_ver.major} unless score {dep_id}_minor load.status matches {dep_ver.minor}.. run data modify storage gm4:log queue append value {log_data}")
 
     # add environment check requests
-    environment_check_requests: List[str] = []
-    for namespaced_environment_check in opts.environment_checks:
-        match namespaced_environment_check.split(":"):
+    echeck_requests: List[str] = []
+    for namespaced_echeck in opts.echecks:
+        match namespaced_echeck.split(":"):
             case [
                 check
             ]:  # if no namespace is given, assume current project's namespace
@@ -73,12 +73,12 @@ def modules(ctx: Context, opts: VersioningConfig):
             case [namespace, check]:
                 pass
             case _:
-                raise ValueError(f"{namespaced_environment_check} is not a valid environment check name!")
-        environment_check_requests.append(f"execute unless data storage gm4:log environment_checks[{{ecid:\"{namespace}:{check}\"}}] run data modify storage gm4:log environment_checks append value {{ecid:\"{namespace}:{check}\",required_by:[],result:{{passed:-1}}}}")
-        environment_check_requests.append(f"data modify storage gm4:log environment_checks[{{ecid:\"{namespace}:{check}\"}}].required_by append value \"{ctx.project_id}\"")
+                raise ValueError(f"{namespaced_echeck} is not a valid environment check name!")
+        echeck_requests.append(f"execute unless data storage gm4:log echecks[{{echeck_id:\"{namespace}:{check}\"}}] run data modify storage gm4:log echecks append value {{echeck_id:\"{namespace}:{check}\",required_by:[],result:{{passed:-1}}}}")
+        echeck_requests.append(f"data modify storage gm4:log echecks[{{echeck_id:\"{namespace}:{check}\"}}].required_by append value \"{ctx.project_id}\"")
 
-    if 0 < len(environment_check_requests):  # append an empty line to envcheck command list if there is at least one envcheck
-        environment_check_requests.append("")
+    if 0 < len(echeck_requests):  # append an empty line to envcheck command list if there is at least one envcheck
+        echeck_requests.append("")
 
     # parse module version
     module_ver = Version(ctx.project_version)
@@ -103,13 +103,13 @@ def modules(ctx: Context, opts: VersioningConfig):
             dependency_check_command
             + f"run scoreboard players set {ctx.project_id}_minor load.status {module_ver.minor}",
             "",
-            *environment_check_requests,
+            *echeck_requests,
             *log_message_commands,
         ]
     )
 
-    # environment_checks.mcfunction if this data pack defines environment checks
-    index_environment_checks(ctx, module_ver)
+    # echecks.mcfunction if this data pack defines environment checks
+    index_echecks(ctx, module_ver)
 
     # load.json tag
     ctx.data.function_tags["load:load"] = FunctionTag({
@@ -127,7 +127,7 @@ def libraries(ctx: Context, opts: VersioningConfig):
     """Assembles version-functions for libraries from dependency information:
     - {lib_name}:enumerate.mcfunction
     - {lib_name}:resolve_load.mcfunction
-    - {lib_name}:environment_checks.mcfunction
+    - {lib_name}:echecks.mcfunction
     - load:{lib_name}.json
     - load:{lib_name}/enumerate.json
     - load:{lib_name}/resolve_load.json
@@ -169,8 +169,8 @@ def libraries(ctx: Context, opts: VersioningConfig):
 
     ctx.data.functions[f"{ctx.project_id}:resolve_load"] = Function(lines)
 
-    # environment_checks.mcfunction if this data pack defines environment checks
-    index_environment_checks(ctx, lib_ver)
+    # echecks.mcfunction if this data pack defines environment checks
+    index_echecks(ctx, lib_ver)
 
     # load/tags {{ lib name }}.json
     ctx.data.function_tags[f"load:{ctx.project_id}"] = FunctionTag({
@@ -244,7 +244,7 @@ def base(ctx: Context, opts: VersioningConfig):
     ctx.data.functions[f"gm4:resolve_post_load"] = Function(lines)
 
     # index env checks
-    index_environment_checks(ctx, ver)
+    index_echecks(ctx, ver)
 
     versioned_advancements(ctx, ver, opts.extra_version_injections.advancements, strict=True) #type:ignore
 
@@ -265,7 +265,7 @@ def versioned_namespace(ctx: Context, version: Version):
         "replace": f"{versioned_namespace}:\\1"
     }))
     ctx.require(find_replace(data_pack={"match": "*"}, substitute={
-        "find": f"(?<![#$])(?<!storage )(?<!storage\":\")(?<!ecid:\"){namespace}:([a-z0-9_/]+)", # NOTE because re module requires fixed-length look behind, storage-referencing json *must* use no spaces between "storage":"ns:loc"
+        "find": f"(?<![#$])(?<!storage )(?<!storage\":\")(?<!echeck_id:\"){namespace}:([a-z0-9_/]+)", # NOTE because re module requires fixed-length look behind, storage-referencing json *must* use no spaces between "storage":"ns:loc"
         "replace": f"{versioned_namespace}:\\1"
     }))
 
@@ -337,18 +337,18 @@ def versioned_functions(ctx: Context, ver: Version, targets: list[str]):
         )
     )
 
-def index_environment_checks(ctx: Context, ver: Version):
+def index_echecks(ctx: Context, ver: Version):
     """
-    Builds the (versioned) {namespace}:environment_checks.mcfunction file based on entries in
-    #gm4:evaluate_environment_checks and points the #gm4:evaluate_environment_checks function tag at it.
+    Builds the (versioned) {namespace}:echecks.mcfunction file based on entries in
+    #gm4:evaluate_echecks and points the #gm4:evaluate_echecks function tag at it.
     """
 
-    if "gm4:evaluate_environment_checks" not in ctx.data.function_tags:
+    if "gm4:evaluate_echecks" not in ctx.data.function_tags:
         return  # no environment checks defined by this module/library/base.
 
-    # read out defined environment checks and build environment_checks.mcfunction (introduces active-version checking)
-    lines = ["# Auto-generated by gm4/plugins/versioning.py -> index_environment_checks. Injects active-version checks into environment check entry points.",]
-    for entry_point in ctx.data.function_tags['gm4:evaluate_environment_checks'].data["values"]:
+    # read out defined environment checks and build echecks.mcfunction (introduces active-version checking)
+    lines = ["# Auto-generated by gm4/plugins/versioning.py -> index_echecks. Injects active-version checks into environment check entry points.",]
+    for entry_point in ctx.data.function_tags['gm4:evaluate_echecks'].data["values"]:
 
         # append conditional environment check entry point
         # only run check if:
@@ -357,15 +357,15 @@ def index_environment_checks(ctx: Context, ver: Version):
         # - the environment check has not yet been evaluated this reload (in-built caching)
         lines.append(
             f"""execute if score gm4 load.status matches {ver.major} if score gm4_minor load.status matches {ver.minor} \\
-            if data storage gm4:log environment_checks.[{{ecid:"{entry_point}"}}] \\
-            if data storage gm4:log environment_checks.[{{ecid:"{entry_point}",result:{{passed:-1}}}}] \\
+            if data storage gm4:log echecks.[{{echeck_id:"{entry_point}"}}] \\
+            if data storage gm4:log echecks.[{{echeck_id:"{entry_point}",result:{{passed:-1}}}}] \\
             run function {entry_point}"""
         )
-    ctx.data.functions[f"{ctx.project_id}:environment_checks"] = Function(lines)
+    ctx.data.functions[f"{ctx.project_id}:echecks"] = Function(lines)
 
-    # point function tag to environment_checks.mcfunction
-    ctx.data.function_tags["gm4:evaluate_environment_checks"] = FunctionTag(
-        {"values": [f"{ctx.project_id}:environment_checks"]}
+    # point function tag to echecks.mcfunction
+    ctx.data.function_tags["gm4:evaluate_echecks"] = FunctionTag(
+        {"values": [f"{ctx.project_id}:echecks"]}
     )
 
 
