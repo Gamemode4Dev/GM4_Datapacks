@@ -3,7 +3,7 @@
 # located at @s
 # run from gm4_smelteries:machine/verify_destroy
 
-# legacy cleanup
+# legacy cleanup - TODO: remove this when we stop supporting the upgrade path
 execute positioned ~ ~-0.3 ~ run kill @e[type=armor_stand,tag=gm4_smeltery_stand,limit=1,distance=..0.01]
 scoreboard players operation $current gm4_smelt_id = @s gm4_smelt_id
 execute positioned ^ ^-1.5 ^-1 as @e[type=armor_stand,tag=gm4_smeltery_cauldron,distance=..0.01] if score @s gm4_smelt_id = $current gm4_smelt_id run kill @s
