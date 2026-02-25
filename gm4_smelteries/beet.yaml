@@ -1,6 +1,6 @@
 id: gm4_smelteries
 name: Smelteries
-version: 1.9.X
+version: 1.8.X
 
 data_pack:
   load: .
