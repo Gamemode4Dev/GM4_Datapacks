@@ -3,8 +3,9 @@
 # located at @s
 # run from gm4_disassemblers:machine/verify_destroy
 
-# kill entities related to machine block (armor stand needs to be killed for legacy reasons)
+# kill legacy armor stand - TODO: remove this when we no longer support the upgrade path
 execute positioned ~ ~-0.4 ~ run kill @e[type=armor_stand,tag=gm4_disassembler_stand,limit=1,distance=..0.01]
+# kill entities related to machine block
 kill @e[type=item_display,tag=gm4_disassembler_display,limit=1,distance=..0.01]
 execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..1,nbt={Age:0s,Item:{id:"minecraft:dropper",count:1,components:{}}},limit=1,sort=nearest]
 kill @s
