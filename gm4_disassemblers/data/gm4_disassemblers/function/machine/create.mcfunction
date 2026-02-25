@@ -4,12 +4,12 @@
 # run from gm4_disassemblers:machine/verify_place_down
 
 # place block depending on rotation
-execute if score $rotation gm4_machine_data matches 1 run data modify storage gm4_disassemblers:temp placement set value {facing:"down",Rotation:[180.0f,0.0f],model:"gm4_disassemblers:block/disassembler_down"}
-execute if score $rotation gm4_machine_data matches 2 run data modify storage gm4_disassemblers:temp placement set value {facing:"up",Rotation:[0.0f,0.0f],model:"gm4_disassemblers:block/disassembler"}
-execute if score $rotation gm4_machine_data matches 3 run data modify storage gm4_disassemblers:temp placement set value {facing:"south",Rotation:[0.0f,0.0f],model:"gm4_disassemblers:block/disassembler_side"}
-execute if score $rotation gm4_machine_data matches 4 run data modify storage gm4_disassemblers:temp placement set value {facing:"west",Rotation:[90.0f,0.0f],model:"gm4_disassemblers:block/disassembler_side"}
-execute if score $rotation gm4_machine_data matches 5 run data modify storage gm4_disassemblers:temp placement set value {facing:"north",Rotation:[180.0f,0.0f],model:"gm4_disassemblers:block/disassembler_side"}
-execute if score $rotation gm4_machine_data matches 6 run data modify storage gm4_disassemblers:temp placement set value {facing:"east",Rotation:[-90.0f,0.0f],model:"gm4_disassemblers:block/disassembler_side"}
+execute if score $rotation gm4_machine_data matches 1 run data modify storage gm4_disassemblers:temp placement set value {facing:"down",rotation:[180.0f,0.0f],model:"gm4_disassemblers:block/disassembler_down"}
+execute if score $rotation gm4_machine_data matches 2 run data modify storage gm4_disassemblers:temp placement set value {facing:"up",rotation:[0.0f,0.0f],model:"gm4_disassemblers:block/disassembler"}
+execute if score $rotation gm4_machine_data matches 3 run data modify storage gm4_disassemblers:temp placement set value {facing:"south",rotation:[0.0f,0.0f],model:"gm4_disassemblers:block/disassembler_side"}
+execute if score $rotation gm4_machine_data matches 4 run data modify storage gm4_disassemblers:temp placement set value {facing:"west",rotation:[90.0f,0.0f],model:"gm4_disassemblers:block/disassembler_side"}
+execute if score $rotation gm4_machine_data matches 5 run data modify storage gm4_disassemblers:temp placement set value {facing:"north",rotation:[180.0f,0.0f],model:"gm4_disassemblers:block/disassembler_side"}
+execute if score $rotation gm4_machine_data matches 6 run data modify storage gm4_disassemblers:temp placement set value {facing:"east",rotation:[-90.0f,0.0f],model:"gm4_disassemblers:block/disassembler_side"}
 
 function gm4_disassemblers:machine/place_rotated with storage gm4_disassemblers:temp placement
 
