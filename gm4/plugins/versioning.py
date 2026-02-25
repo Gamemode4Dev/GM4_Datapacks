@@ -361,7 +361,6 @@ def index_environment_checks(ctx: Context, ver: Version):
             if data storage gm4:log environment_checks.[{{ecid:"{entry_point}",result:{{passed:-1}}}}] \\
             run function {entry_point}"""
         )
-        print(f"{ctx.project_id} defines envcheck at {entry_point}")
     ctx.data.functions[f"{ctx.project_id}:environment_checks"] = Function(lines)
 
     # point function tag to environment_checks.mcfunction
