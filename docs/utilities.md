@@ -46,10 +46,10 @@ Gamemode 4's default entity tags are located at `base/data/gm4/tags/block/`.
 | #gm4:passive         | passive.json         | Entities that are normally friendly and do not turn hostile, even if provoked.                                                       |
 
 ## Environment Checks
-The environment a data pack is installed into can affect its performance.
+The environment a data pack is installed into may affect its performance.
 Servers may have command blocks disabled, or mods may change the way the game reacts to changes made by commands.
 Not all users are aware of this, which can lead to rather frustrating debugging experiences.
-To counteract this, modules can include environment checks which warn the user and block installation of the data pack if certain conditions are not met.
+To counteract this, modules may include environment checks which warn the user of the data pack if certain conditions are not met.
 
 Environment checks are included by specifying them by name (including namespace) inside a module's `beet.yaml`, e.g.
 ```yaml
@@ -91,21 +91,16 @@ meta:
         - venomousbirds
 ```
 
-Multiple checks may be included and are executed in-order:
+Multiple checks may be included, however, the order they will be executed in is arbitrary:
 ```yaml
 echecks: [gm4:score_on_non_player_entity, gm4_double_doors:bloo_is_not_online, lib_forceload:command_blocks_enabled]
 ```
 
-As shown above, environment checks are namespaced. If the namespace is omitted, the namespace of the parent module is used.
+On reload, `base` obtains a list of environment checks requested by all installed modules and libraries. During `post_load` this list is then executed.
+Announcements of the test results are only made if at least one test did not succeed and may not be instantaneous, as environment checks are allowed 30s of runtime.
+If any check does not return after 30s it is marked as "timed-out" and will be announced as such.
 
-Environment checks are run on every reload, with each check only running once per reload even if multiple modules require it.
-For testing purposes, environment checks may be bypassed by setting a positive test result before reloading data packs.
-To do this run
-```mcfunction
-/data modify storage {namespace}:echecks result.{check name}.passed set value 1b
-```
-and run `/reload`.
-This has to be repeated before each reload.
+For debug purposes, you may inspect the contents of storage `gm4:log echecks` to see the results of the latest environment checks. This storage is only cleared before new checks are executed.
 
 ### Base Environment Checks
 `base` comes with some fundamental environment checks that can be referenced by the `gm4:` namespace.
@@ -114,36 +109,22 @@ This has to be repeated before each reload.
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | gm4:score_on_non_player_entity | Checks if non-player entities can be added to a scoreboard. Fails if a test marker's score can not be set and read back. |
 
-### Other Notable Environment Checks
-Some libraries also implement checks, which are inherited by all modules requiring said libraries, as a failed library install will prevent the dependent module from installing.
-Hence, you probably don't need to add these checks to your module if you already depend on the library.
-
-| Library       | Check Name                 | Description                                                                                                         |
-|---------------|----------------------------|---------------------------------------------------------------------------------------------------------------------|
-| lib_forceload | gm4:command_blocks_enabled | Checks if command blocks are enabled. Fails if the command block in the forceloaded chunk can not execute commands. |
-
 ### Creating New Environment Checks
-Modules may also introduce their own environment checks.
-Any functions contained directly within the `function/echeck/` folder of a module are treated as environment checks and may be mentioned within 'beet.yaml`.
-Functions in subfolders within `function/echeck/` are ignored and can therefore be used as helper functions.
+Modules may also introduce their own environment checks. Environment checks are defined as a single `.mcfunction` entry point, but may call other `.mcfunction` files, predicates, etc. from their entry point.
+Caching of environment check results is provided automatically, you do not have to implement caching.
 
-To indicate a successful environment check include
-```mcfunction
-data modify storage <namespace>:echecks result set value {<check name>: {passed: 1b}}
-```
-within your check, replacing `<namespace>` and `<check name>` with the module's namespace and the new check's name (identical to the file name without the `.mcfunction` suffix) respectively.
-Optionally, a failed environment check can display a message to the user by including
-```mcfunction
-data modify storage <namespace>:echecks result set value {<check name>: {probable_cause: "This may be caused by the programmer not expecting you to run this on a potato."}}
-```
-within your check, once again replacing the `<namespace>` and `<check name>` with the module's and the new check's name respectively, as well as adding a more adequate message.
+When introducing an environment check, the corresponding module must add the environment check's entry point to the `#gm4:evaluate_echecks` function tag.
+Upon completion of the test (failure or success), the environment check needs to add a `result` object to its entry in the `gm4:log echeck` storage.
 
-Multiple modules may require the same environment check during a single reload.
-To cut down on lag, you should ensure your environment check tries to use a previous test result -- from the same `/reload` period -- before deciding to re-run the test.
-This can be done using
+For example, the test with entry point located at `gm4:echeck/score_on_non_player_entity` may indicate a test failure as follows
 ```mcfunction
-execute unless data storage <namespace>:echecks result.<check name>
+data modify storage gm4:log echecks[{echeck_id:"gm4:echeck/score_on_non_player_entity"}].result set value {passed:0,probable_cause:"This may be caused by the Paper/Spigot setting 'scoreboards.allow-non-player-entities-on-scoreboards=false'."}
 ```
-You **must also clear all check results** in post-load.
+Or a test success as
+```mcfunction
+data modify storage gm4:log echecks[{echeck_id:"gm4:echeck/score_on_non_player_entity"}].result set value {passed:1,probable_cause:""}
+```
+
+The `result.probable_cause` is shown to the user in chat in case the test fails.
 
 For a textbook example of an environment check, inspect `gm4:score_on_non_player_entity` in `base`.

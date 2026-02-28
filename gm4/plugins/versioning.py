@@ -361,7 +361,7 @@ def index_echecks(ctx: Context, ver: Version):
         # strings should be a namespaced resource locator
         if isinstance(entry_point, str):
             if ":" not in entry_point:
-                raise ValueError(f"Failed to parse echeck entry point from 'gm4:evaluate_echecks' entry '{entry_point}'.")
+                raise ValueError(f"Failed to parse echeck entry point from 'gm4:evaluate_echecks' entry '{entry_point}'. Missing namespace!")
             namespace, path = entry_point.split(":", maxsplit=1)
 
         # unknown type
