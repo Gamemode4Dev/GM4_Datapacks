@@ -9,8 +9,8 @@ scoreboard players set @s gm4_data 1
 # if the score is present, mark the check as passed by removing it from storage
 execute if score @s gm4_data matches 1 run data modify storage gm4:log echecks[{echeck_id:"gm4:echeck/non_player_entity_has_score"}].result set value {passed:1,probable_cause:""}
 
-# if no score is present, provide a probable cause message to the user
-execute unless score @s gm4_data matches 1 run data modify storage gm4:log echecks[{echeck_id:"gm4:echeck/non_player_entity_has_score"}].result set value {passed:0,probable_cause:"This may be caused by the Paper/Spigot setting 'scoreboards.allow-non-player-entities-on-scoreboards=false'."}
+# if no score is present, we don't know why this would happen. Good luck.
+execute unless score @s gm4_data matches 1 run data modify storage gm4:log echecks[{echeck_id:"gm4:echeck/non_player_entity_has_score"}].result set value {passed:0,probable_cause:""}
 
 # clean up marker
 scoreboard players reset @s gm4_data
