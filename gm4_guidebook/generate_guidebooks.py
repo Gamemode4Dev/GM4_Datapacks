@@ -884,7 +884,7 @@ def item_to_display(item: str, components: dict[str, Any] | None, ctx: Context) 
 """
 Recursively reads item tags to find a single item to use
 """
-def get_item_from_tag(ctx: Context, item_tag: str, vanilla: Vanilla) -> str:
+def get_item_from_tag(ctx: Context, item_tag: str, vanilla: Vanilla, searched: list[str] = []) -> str:
   # prepare item tag for searching
   if ":" in item_tag:
     prefix, tag_target = item_tag.split(":")
@@ -909,7 +909,10 @@ def get_item_from_tag(ctx: Context, item_tag: str, vanilla: Vanilla) -> str:
   # if first value is another tag, recursively search until an item is found
   if "#" not in res:
     return res
-  return get_item_from_tag(ctx, res, vanilla)
+  if res in searched:
+    raise ValueError("Cycle found in item tag")
+  searched.append(res)
+  return get_item_from_tag(ctx, res, vanilla, searched)
 
 
 
