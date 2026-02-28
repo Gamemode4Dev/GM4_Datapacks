@@ -37,7 +37,7 @@
           {
             "items": [
               "minecraft:red_sand",
-              "minecraft:red_dye"
+              "minecraft:iron_nugget"
             ]
           }
         ]
@@ -146,6 +146,139 @@
           }
         ]
       }
+    },
+    "obtain_honeycomb_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:honeycomb_block"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_dropper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dropper"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_bone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bone"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:logs"
+          }
+        ]
+      }
+    },
+    "obtain_bamboo_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bamboo_block",
+              "minecraft:stripped_bamboo_block"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_cherry_leaves": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cherry_leaves"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_pink_petals": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:pink_petals"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_iron_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_ingot"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_copper_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:copper_ingot"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_brown_dye_ingredients": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:orange_dye",
+              "minecraft:black_dye"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_green_dye_ingredients": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:blue_dye",
+              "minecraft:yellow_dye"
+            ]
+          }
+        ]
+      }
     }
   },
   "sections": [
@@ -250,14 +383,14 @@
           "\n",
           {
             "insert": "recipe",
-            "recipe": "gm4_standard_crafting:red_sand"
+            "recipe": "gm4_standard_crafting:red_sand_from_sandstone"
           }
         ],
         [
           "\n\n\n",
           {
             "insert": "recipe",
-            "recipe": "gm4_standard_crafting:red_sand_from_red_dye"
+            "recipe": "gm4_standard_crafting:red_sand_conversion"
           }
         ]
       ],
@@ -413,6 +546,237 @@
           {
             "insert": "recipe",
             "recipe": "gm4_standard_crafting:enchanted_golden_apple"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "honeycomb_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_honeycomb_block"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:honeycomb"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "dispenser_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_dropper"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:dispenser"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "bone_block_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_bone"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:bone_block"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "log_chest_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_log"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:log_chest"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "bamboo_block_chest_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_bamboo_block"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:bamboo_block_chest"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "pink_petals_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_cherry_leaves"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:pink_petals"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "cherry_leaves_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_pink_petals"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:cherry_leaves"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "iron_chain_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_iron_ingot"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:iron_chain"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "copper_chain_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_copper_ingot"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:copper_chain"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "brown_dye_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_brown_dye_ingredients"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:brown_dye"
+          }
+        ]
+      ],
+      "prerequisites": [
+        "default_recipes"
+      ]
+    },
+    {
+      "name": "green_dye_recipe",
+      "enable": [],
+      "requirements": [
+        [
+          "obtain_green_dye_ingredients"
+        ]
+      ],
+      "pages": [
+        [
+          "\n\n\n",
+          {
+            "insert": "recipe",
+            "recipe": "gm4_standard_crafting:green_dye"
           }
         ]
       ],

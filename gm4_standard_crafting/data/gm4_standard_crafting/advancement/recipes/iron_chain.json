@@ -4,7 +4,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_standard_crafting:red_sand"
+        "recipe": "gm4_standard_crafting:iron_chain"
       }
     },
     "has_materials": {
@@ -13,10 +13,7 @@
         "items": [
           {
             "items": [
-              "minecraft:red_sandstone",
-              "minecraft:chiseled_red_sandstone",
-              "minecraft:cut_red_sandstone",
-              "minecraft:smooth_red_sandstone"
+              "minecraft:iron_ingot"
             ]
           }
         ]
@@ -31,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "gm4_standard_crafting:red_sand"
+      "gm4_standard_crafting:iron_chain"
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "values": [
-    {"id": "minecraft:weathered_lightning_rod", "required": false},
-    {"id": "minecraft:waxed_weathered_lightning_rod", "required": false}
+    "minecraft:weathered_lightning_rod",
+    "minecraft:waxed_weathered_lightning_rod"
   ]
 }
