@@ -884,17 +884,13 @@ def item_to_display(item: str, components: dict[str, Any] | None, ctx: Context) 
 """
 Recursively reads item tags to find a single item to use
 """
-def get_item_from_tag(ctx: Context, item_tag: str|dict[str, Any], vanilla: Vanilla) -> str:
+def get_item_from_tag(ctx: Context, item_tag: str, vanilla: Vanilla) -> str:
   # prepare item tag for searching
-  if isinstance(item_tag, dict):
-    target: str = item_tag["id"]
-  else:
-    target = item_tag
-  if ":" in target:
-    prefix, tag_target = target.split(":")
+  if ":" in item_tag:
+    prefix, tag_target = item_tag.split(":")
   else:
     prefix = ""
-    tag_target = target.removeprefix("#")
+    tag_target = item_tag.removeprefix("#")
   prefix = prefix.removeprefix("#")
 
   # open item tag
