@@ -11,9 +11,7 @@ pipeline:
 meta:
   gm4:
     versioning:
-      schedule_loops:
-        - tick
-        - day_clock
+      schedule_loops: []
     model_data:
       - item: emerald
         reference: gui/advancement/calling_bell
@@ -32,5 +30,7 @@ meta:
     credits:
       Creator:
         - TheEpyonProject
+      Updated By:
+        - runcows
       Icon Design:
         - Hozz
