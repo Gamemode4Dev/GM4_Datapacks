@@ -3,10 +3,14 @@
 # located at @s
 # run from gm4_smelteries:machine/verify_destroy
 
-# kill entities related to machine block
+# legacy cleanup - TODO: remove this when we stop supporting the upgrade path
 execute positioned ~ ~-0.3 ~ run kill @e[type=armor_stand,tag=gm4_smeltery_stand,limit=1,distance=..0.01]
 scoreboard players operation $current gm4_smelt_id = @s gm4_smelt_id
 execute positioned ^ ^-1.5 ^-1 as @e[type=armor_stand,tag=gm4_smeltery_cauldron,distance=..0.01] if score @s gm4_smelt_id = $current gm4_smelt_id run kill @s
+
+# kill entities related to machine block
+kill @e[type=item_display,tag=gm4_smeltery_display,limit=1,distance=..0.01]
+kill @e[type=item_display,tag=gm4_smeltery_cauldron,limit=1,distance=..0.01]
 execute store result score $dropped_item gm4_machine_data run kill @e[type=item,distance=..1,nbt={Age:0s,Item:{id:"minecraft:furnace",count:1,components:{}}},limit=1,sort=nearest]
 kill @s
 
