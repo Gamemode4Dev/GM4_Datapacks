@@ -888,10 +888,10 @@ def get_item_from_tag(ctx: Context, item_tag: str, vanilla: Vanilla) -> str:
   # prepare item tag for searching
   if ":" in item_tag:
     prefix, tag_target = item_tag.split(":")
+    prefix = prefix.removeprefix("#")
   else:
     prefix = ""
     tag_target = item_tag.removeprefix("#")
-  prefix = prefix.removeprefix("#")
 
   # open item tag
   if prefix == "minecraft" or prefix == "":
