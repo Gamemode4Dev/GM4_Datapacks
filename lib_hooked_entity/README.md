@@ -4,7 +4,7 @@ lib_hooked_entity is a mcfunction library that enables running functions on the 
 ## Usage
 Usage of this library is achieved by adding functions to the provided function tags: `#gm4_hooked_entity:on_hooked_entity`, `#gm4_hooked_entity:pre_hook_on_player`, `#gm4_hooked_entity:post_hook_on_player`
 
-### Function Tags in order of exectution:
+### Function Tags in order of execution:
 
 #### `#gm4_hooked_entity:pre_hook_on_player` 
 Run before selection of the hooked entity. Think of this as what will run any time the player triggers the `fishing_rod_hooked` advancement trigger, it is run as the player and at the player. The intention of this is to access the player in any way you need to before logic is run on the hooked entity.
@@ -16,7 +16,7 @@ Run as the entity hooked by the player, at the fishing bobber. During this, the 
 Very similar to the `#gm4_hooked_entity:pre_hook_on_player`, just run after `#gm4_hooked_entity:on_hooked_entity`.
 
 ## Technical Details
-This library operates by assigning a 16 bit binary ID in the form of scores on every entity that can be hooked by a fishing rod bobber, but only within 42 blocks of any fishing bobber. When a player uses the fishing rod and triggers `fishing_rod_hooked` they will recieve 16 advancements which are used to reconstruct the binary ID of the entity. From there the scores are used in a macro function to select the entity directly.
+This library operates by assigning a 16 bit binary ID in the form of scores on every entity that can be hooked by a fishing rod bobber, but only within 42 blocks of any fishing bobber. When a player uses the fishing rod and triggers `fishing_rod_hooked` they will receive 16 advancements which are used to reconstruct the binary ID of the entity. From there the scores are used in a macro function to select the entity directly.
 
 This method is only necessary due to 2 reasons
 - `execute on` is unable to select the entity a fishing bobber is hooked into
