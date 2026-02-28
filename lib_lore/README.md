@@ -119,4 +119,4 @@ Please note that the `example_pack` must be started by calling `#load:load`, as 
 - These operations are technically not limited to lore, but can also be used for any type of list.
 
 ## License
-This library, and the contents of the `lib_lore` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_data packs), is licensed under the MIT License.
+This library, and the contents of the `lib_lore` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.
