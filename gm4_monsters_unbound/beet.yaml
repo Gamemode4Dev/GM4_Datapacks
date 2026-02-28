@@ -23,6 +23,7 @@ meta:
         - tick
         - main
         - slow_clock
+      echecks: [gm4:echeck/non_player_entity_on_team]
     website:
       description: Mobs gain special effects based on their biome.
       recommended:
