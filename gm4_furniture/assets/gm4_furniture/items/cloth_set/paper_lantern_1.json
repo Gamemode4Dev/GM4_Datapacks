@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "gm4_furniture:block/furniture/cloth_set/paper_lantern_1",
+    "tints": [
+      {
+        "type": "minecraft:dye",
+        "default": -393217
+      }
+    ]
+  }
+}

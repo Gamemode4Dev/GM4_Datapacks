@@ -1,0 +1,15 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "gm4_furniture:block/furniture/metal_set/iron/spotlight/default/base"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "gm4_furniture:block/furniture/metal_set/iron/spotlight/default/lamp"
+      }
+    ]
+  }
+}

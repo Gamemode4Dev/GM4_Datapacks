@@ -1,0 +1,58 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SSS",
+    " I ",
+    " / "
+  ],
+  "key": {
+    "S": "minecraft:string",
+    "I": "minecraft:iron_ingot",
+    "/": "minecraft:stick"
+  },
+  "result": {
+    "id": "minecraft:leather_horse_armor",
+    "components": {
+      "minecraft:tooltip_display": {
+        "hidden_components": [
+          "minecraft:attribute_modifiers"
+        ]
+      },
+      "minecraft:item_model": "gm4_furniture:paintbrush",
+      "minecraft:custom_data": "{gm4_furniture:\"paintbrush\"}",
+      "minecraft:item_name": {
+        "translate": "item.gm4_furniture.paintbrush",
+        "fallback": "Paintbrush",
+        "color": "white",
+        "italic": false
+      },
+      "!minecraft:equippable": {},
+      "minecraft:lore": [
+        {
+          "keybind": "key.use",
+          "extra": [
+            {
+              "translate": "item.gm4_furniture.paintbrush.description_1",
+              "fallback": " to paint furniture"
+            }
+          ],
+          "color": "dark_gray",
+          "italic": true
+        },
+        {
+          "keybind": "key.attack",
+          "extra": [
+            {
+              "translate": "item.gm4_furniture.paintbrush.description_2",
+              "fallback": " furniture to pick color"
+            }
+          ],
+          "color": "dark_gray",
+          "italic": true
+        }
+      ]
+    }
+  },
+  "show_notification": true
+}

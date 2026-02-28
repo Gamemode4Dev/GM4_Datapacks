@@ -1,0 +1,3 @@
+craft_item_1_id,craft_item_1_count,craft_item_2_id,craft_item_2_count,craft_result_count,technical_id,display_name,block_id,length,depth,height,custom_placement,sittable,dyeable,wall_only,ceiling_only,table,scale,diag,custom_interaction
+candle,1,paper,4,1,paper_lantern_1,Paper Lantern,light[level=15],1,1,1,FALSE,0,TRUE,FALSE,TRUE,FALSE,1,FALSE,FALSE
+stick,1,white_wool,6,1,horizontal_flag_1,Long Flag,light[level=0],1,1,1,FALSE,0,TRUE,FALSE,FALSE,FALSE,1,TRUE,FALSE
