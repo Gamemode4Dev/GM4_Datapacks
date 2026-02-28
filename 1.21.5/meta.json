@@ -1,5 +1,5 @@
 {
-  "last_commit": "8bd0a8cb64c961eb9dc6b68be9bf2ec4048f2185",
+  "last_commit": "6461283bfdfcaede08aefdbbbf359f3c82f18c64",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1533,7 +1533,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.18",
+      "version": "1.0.19",
       "hash": "1b3a67f554abb1e9fdbc6ba82a118e8a9151149b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -3192,8 +3192,8 @@
     {
       "id": "gm4_tunnel_bores",
       "name": "Tunnel Bores",
-      "version": "1.6.6",
-      "hash": "52aaa9d05393f481f09e569cd023999761156318",
+      "version": "1.6.7",
+      "hash": "2a6ce8a9e8d86db525c3d6205406289e4b12004a",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tunnel_Bores",
       "credits": {
