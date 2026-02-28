@@ -882,26 +882,34 @@ def item_to_display(item: str, components: dict[str, Any] | None, ctx: Context) 
 
 
 """
-Recursively reads vanilla item tags to find a single item to use
+Recursively reads item tags to find a single item to use
 """
-def get_item_from_tag(item_tag: str, vanilla: Vanilla) -> str:
+def get_item_from_tag(ctx: Context, item_tag: str|dict[str, Any], vanilla: Vanilla) -> str:
   # prepare item tag for searching
-  if "minecraft" in item_tag:
-    if "#" in item_tag:
-      item_tag = item_tag[11:]
-    else:
-      item_tag = item_tag[10:]
-  elif item_tag.split(":")[0] != "minecraft":
-    raise ValueError("Only vanilla item tags are supported")
+  if isinstance(item_tag, dict):
+    target: str = item_tag["id"]
+  else:
+    target = item_tag
+  prefix, tag_target = target.split(":")
+  prefix = prefix.removeprefix("#")
 
   # open item tag
-  item_tags = vanilla.mount("data/minecraft/tags").data["minecraft"].item_tags
-  items = item_tags[item_tag].data["values"]
+  if prefix == "minecraft" or prefix == "":
+    item_tags = vanilla.mount("data/minecraft/tags").data["minecraft"].item_tags
+  else:
+    item_tags = ctx.data[prefix].item_tags
+  items: list[str|dict[str, Any]] = item_tags[tag_target].data["values"]
+
+  # get first item
+  if isinstance(items[0], str):
+    res: str = items[0]
+  else:
+    res: str = items[0]["id"]
 
   # if first value is another tag, recursively search until an item is found
-  if "#" not in items[0]:
-    return items[0]
-  return get_item_from_tag(items[0], vanilla)
+  if "#" not in res:
+    return res
+  return get_item_from_tag(ctx, res, vanilla)
 
 
 
