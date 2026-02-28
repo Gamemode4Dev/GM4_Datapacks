@@ -22,23 +22,28 @@
 ## Comments
 
 ### Function headers
-All functions should start with a header comment that consists of:
+All functions should start with a header comment to make review and debugging easier. Such a header comment could look like:
 ```mcfunction
-# Plays a particle animation upon Zauber Cauldron creation
-# @s = player holding enchanted book
-# at @s align xyz
-# run from zauber_cauldrons:cauldron/create
+# Demonstrates how header comments work.
+# @s = Player in survival, while tabbed-out
+# at @s align xyz rotated as @r
+# run from gm4:load
+# scheduled from gm4:main
+# with $id = Id of the player who's tabbed out
+# with $timestamp = Timestamp at which the player tabbed out in seconds
 ```
-1. (Optional) A human-readable description of the function, e.g. `# Plays a particle animation upon Zauber Cauldron creation`.
-2. Executor information may be written in mcfunction format (e.g. `# @s = @e[type=mooshroom,limit=1,dx=0]`) or in human-readable format (e.g. `# @s = Mooshroom within same  blockspace, limit=1`). Complicated selectors should be written in a human-readable format.
-3. Location information should include the full location (including any `align` or `positioned` arguments) or be written in human-readable format if the location is especially complicated.
-4. Call information can reference:
-    - a single function, if the function is run by `/function ...`: `# run from zauber_cauldrons:cauldron/create`.
-    - a folder, if multiple functions call this function using `/function`: `# run from functions in gm4_pig_tractors:till/blocks/`.
-    - a function from where it was scheduled: `# scheduled by zauber_cauldrons:cauldron/create`.
-    - a function and function-tag pair: `# run from gm4_custom_crafters-3.0:process_input/check_item via #gm4_custom_crafter:custom_item_checks`.
-    - an advancement reward: `# run from advancement damaged/armor/stall`
-    - a combination of these, in which multiple lines may be used.
+Some of the shown lines are optional, in which case the line can be omitted completely; do not replace the line with whitespace.
+
+The first three lines are positional:
+  - **Line 1** [Optional]: `<description>` A human-readable description of what this function does and, if needed, in which context it runs. Don't be too literal.
+  - **Line 2** [Required]: `@s = <description or pseudocode>` A human-readable or pseudocode description of the executing entity. May also be "unspecified" in case no executor was set intentionally.
+  - **Line 3** [Required]: `at <description or pseudocode>` A human-readable or pseudocode description of the location this function is run at. May also be "unspecified" in case no location was set intentionally.
+
+Additional lines may be present to indicate the context of the function. Each of the following may be specified multiple times, do **not** use a single line to specify multiple entries.
+  - `run from <locator>` The full resource locator of a function that calls this function. Use of wildcards, e.g. `run from gm4:boats/*` is permitted.
+  - `scheduled from <locator>` The full resource locator of a function that schedules this function. Use of wildcards, e.g. `run from gm4:boats/*` is permitted.
+  - `rewarded from <locator>` The full resource locator of an advancement that rewards this function. Use of wildcards, e.g. `run from gm4:join/*` is permitted.
+  - `with $<key>: <description>` The key of an nb tag used for the macro call of this function, as well as a description of the value the key holds. Do not specify this unless this function is a macro. Use of wildcards, e.g. `with $id_*: Set of 16 ids used to track runcows.`
 
 ### Inline comments
 Inline comments should be placed to partition code into logical sections and `#` should be followed by a space, e.g.
