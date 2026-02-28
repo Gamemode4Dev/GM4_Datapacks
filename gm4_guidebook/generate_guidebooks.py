@@ -887,7 +887,7 @@ Recursively reads item tags to find a single item to use
 def get_item_from_tag(ctx: Context, item_tag: str, vanilla: Vanilla, searched: list[str] = []) -> str:
   # prepare item tag for searching
   if ":" in item_tag:
-    prefix, tag_target = item_tag.split(":")
+    prefix, tag_target = item_tag.split(":", maxsplit=1)
     prefix = prefix.removeprefix("#")
   else:
     prefix = ""
