@@ -910,7 +910,7 @@ def get_item_from_tag(ctx: Context, item_tag: str, vanilla: Vanilla, searched: l
   if "#" not in res:
     return res
   if res in searched:
-    raise ValueError("Cycle found in item tag")
+    raise ValueError(f"Cycle found in item tag '{item_tag}' (searched: {', '.join(searched)})")
   searched.append(res)
   return get_item_from_tag(ctx, res, vanilla, searched)
 
