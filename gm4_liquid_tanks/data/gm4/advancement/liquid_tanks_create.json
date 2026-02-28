@@ -3,7 +3,7 @@
     "icon": {
       "id": "hopper",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/liquid_tanks_create"
+        "minecraft:custom_model_data": {"strings":["gm4_liquid_tanks:gui/advancement/liquid_tanks_create"]}
       }
     },
     "title": {
@@ -16,7 +16,7 @@
       "color": "gray"
     }
   },
-  "parent": "gm4:custom_crafters",
+  "parent": "gm4:root",
   "criteria": {
     "obtain_liquid_tank": {
       "trigger": "minecraft:inventory_changed",

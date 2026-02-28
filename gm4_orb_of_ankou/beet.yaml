@@ -4,19 +4,6 @@ version: 1.8.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 1
-        max_inclusive: 71
-      min_format: 1
-      max_format: 71
-      directory: backport_71
-    - formats:
-        min_inclusive: 1
-        max_inclusive: 88
-      min_format: 1
-      max_format: 88
-      directory: backport_88
 
 resource_pack:
   load:
@@ -28,7 +15,6 @@ pipeline:
   - gm4_orb_of_ankou.pneuma_model_template
   - gm4_metallurgy.shamir_model_template
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_custom_crafters
   - gm4.plugins.include.lib_player_motion
 
 meta:
@@ -36,7 +22,6 @@ meta:
     versioning:
       required:
         gm4_metallurgy: 1.5.0
-        lib_custom_crafters: 3.4.0
         lib_player_motion: 1.0.0
       schedule_loops:
         - main

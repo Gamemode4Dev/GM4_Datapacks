@@ -16,8 +16,8 @@ def gm4_root_advancement(ctx: Context):
                         "id": "command_block",
                         "components": {
                             "minecraft:custom_model_data": {
-                                "floats": [
-                                    3420001
+                                "strings": [
+                                    "gm4:gui/advancement/root"
                                 ]
                             }
                         }

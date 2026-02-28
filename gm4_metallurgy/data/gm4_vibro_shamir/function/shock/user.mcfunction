@@ -6,7 +6,7 @@ tag @s add gm4_vibro_user
 scoreboard players operation $damage gm4_vibro_shock = @s gm4_vibro_shock
 
 # calculate damage dealt to mobs
-execute as @e[team=!gm4_invalid_team,type=!armor_stand,tag=!gm4_vibro_user,distance=..6] at @s run function gm4_vibro_shamir:shock/calculate
+execute as @e[type=!#gm4:non_living,type=!armor_stand,tag=!gm4_vibro_user,distance=..6] at @s run function gm4_vibro_shamir:shock/calculate
 
 # visuals
 particle minecraft:cloud ~ ~.3 ~ 0.2 0.2 0.2 0.1 20

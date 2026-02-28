@@ -11,7 +11,7 @@
             {
               "function": "set_components",
               "components": {
-                "minecraft:custom_model_data": "block/block_compressor_full",
+                "minecraft:custom_model_data": {"strings":["gm4_block_compressors:block/block_compressor_full"]},
                 "minecraft:profile": "$block_compressor"
               }
             },

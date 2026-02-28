@@ -1,0 +1,19 @@
+{
+  "wants": {
+    "id": "minecraft:emerald",
+    "count": 5
+  },
+  "gives": {
+    "id": "minecraft:oak_sapling",
+    "components": {
+      "minecraft:custom_data": "{gm4_trees:{item:{id:'sapling',type:'apple'}},gm4_podzol_rooting_soil:{id:'apple_tree_sapling'}}",
+      "minecraft:custom_model_data": {"strings":["gm4_apple_trees:item/apple_tree_sapling"]},
+      "minecraft:item_name": {
+        "translate": "item.gm4.apple_tree_sapling",
+        "fallback": "Apple Tree Sapling"
+      }
+    }
+  },
+  "max_uses": 8,
+  "xp": 1
+}

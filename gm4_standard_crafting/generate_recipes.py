@@ -1,23 +1,49 @@
-from beet import Context, Recipe, Advancement, LootTable, Function
+from beet import Context, Recipe, Advancement
 from beet.contrib.vanilla import Vanilla
-from gm4_guidebook.generate_guidebooks import CustomCrafterRecipe
 import logging
 
 logger = logging.getLogger(__name__)
 
 def beet_default(ctx: Context):
-    """generates recipes for stair and slab decrafting
-        NOTE: Function definitions for custom crafters is explicitly set to a 2x2"""
+    """
+        - generates recipes for stair and slab decrafting
+        - groups recipes that have existing vanilla recipes
+    """
     
     vanilla = ctx.inject(Vanilla)
-    vanilla.minecraft_version = '1.21.5'
+    vanilla.minecraft_version = '1.21.11'
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
     recipes = vanilla.mount("data/minecraft/recipe").data.recipes
 
-    def recursive_apply(items: list[str], dir: str, shape: list[str], output_count: int, function: Function):
+    def group_recipe(output: str) -> str:
+        output = output.removeprefix('minecraft:') # remove prefix
+        output_recipe = recipes.get("minecraft:" + output)
+        if output_recipe is None: # no recipe
+            return output
+        elif "group" in output_recipe.data: # recipe with group
+            return output_recipe.data["group"]
+        else: # recipe but no group, add it
+            group: str = output
+            output_recipe.data["group"] = group
+            output_recipe.data["__smithed__"] = {
+                "rules": [
+                    {
+                        "type": "replace",
+                        "target": "group",
+                        "source": {
+                            "type": "reference",
+                            "path": "group"
+                        }
+                    }
+                ]
+            }
+            ctx.data["minecraft:" + output] = Recipe(output_recipe.data)
+            return group
+
+    def recursive_apply(items: list[str], dir: str, shape: list[str], output_count: int):
         for item in items:
             if "#" in item:
-                recursive_apply(item_tags[item.lstrip("#")].data["values"], dir, shape, output_count, function)
+                recursive_apply(item_tags[item.lstrip("#")].data["values"], dir, shape, output_count)
                 continue
 
             # get full block id from the vanilla stair recipe
@@ -33,27 +59,7 @@ def beet_default(ctx: Context):
 
             recipe_path = f"gm4_standard_crafting:{dir}/{item.removeprefix('minecraft:')}"
 
-            output_recipe = recipes.get(output)
-            if output_recipe is None:
-                group: str = output.removeprefix('minecraft:')
-            elif "group" in output_recipe.data:
-                group: str = output_recipe.data["group"]
-            else:
-                group: str = output.removeprefix('minecraft:')
-                output_recipe.data["group"] = group
-                output_recipe.data["__smithed__"] = {
-                    "rules": [
-                        {
-                            "type": "replace",
-                            "target": "group",
-                            "source": {
-                                "type": "reference",
-                                "path": "group"
-                            }
-                        }
-                    ]
-                }
-                ctx.data[output] = Recipe(output_recipe.data)
+            group = group_recipe(output)
 
             ctx.data[recipe_path] = Recipe({
                 "type": "minecraft:crafting_shaped",
@@ -104,63 +110,12 @@ def beet_default(ctx: Context):
                 }
             })
 
-            ctx.data[recipe_path] = CustomCrafterRecipe({
-                "name": f"gm4_standard_crafting:{dir}/{item.removeprefix('minecraft:')}",
-                "input": {
-                    "type": "shaped",
-                    "recipe": shape,
-                    "key": {
-                        "#": {
-                            "item": item
-                        }
-                    }
-                },
-                "output": {
-                    "result": {
-                        "type": "item",
-                        "name": output,
-                        "count": output_count
-                    }
-                }
-            })
-
-            ctx.data[f"gm4_standard_crafting:crafting/{dir}/{output.removeprefix('minecraft:')}"] = LootTable({
-                "type": "minecraft:generic",
-                "pools": [
-                    {
-                        "rolls": 8,
-                        "entries": [
-                            {
-                                "type": "minecraft:loot_table",
-                                "value": "gm4:air"
-                            }
-                        ]
-                    },
-                    {
-                        "rolls": 1,
-                        "entries": [
-                            {
-                                "type": "minecraft:item",
-                                "name": output,
-                                "functions": [
-                                    {
-                                        "function": "minecraft:set_count",
-                                        "count": output_count
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            })
-
-            command: str = "execute if score $crafted gm4_crafting matches 0 store success score $crafted gm4_crafting if data storage gm4_custom_crafters:temp/crafter {Items:[{Slot:0b,id:\"" + item + "\"},{Slot:1b,id:\"" + item + "\"},{Slot:3b,id:\"" + item + "\"},{Slot:4b,id:\"" + item + "\"}]} run loot replace block ~ ~ ~ container.0 loot " + f"gm4_standard_crafting:crafting/{dir}/{output.removeprefix('minecraft:')}"
-            function.append(command)
-    
-    stairs_recipes = ctx.data[f"gm4_standard_crafting:stairs_recipes"] = Function(["##stairs"])
     stairs: list[str] = item_tags["minecraft:stairs"].data['values']
-    recursive_apply(stairs, "stairs_decraft", ["##", "##"], 3, stairs_recipes)
-
-    slabs_recipes = ctx.data[f"gm4_standard_crafting:slabs_recipes"] = Function(["##slabs"])
+    recursive_apply(stairs, "stairs_decraft", ["##", "##"], 3)
     slabs: list[str] = item_tags["minecraft:slabs"].data['values']
-    recursive_apply(slabs, "slab_decraft", ["##","##"], 2, slabs_recipes)
+    recursive_apply(slabs, "slab_decraft", ["##","##"], 2)
+
+    for recipe in [
+        "dispenser", "bone_block", "chest", "iron_chain", "copper_chain", "brown_dye"
+    ]:
+        group_recipe(recipe)

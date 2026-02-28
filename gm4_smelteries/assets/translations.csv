@@ -5,7 +5,7 @@ advancement.gm4.smelteries.title,Serious Smelter
 advancement.gm4.smelteries.description,Construct a Smeltery
 text.gm4.guidebook.module_desc.smelteries,Build a Smeltery and double your ore output with this multi-block structure.
 text.gm4.guidebook.smelteries.description,"Smelteries can refine certain furnace recipes.\n\nMetal ores, sand, and chorus fruit can be doubled with Smelteries."
-text.gm4.guidebook.smelteries.crafting,A Smeltery can be crafted in a Custom Crafter:
+text.gm4.guidebook.smelteries.crafting,A Smeltery can be crafted in a crafting table:
 text.gm4.guidebook.smelteries.multi_block,"The smeltery requires a multi-block structure to work.\n\nBehind the smeltery must be a cauldron. The rest of the 3x3 grid must be filled with iron blocks, then another layer of iron blocks above the first."
 text.gm4.guidebook.smelteries.doubling,"Once the multi-block is set up, the smeltery will produce double the normal result.\n\nSmelting metal ores, raw metals, sand, red sand, or chorus fruit will result in doubled outputs."
 text.gm4.guidebook.smelteries.lava,"When something is smelted in the smeltery there is a chance that the cauldron behind it will fill with lava.\n\nWith a continuous smelting process, it's possible to keep a smeltery fueled with the extra lava."

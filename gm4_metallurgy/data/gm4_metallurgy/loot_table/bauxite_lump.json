@@ -9,12 +9,10 @@
           "functions": [
             {
               "function": "minecraft:set_name",
-              "entity": "this",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.metallurgy.bauxite_lump",
-                "fallback": "Bauxite Lump",
-                "italic": false,
-                "color": "white"
+                "fallback": "Bauxite Lump"
               }
             },
             {
@@ -41,7 +39,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/lump/bauxite",
+                "minecraft:custom_model_data": {"strings":["gm4_metallurgy:item/lump/bauxite"]},
                 "minecraft:profile": "$ore/aluminium"
               }
             },

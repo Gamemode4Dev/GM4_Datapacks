@@ -1,24 +1,11 @@
 import subprocess
 import warnings
-from contextlib import contextmanager
-from dataclasses import asdict, dataclass, replace
+from dataclasses import asdict, dataclass
 from functools import total_ordering
-from typing import Any, Generic, Iterator, List, TypeVar
+from typing import Any, Generic, List, TypeVar
 
-from beet import Advancement, Context, ItemModifier, ListOption, LootTable, Predicate
-from mecha import (
-    AbstractNode,
-    AstJsonObjectEntry,
-    AstJsonObjectKey,
-    AstJsonValue,
-    AstNbtCompound,
-    DiagnosticCollection,
-    DiagnosticError,
-    Mecha,
-    rule,
-)
+from beet import ListOption
 from pydantic import RootModel, field_validator
-from tokenstream import SourceLocation, set_location
 
 T = TypeVar('T')
 import csv
@@ -142,62 +129,6 @@ class MapOption(RootModel[list[T]|dict[str,T]], Generic[T]):
             value = [value]
         return value # type: ignore
 
-# TODO 1.20.5: might not need this anymore
-class InvokeOnJsonNbt:
-    """Extendable mixin to run MutatingReducer's rules on nbt within advancements, loot_tables ect..."""
-    def __init__(self, ctx: Context):
-        self.ctx = ctx
-        raise RuntimeError("InvokeOnJsonNbt should not be directly instantiated. It is a mixin for MutatingReducers and should be interited instead")
-
-    @contextmanager
-    def use_diagnostics(self, diagnostics: DiagnosticCollection) -> Iterator[None]:
-        """Class is mixed into MutatingReducer, who does have this method. Passed here for type completion"""
-        raise NotImplementedError()
-
-    def invoke(self, node: AbstractNode, *args: Any, **kwargs: Any) -> Any:
-        """Class is mixed into MutatingReducer, who does have this method. Passed here for type completion"""
-        raise NotImplementedError()
-
-
-    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='nbt'))
-    @rule(AstJsonObjectEntry, key=AstJsonObjectKey(value='tag'))
-    def process_nbt_in_json(self, node: AstJsonObjectEntry):
-        mc = self.ctx.inject(Mecha)
-        if isinstance(mc.database.current, (Advancement, LootTable, ItemModifier, Predicate)):
-            if isinstance(node.value, AstJsonValue) and isinstance(node.value.value, str) \
-                and node.value.value.startswith("{") and node.value.value.endswith("}"): # excludes location check block/fluid tags - easier than making rule that checks for 'set_nbt' functions on the same json level
-                try:
-                    nbt = mc.parse(node.value.value.replace("\n", "\\\\n"), type=AstNbtCompound)
-                except DiagnosticError as exc:
-                    # if parsing failed, give pretty traceback
-                    for d in exc.diagnostics.exceptions:
-                        yield set_location(replace(d, file=mc.database.current), node.value)
-                    return replace(node, value="{}")
-
-                ## TEMP - trial on yielding children rather than using invoke
-                # with self.use_diagnostics(captured_diagnostics:=DiagnosticCollection()):
-                # 	nbt = yield nbt # run all rules on child-node
-                # print(captured_diagnostics.exceptions)
-                # print(nbt)
-                # new_node = replace(node, value=AstJsonValue(value=mc.serialize(nbt, type=AstNbtCompound)))
-
-                with self.use_diagnostics(captured_diagnostics:=DiagnosticCollection()):
-                    processed_nbt = mc.serialize(self.invoke(nbt, type=AstNbtCompound))
-                for exc in captured_diagnostics.exceptions:
-                    yield propagate_location(exc, node.value)  # set error location to nbt key-value that caused the problem and pass diagnostic back to mecha
-
-                new_node = replace(node, value=AstJsonValue(value=processed_nbt))
-                if new_node != node:
-                    return new_node
-
-        return node
-
-def propagate_location(obj: T, parent_location_obj: Any) -> T:
-    """a set_location like function propagating diagnostic information for manually invoked rules"""
-    return set_location(obj,
-        SourceLocation(pos=parent_location_obj.location.pos+obj.location.pos, lineno=parent_location_obj.location.lineno, colno=parent_location_obj.location.colno+obj.location.colno), # type: ignore
-        SourceLocation(pos=parent_location_obj.location.pos+obj.end_location.pos, lineno=parent_location_obj.location.lineno, colno=parent_location_obj.location.colno+obj.end_location.colno) # type: ignore
-    )
 
 # CSV READING UTILS
 class CSVCell(str):

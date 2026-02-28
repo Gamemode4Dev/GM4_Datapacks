@@ -33,7 +33,7 @@
           },
           {
             "translate": "text.gm4.guidebook.sweethearts.description",
-            "fallback": "Sneaking while holding a small flower will transfer health to a nearby ally in need.\n\nAll small flowers except wither roses work."
+            "fallback": "Sneaking while holding a small flower will transfer health to a nearby ally in need.\n\nAll small flowers work."
           }
         ]
       ]

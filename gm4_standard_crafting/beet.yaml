@@ -1,33 +1,16 @@
 id: gm4_standard_crafting
 name: Standard Crafting
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 88
-        max_inclusive: 88
-      min_format: 88
-      max_format: 88
-      directory: since_88
-    - formats:
-        min_inclusive: 81
-        max_inclusive: 88
-      min_format: 81
-      max_format: 88
-      directory: empty
 
 pipeline:
   - generate_recipes
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_custom_crafters
 
 meta:
   gm4:
-    versioning:
-      required:
-        lib_custom_crafters: 3.4.0
     website:
       description: A crafting recipe pack that adds some nifty new recipes to the game.
       recommended: []
@@ -41,5 +24,6 @@ meta:
         - Sparks
       Updated by:
         - Bloo
+        - runcows
       Icon Design:
         - Sparks

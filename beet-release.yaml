@@ -40,11 +40,9 @@ pipeline:
       - gm4.plugins.player_heads
       - gm4.plugins.resource_pack
       - gm4.plugins.backwards
-      - beet.contrib.model_merging
       - beet.contrib.optifine
       - beet.contrib.babelbox
       - gm4_guidebook.generate_guidebooks.load_page_data
-      - gm4_guidebook.generate_guidebooks.load_custom_recipes
     pipeline:
       - gm4.plugins.manifest.write_credits
       - gm4.plugins.test.strip_tests
@@ -63,8 +61,6 @@ pipeline:
         namespace: gm4_translations
         unicode_escape: True
         dialect: excel
-      model_merging:
-        predicate_order: [custom_model_data]
   
   - pipeline:
     - gm4.plugins.worker.retrieve_and_run
@@ -82,7 +78,6 @@ pipeline:
       - gm4.plugins.output.release_resource_pack
       - gm4.plugins.write_mcmeta
       - gm4.plugins.manifest.update_patch
-      - gm4.plugins.resource_pack.pad_item_def_range_dispatch
     meta:
       pack_scan: resource_pack
 

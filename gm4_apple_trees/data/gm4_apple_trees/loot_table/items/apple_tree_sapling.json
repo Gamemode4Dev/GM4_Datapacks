@@ -10,17 +10,16 @@
                     "functions": [
                         {
                             "function": "minecraft:set_name",
+                            "target": "item_name",
                             "name": {
                                 "translate": "item.gm4.apple_tree_sapling",
-                                "fallback": "Apple Tree Sapling",
-                                "italic": false,
-                                "color": "white"
+                                "fallback": "Apple Tree Sapling"
                             }
                         },
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "item/apple_tree_sapling"
+                                "minecraft:custom_model_data": {"strings":["gm4_apple_trees:item/apple_tree_sapling"]}
                             }
                         },
                         {

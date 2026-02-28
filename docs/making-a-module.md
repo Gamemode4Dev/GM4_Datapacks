@@ -51,7 +51,6 @@ pipeline:
 
   # Include any libraries
   - gm4.plugins.include.lib_machines
-  - gm4.plugins.include.lib_custom_crafters
 
 # Metadata for the build and publishing on the website
 meta:
@@ -59,7 +58,6 @@ meta:
     versioning:
       # A list of minimum-required versions for libraries or other modules
       required:
-        - lib_custom_crafters: 3.0.0
         - lib_machines: 1.1.0
         - gm4_bat_grenades: 1.2.0
 
@@ -74,7 +72,7 @@ meta:
       # Any recommended modules
       recommended:
         - gm4_resource_pack
-        - gm4_relocators
+        - gm4_bat_grenades
       # Important notes for people when they download the module. This can be empty
       notes: []
       # Keywords used by gm4.co's search feature, may be omitted

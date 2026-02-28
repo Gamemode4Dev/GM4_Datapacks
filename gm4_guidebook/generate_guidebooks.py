@@ -15,7 +15,6 @@ from beet import (
     Function,
     JsonFile,
     JsonFileBase,
-    LootTable,
     Model,
     NamespaceContainer,
     NamespaceFileScope,
@@ -26,8 +25,6 @@ from beet.contrib.vanilla import Vanilla
 from beet.core.utils import TextComponent
 from PIL import Image, ImageDraw
 from pydantic import BaseModel
-
-from gm4.plugins.player_heads import Skin
 
 logger = logging.getLogger(__name__)
 
@@ -96,24 +93,12 @@ class GuidebookPages(JsonFileBase[Book]):
   data: ClassVar[FileDeserialize[Book]] = FileDeserialize()
   model = Book # tell beet to parse this file using the Book data model
 
-class CustomCrafterRecipe(JsonFile):
-  """defines a custom beet filetype for CC recipes"""
-  scope: ClassVar[NamespaceFileScope] = ("gm4_recipes",)
-  extension: ClassVar[str] = ".json"
-
-  # NOTE in the future, this can be moved to wherever we auto-generate CC recipes from
-
 
 def load_page_data(ctx: Context):
   """registers guidebook files with the beet file loader"""
   ctx.data.extend_namespace.append(GuidebookPages)
   yield
   ctx.data[GuidebookPages].clear()
-
-def load_custom_recipes(ctx: Context):
-  ctx.data.extend_namespace.append(CustomCrafterRecipe)
-  yield
-  ctx.data[CustomCrafterRecipe].clear()
 
 
 def beet_default(ctx: Context):
@@ -799,137 +784,14 @@ def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
   return header
 
 
-
-"""
-Reads a loot table (custom item) and creates a JSON text component to display the item in the guidebook
-"""
-def loottable_to_display(loottable: str, data: dict[Any,Any], ctx: Context) -> tuple[TextComponent, TextComponent]:
-  item = loottable.split(":")[1].split("/")[-1]
-  if "gm4" in loottable:
-    item = f"gm4.{item}"
-  else:
-    item = f"minecraft.{item}"
-
-  loot = ctx.data.loot_tables[loottable].data
-
-  if len(loot["pools"]) > 1:
-    raise ValueError("Loot table has multiple pools")
-  if len(loot["pools"][0]["entries"]) > 1:
-    raise ValueError("Loot table has multiple entries")
-  if "item" not in loot["pools"][0]["entries"][0]["type"]:
-    raise ValueError("Loot table does not return an item")
-
-  # get item id, name, lore, and color
-  entry: dict[Any, Any] = loot["pools"][0]["entries"][0]
-  item_id: str = entry["name"]
-  profile_name: str = ""
-  name: TextComponent = ""
-  display_color = data["guidebook"]["display_color"] if (item_id in IS_DYED and "guidebook" in data and "display_color" in data["guidebook"]) else DEFAULT_COLORS[item_id] if item_id in DEFAULT_COLORS else 16777215 # white
-  overlay_color = data["guidebook"]["overlay_color"] if (item_id in OVERLAY_DYED and "guidebook" in data and "overlay_color" in data["guidebook"]) else DEFAULT_OVERLAY_COLORS[item_id] if item_id in DEFAULT_OVERLAY_COLORS else 16777215 # white
-  lore: list[str] = []
-  if "functions" in entry:
-    for function in entry["functions"]:
-      if "set_name" in function["function"]:
-        name = function["name"]
-      elif "set_lore" in function["function"]:
-        for line in function["lore"]:
-          lore.append(line)
-      elif "set_components" in function["function"]:
-        for key, value in function["components"].items():
-          if "profile" in key:
-            profile_name = value if isinstance(value, str) else value.get("name", "")
-
-  # color
-  # if "player_head" in item_id and "$" in profile_name:
-  #   skull_owner = profile_name.replace("$","")
-  #   if ":" not in skull_owner:
-  #     skull_owner = f"{ctx.project_id}:{skull_owner}" # NOTE gm4.utils will have an add_namespace helper function after the RP PR
-  #   skin = ctx.data[Skin][skull_owner]
-
-  #   color = get_texture_color(skin)
-
-  # else:
-  vanilla = ctx.inject(Vanilla)
-  vanilla.minecraft_version = '1.21.5'
-  color = get_texture_color(intuit_item_texture(item_id, vanilla))
-
-  # create slot
-  slot: dict[Any, Any] = {
-    "translate": "gm4.second",
-    "fallback": "%1$s",
-    "with": [
-      {
-        "text": " ☒ ",
-        "color": color
-      },
-      [
-        {
-          "translate": f"gui.gm4.guidebook.crafting.display.{item}",
-          "fallback": " ☒ ",
-          "color": f"#{format(display_color, 'x')}",
-          "font": "gm4:guidebook"
-        },
-        {
-          "translate": f"gui.gm4.guidebook.crafting.display.overlay.{item}",
-          "fallback": "",
-          "color": f"#{format(overlay_color, 'x')}",
-          "font": "gm4:guidebook"
-        }
-      ]
-    ],
-    "hover_event": {
-      "action": "show_item",
-      "id": item_id
-    }
-  }
-  slot_under: dict[Any, Any] = {
-    "translate": "gm4.second",
-    "fallback": "%1$s",
-    "with": [
-      {
-        "text": "  ☒",
-        "color": "#fcfcf0"
-      },
-      {
-        "translate": "gui.gm4.guidebook.crafting.display.filled_slot.under",
-        "fallback": "  ☒",
-        "color": "white",
-        "font": "gm4:guidebook"
-      }
-    ],
-    "hover_event": {
-      "action": "show_item",
-      "id": item_id
-    }
-  }
-
-  # custom display name and lore
-  if name != "":
-    if "components" not in slot["hover_event"]:
-      slot["hover_event"]["components"] = {}
-    if "components" not in slot_under["hover_event"]:
-      slot_under["hover_event"]["components"] = {}
-    slot["hover_event"]["components"]["minecraft:custom_name"] = name
-    slot_under["hover_event"]["components"]["minecraft:custom_name"] = name
-  if len(lore) > 0:
-    if "components" not in slot["hover_event"]:
-      slot["hover_event"]["components"] = {}
-    if "components" not in slot_under["hover_event"]:
-      slot_under["hover_event"]["components"] = {}
-    slot["hover_event"]["components"]["minecraft:lore"] = lore
-    slot_under["hover_event"]["components"]["minecraft:lore"] = lore
-  return slot, slot_under
-
-
-
 """
 Reads a vanilla item and creates a JSON text component to display the item in the guidebook
 """
-def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextComponent, TextComponent]:
+def item_to_display(item: str, components: dict[str, Any] | None, ctx: Context) -> tuple[TextComponent, TextComponent]:
   vanilla = ctx.inject(Vanilla)
-  vanilla.minecraft_version = '1.21.5'
-  if ingredient.get("id") == "empty":
-    # show empty slot ()
+  vanilla.minecraft_version = '1.21.11'
+  if item == "air":
+    # show empty slot
     slot = {
       "translate": "gm4.second",
       "fallback": "%1$s",
@@ -961,98 +823,97 @@ def item_to_display(ingredient: dict[Any, Any], ctx: Context) -> tuple[TextCompo
         }
       ]
     }
-  else:
-    # show filled slot (colored with a hover event)
-    if "display" in ingredient and "loot_table" in ingredient["display"]["type"]:
-      return loottable_to_display(ingredient["display"]["name"], ingredient, ctx)
-    else:
-      if "display" in ingredient and "item" in ingredient["display"]["type"]:
-        item = ingredient["display"]["name"]
-      else:
-        item = ingredient["id"]
-      color = get_texture_color(intuit_item_texture(item, vanilla))
-      display_color = ingredient["guidebook"]["display_color"] if (item in IS_DYED and "guidebook" in ingredient and "display_color" in ingredient["guidebook"]) else ingredient["components"]["minecraft:dyed_color"] if (item in IS_DYED and "components" in ingredient and "minecraft:dyed_color" in ingredient["components"]) else DEFAULT_COLORS[item] if item in DEFAULT_COLORS else 16777215 # white
-      overlay_color = ingredient["guidebook"]["overlay_color"] if (item in OVERLAY_DYED and "guidebook" in ingredient and "overlay_color" in ingredient["guidebook"]) else ingredient["components"]["minecraft:dyed_color"] if (item in OVERLAY_DYED and"components" in ingredient and "minecraft:dyed_color" in ingredient["components"]) else DEFAULT_OVERLAY_COLORS[item] if item in DEFAULT_OVERLAY_COLORS else 16777215 # white
-      if "image" in ingredient:
-        image = ingredient["image"]
-      else:
-        image = item
-      slot: dict[Any, Any] = {
-        "translate": "gm4.second",
-        "fallback": "%1$s",
-        "with": [
-          {
-            "text": " ☒ ",
-            "color": color
-          },
-          [
-            {
-              "translate": f"gui.gm4.guidebook.crafting.display.{image.replace(':','.')}",
-              "fallback": " ☒ ",
-              "color": f"#{format(display_color, 'x')}",
-              "font": "gm4:guidebook"
-            },
-            {
-              "translate": f"gui.gm4.guidebook.crafting.display.overlay.{image.replace(':','.')}",
-              "fallback": "",
-              "color": f"#{format(overlay_color, 'x')}",
-              "font": "gm4:guidebook"
-            }
-          ]
-        ],
-        "hover_event": {
-          "action": "show_item",
-          "id": item
+    return slot, slot_under
+
+  color = get_texture_color(intuit_item_texture(item, vanilla))
+  # TODO 26.1
+  slot: dict[Any, Any] = {
+    "translate": "gm4.second",
+    "fallback": "%1$s",
+    "with": [
+      {
+        "text": " ☒ ",
+        "color": color
+      },
+      [
+        {
+          "translate": f"gui.gm4.guidebook.crafting.display.{item.replace(':','.')}",
+          "fallback": " ☒ ",
+          "color": f"#{format(16777215, 'x')}",
+          "font": "gm4:guidebook"
+        },
+        {
+          "translate": f"gui.gm4.guidebook.crafting.display.overlay.{item.replace(':','.')}",
+          "fallback": "",
+          "color": f"#{format(16777215, 'x')}",
+          "font": "gm4:guidebook"
         }
+      ]
+    ],
+    "hover_event": {
+      "action": "show_item",
+      "id": item,
+      **({"components": components} if components else {}),
+    }
+  }
+  slot_under: dict[Any, Any] = {
+    "translate": "gm4.second",
+    "fallback": "%1$s",
+    "with": [
+      {
+        "text": "  ☒",
+        "color": "#fcfcf0"
+      },
+      {
+        "translate": "gui.gm4.guidebook.crafting.display.filled_slot.under",
+        "fallback": "  ☒",
+        "color": "white",
+        "font": "gm4:guidebook"
       }
-      slot_under: dict[Any, Any] = {
-        "translate": "gm4.second",
-        "fallback": "%1$s",
-        "with": [
-          {
-            "text": "  ☒",
-            "color": "#fcfcf0"
-          },
-          {
-            "translate": "gui.gm4.guidebook.crafting.display.filled_slot.under",
-            "fallback": "  ☒",
-            "color": "white",
-            "font": "gm4:guidebook"
-          }
-        ],
-        "hover_event": {
-          "action": "show_item",
-          "id": item
-        }
-      }
-      if "components" in ingredient:
-        slot["hover_event"]["components"] = ingredient['components']
-        slot_under["hover_event"]["components"] = ingredient['components']
+    ],
+    "hover_event": {
+      "action": "show_item",
+      "id": item,
+      **({"components": components} if components else {}),
+    }
+  }
   return slot, slot_under
 
 
 
 """
-Recursively reads vanilla item tags to find a single item to use
+Recursively reads item tags to find a single item to use
 """
-def get_item_from_tag(item_tag: str, vanilla: Vanilla) -> str:
+def get_item_from_tag(ctx: Context, item_tag: str, vanilla: Vanilla, searched: Optional[list[str]] = None) -> str:
   # prepare item tag for searching
-  if "minecraft" in item_tag:
-    if "#" in item_tag:
-      item_tag = item_tag[11:]
-    else:
-      item_tag = item_tag[10:]
-  elif item_tag.split(":")[0] != "minecraft":
-    raise ValueError("Only vanilla item tags are supported")
+  if ":" in item_tag:
+    prefix, tag_target = item_tag.split(":", maxsplit=1)
+    prefix = prefix.removeprefix("#")
+  else:
+    prefix = ""
+    tag_target = item_tag.removeprefix("#")
 
   # open item tag
-  item_tags = vanilla.mount("data/minecraft/tags").data["minecraft"].item_tags
-  items = item_tags[item_tag].data["values"]
+  if prefix == "minecraft" or prefix == "":
+    item_tags = vanilla.mount("data/minecraft/tags").data["minecraft"].item_tags
+  else:
+    item_tags = ctx.data[prefix].item_tags
+  items: list[str|dict[str, Any]] = item_tags[tag_target].data["values"]
+
+  # get first item
+  if isinstance(items[0], str):
+    res: str = items[0]
+  else:
+    res: str = items[0]["id"]
 
   # if first value is another tag, recursively search until an item is found
-  if "#" not in items[0]:
-    return items[0]
-  return get_item_from_tag(items[0], vanilla)
+  if "#" not in res:
+    return res
+  if not searched:
+    searched = []
+  if res in searched:
+    raise ValueError(f"Cycle found in item tag '{item_tag}' (searched: {', '.join(searched)})")
+  return get_item_from_tag(ctx, res, vanilla, [*searched, res])
 
 
 
@@ -1060,53 +921,37 @@ def get_item_from_tag(item_tag: str, vanilla: Vanilla) -> str:
 Generates a crafting grid to be displayed in the guidebook
 """
 def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
-  r = ctx.data[CustomCrafterRecipe][recipe].data
-
-  # get recipe ingredients
-  ingredients:list[dict[str, str]] = []
+  r = ctx.data.recipes[recipe].data
+  ingredients: list[str] = []
   shapeless = "  "
 
-  # shaped
-  if r["input"]["type"] == "shaped":
-    input: list[str] = r["input"]["recipe"]
+  if r["type"].removeprefix("minecraft:") == "crafting_shaped":
+    pattern: list[str] = r["pattern"]
 
     # fix configured shape to be a full 3x3 grid
-    while len(input) < 3:
-      input.append("   ")
+    while len(pattern) < 3:
+      pattern.append("   ")
     for i in range(3):
-      while len(input[i]) < 3:
-        input[i] += " "
+      while len(pattern[i]) < 3:
+        pattern[i] += " "
 
-    # convert input into list of ingredients
+    # convert pattern into list of ingredients
     for i in range(3):
       for j in range(3):
-        ingredient = input[i][j]
-        item: dict[str,str] = {}
-        if ingredient == " ":
-          item["id"] = "empty"
+        key = pattern[i][j]
+        if key == " ":
+          ingredients.append("air")
         else:
-          if isinstance(r["input"]["key"][ingredient], list):
-            ingr = r["input"]["key"][ingredient][0]
-          else:
-            ingr = r["input"]["key"][ingredient]
+          ingr: str | list[str] = r["key"][key]
+          if isinstance(ingr, list):
+            ingr = ingr[0]
+          elif ingr.startswith("#"):
+            vanilla = ctx.inject(Vanilla)
+            vanilla.minecraft_version = '1.21.11'
+            ingr = get_item_from_tag(ctx, ingr, vanilla)
+          ingredients.append(ingr)
 
-          if "guidebook" in ingr:
-            item["guidebook"] = ingr["guidebook"]
-          if "guidebook" in ingr and "type" in ingr["guidebook"]:
-            item["display"] = ingr["guidebook"]
-          else:
-            if "tag" in ingr:
-              vanilla = ctx.inject(Vanilla)
-              vanilla.minecraft_version = '1.21.5'
-              item["id"] = get_item_from_tag(ingr["tag"], vanilla)
-            else:
-              item["id"] = ingr["item"]
-            if "components" in ingr:
-              item["components"] = ingr["components"]
-        ingredients.append(item)
-
-  # shapeless
-  elif r["input"]["type"] == "shapeless":
+  elif r["type"].removeprefix("minecraft:") == "crafting_shapeless":
     shapeless = {
       "translate": "gm4.second",
       "fallback": "%1$s",
@@ -1130,76 +975,44 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
         }
       }
     }
-    for ingredient in r["input"]["ingredients"]:
-      item = {}
-      if ingredient == " ":
-        item["id"] = "empty"
-      else:
-        if isinstance(ingredient, list):
-          item["id"] = ingredient[0]["item"] # type: ignore
-          if "guidebook" in ingredient[0]:
-            if "type" in ingredient[0]["guidebook"]:
-              item["display"] = ingredient[0]["guidebook"]
-            item["guidebook"] = ingredient[0]["guidebook"]
-        else:
-          if "guidebook" in ingredient:
-            item["guidebook"] = ingredient["guidebook"]
-          if "guidebook" in ingredient and "type" in ingredient["guidebook"]:
-            item["display"] = ingredient["guidebook"]
-          else:
-            item["id"] = ingredient["item"]
-            if "components" in ingredient:
-              item["components"] = ingredient["components"]
-      ingredients.append(item)
+    for ingr in r["ingredients"]:
+      if isinstance(ingr, list):
+        ingr = ingr[0]
+      elif ingr.startswith("#"):
+        vanilla = ctx.inject(Vanilla)
+        vanilla.minecraft_version = '1.21.11'
+        ingr = get_item_from_tag(ctx, ingr, vanilla)
+      ingredients.append(ingr)
     while len(ingredients) < 9:
-      ingredients.append({"id": "empty"})
+      ingredients.append("air")
 
   # unknown
   else:
-    raise ValueError(f'Unknown recipe type: {r["input"]["type"]}')
+    raise ValueError(f'Unsupported recipe type: {r["type"]}')
 
   # get JSON for each ingredient
   d_ingredients: list[TextComponent] = []
   d_under: list[TextComponent] = []
-  for ingredient in ingredients:
-    slot, slot_under = item_to_display(ingredient, ctx)
+  for item in ingredients:
+    slot, slot_under = item_to_display(item, None, ctx)
     d_ingredients.append(slot)
     d_under.append(slot_under)
 
   # get recipe results
-  if "type" in r["output"]:
-    output_type = r["output"]["type"]
-  else:
-    output_type = "normal"
-
-  res: dict[str, Any] = {}
-  if output_type == "normal":
-    res = r["output"]["result"]
-  elif output_type == "special":
-    res = r["output"]["guidebook"]
-  elif output_type == "replace":
-    raise NotImplementedError('output type "replace" is not yet implemented')  # TODO: support replace output type
-  else:
-    raise ValueError(f"Unknown output type: '{output_type}'")
-
-  # get display
-  if "item" in res["type"]:
-    res["id"] = res["name"]
-    result, result_under = item_to_display(res, ctx)
-  else:
-    result, result_under = loottable_to_display(res["name"], res, ctx)
+  result, result_under = item_to_display(r["result"]["id"], r["result"].get("components"), ctx)
 
   # show count
+  result_count = r["result"].get("count", 1)
   res_count = ""
-  if "count" in res and res["count"] > 1:
+  if result_count > 1:
     res_count = {
-      "translate": f"gui.gm4.guidebook.crafting.display.count.{res['count']}",
+      "translate": f"gui.gm4.guidebook.crafting.display.count.{result_count}",
       "fallback": "",
       "color": "white",
       "font": "gm4:guidebook"
     }
     NUMBERS = ["☐","☒","②","③","④","⑤","⑥","⑦","⑧","⑨","⑩","⑪","⑫","⑬","⑭","⑮","⑯","⑰","⑱","⑲","⑳"]
-    result["with"][0]["text"] = NUMBERS[res["count"]] # type: ignore
+    result["with"][0]["text"] = NUMBERS[result_count] # type: ignore
 
   ARROW = {
     "translate": "gm4.second",
@@ -1574,7 +1387,9 @@ def generate_display_advancement(book: Book, project_id: str) -> Advancement:
   icon = book.icon
   if icon.components is None:
     icon.components = dict()
-  icon.components["minecraft:custom_model_data"] = f"{project_id}:guidebook_icon/{book.id}"
+  icon.components["minecraft:custom_model_data"] = {
+    "strings": [f"{project_id}:guidebook_icon/{book.id}"]
+  }
   display = {
     "icon": {
       "id": icon.id,
@@ -1726,7 +1541,7 @@ def generate_unlock_function(section: Section, book_id: str, page_index: int, lo
 """
 Creates the page storage to store book info for a given module
 """
-def generate_page_storage(book: Book, ctx: Context) -> any: # type: ignore
+def generate_page_storage(book: Book, ctx: Context) -> dict[str, Any]:
   hand_initial:list[Any] = []
   hand_unlockable:dict[str,Any] = {}
   lectern_initial:list[Any] = [["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["",{"translate":"gui.gm4.guidebook.page.toc","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}],["\n\n",{"translate":"gui.gm4.guidebook.page","fallback":"","color":"white","font":"gm4:guidebook"}]]
@@ -1945,7 +1760,10 @@ def get_texture_color(texture: PngFile|None) -> str:
     return "#000000"
 
   # Find the colors that occur most often
-  palette: list[int] = texture.image.convert('P', palette=Image.ADAPTIVE, colors=4).getpalette() # type: ignore ; PIL typing is weird
+  try:
+    palette: list[int] = texture.image.convert('P', palette=Image.ADAPTIVE, colors=4).getpalette() # type: ignore ; PIL typing is weird
+  except ValueError:
+    return "#000000"
   if not palette:
     return "#000000"
 

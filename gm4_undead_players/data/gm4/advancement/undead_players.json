@@ -3,7 +3,7 @@
     "icon": {
       "id": "zombie_head",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/undead_players"
+        "minecraft:custom_model_data": {"strings":["gm4_undead_players:gui/advancement/undead_players"]}
       }
     },
     "title": {

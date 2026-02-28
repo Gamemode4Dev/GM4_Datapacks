@@ -3,7 +3,7 @@
     "icon": {
       "id": "armor_stand",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/better_armour_stands"
+        "minecraft:custom_model_data": {"strings":["gm4_better_armour_stands:gui/advancement/better_armour_stands"]}
       }
     },
     "title": {

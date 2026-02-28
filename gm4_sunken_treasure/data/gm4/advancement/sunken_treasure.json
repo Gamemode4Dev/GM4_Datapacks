@@ -3,7 +3,7 @@
     "icon": {
       "id": "glass_bottle",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/sunken_treasure"
+        "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:gui/advancement/sunken_treasure"]}
       }
     },
     "title": {

@@ -31,8 +31,8 @@ data remove storage gm4_vibro_shamir:temp Pos
 
 # visuals
 effect give @s resistance 1 4 true
-effect give @s[type=#gm4:undead] instant_health
-effect give @s[type=!#gm4:undead] instant_damage
+effect give @s[type=#minecraft:undead] instant_health
+effect give @s[type=!#minecraft:undead] instant_damage
 
 playsound minecraft:entity.player.attack.crit player @a[distance=..8] ~ ~ ~ 1 1.4
 particle minecraft:crit ~ ~.5 ~ 0 0 0 .5 20

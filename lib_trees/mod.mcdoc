@@ -1,0 +1,11 @@
+dispatch minecraft:storage[gm4_trees:temp] to struct {
+  sapling?: struct {
+    type: string,
+  },
+}
+
+dispatch mcdoc:custom_data[gm4_trees] to struct {
+  item?: struct {
+    type: string,
+  },
+}

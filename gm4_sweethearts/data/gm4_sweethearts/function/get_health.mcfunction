@@ -1,4 +1,5 @@
-# @s = players near sneaking player holding flower
+# @s = players near sneaking player holding flower (including player holding flower)
+# at player holding flower
 # run from transferring
 
 # get max health of player

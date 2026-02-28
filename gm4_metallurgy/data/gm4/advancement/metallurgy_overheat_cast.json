@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:lava_bucket",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/metallurgy_overheat_cast"
+        "minecraft:custom_model_data": {"strings":["gm4_metallurgy:gui/advancement/metallurgy_overheat_cast"]}
       }
     },
     "title": {

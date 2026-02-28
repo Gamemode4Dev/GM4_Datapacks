@@ -3,7 +3,7 @@
     "icon": {
       "id": "piston",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/tunnel_bores"
+        "minecraft:custom_model_data": {"strings":["gm4_tunnel_bores:gui/advancement/tunnel_bores"]}
       }
     },
     "title": {
@@ -16,7 +16,7 @@
       "color": "gray"
     }
   },
-  "parent": "gm4:custom_crafters",
+  "parent": "gm4:root",
   "criteria": {
     "obtain_tunnel_bore": {
       "trigger": "minecraft:inventory_changed",

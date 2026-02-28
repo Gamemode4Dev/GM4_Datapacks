@@ -9,12 +9,10 @@
           "functions": [
             {
               "function": "minecraft:set_name",
-              "entity": "this",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.metallurgy.bismutite_lump",
-                "fallback": "Bismutite Lump",
-                "italic": false,
-                "color": "white"
+                "fallback": "Bismutite Lump"
               }
             },
             {
@@ -77,7 +75,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/lump/bismutite",
+                "minecraft:custom_model_data": {"strings":["gm4_metallurgy:item/lump/bismutite"]},
                 "minecraft:profile": "$ore/bismuth"
               }
             },

@@ -10,15 +10,15 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/ravaged_wings"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/ravaged_wings"]}
               }
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.end_fishing.ravaged_wings",
-                "fallback": "Ravaged Wings",
-                "italic": false
+                "fallback": "Ravaged Wings"
               }
             },
             {

@@ -1,7 +1,7 @@
 use ::java::world::entity::mob::EntityEquipment
 use ::java::world::item::ItemStack
 
-dispatch minecraft:storage[gm4_orb_of_ankou:temp] to struct OrbOfAnkouTemp {
+dispatch minecraft:storage[gm4_orb_of_ankou:temp] to struct {
   equipment?: EntityEquipment,
   Item?: ItemStack,
   Orb?: ItemStack,

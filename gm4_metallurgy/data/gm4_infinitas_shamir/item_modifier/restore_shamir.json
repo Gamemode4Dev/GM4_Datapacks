@@ -3,7 +3,7 @@
     "function": "minecraft:set_components",
     "components": {
       "minecraft:max_stack_size": 1,
-      "minecraft:custom_model_data": "shamir/infinitas"
+      "minecraft:custom_model_data": {"strings":["gm4_metallurgy:shamir/infinitas"]}
     }
   },
   {

@@ -1,0 +1,18 @@
+use ::java::util::text::Text
+
+dispatch minecraft:storage[gm4_monsters_unbound:temp] to struct {
+  slowness?: struct {
+    level: int,
+  },
+  deal?: struct {
+    damage: float,
+  },
+  set?: struct {
+    speed: float,
+    damage: float,
+    knockback_resistance: float,
+  },
+  Rotation?: [float] @ 2,
+  Pos?: [double] @ 3,
+  CustomName?: Text,
+}

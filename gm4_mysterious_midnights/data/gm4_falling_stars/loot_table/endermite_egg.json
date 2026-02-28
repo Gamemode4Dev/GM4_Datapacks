@@ -9,10 +9,10 @@
                     "functions": [
                         {
                             "function": "minecraft:set_name",
+                            "target": "item_name",
                             "name": {
                                 "translate": "item.gm4.endermite_egg",
-                                "fallback": "Endermite Egg",
-                                "italic": false
+                                "fallback": "Endermite Egg"
                             }
                         },
                         {
@@ -30,7 +30,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "item/endermite_egg"
+                                "minecraft:custom_model_data": {"strings":["gm4_mysterious_midnights:item/endermite_egg"]}
                             }
                         },
                         {

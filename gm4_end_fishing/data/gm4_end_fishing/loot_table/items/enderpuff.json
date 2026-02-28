@@ -9,17 +9,16 @@
           "functions": [
             {
               "function": "minecraft:set_name",
-              "entity": "this",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.enderpuff",
-                "fallback": "Enderpuff",
-                "italic": false
+                "fallback": "Enderpuff"
               }
             },
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/enderpuff",
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/enderpuff"]},
                 "minecraft:profile": "$enderpuff",
                 "minecraft:item_model": "minecraft:player_head",
                 "!minecraft:consumable": {}

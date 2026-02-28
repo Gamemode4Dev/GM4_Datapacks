@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:lodestone",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/teleportation_anchor"
+        "minecraft:custom_model_data": {"strings":["gm4_teleportation_anchors:gui/advancement/teleportation_anchor"]}
       }
     },
     "title": {

@@ -1,0 +1,14 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "slots": {
+      "contents": {
+        "items": "minecraft:lead",
+        "predicates": {
+          "minecraft:custom_data": "{gm4_balloon_animals:{}}"
+        }
+      }
+    }
+  }
+}

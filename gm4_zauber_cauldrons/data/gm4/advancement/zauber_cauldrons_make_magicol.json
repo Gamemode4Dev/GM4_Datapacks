@@ -3,7 +3,7 @@
         "icon": {
             "id": "clock",
             "components": {
-                "minecraft:custom_model_data": "gui/advancement/zauber_cauldrons_make_magicol"
+                "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_make_magicol"]}
             }
         },
         "title": {

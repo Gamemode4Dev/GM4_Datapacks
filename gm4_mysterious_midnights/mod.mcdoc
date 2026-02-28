@@ -1,0 +1,9 @@
+dispatch minecraft:storage[gm4_mysterious_midnights:temp] to struct {
+  day?: int,
+}
+
+dispatch minecraft:storage[gm4_falling_stars:motion] to struct {
+  temp?: struct {
+    motion: [double] @ 3,
+  },
+}

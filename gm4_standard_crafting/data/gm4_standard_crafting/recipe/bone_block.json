@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "bone_block",
+  "ingredients": [
+    "minecraft:bone",
+    "minecraft:bone",
+    "minecraft:bone"
+  ],
+  "result": {
+    "id": "minecraft:bone_block"
+  }
+}

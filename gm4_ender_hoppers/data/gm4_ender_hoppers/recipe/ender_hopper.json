@@ -14,7 +14,7 @@
   "result": {
     "id": "minecraft:player_head",
     "components": {
-      "minecraft:custom_model_data": "item/ender_hopper",
+      "minecraft:custom_model_data": {"strings":["gm4_ender_hoppers:item/ender_hopper"]},
       "minecraft:profile": "$ender_hopper",
       "minecraft:custom_data": "{gm4_machines:{id:'ender_hopper'}}",
       "minecraft:custom_name": {"translate":"block.gm4.ender_hopper","fallback":"Ender Hopper","color":"white","italic":false}
