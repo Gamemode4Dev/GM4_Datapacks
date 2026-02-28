@@ -532,6 +532,7 @@
     },
     "elytra": {
       "gm4_end_fishing:gui/advancement/end_fishing_phantom": 1,
+      "gm4_horsemanship:item/horse_wings": 2,
       "gm4_end_fishing:item/captains_wings": 10,
       "gm4_end_fishing:item/ravaged_wings": 11,
       "gm4_metallurgy:shamir/moneo": 113,
@@ -579,6 +580,10 @@
     },
     "experience_bottle": {
       "standard_liquids:gui/advancement/standard_liquids": 1
+    },
+    "feather": {
+      "gm4_horsemanship:item/horse_wings": 2,
+      "gm4_horsemanship:item/horse_winged": 3
     },
     "firework_rocket": {
       "gm4_phantom_scarecrows:gui/advancement/phantom_scarecrows": 1
@@ -1423,6 +1428,7 @@
     },
     "poisonous_potato": {
       "gm4_chairs:gui/advancement/chairs_sit": 1,
+      "gm4_horsemanship:item/horse_wings": 2,
       "gm4_heart_canisters:gui/advancement/heart_canisters_tier_1": 4,
       "gm4_heart_canisters:gui/advancement/heart_canisters_tier_2": 5,
       "gm4_heart_canisters:gui/advancement/heart_canisters_max": 6,
@@ -1523,7 +1529,8 @@
     },
     "saddle": {
       "gm4_pig_tractors:gui/advancement/pig_tractors": 1,
-      "gm4_chairs:guidebook_icon/chairs": 2
+      "gm4_chairs:guidebook_icon/chairs": 2,
+      "gm4_horsemanship:guidebook_icon/horsemanship": 3
     },
     "salmon_bucket": {
       "gm4_metallurgy:shamir/infinitas": 100

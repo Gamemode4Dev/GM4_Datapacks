@@ -1,0 +1,8 @@
+key,en_us
+gm4.horsemanship.item.horse_wings,Pegasuit
+advancement.gm4.horsemanship.horse_takes_flight.title,When Horses Fly!
+advancement.gm4.horsemanship.horse_takes_flight.description,Craft a %s and take to the skies!
+text.gm4.guidebook.module_desc.horsemanship,Form a bond with your horses
+text.gm4.guidebook.horsemanship.description,"Horses can level up, indicated by their amount of hearts. Horses start at 5 hearts and will gain 1 for every level, up to a total of 20.\n\nWearing Frost Walker will also apply to any Horse you ride."
+text.gm4.guidebook.horsemanship.description_2,A pegasuit allows your Horse to fly by looking up or down while riding.
+text.gm4.guidebook.horsemanship.description_3,Horses can be fed the following food items:\n- Baked Potato\n- Beetroot\n- Bread\n- Chorus Fruit\n- Dried Kelp\n- Glow Berries\n- Melon Slice\n- Short Grass\n- Sweet Berries

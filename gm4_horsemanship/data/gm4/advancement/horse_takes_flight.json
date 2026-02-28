@@ -1,0 +1,32 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:elytra",
+            "components": {
+                "minecraft:custom_model_data": "item/horse_wings"
+            }
+        },
+        "title": {
+            "translate": "advancement.gm4.horsemanship.horse_takes_flight.title",
+            "fallback": "When Horses Fly!"
+        },
+        "description": {
+            "translate": "advancement.gm4.horsemanship.horse_takes_flight.description",
+            "fallback": "Craft a %s and take to the skies!",
+            "color": "gray",
+            "with": [
+                {
+                    "translate": "gm4.horsemanship.item.horse_wings",
+                    "fallback": "Pegasuit"
+                }
+            ]
+        },
+        "frame": "task"
+    },
+    "parent": "gm4:root",
+    "criteria": {
+        "full_set": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}
