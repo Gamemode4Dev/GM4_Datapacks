@@ -1,5 +1,5 @@
 {
     "values": [
-        "gm4:echeck/score_on_non_player_entity"
+        "gm4:echeck/non_player_entity_has_score"
     ]
 }

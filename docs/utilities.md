@@ -73,7 +73,7 @@ meta:
       schedule_loops: []
 
       # List of environment checks to include
-      echecks: [gm4:score_on_non_player_entity]
+      echecks: [gm4:non_player_entity_has_score]
     website:
       description: Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blocks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.
       recommended: []
@@ -93,7 +93,7 @@ meta:
 
 Multiple checks may be included, however, the order they will be executed in is arbitrary:
 ```yaml
-echecks: [gm4:score_on_non_player_entity, gm4_double_doors:bloo_is_not_online, lib_forceload:command_blocks_enabled]
+echecks: [gm4:non_player_entity_has_score, gm4_double_doors:bloo_is_not_online, lib_forceload:command_blocks_enabled]
 ```
 
 On reload, `base` obtains a list of environment checks requested by all installed modules and libraries. During `post_load` this list is then executed.
@@ -107,7 +107,7 @@ For debug purposes, you may inspect the contents of storage `gm4:log echecks` to
 
 | Check Name                     | Description                                                                                                              |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| gm4:score_on_non_player_entity | Checks if non-player entities can be added to a scoreboard. Fails if a test marker's score can not be set and read back. |
+| gm4:non_player_entity_has_score | Checks if non-player entities can be added to a scoreboard. Fails if a test marker's score can not be set and read back. |
 
 ### Creating New Environment Checks
 Modules may also introduce their own environment checks. Environment checks are defined as a single `.mcfunction` entry point, but may call other `.mcfunction` files, predicates, etc. from their entry point.
@@ -116,15 +116,15 @@ Caching of environment check results is provided automatically, you do not have 
 When introducing an environment check, the corresponding module must add the environment check's entry point to the `#gm4:evaluate_echecks` function tag.
 Upon completion of the test (failure or success), the environment check needs to add a `result` object to its entry in the `gm4:log echeck` storage.
 
-For example, the test with entry point located at `gm4:echeck/score_on_non_player_entity` may indicate a test failure as follows
+For example, the test with entry point located at `gm4:echeck/non_player_entity_has_score` may indicate a test failure as follows
 ```mcfunction
-data modify storage gm4:log echecks[{echeck_id:"gm4:echeck/score_on_non_player_entity"}].result set value {passed:0,probable_cause:"This may be caused by the Paper/Spigot setting 'scoreboards.allow-non-player-entities-on-scoreboards=false'."}
+data modify storage gm4:log echecks[{echeck_id:"gm4:echeck/non_player_entity_has_score"}].result set value {passed:0,probable_cause:"This may be caused by the Paper/Spigot setting 'scoreboards.allow-non-player-entities-on-scoreboards=false'."}
 ```
 Or a test success as
 ```mcfunction
-data modify storage gm4:log echecks[{echeck_id:"gm4:echeck/score_on_non_player_entity"}].result set value {passed:1,probable_cause:""}
+data modify storage gm4:log echecks[{echeck_id:"gm4:echeck/non_player_entity_has_score"}].result set value {passed:1,probable_cause:""}
 ```
 
 The `result.probable_cause` is shown to the user in chat in case the test fails.
 
-For a textbook example of an environment check, inspect `gm4:score_on_non_player_entity` in `base`.
+For a textbook example of an environment check, inspect `gm4:non_player_entity_has_score` in `base`.

@@ -68,8 +68,8 @@ meta:
         - main # namespace assumed to be the module id
         - gm4_bat_grenades:tick # but one can be manually specified
 
-      # A list of checks to run when installing the module. May be omitted if not needed
-      echecks: [gm4:score_on_non_player_entity]
+      # A list of checks to run on reload while the module is installed. May be omitted.
+      echecks: [gm4:non_player_entity_has_score]
 
     website:
       # A description. This should be a good summary of what this module adds or achieves, to get someone interested in this module
