@@ -1,5 +1,5 @@
 # processes each item
-# @s = armor stand display (we need the hand) [tag=gm4_disassembler_stand]
+# @s = force load chunk armor stand (we need the hand)
 # located at the disassembler block
 # run from process
 
