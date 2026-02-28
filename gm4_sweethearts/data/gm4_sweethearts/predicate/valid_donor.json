@@ -1,19 +1,14 @@
 {
-  "condition": "any_of",
-  "terms": [
-    {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "flags": {
-          "is_sneaking": true
-        },
-        "slots": {
-          "weapon.*": {
-            "items": "#minecraft:small_flowers"
-          }
-        }
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "flags": {
+      "is_sneaking": true
+    },
+    "slots": {
+      "weapon.*": {
+        "items": "#minecraft:small_flowers"
       }
     }
-  ]
+  }
 }
