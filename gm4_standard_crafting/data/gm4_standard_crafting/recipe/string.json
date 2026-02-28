@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "#minecraft:wool"
+    "#wool"
   ],
   "result": {
     "id": "minecraft:string",
