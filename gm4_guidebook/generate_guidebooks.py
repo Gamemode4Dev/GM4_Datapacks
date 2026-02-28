@@ -890,7 +890,11 @@ def get_item_from_tag(ctx: Context, item_tag: str|dict[str, Any], vanilla: Vanil
     target: str = item_tag["id"]
   else:
     target = item_tag
-  prefix, tag_target = target.split(":")
+  if ":" in target:
+    prefix, tag_target = target.split(":")
+  else:
+    prefix = ""
+    tag_target = target.removeprefix("#")
   prefix = prefix.removeprefix("#")
 
   # open item tag
@@ -944,7 +948,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
           elif ingr.startswith("#"):
             vanilla = ctx.inject(Vanilla)
             vanilla.minecraft_version = '1.21.11'
-            ingr = get_item_from_tag(ingr, vanilla)
+            ingr = get_item_from_tag(ctx, ingr, vanilla)
           ingredients.append(ingr)
 
   elif r["type"].removeprefix("minecraft:") == "crafting_shapeless":
