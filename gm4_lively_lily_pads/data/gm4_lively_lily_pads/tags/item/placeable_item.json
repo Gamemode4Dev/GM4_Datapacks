@@ -6,7 +6,7 @@
     "#gm4_lively_lily_pads:waxed_copper_lanterns",
     "#minecraft:candles",
     "minecraft:cactus_flower",
-    {"id": "minecraft:copper_torch", "required": false},
+    "minecraft:copper_torch",
     "minecraft:lantern",
     "minecraft:redstone_torch",
     "minecraft:torch",

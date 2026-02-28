@@ -1,6 +1,6 @@
 {
     "values": [
-        "#gm4:boats",
+        "#minecraft:boat",
         "#gm4:chest_boats",
         "#gm4_reeling_rods:llamas",
         "#gm4_reeling_rods:steal_saddle",
@@ -9,10 +9,10 @@
         "minecraft:axolotl",
         "minecraft:bee",
         "minecraft:camel",
-        {"id": "minecraft:camel_husk", "required": false},
+        "minecraft:camel_husk",
         "minecraft:cat",
         "minecraft:chicken",
-        {"id": "minecraft:copper_golem", "required": false},
+        "minecraft:copper_golem",
         "minecraft:cow",
         "minecraft:dolphin",
         "minecraft:donkey",
@@ -20,13 +20,13 @@
         "minecraft:frog",
         "minecraft:glow_squid",
         "minecraft:goat",
-        {"id": "minecraft:happy_ghast", "required": false},
+        "minecraft:happy_ghast",
         "minecraft:hoglin",
         "minecraft:horse",
         "minecraft:iron_golem",
         "minecraft:mooshroom",
         "minecraft:mule",
-        {"id": "minecraft:nautilus", "required": false},
+        "minecraft:nautilus",
         "minecraft:ocelot",
         "minecraft:parrot",
         "minecraft:polar_bear",
@@ -37,6 +37,6 @@
         "minecraft:squid",
         "minecraft:wolf",
         "minecraft:zoglin",
-        {"id": "minecraft:zombie_nautilus", "required": false}
+        "minecraft:zombie_nautilus"
     ]
 }

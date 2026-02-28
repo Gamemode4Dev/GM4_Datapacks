@@ -3,7 +3,7 @@
         "minecraft:area_effect_cloud",
         "minecraft:arrow",
         "minecraft:block_display",
-        "#gm4:boats",
+        "#minecraft:boat",
         "minecraft:breeze_wind_charge",
         "#gm4:chest_boats",
         "minecraft:chest_minecart",

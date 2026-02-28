@@ -1,13 +1,13 @@
 {
     "values": [
-        {"id": "minecraft:camel_husk", "required": false},
+        "minecraft:camel_husk",
         "minecraft:cave_spider",
         "minecraft:creaking",
         "minecraft:drowned",
         "minecraft:enderman",
         "minecraft:piglin",
         "minecraft:spider",
-        {"id": "minecraft:zombie_nautilus", "required": false},
+        "minecraft:zombie_nautilus",
         "minecraft:zombified_piglin"
     ]
 }
