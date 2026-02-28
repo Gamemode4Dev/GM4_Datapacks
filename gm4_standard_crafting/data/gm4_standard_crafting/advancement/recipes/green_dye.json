@@ -4,7 +4,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_standard_crafting:red_sand_from_red_dye"
+        "recipe": "gm4_standard_crafting:green_dye"
       }
     },
     "has_materials": {
@@ -13,7 +13,8 @@
         "items": [
           {
             "items": [
-              "minecraft:red_dye"
+              "minecraft:blue_dye",
+              "minecraft:yellow_dye"
             ]
           }
         ]
@@ -28,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "gm4_standard_crafting:red_sand_from_red_dye"
+      "gm4_standard_crafting:green_dye"
     ]
   }
 }

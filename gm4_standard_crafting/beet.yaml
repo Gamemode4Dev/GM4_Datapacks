@@ -1,6 +1,6 @@
 id: gm4_standard_crafting
 name: Standard Crafting
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -24,5 +24,6 @@ meta:
         - Sparks
       Updated by:
         - Bloo
+        - runcows
       Icon Design:
         - Sparks

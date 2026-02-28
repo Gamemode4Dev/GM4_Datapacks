@@ -4,12 +4,12 @@
   "group": "red_sand",
   "pattern": [
     "SSS",
-    "SRS",
+    "SIS",
     "SSS"
   ],
   "key": {
     "S": "minecraft:sand",
-    "R": "minecraft:red_dye"
+    "I": "minecraft:iron_nugget"
   },
   "result": {
     "id": "minecraft:red_sand",
