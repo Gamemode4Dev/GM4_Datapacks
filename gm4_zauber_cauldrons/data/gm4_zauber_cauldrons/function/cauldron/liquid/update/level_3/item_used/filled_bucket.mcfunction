@@ -12,7 +12,7 @@ kill @e[type=item_display,tag=gm4_zc_liquid,dx=0,limit=1]
 # checking to see whether this flag was already set before intercepting an interaction is also recommended to prevent conflicts.
 # the player who has interacted with the cauldron is tagged as gm4_zc_actor and their gamemode is available via the fake player
 # $actor_gamemode in gm4_zc_data: 0 = survival or adventure, 1 = creative.
-function #gm4_zauber_cauldrons:liquid/drain_bucket_into_cauldron
+function #gm4_zauber_cauldrons:cauldron/liquid/drain_bucket_into_cauldron
 
 # if no expansion handled the liquid being inserted, fall back to vanilla bucket behavior and remove custom liquid, otherwise set liquid level to full
 execute unless score $interaction_intercepted gm4_zc_data matches 1.. run scoreboard players reset @s gm4_zc_liquid_level

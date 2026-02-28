@@ -8,7 +8,7 @@ execute store result score $dy gm4_zc_data run data get entity @e[type=item,nbt=
 execute store result score $dz gm4_zc_data run data get entity @e[type=item,nbt={Item:{id:"minecraft:popped_chorus_fruit"}},limit=1] UUID[3] 0.000000005
 
 # get bottled_vex cauldron pos
-data modify storage gm4_zauber_cauldrons:blueprint/item/wormhole gm4_zauber_cauldrons.cauldron_pos set from storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:"bottled_vex"}}}}].components.gm4_zauber_cauldrons.cauldron_pos
+data modify storage gm4_zauber_cauldrons:blueprint/item/wormhole gm4_zauber_cauldrons.cauldron_pos set from storage gm4_zauber_cauldrons:temp/cauldron/ingredients items[{components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:"bottled_vex"}}}}].components."minecraft:custom_data".gm4_zauber_cauldrons.cauldron_pos
 execute store result score $x gm4_zc_data run data get storage gm4_zauber_cauldrons:blueprint/item/wormhole gm4_zauber_cauldrons.cauldron_pos.x 1
 execute store result score $y gm4_zc_data run data get storage gm4_zauber_cauldrons:blueprint/item/wormhole gm4_zauber_cauldrons.cauldron_pos.y 1
 execute store result score $z gm4_zc_data run data get storage gm4_zauber_cauldrons:blueprint/item/wormhole gm4_zauber_cauldrons.cauldron_pos.z 1

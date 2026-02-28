@@ -8,7 +8,7 @@ model_data:
   - item: potion
     reference: item/wormhole_in_a_bottle
     template: generated_overlay
-  - item: [player_head, firework_star]
+  - item: player_head
     template: generated
     broadcast:
       - reference: item/crystal/instant_damage

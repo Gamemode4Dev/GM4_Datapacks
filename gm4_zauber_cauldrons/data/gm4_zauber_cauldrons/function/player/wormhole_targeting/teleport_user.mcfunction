@@ -17,7 +17,7 @@ execute positioned ~ ~.7 ~ run playsound minecraft:entity.enderman.teleport play
 # explode user if no cauldron is present
 # in future versions it may be required to wait until the chunks is loaded until the block check is done,
 # but as of 1.20.4 this seems to work just fine in combination with the forceload command above
-execute unless entity @e[tag=gm4_zc_wormhole_consumer,scores={gm4_zc_no_explode=1..},limit=1] unless block ~ ~ ~ #minecraft:cauldrons run summon tnt ~.5 ~.7 ~.5
+execute unless entity @e[tag=gm4_zc_wormhole_consumer,scores={gm4_zc_no_explode=1..},limit=1] unless block ~ ~ ~ #minecraft:cauldrons run summon tnt ~.5 ~.7 ~.5 {fuse:0s}
 
 # reset fake player
 scoreboard players reset $forceloaded gm4_zc_data

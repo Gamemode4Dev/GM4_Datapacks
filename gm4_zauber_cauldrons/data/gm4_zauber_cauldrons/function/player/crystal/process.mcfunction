@@ -1,8 +1,8 @@
-# @s =  player with crystal in off-hand
+# @s = player with crystal in off-hand
 # at world spawn
 # run from player/submain
 
-# activite freshly equiped crystals
+# activate freshly equiped crystals
 execute unless score @s gm4_zc_crystal matches 0..7 at @s run function gm4_zauber_cauldrons:player/crystal/activate
 
 # read and apply effects on slow clock
