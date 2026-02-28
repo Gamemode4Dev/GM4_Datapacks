@@ -977,7 +977,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
       elif ingr.startswith("#"):
         vanilla = ctx.inject(Vanilla)
         vanilla.minecraft_version = '1.21.11'
-        ingr = get_item_from_tag(ingr, vanilla)
+        ingr = get_item_from_tag(ctx, ingr, vanilla)
       ingredients.append(ingr)
     while len(ingredients) < 9:
       ingredients.append("air")
