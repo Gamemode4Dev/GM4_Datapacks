@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gm4_scuba_gear:item/flippers",
+    "layer1": "gm4_scuba_gear:item/flippers_overlay"
+  }
+}
