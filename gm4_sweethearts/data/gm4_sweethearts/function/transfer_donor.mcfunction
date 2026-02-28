@@ -7,7 +7,7 @@ execute store result score $deathmessage gm4_sh_data run gamerule show_death_mes
 gamerule show_death_messages false
 
 # damage player
-damage @s 1 cactus by @s
+damage @s 1 magic by @s
 
 # handle death (@e only selects entities which are alive)
 execute at @s unless entity @e[type=player,tag=gm4_sh_donor,distance=0,limit=1] run function gm4_sweethearts:kill_donor
