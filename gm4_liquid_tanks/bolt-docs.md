@@ -66,7 +66,7 @@ This set of commands is called on tanks of the matching type, and run as provide
 ```py
 @liquid.util_below
     def dispense_ink():
-        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{active_effects:[{id:'minecraft:blindness'}]}] run function gm4_standard_liquids:util/liquid_dispensing/ink
+        execute as @e[type=!#gm4:non_living,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{active_effects:[{id:'minecraft:blindness'}]}] run function gm4_standard_liquids:util/liquid_dispensing/ink
 ```
 
 # Advanced Usage
