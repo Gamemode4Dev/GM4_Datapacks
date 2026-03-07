@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "gm4_scuba_gear:wetsuit"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "in_deep_water": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:reference",
+            "name": "gm4_scuba_gear:in_deep_water"
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "in_deep_water"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gm4_scuba_gear:wetsuit"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "minecraft:dyed_color",
+    "cases": [
+      {
+        "when": 5414081,
+        "model": {
+          "type": "minecraft:model",
+          "model": "gm4_furniture:block/furniture/metal_set/iron/foldable_chair_gm4"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "gm4_furniture:block/furniture/metal_set/iron/foldable_chair_dyeable",
+      "tints": [
+        {
+          "type": "minecraft:dye",
+          "default": -393217
+        }
+      ]
+    }
+  }
+}

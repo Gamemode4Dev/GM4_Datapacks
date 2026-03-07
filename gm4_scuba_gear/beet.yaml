@@ -1,6 +1,6 @@
 id: gm4_scuba_gear
 name: SCUBA Gear
-version: 1.6.X
+version: 2.0.X
 
 data_pack:
   load: .
@@ -29,22 +29,9 @@ meta:
     credits:
       Creator:
         - BPR
+      Updated by:
+        - TheEpyonProject
       Textures by:
         - BPR
       Icon Design:
         - DuckJr
-    model_data:
-      - item: leather_boots
-        reference: item/flippers
-        template: generated_overlay
-      - item: golden_chestplate
-        reference: item/scuba_tank
-        template: generated
-      - item: player_head
-        reference: item/scuba_helmet
-        template: generated
-      - item: player_head
-        reference: gui/advancement/scuba_gear
-        template:
-          name: advancement
-          forward: item/scuba_helmet

@@ -1,0 +1,14 @@
+craft_item_1_id,craft_item_1_count,craft_item_2_id,craft_item_2_count,craft_result_count,technical_id,display_name,block_id,length,depth,height,custom_placement,sittable,dyeable,wall_only,ceiling_only,table,scale,diag,custom_interaction
+stone_bricks,8,tadpole_bucket,1,1,statues.frog,Stone Frog Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,bee_nest,1,1,statues.bee,Stone Bee Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,pufferfish_bucket,1,1,statues.pufferfish,Stone Pufferfish Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,axolotl_bucket,1,1,statues.axolotl,Stone Axolotl Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,jukebox,1,1,statues.allay,Stone Allay Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,slime_block,1,1,statues.slime,Stone Slime Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,egg,1,1,statues.chicken,Stone Chicken Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,sweet_berries,1,1,statues.fox,Stone Fox Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,salmon,1,1,statues.cat,Stone Cat Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,8,stone,1,1,statues.silverfish,Stone Silverfish Statue,barrier,1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,TRUE
+stone_bricks,1,lantern,1,1,lantern_1,Small Stone Lantern,light[level=14],1,1,1,FALSE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+stone_bricks,2,lantern,1,1,lantern_2,Medium Stone Lantern,light[level=14],1,1,2,TRUE,0,FALSE,FALSE,FALSE,FALSE,1,FALSE,FALSE
+stone_bricks,8,lantern,1,1,lantern_big_1,Large Stone Lantern,light[level=14],1,1,3,TRUE,0,FALSE,FALSE,FALSE,FALSE,2,FALSE,FALSE
