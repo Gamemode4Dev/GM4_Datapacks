@@ -40,7 +40,7 @@ The first three lines are positional:
   - **Line 3** [Required]: `at <description or pseudocode>` A human-readable or pseudocode description of the location this function is run at. May also be "unspecified" in case no location was set intentionally.
 
 Additional lines may be present to indicate the context of the function. Each of the following may be specified multiple times, do **not** use a single line to specify multiple entries.
-  - `run from <locator>` The full resource locator of a function that calls this function. Use of wildcards, e.g. `run from gm4:boats/*` is permitted.
+  - `run from <locator>` The resource locator of a function that calls this function. Use of wildcards, e.g. `run from gm4:boats/*` is permitted. The namespace of the resource locator may be omitted, in which case the namespace of the current function is assumed.
   - `scheduled from <locator>` The full resource locator of a function that schedules this function. Use of wildcards, e.g. `run from gm4:boats/*` is permitted.
   - `rewarded from <locator>` The full resource locator of an advancement that rewards this function. Use of wildcards, e.g. `run from gm4:join/*` is permitted.
   - `with $<key>: <description>` The key of an nb tag used for the macro call of this function, as well as a description of the value the key holds. Do not specify this unless this function is a macro. Use of wildcards, e.g. `with $id_*: Set of 16 ids used to track runcows.`
