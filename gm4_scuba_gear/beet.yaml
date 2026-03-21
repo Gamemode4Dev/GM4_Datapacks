@@ -23,7 +23,7 @@ meta:
       recommended:
         - gm4_sunken_treasure
       notes:
-        - This data pack requires you to use the Gamemode 4 resource pack!
+        - This data pack requires you to use the Gamemode 4 resource pack! Restart the server/world after adding this data pack!
     modrinth:
       project_id: 6AVYWZgD
     wiki: https://wiki.gm4.co/wiki/SCUBA_Gear
