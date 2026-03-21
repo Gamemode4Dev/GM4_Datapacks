@@ -3,15 +3,17 @@
 Ease ocean exploration with craftable scuba gear!<!--$pmc:headerSize-->
 
 ### Features
-- Adds Flippers which allow players to swim faster in Water.
-- Adds the SCUBA Tank and Helmet which gives 4 minutes of conduit power when submerged.
-- When worn on land, the player is given a slowness debuff.
+- Adds the Wetsuit and Flippers which aids players in underwater movement.
+- When wearing Flippers on land, players are given a slowness debuff.
+- Adds the SCUBA Tank which adds 4 minutes of submerged air time.
+- Adds the SCUBA Helmet which hastens underwater mining.
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/SCUBA_Gear)
 
 ### Credits
 - Creator: [BPR](https://bsky.app/profile/bpr02.com)
+- Updated by: TheEpyonProject
 - Textures by: [BPR](https://bsky.app/profile/bpr02.com)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 

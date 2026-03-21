@@ -1,5 +1,5 @@
 {
-  "last_commit": "064201e6a141c6c2e7e4b9ea45291329be00bfb5",
+  "last_commit": "063f990aeda066ef2066b8970b895f3be98e2388",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -447,8 +447,8 @@
     {
       "id": "gm4_boots_of_ostara",
       "name": "Boots of Ostara",
-      "version": "1.8.7",
-      "hash": "114984480663b21602db30e0572e358b8ad261d5",
+      "version": "1.8.8",
+      "hash": "f050d107592e50f86610ef74b5bf4808a10d8ac9",
       "video_link": "https://www.youtube.com/watch?v=H4UGM6_wGCE",
       "wiki_link": "https://wiki.gm4.co/wiki/Boots_of_Ostara",
       "credits": {
@@ -1533,7 +1533,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.0.20",
+      "version": "1.0.21",
       "hash": "3aa4a3ca676b20541cb5d050b04f14f083885486",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -2642,13 +2642,16 @@
     {
       "id": "gm4_scuba_gear",
       "name": "SCUBA Gear",
-      "version": "1.6.6",
-      "hash": "047af903e49eb5d7d74b5331d69e845ef420afa3",
+      "version": "2.0.0",
+      "hash": "32116ff2075ef3998f4212da6aa83af379be8a53",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/SCUBA_Gear",
       "credits": {
         "Creator": [
           "BPR"
+        ],
+        "Updated by": [
+          "TheEpyonProject"
         ],
         "Textures by": [
           "BPR"
@@ -2672,7 +2675,7 @@
         "1.21.11"
       ],
       "hidden": false,
-      "important_note": null,
+      "important_note": "This data pack requires you to use the Gamemode 4 resource pack! Restart the server/world after adding this data pack!",
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "6AVYWZgD",
@@ -2952,8 +2955,8 @@
     {
       "id": "gm4_sunken_treasure",
       "name": "Sunken Treasure",
-      "version": "1.7.5",
-      "hash": "7b73bb0a480879529bbf3b4ffa2f5451d14f1eb2",
+      "version": "1.7.6",
+      "hash": "da9c42970e1bed4ca17487a42286bbb2549b9c23",
       "video_link": "https://www.youtube.com/watch?v=VV7ZIyIzKV0",
       "wiki_link": "https://wiki.gm4.co/wiki/Sunken_Treasure",
       "credits": {
@@ -3616,8 +3619,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.4.28",
-      "hash": "62788394b945969337d28f0551ade682069da269",
+      "version": "1.4.29",
+      "hash": "4344dbd516effc42fdd046f38e0a1c9fd05e3222",
       "video_link": "",
       "wiki_link": "",
       "credits": {
