@@ -3,8 +3,7 @@
     "icon": {
       "id": "minecraft:leather_helmet",
       "components": {
-        "minecraft:item_model": "gm4_scuba_gear:scuba_helmet",
-        "minecraft:profile": "$scuba_helmet"
+        "minecraft:item_model": "gm4_scuba_gear:scuba_helmet"
       }
     },
     "title": {

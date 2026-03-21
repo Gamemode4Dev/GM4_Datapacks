@@ -52,7 +52,6 @@
       },
       "minecraft:max_damage": 132,
       "minecraft:max_stack_size": 1,
-      "minecraft:profile": "$scuba_helmet",
       "minecraft:rarity": "common"
     },
     "count": 1
