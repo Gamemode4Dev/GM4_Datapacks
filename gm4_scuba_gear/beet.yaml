@@ -22,7 +22,8 @@ meta:
       description: Ease ocean exploration with craftable scuba gear!
       recommended:
         - gm4_sunken_treasure
-      notes: []
+      notes:
+        - This data pack requires you to use the Gamemode 4 resource pack!
     modrinth:
       project_id: 6AVYWZgD
     wiki: https://wiki.gm4.co/wiki/SCUBA_Gear
