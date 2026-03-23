@@ -69,11 +69,13 @@ def generate_armor_recipes(ctx: Context, armor_flavors: CSV, armor_pieces: CSV):
                         {
                             f"data/gm4_zauber_cauldrons/function/recipes/armor/{piece_data['piece']}/select_flavor.mcfunction": "data/gm4_zauber_cauldrons/templates/function/armor/select_flavor.mcfunction",
                             f"data/gm4_zauber_cauldrons/function/recipes/armor/{piece_data['piece']}/{flavor_data['flavor']}.mcfunction": "data/gm4_zauber_cauldrons/templates/function/armor/craft_piece.mcfunction",
+                            f"data/gm4_zauber_cauldrons/item_modifier/armor/{piece_data['piece']}/{flavor_data['flavor']}.json": "data/gm4_zauber_cauldrons/templates/item_modifier/zauber_armor.json",
                             f"data/gm4_zauber_cauldrons/loot_table/items/armor/{piece_data['piece']}/{flavor_data['flavor']}.json": "data/gm4_zauber_cauldrons/templates/loot_table/zauber_armor.json"
                         }
                     ],
                     "render": {
                         "function": "*",
+                        "item_modifier": "*",
                         "loot_table": "*"
                     }
                 },

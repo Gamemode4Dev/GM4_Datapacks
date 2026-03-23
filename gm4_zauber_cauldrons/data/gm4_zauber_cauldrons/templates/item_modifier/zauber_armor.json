@@ -1,0 +1,61 @@
+[
+    {
+        "function": "minecraft:set_name",
+        "target": "item_name",
+        "name": {
+            "translate": "item.gm4.zauber_cauldrons.zauber_armor.{{piece}}",
+            "fallback": "{{translate_fallback}}"
+        }
+    },
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:item/zauber_armor/{{flavor}}"]}
+        }
+    },
+    {
+        "function": "minecraft:set_custom_data",
+        "tag": "{gm4_zauber_cauldrons:{item:\"zauber_armor\",type:\"{{piece}}\"}}"
+    },
+    {
+        "function": "minecraft:set_attributes",
+        "modifiers": [
+            {
+                "attribute": "minecraft:armor_toughness",
+                "id": "gm4_zauber_cauldrons:armor_toughness_{{slot}}",
+                "amount": 3,
+                "operation": "add_value",
+                "slot": "{{slot}}"
+            },
+            {
+                "attribute": "minecraft:armor",
+                "id": "gm4_zauber_cauldrons:armor_{{slot}}",
+                "amount": {{armor_value}},
+                "operation": "add_value",
+                "slot": "{{slot}}"
+            },
+            {
+                "attribute": "{{flavor_attribute}}",
+                "id": "gm4_zauber_cauldrons:armor_{{flavor}}_{{slot}}",
+                "amount": {{flavor_amount}},
+                "operation": "{{flavor_operation}}",
+                "slot": "{{slot}}"
+            }
+        ]
+    },
+    {
+        "function": "minecraft:set_lore",
+        "mode": "append",
+        "lore": [
+            {
+                "translate": "item.gm4.zauber_cauldrons.zauber_armor.magic",
+                "fallback": "+%s%% Magic",
+                "with": [
+                    "25"
+                ],
+                "color": "blue",
+                "italic": false
+            }
+        ]
+    }
+]
