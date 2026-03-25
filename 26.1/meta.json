@@ -1,5 +1,5 @@
 {
-  "last_commit": "81b021c0056f8dc1d576bde25343e4f9977bfad8",
+  "last_commit": "1f798cb75e88f64fe9e1eba373c77ca75ebee197",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -249,8 +249,8 @@
     {
       "id": "gm4_blossoming_pots",
       "name": "Blossoming Pots",
-      "version": "3.5.0",
-      "hash": "7da0c444c718fcabe3db7d2b0ae5b87483166f9a",
+      "version": "3.5.1",
+      "hash": "399aa47c7ebdca1a8bf2d4fed49000cbd4ffe91f",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Blossoming_Pots",
       "credits": {
@@ -1094,7 +1094,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "hash": "63488a2ec3b58efe5757c8abf12ef3a29807ff1a",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
