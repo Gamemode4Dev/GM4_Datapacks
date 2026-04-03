@@ -1,5 +1,5 @@
 {
-  "last_commit": "631c015f10bcd6b79f4364085ada1c9ead869a6a",
+  "last_commit": "10044afa6de38260556d0d6ec60bedd9dced6e3a",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1094,7 +1094,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.2",
+      "version": "1.1.3",
       "hash": "15c8acf090fb6a8eef386a2e67706c932a8456a3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -1573,8 +1573,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.9.1",
-      "hash": "8ba66d2fef376b5c180a1e82a70c94420cd36fb5",
+      "version": "1.9.2",
+      "hash": "3cc37df5072e311b0f78de8a2f2bdf151fd9d679",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -2875,8 +2875,8 @@
     "lib_player_motion": {
       "id": "gm4_player_motion",
       "name": "Gamemode 4 Player Motion",
-      "version": "1.1.1",
-      "hash": "c8f37467d44c94956014a4c47395cc8a3107f00e",
+      "version": "1.1.2",
+      "hash": "773bd4d7b7cef73b297323ae58971fd4663685c5",
       "video_link": "",
       "wiki_link": "",
       "credits": {
