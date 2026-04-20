@@ -8,5 +8,5 @@ def beet_default(ctx: Context):
 				"color": "red"
 			}
 		]
-    ctx.assets.min_format = 80
-    ctx.assets.max_format = 80
+    ctx.assets.min_format = 84
+    ctx.assets.max_format = 84

@@ -1,5 +1,6 @@
 # smeltery processes
 # @s = smeltery
+# at @s
 # run from main
 
 # update smeltery state

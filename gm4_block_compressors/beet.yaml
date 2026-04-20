@@ -1,6 +1,6 @@
 id: gm4_block_compressors
 name: Block Compressors
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -16,7 +16,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_machines: 1.4.0
+        lib_machines: 1.5.0
       schedule_loops: [main]
     translation_linter_ignores:
       - text.gm4.block_compressors.compressed

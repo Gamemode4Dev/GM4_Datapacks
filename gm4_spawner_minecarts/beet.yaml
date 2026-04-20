@@ -1,6 +1,6 @@
 id: gm4_spawner_minecarts
 name: Spawner Minecarts
-version: 3.0.X
+version: 3.1.X
 
 data_pack:
   load: .

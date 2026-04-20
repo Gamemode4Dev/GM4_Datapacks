@@ -1,6 +1,6 @@
 id: gm4_orb_of_ankou
 name: Orb of Ankou
-version: 1.8.X
+version: 1.9.X
 
 data_pack:
   load: .
@@ -21,8 +21,8 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_metallurgy: 1.5.0
-        lib_player_motion: 1.0.0
+        gm4_metallurgy: 1.8.0
+        lib_player_motion: 1.1.0
       schedule_loops:
         - main
         - tick

@@ -121,7 +121,6 @@ jobs:
       - name: Copy packs to world
         run: |
           mkdir -p world/datapacks
-          rm out/gm4_zauber_cauldrons.zip
           rm out/gm4_zauber_liquids.zip
           cp out/gm4_*.zip world/datapacks
 

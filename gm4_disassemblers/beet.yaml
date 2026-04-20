@@ -1,6 +1,6 @@
 id: gm4_disassemblers
 name: Disassemblers
-version: 2.5.X
+version: 2.6.X
 
 data_pack:
   load: .
@@ -17,7 +17,8 @@ meta:
   gm4:
     versioning:
       required:
-        lib_machines: 1.4.0
+        lib_machines: 1.5.0
+        lib_forceload: 1.6.0
       schedule_loops: [main]
     model_data:
       - item: player_head
@@ -77,6 +78,7 @@ meta:
       Updated by:
         - Federick90
         - BPR
+        - runcows
       Textures by:
         - Kyrius
       Icon Design:

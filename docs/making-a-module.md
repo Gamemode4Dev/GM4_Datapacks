@@ -58,8 +58,8 @@ meta:
     versioning:
       # A list of minimum-required versions for libraries or other modules
       required:
-        - lib_machines: 1.1.0
-        - gm4_bat_grenades: 1.2.0
+        - lib_machines: 1.5.0
+        - gm4_bat_grenades: 1.7.0
 
       # A list of any functions that create "schedule loop clocks". Necessary to turn off the module in case of a load failure
       schedule_loops:

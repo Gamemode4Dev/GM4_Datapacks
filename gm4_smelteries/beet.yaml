@@ -1,6 +1,6 @@
 id: gm4_smelteries
 name: Smelteries
-version: 1.8.X
+version: 1.9.X
 
 data_pack:
   load: .
@@ -17,7 +17,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_machines: 1.4.0
+        lib_machines: 1.5.0
       schedule_loops: [main]
     
     gui_fonts:
@@ -40,6 +40,7 @@ meta:
         - Misode
         - SpecialBuilder32
         - BPR
+        - runcows
       Textures By:
         - Kyrius
       Icon Design:

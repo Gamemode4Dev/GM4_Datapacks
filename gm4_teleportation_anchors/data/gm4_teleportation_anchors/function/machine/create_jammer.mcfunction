@@ -6,8 +6,16 @@
 # place dropper
 setblock ~ ~ ~ dropper[facing=up]{CustomName:{"translate":"gm4.second","fallback":"%1$s","with":[{"translate":"container.gm4.teleportation_jammer","fallback":"Teleportation Jammer"},[{"text":" ","font":"gm4:half_invert"},{"translate":"container.gm4.teleportation_jammer","fallback":"Teleportation Jammer","font":"gm4:half_invert"},{"translate":"container.gm4.teleportation_jammer","fallback":"Teleportation Jammer","font":"gm4:offscreen"},{"translate":"gui.gm4.teleportation_jammer","fallback":"","font":"gm4:container_gui","color":"white"},{"text":" ","font":"gm4:half_invert"},{"translate":"container.gm4.teleportation_jammer","fallback":"Teleportation Jammer","font":"gm4:half_invert"},{"translate":"container.gm4.teleportation_jammer","fallback":"Teleportation Jammer","font":"gm4:default","color":"#404040"}]]}}
 
-# summon display armor stand and marker entity
-summon armor_stand ~ ~-0.4 ~ {Small:1b,NoGravity:1b,Marker:1b,Invulnerable:1b,Invisible:1b,DisabledSlots:2039552,Tags:["gm4_no_edit","gm4_teleportation_jammer_stand","gm4_machine_stand","smithed.entity","smithed.strict","gm4_new_machine"],HasVisualFire:1b,CustomName:"gm4_teleportation_jammer_stand",equipment:{head:{id:"purpur_pillar",count:1,components:{"minecraft:custom_model_data":{"strings":["gm4_teleportation_anchors:block/teleportation_jammer"]}}}},Rotation:[0.0f,0.0f]}
+# summon display and marker entity
+summon minecraft:item_display ~ ~ ~ {\
+  CustomName:"gm4_teleportation_jammer_display",\
+  Tags:["gm4_no_edit","gm4_teleportation_jammer_display","gm4_machine_display","smithed.entity","smithed.strict","gm4_new_machine"],\
+  item:{id:"purpur_pillar",count:1,components:{"minecraft:custom_model_data":{"strings":["gm4_teleportation_anchors:block/teleportation_jammer"]}}},\
+  item_display:head,\
+  brightness:{sky:15,block:15},\
+  Rotation:[0.0f,0.0f],\
+  transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.501f,0f],scale:[0.438,0.438,0.438]}\
+}
 summon marker ~ ~ ~ {Tags:["gm4_teleportation_jammer","gm4_machine_marker","smithed.block","smithed.entity","smithed.strict","gm4_new_machine"],CustomName:"gm4_teleportation_jammer",Rotation:[0.0f,0.0f]}
 
 # set id
@@ -17,5 +25,5 @@ execute store result score @e[type=marker,tag=gm4_new_machine,limit=1,distance=.
 playsound minecraft:block.chorus_flower.death block @a[distance=..8] ~ ~ ~ 100 1.3
 playsound minecraft:block.beacon.power_select block @a[distance=..8] ~ ~ ~ 0.3 0.3
 scoreboard players set $placed_block gm4_machine_data 1
-scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 1
+scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 2
 tag @e[distance=..2] remove gm4_new_machine

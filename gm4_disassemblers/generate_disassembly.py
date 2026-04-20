@@ -66,7 +66,7 @@ ITEMS = {
 def beet_default(ctx: Context):
   """Creates a loot table for dropping the 9 result items when disassembling an item."""
   vanilla = ctx.inject(Vanilla)
-  vanilla.minecraft_version = '1.21.11'
+  vanilla.minecraft_version = '26.1'
   recipes = vanilla.data.recipes
 
   for item, durability in ITEMS.items():

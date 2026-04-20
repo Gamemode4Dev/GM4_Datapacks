@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "ringbell": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "minecraft:emerald"
+            }
+          },
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:bell"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_calling_bell:on_bell_interact"
+  }
+}

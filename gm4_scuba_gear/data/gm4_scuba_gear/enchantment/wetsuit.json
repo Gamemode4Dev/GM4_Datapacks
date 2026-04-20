@@ -1,0 +1,191 @@
+{
+  "description": "",
+  "supported_items": "minecraft:leather_leggings",
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "legs"
+  ],
+  "effects": {
+    "minecraft:tick": [
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:inverted",
+                "term": {
+                  "condition": "minecraft:location_check",
+                  "predicate": {
+                    "fluid": {
+                      "fluids": "#minecraft:water"
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_scores",
+                "entity": "this",
+                "scores": {
+                  "gm4_sg_buoyancy": {
+                    "min": -1,
+                    "max": 1
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "gm4_scuba_gear:wetsuit_buoyancy/clear"
+        }
+      },
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "fluid": {
+                "fluids": "#minecraft:water"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:any_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "type_specific": {
+                    "type": "minecraft:player",
+                    "input": {
+                      "jump": false,
+                      "sneak": false
+                    }
+                  }
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "type_specific": {
+                    "type": "minecraft:player",
+                    "input": {
+                      "jump": true,
+                      "sneak": true
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "gm4_sg_buoyancy": 0
+              }
+            }
+          }
+        ],
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "gm4_scuba_gear:wetsuit_buoyancy/neutral"
+        }
+      },
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "fluid": {
+                "fluids": "#minecraft:water"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "gm4_sg_buoyancy": -1
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "minecraft:player",
+                "input": {
+                  "jump": false,
+                  "sneak": true
+                }
+              }
+            }
+          }
+        ],
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "gm4_scuba_gear:wetsuit_buoyancy/negative"
+        }
+      },
+      {
+        "requirements": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "fluid": {
+                "fluids": "#minecraft:water"
+              }
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "gm4_sg_buoyancy": 1
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "minecraft:player",
+                "input": {
+                  "jump": true,
+                  "sneak": false
+                }
+              }
+            }
+          }
+        ],
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "gm4_scuba_gear:wetsuit_buoyancy/positive"
+        }
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 id: gm4_tunnel_bores
 name: Tunnel Bores
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -16,7 +16,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_machines: 1.4.0
+        lib_machines: 1.5.0
       schedule_loops: [pulse_check]
     model_data:
       - item: furnace_minecart

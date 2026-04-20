@@ -71,7 +71,7 @@ with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
 
                 m, s = row["effect_duration"].split(":")
                 duration = max(int(m)*60 + round(float(s)), 1)
-                execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+                execute as @e[type=!#gm4:non_living,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
                     unless entity @s[gamemode=spectator]
                     unless predicate inline_predicate
                     run function f"gm4_potion_liquids:util/dispense/{row["potion_id"]}":
@@ -115,7 +115,7 @@ class FloatingPotion:
 
     @potion_liquid.util_below
     def dispense_float_potion():
-        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+        execute as @e[type=!#gm4:non_living,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
             unless entity @s[gamemode=spectator]
             unless predicate {
                     "condition":"minecraft:entity_properties",

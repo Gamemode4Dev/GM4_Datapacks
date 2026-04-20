@@ -1,8 +1,9 @@
 # run smeltery in lit state
 # @s = smeltery marker
+# at @s
 # run from process
 
-execute unless entity @s[tag=gm4_smeltery_lit] positioned ~ ~-0.3 ~ run item replace entity @e[type=armor_stand,tag=gm4_smeltery_stand,distance=..0.1,limit=1] armor.head with iron_block[custom_model_data={strings:["gm4_smelteries:block/smeltery_lit"]}]
+execute unless entity @s[tag=gm4_smeltery_lit] run item replace entity @e[type=item_display,tag=gm4_smeltery_display,distance=..0.1,limit=1] contents with iron_block[custom_model_data={strings:["gm4_smelteries:block/smeltery_lit"]}]
 tag @s add gm4_smeltery_lit
 
 particle large_smoke ~ ~ ~ 0 0.3 0 0 5 normal @a
