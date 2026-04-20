@@ -3,7 +3,11 @@
         "icon": {
             "id": "minecraft:elytra",
             "components": {
-                "minecraft:custom_model_data": "item/horse_wings"
+                "minecraft:custom_model_data": {
+                    "strings": [
+                        "gm4_horsemanship:item/horse_wings"
+                    ]
+                }
             }
         },
         "title": {
