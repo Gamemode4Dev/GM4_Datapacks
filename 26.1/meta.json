@@ -1,5 +1,5 @@
 {
-  "last_commit": "3105fd948473c71a7e5b7ebeb5a0b990f8f9d313",
+  "last_commit": "c6bee511338ba16e8f7d2a5c2aebd4a3507142ee",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1094,7 +1094,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.4",
+      "version": "1.1.5",
       "hash": "15c8acf090fb6a8eef386a2e67706c932a8456a3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -2008,8 +2008,8 @@
     {
       "id": "gm4_soul_glass",
       "name": "Soul Glass",
-      "version": "1.7.1",
-      "hash": "92f461ea24050b291885226cfaea4fcadfcd73ca",
+      "version": "1.7.2",
+      "hash": "ed5e5d281c3d34f27fa9007acdb677b29ab96ef0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Soul_Glass",
       "credits": {
