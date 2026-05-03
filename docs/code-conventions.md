@@ -44,7 +44,7 @@ Additional lines may be present to indicate the context of the function. Each of
   - `scheduled from <locator>` The full resource locator of a function that schedules this function. Use of wildcards, e.g. `run from gm4:boats/*` is permitted.
   - `rewarded from <locator>` The full resource locator of an advancement that rewards this function. Use of wildcards, e.g. `run from gm4:join/*` is permitted.
   - `run from <function|dialog|command block|chat|...> <descriptor>` A description or location of any other source that triggers this function.
-  - `with $<key>: <description>` The key of an nb tag used for the macro call of this function, as well as a description of the value the key holds. Do not specify this unless this function is a macro. Use of wildcards, e.g. `with $id_*: Set of 16 ids used to track runcows.`
+  - `with $<key>: <description>` The key of an nb tag used for the macro call of this function, as well as a description of the value the key holds. Do not specify this unless this function is a macro. Use of wildcards, e.g. `with $id_*: Set of 16 ids used to track runcows.` is permitted.
 
 ### Inline comments
 Inline comments should be placed to partition code into logical sections and `#` should be followed by a space, e.g.
