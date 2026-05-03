@@ -24,8 +24,6 @@ from mecha.ast import (
 from nbtlib import String # type: ignore
 from PIL.Image import Image
 
-from gm4.utils import InvokeOnJsonNbt
-
 parent_logger = logging.getLogger("gm4.player_heads")
 
 USER_AGENT = "Gamemode4Dev/GM4_Datapacks/player_head_management (gamemode4official@gmail.com)"
@@ -50,7 +48,7 @@ class Skin(PngFile):
     image: ClassVar[FileDeserialize[Image]] = FileDeserialize() # purely here to solve type-warnings on PIL images
     
 
-class SkinNbtTransformer(MutatingReducer, InvokeOnJsonNbt):
+class SkinNbtTransformer(MutatingReducer):
     """Reducer class defining custom mecha parsing rules for skin texture data, and storing needed data for those operations"""
     def __init__(self, ctx: Context):
         self.ctx: Context = ctx

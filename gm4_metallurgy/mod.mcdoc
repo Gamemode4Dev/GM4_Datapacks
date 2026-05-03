@@ -1,3 +1,28 @@
+use ::java::world::item::ItemStack
+use ::java::world::component::DataComponentPatch
+
+dispatch minecraft:storage[gm4_arborenda_shamir:temp] to struct {
+  tool?: ItemStack,
+  damage?: int,
+}
+
+dispatch minecraft:storage[gm4_infinitas_shamir:bucket] to struct {
+  fish_data?: DataComponentPatch,
+}
+
+dispatch minecraft:storage[gm4_metallurgy:temp/item/cast] to struct {
+  stored_shamir?: string,
+  recasted_shamir?: string,
+}
+
+dispatch minecraft:storage[gm4_metallurgy:temp/item/ore] to struct {
+  gm4_metallurgy?: CustomData,
+}
+
+dispatch minecraft:storage[gm4_vibro_shamir:temp] to struct {
+  Pos?: [double] @ 3,
+}
+
 dispatch mcdoc:custom_data[gm4_metallurgy] to struct CustomData {
   has_shamir?: 1b,
   active_shamir?: string,

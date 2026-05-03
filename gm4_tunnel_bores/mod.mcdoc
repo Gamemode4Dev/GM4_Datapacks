@@ -1,0 +1,5 @@
+use ::java::util::slot::SlottedItem
+
+dispatch minecraft:storage[gm4_tunnel_bores:bore_container] to struct {
+  Items?: [SlottedItem<byte>],
+}

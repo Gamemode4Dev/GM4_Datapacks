@@ -1,9 +1,5 @@
-# @s = trader llama
-# at wandering trader with no llamas, tag=gm4_balloon_animal_trader,tag=gm4_balloon_animal_trader_new
+# @s = wandering trader
+# at wandering trader with no llamas, tag=gm4_balloon_animal_trader
 # run from wandering_trader/trade/pick_animal
 
-tp @s ~ 0 ~
-
-data merge entity @s {Silent:1b,NoGravity:1b,Invulnerable:1b,ChestedHorse:1b,Variant:0,Strength:1,DespawnDelay:1,Tags:["gm4_trade_option"],Items:[{id:"minecraft:emerald",count:8,Slot:1b}],equipment:{body:{id:"minecraft:light_blue_carpet",count:1,components:{"minecraft:custom_data":{gm4_trades:{options:{maxUses:1,rewardXp:1b,xp:1,priceMultiplier:0.05f}}}}}}}
-
-loot replace entity @s horse.0 loot gm4_balloon_animals:bee_nest
+data modify storage gm4_balloon_animals:temp trade set value {buy:{id:"minecraft:emerald",count:8},sell:{id:"minecraft:bee_nest",components:{"minecraft:bees":[{entity_data:{id:"minecraft:bee"},ticks_in_hive:0,min_ticks_in_hive:0}]}},maxUses:1,rewardExp:1b,xp:1,priceMultiplier:0.05f}

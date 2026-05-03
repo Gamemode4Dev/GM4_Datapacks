@@ -6,7 +6,6 @@
   * [Function headers](#function-headers)
   * [Inline comments](#inline-comments)
 * [Smithed conventions](#smithed-conventions)
-  * [CMD prefixing](#cmd-prefixing)
   * [Tag specification](#tag-specification)
 
 ## Naming
@@ -57,9 +56,6 @@ kill @s
 
 ## Smithed conventions
 We follow the Smithed conventions in our data pack. For the full documentation, see the [Smithed Wiki](https://wiki.smithed.dev/conventions/).
-
-### CMD prefixing
-All the custom model data values in GM4 are prefixed with `3420000`. As a module developer you don't need to worry about this, it is handled by our resource pack plugin. <!-- TODO: link to resource pack docs -->
 
 ### Tag specification
 Smithed defines a set of standard entity `/tag`s to ensure compatibility between different packs:

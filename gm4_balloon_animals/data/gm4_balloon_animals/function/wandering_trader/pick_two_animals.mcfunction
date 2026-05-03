@@ -1,4 +1,4 @@
-# @s = a wandering trader with no trader llamas, tag=gm4_balloon_animal_trader,tag=gm4_balloon_animal_trader_new
+# @s = a wandering trader with no trader llamas, tag=gm4_balloon_animal_trader
 # at @s
 # run from wandering_trader/init_trader
 

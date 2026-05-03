@@ -1,0 +1,22 @@
+use ::java::world::item::ItemStack
+use ::java::world::component::item::EnchantmentLevels
+use ::java::util::text::Text
+use ::java::util::text::TextObject
+
+dispatch minecraft:storage[gm4_bookshelf_inspector:temp] to struct {
+  book_data?: (
+    [ItemStack] |
+    ItemStack |
+  ),
+  levels?: EnchantmentLevels,
+  enchantments?: [struct {
+    id: #[id="enchantment"] string,
+    lvl?: int,
+  }],
+  enchantment_list?: [Text],
+  new_enchant?: struct {
+    id: #[id="enchantment"] string,
+    lvl?: int,
+  },
+  text?: (Text | [TextObject] @ 0),
+}

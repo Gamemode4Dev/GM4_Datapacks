@@ -54,7 +54,7 @@
           },
           {
             "translate": "text.gm4.guidebook.liquid_minecarts.crafting",
-            "fallback": "Combining a liquid tank and a minecart in a Custom Crafter will craft a liquid minecart.\n\nLiquid minecarts can be used to move liquids from one tank to another."
+            "fallback": "Combining a liquid tank and a minecart in a crafting table will craft a liquid minecart.\n\nLiquid minecarts can be used to move liquids from one tank to another."
           }
         ]
       ]

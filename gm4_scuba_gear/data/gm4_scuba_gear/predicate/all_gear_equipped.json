@@ -13,10 +13,18 @@
       },
       "chest": {
         "items": [
-          "minecraft:golden_chestplate"
+          "minecraft:leather_chestplate"
         ],
         "predicates": {
           "minecraft:custom_data": "{gm4_scuba_gear:{item:\"tank\"}}"
+        }
+      },
+      "legs": {
+        "items": [
+          "minecraft:leather_chestplate"
+        ],
+        "predicates": {
+          "minecraft:custom_data": "{gm4_scuba_gear:{item:\"wetsuit\"}}"
         }
       },
       "feet": {

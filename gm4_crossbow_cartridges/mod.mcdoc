@@ -1,0 +1,9 @@
+use ::java::world::entity::AnyEntity
+use ::java::world::component::block::Occupant
+use ::java::world::component::item::PotionContents
+
+dispatch minecraft:storage[gm4_crossbow_cartridges:temp] to struct {
+  projectile?: AnyEntity,
+  bees?: [Occupant],
+  potion_contents?: PotionContents
+}

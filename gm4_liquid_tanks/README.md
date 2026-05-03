@@ -1,4 +1,4 @@
-# Liquid Tank<!--$headerTitle--><!--$pmc:delete-->
+# Liquid Tanks<!--$headerTitle--><!--$pmc:delete-->
 
 Store liquids like water and lava or liquids like soup and honey in a compact form to enable autobottling!<!--$pmc:headerSize-->
 

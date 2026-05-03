@@ -107,4 +107,4 @@ execute if entity @s[nbt={data:{gm4_brewing:{previous_items:[{Slot:3b,id:"minecr
 
 
 ## License
-This library, and the contents of the `lib_brewing` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_data packs), is licensed under the MIT License.
+This library, and the contents of the `lib_brewing` directory on the [github repository](https://github.com/Gamemode4Dev/GM4_Datapacks), is licensed under the MIT License.

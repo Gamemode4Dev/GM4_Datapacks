@@ -1,0 +1,5 @@
+use ::java::world::component::item::EnchantmentLevels
+
+dispatch minecraft:storage[gm4_book_binders:temp] to struct {
+  stored_enchantments?: EnchantmentLevels
+}

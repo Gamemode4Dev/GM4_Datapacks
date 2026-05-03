@@ -1,16 +1,9 @@
 id: gm4_metallurgy
 name: Metallurgy
-version: 1.7.X
+version: 1.8.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 1
-        max_inclusive: 81
-      min_format: 1
-      max_format: 81
-      directory: backport_81
 
 resource_pack:
   load: .
@@ -24,7 +17,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_lore: 1.3.0
+        lib_lore: 1.4.0
       schedule_loops:
         - main
         - tick

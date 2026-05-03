@@ -1,26 +1,14 @@
 id: gm4_reeling_rods
 name: Reeling Rods
-version: 1.0.X
+version: 1.1.X
 
 data_pack:
   load: .
-  overlays:
-    - formats:
-        min_inclusive: 1
-        max_inclusive: 71
-      min_format: 1
-      max_format: 71
-      directory: backport_71
-    - formats:
-        min_inclusive: 1
-        max_inclusive: 88
-      min_format: 1
-      max_format: 88
-      directory: backport_88
 
 pipeline:
   - generate_files
   - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_hooked_entity
 
 require:
   - bolt
@@ -28,7 +16,8 @@ require:
 meta:
   gm4:
     versioning:
-      schedule_loops: [tick]
+      required:
+        lib_hooked_entity: 1.0.0
     website:
       description: Steal Villager's wares, scratch up your foes! Fishing rods have never been more useful!
       recommended: 

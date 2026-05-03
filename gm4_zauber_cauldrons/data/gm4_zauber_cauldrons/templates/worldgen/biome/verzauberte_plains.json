@@ -2,30 +2,36 @@
     "temperature": {{temperature}},
     "downfall": 0.8,
     "has_precipitation": {{has_precipitation}},
+    "attributes": {
+        "minecraft:visual/sky_color": {{sky_color}},
+        "minecraft:visual/fog_color": {{fog_color}},
+        "minecraft:visual/water_fog_color": {{water_fog_color}},
+        "minecraft:audio/ambient_sounds": {
+            "mood": {
+                "sound": "minecraft:ambient.cave",
+                "tick_delay": 6000,
+                "block_search_extent": 8,
+                "offset": 2
+            }
+        },
+        "minecraft:audio/background_music": {
+            "default": {
+                "sound": "minecraft:music.overworld.forest",
+                "min_delay": 12000,
+                "max_delay": 24000,
+                "replace_current_music": false
+            }
+        }
+    },
     "effects": {
-        "sky_color": {{sky_color}},
-        "fog_color": {{fog_color}},
         "water_color": {{water_color}},
-        "water_fog_color": {{water_fog_color}},
         "grass_color": {{grass_color}},
         "foliage_color": {{foliage_color}},
         {{biome_particle}}
-        "mood_sound": {
-            "sound": "minecraft:ambient.cave",
-            "tick_delay": 6000,
-            "block_search_extent": 8,
-            "offset": 2
-        },
-        "music": {
-            "sound": "minecraft:music.overworld.forest",
-            "min_delay": 12000,
-            "max_delay": 24000,
-            "replace_current_music": false
-        }
     },
     "spawners": {},
     "spawn_costs": {},
-    "carvers": {},
+    "carvers": [],
     "features": [
         [
             "gm4_zauber_cauldrons:{{flower}}_patch"

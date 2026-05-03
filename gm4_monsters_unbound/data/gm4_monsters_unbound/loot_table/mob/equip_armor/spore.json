@@ -10,7 +10,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/spore/cherry"
+                "minecraft:custom_model_data": {"strings":["gm4_monsters_unbound:item/spore/cherry"]}
               }
             }
           ],
@@ -31,7 +31,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/spore/default"
+                "minecraft:custom_model_data": {"strings":["gm4_monsters_unbound:item/spore/default"]}
               }
             }
           ],
@@ -59,7 +59,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/spore/flowering"
+                "minecraft:custom_model_data": {"strings":["gm4_monsters_unbound:item/spore/flowering"]}
               }
             }
           ],
@@ -87,8 +87,7 @@
           "target": "item_name",
           "name": {
             "translate": "item.gm4.monsters_unbound.zombie_spore",
-            "fallback": "Zombie Spore",
-            "italic": false
+            "fallback": "Zombie Spore"
           }
         }
       ]

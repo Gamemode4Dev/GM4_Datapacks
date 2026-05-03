@@ -3,7 +3,7 @@
         "icon": {
             "id": "furnace",
             "components": {
-                "minecraft:custom_model_data": "gui/advancement/smelteries"
+                "minecraft:custom_model_data": {"strings":["gm4_smelteries:gui/advancement/smelteries"]}
             }
         },
         "title": {
@@ -16,7 +16,7 @@
             "color": "gray"
         }
     },
-    "parent": "gm4:custom_crafters",
+    "parent": "gm4:root",
     "criteria": {
         "obtain_smeltery": {
             "trigger": "minecraft:inventory_changed",

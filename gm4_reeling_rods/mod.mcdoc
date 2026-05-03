@@ -1,0 +1,53 @@
+use ::java::util::BlockState
+use ::java::world::item::ItemStack
+use ::java::world::entity::AnyEntity
+use ::java::world::entity::mob::breedable::villager::ReputationPart
+
+dispatch minecraft:storage[gm4_reeling_rods:temp] to struct {
+  bit_data?: struct {
+    bit_score: string,
+    bit: string,
+    UUID?: #[uuid] int[] @ 4,
+  },
+  position?: [double] @ 3,
+  item_data?: struct {
+    Item?: (ItemStack | struct {}),
+    Motion?: [double] @ 3,
+    PickupDelay?: short,
+  },
+  lookup_key?: int,
+  motion_vector?: [double] @ 3,
+  barbed_attacker_uuid?: #[uuid] int[] @ 4,
+  enchanted?: struct {
+    barbed?: struct {
+      attacker_uuid?: #[uuid] int[] @ 4,
+      period?: int,
+      damage?: int,
+    },
+    reeling?: int,
+  },
+  player_data?: struct {
+    Pos: [double] @ 3,
+  },
+  entity_data?: struct {
+    Items?: [ItemStack],
+    UUID?: #[uuid] int[] @ 4,
+    Passengers?: [AnyEntity],
+    Motion?: [double] @ 3,
+    BlockState?: BlockState,
+    mainhand?: ItemStack,
+    gossip?: struct {
+      Target?: #[uuid] int[] @ 4,
+      Type?: ReputationPart,
+      Value?: int,
+    },
+  },
+  entity_type?: #[id="entity_type"] string,
+  displacement?: float,
+}
+
+dispatch minecraft:storage[gm4_reeling_rods:players] to struct {
+  [string]: struct {
+    [#[match_regex="bit_\\d+"] string]: string,
+  },
+}

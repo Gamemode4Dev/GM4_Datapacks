@@ -141,7 +141,7 @@
             "with": [
                 "40",
                 {
-                    "translate": "attribute.name.generic.movement_speed"
+                    "translate": "attribute.name.movement_speed"
                 }
             ],
             "color": "blue",
@@ -152,7 +152,7 @@
             "with": [
                 "4",
                 {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                 }
             ],
             "color": "red",
@@ -203,7 +203,7 @@
             "with": [
                 "6",
                 {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                 }
             ],
             "color": "blue",

@@ -15,7 +15,7 @@
   "result": {
     "id": "minecraft:hopper_minecart",
     "components": {
-      "minecraft:custom_model_data": "item/liquid_minecart",
+      "minecraft:custom_model_data": {"strings":["gm4_liquid_minecarts:item/liquid_minecart"]},
       "minecraft:custom_data": "{gm4_machines:{id:'liquid_minecart'}}",
       "minecraft:custom_name": {"translate":"item.gm4.liquid_minecart","fallback":"Minecart with Liquid Tank","color":"white","italic":false}
     }

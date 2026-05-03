@@ -10,7 +10,7 @@
 # the player who has interacted with the cauldron is tagged as gm4_zc_actor and their gamemode is available via the fake player
 # $actor_gamemode in gm4_zc_data: 0 = survival or adventure, 1 = creative.
 # the previous fill level is available via fake player $previous_fill_level gm4_zc_data.
-function #gm4_zauber_cauldrons:liquid/fill_bucket_from_cauldron
+function #gm4_zauber_cauldrons:cauldron/liquid/fill_bucket_from_cauldron
 
 # if no expansion handles this liquid type being removed via bucket, fall back to default behavior:
 # reset the cauldron to to its previous level and return the bucket to the player
