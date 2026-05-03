@@ -41,8 +41,10 @@ The first three lines are positional:
 
 Additional lines may be present to indicate the context of the function. Each of the following may be specified multiple times, do **not** use a single line to specify multiple entries.
   - `run from <locator>` The resource locator of a function that calls this function. Use of wildcards, e.g. `run from gm4:boats/*` is permitted. The namespace of the resource locator may be omitted, in which case the namespace of the current function is assumed.
+  - `run from self` Indicate that a function calls itself.
   - `scheduled from <locator>` The full resource locator of a function that schedules this function. Use of wildcards, e.g. `run from gm4:boats/*` is permitted.
   - `rewarded from <locator>` The full resource locator of an advancement that rewards this function. Use of wildcards, e.g. `run from gm4:join/*` is permitted.
+  - `run from <function|dialog|command block|chat|...> <descriptor>` A description or location of any other source that triggers this function.
   - `with $<key>: <description>` The key of an nb tag used for the macro call of this function, as well as a description of the value the key holds. Do not specify this unless this function is a macro. Use of wildcards, e.g. `with $id_*: Set of 16 ids used to track runcows.`
 
 ### Inline comments
