@@ -33,6 +33,7 @@ class Track(BaseModel):
     keyframes: List[Keyframe] = []
 
 class TimelineData(BaseModel):
+    clock: str
     period_ticks: int
     tracks: Dict[str, Track] = {}
 
@@ -139,7 +140,7 @@ def process_day_files(
     """
     function_data: dict[str, Any] = {}
 
-    # start with day 0 (first 600 ticks)
+    # start with day 0 (first 6000 ticks)
     full_timeline = build_day_zero(default_data)
 
     # loop over day definitions
@@ -211,7 +212,7 @@ def build_day_zero(default_data: TimelineData) -> TimelineData:
         track.keyframes = new_keyframes
 
     # add this start to the full_timeline
-    full_timeline = append_to_timeline(TimelineData(period_ticks=0, tracks={}),day_zero)
+    full_timeline = append_to_timeline(TimelineData(clock="minecraft:overworld", period_ticks=0, tracks={}),day_zero)
     full_timeline.period_ticks += TICK_OFFSET
 
     return full_timeline
@@ -236,7 +237,7 @@ def register_day(
         A tuple containing the generated day timeline and a list of function
         calls to be triggered at specific ticks.
     """
-    result = TimelineData(period_ticks=default_data.period_ticks, tracks={})
+    result = TimelineData(clock="minecraft:overworld", period_ticks=default_data.period_ticks, tracks={})
     seen_tracks: set[str] = set()
     functions: List[Dict[str, Any]] = []
 
