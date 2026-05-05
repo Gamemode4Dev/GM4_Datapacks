@@ -1,6 +1,83 @@
 use ::java::world::item::SingleItem
 use ::java::data::advancement::AdvancementCriterion
-use ::java::server::util::text::Text
+use ::java::util::text::Text
+use ::java::util::Filterable
+use ::java::util::slot::SlottedItem
+use ::java::world::item::ItemStack
+
+dispatch minecraft:storage[gm4_guidebook:temp] to struct {
+  modules?: [GuidebookModule],
+  expansions?: [GuidebookModule],
+  check_expansions?: [GuidebookModule],
+  module?: GuidebookModule,
+  expansion?: GuidebookModule,
+  prev_trigger_order?: [int],
+  lectern_pages?: [[Text]],
+  toc_back?: Text,
+  click?: int,
+  book?: struct {
+    trigger: int,
+    uuid: #[uuid] int[] @ 4,
+    count: int,
+    name: string,
+    load: string,
+  },
+  triggers?: [int],
+  Inventory?: [SlottedItem<byte @ 0..35>] @ 0..41,
+  Item?: SlottedItem<byte>,
+  unlocking?: struct {
+    uuid?: #[uuid] int[] @ 4,
+    name?: string,
+    target_page?: int,
+    lectern_target_page?: int,
+    source_page?: string,
+  },
+  lectern_page?: [Text],
+  page?: [Text],
+  page_content?: Text,
+}
+
+struct GuidebookModule {
+  type: string,
+  id: string,
+  base?: string,
+  trigger: int,
+  line_count: int,
+  toc_line: Text,
+}
+
+dispatch minecraft:storage[gm4_guidebook:register] to struct {
+  front_matter?: [Filterable<Text>],
+  trigger_order?: [int],
+  lectern_toc?: [Text],
+  trigger_map?: struct {
+    [int]: struct {
+      name: string,
+      load: string,
+    },
+  },
+  pages?: struct {
+    [string]: struct {
+      hand: PageState,
+      lectern: PageState,
+    },
+  },
+  player_pages?: struct {
+    [#[uuid] string]: struct {
+      [string]: struct {
+        hand: PageState,
+        lectern: PageState,
+      },
+    },
+  },
+}
+
+struct PageState {
+  initial: [Text],
+  unlockable: struct {
+    [string]: [Text],
+  },
+}
 
 dispatch minecraft:resource[gm4_guidebook] to struct Book {
   id: string,

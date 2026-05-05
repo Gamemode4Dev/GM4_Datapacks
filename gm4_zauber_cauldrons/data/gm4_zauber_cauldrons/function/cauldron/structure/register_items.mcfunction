@@ -1,5 +1,5 @@
-# @s = boiling cauldron with valid structure
-# at @s align xyz
+# @s = item inside cauldron
+# at cauldron align xyz
 # run from cauldron/structure/valid
 # counts items in cauldron and virtualizes them
 

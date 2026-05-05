@@ -34,3 +34,10 @@ text.gm4.guidebook.module_desc.potion_liquids,Adds the ability to store potions 
 text.gm4.guidebook.potion_liquids.description,"Potions can be stored in liquid tanks; extended potions count as a three potions.\n\nPotions can be taken out by putting a bottle in the tank, but tanks will not output extended potions."
 text.gm4.guidebook.potion_liquids.mob_effects_and_shulkers,Mobs under a potion tank will gain the potion effect from that tank.\n\nShulkers on an empty or levitation potion tank will fill it with Levitation potion liquid.
 text.gm4.guidebook.potion_liquids.witches,"Witches on an empty tank will fill it with Regeneration, Fire Resistance, Speed, or Instant Damage potion liquid.\n\nThey will also fill pre-existing potion tanks with those four potions."
+container.gm4.liquid_tank.awkward,Awkward Potion Tank
+container.gm4.liquid_tank.infested,Infested Potion Tank
+container.gm4.liquid_tank.mundane,Mundane Potion Tank
+container.gm4.liquid_tank.oozing,Oozing Potion Tank
+container.gm4.liquid_tank.thick,Thick Potion Tank
+container.gm4.liquid_tank.weaving,Weaving Potion Tank
+container.gm4.liquid_tank.wind_charged,Wind Charged Potion Tank

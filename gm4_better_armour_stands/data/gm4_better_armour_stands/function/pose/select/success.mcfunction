@@ -8,7 +8,7 @@ tag @s add gm4_bas_track
 tag @a[tag=gm4_bas_active,limit=1] add gm4_bas_track
 
 data modify entity @s DisabledSlots set value 4144959
-data modify entity @s[nbt={Invisible:1b}] Glowing set value 1
+data modify entity @s[nbt={Invisible:1b}] Glowing set value 1b
 
 # right click detection
 summon minecraft:interaction ~ ~ ~ {Tags:["smithed.entity","smithed.strict","gm4_bas_detect","gm4_bas_new","gm4_bas_temp"],height:2,width:1}

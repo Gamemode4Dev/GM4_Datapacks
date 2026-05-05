@@ -5,7 +5,7 @@
         "minecraft:horse",
         "minecraft:llama",
         "minecraft:mule",
-        {"id": "minecraft:nautilus", "required": false},
+        "minecraft:nautilus",
         "minecraft:parrot",
         "minecraft:skeleton_horse",
         "minecraft:trader_llama",

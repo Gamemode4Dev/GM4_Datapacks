@@ -1,6 +1,5 @@
 # @template gm4:test_platform
 # @skyaccess
-# @optional
 
 execute positioned ~1.5 ~1.5 ~1.5 run function gm4_block_compressors:machine/create
 item replace block ~1 ~1 ~1 container.0 with cobblestone 7

@@ -23,4 +23,6 @@ execute if score $scraped gm4_llp.data matches 0 run return fail
 
 # update axe durability
 execute if score $mainhand gm4_llp.data matches 1 if entity @s[gamemode=!creative] run function gm4_lively_lily_pads:mechanics/interactions/waxed_copper_lantern/used_mainhand_axe
+execute if score $mainhand gm4_llp.data matches 1 run swing @s mainhand
 execute if score $offhand gm4_llp.data matches 1 if entity @s[gamemode=!creative] run function gm4_lively_lily_pads:mechanics/interactions/waxed_copper_lantern/used_offhand_axe
+execute if score $offhand gm4_llp.data matches 1 run swing @s offhand

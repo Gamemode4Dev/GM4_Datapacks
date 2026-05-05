@@ -34,6 +34,7 @@
                         },
                         {
                             "function": "set_name",
+                            "target": "custom_name",
                             "name": {
                                 "translate": "item.gm4.lingering_floating_potion",
                                 "fallback": "Lingering Potion of Floating",

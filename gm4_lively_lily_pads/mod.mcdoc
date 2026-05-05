@@ -1,0 +1,12 @@
+use ::java::world::item::ItemStack
+
+dispatch minecraft:storage[gm4_llp:temp] to struct {
+  item?: struct {
+    id: #[id="item"] string,
+    count: int,
+    motion: [double] @ 3,
+  },
+  held_item?: #[id="item"] string,
+  DisplayType?: #[id="item"] string,
+  damage?: int,
+}

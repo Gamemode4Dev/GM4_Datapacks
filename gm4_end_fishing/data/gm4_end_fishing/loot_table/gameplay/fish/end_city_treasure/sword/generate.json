@@ -22,7 +22,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_1"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_1"]}
               }
             },
             {
@@ -56,7 +56,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_2"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_2"]}
               }
             },
             {
@@ -84,7 +84,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_3"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_3"]}
               }
             },
             {
@@ -112,7 +112,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_4"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_4"]}
               }
             },
             {
@@ -140,7 +140,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_5"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_5"]}
               }
             },
             {
@@ -168,7 +168,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_6"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_6"]}
               }
             },
             {
@@ -202,7 +202,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_7"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_7"]}
               }
             },
             {
@@ -230,7 +230,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_8"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_8"]}
               }
             },
             {
@@ -258,7 +258,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_9"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_9"]}
               }
             },
             {
@@ -286,7 +286,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_10"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_10"]}
               }
             },
             {
@@ -314,7 +314,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_11"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_11"]}
               }
             },
             {
@@ -348,7 +348,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_12"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_12"]}
               }
             },
             {
@@ -376,7 +376,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_13"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_13"]}
               }
             },
             {
@@ -410,7 +410,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_14"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_14"]}
               }
             },
             {
@@ -438,7 +438,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_15"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_15"]}
               }
             },
             {
@@ -466,7 +466,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_16"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_16"]}
               }
             },
             {
@@ -500,7 +500,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_17"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_17"]}
               }
             },
             {
@@ -528,7 +528,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_18"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_18"]}
               }
             },
             {
@@ -556,7 +556,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_19"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_19"]}
               }
             },
             {
@@ -584,7 +584,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_swords_20"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_swords_20"]}
               }
             },
             {

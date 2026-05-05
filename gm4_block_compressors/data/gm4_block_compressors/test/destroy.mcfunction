@@ -1,6 +1,5 @@
 # @template gm4:test_platform
 # @dummy ~ ~1 ~
-# @optional
 
 execute positioned ~1.5 ~1.5 ~1.5 run function gm4_block_compressors:machine/create
 give @s diamond_pickaxe

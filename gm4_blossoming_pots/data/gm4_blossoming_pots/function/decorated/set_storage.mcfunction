@@ -4292,3 +4292,21 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:potato set valu
         }\
     ]\
 }
+
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:golden_dandelion set value {\
+    place_sound:"minecraft:item.bone_meal.use",\
+    maximum:1,\
+    1:[\
+        {\
+            block_state:{\
+                Name:"minecraft:golden_dandelion"\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}

@@ -21,11 +21,11 @@ USER_AGENT = "Gamemode4Dev/GM4_Datapacks/release-pipeline (gamemode4official@gma
 def beet_default(ctx: Context):
 	"""Saves the datapack to the ./out folder in it's exit phase.
 	 	Should be first in pipeline to properly wrap all other plugins cleanup phases"""
-	version = os.getenv("VERSION", "1.21.5")
+	version = os.getenv("VERSION", "26.1")
 	out_dir = Path("out")
 
 	yield # wait for exit phase, after other plugins cleanup
-	
+
 	ctx.data.save(
 		path=out_dir / f"{ctx.project_id}_{version.replace('.', '_')}",
 		overwrite=True,
@@ -33,7 +33,7 @@ def beet_default(ctx: Context):
 
 def resource_pack(ctx: Context):
 	"""Saves the resourcepack to the ./out folder."""
-	version = os.getenv("VERSION", "1.21.5")
+	version = os.getenv("VERSION", "26.1")
 	out_dir = Path("out")
 
 	ctx.assets.save(
@@ -43,7 +43,7 @@ def resource_pack(ctx: Context):
 
 def release_resource_pack(ctx: Context):
 	"""Saves the resourcepack to the ./out folder."""
-	version = os.getenv("VERSION", "1.21.5")
+	version = os.getenv("VERSION", "26.1")
 	release_dir = Path("release") / version
 
 	yield
@@ -73,7 +73,7 @@ def release(ctx: Context):
 	"""
 	Saves the zipped datapack and metadata to the ./release/{version} folder.
 		Should be first in pipeline to properly wrap all other plugins cleanup phases
-	
+
 	If the module has the `version` and `meta.modrinth.project_id` fields, and
 	`BEET_MODRINTH_TOKEN` environment variable is set, will try to publish a
 	new version to Modrinth if it doesn't already exist.
@@ -82,7 +82,7 @@ def release(ctx: Context):
 	`BEET_SMITHED_TOKEN` environment variable is set, will try to publish a
 	new version to Smithed if it doesn't already exist.
 	"""
-	version_dir = os.getenv("VERSION", "1.21.5")
+	version_dir = os.getenv("VERSION", "26.1")
 	release_dir = Path("release") / version_dir
 
 	corrected_project_id = stem if (stem:=ctx.directory.stem).startswith("lib") else ctx.project_id
@@ -90,7 +90,7 @@ def release(ctx: Context):
 	file_name = f"{corrected_project_id}_{version_dir.replace('.', '_')}.zip"
 
 	yield # wait for exit phase, after other plugins cleanup
-	
+
 	ctx.data.save(
 		path=release_dir / file_name,
 		overwrite=True,
@@ -103,7 +103,7 @@ def release(ctx: Context):
 	os.makedirs(pack_icon_dir, exist_ok=True)
 	if "pack.png" in ctx.data.extra:
 		ctx.data.extra["pack.png"].dump(pack_icon_dir, f"{corrected_project_id}.png")
-	
+
 	smithed_readme_dir = generated_dir / "smithed_readmes"
 	os.makedirs(smithed_readme_dir, exist_ok=True)
 	if "smithed_readme" in ctx.meta:
@@ -199,8 +199,8 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
 	"""Attempts to publish pack to smithed"""
 	auth_token = os.getenv(SMITHED_AUTH_KEY, None)
 	logger = parent_logger.getChild(f"smithed.{ctx.project_id}")
-	mc_version_dir = os.getenv("VERSION", "1.21.5")
-	manifest = ManifestCacheModel.parse_obj(ctx.cache["gm4_manifest"].json)
+	mc_version_dir = os.getenv("VERSION", "26.1")
+	manifest = ManifestCacheModel.model_validate(ctx.cache["gm4_manifest"].json)
 	project_id = stem if (stem:=ctx.directory.stem).startswith("lib") else ctx.project_id
 
 	if config.smithed and auth_token:
@@ -214,7 +214,7 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
 			else:
 				logger.warning(f"Failed to get project: {res.status_code} {res.text}")
 			return
-		
+
 		project_data = res.json()
 
 		# update description and pack image
@@ -299,7 +299,7 @@ def clear_release(ctx: Context):
 	1. Deleted modules no longer stick around in the current version
 	2. Changes to the build system (such as renamed files/folders) are properly reflected
 	"""
-	version = os.getenv("VERSION", "1.21.5")
+	version = os.getenv("VERSION", "26.1")
 	release_dir = Path("release") / version
 	shutil.rmtree(release_dir, ignore_errors=True)
 	os.makedirs(release_dir, exist_ok=True)
@@ -307,10 +307,10 @@ def clear_release(ctx: Context):
 
 def readmes(ctx: Context):
 	"""Saves all READMEs intended for download sites to the ./out/readmes folder."""
-	
+
 	readme_dir = Path("out/readmes")
 	base_path = readme_dir / ctx.project_id
-	
+
 	if "README.md" in ctx.data.extra:
 		os.makedirs(base_path, exist_ok=True)
 		ctx.data.extra["README.md"].dump(base_path, "GM4_README.md")

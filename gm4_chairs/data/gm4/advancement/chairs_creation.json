@@ -3,7 +3,7 @@
     "icon": {
       "id": "birch_stairs",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/chairs_creation"
+        "minecraft:custom_model_data": {"strings":["gm4_chairs:gui/advancement/chairs_creation"]}
       }
     },
     "title": {

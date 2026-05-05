@@ -59,6 +59,7 @@ text.gm4.pneuma_soaring,Soaring
 text.gm4.pneuma_striding,Striding
 text.gm4.pneuma_synergetic,Synergetic
 text.gm4.pneuma_tranquilizing,Tranquilizing
+text.gm4.pneuma_debilitate,Debilitate
 text.gm4.pneuma_vanishing,Vanishing
 text.gm4.pneuma_venomous,Venomous
 text.gm4.pneuma_volatile,Volatile
@@ -93,6 +94,7 @@ text.gm4.guidebook.orb_of_ankou.note.depriving,Applies Hunger to attacked target
 text.gm4.guidebook.orb_of_ankou.note.freezing,Applies Slowness to arrows shot from bows
 text.gm4.guidebook.orb_of_ankou.note.hawkeye,Doubles the damage of arrows shot from bows; Arrows shot from bows will have Piercing I
 text.gm4.guidebook.orb_of_ankou.note.tranquilizing,Applies Poison to arrows shot from bows
+text.gm4.guidebook.orb_of_ankou.note.debilitate,Applies Weakness to arrows shot from bows
 text.gm4.guidebook.orb_of_ankou.note.venomous,Applies Poison to attacked target
 text.gm4.guidebook.orb_of_ankou.note.withering,Applies Wither to attacked target
 text.gm4.guidebook.orb_of_ankou.passive_pneumas,"The following pneumas are passive, activating automatically:"

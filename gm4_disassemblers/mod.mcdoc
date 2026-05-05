@@ -1,0 +1,5 @@
+use ::java::world::item::ItemStack
+
+dispatch minecraft:storage[gm4_disassemblers:temp] to struct {
+  Items?: [ItemStack]
+}

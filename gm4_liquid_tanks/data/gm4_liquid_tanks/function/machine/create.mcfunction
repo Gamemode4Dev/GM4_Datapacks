@@ -16,5 +16,5 @@ execute as @e[type=marker,tag=gm4_new_machine,limit=1] run function gm4_liquid_t
 # mark block as placed
 playsound block.end_portal_frame.fill block @a[distance=..30] ~ ~ ~ 1 0.5
 scoreboard players set $placed_block gm4_machine_data 1
-scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 1
+scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 2
 tag @e[distance=..2] remove gm4_new_machine

@@ -82,16 +82,16 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.waders",
-                "fallback": "Waders",
-                "italic": false
+                "fallback": "Waders"
               }
             },
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/waders"
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/waders"]}
               }
             }
           ]
@@ -204,7 +204,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/shipwreck_supply",
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/shipwreck_supply"]},
                 "minecraft:container_loot": {
                   "loot_table": "minecraft:chests/shipwreck_supply"
                 }
@@ -212,10 +212,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "block.gm4.shipwreck_supply_chest",
-                "fallback": "Shipwreck Supply Chest",
-                "italic": false
+                "fallback": "Shipwreck Supply Chest"
               }
             }
           ]
@@ -228,7 +228,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/shipwreck_treasure",
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/shipwreck_treasure"]},
                 "minecraft:container_loot": {
                   "loot_table": "minecraft:chests/shipwreck_treasure"
                 }
@@ -236,10 +236,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "block.gm4.shipwreck_treasure_chest",
-                "fallback": "Shipwreck Treasure Chest",
-                "italic": false
+                "fallback": "Shipwreck Treasure Chest"
               }
             }
           ]
@@ -252,7 +252,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/treasure_chest",
+                "minecraft:custom_model_data": {"strings":["gm4_sunken_treasure:item/treasure_chest"]},
                 "minecraft:container_loot": {
                   "loot_table": "gm4_sunken_treasure:chests/treasure_chest"
                 }
@@ -260,10 +260,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "block.gm4.treasure_chest",
-                "fallback": "Treasure Chest",
-                "italic": false
+                "fallback": "Treasure Chest"
               }
             }
           ]

@@ -1,0 +1,14 @@
+
+dispatch minecraft:storage[gm4_sunken_treasure:temp] to struct {
+  spawn?: SunkenTreasureSpawn,
+}
+
+dispatch mcdoc:custom_data[gm4_sunken_treasure] to struct {
+  spawn?: SunkenTreasureSpawn,
+}
+
+struct SunkenTreasureSpawn {
+  id: #[id="entity_type"] string,
+}
+
+dispatch mcdoc:custom_data[gm4_audrey] to byte

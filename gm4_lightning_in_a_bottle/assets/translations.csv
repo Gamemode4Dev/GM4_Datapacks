@@ -3,7 +3,7 @@ advancement.gm4.lightning_in_a_bottle.lightning_drink.description,Drink a Bottle
 advancement.gm4.lightning_in_a_bottle.lightning_drink.title,Shocking!
 advancement.gm4.lightning_in_a_bottle.lightning_shulker.description,Strike a Purpur Block with lightning to create a Shulker
 advancement.gm4.lightning_in_a_bottle.lightning_shulker.title,It's Alive!
-container.gm4.liquid_tank.lightning,Lightning Tank
+container.gm4.liquid_tank.liab_lightning,Lightning Tank
 effect.gm4.lightning_in_a_bottle.lightning,Lightning
 item.gm4.bottle.effect.lightning,Bottle of Lightning
 item.gm4.lingering_bottle.effect.lightning,Lingering Bottle of Lightning

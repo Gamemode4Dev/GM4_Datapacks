@@ -1,6 +1,6 @@
 id: gm4_sweethearts
 name: Sweethearts
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -31,6 +31,6 @@ meta:
         - The8BitMonkey
       Updated by:
         - BPR
-        - Thanathor
+        - Djones
       Icon Design:
         - DuckJr

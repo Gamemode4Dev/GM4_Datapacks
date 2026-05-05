@@ -41,14 +41,32 @@
         ],
         [
           {
+            "translate":"text.gm4.guidebook.blossoming_pots.item_list.header",
+            "fallback":"Supported Items:",
+            "underlined":true
+          },
+          {
+            "text":"\n\n"
+          },
+          {
             "translate": "text.gm4.guidebook.blossoming_pots.item_list.1",
-            "fallback": "§nSupported Items:§r\n\nVanilla Flower Pot\n                    plants\nPale hanging moss\nPointed dripstone\nAmethyst crystals\nLeaves\nGrass plants\nLush cave plants"
+            "fallback": "Vanilla Flower Pot\n                    plants\nPale hanging moss\nPointed dripstone\nAmethyst crystals\nLeaves\nGrass plants\nLush cave plants",
+            "underlined":false
           }
         ],
         [
           {
+            "translate":"text.gm4.guidebook.blossoming_pots.item_list.header",
+            "fallback":"Supported Items:",
+            "underlined":true
+          },
+          {
+            "text":"\n\n"
+          },
+          {
             "translate": "text.gm4.guidebook.blossoming_pots.item_list.2",
-            "fallback": "§nSupported Items:§r\n\nSugar cane\nNether vines\n2 tall plants\nChorus flower\nNon-sniffer seeds\nNether wart\nBush plants\nCoral reef plants\nCactus Flower"
+            "fallback": "Sugar cane\nNether vines\n2 tall plants\nChorus flower\nNon-sniffer seeds\nNether wart\nBush plants\nCoral reef plants\nCactus Flower",
+            "underlined":false
           }
         ]
       ]

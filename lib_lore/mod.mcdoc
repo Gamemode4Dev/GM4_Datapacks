@@ -1,0 +1,13 @@
+use ::java::util::text::Text
+
+dispatch minecraft:storage[gm4_lore:temp] to struct {
+  /// A list of the lore that will be modified, typically this would be extracted directly from the item being modified, but can be set manually to a desired set of lore.
+  Source?: [Text],
+  /// A single json item (i.e. a single 'line' of lore) that will be found during the operations. This sets the line of lore to be searched, removed, inserted after, or replaced.
+  Target?: Text,
+  /// A list of the lore that will be inserted or replaced. This should not be set when simply searching or removing and will be ignored if set while using the search or remove operation.
+  Input?: [Text],
+  TempSource?: [Text],
+  TempInput?: [Text],
+  Dump?: [Text],
+}

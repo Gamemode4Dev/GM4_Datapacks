@@ -1,0 +1,17 @@
+{
+  "values": [
+    "minecraft:gold_ore",
+    "minecraft:nether_gold_ore",
+    "minecraft:deepslate_gold_ore",
+    "minecraft:raw_gold",
+    "minecraft:iron_ore",
+    "minecraft:deepslate_iron_ore",
+    "minecraft:raw_iron",
+    "minecraft:copper_ore",
+    "minecraft:deepslate_copper_ore",
+    "minecraft:raw_copper",
+    "minecraft:sand",
+    "minecraft:red_sand",
+    "minecraft:chorus_fruit"
+  ]
+}

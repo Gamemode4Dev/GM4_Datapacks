@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:minecart",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/ziprails"
+        "minecraft:custom_model_data": {"strings":["gm4_ziprails:gui/advancement/ziprails"]}
       }
     },
     "title": {

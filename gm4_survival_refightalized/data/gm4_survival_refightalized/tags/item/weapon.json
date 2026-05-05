@@ -1,9 +1,9 @@
 {
   "values": [
-    {"id": "copper_axe", "required": false},
-    {"id": "copper_pickaxe", "required": false},
-    {"id": "copper_shovel", "required": false},
-    {"id": "copper_sword", "required": false},
+    "copper_axe",
+    "copper_pickaxe",
+    "copper_shovel",
+    "copper_sword",
     "diamond_axe",
     "diamond_pickaxe",
     "diamond_shovel",

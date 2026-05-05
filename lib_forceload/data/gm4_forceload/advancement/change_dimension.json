@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "change_dimension": {
+      "trigger": "minecraft:changed_dimension"
+    }
+  },
+  "rewards": {
+    "function": "gm4_forceload:mark_dimension"
+  }
+}

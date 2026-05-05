@@ -18,6 +18,7 @@ advancement.gm4.zauber_cauldrons.wormhole.title,Questionable Ingredients
 entity.gm4.possessed_item,Possessed Item\u00A7
 entity.gm4.zauber_cauldrons.smog.instant_health,their own incompetence
 entity.gm4.zauber_cauldrons.smog.regeneration,the mess they made
+entity.gm4.zauber_cauldrons.smog.poison,the mess they made
 item.gm4.enchanted_prismarine_shard,Enchanted Prismarine Shard
 item.gm4.magic_in_a_bottle,Magic in a Bottle
 item.gm4.wormhole_in_a_bottle,Wormhole in a Bottle

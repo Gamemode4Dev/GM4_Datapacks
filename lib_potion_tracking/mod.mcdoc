@@ -1,0 +1,5 @@
+use ::java::world::entity::projectile::throwable::Potion
+
+dispatch minecraft:storage[gm4_potion_tracking:temp] to struct {
+  entity_data?: Potion,
+}

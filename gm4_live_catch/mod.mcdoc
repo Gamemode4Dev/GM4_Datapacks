@@ -1,0 +1,7 @@
+dispatch minecraft:storage[gm4_live_catch:temp/input] to struct {
+  Target?: minecraft:entity[%fallback],
+}
+
+dispatch minecraft:storage[gm4_live_catch:temp/output] to struct {
+  Target?: minecraft:entity[%fallback],
+}

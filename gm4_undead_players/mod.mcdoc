@@ -1,0 +1,9 @@
+use ::java::world::entity::mob::zombie::Zombie
+use ::java::util::text::Text
+
+dispatch minecraft:storage[gm4_undead_players:temp] to struct {
+  zombie_data?: Zombie,
+  name_attribute?: struct {
+    Name: string,
+  },
+}

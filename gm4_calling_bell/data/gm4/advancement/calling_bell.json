@@ -3,7 +3,7 @@
       "icon": {
         "id": "emerald",
         "components": {
-          "minecraft:custom_model_data": "gui/advancement/calling_bell"
+          "minecraft:custom_model_data": {"strings":["gm4_calling_bell:gui/advancement/calling_bell"]}
         }
       },
       "title": {

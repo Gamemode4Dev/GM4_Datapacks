@@ -1,19 +1,30 @@
 #@s = water tank liquid_tank_stand with item in first slot
 #run from item_fill
 
-# Copy item to armor stand offhand 
-data modify entity @s equipment.offhand merge value {id:"minecraft:stick",count:1}
-data modify entity @s equipment.offhand.id set from storage gm4_liquid_tanks:temp/tank input_slot.id
+conversions = {
+    "glass": "glass",
+    "glass_pane": "glass_pane",
+    "terracotta": "terracotta",
+    "wool": "white_wool",
+    "bed": "white_bed",
+    "carpet": "white_carpet",
+    "shulker_box": "shulker_box",
+    "harness": "white_harness",
+    "bundle": "bundle",
+    "candle": "candle"
+}
 
-execute if predicate gm4_washing_tanks:harness as @e[type=marker,tag=gm4_liquid_tank,distance=..0.6,limit=1] run function gm4_washing_tanks:washing_recipes/harness
-execute if predicate gm4_washing_tanks:glass as @e[type=marker,tag=gm4_liquid_tank,distance=..0.6,limit=1] run function gm4_washing_tanks:washing_recipes/glass
-execute if predicate gm4_washing_tanks:glass_pane as @e[type=marker,tag=gm4_liquid_tank,distance=..0.6,limit=1] run function gm4_washing_tanks:washing_recipes/glass_pane
-execute if predicate gm4_washing_tanks:terracotta as @e[type=marker,tag=gm4_liquid_tank,distance=..0.6,limit=1] run function gm4_washing_tanks:washing_recipes/terracotta
-execute if predicate gm4_washing_tanks:wool as @e[type=marker,tag=gm4_liquid_tank,distance=..0.6,limit=1] run function gm4_washing_tanks:washing_recipes/wool
-execute if predicate gm4_washing_tanks:bed as @e[type=marker,tag=gm4_liquid_tank,distance=..0.6,limit=1] run function gm4_washing_tanks:washing_recipes/bed
-execute if predicate gm4_washing_tanks:carpet as @e[type=marker,tag=gm4_liquid_tank,distance=..0.6,limit=1] run function gm4_washing_tanks:washing_recipes/carpet
-execute if predicate gm4_washing_tanks:armour if data storage gm4_liquid_tanks:temp/tank input_slot.components."minecraft:dyed_color" as @e[type=marker,tag=gm4_liquid_tank,distance=..0.6,limit=1] run function gm4_washing_tanks:washing_recipes/armour
-execute if predicate gm4_washing_tanks:shulker_box as @e[type=marker,tag=gm4_liquid_tank,distance=..0.6,limit=1] run function gm4_washing_tanks:washing_recipes/shulker_box
+for from_id, to_id in conversions.items():
+    execute if items block ~ ~ ~ container.0 f"#gm4_washing_tanks:{from_id}" run function f"gm4_washing_tanks:washing_recipes/{from_id}":
+        scoreboard players set $item_value gm4_lt_value -1
+        item replace entity 00344d47-0004-0004-0004-000f04ce104d weapon.mainhand from block ~ ~ ~ container.0
+        item modify entity 00344d47-0004-0004-0004-000f04ce104d weapon.mainhand {"function":"minecraft:set_item", "item":f"minecraft:{to_id}"}
+        function gm4_liquid_tanks:smart_item_fill
+        tag @s add gm4_lt_fill
 
-# Clear armor stand offhand
-data remove entity @s equipment.offhand
+execute if items block ~ ~ ~ container.0 #gm4_washing_tanks:armour[dyed_color] run function gm4_washing_tanks:washing_recipes/armour:
+        scoreboard players set $item_value gm4_lt_value -1
+        item replace entity 00344d47-0004-0004-0004-000f04ce104d weapon.mainhand from block ~ ~ ~ container.0
+        item modify entity 00344d47-0004-0004-0004-000f04ce104d weapon.mainhand {"function":"minecraft:set_components", "components":{"!minecraft:dyed_color":{}}}
+        function gm4_liquid_tanks:smart_item_fill
+        tag @s add gm4_lt_fill

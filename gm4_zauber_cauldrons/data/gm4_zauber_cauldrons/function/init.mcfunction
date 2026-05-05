@@ -21,6 +21,7 @@ execute unless score $magicol_offset gm4_zc_moon_phase matches -2147483648..2147
 scoreboard players set #modulo gm4_zc_fullness 3
 scoreboard players set #8 gm4_zc_moon_phase 8
 scoreboard players set #256 gm4_zc_moon_phase 256
+scoreboard players set #24000 gm4_zc_moon_phase 24000
 team add gm4_hide_name
 team modify gm4_hide_name nametagVisibility never
 

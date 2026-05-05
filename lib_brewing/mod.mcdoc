@@ -1,0 +1,11 @@
+use ::java::util::slot::SlottedItem
+use ::java::world::item::ItemStack
+
+dispatch minecraft:storage[gm4_brewing:temp] to struct {
+  Items?: [SlottedItem<byte>],
+  insert?: (ItemStack | SlottedItem<byte>),
+}
+
+dispatch mcdoc:marker_data[gm4_brewing] to struct {
+  previous_items?: [SlottedItem<byte>],
+}

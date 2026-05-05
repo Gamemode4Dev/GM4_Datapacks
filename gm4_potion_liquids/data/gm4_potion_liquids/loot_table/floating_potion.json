@@ -29,6 +29,7 @@
                         },
                         {
                             "function": "set_name",
+                            "target": "custom_name",
                             "name": {
                                 "translate": "item.gm4.floating_potion",
                                 "fallback": "Potion of Floating",

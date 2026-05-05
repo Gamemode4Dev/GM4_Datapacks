@@ -14,15 +14,15 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                              "minecraft:custom_model_data": "item/pirate_turtle_helmet"
+                              "minecraft:custom_model_data": {"strings":["gm4_tower_structures:item/pirate_turtle_helmet"]}
                             }
                         },
                         {
                             "function": "minecraft:set_name",
+                            "target": "item_name",
                             "name": {
                                 "translate": "item.gm4.tower_structures.pirate_turtle_helmet",
-                                "fallback": "Pirate Turtle Helmet",
-                                "italic": false
+                                "fallback": "Pirate Turtle Helmet"
                             }
                         }
                     ]

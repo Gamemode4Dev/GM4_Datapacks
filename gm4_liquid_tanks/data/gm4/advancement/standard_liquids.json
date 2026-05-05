@@ -3,7 +3,7 @@
     "icon": {
       "id": "experience_bottle",
       "components": {
-        "minecraft:custom_model_data": "standard_liquids:gui/advancement/standard_liquids"
+        "minecraft:custom_model_data": {"strings":["standard_liquids:gui/advancement/standard_liquids"]}
       }
     },
     "title": {

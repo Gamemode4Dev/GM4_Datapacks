@@ -6,7 +6,7 @@
 scoreboard players set $toc gm4_guide_pages 1
 
 # if 0, jump to TOC (refresh)
-execute if score $page gm4_guide_pages matches 0 run function gm4_guidebook:lecterns/section/update/toc/jump with storage gm4_guidebook:register
+execute if score $page gm4_guide_pages matches 0 run function gm4_guidebook:lecterns/section/update/toc/jump
 
 # else, figure out what section to jump to
 # execute if score $page gm4_guide_pages matches 0..1 run return

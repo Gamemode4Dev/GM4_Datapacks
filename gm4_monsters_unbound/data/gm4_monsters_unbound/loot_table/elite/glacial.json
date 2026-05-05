@@ -14,7 +14,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/elite_headwear/glacial",
+                "minecraft:custom_model_data": {"strings":["gm4_monsters_unbound:item/elite_headwear/glacial"]},
                 "enchantment_glint_override": false,
                 "enchantments": {
                   "binding_curse": 1

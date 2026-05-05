@@ -1,6 +1,5 @@
 # @template gm4:test_platform
 # @dummy ~1 ~1 ~
-# @optional
 
 setblock ~1 ~ ~1 purpur_block
 loot give @s loot gm4_lightning_in_a_bottle:items/splash_bottle_of_lightning

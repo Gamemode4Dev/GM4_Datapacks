@@ -1,6 +1,6 @@
 id: gm4_dripleaf_launchers
 name: Dripleaf Launchers
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
   load: .
@@ -25,4 +25,6 @@ meta:
     wiki: https://wiki.gm4.co/wiki/Dripleaf_Launchers
     credits:
       Creator:
-        - Thanathor
+        - Djones
+      Icon Design:
+        - Hozz

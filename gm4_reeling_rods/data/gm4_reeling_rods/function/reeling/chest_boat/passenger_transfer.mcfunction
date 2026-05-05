@@ -4,4 +4,4 @@
 # run from reeling/chest_boat/action
 
 ride @s dismount
-ride @s mount @e[type=#gm4:boats,distance=..0.00001,limit=1]
+ride @s mount @e[type=#minecraft:boat,distance=..0.00001,limit=1]

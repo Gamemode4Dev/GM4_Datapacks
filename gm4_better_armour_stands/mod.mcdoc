@@ -1,0 +1,20 @@
+use ::java::world::entity::mob::armor_stand::Pose
+use ::java::world::entity::AnyEntity
+use ::java::util::Filterable
+
+dispatch minecraft:storage[gm4_better_armour_stands:default] to struct {
+  Pose?: Pose
+}
+
+dispatch minecraft:storage[gm4_better_armour_stands:temp] to struct {
+  pages?: [Filterable<string>],
+  entity_data?: AnyEntity,
+  CurrentPose?: Pose,
+  Pose?: Pose,
+  Undo?: any,
+  Data?: struct {
+    Pose?: Pose,
+    Rotation?: [float] @ 2,
+    Pos?: [double] @ 3,
+  },
+}

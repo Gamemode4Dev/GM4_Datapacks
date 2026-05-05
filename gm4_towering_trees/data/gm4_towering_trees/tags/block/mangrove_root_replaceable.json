@@ -1,0 +1,7 @@
+{
+    "values": [
+        "#minecraft:air",
+        "#minecraft:mangrove_roots_can_grow_through",
+        "#minecraft:replaceable_by_trees"
+    ]
+}

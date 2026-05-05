@@ -15,8 +15,8 @@ import yaml
 from beet import Project
 from beet.toolchain.cli import beet
 
-# NOTE pydantic.v1 does not allow reloading models with custom validators, which beet watch will do normally. 
-# Importing them here prevents their reload on each watch cycle. This may change in pydantic.v2 - revisit then
+# NOTE pydantic does not allow reloading models with custom validators, which beet watch will do normally.
+# Importing them here prevents their reload on each watch cycle.
 from gm4.utils import MapOption  # type: ignore
 from gm4.plugins.resource_pack import ModelData  # type: ignore
 
@@ -104,16 +104,16 @@ def clean():
 @click.option("-c", "--clean", is_flag=True, help="Clean the output folder.")
 def readme_gen(ctx: click.Context, project: Project, modules: tuple[str, ...], watch: bool, clean: bool):
 	"""Generates all README files for manual uplaoad"""
-	
+
 	modules = tuple(m if m.startswith("gm4_") else f"gm4_{m}" for m in modules)
 	if len(modules) == 0:
 		click.echo("[GM4] You need at least one module")
 		return
-	
+
 	if clean:
 		click.echo(f"[GM4] Cleaning output folder...")
 		shutil.rmtree("out", ignore_errors=True)
-	
+
 	click.echo(f"[GM4] Generating READMEs for: {', '.join(modules)}")
 
 	# we want to only read in the metadata from each project fo make a readme, not run the whole build pipeline

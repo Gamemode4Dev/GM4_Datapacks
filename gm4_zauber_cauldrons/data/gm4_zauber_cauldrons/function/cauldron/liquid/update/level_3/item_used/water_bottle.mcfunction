@@ -11,7 +11,7 @@
 # $actor_gamemode in gm4_zc_data: 0 = survival or adventure, 1 = creative.
 # the previous fill level is available via fake player $previous_fill_level gm4_zc_data and should be checked before checking for the
 # liquid type in case the cauldron was empty; an empty cauldron has no liquid level score.
-function #gm4_zauber_cauldrons:liquid/drain_bottle_into_cauldron
+function #gm4_zauber_cauldrons:cauldron/liquid/drain_bottle_into_cauldron
 
 # if no expansion handles this liquid type being added via bottle, fall back to default behavior:
 # reset the cauldron to to its previous level and return the bottle to the player
