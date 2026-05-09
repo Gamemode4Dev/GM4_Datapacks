@@ -1,14 +1,7 @@
 schedule function gm4_timelines:main 1t
 
-execute store result score $day.real gm4_timelines.data run time query day
-execute store result score $daytime.real gm4_timelines.data run time query minecraft:day
-
-scoreboard players operation $day.current gm4_timelines.data = $day.real gm4_timelines.data
-scoreboard players operation $day.current gm4_timelines.data *= #24000 gm4_timelines.data
-scoreboard players operation $day.current gm4_timelines.data += $daytime.real gm4_timelines.data
-scoreboard players operation $day.current gm4_timelines.data -= #day.offset gm4_timelines.data
-scoreboard players operation $daytime.current gm4_timelines.data = $day.current gm4_timelines.data
-scoreboard players operation $day.current gm4_timelines.data /= #day.duration gm4_timelines.data
-scoreboard players operation $daytime.current gm4_timelines.data %= #day.duration gm4_timelines.data
-
-execute unless score $day.active gm4_timelines.data = $day.current gm4_timelines.data run function gm4_timelines:pick_day/run
+# check if we're still in the day we think we are in
+execute store result score $time_check gm4_timelines_data run time query minecraft:day
+scoreboard players operation $time_check gm4_timelines_data -= $current_day.end_tick gm4_timelines_data
+execute unless score $time_check gm4_timelines_data matches -24000..0 run function gm4_timelines:pick_day/run
+  

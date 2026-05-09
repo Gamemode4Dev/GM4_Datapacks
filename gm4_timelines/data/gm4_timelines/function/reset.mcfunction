@@ -1,6 +1,4 @@
 
-# TODO: how does this impact local difficulty?
 time set 5999
-data modify storage gm4_timelines:data dayline set value []
-random reset gm4_timelines:pick_day 0 true true
-scoreboard players set $day.active gm4_timelines.data -1
+scoreboard players set $current_day.end_tick gm4_timelines_data 6000
+scoreboard players set $current_day.moon_phase gm4_timelines_data -1

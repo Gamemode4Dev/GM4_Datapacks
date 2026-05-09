@@ -27,6 +27,10 @@ class Keyframe(BaseModel):
     ticks: int
     value: Any
 
+class TimeMarker(BaseModel):
+    show_in_commands: bool
+    ticks: int
+
 class Track(BaseModel):
     modifier: Optional[str] = None
     ease: Optional[Any] = None
@@ -35,6 +39,7 @@ class Track(BaseModel):
 class TimelineData(BaseModel):
     clock: str
     period_ticks: int
+    time_markers: Dict[str, TimeMarker]
     tracks: Dict[str, Track] = {}
 
 class ScheduleEntry(BaseModel):
@@ -63,16 +68,16 @@ def beet_default(ctx: Context) -> None:
 
     with default_file.open("r", encoding="utf-8") as f:
         data_dict = json.load(f)
-    data = TimelineData(**data_dict)
-
-    # factor and offset the ticks so it matches the new daytime
-    # data = factor_ticks(data)
+    timeline = TimelineData(**data_dict)
     
-    data = register_days(ctx, data)
+    timeline = register_days(ctx, timeline)
 
-    data = remove_null_entries(data)
+    timeline = remove_null_entries(timeline)
 
-    ctx.data["minecraft:day"] = Timeline(data.model_dump())
+    # add empty space at the end of the timeline to loop nicer with the datapack
+    timeline.period_ticks += DAY_DURATION_TICKS
+
+    ctx.data["minecraft:day"] = Timeline(timeline.model_dump())
 
 
 
@@ -145,6 +150,9 @@ def process_day_files(
 
     # loop over day definitions
     for file_path in folder_path.glob("*.json"):
+
+        file_name = file_path.stem
+
         with file_path.open("r", encoding="utf-8") as f:
             day_data_dict = json.load(f)
         day_data = DayData(**day_data_dict)
@@ -155,23 +163,42 @@ def process_day_files(
 
             day_build, functions = register_day(default_data, day_data, moon_phase)
 
-            full_timeline = append_to_timeline(full_timeline, day_build)
+            day_start_tick = full_timeline.period_ticks
+            time_markers = {
+                f"gm4_timelines:{file_name}.{moon_phase}.morning": TimeMarker(
+                    show_in_commands=True,
+                    ticks=day_start_tick
+                ),
+                f"gm4_timelines:{file_name}.{moon_phase}.noon": TimeMarker(
+                    show_in_commands=True,
+                    ticks=day_start_tick+6000
+                ),
+                f"gm4_timelines:{file_name}.{moon_phase}.night": TimeMarker(
+                    show_in_commands=True,
+                    ticks=day_start_tick+13000
+                ),
+                f"gm4_timelines:{file_name}.{moon_phase}.midnight": TimeMarker(
+                    show_in_commands=True,
+                    ticks=day_start_tick+18000
+                ),
+            }
+
+            full_timeline = append_to_timeline(full_timeline, day_build, time_markers)
 
             function_moon_phase = function_data.setdefault(moon_phase, {})
             function_entries = function_moon_phase.setdefault(day_data.settings["in_type"], [])
             function_entries.append({
-                "moon_phase": moon_phase,
                 "in_type": day_data.settings["in_type"],
                 "out_type": day_data.settings["out_type"],
                 "weight": day_data.settings["weight"],
-                "start_time": full_timeline.period_ticks,
+                "id": f"{file_name}.{moon_phase}.morning",
                 "functions": functions
             })
 
             full_timeline.period_ticks += day_build.period_ticks
 
     # create function
-    func: dict[str, Any] = {"duration":DAY_DURATION_TICKS,"offset":TICK_OFFSET,"registry":function_data}
+    func: dict[str, Any] = {"registry":function_data}
     ctx.data["gm4_timelines:register/days"] = Function([
         "# register days",
         "# generated from generate.py",
@@ -212,7 +239,7 @@ def build_day_zero(default_data: TimelineData) -> TimelineData:
         track.keyframes = new_keyframes
 
     # add this start to the full_timeline
-    full_timeline = append_to_timeline(TimelineData(clock="minecraft:overworld", period_ticks=0, tracks={}),day_zero)
+    full_timeline = append_to_timeline(TimelineData(clock="minecraft:overworld", period_ticks=0, time_markers={}, tracks={}), day_zero)
     full_timeline.period_ticks += TICK_OFFSET
 
     return full_timeline
@@ -237,7 +264,7 @@ def register_day(
         A tuple containing the generated day timeline and a list of function
         calls to be triggered at specific ticks.
     """
-    result = TimelineData(clock="minecraft:overworld", period_ticks=default_data.period_ticks, tracks={})
+    result = TimelineData(clock="minecraft:overworld", period_ticks=default_data.period_ticks, time_markers={}, tracks={})
     seen_tracks: set[str] = set()
     functions: List[Dict[str, Any]] = []
 
@@ -292,7 +319,7 @@ def register_day(
     return result, functions
 
 
-def append_to_timeline(full_timeline: TimelineData, new_data: TimelineData) -> TimelineData:
+def append_to_timeline(full_timeline: TimelineData, new_data: TimelineData, time_markers: Dict[str, TimeMarker] = {}) -> TimelineData:
     """
     Append the next day timeline into the full timeline by offsetting its ticks, they are
     shifted by the current period of the full timeline and then merged into the matching
@@ -324,5 +351,9 @@ def append_to_timeline(full_timeline: TimelineData, new_data: TimelineData) -> T
             dst_track.keyframes.append(
                 Keyframe(ticks=kf.ticks + offset, value=copy.deepcopy(kf.value))
             )
+
+    # add the time markers
+    for marker_name, src_marker in time_markers.items():
+        full_timeline.time_markers[marker_name] = copy.deepcopy(src_marker)
 
     return full_timeline

@@ -1,6 +1,7 @@
 {
   "clock": "minecraft:overworld",
   "period_ticks": 24000,
+  "time_markers": {},
   "tracks": {
     "minecraft:visual/sun_angle": {
       "modifier": null,
