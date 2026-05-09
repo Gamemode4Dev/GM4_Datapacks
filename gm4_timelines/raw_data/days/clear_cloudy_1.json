@@ -1,0 +1,137 @@
+{
+    "settings": {
+        "weight": 1,
+        "moon_phase": [
+            "full_moon",
+            "waning_gibbous",
+            "third_quarter",
+            "waning_crescent",
+            "new_moon",
+            "waxing_crescent",
+            "first_quarter",
+            "waxing_gibbous"
+        ],
+        "in_type": "clear",
+        "out_type": "clear"
+    },
+    "schedule": [
+        {
+            "time": 0,
+            "effects": {
+                "visual/cloud_color": "#00ffffff",
+                "visual/cloud_fog_end_distance": 0,
+                "visual/cloud_height": 1.25,
+                "visual/sky_color": "#4d7cff",
+                "visual/sunrise_sunset_color": "#00ffc955"
+            }
+        },
+        {
+            "time": 4000,
+            "effects": {
+                "visual/cloud_color": "#55ffffff",
+                "visual/cloud_fog_end_distance": 256,
+                "visual/cloud_height": 1,
+                "visual/sky_color": "#4d7cff",
+                "visual/sunrise_sunset_color": "#00ffc955"
+            }
+        },
+        {
+            "time": 5000,
+            "effects": {
+                "visual/cloud_color": "#44ffffff",
+                "visual/cloud_fog_end_distance": 512,
+                "visual/cloud_height": 0.8,
+                "visual/sky_color": "#386aff"
+            }
+        },
+        {
+            "time": 5500,
+            "effects": {
+                "visual/cloud_color": "#77ff0b9c5",
+                "visual/cloud_fog_end_distance": 768,
+                "visual/cloud_height": 1,
+                "visual/sky_color": "#386aff",
+                "visual/sunrise_sunset_color": "#ddff5c33"
+            }
+        },
+        {
+            "time": 6500,
+            "effects": {
+                "visual/cloud_color": "#5527283b",
+                "visual/cloud_fog_end_distance": 768,
+                "visual/cloud_height": 0.9,
+                "visual/sky_color": "#272659"
+            }
+        },
+        {
+            "time": 7000,
+            "effects": {
+                "visual/sunrise_sunset_color": "#008f365d"
+            }
+        },
+        {
+            "time": 7250,
+            "effects": {
+                "visual/sky_color": "#0d101c"
+            }
+        },
+        {
+            "time": 12000,
+            "effects": {
+                "visual/cloud_color": "#4027283b",
+                "visual/cloud_fog_end_distance": 512,
+                "visual/cloud_height": 1.1,
+                "visual/sky_color": "#101729"
+            }
+        },
+        {
+            "time": 16750,
+            "effects": {
+                "visual/cloud_color": "#5527283b",
+                "visual/cloud_fog_end_distance": 768,
+                "visual/cloud_height": 0.9,
+                "visual/sky_color": "#0d101c"
+            }
+        },
+        {
+            "time": 17000,
+            "effects": {
+                "visual/sunrise_sunset_color": "#00ff7a33"
+            }
+        },
+        {
+            "time": 18000,
+            "effects": {
+                "visual/sky_color": "#4c90cf"
+            }
+        },
+        {
+            "time": 18500,
+            "effects": {
+                "visual/cloud_color": "#66f0d9ad",
+                "visual/cloud_fog_end_distance": 768,
+                "visual/cloud_height": 0.9,
+                "visual/sunrise_sunset_color": "#eeffa845"
+            }
+        },
+        {
+            "time": 19500,
+            "effects": {
+                "visual/cloud_color": "#55ffffff",
+                "visual/cloud_fog_end_distance": 768,
+                "visual/cloud_height": 1.1,
+                "visual/sunrise_sunset_color": "#00ffe3a6"
+            }
+        },
+        {
+            "time": 24000,
+            "effects": {
+                "visual/cloud_color": "#77ffffff",
+                "visual/cloud_fog_end_distance": 512,
+                "visual/cloud_height": 1,
+                "visual/sky_color": "#4d7cff",
+                "visual/sunrise_sunset_color": "#00ffc955"
+            }
+        }
+    ]
+}

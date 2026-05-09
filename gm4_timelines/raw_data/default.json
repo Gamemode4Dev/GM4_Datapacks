@@ -53,12 +53,12 @@
           "value": 0
         },
         {
-          "ticks": 3500,
+          "ticks": 5000,
           "value": 0
         },
         {
           "ticks": 7000,
-          "value": 0.75
+          "value": 0.8
         },
         {
           "ticks": 12000,
@@ -69,7 +69,7 @@
           "value": 0.75
         },
         {
-          "ticks": 20500,
+          "ticks": 19000,
           "value": 0
         },
         {
@@ -84,27 +84,39 @@
       "keyframes": [
         {
           "ticks": 0,
-          "value": "#3888f0"
+          "value": "#4d7cff"
         },
         {
           "ticks": 4000,
-          "value": "#3888f0"
+          "value": "#4d7cff"
         },
         {
-          "ticks": 6000,
-          "value": "#142e5f"
+          "ticks": 5000,
+          "value": "#386aff"
         },
         {
           "ticks": 6500,
-          "value": "#0b1738"
+          "value": "#272659"
         },
         {
-          "ticks": 7000,
-          "value": "#02040a"
+          "ticks": 7250,
+          "value": "#0d101c"
+        },
+        {
+          "ticks": 12000,
+          "value": "#101729"
+        },
+        {
+          "ticks": 16750,
+          "value": "#0d101c"
         },
         {
           "ticks": 18000,
-          "value": "#02040a"
+          "value": "#4c90cf"
+        },
+        {
+          "ticks": 24000,
+          "value": "#4d7cff"
         }
       ]
     },
@@ -117,16 +129,32 @@
           "value": "#00ffc955"
         },
         {
-          "ticks": 3750,
+          "ticks": 4000,
           "value": "#00ffc955"
         },
         {
           "ticks": 5500,
-          "value": "#ffdf7b4d"
+          "value": "#ddff5c33"
         },
         {
           "ticks": 7000,
-          "value": "#005a3388"
+          "value": "#008f365d"
+        },
+        {
+          "ticks": 17000,
+          "value": "#00ff7a33"
+        },
+        {
+          "ticks": 18500,
+          "value": "#eeffa845"
+        },
+        {
+          "ticks": 19500,
+          "value": "#00ffe3a6"
+        },
+        {
+          "ticks": 24000,
+          "value": "#00ffc955"
         }
       ]
     },
@@ -139,24 +167,40 @@
           "value": "#fffadd"
         },
         {
-          "ticks": 4000,
+          "ticks": 3500,
           "value": "#fffadd"
         },
         {
           "ticks": 5250,
-          "value": "#5a362b"
+          "value": "#cfac82"
         },
         {
-          "ticks": 6500,
-          "value": "#010207"
+          "ticks": 5500,
+          "value": "#8c4c3e"
         },
         {
-          "ticks": 7500,
-          "value": "#03090e"
+          "ticks": 6250,
+          "value": "#0c0c0f"
         },
         {
-          "ticks": 18000,
-          "value": "#03090e"
+          "ticks": 12000,
+          "value": "#0f121c"
+        },
+        {
+          "ticks": 17500,
+          "value": "#0c0c0f"
+        },
+        {
+          "ticks": 18500,
+          "value": "#8296b3"
+        },
+        {
+          "ticks": 20000,
+          "value": "#fffadd"
+        },
+        {
+          "ticks": 24000,
+          "value": "#fffadd"
         }
       ]
     },
@@ -176,14 +220,6 @@
         {
           "ticks": 0,
           "value": "#090810"
-        },
-        {
-          "ticks": 6000,
-          "value": "#090810"
-        },
-        {
-          "ticks": 12000,
-          "value": "#090810"
         }
       ]
     },
@@ -192,35 +228,51 @@
       "keyframes": [
         {
           "ticks": 0,
-          "value": "#ffc56e"
-        },
-        {
-          "ticks": 6000,
-          "value": "#ffc56e"
-        },
-        {
-          "ticks": 12000,
-          "value": "#ffc56e"
+          "value": "#ffcf99"
         }
       ]
     },
     "minecraft:visual/cloud_height": {
       "modifier": "multiply",
-      "ease": "linear",
+      "ease": "in_out_sine",
       "keyframes": [
         {
           "ticks": 0,
+          "value": 1
+        },
+        {
+          "ticks": 15000,
+          "value": 0.6
+        },
+        {
+          "ticks": 21000,
+          "value": 1.1
+        },
+        {
+          "ticks": 24000,
           "value": 1
         }
       ]
     },
     "minecraft:visual/cloud_fog_end_distance": {
       "modifier": "override",
-      "ease": "linear",
+      "ease": "in_out_sine",
       "keyframes": [
         {
           "ticks": 0,
-          "value": 2048
+          "value": 0
+        },
+        {
+          "ticks": 17000,
+          "value": 0
+        },
+        {
+          "ticks": 20000,
+          "value": 768
+        },
+        {
+          "ticks": 24000,
+          "value": 0
         }
       ]
     },
@@ -231,6 +283,22 @@
         {
           "ticks": 0,
           "value": "#00ffffff"
+        },
+        {
+          "ticks": 16000,
+          "value": "#00ffffff"
+        },
+        {
+          "ticks": 17000,
+          "value": "#1127283b"
+        },
+        {
+          "ticks": 19000,
+          "value": "#66ffffff"
+        },
+        {
+          "ticks": 24000,
+          "value": "#00ffffff"
         }
       ]
     },
@@ -240,23 +308,39 @@
       "keyframes": [
         {
           "ticks": 0,
-          "value": "#cbfdf2"
+          "value": "#abe7ff"
         },
         {
-          "ticks": 4000,
-          "value": "#cbfdf2"
+          "ticks": 4500,
+          "value": "#96dcfa"
         },
         {
-          "ticks": 5500,
-          "value": "#475575"
+          "ticks": 5750,
+          "value": "#e6ac81"
         },
         {
-          "ticks": 7000,
-          "value": "#020307"
+          "ticks": 6250,
+          "value": "#2d2c47"
         },
         {
-          "ticks": 16000,
-          "value": "#020307"
+          "ticks": 7250,
+          "value": "#040205"
+        },
+        {
+          "ticks": 16750,
+          "value": "#040205"
+        },
+        {
+          "ticks": 19000,
+          "value": "#cce7ff"
+        },
+        {
+          "ticks": 21000,
+          "value": "#abe7ff"
+        },
+        {
+          "ticks": 24000,
+          "value": "#abe7ff"
         }
       ]
     },
@@ -267,6 +351,30 @@
         {
           "ticks": 0,
           "value": 64
+        },
+        {
+          "ticks": 6000,
+          "value":64
+        },
+        {
+          "ticks": 12000,
+          "value": 32
+        },
+        {
+          "ticks": 16000,
+          "value": 16
+        },
+        {
+          "ticks": 19000,
+          "value": 16
+        },
+        {
+          "ticks": 23000,
+          "value": 64
+        },
+        {
+          "ticks": 24000,
+          "value": 64
         }
       ]
     },
@@ -276,6 +384,30 @@
       "keyframes": [
         {
           "ticks": 0,
+          "value": 512
+        },
+        {
+          "ticks": 6000,
+          "value": 512
+        },
+        {
+          "ticks": 12000,
+          "value": 512
+        },
+        {
+          "ticks": 16000,
+          "value": 512
+        },
+        {
+          "ticks": 18000,
+          "value": 192
+        },
+        {
+          "ticks": 23000,
+          "value": 512
+        },
+        {
+          "ticks": 24000,
           "value": 512
         }
       ]
@@ -289,16 +421,32 @@
           "value": 512
         },
         {
-          "ticks": 4000,
+          "ticks": 3500,
+          "value": 128
+        },
+        {
+          "ticks": 6500,
           "value": 64
         },
         {
-          "ticks": 7000,
+          "ticks": 12000,
+          "value": 128
+        },
+        {
+          "ticks": 17500,
           "value": 64
         },
         {
-          "ticks": 19000,
+          "ticks": 19500,
           "value": 64
+        },
+        {
+          "ticks": 21000,
+          "value": 512
+        },
+        {
+          "ticks": 24000,
+          "value": 512
         }
       ]
     },
