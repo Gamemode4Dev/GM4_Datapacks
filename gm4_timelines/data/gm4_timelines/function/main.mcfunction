@@ -1,7 +1,7 @@
 schedule function gm4_timelines:main 1t
 
 execute store result score $day.real gm4_timelines.data run time query day
-execute store result score $daytime.real gm4_timelines.data run time query daytime
+execute store result score $daytime.real gm4_timelines.data run time query minecraft:day
 
 scoreboard players operation $day.current gm4_timelines.data = $day.real gm4_timelines.data
 scoreboard players operation $day.current gm4_timelines.data *= #24000 gm4_timelines.data
