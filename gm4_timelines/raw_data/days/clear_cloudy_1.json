@@ -124,7 +124,7 @@
             }
         },
         {
-            "time": 24000,
+            "time": 23999,
             "effects": {
                 "visual/cloud_color": "#77ffffff",
                 "visual/cloud_fog_end_distance": 512,
