@@ -1,5 +1,5 @@
 {
-  "last_commit": "d9f388209f896d36e599c772dd697a2101e05615",
+  "last_commit": "50101bf302d9aa0ce1bd983aedbaa08bb118925a",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1094,7 +1094,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.6",
+      "version": "1.1.7",
       "hash": "15c8acf090fb6a8eef386a2e67706c932a8456a3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -1802,8 +1802,8 @@
     {
       "id": "gm4_reeling_rods",
       "name": "Reeling Rods",
-      "version": "1.1.1",
-      "hash": "e619718f5d29ceecef27097e3b4b489dfcacb327",
+      "version": "1.1.2",
+      "hash": "9d486e30be0c3339baeebc203b518d8c64e02171",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Reeling_Rods",
       "credits": {
@@ -2771,8 +2771,8 @@
     "lib_hooked_entity": {
       "id": "gm4_hooked_entity",
       "name": "Gamemode 4 Hooked Entity Selection",
-      "version": "1.0.1",
-      "hash": "8d9e2869d0e4fb2e430c681e0eca8c39f2e90fbb",
+      "version": "1.0.2",
+      "hash": "3e47a8e11a193de1e08a12f63c9c1a51177059ce",
       "video_link": "",
       "wiki_link": "",
       "credits": {
