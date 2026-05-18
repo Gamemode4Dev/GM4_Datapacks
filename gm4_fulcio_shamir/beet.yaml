@@ -33,6 +33,8 @@ meta:
       notes: []
     modrinth:
       project_id: N09PsTgz
+    smithed:
+      pack_id: gm4_fulcio_shamir
     wiki: https://wiki.gm4.co/wiki/Metallurgy/Fulcio_Shamir
     credits:
       Creators:

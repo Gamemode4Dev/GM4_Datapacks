@@ -16,6 +16,8 @@ meta:
       notes: []
     modrinth:
       project_id: 8lN3MtcQ
+    smithed:
+      pack_id: gm4_pig_tractors
     model_data:
       - item: saddle
         reference: gui/advancement/pig_tractors

@@ -23,6 +23,8 @@ meta:
         - This data pack requires you to use the Gamemode 4 resource pack! Restart the server/world after adding this data pack!
     modrinth:
       project_id: 6AVYWZgD
+    smithed:
+      pack_id: gm4_scuba_gear
     wiki: https://wiki.gm4.co/wiki/SCUBA_Gear
     credits:
       Creator:

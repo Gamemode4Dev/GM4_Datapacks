@@ -33,6 +33,8 @@ meta:
       notes: []
     modrinth:
       project_id: Z08l0oKH
+    smithed:
+      pack_id: gm4_potion_liquids
     video: https://www.youtube.com/watch?v=qa9lcbii1BE
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids
     credits:

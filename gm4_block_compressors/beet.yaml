@@ -69,6 +69,8 @@ meta:
       notes: []
     modrinth:
       project_id: TSz8iiMD
+    smithed:
+      pack_id: gm4_block_compressors
     planetminecraft: 
       uid: 4344954
     video: https://www.youtube.com/watch?v=sdrTJYjL8C0

@@ -35,6 +35,8 @@ meta:
       notes: []
     modrinth:
       project_id: Ymtg3OOc
+    smithed:
+      pack_id: gm4_liquid_minecarts
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts
     credits:
       Creator:
