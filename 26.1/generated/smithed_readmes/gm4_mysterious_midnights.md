@@ -8,7 +8,7 @@ Full moons gain an element of surprise with random events.<!--$pmc:headerSize-->
 - The base pack has 6 events ranging from skeletons being resurrected when bones are on the floor to skeletons being given tipped arrows
 
 ### Expansions
-Add 6 more event variants using [Midnight Menaces](https://gm4.co/modules/midnight-menaces)<!--$dynamicLink:gm4_midnight_menaces-->!
+Add 6 more event variants using [Midnight Menaces](https://beta.smithed.dev/packs/gm4_midnight_menaces)!
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Mysterious_Midnights)

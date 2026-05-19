@@ -11,8 +11,8 @@ Ever felt like minecraft could do with a bit more immersion? This modular data p
 
 ### Compatability 
 When playing with other Gamemode 4 data packs, adds some bonus features:
-- Adds the Celaro shamir when used with the [Metallurgy](https://gm4.co/modules/metallurgy)<!--$dynamicLink:gm4_metallurgy--> data pack.
-- Use the [Boots of Ostara](https://gm4.co/modules/boots-of-ostara)<!--$dynamicLink:gm4_boots_of_ostara--> data pack to spread nature instead of trampling it.
+- Adds the Celaro shamir when used with the [Metallurgy](https://beta.smithed.dev/packs/gm4_metallurgy) data pack.
+- Use the [Boots of Ostara](https://beta.smithed.dev/packs/gm4_boots_of_ostara) data pack to spread nature instead of trampling it.
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=wmGaatfekfs)

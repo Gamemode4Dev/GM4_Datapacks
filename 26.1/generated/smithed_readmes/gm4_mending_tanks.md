@@ -3,7 +3,7 @@
 Mending items but using a Gamemode 4 Liquid Tank! <!--$pmc:headerSize-->
 
 ### Features
-- Extends the features of the Gamemode 4 [Liquid Tanks](https://gm4.co/modules/liquid-tanks)<!--$dynamicLink:gm4_liquid_tanks--> data pack
+- Extends the features of the Gamemode 4 [Liquid Tanks](https://beta.smithed.dev/packs/gm4_liquid_tanks) data pack
 - Allows XP fluid in a tank to repair damaged items if they have the mending enchant
 
 ### More Info

@@ -1,5 +1,5 @@
 {
-  "last_commit": "50101bf302d9aa0ce1bd983aedbaa08bb118925a",
+  "last_commit": "4db297db90c17f4d15f4e569957b64b117334537",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -29,7 +29,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "bPnAELDm",
-      "smithed_link": null,
+      "smithed_link": "gm4_animi_shamir",
       "pmc_link": null
     },
     {
@@ -95,7 +95,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "2rSIqoh7",
-      "smithed_link": null,
+      "smithed_link": "gm4_audere_shamir",
       "pmc_link": null
     },
     {
@@ -124,7 +124,7 @@
       "search_keywords": [],
       "publish_date": "2024-04-14",
       "modrinth_id": "zKRZZHQ3",
-      "smithed_link": null,
+      "smithed_link": "gm4_balloon_animals",
       "pmc_link": null
     },
     {
@@ -243,7 +243,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "TSz8iiMD",
-      "smithed_link": null,
+      "smithed_link": "gm4_block_compressors",
       "pmc_link": null
     },
     {
@@ -283,8 +283,8 @@
     {
       "id": "gm4_book_binders",
       "name": "Book Binders",
-      "version": "1.6.1",
-      "hash": "149fe4e5d9745629e7618d042fd5d8e834c73518",
+      "version": "1.6.2",
+      "hash": "886c4b1f670930f9068d4e02b33d01a2e0e427fc",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Book_Binders",
       "credits": {
@@ -297,7 +297,7 @@
         ]
       },
       "requires": [],
-      "description": "Start printing your own Enchanted Books with Book Binders. Use lecterns to exract singular pages from Enchanted Books and recombine pages with Leather to create your own Enchanted Books -- free of charge!",
+      "description": "Start printing your own Enchanted Books with Book Binders. Use lecterns to extract singular pages from Enchanted Books and recombine pages with Leather to create your own Enchanted Books -- free of charge!",
       "recommends": [
         "gm4_resource_pack"
       ],
@@ -309,7 +309,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "oIqNf2N4",
-      "smithed_link": null,
+      "smithed_link": "gm4_book_binders",
       "pmc_link": null
     },
     {
@@ -376,7 +376,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "YCcs2E01",
-      "smithed_link": null,
+      "smithed_link": "gm4_boots_of_ostara",
       "pmc_link": null
     },
     {
@@ -442,7 +442,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "blBLRC4i",
-      "smithed_link": null,
+      "smithed_link": "gm4_cement_mixers",
       "pmc_link": null
     },
     {
@@ -510,7 +510,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "juqV05HI",
-      "smithed_link": null,
+      "smithed_link": "gm4_cooler_caves",
       "pmc_link": null
     },
     {
@@ -539,7 +539,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "BKQjQlSY",
-      "smithed_link": null,
+      "smithed_link": "gm4_cozy_campfires",
       "pmc_link": null
     },
     {
@@ -604,7 +604,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "Go9VJGOZ",
-      "smithed_link": null,
+      "smithed_link": "gm4_dangerous_dungeons",
       "pmc_link": null
     },
     {
@@ -690,7 +690,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "Cg5FQaTk",
-      "smithed_link": null,
+      "smithed_link": "gm4_disassemblers",
       "pmc_link": null
     },
     {
@@ -724,7 +724,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "u59ticCz",
-      "smithed_link": null,
+      "smithed_link": "gm4_display_frames",
       "pmc_link": null
     },
     {
@@ -784,7 +784,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "WNvo6RJr",
-      "smithed_link": null,
+      "smithed_link": "gm4_dripleaf_filters",
       "pmc_link": null
     },
     {
@@ -846,7 +846,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "BbEwao9o",
-      "smithed_link": null,
+      "smithed_link": "gm4_end_fishing",
       "pmc_link": null
     },
     {
@@ -958,7 +958,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "N09PsTgz",
-      "smithed_link": null,
+      "smithed_link": "gm4_fulcio_shamir",
       "pmc_link": null
     },
     {
@@ -989,8 +989,8 @@
       "important_note": "Experimental Module! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.",
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
-      "smithed_link": null,
+      "modrinth_id": "aHcF2nVP",
+      "smithed_link": "gm4_guidebook",
       "pmc_link": null
     },
     {
@@ -1056,7 +1056,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "DTk79ZcR",
-      "smithed_link": null,
+      "smithed_link": "gm4_iacio_shamir",
       "pmc_link": null
     },
     {
@@ -1088,13 +1088,13 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "ljOfYHJv",
-      "smithed_link": null,
+      "smithed_link": "gm4_ink_spitting_squid",
       "pmc_link": null
     },
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.7",
+      "version": "1.1.8",
       "hash": "15c8acf090fb6a8eef386a2e67706c932a8456a3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -1116,8 +1116,8 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2025-12-20",
-      "modrinth_id": null,
-      "smithed_link": null,
+      "modrinth_id": "9K6xigHH",
+      "smithed_link": "gm4_lavish_livestock",
       "pmc_link": null
     },
     {
@@ -1153,7 +1153,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "GVqJxowR",
-      "smithed_link": null,
+      "smithed_link": "gm4_lightning_in_a_bottle",
       "pmc_link": null
     },
     {
@@ -1190,7 +1190,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "Ymtg3OOc",
-      "smithed_link": null,
+      "smithed_link": "gm4_liquid_minecarts",
       "pmc_link": null
     },
     {
@@ -1233,7 +1233,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "h4BcuD3C",
-      "smithed_link": null,
+      "smithed_link": "gm4_liquid_tanks",
       "pmc_link": null
     },
     {
@@ -1267,7 +1267,7 @@
       ],
       "publish_date": "2023-07-10",
       "modrinth_id": "uSXn7pVW",
-      "smithed_link": null,
+      "smithed_link": "gm4_live_catch",
       "pmc_link": null
     },
     {
@@ -1339,7 +1339,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "vYbLApXc",
-      "smithed_link": null,
+      "smithed_link": "gm4_lumos_shamir",
       "pmc_link": null
     },
     {
@@ -1370,7 +1370,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "DPYixL7Y",
-      "smithed_link": null,
+      "smithed_link": "gm4_mending_tanks",
       "pmc_link": null
     },
     {
@@ -1434,7 +1434,7 @@
       ],
       "publish_date": "2023-07-10",
       "modrinth_id": "raWyrHxi",
-      "smithed_link": null,
+      "smithed_link": "gm4_metallurgy",
       "pmc_link": null
     },
     {
@@ -1465,7 +1465,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "9aTlLrlw",
-      "smithed_link": null,
+      "smithed_link": "gm4_midnight_menaces",
       "pmc_link": null
     },
     {
@@ -1499,8 +1499,8 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2025-08-11",
-      "modrinth_id": null,
-      "smithed_link": null,
+      "modrinth_id": "6EGin6pC",
+      "smithed_link": "gm4_monsters_unbound",
       "pmc_link": null
     },
     {
@@ -1535,7 +1535,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "9skST20d",
-      "smithed_link": null,
+      "smithed_link": "gm4_mysterious_midnights",
       "pmc_link": null
     },
     {
@@ -1598,7 +1598,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "rRP5afZM",
-      "smithed_link": null,
+      "smithed_link": "gm4_orb_of_ankou",
       "pmc_link": null
     },
     {
@@ -1635,7 +1635,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "hqLgWYiS",
-      "smithed_link": null,
+      "smithed_link": "gm4_particles_pack",
       "pmc_link": null
     },
     {
@@ -1666,7 +1666,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "MrSTch8u",
-      "smithed_link": null,
+      "smithed_link": "gm4_percurro_shamir",
       "pmc_link": null
     },
     {
@@ -1698,7 +1698,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "OQYrrgEP",
-      "smithed_link": null,
+      "smithed_link": "gm4_phantom_scarecrows",
       "pmc_link": null
     },
     {
@@ -1727,7 +1727,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "8lN3MtcQ",
-      "smithed_link": null,
+      "smithed_link": "gm4_pig_tractors",
       "pmc_link": null
     },
     {
@@ -1759,7 +1759,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "keFbZ5iO",
-      "smithed_link": null,
+      "smithed_link": "gm4_podzol_rooting_soil",
       "pmc_link": null
     },
     {
@@ -1796,7 +1796,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "Z08l0oKH",
-      "smithed_link": null,
+      "smithed_link": "gm4_potion_liquids",
       "pmc_link": null
     },
     {
@@ -1902,7 +1902,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "6AVYWZgD",
-      "smithed_link": null,
+      "smithed_link": "gm4_scuba_gear",
       "pmc_link": null
     },
     {
@@ -1962,7 +1962,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "7Rcai2W4",
-      "smithed_link": null,
+      "smithed_link": "gm4_shroomites",
       "pmc_link": null
     },
     {
@@ -2002,7 +2002,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "AHj8RSHk",
-      "smithed_link": null,
+      "smithed_link": "gm4_smelteries",
       "pmc_link": null
     },
     {
@@ -2033,7 +2033,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "Hi8fkYoI",
-      "smithed_link": null,
+      "smithed_link": "gm4_soul_glass",
       "pmc_link": null
     },
     {
@@ -2064,7 +2064,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "j4qeIaSW",
-      "smithed_link": null,
+      "smithed_link": "gm4_spawner_minecarts",
       "pmc_link": null
     },
     {
@@ -2097,7 +2097,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "vRH8BKZ7",
-      "smithed_link": null,
+      "smithed_link": "gm4_speed_paths",
       "pmc_link": null
     },
     {
@@ -2130,7 +2130,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "KIxK9MA7",
-      "smithed_link": null,
+      "smithed_link": "gm4_standard_crafting",
       "pmc_link": null
     },
     {
@@ -2167,7 +2167,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "drjgVlzU",
-      "smithed_link": null,
+      "smithed_link": "gm4_sunken_treasure",
       "pmc_link": null
     },
     {
@@ -2197,8 +2197,8 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2025-08-11",
-      "modrinth_id": null,
-      "smithed_link": null,
+      "modrinth_id": "AyXb56yt",
+      "smithed_link": "gm4_survival_refightalized",
       "pmc_link": null
     },
     {
@@ -2231,7 +2231,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "z33oiJCd",
-      "smithed_link": null,
+      "smithed_link": "gm4_sweethearts",
       "pmc_link": null
     },
     {
@@ -2266,7 +2266,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "CQkaELVA",
-      "smithed_link": null,
+      "smithed_link": "gm4_teleportation_anchors",
       "pmc_link": null
     },
     {
@@ -2301,7 +2301,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "FvGL10DQ",
-      "smithed_link": null,
+      "smithed_link": "gm4_tower_structures",
       "pmc_link": null
     },
     {
@@ -2335,8 +2335,8 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2026-01-26",
-      "modrinth_id": null,
-      "smithed_link": null,
+      "modrinth_id": "ghmlkCsY",
+      "smithed_link": "gm4_towering_trees",
       "pmc_link": null
     },
     {
@@ -2372,7 +2372,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "L32wQVcn",
-      "smithed_link": null,
+      "smithed_link": "gm4_tunnel_bores",
       "pmc_link": null
     },
     {
@@ -2404,7 +2404,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "jx6D06Q4",
-      "smithed_link": null,
+      "smithed_link": "gm4_undead_players",
       "pmc_link": null
     },
     {
@@ -2435,7 +2435,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "wwe9xfEp",
-      "smithed_link": null,
+      "smithed_link": "gm4_vecto_shamir",
       "pmc_link": null
     },
     {
@@ -2469,7 +2469,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "PL3P0wBS",
-      "smithed_link": null,
+      "smithed_link": "gm4_vertical_rails",
       "pmc_link": null
     },
     {
@@ -2501,7 +2501,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "9QdXJeGc",
-      "smithed_link": null,
+      "smithed_link": "gm4_vigere_shamir",
       "pmc_link": null
     },
     {
@@ -2533,7 +2533,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "ipiZnkaE",
-      "smithed_link": null,
+      "smithed_link": "gm4_washing_tanks",
       "pmc_link": null
     },
     {
@@ -2562,7 +2562,7 @@
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "ReZCIa6j",
-      "smithed_link": null,
+      "smithed_link": "gm4_weighted_armour",
       "pmc_link": null
     },
     {
@@ -2603,8 +2603,8 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
-      "smithed_link": null,
+      "modrinth_id": "3vluenrD",
+      "smithed_link": "gm4_zauber_cauldrons",
       "pmc_link": null
     },
     {

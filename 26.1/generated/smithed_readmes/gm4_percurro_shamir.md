@@ -5,7 +5,7 @@ Get a better hit on your target by being teleported behind it!<!--$pmc:headerSiz
 ### Features
 - All attacking items (Swords/Axes/Trident/Mace) can have the Shamir applied
 - When attacking a target the player is teleported 6 blocks behind the target and the target is made to face the player
-- Builds on Gamemode 4's comprehensive extension to enchantments, [Metallurgy](https://gm4.co/modules/metallurgy)<!--$dynamicLink:gm4_metallurgy-->
+- Builds on Gamemode 4's comprehensive extension to enchantments, [Metallurgy](https://beta.smithed.dev/packs/gm4_metallurgy)
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Metallurgy/Percurro_Shamir)

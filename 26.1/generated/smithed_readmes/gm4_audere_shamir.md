@@ -5,7 +5,7 @@ Play the risky game and nearly break your tools! The lower your durability, the 
 ### Features
 - Get up to Haste 4 when your durability is really low
 - Works across all tool types and all tool tiers (Wood to Netherrite)
-- Builds on Gamemode 4's comprehensive and fun take on enchantments with the [Metallurgy](https://gm4.co/modules/metallurgy)<!--$dynamicLink:gm4_metallurgy--> system.
+- Builds on Gamemode 4's comprehensive and fun take on enchantments with the [Metallurgy](https://beta.smithed.dev/packs/gm4_metallurgy) system.
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Metallurgy/Audere_Shamir)

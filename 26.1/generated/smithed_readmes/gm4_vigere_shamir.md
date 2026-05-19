@@ -4,7 +4,7 @@ When added to a Shield, you are healed when you block<!--$pmc:headerSize-->
 
 ### Features
 - Successfully blocking an attack heals the player 1.5 hearts, but applies Mining Fatigue 6.
-- Builds on Gamemode 4's extension of the enchantment system, [Metallurgy](https://gm4.co/modules/metallurgy)<!--$dynamicLink:gm4_metallurgy-->
+- Builds on Gamemode 4's extension of the enchantment system, [Metallurgy](https://beta.smithed.dev/packs/gm4_metallurgy)
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Metallurgy/Vigere_Shamir)

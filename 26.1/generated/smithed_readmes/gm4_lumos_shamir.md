@@ -5,7 +5,7 @@ The darkness is now a little less lonely when you can auto-place torches!<!--$pm
 ### Features
 - When a tool with Lumos on it detects a player is in a light level below 2, a torch from the inventory will be used
 - The torch is placed a the feet of the player
-- Builds on Gamemode 4's fun extension of the Enchantment system, [Metallurgy](https://gm4.co/modules/metallurgy)<!--$dynamicLink:gm4_metallurgy-->
+- Builds on Gamemode 4's fun extension of the Enchantment system, [Metallurgy](https://beta.smithed.dev/packs/gm4_metallurgy)
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Metallurgy/Lumos_Shamir)

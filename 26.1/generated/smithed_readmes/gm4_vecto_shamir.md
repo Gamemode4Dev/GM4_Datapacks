@@ -6,7 +6,7 @@ Summon a Boat or Minecart out of thin air when in need, no more wasting an inven
 - Sneak on top of Water, Ice or Rails to spawn a temporary Boat or Minecart
 - The mode of transport disappears once the summoning player moves away from it
 - Boats spawned reflect the biome it spawns in
-- Builds on Gamemode 4's expansion on the Echantment system, [Metallurgy](https://gm4.co/modules/metallurgy)<!--$dynamicLink:gm4_metallurgy-->
+- Builds on Gamemode 4's expansion on the Echantment system, [Metallurgy](https://beta.smithed.dev/packs/gm4_metallurgy)
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Metallurgy/Vecto_Shamir)

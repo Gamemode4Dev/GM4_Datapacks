@@ -3,7 +3,7 @@
 Allows you store compactly store your potions in a Liquid Tank.<!--$pmc:headerSize-->
 
 ### Features
-- Extends the features of the Gamemode 4 [Liquid Tanks](https://gm4.co/modules/liquid-tanks)<!--$dynamicLink:gm4_liquid_tanks--> data pack
+- Extends the features of the Gamemode 4 [Liquid Tanks](https://beta.smithed.dev/packs/gm4_liquid_tanks) data pack
 - Allows potions in a Liquid Tank and interactions from using the tank
 - An unextended potion will fill 1/3 a bucket. An extended potion will fill 1 bucket.
 - Allows the "Milking" of Shulkers for floating and Witches for a variety of potions

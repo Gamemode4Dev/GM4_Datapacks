@@ -4,7 +4,7 @@ Throw items further!<!--$pmc:headerSize-->
 
 ### Features
 - Whilst wearing a chestplate with Iacio on it, tridents, enderpearls, throwable potions, snowballs and eggs go further
-- Builds on Gamemode 4's fun extension of the Enchantment system, [Metallurgy](https://gm4.co/modules/metallurgy)<!--$dynamicLink:gm4_metallurgy-->
+- Builds on Gamemode 4's fun extension of the Enchantment system, [Metallurgy](https://beta.smithed.dev/packs/gm4_metallurgy)
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Metallurgy/Iacio_Shamir)

@@ -34,7 +34,7 @@ Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your
 ### Expansion Packs
 Want some preset poses? Download the [Poses Pack Expansion](https://gm4.co/modules/poses-pack)<!--$dynamicLink:gm4_poses_pack-->
 
-Add particles to your builds with the [Particles Pack Expansion](https://gm4.co/modules/particles-pack)<!--$dynamicLink:gm4_particles_pack-->
+Add particles to your builds with the [Particles Pack Expansion](https://beta.smithed.dev/packs/gm4_particles_pack)
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/youtube_logo.png" alt="Youtube Logo" width="40" align="center"/> **Watch on Youtube**](https://www.youtube.com/watch?v=ZBqmGpAXqmw)

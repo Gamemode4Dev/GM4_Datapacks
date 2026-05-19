@@ -5,7 +5,7 @@ Place blocks whilst floating in mid-air!<!--$pmc:headerSize-->
 ### Features
 - Allows players to float whilst sneaking and holding a compass with the Fulcio Shamir on it
 - Makes particle box appear where the player can then place blocks
-- Builds on Gamemode 4's fun extension of the Enchantment system, [Metallurgy](https://gm4.co/modules/metallurgy)<!--$dynamicLink:gm4_metallurgy-->.
+- Builds on Gamemode 4's fun extension of the Enchantment system, [Metallurgy](https://beta.smithed.dev/packs/gm4_metallurgy).
 
 ### More Info
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Metallurgy/Fulcio_Shamir)
