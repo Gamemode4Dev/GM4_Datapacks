@@ -11,6 +11,7 @@ Selectively breed your livestock for increased yields! Commercialize your farmin
 
 ### Credits
 - Creator: [Bloo](https://bsky.app/profile/bloo.boo)
+- Icon Design: [runcows](https://bsky.app/profile/runcows.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>
