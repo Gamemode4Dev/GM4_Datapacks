@@ -34,6 +34,10 @@ meta:
         - gm4_resource_pack
         - gm4_zauber_liquids
       notes: []
+    modrinth:
+      project_id: 3vluenrD
+    smithed:
+      pack_id: gm4_zauber_cauldrons
     video: https://www.youtube.com/watch?v=Io1JTFUzyrc
     wiki: https://wiki.gm4.co/wiki/Zauber_Cauldrons
     credits:

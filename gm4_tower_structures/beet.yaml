@@ -35,6 +35,8 @@ meta:
       notes: []
     modrinth:
       project_id: FvGL10DQ
+    smithed:
+      pack_id: gm4_tower_structures
     wiki: https://wiki.gm4.co/wiki/Orbis/Tower_Structures
     credits:
       Creator:

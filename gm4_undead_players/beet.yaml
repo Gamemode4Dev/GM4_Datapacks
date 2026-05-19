@@ -26,6 +26,8 @@ meta:
         - Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.
     modrinth:
       project_id: jx6D06Q4
+    smithed:
+      pack_id: gm4_undead_players
     planetminecraft:
       uid: 4294228
     video: https://www.youtube.com/watch?v=dD8nChP8t9A

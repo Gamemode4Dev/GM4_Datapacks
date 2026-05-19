@@ -45,6 +45,10 @@ meta:
         - gm4_resource_pack
       notes:
         - Experimental Module! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.
+    modrinth:
+      project_id: aHcF2nVP
+    smithed:
+      pack_id: gm4_guidebook
     wiki: https://wiki.gm4.co/wiki/Guidebook
     credits:
       Creators:

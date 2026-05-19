@@ -21,6 +21,8 @@ meta:
       notes: []
     modrinth:
       project_id: hqLgWYiS
+    smithed:
+      pack_id: gm4_particles_pack
     video: https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=238s
     wiki: https://wiki.gm4.co/wiki/Particles_Pack
     credits:
