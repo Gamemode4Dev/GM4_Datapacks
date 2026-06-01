@@ -9,6 +9,7 @@ scoreboard objectives add gm4_horse.jump_strength_on_level dummy
 scoreboard objectives add gm4_horse.experience_to_level dummy
 scoreboard objectives add gm4_horse.wing_timer dummy
 scoreboard objectives add gm4_horse.horse_one_cm custom:horse_one_cm
+scoreboard objectives add gm4_horse.horse_moved custom:horse_one_cm
 
 # constants
 scoreboard players set #-1 gm4_horse_data -1

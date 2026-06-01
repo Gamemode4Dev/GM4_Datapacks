@@ -3,7 +3,7 @@
 # at unspecified
 # run from tick
 
-execute on vehicle store result score $set_yaw gm4_horse_data run data get entity @s Rotation[0] 100
+scoreboard players operation $set_yaw gm4_horse_data = $horse_yaw gm4_horse_data
 execute if entity @s[tag=gm4_horse.glider_wing.right] run scoreboard players add $set_yaw gm4_horse_data 8000
 execute if entity @s[tag=gm4_horse.glider_wing.left] run scoreboard players remove $set_yaw gm4_horse_data 8000
 execute store result entity @s Rotation[0] float 0.01 run scoreboard players get $set_yaw gm4_horse_data

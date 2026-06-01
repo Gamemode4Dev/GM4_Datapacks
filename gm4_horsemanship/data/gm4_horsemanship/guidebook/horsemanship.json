@@ -15,7 +15,7 @@
             "entity": "this",
             "predicate": {
               "vehicle": {
-                "type": "#gm4_horsemanship:trainable",
+                "entity_type": "#gm4_horsemanship:trainable",
                 "nbt": "{Tags:[\"gm4_horse\"]}"
               }
             }
@@ -66,7 +66,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "wings",
       "enable": [],
       "requirements": [
         [
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "name": "description",
+      "name": "feeding",
       "enable": [],
       "requirements": [
         [

@@ -18,12 +18,13 @@ execute if score $pitch_level gm4_horse_data matches 1.. run scoreboard players 
 # if not riding ignore pitch
 execute if score $riding gm4_horse_data matches 0 run scoreboard players set $pitch_level gm4_horse_data 0
 
-# check for a jump
-execute on passengers if entity @s[type=player,predicate=gm4_horsemanship:jumping]
-
 # update glider
 execute if score $grounded gm4_horse_data matches 0 if score $on_ground gm4_horse_data matches 1 unless score $pitch_level gm4_horse_data matches ..-1 run function gm4_horsemanship:horse_processing/glider/ground
 execute if score $grounded gm4_horse_data matches 1 if score $pitch_level gm4_horse_data matches ..-2 run function gm4_horsemanship:horse_processing/glider/fly
+
+# if glider doesn't match what horse is doing ground it to be sure
+execute if score $grounded gm4_horse_data matches 0 unless entity @s[tag=gm4_horse.gliding] run function gm4_horsemanship:horse_processing/glider/ground
+execute if score $grounded gm4_horse_data matches 1 if entity @s[tag=gm4_horse.gliding] run function gm4_horsemanship:horse_processing/glider/ground
 
 # if flying update Y motion based on looking direction
 execute if score $grounded gm4_horse_data matches 1 run return 0

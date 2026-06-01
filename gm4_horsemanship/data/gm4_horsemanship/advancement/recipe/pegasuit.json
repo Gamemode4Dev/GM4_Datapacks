@@ -1,0 +1,43 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_horse_armor": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": "#gm4_horsemanship:horse_armor"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        },
+        "has_elytra": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:elytra"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        },
+        "has_the_recipe": {
+            "conditions": {
+                "recipe": "gm4_horsemanship:horse_wings"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+        }
+    },
+    "requirements": [
+        [
+            "has_the_recipe",
+            "has_horse_armor",
+            "has_elytra"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "gm4_horsemanship:horse_wings"
+        ]
+    }
+}
