@@ -16,7 +16,7 @@ $summon minecraft:block_display ~ ~ ~ {\
     right_rotation:[0f,0f,0f,1f]\
   }\
 }
-summon minecraft:interaction ~ ~ ~ {width:0.4f,height:0.4f,response:1b,Tags:["gm4_llp_waxed_copper_rcd","gm4_llp_perma_rcd","smithed.entity","smithed.strict"]}
+summon minecraft:interaction ~ ~ ~ {width:0.4f,height:0.4f,Tags:["gm4_llp_waxed_copper_rcd","gm4_llp_perma_rcd","smithed.entity","smithed.strict"]}
 
 # light block
 setblock ~ ~1 ~ light[level=14] keep

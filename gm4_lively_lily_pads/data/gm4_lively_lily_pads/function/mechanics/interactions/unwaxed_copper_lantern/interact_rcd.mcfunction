@@ -22,6 +22,11 @@ execute as @e[type=interaction,tag=gm4_llp_unwaxed_copper_rcd,distance=..8] if d
 
 # item usage
 execute if score $wax_used gm4_llp.data matches 1 run item modify entity @s[gamemode=!creative] weapon.mainhand {function:"minecraft:set_count",count:-1,add:1b}
+execute if score $wax_used gm4_llp.data matches 1 run swing @s mainhand
 execute if score $wax_used gm4_llp.data matches 2 run item modify entity @s[gamemode=!creative] weapon.offhand {function:"minecraft:set_count",count:-1,add:1b}
+execute if score $wax_used gm4_llp.data matches 2 run swing @s offhand
+
 execute if score $axe_used gm4_llp.data matches 1 if entity @s[gamemode=!creative] run function gm4_lively_lily_pads:mechanics/interactions/waxed_copper_lantern/used_mainhand_axe
+execute if score $axe_used gm4_llp.data matches 1 run swing @s mainhand
 execute if score $axe_used gm4_llp.data matches 2 if entity @s[gamemode=!creative] run function gm4_lively_lily_pads:mechanics/interactions/waxed_copper_lantern/used_offhand_axe
+execute if score $axe_used gm4_llp.data matches 2 run swing @s offhand

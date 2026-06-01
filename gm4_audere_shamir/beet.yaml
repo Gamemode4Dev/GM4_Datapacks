@@ -31,6 +31,8 @@ meta:
       notes: []
     modrinth:
       project_id: 2rSIqoh7
+    smithed:
+      pack_id: gm4_audere_shamir
     wiki: https://wiki.gm4.co/wiki/Metallurgy/Audere_Shamir
     credits:
       Creator:

@@ -3,6 +3,7 @@
 # at @s
 # run from mechanics/interactions/candle/find_igniter
 
+swing @s mainhand
 # sound
 playsound minecraft:item.firecharge.use player @a[distance=..16]
 

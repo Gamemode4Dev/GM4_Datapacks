@@ -72,6 +72,8 @@ meta:
       notes: []
     modrinth:
       project_id: h4BcuD3C
+    smithed:
+      pack_id: gm4_liquid_tanks
     video: https://www.youtube.com/watch?v=qa9lcbii1BE
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks
     credits:

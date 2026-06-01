@@ -19,6 +19,10 @@ meta:
       description: Adds mega and small tree variants to any sapling that is missing one!
       recommended:
         - gm4_metallurgy
+    modrinth:
+      project_id: ghmlkCsY
+    smithed:
+      pack_id: gm4_towering_trees
     wiki: https://wiki.gm4.co/wiki/Towering_Trees
     credits:
       Creator:

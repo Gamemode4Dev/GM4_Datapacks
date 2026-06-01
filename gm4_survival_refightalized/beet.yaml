@@ -27,6 +27,10 @@ meta:
       description: A reworked survival experience with more varied mobs and new armor and shield mechanics.
       recommended:
         - gm4_monsters_unbound
+    modrinth:
+      project_id: AyXb56yt
+    smithed:
+      pack_id: gm4_survival_refightalized
     wiki: https://wiki.gm4.co/wiki/Survival_Refightalized
     credits:
       Creator:
