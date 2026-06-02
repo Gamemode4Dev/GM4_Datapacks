@@ -1,0 +1,6 @@
+use ::java::world::item::ItemStack
+
+dispatch minecraft:storage[gm4_blasting_maces:temp] to struct {
+  tool?: ItemStack,
+  damage?: int,
+}
