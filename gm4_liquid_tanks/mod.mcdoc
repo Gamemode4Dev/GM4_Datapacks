@@ -1,0 +1,5 @@
+dispatch minecraft:storage[gm4_liquid_tanks:temp] to struct {
+  exp?: struct {
+    points: int,
+  },
+}

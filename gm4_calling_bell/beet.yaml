@@ -1,22 +1,17 @@
 id: gm4_calling_bell
 name: Calling Bell
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
 
 pipeline:
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_trades
 
 meta:
   gm4:
     versioning:
-      required:
-        lib_trades: 1.6.0
-      schedule_loops:
-        - tick
-        - day_clock
+      schedule_loops: []
     model_data:
       - item: emerald
         reference: gui/advancement/calling_bell
@@ -35,5 +30,7 @@ meta:
     credits:
       Creator:
         - TheEpyonProject
+      Updated By:
+        - runcows
       Icon Design:
         - Hozz

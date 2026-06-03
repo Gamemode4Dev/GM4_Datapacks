@@ -27,11 +27,10 @@
             },
             {
               "function": "minecraft:set_name",
-              "target": "custom_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.survival_refightalized.lore.wither_arrow",
-                "fallback": "Arrow of Wither",
-                "italic": false
+                "fallback": "Arrow of Wither"
               }
             },
             {

@@ -5,7 +5,7 @@
 
 # execute as player, at block
 scoreboard players operation $current gm4_guide_id = @s gm4_guide_id
-execute as @a[distance=..6] if score @s gm4_guide_id = $current gm4_guide_id run function gm4_guidebook:lecterns/section/toc/jump with storage gm4_guidebook:register
+execute as @a[distance=..6] if score @s gm4_guide_id = $current gm4_guide_id run function gm4_guidebook:lecterns/section/toc/jump
 
 # mark toc
 tag @s remove gm4_guide_toc

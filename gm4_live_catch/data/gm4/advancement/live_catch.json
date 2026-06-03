@@ -3,7 +3,7 @@
     "icon": {
       "id": "pufferfish",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/live_catch"
+        "minecraft:custom_model_data": {"strings":["gm4_live_catch:gui/advancement/live_catch"]}
       }
     },
     "title": {

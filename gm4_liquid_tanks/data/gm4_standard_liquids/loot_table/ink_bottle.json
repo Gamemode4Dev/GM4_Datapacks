@@ -11,7 +11,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "gm4_standard_liquids:item/ink_bottle",
+                                "minecraft:custom_model_data": {"strings":["gm4_standard_liquids:item/ink_bottle"]},
                                 "minecraft:potion_contents": {
                                     "custom_color": 68378,
                                     "custom_effects": [

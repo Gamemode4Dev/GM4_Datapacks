@@ -15,7 +15,7 @@ class BottledLightning:
 
     @liquid.util_below
     def lightning_strike():
-        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+        execute as @e[type=!#gm4:non_living,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
             unless entity @s[gamemode=spectator]
             unless entity @s[predicate=gm4_lightning_in_a_bottle:on_fire]
             run function gm4_lightning_in_a_bottle:liquid_tanks/util/lightning:

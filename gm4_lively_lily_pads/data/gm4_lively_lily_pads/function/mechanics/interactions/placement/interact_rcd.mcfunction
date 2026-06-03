@@ -21,7 +21,9 @@ execute as @e[type=interaction,tag=gm4_llp_placement_rcd,distance=..8] if data e
 
 # remove item if successful
 execute if score $placement_success gm4_llp.data matches 1 if score $mainhand gm4_llp.data matches 1 run item modify entity @s[gamemode=!creative] weapon.mainhand {function:"minecraft:set_count",count:-1,add:1b}
+execute if score $placement_success gm4_llp.data matches 1 if score $mainhand gm4_llp.data matches 1 run swing @s mainhand
 execute if score $placement_success gm4_llp.data matches 1 if score $offhand gm4_llp.data matches 1 run item modify entity @s[gamemode=!creative] weapon.offhand {function:"minecraft:set_count",count:-1,add:1b}
+execute if score $placement_success gm4_llp.data matches 1 if score $offhand gm4_llp.data matches 1 run swing @s offhand
 
 # reset
 scoreboard players reset $placement_success gm4_llp.data

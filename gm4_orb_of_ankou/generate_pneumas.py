@@ -144,18 +144,19 @@ def generate_soul_essence_loot_tables(ctx: Context):
                 },
                 {
                   "function": "minecraft:set_name",
+                  "target": "item_name",
                   "name": {
                     "translate": "item.gm4.soul_essence",
-                    "fallback": "Soul Essence",
-                    "italic": False,
-                    "color": "white"
+                    "fallback": "Soul Essence"
                   }
                 },
                 {
                   "function": "minecraft:set_components",
                   "components": {
                     "minecraft:enchantment_glint_override": True,
-                    "minecraft:custom_model_data": f"pneuma/{pneuma}",
+                    "minecraft:custom_model_data": {
+                      "strings": [f"gm4_orb_of_ankou:pneuma/{pneuma}"]
+                    },
                     "minecraft:damage_resistant": {
                         "types": "#minecraft:is_fire"
                     },

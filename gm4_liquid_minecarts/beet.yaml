@@ -1,6 +1,6 @@
 id: gm4_liquid_minecarts
 name: Liquid Minecarts
-version: 1.8.X
+version: 1.9.X
 
 data_pack:
   load: .
@@ -16,8 +16,8 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_liquid_tanks: 3.0.0
-        lib_machines: 1.4.0
+        gm4_liquid_tanks: 3.1.0
+        lib_machines: 1.5.0
       schedule_loops: [main]
     model_data:
       - item: hopper_minecart
@@ -35,6 +35,8 @@ meta:
       notes: []
     modrinth:
       project_id: Ymtg3OOc
+    smithed:
+      pack_id: gm4_liquid_minecarts
     wiki: https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts
     credits:
       Creator:

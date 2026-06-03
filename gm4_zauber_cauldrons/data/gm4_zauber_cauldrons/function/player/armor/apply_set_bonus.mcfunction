@@ -7,19 +7,11 @@
 # advancement equipment/unequipped_armor
 
 # count flavors
-data modify storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Items set from entity @s Inventory
-data modify storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Armor append from storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Items[{Slot:100b}]
-data modify storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Armor append from storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Items[{Slot:101b}]
-data modify storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Armor append from storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Items[{Slot:102b}]
-data modify storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Armor append from storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Items[{Slot:103b}]
-data modify storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.boosts.armor append from storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Armor[{components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:"zauber_armor"}},"minecraft:attribue_modifiers":{modifiers:[{Name:"gm4_zauber_cauldrons.armor.armor_boost"}]}}}]
-data modify storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.boosts.attack append from storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Armor[{components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:"zauber_armor"}},"minecraft:attribue_modifiers":{modifiers:[{Name:"gm4_zauber_cauldrons.armor.attack_boost"}]}}}]
-data modify storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.boosts.health append from storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Armor[{components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:"zauber_armor"}},"minecraft:attribue_modifiers":{modifiers:[{Name:"gm4_zauber_cauldrons.armor.health_boost"}]}}}]
-data modify storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.boosts.speed append from storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.Armor[{components:{"minecraft:custom_data":{gm4_zauber_cauldrons:{item:"zauber_armor"}},"minecraft:attribue_modifiers":{modifiers:[{Name:"gm4_zauber_cauldrons.armor.speed_boost"}]}}}]
-execute store result score $armor_boost gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.boosts.armor
-execute store result score $attack_boost gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.boosts.attack
-execute store result score $health_boost gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.boosts.health
-execute store result score $speed_boost gm4_zc_data run data get storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons.boosts.speed
+# note: also checking for the armor amount because all zauber armor has +3 armor by default
+execute store result score $armor_boost gm4_zc_data if items entity @s armor.* *[custom_data~{gm4_zauber_cauldrons:{item:"zauber_armor"}},attribute_modifiers~{modifiers:{contains:[{attribute:"minecraft:armor",amount:1d}]}}]
+execute store result score $attack_boost gm4_zc_data if items entity @s armor.* *[custom_data~{gm4_zauber_cauldrons:{item:"zauber_armor"}},attribute_modifiers~{modifiers:{contains:[{attribute:"minecraft:attack_damage"}]}}]
+execute store result score $health_boost gm4_zc_data if items entity @s armor.* *[custom_data~{gm4_zauber_cauldrons:{item:"zauber_armor"}},attribute_modifiers~{modifiers:{contains:[{attribute:"minecraft:max_health"}]}}]
+execute store result score $speed_boost gm4_zc_data if items entity @s armor.* *[custom_data~{gm4_zauber_cauldrons:{item:"zauber_armor"}},attribute_modifiers~{modifiers:{contains:[{attribute:"minecraft:movement_speed"}]}}]
 
 # check how many of the most prevalent flavor there are
 scoreboard players set $comparison gm4_zc_data 0
@@ -34,8 +26,7 @@ execute if score $comparison gm4_zc_data = $attack_boost gm4_zc_data run functio
 execute if score $comparison gm4_zc_data = $health_boost gm4_zc_data run function gm4_zauber_cauldrons:player/armor/set_bonus/health_boost
 execute if score $comparison gm4_zc_data = $speed_boost gm4_zc_data run function gm4_zauber_cauldrons:player/armor/set_bonus/speed_boost
 
-# reset storage and fake players
-data remove storage gm4_zauber_cauldrons:temp/player/inventory gm4_zauber_cauldrons
+# reset fake players
 scoreboard players reset $armor_boost gm4_zc_data
 scoreboard players reset $attack_boost gm4_zc_data
 scoreboard players reset $health_boost gm4_zc_data

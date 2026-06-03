@@ -1,13 +1,15 @@
 [
     {
         "function": "minecraft:set_lore",
-        "mode": "replace_all",
+        "mode": "replace_section",
+        "offset": 0,
         "entity": "this",
         "lore": [
             [
                 {
                     "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.sips",
                     "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
+                    "plain": true,
                     "color": "gray",
                     "italic": false
                 },
@@ -19,6 +21,7 @@
                 {
                     "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.size",
                     "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
+                    "plain": true,
                     "color": "gray",
                     "italic": false
                 },
@@ -52,13 +55,15 @@
     },
     {
         "function": "minecraft:set_lore",
-        "mode": "replace_all",
+        "mode": "replace_section",
+        "offset": 0,
         "entity": "this",
         "lore": [
             [
                 {
                     "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.sips",
                     "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
+                    "plain": true,
                     "color": "gray",
                     "italic": false
                 },
@@ -70,6 +75,7 @@
                 {
                     "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.size",
                     "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
+                    "plain": true,
                     "color": "gray",
                     "italic": false
                 },
@@ -98,20 +104,6 @@
                     "score": "gm4_zc_data"
                 },
                 "range": 1
-            }
-        ]
-    },
-    {
-        "function": "minecraft:copy_nbt",
-        "source": {
-            "type": "minecraft:storage",
-            "source": "gm4_zauber_cauldrons:temp/item/multi_use_bottle"
-        },
-        "ops": [
-            {
-                "source": "Item.components.'minecraft:lore'[]",
-                "target": "display.Lore",
-                "op": "append"
             }
         ]
     }

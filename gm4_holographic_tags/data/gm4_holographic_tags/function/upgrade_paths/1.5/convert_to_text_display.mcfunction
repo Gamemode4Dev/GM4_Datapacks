@@ -1,7 +1,7 @@
 # collects data from the existing aec and initiates summoning of a replacement text display
 # @s = outdated aec-based holographic tag
 # at @s
-# run from upgrade_path/1.5
+# run from upgrade_paths/1.5
 
 # summon text display based on aec
 tp ^ ^ ^.3

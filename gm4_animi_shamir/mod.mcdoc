@@ -1,0 +1,12 @@
+use ::java::world::item::ItemStack
+
+dispatch minecraft:storage[gm4_animi_shamir:cache] to struct {
+  prepared_entry?: Entry,
+  temp_entry?: Entry,
+  inventories?: [Entry],
+}
+
+struct Entry {
+  owner?: #[uuid] int[] @ 4,
+  inventory?: [ItemStack],
+}

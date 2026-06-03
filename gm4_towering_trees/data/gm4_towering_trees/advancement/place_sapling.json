@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "place_sapling": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:match_tool",
+                        "predicate": {
+                            "items": "#gm4_towering_trees:supported_sapling"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "gm4_towering_trees:place_sapling"
+    }
+}

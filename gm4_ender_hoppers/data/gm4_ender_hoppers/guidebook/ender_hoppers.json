@@ -6,24 +6,6 @@
     "id": "minecraft:ender_eye"
   },
   "criteria": {
-    "open_custom_crafter": {
-      "trigger": "minecraft:default_block_use",
-      "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": [
-                  "minecraft:dropper"
-                ],
-                "nbt": "{CustomName:{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.custom_crafter\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.custom_crafter\",\"fallback\":\"Custom Crafter\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}}"
-              }
-            }
-          }
-        ]
-      }
-    },
     "obtain_ender_eye": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -104,9 +86,6 @@
       "enable": [],
       "requirements": [
         [
-          "open_custom_crafter"
-        ],
-        [
           "obtain_ender_eye"
         ],
         [
@@ -117,7 +96,7 @@
         [
           {
             "translate": "text.gm4.guidebook.ender_hoppers.crafting",
-            "fallback": "Ender Hoppers can be crafted in a Custom Crafter:"
+            "fallback": "Ender Hoppers can be crafted in a crafting table:"
           },
           "\n",
           {
@@ -140,7 +119,7 @@
         [
           {
             "translate": "text.gm4.guidebook.ender_hoppers.usage",
-            "fallback": "Ender Hoppers can pick up items in a range of 9x9 blocks, centered at itself and extending 3 blocks above itself.\n\nCombining a minecart with an ender hopper in a custom crafter yields an ender hopper minecart."
+            "fallback": "Ender Hoppers can pick up items in a range of 9x9 blocks, centered at itself and extending 3 blocks above itself.\n\nCombining a minecart with an ender hopper yields an ender hopper minecart."
           }
         ]
       ]

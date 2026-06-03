@@ -148,7 +148,7 @@
             "with": [
                 "40",
                 {
-                    "translate": "attribute.name.generic.movement_speed"
+                    "translate": "attribute.name.movement_speed"
                 }
             ],
             "color": "blue",
@@ -211,7 +211,7 @@
             "with": [
                 "80",
                 {
-                    "translate": "attribute.name.generic.movement_speed"
+                    "translate": "attribute.name.movement_speed"
                 }
             ],
             "color": "blue",
@@ -222,7 +222,7 @@
             "with": [
                 "12",
                 {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                 }
             ],
             "color": "red",
@@ -285,7 +285,7 @@
             "with": [
                 "12",
                 {
-                    "translate": "attribute.name.generic.attack_damage"
+                    "translate": "attribute.name.attack_damage"
                 }
             ],
             "color": "blue",

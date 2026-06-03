@@ -4,15 +4,19 @@
 # run from gm4_disassemblers:machine/verify_place_down
 
 # place block depending on rotation
-execute if score $rotation gm4_machine_data matches 1 run function gm4_disassemblers:machine/rotate/down
-execute if score $rotation gm4_machine_data matches 2 run function gm4_disassemblers:machine/rotate/up
-execute if score $rotation gm4_machine_data matches 3 run function gm4_disassemblers:machine/rotate/south
-execute if score $rotation gm4_machine_data matches 4 run function gm4_disassemblers:machine/rotate/west
-execute if score $rotation gm4_machine_data matches 5 run function gm4_disassemblers:machine/rotate/north
-execute if score $rotation gm4_machine_data matches 6 run function gm4_disassemblers:machine/rotate/east
+execute if score $rotation gm4_machine_data matches 1 run data modify storage gm4_disassemblers:temp placement set value {facing:"down",rotation:[180.0f,0.0f],model:"gm4_disassemblers:block/disassembler_down"}
+execute if score $rotation gm4_machine_data matches 2 run data modify storage gm4_disassemblers:temp placement set value {facing:"up",rotation:[0.0f,0.0f],model:"gm4_disassemblers:block/disassembler"}
+execute if score $rotation gm4_machine_data matches 3 run data modify storage gm4_disassemblers:temp placement set value {facing:"south",rotation:[0.0f,0.0f],model:"gm4_disassemblers:block/disassembler_side"}
+execute if score $rotation gm4_machine_data matches 4 run data modify storage gm4_disassemblers:temp placement set value {facing:"west",rotation:[90.0f,0.0f],model:"gm4_disassemblers:block/disassembler_side"}
+execute if score $rotation gm4_machine_data matches 5 run data modify storage gm4_disassemblers:temp placement set value {facing:"north",rotation:[180.0f,0.0f],model:"gm4_disassemblers:block/disassembler_side"}
+execute if score $rotation gm4_machine_data matches 6 run data modify storage gm4_disassemblers:temp placement set value {facing:"east",rotation:[-90.0f,0.0f],model:"gm4_disassemblers:block/disassembler_side"}
+
+function gm4_disassemblers:machine/place_rotated with storage gm4_disassemblers:temp placement
+
+data remove storage gm4_disassemblers:temp placement
 
 # mark block as placed
 playsound minecraft:block.anvil.place master @a ~ ~ ~ 0.9 0.1
 scoreboard players set $placed_block gm4_machine_data 1
-scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 1
+scoreboard players set @e[distance=..2,tag=gm4_new_machine] gm4_entity_version 2
 tag @e[distance=..2] remove gm4_new_machine

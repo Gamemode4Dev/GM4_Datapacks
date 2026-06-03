@@ -12,7 +12,7 @@ To contribute to our project you need to install [Git](https://git-scm.com/downl
 
 Our modules are built using [beet](https://github.com/mcbeet/beet), which is a Python framework that allows us to automatically validate and generate part of our data packs and resource packs.
 
-You will need to install [uv](https://docs.astral.sh/uv/) as project manager. If you don't already have Python installed, uv will do that automatically. We currently use Python 3.10.
+You will need to install [uv](https://docs.astral.sh/uv/) as project manager. If you don't already have Python installed, uv will do that automatically. We currently use Python 3.14.
 ```sh
 # MacOS, Linux, or Git Bash (recommended)
 curl -LsSf https://astral.sh/uv/install.sh | sh

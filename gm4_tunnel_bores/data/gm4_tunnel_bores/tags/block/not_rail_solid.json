@@ -1,6 +1,7 @@
 {
   "values": [
     "#minecraft:air",
+    "#minecraft:chains",
     "#gm4_tunnel_bores:liquids",
     "#minecraft:small_flowers",
     "minecraft:brown_mushroom",
@@ -143,8 +144,6 @@
     "minecraft:crimson_roots",
     "minecraft:warped_roots",
     "minecraft:nether_sprouts",
-    { "id": "minecraft:chain", "required": false },
-    { "id": "minecraft:iron_chain", "required": false },
     "minecraft:warped_fence",
     "minecraft:crimson_fence_gate",
     "minecraft:sweet_berry_bush",

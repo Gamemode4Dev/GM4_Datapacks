@@ -10,7 +10,7 @@
                         {
                             "function": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": "shamir/tinker"
+                                "minecraft:custom_model_data": {"strings":["gm4_metallurgy:shamir/tinker"]}
                             }
                         },
                         {

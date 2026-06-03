@@ -22,7 +22,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_ore_1"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_ore_1"]}
               }
             }
           ]
@@ -46,7 +46,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_ore_2"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_ore_2"]}
               }
             }
           ]
@@ -70,7 +70,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_ore_3"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_ore_3"]}
               }
             }
           ]
@@ -94,7 +94,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_ore_4"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_ore_4"]}
               }
             }
           ]
@@ -118,7 +118,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_ore_5"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_ore_5"]}
               }
             }
           ]
@@ -142,7 +142,7 @@
             {
               "function": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": "item/end_city_ore_6"
+                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_ore_6"]}
               }
             }
           ]

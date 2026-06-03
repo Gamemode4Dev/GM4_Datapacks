@@ -3,7 +3,7 @@
     "icon": {
       "id": "lectern",
       "components": {
-        "minecraft:custom_model_data": "gui/advancement/book_binders"
+        "minecraft:custom_model_data": {"strings":["gm4_book_binders:gui/advancement/book_binders"]}
       }
     },
     "title": {

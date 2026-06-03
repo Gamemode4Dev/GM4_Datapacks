@@ -1,7 +1,7 @@
 {
   "values": [
     "minecraft:allay",
-    {"id": "minecraft:copper_golem", "required": false},
+    "minecraft:copper_golem",
     "minecraft:fox",
     "minecraft:illusioner",
     "minecraft:panda",

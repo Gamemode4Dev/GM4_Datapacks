@@ -114,7 +114,7 @@ class Ink:
 
     @liquid.util_below
     def dispense_ink():
-        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{active_effects:[{id:'minecraft:blindness'}]}] run function gm4_standard_liquids:util/liquid_dispensing/ink
+        execute as @e[type=!#gm4:non_living,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{active_effects:[{id:'minecraft:blindness'}]}] run function gm4_standard_liquids:util/liquid_dispensing/ink
     
 @liquid
 class GlowInk:
@@ -133,7 +133,7 @@ class GlowInk:
 
     @liquid.util_below
     def dispense_ink():
-        execute as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{active_effects:[{id:'minecraft:glowing'}]}] run function gm4_standard_liquids:util/liquid_dispensing/glow_ink
+        execute as @e[type=!#gm4:non_living,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0] unless entity @s[gamemode=spectator] if entity @s[nbt=!{active_effects:[{id:'minecraft:glowing'}]}] run function gm4_standard_liquids:util/liquid_dispensing/glow_ink
 
 # tell bolt how to name different ominous bottles - they have the same item id so this is a special case
 def omnious_naming_scheme(input_name: str, output_name: str) -> str | bool:
@@ -157,7 +157,7 @@ for lvl, numeral_lvl in zip((0,1,2,3,4), ("I", "II", "III", "IV", "V")):
         @liquid.util_below
         def dispense_omen():
             execute
-                as @e[team=!invalid_team,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
+                as @e[type=!#gm4:non_living,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
                 unless entity @s[gamemode=spectator]
                 if entity @s[nbt=!{active_effects:[{id:'minecraft:bad_omen'}]}]
                 run function f"gm4_standard_liquids:util/liquid_dispensing/ominous_bottle_{lvl}":

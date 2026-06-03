@@ -1,0 +1,10 @@
+use ::java::world::item::ItemStack
+
+dispatch minecraft:storage[gm4_block_compressors:temp/item_stack] to struct {
+  Item?: ItemStack,
+  gm4_compressed?: boolean,
+}
+
+dispatch minecraft:storage[gm4_block_compressors:temp/compressor] to struct {
+  Items?: [ItemStack],
+}

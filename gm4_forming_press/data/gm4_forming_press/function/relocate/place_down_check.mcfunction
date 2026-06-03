@@ -1,6 +1,0 @@
-# checks if the block is from this module
-# @s = player who placed the block
-# located at the center of the block to be placed
-# run from #gm4_relocators:place_down_check
-
-execute if score $placed_block gm4_rl_data matches 0 if score gm4_forming_press load.status matches 1 if data storage gm4_relocators:temp gm4_relocation{custom_block:"gm4_forming_press"} run function gm4_forming_press:relocate/summon_block_markers

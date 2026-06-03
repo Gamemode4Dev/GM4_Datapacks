@@ -1,6 +1,6 @@
 id: gm4_iacio_shamir
 name: Iacio Shamir
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -16,7 +16,7 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_metallurgy: 1.5.0
+        gm4_metallurgy: 1.8.0
     model_data:
       - item: chestplates
         reference: shamir/iacio
@@ -30,6 +30,8 @@ meta:
       notes: []
     modrinth:
       project_id: DTk79ZcR
+    smithed:
+      pack_id: gm4_iacio_shamir
     wiki: https://wiki.gm4.co/wiki/Metallurgy/Iacio_Shamir
     credits:
       Creator:

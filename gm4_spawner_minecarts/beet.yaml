@@ -1,6 +1,6 @@
 id: gm4_spawner_minecarts
 name: Spawner Minecarts
-version: 3.0.X
+version: 3.1.X
 
 data_pack:
   load: .
@@ -22,6 +22,8 @@ meta:
       notes: []
     modrinth:
       project_id: j4qeIaSW
+    smithed:
+      pack_id: gm4_spawner_minecarts
     wiki: https://wiki.gm4.co/wiki/Spawner_Minecarts
     credits:
       Creators:

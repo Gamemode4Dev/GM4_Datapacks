@@ -10,10 +10,10 @@
 					"functions": [
 						{
 							"function": "minecraft:set_name",
+							"target": "item_name",
 							"name": {
 								"text": "Apple Tree Sapling",
-								"italic": false,
-								"color": "white"
+								"italic": false
 							}
 						},
 						{

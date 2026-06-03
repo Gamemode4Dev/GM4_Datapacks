@@ -11,7 +11,7 @@
               "function": "minecraft:set_components",
               "components": {
                 "minecraft:enchantment_glint_override": true,
-                "minecraft:custom_model_data": "item/soul_glass"
+                "minecraft:custom_model_data": {"strings":["gm4_soul_glass:item/soul_glass"]}
               }
             },
             {
@@ -20,10 +20,10 @@
             },
             {
               "function": "minecraft:set_name",
+              "target": "item_name",
               "name": {
                 "translate": "item.gm4.soul_glass",
-                "fallback": "Soul Glass",
-                "italic": false
+                "fallback": "Soul Glass"
               }
             }
           ]

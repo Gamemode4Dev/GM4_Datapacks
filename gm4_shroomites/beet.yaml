@@ -1,6 +1,6 @@
 id: gm4_shroomites
 name: Shroomites
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -20,6 +20,8 @@ meta:
       notes: []
     modrinth:
       project_id: 7Rcai2W4
+    smithed:
+      pack_id: gm4_shroomites
     wiki: https://wiki.gm4.co/wiki/Shroomites
     credits:
       Creators:

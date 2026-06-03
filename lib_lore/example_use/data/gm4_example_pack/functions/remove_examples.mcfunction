@@ -29,7 +29,7 @@ data modify entity @e[type=item,limit=1,sort=nearest] Item.components."minecraft
 ## Removes lore from one item, and transfers it to another item
 
 # set inputs
-summon item ~ ~ ~ {Tags:["item_1"],Item:{components:{"minecraft:lore":[{"text":"This line and the ones after will be searched for the TARGET_LINE"},{"text":"FILLER_LINE"},{"text":"TARGET_LINE"},{"text":"The line after this line will be removed, since start is 2 (2 after TARGET_LINE)"},{"text":"This line will be removed and appended to another item"},{"text":"This line will be removed and appended to another item since extra is -1"},{"text":"This line will be removed and appended to another item since extra is -1"}]}}}
+summon item ~ ~ ~ {Tags:["item_1"],Item:{id:"stone",components:{"minecraft:lore":[{"text":"This line and the ones after will be searched for the TARGET_LINE"},{"text":"FILLER_LINE"},{"text":"TARGET_LINE"},{"text":"The line after this line will be removed, since start is 2 (2 after TARGET_LINE)"},{"text":"This line will be removed and appended to another item"},{"text":"This line will be removed and appended to another item since extra is -1"},{"text":"This line will be removed and appended to another item since extra is -1"}]}}}
 data modify storage gm4_lore:temp Source set from entity @e[type=item,tag=item_1,limit=1] Item.components."minecraft:lore"
 data modify storage gm4_lore:temp Target set value {"text":"TARGET_LINE"}
 scoreboard players set $start gm4_lore 2

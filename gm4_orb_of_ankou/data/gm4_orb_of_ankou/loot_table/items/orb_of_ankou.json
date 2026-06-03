@@ -11,7 +11,7 @@
                             "function": "minecraft:set_components",
                             "components": {
                                 "minecraft:enchantment_glint_override": true,
-                                "minecraft:custom_model_data": "item/orb_of_ankou",
+                                "minecraft:custom_model_data": {"strings":["gm4_orb_of_ankou:item/orb_of_ankou"]},
                                 "minecraft:firework_explosion": {
                                     "shape": "small_ball",
                                     "colors": [
@@ -23,6 +23,7 @@
                                         "minecraft:firework_explosion"
                                     ]
                                 },
+                                "minecraft:rarity": "rare",
                                 "minecraft:damage_resistant": {
                                     "types": "#minecraft:is_fire"
                                 },
@@ -38,11 +39,10 @@
                         },
                         {
                             "function": "minecraft:set_name",
+                            "target": "item_name",
                             "name": {
                                 "translate": "item.gm4.orb_of_ankou",
-                                "fallback": "Orb of Ankou",
-                                "italic": false,
-                                "color": "aqua"
+                                "fallback": "Orb of Ankou"
                             }
                         },
                         {

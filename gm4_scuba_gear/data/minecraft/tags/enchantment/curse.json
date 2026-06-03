@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "gm4_scuba_gear:wetsuit", "required": false},
+    {"id": "gm4_scuba_gear:flippers", "required": false}
+  ]
+}

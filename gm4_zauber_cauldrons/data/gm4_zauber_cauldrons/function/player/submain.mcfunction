@@ -8,8 +8,5 @@ execute at @s[gamemode=!adventure] if predicate gm4_zauber_cauldrons:player/equi
 # crystal effects
 scoreboard players set $success gm4_zc_data 0
 execute if predicate gm4_zauber_cauldrons:player/equipment/crystal/luck_and_in_offhand run function gm4_zauber_cauldrons:player/crystal/process
-execute if score $success gm4_zc_data matches 0 if score @s gm4_zc_crystal matches 0..7 at @s run function gm4_zauber_cauldrons:player/crystal/deactivate
-
-
-# reset fake player
-scoreboard players reset $success
+execute if score $success gm4_zc_data matches 0 if entity @s[tag=gm4_zc_crystal_active] at @s run function gm4_zauber_cauldrons:player/crystal/deactivate
+scoreboard players reset $success gm4_zc_data

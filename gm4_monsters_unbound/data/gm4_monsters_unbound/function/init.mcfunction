@@ -23,7 +23,7 @@ execute unless score $phantoms_disabled gm4_mu_data matches 1 run gamerule spawn
 execute unless score $phantoms_disabled gm4_mu_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:{"text":"[INFO] Monsters Unbound changed gamerule spawn_phantoms to false"}}
 scoreboard players set $phantoms_disabled gm4_mu_data 1
 execute store result score $doinsomnia gm4_mu_data run gamerule spawn_phantoms
-execute if score $spawn_phantoms gm4_mu_config matches 1 if score $doinsomnia gm4_mu_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:[{"text":"[WARN]","color":"red"},{"text":" Monsters Unbound requires minecraft:spawn_phantoms to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","clickEvent":{"action":"suggest_command","value":"/gamerule spawn_phantoms false"}}]}
+execute if score $spawn_phantoms gm4_mu_config matches 1 if score $doinsomnia gm4_mu_data matches 1 run data modify storage gm4:log queue append value {type:"text",message:[{"text":"[WARN]","color":"red"},{"text":" Monsters Unbound requires minecraft:spawn_phantoms to be false, but it is true. ","color":"white"},{"text":"click here to fix","color":"red","click_event":{"action":"suggest_command","command":"/gamerule spawn_phantoms false"}}]}
 
 # mob caps
 execute unless score $mob_limit.husk_army gm4_mu_config matches -2147483648..2147483647 run scoreboard players set $mob_limit.husk_army gm4_mu_config 128

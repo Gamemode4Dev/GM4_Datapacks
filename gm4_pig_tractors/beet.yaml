@@ -1,6 +1,6 @@
 id: gm4_pig_tractors
 name: Pig Tractors
-version: 1.8.X
+version: 1.9.X
 
 data_pack:
   load: .
@@ -16,6 +16,8 @@ meta:
       notes: []
     modrinth:
       project_id: 8lN3MtcQ
+    smithed:
+      pack_id: gm4_pig_tractors
     model_data:
       - item: saddle
         reference: gui/advancement/pig_tractors
