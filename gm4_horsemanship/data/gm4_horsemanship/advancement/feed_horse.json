@@ -1,0 +1,179 @@
+{
+  "criteria": {
+    "apple": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:apple"
+          ]
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#gm4_horsemanship:trainable",
+              "nbt": "{Tags:[\"gm4_horse\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "golden_apple": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:golden_apple"
+          ]
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#gm4_horsemanship:trainable",
+              "nbt": "{Tags:[\"gm4_horse\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "carrot": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:carrot"
+          ]
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#gm4_horsemanship:trainable",
+              "nbt": "{Tags:[\"gm4_horse\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "enchanted_golden_apple": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:enchanted_golden_apple"
+          ]
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#gm4_horsemanship:trainable",
+              "nbt": "{Tags:[\"gm4_horse\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "golden_carrot": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:golden_carrot"
+          ]
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#gm4_horsemanship:trainable",
+              "nbt": "{Tags:[\"gm4_horse\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "sugar": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:sugar"
+          ]
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#gm4_horsemanship:trainable",
+              "nbt": "{Tags:[\"gm4_horse\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "wheat": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:wheat"
+          ]
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#gm4_horsemanship:trainable",
+              "nbt": "{Tags:[\"gm4_horse\"]}"
+            }
+          }
+        ]
+      }
+    },
+    "hay_block": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:hay_block"
+          ]
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "#gm4_horsemanship:trainable",
+              "nbt": "{Tags:[\"gm4_horse\"]}"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "apple",
+      "golden_apple",
+      "carrot",
+      "enchanted_golden_apple",
+      "golden_carrot",
+      "sugar",
+      "wheat",
+      "hay_block"
+    ]
+  ],
+  "rewards": {
+    "function": "gm4_horsemanship:horse_processing/food/feed_original_food"
+  }
+}
