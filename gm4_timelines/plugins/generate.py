@@ -144,6 +144,7 @@ def process_day_files(
         TimelineData instance representing the concatenated day timeline.
     """
     function_data: dict[str, Any] = {}
+    day_list: list[str] = []
 
     # start with day 0 (first 6000 ticks)
     full_timeline = build_day_zero(default_data)
@@ -165,19 +166,19 @@ def process_day_files(
 
             day_start_tick = full_timeline.period_ticks
             time_markers = {
-                f"gm4_timelines:{file_name}.{moon_phase}.morning": TimeMarker(
+                f"gm4_timelines:{file_name}.{moon_phase}.noon": TimeMarker(
                     show_in_commands=True,
                     ticks=day_start_tick
                 ),
-                f"gm4_timelines:{file_name}.{moon_phase}.noon": TimeMarker(
+                f"gm4_timelines:{file_name}.{moon_phase}.night": TimeMarker(
                     show_in_commands=True,
                     ticks=day_start_tick+6000
                 ),
-                f"gm4_timelines:{file_name}.{moon_phase}.night": TimeMarker(
+                f"gm4_timelines:{file_name}.{moon_phase}.midnight": TimeMarker(
                     show_in_commands=True,
                     ticks=day_start_tick+13000
                 ),
-                f"gm4_timelines:{file_name}.{moon_phase}.midnight": TimeMarker(
+                f"gm4_timelines:{file_name}.{moon_phase}.morning": TimeMarker(
                     show_in_commands=True,
                     ticks=day_start_tick+18000
                 ),
@@ -191,14 +192,15 @@ def process_day_files(
                 "in_type": day_data.settings["in_type"],
                 "out_type": day_data.settings["out_type"],
                 "weight": day_data.settings["weight"],
-                "id": f"{file_name}.{moon_phase}.morning",
+                "id": file_name,
+                "moon_phase": moon_phase,
                 "functions": functions
             })
-
+            day_list.append(f'{moon_phase}.{day_data.settings["in_type"]}'+'[{'+f'id:"{file_name}"'+'}]')
             full_timeline.period_ticks += day_build.period_ticks
 
     # create function
-    func: dict[str, Any] = {"registry":function_data}
+    func: dict[str, Any] = {"registry":function_data,"reference_list":day_list}
     ctx.data["gm4_timelines:register/days"] = Function([
         "# register days",
         "# generated from generate.py",
