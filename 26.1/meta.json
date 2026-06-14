@@ -1,5 +1,5 @@
 {
-  "last_commit": "8661cbb37453f2359e757003423fbc75e7f56b1e",
+  "last_commit": "27d661ad34ac854f0fa47ac1d5593a121215a2d1",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1029,6 +1029,32 @@
       "pmc_link": null
     },
     {
+      "id": "gm4_horsemanship",
+      "name": "Horsemanship",
+      "version": "1.0.0",
+      "hash": "16ec950a95a04d4cf35b4b78bb8ef1ff32502b51",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Horsemanship",
+      "credits": {
+        "Creator": [
+          "Thanathor"
+        ]
+      },
+      "requires": [],
+      "description": "Form a bond with your horses",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": "Usage of the Gamemode 4 Resource Pack is highly recommended.",
+      "search_keywords": [],
+      "publish_date": "2026-06-14",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    {
       "id": "gm4_iacio_shamir",
       "name": "Iacio Shamir",
       "version": "1.6.2",
@@ -1094,7 +1120,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.10",
+      "version": "1.1.11",
       "hash": "53f12123b8efdf7af6734787fb85b32298c6b94f",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -2684,8 +2710,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.5.2",
-      "hash": "456e6965f076bdf428b877894f9cab179590d79b",
+      "version": "1.5.3",
+      "hash": "f41d39d138a34b38ad47c9d459a1391f797b2488",
       "video_link": "",
       "wiki_link": "",
       "credits": {
