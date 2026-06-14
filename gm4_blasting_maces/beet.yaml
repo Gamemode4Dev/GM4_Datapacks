@@ -11,11 +11,10 @@ pipeline:
 meta:
   gm4:
     versioning:
-      schedule_loops: [tick]
+      schedule_loops: [tick, main]
     website:
-      description: Dig a hole like a mole!
-      recommended:
-        - gm4_resource_pack
+      description: "Why break one block when you can break nine? Now maces hit harder than ever!"
+      recommended: []
       notes: []
     video: null
     wiki: "https://wiki.gm4.co/wiki/Blasting_Maces"

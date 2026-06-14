@@ -1,9 +1,6 @@
-# manage tool component on maces (add when enchanted, remove when not)
-execute as @a[predicate=gm4_blasting_maces:mace_needs_tool] run function gm4_blasting_maces:mace/add_tool_component
-execute as @a[predicate=gm4_blasting_maces:mace_needs_tool_removed] run function gm4_blasting_maces:mace/remove_tool_component
-
-# check players who used a mace for blasting enchantment
-execute as @a[scores={gm4_blast_use_mace=1..}] run function gm4_blasting_maces:player/check_for_mace
+# the player let go of right click this tick, so try to blast
+execute as @a[scores={gm4_blast_charging=1}] at @s run function gm4_blasting_maces:player/release
+scoreboard players remove @a[scores={gm4_blast_charging=1..}] gm4_blast_charging 1
 
 # reschedule
 schedule function gm4_blasting_maces:tick 1t

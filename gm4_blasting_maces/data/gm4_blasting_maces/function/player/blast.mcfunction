@@ -1,27 +1,25 @@
-# Starts the blasting mace mining sequence based on the enchantment level
-# @s = player with blasting mace who just broke a block
-# at @s
-# run from gm4_blasting_maces:player/check_for_mace
+# Blasts the 3x3 area around the targeted block in the plane of the hit face
+# @s = player
+# at the targeted block
+# run from gm4_blasting_maces:player/release
 
-# find the nearest dropped item (from the block that was just broken)
-# place marker at that location for any item drop
-# distance 8 to account for max reach + item drop physics
-scoreboard players set $success gm4_blast_data 0
-execute as @e[type=item,limit=1,distance=..8,sort=nearest,nbt={Age:0s}] at @s store success score $success gm4_blast_data \
-  if items entity @s container.* #gm4_blasting_maces:breakable align xyz run summon marker ~0.5 ~0.5 ~0.5 {Tags:["gm4_blast_source","gm4_blast_marker","smithed.entity","smithed.strict"]}
+# reset the block count
+scoreboard players set $count gm4_blast_data 0
 
-# if we found a valid block, save mace NBT and store player pitch for directional mining
-execute if score $success gm4_blast_data matches 1 run data modify storage gm4_blasting_maces:temp tool set from entity @s SelectedItem
-execute if score $success gm4_blast_data matches 1 store result score @s gm4_blast_pitch run data get entity @s Rotation[1] 1
+# break the full 3x3 plane in the plane of the hit face
+execute if score $face_axis gm4_blast_data matches 1 rotated 90 0 run function gm4_blasting_maces:mining/plane_3x3
+execute if score $face_axis gm4_blast_data matches 2 rotated 0 90 run function gm4_blasting_maces:mining/plane_3x3
+execute if score $face_axis gm4_blast_data matches 3 rotated 0 0 run function gm4_blasting_maces:mining/plane_3x3
 
-# perform directional detonation at marker location
-execute if score $success gm4_blast_data matches 1 at @e[type=marker,tag=gm4_blast_source,limit=1] run function gm4_blasting_maces:mining/detonate
+# blast effects
+particle minecraft:explosion ~ ~ ~ 0 0 0 0 0
+playsound minecraft:entity.generic.explode block @a ~ ~ ~ 0.6 1.0
 
-# apply durability damage based on blocks broken
-execute if score $blast_count gm4_blast_data matches 1.. run function gm4_blasting_maces:player/modify_mace_durability
+# push nearby entities with a wind burst (no damage)
+summon minecraft:wind_charge ~ ~ ~ {Motion:[0.0,-5.0,0.0],Tags:["gm4_blast_wind"]}
 
-# cleanup marker
-kill @e[type=marker,tag=gm4_blast_source]
+# lose durability based on how many blocks broke
+execute if score $count gm4_blast_data matches 1.. at @s run function gm4_blasting_maces:player/durability/apply
 
-# clear storage
-data remove storage gm4_blasting_maces:temp tool
+# unlock the module advancement on the first successful blast
+execute if score $count gm4_blast_data matches 1.. run advancement grant @s only gm4:blasting_maces

@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "mace": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:mace"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_blasting_maces:player/using"
+  }
+}
