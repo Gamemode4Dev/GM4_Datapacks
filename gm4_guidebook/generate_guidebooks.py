@@ -789,7 +789,7 @@ Reads a vanilla item and creates a JSON text component to display the item in th
 """
 def item_to_display(item: str, components: dict[str, Any] | None, ctx: Context) -> tuple[TextComponent, TextComponent]:
   vanilla = ctx.inject(Vanilla)
-  vanilla.minecraft_version = '26.1'
+  vanilla.minecraft_version = '26.2'
   if item == "air":
     # show empty slot
     slot = {
@@ -947,7 +947,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
             ingr = ingr[0]
           elif ingr.startswith("#"):
             vanilla = ctx.inject(Vanilla)
-            vanilla.minecraft_version = '26.1'
+            vanilla.minecraft_version = '26.2'
             ingr = get_item_from_tag(ctx, ingr, vanilla)
           ingredients.append(ingr)
 
@@ -980,7 +980,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
         ingr = ingr[0]
       elif ingr.startswith("#"):
         vanilla = ctx.inject(Vanilla)
-        vanilla.minecraft_version = '26.1'
+        vanilla.minecraft_version = '26.2'
         ingr = get_item_from_tag(ctx, ingr, vanilla)
       ingredients.append(ingr)
     while len(ingredients) < 9:

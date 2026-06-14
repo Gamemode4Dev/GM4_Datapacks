@@ -21,7 +21,7 @@ from gm4.utils import Version, run
 
 parent_logger = logging.getLogger("gm4.manifest")
 
-SUPPORTED_GAME_VERSIONS = ["26.1"]
+SUPPORTED_GAME_VERSIONS = ["26.2"]
 
 # config models for beet.yaml metas
 CreditsModel = dict[str, list[str]]
@@ -145,7 +145,7 @@ def create(ctx: Context):
 	ctx.cache["gm4_manifest"].json = manifest.model_dump()
 
 	# Read in the previous manifest, if found
-	version = os.getenv("VERSION", "26.1")
+	version = os.getenv("VERSION", "26.2")
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
 
@@ -219,7 +219,7 @@ def update_patch(ctx: Context):
 
 def write_meta(ctx: Context):
 	"""Write the updated meta.json file."""
-	version = os.getenv("VERSION", "26.1")
+	version = os.getenv("VERSION", "26.2")
 	release_dir = Path('release') / version
 	os.makedirs(release_dir, exist_ok=True)
 

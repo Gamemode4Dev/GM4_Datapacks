@@ -43,7 +43,7 @@ from gm4.utils import (
 
 JsonType = dict[str,Any]
 
-MINECRAFT_REFERENCE_VERSION = "26.1"
+MINECRAFT_REFERENCE_VERSION = "26.2"
 
 parent_logger = logging.getLogger("gm4.resource_pack")
 
