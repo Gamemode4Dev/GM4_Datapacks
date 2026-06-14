@@ -305,11 +305,9 @@
                 "tries": 300
             }
         ],
-        "dirt_provider": {
-            "type": "minecraft:simple_state_provider",
-            "state": {
-                "Name": "minecraft:air"
-            }
+        "below_trunk_provider": {
+            "type": "minecraft:rule_based_state_provider",
+            "rules": []
         },
         "foliage_placer": {
             "type": "minecraft:bush_foliage_placer",
@@ -323,7 +321,6 @@
                 "Name": "minecraft:air"
             }
         },
-        "force_dirt": false,
         "ignore_vines": true,
         "minimum_size": {
             "type": "minecraft:two_layers_feature_size",
