@@ -1,0 +1,108 @@
+{
+  "attributes": {
+    "minecraft:audio/background_music": {
+      "default": {
+        "max_delay": 24000,
+        "min_delay": 12000,
+        "sound": "minecraft:music.overworld.sulfur_caves"
+      }
+    },
+    "minecraft:visual/fog_color": "#8cb831",
+    "minecraft:visual/sky_color": "#78a7ff",
+    "minecraft:visual/water_fog_color": "#17543c"
+  },
+  "carvers": "#minecraft:in_biome/sulfur_caves",
+  "downfall": 0.4,
+  "effects": {
+    "grass_color": "#aba64f",
+    "water_color": "#34bf89"
+  },
+  "features": [
+    "#minecraft:raw_generation/in_biome/sulfur_caves",
+    "#minecraft:lakes/in_biome/sulfur_caves",
+    "#minecraft:local_modifications/in_biome/sulfur_caves",
+    "#minecraft:underground_structures/in_biome/sulfur_caves",
+    "#minecraft:surface_structures/in_biome/sulfur_caves",
+    "#minecraft:strongholds/in_biome/sulfur_caves",
+    "#minecraft:underground_ores/in_biome/sulfur_caves",
+    "#minecraft:underground_decoration/in_biome/sulfur_caves",
+    "#minecraft:fluid_springs/in_biome/sulfur_caves",
+    "#minecraft:vegetal_decoration/in_biome/sulfur_caves",
+    "#minecraft:top_layer_modification/in_biome/sulfur_caves"
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
+        "weight": 10
+      }
+    ],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [
+      {
+        "type": "minecraft:sulfur_cube",
+        "maxCount": 4,
+        "minCount": 2,
+        "weight": 100
+      },
+      {
+        "type": "minecraft:creeper",
+        "maxCount": 2,
+        "minCount": 2,
+        "weight": 50
+      },
+      {
+        "type": "minecraft:skeleton",
+        "maxCount": 2,
+        "minCount": 2,
+        "weight": 50
+      },
+      {
+        "type": "minecraft:slime",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 25
+      },
+      {
+        "type": "minecraft:cave_spider",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 20
+      },
+      {
+        "type": "minecraft:zombie",
+        "maxCount": 2,
+        "minCount": 2,
+        "weight": 50
+      },
+      {
+        "type": "minecraft:enderman",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 10
+      },
+      {
+        "type": "minecraft:witch",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 1
+      },
+      {
+        "type": "minecraft:zombie_villager",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 5
+      }
+    ],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.8
+}

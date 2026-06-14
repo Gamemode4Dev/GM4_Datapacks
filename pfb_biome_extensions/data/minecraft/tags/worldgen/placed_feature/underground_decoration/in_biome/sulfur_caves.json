@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:underground_decoration/in_overworld",
+      "required": false
+    },
+    "minecraft:sulfur_spike_cluster",
+    "minecraft:sulfur_spike"
+  ]
+}
