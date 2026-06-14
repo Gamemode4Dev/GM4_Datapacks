@@ -15,7 +15,7 @@
             "entity": "this",
             "predicate": {
               "vehicle": {
-                "type": "minecraft:pig"
+                "minecraft:entity_type": "minecraft:pig"
               }
             }
           },
@@ -26,8 +26,8 @@
               "entity": "this",
               "predicate": {
                 "vehicle": {
-                  "type": "minecraft:pig",
-                  "nbt": "{NoAI:1b}"
+                  "minecraft:entity_type": "minecraft:pig",
+                  "minecraft:nbt": "{NoAI:1b}"
                 }
               }
             }
@@ -43,8 +43,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type_specific": {
-                "type": "player",
+              "minecraft:type_specific/player": {
                 "advancements": {
                   "gm4:pig_tractors": true
                 }

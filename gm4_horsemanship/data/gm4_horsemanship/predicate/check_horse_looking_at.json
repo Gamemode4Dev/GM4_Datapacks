@@ -2,10 +2,9 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "type_specific": {
-      "type": "player",
+    "minecraft:type_specific/player": {
       "looking_at": {
-        "type": "#gm4_horsemanship:trainable",
+        "entity_type": "#gm4_horsemanship:trainable",
         "nbt": "{Tags:[\"gm4_horse_check\"]}"
       }
     }

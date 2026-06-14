@@ -13,8 +13,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:interaction",
-              "nbt": "{Tags:[\"gm4_bas_arms_detect\"]}"
+              "minecraft:entity_type": "minecraft:interaction",
+              "minecraft:nbt": "{Tags:[\"gm4_bas_arms_detect\"]}"
             }
           }
         ]

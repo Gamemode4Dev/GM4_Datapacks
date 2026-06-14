@@ -1234,8 +1234,7 @@ def generate_prereq(prereq: str, module: str):
           "condition": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
-            "type_specific": {
-              "type": "player",
+            "minecraft:type_specific/player": {
               "advancements": {
                 f"gm4_guidebook:{module}/unlock/{prereq}": True
               }
@@ -1280,8 +1279,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
         "condition": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
-          "type_specific": {
-            "type": "player",
+          "minecraft:type_specific/player": {
             "gamemode": [
               "spectator"
             ]

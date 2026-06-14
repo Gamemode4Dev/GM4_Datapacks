@@ -4,8 +4,8 @@
     "entity": "this",
     "predicate": {
       "vehicle": {
-        "type": "minecraft:pig",
-        "location": {
+        "minecraft:entity_type": "minecraft:pig",
+        "minecraft:location": {
           "block": {
             "blocks": "#gm4_pig_tractors:replaceable"
           }
@@ -19,8 +19,8 @@
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "vehicle": {
-          "nbt": "{Tags:[\"smithed.entity\"]}"
+        "minecraft:vehicle": {
+          "minecraft:nbt": "{Tags:[\"smithed.entity\"]}"
         }
       }
     }

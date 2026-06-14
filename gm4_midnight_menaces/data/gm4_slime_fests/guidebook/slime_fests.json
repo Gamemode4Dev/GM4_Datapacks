@@ -20,20 +20,19 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "type": "minecraft:slime",
-                  "type_specific": {
-                    "type": "slime",
+                  "minecraft:entity_type": "minecraft:slime",
+                  "minecraft:type_specific/cube_mob": {
                     "size": 0
                   },
-                  "nbt": "{DeathLootTable:\"minecraft:empty\"}"
+                  "minecraft:nbt": "{DeathLootTable:\"minecraft:empty\"}"
                 }
               },
               {
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "type": "minecraft:slime",
-                  "nbt": "{DeathLootTable:\"gm4_slime_fests:entities/giant_slime\"}"
+                  "minecraft:entity_type": "minecraft:slime",
+                  "minecraft:nbt": "{DeathLootTable:\"gm4_slime_fests:entities/giant_slime\"}"
                 }
               }
             ]

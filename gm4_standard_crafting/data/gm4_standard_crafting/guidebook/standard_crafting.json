@@ -114,7 +114,7 @@
             "entity": "this",
             "predicate": {
               "vehicle": {
-                "type": "minecraft:horse"
+                "minecraft:entity_type": "minecraft:horse"
               }
             }
           },
@@ -125,8 +125,8 @@
               "entity": "this",
               "predicate": {
                 "vehicle": {
-                  "type": "minecraft:horse",
-                  "nbt": "{NoAI:1b}"
+                  "minecraft:entity_type": "minecraft:horse",
+                  "minecraft:nbt": "{NoAI:1b}"
                 }
               }
             }

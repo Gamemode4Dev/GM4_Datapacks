@@ -11,8 +11,8 @@
       "conditions": {
         "damage": {
           "source_entity": {
-            "type": "minecraft:creeper",
-            "nbt": "{Tags:[\"gm4_bat_grenade\"]}"
+            "minecraft:entity_type": "minecraft:creeper",
+            "minecraft:nbt": "{Tags:[\"gm4_bat_grenade\"]}"
           }
         }
       }

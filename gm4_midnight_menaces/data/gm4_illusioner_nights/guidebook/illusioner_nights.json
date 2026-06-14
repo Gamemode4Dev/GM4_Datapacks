@@ -20,8 +20,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:illusioner",
-              "nbt": "{DeathLootTable:\"gm4_illusioner_nights:entities/illusioner\"}"
+              "minecraft:entity_type": "minecraft:illusioner",
+              "minecraft:nbt": "{DeathLootTable:\"gm4_illusioner_nights:entities/illusioner\"}"
             }
           }
         ]

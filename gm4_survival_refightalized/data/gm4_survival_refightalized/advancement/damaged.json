@@ -199,7 +199,7 @@
           "minecraft:poison": {}
         },
         "source": {
-          "type": "minecraft:witch"
+          "minecraft:entity_type": "minecraft:witch"
         }
       }
     },
@@ -208,7 +208,7 @@
       "conditions": {
         "damage": {
           "source_entity": {
-            "type": "minecraft:cave_spider"
+            "minecraft:entity_type": "minecraft:cave_spider"
           },
           "type": {
             "tags": [

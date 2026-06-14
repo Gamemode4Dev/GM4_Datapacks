@@ -13,7 +13,7 @@
             ]
           },
           "source_entity": {
-            "type": "minecraft:evoker"
+            "minecraft:entity_type": "minecraft:evoker"
           }
         }
       }

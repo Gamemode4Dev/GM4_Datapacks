@@ -37,7 +37,7 @@
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "type": [
+                    "minecraft:entity_type": [
                       "minecraft:tnt",
                       "minecraft:creeper",
                       "minecraft:wither",

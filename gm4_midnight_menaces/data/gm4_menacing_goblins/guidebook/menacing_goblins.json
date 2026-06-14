@@ -17,8 +17,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:zombie",
-              "nbt": "{Tags:['gm4_goblin']}"
+              "minecraft:entity_type": "minecraft:zombie",
+              "minecraft:nbt": "{Tags:['gm4_goblin']}"
             }
           }
         ]
