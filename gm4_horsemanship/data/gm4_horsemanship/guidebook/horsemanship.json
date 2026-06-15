@@ -16,7 +16,11 @@
             "predicate": {
               "vehicle": {
                 "entity_type": "#gm4_horsemanship:trainable",
-                "nbt": "{Tags:[\"gm4_horse\"]}"
+                "minecraft:entity_tags": {
+                  "all_of": [
+                    "gm4_horse"
+                  ]
+                }
               }
             }
           }

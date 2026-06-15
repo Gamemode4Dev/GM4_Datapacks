@@ -14,16 +14,13 @@
                         "entity": "this",
                         "predicate": {
                             "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
-                        }
-                    },
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "minecraft:nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            "minecraft:entity_tags": {
+                                "all_of": [
+                                    "gm4_horse"
+                                ],
+                                "none_of": [
+                                    "gm4_horse.tamed"
+                                ]
                             }
                         }
                     }
@@ -44,16 +41,13 @@
                         "entity": "this",
                         "predicate": {
                             "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
-                        }
-                    },
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "minecraft:nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            "minecraft:entity_tags": {
+                                "all_of": [
+                                    "gm4_horse"
+                                ],
+                                "none_of": [
+                                    "gm4_horse.tamed"
+                                ]
                             }
                         }
                     }
@@ -74,16 +68,13 @@
                         "entity": "this",
                         "predicate": {
                             "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
-                        }
-                    },
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "minecraft:nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            "minecraft:entity_tags": {
+                                "all_of": [
+                                    "gm4_horse"
+                                ],
+                                "none_of": [
+                                    "gm4_horse.tamed"
+                                ]
                             }
                         }
                     }
@@ -104,16 +95,13 @@
                         "entity": "this",
                         "predicate": {
                             "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
-                        }
-                    },
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "minecraft:nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            "minecraft:entity_tags": {
+                                "all_of": [
+                                    "gm4_horse"
+                                ],
+                                "none_of": [
+                                    "gm4_horse.tamed"
+                                ]
                             }
                         }
                     }
@@ -134,16 +122,13 @@
                         "entity": "this",
                         "predicate": {
                             "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
-                        }
-                    },
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "minecraft:nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            "minecraft:entity_tags": {
+                                "all_of": [
+                                    "gm4_horse"
+                                ],
+                                "none_of": [
+                                    "gm4_horse.tamed"
+                                ]
                             }
                         }
                     }
@@ -164,16 +149,13 @@
                         "entity": "this",
                         "predicate": {
                             "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
-                        }
-                    },
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "minecraft:nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            "minecraft:entity_tags": {
+                                "all_of": [
+                                    "gm4_horse"
+                                ],
+                                "none_of": [
+                                    "gm4_horse.tamed"
+                                ]
                             }
                         }
                     }
@@ -194,16 +176,13 @@
                         "entity": "this",
                         "predicate": {
                             "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
-                        }
-                    },
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "minecraft:nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            "minecraft:entity_tags": {
+                                "all_of": [
+                                    "gm4_horse"
+                                ],
+                                "none_of": [
+                                    "gm4_horse.tamed"
+                                ]
                             }
                         }
                     }
@@ -224,16 +203,13 @@
                         "entity": "this",
                         "predicate": {
                             "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
-                        }
-                    },
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:entity_properties",
-                            "entity": "this",
-                            "predicate": {
-                                "minecraft:nbt": "{Tags:[\"gm4_horse.tamed\"]}"
+                            "minecraft:entity_tags": {
+                                "all_of": [
+                                    "gm4_horse"
+                                ],
+                                "none_of": [
+                                    "gm4_horse.tamed"
+                                ]
                             }
                         }
                     }

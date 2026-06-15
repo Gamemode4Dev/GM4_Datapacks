@@ -39,7 +39,11 @@ def generate_corripio(ctx: Context):
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "minecraft:nbt": "{Tags:[\"" + tag + "\"]}"
+                    "minecraft:entity_tags": {
+                      "all_of": [
+                        tag
+                      ]
+                    }
                   }
                 }
               } for tag in ["gm4_oa_ignore", "smithed.entity"]],

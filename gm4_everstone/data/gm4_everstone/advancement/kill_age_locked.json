@@ -4,7 +4,11 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "nbt": "{Tags:[\"gm4_everstone_locked\"]}"
+          "minecraft:entity_tags": {
+            "all_of": [
+              "gm4_everstone_locked"
+            ]
+          }
         }
       }
     }

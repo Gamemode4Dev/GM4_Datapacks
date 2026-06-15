@@ -5,7 +5,11 @@
     "minecraft:type_specific/player": {
       "looking_at": {
         "entity_type": "#gm4_horsemanship:trainable",
-        "nbt": "{Tags:[\"gm4_horse_check\"]}"
+        "minecraft:entity_tags": {
+          "all_of": [
+            "gm4_horse_check"
+          ]
+        }
       }
     }
   }

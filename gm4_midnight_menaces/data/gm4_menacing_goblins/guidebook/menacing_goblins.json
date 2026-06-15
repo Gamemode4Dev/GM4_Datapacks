@@ -18,7 +18,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "minecraft:zombie",
-              "minecraft:nbt": "{Tags:['gm4_goblin']}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_goblin"
+                ]
+              }
             }
           }
         ]

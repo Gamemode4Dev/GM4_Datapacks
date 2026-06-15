@@ -5,7 +5,11 @@
       "conditions": {
         "damage": {
           "source_entity": {
-            "nbt": "{Tags:[\"gm4_mu_charging_attack\"]}"
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_mu_charging_attack"
+              ]
+            }
           }
         }
       }

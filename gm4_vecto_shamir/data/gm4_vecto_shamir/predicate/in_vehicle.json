@@ -2,8 +2,12 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "vehicle": {
-      "nbt": "{Tags:[\"gm4_vecto_vehicle\"]}"
+    "minecraft:vehicle": {
+      "minecraft:entity_tags": {
+        "all_of": [
+          "gm4_vecto_vehicle"
+        ]
+      }
     }
   }
 }

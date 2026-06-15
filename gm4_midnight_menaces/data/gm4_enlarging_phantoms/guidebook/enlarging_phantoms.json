@@ -18,7 +18,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "minecraft:phantom",
-              "minecraft:nbt": "{Tags:['gm4_enlarged_phantom']}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_enlarged_phantom"
+                ]
+              }
             }
           }
         ]

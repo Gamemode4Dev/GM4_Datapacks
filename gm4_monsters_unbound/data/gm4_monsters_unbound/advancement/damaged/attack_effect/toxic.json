@@ -6,7 +6,11 @@
         "damage": {
           "blocked": false,
           "source_entity": {
-            "nbt": "{Tags:[\"gm4_mu_toxic_attack\"]}"
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_mu_toxic_attack"
+              ]
+            }
           }
         }
       }

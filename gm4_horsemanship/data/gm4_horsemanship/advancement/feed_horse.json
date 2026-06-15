@@ -14,7 +14,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_horse"
+                ]
+              }
             }
           }
         ]
@@ -34,7 +38,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_horse"
+                ]
+              }
             }
           }
         ]
@@ -54,7 +62,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_horse"
+                ]
+              }
             }
           }
         ]
@@ -74,7 +86,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_horse"
+                ]
+              }
             }
           }
         ]
@@ -94,7 +110,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_horse"
+                ]
+              }
             }
           }
         ]
@@ -114,7 +134,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_horse"
+                ]
+              }
             }
           }
         ]
@@ -134,7 +158,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_horse"
+                ]
+              }
             }
           }
         ]
@@ -154,7 +182,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:nbt": "{Tags:[\"gm4_horse\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_horse"
+                ]
+              }
             }
           }
         ]

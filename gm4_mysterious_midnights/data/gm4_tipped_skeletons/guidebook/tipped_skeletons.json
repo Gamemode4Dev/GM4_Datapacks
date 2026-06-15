@@ -18,7 +18,11 @@
         "damage": {
           "source_entity": {
             "minecraft:entity_type": "minecraft:skeleton",
-            "minecraft:nbt": "{Tags:['gm4_tipped_skeleton']}"
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_tipped_skeleton"
+              ]
+            }
           }
         }
       }

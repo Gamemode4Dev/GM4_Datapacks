@@ -21,7 +21,11 @@
                 "entity": "this",
                 "predicate": {
                   "minecraft:entity_type": "minecraft:splash_potion",
-                  "minecraft:nbt": "{Tags:['gm4_falling_star']}"
+                  "minecraft:entity_tags": {
+                    "all_of": [
+                      "gm4_falling_star"
+                    ]
+                  }
                 }
               },
               {
@@ -31,7 +35,11 @@
                   "minecraft:type_specific/player": {
                     "looking_at": {
                       "minecraft:entity_type": "minecraft:area_effect_cloud",
-                      "minecraft:nbt": "{Tags:['gm4_falling_star']}"
+                      "minecraft:entity_tags": {
+                        "all_of": [
+                          "gm4_falling_star"
+                        ]
+                      }
                     }
                   }
                 }
@@ -43,7 +51,11 @@
                   "minecraft:type_specific/player": {
                     "looking_at": {
                       "minecraft:entity_type": "minecraft:shulker_bullet",
-                      "minecraft:nbt": "{Tags:['gm4_falling_star']}"
+                      "minecraft:entity_tags": {
+                        "all_of": [
+                          "gm4_falling_star"
+                        ]
+                      }
                     }
                   }
                 }

@@ -8,8 +8,12 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_empty\"]}",
-              "equipment": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_infinitas_mainhand_empty"
+                ]
+              },
+              "minecraft:equipment": {
                 "mainhand": {
                   "items": [
                     "minecraft:lava_bucket",
@@ -43,7 +47,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_empty\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_infinitas_mainhand_empty"
+                ]
+              }
             }
           }
         ],
@@ -62,7 +70,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_empty\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_infinitas_mainhand_empty"
+                ]
+              }
             }
           }
         ],
@@ -81,7 +93,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_empty\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_infinitas_mainhand_empty"
+                ]
+              }
             }
           }
         ],
@@ -100,7 +116,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_empty\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_infinitas_mainhand_empty"
+                ]
+              }
             }
           }
         ],

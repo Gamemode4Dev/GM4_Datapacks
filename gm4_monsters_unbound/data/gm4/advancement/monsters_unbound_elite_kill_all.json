@@ -24,7 +24,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_mu_elite.blazing\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_mu_elite.blazing"
+                ]
+              }
             }
           }
         ]
@@ -38,7 +42,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_mu_elite.gargantuan\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_mu_elite.gargantuan"
+                ]
+              }
             }
           }
         ]
@@ -52,7 +60,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_mu_elite.glacial\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_mu_elite.glacial"
+                ]
+              }
             }
           }
         ]
@@ -66,7 +78,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_mu_elite.mending\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_mu_elite.mending"
+                ]
+              }
             }
           }
         ]
@@ -80,7 +96,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_mu_elite.pearlescent\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_mu_elite.pearlescent"
+                ]
+              }
             }
           }
         ]
@@ -94,7 +114,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_mu_elite.splitting\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_mu_elite.splitting"
+                ]
+              }
             }
           }
         ]
@@ -108,7 +132,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_mu_elite.volatile\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_mu_elite.volatile"
+                ]
+              }
             }
           }
         ]
@@ -122,7 +150,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_mu_elite.vorpal\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_mu_elite.vorpal"
+                ]
+              }
             }
           }
         ]
@@ -136,7 +168,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_mu_elite.zephyr\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_mu_elite.zephyr"
+                ]
+              }
             }
           }
         ]

@@ -18,7 +18,11 @@
                   "creative"
                 ]
               },
-              "nbt": "{Tags:[\"gm4_llp_holding_item\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_llp_holding_item"
+                ]
+              }
             }
           }
         ],
@@ -28,7 +32,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "minecraft:interaction",
-              "minecraft:nbt": "{Tags:[\"gm4_llp_placement_rcd\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_llp_placement_rcd"
+                ]
+              }
             }
           }
         ]

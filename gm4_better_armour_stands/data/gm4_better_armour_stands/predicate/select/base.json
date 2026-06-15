@@ -4,7 +4,11 @@
   "predicate": {
     "minecraft:type_specific/player": {
       "looking_at": {
-        "nbt": "{Tags:[\"gm4_bas_base\"]}"
+        "minecraft:entity_tags": {
+          "all_of": [
+            "gm4_bas_base"
+          ]
+        }
       }
     }
   }

@@ -30,7 +30,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "minecraft:armor_stand",
-              "minecraft:nbt": "{Tags:[\"gm4_apple\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_apple"
+                ]
+              }
             }
           }
         ]

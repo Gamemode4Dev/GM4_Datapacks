@@ -14,7 +14,11 @@
             "entity": "this",
             "predicate": {
               "minecraft:entity_type": "minecraft:interaction",
-              "minecraft:nbt": "{Tags:[\"gm4_bas_arms_detect\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_bas_arms_detect"
+                ]
+              }
             }
           }
         ]
