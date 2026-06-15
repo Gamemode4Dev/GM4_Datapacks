@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:sulfur"
+  ],
+  "result": {
+    "id": "minecraft:sulfur_spike",
+    "count": 4
+  }
+}

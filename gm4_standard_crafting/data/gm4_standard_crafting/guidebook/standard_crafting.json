@@ -69,6 +69,19 @@
         ]
       }
     },
+    "obtain_sulfur": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sulfur",
+              "minecraft:sulfur_spike"
+            ]
+          }
+        ]
+      }
+    },
     "obtain_quartz": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
