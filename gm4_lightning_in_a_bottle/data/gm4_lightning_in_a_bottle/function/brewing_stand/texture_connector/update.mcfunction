@@ -4,7 +4,7 @@
 
 # kill if unneeded
 execute unless block ~ ~-0.1 ~ minecraft:brewing_stand run return run kill @s
-execute unless block ~ ~ ~ #gm4_lightning_in_a_bottle:lightning_rod run return run kill @s
+execute unless block ~ ~ ~ #minecraft:lightning_rods run return run kill @s
 
 # update texture
 scoreboard players set $texture_changed gm4_liab_data 0
