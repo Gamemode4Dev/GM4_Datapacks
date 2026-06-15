@@ -1,5 +1,5 @@
 {
-  "last_commit": "55687fdd7d7c9d3c454d67392b4efb84734048f0",
+  "last_commit": "20821117bb5b79c030e10b921cec99e6db432c29",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1031,13 +1031,16 @@
     {
       "id": "gm4_horsemanship",
       "name": "Horsemanship",
-      "version": "1.0.1",
-      "hash": "85e8702536f85da87830e1db57f88bdf880553e3",
+      "version": "1.0.2",
+      "hash": "7240edcccbb0ef579460386ab2aac6b2084426b1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Horsemanship",
       "credits": {
         "Creator": [
           "Thanathor"
+        ],
+        "Icon Design": [
+          "Hozz"
         ]
       },
       "requires": [],
@@ -1120,7 +1123,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.12",
+      "version": "1.1.13",
       "hash": "bac6b4355d15c0003aded2f228a290a8f78b3505",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -2710,8 +2713,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.5.3",
-      "hash": "f41d39d138a34b38ad47c9d459a1391f797b2488",
+      "version": "1.5.4",
+      "hash": "7276d51b7ca75ac03866ba89f623e9a736079ae2",
       "video_link": "",
       "wiki_link": "",
       "credits": {
