@@ -6,4 +6,5 @@
 scoreboard players set $food_processed gm4_horse_data 1
 tag @s remove gm4_horse_target
 
-function gm4_horsemanship:horse_processing/cap_health
+# /!\ Disabled as it intereferes with the horse breeding
+# function gm4_horsemanship:horse_processing/cap_health

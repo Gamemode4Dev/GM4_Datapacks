@@ -9,6 +9,7 @@ execute as @e[type=#gm4_horsemanship:trainable,distance=..8] run function gm4_ho
 tag @s remove gm4_horse_check_player
 
 # check advancement criteria to find used food item
+# /!\ breed items are disabled for now as they caused problems letting the horse breed
 scoreboard players set $food_processed gm4_horse_data 0
 execute if score $food_processed gm4_horse_data matches 0 if entity @s[advancements={gm4_horsemanship:feed_horse={apple=true}}] as @e[type=#gm4_horsemanship:trainable,tag=gm4_horse_target,distance=..8,limit=1] run function gm4_horsemanship:horse_processing/food/type/apple
 execute if score $food_processed gm4_horse_data matches 0 if entity @s[advancements={gm4_horsemanship:feed_horse={golden_apple=true}}] as @e[type=#gm4_horsemanship:trainable,tag=gm4_horse_target,distance=..8,limit=1] run function gm4_horsemanship:horse_processing/food/type/golden_apple
