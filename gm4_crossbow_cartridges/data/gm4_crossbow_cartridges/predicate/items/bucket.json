@@ -1,18 +1,11 @@
 {
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "equipment": {
-      "offhand": {
-        "items": [
-          "minecraft:cod_bucket",
-          "minecraft:salmon_bucket",
-          "minecraft:pufferfish_bucket",
-          "minecraft:tropical_fish_bucket",
-          "minecraft:axolotl_bucket",
-          "minecraft:tadpole_bucket"
-        ]
-      }
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "offhand": {
+                "items": "#gm4_crossbow_cartridges:bucket"
+            }
+        }
     }
-  }
 }
