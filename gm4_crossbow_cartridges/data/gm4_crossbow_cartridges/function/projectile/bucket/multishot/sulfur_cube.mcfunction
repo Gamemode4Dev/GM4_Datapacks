@@ -9,4 +9,4 @@ summon minecraft:sulfur_cube ~ ~ ~ {FromBucket:1b,Tags:["gm4_cb_projectile"],act
 execute as @e[type=minecraft:sulfur_cube,tag=gm4_cb_projectile,limit=1,distance=..1] run function gm4_crossbow_cartridges:projectile/arrow_motion
 
 # sulfur cube sound
-playsound minecraft:entity.sulfur_cube.jump player @a[distance=..15] ^ ^ ^1 2 .5
+playsound minecraft:entity.sulfur_cube.squish player @a[distance=..15] ^ ^ ^1 2 1
