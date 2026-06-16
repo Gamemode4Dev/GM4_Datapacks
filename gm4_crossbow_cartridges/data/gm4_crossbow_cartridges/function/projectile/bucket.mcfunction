@@ -14,7 +14,7 @@ execute if predicate gm4_crossbow_cartridges:items/tadpole run function gm4_cros
 execute if predicate gm4_crossbow_cartridges:items/tropical run function gm4_crossbow_cartridges:projectile/bucket/tropical
 
 # give advancement for launching mob in a bucket
-execute unless predicate gm4_crossbow_cartridges:items/sulfur_cube advancement grant @s only gm4:crossbow_cartridges_bucket
+execute unless predicate gm4_crossbow_cartridges:items/sulfur_cube run advancement grant @s only gm4:crossbow_cartridges_bucket
 
 # replace filled bucket in player's offhand with water bucket
 execute if predicate gm4_crossbow_cartridges:items/sulfur_cube run return run item replace entity @s[gamemode=!creative] weapon.offhand with minecraft:bucket
