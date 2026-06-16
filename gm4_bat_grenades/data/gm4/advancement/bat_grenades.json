@@ -22,8 +22,12 @@
       "trigger": "minecraft:entity_killed_player",
       "conditions": {
         "entity": {
-          "type": "creeper",
-          "nbt": "{Tags:[\"gm4_bat_grenade\"]}"
+          "minecraft:entity_type": "creeper",
+          "minecraft:entity_tags": {
+            "all_of": [
+              "gm4_bat_grenade"
+            ]
+          }
         }
       }
     }

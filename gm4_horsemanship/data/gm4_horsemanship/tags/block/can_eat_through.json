@@ -2,6 +2,6 @@
     "values": [
         "#gm4:foliage",
         "#gm4:no_collision",
-        "snow"
+        "minecraft:snow"
     ]
 }

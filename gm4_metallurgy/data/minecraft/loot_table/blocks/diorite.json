@@ -20,7 +20,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:tnt"
+              "minecraft:entity_type": "minecraft:tnt"
             }
           }
         }
@@ -58,7 +58,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type": "minecraft:tnt"
+                "minecraft:entity_type": "minecraft:tnt"
               }
             }
           ]

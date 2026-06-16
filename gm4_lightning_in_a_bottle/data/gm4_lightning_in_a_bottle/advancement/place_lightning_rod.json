@@ -7,7 +7,7 @@
                     {
                         "condition": "minecraft:match_tool",
                         "predicate": {
-                            "items": "#gm4_lightning_in_a_bottle:lightning_rod"
+                            "items": "#minecraft:lightning_rods"
                         }
                     },
                     {

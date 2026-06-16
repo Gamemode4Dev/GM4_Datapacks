@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:top_layer_modification/in_overworld",
+      "required": false
+    },
+    "minecraft:freeze_top_layer"
+  ]
+}

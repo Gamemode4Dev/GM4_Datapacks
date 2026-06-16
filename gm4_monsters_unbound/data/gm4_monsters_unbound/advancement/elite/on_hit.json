@@ -8,7 +8,11 @@
                         "condition": "minecraft:entity_properties",
                         "entity": "this",
                         "predicate": {
-                            "nbt": "{Tags:[\"gm4_mu_elite.on_hit\"]}"
+                            "minecraft:entity_tags": {
+                                "all_of": [
+                                    "gm4_mu_elite.on_hit"
+                                ]
+                            }
                         }
                     }
                 ]

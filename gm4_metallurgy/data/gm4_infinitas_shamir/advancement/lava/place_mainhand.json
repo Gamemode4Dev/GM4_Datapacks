@@ -10,8 +10,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type_specific": {
-                  "type": "player",
+                "minecraft:type_specific/player": {
                   "gamemode": [
                     "creative"
                   ]
@@ -72,8 +71,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type_specific": {
-                  "type": "player",
+                "minecraft:type_specific/player": {
                   "gamemode": [
                     "creative"
                   ]
@@ -97,8 +95,12 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_lava\"]}",
-              "equipment": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_infinitas_mainhand_lava"
+                ]
+              },
+              "minecraft:equipment": {
                 "mainhand": {
                   "items": [
                     "minecraft:bucket"

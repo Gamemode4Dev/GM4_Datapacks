@@ -4,7 +4,7 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "type": "#gm4:hostile"
+                    "minecraft:entity_type": "#gm4:hostile"
                 }
             }
         },
@@ -12,7 +12,7 @@
             "trigger": "minecraft:player_killed_entity",
             "conditions": {
                 "entity": {
-                    "type": "#gm4:neutral_hostile"
+                    "minecraft:entity_type": "#gm4:neutral_hostile"
                 }
             }
         }

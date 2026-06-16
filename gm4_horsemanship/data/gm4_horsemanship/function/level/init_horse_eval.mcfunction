@@ -10,7 +10,7 @@ $attribute @s jump_strength modifier add gm4_horse:jump.remove_base -$(jump_base
 
 # add boosts for wild horses
 attribute @s max_health modifier add gm4_horse:untamed 10 add_value
-$attribute @s movement_speed modifier add gm4_horse:untamed $(speed_base) add_value
+$attribute @s movement_speed modifier add gm4_horse:untamed $(speed_wild) add_value
 
 # add base stats
 attribute @s max_health modifier add gm4_horse:health 11.01 add_value

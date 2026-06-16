@@ -27,8 +27,12 @@
             "entity": "this",
             "predicate": {
               "vehicle": {
-                "type": "minecraft:minecart",
-                "nbt": "{Tags:[\"gm4_linked\"]}"
+                "minecraft:entity_type": "minecraft:minecart",
+                "minecraft:entity_tags": {
+                  "all_of": [
+                    "gm4_linked"
+                  ]
+                }
               }
             }
           }

@@ -19,7 +19,11 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:[\"gm4_mu_spore_zombie.cherry\"]}"
+                "minecraft:entity_tags": {
+                  "all_of": [
+                    "gm4_mu_spore_zombie.cherry"
+                  ]
+                }
               }
             }
           ]
@@ -41,12 +45,13 @@
               "chance": 0.66
             },
             {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "nbt": "{Tags:[\"gm4_mu_spore_zombie.cherry\"]}"
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:entity_tags": {
+                  "none_of": [
+                    "gm4_mu_spore_zombie.cherry"
+                  ]
                 }
               }
             }
@@ -65,12 +70,13 @@
           ],
           "conditions": [
             {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "nbt": "{Tags:[\"gm4_mu_spore_zombie.cherry\"]}"
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:entity_tags": {
+                  "none_of": [
+                    "gm4_mu_spore_zombie.cherry"
+                  ]
                 }
               }
             }

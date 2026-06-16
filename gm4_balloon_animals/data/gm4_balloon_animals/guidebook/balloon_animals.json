@@ -14,7 +14,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_balloon_animal_trader\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_balloon_animal_trader"
+                ]
+              }
             }
           }
         ]

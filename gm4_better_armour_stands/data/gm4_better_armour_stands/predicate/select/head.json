@@ -2,10 +2,13 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "type_specific": {
-      "type": "player",
+    "minecraft:type_specific/player": {
       "looking_at": {
-        "nbt": "{Tags:[\"gm4_bas_head\"]}"
+        "minecraft:entity_tags": {
+          "all_of": [
+            "gm4_bas_head"
+          ]
+        }
       }
     }
   }

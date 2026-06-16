@@ -4,7 +4,7 @@
       "trigger": "minecraft:bred_animals",
       "conditions": {
         "child": {
-          "type": "donkey"
+          "minecraft:entity_type": "donkey"
         }
       }
     }

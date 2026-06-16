@@ -8,8 +8,12 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:pig",
-              "nbt": "{Tags:[\"gm4_chairs\"]}"
+              "minecraft:entity_type": "minecraft:pig",
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_chairs"
+                ]
+              }
             }
           }
         ]

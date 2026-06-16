@@ -8,7 +8,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_bas_track\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_bas_track"
+                ]
+              }
             }
           }
         ],
@@ -22,7 +26,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:armor_stand"
+              "minecraft:entity_type": "minecraft:armor_stand"
             }
           },
           {

@@ -17,8 +17,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:husk",
-              "nbt": "{DeathLootTable:\"gm4_sandy_husks:entities/sandy_husk\"}"
+              "minecraft:entity_type": "minecraft:husk",
+              "minecraft:nbt": "{DeathLootTable:\"gm4_sandy_husks:entities/sandy_husk\"}"
             }
           }
         ]

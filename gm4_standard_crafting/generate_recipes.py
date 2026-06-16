@@ -11,7 +11,7 @@ def beet_default(ctx: Context):
     """
     
     vanilla = ctx.inject(Vanilla)
-    vanilla.minecraft_version = '26.1'
+    vanilla.minecraft_version = '26.2'
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
     recipes = vanilla.mount("data/minecraft/recipe").data.recipes
 

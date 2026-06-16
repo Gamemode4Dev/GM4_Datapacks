@@ -8,8 +8,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type_specific": {
-                "type": "minecraft:player",
+              "minecraft:type_specific/player": {
                 "gamemode": [
                   "survival",
                   "creative"
@@ -23,8 +22,12 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:interaction",
-              "nbt": "{Tags:[\"gm4_llp_waxed_copper_rcd\"]}"
+              "minecraft:entity_type": "minecraft:interaction",
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_llp_waxed_copper_rcd"
+                ]
+              }
             }
           }
         ]

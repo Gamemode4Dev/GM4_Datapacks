@@ -59,7 +59,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pointed_dripstone 
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -74,7 +75,46 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pointed_dripstone 
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
+        }\
+    ]\
+}
+
+data modify storage gm4_blossoming_pots:flower_pots minecraft:sulfur_spike set value {\
+    place_sound:"minecraft:block.sulfur.place",\
+    display:[\
+        {\
+            block_state:{\
+                Name:"minecraft:sulfur_spike",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"frustum"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.1435f,0.25f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            },\
+            Rotation:[0f,0f]\
+        },\
+        {\
+            block_state:{\
+                Name:"minecraft:sulfur_spike",\
+                Properties:{\
+                    vertical_direction:"down",\
+                    thickness:"tip"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.25f,0.6435f,0.25f],\
+                left_rotation:[0.707f,0f,0f,0.707f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0.707f,0f,0f,0.707f]\
+            },\
+            Rotation:[0f,0f]\
         }\
     ]\
 }

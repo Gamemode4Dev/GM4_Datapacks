@@ -4,7 +4,7 @@
       "trigger": "minecraft:bred_animals",
       "conditions": {
         "child": {
-          "type": "trader_llama"
+          "minecraft:entity_type": "trader_llama"
         }
       }
     }

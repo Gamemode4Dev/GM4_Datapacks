@@ -8,9 +8,13 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "vehicle": {
-                "type": "#gm4_horsemanship:trainable",
-                "nbt": "{Tags:[\"gm4_horse\"]}"
+              "minecraft:vehicle": {
+                "minecraft:entity_type": "#gm4_horsemanship:trainable",
+                "minecraft:entity_tags": {
+                  "all_of": [
+                    "gm4_horse"
+                  ]
+                }
               }
             }
           }

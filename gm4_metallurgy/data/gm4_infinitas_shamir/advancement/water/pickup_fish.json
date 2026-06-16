@@ -10,8 +10,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type_specific": {
-                  "type": "player",
+                "minecraft:type_specific/player": {
                   "gamemode": [
                     "creative"
                   ]
@@ -23,7 +22,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_mainhand_water\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_infinitas_mainhand_water"
+                ]
+              }
             }
           }
         ],
@@ -49,8 +52,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "type_specific": {
-                  "type": "player",
+                "minecraft:type_specific/player": {
                   "gamemode": [
                     "creative"
                   ]
@@ -62,7 +64,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_infinitas_offhand_water\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_infinitas_offhand_water"
+                ]
+              }
             }
           }
         ],

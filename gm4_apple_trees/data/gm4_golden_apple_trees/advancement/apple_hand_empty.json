@@ -27,8 +27,13 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:armor_stand",
-              "nbt": "{Tags:[\"gm4_golden_apple\",\"gm4_ripe_apple\"]}"
+              "minecraft:entity_type": "minecraft:armor_stand",
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_golden_apple",
+                  "gm4_ripe_apple"
+                ]
+              }
             }
           }
         ]

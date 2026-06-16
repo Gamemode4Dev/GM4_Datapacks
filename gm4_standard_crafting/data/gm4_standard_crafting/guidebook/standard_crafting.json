@@ -69,6 +69,19 @@
         ]
       }
     },
+    "obtain_sulfur": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sulfur",
+              "minecraft:sulfur_spike"
+            ]
+          }
+        ]
+      }
+    },
     "obtain_quartz": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
@@ -114,7 +127,7 @@
             "entity": "this",
             "predicate": {
               "vehicle": {
-                "type": "minecraft:horse"
+                "minecraft:entity_type": "minecraft:horse"
               }
             }
           },
@@ -125,8 +138,8 @@
               "entity": "this",
               "predicate": {
                 "vehicle": {
-                  "type": "minecraft:horse",
-                  "nbt": "{NoAI:1b}"
+                  "minecraft:entity_type": "minecraft:horse",
+                  "minecraft:nbt": "{NoAI:1b}"
                 }
               }
             }

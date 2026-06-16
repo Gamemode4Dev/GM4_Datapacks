@@ -10,7 +10,7 @@
       "trigger": "minecraft:bred_animals",
       "conditions": {
         "child": {
-          "type": "#gm4_lavish_livestock:livestock"
+          "minecraft:entity_type": "#gm4_lavish_livestock:livestock"
         }
       }
     }

@@ -4,9 +4,14 @@
             "trigger": "minecraft:fishing_rod_hooked",
             "conditions": {
                 "entity": {
-                    "type": "minecraft:armor_stand",
-                    "nbt": "{Tags:[\"gm4_no_edit\",\"gm4_end_fishing_bait\"]}",
-                    "location": {
+                    "minecraft:entity_type": "minecraft:armor_stand",
+                    "minecraft:entity_tags": {
+                        "all_of": [
+                            "gm4_no_edit",
+                            "gm4_end_fishing_bait"
+                        ]
+                    },
+                    "minecraft:location": {
                         "dimension": "the_end"
                     }
                 }

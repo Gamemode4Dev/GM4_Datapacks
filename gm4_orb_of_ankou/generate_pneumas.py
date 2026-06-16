@@ -29,7 +29,9 @@ def generate_corripio(ctx: Context):
               {
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
-                "predicate": { "type": f"minecraft:{entity}" }
+                "predicate": {
+                  "minecraft:entity_type": f"minecraft:{entity}"
+                }
               },
               *[{
                 "condition": "minecraft:inverted",
@@ -37,7 +39,11 @@ def generate_corripio(ctx: Context):
                   "condition": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "nbt": "{Tags:[\"" + tag + "\"]}"
+                    "minecraft:entity_tags": {
+                      "all_of": [
+                        tag
+                      ]
+                    }
                   }
                 }
               } for tag in ["gm4_oa_ignore", "smithed.entity"]],
@@ -158,7 +164,7 @@ def generate_soul_essence_loot_tables(ctx: Context):
                       "strings": [f"gm4_orb_of_ankou:pneuma/{pneuma}"]
                     },
                     "minecraft:damage_resistant": {
-                        "types": "#minecraft:is_fire"
+                      "types": "#minecraft:is_fire"
                     },
                   }
                 },

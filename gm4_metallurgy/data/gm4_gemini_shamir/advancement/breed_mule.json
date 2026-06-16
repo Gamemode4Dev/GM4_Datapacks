@@ -4,7 +4,7 @@
       "trigger": "minecraft:bred_animals",
       "conditions": {
         "child": {
-          "type": "mule"
+          "minecraft:entity_type": "mule"
         }
       }
     }

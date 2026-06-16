@@ -4,7 +4,7 @@
       "trigger": "minecraft:bred_animals",
       "conditions": {
         "child": {
-          "type": "horse"
+          "minecraft:entity_type": "horse"
         }
       }
     }

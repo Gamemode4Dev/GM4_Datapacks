@@ -17,8 +17,12 @@
       "conditions": {
         "damage": {
           "source_entity": {
-            "type": "minecraft:skeleton",
-            "nbt": "{Tags:['gm4_tipped_skeleton']}"
+            "minecraft:entity_type": "minecraft:skeleton",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_tipped_skeleton"
+              ]
+            }
           }
         }
       }

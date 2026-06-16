@@ -24,7 +24,11 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:[\"gm4_mu_elite\"]}"
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_mu_elite"
+                ]
+              }
             }
           }
         ]

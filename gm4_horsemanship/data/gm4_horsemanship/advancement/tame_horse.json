@@ -8,7 +8,7 @@
                         "condition": "minecraft:entity_properties",
                         "entity": "this",
                         "predicate": {
-                            "type": "#gm4_horsemanship:trainable"
+                            "minecraft:entity_type": "#gm4_horsemanship:trainable"
                         }
                     }
                 ]

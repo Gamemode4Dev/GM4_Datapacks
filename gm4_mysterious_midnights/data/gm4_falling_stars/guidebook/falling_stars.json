@@ -20,19 +20,26 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "type": "minecraft:splash_potion",
-                  "nbt": "{Tags:['gm4_falling_star']}"
+                  "minecraft:entity_type": "minecraft:splash_potion",
+                  "minecraft:entity_tags": {
+                    "all_of": [
+                      "gm4_falling_star"
+                    ]
+                  }
                 }
               },
               {
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "type_specific": {
-                    "type": "player",
+                  "minecraft:type_specific/player": {
                     "looking_at": {
-                      "type": "minecraft:area_effect_cloud",
-                      "nbt": "{Tags:['gm4_falling_star']}"
+                      "minecraft:entity_type": "minecraft:area_effect_cloud",
+                      "minecraft:entity_tags": {
+                        "all_of": [
+                          "gm4_falling_star"
+                        ]
+                      }
                     }
                   }
                 }
@@ -41,11 +48,14 @@
                 "condition": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
-                  "type_specific": {
-                    "type": "player",
+                  "minecraft:type_specific/player": {
                     "looking_at": {
-                      "type": "minecraft:shulker_bullet",
-                      "nbt": "{Tags:['gm4_falling_star']}"
+                      "minecraft:entity_type": "minecraft:shulker_bullet",
+                      "minecraft:entity_tags": {
+                        "all_of": [
+                          "gm4_falling_star"
+                        ]
+                      }
                     }
                   }
                 }

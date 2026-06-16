@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  VERSION: '26.1'
+  VERSION: '26.2'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
 
 jobs:
@@ -86,11 +86,11 @@ jobs:
           # https://fabricmc.net/use/server/
           # https://modrinth.com/mod/fabric-api/versions
           # https://modrinth.com/mod/packtest/versions
-          - version: '26.1'
-            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/26.1-snapshot-6/0.18.4/1.1.1/server/jar
-            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/WAZ95Yd8/fabric-api-0.143.2%2B26.1.jar
-            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/eupLiv70/packtest-2.5.0-beta1.jar
-            command_limit_tracer_url: https://cdn.modrinth.com/data/Ao12dSbt/versions/DxBN5h3K/commandlimittracer-0.2.0.jar
+          - version: '26.2'
+            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/26.2-rc-2/0.19.3/1.1.1/server/jar
+            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/Fsy077WD/fabric-api-0.152.0%2B26.2.jar
+            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/qT2wdJhc/packtest-2.6.0-beta1.jar
+            command_limit_tracer_url: https://cdn.modrinth.com/data/Ao12dSbt/versions/zKvlVzlN/commandlimittracer-0.3.0.jar
     name: 'test-${{ matrix.version }}'
     runs-on: ubuntu-24.04
     steps:

@@ -17,8 +17,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:skeleton",
-              "nbt": "{DeathLootTable:\"minecraft:empty\",attributes:[{id:\"minecraft:attack_damage\",base:10.0d}]}"
+              "minecraft:entity_type": "minecraft:skeleton",
+              "minecraft:nbt": "{DeathLootTable:\"minecraft:empty\",attributes:[{id:\"minecraft:attack_damage\",base:10.0d}]}"
             }
           }
         ]
