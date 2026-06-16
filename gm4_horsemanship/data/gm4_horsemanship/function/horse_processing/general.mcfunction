@@ -21,10 +21,6 @@ execute store success score $mounted gm4_horse_data on controller if entity @s[t
 execute if score $mounted gm4_horse_data matches 1 on controller store result score $riding gm4_horse_data if predicate gm4_horsemanship:riding
 execute store result score $on_ground gm4_horse_data run data get entity @s OnGround
 
-# give horses in love a speed boost (slow horses may fail to breed)
-execute store result score $in_love gm4_horse_data run data get entity @s InLove
-execute if score $in_love gm4_horse_data matches 1.. if score $mounted gm4_horse_data matches 0 run effect give @s speed 1 4 true
-
 # glider
 execute if items entity @s[tag=!gm4_horse.glider_disabled] armor.body *[custom_data~{gm4_horsemanship:{glider:{}}}] run function gm4_horsemanship:horse_processing/glider/process
 execute unless items entity @s[tag=gm4_horse.gliding] armor.body *[custom_data~{gm4_horsemanship:{glider:{}}}] run function gm4_horsemanship:horse_processing/glider/ground
