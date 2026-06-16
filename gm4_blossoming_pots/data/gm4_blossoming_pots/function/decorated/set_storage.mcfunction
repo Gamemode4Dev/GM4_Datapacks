@@ -124,7 +124,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -139,7 +140,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         }\
     ],\
     2:[\
@@ -156,7 +158,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -171,7 +174,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -186,7 +190,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         }\
     ],\
     3:[\
@@ -203,7 +208,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -218,7 +224,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -233,7 +240,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -248,7 +256,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pointed_dripsto
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         }\
     ]\
 }
@@ -270,7 +279,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sulfur_spike se
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -285,7 +295,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sulfur_spike se
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         }\
     ],\
     2:[\
@@ -302,7 +313,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sulfur_spike se
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -317,7 +329,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sulfur_spike se
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -332,7 +345,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sulfur_spike se
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         }\
     ],\
     3:[\
@@ -349,7 +363,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sulfur_spike se
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -364,7 +379,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sulfur_spike se
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -379,7 +395,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sulfur_spike se
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -394,7 +411,8 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:sulfur_spike se
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.7f,0.7f,0.7f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         }\
     ]\
 }
