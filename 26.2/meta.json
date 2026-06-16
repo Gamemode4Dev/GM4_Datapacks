@@ -1,0 +1,3216 @@
+{
+  "last_commit": "20821117bb5b79c030e10b921cec99e6db432c29",
+  "modules": [
+    {
+      "id": "gm4_animi_shamir",
+      "name": "Animi Shamir",
+      "version": "1.6.3",
+      "hash": "4d0b385391340ee602b55a19d26cc84f2bdee9f5",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Animi_Shamir",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [
+        "gm4_metallurgy"
+      ],
+      "description": "Adds the Animi Shamir to Metallurgy. Items with Animi will respawn with you when you die!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "bPnAELDm",
+      "smithed_link": "gm4_animi_shamir",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_apple_trees",
+      "name": "Apple Trees",
+      "version": "2.6.3",
+      "hash": "7c685e93d9b9d4e160fec86dafe9bf98efb27510",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Apple_Trees",
+      "credits": {
+        "Creators": [
+          "Bloo",
+          "BPR",
+          "SpecialBuilder32"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "Introduces fruit-bearing apple trees! Trade for apple saplings with wandering traders or find them growing in forests!",
+      "recommends": [
+        "gm4_resource_pack",
+        "gm4_orbis",
+        "gm4_podzol_rooting_soil"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": "Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "Afacz65w",
+      "smithed_link": "gm4_apple_trees",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_audere_shamir",
+      "name": "Audere Shamir",
+      "version": "1.6.3",
+      "hash": "0725b28152d83ef422d64268b41bf46b0dc3b33a",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Audere_Shamir",
+      "credits": {
+        "Creator": [
+          "Kattacka"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [
+        "gm4_metallurgy"
+      ],
+      "description": "Adds the shamir 'Audere' to Metallurgy. Gain Haste with low durability tools.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "2rSIqoh7",
+      "smithed_link": "gm4_audere_shamir",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_balloon_animals",
+      "name": "Balloon Animals",
+      "version": "1.4.3",
+      "hash": "a5d82e89dc774fb8934c9f6140d21783067b84d8",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Balloon_Animals",
+      "credits": {
+        "Creator": [
+          "TheEpyonProject"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Looking for exotic animals? This module makes some Wandering Traders sell cute baby animals!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2024-04-14",
+      "modrinth_id": "zKRZZHQ3",
+      "smithed_link": "gm4_balloon_animals",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_bat_grenades",
+      "name": "Bat Grenades",
+      "version": "1.7.3",
+      "hash": "074238c1c2d54a609c5d57e8f49eb967226a54da",
+      "video_link": "https://www.youtube.com/watch?v=uUoEKtte1GQ",
+      "wiki_link": "https://wiki.gm4.co/wiki/Bat_Grenades",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [],
+      "description": "Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!",
+      "recommends": [
+        "gm4_enderman_support_class",
+        "gm4_metallurgy"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "qWQqEQMY",
+      "smithed_link": "gm4_bat_grenades",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_better_armour_stands",
+      "name": "Better Armour Stands",
+      "version": "2.6.3",
+      "hash": "e72f02eb720cdde89fcfa764211d5484f7aeb40b",
+      "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw",
+      "wiki_link": "https://wiki.gm4.co/wiki/Better_Armour_Stands",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "SpecialBuilder32",
+          "Misode",
+          "Denniss"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [],
+      "description": "Ever felt like Armour Stands looked a bit boring? Better Armour Stands lets your Armour Stands strike all the poses you want! Simply use a Book and Quill to edit Armour Stands.",
+      "recommends": [
+        "gm4_poses_pack",
+        "gm4_particles_pack"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "ib7YfS5V",
+      "smithed_link": "gm4_better_armour_stands",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_block_compressors",
+      "name": "Block Compressors",
+      "version": "1.7.3",
+      "hash": "4104edb9cf9bf14f537d3dcf8321bed9a88cb727",
+      "video_link": "https://www.youtube.com/watch?v=sdrTJYjL8C0",
+      "wiki_link": "https://wiki.gm4.co/wiki/Block_Compressors",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "SunderB",
+          "Misode",
+          "JP12",
+          "BPR"
+        ],
+        "Textures by": [
+          "Kyrius"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [],
+      "description": "Chest space won't be an issue with this module! Use a Block Compressor to compress stacks of items, turning a stack of items into a single item for long-term storage. Make sure to uncompress your items before using them again, though!",
+      "recommends": [
+        "gm4_resource_pack",
+        "gm4_standard_crafting",
+        "gm4_ender_hoppers",
+        "gm4_enchantment_extractors",
+        "gm4_forming_press",
+        "gm4_disassemblers",
+        "gm4_tunnel_bores",
+        "gm4_boots_of_ostara",
+        "gm4_heart_canisters",
+        "gm4_smelteries",
+        "gm4_liquid_tanks"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "TSz8iiMD",
+      "smithed_link": "gm4_block_compressors",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_blossoming_pots",
+      "name": "Blossoming Pots",
+      "version": "3.5.4",
+      "hash": "1ff8324a8661c29f2611ae34e97050c4d201c52a",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Blossoming_Pots",
+      "credits": {
+        "Creator": [
+          "runcows"
+        ],
+        "Icon Design": [
+          "runcows"
+        ]
+      },
+      "requires": [],
+      "description": "Greatly expands the selection of potable plants. Use Decorated Pots as abnormally large flower pots. Decorate in Style!",
+      "recommends": [
+        "gm4_lively_lily_pads"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [
+        "flowering",
+        "plant"
+      ],
+      "publish_date": "2025-02-09",
+      "modrinth_id": "wOnn6VDU",
+      "smithed_link": "gm4_blossoming_pots",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_book_binders",
+      "name": "Book Binders",
+      "version": "1.6.4",
+      "hash": "21d723e7f82f06bb44f92b022a9edf35c5946560",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Book_Binders",
+      "credits": {
+        "Creators": [
+          "Bloo",
+          "Sparks"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [],
+      "description": "Start printing your own Enchanted Books with Book Binders. Use lecterns to extract singular pages from Enchanted Books and recombine pages with Leather to create your own Enchanted Books -- free of charge!",
+      "recommends": [
+        "gm4_resource_pack"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "oIqNf2N4",
+      "smithed_link": "gm4_book_binders",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_bookshelf_inspector",
+      "name": "Bookshelf Inspector",
+      "version": "1.5.3",
+      "hash": "abfe2aa0167ee234b0dc9da1e022ac2ddf652cf9",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Bookshelf_Inspector",
+      "credits": {
+        "Creator": [
+          "Djones"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "See what's in your Chiseled Bookshelves without having to take all the books out!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-11-14",
+      "modrinth_id": "hI6pAf86",
+      "smithed_link": "gm4_bookshelf_inspector",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_boots_of_ostara",
+      "name": "Boots of Ostara",
+      "version": "1.9.3",
+      "hash": "19d175de6081a84bfe0e614d4003bf13d917ecb5",
+      "video_link": "https://www.youtube.com/watch?v=H4UGM6_wGCE",
+      "wiki_link": "https://wiki.gm4.co/wiki/Boots_of_Ostara",
+      "credits": {
+        "Creator": [
+          "The8BitMonkey"
+        ],
+        "Updated by": [
+          "Misode",
+          "catter1"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "A pair of boots every gardener would love to have! Boots of Ostara allow you to easily spread Grass and Moss, and they even stop the Desire Lines module from creating that pesky dirt.",
+      "recommends": [
+        "gm4_resource_pack",
+        "gm4_desire_lines",
+        "gm4_better_armour_stands",
+        "gm4_standard_crafting"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "YCcs2E01",
+      "smithed_link": "gm4_boots_of_ostara",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_calling_bell",
+      "name": "Calling Bell",
+      "version": "1.6.3",
+      "hash": "e83fddad50010331f994b578c0765e393f3e25d6",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Calling_Bell",
+      "credits": {
+        "Creator": [
+          "TheEpyonProject"
+        ],
+        "Updated By": [
+          "runcows"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Summon a Wandering Trader by using an Emerald on a Bell.",
+      "recommends": [
+        "gm4_apple_trees",
+        "gm4_zauber_cauldrons"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "qNzelyE3",
+      "smithed_link": "gm4_calling_bell",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_cement_mixers",
+      "name": "Cement Mixers",
+      "version": "1.6.3",
+      "hash": "8adc864cca0153ca18724656ac2d10e852f14f83",
+      "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
+      "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Cement_Mixers",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [
+        "gm4_liquid_tanks"
+      ],
+      "description": "Allows Liquid Tanks to convert Concrete Powder items into Concrete, at the cost of \u2153 of a Bucket of Water per Concrete Powder.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "blBLRC4i",
+      "smithed_link": "gm4_cement_mixers",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_chairs",
+      "name": "Chairs",
+      "version": "1.7.3",
+      "hash": "9c94285838110fe5f490fd3186d8973268c5e5a0",
+      "video_link": "https://www.youtube.com/watch?v=7KbBw1hEKdY",
+      "wiki_link": "https://wiki.gm4.co/wiki/Chairs",
+      "credits": {
+        "Creator": [
+          "Denniss"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "Place a saddle on a stair to have a chair to sit on!",
+      "recommends": [
+        "gm4_display_frames",
+        "gm4_better_armour_stands",
+        "gm4_holographic_tags"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "KLywOs5L",
+      "smithed_link": "gm4_chairs",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_cooler_caves",
+      "name": "Cooler Caves",
+      "version": "2.6.3",
+      "hash": "336d62cdf7dbabb88b8a152e7463a860501aa5be",
+      "video_link": "https://www.youtube.com/watch?v=cAsXiwLWHFo",
+      "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Cooler_Caves",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Misode"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "A custom terrain expansion pack that makes biome specific caves",
+      "recommends": [
+        "gm4_dangerous_dungeons",
+        "gm4_tower_structures"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "juqV05HI",
+      "smithed_link": "gm4_cooler_caves",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_cozy_campfires",
+      "name": "Cozy Campfires",
+      "version": "1.6.3",
+      "hash": "694b63ddf9e97704dd7a5aeacd24bdb5137f8e0c",
+      "video_link": "https://www.youtube.com/watch?v=nvAbzAtDFhw",
+      "wiki_link": "https://wiki.gm4.co/wiki/Cozy_Campfires",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "Allows Campfires to grant you up to 4 extra hearts that last for more than half of a Minecraft day. Perfect for those scary first nights in a Minecraft world.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "BKQjQlSY",
+      "smithed_link": "gm4_cozy_campfires",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_crossbow_cartridges",
+      "name": "Crossbow Cartridges",
+      "version": "1.9.3",
+      "hash": "29d36879ca5776080e419371a7d75c02f9a95f75",
+      "video_link": "https://www.youtube.com/watch?v=XJiGvX7l-pI",
+      "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
+      "credits": {
+        "Creators": [
+          "Denniss",
+          "Nik3141"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [],
+      "description": "Shoot more than just arrows! Crossbow Cartridges allows your crossbow to fire a variety of projectiles; Shoot Pufferfish, Tripwires, Torches, and many more. Synergizes nicely with the Ziprails Module for easy Ziprail construction.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "E7M57BNU",
+      "smithed_link": "gm4_crossbow_cartridges",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_dangerous_dungeons",
+      "name": "Dangerous Dungeons",
+      "version": "2.6.3",
+      "hash": "745c451818d51d4844d59cede2f83abe128de654",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Dangerous_Dungeons",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Misode"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "A custom terrain expansion pack that adds new types of dungeons underground.",
+      "recommends": [
+        "gm4_tower_structures",
+        "gm4_cooler_caves"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "Go9VJGOZ",
+      "smithed_link": "gm4_dangerous_dungeons",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_desire_lines",
+      "name": "Desire Lines",
+      "version": "1.7.3",
+      "hash": "eb8f35f1391352a98811cbb5643f802c35a714ea",
+      "video_link": "https://www.youtube.com/watch?v=wmGaatfekfs",
+      "wiki_link": "https://wiki.gm4.co/wiki/Desire_Lines",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Bloo",
+          "SpecialBuilder32",
+          "Misode",
+          "dvitski"
+        ],
+        "Icon Design": [
+          "JonPot"
+        ]
+      },
+      "requires": [],
+      "description": "Creates natural looking trodden paths in high traffic areas, but be careful not to ruin your neighbour's lawn!",
+      "recommends": [
+        "gm4_boots_of_ostara"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "cx5dX4ug",
+      "smithed_link": "gm4_desire_lines",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_disassemblers",
+      "name": "Disassemblers",
+      "version": "2.6.3",
+      "hash": "fad8be6b3678609fe42c7d1873ee74994c4d3547",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Disassemblers",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Federick90",
+          "BPR",
+          "runcows"
+        ],
+        "Textures by": [
+          "Kyrius"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Break apart gold and iron tools and weapons for materials. Attach this to a mob farm to finally make use of those extra armour sets!",
+      "recommends": [
+        "gm4_resource_pack",
+        "gm4_standard_crafting",
+        "gm4_ender_hoppers",
+        "gm4_enchantment_extractors",
+        "gm4_forming_press",
+        "gm4_block_compressors",
+        "gm4_tunnel_bores",
+        "gm4_boots_of_ostara",
+        "gm4_heart_canisters",
+        "gm4_smelteries",
+        "gm4_liquid_tanks"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "Cg5FQaTk",
+      "smithed_link": "gm4_disassemblers",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_display_frames",
+      "name": "Display Frames",
+      "version": "1.7.3",
+      "hash": "2be697c2312ea0b057ac3f476ff8c80cf08397f5",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Display_Frames",
+      "credits": {
+        "Creators": [
+          "BPR",
+          "TheEpyonProject"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "Splash item frames with invisibilty to make invisible item frames! Great for interior decor!",
+      "recommends": [
+        "gm4_chairs",
+        "gm4_better_armour_stands",
+        "gm4_holographic_tags"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "u59ticCz",
+      "smithed_link": "gm4_display_frames",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_double_doors",
+      "name": "Double Doors",
+      "version": "1.4.3",
+      "hash": "8dbbc4fdb922c404a421d608eb9f66bfaa7df2cd",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Double_Doors",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Icon Design": [
+          "venomousbirds"
+        ]
+      },
+      "requires": [],
+      "description": "Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blocks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-08-12",
+      "modrinth_id": "Vx4zJ1Np",
+      "smithed_link": "gm4_double_doors",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_dripleaf_filters",
+      "name": "Dripleaf Filters",
+      "version": "1.6.3",
+      "hash": "dcfd17b294714a199ec3359309dcf9f06fb614b4",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Filters",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Dripleaves will flick items that match a hopper's contents into the hopper for you!",
+      "recommends": [
+        "gm4_book_binders"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "WNvo6RJr",
+      "smithed_link": "gm4_dripleaf_filters",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_dripleaf_launchers",
+      "name": "Dripleaf Launchers",
+      "version": "1.5.3",
+      "hash": "cec3ee74f5bcf5ce6b093abbf492cdfa0e340634",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Launchers",
+      "credits": {
+        "Creator": [
+          "Djones"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Start your own Dripleaf Space Program!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-08-12",
+      "modrinth_id": "kUn3Z6gZ",
+      "smithed_link": "gm4_dripleaf_launchers",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_end_fishing",
+      "name": "End Fishing",
+      "version": "1.7.3",
+      "hash": "50e3bb2cf236ab3bd01544d40af9ce5630cc5d3d",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/End_Fishing",
+      "credits": {
+        "Creator": [
+          "BPR"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [],
+      "description": "Catch rare loot by fishing in the end void! The void holds many riches, from End City loot and Elytra to weapons that once belonged to explorers time forgot, collect them all!",
+      "recommends": [
+        "gm4_resource_pack",
+        "gm4_reeling_rods",
+        "gm4_live_catch"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "BbEwao9o",
+      "smithed_link": "gm4_end_fishing",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_ender_hoppers",
+      "name": "Ender Hoppers",
+      "version": "1.9.3",
+      "hash": "b417183fe2461a5aa743deb63ab901ae5c74e9b4",
+      "video_link": "https://www.youtube.com/watch?v=wrwg4BDgEGU",
+      "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
+      "credits": {
+        "Creator": [
+          "Elemend"
+        ],
+        "Updated by": [
+          "Misode",
+          "BPR"
+        ],
+        "Textures by": [
+          "Kyrius"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [],
+      "description": "Create special hoppers that teleport nearby items to them.",
+      "recommends": [
+        "gm4_resource_pack",
+        "gm4_standard_crafting",
+        "gm4_enchantment_extractors",
+        "gm4_forming_press",
+        "gm4_block_compressors",
+        "gm4_disassemblers",
+        "gm4_tunnel_bores",
+        "gm4_boots_of_ostara",
+        "gm4_heart_canisters",
+        "gm4_smelteries",
+        "gm4_liquid_tanks"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "dB4zrtK8",
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_everstone",
+      "name": "Everstone",
+      "version": "1.6.3",
+      "hash": "2d939440f075792e12e537cb7ec49a6806a0da00",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Everstone",
+      "credits": {
+        "Creators": [
+          "Denniss",
+          "BPR"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "Collect Everstones during full moons and use them on baby mobs to stop them from aging! But watch out, some other mobs might start aging, too!",
+      "recommends": [
+        "gm4_resource_pack"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "4XVj9LBh",
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_fulcio_shamir",
+      "name": "Fulcio Shamir",
+      "version": "1.6.3",
+      "hash": "b06c8b35a80db7c0e9ffd4073bb471ecb81b6fbf",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Fulcio_Shamir",
+      "credits": {
+        "Creators": [
+          "BPR",
+          "Bloo"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [
+        "gm4_metallurgy"
+      ],
+      "description": "Adds the shamir 'Fulcio' to Metallurgy. It allows you to place blocks in mid-air! This also enables you to choose the orientation of blocks like logs without needing a supporting block.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "N09PsTgz",
+      "smithed_link": "gm4_fulcio_shamir",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_guidebook",
+      "name": "Guidebook",
+      "version": "3.3.3",
+      "hash": "42a346c652726fc8a0f742e0b6e6dec8b42b50ef",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",
+      "credits": {
+        "Creators": [
+          "BPR",
+          "JP12"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Adds a dynamic guidebook to discover the mechanics of Gamemode 4! This provides a wiki-like experience in-game!",
+      "recommends": [
+        "gm4_resource_pack"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": "Experimental Module! Features may be added or removed without an easy upgrade path. You may encounter unintentional behaviour.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "aHcF2nVP",
+      "smithed_link": "gm4_guidebook",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_holographic_tags",
+      "name": "Holographic Tags",
+      "version": "1.6.3",
+      "hash": "8f7b8a6d98ce94843be0c4b633a9e24f1c4796b6",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Holographic_Tags",
+      "credits": {
+        "Creator": [
+          "BPR"
+        ],
+        "Updated by": [
+          "Bloo"
+        ],
+        "Inspired by": [
+          "SethBling"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Set up floating messages with a simple name tag!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "AzpWemXn",
+      "smithed_link": "gm4_holographic_tags",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_horsemanship",
+      "name": "Horsemanship",
+      "version": "1.0.2",
+      "hash": "7240edcccbb0ef579460386ab2aac6b2084426b1",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Horsemanship",
+      "credits": {
+        "Creator": [
+          "Thanathor"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Form a bond with your horses",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": "Usage of the Gamemode 4 Resource Pack is highly recommended.",
+      "search_keywords": [],
+      "publish_date": "2026-06-14",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_iacio_shamir",
+      "name": "Iacio Shamir",
+      "version": "1.6.3",
+      "hash": "77b7325ee16278bd8a302354bd758adde4a853bf",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Iacio_Shamir",
+      "credits": {
+        "Creator": [
+          "Denniss"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [
+        "gm4_metallurgy"
+      ],
+      "description": "Adds the 'Iacio' shamir to Metallurgy. It lets you throw things further! Launch an Ender Pearl into orbit or simply throw your Trident exceptionally far.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "DTk79ZcR",
+      "smithed_link": "gm4_iacio_shamir",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_ink_spitting_squid",
+      "name": "Ink Spitting Squid",
+      "version": "1.7.3",
+      "hash": "a780f4bb60c54b21c317b968b4e2006597b370e5",
+      "video_link": "https://www.youtube.com/watch?v=68LMYEhueZ0",
+      "wiki_link": "https://wiki.gm4.co/wiki/Ink_Spitting_Squid",
+      "credits": {
+        "Creator": [
+          "Energyxxer"
+        ],
+        "Updated by": [
+          "BPR"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [],
+      "description": "Improves the vanilla ink effect by adding Blindness. Glow Squid will give Night Vision when disturbed, which might come in handy if you're out of torches!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "ljOfYHJv",
+      "smithed_link": "gm4_ink_spitting_squid",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_lavish_livestock",
+      "name": "Lavish Livestock",
+      "version": "1.1.13",
+      "hash": "bac6b4355d15c0003aded2f228a290a8f78b3505",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Icon Design": [
+          "runcows"
+        ]
+      },
+      "requires": [],
+      "description": "Selectively breed your livestock for increased yields! Commercialize your farming!",
+      "recommends": [
+        "gm4_pig_tractors",
+        "metallurgy"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2025-12-20",
+      "modrinth_id": "9K6xigHH",
+      "smithed_link": "gm4_lavish_livestock",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_lightning_in_a_bottle",
+      "name": "Lightning in a Bottle",
+      "version": "1.9.3",
+      "hash": "ebdfb543e7cb7e348b81173271b58a3cbbaec00d",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
+      "credits": {
+        "Creator": [
+          "Bloo",
+          "BPR",
+          "TheEpyonProject"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "Bottle and harness the power of lightning using Brewing Stands! Lightning in a Bottle comes in splash and lingering variants, too.",
+      "recommends": [
+        "gm4_resource_pack",
+        "gm4_liquid_tanks",
+        "gm4_potion_liquids",
+        "gm4_spawner_minecarts"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "GVqJxowR",
+      "smithed_link": "gm4_lightning_in_a_bottle",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_liquid_minecarts",
+      "name": "Liquid Minecarts",
+      "version": "1.9.3",
+      "hash": "a11036b992d508c27575a8a97e4f0a19090e66d2",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "SpecialBuilder32",
+          "BPR"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [
+        "gm4_liquid_tanks"
+      ],
+      "description": "Adds Liquid Tank Minecarts that allow you to move your liquids from one Liquid Tank to another.",
+      "recommends": [
+        "gm4_potion_liquids"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "Ymtg3OOc",
+      "smithed_link": "gm4_liquid_minecarts",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_liquid_tanks",
+      "name": "Liquid Tanks",
+      "version": "3.1.3",
+      "hash": "5cb25f4a4173cb1c0dc245f0ef579f7f8e913bce",
+      "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
+      "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
+      "credits": {
+        "Creator": [
+          "SpecialBuilder32"
+        ],
+        "Updated by": [
+          "SpecialBuilder32",
+          "BPR"
+        ],
+        "Textures by": [
+          "Vilder50",
+          "Kyrius"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "Store liquids like Water, Lava, Milk, or Soup compactly in special tanks and interact with them!",
+      "recommends": [
+        "gm4_resource_pack",
+        "gm4_potion_liquids",
+        "gm4_zauber_liquids",
+        "gm4_liquid_minecarts",
+        "gm4_cement_mixers"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "h4BcuD3C",
+      "smithed_link": "gm4_liquid_tanks",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_live_catch",
+      "name": "Live Catch",
+      "version": "1.6.3",
+      "hash": "890e64dd2fc07934c14ada31f84a86b270545061",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Live_Catch",
+      "credits": {
+        "Creator": [
+          "Modulorium"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "Catch live fish when fishing! But watch out for Pufferfish, those might make for a nasty surprise!",
+      "recommends": [
+        "gm4_end_fishing",
+        "gm4_reeling_rods"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [
+        "fishing"
+      ],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "uSXn7pVW",
+      "smithed_link": "gm4_live_catch",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_lively_lily_pads",
+      "name": "Lively Lily Pads",
+      "version": "3.3.2",
+      "hash": "73bcef75393c21de1775e3477f3edfb21693a7f2",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Lively_Lily_Pads",
+      "credits": {
+        "Creator": [
+          "runcows"
+        ],
+        "Icon Design": [
+          "runcows"
+        ]
+      },
+      "requires": [],
+      "description": "Place decorations on Lily Pads!",
+      "recommends": [
+        "gm4_blossoming_pots"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [
+        "candle",
+        "plant",
+        "coral",
+        "spore",
+        "lantern"
+      ],
+      "publish_date": "2025-09-23",
+      "modrinth_id": "7wnTwrbr",
+      "smithed_link": "gm4_lively_lily_pads",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_lumos_shamir",
+      "name": "Lumos Shamir",
+      "version": "1.6.3",
+      "hash": "fac1edc550fec6ae319186d370a61a54cd947711",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Lumos_Shamir",
+      "credits": {
+        "Creators": [
+          "InternetAlien",
+          "SirSheepe"
+        ],
+        "Idea By": [
+          "Misode"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [
+        "gm4_metallurgy"
+      ],
+      "description": "Adds the shamir 'Lumos' to Metallurgy. It places torches when it is dark.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "vYbLApXc",
+      "smithed_link": "gm4_lumos_shamir",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_mending_tanks",
+      "name": "Mending Tanks",
+      "version": "1.7.3",
+      "hash": "37e704ba53279f201c88b0799bcab00333110d28",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Mending_Tanks",
+      "credits": {
+        "Creator": [
+          "Kroppeb"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [
+        "gm4_liquid_tanks"
+      ],
+      "description": "Enables Liquid Tanks filled with Experience to repair tools with the mending enchant on them.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "DPYixL7Y",
+      "smithed_link": "gm4_mending_tanks",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_metallurgy",
+      "name": "Metallurgy",
+      "version": "1.8.3",
+      "hash": "fe674c262846e59cc99d8da22133c45a1a842171",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
+      "credits": {
+        "Creators": [
+          "Sparks",
+          "SpecialBuilder32",
+          "Bloo",
+          "BPR",
+          "SirSheepe"
+        ],
+        "Updated by": [
+          "Denniss",
+          "Misode",
+          "Modulorium",
+          "TheEpyonProject"
+        ],
+        "Textures by": [
+          "Memo"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!",
+      "recommends": [
+        "gm4_resource_pack",
+        "gm4_audere_shamir",
+        "gm4_fulcio_shamir",
+        "gm4_iacio_shamir",
+        "gm4_lumos_shamir",
+        "gm4_orb_of_ankou",
+        "gm4_percurro_shamir",
+        "gm4_vecto_shamir"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": "Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
+      "search_keywords": [
+        "arborenda",
+        "defuse",
+        "forterra",
+        "gemini",
+        "hypexperia",
+        "infinitas",
+        "moneo",
+        "musical",
+        "sensus",
+        "tinker",
+        "vibro",
+        "shamir"
+      ],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "raWyrHxi",
+      "smithed_link": "gm4_metallurgy",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_midnight_menaces",
+      "name": "Midnight Menaces",
+      "version": "1.7.3",
+      "hash": "fbd32555ae14e075a8a6202f6e89a9fca550fdb4",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights/Midnight_Menaces",
+      "credits": {
+        "Creator": [
+          "BPR"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [
+        "gm4_mysterious_midnights"
+      ],
+      "description": "Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "9aTlLrlw",
+      "smithed_link": "gm4_midnight_menaces",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_monsters_unbound",
+      "name": "Monsters Unbound",
+      "version": "1.2.3",
+      "hash": "22e6472f9be03039b7353ae3e21afd0273d5c62c",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Monsters_Unbound",
+      "credits": {
+        "Creator": [
+          "Djones"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ],
+        "Textures": [
+          "Kyrius",
+          "rednls"
+        ]
+      },
+      "requires": [],
+      "description": "Mobs gain special effects based on their biome.",
+      "recommends": [
+        "gm4_survival_refightalized"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2025-08-11",
+      "modrinth_id": "6EGin6pC",
+      "smithed_link": "gm4_monsters_unbound",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_mysterious_midnights",
+      "name": "Mysterious Midnights",
+      "version": "1.8.3",
+      "hash": "2d93de21bc382860a74ad9527f6b85efe018607a",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Updated by": [
+          "Bloo",
+          "BPR"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "Full moons gain an element of surprise with Mysterious Midnights! You might encounter falling stars, or Skeletons wielding poisonous arrows during full moons! So you better listen for that howl...",
+      "recommends": [
+        "gm4_midnight_menaces"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "9skST20d",
+      "smithed_link": "gm4_mysterious_midnights",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_note_block_interface",
+      "name": "Note Block Interface",
+      "version": "1.6.3",
+      "hash": "50aaa2c94be6f373d616897a29d3ba72de4fb5ac",
+      "video_link": "https://www.youtube.com/watch?v=Kqrdy-8-sb8",
+      "wiki_link": "https://wiki.gm4.co/wiki/Note_Block_Interface",
+      "credits": {
+        "Creator": [
+          "Scommander"
+        ],
+        "Updated by": [
+          "Denniss"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "Adds a neat interface to improve your musical skills!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "ikXgoCNB",
+      "smithed_link": "gm4_note_block_interface",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_orb_of_ankou",
+      "name": "Orb of Ankou",
+      "version": "1.9.4",
+      "hash": "5cd5d2047f36ddc60ab62cbb26e941967a8e3acd",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
+      "credits": {
+        "Creator": [
+          "BPR"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [
+        "gm4_metallurgy"
+      ],
+      "description": "Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "rRP5afZM",
+      "smithed_link": "gm4_orb_of_ankou",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_particles_pack",
+      "name": "Particles Pack",
+      "version": "1.8.3",
+      "hash": "f70dfb4de80744729f05191c1a99978bd65ce9ed",
+      "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=238s",
+      "wiki_link": "https://wiki.gm4.co/wiki/Particles_Pack",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Misode",
+          "kindabland"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [
+        "gm4_better_armour_stands"
+      ],
+      "description": "Fireflies to flames, add some pezazz to your projects! Allows you to turn Armour Stands into particle sources that you control!",
+      "recommends": [
+        "gm4_poses_pack"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "hqLgWYiS",
+      "smithed_link": "gm4_particles_pack",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_percurro_shamir",
+      "name": "Percurro Shamir",
+      "version": "1.6.3",
+      "hash": "4e78d99f2812e0e1b96c0416b8407aac3b66ee48",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Percurro_Shamir",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [
+        "gm4_metallurgy"
+      ],
+      "description": "Adds the 'Percurro' Shamir to Metallurgy! Weapons with Percurro let you teleport past your enemies in the blink of an eye!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "MrSTch8u",
+      "smithed_link": "gm4_percurro_shamir",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_phantom_scarecrows",
+      "name": "Phantom Scarecrows",
+      "version": "1.6.3",
+      "hash": "7a4d41d60c41aca60d5a4b2518873f9975991e37",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Phantom_Scarecrows",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Inspired by": [
+          "Chopper2112"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "Set up Scarecrows that shoot homing rockets at Phantoms!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "OQYrrgEP",
+      "smithed_link": "gm4_phantom_scarecrows",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_pig_tractors",
+      "name": "Pig Tractors",
+      "version": "1.9.3",
+      "hash": "80e8ad55ae106d891f1cf162720e89dc96410971",
+      "video_link": "https://www.youtube.com/watch?v=7i0WFHUfBXs",
+      "wiki_link": "https://wiki.gm4.co/wiki/Pig_Tractors",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Ride pigs through fields to quickly harvest and plant crops! Who knows, maybe you will even dig up some useful things in the process.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "8lN3MtcQ",
+      "smithed_link": "gm4_pig_tractors",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_podzol_rooting_soil",
+      "name": "Podzol Rooting Soil",
+      "version": "1.7.3",
+      "hash": "6fae82dfb496afc0e325994bdf48c7779d3809cd",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Podzol_Rooting_Soil",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Updated by": [
+          "Misode"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "Allows saplings to self-plant when on Podzol. The perfect choice for auto-treefarms!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "keFbZ5iO",
+      "smithed_link": "gm4_podzol_rooting_soil",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_potion_liquids",
+      "name": "Potion Liquids",
+      "version": "1.10.3",
+      "hash": "c7db1842396db2582f419e56fdfe4e13444091d7",
+      "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
+      "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids",
+      "credits": {
+        "Creator": [
+          "SpecialBuilder32"
+        ],
+        "Updated by": [
+          "SpecialBuilder32"
+        ],
+        "Textures by": [
+          "Vilder50"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [
+        "gm4_liquid_tanks"
+      ],
+      "description": "Adds the ability to store potions in Liquid Tanks! You can also use a potion by walking beneath a potion-filled Liquid Tank.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "Z08l0oKH",
+      "smithed_link": "gm4_potion_liquids",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_reeling_rods",
+      "name": "Reeling Rods",
+      "version": "1.1.4",
+      "hash": "fd0ce0545f68d72f62f055de4c504b32e6f08229",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Reeling_Rods",
+      "credits": {
+        "Creators": [
+          "runcows",
+          "Bloo"
+        ],
+        "Icon Design": [
+          "runcows"
+        ]
+      },
+      "requires": [],
+      "description": "Steal Villager's wares, scratch up your foes! Fishing rods have never been more useful!",
+      "recommends": [
+        "gm4_end_fishing",
+        "gm4_live_catch"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [
+        "barbed",
+        "fishing",
+        "enchantment"
+      ],
+      "publish_date": "2025-08-26",
+      "modrinth_id": "MWPuloVL",
+      "smithed_link": "gm4_reeling_rods",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_rope_ladders",
+      "name": "Rope Ladders",
+      "version": "1.6.4",
+      "hash": "fa876ea34bc6766ffb3f241e2d22b66d7dbf1e57",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Rope_Ladders",
+      "credits": {
+        "Creator": [
+          "Modulorium"
+        ],
+        "Updated By": [
+          "runcows"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "Climbing downward has never been easier!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "wN3RC3Zr",
+      "smithed_link": "gm4_rope_ladders",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_scuba_gear",
+      "name": "SCUBA Gear",
+      "version": "2.1.3",
+      "hash": "f9ce19fa9098e6eaefb2ebc2756b41af4a0b1203",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/SCUBA_Gear",
+      "credits": {
+        "Creator": [
+          "BPR"
+        ],
+        "Updated by": [
+          "TheEpyonProject"
+        ],
+        "Textures by": [
+          "BPR"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "Ease ocean exploration with craftable scuba gear!",
+      "recommends": [
+        "gm4_sunken_treasure"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": "This data pack requires you to use the Gamemode 4 resource pack! Restart the server/world after adding this data pack!",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "6AVYWZgD",
+      "smithed_link": "gm4_scuba_gear",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_shapeless_portals",
+      "name": "Shapeless Portals",
+      "version": "1.4.3",
+      "hash": "1ac852dc3e5661a297e336c32c060074c10d13cb",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Shapeless_Portals",
+      "credits": {
+        "Creator": [
+          "Djones"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Say goodbye to your boring old rectangular portals!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "eq7hf4YU",
+      "smithed_link": "gm4_shapeless_portals",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_shroomites",
+      "name": "Shroomites",
+      "version": "1.7.3",
+      "hash": "75d8c4031cbc403f1eb4e27f39805a77c128b78f",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Shroomites",
+      "credits": {
+        "Creators": [
+          "Sparks",
+          "SpecialBuilder32",
+          "Bloo"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "Ever wondered why all the Mooshrooms are locked up on islands? This Module makes Mooshrooms spread mycelium and mushrooms wherever they go.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "7Rcai2W4",
+      "smithed_link": "gm4_shroomites",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_smelteries",
+      "name": "Smelteries",
+      "version": "1.9.3",
+      "hash": "3635efcd1f1d156373b8f6c5a1ffbdd05a8d119a",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/smelteries",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Updated By": [
+          "dvitski",
+          "Kroppeb",
+          "Misode",
+          "SpecialBuilder32",
+          "BPR",
+          "runcows"
+        ],
+        "Textures By": [
+          "Kyrius"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Build a Smeltery and double your ore output with this multi-block structure.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "AHj8RSHk",
+      "smithed_link": "gm4_smelteries",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_soul_glass",
+      "name": "Soul Glass",
+      "version": "1.7.4",
+      "hash": "e44b58b69889b85ebb51dbbd24a4dbd26937996c",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Soul_Glass",
+      "credits": {
+        "Creators": [
+          "BPR",
+          "Denniss",
+          "Lue"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [],
+      "description": "Reverse the effects of beacons with corrupting glass! But be careful, a poison Beacon may sound great at first, but is incredibly painful in pratice.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": "On versions <1.21, Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "Hi8fkYoI",
+      "smithed_link": "gm4_soul_glass",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_spawner_minecarts",
+      "name": "Spawner Minecarts",
+      "version": "3.1.3",
+      "hash": "2bc94193f22798e832f421ebab707d74b639887f",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Spawner_Minecarts",
+      "credits": {
+        "Creators": [
+          "Sparks",
+          "Bloo",
+          "SpecialBuilder32"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [],
+      "description": "Pick up Spawners and move them wherever you want with Minecarts.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "j4qeIaSW",
+      "smithed_link": "gm4_spawner_minecarts",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_speed_paths",
+      "name": "Speed Paths",
+      "version": "1.7.3",
+      "hash": "eeee044e978c565291f423677eb192c9296bc871",
+      "video_link": "https://www.youtube.com/watch?v=99VFSW1ORzU",
+      "wiki_link": "https://wiki.gm4.co/wiki/Speed_Paths",
+      "credits": {
+        "Creator": [
+          "15Redstones"
+        ],
+        "Updated by": [
+          "Misode",
+          "TheEpyonProject"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [],
+      "description": "Gives you a speed effect when you walk on path blocks.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "vRH8BKZ7",
+      "smithed_link": "gm4_speed_paths",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_standard_crafting",
+      "name": "Standard Crafting",
+      "version": "2.0.3",
+      "hash": "34828bb7aaadf0b6cac72b7e31f9a112e6545b85",
+      "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
+      "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Bloo",
+          "runcows"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [],
+      "description": "A crafting recipe pack that adds some nifty new recipes to the game.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "KIxK9MA7",
+      "smithed_link": "gm4_standard_crafting",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_sunken_treasure",
+      "name": "Sunken Treasure",
+      "version": "1.8.3",
+      "hash": "79d28d2fc732f376eb300fb49855a6a746703e76",
+      "video_link": "https://www.youtube.com/watch?v=VV7ZIyIzKV0",
+      "wiki_link": "https://wiki.gm4.co/wiki/Sunken_Treasure",
+      "credits": {
+        "Creators": [
+          "Wumpacraft",
+          "Sparks"
+        ],
+        "Updated by": [
+          "BPR",
+          "Lue"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Digging sand underwater with a fortune tool can uncover buried treasures, or a nasty surprise! Who knows, maybe you'll even find some old love letters.",
+      "recommends": [
+        "gm4_resource_pack",
+        "gm4_scuba_gear"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "drjgVlzU",
+      "smithed_link": "gm4_sunken_treasure",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_survival_refightalized",
+      "name": "Survival Refightalized",
+      "version": "1.2.3",
+      "hash": "0e95e158f736f0f22afc6797f4bff8fb923797df",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Survival_Refightalized",
+      "credits": {
+        "Creator": [
+          "Djones"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "A reworked survival experience with more varied mobs and new armor and shield mechanics.",
+      "recommends": [
+        "gm4_monsters_unbound"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2025-08-11",
+      "modrinth_id": "AyXb56yt",
+      "smithed_link": "gm4_survival_refightalized",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_sweethearts",
+      "name": "Sweethearts",
+      "version": "1.7.3",
+      "hash": "9772f937fb45c0c546fa6a8eddb62c126e883ce0",
+      "video_link": "https://www.youtube.com/watch?v=mcopNZzY2dA",
+      "wiki_link": "https://wiki.gm4.co/wiki/Sweethearts",
+      "credits": {
+        "Creator": [
+          "The8BitMonkey"
+        ],
+        "Updated by": [
+          "BPR",
+          "Djones"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "Transfer your health to another player using flowers.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "z33oiJCd",
+      "smithed_link": "gm4_sweethearts",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_teleportation_anchors",
+      "name": "Teleportation Anchors",
+      "version": "1.7.3",
+      "hash": "e01949011015d8b4e5d8e7b6f65c93c824fda5d0",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Teleportation_Anchors",
+      "credits": {
+        "Creator": [
+          "BPR"
+        ],
+        "Updated By": [
+          "runcows"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Suppress and control chorus-based teleportation!",
+      "recommends": [
+        "gm4_orb_of_ankou",
+        "gm4_zauber_cauldrons"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "CQkaELVA",
+      "smithed_link": "gm4_teleportation_anchors",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_tower_structures",
+      "name": "Tower Structures",
+      "version": "3.6.3",
+      "hash": "235e45848d59748033f557792ecc330db93250cb",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Tower_Structures",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Misode"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "A custom terrain expansion pack that adds new tower structures to the world.",
+      "recommends": [
+        "gm4_dangerous_dungeons",
+        "gm4_cooler_caves"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "FvGL10DQ",
+      "smithed_link": "gm4_tower_structures",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_towering_trees",
+      "name": "Towering Trees",
+      "version": "1.1.3",
+      "hash": "355a8f2b00fae14ec148f23c9996760dd3c5fce8",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Towering_Trees",
+      "credits": {
+        "Creator": [
+          "Djones",
+          "Kyrius"
+        ],
+        "Tree Structures": [
+          "BPR",
+          "rednls",
+          "Dinoguin_Jess",
+          "Lune6"
+        ]
+      },
+      "requires": [],
+      "description": "Adds mega and small tree variants to any sapling that is missing one!",
+      "recommends": [
+        "gm4_metallurgy"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2026-01-26",
+      "modrinth_id": "ghmlkCsY",
+      "smithed_link": "gm4_towering_trees",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_tunnel_bores",
+      "name": "Tunnel Bores",
+      "version": "1.7.3",
+      "hash": "cc2ab282d1807e9853e24823b2808c248cb45d80",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Tunnel_Bores",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Updated by": [
+          "Bloo",
+          "BPR"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Ever wondered how mineshafts came to be? This is it! Tunnel Bores allow you to easily dig 3\u2a093 tunnels, and even lay rails behind themselves.",
+      "recommends": [
+        "gm4_ziprails",
+        "gm4_vertical_rails"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "L32wQVcn",
+      "smithed_link": "gm4_tunnel_bores",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_undead_players",
+      "name": "Undead Players",
+      "version": "1.8.3",
+      "hash": "c37c010f85cbb7614b363599380149c47c280512",
+      "video_link": "https://www.youtube.com/watch?v=dD8nChP8t9A",
+      "wiki_link": "https://wiki.gm4.co/wiki/Undead_Players",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "SunderB"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "You'll find your death point faster, but you'll have to fight your corpse for your stuff back!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "jx6D06Q4",
+      "smithed_link": "gm4_undead_players",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_vecto_shamir",
+      "name": "Vecto Shamir",
+      "version": "1.7.3",
+      "hash": "f72c448c7d9df1d1f78092fbae9775dede8fb582",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vecto_Shamir",
+      "credits": {
+        "Creator": [
+          "Denniss"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [
+        "gm4_metallurgy"
+      ],
+      "description": "Adds the 'Vecto' Shamir to Metallurgy. Summon a Boat or Minecart out of thin air when in need, no more wasting an inventory slot!",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "wwe9xfEp",
+      "smithed_link": "gm4_vecto_shamir",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_vertical_rails",
+      "name": "Vertical Rails",
+      "version": "1.7.3",
+      "hash": "77dc31a0256f3416a10e7b0b04bad6ef4671db84",
+      "video_link": "https://www.youtube.com/watch?v=LJoN7CmJL4Q",
+      "wiki_link": "https://wiki.gm4.co/wiki/Vertical_Rails",
+      "credits": {
+        "Creators": [
+          "Sparks",
+          "SiberianHat"
+        ],
+        "Updated by": [
+          "SpecialBuilder32",
+          "Kruthers"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "Use ladders as vertical Minecart tracks.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "PL3P0wBS",
+      "smithed_link": "gm4_vertical_rails",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_vigere_shamir",
+      "name": "Vigere Shamir",
+      "version": "1.6.3",
+      "hash": "0f8350e57bb314192a8baac7ad6b860ec9e2e6cb",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vigere_Shamir",
+      "credits": {
+        "Creator": [
+          "Djones",
+          "TheEpyonProject"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [
+        "gm4_metallurgy"
+      ],
+      "description": "Adds the shamir 'Vigere' to Metallurgy. It heals you when you block with a shield.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "9QdXJeGc",
+      "smithed_link": "gm4_vigere_shamir",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_washing_tanks",
+      "name": "Washing Tanks",
+      "version": "1.6.3",
+      "hash": "a1fbba4555cfe9029afe8912fb969524d0b95849",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Washing_Tanks",
+      "credits": {
+        "Creators": [
+          "Bunnygamers",
+          "Misode"
+        ],
+        "Icon Design": [
+          "BPR"
+        ]
+      },
+      "requires": [
+        "gm4_liquid_tanks"
+      ],
+      "description": "Die! Dye! Remove die from items in a Liquid Tank filled with Water, at the cost of \u2153 of a bucket.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "ipiZnkaE",
+      "smithed_link": "gm4_washing_tanks",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_weighted_armour",
+      "name": "Weighted Armour",
+      "version": "1.9.3",
+      "hash": "9e71d1c3c1ce1d5f084c201be9da065ee3b0e071",
+      "video_link": "https://www.youtube.com/watch?v=rVRSXTGQPbg",
+      "wiki_link": "https://wiki.gm4.co/wiki/Weighted_Armour",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Icon Design": [
+          "Hozz"
+        ]
+      },
+      "requires": [],
+      "description": "Perfect for UHCs, this module forces you to balance protection with speed.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "ReZCIa6j",
+      "smithed_link": "gm4_weighted_armour",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_zauber_cauldrons",
+      "name": "Zauber Cauldrons",
+      "version": "2.0.3",
+      "hash": "450dcd616156de5ed695c389c70bf722b92930df",
+      "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
+      "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
+      "credits": {
+        "Creator": [
+          "Bloo"
+        ],
+        "Updated by": [
+          "Bloo",
+          "Lue",
+          "BPR",
+          "Misode"
+        ],
+        "Textures": [
+          "Memo",
+          "Kyrius"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "Powerful potions, Wormholes, portable Beacons and special armour that makes you stronger! Zauber Cauldrons adds an entire magic branch to the game.",
+      "recommends": [
+        "gm4_resource_pack",
+        "gm4_zauber_liquids"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "3vluenrD",
+      "smithed_link": "gm4_zauber_cauldrons",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_zauber_liquids",
+      "name": "Zauber Liquids",
+      "version": "1.9.10",
+      "hash": "b413f715736028bdcd2b01ae5499dd98d778b203",
+      "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
+      "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids",
+      "credits": {
+        "Creators": [
+          "SpecialBuilder32",
+          "Bloo"
+        ],
+        "Updated by": [
+          "JP12"
+        ],
+        "Textures by": [
+          "Vilder50",
+          "Hozz"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "requires": [
+        "gm4_liquid_tanks",
+        "gm4_zauber_cauldrons"
+      ],
+      "description": "From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!",
+      "recommends": [],
+      "minecraft": [],
+      "hidden": true,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_ziprails",
+      "name": "Ziprails",
+      "version": "1.7.3",
+      "hash": "dc38b13e70d0fabebc232691b67f6523eaf88c0c",
+      "video_link": "https://www.youtube.com/watch?v=QA7a5q2kVcg",
+      "wiki_link": "https://wiki.gm4.co/wiki/Ziprails",
+      "credits": {
+        "Creators": [
+          "Sparks",
+          "SpecialBuilder32",
+          "Bloo"
+        ],
+        "Icon Design": [
+          "DuckJr"
+        ]
+      },
+      "requires": [],
+      "description": "Automatically latch on to a tripwire to sail through the sky on a suspended line!",
+      "recommends": [
+        "gm4_vertical_rails"
+      ],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-07-10",
+      "modrinth_id": "EpgLRkLf",
+      "smithed_link": "gm4_ziprails",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_resource_pack",
+      "name": "Resource Pack",
+      "version": "1.5.4",
+      "hash": "7276d51b7ca75ac03866ba89f623e9a736079ae2",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Textures": [
+          "Memo",
+          "Hozz"
+        ],
+        "Translations": [
+          "ToffeeMax",
+          "SarguCopperpot",
+          "TheRedCommander",
+          "KompetenterKeks"
+        ],
+        "Font Magic": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "Use our resource pack for the definitive Gamemode 4 experience! This resource pack does not touch vanilla textures, but adds textures and models to most Gamemode 4 blocks, items and mobs.",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2024-03-09",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null
+    }
+  ],
+  "libraries": {
+    "lib_brewing": {
+      "id": "gm4_brewing",
+      "name": "Gamemode 4 Brewing",
+      "version": "1.5.1",
+      "hash": "1795ecaa3e5854217c5953137dc771e84be72236",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": true,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_brewing",
+      "pmc_link": null
+    },
+    "lib_forceload": {
+      "id": "gm4_forceload",
+      "name": "Gamemode 4 Forceload",
+      "version": "1.6.1",
+      "hash": "6e8e947066d387f6bfb6e61a1cd9327485dd1b95",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "Misode"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": true,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_forceload",
+      "pmc_link": null
+    },
+    "lib_hooked_entity": {
+      "id": "gm4_hooked_entity",
+      "name": "Gamemode 4 Hooked Entity Selection",
+      "version": "1.0.2",
+      "hash": "3e47a8e11a193de1e08a12f63c9c1a51177059ce",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "runcows"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": true,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2026-03-24",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_hooked_entity",
+      "pmc_link": null
+    },
+    "lib_lore": {
+      "id": "gm4_lore",
+      "name": "Gamemode 4 Lore",
+      "version": "1.4.1",
+      "hash": "7668ecea884b83b2e40ccd09abe833e1a59c9a8d",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": true,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_lore",
+      "pmc_link": null
+    },
+    "lib_machines": {
+      "id": "gm4_machines",
+      "name": "Gamemode 4 Machines",
+      "version": "1.5.1",
+      "hash": "ee4dddc7fd17b19acaf7ef55f568fe0fb1cff586",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Machines Library Creator": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": true,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_machines",
+      "pmc_link": null
+    },
+    "lib_player_death": {
+      "id": "gm4_player_death",
+      "name": "Gamemode 4 Player Death",
+      "version": "1.4.1",
+      "hash": "a152584b0be92af3757c1cd1781550d0a704a202",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "Misode"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": true,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2024-01-06",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    "lib_player_motion": {
+      "id": "gm4_player_motion",
+      "name": "Gamemode 4 Player Motion",
+      "version": "1.1.2",
+      "hash": "773bd4d7b7cef73b297323ae58971fd4663685c5",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Original Creator": [
+          "MulverineX"
+        ],
+        "Adapted for GM4 by": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": true,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2025-05-25",
+      "modrinth_id": null,
+      "smithed_link": null,
+      "pmc_link": null
+    },
+    "lib_potion_tracking": {
+      "id": "gm4_potion_tracking",
+      "name": "Gamemode 4 Potion Tracking",
+      "version": "1.4.1",
+      "hash": "7bdfaa078ebacafe3dd5492ad2fc2dd18958fed9",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "BPR"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": true,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_potion_tracking",
+      "pmc_link": null
+    },
+    "lib_trees": {
+      "id": "gm4_trees",
+      "name": "Gamemode 4 Trees",
+      "version": "1.5.1",
+      "hash": "199a7b7badbf58c192634015bbb128a64773675f",
+      "video_link": "",
+      "wiki_link": "",
+      "credits": {
+        "Creator": [
+          "BPR",
+          "Bloo"
+        ]
+      },
+      "requires": [],
+      "description": "",
+      "recommends": [],
+      "minecraft": [
+        "26.1"
+      ],
+      "hidden": true,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2023-10-04",
+      "modrinth_id": null,
+      "smithed_link": "gm4_lib_trees",
+      "pmc_link": null
+    }
+  },
+  "contributors": {
+    "15Redstones": {
+      "name": "15Redstones",
+      "links": [
+        "https://twitter.com/15Redstones"
+      ]
+    },
+    "dvitski": {
+      "name": "dvitski",
+      "links": [
+        "https://bsky.app/profile/dvitski.cc"
+      ]
+    },
+    "Bloo": {
+      "name": "Bloo",
+      "links": [
+        "https://bsky.app/profile/bloo.boo"
+      ]
+    },
+    "BPR": {
+      "name": "BPR",
+      "links": [
+        "https://bsky.app/profile/bpr02.com"
+      ]
+    },
+    "Bunnygamers": {
+      "name": "Bunnygamers",
+      "links": [
+        "https://bsky.app/profile/bunnygamers.bsky.social"
+      ]
+    },
+    "catter1": {
+      "name": "catter1",
+      "links": [
+        "https://bsky.app/profile/catter.dev"
+      ]
+    },
+    "Chopper2112": {
+      "name": "Chopper2112",
+      "links": [
+        "https://twitter.com/TheChopper2112"
+      ]
+    },
+    "Denniss": {
+      "name": "Denniss",
+      "links": [
+        "https://github.com/Dennis-0"
+      ]
+    },
+    "Dinoguin_Jess": {
+      "name": "Dinoguin_Jess",
+      "links": [
+        "https://github.com/Dinoguin-Jess"
+      ]
+    },
+    "Djones": {
+      "name": "Djones",
+      "links": [
+        "https://bsky.app/profile/thanathor.bsky.social"
+      ]
+    },
+    "DuckJr": {
+      "name": "DuckJr",
+      "links": [
+        "https://twitter.com/DuckJr94"
+      ]
+    },
+    "Energyxxer": {
+      "name": "Energyxxer",
+      "links": [
+        "https://youtube.com/user/Energyxxer"
+      ]
+    },
+    "foodiebonus": {
+      "name": "foodiebonus",
+      "links": []
+    },
+    "Fyid": {
+      "name": "Fyid",
+      "links": [
+        "https://twitter.com/FyidRants"
+      ]
+    },
+    "Hozz": {
+      "name": "Hozz",
+      "links": []
+    },
+    "JP12": {
+      "name": "JP12",
+      "links": [
+        "https://github.com/jpeterik12"
+      ]
+    },
+    "kindabland": {
+      "name": "kindabland",
+      "links": [
+        "https://github.com/kindabland"
+      ]
+    },
+    "Kroppeb": {
+      "name": "Kroppeb",
+      "links": [
+        "https://tech.lgbt/@Kroppeb"
+      ]
+    },
+    "Kruthers": {
+      "name": "Kruthers",
+      "links": [
+        "https://twitter.com/Pandakruthers"
+      ]
+    },
+    "Kyrius": {
+      "name": "Kyrius",
+      "links": [
+        "https://bsky.app/profile/kyriuspixels.bsky.social"
+      ]
+    },
+    "Lue": {
+      "name": "Lue",
+      "links": [
+        "https://github.com/Luexa"
+      ]
+    },
+    "Lune6": {
+      "name": "Lune6",
+      "links": [
+        "https://bsky.app/profile/lune6.bsky.social"
+      ]
+    },
+    "Modulorium": {
+      "name": "Modulorium",
+      "links": [
+        "https://www.modulorium.dev"
+      ]
+    },
+    "Misode": {
+      "name": "Misode",
+      "links": [
+        "https://bsky.app/profile/misode.dev"
+      ]
+    },
+    "Memo": {
+      "name": "Memo",
+      "links": [
+        "https://linktr.ee/miraku_memo"
+      ]
+    },
+    "Nik3141": {
+      "name": "Nik3141",
+      "links": [
+        "https://youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"
+      ]
+    },
+    "runcows": {
+      "name": "runcows",
+      "links": [
+        "https://bsky.app/profile/runcows.bsky.social"
+      ]
+    },
+    "Scommander": {
+      "name": "Scommander",
+      "links": [
+        "https://github.com/Scommander"
+      ]
+    },
+    "SethBling": {
+      "name": "SethBling",
+      "links": [
+        "https://youtube.com/user/SethBling"
+      ]
+    },
+    "SiberianHat": {
+      "name": "SiberianHat",
+      "links": [
+        "https://twitter.com/SiberianHat"
+      ]
+    },
+    "SirSheepe": {
+      "name": "SirSheepe",
+      "links": [
+        "https://bsky.app/profile/sirsheepe.bsky.social"
+      ]
+    },
+    "Sparks": {
+      "name": "Sparks",
+      "links": [
+        "https://bsky.app/profile/selcouthsparks.bsky.social"
+      ]
+    },
+    "SpecialBuilder32": {
+      "name": "SpecialBuilder32",
+      "links": [
+        "https://bsky.app/profile/specialbuilder32.bsky.social"
+      ]
+    },
+    "The8BitMonkey": {
+      "name": "The8BitMonkey",
+      "links": [
+        "https://youtube.com/the8bitmonkey"
+      ]
+    },
+    "torbray": {
+      "name": "torbray",
+      "links": [
+        "https://twitter.com/torbray00"
+      ]
+    },
+    "Wumpacraft": {
+      "name": "Wumpacraft",
+      "links": [
+        "https://twitter.com/wumpacraft"
+      ]
+    },
+    "Venomousbirds": {
+      "name": "Venomousbirds",
+      "links": [
+        "https://venomousbirds.artstation.com/"
+      ]
+    },
+    "MulverineX": {
+      "name": "MulverineX",
+      "links": [
+        "https://modrinth.com/user/MulverineX"
+      ]
+    }
+  }
+}
