@@ -4,7 +4,7 @@
 # run from projectile/bucket
 
 # replace arrow with sulfur cube and copy data
-summon minecraft:sulfur_cube ~ ~ ~ {FromBucket:1b,Tags:["gm4_cb_projectile"],active_effects:[{id:'minecraft:regeneration',amplifier:10,duration:200,show_particles:0b}]}
+summon minecraft:sulfur_cube ~ ~ ~ {from_bucket:1b,Size:1,Tags:["gm4_cb_projectile"],active_effects:[{id:'minecraft:regeneration',amplifier:10,duration:200,show_particles:0b}]}
 
 data modify storage gm4_crossbow_cartridges:temp projectile.Age merge from entity @s equipment.offhand.components."minecraft:bucket_entity_data".age
 data modify storage gm4_crossbow_cartridges:temp projectile.AgeLocked merge from entity @s equipment.offhand.components."minecraft:bucket_entity_data".age_locked
