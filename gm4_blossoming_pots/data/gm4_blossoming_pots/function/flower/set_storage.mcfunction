@@ -59,7 +59,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pointed_dripstone 
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -74,7 +75,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pointed_dripstone 
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         }\
     ]\
 }
@@ -95,7 +97,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:sulfur_spike set v
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         },\
         {\
             block_state:{\
@@ -110,7 +113,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:sulfur_spike set v
                 left_rotation:[0.707f,0f,0f,0.707f],\
                 scale:[0.5f,0.5f,0.5f],\
                 right_rotation:[0.707f,0f,0f,0.707f]\
-            }\
+            },\
+            Rotation:[0f,0f]\
         }\
     ]\
 }
