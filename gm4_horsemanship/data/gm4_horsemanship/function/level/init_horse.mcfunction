@@ -16,14 +16,16 @@ execute store result storage gm4_horsemanship:temp attribute.scale float 0.01 ru
 
 # | Movement Speed
 # Formula: 0.85*x + level*((0.555*x)/15)
-execute store result storage gm4_horsemanship:temp attribute.speed_base float 0.00001 run attribute @s movement_speed base get 100000
-execute store result score $speed.start gm4_horse_data run attribute @s movement_speed base get 100000
+execute store result score $speed.base gm4_horse_data run attribute @s movement_speed base get 100000
+execute store result storage gm4_horsemanship:temp attribute.speed_base float 0.00001 run scoreboard players get $speed.base gm4_horse_data
+scoreboard players operation $speed.start gm4_horse_data = $speed.base gm4_horse_data
 scoreboard players operation @s gm4_horse.speed_on_level = $speed.start gm4_horse_data
 scoreboard players operation @s gm4_horse.speed_on_level *= #555 gm4_horse_data
 scoreboard players operation @s gm4_horse.speed_on_level /= #15000 gm4_horse_data
 
 scoreboard players operation $speed.start gm4_horse_data *= #85 gm4_horse_data
 execute store result storage gm4_horsemanship:temp attribute.speed_start float 0.0000001 run scoreboard players get $speed.start gm4_horse_data
+execute store result storage gm4_horsemanship:temp attribute.speed_wild float 0.0000001 run scoreboard players operation $speed.base gm4_horse_data -= $speed.start gm4_horse_data
 
 # | Jump Strength
 # Formula: x + level*(-x/45 + 0.02888)
