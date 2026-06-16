@@ -1765,7 +1765,15 @@
                           "type": "minecraft:condition",
                           "if_true": {
                             "type": "minecraft:biome",
-                            "biome_is": "minecraft:ice_spikes"
+                            "biome_is": [
+                              "minecraft:frozen_river",
+                              "minecraft:grove",
+                              "minecraft:ice_spikes",
+                              "minecraft:snowy_beach",
+                              "minecraft:snowy_plains",
+                              "minecraft:snowy_slopes",
+                              "minecraft:snowy_taiga"
+                            ]
                           },
                           "then_run": {
                             "type": "minecraft:condition",
@@ -2086,7 +2094,7 @@
                               {
                                 "type": "minecraft:block",
                                 "result_state": {
-                                  "Name": "minecraft:dirt"
+                                  "Name": "minecraft:packed_ice"
                                 }
                               }
                             ]
@@ -2503,6 +2511,25 @@
                           }
                         },
                         {
+                          "type": "minecraft:condition",
+                          "if_true": {
+                            "type": "minecraft:biome",
+                            "biome_is": [
+                              "minecraft:frozen_river",
+                              "minecraft:ice_spikes",
+                              "minecraft:snowy_beach",
+                              "minecraft:snowy_plains",
+                              "minecraft:snowy_taiga"
+                            ]
+                          },
+                          "then_run": {
+                            "type": "minecraft:block",
+                            "result_state": {
+                              "Name": "minecraft:packed_ice"
+                            }
+                          }
+                        },
+                        {
                           "type": "minecraft:block",
                           "result_state": {
                             "Name": "minecraft:dirt"
@@ -2742,6 +2769,60 @@
             "Properties": {
               "axis": "y"
             }
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:biome",
+          "biome_is": [
+            "minecraft:desert"
+          ]
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "minecraft:sandstone"
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:biome",
+          "biome_is": [
+            "minecraft:frozen_peaks",
+            "minecraft:frozen_river",
+            "minecraft:grove",
+            "minecraft:ice_spikes",
+            "minecraft:snowy_beach",
+            "minecraft:snowy_plains",
+            "minecraft:snowy_slopes",
+            "minecraft:snowy_taiga"
+          ]
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "minecraft:snow_block"
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:biome",
+          "biome_is": [
+            "minecraft:badlands",
+            "minecraft:eroded_badlands",
+            "minecraft:wooded_badlands"
+          ]
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "minecraft:terracotta"
           }
         }
       }
