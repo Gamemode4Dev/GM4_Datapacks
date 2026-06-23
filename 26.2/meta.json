@@ -1,5 +1,5 @@
 {
-  "last_commit": "d9e055038604808abaffe2c117edbf3821536ffb",
+  "last_commit": "16ffada542b1294f1e1cd355d286c630549fa09f",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -116,10 +116,8 @@
       "requires": [],
       "description": "Looking for exotic animals? This module makes some Wandering Traders sell cute baby animals!",
       "recommends": [],
-      "minecraft": [
-        "26.2"
-      ],
-      "hidden": false,
+      "minecraft": [],
+      "hidden": true,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2024-04-14",
@@ -1123,7 +1121,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.14",
+      "version": "1.1.15",
       "hash": "e4698b7de7673bff39c655506c50e703efb84aff",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
