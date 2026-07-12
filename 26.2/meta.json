@@ -1,5 +1,5 @@
 {
-  "last_commit": "16ffada542b1294f1e1cd355d286c630549fa09f",
+  "last_commit": "ccc2d68ccd2da0ceaa5ad289cf53d38ee02b2525",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1121,7 +1121,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.15",
+      "version": "1.1.16",
       "hash": "e4698b7de7673bff39c655506c50e703efb84aff",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -2133,8 +2133,8 @@
     {
       "id": "gm4_standard_crafting",
       "name": "Standard Crafting",
-      "version": "2.0.4",
-      "hash": "a9ef665ca6fd7c498ec82c7b9d858fe74dbc73c2",
+      "version": "2.0.5",
+      "hash": "54b4691219459c1859adb08263c278273863f7dc",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
       "credits": {
