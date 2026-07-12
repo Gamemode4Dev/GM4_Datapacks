@@ -1,0 +1,7 @@
+key,en_us,es_es
+gm4.blasting_maces.enchantment.blasting,Blasting,Explosión
+advancement.gm4.blasting_maces.title,Diggy Diggy Mole,Topo demoledor
+advancement.gm4.blasting_maces.description,Destroy blocks with a mace enchanted with Blasting,Destruye bloques con una maza encantada con Explosión
+text.gm4.guidebook.module_desc.blasting_maces,"Why break one block when you can break nine? Now maces hit harder than ever!","¿Por qué romper un bloque cuando puedes romper nueve? ¡Ahora las mazas pegan más fuerte que nunca!"
+text.gm4.guidebook.blasting_maces.description,"Maces can be enchanted with Blasting to break multiple blocks at once.","Las mazas se pueden encantar con Explosión para romper múltiples bloques de un golpe."
+text.gm4.guidebook.blasting_maces.usage,"Hold right click to charge a blast, then release while aiming at a block to break a 3x3 area.\n\nThe more a single blast breaks, the faster it will wear down, so keep an eye on its durability.","Mantén pulsado clic derecho para cargar la maza y suelta mientras apuntas a un bloque para romper un área de 3x3.\n\nCuanto más rompas de un golpe, más rápido se desgastará, así que cuidado con la durabilidad."

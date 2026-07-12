@@ -1,0 +1,16 @@
+{
+  "values": [
+    "#gm4:no_collision",
+    "minecraft:snow",
+    "#minecraft:wool_carpets",
+    "minecraft:moss_carpet",
+    "minecraft:pale_moss_carpet",
+    "minecraft:lily_pad",
+    "#minecraft:wall_hanging_signs",
+    "minecraft:kelp",
+    "minecraft:kelp_plant",
+    "minecraft:seagrass",
+    "minecraft:tall_seagrass",
+    "minecraft:bubble_column"
+  ]
+}

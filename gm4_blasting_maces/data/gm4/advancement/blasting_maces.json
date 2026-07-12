@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": {
+      "id": "mace"
+    },
+    "title": {
+      "translate": "advancement.gm4.blasting_maces.title",
+      "fallback": "Diggy Diggy Mole"
+    },
+    "description": {
+      "translate": "advancement.gm4.blasting_maces.description",
+      "fallback": "Destroy blocks with a mace enchanted with Blasting",
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "blasting_maces": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
