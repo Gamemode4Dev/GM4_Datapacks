@@ -165,3 +165,10 @@ jobs:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+
+  summarize:
+    runs-on: ubuntu-24.04
+    if: github.event_name != 'pull_request'
+    needs: publish
+    steps:
+      - uses: action/checkout@v7
