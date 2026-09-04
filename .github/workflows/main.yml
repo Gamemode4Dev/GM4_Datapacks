@@ -135,3 +135,33 @@ jobs:
         with:
           name: 'Test world in ${{ matrix.version }} for ${{ github.sha }}'
           path: ${{ github.workspace }}/world/
+
+  publish:
+    runs-on: ubuntu-24.04
+    if: github.event_name != 'pull_request'
+    needs: build
+    strategy:
+      matrix:
+        platform: [modrinth, smithed]
+    concurrency:
+      group: release
+    name: 'publish-${{ matrix.platform }}'
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Checkout release branch
+        uses: actions/checkout@v7
+        with:
+          ref: release
+          path: release
+
+      # TODO use cache from build? 
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Publish all modules
+        run: uv run beet -p beet-publish.yaml -l ${{ env.LOG_LEVEL }} build
+        env:
+          BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
+          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
