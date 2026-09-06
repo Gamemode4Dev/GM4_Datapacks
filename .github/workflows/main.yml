@@ -174,7 +174,7 @@ jobs:
         uses: astral-sh/setup-uv@v7
 
       - name: Publish all modules
-        run: uv run beet -p beet-publish.yaml -l ${{ env.LOG_LEVEL }} build
+        run: uv run beet -p beet-publish.yaml -l ${{ env.LOG_LEVEL }} -s meta.gm4.publish_to=${{ matrix.platform }} build
         env:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}

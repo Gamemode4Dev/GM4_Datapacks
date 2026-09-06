@@ -1,7 +1,8 @@
 broadcast: gm4_bat_grenades
 pipeline:
-  - gm4.plugins.publish.my_load_config
+  - gm4.plugins.publish.load_config
 
 meta:
   plugins:
     - gm4.plugins.readme_generator
+    - gm4.plugins.publish
