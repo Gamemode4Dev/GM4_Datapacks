@@ -1,0 +1,35 @@
+{
+    "settings": {
+        "weight": 1,
+        "moon_phase": [
+            "full_moon",
+            "waning_gibbous",
+            "third_quarter",
+            "waning_crescent",
+            "new_moon",
+            "waxing_crescent",
+            "first_quarter",
+            "waxing_gibbous"
+        ],
+        "in_type": "clear",
+        "out_type": "clear"
+    },
+    "schedule": [
+        {
+            "time": 0,
+            "effects": {
+                "visual/cloud_color": "#00ffffff",
+                "visual/cloud_fog_end_distance": 0,
+                "visual/cloud_height": 1
+            }
+        },
+        {
+            "time": 23999,
+            "effects": {
+                "visual/cloud_color": "#00ffffff",
+                "visual/cloud_fog_end_distance": 0,
+                "visual/cloud_height": 1
+            }
+        }
+    ]
+}

@@ -1,0 +1,340 @@
+{
+    "settings": {
+        "weight": 1,
+        "moon_phase": [
+            "full_moon",
+            "waning_gibbous",
+            "third_quarter",
+            "waning_crescent",
+            "new_moon",
+            "waxing_crescent",
+            "first_quarter",
+            "waxing_gibbous"
+        ],
+        "in_type": "clear",
+        "out_type": "clear"
+    },
+    "schedule": [
+        {
+            "time": 0,
+            "effects": {
+                "visual/sun_angle": 0,
+                "visual/star_angle": 0,
+                "visual/moon_angle": 180,
+                "visual/star_brightness": 0,
+                "visual/sky_color": "#4d7cff",
+                "visual/sunrise_sunset_color": "#00ffc955",
+                "visual/sky_light_color": "#fffadd",
+                "visual/sky_light_factor": 1,
+                "visual/ambient_light_color": "#090810",
+                "visual/block_light_tint": "#ffcf99",
+                "visual/cloud_height": 1,
+                "visual/cloud_fog_end_distance": 0,
+                "visual/cloud_color": "#00ffffff",
+                "visual/fog_color": "#abe7ff",
+                "visual/fog_start_distance": 64,
+                "visual/fog_end_distance": 512,
+                "visual/sky_fog_end_distance": 512,
+                "visual/night_vision_color": "#999999",
+                "gameplay/baby_villager_activity": "minecraft:idle"
+            }
+        },
+        {
+            "time": 3000,
+            "effects": {
+                "gameplay/villager_activity": "minecraft:meet"
+            }
+        },
+        {
+            "time": 3500,
+            "effects": {
+                "visual/sky_light_color": "#fffadd",
+                "visual/sky_fog_end_distance": 128
+            }
+        },
+        {
+            "time": 4000,
+            "effects": {
+                "visual/sky_color": "#4d7cff",
+                "visual/sunrise_sunset_color": "#00ffc955",
+                "gameplay/baby_villager_activity": "minecraft:play"
+            }
+        },
+        {
+            "time": 4500,
+            "effects": {
+                "visual/fog_color": "#96dcfa"
+            }
+        },
+        {
+            "time": 5000,
+            "effects": {
+                "visual/star_brightness": 0,
+                "visual/sky_color": "#386aff",
+                "gameplay/villager_activity": "minecraft:idle"
+            }
+        },
+        {
+            "time": 5250,
+            "effects": {
+                "visual/sky_light_color": "#cfac82"
+            }
+        },
+        {
+            "time": 5500,
+            "effects": {
+                "visual/sunrise_sunset_color": "#ddff5c33",
+                "visual/sky_light_color": "#8c4c3e"
+            }
+        },
+        {
+            "time": 5750,
+            "effects": {
+                "visual/fog_color": "#e6ac81"
+            }
+        },
+        {
+            "time": 5867,
+            "effects": {
+                "gameplay/sky_light_level": 1
+            }
+        },
+        {
+            "time": 6000,
+            "effects": {
+                "visual/fog_start_distance": 64,
+                "visual/fog_end_distance": 512,
+                "gameplay/baby_villager_activity": "minecraft:rest",
+                "gameplay/villager_activity": "minecraft:rest"
+            }
+        },
+        {
+            "time": 6250,
+            "effects": {
+                "visual/sky_light_color": "#0c0c0f",
+                "visual/fog_color": "#2d2c47"
+            }
+        },
+        {
+            "time": 6500,
+            "effects": {
+                "visual/sky_color": "#272659",
+                "visual/sky_fog_end_distance": 64
+            }
+        },
+        {
+            "time": 6542,
+            "effects": {
+                "gameplay/bees_stay_in_hive": true,
+                "gameplay/monsters_burn": false
+            }
+        },
+        {
+            "time": 6600,
+            "effects": {
+                "audio/firefly_bush_sounds": true,
+                "gameplay/creaking_active": true,
+                "gameplay/eyeblossom_open": true
+            }
+        },
+        {
+            "time": 7000,
+            "effects": {
+                "visual/star_brightness": 0.8,
+                "visual/sunrise_sunset_color": "#008f365d"
+            }
+        },
+        {
+            "time": 7250,
+            "effects": {
+                "visual/sky_color": "#0d101c",
+                "visual/fog_color": "#040205"
+            }
+        },
+        {
+            "time": 7670,
+            "effects": {
+                "gameplay/sky_light_level": 0.26666668
+            }
+        },
+        {
+            "time": 12000,
+            "effects": {
+                "visual/star_brightness": 0.6,
+                "visual/sky_color": "#101729",
+                "visual/sky_light_color": "#0f121c",
+                "visual/fog_start_distance": 32,
+                "visual/fog_end_distance": 512,
+                "visual/sky_fog_end_distance": 128
+            }
+        },
+        {
+            "time": 15000,
+            "effects": {
+                "visual/cloud_height": 0.6
+            }
+        },
+        {
+            "time": 15062,
+            "effects": {
+                "gameplay/turtle_egg_hatch_chance": 1
+            }
+        },
+        {
+            "time": 15905,
+            "effects": {
+                "gameplay/turtle_egg_hatch_chance": 0.002
+            }
+        },
+        {
+            "time": 16000,
+            "effects": {
+                "visual/cloud_color": "#00ffffff",
+                "visual/fog_start_distance": 16,
+                "visual/fog_end_distance": 512
+            }
+        },
+        {
+            "time": 16330,
+            "effects": {
+                "gameplay/sky_light_level": 0.26666668
+            }
+        },
+        {
+            "time": 16750,
+            "effects": {
+                "visual/sky_color": "#0d101c",
+                "visual/fog_color": "#040205"
+            }
+        },
+        {
+            "time": 17000,
+            "effects": {
+                "visual/star_brightness": 0.75,
+                "visual/cloud_fog_end_distance": 0,
+                "visual/cloud_color": "#1127283b",
+                "visual/sunrise_sunset_color": "#00ff7a33"
+            }
+        },
+        {
+            "time": 17401,
+            "effects": {
+                "audio/firefly_bush_sounds": false,
+                "gameplay/creaking_active": false,
+                "gameplay/eyeblossom_open": false
+            }
+        },
+        {
+            "time": 17460,
+            "effects": {
+                "gameplay/bees_stay_in_hive": false,
+                "gameplay/monsters_burn": true
+            }
+        },
+        {
+            "time": 17500,
+            "effects": {
+                "visual/sky_light_color": "#0c0c0f",
+                "visual/sky_fog_end_distance": 64
+            }
+        },
+        {
+            "time": 17667,
+            "effects": {
+                "gameplay/cat_waking_up_gift_chance": 0.7
+            }
+        },
+        {
+            "time": 18000,
+            "effects": {
+                "visual/sky_color": "#4c90cf",
+                "visual/fog_end_distance": 192
+            }
+        },
+        {
+            "time": 18010,
+            "effects": {
+                "gameplay/baby_villager_activity": "minecraft:idle",
+                "gameplay/villager_activity": "minecraft:idle"
+            }
+        },
+        {
+            "time": 18133,
+            "effects": {
+                "gameplay/sky_light_level": 1
+            }
+        },
+        {
+            "time": 18362,
+            "effects": {
+                "gameplay/cat_waking_up_gift_chance": 0
+            }
+        },
+        {
+            "time": 18500,
+            "effects": {
+                "visual/sky_light_color": "#8296b3",
+                "visual/sunrise_sunset_color": "#eeffa845"
+            }
+        },
+        {
+            "time": 19000,
+            "effects": {
+                "visual/star_brightness": 0,
+                "visual/cloud_color": "#66ffffff",
+                "visual/fog_color": "#cce7ff",
+                "visual/fog_start_distance": 16
+            }
+        },
+        {
+            "time": 19500,
+            "effects": {
+                "visual/sunrise_sunset_color": "#00ffe3a6",
+                "visual/sky_fog_end_distance": 64
+            }
+        },
+        {
+            "time": 20000,
+            "effects": {
+                "visual/sky_light_color": "#fffadd",
+                "visual/cloud_fog_end_distance": 768,
+                "gameplay/villager_activity": "minecraft:work"
+            }
+        },
+        {
+            "time": 21000,
+            "effects": {
+                "visual/cloud_height": 1.1,
+                "visual/fog_color": "#abe7ff",
+                "visual/sky_fog_end_distance": 512,
+                "gameplay/baby_villager_activity": "minecraft:play"
+            }
+        },
+        {
+            "time": 23000,
+            "effects": {
+                "visual/fog_start_distance": 64,
+                "visual/fog_end_distance": 512
+            }
+        },
+        {
+            "time": 23999,
+            "effects": {
+                "visual/sun_angle": 360,
+                "visual/star_angle": 360,
+                "visual/moon_angle": 540,
+                "visual/star_brightness": 0,
+                "visual/sky_color": "#4d7cff",
+                "visual/sunrise_sunset_color": "#00ffc955",
+                "visual/sky_light_color": "#fffadd",
+                "visual/cloud_height": 1,
+                "visual/cloud_fog_end_distance": 0,
+                "visual/cloud_color": "#00ffffff",
+                "visual/fog_color": "#abe7ff",
+                "visual/fog_start_distance": 64,
+                "visual/fog_end_distance": 512,
+                "visual/sky_fog_end_distance": 512
+            }
+        }
+    ]
+}
