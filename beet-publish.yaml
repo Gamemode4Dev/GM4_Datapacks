@@ -1,8 +1,11 @@
-broadcast: gm4_bat_grenades
 pipeline:
-  - gm4.plugins.publish.load_config
+  - gm4.plugins.annotations
+  - gm4.plugins.publish.switch_platform
 
-meta:
-  plugins:
-    - gm4.plugins.readme_generator
-    - gm4.plugins.publish
+  - broadcast: gm4_bat_grenades
+    pipeline:
+      - gm4.plugins.publish.load_config
+    meta:
+      plugins:
+        - gm4.plugins.readme_generator
+        - gm4.plugins.publish

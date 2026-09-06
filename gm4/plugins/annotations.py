@@ -31,7 +31,7 @@ def beet_default(ctx: Context):
 
     # summary handler holds onto certain records until the exit phase when it emits to a markdown summary
     sum_handler = SummaryHandler(1000, ctx.cache)
-    logging.getLogger("gm4.output").addHandler(sum_handler)
+    logging.getLogger("gm4.publish").addHandler(sum_handler)
     logging.getLogger("gm4.manifest.update_patch").addHandler(sum_handler)
 
     # after the whole build, flush the stored records and form the markdown summary

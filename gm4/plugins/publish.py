@@ -1,13 +1,16 @@
-from beet import Context, Project, ProjectBuilder, PackConfig
-from beet.toolchain.config import load_config as beet_load_config
 import json
-import re
-import requests
-import os
-from gm4.utils import run, Version, NoneAttribute
-from gm4.plugins.manifest import ManifestConfig, ManifestCacheModel
-from pathlib import Path
 import logging
+import os
+import re
+import sys
+from pathlib import Path
+
+import requests
+from beet import Context, PackConfig, Project, ProjectBuilder
+from beet.toolchain.config import load_config as beet_load_config
+
+from gm4.plugins.manifest import ManifestCacheModel, ManifestConfig
+from gm4.utils import NoneAttribute, Version, run
 
 parent_logger = logging.getLogger("gm4.publish")
 
@@ -28,6 +31,8 @@ def beet_default(ctx: Context):
     Similarly, if the module has the `version` and `meta.smithed.pack_id` fields, and
     `BEET_SMITHED_TOKEN` environment variable is set, will try to publish a
     new version to Smithed if it doesn't already exist."""
+
+    print(f"running publish on {ctx.project_id}")
     
     version_dir = os.getenv("VERSION", "26.2")
     release_dir = Path("release") / version_dir
@@ -38,25 +43,31 @@ def beet_default(ctx: Context):
     
     config = ctx.validate("gm4", ManifestConfig)
 
-    publish_to = ctx.meta.get("gm4",{}).get("publish_to", None)
+    publish_to = ctx.cache["currently_publishing"].json.get("publish_to", None)
+    print(publish_to)
     
-    # publish to download platforms
+    # publish to download platforms, based on which gh job this is
     if publish_to == "smithed":
         publish_smithed(ctx, config, file_name)
     elif publish_to == "modrinth":
         publish_modrinth(ctx, config, release_dir, file_name)
 
-def dev_test_1(ctx: Context):
-    # print(f"beet cache restored as: {list(ctx.cache.keys())}")
+# def dev_test_1(ctx: Context):
+#     # print(f"beet cache restored as: {list(ctx.cache.keys())}")
 
-    # print(f"gm4_manifest is :{ctx.cache["gm4_manifest"]}")
-    print(ctx.meta.get("gm4"))
+#     # print(f"gm4_manifest is :{ctx.cache["gm4_manifest"]}")
+#     print(ctx.meta.get("gm4"))
 
-    if ctx.meta.get("gm4",{}).get("publish_to", None) == "modrinth":
-        print(f"publishing to modrinth!")
-    else:
-        print(f"publishing to smithed")
-    pass
+#     if ctx.meta.get("gm4",{}).get("publish_to", None) == "modrinth":
+#         print(f"publishing to modrinth!")
+#     else:
+#         print(f"publishing to smithed")
+#     pass
+
+def switch_platform(ctx: Context):
+    """Reads gm4.publish_to meta field to the cache, for subpipelines to check and run the correct publish plugin"""
+    publish_to: str = ctx.meta.get("gm4", {}).get("publish_to", None)
+    ctx.cache["currently_publishing"].json = {"publish_to": publish_to}
 
 def load_config(ctx: Context):
     """Loads relavent fields from each module's beet.yaml, without inheriting the pipeline and running plugins"""
@@ -67,7 +78,6 @@ def load_config(ctx: Context):
     config.pipeline = ctx.meta.get("plugins", [])
     config.data_pack = PackConfig()
     config.resource_pack = PackConfig()
-    config.meta["gm4"] |= ctx.meta["gm4"] # pull in root gm4 meta
 
     # run the new list of plugins from beet-publish.yaml
     ctx.require(
@@ -125,7 +135,10 @@ def publish_modrinth(ctx: Context, config: ManifestConfig, release_dir: Path, fi
                     res = requests.patch(f"{MODRINTH_API}/version/{matching_version['id']}", headers={'Authorization': auth_token, 'User-Agent': USER_AGENT}, json={
                         "game_versions": config.minecraft
                     })
-                    if not (200 <= res.status_code < 300):
+                    if res.status_code == 401:
+                        logger.critical(f"Authentication error, cancelling publish. Check token validity!: {res.status_code} {res.text}")
+                        sys.exit(1) # quit the build and mark the github action as failed
+                    elif not (200 <= res.status_code < 300):
                         logger.warning(f"Failed to patch project versions: {res.status_code} {res.text}")
                 return
 
@@ -152,7 +165,10 @@ def publish_modrinth(ctx: Context, config: ManifestConfig, release_dir: Path, fi
                     }),
                     file_name: file_bytes,
                 })
-                if not (200 <= res.status_code < 300):
+                if res.status_code == 401:
+                    logger.critical(f"Authentication error, cancelling publish. Check token validity!: {res.status_code} {res.text}")
+                    sys.exit(1) # quit the build and mark the github action as failed
+                elif not (200 <= res.status_code < 300):
                     logger.warning(f"Failed to publish new version version: {res.status_code} {res.text}")
                     return
                 logger.info(f"Successfully published {res.json()['name']}", extra={"gh_annotate_skip": True})
@@ -198,7 +214,10 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
                                 "webPage": current_readme,
                             },
                     }})
-                if not (200 <= res.status_code < 300):
+                if res.status_code == 401:
+                    logger.critical(f"Authentication error, cancelling publish. Check token validity!: {res.status_code} {res.text}")
+                    sys.exit(1) # quit the build and mark the github action as failed
+                elif not (200 <= res.status_code < 300):
                     logger.warning(f"Failed to update descripion: {res.status_code} {res.text}")
                 logger.info(f"{ctx.project_name} {res.text}", extra={"gh_annotate_skip": True})
 
@@ -213,7 +232,10 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
                         "supports": config.minecraft
                     }
                 })
-                if not (200 <= res.status_code < 300):
+                if res.status_code == 401:
+                    logger.critical(f"Authentication error, cancelling publish. Check token validity!: {res.status_code} {res.text}")
+                    sys.exit(1) # quit the build and mark the github action as failed
+                elif not (200 <= res.status_code < 300):
                     logger.warning(f"Failed to patch project versions: {res.status_code} {res.text}")
             return
 
@@ -231,7 +253,10 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
                     }
                 }
             })
-            if not (200 <= res.status_code < 300):
+            if res.status_code == 401:
+                logger.critical(f"Authentication error, cancelling publish. Check token validity!: {res.status_code} {res.text}")
+                sys.exit(1) # quit the build and mark the github action as failed
+            elif not (200 <= res.status_code < 300):
                 logger.warning(f"Failed to permalink {project_id} version {prior_version_in_mc_version}: {res.status_code} {res.text}")
             else:
                 logger.info(f"Permalinked {project_id} {prior_version_in_mc_version} to git history: {res.text}", extra={"gh_annotate_skip": True})
@@ -250,7 +275,10 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
                     "dependencies": []
                 }}
             )
-            if not (200 <= res.status_code < 300):
+            if res.status_code == 401:
+                logger.critical(f"Authentication error, cancelling publish. Check token validity!: {res.status_code} {res.text}")
+                sys.exit(1) # quit the build and mark the github action as failed
+            elif not (200 <= res.status_code < 300):
                 logger.warning(f"Failed to publish new version of {ctx.project_name}: {res.status_code} {res.text}")
                 return
             logger.info(f"{ctx.project_name} {res.text}", extra={"gh_annotate_skip": True})
