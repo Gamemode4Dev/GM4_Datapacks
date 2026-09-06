@@ -1,2 +1,8 @@
-pipeline: 
-  - test_plugin.say_hello
+broadcast: gm4_bat_grenades
+pipeline:
+  - gm4.plugins.publish.dev_test_1
+  - gm4.plugins.publish.my_load_config
+
+meta:
+  plugins:
+    - test_plugin.print_data
