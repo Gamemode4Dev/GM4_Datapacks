@@ -5,4 +5,5 @@ pipeline:
 
 meta:
   plugins:
+    - gm4.plugins.readme_generator
     - test_plugin.print_data

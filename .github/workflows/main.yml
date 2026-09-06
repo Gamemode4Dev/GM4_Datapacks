@@ -78,6 +78,14 @@ jobs:
           directory: release
           branch: release
 
+      - name: Upload .beet_cache as artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v7
+        with:
+          name: .beet_cache
+          path: ${{ github.workspace }}/.beet_cache/
+          include-hidden-files: true
+
   test:
     strategy:
       fail-fast: false
@@ -154,6 +162,12 @@ jobs:
         with:
           ref: release
           path: release
+
+      - name: Restore .beet_cache from artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: .beet_cache
+          path: ${{ github.workspace }}/.beet_cache
 
       # TODO use cache from build? 
       - name: Set up uv
