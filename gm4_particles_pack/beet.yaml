@@ -14,6 +14,8 @@ meta:
       schedule_loops: [main]
       required:
         gm4_better_armour_stands: 2.6.0
+    translation_linter_ignores:
+      - text.gm4.guidebook.better_armour_stands.copy_code
     website:
       description: Fireflies to flames, add some pezazz to your projects! Allows you to turn Armour Stands into particle sources that you control!
       recommended:

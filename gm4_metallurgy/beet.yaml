@@ -21,6 +21,8 @@ meta:
       schedule_loops:
         - main
         - tick
+    translation_linter_ignores:
+      - item.gm4.metallurgy.shamir # only used by legacy item upgrading
     website:
       description: Introduces 4 custom ores, 6 custom metals and a whole bunch of custom enchants to the game. Cast metal bands that hold magical properties called 'Shamirs' and upgrade your armour and tools with them!
       recommended:
