@@ -86,6 +86,16 @@ jobs:
           path: ${{ github.workspace }}/.beet_cache/
           include-hidden-files: true
 
+      - name: Rename log file
+        run: mv ${{ github.workspace }}/logs/summary_logs.pkl ${{ github.workspace }}/logs/build_log.pkl
+
+      - name: Upload logs as artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v7
+        with:
+          path: ${{ github.workspace }}/logs/build_log.pkl
+          archive: false
+
   test:
     strategy:
       fail-fast: false
@@ -151,8 +161,8 @@ jobs:
     strategy:
       matrix:
         platform: [modrinth, smithed]
-    concurrency:
-      group: release
+    # concurrency:
+    #   group: release
     name: 'publish-${{ matrix.platform }}'
     steps:
       - uses: actions/checkout@v7
@@ -180,9 +190,37 @@ jobs:
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
+      - name: Rename log file
+        run: mv ${{ github.workspace }}/logs/summary_logs.pkl ${{ github.workspace }}/logs/publish_${{ matrix.platform }}_log.pkl
+
+      - name: Upload logs as artifact
+        uses: actions/upload-artifact@v7
+        with:
+          path: ${{ github.workspace }}/logs/publish_${{ matrix.platform }}_log.pkl
+          archive: false
+
   summarize:
     runs-on: ubuntu-24.04
     if: github.event_name != 'pull_request'
     needs: publish
     steps:
-      - uses: action/checkout@v7
+      - uses: actions/checkout@v7
+
+      - name: Restore .beet_cache from artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: .beet_cache
+          path: ${{ github.workspace }}/.beet_cache
+
+      - name: Restore log files from artifacts
+        uses: actions/download-artifact@v8
+        with:
+          pattern: '*_log.pkl'
+          path: ${{ github.workspace }}/logs
+          merge-multiple: true
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Summarize build logs
+        run: uv run beet -p beet-summarize.yaml build
