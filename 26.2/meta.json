@@ -1,5 +1,5 @@
 {
-  "last_commit": "06180aa6f3beb885c51ccfdc35245253338e0eea",
+  "last_commit": "4453aecae2944a516b6dbe29f84cbb6fde4130d8",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -21,6 +21,7 @@
       ],
       "description": "Adds the Animi Shamir to Metallurgy. Items with Animi will respawn with you when you die!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -56,6 +57,7 @@
         "gm4_orbis",
         "gm4_podzol_rooting_soil"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -87,6 +89,7 @@
       ],
       "description": "Adds the shamir 'Audere' to Metallurgy. Gain Haste with low durability tools.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -116,6 +119,10 @@
       "requires": [],
       "description": "Looking for exotic animals? This module makes some Wandering Traders sell cute baby animals!",
       "recommends": [],
+      "sponsor": {
+        "name": "Misode",
+        "game_profile": "misode"
+      },
       "minecraft": [],
       "hidden": true,
       "important_note": null,
@@ -146,6 +153,7 @@
         "gm4_enderman_support_class",
         "gm4_metallurgy"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -183,6 +191,7 @@
         "gm4_poses_pack",
         "gm4_particles_pack"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -212,6 +221,7 @@
       "requires": [],
       "description": "Why break one block when you can break nine? Now maces hit harder than ever!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -262,6 +272,7 @@
         "gm4_smelteries",
         "gm4_liquid_tanks"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -293,6 +304,7 @@
       "recommends": [
         "gm4_lively_lily_pads"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -328,6 +340,7 @@
       "recommends": [
         "gm4_resource_pack"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -357,6 +370,7 @@
       "requires": [],
       "description": "See what's in your Chiseled Bookshelves without having to take all the books out!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -395,6 +409,7 @@
         "gm4_better_armour_stands",
         "gm4_standard_crafting"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -430,6 +445,7 @@
         "gm4_apple_trees",
         "gm4_zauber_cauldrons"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -461,6 +477,7 @@
       ],
       "description": "Allows Liquid Tanks to convert Concrete Powder items into Concrete, at the cost of \u2153 of a Bucket of Water per Concrete Powder.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -494,6 +511,7 @@
         "gm4_better_armour_stands",
         "gm4_holographic_tags"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -529,6 +547,7 @@
         "gm4_dangerous_dungeons",
         "gm4_tower_structures"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -558,6 +577,7 @@
       "requires": [],
       "description": "Allows Campfires to grant you up to 4 extra hearts that last for more than half of a Minecraft day. Perfect for those scary first nights in a Minecraft world.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -588,6 +608,7 @@
       "requires": [],
       "description": "Shoot more than just arrows! Crossbow Cartridges allows your crossbow to fire a variety of projectiles; Shoot Pufferfish, Tripwires, Torches, and many more. Synergizes nicely with the Ziprails Module for easy Ziprail construction.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -623,6 +644,7 @@
         "gm4_tower_structures",
         "gm4_cooler_caves"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -660,6 +682,7 @@
       "recommends": [
         "gm4_boots_of_ostara"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -709,6 +732,7 @@
         "gm4_smelteries",
         "gm4_liquid_tanks"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -743,6 +767,7 @@
         "gm4_better_armour_stands",
         "gm4_holographic_tags"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -772,6 +797,7 @@
       "requires": [],
       "description": "Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blocks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -803,6 +829,7 @@
       "recommends": [
         "gm4_book_binders"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -832,6 +859,7 @@
       "requires": [],
       "description": "Start your own Dripleaf Space Program!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -865,6 +893,7 @@
         "gm4_reeling_rods",
         "gm4_live_catch"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -913,6 +942,7 @@
         "gm4_smelteries",
         "gm4_liquid_tanks"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -945,6 +975,7 @@
       "recommends": [
         "gm4_resource_pack"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -977,6 +1008,7 @@
       ],
       "description": "Adds the shamir 'Fulcio' to Metallurgy. It allows you to place blocks in mid-air! This also enables you to choose the orientation of blocks like logs without needing a supporting block.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1009,6 +1041,7 @@
       "recommends": [
         "gm4_resource_pack"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1044,6 +1077,7 @@
       "requires": [],
       "description": "Set up floating messages with a simple name tag!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1073,6 +1107,7 @@
       "requires": [],
       "description": "Form a bond with your horses",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1104,6 +1139,7 @@
       ],
       "description": "Adds the 'Iacio' shamir to Metallurgy. It lets you throw things further! Launch an Ender Pearl into orbit or simply throw your Trident exceptionally far.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1136,6 +1172,7 @@
       "requires": [],
       "description": "Improves the vanilla ink effect by adding Blindness. Glow Squid will give Night Vision when disturbed, which might come in handy if you're out of torches!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1150,7 +1187,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.24",
+      "version": "1.1.25",
       "hash": "e4698b7de7673bff39c655506c50e703efb84aff",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -1168,6 +1205,7 @@
         "gm4_pig_tractors",
         "metallurgy"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1204,6 +1242,7 @@
         "gm4_potion_liquids",
         "gm4_spawner_minecarts"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1241,6 +1280,7 @@
       "recommends": [
         "gm4_potion_liquids"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1284,6 +1324,7 @@
         "gm4_liquid_minecarts",
         "gm4_cement_mixers"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1316,6 +1357,7 @@
         "gm4_end_fishing",
         "gm4_reeling_rods"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1349,6 +1391,7 @@
       "recommends": [
         "gm4_blossoming_pots"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1390,6 +1433,7 @@
       ],
       "description": "Adds the shamir 'Lumos' to Metallurgy. It places torches when it is dark.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1421,6 +1465,7 @@
       ],
       "description": "Enables Liquid Tanks filled with Experience to repair tools with the mending enchant on them.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1472,6 +1517,7 @@
         "gm4_percurro_shamir",
         "gm4_vecto_shamir"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1516,6 +1562,7 @@
       ],
       "description": "Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1551,6 +1598,7 @@
       "recommends": [
         "gm4_survival_refightalized"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1586,6 +1634,7 @@
       "recommends": [
         "gm4_midnight_menaces"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1618,6 +1667,7 @@
       "requires": [],
       "description": "Adds a neat interface to improve your musical skills!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1649,6 +1699,7 @@
       ],
       "description": "Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1686,6 +1737,7 @@
       "recommends": [
         "gm4_poses_pack"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1717,6 +1769,7 @@
       ],
       "description": "Adds the 'Percurro' Shamir to Metallurgy! Weapons with Percurro let you teleport past your enemies in the blink of an eye!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1749,6 +1802,7 @@
       "requires": [],
       "description": "Set up Scarecrows that shoot homing rockets at Phantoms!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1778,6 +1832,7 @@
       "requires": [],
       "description": "Ride pigs through fields to quickly harvest and plant crops! Who knows, maybe you will even dig up some useful things in the process.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1810,6 +1865,7 @@
       "requires": [],
       "description": "Allows saplings to self-plant when on Podzol. The perfect choice for auto-treefarms!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1847,6 +1903,7 @@
       ],
       "description": "Adds the ability to store potions in Liquid Tanks! You can also use a potion by walking beneath a potion-filled Liquid Tank.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1880,6 +1937,7 @@
         "gm4_end_fishing",
         "gm4_live_catch"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1916,6 +1974,7 @@
       "requires": [],
       "description": "Climbing downward has never been easier!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1953,6 +2012,7 @@
       "recommends": [
         "gm4_sunken_treasure"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -1982,6 +2042,7 @@
       "requires": [],
       "description": "Say goodbye to your boring old rectangular portals!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2013,6 +2074,7 @@
       "requires": [],
       "description": "Ever wondered why all the Mooshrooms are locked up on islands? This Module makes Mooshrooms spread mycelium and mushrooms wherever they go.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2053,6 +2115,7 @@
       "requires": [],
       "description": "Build a Smeltery and double your ore output with this multi-block structure.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2084,6 +2147,7 @@
       "requires": [],
       "description": "Reverse the effects of beacons with corrupting glass! But be careful, a poison Beacon may sound great at first, but is incredibly painful in pratice.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2115,6 +2179,7 @@
       "requires": [],
       "description": "Pick up Spawners and move them wherever you want with Minecarts.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2148,6 +2213,7 @@
       "requires": [],
       "description": "Gives you a speed effect when you walk on path blocks.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2181,6 +2247,7 @@
       "requires": [],
       "description": "A crafting recipe pack that adds some nifty new recipes to the game.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2218,6 +2285,7 @@
         "gm4_resource_pack",
         "gm4_scuba_gear"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2249,6 +2317,7 @@
       "recommends": [
         "gm4_monsters_unbound"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2282,6 +2351,7 @@
       "requires": [],
       "description": "Transfer your health to another player using flowers.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2317,6 +2387,7 @@
         "gm4_orb_of_ankou",
         "gm4_zauber_cauldrons"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2352,6 +2423,7 @@
         "gm4_dangerous_dungeons",
         "gm4_cooler_caves"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2390,6 +2462,7 @@
       "recommends": [
         "gm4_metallurgy"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2426,6 +2499,7 @@
         "gm4_ziprails",
         "gm4_vertical_rails"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2458,6 +2532,7 @@
       "requires": [],
       "description": "You'll find your death point faster, but you'll have to fight your corpse for your stuff back!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2489,6 +2564,7 @@
       ],
       "description": "Adds the 'Vecto' Shamir to Metallurgy. Summon a Boat or Minecart out of thin air when in need, no more wasting an inventory slot!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2523,6 +2599,7 @@
       "requires": [],
       "description": "Use ladders as vertical Minecart tracks.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2555,6 +2632,7 @@
       ],
       "description": "Adds the shamir 'Vigere' to Metallurgy. It heals you when you block with a shield.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2587,6 +2665,7 @@
       ],
       "description": "Die! Dye! Remove die from items in a Liquid Tank filled with Water, at the cost of \u2153 of a bucket.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2616,6 +2695,7 @@
       "requires": [],
       "description": "Perfect for UHCs, this module forces you to balance protection with speed.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2658,6 +2738,7 @@
         "gm4_resource_pack",
         "gm4_zauber_liquids"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2698,6 +2779,7 @@
       ],
       "description": "From cauldron-made potions to potion-filled tanks! Store your tier IV potions and wormholes in Liquid Tanks!",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [],
       "hidden": true,
       "important_note": null,
@@ -2729,6 +2811,7 @@
       "recommends": [
         "gm4_vertical_rails"
       ],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2765,6 +2848,7 @@
       "requires": [],
       "description": "Use our resource pack for the definitive Gamemode 4 experience! This resource pack does not touch vanilla textures, but adds textures and models to most Gamemode 4 blocks, items and mobs.",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2793,6 +2877,7 @@
       "requires": [],
       "description": "",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2819,6 +2904,7 @@
       "requires": [],
       "description": "",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2845,6 +2931,7 @@
       "requires": [],
       "description": "",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2871,6 +2958,7 @@
       "requires": [],
       "description": "",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2897,6 +2985,7 @@
       "requires": [],
       "description": "",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2923,6 +3012,7 @@
       "requires": [],
       "description": "",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2952,6 +3042,7 @@
       "requires": [],
       "description": "",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -2978,6 +3069,7 @@
       "requires": [],
       "description": "",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
@@ -3005,6 +3097,7 @@
       "requires": [],
       "description": "",
       "recommends": [],
+      "sponsor": null,
       "minecraft": [
         "26.2"
       ],
