@@ -32,8 +32,6 @@ def beet_default(ctx: Context):
     `BEET_SMITHED_TOKEN` environment variable is set, will try to publish a
     new version to Smithed if it doesn't already exist."""
 
-    print(f"running publish on {ctx.project_id}")
-    
     version_dir = os.getenv("VERSION", "26.2")
     release_dir = Path("release") / version_dir
 
@@ -44,7 +42,6 @@ def beet_default(ctx: Context):
     config = ctx.validate("gm4", ManifestConfig)
 
     publish_to = ctx.cache["currently_publishing"].json.get("publish_to", None)
-    print(publish_to)
     
     # publish to download platforms, based on which gh job this is
     if publish_to == "smithed":

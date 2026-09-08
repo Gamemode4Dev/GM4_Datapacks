@@ -44,15 +44,11 @@ def load_and_summarize(ctx: Context):
     """Loads log entries from previous gh step/job to aggregate"""
     sum_handler = SummaryHandler(1000, ctx.cache)
 
-    print(os.listdir("logs"))
-    
     log_dir = Path("logs")
     for log_file in log_dir.iterdir():
-        print(f"loaded {log_file}")
         with open(log_file, 'rb') as f:
             log_buffer: list[logging.LogRecord] = pickle.load(f)
         for log_entry in log_buffer:
-            print(f"{log_entry=}")
             sum_handler.emit(log_entry)
 
     sum_handler.flush_to_summary()
@@ -152,7 +148,6 @@ class SummaryHandler(logging.handlers.BufferingHandler):
             table += f"\n {entry['name']} | {entry['ver_update']} | {nested_table}"
 
         summary = "# :rocket: Build Deployment Summary :rocket:\n"+table
-        print(summary)
 
         if not self.summary_created:
             env_file = os.getenv("GITHUB_STEP_SUMMARY")
@@ -164,7 +159,6 @@ class SummaryHandler(logging.handlers.BufferingHandler):
 
     def flush_to_pickle(self):
         """Writes buffer of log entries to file, for a later gh action step to aggregate into the summary file"""
-        print("flushing logs")
         log_dir = Path("logs")
         log_file = log_dir/"summary_logs.pkl"
         os.makedirs(log_dir, exist_ok=True)
