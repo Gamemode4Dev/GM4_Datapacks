@@ -2,7 +2,7 @@ pipeline:
   - gm4.plugins.annotations
   - gm4.plugins.publish.switch_platform
 
-  - broadcast: gm4_bat_grenades
+  - broadcast: [gm4_*, lib_*]
     pipeline:
       - gm4.plugins.publish.load_config
     meta:
