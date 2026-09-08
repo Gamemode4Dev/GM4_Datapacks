@@ -67,6 +67,9 @@ meta:
         - gm4_smelteries
         - gm4_liquid_tanks
       notes: []
+      sponsor:
+        name: Hero
+        game_profile: 1db15fb6-29d3-435e-9fda-4681a853a64a
     modrinth:
       project_id: TSz8iiMD
     smithed:
