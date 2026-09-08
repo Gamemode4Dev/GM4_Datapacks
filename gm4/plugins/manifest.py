@@ -26,11 +26,16 @@ SUPPORTED_GAME_VERSIONS = ["26.2"]
 # config models for beet.yaml metas
 CreditsModel = dict[str, list[str]]
 
+class ModuleSponsor(PluginOptions):
+	name: str
+	game_profile: str
+
 class WebsiteConfig(PluginOptions):
 	description: str
 	recommended: list[str] = []
 	notes: list[str] = []
 	search_keywords: list[str] = []
+	sponsor: ModuleSponsor | None = None
 
 class ModrinthConfig(PluginOptions):
 	project_id: str
@@ -67,6 +72,7 @@ class ManifestModuleModel(BaseModel):
 	requires: list[str] = []
 	description: str
 	recommends: list[str] = []
+	sponsor: ModuleSponsor | None = None
 	minecraft: list[str] = []
 	hidden: bool = False
 	important_note: Optional[str]
@@ -116,6 +122,7 @@ def create(ctx: Context):
 					description = gm4_meta.website.description if gm4_meta.website else "",
 					recommends = gm4_meta.website.recommended if gm4_meta.website else [],
 					important_note = gm4_meta.website.notes[0] if gm4_meta.website and len(gm4_meta.website.notes) > 0 else None,
+					sponsor = gm4_meta.website.sponsor if gm4_meta.website else None,
 					minecraft = gm4_meta.minecraft,
 					hidden = len(gm4_meta.minecraft) == 0 or gm4_meta.website is None,
 					publish_date = None,
