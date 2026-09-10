@@ -289,7 +289,7 @@ def generate_flower_features(ctx: Context, flower_types: CSV):
             "data_pack": {
                 "load": [
                     {
-                        f"data/gm4_zauber_cauldrons/worldgen/configured_feature/{flower_data['flower']}_patch.json": "data/gm4_zauber_cauldrons/templates/worldgen/configured_feature/flower_patch.json",
+                        f"data/gm4_zauber_cauldrons/worldgen/feature/{flower_data['flower']}_patch.json": "data/gm4_zauber_cauldrons/templates/worldgen/feature/flower_patch.json",
                         f"data/gm4_zauber_cauldrons/worldgen/placed_feature/{flower_data['flower']}_patch.json": "data/gm4_zauber_cauldrons/templates/worldgen/placed_feature/flower_patch.json"
                     }
                 ],
