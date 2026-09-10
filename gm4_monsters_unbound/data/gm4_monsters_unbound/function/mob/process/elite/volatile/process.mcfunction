@@ -8,7 +8,7 @@ execute on target if entity @s[type=player,distance=..22] run scoreboard players
 execute if score $has_target gm4_mu_data matches 0 run return 0
 
 scoreboard players add @s gm4_mu_timer 1
-execute if predicate {condition:"random_chance","chance":0.45} run scoreboard players add @s gm4_mu_timer 1
+execute if predicate {type:"random_chance","chance":0.45} run scoreboard players add @s gm4_mu_timer 1
 
 execute if score @s gm4_mu_timer matches 8..12 run particle block{block_state:"purple_glazed_terracotta"} ~ ~2 ~ 0 4 0 0.25 32
 execute if score @s gm4_mu_timer matches 8..12 on target at @s summon marker run function gm4_monsters_unbound:mob/process/elite/volatile/pillar_location
