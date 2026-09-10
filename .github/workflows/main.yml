@@ -89,7 +89,7 @@ jobs:
           - version: '26.3'
             fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/26.3-rc-1/0.19.5/1.1.2/server/jar
             fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/QfyrYezy/fabric-api-0.160.3%2B26.3.jar
-            packtest_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/QfyrYezy/fabric-api-0.160.3%2B26.3.jar
+            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/5pthhuxY/packtest-2.7.0-beta1.jar
             command_limit_tracer_url: https://cdn.modrinth.com/data/Ao12dSbt/versions/zKvlVzlN/commandlimittracer-0.3.0.jar
     name: 'test-${{ matrix.version }}'
     runs-on: ubuntu-24.04
