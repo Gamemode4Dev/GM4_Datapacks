@@ -1,5 +1,5 @@
 {
-  "last_commit": "93dd3422655e9191227e83338d90ede786cd162e",
+  "last_commit": "d8ebc00bced238d635107f53856e8339fcb2de56",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -227,7 +227,7 @@
       "search_keywords": [],
       "publish_date": "2026-08-11",
       "modrinth_id": "YaoejRWw",
-      "smithed_link": null,
+      "smithed_link": "gm4_blasting_maces",
       "pmc_link": null
     },
     {
@@ -1116,7 +1116,7 @@
       "search_keywords": [],
       "publish_date": "2026-06-14",
       "modrinth_id": "u4hUNmhk",
-      "smithed_link": null,
+      "smithed_link": "gm4_horsemanship",
       "pmc_link": null
     },
     {
@@ -1187,8 +1187,8 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.26",
-      "hash": "e4698b7de7673bff39c655506c50e703efb84aff",
+      "version": "1.1.27",
+      "hash": "85e1c66fb117906dbc8559a534c093b74cab2436",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
       "credits": {
