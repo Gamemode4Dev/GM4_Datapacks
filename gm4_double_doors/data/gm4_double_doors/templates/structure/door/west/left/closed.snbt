@@ -25,24 +25,24 @@
   ],
   palette: [
     {
-      Properties: {
+      properties: {
         hinge: "left",
         half: "lower",
         powered: "false",
         facing: "west",
         open: "false"
       },
-      Name: "minecraft:{{ material_name }}_door"
+      id: "minecraft:{{ material_name }}_door"
     },
     {
-      Properties: {
+      properties: {
         hinge: "left",
         half: "upper",
         powered: "false",
         facing: "west",
         open: "false"
       },
-      Name: "minecraft:{{ material_name }}_door"
+      id: "minecraft:{{ material_name }}_door"
     }
   ],
   DataVersion: 3465

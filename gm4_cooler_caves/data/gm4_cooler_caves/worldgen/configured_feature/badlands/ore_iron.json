@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "minecraft:iron_ore"
+          "id": "minecraft:iron_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

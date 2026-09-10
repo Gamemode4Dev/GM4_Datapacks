@@ -20,7 +20,7 @@
                     "block": "minecraft:cobweb",
                     "probability": 0.9
                   },
-                  "output_state": { "Name": "minecraft:air" }
+                  "output_state": { "id": "minecraft:air" }
                 },
                 {
                   "location_predicate": {
@@ -32,7 +32,7 @@
                     "probability": 0.2
                   },
                   "output_state": {
-                    "Name": "minecraft:cracked_deepslate_bricks"
+                    "id": "minecraft:cracked_deepslate_bricks"
                   }
                 },
                 {
@@ -45,7 +45,7 @@
                     "probability": 0.125
                   },
                   "output_state": {
-                    "Name": "minecraft:cobbled_deepslate"
+                    "id": "minecraft:cobbled_deepslate"
                   }
                 },
                 {
@@ -58,7 +58,7 @@
                     "probability": 0.3
                   },
                   "output_state": {
-                    "Name": "minecraft:cracked_deepslate_tiles"
+                    "id": "minecraft:cracked_deepslate_tiles"
                   }
                 }
               ]
@@ -85,7 +85,7 @@
                     "block": "minecraft:cobweb",
                     "probability": 0.9
                   },
-                  "output_state": { "Name": "minecraft:air" }
+                  "output_state": { "id": "minecraft:air" }
                 },
                 {
                   "location_predicate": {
@@ -97,7 +97,7 @@
                     "probability": 0.2
                   },
                   "output_state": {
-                    "Name": "minecraft:cracked_deepslate_bricks"
+                    "id": "minecraft:cracked_deepslate_bricks"
                   }
                 },
                 {
@@ -110,7 +110,7 @@
                     "probability": 0.125
                   },
                   "output_state": {
-                    "Name": "minecraft:cobbled_deepslate"
+                    "id": "minecraft:cobbled_deepslate"
                   }
                 },
                 {
@@ -123,7 +123,7 @@
                     "probability": 0.3
                   },
                   "output_state": {
-                    "Name": "minecraft:cracked_deepslate_tiles"
+                    "id": "minecraft:cracked_deepslate_tiles"
                   }
                 }
               ]
@@ -150,7 +150,7 @@
                     "block": "minecraft:cobweb",
                     "probability": 0.9
                   },
-                  "output_state": { "Name": "minecraft:air" }
+                  "output_state": { "id": "minecraft:air" }
                 },
                 {
                   "location_predicate": {
@@ -162,7 +162,7 @@
                     "probability": 0.2
                   },
                   "output_state": {
-                    "Name": "minecraft:cracked_deepslate_bricks"
+                    "id": "minecraft:cracked_deepslate_bricks"
                   }
                 },
                 {
@@ -175,7 +175,7 @@
                     "probability": 0.125
                   },
                   "output_state": {
-                    "Name": "minecraft:cobbled_deepslate"
+                    "id": "minecraft:cobbled_deepslate"
                   }
                 },
                 {
@@ -188,7 +188,7 @@
                     "probability": 0.3
                   },
                   "output_state": {
-                    "Name": "minecraft:cracked_deepslate_tiles"
+                    "id": "minecraft:cracked_deepslate_tiles"
                   }
                 }
               ]
@@ -215,7 +215,7 @@
                     "block": "minecraft:cobweb",
                     "probability": 0.9
                   },
-                  "output_state": { "Name": "minecraft:air" }
+                  "output_state": { "id": "minecraft:air" }
                 },
                 {
                   "location_predicate": {
@@ -227,7 +227,7 @@
                     "probability": 0.2
                   },
                   "output_state": {
-                    "Name": "minecraft:cracked_deepslate_bricks"
+                    "id": "minecraft:cracked_deepslate_bricks"
                   }
                 },
                 {
@@ -240,7 +240,7 @@
                     "probability": 0.125
                   },
                   "output_state": {
-                    "Name": "minecraft:cobbled_deepslate"
+                    "id": "minecraft:cobbled_deepslate"
                   }
                 },
                 {
@@ -253,7 +253,7 @@
                     "probability": 0.3
                   },
                   "output_state": {
-                    "Name": "minecraft:cracked_deepslate_tiles"
+                    "id": "minecraft:cracked_deepslate_tiles"
                   }
                 }
               ]

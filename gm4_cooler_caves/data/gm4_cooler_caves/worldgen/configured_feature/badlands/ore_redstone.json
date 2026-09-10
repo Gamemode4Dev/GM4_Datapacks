@@ -6,8 +6,8 @@
     "targets": [
       {
         "state": {
-          "Name": "minecraft:redstone_ore",
-          "Properties": {
+          "id": "minecraft:redstone_ore",
+          "properties": {
             "lit": "false"
           }
         },

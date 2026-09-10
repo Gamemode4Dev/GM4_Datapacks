@@ -6,7 +6,7 @@
 summon minecraft:block_display ~ ~ ~ {\
   Tags:["gm4_llp_display","gm4_llp_light","gm4_llp_light.14","gm4_llp_wood_sound","gm4_llp_smoke_torch","smithed.entity"],\
   block_state:{\
-    Name:"minecraft:torch"\
+    id:"minecraft:torch"\
   },\
   transformation:{\
     scale:[0.8f,0.8f,0.8f],\

@@ -5,8 +5,8 @@
       "to_place": {
         "type": "minecraft:simple_state_provider",
         "state": {
-          "Name": "minecraft:snow",
-          "Properties": {
+          "id": "minecraft:snow",
+          "properties": {
             "layers": "2"
           }
         }

@@ -23,7 +23,7 @@
                     "probability": 0.97
                   },
                   "output_state": {
-                    "Name": "minecraft:air"
+                    "id": "minecraft:air"
                   }
                 },
                 {
@@ -36,7 +36,7 @@
                     "probability": 0.25
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sandstone"
+                    "id": "minecraft:red_sandstone"
                   }
                 },
                 {
@@ -49,7 +49,7 @@
                     "probability": 0.30
                   },
                   "output_state": {
-                    "Name": "minecraft:cut_red_sandstone"
+                    "id": "minecraft:cut_red_sandstone"
                   }
                 },
                 {
@@ -62,7 +62,7 @@
                     "probability": 0.35
                   },
                   "output_state": {
-                    "Name": "minecraft:smooth_red_sandstone"
+                    "id": "minecraft:smooth_red_sandstone"
                   }
                 }
               ]
@@ -92,7 +92,7 @@
                     "probability": 0.1
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sand"
+                    "id": "minecraft:red_sand"
                   }
                 },
                 {
@@ -105,7 +105,7 @@
                     "probability": 0.333
                   },
                   "output_state": {
-                    "Name": "minecraft:smooth_red_sandstone"
+                    "id": "minecraft:smooth_red_sandstone"
                   }
                 },
                 {
@@ -118,7 +118,7 @@
                     "probability": 0.25
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sandstone"
+                    "id": "minecraft:red_sandstone"
                   }
                 },
                 {
@@ -130,7 +130,7 @@
                     "block": "minecraft:red_concrete_powder"
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sand"
+                    "id": "minecraft:red_sand"
                   }
                 }
               ]
@@ -160,7 +160,7 @@
                     "probability": 0.1
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sand"
+                    "id": "minecraft:red_sand"
                   }
                 },
                 {
@@ -173,7 +173,7 @@
                     "probability": 0.333
                   },
                   "output_state": {
-                    "Name": "minecraft:smooth_red_sandstone"
+                    "id": "minecraft:smooth_red_sandstone"
                   }
                 },
                 {
@@ -186,7 +186,7 @@
                     "probability": 0.25
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sandstone"
+                    "id": "minecraft:red_sandstone"
                   }
                 },
                 {
@@ -198,7 +198,7 @@
                     "block": "minecraft:red_concrete_powder"
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sand"
+                    "id": "minecraft:red_sand"
                   }
                 }
               ]
@@ -228,7 +228,7 @@
                     "probability": 0.75
                   },
                   "output_state": {
-                    "Name": "minecraft:air"
+                    "id": "minecraft:air"
                   }
                 },
                 {
@@ -241,7 +241,7 @@
                     "probability": 0.1
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sand"
+                    "id": "minecraft:red_sand"
                   }
                 },
                 {
@@ -254,7 +254,7 @@
                     "probability": 0.333
                   },
                   "output_state": {
-                    "Name": "minecraft:smooth_red_sandstone"
+                    "id": "minecraft:smooth_red_sandstone"
                   }
                 },
                 {
@@ -267,7 +267,7 @@
                     "probability": 0.25
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sandstone"
+                    "id": "minecraft:red_sandstone"
                   }
                 },
                 {
@@ -279,7 +279,7 @@
                     "block": "minecraft:red_concrete_powder"
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sand"
+                    "id": "minecraft:red_sand"
                   }
                 }
               ]
@@ -309,7 +309,7 @@
                     "probability": 0.1
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sand"
+                    "id": "minecraft:red_sand"
                   }
                 },
                 {
@@ -322,7 +322,7 @@
                     "probability": 0.333
                   },
                   "output_state": {
-                    "Name": "minecraft:smooth_red_sandstone"
+                    "id": "minecraft:smooth_red_sandstone"
                   }
                 },
                 {
@@ -335,7 +335,7 @@
                     "probability": 0.25
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sandstone"
+                    "id": "minecraft:red_sandstone"
                   }
                 },
                 {
@@ -347,7 +347,7 @@
                     "block": "minecraft:red_concrete_powder"
                   },
                   "output_state": {
-                    "Name": "minecraft:red_sand"
+                    "id": "minecraft:red_sand"
                   }
                 }
               ]
