@@ -4,10 +4,9 @@
       "default": {
         "max_delay": 24000,
         "min_delay": 12000,
-        "sound": "minecraft:music.overworld.bamboo_jungle"
+        "sound": "minecraft:music.overworld.forest"
       }
     },
-    "minecraft:gameplay/increased_fire_burnout": true,
     "minecraft:gameplay/natural_mob_spawns": {
       "argument": {
         "spawn_costs": {},
@@ -41,27 +40,22 @@
               "weight": 8
             },
             {
-              "type": "minecraft:chicken",
-              "count": 4,
-              "weight": 10
-            },
-            {
-              "type": "minecraft:parrot",
+              "type": "minecraft:rabbit",
               "count": {
                 "type": "minecraft:uniform",
-                "max_inclusive": 2,
-                "min_inclusive": 1
+                "max_inclusive": 4,
+                "min_inclusive": 2
               },
-              "weight": 40
+              "weight": 4
             },
             {
-              "type": "minecraft:panda",
+              "type": "minecraft:fox",
               "count": {
                 "type": "minecraft:uniform",
-                "max_inclusive": 2,
-                "min_inclusive": 1
+                "max_inclusive": 4,
+                "min_inclusive": 2
               },
-              "weight": 80
+              "weight": 4
             }
           ],
           "monster": [
@@ -108,11 +102,6 @@
               "type": "minecraft:witch",
               "count": 1,
               "weight": 5
-            },
-            {
-              "type": "minecraft:ocelot",
-              "count": 1,
-              "weight": 2
             }
           ],
           "underground_water_creature": [
@@ -130,26 +119,31 @@
       },
       "modifier": "overlay"
     },
-    "minecraft:visual/sky_color": "#77a8ff"
+    "minecraft:visual/fog_color": "#ccd8e2",
+    "minecraft:visual/sky_color": "#7ca3ff",
+    "minecraft:visual/water_fog_color": "#375154"
   },
-  "carvers": "#minecraft:in_biome/bamboo_jungle",
-  "downfall": 0.9,
+  "carvers": "#minecraft:in_biome/dappled_forest",
+  "downfall": 0.6,
   "effects": {
-    "water_color": "#3f76e4"
+    "dry_foliage_color": "#8c3a04",
+    "foliage_color": "#e68e30",
+    "grass_color": "#df6827",
+    "water_color": "#375154"
   },
   "features": [
-    "#minecraft:raw_generation/in_biome/bamboo_jungle",
-    "#minecraft:lakes/in_biome/bamboo_jungle",
-    "#minecraft:local_modifications/in_biome/bamboo_jungle",
-    "#minecraft:underground_structures/in_biome/bamboo_jungle",
-    "#minecraft:surface_structures/in_biome/bamboo_jungle",
-    "#minecraft:strongholds/in_biome/bamboo_jungle",
-    "#minecraft:underground_ores/in_biome/bamboo_jungle",
-    "#minecraft:underground_decoration/in_biome/bamboo_jungle",
-    "#minecraft:fluid_springs/in_biome/bamboo_jungle",
-    "#minecraft:vegetal_decoration/in_biome/bamboo_jungle",
-    "#minecraft:top_layer_modification/in_biome/bamboo_jungle"
+    "#minecraft:raw_generation/in_biome/dappled_forest",
+    "#minecraft:lakes/in_biome/dappled_forest",
+    "#minecraft:local_modifications/in_biome/dappled_forest",
+    "#minecraft:underground_structures/in_biome/dappled_forest",
+    "#minecraft:surface_structures/in_biome/dappled_forest",
+    "#minecraft:strongholds/in_biome/dappled_forest",
+    "#minecraft:underground_ores/in_biome/dappled_forest",
+    "#minecraft:underground_decoration/in_biome/dappled_forest",
+    "#minecraft:fluid_springs/in_biome/dappled_forest",
+    "#minecraft:vegetal_decoration/in_biome/dappled_forest",
+    "#minecraft:top_layer_modification/in_biome/dappled_forest"
   ],
   "has_precipitation": true,
-  "temperature": 0.95
+  "temperature": 0.6
 }
