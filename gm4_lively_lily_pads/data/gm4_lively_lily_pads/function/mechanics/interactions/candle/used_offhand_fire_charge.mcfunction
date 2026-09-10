@@ -11,4 +11,4 @@ playsound minecraft:item.firecharge.use player @a[distance=..16]
 execute if entity @s[gamemode=creative] run return 1
 
 # use item
-item modify entity @s weapon.offhand {function:"minecraft:set_count",count:-1,add:1b}
+item modify entity @s weapon.offhand {type: "minecraft:set_count", count: -1, add: 1b}

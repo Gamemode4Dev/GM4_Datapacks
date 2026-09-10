@@ -13,4 +13,4 @@ execute align xyz positioned ~.5 ~.5 ~.5 run particle minecraft:happy_villager ~
 playsound minecraft:block.chorus_flower.grow block @a[distance=..6] ~ ~ ~ 0.2 0.8
 
 # remove sapling item
-item modify entity @s contents {function:"minecraft:set_count",count:-1,add:true}
+item modify entity @s contents {type: "minecraft:set_count", count: -1, add: true}
