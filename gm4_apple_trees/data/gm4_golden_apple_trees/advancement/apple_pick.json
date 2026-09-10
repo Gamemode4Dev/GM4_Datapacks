@@ -19,19 +19,15 @@
             }
           }
         ],
-        "item": {
-          "count": 0
-        },
         "entity": [
           {
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "minecraft:entity_type": "minecraft:armor_stand",
+              "minecraft:entity_type": "minecraft:interaction",
               "minecraft:entity_tags": {
                 "all_of": [
-                  "gm4_apple",
-                  "gm4_ripe_apple"
+                  "gm4_golden_apple_interaction"
                 ]
               }
             }
@@ -41,6 +37,6 @@
     }
   },
   "rewards": {
-    "function": "gm4_apple_trees:leaf/apple/hand_interact"
+    "function": "gm4_golden_apple_trees:leaf/apple/pick"
   }
 }
