@@ -13,8 +13,8 @@ wheels = [
 
 [[package]]
 name = "beet"
-version = "0.115.0"
-source = { registry = "https://pypi.org/simple" }
+version = "0.117.0"
+source = { git = "https://github.com/edayot/beet.git?rev=26.3_update#7f29e1825f87bf121ddc454666e5fbc5a821c174" }
 dependencies = [
     { name = "click" },
     { name = "click-help-colors" },
@@ -25,10 +25,6 @@ dependencies = [
     { name = "pydantic" },
     { name = "pyyaml" },
     { name = "toml" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/56/ad/798ffabe884dba56a7059bf899aff082efd964f5c3a27ca51c6bc71877f1/beet-0.115.0.tar.gz", hash = "sha256:9128aeb77f84389df01182c5f1e71ea861879391f114969589c48848e3f20512", size = 95694, upload-time = "2026-03-27T17:05:29.173Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/a8/f8/9f904662f6d992f24c7939e841225faecb4bd990ac65bca443e4d48d7f2a/beet-0.115.0-py3-none-any.whl", hash = "sha256:29c153ebc7a60bfc980b7f23aa6eb5e9aa579268691616d025ce2b8cd25d4b89", size = 125192, upload-time = "2026-03-27T17:05:27.875Z" },
 ]
 
 [[package]]
@@ -55,14 +51,10 @@ wheels = [
 [[package]]
 name = "bolt"
 version = "0.50.1"
-source = { registry = "https://pypi.org/simple" }
+source = { git = "https://github.com/edayot/beet.git?subdirectory=packages%2Fbolt&rev=26.3_update#7f29e1825f87bf121ddc454666e5fbc5a821c174" }
 dependencies = [
     { name = "beet" },
     { name = "mecha" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/b4/3c/53d8b950adbba601fdf4a0d2f1f1da652ca5f5879e040da2d8d8a020f9db/bolt-0.50.1.tar.gz", hash = "sha256:5bcb0ee76c87c0504fdf52fb79cf71a9acd0e681cc6df33fa9829039d8277ab8", size = 52341, upload-time = "2026-01-17T13:59:47.578Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/3f/9b/fa2699f4d991fa7b83b61daecb0c7a533487358448191bf4eefbcef89ce7/bolt-0.50.1-py3-none-any.whl", hash = "sha256:89c5505050d4431f0c0a6fed28691c626d0439c8d2432c3fdfdc185dbcddf592", size = 59733, upload-time = "2026-01-17T13:59:48.527Z" },
 ]
 
 [[package]]
@@ -152,9 +144,9 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "beet", specifier = ">=0.115.0" },
-    { name = "bolt", specifier = ">=0.50.1" },
-    { name = "mecha", specifier = ">=0.103.0" },
+    { name = "beet", git = "https://github.com/edayot/beet.git?rev=26.3_update" },
+    { name = "bolt", git = "https://github.com/edayot/beet.git?subdirectory=packages%2Fbolt&rev=26.3_update" },
+    { name = "mecha", git = "https://github.com/edayot/beet.git?subdirectory=packages%2Fmecha&rev=26.3_update" },
     { name = "repro-zipfile", specifier = ">=0.1.0" },
     { name = "requests", specifier = ">=2.28.1" },
 ]
@@ -227,15 +219,11 @@ wheels = [
 
 [[package]]
 name = "mecha"
-version = "0.103.0"
-source = { registry = "https://pypi.org/simple" }
+version = "0.104.1"
+source = { git = "https://github.com/edayot/beet.git?subdirectory=packages%2Fmecha&rev=26.3_update#7f29e1825f87bf121ddc454666e5fbc5a821c174" }
 dependencies = [
     { name = "beet" },
     { name = "tokenstream" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/62/65/c0ac93886ec73499d90620e6b2931e90490ef6ed37e18a7400f6217dd017/mecha-0.103.0.tar.gz", hash = "sha256:37981668b3874547474ef2b31f28a11e7a3b4d02dc44000e423cde7649428b79", size = 581866, upload-time = "2026-03-27T17:06:01.04Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/3d/72/e0b3a63935e2b9c2b6664f540b37ff32774dd438fcafa623353d75badcbc/mecha-0.103.0-py3-none-any.whl", hash = "sha256:af3f8f94e9838ecacff091996f666efaac92cca35e631435d154b160e8817f96", size = 617085, upload-time = "2026-03-27T17:06:02.658Z" },
 ]
 
 [[package]]
