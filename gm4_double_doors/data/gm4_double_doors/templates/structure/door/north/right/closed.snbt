@@ -45,5 +45,5 @@
       id: "minecraft:{{ material_name }}_door"
     }
   ],
-  DataVersion: 3465
+  DataVersion: 5021
 }
