@@ -270,14 +270,13 @@ def versioned_advancements(ctx: Context, ver: Version, targets: list[str], stric
         else:
             handle = ctx.data.advancements[f"{ctx.project_id}:{entry}"]
         for criteria in handle.data["criteria"].values():
-            player_conditions = criteria.setdefault("conditions", {}).setdefault("player", [])
-            if type(player_conditions) is dict:
-                raise ValueError(f"{entry} is using legacy player conditions, which does not support load.status injections.")
+            player_condition = criteria.setdefault("conditions", {}).setdefault("player", [])
+            player_conditions = [player_condition] if type(player_condition) is dict else player_condition # type: ignore
             if strict:
-                player_conditions.append(assemble_value_check(ctx.project_id, ver.major))
-                player_conditions.append(assemble_value_check(f"{ctx.project_id}_minor", ver.minor))
+                player_conditions.append(assemble_value_check(ctx.project_id, ver.major)) # type: ignore
+                player_conditions.append(assemble_value_check(f"{ctx.project_id}_minor", ver.minor)) # type: ignore
             else:
-                player_conditions.append(assemble_value_check(ctx.project_id, {"min": 1}))
+                player_conditions.append(assemble_value_check(ctx.project_id, {"min": 1})) # type: ignore
 
 def warn_on_future_version(ctx: Context, dep_id: str, ver: Version):
     """Issues a console warning if the dependancy version a module requires is greater than the current version of that dependancy"""
