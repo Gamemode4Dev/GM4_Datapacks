@@ -271,7 +271,7 @@ def versioned_advancements(ctx: Context, ver: Version, targets: list[str], stric
             handle = ctx.data.advancements[f"{ctx.project_id}:{entry}"]
         for criteria in handle.data["criteria"].values():
             player_condition = criteria.setdefault("conditions", {}).setdefault("player", [])
-            player_conditions = [player_condition] if type(player_condition) is dict else player_condition # type: ignore
+            player_conditions = player_condition if isinstance(player_condition, list) else [player_condition] # type: ignore
             if strict:
                 player_conditions.append(assemble_value_check(ctx.project_id, ver.major)) # type: ignore
                 player_conditions.append(assemble_value_check(f"{ctx.project_id}_minor", ver.minor)) # type: ignore
