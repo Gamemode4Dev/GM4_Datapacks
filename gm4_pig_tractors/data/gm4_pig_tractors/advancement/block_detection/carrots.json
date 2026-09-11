@@ -4,10 +4,10 @@
             "trigger": "minecraft:enter_block",
             "conditions": {
                 "player": "gm4_pig_tractors:player/vehicle/pig/in_farmland",
-                "block": "minecraft:carrots",
                 "state": {
                     "age": "7"
-                }
+                },
+                "blocks": "minecraft:carrots"
             }
         }
     },
