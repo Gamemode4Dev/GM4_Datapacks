@@ -12,16 +12,14 @@
     "fight_icy_stray": {
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:stray",
-              "minecraft:nbt": "{DeathLootTable:\"gm4_icy_strays:entities/icy_stray\"}"
-            }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:stray",
+            "minecraft:nbt": "{DeathLootTable:\"gm4_icy_strays:entities/icy_stray\"}"
           }
-        ]
+        }
       }
     }
   },

@@ -12,20 +12,18 @@
     "fight_enlarged_phantom": {
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:phantom",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_enlarged_phantom"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:phantom",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_enlarged_phantom"
+              ]
             }
           }
-        ]
+        }
       }
     }
   },
