@@ -9,35 +9,31 @@
                         {
                             "type": "minecraft:loot_table",
                             "value": "gm4_example_pack:items/splash_resistance_potion",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_properties",
-                                    "entity": "this",
-                                    "predicate": {
-                                        "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{custom_potion:'resistance'}}}}}}"
-                                    }
+                            "condition": {
+                                "type": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{custom_potion:'resistance'}}}}}}"
                                 }
-                            ]
+                            }
                         },
                         {
                             "type": "minecraft:loot_table",
                             "value": "gm4_example_pack:items/splash_booze",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:entity_properties",
-                                    "entity": "this",
-                                    "predicate": {
-                                        "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{custom_potion:'booze'}}}}}}"
-                                    }
+                            "condition": {
+                                "type": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{custom_potion:'booze'}}}}}}"
                                 }
-                            ]
+                            }
                         }
                     ]
                 }
             ],
-            "functions": [
+            "modifier": [
                 {
-                    "function": "minecraft:set_nbt",
+                    "type": "minecraft:set_nbt",
                     "tag": "{gm4_custom_potion:1b}"
                 }
             ]

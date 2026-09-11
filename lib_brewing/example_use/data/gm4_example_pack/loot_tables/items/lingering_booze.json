@@ -8,17 +8,17 @@
           "type": "item",
           "weight": 1,
           "name": "minecraft:lingering_potion",
-          "functions": [
+          "modifier": [
             {
-              "function": "set_count",
+              "type": "set_count",
               "count": 1
             },
             {
-              "function": "set_nbt",
+              "type": "set_nbt",
               "tag": "{custom_potion:\"booze\",custom_potion_effects:[{id:'minecraft:slowness',amplifier:0b,duration:300},{id:'minecraft:strength',amplifier:0b,duration:300},{id:'minecraft:nausea',amplifier:1b,duration:100},{id:'minecraft:poison',amplifier:0b,duration:100},{id:'minecraft:absorption',amplifier:1b,duration:300}],CustomPotionColor:11236936}"
             },
             {
-              "function": "set_name",
+              "type": "set_name",
               "name": [
                 {
                   "text": "Lingering Booze"

@@ -24,35 +24,31 @@ loot table `MODULE_ID:technical/brewing_stand/splash`
             {
               "type": "minecraft:loot_table",
               "name": "LOOT TABLE PATH TO SPLASH POTION 1",
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{INDICATION NBT FOR POTION 1}}}}}"
-                  }
+              "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{INDICATION NBT FOR POTION 1}}}}}"
                 }
-              ]
+              }
             },
             {
               "type": "minecraft:loot_table",
               "name": "LOOT TABLE PATH TO SPLASH POTION 2",
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{INDICATION NBT FOR POTION 2}}}}}"
-                  }
+              "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{data:{gm4_brewing:{insert:{components:{'minecraft:custom_data':{INDICATION NBT FOR POTION 2}}}}}"
                 }
-              ]
+              }
             }
           ]
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{gm4_custom_potion:1b}"
         }
       ]

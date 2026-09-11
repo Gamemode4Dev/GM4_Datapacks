@@ -203,7 +203,11 @@
           "minecraft:poison": {}
         },
         "source": {
-          "minecraft:entity_type": "minecraft:witch"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:witch"
+          }
         }
       }
     },

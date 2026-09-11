@@ -10,15 +10,13 @@
             "minecraft:entity_type": "minecraft:turtle"
           }
         },
-        "partner": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:turtle"
-            }
+        "partner": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:turtle"
           }
-        ]
+        }
       }
     }
   },
