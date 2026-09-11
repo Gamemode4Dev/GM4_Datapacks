@@ -40,7 +40,9 @@
           {
             "items": "minecraft:potion",
             "predicates": {
-              "minecraft:potion_contents": "minecraft:thick"
+              "minecraft:potion_contents": {
+                "potions": "minecraft:thick"
+              }
             }
           }
         ]

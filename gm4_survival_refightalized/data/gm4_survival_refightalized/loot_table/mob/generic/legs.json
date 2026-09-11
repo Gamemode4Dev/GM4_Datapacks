@@ -97,13 +97,21 @@
                     "condition": {
                         "type": "minecraft:random_chance",
                         "chance": {
-                            "type": "minecraft:score",
-                            "target": {
-                                "type": "minecraft:fixed",
-                                "name": "$armor_chance"
-                            },
-                            "score": "gm4_sr_data",
-                            "scale": 0.05
+                            "type": "minecraft:mul",
+                            "inputs": [
+                                {
+                                    "type": "minecraft:from_int",
+                                    "input": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$armor_chance"
+                                        },
+                                        "score": "gm4_sr_data"
+                                    }
+                                },
+                                0.05
+                            ]
                         }
                     }
                 }

@@ -8,7 +8,9 @@
                     "minecraft:potion"
                 ],
                 "predicates": {
-                    "minecraft:potion_contents": "minecraft:water"
+                    "minecraft:potion_contents": {
+                        "potions": "minecraft:water"
+                    }
                 }
             }
         }
