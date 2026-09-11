@@ -294,7 +294,7 @@ def generate_flower_features(ctx: Context, flower_types: CSV):
                     }
                 ],
                 "render": {
-                    "worldgen_configured_features": "*",
+                    "features": "*",
                     "worldgen_placed_features": "*"
                 }
             },
