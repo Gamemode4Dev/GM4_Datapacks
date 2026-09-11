@@ -21,16 +21,14 @@
                 "max_delay": 24000,
                 "replace_current_music": false
             }
-        }
+        },
+        "minecraft:visual/ambient_particles": [{{biome_particle}}]
     },
     "effects": {
         "water_color": {{water_color}},
         "grass_color": {{grass_color}},
-        "foliage_color": {{foliage_color}},
-        {{biome_particle}}
+        "foliage_color": {{foliage_color}}
     },
-    "spawners": {},
-    "spawn_costs": {},
     "carvers": [],
     "features": [
         [
