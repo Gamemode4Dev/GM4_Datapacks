@@ -1229,19 +1229,17 @@ def generate_prereq(prereq: str, module: str):
   criterion = {
     "trigger": "minecraft:tick",
     "conditions": {
-      "player": [
-        {
-          "condition": "minecraft:entity_properties",
-          "entity": "this",
-          "predicate": {
-            "minecraft:type_specific/player": {
-              "advancements": {
-                f"gm4_guidebook:{module}/unlock/{prereq}": True
-              }
+      "player": {
+        "type": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "minecraft:type_specific/player": {
+            "advancements": {
+              f"gm4_guidebook:{module}/unlock/{prereq}": True
             }
           }
         }
-      ]
+      }
     }
   }
   return criterion
@@ -1274,9 +1272,9 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
   # standard checks for load checking and spectator prevention
   extra_player_checks = [
     {
-      "condition": "minecraft:inverted",
+      "type": "minecraft:inverted",
       "term": {
-        "condition": "minecraft:entity_properties",
+        "type": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
           "minecraft:type_specific/player": {
@@ -1288,7 +1286,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
       }
     },
     {
-      "condition": "minecraft:value_check",
+      "type": "minecraft:int_value_check",
       "value": {
         "type": "minecraft:score",
         "target": {
@@ -1297,22 +1295,22 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
         },
         "score": "load.status"
       },
-      "range": {"min": 1}
+      "test": {"min": 1}
     },
     {
-      "condition": "minecraft:value_check",
+      "type": "minecraft:int_value_check",
       "value": {
         "type": "minecraft:score",
         "target": {
-            "type": "minecraft:fixed",
-            "name": book.load_check
+          "type": "minecraft:fixed",
+          "name": book.load_check
         },
         "score": "load.status"
       },
-      "range": {"min": 1}
+      "test": {"min": 1}
     },
     {
-      "condition": "minecraft:value_check",
+      "type": "minecraft:int_value_check",
       "value": {
         "type": "minecraft:score",
         "target": {
@@ -1321,7 +1319,7 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
         },
         "score": "gm4_guide"
       },
-      "range": {"min": 1}
+      "test": {"min": 1}
     }
   ]
 
@@ -1329,9 +1327,9 @@ def generate_advancement(book: Book, section_index: int) -> Advancement | None:
   criteria = {k: v for k, v in all_criteria.items() if k in criteria_keys}
   for criterion in criteria.values():
     if "player" not in criterion["conditions"]:
-      criterion["conditions"]["player"] = extra_player_checks
+      criterion["conditions"]["player"] = {"type":"minecraft:all_of","terms": extra_player_checks}
     else:
-      criterion["conditions"]["player"] = [*criterion["conditions"]["player"], *extra_player_checks]
+      criterion["conditions"]["player"] = {"type":"minecraft:all_of","terms": [criterion["conditions"]["player"], *extra_player_checks]}
 
   # create advancement that rewards the function
   return Advancement({
@@ -1354,22 +1352,20 @@ def root_advancement() -> Advancement:
     "requirement": {
       "trigger": "minecraft:impossible",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "gm4_guidebook"
-              },
-              "score": "load.status"
+        "player": {
+          "type": "minecraft:int_value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "gm4_guidebook"
             },
-            "range": {
-              "min": 1
-            }
+            "score": "load.status"
+          },
+          "test": {
+            "min": 1
           }
-        ]
+        }
       }
     }
   }

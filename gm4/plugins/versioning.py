@@ -252,7 +252,7 @@ def versioned_advancements(ctx: Context, ver: Version, targets: list[str], stric
     """Adds versioning to advancements, either strict checks for libraries or load checks for most modules"""
     # NOTE advancements get score checks injected into every criteria
     assemble_value_check = lambda name_field, range_field: { # type:ignore
-        "condition": "minecraft:value_check",
+        "type": "minecraft:int_value_check",
         "value": {
             "type": "minecraft:score",
             "target": {
@@ -261,7 +261,7 @@ def versioned_advancements(ctx: Context, ver: Version, targets: list[str], stric
             },
             "score": "load.status"
         },
-        "range": range_field
+        "test": range_field
     }
 
     for entry in targets:

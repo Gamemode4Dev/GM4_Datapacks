@@ -104,8 +104,8 @@ def beet_default(ctx: Context):
       else:
         entry: Any = {"type": "minecraft:item", "name": ingredient}
 
-      entry["conditions"] = [{
-        "condition": "value_check",
+      entry["condition"] = {
+        "type": "minecraft:int_value_check",
         "value": {
           "type": "score",
           "target": {
@@ -114,7 +114,7 @@ def beet_default(ctx: Context):
           },
           "score": "gm4_disassembler"
         },
-        "range": {
+        "test": {
           "min": 0,
           "max": {
             "type": "uniform",
@@ -122,7 +122,7 @@ def beet_default(ctx: Context):
             "max": durability
           }
         }
-      }]
+      }
       pools.append({
         "rolls": count,
         "entries": [{
@@ -153,17 +153,22 @@ def beet_default(ctx: Context):
     caller["pools"][0]["entries"][0]["children"].append({
       "type": "minecraft:loot_table",
       "value": f'gm4_disassemblers:disassembleables/{item}',
-      "conditions": [{
-        "condition": "match_tool",
-        "predicate": {
-          "items": [f"minecraft:{item}"]
-        }
-      }]
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms":[
+          {
+            "type": "match_tool",
+            "predicate": {
+              "items": [f"minecraft:{item}"]
+            }
+          }
+        ]
+      }
     })
     if item.startswith("diamond_"):
-      caller["pools"][0]["entries"][0]["children"][-1]["conditions"].append({
-        "condition": "value_check",
-        "range": 1,
+      caller["pools"][0]["entries"][0]["children"][-1]["condition"]["terms"].append({
+        "type": "minecraft:int_value_check",
+        "test": 1,
         "value": {"type":"score","target":{"type":"fixed","name":"disassemble_diamonds"},"score":"gm4_disassembler"}
       })
 
