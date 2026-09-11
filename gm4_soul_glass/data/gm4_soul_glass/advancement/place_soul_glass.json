@@ -21,8 +21,8 @@
           "type": "minecraft:all_of",
           "terms": [
             {
-              "type": "minecraft:block_state_property",
-              "block": "minecraft:brown_stained_glass"
+              "type": "minecraft:match_block",
+              "blocks": "minecraft:brown_stained_glass"
             },
             {
               "type": "minecraft:match_tool",

@@ -4,8 +4,8 @@
       "trigger": "minecraft:placed_block",
       "conditions": {
         "location": {
-          "type": "minecraft:block_state_property",
-          "block": "minecraft:brewing_stand"
+          "type": "minecraft:match_block",
+          "blocks": "minecraft:brewing_stand"
         }
       }
     }

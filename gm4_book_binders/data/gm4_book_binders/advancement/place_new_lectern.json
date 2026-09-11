@@ -4,8 +4,8 @@
       "trigger": "minecraft:placed_block",
       "conditions": {
         "location": {
-          "type": "minecraft:block_state_property",
-          "block": "minecraft:lectern"
+          "type": "minecraft:match_block",
+          "blocks": "minecraft:lectern"
         }
       }
     }

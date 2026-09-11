@@ -13,8 +13,8 @@
               }
             },
             {
-              "type": "minecraft:block_state_property",
-              "block": "minecraft:bell"
+              "type": "minecraft:match_block",
+              "blocks": "minecraft:bell"
             }
           ]
         }
