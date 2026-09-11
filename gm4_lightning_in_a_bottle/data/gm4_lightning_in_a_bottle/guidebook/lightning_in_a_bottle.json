@@ -10,10 +10,14 @@
       "trigger": "minecraft:lightning_strike",
       "conditions": {
         "lightning": {
-          "distance": {
-            "absolute": {
-              "min": 0,
-              "max": 64
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:distance": {
+              "absolute": {
+                "min": 0,
+                "max": 64
+              }
             }
           }
         }
