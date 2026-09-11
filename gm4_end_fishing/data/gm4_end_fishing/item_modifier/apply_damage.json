@@ -8,13 +8,21 @@
       "type": "minecraft:binomial",
       "n": 1,
       "p": {
-        "type": "minecraft:score",
-        "target": {
-          "type": "minecraft:fixed",
-          "name": "$unbreaking"
-        },
-        "score": "gm4_ef_data",
-        "scale": 0.01
+        "type": "minecraft:mul",
+        "inputs": [
+          {
+            "type": "minecraft:from_int",
+            "input": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "$unbreaking"
+              },
+              "score": "gm4_ef_data"
+            }
+          },
+          0.01
+        ]
       }
     },
     "test": 1

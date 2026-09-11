@@ -34,6 +34,7 @@
         {
           "type": "minecraft:set_damage",
           "damage": {
+            "type": "minecraft:uniform",
             "min": 0.4,
             "max": 0.7
           }
