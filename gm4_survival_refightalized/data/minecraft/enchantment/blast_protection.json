@@ -42,7 +42,7 @@
                     }
                 },
                 "requirements": {
-                    "condition": "minecraft:damage_source_properties",
+                    "type": "minecraft:damage_source_properties",
                     "predicate": {
                         "tags": [
                             {

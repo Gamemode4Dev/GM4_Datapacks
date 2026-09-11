@@ -9,12 +9,7 @@
     },
     "in_deep_water": {
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_scuba_gear:in_deep_water"
-          }
-        ]
+        "player": "gm4_scuba_gear:in_deep_water"
       },
       "trigger": "minecraft:location"
     }

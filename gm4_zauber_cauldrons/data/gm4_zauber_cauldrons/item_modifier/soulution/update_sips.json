@@ -1,46 +1,47 @@
-[
-    {
-        "function": "minecraft:set_lore",
-        "mode": "replace_section",
-        "offset": 0,
-        "entity": "this",
-        "lore": [
-            [
-                {
-                    "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.sips",
-                    "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
-                    "plain": true,
-                    "color": "gray",
-                    "italic": false
-                },
-                {
-                    "text": "/",
-                    "color": "gray",
-                    "italic": false
-                },
-                {
-                    "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.size",
-                    "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
-                    "plain": true,
-                    "color": "gray",
-                    "italic": false
-                },
-                {
-                    "text": " ",
-                    "color": "gray",
-                    "italic": false
-                },
-                {
-                    "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lore.sips",
-                    "fallback": "Sips",
-                    "color": "gray",
-                    "italic": false
-                }
-            ]
-        ],
-        "conditions": [
-            {
-                "condition": "minecraft:value_check",
+{
+    "type": "sequence",
+    "functions": [
+        {
+            "type": "minecraft:set_lore",
+            "mode": "replace_section",
+            "offset": 0,
+            "entity": "this",
+            "lore": [
+                [
+                    {
+                        "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.sips",
+                        "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
+                        "plain": true,
+                        "color": "gray",
+                        "italic": false
+                    },
+                    {
+                        "text": "/",
+                        "color": "gray",
+                        "italic": false
+                    },
+                    {
+                        "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.size",
+                        "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
+                        "plain": true,
+                        "color": "gray",
+                        "italic": false
+                    },
+                    {
+                        "text": " ",
+                        "color": "gray",
+                        "italic": false
+                    },
+                    {
+                        "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lore.sips",
+                        "fallback": "Sips",
+                        "color": "gray",
+                        "italic": false
+                    }
+                ]
+            ],
+            "condition": {
+                "type": "minecraft:int_value_check",
                 "value": {
                     "type": "minecraft:score",
                     "target": {
@@ -49,52 +50,50 @@
                     },
                     "score": "gm4_zc_data"
                 },
-                "range": 0
+                "test": 0
             }
-        ]
-    },
-    {
-        "function": "minecraft:set_lore",
-        "mode": "replace_section",
-        "offset": 0,
-        "entity": "this",
-        "lore": [
-            [
-                {
-                    "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.sips",
-                    "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
-                    "plain": true,
-                    "color": "gray",
-                    "italic": false
-                },
-                {
-                    "text": "/",
-                    "color": "gray",
-                    "italic": false
-                },
-                {
-                    "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.size",
-                    "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
-                    "plain": true,
-                    "color": "gray",
-                    "italic": false
-                },
-                {
-                    "text": " ",
-                    "color": "gray",
-                    "italic": false
-                },
-                {
-                    "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lore.throws",
-                    "fallback": "Throws",
-                    "color": "gray",
-                    "italic": false
-                }
-            ]
-        ],
-        "conditions": [
-            {
-                "condition": "minecraft:value_check",
+        },
+        {
+            "type": "minecraft:set_lore",
+            "mode": "replace_section",
+            "offset": 0,
+            "entity": "this",
+            "lore": [
+                [
+                    {
+                        "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.sips",
+                        "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
+                        "plain": true,
+                        "color": "gray",
+                        "italic": false
+                    },
+                    {
+                        "text": "/",
+                        "color": "gray",
+                        "italic": false
+                    },
+                    {
+                        "nbt": "Item.components.'minecraft:custom_data'.gm4_zauber_cauldrons.bottle.size",
+                        "storage": "gm4_zauber_cauldrons:temp/item/multi_use_bottle",
+                        "plain": true,
+                        "color": "gray",
+                        "italic": false
+                    },
+                    {
+                        "text": " ",
+                        "color": "gray",
+                        "italic": false
+                    },
+                    {
+                        "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.lore.throws",
+                        "fallback": "Throws",
+                        "color": "gray",
+                        "italic": false
+                    }
+                ]
+            ],
+            "condition": {
+                "type": "minecraft:int_value_check",
                 "value": {
                     "type": "minecraft:score",
                     "target": {
@@ -103,8 +102,8 @@
                     },
                     "score": "gm4_zc_data"
                 },
-                "range": 1
+                "test": 1
             }
-        ]
-    }
-]
+        }
+    ]
+}

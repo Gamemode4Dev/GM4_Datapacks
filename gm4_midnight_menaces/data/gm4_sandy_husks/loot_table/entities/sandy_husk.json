@@ -15,13 +15,13 @@
                 {
                     "type": "item",
                     "name": "minecraft:sand",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "set_count",
+                            "type": "set_count",
                             "count": 0
                         },
                         {
-                            "function": "minecraft:enchanted_count_increase",
+                            "type": "minecraft:enchanted_count_increase",
                             "enchantment": "minecraft:looting",
                             "count": {
                                 "min": 1,

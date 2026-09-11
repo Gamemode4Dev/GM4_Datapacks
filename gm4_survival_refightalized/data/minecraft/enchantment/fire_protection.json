@@ -42,10 +42,10 @@
                     }
                 },
                 "requirements": {
-                    "condition": "minecraft:all_of",
+                    "type": "minecraft:all_of",
                     "terms": [
                         {
-                            "condition": "minecraft:damage_source_properties",
+                            "type": "minecraft:damage_source_properties",
                             "predicate": {
                                 "tags": [
                                     {

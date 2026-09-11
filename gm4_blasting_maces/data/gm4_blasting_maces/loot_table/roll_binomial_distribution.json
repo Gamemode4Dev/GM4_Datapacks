@@ -25,12 +25,10 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:stone",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 0
-            }
-          ]
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": 0
+          }
         }
       ]
     }

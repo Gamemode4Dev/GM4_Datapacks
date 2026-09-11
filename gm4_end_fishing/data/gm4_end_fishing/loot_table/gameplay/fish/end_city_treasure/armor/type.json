@@ -37,9 +37,9 @@
           "name": "minecraft:iron_helmet"
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:enchant_with_levels",
+          "type": "minecraft:enchant_with_levels",
           "levels": {
             "min": 20,
             "max": 39,
@@ -48,7 +48,7 @@
           "options": "#minecraft:on_random_loot"
         },
         {
-          "function": "minecraft:set_damage",
+          "type": "minecraft:set_damage",
           "damage": {
             "min": 0.4,
             "max": 0.7

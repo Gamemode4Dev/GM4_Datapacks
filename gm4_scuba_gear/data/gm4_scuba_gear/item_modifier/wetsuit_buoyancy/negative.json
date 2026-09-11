@@ -1,5 +1,5 @@
 {
-  "function": "minecraft:set_attributes",
+  "type": "minecraft:set_attributes",
   "modifiers": [
     {
       "attribute": "minecraft:gravity",

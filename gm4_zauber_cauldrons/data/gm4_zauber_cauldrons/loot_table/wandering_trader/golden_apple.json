@@ -15,15 +15,14 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:emerald",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "min": 10,
-                                "max": 14
-                            }
+                    "modifier": {
+                        "type": "minecraft:set_count",
+                        "count": {
+                            "type": "minecraft:uniform",
+                            "min": 10,
+                            "max": 14
                         }
-                    ]
+                    }
                 }
             ]
         }

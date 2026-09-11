@@ -1,40 +1,38 @@
-[
-  {
-    "condition": "minecraft:any_of",
-    "terms": [
-      {
-        "condition": "minecraft:all_of",
-        "terms": [
-          {
-            "condition": "minecraft:location_check",
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:all_of",
+      "terms": [
+        {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "biomes": "#minecraft:is_badlands"
+          }
+        },
+        {
+          "type": "minecraft:random_chance",
+          "chance": 0.3
+        }
+      ]
+    },
+    {
+      "type": "minecraft:all_of",
+      "terms": [
+        {
+          "type": "minecraft:inverted",
+          "term": {
+            "type": "minecraft:location_check",
             "predicate": {
               "biomes": "#minecraft:is_badlands"
             }
-          },
-          {
-            "condition": "minecraft:random_chance",
-            "chance": 0.30
           }
-        ]
-      },
-      {
-        "condition": "minecraft:all_of",
-        "terms": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "biomes": "#minecraft:is_badlands"
-              }
-            }
-          },
-          {
-            "condition": "minecraft:random_chance",
-            "chance": 0.15
-          }
-        ]
-      }
-    ]
-  }
-]
+        },
+        {
+          "type": "minecraft:random_chance",
+          "chance": 0.15
+        }
+      ]
+    }
+  ]
+}

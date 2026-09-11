@@ -6,19 +6,19 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:player_head",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
                                 "minecraft:profile": "$band/copper_RETIRED"
                             }
                         },
                         {
-                            "function": "minecraft:set_custom_data",
+                            "type": "minecraft:set_custom_data",
                             "tag": "{gm4_metallurgy:{has_shamir:1b,metal:{type:'copper',amount:[12s],castable:1b},item:'obsidian_cast'}}"
                         },
                         {
-                            "function": "minecraft:set_name",
+                            "type": "minecraft:set_name",
                             "target": "item_name",
                             "name": {
                                 "translate": "item.gm4.metallurgy.obsidian_cast",
@@ -26,7 +26,7 @@
                             }
                         },
                         {
-                            "function": "minecraft:set_lore",
+                            "type": "minecraft:set_lore",
                             "mode": "append",
                             "lore": [
                                 {

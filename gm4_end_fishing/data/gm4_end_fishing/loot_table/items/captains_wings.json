@@ -6,15 +6,19 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:elytra",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/captains_wings"]}
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_end_fishing:item/captains_wings"
+                  ]
+                }
               }
             },
             {
-              "function": "minecraft:set_lore",
+              "type": "minecraft:set_lore",
               "mode": "append",
               "lore": [
                 {
@@ -32,7 +36,7 @@
               ]
             },
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
                 "min": 0,
                 "max": 0.005

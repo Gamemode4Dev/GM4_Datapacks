@@ -21,30 +21,31 @@
                     "value": "gm4_tower_structures:items/pirate_sword"
                 }
             ],
-            "functions": [
-                {
-                    "function": "minecraft:set_damage",
-                    "damage": {
-                        "min": 0,
-                        "max": 1
+            "condition": {
+                "type": "minecraft:all_of",
+                "terms": [
+                    {
+                        "type": "minecraft:killed_by_player"
+                    },
+                    {
+                        "type": "minecraft:table_bonus",
+                        "enchantment": "minecraft:looting",
+                        "chances": [
+                            0.085,
+                            0.095,
+                            0.105,
+                            0.115
+                        ]
                     }
+                ]
+            },
+            "modifier": {
+                "type": "minecraft:set_damage",
+                "damage": {
+                    "min": 0,
+                    "max": 1
                 }
-            ],
-            "conditions": [
-                {
-                    "condition": "minecraft:killed_by_player"
-                },
-                {
-                    "condition": "minecraft:table_bonus",
-                    "enchantment": "minecraft:looting",
-                    "chances": [
-                        0.085,
-                        0.095,
-                        0.105,
-                        0.115
-                    ]
-                }
-            ]
+            }
         }
     ]
 }

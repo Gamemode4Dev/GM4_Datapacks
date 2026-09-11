@@ -1,94 +1,97 @@
-[
-    {
-        "condition": "minecraft:any_of",
-        "terms": [
-            {
-                "condition": "minecraft:location_check",
-                "offsetX": 1,
-                "predicate": {
-                    "block": {
-                        "blocks": "#gm4_shapeless_portals:portal_block"
+{
+    "type": "minecraft:all_of",
+    "terms": [
+        {
+            "type": "minecraft:any_of",
+            "terms": [
+                {
+                    "type": "minecraft:location_check",
+                    "offsetX": 1,
+                    "predicate": {
+                        "block": {
+                            "blocks": "#gm4_shapeless_portals:portal_block"
+                        }
+                    }
+                },
+                {
+                    "type": "minecraft:location_check",
+                    "offsetX": 1,
+                    "predicate": {
+                        "block": {
+                            "blocks": "#minecraft:air"
+                        }
                     }
                 }
-            },
-            {
-                "condition": "minecraft:location_check",
-                "offsetX": 1,
-                "predicate": {
-                    "block": {
-                        "blocks": "#minecraft:air"
+            ]
+        },
+        {
+            "type": "minecraft:any_of",
+            "terms": [
+                {
+                    "type": "minecraft:location_check",
+                    "offsetX": -1,
+                    "predicate": {
+                        "block": {
+                            "blocks": "#gm4_shapeless_portals:portal_block"
+                        }
+                    }
+                },
+                {
+                    "type": "minecraft:location_check",
+                    "offsetX": -1,
+                    "predicate": {
+                        "block": {
+                            "blocks": "#minecraft:air"
+                        }
                     }
                 }
-            }
-        ]
-    },
-    {
-        "condition": "minecraft:any_of",
-        "terms": [
-            {
-                "condition": "minecraft:location_check",
-                "offsetX": -1,
-                "predicate": {
-                    "block": {
-                        "blocks": "#gm4_shapeless_portals:portal_block"
+            ]
+        },
+        {
+            "type": "minecraft:any_of",
+            "terms": [
+                {
+                    "type": "minecraft:location_check",
+                    "offsetY": 1,
+                    "predicate": {
+                        "block": {
+                            "blocks": "#gm4_shapeless_portals:portal_block"
+                        }
+                    }
+                },
+                {
+                    "type": "minecraft:location_check",
+                    "offsetY": 1,
+                    "predicate": {
+                        "block": {
+                            "blocks": "#minecraft:air"
+                        }
                     }
                 }
-            },
-            {
-                "condition": "minecraft:location_check",
-                "offsetX": -1,
-                "predicate": {
-                    "block": {
-                        "blocks": "#minecraft:air"
+            ]
+        },
+        {
+            "type": "minecraft:any_of",
+            "terms": [
+                {
+                    "type": "minecraft:location_check",
+                    "offsetY": -1,
+                    "predicate": {
+                        "block": {
+                            "blocks": "#gm4_shapeless_portals:portal_block"
+                        }
+                    }
+                },
+                {
+                    "type": "minecraft:location_check",
+                    "offsetY": -1,
+                    "predicate": {
+                        "block": {
+                            "blocks": "#minecraft:air"
+                        }
                     }
                 }
-            }
-        ]
-    },
-    {
-        "condition": "minecraft:any_of",
-        "terms": [
-            {
-                "condition": "minecraft:location_check",
-                "offsetY": 1,
-                "predicate": {
-                    "block": {
-                        "blocks": "#gm4_shapeless_portals:portal_block"
-                    }
-                }
-            },
-            {
-                "condition": "minecraft:location_check",
-                "offsetY": 1,
-                "predicate": {
-                    "block": {
-                        "blocks": "#minecraft:air"
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "condition": "minecraft:any_of",
-        "terms": [
-            {
-                "condition": "minecraft:location_check",
-                "offsetY": -1,
-                "predicate": {
-                    "block": {
-                        "blocks": "#gm4_shapeless_portals:portal_block"
-                    }
-                }
-            },
-            {
-                "condition": "minecraft:location_check",
-                "offsetY": -1,
-                "predicate": {
-                    "block": {
-                        "blocks": "#minecraft:air"
-                    }
-                }
-            }
-        ]
-    }
-]
+            ]
+        }
+    ]
+}

@@ -6,18 +6,14 @@
                 {
                     "type": "minecraft:loot_table",
                     "value": "gm4_zauber_cauldrons:items/enchanted_prismarine_shard",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": 3,
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:random_chance",
-                                    "chance": 0.125
-                                }
-                            ]
+                    "modifier": {
+                        "type": "minecraft:set_count",
+                        "count": 3,
+                        "condition": {
+                            "type": "minecraft:random_chance",
+                            "chance": 0.125
                         }
-                    ]
+                    }
                 }
             ]
         },
@@ -27,15 +23,14 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:emerald",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "min": 24,
-                                "max": 47
-                            }
+                    "modifier": {
+                        "type": "minecraft:set_count",
+                        "count": {
+                            "type": "minecraft:uniform",
+                            "min": 24,
+                            "max": 47
                         }
-                    ]
+                    }
                 }
             ]
         }

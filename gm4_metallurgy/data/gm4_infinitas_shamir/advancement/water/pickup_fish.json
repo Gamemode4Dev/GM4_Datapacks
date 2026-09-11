@@ -3,33 +3,36 @@
     "pickup_fish_mainhand": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
+        "player": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:inverted",
+              "term": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:type_specific/player": {
+                    "gamemode": [
+                      "creative"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "minecraft:type_specific/player": {
-                  "gamemode": [
-                    "creative"
+                "minecraft:entity_tags": {
+                  "all_of": [
+                    "gm4_infinitas_mainhand_water"
                   ]
                 }
               }
             }
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_infinitas_mainhand_water"
-                ]
-              }
-            }
-          }
-        ],
+          ]
+        },
         "item": {
           "items": [
             "minecraft:axolotl_bucket",
@@ -45,33 +48,36 @@
     "pickup_fish_offhand": {
       "trigger": "minecraft:filled_bucket",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
+        "player": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:inverted",
+              "term": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:type_specific/player": {
+                    "gamemode": [
+                      "creative"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "minecraft:type_specific/player": {
-                  "gamemode": [
-                    "creative"
+                "minecraft:entity_tags": {
+                  "all_of": [
+                    "gm4_infinitas_offhand_water"
                   ]
                 }
               }
             }
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_infinitas_offhand_water"
-                ]
-              }
-            }
-          }
-        ],
+          ]
+        },
         "item": {
           "items": [
             "minecraft:axolotl_bucket",

@@ -13,34 +13,32 @@
           "type": "item",
           "name": "minecraft:wet_sponge",
           "weight": 50,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:trident",
           "weight": 1,
-          "functions": [
-            {
-              "function": "set_damage",
-              "damage": {
-                "min": 0,
-                "max": 0.01
-              }
+          "modifier": {
+            "type": "set_damage",
+            "damage": {
+              "min": 0,
+              "max": 0.01
             }
-          ]
+          }
         }
       ]
     },
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 0,
         "max": 2
       },
@@ -49,48 +47,46 @@
           "type": "item",
           "name": "minecraft:emerald",
           "weight": 20,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:diamond",
           "weight": 10,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:nautilus_shell",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
             }
-          ]
+          }
         }
       ]
     },
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 1,
         "max": 3
       },
@@ -99,216 +95,202 @@
           "type": "item",
           "name": "minecraft:tube_coral",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:tube_coral_fan",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:tube_coral_block",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:brain_coral",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:brain_coral_fan",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:brain_coral_block",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:bubble_coral",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:bubble_coral_fan",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:bubble_coral_block",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:fire_coral",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:fire_coral_fan",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:fire_coral_block",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:horn_coral",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:horn_coral_fan",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:horn_coral_block",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
             }
-          ]
+          }
         }
       ]
     },
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 4,
         "max": 8
       },
@@ -317,48 +299,46 @@
           "type": "item",
           "name": "minecraft:sand",
           "weight": 15,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:gravel",
           "weight": 20,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:clay_ball",
           "weight": 15,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 5,
-                "max": 9
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 5,
+              "max": 9
             }
-          ]
+          }
         }
       ]
     },
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 2,
         "max": 4
       },
@@ -367,90 +347,85 @@
           "type": "item",
           "name": "minecraft:gunpowder",
           "weight": 10,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 5
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 5
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:lapis_lazuli",
           "weight": 10,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 4,
-                "max": 12
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 4,
+              "max": 12
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:gold_nugget",
           "weight": 10,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:iron_nugget",
           "weight": 10,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 4
-              }
+          "modifier": {
+            "type": "set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:rotten_flesh",
           "weight": 5,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 5
-              }
+          "modifier": {
+            "type": "set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 5
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:bone",
           "weight": 5,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 5
-              }
+          "modifier": {
+            "type": "set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 5
             }
-          ]
+          }
         }
       ]
     },
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 0,
         "max": 1
       },
@@ -459,22 +434,20 @@
           "type": "item",
           "name": "minecraft:book",
           "weight": 2,
-          "functions": [
-            {
-              "function": "minecraft:enchant_randomly"
-            }
-          ]
+          "modifier": {
+            "type": "minecraft:enchant_randomly"
+          }
         },
         {
           "type": "item",
           "name": "minecraft:iron_shovel",
           "weight": 1,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly"
+              "type": "minecraft:enchant_randomly"
             },
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
                 "min": 0,
                 "max": 0.5
@@ -486,12 +459,12 @@
           "type": "item",
           "name": "minecraft:fishing_rod",
           "weight": 1,
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly"
+              "type": "minecraft:enchant_randomly"
             },
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
                 "min": 0,
                 "max": 0.4
@@ -508,57 +481,53 @@
           "type": "item",
           "name": "minecraft:cod",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 5
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 5
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:salmon",
           "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 5
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 5
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:tropical_fish",
           "weight": 1,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
             }
-          ]
+          }
         },
         {
           "type": "item",
           "name": "minecraft:pufferfish",
           "weight": 3,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
             }
-          ]
+          }
         }
       ]
     }

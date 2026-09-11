@@ -6,19 +6,17 @@
         {
           "type": "minecraft:loot_table",
           "value": "gm4_guidebook:items/guidebook",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$count"
-                },
-                "score": "gm4_guide"
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "$count"
+              },
+              "score": "gm4_guide"
             }
-          ]
+          }
         }
       ]
     }

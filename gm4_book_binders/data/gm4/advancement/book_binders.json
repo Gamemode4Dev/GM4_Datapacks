@@ -3,7 +3,11 @@
     "icon": {
       "id": "lectern",
       "components": {
-        "minecraft:custom_model_data": {"strings":["gm4_book_binders:gui/advancement/book_binders"]}
+        "minecraft:custom_model_data": {
+          "strings": [
+            "gm4_book_binders:gui/advancement/book_binders"
+          ]
+        }
       }
     },
     "title": {
@@ -21,12 +25,10 @@
     "gm4_place_book_binder": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:block_state_property",
-            "block": "minecraft:lectern"
-          }
-        ]
+        "location": {
+          "type": "minecraft:block_state_property",
+          "block": "minecraft:lectern"
+        }
       }
     }
   }

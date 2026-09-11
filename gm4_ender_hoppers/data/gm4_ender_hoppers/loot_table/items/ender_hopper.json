@@ -7,20 +7,24 @@
         {
           "type": "item",
           "name": "minecraft:player_head",
-          "functions": [
+          "modifier": [
             {
-              "function": "set_components",
+              "type": "set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_ender_hoppers:item/ender_hopper"]},
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_ender_hoppers:item/ender_hopper"
+                  ]
+                },
                 "minecraft:profile": "$ender_hopper"
               }
             },
             {
-              "function": "set_custom_data",
+              "type": "set_custom_data",
               "tag": "{gm4_machines:{id:'ender_hopper'}}"
             },
             {
-              "function": "set_name",
+              "type": "set_name",
               "name": [
                 {
                   "translate": "block.gm4.ender_hopper",

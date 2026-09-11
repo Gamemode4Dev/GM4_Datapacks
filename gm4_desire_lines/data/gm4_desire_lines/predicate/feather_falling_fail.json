@@ -1,10 +1,10 @@
 {
-  "condition": "minecraft:any_of",
+  "type": "minecraft:any_of",
   "terms": [
     {
-      "condition": "minecraft:inverted",
+      "type": "minecraft:inverted",
       "term": {
-        "condition": "minecraft:entity_properties",
+        "type": "minecraft:entity_properties",
         "entity": "this",
         "predicate": {
           "equipment": {
@@ -22,10 +22,10 @@
       }
     },
     {
-      "condition": "minecraft:all_of",
+      "type": "minecraft:all_of",
       "terms": [
         {
-          "condition": "minecraft:entity_properties",
+          "type": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
             "equipment": {
@@ -43,16 +43,16 @@
           }
         },
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.7
         }
       ]
     },
     {
-      "condition": "minecraft:all_of",
+      "type": "minecraft:all_of",
       "terms": [
         {
-          "condition": "minecraft:entity_properties",
+          "type": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
             "equipment": {
@@ -70,16 +70,16 @@
           }
         },
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.5
         }
       ]
     },
     {
-      "condition": "minecraft:all_of",
+      "type": "minecraft:all_of",
       "terms": [
         {
-          "condition": "minecraft:entity_properties",
+          "type": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
             "equipment": {
@@ -97,16 +97,16 @@
           }
         },
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.3
         }
       ]
     },
     {
-      "condition": "minecraft:all_of",
+      "type": "minecraft:all_of",
       "terms": [
         {
-          "condition": "minecraft:entity_properties",
+          "type": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
             "equipment": {
@@ -127,7 +127,7 @@
           }
         },
         {
-          "condition": "minecraft:random_chance",
+          "type": "minecraft:random_chance",
           "chance": 0.1
         }
       ]

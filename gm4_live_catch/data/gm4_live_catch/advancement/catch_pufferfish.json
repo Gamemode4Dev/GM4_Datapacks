@@ -3,7 +3,10 @@
     "requirement": {
       "trigger": "minecraft:fishing_rod_hooked",
       "conditions": {
-        "entity": [],
+        "entity": {
+          "type": "minecraft:all_of",
+          "terms": []
+        },
         "item": {
           "items": [
             "minecraft:pufferfish"
