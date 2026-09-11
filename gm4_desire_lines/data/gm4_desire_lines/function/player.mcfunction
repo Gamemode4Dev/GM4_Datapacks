@@ -17,4 +17,4 @@ function #gm4_desire_lines:expansion
 # | Instead, modify $probability by addition or subtraction. Do NOT subtract max_int, as that may cause over or underflows.
 
 # trigger block conversion
-execute if predicate {type: "minecraft:random_chance", chance: {type: "minecraft:score", target: {type: "minecraft:fixed", name: "$probability"}, score: "gm4_desire_lines", scale: 0.01}} at @s run function gm4_desire_lines:path
+execute if predicate {type: "minecraft:random_chance", chance: {type: "minecraft:mul", inputs:[{type: "minecraft:from_int", input: {type: "minecraft:score", target: {type: "minecraft:fixed", name: "$probability"}, score: "gm4_desire_lines"}}, 0.01]}} at @s run function gm4_desire_lines:path
