@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gm4_scuba_gear:flippers"
+        "recipes": "gm4_scuba_gear:flippers"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

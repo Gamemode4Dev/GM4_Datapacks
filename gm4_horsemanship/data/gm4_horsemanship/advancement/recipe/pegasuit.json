@@ -23,7 +23,7 @@
         },
         "has_the_recipe": {
             "conditions": {
-                "recipe": "gm4_horsemanship:horse_wings"
+                "recipes": "gm4_horsemanship:horse_wings"
             },
             "trigger": "minecraft:recipe_unlocked"
         }

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gm4_scuba_gear:wetsuit"
+        "recipes": "gm4_scuba_gear:wetsuit"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

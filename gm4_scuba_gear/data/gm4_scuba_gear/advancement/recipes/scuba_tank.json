@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gm4_scuba_gear:scuba_tank"
+        "recipes": "gm4_scuba_gear:scuba_tank"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

@@ -81,7 +81,7 @@ def beet_default(ctx: Context):
                     "has_the_recipe": {
                     "trigger": "minecraft:recipe_unlocked",
                         "conditions": {
-                            "recipe": recipe_path
+                            "recipes": recipe_path
                         }
                     },
                     "has_materials": {
