@@ -282,7 +282,7 @@ def versioned_advancements(ctx: Context, ver: Version, targets: list[str], stric
                 conditions["player"] = predicates[0]
             else:
                 conditions["player"] = {
-                    "type": "minecraft:sequence",
+                    "type": "minecraft:all_of",
                     "terms": predicates,
                 }
 
