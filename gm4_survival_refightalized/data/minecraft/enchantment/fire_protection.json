@@ -49,11 +49,11 @@
                             "predicate": {
                                 "tags": [
                                     {
-                                        "id": "minecraft:is_fire",
+                                        "id": "#minecraft:is_fire",
                                         "expected": true
                                     },
                                     {
-                                        "id": "minecraft:bypasses_invulnerability",
+                                        "id": "#minecraft:bypasses_invulnerability",
                                         "expected": false
                                     }
                                 ]

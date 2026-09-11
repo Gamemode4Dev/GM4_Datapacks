@@ -34,7 +34,7 @@
                     "predicate": {
                         "tags": [
                             {
-                                "id": "minecraft:bypasses_invulnerability",
+                                "id": "#minecraft:bypasses_invulnerability",
                                 "expected": false
                             }
                         ]
