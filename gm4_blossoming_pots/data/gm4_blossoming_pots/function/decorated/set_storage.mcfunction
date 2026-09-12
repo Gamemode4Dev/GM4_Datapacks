@@ -1603,7 +1603,7 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:cherry_sapling 
     ]\
 }
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:pale_oak_sapling set value {\
-    place_sound:"minecraft:block.cherry_sapling.place",\
+    place_sound:"minecraft:item.bone_meal.use",\
     maximum:2,\
     1:[\
         {\
