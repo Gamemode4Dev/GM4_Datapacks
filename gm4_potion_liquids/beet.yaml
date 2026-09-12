@@ -12,7 +12,6 @@ pipeline:
   - gm4_liquid_tanks.override_formatting
   - gm4_liquid_tanks.bolt_liquid_wrappers
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_brewing
 
 meta:
   bolt:
@@ -22,7 +21,6 @@ meta:
     versioning:
       required:
         gm4_liquid_tanks: 3.1.0
-        lib_brewing: 1.5.0
     model_data:
       - item: potion
         reference: gui/advancement/potion_liquids
