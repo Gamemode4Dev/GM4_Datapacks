@@ -40,7 +40,14 @@
           ]
         },
         "minecraft:potion_contents": {
-          "custom_color": 11985402
+          "custom_color": 11985402,
+          "custom_effects": [
+            {
+              "id": "minecraft:night_vision",
+              "amplifier": 12,
+              "duration": 1
+            }
+          ]
         },
         "minecraft:tooltip_display": {
           "hidden_components": [
