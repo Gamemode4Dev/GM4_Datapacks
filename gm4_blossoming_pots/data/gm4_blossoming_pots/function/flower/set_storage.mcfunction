@@ -328,6 +328,54 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pale_oak_leaves se
         }\
     ]\
 }
+data modify storage gm4_blossoming_pots:flower_pots minecraft:red_poplar_leaves set value {\
+    place_sound:"minecraft:block.poplar_leaves.place",\
+    display:[\
+        {\
+            block_state:{\
+                id:"minecraft:red_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.25f,-0.125f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:flower_pots minecraft:orange_poplar_leaves set value {\
+    place_sound:"minecraft:block.poplar_leaves.place",\
+    display:[\
+        {\
+            block_state:{\
+                id:"minecraft:orange_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.25f,-0.125f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:flower_pots minecraft:yellow_poplar_leaves set value {\
+    place_sound:"minecraft:block.poplar_leaves.place",\
+    display:[\
+        {\
+            block_state:{\
+                id:"minecraft:yellow_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.25f,-0.125f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
 data modify storage gm4_blossoming_pots:flower_pots minecraft:azalea_leaves set value {\
     place_sound:"minecraft:block.azalea_leaves.place",\
     display:[\
@@ -404,6 +452,22 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:bush set value {\
                 translation:[-0.39f,-0.2565f,-0.39f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.78f,0.78f,0.78f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:flower_pots minecraft:red_shrub set value {\
+    place_sound:"minecraft:block.red_shrub.place",\
+    display:[\
+        {\
+            block_state:{\
+                id:"minecraft:red_shrub"\
+            },\
+            transformation:{\
+                translation:[-0.3f,-0.2565f,-0.3f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.6f,0.6f,0.6f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\

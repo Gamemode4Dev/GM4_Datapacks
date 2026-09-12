@@ -1171,6 +1171,234 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pale_oak_leaves
         }\
     ]\
 }
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:red_poplar_leaves set value {\
+    place_sound:"minecraft:block.poplar_leaves.place",\
+    maximum:3,\
+    1:[\
+        {\
+            block_state:{\
+                id:"minecraft:red_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    2:[\
+        {\
+            block_state:{\
+                id:"minecraft:red_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                id:"minecraft:red_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    3:[\
+        {\
+            block_state:{\
+                id:"minecraft:red_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                id:"minecraft:red_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                id:"minecraft:red_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:orange_poplar_leaves set value {\
+    place_sound:"minecraft:block.poplar_leaves.place",\
+    maximum:3,\
+    1:[\
+        {\
+            block_state:{\
+                id:"minecraft:orange_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    2:[\
+        {\
+            block_state:{\
+                id:"minecraft:orange_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                id:"minecraft:orange_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    3:[\
+        {\
+            block_state:{\
+                id:"minecraft:orange_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                id:"minecraft:orange_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                id:"minecraft:orange_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:yellow_poplar_leaves set value {\
+    place_sound:"minecraft:block.poplar_leaves.place",\
+    maximum:3,\
+    1:[\
+        {\
+            block_state:{\
+                id:"minecraft:yellow_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    2:[\
+        {\
+            block_state:{\
+                id:"minecraft:yellow_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                id:"minecraft:yellow_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    3:[\
+        {\
+            block_state:{\
+                id:"minecraft:yellow_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,0.7435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                id:"minecraft:yellow_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,1.4935f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        },\
+        {\
+            block_state:{\
+                id:"minecraft:yellow_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.375f,2.2435f,-0.375f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.75f,0.75f,0.75f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea_leaves set value {\
     place_sound:"minecraft:block.azalea_leaves.place",\
     maximum:3,\
@@ -1636,6 +1864,40 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:pale_oak_saplin
         }\
     ]\
 }
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:poplar_sapling set value {\
+    place_sound:"minecraft:item.bone_meal.use",\
+    maximum:2,\
+    1:[\
+        {\
+            block_state:{\
+                id:"minecraft:poplar_sapling"\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ],\
+    2:[\
+        {\
+            block_state:{\
+                id:"minecraft:poplar_sapling",\
+                properties:{\
+                    stage:"1"\
+                }\
+            },\
+            transformation:{\
+                translation:[-0.5f,0.681f,-0.5f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            },\
+            Rotation:[0f,0f]\
+        }\
+    ]\
+}
 
 data modify storage gm4_blossoming_pots:decorated_pots minecraft:azalea set value {\
     place_sound:"minecraft:block.azalea.place",\
@@ -1856,6 +2118,23 @@ data modify storage gm4_blossoming_pots:decorated_pots minecraft:bush set value 
                 translation:[-0.5f,0.7435f,-0.5f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[1f,1f,1f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:decorated_pots minecraft:red_shrub set value {\
+    place_sound:"minecraft:minecraft:block.red_shrub.place",\
+    maximum:1,\
+    1:[\
+        {\
+            block_state:{\
+                id:"minecraft:red_shrub"\
+            },\
+            transformation:{\
+                translation:[-0.4325f,0.6895625f,-0.4325f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.863f,0.863f,0.863f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
