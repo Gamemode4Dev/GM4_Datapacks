@@ -1,5 +1,2 @@
-require:
-  - pfb_biome_extensions.load_carver_tags
-
 data_pack:
   load: .
