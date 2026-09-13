@@ -85,6 +85,7 @@ jobs:
           name: .beet_cache
           path: ${{ github.workspace }}/.beet_cache/
           include-hidden-files: true
+          retention-days: 2
 
       - name: Rename log file
         run: mv ${{ github.workspace }}/logs/summary_logs.pkl ${{ github.workspace }}/logs/build_log.pkl
@@ -95,6 +96,7 @@ jobs:
         with:
           path: ${{ github.workspace }}/logs/build_log.pkl
           archive: false
+          retention-days: 2
 
   test:
     strategy:
@@ -198,6 +200,7 @@ jobs:
         with:
           path: ${{ github.workspace }}/logs/publish_${{ matrix.platform }}_log.pkl
           archive: false
+          retention-days: 2
 
   summarize:
     runs-on: ubuntu-24.04
