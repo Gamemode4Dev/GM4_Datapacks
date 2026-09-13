@@ -3,8 +3,6 @@
 # at @s
 # run from advancement place_lightning_rod
 
-say place
-
 # revoke advancement
 advancement revoke @s only gm4_lightning_in_a_bottle:place_lightning_rod
 
