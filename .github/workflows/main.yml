@@ -19,7 +19,6 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Checkout release branch
-        if: github.event_name != 'pull_request'
         uses: actions/checkout@v7
         with:
           ref: release
@@ -78,6 +77,24 @@ jobs:
           directory: release
           branch: release
 
+      - name: Upload .beet_cache as artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: .beet_cache
+          path: ${{ github.workspace }}/.beet_cache/
+          include-hidden-files: true
+          retention-days: 2
+
+      - name: Rename log file
+        run: mv ${{ github.workspace }}/logs/summary_logs.pkl ${{ github.workspace }}/logs/build_log.pkl
+
+      - name: Upload logs as artifact
+        uses: actions/upload-artifact@v7
+        with:
+          path: ${{ github.workspace }}/logs/build_log.pkl
+          archive: false
+          retention-days: 2
+
   test:
     strategy:
       fail-fast: false
@@ -135,3 +152,75 @@ jobs:
         with:
           name: 'Test world in ${{ matrix.version }} for ${{ github.sha }}'
           path: ${{ github.workspace }}/world/
+
+  publish:
+    runs-on: ubuntu-24.04
+    if: github.event_name != 'pull_request'
+    needs: build
+    strategy:
+      matrix:
+        platform: [modrinth, smithed]
+    # concurrency:
+    #   group: release
+    name: 'publish-${{ matrix.platform }}'
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Checkout release branch
+        uses: actions/checkout@v7
+        with:
+          ref: release
+          path: release
+
+      - name: Restore .beet_cache from artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: .beet_cache
+          path: ${{ github.workspace }}/.beet_cache
+
+      # TODO use cache from build? 
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Publish all modules
+        run: uv run beet -p beet-publish.yaml -l ${{ env.LOG_LEVEL }} -s meta.gm4.publish_to=${{ matrix.platform }} build
+        env:
+          BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
+          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+
+      - name: Rename log file
+        run: mv ${{ github.workspace }}/logs/summary_logs.pkl ${{ github.workspace }}/logs/publish_${{ matrix.platform }}_log.pkl
+
+      - name: Upload logs as artifact
+        uses: actions/upload-artifact@v7
+        with:
+          path: ${{ github.workspace }}/logs/publish_${{ matrix.platform }}_log.pkl
+          archive: false
+          retention-days: 2
+
+  summarize:
+    runs-on: ubuntu-24.04
+    needs: [build, publish]
+    if: ${{ always() }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Restore .beet_cache from artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: .beet_cache
+          path: ${{ github.workspace }}/.beet_cache
+
+      - name: Restore log files from artifacts
+        uses: actions/download-artifact@v8
+        with:
+          pattern: '*_log.pkl'
+          path: ${{ github.workspace }}/logs
+          merge-multiple: true
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Summarize build logs
+        run: uv run beet -p beet-summarize.yaml -s meta.gm4.summarize_type=${{ github.event_name != 'pull_request' && 'release' || 'pull_request' }} build

@@ -1,0 +1,2 @@
+pipeline: 
+  - gm4.plugins.annotations.load_and_summarize
