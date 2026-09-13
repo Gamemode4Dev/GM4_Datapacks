@@ -16,9 +16,19 @@
                             "type": "minecraft:location_check",
                             "predicate": {
                                 "block": {
-                                    "blocks": [
-                                        "minecraft:brewing_stand"
-                                    ]
+                                    "blocks": "minecraft:brewing_stand"
+                                }
+                            }
+                        },
+                        {
+                            "type": "minecraft:location_check",
+                            "offsetY": 1,
+                            "predicate": {
+                                "block": {
+                                    "blocks": "#minecraft:lightning_rods",
+                                    "state": {
+                                        "facing": "up"
+                                    }
                                 }
                             }
                         }
@@ -28,6 +38,6 @@
         }
     },
     "rewards": {
-        "function": "gm4_lightning_in_a_bottle:brewing_stand/texture_connector/force_update"
+        "function": "gm4_lightning_in_a_bottle:brewing_stand/texture_connector/place_brewing_stand"
     }
 }
