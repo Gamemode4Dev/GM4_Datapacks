@@ -6,9 +6,9 @@
                 {
                     "type": "minecraft:item",
                     "name": "{{bottle_item_id}}",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:item/bottled_magicol/{{weather_modifier}}"]},
                                 "minecraft:potion_contents": {
@@ -22,11 +22,11 @@
                             }
                         },
                         {
-                            "function": "minecraft:set_custom_data",
+                            "type": "minecraft:set_custom_data",
                             "tag": "{gm4_zauber_cauldrons:{item:\"bottled_magicol\",color:\"{{color}}\",weather_modifier:\"{{weather_modifier}}\",bottle:{multi_use:0b}}}"
                         },
                         {
-                            "function": "minecraft:set_name",
+                            "type": "minecraft:set_name",
                             "name": {
                                 "translate": "item.gm4.zauber_cauldrons.bottled_magicol.{{translate_name}}",
                                 "fallback": "{{translate_fallback}}",
@@ -34,30 +34,28 @@
                             }
                         },
                         {
-                            "function": "minecraft:set_name",
+                            "type": "minecraft:set_name",
                             "entity": "this",
                             "name": {
                                 "translate": "item.gm4.zauber_cauldrons.multi_use_bottle.bottled_magicol.{{translate_name}}",
                                 "fallback": "{{soulution_translate_fallback}}",
                                 "italic": false
                             },
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:value_check",
-                                    "value": {
-                                        "type": "minecraft:score",
-                                        "target": {
-                                            "type": "minecraft:fixed",
-                                            "name": "$has_soul_fire_heatsource"
-                                        },
-                                        "score": "gm4_zc_data"
+                            "condition": {
+                                "type": "minecraft:int_value_check",
+                                "value": {
+                                    "type": "minecraft:score",
+                                    "target": {
+                                        "type": "minecraft:fixed",
+                                        "name": "$has_soul_fire_heatsource"
                                     },
-                                    "range": 1
-                                }
-                            ]
+                                    "score": "gm4_zc_data"
+                                },
+                                "test": 1
+                            }
                         },
                         {
-                            "function": "minecraft:copy_custom_data",
+                            "type": "minecraft:copy_custom_data",
                             "source": {
                                 "type": "minecraft:storage",
                                 "source": "gm4_zauber_cauldrons:blueprint/item/multi_sip"
@@ -69,43 +67,39 @@
                                     "op": "replace"
                                 }
                             ],
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:value_check",
-                                    "value": {
-                                        "type": "minecraft:score",
-                                        "target": {
-                                            "type": "minecraft:fixed",
-                                            "name": "$has_soul_fire_heatsource"
-                                        },
-                                        "score": "gm4_zc_data"
+                            "condition": {
+                                "type": "minecraft:int_value_check",
+                                "value": {
+                                    "type": "minecraft:score",
+                                    "target": {
+                                        "type": "minecraft:fixed",
+                                        "name": "$has_soul_fire_heatsource"
                                     },
-                                    "range": 1
-                                }
-                            ]
+                                    "score": "gm4_zc_data"
+                                },
+                                "test": 1
+                            }
                         },
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
                                 "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:item/bottled_magicol_soulution/{{weather_modifier}}"]}
                             },
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:value_check",
-                                    "value": {
-                                        "type": "minecraft:score",
-                                        "target": {
-                                            "type": "minecraft:fixed",
-                                            "name": "$has_soul_fire_heatsource"
-                                        },
-                                        "score": "gm4_zc_data"
+                            "condition": {
+                                "type": "minecraft:int_value_check",
+                                "value": {
+                                    "type": "minecraft:score",
+                                    "target": {
+                                        "type": "minecraft:fixed",
+                                        "name": "$has_soul_fire_heatsource"
                                     },
-                                    "range": 1
-                                }
-                            ]
+                                    "score": "gm4_zc_data"
+                                },
+                                "test": 1
+                            }
                         },
                         {
-                            "function": "minecraft:set_lore",
+                            "type": "minecraft:set_lore",
                             "mode": "append",
                             "entity": "this",
                             "lore": [
@@ -142,23 +136,21 @@
                                     }
                                 ]
                             ],
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:value_check",
-                                    "value": {
-                                        "type": "minecraft:score",
-                                        "target": {
-                                            "type": "minecraft:fixed",
-                                            "name": "$has_soul_fire_heatsource"
-                                        },
-                                        "score": "gm4_zc_data"
+                            "condition": {
+                                "type": "minecraft:int_value_check",
+                                "value": {
+                                    "type": "minecraft:score",
+                                    "target": {
+                                        "type": "minecraft:fixed",
+                                        "name": "$has_soul_fire_heatsource"
                                     },
-                                    "range": 1
-                                }
-                            ]
+                                    "score": "gm4_zc_data"
+                                },
+                                "test": 1
+                            }
                         },
                         {
-                            "function": "minecraft:set_lore",
+                            "type": "minecraft:set_lore",
                             "mode": "append",
                             "lore": [
                                 {

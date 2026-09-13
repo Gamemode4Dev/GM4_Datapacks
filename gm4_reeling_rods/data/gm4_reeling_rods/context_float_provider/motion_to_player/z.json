@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:mul",
+  "inputs": [
+    0.1,
+    {
+      "type": "minecraft:sub",
+      "left": {
+        "type": "minecraft:storage",
+        "storage": "gm4_reeling_rods:temp",
+        "path": "player_data.Pos[2]"
+      },
+      "right": {
+        "type": "minecraft:storage",
+        "storage": "gm4_reeling_rods:temp",
+        "path": "position[2]"
+      }
+    }
+  ]
+}

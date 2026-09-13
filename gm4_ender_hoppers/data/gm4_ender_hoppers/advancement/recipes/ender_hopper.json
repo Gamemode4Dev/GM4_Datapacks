@@ -4,13 +4,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_ender_hoppers:ender_hopper"
+        "recipes": "gm4_ender_hoppers:ender_hopper"
       }
     },
     "has_the_minecart_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_ender_hoppers:ender_hopper_minecart"
+        "recipes": "gm4_ender_hoppers:ender_hopper_minecart"
       }
     },
     "has_materials": {

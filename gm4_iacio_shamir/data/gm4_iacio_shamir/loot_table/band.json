@@ -6,19 +6,23 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "gm4_metallurgy:barium_band",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
-								"minecraft:custom_model_data": {"strings":["gm4_iacio_shamir:shamir/iacio"]}
+								"minecraft:custom_model_data": {
+									"strings": [
+										"gm4_iacio_shamir:shamir/iacio"
+									]
+								}
 							}
 						},
 						{
-							"function": "minecraft:set_custom_data",
+							"type": "minecraft:set_custom_data",
 							"tag": "{gm4_metallurgy:{stored_shamir:'iacio'}}"
 						},
 						{
-							"function": "minecraft:set_lore",
+							"type": "minecraft:set_lore",
 							"mode": "append",
 							"lore": [
 								{

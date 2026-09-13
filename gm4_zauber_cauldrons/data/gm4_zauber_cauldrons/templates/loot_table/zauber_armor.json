@@ -6,11 +6,8 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:golden_{{piece}}",
-                    "functions": [
-                        {
-                            "function": "minecraft:reference",
-                            "name": "gm4_zauber_cauldrons:armor/{{piece}}/{{flavor}}"
-                        }
+                    "modifier": [
+                        "gm4_zauber_cauldrons:armor/{{piece}}/{{flavor}}"
                     ]
                 }
             ]

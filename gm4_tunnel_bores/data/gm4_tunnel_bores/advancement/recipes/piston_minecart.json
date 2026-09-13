@@ -4,13 +4,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_tunnel_bores:piston_minecart"
+        "recipes": "gm4_tunnel_bores:piston_minecart"
       }
     },
     "has_the_minecart_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_tunnel_bores:piston_minecart_from_furnace_minecart"
+        "recipes": "gm4_tunnel_bores:piston_minecart_from_furnace_minecart"
       }
     },
     "has_materials": {

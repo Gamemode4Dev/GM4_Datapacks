@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#minecraft:vegetal_decoration/in_overworld",
+      "required": false
+    },
+    "minecraft:glow_lichen",
+    "minecraft:trees_dappled_forest",
+    "minecraft:brown_mushroom_dappled_forest",
+    "minecraft:patch_red_shrub",
+    "minecraft:patch_grass_forest"
+  ]
+}

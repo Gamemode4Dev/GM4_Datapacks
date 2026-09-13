@@ -7,9 +7,9 @@
 				{
 					"type": "minecraft:item",
 					"name": "minecraft:oak_sapling",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_name",
+							"type": "minecraft:set_name",
 							"target": "item_name",
 							"name": {
 								"text": "Apple Tree Sapling",
@@ -17,7 +17,7 @@
 							}
 						},
 						{
-							"function": "minecraft:set_nbt",
+							"type": "minecraft:set_nbt",
 							"tag": "{gm4_trees:{item:{id:\"sapling\",type:\"apple\"}}}"
 						}
 					]

@@ -1,5 +1,5 @@
 {
-  "function": "minecraft:set_components",
+  "type": "minecraft:set_components",
   "components": {
     "minecraft:max_stack_size": 1
   }

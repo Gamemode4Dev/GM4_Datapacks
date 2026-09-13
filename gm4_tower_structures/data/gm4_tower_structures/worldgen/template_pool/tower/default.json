@@ -20,7 +20,7 @@
                     "block": "minecraft:stone",
                     "probability": 0.08
                   },
-                  "output_state": { "Name": "minecraft:cracked_stone_bricks" }
+                  "output_state": { "id": "minecraft:cracked_stone_bricks" }
                 },
                 {
                   "location_predicate": { "predicate_type": "minecraft:always_true" },
@@ -29,7 +29,7 @@
                     "block": "minecraft:stone",
                     "probability": 0.16
                   },
-                  "output_state": { "Name": "minecraft:cobblestone" }
+                  "output_state": { "id": "minecraft:cobblestone" }
                 },
                 {
                   "location_predicate": { "predicate_type": "minecraft:always_true" },
@@ -38,7 +38,7 @@
                     "block": "minecraft:stone",
                     "probability": 0.22
                   },
-                  "output_state": { "Name": "minecraft:andesite" }
+                  "output_state": { "id": "minecraft:andesite" }
                 },
                 {
                   "location_predicate": { "predicate_type": "minecraft:always_true" },
@@ -47,7 +47,7 @@
                     "block": "minecraft:stone",
                     "probability": 0.12
                   },
-                  "output_state": { "Name": "minecraft:polished_andesite" }
+                  "output_state": { "id": "minecraft:polished_andesite" }
                 }
               ]
             }
@@ -127,7 +127,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.2
                   },
-                  "output_state": { "Name": "minecraft:cracked_stone_bricks" }
+                  "output_state": { "id": "minecraft:cracked_stone_bricks" }
                 },
                 {
                   "location_predicate": { "predicate_type": "minecraft:always_true" },
@@ -136,7 +136,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.07
                   },
-                  "output_state": { "Name": "minecraft:polished_andesite" }
+                  "output_state": { "id": "minecraft:polished_andesite" }
                 },
                 {
                   "location_predicate": { "predicate_type": "minecraft:always_true" },
@@ -145,7 +145,7 @@
                     "block": "minecraft:cobblestone",
                     "probability": 0.04
                   },
-                  "output_state": { "Name": "minecraft:stone" }
+                  "output_state": { "id": "minecraft:stone" }
                 },
                 {
                   "location_predicate": { "predicate_type": "minecraft:always_true" },
@@ -154,7 +154,7 @@
                     "block": "minecraft:cobblestone",
                     "probability": 0.15
                   },
-                  "output_state": { "Name": "minecraft:gravel" }
+                  "output_state": { "id": "minecraft:gravel" }
                 },
                 {
                   "location_predicate": { "predicate_type": "minecraft:always_true" },
@@ -163,7 +163,7 @@
                     "block": "minecraft:cobblestone",
                     "probability": 0.87
                   },
-                  "output_state": { "Name": "minecraft:andesite" }
+                  "output_state": { "id": "minecraft:andesite" }
                 }
               ]
             }

@@ -10,21 +10,24 @@
           "name": "minecraft:diorite"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        },
-        {
-          "condition": "minecraft:inverted",
-          "term": {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:tnt"
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:survives_explosion"
+          },
+          {
+            "type": "minecraft:inverted",
+            "term": {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:entity_type": "minecraft:tnt"
+              }
             }
           }
-        }
-      ]
+        ]
+      }
     },
     {
       "rolls": 1.0,
@@ -36,32 +39,26 @@
             {
               "type": "minecraft:loot_table",
               "value": "gm4_metallurgy:thorianite_lump",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.1
-                }
-              ]
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.1
+              }
             },
             {
               "type": "minecraft:item",
               "name": "minecraft:diorite",
-              "conditions": [
-                {
-                  "condition": "minecraft:survives_explosion"
-                }
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "minecraft:entity_type": "minecraft:tnt"
+              "condition": {
+                "type": "minecraft:survives_explosion"
               }
             }
-          ]
+          ],
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_type": "minecraft:tnt"
+            }
+          }
         }
       ]
     }

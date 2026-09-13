@@ -10,7 +10,7 @@ execute unless score $curr_health gm4_mu_data = @s gm4_mu_data run function gm4_
 # no nearby players
 execute unless score @s gm4_mu_timer matches 1.. unless entity @a[gamemode=!spectator,distance=..7] run return 0
 # otherwise 40% chance to start attack (60% to return and not use it)
-execute unless score @s gm4_mu_timer matches 1.. if entity @a[gamemode=!spectator,distance=..7] if predicate {condition:"minecraft:random_chance",chance:0.6} run return 0
+execute unless score @s gm4_mu_timer matches 1.. if entity @a[gamemode=!spectator,distance=..7] if predicate {type:"minecraft:random_chance",chance:0.6} run return 0
 
 scoreboard players add @s gm4_mu_timer 1
 scoreboard players set @s[scores={gm4_mu_timer=20..}] gm4_mu_timer 0

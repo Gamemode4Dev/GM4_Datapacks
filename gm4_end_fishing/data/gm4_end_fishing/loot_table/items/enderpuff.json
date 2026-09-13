@@ -6,9 +6,9 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:poisonous_potato",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_name",
+              "type": "minecraft:set_name",
               "target": "item_name",
               "name": {
                 "translate": "item.gm4.enderpuff",
@@ -16,16 +16,20 @@
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/enderpuff"]},
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_end_fishing:item/enderpuff"
+                  ]
+                },
                 "minecraft:profile": "$enderpuff",
                 "minecraft:item_model": "minecraft:player_head",
                 "!minecraft:consumable": {}
               }
             },
             {
-              "function": "minecraft:set_custom_data",
+              "type": "minecraft:set_custom_data",
               "tag": "{gm4_end_fishing:{enderpuff:1b}}"
             }
           ]

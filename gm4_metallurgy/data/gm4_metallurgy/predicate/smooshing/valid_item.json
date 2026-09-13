@@ -1,29 +1,32 @@
-[
-  {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-      "slots": {
-        "contents": {
-          "count": 1
-        }
-      }
-    }
-  },
-  {
-    "condition": "minecraft:inverted",
-    "term": {
-      "condition": "minecraft:entity_properties",
+{
+  "type": "minecraft:all_of",
+  "terms": [
+    {
+      "type": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
         "slots": {
           "contents": {
-            "predicates": {
-              "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b}}"
+            "count": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:inverted",
+      "term": {
+        "type": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {
+            "contents": {
+              "predicates": {
+                "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b}}"
+              }
             }
           }
         }
       }
     }
-  }
-]
+  ]
+}

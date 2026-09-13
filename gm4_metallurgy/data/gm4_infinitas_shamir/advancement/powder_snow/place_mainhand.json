@@ -3,125 +3,127 @@
     "place_powder_snow": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "minecraft:type_specific/player": {
-                  "gamemode": [
-                    "creative"
-                  ]
+        "player": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:inverted",
+              "term": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:type_specific/player": {
+                    "gamemode": [
+                      "creative"
+                    ]
+                  }
                 }
               }
-            }
-          },
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "$powder_snow_infinitas"
-              },
-              "score": "gm4_ml_data"
             },
-            "range": 1
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "equipment": {
-                "mainhand": {
-                  "items": [
-                    "minecraft:powder_snow_bucket"
-                  ],
-                  "predicates": {
-                    "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+            {
+              "type": "minecraft:int_value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$powder_snow_infinitas"
+                },
+                "score": "gm4_ml_data"
+              },
+              "test": 1
+            },
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "equipment": {
+                  "mainhand": {
+                    "items": [
+                      "minecraft:powder_snow_bucket"
+                    ],
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:\"infinitas\"}}"
+                    }
                   }
                 }
               }
             }
-          }
-        ],
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": [
-                  "minecraft:powder_snow"
-                ]
-              }
+          ]
+        },
+        "location": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": [
+                "minecraft:powder_snow"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "use_on_cauldron": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
+        "player": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:inverted",
+              "term": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:type_specific/player": {
+                    "gamemode": [
+                      "creative"
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "type": "minecraft:int_value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "$powder_snow_infinitas"
+                },
+                "score": "gm4_ml_data"
+              },
+              "test": 1
+            },
+            {
+              "type": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "minecraft:type_specific/player": {
-                  "gamemode": [
-                    "creative"
+                "minecraft:entity_tags": {
+                  "all_of": [
+                    "gm4_infinitas_mainhand_powder_snow"
                   ]
+                },
+                "minecraft:equipment": {
+                  "mainhand": {
+                    "items": [
+                      "minecraft:bucket"
+                    ]
+                  }
                 }
               }
             }
-          },
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "$powder_snow_infinitas"
-              },
-              "score": "gm4_ml_data"
-            },
-            "range": 1
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_infinitas_mainhand_powder_snow"
-                ]
-              },
-              "minecraft:equipment": {
-                "mainhand": {
-                  "items": [
-                    "minecraft:bucket"
-                  ]
-                }
-              }
+          ]
+        },
+        "location": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": [
+                "minecraft:powder_snow_cauldron"
+              ]
             }
           }
-        ],
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": [
-                  "minecraft:powder_snow_cauldron"
-                ]
-              }
-            }
-          }
-        ]
+        }
       }
     }
   },

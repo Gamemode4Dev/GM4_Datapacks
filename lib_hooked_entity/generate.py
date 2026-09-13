@@ -8,15 +8,13 @@ def beet_default(ctx: Context):
                     "fishing_rod_hooked":{
                         "trigger":"minecraft:fishing_rod_hooked",
                         "conditions":{
-                            "entity": [
-                                {
-                                    "condition": "minecraft:entity_scores",
-                                    "entity": "this",
-                                    "scores": {
-                                        f"gm4_hooked_entity.id_bit.{bit}": value
-                                    }
+                            "entity": {
+                                "type": "minecraft:entity_scores",
+                                "entity": "this",
+                                "scores": {
+                                    f"gm4_hooked_entity.id_bit.{bit}": value
                                 }
-                            ]
+                            }
                         }
                     }
                 },

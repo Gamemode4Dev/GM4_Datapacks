@@ -10,34 +10,22 @@
             {
               "type": "minecraft:item",
               "name": "iron_boots",
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_survival_refightalized:mob/material_check/iron"
-                }
-              ]
+              "condition": "gm4_survival_refightalized:mob/material_check/iron"
             },
             {
               "type": "minecraft:item",
               "name": "chainmail_boots",
-              "conditions": [
-                {
-                  "condition": "minecraft:reference",
-                  "name": "gm4_survival_refightalized:mob/material_check/chainmail"
-                }
-              ]
+              "condition": "gm4_survival_refightalized:mob/material_check/chainmail"
             },
             {
               "type": "minecraft:loot_table",
               "value": "gm4:empty"
             }
           ],
-          "conditions": [
-            {
-              "condition": "minecraft:random_chance",
-              "chance": 0.666
-            }
-          ]
+          "condition": {
+            "type": "minecraft:random_chance",
+            "chance": 0.666
+          }
         }
       ]
     }

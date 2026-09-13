@@ -14,7 +14,6 @@ require:
 pipeline:
   - gm4_liquid_tanks.bolt_liquid_wrappers
   - gm4.plugins.extend.module
-  - gm4.plugins.include.lib_brewing
   - gm4.plugins.include.lib_potion_tracking
 
 meta:
@@ -25,7 +24,6 @@ meta:
     versioning:
       required:
         lib_potion_tracking: 1.4.0
-        lib_brewing: 1.5.0
       schedule_loops:
         - main
         - brewing_stand/texture_connector/process

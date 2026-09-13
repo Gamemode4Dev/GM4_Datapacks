@@ -3,42 +3,38 @@
     "requirement": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "equipment": {
+              "mainhand": {
+                "items": [
+                  "minecraft:writable_book"
+                ],
+                "predicates": {
+                  "minecraft:custom_data": "{gm4_bas_ignore:1b}"
+                }
+              }
+            }
+          }
+        },
+        "entity": {
+          "type": "minecraft:inverted",
+          "term": {
+            "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
               "equipment": {
                 "mainhand": {
                   "items": [
                     "minecraft:writable_book"
-                  ],
-                  "predicates": {
-                    "minecraft:custom_data": "{gm4_bas_ignore:1b}"
-                  }
+                  ]
                 }
               }
             }
           }
-        ],
-        "entity": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "equipment": {
-                  "mainhand": {
-                    "items": [
-                      "minecraft:writable_book"
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        ]
+        }
       }
     }
   },

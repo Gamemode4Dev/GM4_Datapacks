@@ -8,13 +8,13 @@ execute if entity @s[tag=gm4_llp_lit_candle] run return run function gm4_lively_
 execute store result score $rand gm4_llp.data run random value 1..10
 execute if entity @s[tag=gm4_llp_smoke_torch] \
   if score $rand gm4_llp.data matches 1..6 run particle smoke ~ ~.6 ~
-execute if data entity @s {block_state:{Name:"minecraft:soul_torch"}} \
+execute if data entity @s {block_state:{id:"minecraft:soul_torch"}} \
   if score $rand gm4_llp.data matches 1..9 run particle soul_fire_flame ~ ~.58 ~
-execute if data entity @s {block_state:{Name:"minecraft:torch"}} \
+execute if data entity @s {block_state:{id:"minecraft:torch"}} \
   if score $rand gm4_llp.data matches 1..9 run particle flame ~ ~.58 ~
-execute if data entity @s {block_state:{Name:"minecraft:copper_torch"}} \
+execute if data entity @s {block_state:{id:"minecraft:copper_torch"}} \
   if score $rand gm4_llp.data matches 1..9 run particle copper_fire_flame ~ ~.58 ~
-execute if data entity @s {block_state:{Name:"minecraft:redstone_torch"}} \
+execute if data entity @s {block_state:{id:"minecraft:redstone_torch"}} \
   if score $rand gm4_llp.data matches 1..8 run particle dust{color:[1,0,0],scale:0.8} ~ ~.58 ~
 
 # refresh light block

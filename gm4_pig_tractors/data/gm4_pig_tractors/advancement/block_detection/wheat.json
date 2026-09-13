@@ -3,16 +3,11 @@
         "requirement": {
             "trigger": "minecraft:enter_block",
             "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:reference",
-                        "name": "gm4_pig_tractors:player/vehicle/pig/in_farmland"
-                    }
-                ],
-                "block": "minecraft:wheat",
+                "player": "gm4_pig_tractors:player/vehicle/pig/in_farmland",
                 "state": {
                     "age": "7"
-                }
+                },
+                "blocks": "minecraft:wheat"
             }
         }
     },

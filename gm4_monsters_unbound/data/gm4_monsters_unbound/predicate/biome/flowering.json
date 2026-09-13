@@ -1,35 +1,30 @@
-[
-  {
-    "condition": "minecraft:any_of",
-    "terms": [
-      {
-        "condition": "minecraft:location_check",
-        "predicate": {
-          "biomes": "minecraft:lush_caves"
-        }
-      },
-      {
-        "condition": "minecraft:all_of",
-        "terms": [
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:reference",
-              "name": "gm4_monsters_unbound:technical/underground"
-            }
-          },
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": [
-                "minecraft:sunflower_plains",
-                "minecraft:flower_forest",
-                "minecraft:cherry_grove"
-              ]
-            }
-          }
-        ]
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "biomes": "minecraft:lush_caves"
       }
-    ]
-  }
-]
+    },
+    {
+      "type": "minecraft:all_of",
+      "terms": [
+        {
+          "type": "minecraft:inverted",
+          "term": "gm4_monsters_unbound:technical/underground"
+        },
+        {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "biomes": [
+              "minecraft:sunflower_plains",
+              "minecraft:flower_forest",
+              "minecraft:cherry_grove"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

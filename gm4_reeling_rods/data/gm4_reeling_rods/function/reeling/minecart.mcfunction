@@ -1,7 +1,7 @@
 # Action for reeled *_minecart
 # @s = *_minecart
 # at bobber in @s
-# with {block}
+# with $block: string block in this minecart to return
 # run from hooked_entity/select_type
 
 # fail if passengers

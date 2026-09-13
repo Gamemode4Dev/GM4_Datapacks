@@ -6,19 +6,23 @@
 				{
 					"type": "minecraft:loot_table",
 					"value": "gm4_metallurgy:curies_bismium_band",
-					"functions": [
+					"modifier": [
 						{
-							"function": "minecraft:set_components",
+							"type": "minecraft:set_components",
 							"components": {
-								"minecraft:custom_model_data": {"strings":["gm4_animi_shamir:shamir/animi"]}
+								"minecraft:custom_model_data": {
+									"strings": [
+										"gm4_animi_shamir:shamir/animi"
+									]
+								}
 							}
 						},
 						{
-							"function": "minecraft:set_custom_data",
+							"type": "minecraft:set_custom_data",
 							"tag": "{gm4_metallurgy:{stored_shamir:'animi'}}"
 						},
 						{
-							"function": "minecraft:set_lore",
+							"type": "minecraft:set_lore",
 							"mode": "append",
 							"lore": [
 								{

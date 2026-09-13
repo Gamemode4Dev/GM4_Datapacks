@@ -3,27 +3,30 @@
         "requirement": {
             "trigger": "minecraft:any_block_use",
             "conditions": {
-                "location": [
-                    {
-                        "condition": "minecraft:match_tool",
-                        "predicate": {
-                            "items": [
-                                "minecraft:potion"
-                            ],
-                            "predicates": {
-                              "minecraft:custom_data": "{gm4_standard_liquids:{potion:\"glowing\"}}"
+                "location": {
+                    "type": "minecraft:all_of",
+                    "terms": [
+                        {
+                            "type": "minecraft:match_tool",
+                            "predicate": {
+                                "items": [
+                                    "minecraft:potion"
+                                ],
+                                "predicates": {
+                                    "minecraft:custom_data": "{gm4_standard_liquids:{potion:\"glowing\"}}"
+                                }
+                            }
+                        },
+                        {
+                            "type": "minecraft:location_check",
+                            "predicate": {
+                                "block": {
+                                    "blocks": "#minecraft:all_signs"
+                                }
                             }
                         }
-                    },
-                    {
-                        "condition": "minecraft:location_check",
-                        "predicate": {
-                            "block": {
-                                "blocks": "#minecraft:all_signs"
-                            }
-                        }
-                    }
-                ]
+                    ]
+                }
             }
         }
     },

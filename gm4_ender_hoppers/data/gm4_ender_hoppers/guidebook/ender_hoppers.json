@@ -48,19 +48,17 @@
     "open_ender_hopper": {
       "trigger": "minecraft:default_block_use",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": [
-                  "minecraft:hopper"
-                ],
-                "nbt": "{CustomName:{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.ender_hopper\",\"fallback\":\"Ender Hopper\"},{\"translate\":\"gui.gm4.ender_hopper\",\"fallback\":\"\",\"extra\":[{\"translate\":\"container.gm4.ender_hopper\",\"fallback\":\"Ender Hopper\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:container_gui\",\"color\":\"white\"}]}}"
-              }
+        "location": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": [
+                "minecraft:hopper"
+              ],
+              "nbt": "{CustomName:{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.ender_hopper\",\"fallback\":\"Ender Hopper\"},{\"translate\":\"gui.gm4.ender_hopper\",\"fallback\":\"\",\"extra\":[{\"translate\":\"container.gm4.ender_hopper\",\"fallback\":\"Ender Hopper\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:container_gui\",\"color\":\"white\"}]}}"
             }
           }
-        ]
+        }
       }
     }
   },

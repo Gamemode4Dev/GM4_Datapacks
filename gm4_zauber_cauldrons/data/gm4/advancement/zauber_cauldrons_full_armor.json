@@ -3,7 +3,11 @@
     "icon": {
       "id": "minecraft:golden_chestplate",
       "components": {
-        "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_full_armor"]}
+        "minecraft:custom_model_data": {
+          "strings": [
+            "gm4_zauber_cauldrons:gui/advancement/zauber_cauldrons_full_armor"
+          ]
+        }
       }
     },
     "title": {
@@ -21,12 +25,7 @@
     "wear_full_zauber_armor": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_zauber_cauldrons:player/equipment/armor/full"
-          }
-        ]
+        "player": "gm4_zauber_cauldrons:player/equipment/armor/full"
       }
     }
   }

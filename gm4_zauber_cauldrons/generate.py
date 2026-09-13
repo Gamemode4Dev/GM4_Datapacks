@@ -243,8 +243,8 @@ def generate_zauber_biomes(ctx: Context, weather_modifiers: CSV, magicol_colors:
         if bottle_data['bottle'] == 'lingering':
             adjective = 'glittering_'
             # convert base-10 colors to rgb float colors
-            biome_particle = '"particle":{"options":{"type":"minecraft:dust","color":' + color_data.get(
-                f"particle_color_{modifier_data['modifier']}", 7979098).to_color_code(CSVCell.FLOAT) + ',"scale":2},"probability":0.002},'
+            biome_particle = '{"particle":{"type":"minecraft:dust","color":' + color_data.get(
+                f"particle_color_{modifier_data['modifier']}", 7979098).to_color_code(CSVCell.FLOAT) + ', "scale": 2}, "probability": 0.002}'
 
         subproject_config = {
             "data_pack": {
@@ -289,12 +289,12 @@ def generate_flower_features(ctx: Context, flower_types: CSV):
             "data_pack": {
                 "load": [
                     {
-                        f"data/gm4_zauber_cauldrons/worldgen/configured_feature/{flower_data['flower']}_patch.json": "data/gm4_zauber_cauldrons/templates/worldgen/configured_feature/flower_patch.json",
+                        f"data/gm4_zauber_cauldrons/worldgen/feature/{flower_data['flower']}_patch.json": "data/gm4_zauber_cauldrons/templates/worldgen/feature/flower_patch.json",
                         f"data/gm4_zauber_cauldrons/worldgen/placed_feature/{flower_data['flower']}_patch.json": "data/gm4_zauber_cauldrons/templates/worldgen/placed_feature/flower_patch.json"
                     }
                 ],
                 "render": {
-                    "worldgen_configured_features": "*",
+                    "worldgen_features": "*",
                     "worldgen_placed_features": "*"
                 }
             },

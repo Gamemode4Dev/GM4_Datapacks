@@ -7,18 +7,20 @@
                     "type": "item",
                     "name": "minecraft:rotten_flesh",
                     "weight": 1,
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "set_count",
+                            "type": "set_count",
                             "count": {
+                                "type": "minecraft:uniform",
                                 "min": 0,
                                 "max": 2
                             }
                         },
                         {
-                            "function": "minecraft:enchanted_count_increase",
+                            "type": "minecraft:enchanted_count_increase",
                             "enchantment": "minecraft:looting",
                             "count": {
+                                "type": "minecraft:uniform",
                                 "min": 0,
                                 "max": 1
                             }
@@ -29,6 +31,7 @@
         },
         {
             "rolls": {
+                "type": "minecraft:uniform",
                 "min": 1,
                 "max": 2
             },
@@ -37,18 +40,20 @@
                     "type": "item",
                     "name": "minecraft:iron_nugget",
                     "weight": 2,
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "set_count",
+                            "type": "set_count",
                             "count": {
+                                "type": "minecraft:uniform",
                                 "min": 0,
                                 "max": 2
                             }
                         },
                         {
-                            "function": "minecraft:enchanted_count_increase",
+                            "type": "minecraft:enchanted_count_increase",
                             "enchantment": "minecraft:looting",
                             "count": {
+                                "type": "minecraft:uniform",
                                 "min": 0,
                                 "max": 1
                             }
@@ -59,18 +64,20 @@
                     "type": "item",
                     "name": "minecraft:gold_nugget",
                     "weight": 3,
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "set_count",
+                            "type": "set_count",
                             "count": {
+                                "type": "minecraft:uniform",
                                 "min": 0,
                                 "max": 1
                             }
                         },
                         {
-                            "function": "minecraft:enchanted_count_increase",
+                            "type": "minecraft:enchanted_count_increase",
                             "enchantment": "minecraft:looting",
                             "count": {
+                                "type": "minecraft:uniform",
                                 "min": 0,
                                 "max": 1
                             }

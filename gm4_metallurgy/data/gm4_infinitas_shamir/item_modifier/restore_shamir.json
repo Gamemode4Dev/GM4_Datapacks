@@ -1,37 +1,44 @@
-[
-  {
-    "function": "minecraft:set_components",
-    "components": {
-      "minecraft:max_stack_size": 1,
-      "minecraft:custom_model_data": {"strings":["gm4_metallurgy:shamir/infinitas"]}
-    }
-  },
-  {
-    "function": "minecraft:set_custom_data",
-    "tag": "{gm4_metallurgy:{has_shamir:1b,custom_model_data:3420100,metal:{type:'curies_bismium'},active_shamir:'infinitas'}}"
-  },
-  {
-    "function": "minecraft:set_lore",
-    "mode": "replace_all",
-    "lore": [
-      {
-        "translate": "item.gm4.metallurgy.band",
-        "fallback": "%s Band",
-        "with": [
-          {
-            "translate": "item.gm4.metallurgy.curies_bismium",
-            "fallback": "Curie's Bismium"
-          }
-        ],
-        "italic": false,
-        "color": "#467A1B"
-      },
-      {
-        "translate": "item.gm4.shamir.infinitas",
-        "fallback": "Infinitas Shamir",
-        "italic": false,
-        "color": "gray"
+{
+  "type": "sequence",
+  "functions": [
+    {
+      "type": "minecraft:set_components",
+      "components": {
+        "minecraft:max_stack_size": 1,
+        "minecraft:custom_model_data": {
+          "strings": [
+            "gm4_metallurgy:shamir/infinitas"
+          ]
+        }
       }
-    ]
-  }
-]
+    },
+    {
+      "type": "minecraft:set_custom_data",
+      "tag": "{gm4_metallurgy:{has_shamir:1b,custom_model_data:3420100,metal:{type:'curies_bismium'},active_shamir:'infinitas'}}"
+    },
+    {
+      "type": "minecraft:set_lore",
+      "mode": "replace_all",
+      "lore": [
+        {
+          "translate": "item.gm4.metallurgy.band",
+          "fallback": "%s Band",
+          "with": [
+            {
+              "translate": "item.gm4.metallurgy.curies_bismium",
+              "fallback": "Curie's Bismium"
+            }
+          ],
+          "italic": false,
+          "color": "#467A1B"
+        },
+        {
+          "translate": "item.gm4.shamir.infinitas",
+          "fallback": "Infinitas Shamir",
+          "italic": false,
+          "color": "gray"
+        }
+      ]
+    }
+  ]
+}

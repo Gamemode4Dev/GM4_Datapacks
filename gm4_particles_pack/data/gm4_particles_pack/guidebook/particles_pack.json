@@ -10,19 +10,17 @@
     "modify_armor_stand": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:type_specific/player": {
-                "advancements": {
-                  "gm4:better_armour_stands": true
-                }
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:type_specific/player": {
+              "advancements": {
+                "gm4:better_armour_stands": true
               }
             }
           }
-        ]
+        }
       }
     }
   },

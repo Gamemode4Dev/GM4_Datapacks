@@ -12,16 +12,14 @@
     "fight_sandy_husk": {
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:husk",
-              "minecraft:nbt": "{DeathLootTable:\"gm4_sandy_husks:entities/sandy_husk\"}"
-            }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:husk",
+            "minecraft:nbt": "{DeathLootTable:\"gm4_sandy_husks:entities/sandy_husk\"}"
           }
-        ]
+        }
       }
     }
   },

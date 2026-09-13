@@ -9,19 +9,17 @@
     "interact_trader": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_balloon_animal_trader"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_balloon_animal_trader"
+              ]
             }
           }
-        ]
+        }
       }
     }
   },

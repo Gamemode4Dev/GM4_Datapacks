@@ -1,7 +1,8 @@
 # Logic for when a player receives a bit
 # @s = player who received a bit
 # at @s
-# with {bit, UUID}
+# with $bit: bit index
+# with $UUID: player UUID array
 # run from player/bits/bit_{bit}_{value}
 
 $data modify storage gm4_hooked_entity:players "$(UUID)".bit_$(bit) set from storage gm4_hooked_entity:temp bit_data.bit_score

@@ -4,7 +4,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_smelteries:smeltery"
+        "recipes": "gm4_smelteries:smeltery"
       }
     },
     "has_materials": {

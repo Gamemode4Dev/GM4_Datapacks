@@ -9,33 +9,29 @@
     "enter_end_gateway": {
       "trigger": "minecraft:enter_block",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "dimension": "minecraft:the_end"
-            }
+        "player": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "dimension": "minecraft:the_end"
           }
-        ],
+        },
         "block": "minecraft:end_gateway"
       }
     },
     "fish_phantom": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:type_specific/player": {
-                "advancements": {
-                  "gm4:end_fishing_phantom": true
-                }
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:type_specific/player": {
+              "advancements": {
+                "gm4:end_fishing_phantom": true
               }
             }
           }
-        ]
+        }
       }
     }
   },

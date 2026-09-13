@@ -6,9 +6,9 @@
         {
           "type": "minecraft:loot_table",
           "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/type",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_lore",
+              "type": "minecraft:set_lore",
               "mode": "append",
               "lore": [
                 {
@@ -20,9 +20,13 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_ore_1"]}
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_end_fishing:item/end_city_ore_1"
+                  ]
+                }
               }
             }
           ]
@@ -30,9 +34,9 @@
         {
           "type": "minecraft:loot_table",
           "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/type",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_lore",
+              "type": "minecraft:set_lore",
               "mode": "append",
               "lore": [
                 {
@@ -44,9 +48,13 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_ore_2"]}
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_end_fishing:item/end_city_ore_2"
+                  ]
+                }
               }
             }
           ]
@@ -54,9 +62,9 @@
         {
           "type": "minecraft:loot_table",
           "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/type",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_lore",
+              "type": "minecraft:set_lore",
               "mode": "append",
               "lore": [
                 {
@@ -68,9 +76,13 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_ore_3"]}
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_end_fishing:item/end_city_ore_3"
+                  ]
+                }
               }
             }
           ]
@@ -78,9 +90,9 @@
         {
           "type": "minecraft:loot_table",
           "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/type",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_lore",
+              "type": "minecraft:set_lore",
               "mode": "append",
               "lore": [
                 {
@@ -92,9 +104,13 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_ore_4"]}
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_end_fishing:item/end_city_ore_4"
+                  ]
+                }
               }
             }
           ]
@@ -102,9 +118,9 @@
         {
           "type": "minecraft:loot_table",
           "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/type",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_lore",
+              "type": "minecraft:set_lore",
               "mode": "append",
               "lore": [
                 {
@@ -116,9 +132,13 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_ore_5"]}
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_end_fishing:item/end_city_ore_5"
+                  ]
+                }
               }
             }
           ]
@@ -126,9 +146,9 @@
         {
           "type": "minecraft:loot_table",
           "value": "gm4_end_fishing:gameplay/fish/end_city_treasure/ore/type",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_lore",
+              "type": "minecraft:set_lore",
               "mode": "append",
               "lore": [
                 {
@@ -140,9 +160,13 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/end_city_ore_6"]}
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_end_fishing:item/end_city_ore_6"
+                  ]
+                }
               }
             }
           ]

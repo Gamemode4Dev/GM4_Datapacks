@@ -3,25 +3,28 @@
     "placed_machine_entity": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "#gm4_machines:minecarts",
-              "predicates": {
-                "minecraft:custom_data": "{gm4_machines:{}}"
+        "location": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:match_tool",
+              "predicate": {
+                "items": "#gm4_machines:minecarts",
+                "predicates": {
+                  "minecraft:custom_data": "{gm4_machines:{}}"
+                }
+              }
+            },
+            {
+              "type": "minecraft:location_check",
+              "predicate": {
+                "block": {
+                  "blocks": "#minecraft:rails"
+                }
               }
             }
-          },
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": "#minecraft:rails"
-              }
-            }
-          }
-        ]
+          ]
+        }
       }
     }
   },

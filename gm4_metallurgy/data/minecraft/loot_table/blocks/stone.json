@@ -10,69 +10,66 @@
           "children": [
             {
               "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
+              "name": "minecraft:stone",
+              "condition": {
+                "type": "minecraft:match_tool",
+                "predicate": {
+                  "predicates": {
+                    "minecraft:enchantments": [
+                      {
+                        "enchantments": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
                         }
-                      ]
-                    }
+                      }
+                    ]
                   }
                 }
-              ],
-              "name": "minecraft:stone"
+              }
             },
             {
               "type": "minecraft:loot_table",
               "value": "gm4_metallurgy:bismutite_lump",
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "minecraft:entity_type": [
-                      "minecraft:tnt",
-                      "minecraft:creeper",
-                      "minecraft:wither",
-                      "minecraft:wither_skull"
-                    ]
+              "condition": {
+                "type": "minecraft:all_of",
+                "terms": [
+                  {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                      "minecraft:entity_type": [
+                        "minecraft:tnt",
+                        "minecraft:creeper",
+                        "minecraft:wither",
+                        "minecraft:wither_skull"
+                      ]
+                    }
+                  },
+                  {
+                    "type": "minecraft:random_chance",
+                    "chance": 0.1
                   }
-                },
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.1
-                }
-              ]
+                ]
+              }
             },
             {
               "type": "minecraft:loot_table",
               "value": "gm4_forterra_shamir:stone",
-              "conditions": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "predicates": {
-                      "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'forterra'}}"
-                    }
+              "condition": {
+                "type": "minecraft:match_tool",
+                "predicate": {
+                  "predicates": {
+                    "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'forterra'}}"
                   }
                 }
-              ]
+              }
             },
             {
               "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:survives_explosion"
-                }
-              ],
-              "name": "minecraft:cobblestone"
+              "name": "minecraft:cobblestone",
+              "condition": {
+                "type": "minecraft:survives_explosion"
+              }
             }
           ]
         }

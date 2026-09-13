@@ -2,12 +2,12 @@ block_checks = []
 
 for y in range(1, 4064):
   block_checks.append({
-    "condition": "minecraft:any_of",
+    "type": "minecraft:any_of",
     "terms": [
       {
-        "condition": "minecraft:inverted",
+        "type": "minecraft:inverted",
         "term": {
-          "condition": "minecraft:location_check",
+          "type": "minecraft:location_check",
           "offsetY": y,
           "predicate": {
             "light": {
@@ -20,7 +20,7 @@ for y in range(1, 4064):
         }
       },
       {
-        "condition": "minecraft:location_check",
+        "type": "minecraft:location_check",
         "offsetY": y,
         "predicate": {
           "block": {
@@ -29,7 +29,7 @@ for y in range(1, 4064):
         }
       },
       {
-        "condition": "minecraft:location_check",
+        "type": "minecraft:location_check",
         "offsetY": y,
         "predicate": {
           "block": {
@@ -41,7 +41,7 @@ for y in range(1, 4064):
         }
       },
       {
-        "condition": "minecraft:location_check",
+        "type": "minecraft:location_check",
         "offsetY": y,
         "predicate": {
           "block": {
@@ -53,7 +53,7 @@ for y in range(1, 4064):
         }
       },
       {
-        "condition": "minecraft:location_check",
+        "type": "minecraft:location_check",
         "offsetY": y,
         "predicate": {
           "block": {
@@ -68,6 +68,6 @@ for y in range(1, 4064):
   })
 
 {
-  "condition": "minecraft:all_of",
+  "type": "minecraft:all_of",
   "terms": block_checks
 }

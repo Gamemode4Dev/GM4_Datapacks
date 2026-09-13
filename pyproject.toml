@@ -7,9 +7,9 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
-    "beet>=0.115.0",
-    "mecha>=0.103.0",
-    "bolt>=0.50.1",
+    "beet @ git+https://github.com/edayot/beet.git@26.3_update",
+    "mecha @ git+https://github.com/edayot/beet.git@26.3_update#subdirectory=packages/mecha",
+    "bolt @ git+https://github.com/edayot/beet.git@26.3_update#subdirectory=packages/bolt",
     "requests>=2.28.1",
     "repro-zipfile>=0.1.0",
 ]

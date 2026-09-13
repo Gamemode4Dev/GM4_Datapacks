@@ -15,13 +15,13 @@ fill ~ ~ ~ ~ ~ ~ mangrove_roots[waterlogged=true] replace #gm4:water
 execute unless block ~ ~ ~ mangrove_roots unless block ~ ~ ~ muddy_mangrove_roots run setblock ~ ~ ~ mangrove_roots
 
 # random carpets
-execute if predicate {condition:"random_chance",chance:0.5} run fill ~ ~1 ~ ~ ~1 ~ moss_carpet replace #air
+execute if predicate {type:"random_chance",chance:0.5} run fill ~ ~1 ~ ~ ~1 ~ moss_carpet replace #air
 
 # small chance to skew to ground from now on
-execute if predicate {condition:"random_chance",chance:0.02} run tag @s add gm4_towering_trees.mangrove_root_skewed
+execute if predicate {type:"random_chance",chance:0.02} run tag @s add gm4_towering_trees.mangrove_root_skewed
 
 # pick direction
-execute if predicate {condition:"random_chance",chance:0.8} positioned ~ ~-1 ~ run return run function gm4_towering_trees:generate_tree_type/mangrove/roots/loop
+execute if predicate {type:"random_chance",chance:0.8} positioned ~ ~-1 ~ run return run function gm4_towering_trees:generate_tree_type/mangrove/roots/loop
 execute if score $max_distance_from_tree gm4_towering_trees_data matches 0 positioned ~ ~-1 ~ run return run function gm4_towering_trees:generate_tree_type/mangrove/roots/loop
 
 # if skewed to ground start a loop down if the root is going forward

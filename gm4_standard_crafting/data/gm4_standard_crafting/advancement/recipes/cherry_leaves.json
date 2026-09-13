@@ -4,7 +4,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_standard_crafting:cherry_leaves"
+        "recipes": "gm4_standard_crafting:cherry_leaves"
       }
     },
     "has_materials": {

@@ -6,19 +6,23 @@
                 {
                     "type": "minecraft:loot_table",
                     "value": "gm4_metallurgy:thorium_band",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": {"strings":["gm4_metallurgy:shamir/vibro"]}
+                                "minecraft:custom_model_data": {
+                                    "strings": [
+                                        "gm4_metallurgy:shamir/vibro"
+                                    ]
+                                }
                             }
                         },
                         {
-                            "function": "minecraft:set_custom_data",
+                            "type": "minecraft:set_custom_data",
                             "tag": "{gm4_metallurgy:{stored_shamir:'vibro'}}"
                         },
                         {
-                            "function": "minecraft:set_lore",
+                            "type": "minecraft:set_lore",
                             "mode": "append",
                             "lore": [
                                 {

@@ -6,90 +6,95 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:cherry_leaves",
-          "functions": [
-            {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_monsters_unbound:item/spore/cherry"]}
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "all_of": [
+                  "gm4_mu_spore_zombie.cherry"
+                ]
               }
             }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "minecraft:entity_tags": {
-                  "all_of": [
-                    "gm4_mu_spore_zombie.cherry"
-                  ]
-                }
+          },
+          "modifier": {
+            "type": "minecraft:set_components",
+            "components": {
+              "minecraft:custom_model_data": {
+                "strings": [
+                  "gm4_monsters_unbound:item/spore/cherry"
+                ]
               }
             }
-          ]
+          }
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:azalea_leaves",
-          "functions": [
-            {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_monsters_unbound:item/spore/default"]}
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:random_chance",
-              "chance": 0.66
-            },
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "minecraft:entity_tags": {
-                  "none_of": [
-                    "gm4_mu_spore_zombie.cherry"
-                  ]
+          "condition": {
+            "type": "minecraft:all_of",
+            "terms": [
+              {
+                "type": "minecraft:random_chance",
+                "chance": 0.66
+              },
+              {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:entity_tags": {
+                    "none_of": [
+                      "gm4_mu_spore_zombie.cherry"
+                    ]
+                  }
                 }
               }
+            ]
+          },
+          "modifier": {
+            "type": "minecraft:set_components",
+            "components": {
+              "minecraft:custom_model_data": {
+                "strings": [
+                  "gm4_monsters_unbound:item/spore/default"
+                ]
+              }
             }
-          ]
+          }
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:flowering_azalea_leaves",
-          "functions": [
-            {
-              "function": "minecraft:set_components",
-              "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_monsters_unbound:item/spore/flowering"]}
+          "condition": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:entity_tags": {
+                "none_of": [
+                  "gm4_mu_spore_zombie.cherry"
+                ]
               }
             }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:entity_properties",
-              "entity": "this",
-              "predicate": {
-                "minecraft:entity_tags": {
-                  "none_of": [
-                    "gm4_mu_spore_zombie.cherry"
-                  ]
-                }
+          },
+          "modifier": {
+            "type": "minecraft:set_components",
+            "components": {
+              "minecraft:custom_model_data": {
+                "strings": [
+                  "gm4_monsters_unbound:item/spore/flowering"
+                ]
               }
             }
-          ]
+          }
         }
       ],
-      "functions": [
+      "modifier": [
         {
-          "function": "minecraft:set_custom_data",
+          "type": "minecraft:set_custom_data",
           "tag": "{gm4_mu_spore:{generation:0}}"
         },
         {
-          "function": "minecraft:set_name",
+          "type": "minecraft:set_name",
           "target": "item_name",
           "name": {
             "translate": "item.gm4.monsters_unbound.zombie_spore",

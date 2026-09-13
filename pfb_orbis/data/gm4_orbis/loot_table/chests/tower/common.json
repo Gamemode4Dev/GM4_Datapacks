@@ -3,6 +3,7 @@
   "pools": [
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 2,
         "max": 4
       },
@@ -11,44 +12,41 @@
           "type": "minecraft:item",
           "weight": 10,
           "name": "minecraft:rotten_flesh",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 5
-              },
-              "add": true
-            }
-          ]
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 5
+            },
+            "add": true
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 8,
           "name": "minecraft:bone",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 4
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 4
             }
-          ]
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 5,
           "name": "minecraft:gunpowder",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 3
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 2,
+              "max": 3
             }
-          ]
+          }
         },
         {
           "type": "minecraft:item",
@@ -59,62 +57,59 @@
           "type": "minecraft:item",
           "weight": 8,
           "name": "minecraft:string",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
             }
-          ]
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 6,
           "name": "minecraft:phantom_membrane",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
             }
-          ]
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 7,
           "name": "minecraft:beetroot_seeds",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 3
             }
-          ]
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 7,
           "name": "minecraft:pumpkin_seeds",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 1,
+              "max": 2
             }
-          ]
+          }
         }
       ]
     },
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": 2,
         "max": 4
       },

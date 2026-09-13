@@ -10,114 +10,110 @@
                         {
                             "type": "minecraft:item",
                             "name": "diamond_leggings",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "gm4_survival_refightalized:mob/material_check/diamond"
-                                },
-                                {
-                                    "condition": "minecraft:value_check",
-                                    "value": {
-                                        "type": "minecraft:score",
-                                        "target": {
-                                            "type": "minecraft:fixed",
-                                            "name": "$armor_tier"
+                            "condition": {
+                                "type": "minecraft:all_of",
+                                "terms": [
+                                    "gm4_survival_refightalized:mob/material_check/diamond",
+                                    {
+                                        "type": "minecraft:int_value_check",
+                                        "value": {
+                                            "type": "minecraft:score",
+                                            "target": {
+                                                "type": "minecraft:fixed",
+                                                "name": "$armor_tier"
+                                            },
+                                            "score": "gm4_sr_data"
                                         },
-                                        "score": "gm4_sr_data"
-                                    },
-                                    "range": {
-                                        "min": 2
+                                        "test": {
+                                            "min": 2
+                                        }
                                     }
-                                }
-                            ]
+                                ]
+                            }
                         },
                         {
                             "type": "minecraft:item",
                             "name": "golden_leggings",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "gm4_survival_refightalized:mob/material_check/golden"
-                                },
-                                {
-                                    "condition": "minecraft:value_check",
-                                    "value": {
-                                        "type": "minecraft:score",
-                                        "target": {
-                                            "type": "minecraft:fixed",
-                                            "name": "$armor_tier"
+                            "condition": {
+                                "type": "minecraft:all_of",
+                                "terms": [
+                                    "gm4_survival_refightalized:mob/material_check/golden",
+                                    {
+                                        "type": "minecraft:int_value_check",
+                                        "value": {
+                                            "type": "minecraft:score",
+                                            "target": {
+                                                "type": "minecraft:fixed",
+                                                "name": "$armor_tier"
+                                            },
+                                            "score": "gm4_sr_data"
                                         },
-                                        "score": "gm4_sr_data"
-                                    },
-                                    "range": {
-                                        "min": 1
+                                        "test": {
+                                            "min": 1
+                                        }
                                     }
-                                }
-                            ]
+                                ]
+                            }
                         },
                         {
                             "type": "minecraft:item",
                             "name": "iron_leggings",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "gm4_survival_refightalized:mob/material_check/iron"
-                                },
-                                {
-                                    "condition": "minecraft:value_check",
-                                    "value": {
-                                        "type": "minecraft:score",
-                                        "target": {
-                                            "type": "minecraft:fixed",
-                                            "name": "$armor_tier"
+                            "condition": {
+                                "type": "minecraft:all_of",
+                                "terms": [
+                                    "gm4_survival_refightalized:mob/material_check/iron",
+                                    {
+                                        "type": "minecraft:int_value_check",
+                                        "value": {
+                                            "type": "minecraft:score",
+                                            "target": {
+                                                "type": "minecraft:fixed",
+                                                "name": "$armor_tier"
+                                            },
+                                            "score": "gm4_sr_data"
                                         },
-                                        "score": "gm4_sr_data"
-                                    },
-                                    "range": {
-                                        "min": 1
+                                        "test": {
+                                            "min": 1
+                                        }
                                     }
-                                }
-                            ]
+                                ]
+                            }
                         },
                         {
                             "type": "minecraft:item",
                             "name": "chainmail_leggings",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "gm4_survival_refightalized:mob/material_check/chainmail"
-                                }
-                            ]
+                            "condition": "gm4_survival_refightalized:mob/material_check/chainmail"
                         },
                         {
                             "type": "minecraft:item",
                             "name": "copper_leggings",
-                            "conditions": [
-                                {
-                                    "condition": "minecraft:reference",
-                                    "name": "gm4_survival_refightalized:mob/material_check/copper"
-                                }
-                            ]
+                            "condition": "gm4_survival_refightalized:mob/material_check/copper"
                         },
                         {
                             "type": "minecraft:item",
                             "name": "leather_leggings"
                         }
                     ],
-                    "conditions": [
-                        {
-                            "condition": "minecraft:random_chance",
-                            "chance": {
-                                "type": "minecraft:score",
-                                "target": {
-                                    "type": "minecraft:fixed",
-                                    "name": "$armor_chance"
+                    "condition": {
+                        "type": "minecraft:random_chance",
+                        "chance": {
+                            "type": "minecraft:mul",
+                            "inputs": [
+                                {
+                                    "type": "minecraft:from_int",
+                                    "input": {
+                                        "type": "minecraft:score",
+                                        "target": {
+                                            "type": "minecraft:fixed",
+                                            "name": "$armor_chance"
+                                        },
+                                        "score": "gm4_sr_data"
+                                    }
                                 },
-                                "score": "gm4_sr_data",
-                                "scale": 0.05
-                            }
+                                0.05
+                            ]
                         }
-                    ]
+                    }
                 }
             ]
         }

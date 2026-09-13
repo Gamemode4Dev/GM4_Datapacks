@@ -8,35 +8,31 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:yellow_shulker_box",
-          "functions": [
-            {
-              "function": "minecraft:copy_components",
-              "source": "block_entity",
-              "include": [
-                "minecraft:custom_name",
-                "minecraft:container",
-                "minecraft:lock",
-                "minecraft:container_loot"
-              ]
-            }
-          ]
+          "modifier": {
+            "type": "minecraft:copy_components",
+            "source": "block_entity",
+            "include": [
+              "minecraft:custom_name",
+              "minecraft:container",
+              "minecraft:lock",
+              "minecraft:container_loot"
+            ]
+          }
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:inverted",
-          "term": {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "predicates": {
-                "minecraft:custom_data": {
-                  "drop_contents": 1
-                }
+      "condition": {
+        "type": "minecraft:inverted",
+        "term": {
+          "type": "minecraft:match_tool",
+          "predicate": {
+            "predicates": {
+              "minecraft:custom_data": {
+                "drop_contents": 1
               }
             }
           }
         }
-      ]
+      }
     },
     {
       "rolls": 1.0,
@@ -47,18 +43,16 @@
           "name": "minecraft:contents"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:match_tool",
-          "predicate": {
-            "predicates": {
-              "minecraft:custom_data": {
-                "drop_contents": 1
-              }
+      "condition": {
+        "type": "minecraft:match_tool",
+        "predicate": {
+          "predicates": {
+            "minecraft:custom_data": {
+              "drop_contents": 1
             }
           }
         }
-      ]
+      }
     }
   ],
   "random_sequence": "minecraft:blocks/yellow_shulker_box",

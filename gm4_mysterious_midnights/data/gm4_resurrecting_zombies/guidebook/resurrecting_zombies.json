@@ -12,16 +12,14 @@
     "fight_resurrected_zombie": {
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:zombie",
-              "minecraft:nbt": "{DeathLootTable:\"minecraft:empty\",attributes:[{id:\"minecraft:attack_damage\",base:10.0d}]}"
-            }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:zombie",
+            "minecraft:nbt": "{DeathLootTable:\"minecraft:empty\",attributes:[{id:\"minecraft:attack_damage\",base:10.0d}]}"
           }
-        ]
+        }
       }
     }
   },

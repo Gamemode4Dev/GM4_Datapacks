@@ -24,20 +24,18 @@
     "pick_apple": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:armor_stand",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_apple"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:armor_stand",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_apple"
+              ]
             }
           }
-        ]
+        }
       }
     }
   },

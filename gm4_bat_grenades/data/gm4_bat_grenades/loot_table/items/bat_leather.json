@@ -1,48 +1,51 @@
 {
     "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-            {
-                "type": "item",
-                "name": "minecraft:rabbit_hide",
-                "functions": [
-                  {
-                    "function": "set_components",
-                    "components": {
-                      "minecraft:custom_model_data": {"strings":["gm4_bat_grenades:item/bat_leather"]}
-                    }
-                  },
-                  {
-                    "function": "set_name",
-                    "target": "item_name",
-                    "name": {
-                      "translate": "item.gm4.bat_leather",
-                      "fallback": "Bat Leather"
-                    }
-                  },
-                  {
-                    "function": "set_lore",
-                    "mode": "append",
-                    "lore": [
-                      {
-                        "translate": "text.gm4.bat_leather.1",
-                        "fallback": "Would make for a very strange,",
-                        "italic": true,
-                        "color": "dark_gray"
-                      },
-                      {
-                        "translate": "text.gm4.bat_leather.2",
-                        "fallback": "very tiny jacket",
-                        "italic": true,
-                        "color": "dark_gray"
-                      }
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:rabbit_hide",
+                    "modifier": [
+                        {
+                            "type": "set_components",
+                            "components": {
+                                "minecraft:custom_model_data": {
+                                    "strings": [
+                                        "gm4_bat_grenades:item/bat_leather"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "type": "set_name",
+                            "target": "item_name",
+                            "name": {
+                                "translate": "item.gm4.bat_leather",
+                                "fallback": "Bat Leather"
+                            }
+                        },
+                        {
+                            "type": "set_lore",
+                            "mode": "append",
+                            "lore": [
+                                {
+                                    "translate": "text.gm4.bat_leather.1",
+                                    "fallback": "Would make for a very strange,",
+                                    "italic": true,
+                                    "color": "dark_gray"
+                                },
+                                {
+                                    "translate": "text.gm4.bat_leather.2",
+                                    "fallback": "very tiny jacket",
+                                    "italic": true,
+                                    "color": "dark_gray"
+                                }
+                            ]
+                        }
                     ]
-                  }
-                ]
-              }
-        ]
-      }
+                }
+            ]
+        }
     ]
-  }
-  
+}

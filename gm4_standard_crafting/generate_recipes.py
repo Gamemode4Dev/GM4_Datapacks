@@ -11,7 +11,7 @@ def beet_default(ctx: Context):
     """
     
     vanilla = ctx.inject(Vanilla)
-    vanilla.minecraft_version = '26.2'
+    vanilla.minecraft_version = '26.3-rc-1'
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
     recipes = vanilla.mount("data/minecraft/recipe").data.recipes
 
@@ -81,7 +81,7 @@ def beet_default(ctx: Context):
                     "has_the_recipe": {
                     "trigger": "minecraft:recipe_unlocked",
                         "conditions": {
-                            "recipe": recipe_path
+                            "recipes": recipe_path
                         }
                     },
                     "has_materials": {
