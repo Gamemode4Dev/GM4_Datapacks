@@ -51,7 +51,13 @@ def load_and_summarize(ctx: Context):
         for log_entry in log_buffer:
             sum_handler.emit(log_entry)
 
-    sum_handler.flush_to_summary()
+    summary_title = ""
+    if (sum_type:=ctx.meta.get('gm4', {}).get('summarize_type')) == 'release':
+        summary_title = "Build Deployment Summary"
+    elif sum_type == 'pull_request':
+        summary_title = "Pull Request Deployment Preview"
+
+    sum_handler.flush_to_summary(summary_title)
 
 
 LEVEL_CONVERSION = {
@@ -101,7 +107,7 @@ class SummaryHandler(logging.handlers.BufferingHandler):
         self.beet_cache = beet_cache
         self.summary_created = False
 
-    def flush_to_summary(self):
+    def flush_to_summary(self, summary_title: str):
         summary_entries: dict[str, Any] = {}
 
         this_manifest = ManifestCacheModel.model_validate(self.beet_cache["gm4_manifest"].json)
@@ -147,7 +153,7 @@ class SummaryHandler(logging.handlers.BufferingHandler):
 
             table += f"\n {entry['name']} | {entry['ver_update']} | {nested_table}"
 
-        summary = "# :rocket: Build Deployment Summary :rocket:\n"+table
+        summary = f"# :rocket: {summary_title} :rocket:\n"+table
 
         if not self.summary_created:
             env_file = os.getenv("GITHUB_STEP_SUMMARY")

@@ -19,7 +19,6 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Checkout release branch
-        if: github.event_name != 'pull_request'
         uses: actions/checkout@v7
         with:
           ref: release
@@ -79,7 +78,6 @@ jobs:
           branch: release
 
       - name: Upload .beet_cache as artifact
-        if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@v7
         with:
           name: .beet_cache
@@ -91,7 +89,6 @@ jobs:
         run: mv ${{ github.workspace }}/logs/summary_logs.pkl ${{ github.workspace }}/logs/build_log.pkl
 
       - name: Upload logs as artifact
-        if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@v7
         with:
           path: ${{ github.workspace }}/logs/build_log.pkl
@@ -204,8 +201,8 @@ jobs:
 
   summarize:
     runs-on: ubuntu-24.04
-    if: github.event_name != 'pull_request'
-    needs: publish
+    needs: [build, publish]
+    if: ${{ always() }}
     steps:
       - uses: actions/checkout@v7
 
@@ -226,4 +223,4 @@ jobs:
         uses: astral-sh/setup-uv@v7
 
       - name: Summarize build logs
-        run: uv run beet -p beet-summarize.yaml build
+        run: uv run beet -p beet-summarize.yaml -s meta.gm4.summarize_type=${{ github.event_name != 'pull_request' && 'release' || 'pull_request' }} build
