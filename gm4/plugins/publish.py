@@ -42,24 +42,16 @@ def beet_default(ctx: Context):
     config = ctx.validate("gm4", ManifestConfig)
 
     publish_to = ctx.cache["currently_publishing"].json.get("publish_to", None)
+
+    # check if build already failed, and do not continue attempting to publish
+    if ctx.cache['gh_action_failed'].json.get('gh_action_failed', False):
+        return
     
     # publish to download platforms, based on which gh job this is
     if publish_to == "smithed":
         publish_smithed(ctx, config, file_name)
     elif publish_to == "modrinth":
         publish_modrinth(ctx, config, release_dir, file_name)
-
-# def dev_test_1(ctx: Context):
-#     # print(f"beet cache restored as: {list(ctx.cache.keys())}")
-
-#     # print(f"gm4_manifest is :{ctx.cache["gm4_manifest"]}")
-#     print(ctx.meta.get("gm4"))
-
-#     if ctx.meta.get("gm4",{}).get("publish_to", None) == "modrinth":
-#         print(f"publishing to modrinth!")
-#     else:
-#         print(f"publishing to smithed")
-#     pass
 
 def switch_platform(ctx: Context):
     """Reads gm4.publish_to meta field to the cache, for subpipelines to check and run the correct publish plugin"""
@@ -85,6 +77,17 @@ def load_config(ctx: Context):
             )
         )
     )
+
+def mark_gh_action_failed(ctx: Context):
+    """Marks beet cache that pipeline failed, allowing for cleanup steps (like annotations)"""
+    ctx.cache['gh_action_failed'].json = {'gh_action_failed': True}
+
+def check_gh_action_failed(ctx: Context):
+    """Checks beet cache and marks github action runner as 'failed'"""
+    yield 
+    is_failed = ctx.cache['gh_action_failed'].json.get('gh_action_failed', False)
+    if is_failed:
+        sys.exit(1)
 
 def publish_modrinth(ctx: Context, config: ManifestConfig, release_dir: Path, file_name: str):
     '''Attempts to publish pack to modrinth'''
@@ -134,7 +137,8 @@ def publish_modrinth(ctx: Context, config: ManifestConfig, release_dir: Path, fi
                     })
                     if res.status_code == 401:
                         logger.critical(f"Authentication error, cancelling publish. Check token validity!: {res.status_code} {res.text}")
-                        # sys.exit(1) # quit the build and mark the github action as failed
+                        ctx.require(mark_gh_action_failed)
+                        return
                     elif not (200 <= res.status_code < 300):
                         logger.warning(f"Failed to patch project versions: {res.status_code} {res.text}")
                 return
@@ -164,7 +168,8 @@ def publish_modrinth(ctx: Context, config: ManifestConfig, release_dir: Path, fi
                 })
                 if res.status_code == 401:
                     logger.critical(f"Authentication error, cancelling publish. Check token validity!: {res.status_code} {res.text}")
-                    # sys.exit(1) # quit the build and mark the github action as failed
+                    ctx.require(mark_gh_action_failed)
+                    return
                 elif not (200 <= res.status_code < 300):
                     logger.warning(f"Failed to publish new version version: {res.status_code} {res.text}")
                     return
@@ -213,7 +218,8 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
                     }})
                 if res.status_code == 401:
                     logger.critical(f"Authentication error, cancelling publish. Check token validity!: {res.status_code} {res.text}")
-                    # sys.exit(1) # quit the build and mark the github action as failed
+                    ctx.require(mark_gh_action_failed)
+                    return
                 elif not (200 <= res.status_code < 300):
                     logger.warning(f"Failed to update descripion: {res.status_code} {res.text}")
                 logger.info(f"{ctx.project_name} {res.text}", extra={"gh_annotate_skip": True})
@@ -231,7 +237,8 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
                 })
                 if res.status_code == 401:
                     logger.critical(f"Authentication error, cancelling publish. Check token validity!: {res.status_code} {res.text}")
-                    # sys.exit(1) # quit the build and mark the github action as failed
+                    ctx.require(mark_gh_action_failed)
+                    return
                 elif not (200 <= res.status_code < 300):
                     logger.warning(f"Failed to patch project versions: {res.status_code} {res.text}")
             return
@@ -252,7 +259,8 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
             })
             if res.status_code == 401:
                 logger.critical(f"Authentication error, cancelling publish. Check token validity!: {res.status_code} {res.text}")
-                # sys.exit(1) # quit the build and mark the github action as failed
+                ctx.require(mark_gh_action_failed)
+                return
             elif not (200 <= res.status_code < 300):
                 logger.warning(f"Failed to permalink {project_id} version {prior_version_in_mc_version}: {res.status_code} {res.text}")
             else:
@@ -274,7 +282,8 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
             )
             if res.status_code == 401:
                 logger.critical(f"Authentication error, cancelling publish. Check token validity!: {res.status_code} {res.text}")
-                # sys.exit(1) # quit the build and mark the github action as failed
+                ctx.require(mark_gh_action_failed)
+                return
             elif not (200 <= res.status_code < 300):
                 logger.warning(f"Failed to publish new version of {ctx.project_name}: {res.status_code} {res.text}")
                 return

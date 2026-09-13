@@ -37,7 +37,6 @@ def beet_default(ctx: Context):
 
     # after the whole build, flush the stored records to file for the later markdown summary action job
     yield
-    # FIXME sys.exit causes this process to cancel before being completed? Reconsider how to mark job as failed
     sum_handler.flush_to_pickle()
 
 def load_and_summarize(ctx: Context):
