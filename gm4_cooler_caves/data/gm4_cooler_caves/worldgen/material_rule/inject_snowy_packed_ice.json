@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:condition",
+  "if_true": {
+    "type": "minecraft:biome",
+    "biome_is": [
+      "minecraft:frozen_river",
+      "minecraft:ice_spikes",
+      "minecraft:snowy_beach",
+      "minecraft:snowy_plains",
+      "minecraft:snowy_taiga"
+    ]
+  },
+  "then_run": {
+    "type": "minecraft:block",
+    "result_state": {
+      "id": "minecraft:packed_ice"
+    }
+  }
+}
