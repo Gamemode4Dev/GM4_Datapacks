@@ -2,8 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
@@ -35,8 +34,7 @@
       }
     },
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:dynamic",
@@ -63,10 +61,10 @@
     "rules": [
       {
         "type": "append",
-        "target": "pools[0].conditions",
+        "target": "pools[0].condition",
         "source": {
           "type": "reference",
-          "path": "pools[0].conditions[0]"
+          "path": "pools[0].condition"
         }
       },
       {

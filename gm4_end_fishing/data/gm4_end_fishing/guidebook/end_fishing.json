@@ -15,7 +15,7 @@
             "dimension": "minecraft:the_end"
           }
         },
-        "block": "minecraft:end_gateway"
+        "blocks": "minecraft:end_gateway"
       }
     },
     "fish_phantom": {
