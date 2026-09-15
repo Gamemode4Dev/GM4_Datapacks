@@ -11,4 +11,5 @@ execute if entity @s[tag=gm4_mangrove_tree_sapling.waterlogged] run setblock ~ ~
 execute if entity @s[tag=!gm4_mangrove_tree_sapling.waterlogged,tag=gm4_mangrove_tree_sapling] run setblock ~ ~ ~ mangrove_propagule[stage=0,age=4,waterlogged=false]
 execute if entity @s[tag=gm4_birch_tree_sapling] run setblock ~ ~ ~ birch_sapling[stage=0]
 execute if entity @s[tag=gm4_pale_oak_tree_sapling] run setblock ~ ~ ~ pale_oak_sapling[stage=0]
+execute if entity @s[tag=gm4_poplar_tree_sapling] run setblock ~ ~ ~ poplar_sapling[stage=0]
 execute if entity @s[tag=gm4_dark_oak_tree_sapling] run setblock ~ ~ ~ dark_oak_sapling[stage=0]
