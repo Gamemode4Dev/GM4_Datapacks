@@ -1,0 +1,6 @@
+type,variant,size_x,size_y,size_z,base_x_offset,base_z_offset,branch_start_height,feature,is_mega
+oak,a,19,14,18,8,9,3,place feature gm4_towering_trees:leaf_litter ~ ~1 ~,true
+oak,b,14,15,14,6,6,3,place feature gm4_towering_trees:leaf_litter ~ ~1 ~,true
+oak,c,18,15,19,8,8,4,place feature gm4_towering_trees:leaf_litter ~ ~1 ~,true
+oak,d,18,16,19,8,8,4,place feature gm4_towering_trees:leaf_litter ~ ~1 ~,true
+oak,e,14,13,14,6,6,3,place feature gm4_towering_trees:leaf_litter ~ ~1 ~,true
