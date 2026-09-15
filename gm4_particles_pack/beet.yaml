@@ -1,6 +1,6 @@
 id: gm4_particles_pack
 name: Particles Pack
-version: 1.8.X
+version: 1.9.X
 
 data_pack:
   load: .
@@ -13,7 +13,7 @@ meta:
     versioning:
       schedule_loops: [main]
       required:
-        gm4_better_armour_stands: 2.6.0
+        gm4_better_armour_stands: 2.7.0
     translation_linter_ignores:
       - text.gm4.guidebook.better_armour_stands.copy_code
     website:

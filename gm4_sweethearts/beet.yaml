@@ -1,6 +1,6 @@
 id: gm4_sweethearts
 name: Sweethearts
-version: 1.7.X
+version: 1.8.X
 
 data_pack:
   load: .
@@ -24,7 +24,7 @@ meta:
       project_id: z33oiJCd
     smithed:
       pack_id: gm4_sweethearts
-    planetminecraft: 
+    planetminecraft:
       uid: 5484554
     video: https://www.youtube.com/watch?v=mcopNZzY2dA
     wiki: https://wiki.gm4.co/wiki/Sweethearts

@@ -1,9 +1,9 @@
 id: gm4_player_motion
 name: Gamemode 4 Player Motion
-version: 1.1.X
+version: 1.2.X
 
 data_pack:
-  load: 
+  load:
     data: data
 
 pipeline:
@@ -14,7 +14,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_forceload: 1.6.0
+        lib_forceload: 1.7.0
       schedule_loops: [internal/technical/tick]
     credits:
       Original Creator:

@@ -1,6 +1,6 @@
 id: gm4_book_binders
 name: Book Binders
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -8,7 +8,7 @@ data_pack:
 require:
   - bolt
 
-resource_pack: 
+resource_pack:
   load: .
 
 pipeline:

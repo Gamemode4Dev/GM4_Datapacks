@@ -1,6 +1,6 @@
 id: gm4_lively_lily_pads
 name: Lively Lily Pads
-version: 3.3.X
+version: 3.4.X
 
 data_pack:
   load: .
@@ -11,13 +11,13 @@ pipeline:
 meta:
   gm4:
     versioning:
-      schedule_loops: [main,tick]
+      schedule_loops: [main, tick]
     website:
       description: Place decorations on Lily Pads!
-      recommended: 
+      recommended:
         - gm4_blossoming_pots
       notes: []
-      search_keywords: 
+      search_keywords:
         - candle
         - plant
         - coral

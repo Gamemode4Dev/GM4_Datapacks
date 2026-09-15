@@ -1,6 +1,6 @@
 id: gm4_audere_shamir
 name: Audere Shamir
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -16,12 +16,12 @@ meta:
   gm4:
     versioning:
       required:
-        gm4_metallurgy: 1.8.0
+        gm4_metallurgy: 1.9.0
       schedule_loops: [main]
     model_data:
       - item: tools
         reference: shamir/audere
-        template: 
+        template:
           name: shamir
           metal: barium
           textures_path: gm4_metallurgy:item/shamir/barium
