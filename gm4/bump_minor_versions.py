@@ -40,6 +40,11 @@ def get_file_locations() -> list[str]:
 def update_version(path: str):
     with open(path, 'r+', encoding='utf-8') as file:
         beet_yaml = yaml.load(file)
+        try:
+            if beet_yaml['meta']['gm4']['minecraft'] == []:
+                return
+        except:
+            pass
         version = beet_yaml['version']
         major, minor, patch = version.split('.')
         new_version = f"{major}.{int(minor) + 1}.{patch}"
@@ -60,6 +65,11 @@ def update_dependencies(pack: str, new_version: str):
     for path in get_file_locations():
         with open(path, 'r+', encoding='utf-8') as file:
             beet_yaml = yaml.load(file)
+            try:
+                if beet_yaml['meta']['gm4']['minecraft'] == []:
+                    continue
+            except:
+                pass
             try:
                 dependencies = beet_yaml['meta']['gm4']['versioning']['required']
                 for key,value in beet_yaml['meta']['gm4']['versioning']['required'].items():
