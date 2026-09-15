@@ -1,32 +1,31 @@
 {
-    "condition": "minecraft:any_of",
+    "type": "minecraft:any_of",
     "terms": [
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "minecraft:type_specific/player": {
-            "advancements": {
-              "gm4_infinitas_shamir:water/place": {
-                "place_water_offhand": true
-              }
+        {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "minecraft:type_specific/player": {
+                    "advancements": {
+                        "gm4_infinitas_shamir:water/place": {
+                            "place_water_offhand": true
+                        }
+                    }
+                }
             }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "minecraft:type_specific/player": {
-            "advancements": {
-              "gm4_infinitas_shamir:water/place": {
-                "use_on_cauldron_offhand": true
-              }
+        },
+        {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "minecraft:type_specific/player": {
+                    "advancements": {
+                        "gm4_infinitas_shamir:water/place": {
+                            "use_on_cauldron_offhand": true
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     ]
-  }
-  
+}

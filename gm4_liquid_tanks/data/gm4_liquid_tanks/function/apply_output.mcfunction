@@ -3,7 +3,7 @@
 
 # merge count from input and set to tank
 item_modifier gm4_liquid_tanks:apply_output_count:
-    function: "minecraft:set_count"
+    type: "minecraft:set_count"
     count:
         type: "minecraft:score"
         target: 

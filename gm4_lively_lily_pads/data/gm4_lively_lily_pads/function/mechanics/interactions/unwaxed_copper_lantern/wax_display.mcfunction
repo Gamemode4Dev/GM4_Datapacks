@@ -11,7 +11,7 @@ tag @s remove gm4_llp_unwaxed_copper_lantern
 tag @s add gm4_llp_waxed_copper_lantern
 
 # modify
-execute if data entity @s {block_state:{Name:"minecraft:copper_lantern"}} run return run data modify entity @s block_state.Name set value "minecraft:waxed_copper_lantern"
-execute if data entity @s {block_state:{Name:"minecraft:exposed_copper_lantern"}} run return run data modify entity @s block_state.Name set value "minecraft:waxed_exposed_copper_lantern"
-execute if data entity @s {block_state:{Name:"minecraft:weathered_copper_lantern"}} run return run data modify entity @s block_state.Name set value "minecraft:waxed_weathered_copper_lantern"
-execute if data entity @s {block_state:{Name:"minecraft:oxidized_copper_lantern"}} run return run data modify entity @s block_state.Name set value "minecraft:waxed_oxidized_copper_lantern"
+execute if data entity @s {block_state:{id:"minecraft:copper_lantern"}} run return run data modify entity @s block_state.id set value "minecraft:waxed_copper_lantern"
+execute if data entity @s {block_state:{id:"minecraft:exposed_copper_lantern"}} run return run data modify entity @s block_state.id set value "minecraft:waxed_exposed_copper_lantern"
+execute if data entity @s {block_state:{id:"minecraft:weathered_copper_lantern"}} run return run data modify entity @s block_state.id set value "minecraft:waxed_weathered_copper_lantern"
+execute if data entity @s {block_state:{id:"minecraft:oxidized_copper_lantern"}} run return run data modify entity @s block_state.id set value "minecraft:waxed_oxidized_copper_lantern"

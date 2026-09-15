@@ -8,23 +8,21 @@
                         "minecraft:baked_potato"
                     ]
                 },
-                "entity": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:entity_tags": {
-                                "all_of": [
-                                    "gm4_horse"
-                                ],
-                                "none_of": [
-                                    "gm4_horse.tamed"
-                                ]
-                            }
+                "entity": {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_type": "#gm4_horsemanship:trainable",
+                        "minecraft:entity_tags": {
+                            "all_of": [
+                                "gm4_horse"
+                            ],
+                            "none_of": [
+                                "gm4_horse.tamed"
+                            ]
                         }
                     }
-                ]
+                }
             }
         },
         "beetroot": {
@@ -35,23 +33,21 @@
                         "minecraft:beetroot"
                     ]
                 },
-                "entity": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:entity_tags": {
-                                "all_of": [
-                                    "gm4_horse"
-                                ],
-                                "none_of": [
-                                    "gm4_horse.tamed"
-                                ]
-                            }
+                "entity": {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_type": "#gm4_horsemanship:trainable",
+                        "minecraft:entity_tags": {
+                            "all_of": [
+                                "gm4_horse"
+                            ],
+                            "none_of": [
+                                "gm4_horse.tamed"
+                            ]
                         }
                     }
-                ]
+                }
             }
         },
         "bread": {
@@ -62,23 +58,21 @@
                         "minecraft:bread"
                     ]
                 },
-                "entity": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:entity_tags": {
-                                "all_of": [
-                                    "gm4_horse"
-                                ],
-                                "none_of": [
-                                    "gm4_horse.tamed"
-                                ]
-                            }
+                "entity": {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_type": "#gm4_horsemanship:trainable",
+                        "minecraft:entity_tags": {
+                            "all_of": [
+                                "gm4_horse"
+                            ],
+                            "none_of": [
+                                "gm4_horse.tamed"
+                            ]
                         }
                     }
-                ]
+                }
             }
         },
         "chorus_fruit": {
@@ -89,23 +83,21 @@
                         "minecraft:chorus_fruit"
                     ]
                 },
-                "entity": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:entity_tags": {
-                                "all_of": [
-                                    "gm4_horse"
-                                ],
-                                "none_of": [
-                                    "gm4_horse.tamed"
-                                ]
-                            }
+                "entity": {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_type": "#gm4_horsemanship:trainable",
+                        "minecraft:entity_tags": {
+                            "all_of": [
+                                "gm4_horse"
+                            ],
+                            "none_of": [
+                                "gm4_horse.tamed"
+                            ]
                         }
                     }
-                ]
+                }
             }
         },
         "dried_kelp": {
@@ -116,23 +108,21 @@
                         "minecraft:dried_kelp"
                     ]
                 },
-                "entity": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:entity_tags": {
-                                "all_of": [
-                                    "gm4_horse"
-                                ],
-                                "none_of": [
-                                    "gm4_horse.tamed"
-                                ]
-                            }
+                "entity": {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_type": "#gm4_horsemanship:trainable",
+                        "minecraft:entity_tags": {
+                            "all_of": [
+                                "gm4_horse"
+                            ],
+                            "none_of": [
+                                "gm4_horse.tamed"
+                            ]
                         }
                     }
-                ]
+                }
             }
         },
         "glow_berries": {
@@ -143,23 +133,21 @@
                         "minecraft:glow_berries"
                     ]
                 },
-                "entity": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:entity_tags": {
-                                "all_of": [
-                                    "gm4_horse"
-                                ],
-                                "none_of": [
-                                    "gm4_horse.tamed"
-                                ]
-                            }
+                "entity": {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_type": "#gm4_horsemanship:trainable",
+                        "minecraft:entity_tags": {
+                            "all_of": [
+                                "gm4_horse"
+                            ],
+                            "none_of": [
+                                "gm4_horse.tamed"
+                            ]
                         }
                     }
-                ]
+                }
             }
         },
         "melon_slice": {
@@ -170,23 +158,21 @@
                         "minecraft:melon_slice"
                     ]
                 },
-                "entity": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:entity_tags": {
-                                "all_of": [
-                                    "gm4_horse"
-                                ],
-                                "none_of": [
-                                    "gm4_horse.tamed"
-                                ]
-                            }
+                "entity": {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_type": "#gm4_horsemanship:trainable",
+                        "minecraft:entity_tags": {
+                            "all_of": [
+                                "gm4_horse"
+                            ],
+                            "none_of": [
+                                "gm4_horse.tamed"
+                            ]
                         }
                     }
-                ]
+                }
             }
         },
         "sweet_berries": {
@@ -197,23 +183,21 @@
                         "minecraft:sweet_berries"
                     ]
                 },
-                "entity": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "minecraft:entity_type": "#gm4_horsemanship:trainable",
-                            "minecraft:entity_tags": {
-                                "all_of": [
-                                    "gm4_horse"
-                                ],
-                                "none_of": [
-                                    "gm4_horse.tamed"
-                                ]
-                            }
+                "entity": {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "minecraft:entity_type": "#gm4_horsemanship:trainable",
+                        "minecraft:entity_tags": {
+                            "all_of": [
+                                "gm4_horse"
+                            ],
+                            "none_of": [
+                                "gm4_horse.tamed"
+                            ]
                         }
                     }
-                ]
+                }
             }
         }
     },

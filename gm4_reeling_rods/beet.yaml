@@ -1,6 +1,6 @@
 id: gm4_reeling_rods
 name: Reeling Rods
-version: 1.1.X
+version: 1.2.X
 
 data_pack:
   load: .
@@ -17,14 +17,14 @@ meta:
   gm4:
     versioning:
       required:
-        lib_hooked_entity: 1.0.0
+        lib_hooked_entity: 1.1.0
     website:
       description: Steal Villager's wares, scratch up your foes! Fishing rods have never been more useful!
-      recommended: 
+      recommended:
         - gm4_end_fishing
         - gm4_live_catch
       notes: []
-      search_keywords: 
+      search_keywords:
         - barbed
         - fishing
         - enchantment

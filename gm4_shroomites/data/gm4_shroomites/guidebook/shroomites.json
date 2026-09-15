@@ -9,36 +9,32 @@
     "step_on_mycelium": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "stepping_on": {
-                "block": {
-                  "blocks": [
-                    "minecraft:mycelium"
-                  ]
-                }
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "stepping_on": {
+              "block": {
+                "blocks": [
+                  "minecraft:mycelium"
+                ]
               }
             }
           }
-        ]
+        }
       }
     },
     "stand_in_blocker": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": "#gm4_shroomites:spore_opaque"
-              }
+        "player": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "#gm4_shroomites:spore_opaque"
             }
           }
-        ]
+        }
       }
     }
   },

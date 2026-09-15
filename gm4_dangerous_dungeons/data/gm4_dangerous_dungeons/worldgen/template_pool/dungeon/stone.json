@@ -23,7 +23,7 @@
                     "probability": 0.93
                   },
                   "output_state": {
-                    "Name": "minecraft:air"
+                    "id": "minecraft:air"
                   }
                 },
                 {
@@ -36,7 +36,7 @@
                     "probability": 0.30
                   },
                   "output_state": {
-                      "Name": "minecraft:cracked_stone_bricks"
+                      "id": "minecraft:cracked_stone_bricks"
                   }
                 },
                 {
@@ -49,7 +49,7 @@
                     "probability": 0.40
                   },
                   "output_state": {
-                      "Name": "minecraft:mossy_stone_bricks"
+                      "id": "minecraft:mossy_stone_bricks"
                   }
                 }
               ]
@@ -79,7 +79,7 @@
                     "probability": 0.94
                   },
                   "output_state": {
-                    "Name": "minecraft:air"
+                    "id": "minecraft:air"
                   }
                 },
                 {
@@ -92,7 +92,7 @@
                     "probability": 0.30
                   },
                   "output_state": {
-                      "Name": "minecraft:polished_andesite"
+                      "id": "minecraft:polished_andesite"
                   }
                 },
                 {
@@ -105,7 +105,7 @@
                     "probability": 0.40
                   },
                   "output_state": {
-                      "Name": "minecraft:cracked_stone_bricks"
+                      "id": "minecraft:cracked_stone_bricks"
                   }
                 }
               ]
@@ -132,7 +132,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.2
                   },
-                  "output_state": { "Name": "minecraft:cracked_stone_bricks" }
+                  "output_state": { "id": "minecraft:cracked_stone_bricks" }
                 },
                 {
                   "location_predicate": { "predicate_type": "always_true" },
@@ -141,7 +141,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.1875
                   },
-                  "output_state": { "Name": "minecraft:mossy_stone_bricks" }
+                  "output_state": { "id": "minecraft:mossy_stone_bricks" }
                 },
                 {
                   "location_predicate": { "predicate_type": "always_true" },
@@ -150,7 +150,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.0833
                   },
-                  "output_state": { "Name": "minecraft:cobblestone" }
+                  "output_state": { "id": "minecraft:cobblestone" }
                 }
               ]
             }
@@ -176,7 +176,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.2
                   },
-                  "output_state": { "Name": "minecraft:cracked_stone_bricks" }
+                  "output_state": { "id": "minecraft:cracked_stone_bricks" }
                 },
                 {
                   "location_predicate": { "predicate_type": "always_true" },
@@ -185,7 +185,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.1875
                   },
-                  "output_state": { "Name": "minecraft:mossy_stone_bricks" }
+                  "output_state": { "id": "minecraft:mossy_stone_bricks" }
                 },
                 {
                   "location_predicate": { "predicate_type": "always_true" },
@@ -194,7 +194,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.0833
                   },
-                  "output_state": { "Name": "minecraft:cobblestone" }
+                  "output_state": { "id": "minecraft:cobblestone" }
                 }
               ]
             }
@@ -220,7 +220,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.2
                   },
-                  "output_state": { "Name": "minecraft:cracked_stone_bricks" }
+                  "output_state": { "id": "minecraft:cracked_stone_bricks" }
                 },
                 {
                   "location_predicate": { "predicate_type": "always_true" },
@@ -229,7 +229,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.1875
                   },
-                  "output_state": { "Name": "minecraft:mossy_stone_bricks" }
+                  "output_state": { "id": "minecraft:mossy_stone_bricks" }
                 },
                 {
                   "location_predicate": { "predicate_type": "always_true" },
@@ -238,7 +238,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.0833
                   },
-                  "output_state": { "Name": "minecraft:cobblestone" }
+                  "output_state": { "id": "minecraft:cobblestone" }
                 }
               ]
             }
@@ -264,7 +264,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.2
                   },
-                  "output_state": { "Name": "minecraft:cracked_stone_bricks" }
+                  "output_state": { "id": "minecraft:cracked_stone_bricks" }
                 },
                 {
                   "location_predicate": { "predicate_type": "always_true" },
@@ -273,7 +273,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.1875
                   },
-                  "output_state": { "Name": "minecraft:mossy_stone_bricks" }
+                  "output_state": { "id": "minecraft:mossy_stone_bricks" }
                 },
                 {
                   "location_predicate": { "predicate_type": "always_true" },
@@ -282,7 +282,7 @@
                     "block": "minecraft:stone_bricks",
                     "probability": 0.0833
                   },
-                  "output_state": { "Name": "minecraft:cobblestone" }
+                  "output_state": { "id": "minecraft:cobblestone" }
                 }
               ]
             }

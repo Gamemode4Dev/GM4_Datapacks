@@ -1,6 +1,6 @@
 id: gm4_rope_ladders
 name: Rope Ladders
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -11,7 +11,7 @@ pipeline:
 meta:
   gm4:
     versioning:
-      schedule_loops: 
+      schedule_loops:
         - main
         - tick
     model_data:

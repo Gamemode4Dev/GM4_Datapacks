@@ -23,24 +23,22 @@
     "find_phantom_scarecrow": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:type_specific/player": {
-                "looking_at": {
-                  "minecraft:entity_type": "minecraft:armor_stand",
-                  "minecraft:entity_tags": {
-                    "all_of": [
-                      "gm4_phantom_scarecrow"
-                    ]
-                  }
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:type_specific/player": {
+              "looking_at": {
+                "minecraft:entity_type": "minecraft:armor_stand",
+                "minecraft:entity_tags": {
+                  "all_of": [
+                    "gm4_phantom_scarecrow"
+                  ]
                 }
               }
             }
           }
-        ]
+        }
       }
     }
   },

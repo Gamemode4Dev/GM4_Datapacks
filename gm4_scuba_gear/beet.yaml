@@ -1,6 +1,6 @@
 id: gm4_scuba_gear
 name: SCUBA Gear
-version: 2.1.X
+version: 2.2.X
 
 data_pack:
   load: .

@@ -8,22 +8,22 @@
             "minecraft:writable_book"
           ]
         },
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:armor_stand"
+        "entity": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:entity_type": "minecraft:armor_stand"
+              }
+            },
+            {
+              "type": "minecraft:inverted",
+              "term": "gm4_better_armour_stands:holding/mainhand/book_ignore"
             }
-          },
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:reference",
-              "name": "gm4_better_armour_stands:holding/mainhand/book_ignore"
-            }
-          }
-        ]
+          ]
+        }
       }
     }
   },

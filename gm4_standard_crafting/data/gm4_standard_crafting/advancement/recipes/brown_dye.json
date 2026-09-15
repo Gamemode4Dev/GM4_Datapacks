@@ -4,7 +4,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_standard_crafting:brown_dye"
+        "recipes": "gm4_standard_crafting:brown_dye"
       }
     },
     "has_materials": {

@@ -10,12 +10,10 @@
             {
               "type": "minecraft:item",
               "name": "minecraft:bow",
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.4
-                }
-              ]
+              "condition": {
+                "type": "minecraft:random_chance",
+                "chance": 0.4
+              }
             },
             {
               "type": "minecraft:item",

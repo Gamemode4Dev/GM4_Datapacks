@@ -3,19 +3,17 @@
     "placed_machine_block": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": [
-                "minecraft:player_head"
-              ],
-              "predicates": {
-                "minecraft:custom_data": "{gm4_machines:{}}"
-              }
+        "location": {
+          "type": "minecraft:match_tool",
+          "predicate": {
+            "items": [
+              "minecraft:player_head"
+            ],
+            "predicates": {
+              "minecraft:custom_data": "{gm4_machines:{}}"
             }
           }
-        ]
+        }
       }
     }
   },

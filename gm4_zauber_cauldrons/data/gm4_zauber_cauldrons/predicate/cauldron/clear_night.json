@@ -1,8 +1,8 @@
 {
-    "condition": "minecraft:all_of",
+    "type": "minecraft:all_of",
     "terms": [
         {
-            "condition": "minecraft:time_check",
+            "type": "minecraft:time_check",
             "clock": "minecraft:overworld",
             "value": {
                 "min": 13000,
@@ -11,7 +11,7 @@
             "period": 24000
         },
         {
-            "condition": "minecraft:weather_check",
+            "type": "minecraft:weather_check",
             "raining": false,
             "thundering": false
         }

@@ -1,6 +1,6 @@
 id: gm4_soul_glass
 name: Soul Glass
-version: 1.7.X
+version: 1.8.X
 
 require:
   - bolt
@@ -16,8 +16,8 @@ meta:
   gm4:
     versioning:
       required:
-        lib_machines: 1.5.0
-      schedule_loops: 
+        lib_machines: 1.6.0
+      schedule_loops:
         - main
         - beacon_clock
     model_data:

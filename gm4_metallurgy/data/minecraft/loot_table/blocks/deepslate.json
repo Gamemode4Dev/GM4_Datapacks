@@ -10,47 +10,41 @@
           "children": [
             {
               "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "predicates": {
-                      "minecraft:enchantments": [
-                        {
-                          "enchantments": "minecraft:silk_touch",
-                          "levels": {
-                            "min": 1
-                          }
+              "name": "minecraft:deepslate",
+              "condition": {
+                "type": "minecraft:match_tool",
+                "predicate": {
+                  "predicates": {
+                    "minecraft:enchantments": [
+                      {
+                        "enchantments": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
                         }
-                      ]
-                    }
+                      }
+                    ]
                   }
                 }
-              ],
-              "name": "minecraft:deepslate"
+              }
             },
             {
               "type": "minecraft:loot_table",
               "value": "gm4_forterra_shamir:deepslate",
-              "conditions": [
-                {
-                  "condition": "minecraft:match_tool",
-                  "predicate": {
-                    "predicates": {
-                      "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'forterra'}}"
-                    }
+              "condition": {
+                "type": "minecraft:match_tool",
+                "predicate": {
+                  "predicates": {
+                    "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'forterra'}}"
                   }
                 }
-              ]
+              }
             },
             {
               "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:survives_explosion"
-                }
-              ],
-              "name": "minecraft:cobbled_deepslate"
+              "name": "minecraft:cobbled_deepslate",
+              "condition": {
+                "type": "minecraft:survives_explosion"
+              }
             }
           ]
         }

@@ -6,9 +6,9 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:player_head",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_name",
+              "type": "minecraft:set_name",
               "target": "item_name",
               "name": {
                 "translate": "item.gm4.metallurgy.bismutite_lump",
@@ -16,14 +16,14 @@
               }
             },
             {
-              "function": "minecraft:set_lore",
+              "type": "minecraft:set_lore",
               "mode": "append",
               "entity": "this",
               "lore": [
                 [
                   {
                     "translate": "text.gm4.metallurgy.contains",
-                    "fallback":"Contains ",
+                    "fallback": "Contains ",
                     "italic": false,
                     "color": "gray"
                   },
@@ -73,14 +73,18 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_metallurgy:item/lump/bismutite"]},
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_metallurgy:item/lump/bismutite"
+                  ]
+                },
                 "minecraft:profile": "$ore/bismuth"
               }
             },
             {
-              "function": "minecraft:set_custom_data",
+              "type": "minecraft:set_custom_data",
               "tag": "{gm4_metallurgy:{metal:{type:'bismuth',amount:[1s],castable:1b},item:'ore'}}"
             }
           ]

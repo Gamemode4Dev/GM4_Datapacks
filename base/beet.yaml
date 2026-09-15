@@ -1,4 +1,4 @@
-version: 1.9.0
+version: 1.10.0
 id: gm4
 
 data_pack:
@@ -22,7 +22,7 @@ meta:
     versioning:
       extra_version_injections:
         advancements:
-          - 'gm4:intro_song/play_song'
+          - gm4:intro_song/play_song
     model_data:
       - item: command_block
         reference: gm4:gui/advancement/root

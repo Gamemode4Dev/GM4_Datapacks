@@ -3,12 +3,7 @@
         "requirement": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:reference",
-                        "name": "gm4_zauber_cauldrons:player/equipment/armor/full"
-                    }
-                ]
+                "player": "gm4_zauber_cauldrons:player/equipment/armor/full"
             }
         }
     },

@@ -3,24 +3,20 @@
     "breed_frogs": {
       "trigger": "minecraft:bred_animals",
       "conditions": {
-        "parent": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:frog"
-            }
+        "parent": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:frog"
           }
-        ],
-        "partner": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:frog"
-            }
+        },
+        "partner": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:frog"
           }
-        ]
+        }
       }
     }
   },

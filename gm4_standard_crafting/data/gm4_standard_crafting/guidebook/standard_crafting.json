@@ -121,30 +121,33 @@
     "ride_horse": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "vehicle": {
-                "minecraft:entity_type": "minecraft:horse"
-              }
-            }
-          },
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
+        "player": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
                 "vehicle": {
-                  "minecraft:entity_type": "minecraft:horse",
-                  "minecraft:nbt": "{NoAI:1b}"
+                  "minecraft:entity_type": "minecraft:horse"
+                }
+              }
+            },
+            {
+              "type": "minecraft:inverted",
+              "term": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "vehicle": {
+                    "minecraft:entity_type": "minecraft:horse",
+                    "minecraft:nbt": "{NoAI:1b}"
+                  }
                 }
               }
             }
-          }
-        ]
+          ]
+        }
       }
     },
     "obtain_gold_block": {

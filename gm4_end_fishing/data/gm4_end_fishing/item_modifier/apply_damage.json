@@ -1,26 +1,30 @@
-[
-  {
-    "function": "minecraft:set_damage",
-    "damage": -0.015625,
-    "add": true,
-    "conditions": [
-      {
-        "condition": "minecraft:value_check",
-        "value": {
-          "type": "minecraft:binomial",
-          "n": 1,
-          "p": {
-            "type": "minecraft:score",
-            "target": {
-              "type": "minecraft:fixed",
-              "name": "$unbreaking"
-            },
-            "score": "gm4_ef_data",
-            "scale": 0.01
-          }
-        },
-        "range": 1
+{
+  "type": "minecraft:set_damage",
+  "damage": -0.015625,
+  "add": true,
+  "condition": {
+    "type": "minecraft:int_value_check",
+    "value": {
+      "type": "minecraft:binomial",
+      "n": 1,
+      "p": {
+        "type": "minecraft:mul",
+        "inputs": [
+          {
+            "type": "minecraft:from_int",
+            "input": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "$unbreaking"
+              },
+              "score": "gm4_ef_data"
+            }
+          },
+          0.01
+        ]
       }
-    ]
+    },
+    "test": 1
   }
-]
+}

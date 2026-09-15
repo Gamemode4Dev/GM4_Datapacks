@@ -3,25 +3,23 @@
         "requirement": {
             "trigger": "minecraft:changed_dimension",
             "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:value_check",
-                            "value": {
-                                "type": "minecraft:score",
-                                "target": {
-                                    "type": "minecraft:fixed",
-                                    "name": "$disable_upgrade_paths"
-                                },
-                                "score": "gm4_data"
+                "player": {
+                    "type": "minecraft:inverted",
+                    "term": {
+                        "type": "minecraft:int_value_check",
+                        "value": {
+                            "type": "minecraft:score",
+                            "target": {
+                                "type": "minecraft:fixed",
+                                "name": "$disable_upgrade_paths"
                             },
-                            "range": {
-                                "min": 1
-                            }
+                            "score": "gm4_data"
+                        },
+                        "test": {
+                            "min": 1
                         }
                     }
-                ]
+                }
             }
         }
     },

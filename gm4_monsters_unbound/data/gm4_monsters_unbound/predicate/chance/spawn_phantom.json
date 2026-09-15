@@ -1,19 +1,19 @@
-[
-    {
-        "condition": "minecraft:random_chance",
-        "chance": 0.075
-    },
-    {
-        "condition": "minecraft:reference",
-        "name": "gm4_monsters_unbound:biome/mountainous"
-    },
-    {
-        "condition": "minecraft:time_check",
-        "clock": "minecraft:overworld",
-        "value": {
-            "min": 13188,
-            "max": 22812
+{
+    "type": "minecraft:all_of",
+    "terms": [
+        {
+            "type": "minecraft:random_chance",
+            "chance": 0.075
         },
-        "period": 24000
-    }
-]
+        "gm4_monsters_unbound:biome/mountainous",
+        {
+            "type": "minecraft:time_check",
+            "clock": "minecraft:overworld",
+            "value": {
+                "min": 13188,
+                "max": 22812
+            },
+            "period": 24000
+        }
+    ]
+}

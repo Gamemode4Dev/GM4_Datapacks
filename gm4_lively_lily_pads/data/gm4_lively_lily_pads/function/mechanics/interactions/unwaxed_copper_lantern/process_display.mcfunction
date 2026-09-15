@@ -10,7 +10,7 @@ execute if score $interaction_processed gm4_llp.data matches 0 if score $mainhan
 execute if score $interaction_processed gm4_llp.data matches 0 if score $mainhand gm4_llp.data matches 0 if score $offhand gm4_llp.data matches 2 store success score $interaction_processed gm4_llp.data run scoreboard players set $wax_used gm4_llp.data 2
 
 # check if can scrape
-execute if score $interaction_processed gm4_llp.data matches 0 store success score $can_scrape gm4_llp.data unless data entity @s {block_state:{Name:"minecraft:copper_lantern"}}
+execute if score $interaction_processed gm4_llp.data matches 0 store success score $can_scrape gm4_llp.data unless data entity @s {block_state:{id:"minecraft:copper_lantern"}}
 # if cant scrape, but offhand honeycomb, wax
 execute if score $interaction_processed gm4_llp.data matches 0 if score $can_scrape gm4_llp.data matches 0 if score $offhand gm4_llp.data matches 2 store success score $interaction_processed gm4_llp.data run scoreboard players set $wax_used gm4_llp.data 2
 

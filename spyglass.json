@@ -23,8 +23,8 @@
       "templates/worldgen/biome": {
         "category": "worldgen/biome"
       },
-      "templates/worldgen/configured_feature": {
-        "category": "worldgen/configured_feature"
+      "templates/worldgen/feature": {
+        "category": "worldgen/feature"
       },
       "templates/worldgen/placed_feature": {
         "category": "worldgen/placed_feature"

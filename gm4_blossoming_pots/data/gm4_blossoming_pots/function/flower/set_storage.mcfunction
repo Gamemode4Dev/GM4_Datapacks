@@ -14,8 +14,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pale_hanging_moss 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:pale_hanging_moss",\
-                Properties:{\
+                id:"minecraft:pale_hanging_moss",\
+                properties:{\
                     tip:"false"\
                 }\
             },\
@@ -28,8 +28,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pale_hanging_moss 
         },\
         {\
             block_state:{\
-                Name:"minecraft:pale_hanging_moss",\
-                Properties:{\
+                id:"minecraft:pale_hanging_moss",\
+                properties:{\
                     tip:"true"\
                 }\
             },\
@@ -48,8 +48,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pointed_dripstone 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:pointed_dripstone",\
-                Properties:{\
+                id:"minecraft:pointed_dripstone",\
+                properties:{\
                     vertical_direction:"down",\
                     thickness:"frustum"\
                 }\
@@ -64,8 +64,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pointed_dripstone 
         },\
         {\
             block_state:{\
-                Name:"minecraft:pointed_dripstone",\
-                Properties:{\
+                id:"minecraft:pointed_dripstone",\
+                properties:{\
                     vertical_direction:"down",\
                     thickness:"tip"\
                 }\
@@ -86,8 +86,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:sulfur_spike set v
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:sulfur_spike",\
-                Properties:{\
+                id:"minecraft:sulfur_spike",\
+                properties:{\
                     vertical_direction:"down",\
                     thickness:"frustum"\
                 }\
@@ -102,8 +102,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:sulfur_spike set v
         },\
         {\
             block_state:{\
-                Name:"minecraft:sulfur_spike",\
-                Properties:{\
+                id:"minecraft:sulfur_spike",\
+                properties:{\
                     vertical_direction:"down",\
                     thickness:"tip"\
                 }\
@@ -124,7 +124,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:small_amethyst_bud
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:small_amethyst_bud"\
+                id:"minecraft:small_amethyst_bud"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.2565f,-0.25f],\
@@ -140,7 +140,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:medium_amethyst_bu
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:medium_amethyst_bud"\
+                id:"minecraft:medium_amethyst_bud"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.2565f,-0.25f],\
@@ -156,7 +156,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:large_amethyst_bud
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:large_amethyst_bud"\
+                id:"minecraft:large_amethyst_bud"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.2565f,-0.25f],\
@@ -172,7 +172,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:amethyst_cluster s
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:amethyst_cluster"\
+                id:"minecraft:amethyst_cluster"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.2565f,-0.25f],\
@@ -189,7 +189,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:oak_leaves set val
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:oak_leaves"\
+                id:"minecraft:oak_leaves"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.125f,-0.25f],\
@@ -205,7 +205,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:spruce_leaves set 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:spruce_leaves"\
+                id:"minecraft:spruce_leaves"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.125f,-0.25f],\
@@ -221,7 +221,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:birch_leaves set v
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:birch_leaves"\
+                id:"minecraft:birch_leaves"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.125f,-0.25f],\
@@ -237,7 +237,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:jungle_leaves set 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:jungle_leaves"\
+                id:"minecraft:jungle_leaves"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.125f,-0.25f],\
@@ -253,7 +253,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:acacia_leaves set 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:acacia_leaves"\
+                id:"minecraft:acacia_leaves"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.125f,-0.25f],\
@@ -269,7 +269,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:dark_oak_leaves se
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:dark_oak_leaves"\
+                id:"minecraft:dark_oak_leaves"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.125f,-0.25f],\
@@ -285,7 +285,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:mangrove_leaves se
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:mangrove_leaves"\
+                id:"minecraft:mangrove_leaves"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.125f,-0.25f],\
@@ -301,7 +301,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:cherry_leaves set 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:cherry_leaves"\
+                id:"minecraft:cherry_leaves"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.125f,-0.25f],\
@@ -317,7 +317,55 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pale_oak_leaves se
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:pale_oak_leaves"\
+                id:"minecraft:pale_oak_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.25f,-0.125f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:flower_pots minecraft:red_poplar_leaves set value {\
+    place_sound:"minecraft:block.poplar_leaves.place",\
+    display:[\
+        {\
+            block_state:{\
+                id:"minecraft:red_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.25f,-0.125f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:flower_pots minecraft:orange_poplar_leaves set value {\
+    place_sound:"minecraft:block.poplar_leaves.place",\
+    display:[\
+        {\
+            block_state:{\
+                id:"minecraft:orange_poplar_leaves"\
+            },\
+            transformation:{\
+                translation:[-0.25f,-0.125f,-0.25f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.5f,0.5f,0.5f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:flower_pots minecraft:yellow_poplar_leaves set value {\
+    place_sound:"minecraft:block.poplar_leaves.place",\
+    display:[\
+        {\
+            block_state:{\
+                id:"minecraft:yellow_poplar_leaves"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.125f,-0.25f],\
@@ -333,7 +381,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:azalea_leaves set 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:azalea_leaves"\
+                id:"minecraft:azalea_leaves"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.125f,-0.25f],\
@@ -349,7 +397,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:flowering_azalea_l
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:flowering_azalea_leaves"\
+                id:"minecraft:flowering_azalea_leaves"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.125f,-0.25f],\
@@ -366,7 +414,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:short_grass set va
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:short_grass"\
+                id:"minecraft:short_grass"\
             },\
             transformation:{\
                 translation:[-0.2f,-0.25f,-0.2f],\
@@ -382,7 +430,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:short_dry_grass se
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:short_dry_grass"\
+                id:"minecraft:short_dry_grass"\
             },\
             transformation:{\
                 translation:[-0.325f,-0.2565f,-0.325f],\
@@ -398,12 +446,28 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:bush set value {\
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:bush"\
+                id:"minecraft:bush"\
             },\
             transformation:{\
                 translation:[-0.39f,-0.2565f,-0.39f],\
                 left_rotation:[0f,0f,0f,1f],\
                 scale:[0.78f,0.78f,0.78f],\
+                right_rotation:[0f,0f,0f,1f]\
+            }\
+        }\
+    ]\
+}
+data modify storage gm4_blossoming_pots:flower_pots minecraft:red_shrub set value {\
+    place_sound:"minecraft:block.red_shrub.place",\
+    display:[\
+        {\
+            block_state:{\
+                id:"minecraft:red_shrub"\
+            },\
+            transformation:{\
+                translation:[-0.3f,-0.2565f,-0.3f],\
+                left_rotation:[0f,0f,0f,1f],\
+                scale:[0.6f,0.6f,0.6f],\
                 right_rotation:[0f,0f,0f,1f]\
             }\
         }\
@@ -415,7 +479,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:cactus_flower set 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:cactus_flower"\
+                id:"minecraft:cactus_flower"\
             },\
             transformation:{\
                 translation:[-0.4f,-0.2565f,-0.4f],\
@@ -432,7 +496,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:spore_blossom set 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:spore_blossom"\
+                id:"minecraft:spore_blossom"\
             },\
             transformation:{\
                 translation:[-0.2f,0.42f,0.2f],\
@@ -449,7 +513,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:firefly_bush set v
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:firefly_bush"\
+                id:"minecraft:firefly_bush"\
             },\
             transformation:{\
                 translation:[-0.3f,-0.2565f,-0.3f],\
@@ -466,7 +530,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:sugar_cane set val
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:sugar_cane"\
+                id:"minecraft:sugar_cane"\
             },\
             transformation:{\
                 translation:[-0.15f,-0.2565f,-0.15f],\
@@ -477,7 +541,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:sugar_cane set val
         },\
         {\
             block_state:{\
-                Name:"minecraft:sugar_cane"\
+                id:"minecraft:sugar_cane"\
             },\
             transformation:{\
                 translation:[-0.15f,0.0435f,-0.15f],\
@@ -494,7 +558,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:weeping_vines set 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:weeping_vines_plant"\
+                id:"minecraft:weeping_vines_plant"\
             },\
             transformation:{\
                 translation:[-0.25f,0.2434f,0.25f],\
@@ -505,7 +569,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:weeping_vines set 
         },\
         {\
             block_state:{\
-                Name:"minecraft:weeping_vines"\
+                id:"minecraft:weeping_vines"\
             },\
             transformation:{\
                 translation:[-0.25f,0.7434f,0.25f],\
@@ -521,7 +585,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:twisting_vines set
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:twisting_vines_plant"\
+                id:"minecraft:twisting_vines_plant"\
             },\
             transformation:{\
                 translation:[-0.25f,-0.2565f,-0.25f],\
@@ -532,7 +596,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:twisting_vines set
         },\
         {\
             block_state:{\
-                Name:"minecraft:twisting_vines"\
+                id:"minecraft:twisting_vines"\
             },\
             transformation:{\
                 translation:[-0.25f,0.2435f,-0.25f],\
@@ -549,8 +613,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:tall_grass set val
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:tall_grass",\
-                Properties:{\
+                id:"minecraft:tall_grass",\
+                properties:{\
                     half:"lower"\
                 }\
             },\
@@ -563,8 +627,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:tall_grass set val
         },\
         {\
             block_state:{\
-                Name:"minecraft:tall_grass",\
-                Properties:{\
+                id:"minecraft:tall_grass",\
+                properties:{\
                     half:"upper"\
                 }\
             },\
@@ -582,8 +646,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:large_fern set val
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:large_fern",\
-                Properties:{\
+                id:"minecraft:large_fern",\
+                properties:{\
                     half:"lower"\
                 }\
             },\
@@ -596,8 +660,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:large_fern set val
         },\
         {\
             block_state:{\
-                Name:"minecraft:large_fern",\
-                Properties:{\
+                id:"minecraft:large_fern",\
+                properties:{\
                     half:"upper"\
                 }\
             },\
@@ -615,7 +679,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:tall_dry_grass set
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:tall_dry_grass"\
+                id:"minecraft:tall_dry_grass"\
             },\
             transformation:{\
                 translation:[-0.325f,-0.2565f,-0.325f],\
@@ -633,8 +697,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:sunflower set valu
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:sunflower",\
-                Properties:{\
+                id:"minecraft:sunflower",\
+                properties:{\
                     half:"upper"\
                 }\
             },\
@@ -652,8 +716,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:lilac set value {\
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:lilac",\
-                Properties:{\
+                id:"minecraft:lilac",\
+                properties:{\
                     half:"upper"\
                 }\
             },\
@@ -671,8 +735,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:rose_bush set valu
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:rose_bush",\
-                Properties:{\
+                id:"minecraft:rose_bush",\
+                properties:{\
                     half:"upper"\
                 }\
             },\
@@ -690,8 +754,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:peony set value {\
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:peony",\
-                Properties:{\
+                id:"minecraft:peony",\
+                properties:{\
                     half:"upper"\
                 }\
             },\
@@ -709,8 +773,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pitcher_plant set 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:pitcher_plant",\
-                Properties:{\
+                id:"minecraft:pitcher_plant",\
+                properties:{\
                     half:"lower"\
                 }\
             },\
@@ -723,8 +787,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pitcher_plant set 
         },\
         {\
             block_state:{\
-                Name:"minecraft:pitcher_plant",\
-                Properties:{\
+                id:"minecraft:pitcher_plant",\
+                properties:{\
                     half:"upper"\
                 }\
             },\
@@ -743,8 +807,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:big_dripleaf set v
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:big_dripleaf",\
-                Properties:{\
+                id:"minecraft:big_dripleaf",\
+                properties:{\
                     facing:"east"\
                 }\
             },\
@@ -762,8 +826,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:small_dripleaf set
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:small_dripleaf",\
-                Properties:{\
+                id:"minecraft:small_dripleaf",\
+                properties:{\
                     facing:"east",\
                     half:"upper"\
                 }\
@@ -783,7 +847,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:chorus_flower set 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:chorus_flower"\
+                id:"minecraft:chorus_flower"\
             },\
             transformation:{\
                 translation:[-0.25f,0.3435f,-0.25f],\
@@ -794,8 +858,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:chorus_flower set 
         },\
         {\
             block_state:{\
-                Name:"minecraft:chorus_plant",\
-                Properties:{\
+                id:"minecraft:chorus_plant",\
+                properties:{\
                     down:"true",\
                     up:"true"\
                 }\
@@ -815,7 +879,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:hanging_roots set 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:hanging_roots"\
+                id:"minecraft:hanging_roots"\
             },\
             transformation:{\
                 translation:[-0.2f,0.2432f,0.2f],\
@@ -832,8 +896,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:wheat_seeds set va
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:wheat",\
-                Properties:{\
+                id:"minecraft:wheat",\
+                properties:{\
                     age:"7"\
                 }\
             },\
@@ -852,8 +916,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:pumpkin_seeds set 
     display:[\
         {\
             block_state:{\
-                Name:"attached_pumpkin_stem",\
-                Properties:{\
+                id:"attached_pumpkin_stem",\
+                properties:{\
                     facing:"north"\
                 }\
             },\
@@ -871,8 +935,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:melon_seeds set va
     display:[\
         {\
             block_state:{\
-                Name:"attached_melon_stem",\
-                Properties:{\
+                id:"attached_melon_stem",\
+                properties:{\
                     facing:"north"\
                 }\
             },\
@@ -890,8 +954,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:beetroot_seeds set
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:beetroots",\
-                Properties:{\
+                id:"minecraft:beetroots",\
+                properties:{\
                     age:"3"\
                 }\
             },\
@@ -910,8 +974,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:glow_berries set v
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:cave_vines_plant",\
-                Properties:{\
+                id:"minecraft:cave_vines_plant",\
+                properties:{\
                     berries:"false"\
                 }\
             },\
@@ -924,8 +988,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:glow_berries set v
         },\
         {\
             block_state:{\
-                Name:"minecraft:cave_vines",\
-                Properties:{\
+                id:"minecraft:cave_vines",\
+                properties:{\
                     berries:"true"\
                 }\
             },\
@@ -944,8 +1008,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:sweet_berries set 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:sweet_berry_bush",\
-                Properties:{\
+                id:"minecraft:sweet_berry_bush",\
+                properties:{\
                     age:"3"\
                 }\
             },\
@@ -964,8 +1028,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:nether_wart set va
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:nether_wart",\
-                Properties:{\
+                id:"minecraft:nether_wart",\
+                properties:{\
                     age:"3"\
                 }\
             },\
@@ -984,8 +1048,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:sea_pickle set val
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:sea_pickle",\
-                Properties:{\
+                id:"minecraft:sea_pickle",\
+                properties:{\
                     waterlogged:"false"\
                 }\
             },\
@@ -1004,7 +1068,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:tube_coral set val
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:tube_coral"\
+                id:"minecraft:tube_coral"\
             },\
             transformation:{\
                 translation:[-0.2f,-0.25f,-0.2f],\
@@ -1020,7 +1084,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:brain_coral set va
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:brain_coral"\
+                id:"minecraft:brain_coral"\
             },\
             transformation:{\
                 translation:[-0.2f,-0.25f,-0.2f],\
@@ -1036,7 +1100,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:bubble_coral set v
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:bubble_coral"\
+                id:"minecraft:bubble_coral"\
             },\
             transformation:{\
                 translation:[-0.2f,-0.25f,-0.2f],\
@@ -1052,7 +1116,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:fire_coral set val
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:fire_coral"\
+                id:"minecraft:fire_coral"\
             },\
             transformation:{\
                 translation:[-0.2f,-0.25f,-0.2f],\
@@ -1068,7 +1132,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:horn_coral set val
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:horn_coral"\
+                id:"minecraft:horn_coral"\
             },\
             transformation:{\
                 translation:[-0.2f,-0.25f,-0.2f],\
@@ -1085,7 +1149,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:dead_tube_coral se
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:dead_tube_coral"\
+                id:"minecraft:dead_tube_coral"\
             },\
             transformation:{\
                 translation:[-0.2f,-0.25f,-0.2f],\
@@ -1101,7 +1165,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:dead_brain_coral s
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:dead_brain_coral"\
+                id:"minecraft:dead_brain_coral"\
             },\
             transformation:{\
                 translation:[-0.2f,-0.25f,-0.2f],\
@@ -1117,7 +1181,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:dead_bubble_coral 
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:dead_bubble_coral"\
+                id:"minecraft:dead_bubble_coral"\
             },\
             transformation:{\
                 translation:[-0.2f,-0.25f,-0.2f],\
@@ -1133,7 +1197,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:dead_fire_coral se
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:dead_fire_coral"\
+                id:"minecraft:dead_fire_coral"\
             },\
             transformation:{\
                 translation:[-0.2f,-0.25f,-0.2f],\
@@ -1149,7 +1213,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:dead_horn_coral se
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:dead_horn_coral"\
+                id:"minecraft:dead_horn_coral"\
             },\
             transformation:{\
                 translation:[-0.2f,-0.25f,-0.2f],\
@@ -1166,7 +1230,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:tube_coral_fan set
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:tube_coral_fan"\
+                id:"minecraft:tube_coral_fan"\
             },\
             transformation:{\
                 translation:[-0.1875f,-0.225f,-0.1875f],\
@@ -1182,7 +1246,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:brain_coral_fan se
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:brain_coral_fan"\
+                id:"minecraft:brain_coral_fan"\
             },\
             transformation:{\
                 translation:[-0.1875f,-0.225f,-0.1875f],\
@@ -1198,7 +1262,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:bubble_coral_fan s
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:bubble_coral_fan"\
+                id:"minecraft:bubble_coral_fan"\
             },\
             transformation:{\
                 translation:[-0.1875f,-0.225f,-0.1875f],\
@@ -1214,7 +1278,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:fire_coral_fan set
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:fire_coral_fan"\
+                id:"minecraft:fire_coral_fan"\
             },\
             transformation:{\
                 translation:[-0.1875f,-0.225f,-0.1875f],\
@@ -1230,7 +1294,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:horn_coral_fan set
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:horn_coral_fan"\
+                id:"minecraft:horn_coral_fan"\
             },\
             transformation:{\
                 translation:[-0.1875f,-0.225f,-0.1875f],\
@@ -1247,7 +1311,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:dead_tube_coral_fa
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:dead_tube_coral_fan"\
+                id:"minecraft:dead_tube_coral_fan"\
             },\
             transformation:{\
                 translation:[-0.1875f,-0.225f,-0.1875f],\
@@ -1263,7 +1327,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:dead_brain_coral_f
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:dead_brain_coral_fan"\
+                id:"minecraft:dead_brain_coral_fan"\
             },\
             transformation:{\
                 translation:[-0.1875f,-0.225f,-0.1875f],\
@@ -1279,7 +1343,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:dead_bubble_coral_
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:dead_bubble_coral_fan"\
+                id:"minecraft:dead_bubble_coral_fan"\
             },\
             transformation:{\
                 translation:[-0.1875f,-0.225f,-0.1875f],\
@@ -1295,7 +1359,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:dead_fire_coral_fa
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:dead_fire_coral_fan"\
+                id:"minecraft:dead_fire_coral_fan"\
             },\
             transformation:{\
                 translation:[-0.1875f,-0.225f,-0.1875f],\
@@ -1311,7 +1375,7 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:dead_horn_coral_fa
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:dead_horn_coral_fan"\
+                id:"minecraft:dead_horn_coral_fan"\
             },\
             transformation:{\
                 translation:[-0.1875f,-0.225f,-0.1875f],\
@@ -1328,8 +1392,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:carrot set value {
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:carrots",\
-                Properties:{\
+                id:"minecraft:carrots",\
+                properties:{\
                     age:"7"\
                 }\
             },\
@@ -1347,8 +1411,8 @@ data modify storage gm4_blossoming_pots:flower_pots minecraft:potato set value {
     display:[\
         {\
             block_state:{\
-                Name:"minecraft:potatoes",\
-                Properties:{\
+                id:"minecraft:potatoes",\
+                properties:{\
                     age:"7"\
                 }\
             },\

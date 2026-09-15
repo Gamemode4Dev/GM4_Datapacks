@@ -17,19 +17,19 @@
           "type": {
             "tags": [
               {
-                "id": "minecraft:is_explosion",
+                "id": "#minecraft:is_explosion",
                 "expected": false
               },
               {
-                "id": "minecraft:is_fire",
+                "id": "#minecraft:is_fire",
                 "expected": false
               },
               {
-                "id": "minecraft:is_projectile",
+                "id": "#minecraft:is_projectile",
                 "expected": false
               },
               {
-                "id": "minecraft:witch_resistant_to",
+                "id": "#minecraft:witch_resistant_to",
                 "expected": false
               }
             ]

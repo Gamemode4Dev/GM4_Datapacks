@@ -221,7 +221,7 @@ def beet_default(ctx: Context):
     # bind context object to a ClassVar so it can be accessed later during template processing
     ShamirTemplate.bound_ctx = ctx
     vanilla = ctx.inject(Vanilla)
-    vanilla.minecraft_version = '26.2'
+    vanilla.minecraft_version = '26.3-rc-1'
     ShamirTemplate.vanilla_models_jar = vanilla.mount("assets/minecraft/items")
     merge_policy(ctx)
 

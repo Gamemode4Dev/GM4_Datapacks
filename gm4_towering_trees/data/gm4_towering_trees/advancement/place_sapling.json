@@ -3,14 +3,12 @@
         "place_sapling": {
             "trigger": "minecraft:placed_block",
             "conditions": {
-                "location": [
-                    {
-                        "condition": "minecraft:match_tool",
-                        "predicate": {
-                            "items": "#gm4_towering_trees:supported_sapling"
-                        }
+                "location": {
+                    "type": "minecraft:match_tool",
+                    "predicate": {
+                        "items": "#gm4_towering_trees:supported_sapling"
                     }
-                ]
+                }
             }
         }
     },

@@ -8,20 +8,18 @@
             "minecraft:apple"
           ]
         },
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_horse"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "#gm4_horsemanship:trainable",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_horse"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "golden_apple": {
@@ -32,20 +30,18 @@
             "minecraft:golden_apple"
           ]
         },
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_horse"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "#gm4_horsemanship:trainable",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_horse"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "carrot": {
@@ -56,20 +52,18 @@
             "minecraft:carrot"
           ]
         },
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_horse"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "#gm4_horsemanship:trainable",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_horse"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "enchanted_golden_apple": {
@@ -80,20 +74,18 @@
             "minecraft:enchanted_golden_apple"
           ]
         },
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_horse"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "#gm4_horsemanship:trainable",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_horse"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "golden_carrot": {
@@ -104,20 +96,18 @@
             "minecraft:golden_carrot"
           ]
         },
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_horse"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "#gm4_horsemanship:trainable",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_horse"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "sugar": {
@@ -128,20 +118,18 @@
             "minecraft:sugar"
           ]
         },
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_horse"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "#gm4_horsemanship:trainable",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_horse"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "wheat": {
@@ -152,20 +140,18 @@
             "minecraft:wheat"
           ]
         },
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_horse"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "#gm4_horsemanship:trainable",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_horse"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "hay_block": {
@@ -176,20 +162,18 @@
             "minecraft:hay_block"
           ]
         },
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "#gm4_horsemanship:trainable",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_horse"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "#gm4_horsemanship:trainable",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_horse"
+              ]
             }
           }
-        ]
+        }
       }
     }
   },

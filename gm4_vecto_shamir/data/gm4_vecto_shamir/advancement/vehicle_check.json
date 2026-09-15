@@ -3,26 +3,26 @@
     "not_in_vehicle": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_vecto_active"
-                ]
+        "player": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:entity_tags": {
+                  "all_of": [
+                    "gm4_vecto_active"
+                  ]
+                }
               }
+            },
+            {
+              "type": "minecraft:inverted",
+              "term": "gm4_vecto_shamir:in_vehicle"
             }
-          },
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:reference",
-              "name": "gm4_vecto_shamir:in_vehicle"
-            }
-          }
-        ]
+          ]
+        }
       }
     }
   },

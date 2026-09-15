@@ -1,7 +1,7 @@
 # sells out a trade
 # @s = villager
 # at bobber in @s
-# with {mainhand}
+# with $mainhand: item data of mainhand item stolen
 # run from reeling/villager/action
 
 # for some reason on the first item after a restock?? it fails to set uses, but succeeds after that? This double set doesn't fix that though

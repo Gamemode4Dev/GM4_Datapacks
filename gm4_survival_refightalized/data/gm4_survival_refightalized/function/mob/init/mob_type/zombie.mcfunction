@@ -29,7 +29,7 @@ execute if data entity @s attributes[{id:"minecraft:max_health"}].modifiers[{id:
 
 # remove baby zombies except chicken jockeys (will be turned into Elites with Monsters Unbound)
 scoreboard players set $was_baby gm4_sr_data 0
-execute if predicate {condition:"all_of",terms:[{condition:"entity_properties",entity:"this",predicate:{flags:{is_baby:1b}}},{condition:"inverted",term:{condition:"entity_properties",entity:"this",predicate:{vehicle:{}}}}]} store success score $was_baby gm4_sr_data run data modify entity @s IsBaby set value 0b
+execute if predicate {type:"all_of",terms:[{type:"entity_properties",entity:"this",predicate:{flags:{is_baby:1b}}},{type:"inverted",term:{type:"entity_properties",entity:"this",predicate:{vehicle:{}}}}]} store success score $was_baby gm4_sr_data run data modify entity @s IsBaby set value 0b
 execute if score $was_baby gm4_sr_data matches 1 run tag @s add gm4_sr_was_baby
 
 # set armor

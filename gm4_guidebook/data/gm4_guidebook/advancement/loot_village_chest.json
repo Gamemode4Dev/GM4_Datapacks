@@ -3,97 +3,97 @@
     "armorer": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_armorer"
+        "loot_tables": "minecraft:chests/village/village_armorer"
       }
     },
     "butcher": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_butcher"
+        "loot_tables": "minecraft:chests/village/village_butcher"
       }
     },
     "cartographer": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_cartographer"
+        "loot_tables": "minecraft:chests/village/village_cartographer"
       }
     },
     "desert_house": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_desert_house"
+        "loot_tables": "minecraft:chests/village/village_desert_house"
       }
     },
     "fisher": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_fisher"
+        "loot_tables": "minecraft:chests/village/village_fisher"
       }
     },
     "fletcher": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_fletcher"
+        "loot_tables": "minecraft:chests/village/village_fletcher"
       }
     },
     "mason": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_mason"
+        "loot_tables": "minecraft:chests/village/village_mason"
       }
     },
     "plains_house": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_plains_house"
+        "loot_tables": "minecraft:chests/village/village_plains_house"
       }
     },
     "savanna_house": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_savanna_house"
+        "loot_tables": "minecraft:chests/village/village_savanna_house"
       }
     },
     "shepherd": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_shepherd"
+        "loot_tables": "minecraft:chests/village/village_shepherd"
       }
     },
     "snowy_house": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_snowy_house"
+        "loot_tables": "minecraft:chests/village/village_snowy_house"
       }
     },
     "taiga_house": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_taiga_house"
+        "loot_tables": "minecraft:chests/village/village_taiga_house"
       }
     },
     "tannery": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_tannery"
+        "loot_tables": "minecraft:chests/village/village_tannery"
       }
     },
     "temple": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_temple"
+        "loot_tables": "minecraft:chests/village/village_temple"
       }
     },
     "toolsmith": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_toolsmith"
+        "loot_tables": "minecraft:chests/village/village_toolsmith"
       }
     },
     "weaponsmith": {
       "trigger": "minecraft:player_generates_container_loot",
       "conditions": {
-        "loot_table": "minecraft:chests/village/village_weaponsmith"
+        "loot_tables": "minecraft:chests/village/village_weaponsmith"
       }
     }
   },

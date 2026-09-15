@@ -33,19 +33,17 @@
     "open_smeltery": {
       "trigger": "minecraft:default_block_use",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": [
-                  "minecraft:furnace"
-                ],
-                "nbt": "{CustomName:{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.smeltery\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}}"
-              }
+        "location": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": [
+                "minecraft:furnace"
+              ],
+              "nbt": "{CustomName:{\"translate\":\"gm4.second\",\"fallback\":\"%1$s\",\"with\":[{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\"},{\"text\":\" \",\"extra\":[{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\",\"font\":\"gm4:offscreen\"},{\"translate\":\"gui.gm4.smeltery\",\"fallback\":\"\",\"font\":\"gm4:container_gui\",\"color\":\"white\"},{\"text\":\" \",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\",\"font\":\"gm4:half_invert\"},{\"translate\":\"container.gm4.smeltery\",\"fallback\":\"Smeltery\",\"font\":\"gm4:default\",\"color\":\"#404040\"}],\"font\":\"gm4:half_invert\"}]}}"
             }
           }
-        ]
+        }
       }
     }
   },

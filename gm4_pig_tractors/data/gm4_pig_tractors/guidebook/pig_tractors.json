@@ -9,48 +9,49 @@
     "ride_pig": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "vehicle": {
-                "minecraft:entity_type": "minecraft:pig"
-              }
-            }
-          },
-          {
-            "condition": "minecraft:inverted",
-            "term": {
-              "condition": "minecraft:entity_properties",
+        "player": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
                 "vehicle": {
-                  "minecraft:entity_type": "minecraft:pig",
-                  "minecraft:nbt": "{NoAI:1b}"
+                  "minecraft:entity_type": "minecraft:pig"
+                }
+              }
+            },
+            {
+              "type": "minecraft:inverted",
+              "term": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "vehicle": {
+                    "minecraft:entity_type": "minecraft:pig",
+                    "minecraft:nbt": "{NoAI:1b}"
+                  }
                 }
               }
             }
-          }
-        ]
+          ]
+        }
       }
     },
     "till_soil": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:type_specific/player": {
-                "advancements": {
-                  "gm4:pig_tractors": true
-                }
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:type_specific/player": {
+              "advancements": {
+                "gm4:pig_tractors": true
               }
             }
           }
-        ]
+        }
       }
     }
   },

@@ -3,18 +3,21 @@
     "ringbell": {
       "trigger": "minecraft:any_block_use",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "items": "minecraft:emerald"
+        "location": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:match_tool",
+              "predicate": {
+                "items": "minecraft:emerald"
+              }
+            },
+            {
+              "type": "minecraft:match_block",
+              "blocks": "minecraft:bell"
             }
-          },
-          {
-            "condition": "minecraft:block_state_property",
-            "block": "minecraft:bell"
-          }
-        ]
+          ]
+        }
       }
     }
   },
