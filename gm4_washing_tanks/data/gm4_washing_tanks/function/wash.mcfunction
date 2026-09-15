@@ -6,12 +6,15 @@ conversions = {
     "glass_pane": "glass_pane",
     "terracotta": "terracotta",
     "wool": "white_wool",
+    "wool_stairs": "white_wool_stairs",
+    "wool_slab": "white_wool_slab",
     "bed": "white_bed",
     "carpet": "white_carpet",
     "shulker_box": "shulker_box",
     "harness": "white_harness",
     "bundle": "bundle",
-    "candle": "candle"
+    "candle": "candle",
+    "cushion": "white_cushion"
 }
 
 for from_id, to_id in conversions.items():
