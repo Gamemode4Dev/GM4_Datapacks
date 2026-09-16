@@ -1,5 +1,5 @@
 {
-  "last_commit": "ebf04f81511885550911c8bb55379dee92206db4",
+  "last_commit": "2d11c81ea1bb23d7f2c0f64b28fb5948606440bd",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -492,8 +492,8 @@
     {
       "id": "gm4_chairs",
       "name": "Chairs",
-      "version": "1.8.0",
-      "hash": "587618271cc39ea8de899d0c0782a3326ada0eea",
+      "version": "1.8.1",
+      "hash": "3164c10c3c76705b897ff35dd1909d54a823be49",
       "video_link": "https://www.youtube.com/watch?v=7KbBw1hEKdY",
       "wiki_link": "https://wiki.gm4.co/wiki/Chairs",
       "credits": {
@@ -516,7 +516,7 @@
         "26.3"
       ],
       "hidden": false,
-      "important_note": null,
+      "important_note": "Deprecated: This data pack will be removed in a future version",
       "search_keywords": [],
       "publish_date": "2023-07-10",
       "modrinth_id": "KLywOs5L",
