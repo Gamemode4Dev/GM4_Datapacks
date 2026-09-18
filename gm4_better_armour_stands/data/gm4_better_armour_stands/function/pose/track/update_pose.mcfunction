@@ -7,7 +7,7 @@ execute store result score $as_rot_y gm4_bas_data run data get entity @s Rotatio
 scoreboard players operation $joint_rot_y gm4_bas_data -= $as_rot_y gm4_bas_data 
 
 # snap pose
-execute as @p[tag=gm4_bas_track] if predicate gm4_better_armour_stands:sneaking run function gm4_better_armour_stands:pose/snap/pose
+execute as @p[tag=gm4_bas_track] if predicate gm4:sneaking run function gm4_better_armour_stands:pose/snap/pose
 
 # apply optional modifiers
 execute if entity @s[tag=gm4_bas_invert] run scoreboard players add $joint_rot_x gm4_bas_data 18000
