@@ -1,22 +1,16 @@
 {
-    "type": "minecraft:all_of",
-    "terms": [
-        {
-            "type": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-                "nbt": "{OnGround:0b}"
-            }
-        },
-        {
-            "type": "minecraft:inverted",
-            "term": {
+    "type": "minecraft:inverted",
+    "term": {
+        "type": "minecraft:any_of",
+        "terms": [
+            "gm4:on_ground",
+            {
                 "type": "minecraft:entity_properties",
                 "entity": "this",
                 "predicate": {
                     "vehicle": {}
                 }
             }
-        }
-    ]
+        ]
+    }
 }
