@@ -13,7 +13,7 @@ particle happy_villager ~ ~0.5 ~ 0.3 0.3 0.3 1 5
 particle large_smoke ~ ~1 ~ 0.25 0.5 0.25 0 10
 
 # consume emerald
-item modify entity @s[gamemode=!creative] weapon.mainhand gm4_calling_bell:minus_one
+item modify entity @s[gamemode=!creative] weapon.mainhand gm4:minus_one
 
 # update player
 scoreboard players operation @s gm4_calling_bell = $day gm4_calling_bell

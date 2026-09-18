@@ -10,7 +10,7 @@ summon minecraft:tnt ~ ~ ~ {Tags:["gm4_cb_projectile"],fuse:80s}
 execute as @e[type=minecraft:tnt,tag=gm4_cb_projectile,limit=1,distance=..1] run function gm4_crossbow_cartridges:projectile/arrow_motion
 
 # remove tnt from player
-item modify entity @s[gamemode=!creative] weapon.offhand gm4_crossbow_cartridges:remove_item
+item modify entity @s[gamemode=!creative] weapon.offhand gm4:minus_one
 
 # primed tnt sound
 playsound minecraft:entity.tnt.primed block @a[distance=..15] ^ ^ ^1

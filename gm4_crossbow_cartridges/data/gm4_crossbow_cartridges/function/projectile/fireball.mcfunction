@@ -11,7 +11,7 @@ summon minecraft:small_fireball ~ ~ ~ {Tags:["gm4_cb_projectile","gm4_cb_firebal
 execute as @e[type=minecraft:small_fireball,tag=gm4_cb_projectile,limit=1,distance=..1] run function gm4_crossbow_cartridges:projectile/arrow_motion
 
 # remove fire charge from player
-item modify entity @s[gamemode=!creative] weapon.offhand gm4_crossbow_cartridges:remove_item
+item modify entity @s[gamemode=!creative] weapon.offhand gm4:minus_one
 
 # fire charge sound
 playsound minecraft:item.firecharge.use player @a[distance=..15] ^ ^ ^1

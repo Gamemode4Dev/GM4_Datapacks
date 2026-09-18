@@ -13,7 +13,7 @@ data merge entity @e[tag=gm4_cb_arrow,tag=gm4_cb_torch,distance=..1,sort=nearest
 tag @e[tag=gm4_cb_arrow,tag=gm4_cb_torch,distance=..1,sort=nearest,limit=1] remove gm4_cb_arrow
 
 # clear torch from player
-item modify entity @s[gamemode=!creative] weapon.offhand gm4_crossbow_cartridges:remove_item
+item modify entity @s[gamemode=!creative] weapon.offhand gm4:minus_one
 
 # repeat
 execute if entity @e[tag=gm4_cb_arrow,distance=..1,sort=nearest,limit=1] if entity @s[predicate=gm4_crossbow_cartridges:items/torch] run function gm4_crossbow_cartridges:projectile/torch
