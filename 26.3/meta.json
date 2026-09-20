@@ -1,5 +1,5 @@
 {
-  "last_commit": "2d11c81ea1bb23d7f2c0f64b28fb5948606440bd",
+  "last_commit": "7e511e3dea866e5824177bef87fd18fe0dcdca3b",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -203,8 +203,8 @@
     {
       "id": "gm4_blasting_maces",
       "name": "Blasting Maces",
-      "version": "1.1.0",
-      "hash": "2614e08f7ae0169fda1233625bed36a8a3ca2601",
+      "version": "1.1.1",
+      "hash": "dadacb3a8a76a6fed87f3c521e202c15910e9fe4",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Blasting_Maces",
       "credits": {
@@ -1415,8 +1415,8 @@
     {
       "id": "gm4_mending_tanks",
       "name": "Mending Tanks",
-      "version": "1.8.0",
-      "hash": "a4f2d0fb4c90714f842afc05c9e5e679ccae645c",
+      "version": "1.8.1",
+      "hash": "19316d58c7bb5bc40602b94b93b572c973275c73",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Mending_Tanks",
       "credits": {
