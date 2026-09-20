@@ -4,8 +4,8 @@
 # run from gm4_blasting_maces:tick
 
 # cancel if the charged mace is no longer in that hand
-execute if score @s gm4_blast_slot matches -1 unless items entity @s weapon.offhand minecraft:mace[minecraft:enchantments~[{enchantment:"gm4_blasting_maces:blasting"}]] run return run scoreboard players set @s gm4_blast_charge_ticks 0
-execute if score @s gm4_blast_slot matches 0.. unless items entity @s weapon.mainhand minecraft:mace[minecraft:enchantments~[{enchantment:"gm4_blasting_maces:blasting"}]] run return run scoreboard players set @s gm4_blast_charge_ticks 0
+execute if score @s gm4_blast_slot matches -1 unless items entity @s weapon.offhand minecraft:mace[minecraft:enchantments~[{enchantments:"gm4_blasting_maces:blasting"}]] run return run scoreboard players set @s gm4_blast_charge_ticks 0
+execute if score @s gm4_blast_slot matches 0.. unless items entity @s weapon.mainhand minecraft:mace[minecraft:enchantments~[{enchantments:"gm4_blasting_maces:blasting"}]] run return run scoreboard players set @s gm4_blast_charge_ticks 0
 
 # stop if it was not charged for long enough
 execute unless score @s gm4_blast_charge_ticks matches 20.. run return run scoreboard players set @s gm4_blast_charge_ticks 0
