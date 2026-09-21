@@ -53,11 +53,12 @@ jobs:
           rm release/$VERSION/lib_*
           rm release/$VERSION/meta.json
 
-      - name: Upload artifact
-        if: github.event_name == 'pull_request'
+      - name: Upload zip artifact
         uses: actions/upload-artifact@v7
         with:
-          name: 'Modules for pull request #${{ github.event.number }}'
+          name: "${{ format('Modules for {0} #{1}', github.event_name != 'pull_request' && 'publish' || 'pull request', github.event_name != 'pull_request' && github.event.after || github.event.number) }}"
+          # name: ${{ github.event_name != 'pull_request' && format('Modules for publish \#') || format('Modules for pull request \#{0}') }}
+          # name: 'Modules for pull request #${{ github.event.number }}'
           path: ${{ github.workspace }}/release/${{ env.VERSION }}/
 
       - name: Commit release
@@ -166,11 +167,11 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Checkout release branch
-        uses: actions/checkout@v7
+      - name: Download module zips from artifact
+        uses: actions/download-artifact@v7
         with:
-          ref: release
-          path: release
+          name: 'Modules for publish #${{ github.event.after }}'
+          path: ${{ github.workspace }}/release/${{ env.VERSION }}/
 
       - name: Restore .beet_cache from artifact
         uses: actions/download-artifact@v7
@@ -178,7 +179,6 @@ jobs:
           name: .beet_cache
           path: ${{ github.workspace }}/.beet_cache
 
-      # TODO use cache from build? 
       - name: Set up uv
         uses: astral-sh/setup-uv@v7
 
