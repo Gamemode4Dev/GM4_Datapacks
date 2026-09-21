@@ -14,7 +14,7 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     concurrency:
-      group: ${{ github.event_name != 'pull_request' && 'release' || format('pr-{0}', github.event.number) }}
+      group: ${{ case(github.event_name != 'pull_request', 'release', format('pr-{0}', github.event.number)) }}
     steps:
       - uses: actions/checkout@v7
 
@@ -37,14 +37,14 @@ jobs:
         env:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
-          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+          LOG_LEVEL: ${{ case(runner.debug == 1, 'DEBUG', 'INFO') }}
           MASTER_BUILD: true
 
       - name: Build all modules for pull request
         if: github.event_name == 'pull_request'
         run: uv run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
         env:
-          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+          LOG_LEVEL: ${{ case(runner.debug == 1, 'DEBUG', 'INFO') }}
 
       - name: Remove non-modules for artifact
         if: github.event_name == 'pull_request'
@@ -123,7 +123,7 @@ jobs:
       - name: Build all modules for tests
         run: uv run beet -p beet-test.yaml -l ${{ env.LOG_LEVEL }} build
         env:
-          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+          LOG_LEVEL: ${{ case(runner.debug == 1, 'DEBUG', 'INFO') }}
 
       - name: Setup Java
         uses: actions/setup-java@v6
@@ -193,7 +193,7 @@ jobs:
         env:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
-          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+          LOG_LEVEL: ${{ case(runner.debug == 1, 'DEBUG', 'INFO') }}
 
       - name: Rename log file
         run: mv ${{ github.workspace }}/logs/summary_logs.pkl ${{ github.workspace }}/logs/publish_${{ matrix.platform }}_log.pkl
@@ -229,4 +229,4 @@ jobs:
         uses: astral-sh/setup-uv@v7
 
       - name: Summarize build logs
-        run: uv run beet -p beet-summarize.yaml -s meta.gm4.summarize_type=${{ github.event_name != 'pull_request' && 'release' || 'pull_request' }} build
+        run: uv run beet -p beet-summarize.yaml -s meta.gm4.summarize_type=${{ case(github.event_name != 'pull_request', 'release', 'pull_request') }} build
