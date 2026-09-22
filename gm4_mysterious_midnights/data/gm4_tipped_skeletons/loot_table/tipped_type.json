@@ -7,16 +7,17 @@
                     "type": "minecraft:item",
                     "weight": 1,
                     "name": "minecraft:tipped_arrow",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
                                 "minecraft:potion_contents": "minecraft:strong_harming"
                             }
                         },
                         {
-                            "function": "minecraft:set_count",
+                            "type": "minecraft:set_count",
                             "count": {
+                                "type": "minecraft:uniform",
                                 "min": 7,
                                 "max": 11
                             }
@@ -27,16 +28,17 @@
                     "type": "minecraft:item",
                     "weight": 2,
                     "name": "minecraft:tipped_arrow",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
                                 "minecraft:potion_contents": "minecraft:long_poison"
                             }
                         },
                         {
-                            "function": "minecraft:set_count",
+                            "type": "minecraft:set_count",
                             "count": {
+                                "type": "minecraft:uniform",
                                 "min": 9,
                                 "max": 12
                             }
@@ -47,16 +49,17 @@
                     "type": "minecraft:item",
                     "weight": 2,
                     "name": "minecraft:tipped_arrow",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
                                 "minecraft:potion_contents": "minecraft:long_weakness"
                             }
                         },
                         {
-                            "function": "minecraft:set_count",
+                            "type": "minecraft:set_count",
                             "count": {
+                                "type": "minecraft:uniform",
                                 "min": 4,
                                 "max": 8
                             }
@@ -67,16 +70,17 @@
                     "type": "minecraft:item",
                     "weight": 1,
                     "name": "minecraft:tipped_arrow",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
                                 "minecraft:potion_contents": "minecraft:long_slowness"
                             }
                         },
                         {
-                            "function": "minecraft:set_count",
+                            "type": "minecraft:set_count",
                             "count": {
+                                "type": "minecraft:uniform",
                                 "min": 4,
                                 "max": 8
                             }

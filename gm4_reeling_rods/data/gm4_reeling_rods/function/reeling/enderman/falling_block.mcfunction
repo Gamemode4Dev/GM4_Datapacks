@@ -1,7 +1,7 @@
 # Steal falling block of the enderman's held block
 # @s = enderman
 # at bobber in @s
-# with {displacement}
+# with $displacement: vertical displacement to held block
 # run from reeling/enderman/action
 
 data modify storage gm4_reeling_rods:temp entity_data set value {}

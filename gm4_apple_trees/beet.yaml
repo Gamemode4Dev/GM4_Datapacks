@@ -1,6 +1,6 @@
 id: gm4_apple_trees
 name: Apple Trees
-version: 2.6.X
+version: 2.7.X
 
 require:
   - bolt
@@ -8,7 +8,7 @@ require:
 data_pack:
   load: .
 
-resource_pack: 
+resource_pack:
   load: .
 
 pipeline:
@@ -19,7 +19,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_trees: 1.5.0
+        lib_trees: 1.6.0
       schedule_loops:
         - main
         - slow_clock

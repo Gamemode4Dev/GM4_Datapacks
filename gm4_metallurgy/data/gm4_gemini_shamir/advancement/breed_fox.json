@@ -4,7 +4,11 @@
       "trigger": "minecraft:bred_animals",
       "conditions": {
         "child": {
-          "minecraft:entity_type": "fox"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "fox"
+          }
         }
       }
     }

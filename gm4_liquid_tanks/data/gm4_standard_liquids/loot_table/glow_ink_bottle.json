@@ -7,11 +7,15 @@
                 {
                     "type": "item",
                     "name": "potion",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
-                                "minecraft:custom_model_data": {"strings":["gm4_standard_liquids:item/glow_ink_bottle"]},
+                                "minecraft:custom_model_data": {
+                                    "strings": [
+                                        "gm4_standard_liquids:item/glow_ink_bottle"
+                                    ]
+                                },
                                 "minecraft:potion_contents": {
                                     "custom_color": 9828808,
                                     "custom_effects": [
@@ -30,11 +34,11 @@
                             }
                         },
                         {
-                            "function": "minecraft:set_custom_data",
+                            "type": "minecraft:set_custom_data",
                             "tag": "{gm4_standard_liquids:{potion:'glowing'}}"
                         },
                         {
-                            "function": "minecraft:set_name",
+                            "type": "minecraft:set_name",
                             "name": {
                                 "translate": "item.gm4.glow_ink_bottle",
                                 "fallback": "Glow Ink Bottle",

@@ -33,7 +33,7 @@
           },
           {
             "translate": "text.gm4.guidebook.towering_trees.description",
-            "fallback": "Oak, Birch, Acacia, Cherry and Mangrove trees have mega (2x2) variants.\n\nDark Oak and Pale Oak have small variants."
+            "fallback": "Oak, Birch, Acacia, Cherry, Poplar and Mangrove trees have mega (2x2) variants.\n\nDark Oak and Pale Oak have small variants."
           }
         ]
       ]

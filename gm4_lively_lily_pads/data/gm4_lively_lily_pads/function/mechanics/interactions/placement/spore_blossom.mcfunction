@@ -6,7 +6,7 @@
 summon minecraft:block_display ~ ~ ~ {\
   Tags:["gm4_llp_display","gm4_llp_spore_blossom_sound","smithed.entity"],\
   block_state:{\
-    Name:"minecraft:spore_blossom"\
+    id:"minecraft:spore_blossom"\
   },\
   transformation:{\
     scale:[0.5f,0.5f,0.7f],\

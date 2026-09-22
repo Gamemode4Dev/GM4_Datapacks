@@ -1,6 +1,6 @@
 id: gm4_metallurgy
 name: Metallurgy
-version: 1.8.X
+version: 1.9.X
 
 data_pack:
   load: .
@@ -17,7 +17,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_lore: 1.4.0
+        lib_lore: 1.5.0
       schedule_loops:
         - main
         - tick
@@ -36,7 +36,7 @@ meta:
         - gm4_vecto_shamir
       notes:
         - Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.
-      search_keywords: 
+      search_keywords:
         - arborenda
         - defuse
         - forterra
@@ -70,4 +70,4 @@ meta:
         - Memo
       Icon Design:
         - DuckJr
-    
+

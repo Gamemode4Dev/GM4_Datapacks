@@ -1,26 +1,29 @@
-[
-  {
-    "condition": "minecraft:inverted",
-    "term": {
-      "condition": "minecraft:entity_properties",
-      "entity": "this",
-      "predicate": {
-        "effects": {
-          "minecraft:conduit_power": {
-            "duration": {
-              "min": 1
+{
+  "type": "minecraft:all_of",
+  "terms": [
+    {
+      "type": "minecraft:inverted",
+      "term": {
+        "type": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "effects": {
+            "minecraft:conduit_power": {
+              "duration": {
+                "min": 1
+              }
             }
           }
         }
       }
-    }
-  },
-  {
-    "condition": "minecraft:location_check",
-    "predicate": {
-      "fluid": {
-        "fluids": "#minecraft:water"
+    },
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "fluid": {
+          "fluids": "#minecraft:water"
+        }
       }
     }
-  }
-]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:sequence",
+  "sequence": [
+    "minecraft:overworld/powder_snow_under_surface",
+    "gm4_cooler_caves:inject_grove_packed_ice",
+    {
+      "type": "minecraft:block",
+      "result_state": "minecraft:dirt"
+    }
+  ]
+}

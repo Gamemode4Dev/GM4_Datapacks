@@ -3,42 +3,40 @@
         "mainhand": {
             "trigger": "minecraft:using_item",
             "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:all_of",
-                        "terms": [
-                            {
-                                "condition": "minecraft:entity_properties",
+                "player": {
+                    "type": "minecraft:all_of",
+                    "terms": [
+                        {
+                            "type": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "equipment": {
+                                    "mainhand": {
+                                        "items": "shield"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "minecraft:inverted",
+                            "term": {
+                                "type": "minecraft:entity_properties",
                                 "entity": "this",
                                 "predicate": {
                                     "equipment": {
                                         "mainhand": {
-                                            "items": "shield"
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "condition": "minecraft:inverted",
-                                "term": {
-                                    "condition": "minecraft:entity_properties",
-                                    "entity": "this",
-                                    "predicate": {
-                                        "equipment": {
-                                            "mainhand": {
-                                                "predicates": {
-                                                    "minecraft:custom_data": {
-                                                        "gm4_survival_refightalized": {}
-                                                    }
+                                            "predicates": {
+                                                "minecraft:custom_data": {
+                                                    "gm4_survival_refightalized": {}
                                                 }
                                             }
                                         }
                                     }
                                 }
                             }
-                        ]
-                    }
-                ],
+                        }
+                    ]
+                },
                 "item": {
                     "items": "shield"
                 }
@@ -47,42 +45,40 @@
         "offhand": {
             "trigger": "minecraft:using_item",
             "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:all_of",
-                        "terms": [
-                            {
-                                "condition": "minecraft:entity_properties",
+                "player": {
+                    "type": "minecraft:all_of",
+                    "terms": [
+                        {
+                            "type": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "equipment": {
+                                    "offhand": {
+                                        "items": "shield"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "minecraft:inverted",
+                            "term": {
+                                "type": "minecraft:entity_properties",
                                 "entity": "this",
                                 "predicate": {
                                     "equipment": {
                                         "offhand": {
-                                            "items": "shield"
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "condition": "minecraft:inverted",
-                                "term": {
-                                    "condition": "minecraft:entity_properties",
-                                    "entity": "this",
-                                    "predicate": {
-                                        "equipment": {
-                                            "offhand": {
-                                                "predicates": {
-                                                    "minecraft:custom_data": {
-                                                        "gm4_survival_refightalized": {}
-                                                    }
+                                            "predicates": {
+                                                "minecraft:custom_data": {
+                                                    "gm4_survival_refightalized": {}
                                                 }
                                             }
                                         }
                                     }
                                 }
                             }
-                        ]
-                    }
-                ],
+                        }
+                    ]
+                },
                 "item": {
                     "items": "shield"
                 }

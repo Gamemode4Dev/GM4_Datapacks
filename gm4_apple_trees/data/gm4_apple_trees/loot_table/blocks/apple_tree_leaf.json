@@ -7,12 +7,10 @@
                 {
                     "type": "minecraft:loot_table",
                     "value": "gm4_apple_trees:items/apple_tree_sapling",
-                    "conditions": [
-                        {
-                            "condition": "minecraft:random_chance",
-                            "chance": 0.75
-                        }
-                    ]
+                    "condition": {
+                        "type": "minecraft:random_chance",
+                        "chance": 0.75
+                    }
                 }
             ]
         }

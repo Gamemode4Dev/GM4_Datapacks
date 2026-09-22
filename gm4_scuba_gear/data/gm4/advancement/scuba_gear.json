@@ -21,12 +21,7 @@
     "all_gear_equipped": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_scuba_gear:all_gear_equipped"
-          }
-        ]
+        "player": "gm4_scuba_gear:all_gear_equipped"
       }
     }
   }

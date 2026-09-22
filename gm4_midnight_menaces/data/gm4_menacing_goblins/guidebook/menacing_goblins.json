@@ -12,20 +12,18 @@
     "fight_goblin": {
       "trigger": "minecraft:player_hurt_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:zombie",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_goblin"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:zombie",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_goblin"
+              ]
             }
           }
-        ]
+        }
       }
     }
   },

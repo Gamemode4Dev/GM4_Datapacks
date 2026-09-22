@@ -7,19 +7,23 @@
         {
           "type": "item",
           "name": "minecraft:hopper_minecart",
-          "functions": [
+          "modifier": [
             {
-              "function": "set_components",
+              "type": "set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_ender_hoppers:item/ender_hopper_minecart"]}
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_ender_hoppers:item/ender_hopper_minecart"
+                  ]
+                }
               }
             },
             {
-              "function": "set_custom_data",
+              "type": "set_custom_data",
               "tag": "{gm4_machines:{id:'ender_hopper_minecart'}}"
             },
             {
-              "function": "set_name",
+              "type": "set_name",
               "name": [
                 {
                   "translate": "item.gm4.ender_hopper_minecart",

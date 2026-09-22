@@ -1,28 +1,28 @@
-[
-  {
-    "condition": "minecraft:any_of",
-    "terms": [
-      {
-        "condition": "minecraft:inverted",
-        "term": {
-          "condition": "minecraft:reference",
-          "name": "gm4_monsters_unbound:technical/underground"
-        }
-      },
-      {
-        "condition": "minecraft:location_check",
-        "predicate": {
-          "block": {
-            "blocks": "#gm4:water"
+{
+  "type": "minecraft:all_of",
+  "terms": [
+    {
+      "type": "minecraft:any_of",
+      "terms": [
+        {
+          "type": "minecraft:inverted",
+          "term": "gm4_monsters_unbound:technical/underground"
+        },
+        {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "#gm4:water"
+            }
           }
         }
+      ]
+    },
+    {
+      "type": "minecraft:location_check",
+      "predicate": {
+        "biomes": "minecraft:warm_ocean"
       }
-    ]
-  },
-  {
-    "condition": "minecraft:location_check",
-    "predicate": {
-      "biomes": "minecraft:warm_ocean"
     }
-  }
-]
+  ]
+}

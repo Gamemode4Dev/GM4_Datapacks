@@ -1,24 +1,27 @@
-[
-  {
-    "condition": "minecraft:location_check",
-    "offsetX": 0,
-    "offsetY": -1,
-    "offsetZ": 0,
-    "predicate": {
-      "block": {
-        "blocks": "#gm4:no_collision"
+{
+  "type": "minecraft:all_of",
+  "terms": [
+    {
+      "type": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "#gm4:no_collision"
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetY": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "fluid": {
+          "fluid": "minecraft:water"
+        }
       }
     }
-  },
-  {
-    "condition": "minecraft:location_check",
-    "offsetX": 0,
-    "offsetY": -1,
-    "offsetZ": 0,
-    "predicate": {
-      "fluid": {
-        "fluid": "minecraft:water"
-      }
-    }
-  }
-]
+  ]
+}

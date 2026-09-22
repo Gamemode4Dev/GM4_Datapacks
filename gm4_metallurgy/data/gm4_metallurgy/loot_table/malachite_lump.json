@@ -6,9 +6,9 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:player_head",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_name",
+              "type": "minecraft:set_name",
               "target": "item_name",
               "name": {
                 "translate": "item.gm4.metallurgy.malachite_lump",
@@ -16,7 +16,7 @@
               }
             },
             {
-              "function": "minecraft:set_lore",
+              "type": "minecraft:set_lore",
               "mode": "append",
               "entity": "this",
               "lore": [
@@ -37,7 +37,7 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": {
                   "floats": [
@@ -48,7 +48,7 @@
               }
             },
             {
-              "function": "minecraft:set_custom_data",
+              "type": "minecraft:set_custom_data",
               "tag": "{gm4_metallurgy:{metal:{type:'copper',amount:[1s],castable:1b},item:'ore'}}"
             }
           ]

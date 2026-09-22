@@ -3,15 +3,18 @@
     "#gm4:no_collision",
     "#minecraft:fence_gates",
     "#minecraft:fences",
+    "#minecraft:all_hanging_signs",
     "#minecraft:leaves",
     "#minecraft:trapdoors",
     "#minecraft:walls",
+    "#minecraft:wooden_shelves",
     "minecraft:brewing_stand",
     "minecraft:cobweb",
     "minecraft:comparator",
     "minecraft:end_rod",
     "minecraft:iron_bars",
     "minecraft:repeater",
-    "minecraft:snow"
+    "minecraft:snow",
+    "minecraft:straw_bed"
   ]
 }

@@ -24,19 +24,17 @@
     "create_soul_forge": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:type_specific/player": {
-                "advancements": {
-                  "gm4:create_soul_forge": true
-                }
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:type_specific/player": {
+              "advancements": {
+                "gm4:create_soul_forge": true
               }
             }
           }
-        ]
+        }
       }
     },
     "obtain_soul_shard": {

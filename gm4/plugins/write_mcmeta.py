@@ -9,18 +9,18 @@ def beet_default(ctx: Context):
 	manifest = ManifestCacheModel.model_validate(ctx.cache["gm4_manifest"].json)
 	manifest_entry = {v.id:v for v in (manifest.modules|manifest.libraries).values()}.get(ctx.project_id, NoneAttribute())
 
-	ctx.data.min_format = 107
-	ctx.data.max_format = 107
+	ctx.data.min_format = 121
+	ctx.data.max_format = 121
 
-	ctx.assets.min_format = 88
-	ctx.assets.max_format = 88
+	ctx.assets.min_format = 97
+	ctx.assets.max_format = 97
 
 	for pack in ctx.packs:
 		pack.description = [
 			ctx.project_name,
 			"\n",
 			{
-				"text": f"Gamemode 4 for 26.2",
+				"text": f"Gamemode 4 for 26.3",
 				"color": "#4AA0C7"
 			}
 		]

@@ -1,15 +1,15 @@
 {
   "values": [
-    "minecraft:taiga",
-    "minecraft:snowy_taiga",
-    "minecraft:snowy_plains",
-    "minecraft:snowy_beach",
-    "minecraft:snowy_slopes",
+    "minecraft:grove",
     "minecraft:old_growth_pine_taiga",
     "minecraft:old_growth_spruce_taiga",
+    "minecraft:snowy_beach",
+    "minecraft:snowy_plains",
+    "minecraft:snowy_slopes",
+    "minecraft:snowy_taiga",
+    "minecraft:taiga",
     "minecraft:windswept_forest",
-    "minecraft:windswept_hills",
     "minecraft:windswept_gravelly_hills",
-    "minecraft:grove"
+    "minecraft:windswept_hills"
   ]
 }

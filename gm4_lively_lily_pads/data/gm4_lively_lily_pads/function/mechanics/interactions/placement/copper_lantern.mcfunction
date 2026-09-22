@@ -7,7 +7,7 @@
 $summon minecraft:block_display ~ ~ ~ {\
   Tags:["gm4_llp_display","gm4_llp_light","gm4_llp_light.14","gm4_llp_lantern_sound","gm4_llp_unwaxed_copper_lantern","smithed.entity"],\
   block_state:{\
-    Name:"$(DisplayType)"\
+    id:"$(DisplayType)"\
   },\
   transformation:{\
     scale:[0.8f,0.8f,0.8f],\

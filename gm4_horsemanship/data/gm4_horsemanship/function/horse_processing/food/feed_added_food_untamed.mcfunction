@@ -24,4 +24,4 @@ advancement revoke @s only gm4_horsemanship:feed_untamed_horse
 
 # playsound and remove the fed item
 execute at @e[type=#gm4_horsemanship:trainable,tag=gm4_horse_target,distance=..8,limit=1] run playsound entity.horse.eat neutral @a ~ ~ ~ 1 1
-item modify entity @s[gamemode=!creative] weapon.mainhand {"function": "minecraft:set_count","count":-1,"add":true}
+item modify entity @s[gamemode=!creative] weapon.mainhand {type: "minecraft:set_count", count: -1, add: true}

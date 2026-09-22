@@ -8,12 +8,10 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:player_head",
-          "functions": [
-            {
-              "function": "minecraft:copy_components",
-              "source": "block_entity"
-            }
-          ]
+          "modifier": {
+            "type": "minecraft:copy_components",
+            "source": "block_entity"
+          }
         }
       ]
     }

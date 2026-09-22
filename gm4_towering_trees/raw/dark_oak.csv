@@ -1,0 +1,11 @@
+type,variant,size_x,size_y,size_z,base_x_offset,base_z_offset,branch_start_height,feature,is_mega
+dark_oak,a,7,6,7,3,4,4,#,false
+dark_oak,b,7,7,7,3,3,5,#,false
+dark_oak,c,8,8,7,4,4,5,#,false
+dark_oak,d,8,9,7,4,3,7,#,false
+dark_oak,e,8,10,7,4,3,7,#,false
+dark_oak,f,7,7,7,4,3,5,#,false
+dark_oak,g,7,7,7,4,3,5,#,false
+dark_oak,h,7,8,8,4,4,6,#,false
+dark_oak,i,8,9,8,4,4,7,#,false
+dark_oak,j,7,10,8,3,3,8,#,false

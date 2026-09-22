@@ -1,6 +1,6 @@
 id: gm4_horsemanship
 name: Horsemanship
-version: 1.0.X
+version: 1.1.X
 
 resource_pack:
   load: .
@@ -15,16 +15,16 @@ meta:
   gm4:
     versioning:
       required:
-        lib_forceload: 1.1.0
+        lib_forceload: 1.7.0
       schedule_loops:
-      - main
-      - tick
+        - main
+        - tick
     website:
       description: Form a bond with your horses
       recommended: []
       notes:
         - Usage of the Gamemode 4 Resource Pack is highly recommended.
-    modrinth: 
+    modrinth:
       project_id: u4hUNmhk
     smithed:
       pack_id: gm4_horsemanship

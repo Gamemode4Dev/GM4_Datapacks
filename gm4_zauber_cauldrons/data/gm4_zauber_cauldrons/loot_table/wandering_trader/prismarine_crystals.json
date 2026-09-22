@@ -6,15 +6,14 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:prismarine_crystals",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "min": 8,
-                                "max": 24
-                            }
+                    "modifier": {
+                        "type": "minecraft:set_count",
+                        "count": {
+                            "type": "minecraft:uniform",
+                            "min": 8,
+                            "max": 24
                         }
-                    ]
+                    }
                 }
             ]
         },
@@ -24,15 +23,14 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:emerald",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_count",
-                            "count": {
-                                "min": 2,
-                                "max": 4
-                            }
+                    "modifier": {
+                        "type": "minecraft:set_count",
+                        "count": {
+                            "type": "minecraft:uniform",
+                            "min": 2,
+                            "max": 4
                         }
-                    ]
+                    }
                 }
             ]
         }

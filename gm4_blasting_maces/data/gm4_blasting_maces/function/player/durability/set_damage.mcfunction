@@ -3,4 +3,4 @@
 # at @s
 # run from gm4_blasting_maces:player/durability/calculate with storage
 
-$item modify entity @s $(slot) {function:"minecraft:set_components",components:{"minecraft:damage":$(damage)}}
+$item modify entity @s $(slot) {type:"minecraft:set_components",components:{"minecraft:damage":$(damage)}}

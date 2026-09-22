@@ -1,7 +1,7 @@
 # Action for reeled chest_boat
 # @s = chest_boat type
 # at bobber in @s
-# with {boat_type}
+# with $boat_type: string resulting entity type
 # run from hooked_entity/select_type
 
 # steal

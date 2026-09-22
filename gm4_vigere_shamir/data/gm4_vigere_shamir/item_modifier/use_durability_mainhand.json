@@ -1,17 +1,18 @@
-[
-    {
-        "function": "minecraft:set_damage",
-        "damage": {
-            "type": "minecraft:uniform",
-            "min": -0.003,
-            "max": -0.024
-        },
-        "add": true,
-        "conditions": [
-            {
-                "condition": "minecraft:inverted",
+{
+    "type": "sequence",
+    "functions": [
+        {
+            "type": "minecraft:set_damage",
+            "damage": {
+                "type": "minecraft:uniform",
+                "min": -0.003,
+                "max": -0.024
+            },
+            "add": true,
+            "condition": {
+                "type": "minecraft:inverted",
                 "term": {
-                    "condition": "minecraft:entity_properties",
+                    "type": "minecraft:entity_properties",
                     "entity": "this",
                     "predicate": {
                         "equipment": {
@@ -35,117 +36,126 @@
                     }
                 }
             }
-        ]
-    },
-    {
-        "function": "minecraft:set_damage",
-        "damage": {
-            "type": "minecraft:uniform",
-            "min": -0.003,
-            "max": -0.024
         },
-        "add": true,
-        "conditions": [
-            {
-                "condition": "minecraft:random_chance",
-                "chance": 0.5
+        {
+            "type": "minecraft:set_damage",
+            "damage": {
+                "type": "minecraft:uniform",
+                "min": -0.003,
+                "max": -0.024
             },
-            {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                    "equipment": {
-                        "mainhand": {
-                            "items": [
-                                "minecraft:shield"
-                            ],
-                            "predicates": {
-                                "minecraft:enchantments": [
-                                  {
-                                      "enchantments": "minecraft:unbreaking",
-                                      "levels": 1
-                                  }
-                              ]
-                            }
-                        }
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "function": "minecraft:set_damage",
-        "damage": {
-            "type": "minecraft:uniform",
-            "min": -0.003,
-            "max": -0.024
-        },
-        "add": true,
-        "conditions": [
-            {
-                "condition": "minecraft:random_chance",
-                "chance": 0.33
-            },
-            {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                    "equipment": {
-                        "mainhand": {
-                            "items": [
-                                "minecraft:shield"
-                            ],
-                            "predicates": {
-                                "minecraft:enchantments": [
-                                  {
-                                      "enchantments": "minecraft:unbreaking",
-                                      "levels": 2
-                                  }
-                              ]
-                            }
-                        }
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "function": "minecraft:set_damage",
-        "damage": {
-            "type": "minecraft:uniform",
-            "min": -0.003,
-            "max": -0.024
-        },
-        "add": true,
-        "conditions": [
-            {
-                "condition": "minecraft:random_chance",
-                "chance": 0.25
-            },
-            {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                    "equipment": {
-                        "mainhand": {
-                            "items": [
-                                "minecraft:shield"
-                            ],
-                            "predicates": {
-                                "minecraft:enchantments": [
-                                    {
-                                        "enchantments": "minecraft:unbreaking",
-                                        "levels": {
-                                            "min": 3,
-                                            "max": 255
-                                        }
+            "add": true,
+            "condition": {
+                "type": "minecraft:all_of",
+                "terms": [
+                    {
+                        "type": "minecraft:random_chance",
+                        "chance": 0.5
+                    },
+                    {
+                        "type": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "equipment": {
+                                "mainhand": {
+                                    "items": [
+                                        "minecraft:shield"
+                                    ],
+                                    "predicates": {
+                                        "minecraft:enchantments": [
+                                            {
+                                                "enchantments": "minecraft:unbreaking",
+                                                "levels": 1
+                                            }
+                                        ]
                                     }
-                                ]
+                                }
                             }
                         }
                     }
-                }
+                ]
             }
-        ]
-    }
-]
+        },
+        {
+            "type": "minecraft:set_damage",
+            "damage": {
+                "type": "minecraft:uniform",
+                "min": -0.003,
+                "max": -0.024
+            },
+            "add": true,
+            "condition": {
+                "type": "minecraft:all_of",
+                "terms": [
+                    {
+                        "type": "minecraft:random_chance",
+                        "chance": 0.33
+                    },
+                    {
+                        "type": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "equipment": {
+                                "mainhand": {
+                                    "items": [
+                                        "minecraft:shield"
+                                    ],
+                                    "predicates": {
+                                        "minecraft:enchantments": [
+                                            {
+                                                "enchantments": "minecraft:unbreaking",
+                                                "levels": 2
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "minecraft:set_damage",
+            "damage": {
+                "type": "minecraft:uniform",
+                "min": -0.003,
+                "max": -0.024
+            },
+            "add": true,
+            "condition": {
+                "type": "minecraft:all_of",
+                "terms": [
+                    {
+                        "type": "minecraft:random_chance",
+                        "chance": 0.25
+                    },
+                    {
+                        "type": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "equipment": {
+                                "mainhand": {
+                                    "items": [
+                                        "minecraft:shield"
+                                    ],
+                                    "predicates": {
+                                        "minecraft:enchantments": [
+                                            {
+                                                "enchantments": "minecraft:unbreaking",
+                                                "levels": {
+                                                    "min": 3,
+                                                    "max": 255
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

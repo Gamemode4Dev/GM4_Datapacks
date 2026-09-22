@@ -1,24 +1,17 @@
 from pathlib import Path
 from typing import Any
 from gm4.utils import CSV # type: ignore
-import json
 
 from beet import Context, subproject # type: ignore
 
-def read_json(path: Path) -> CSV:
-    """
-    Reads in a json file and returns a python object representing the json.
-    """
-    with open(path, mode='r') as file:
-        json_file = json.load(file)
-        return json_file
 
 def beet_default(ctx: Context):
 
     # read raw data
-    tree_data: CSV = CSV.from_file(Path('gm4_towering_trees', 'tree_data.csv'))
-    
-    generate_tree_files(ctx, tree_data)
+    raw = Path('gm4_towering_trees', 'raw')
+    for file in raw.iterdir():
+        tree_data: CSV = CSV.from_file(file)
+        generate_tree_files(ctx, tree_data)
 
 def generate_tree_files(ctx: Context, tree_data: CSV):
     """

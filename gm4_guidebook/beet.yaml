@@ -1,13 +1,13 @@
 id: gm4_guidebook
 name: Guidebook
-version: 3.3.X
+version: 3.4.X
 
 data_pack:
   load: .
 
 resource_pack:
   load: .
-  
+
 require:
   - bolt
 
@@ -20,8 +20,8 @@ meta:
   gm4:
     versioning:
       required:
-        lib_forceload: 1.6.0
-      schedule_loops: 
+        lib_forceload: 1.7.0
+      schedule_loops:
         - main
         - tick
         - lecterns/section/tracking

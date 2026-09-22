@@ -1,7 +1,7 @@
 # Applies the barbed damage to the hooked entity
 # @s = hooked entity
 # at bobber position
-# with {damage}
+# with $damage: damage amount
 # run from hooked_entity/select_type
 
 # immediate damage (amount scales with enchantment level)

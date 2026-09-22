@@ -7,11 +7,11 @@
           "type": {
             "tags": [
               {
-                "id": "gm4_survival_refightalized:combat",
+                "id": "#gm4_survival_refightalized:combat",
                 "expected": true
               },
               {
-                "id": "gm4_survival_refightalized:ignore",
+                "id": "#gm4_survival_refightalized:ignore",
                 "expected": false
               }
             ]
@@ -26,11 +26,11 @@
           "type": {
             "tags": [
               {
-                "id": "gm4_survival_refightalized:armor_piercing",
+                "id": "#gm4_survival_refightalized:armor_piercing",
                 "expected": true
               },
               {
-                "id": "gm4_survival_refightalized:ignore",
+                "id": "#gm4_survival_refightalized:ignore",
                 "expected": false
               }
             ]
@@ -74,7 +74,7 @@
           "type": {
             "tags": [
               {
-                "id": "gm4_survival_refightalized:ignore",
+                "id": "#gm4_survival_refightalized:ignore",
                 "expected": false
               }
             ]
@@ -89,11 +89,11 @@
           "type": {
             "tags": [
               {
-                "id": "minecraft:bypasses_enchantments",
+                "id": "#minecraft:bypasses_enchantments",
                 "expected": true
               },
               {
-                "id": "gm4_survival_refightalized:ignore",
+                "id": "#gm4_survival_refightalized:ignore",
                 "expected": false
               }
             ]
@@ -108,11 +108,11 @@
           "type": {
             "tags": [
               {
-                "id": "minecraft:bypasses_shield",
+                "id": "#minecraft:bypasses_shield",
                 "expected": true
               },
               {
-                "id": "gm4_survival_refightalized:ignore",
+                "id": "#gm4_survival_refightalized:ignore",
                 "expected": false
               }
             ]
@@ -127,11 +127,11 @@
           "type": {
             "tags": [
               {
-                "id": "minecraft:is_fire",
+                "id": "#minecraft:is_fire",
                 "expected": true
               },
               {
-                "id": "gm4_survival_refightalized:ignore",
+                "id": "#gm4_survival_refightalized:ignore",
                 "expected": false
               }
             ]
@@ -146,11 +146,11 @@
           "type": {
             "tags": [
               {
-                "id": "minecraft:is_explosion",
+                "id": "#minecraft:is_explosion",
                 "expected": true
               },
               {
-                "id": "gm4_survival_refightalized:ignore",
+                "id": "#gm4_survival_refightalized:ignore",
                 "expected": false
               }
             ]
@@ -165,11 +165,11 @@
           "type": {
             "tags": [
               {
-                "id": "minecraft:is_fall",
+                "id": "#minecraft:is_fall",
                 "expected": true
               },
               {
-                "id": "gm4_survival_refightalized:ignore",
+                "id": "#gm4_survival_refightalized:ignore",
                 "expected": false
               }
             ]
@@ -184,11 +184,11 @@
           "type": {
             "tags": [
               {
-                "id": "minecraft:is_projectile",
+                "id": "#minecraft:is_projectile",
                 "expected": true
               },
               {
-                "id": "gm4_survival_refightalized:ignore",
+                "id": "#gm4_survival_refightalized:ignore",
                 "expected": false
               }
             ]
@@ -203,7 +203,11 @@
           "minecraft:poison": {}
         },
         "source": {
-          "minecraft:entity_type": "minecraft:witch"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:witch"
+          }
         }
       }
     },
@@ -217,7 +221,7 @@
           "type": {
             "tags": [
               {
-                "id": "gm4_survival_refightalized:ignore",
+                "id": "#gm4_survival_refightalized:ignore",
                 "expected": false
               }
             ]
@@ -232,7 +236,7 @@
           "type": {
             "tags": [
               {
-                "id": "gm4_survival_refightalized:ignore",
+                "id": "#gm4_survival_refightalized:ignore",
                 "expected": false
               }
             ]

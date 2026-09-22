@@ -11,7 +11,7 @@ parent_logger = logging.getLogger("gm4.output")
 def beet_default(ctx: Context):
 	"""Saves the datapack to the ./out folder in it's exit phase.
 	 	Should be first in pipeline to properly wrap all other plugins cleanup phases"""
-	version = os.getenv("VERSION", "26.2")
+	version = os.getenv("VERSION", "26.3-rc-1")
 	out_dir = Path("out")
 
 	yield # wait for exit phase, after other plugins cleanup
@@ -23,7 +23,7 @@ def beet_default(ctx: Context):
 
 def resource_pack(ctx: Context):
 	"""Saves the resourcepack to the ./out folder."""
-	version = os.getenv("VERSION", "26.2")
+	version = os.getenv("VERSION", "26.3-rc-1")
 	out_dir = Path("out")
 
 	ctx.assets.save(
@@ -33,7 +33,7 @@ def resource_pack(ctx: Context):
 
 def release_resource_pack(ctx: Context):
 	"""Saves the resourcepack to the ./out folder."""
-	version = os.getenv("VERSION", "26.2")
+	version = os.getenv("VERSION", "26.3-rc-1")
 	release_dir = Path("release") / version
 
 	yield
@@ -64,7 +64,7 @@ def release(ctx: Context):
 	Saves the zipped datapack and metadata to the ./release/{version} folder.
 		Should be first in pipeline to properly wrap all other plugins cleanup phases
 	"""
-	version_dir = os.getenv("VERSION", "26.2")
+	version_dir = os.getenv("VERSION", "26.3-rc-1")
 	release_dir = Path("release") / version_dir
 
 	corrected_project_id = stem if (stem:=ctx.directory.stem).startswith("lib") else ctx.project_id
@@ -98,7 +98,7 @@ def clear_release(ctx: Context):
 	1. Deleted modules no longer stick around in the current version
 	2. Changes to the build system (such as renamed files/folders) are properly reflected
 	"""
-	version = os.getenv("VERSION", "26.2")
+	version = os.getenv("VERSION", "26.3-rc-1")
 	release_dir = Path("release") / version
 	shutil.rmtree(release_dir, ignore_errors=True)
 	os.makedirs(release_dir, exist_ok=True)

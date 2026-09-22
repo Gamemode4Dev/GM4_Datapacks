@@ -1,5 +1,5 @@
 {
-  "function": "minecraft:set_name",
+  "type": "minecraft:set_name",
   "entity": "this",
   "name": {
     "translate": "entity.gm4.undead_player_name",

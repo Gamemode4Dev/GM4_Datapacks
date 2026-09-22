@@ -1,36 +1,39 @@
 {
     "criteria": {
-      "requirement": {
-        "trigger": "minecraft:location",
-        "conditions": {
-          "player": [
-            {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "gm4_intro_walked": {
-                  "min": 1,
-                  "max": 9999
+        "requirement": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "player": {
+                    "type": "minecraft:all_of",
+                    "terms": [
+                        {
+                            "type": "minecraft:entity_scores",
+                            "entity": "this",
+                            "scores": {
+                                "gm4_intro_walked": {
+                                    "min": 1,
+                                    "max": 9999
+                                }
+                            }
+                        },
+                        {
+                            "type": "minecraft:int_value_check",
+                            "value": {
+                                "type": "minecraft:score",
+                                "target": {
+                                    "type": "minecraft:fixed",
+                                    "name": "$first_join"
+                                },
+                                "score": "gm4_intro_song"
+                            },
+                            "test": 1
+                        }
+                    ]
                 }
-              }
-            },
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "$first_join"
-                },
-                "score": "gm4_intro_song"
-              },
-              "range": 1
             }
-          ]
         }
-      }
     },
     "rewards": {
-      "function": "gm4:intro_song/init_song"
+        "function": "gm4:intro_song/init_song"
     }
-  }
+}

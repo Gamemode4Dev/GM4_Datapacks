@@ -25,22 +25,20 @@
     "requirement": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "gm4"
-              },
-              "score": "gm4_modules"
+        "player": {
+          "type": "minecraft:int_value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "gm4"
             },
-            "range": {
-              "min": 1
-            }
+            "score": "gm4_modules"
+          },
+          "test": {
+            "min": 1
           }
-        ]
+        }
       }
     }
   }

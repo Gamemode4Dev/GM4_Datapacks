@@ -19,7 +19,7 @@
     "minecraft:location_changed": [
       {
         "requirements": {
-          "condition": "minecraft:entity_properties",
+          "type": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
             "location": {
@@ -39,9 +39,9 @@
       },
       {
         "requirements": {
-          "condition": "minecraft:inverted",
+          "type": "minecraft:inverted",
           "term": {
-            "condition": "minecraft:entity_properties",
+            "type": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
               "location": {

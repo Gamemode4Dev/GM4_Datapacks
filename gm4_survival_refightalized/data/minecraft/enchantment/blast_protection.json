@@ -42,15 +42,15 @@
                     }
                 },
                 "requirements": {
-                    "condition": "minecraft:damage_source_properties",
+                    "type": "minecraft:damage_source_properties",
                     "predicate": {
                         "tags": [
                             {
-                                "id": "minecraft:is_explosion",
+                                "id": "#minecraft:is_explosion",
                                 "expected": true
                             },
                             {
-                                "id": "minecraft:bypasses_invulnerability",
+                                "id": "#minecraft:bypasses_invulnerability",
                                 "expected": false
                             }
                         ]

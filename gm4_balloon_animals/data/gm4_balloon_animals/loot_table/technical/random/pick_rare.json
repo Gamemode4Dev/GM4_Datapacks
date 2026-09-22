@@ -2,6 +2,7 @@
   "pools": [
     {
       "rolls": {
+        "type": "minecraft:uniform",
         "min": ctx.meta['rare_start'],
         "max": int(f"{len(ctx.meta['enumeration'])-1}")
       },

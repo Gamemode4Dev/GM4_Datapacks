@@ -252,7 +252,7 @@ def versioned_advancements(ctx: Context, ver: Version, targets: list[str], stric
     """Adds versioning to advancements, either strict checks for libraries or load checks for most modules"""
     # NOTE advancements get score checks injected into every criteria
     assemble_value_check = lambda name_field, range_field: { # type:ignore
-        "condition": "minecraft:value_check",
+        "type": "minecraft:int_value_check",
         "value": {
             "type": "minecraft:score",
             "target": {
@@ -261,7 +261,7 @@ def versioned_advancements(ctx: Context, ver: Version, targets: list[str], stric
             },
             "score": "load.status"
         },
-        "range": range_field
+        "test": range_field
     }
 
     for entry in targets:
@@ -270,14 +270,21 @@ def versioned_advancements(ctx: Context, ver: Version, targets: list[str], stric
         else:
             handle = ctx.data.advancements[f"{ctx.project_id}:{entry}"]
         for criteria in handle.data["criteria"].values():
-            player_conditions = criteria.setdefault("conditions", {}).setdefault("player", [])
-            if type(player_conditions) is dict:
-                raise ValueError(f"{entry} is using legacy player conditions, which does not support load.status injections.")
+            conditions = criteria.setdefault("conditions", {})
+            player = conditions.get("player", [])
+            predicates = player if isinstance(player, list) else [player] # type: ignore
             if strict:
-                player_conditions.append(assemble_value_check(ctx.project_id, ver.major))
-                player_conditions.append(assemble_value_check(f"{ctx.project_id}_minor", ver.minor))
+                predicates.append(assemble_value_check(ctx.project_id, ver.major)) # type: ignore
+                predicates.append(assemble_value_check(f"{ctx.project_id}_minor", ver.minor)) # type: ignore
             else:
-                player_conditions.append(assemble_value_check(ctx.project_id, {"min": 1}))
+                predicates.append(assemble_value_check(ctx.project_id, {"min": 1})) # type: ignore
+            if len(predicates) == 1: # type: ignore
+                conditions["player"] = predicates[0]
+            else:
+                conditions["player"] = {
+                    "type": "minecraft:all_of",
+                    "terms": predicates,
+                }
 
 def warn_on_future_version(ctx: Context, dep_id: str, ver: Version):
     """Issues a console warning if the dependancy version a module requires is greater than the current version of that dependancy"""

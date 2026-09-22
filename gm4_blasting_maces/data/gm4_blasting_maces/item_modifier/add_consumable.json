@@ -1,13 +1,11 @@
-[
-  {
-    "function": "minecraft:set_components",
-    "components": {
-      "minecraft:consumable": {
-        "consume_seconds": 100000,
-        "animation": "bow",
-        "has_consume_particles": false,
-        "sound": "minecraft:intentionally_empty"
-      }
+{
+  "type": "minecraft:set_components",
+  "components": {
+    "minecraft:consumable": {
+      "consume_seconds": 100000,
+      "animation": "bow",
+      "has_consume_particles": false,
+      "sound": "minecraft:intentionally_empty"
     }
   }
-]
+}
