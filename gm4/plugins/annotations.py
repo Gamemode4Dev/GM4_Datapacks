@@ -5,6 +5,7 @@ import re
 from functools import partial
 from pathlib import Path
 from typing import Any
+import pickle
 
 from beet import Context, ProjectCache
 
@@ -31,12 +32,32 @@ def beet_default(ctx: Context):
 
     # summary handler holds onto certain records until the exit phase when it emits to a markdown summary
     sum_handler = SummaryHandler(1000, ctx.cache)
-    logging.getLogger("gm4.output").addHandler(sum_handler)
+    logging.getLogger("gm4.publish").addHandler(sum_handler)
     logging.getLogger("gm4.manifest.update_patch").addHandler(sum_handler)
 
-    # after the whole build, flush the stored records and form the markdown summary
+    # after the whole build, flush the stored records to file for the later markdown summary action job
     yield
-    sum_handler.flush()
+    sum_handler.flush_to_pickle()
+
+def load_and_summarize(ctx: Context):
+    """Loads log entries from previous gh step/job to aggregate"""
+    sum_handler = SummaryHandler(1000, ctx.cache)
+
+    log_dir = Path("logs")
+    for log_file in log_dir.iterdir():
+        with open(log_file, 'rb') as f:
+            log_buffer: list[logging.LogRecord] = pickle.load(f)
+        for log_entry in log_buffer:
+            sum_handler.emit(log_entry)
+
+    summary_title = ""
+    if (sum_type:=ctx.meta.get('gm4', {}).get('summarize_type')) == 'release':
+        summary_title = "Build Deployment Summary"
+    elif sum_type == 'pull_request':
+        summary_title = "Pull Request Deployment Preview"
+
+    sum_handler.flush_to_summary(summary_title)
+
 
 LEVEL_CONVERSION = {
     logging.DEBUG: "debug",
@@ -85,7 +106,7 @@ class SummaryHandler(logging.handlers.BufferingHandler):
         self.beet_cache = beet_cache
         self.summary_created = False
 
-    def flush(self):
+    def flush_to_summary(self, summary_title: str):
         summary_entries: dict[str, Any] = {}
 
         this_manifest = ManifestCacheModel.model_validate(self.beet_cache["gm4_manifest"].json)
@@ -131,7 +152,7 @@ class SummaryHandler(logging.handlers.BufferingHandler):
 
             table += f"\n {entry['name']} | {entry['ver_update']} | {nested_table}"
 
-        summary = "# :rocket: Build Deployment Summary :rocket:\n"+table
+        summary = f"# :rocket: {summary_title} :rocket:\n"+table
 
         if not self.summary_created:
             env_file = os.getenv("GITHUB_STEP_SUMMARY")
@@ -139,6 +160,15 @@ class SummaryHandler(logging.handlers.BufferingHandler):
                 with open(env_file, "a") as f:
                     f.write(summary) # python normally has no access to env variables, so we go direct to the action env file.
                 self.summary_created = True
+        self.buffer.clear()
+
+    def flush_to_pickle(self):
+        """Writes buffer of log entries to file, for a later gh action step to aggregate into the summary file"""
+        log_dir = Path("logs")
+        log_file = log_dir/"summary_logs.pkl"
+        os.makedirs(log_dir, exist_ok=True)
+        with open(log_file, "wb") as f:
+            pickle.dump(self.buffer, f)
         self.buffer.clear()
 
 
