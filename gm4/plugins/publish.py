@@ -32,7 +32,7 @@ def beet_default(ctx: Context):
     `BEET_SMITHED_TOKEN` environment variable is set, will try to publish a
     new version to Smithed if it doesn't already exist."""
 
-    version_dir = os.getenv("VERSION", "26.2")
+    version_dir = os.getenv("VERSION", "26.3")
     release_dir = Path("release") / version_dir
 
     corrected_project_id = stem if (stem:=ctx.directory.stem).startswith("lib") else ctx.project_id
@@ -180,7 +180,7 @@ def publish_smithed(ctx: Context, config: ManifestConfig, file_name: str):
     """Attempts to publish pack to smithed"""
     auth_token = os.getenv(SMITHED_AUTH_KEY, None)
     logger = parent_logger.getChild(f"smithed.{ctx.project_id}")
-    mc_version_dir = os.getenv("VERSION", "26.2")
+    mc_version_dir = os.getenv("VERSION", "26.3-rc-1")
     manifest = ManifestCacheModel.model_validate(ctx.cache["gm4_manifest"].json)
     project_id = stem if (stem:=ctx.directory.stem).startswith("lib") else ctx.project_id
 
