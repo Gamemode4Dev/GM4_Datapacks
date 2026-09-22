@@ -164,9 +164,9 @@ jobs:
     strategy:
       matrix:
         platform: [modrinth, smithed]
-    # concurrency:
-    #   group: release
-    name: 'publish-${{ matrix.platform }}'
+    concurrency:
+      group: 'publish-${{ matrix.platform }}'
+    name: 'publish'
     steps:
       - uses: actions/checkout@v7
 
