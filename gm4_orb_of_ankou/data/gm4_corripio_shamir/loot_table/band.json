@@ -5,7 +5,7 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "value": "gm4_metallurgy:bismuth_band",
+                    "value": "#gm4_metallurgy:bismuth_band",
                     "modifier": [
                         {
                             "type": "minecraft:set_components",

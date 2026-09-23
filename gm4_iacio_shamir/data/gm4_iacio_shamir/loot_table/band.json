@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "minecraft:loot_table",
-					"value": "gm4_metallurgy:barium_band",
+					"value": "#gm4_metallurgy:barium_band",
 					"modifier": [
 						{
 							"type": "minecraft:set_components",

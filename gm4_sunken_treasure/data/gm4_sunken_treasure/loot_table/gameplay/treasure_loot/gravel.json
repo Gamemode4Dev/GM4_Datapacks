@@ -361,7 +361,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 4,
-          "value": "gm4_scuba_gear:items/scuba_helmet",
+          "value": "#gm4_scuba_gear:items/scuba_helmet",
           "condition": {
             "type": "minecraft:int_value_check",
             "value": {
@@ -380,7 +380,7 @@
         {
           "type": "minecraft:loot_table",
           "weight": 3,
-          "value": "gm4_scuba_gear:items/scuba_tank",
+          "value": "#gm4_scuba_gear:items/scuba_tank",
           "condition": {
             "type": "minecraft:int_value_check",
             "value": {
