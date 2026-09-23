@@ -1,11 +1,11 @@
 {
-  "last_commit": "7e511e3dea866e5824177bef87fd18fe0dcdca3b",
+  "last_commit": "00c2f4179ab1ede971e33edbc0679c6ab3704b66",
   "modules": [
     {
       "id": "gm4_animi_shamir",
       "name": "Animi Shamir",
-      "version": "1.7.0",
-      "hash": "e9ccf2738178e1f0eaf6e41a98333a2b00fe28d5",
+      "version": "1.7.1",
+      "hash": "571b8c3e5486acd189446fd303dc69e896f01391",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Animi_Shamir",
       "credits": {
@@ -72,8 +72,8 @@
     {
       "id": "gm4_audere_shamir",
       "name": "Audere Shamir",
-      "version": "1.7.0",
-      "hash": "d643bc2254a18cb659cd0256b4a73561c0a01ea8",
+      "version": "1.7.1",
+      "hash": "e835ba04fae70401f4ebd14cdde5ec9452b0613e",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Audere_Shamir",
       "credits": {
@@ -659,8 +659,8 @@
     {
       "id": "gm4_desire_lines",
       "name": "Desire Lines",
-      "version": "1.8.0",
-      "hash": "8e7ca0bd8fe7b7eb507dc10aa479a7e1a37938fa",
+      "version": "1.8.1",
+      "hash": "eea15c469b4f6b9650f7a128885b275fd47f6890",
       "video_link": "https://www.youtube.com/watch?v=wmGaatfekfs",
       "wiki_link": "https://wiki.gm4.co/wiki/Desire_Lines",
       "credits": {
@@ -957,8 +957,8 @@
     {
       "id": "gm4_fulcio_shamir",
       "name": "Fulcio Shamir",
-      "version": "1.7.0",
-      "hash": "7ad519cf6cd6af16042012e16e454a62807ae493",
+      "version": "1.7.1",
+      "hash": "133be7b063a47a472845aefecd6b19147248c8a4",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Fulcio_Shamir",
       "credits": {
@@ -1089,8 +1089,8 @@
     {
       "id": "gm4_iacio_shamir",
       "name": "Iacio Shamir",
-      "version": "1.7.0",
-      "hash": "cec4f31149885f2b8c36fcc28db481f39b73d77a",
+      "version": "1.7.1",
+      "hash": "3a5a60a1adf34d7738c63883333ef957fc523e11",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Iacio_Shamir",
       "credits": {
@@ -1379,8 +1379,8 @@
     {
       "id": "gm4_lumos_shamir",
       "name": "Lumos Shamir",
-      "version": "1.7.0",
-      "hash": "ce280244c34d4a5fd0d2cd2739edbf72e6e0b264",
+      "version": "1.7.1",
+      "hash": "7060ed16609d66306207052d6a8cbf7de350f35e",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Lumos_Shamir",
       "credits": {
@@ -1649,8 +1649,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.10.0",
-      "hash": "47703e169bf328f9ae9c502b60083a0c688820b9",
+      "version": "1.10.1",
+      "hash": "ce46ef553d7da5ca56d381611971f9f05f8973b7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -1719,8 +1719,8 @@
     {
       "id": "gm4_percurro_shamir",
       "name": "Percurro Shamir",
-      "version": "1.7.0",
-      "hash": "0250b0cb192f2a9ad164ed574f819dddb702c771",
+      "version": "1.7.1",
+      "hash": "25bb0ffeb6a2016af104ad167cac73942b314391",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Percurro_Shamir",
       "credits": {
@@ -2229,8 +2229,8 @@
     {
       "id": "gm4_sunken_treasure",
       "name": "Sunken Treasure",
-      "version": "1.9.0",
-      "hash": "1a16a9c6d052279a8a0e7e478a8e26141bb7e4bb",
+      "version": "1.9.1",
+      "hash": "50980cb16e2a7f38f7feff1c4f0f4fe136c65f3d",
       "video_link": "https://www.youtube.com/watch?v=VV7ZIyIzKV0",
       "wiki_link": "https://wiki.gm4.co/wiki/Sunken_Treasure",
       "credits": {
@@ -2515,8 +2515,8 @@
     {
       "id": "gm4_vecto_shamir",
       "name": "Vecto Shamir",
-      "version": "1.8.0",
-      "hash": "8865df296fd6c886557d816cef076b376f86aa0b",
+      "version": "1.8.1",
+      "hash": "391974da7e676f133283657cd31135f7fcecd290",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vecto_Shamir",
       "credits": {
@@ -2582,8 +2582,8 @@
     {
       "id": "gm4_vigere_shamir",
       "name": "Vigere Shamir",
-      "version": "1.7.0",
-      "hash": "3864bb91b4baf6c2bb7501ebcf17e640fc7baa41",
+      "version": "1.7.1",
+      "hash": "a09b628253a8768a3301c924286a70d959c2b9eb",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vigere_Shamir",
       "credits": {
@@ -2648,8 +2648,8 @@
     {
       "id": "gm4_weighted_armour",
       "name": "Weighted Armour",
-      "version": "1.10.0",
-      "hash": "affc48bb64c13fdd8102339f5636416bf0495562",
+      "version": "1.10.1",
+      "hash": "c621b1b897fcd76617e43f4a7ef475004a139439",
       "video_link": "https://www.youtube.com/watch?v=rVRSXTGQPbg",
       "wiki_link": "https://wiki.gm4.co/wiki/Weighted_Armour",
       "credits": {
