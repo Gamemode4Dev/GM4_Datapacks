@@ -1,0 +1,29 @@
+id: gm4_gilded_gateways
+name: Gilded Gateways
+version: 1.0.X
+
+data_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops: [tick]
+    website:
+      description: Prettier End Gateways!
+      recommended: []
+      notes: []
+    # modrinth:
+    #   project_id: 
+    # smithed:
+    #   pack_id: gm4_gilded_gateways
+    wiki: https://wiki.gm4.co/wiki/Gilded_Gateways
+    credits:
+      Creators:
+        - runcows
+        - Dinoguin_Jess
+      # Icon Design:
+      #   - runcows

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:random_selector",
+  "features": [],
+  "default": {
+    "feature": {
+      "type": "minecraft:template",
+      "templates": [
+        {
+          "weight": 1,
+          "data": {
+            "id": "gm4_gilded_gateways:return",
+            "rotations": [
+              "none"
+            ]
+          }
+        }
+      ]
+    },
+    "placement": [
+      {
+        "type": "minecraft:offset",
+        "x": 0,
+        "y": -2,
+        "z": 0
+      }
+    ]
+  }
+}
