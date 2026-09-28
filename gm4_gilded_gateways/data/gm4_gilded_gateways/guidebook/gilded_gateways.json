@@ -1,0 +1,44 @@
+{
+  "id": "gilded_gateways",
+  "name": "Gilded Gateways",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:bedrock"
+  },
+  "criteria": {
+    "enter_gateway": {
+      "trigger": "minecraft:enter_block",
+      "conditions": {
+        "player": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "dimension": "minecraft:the_end"
+          }
+        },
+        "blocks": "minecraft:end_gateway"
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "display",
+      "enable": [],
+      "requirements": [
+        [
+          "enter_gateway"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "translate": "text.gm4.guidebook.gilded_gateways.description",
+            "fallback": "3 Unique Gateway types for the main island\nAnd a secret 4th type for the outer end"
+          }
+        ]
+      ]
+    }
+  ]
+}

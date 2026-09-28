@@ -13,7 +13,7 @@ meta:
     versioning:
       schedule_loops: [tick]
     website:
-      description: Prettier End Gateways!
+      description: Tired of boring bedrock end gateways? Bring back the magic with custom gateways!
       recommended: []
       notes: []
     # modrinth:
