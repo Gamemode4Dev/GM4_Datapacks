@@ -15,3 +15,6 @@ execute if entity @s[tag=gm4_gilded_gateways.gateway.2] run place template gm4_g
 
 # unforceload
 execute if score #loaded gm4_gilded_gateways matches 0 run forceload remove ~ ~
+
+# kill
+kill @s
