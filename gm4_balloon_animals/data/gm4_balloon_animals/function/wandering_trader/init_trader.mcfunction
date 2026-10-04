@@ -11,4 +11,9 @@ execute as @e[type=trader_llama,tag=!smithed.entity,distance=..6] run function g
 tag @s remove gm4_balloon_animal_trader_new
 
 # pick two animals and set up trades
+data modify storage gm4_balloon_animals:temp trades set value []
 function gm4_balloon_animals:wandering_trader/pick_two_animals
+
+# copy trades list to entity custom data
+data modify entity @s data.gm4_balloon_animals.trades set from storage gm4_balloon_animals:temp trades
+data remove storage gm4_balloon_animals:temp trades
