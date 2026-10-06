@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:random_selector",
+  "features": [],
+  "default": {
+    "feature": {
+      "type": "minecraft:template",
+      "templates": [
+        {
+          "weight": 1,
+          "data": {
+            "id": "gm4_gilded_gateways:main_0",
+            "rotations": [
+              "none"
+            ]
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "id": "gm4_gilded_gateways:main_1",
+            "rotations": [
+              "none"
+            ]
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "id": "gm4_gilded_gateways:main_2",
+            "rotations": [
+              "none"
+            ]
+          }
+        }
+      ]
+    },
+    "placement": [
+      {
+        "type": "minecraft:offset",
+        "x": 0,
+        "y": -4,
+        "z": 0
+      }
+    ]
+  }
+}
