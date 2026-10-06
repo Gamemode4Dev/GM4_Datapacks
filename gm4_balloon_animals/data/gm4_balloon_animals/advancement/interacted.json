@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "interacted": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:wandering_trader",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_balloon_animal_trader"
+              ],
+              "none_of": [
+                "gm4_balloon_animal_offers_initialized",
+                "smithed.entity"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_balloon_animals:wandering_trader/interacted"
+  }
+}
