@@ -1,5 +1,5 @@
 {
-  "last_commit": "1959189487ca469507e39da0b3d0c6cf7becf7c9",
+  "last_commit": "7da717ca827cc78755d2bcf5fc0811b21db175b3",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -104,8 +104,8 @@
     {
       "id": "gm4_balloon_animals",
       "name": "Balloon Animals",
-      "version": "1.4.6",
-      "hash": "3701da680521e9a3338daf347fe71cc47b8ebfe9",
+      "version": "1.4.7",
+      "hash": "dd6ef0e419680d49d791638e01262e2e19dc66eb",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Balloon_Animals",
       "credits": {
@@ -120,8 +120,10 @@
       "description": "Looking for exotic animals? This module makes some Wandering Traders sell cute baby animals!",
       "recommends": [],
       "sponsor": null,
-      "minecraft": [],
-      "hidden": true,
+      "minecraft": [
+        "26.3"
+      ],
+      "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2024-04-14",
