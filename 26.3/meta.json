@@ -1,5 +1,5 @@
 {
-  "last_commit": "00c2f4179ab1ede971e33edbc0679c6ab3704b66",
+  "last_commit": "1959189487ca469507e39da0b3d0c6cf7becf7c9",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -985,6 +985,37 @@
       "publish_date": "2023-07-10",
       "modrinth_id": "N09PsTgz",
       "smithed_link": "gm4_fulcio_shamir",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_gilded_gateways",
+      "name": "Gilded Gateways",
+      "version": "1.0.0",
+      "hash": "ab8028c29308d957f3919a5ce342203571df3ae4",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Gilded_Gateways",
+      "credits": {
+        "Creators": [
+          "runcows",
+          "Dinoguin_Jess"
+        ],
+        "Icon Design": [
+          "runcows"
+        ]
+      },
+      "requires": [],
+      "description": "Tired of boring bedrock end gateways? Bring back the magic with custom gateways!",
+      "recommends": [],
+      "sponsor": null,
+      "minecraft": [
+        "26.3"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2026-10-06",
+      "modrinth_id": "pJokm5M5",
+      "smithed_link": "gm4_gilded_gateways",
       "pmc_link": null
     },
     {
@@ -2794,8 +2825,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.5.11",
-      "hash": "0adaf97985fc1fa197035f0a6a3a3348ca2a8d1c",
+      "version": "1.5.12",
+      "hash": "8880290ac349443f44308c6bd195bce14f56a71d",
       "video_link": "",
       "wiki_link": "",
       "credits": {
