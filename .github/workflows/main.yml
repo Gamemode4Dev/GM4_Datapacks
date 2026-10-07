@@ -14,12 +14,11 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     concurrency:
-      group: ${{ github.event_name != 'pull_request' && 'release' || format('pr-{0}', github.event.number) }}
+      group: ${{ case(github.event_name != 'pull_request', 'release', format('pr-{0}', github.event.number)) }}
     steps:
       - uses: actions/checkout@v7
 
       - name: Checkout release branch
-        if: github.event_name != 'pull_request'
         uses: actions/checkout@v7
         with:
           ref: release
@@ -38,14 +37,14 @@ jobs:
         env:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
-          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+          LOG_LEVEL: ${{ case(runner.debug == 1, 'DEBUG', 'INFO') }}
           MASTER_BUILD: true
 
       - name: Build all modules for pull request
         if: github.event_name == 'pull_request'
         run: uv run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
         env:
-          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+          LOG_LEVEL: ${{ case(runner.debug == 1, 'DEBUG', 'INFO') }}
 
       - name: Remove non-modules for artifact
         if: github.event_name == 'pull_request'
@@ -54,11 +53,15 @@ jobs:
           rm release/$VERSION/lib_*
           rm release/$VERSION/meta.json
 
-      - name: Upload artifact
-        if: github.event_name == 'pull_request'
+      - name: Retrieve commit sha
+        run: echo "SHORT_SHA=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_ENV
+
+      - name: Upload zip artifact
         uses: actions/upload-artifact@v7
         with:
-          name: 'Modules for pull request #${{ github.event.number }}'
+          name: "${{ format('Modules for {0} #{1}', \
+            case(github.event_name != 'pull_request', 'publish', 'pull request'),\
+            case(github.event_name != 'pull_request', env.SHORT_SHA, github.event.number)) }}"
           path: ${{ github.workspace }}/release/${{ env.VERSION }}/
 
       - name: Commit release
@@ -77,6 +80,24 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           directory: release
           branch: release
+
+      - name: Upload .beet_cache as artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: .beet_cache
+          path: ${{ github.workspace }}/.beet_cache/
+          include-hidden-files: true
+          retention-days: 2
+
+      - name: Rename log file
+        run: mv ${{ github.workspace }}/logs/summary_logs.pkl ${{ github.workspace }}/logs/build_log.pkl
+
+      - name: Upload logs as artifact
+        uses: actions/upload-artifact@v7
+        with:
+          path: ${{ github.workspace }}/logs/build_log.pkl
+          archive: false
+          retention-days: 2
 
   test:
     strategy:
@@ -102,7 +123,7 @@ jobs:
       - name: Build all modules for tests
         run: uv run beet -p beet-test.yaml -l ${{ env.LOG_LEVEL }} build
         env:
-          LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
+          LOG_LEVEL: ${{ case(runner.debug == 1, 'DEBUG', 'INFO') }}
 
       - name: Setup Java
         uses: actions/setup-java@v6
@@ -135,3 +156,77 @@ jobs:
         with:
           name: 'Test world in ${{ matrix.version }} for ${{ github.sha }}'
           path: ${{ github.workspace }}/world/
+
+  publish:
+    runs-on: ubuntu-24.04
+    if: github.event_name != 'pull_request'
+    needs: build
+    strategy:
+      matrix:
+        platform: [modrinth, smithed]
+    concurrency:
+      group: 'publish-${{ matrix.platform }}'
+    name: 'publish'
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Retrieve commit sha
+        run: echo "SHORT_SHA=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_ENV
+
+      - name: Download module zips from artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: 'Modules for publish #${{ env.SHORT_SHA }}'
+          path: ${{ github.workspace }}/release/${{ env.VERSION }}/
+
+      - name: Restore .beet_cache from artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: .beet_cache
+          path: ${{ github.workspace }}/.beet_cache
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Publish all modules
+        run: uv run beet -p beet-publish.yaml -l ${{ env.LOG_LEVEL }} -s meta.gm4.publish_to=${{ matrix.platform }} build
+        env:
+          BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
+          LOG_LEVEL: ${{ case(runner.debug == 1, 'DEBUG', 'INFO') }}
+
+      - name: Rename log file
+        run: mv ${{ github.workspace }}/logs/summary_logs.pkl ${{ github.workspace }}/logs/publish_${{ matrix.platform }}_log.pkl
+
+      - name: Upload logs as artifact
+        uses: actions/upload-artifact@v7
+        with:
+          path: ${{ github.workspace }}/logs/publish_${{ matrix.platform }}_log.pkl
+          archive: false
+          retention-days: 2
+
+  summarize:
+    runs-on: ubuntu-24.04
+    needs: [build, publish]
+    if: ${{ always() }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Restore .beet_cache from artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: .beet_cache
+          path: ${{ github.workspace }}/.beet_cache
+
+      - name: Restore log files from artifacts
+        uses: actions/download-artifact@v8
+        with:
+          pattern: '*_log.pkl'
+          path: ${{ github.workspace }}/logs
+          merge-multiple: true
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Summarize build logs
+        run: uv run beet -p beet-summarize.yaml -s meta.gm4.summarize_type=${{ case(github.event_name != 'pull_request', 'release', 'pull_request') }} build

@@ -1,0 +1,12 @@
+pipeline:
+  - gm4.plugins.publish.check_gh_action_failed
+  - gm4.plugins.annotations
+  - gm4.plugins.publish.switch_platform
+
+  - broadcast: [gm4_*, lib_*]
+    pipeline:
+      - gm4.plugins.publish.load_config
+    meta:
+      plugins:
+        - gm4.plugins.readme_generator
+        - gm4.plugins.publish
