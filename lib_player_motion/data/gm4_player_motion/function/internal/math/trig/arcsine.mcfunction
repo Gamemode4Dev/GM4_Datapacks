@@ -1,1 +1,0 @@
-$execute store result score $d gm4_player_motion.internal.math run data get storage gm4_player_motion:arcsine arr[$(quotient)]

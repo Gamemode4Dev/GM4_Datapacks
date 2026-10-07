@@ -15,7 +15,6 @@ meta:
     versioning:
       required:
         lib_forceload: 1.7.0
-      schedule_loops: [internal/technical/tick]
     credits:
       Original Creator:
         - MulverineX
