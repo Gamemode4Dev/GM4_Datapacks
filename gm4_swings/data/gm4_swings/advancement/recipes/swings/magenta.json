@@ -1,6 +1,12 @@
 {
   "criteria": {
-    "place": {
+    "has_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "gm4_swings:swings/magenta"
+      }
+    },
+    "has materials": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -11,6 +17,12 @@
       }
     }
   },
+  "requirements": [
+    [
+      "has_recipe",
+      "has materials"
+    ]
+  ],
   "rewards": {
     "recipes": [
       "gm4_swings:swings/magenta"
