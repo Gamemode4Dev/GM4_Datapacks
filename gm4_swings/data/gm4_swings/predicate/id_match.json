@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:entity_scores",
+  "entity": "this",
+  "scores": {
+    "gm4_swings.id": {
+      "min": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$id"
+        },
+        "score": "gm4_swings.id"
+      },
+      "max": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "$id"
+        },
+        "score": "gm4_swings.id"
+      }
+    }
+  }
+}

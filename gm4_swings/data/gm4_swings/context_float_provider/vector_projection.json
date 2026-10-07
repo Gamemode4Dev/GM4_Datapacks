@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:add",
+  "inputs": [
+    {
+      "type": "minecraft:mul",
+      "inputs": [
+        {
+          "type": "minecraft:storage",
+          "storage": "gm4_swings:data",
+          "path": "player_motion[0]"
+        },
+        {
+          "type": "minecraft:sin",
+          "input": {
+            "type": "minecraft:mul",
+            "inputs": [
+              {
+                "type": "minecraft:storage",
+                "storage": "gm4_swings:data",
+                "path": "seat_angle"
+              },
+              0.0174532925199
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "minecraft:mul",
+      "inputs": [
+        {
+          "type": "minecraft:storage",
+          "storage": "gm4_swings:data",
+          "path": "player_motion[2]"
+        },
+        {
+          "type": "minecraft:cos",
+          "input": {
+            "type": "minecraft:mul",
+            "inputs": [
+              {
+                "type": "minecraft:storage",
+                "storage": "gm4_swings:data",
+                "path": "seat_angle"
+              },
+              0.0174532925199
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

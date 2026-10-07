@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "place": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:white_cushion"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "gm4_swings:swings/white"
+    ]
+  }
+}

@@ -1,0 +1,662 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:display_context",
+    "cases": [
+      {
+        "when": [
+          "firstperson_righthand",
+          "firstperson_lefthand",
+          "thirdperson_righthand",
+          "thirdperson_lefthand",
+          "gui",
+          "head",
+          "ground",
+          "fixed",
+          "on_shelf"
+        ],
+        "model": {
+          "type": "minecraft:model",
+          "model": "gm4_swings:item/light_blue_swing"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:range_dispatch",
+      "property": "minecraft:custom_model_data",
+      "index": 0,
+      "entries": [
+        {
+          "threshold": 0,
+          "model": {
+            "type": "minecraft:composite",
+            "models": [
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/light_blue_swing",
+                "transformation": {
+                  "translation": [0,0,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 1,
+          "model": {
+            "type": "minecraft:composite",
+            "models": [
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,0,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/light_blue_swing",
+                "transformation": {
+                  "translation": [0,-1,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 2,
+          "model": {
+            "type": "minecraft:composite",
+            "models": [
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,0,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-1,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/light_blue_swing",
+                "transformation": {
+                  "translation": [0,-2,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 3,
+          "model": {
+            "type": "minecraft:composite",
+            "models": [
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,0,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-1,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-2,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/light_blue_swing",
+                "transformation": {
+                  "translation": [0,-3,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 4,
+          "model": {
+            "type": "minecraft:composite",
+            "models": [
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,0,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-1,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-2,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-3,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/light_blue_swing",
+                "transformation": {
+                  "translation": [0,-4,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 5,
+          "model": {
+            "type": "minecraft:composite",
+            "models": [
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,0,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-1,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-2,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-3,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-4,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/light_blue_swing",
+                "transformation": {
+                  "translation": [0,-5,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 6,
+          "model": {
+            "type": "minecraft:composite",
+            "models": [
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,0,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-1,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-2,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-3,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-4,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-5,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/light_blue_swing",
+                "transformation": {
+                  "translation": [0,-6,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 7,
+          "model": {
+            "type": "minecraft:composite",
+            "models": [
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,0,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-1,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-2,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-3,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-4,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-5,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-6,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/light_blue_swing",
+                "transformation": {
+                  "translation": [0,-7,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 8,
+          "model": {
+            "type": "minecraft:composite",
+            "models": [
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,0,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-1,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-2,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-3,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-4,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-5,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-6,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-7,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/light_blue_swing",
+                "transformation": {
+                  "translation": [0,-8,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 9,
+          "model": {
+            "type": "minecraft:composite",
+            "models": [
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,0,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-1,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-2,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-3,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-4,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-5,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-6,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-7,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/swing_rope",
+                "transformation": {
+                  "translation": [0,-8,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              },
+              {
+                "type": "minecraft:model",
+                "model": "gm4_swings:block/light_blue_swing",
+                "transformation": {
+                  "translation": [0,-9,0],
+                  "left_rotation": [0,0,0,1],
+                  "right_rotation": [0,0,0,1],
+                  "scale": [1,1,1]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

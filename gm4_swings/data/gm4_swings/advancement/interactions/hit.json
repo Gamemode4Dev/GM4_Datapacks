@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "entity_type": "minecraft:interaction",
+            "entity_tags": {"any_of":["gm4_swings.interaction.hit"]}
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_swings:interactions/hit/main"
+  }
+}

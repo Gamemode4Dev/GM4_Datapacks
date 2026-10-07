@@ -1,0 +1,134 @@
+{
+  "type": "minecraft:mul",
+  "inputs": [
+    {
+      "type": "minecraft:add",
+      "inputs": [
+        {
+          "type": "minecraft:add",
+          "inputs": [
+            {"type":"storage","storage":"gm4_swings:data","path":"angular_velocity"},
+            {
+              "type": "minecraft:mul",
+              "inputs": [
+                {"type":"storage","storage":"gm4_swings:data","path":"angular_velocity"},
+                {"type":"storage","storage":"gm4_swings:constants","path":"damping"},
+                -1
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:mul",
+          "inputs": [
+            {
+              "type": "minecraft:div",
+              "left": {
+                "type": "minecraft:add",
+                "inputs": [
+                  {"type":"storage","storage":"gm4_swings:data","path":"player_torque"},
+                  {
+                    "type": "minecraft:mul",
+                    "inputs": [
+                      {
+                        "type": "minecraft:conditional",
+                        "condition": {
+                          "type": "minecraft:float_value_check",
+                          "value": {"type":"storage","storage":"gm4_swings:data","path":"rotation"},
+                          "test": {
+                            "min": 0,
+                            "max": 90
+                          }
+                        },
+                        "on_true": "gm4_swings:dx",
+                        "on_false": {
+                          "type": "minecraft:mul",
+                          "inputs": [
+                            "gm4_swings:dx",
+                            -1
+                          ]
+                        }
+                      },
+                      {"type":"storage","storage":"gm4_swings:constants","path":"gravity"},
+                      {"type":"storage","storage":"gm4_swings:constants","path":"mass"},
+                      -1
+                    ]
+                  }
+                ]
+              },
+              "right": {
+                "type": "minecraft:mul",
+                "inputs": [
+                  {"type":"storage","storage":"gm4_swings:constants","path":"mass"},
+                  {
+                    "type": "minecraft:pow",
+                    "base": {"type":"storage","storage":"gm4_swings:data","path":"length"},
+                    "exponent": 2
+                  }
+                ]
+              }
+            },
+            57.2957795131
+          ]
+        }
+      ]
+    },
+    {
+      "type": "minecraft:conditional",
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:inverted",
+            "term": {
+              "type": "minecraft:float_value_check",
+              "test": 0,
+              "value": {
+                "type": "minecraft:storage",
+                "storage": "gm4_swings:data",
+                "path": "angular_velocity"
+              }
+            }
+          },
+          {
+            "type": "minecraft:float_value_check",
+            "test": {
+              "min": 80 
+            },
+            "value": {
+              "type": "minecraft:abs",
+              "input": {
+                "type": "minecraft:storage",
+                "storage": "gm4_swings:data",
+                "path": "rotation"
+              }
+            }
+          },
+          {
+            "type": "minecraft:float_value_check",
+            "test": {
+              "min": 0
+            },
+            "value": {
+              "type": "minecraft:mul",
+              "inputs": [
+                {
+                  "type": "minecraft:storage",
+                  "storage": "gm4_swings:data",
+                  "path": "rotation"
+                },
+                {
+                  "type": "minecraft:storage",
+                  "storage": "gm4_swings:data",
+                  "path": "angular_velocity"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "on_true": "gm4_swings:angle_damper",
+      "on_false": 1
+    }
+  ]
+}
