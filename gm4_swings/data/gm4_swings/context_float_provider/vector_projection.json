@@ -19,7 +19,7 @@
                 "storage": "gm4_swings:data",
                 "path": "seat_angle"
               },
-              0.0174532925199
+              "gm4_swings:conversions/to_radians"
             ]
           }
         }
@@ -43,7 +43,7 @@
                 "storage": "gm4_swings:data",
                 "path": "seat_angle"
               },
-              0.0174532925199
+              "gm4_swings:conversions/to_radians"
             ]
           }
         }
