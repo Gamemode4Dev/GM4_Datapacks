@@ -1,0 +1,26 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_swings:swings/base",
+          "modifier": [
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {"translate":"item.gm4_swings.black_swing", "fallback":"Black Swing"},
+                "minecraft:item_model": "gm4_swings:black_swing"
+              }
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": {"gm4_swings":{"type":"black"}}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

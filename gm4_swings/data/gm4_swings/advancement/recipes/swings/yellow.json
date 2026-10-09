@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "has_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipes": "gm4_swings:swings/yellow"
+      }
+    },
+    "has materials": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:yellow_cushion"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_recipe",
+      "has materials"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gm4_swings:swings/yellow"
+    ]
+  }
+}

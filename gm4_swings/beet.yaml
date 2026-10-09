@@ -1,0 +1,35 @@
+id: gm4_swings
+name: gm4_swings
+version: 1.0.X
+
+data_pack:
+  load: .
+
+resource_pack:
+  load: .
+
+pipeline:
+  - gm4.plugins.extend.module
+  - gm4.plugins.include.lib_player_motion
+
+meta:
+  gm4:
+    versioning:
+      schedule_loops:
+        - tick
+        - tick_5s
+      required:
+        lib_player_motion: 1.2.0
+    website:
+      description: Swings to swing on
+      recommended: []
+      notes: []
+    modrinth:
+      project_id: xxxxxxx
+    smithed:
+      pack_id: gm4_swings
+    wiki: https://wiki.gm4.co/wiki/Swings
+    credits:
+      Creators:
+        - maybejake
+        - kyrius

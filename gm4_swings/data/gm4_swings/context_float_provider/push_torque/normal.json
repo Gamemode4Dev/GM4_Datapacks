@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:mul",
+  "inputs": [
+    {
+      "type": "minecraft:storage",
+      "storage": "gm4_swings:constants",
+      "path": "player_torque"
+    },
+    {
+      "type": "minecraft:storage",
+      "storage": "gm4_swings:data",
+      "path": "length"
+    },
+    10
+  ]
+}

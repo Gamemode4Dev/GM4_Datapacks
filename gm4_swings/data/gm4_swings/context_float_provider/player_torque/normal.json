@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:number_dispatcher",
+  "cases": [
+    {
+      "condition": {
+        "type": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "minecraft:type_specific/player": {
+            "input": {
+              "forward": true
+            }
+          }
+        }
+      },
+      "value": {
+        "type": "minecraft:mul",
+        "inputs": [
+          {"type":"storage","storage":"gm4_swings:constants","path":"player_torque"},
+          {"type":"storage","storage":"gm4_swings:data","path":"length"}
+        ]
+      }
+    },
+    {
+      "condition": {
+        "type": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "minecraft:type_specific/player": {
+            "input": {
+              "backward": true
+            }
+          }
+        }
+      },
+      "value": {
+        "type": "minecraft:mul",
+        "inputs": [
+          {
+            "type": "minecraft:mul",
+            "inputs": [
+              {"type":"storage","storage":"gm4_swings:constants","path":"player_torque"},
+              {"type":"storage","storage":"gm4_swings:data","path":"length"}
+            ]
+          },
+          -1
+        ]
+      }
+    }
+  ]
+}
