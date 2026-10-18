@@ -25,4 +25,4 @@ execute store result entity @s[tag=!gm4_bas_move_alt] Pos[2] double .001 run sco
 execute store result entity @s Pos[1] double .001 run scoreboard players operation $as_pos_y gm4_bas_data += @s gm4_bas_dy
 
 # round up position to multiples of 1/8th of a block
-execute if entity @p[tag=gm4_bas_track,predicate=gm4_better_armour_stands:sneaking] run function gm4_better_armour_stands:pose/snap/position
+execute if entity @p[tag=gm4_bas_track,predicate=gm4:sneaking] run function gm4_better_armour_stands:pose/snap/position

@@ -10,5 +10,5 @@ scoreboard players reset @s gm4_nbi_tune
 scoreboard players set @s gm4_nbi_ray 50
 
 # runs raycast loop
-execute unless predicate gm4_note_block_interface:sneaking run function gm4_note_block_interface:tune/loop
-execute if predicate gm4_note_block_interface:sneaking run function gm4_note_block_interface:tune/sneak_loop
+execute unless predicate gm4:sneaking run function gm4_note_block_interface:tune/loop
+execute if predicate gm4:sneaking run function gm4_note_block_interface:tune/sneak_loop
