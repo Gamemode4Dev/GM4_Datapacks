@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "weight": 1,
+        "moon_phase": [
+            "full_moon",
+            "waning_gibbous",
+            "third_quarter",
+            "waning_crescent",
+            "new_moon",
+            "waxing_crescent",
+            "first_quarter",
+            "waxing_gibbous"
+        ],
+        "in_type": "clear",
+        "out_type": "clear"
+    },
+    "schedule": []
+}
