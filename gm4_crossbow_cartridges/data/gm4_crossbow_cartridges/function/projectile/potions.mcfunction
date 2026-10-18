@@ -13,7 +13,7 @@ execute if predicate gm4_crossbow_cartridges:items/lingering_potion run summon m
 execute as @e[tag=gm4_cb_projectile,limit=1,distance=..1] run function gm4_crossbow_cartridges:projectile/arrow_motion
 
 # remove potion from player's offhand
-item modify entity @s[gamemode=!creative] weapon.offhand gm4:minus_one
+item modify entity @s[gamemode=!creative] weapon.offhand gm4:count_minus_one
 
 # potion throw sound
 playsound minecraft:entity.splash_potion.throw player @a[distance=..15] ^ ^ ^1 .5 0

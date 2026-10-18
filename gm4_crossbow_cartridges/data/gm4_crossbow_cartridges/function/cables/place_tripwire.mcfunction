@@ -7,5 +7,5 @@
 setblock ~ ~ ~ minecraft:tripwire destroy
 
 # remove string from player
-item modify entity @s[gamemode=!creative] weapon.offhand gm4:minus_one
+item modify entity @s[gamemode=!creative] weapon.offhand gm4:count_minus_one
 scoreboard players remove @s[gamemode=!creative] gm4_cb_string 1

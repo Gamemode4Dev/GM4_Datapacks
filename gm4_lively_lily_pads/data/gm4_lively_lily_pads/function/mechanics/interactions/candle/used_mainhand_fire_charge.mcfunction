@@ -11,4 +11,4 @@ playsound minecraft:item.firecharge.use player @a[distance=..16]
 execute if entity @s[gamemode=creative] run return 1
 
 # use item
-item modify entity @s weapon.mainhand gm4:minus_one
+item modify entity @s weapon.mainhand gm4:count_minus_one
