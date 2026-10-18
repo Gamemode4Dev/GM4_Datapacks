@@ -9,9 +9,8 @@ setblock ~ ~ ~ air destroy
 # item magnet
 function gm4_pig_tractors:utility/item_magnet
 
-# try to replant beetroot if the player isn't holding a seed
-scoreboard players set $planted_successfully gm4_pig_tractors 0
-execute unless predicate gm4_pig_tractors:player/equipment/holding_seeds run function gm4_pig_tractors:plant/item/beetroot_seeds
+# try to replant beetroot if the player has beetroot seeds
+execute if items entity @s gm4_pig_tractors:player_inventory minecraft:beetroot_seeds run return run function gm4_pig_tractors:plant/block/beetroot_seeds
 
-# plant other crop if beetroot seed planting failed
-execute if score $planted_successfully gm4_pig_tractors matches 0 run function gm4_pig_tractors:plant/select_type
+# plant other crop if beetroot planting failed
+function gm4_pig_tractors:plant/plant_seed
