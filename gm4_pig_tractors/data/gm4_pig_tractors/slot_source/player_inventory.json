@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:group",
+  "terms": [
+    {
+      "type": "minecraft:slot_range",
+      "source": "this",
+      "slots": "container.*"
+    },
+    {
+      "type": "minecraft:slot_range",
+      "source": "this",
+      "slots": "weapon.offhand"
+    }
+  ]
+}

@@ -1,7 +1,0 @@
-{
-    "type": "minecraft:any_of",
-    "terms": [
-        "gm4_pig_tractors:player/equipment/mainhand/seeds",
-        "gm4_pig_tractors:player/equipment/offhand/seeds"
-    ]
-}

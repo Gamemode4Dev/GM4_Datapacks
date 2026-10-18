@@ -3,7 +3,7 @@
 # at location of seeds to be planted
 # run from gm4_pig_tractors:plant/select_type
 
-function gm4_pig_tractors:plant/item/beetroot_seeds
-execute if score $planted_successfully gm4_pig_tractors matches 0 run function gm4_pig_tractors:plant/item/carrot
-execute if score $planted_successfully gm4_pig_tractors matches 0 run function gm4_pig_tractors:plant/item/potato
-execute if score $planted_successfully gm4_pig_tractors matches 0 run function gm4_pig_tractors:plant/item/wheat_seeds
+execute if items entity @s gm4_pig_tractors:player_inventory minecraft:beetroot_seeds run return run function gm4_pig_tractors:plant/block/beetroot_seeds
+execute if items entity @s gm4_pig_tractors:player_inventory minecraft:carrot run return run function gm4_pig_tractors:plant/block/carrot
+execute if items entity @s gm4_pig_tractors:player_inventory minecraft:potato run return run function gm4_pig_tractors:plant/block/potato
+execute if items entity @s gm4_pig_tractors:player_inventory minecraft:wheat_seeds run return run function gm4_pig_tractors:plant/block/wheat_seeds
