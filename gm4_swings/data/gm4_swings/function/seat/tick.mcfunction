@@ -21,3 +21,6 @@ execute on passengers if entity @s[type=minecraft:player] run return run functio
 
 # player has dismounted
 execute if entity @s[tag=gm4_swings.has_player] if score $has_player gm4_swings.dummy matches 0 run function gm4_swings:swing/no_player
+
+# if no player, check for an entity to mount
+execute if score $has_player gm4_swings.dummy matches 0 as @n[type=!#gm4:non_living,type=!minecraft:player,distance=..1] at @s run function gm4_swings:seat/seat_entity
