@@ -1,0 +1,6 @@
+{
+  "parent": "gm4_swings:block/swing_template",
+  "textures": {
+    "texture": "gm4_swings:block/pink_swing"
+  }
+}

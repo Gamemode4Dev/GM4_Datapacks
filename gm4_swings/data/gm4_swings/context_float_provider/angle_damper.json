@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:div",
+  "left": {
+    "type": "minecraft:sub",
+    "left": 90,
+    "right": {
+      "type": "minecraft:abs",
+      "input": {
+        "type": "minecraft:storage",
+        "storage": "gm4_swings:data",
+        "path": "rotation"
+      }
+    }
+  },
+  "right": 10
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "s s",
+    "s s",
+    "scs"
+  ],
+  "key": {
+    "s": "minecraft:string",
+    "c": "minecraft:light_gray_cushion"
+  },
+  "result": {
+    "id": "minecraft:player_head",
+    "count": 1,
+    "components": {
+      "minecraft:item_name": {"translate":"item.gm4_swings.light_gray_swing", "fallback":"Light Gray Swing"},
+      "minecraft:item_model": "gm4_swings:light_gray_swing",
+      "minecraft:custom_data": {"gm4_swings":{"type":"light_gray"},"smithed":{"ignore":{"functionality":true,"crafting":true}}},
+      "minecraft:profile": {"texture":"gm4_swings:block/transparent_head"},
+      "tooltip_display": {"hidden_components":["minecraft:profile"]},
+      "minecraft:max_stack_size": 16,
+      "minecraft:rarity":"common",
+      "!minecraft:equippable": {}
+    }
+  }
+}

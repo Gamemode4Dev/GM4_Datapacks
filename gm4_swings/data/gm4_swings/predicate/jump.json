@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "entity_type": "player",
+    "type_specific/player": {
+      "input": {
+        "jump": true
+      }
+    }
+  }
+}

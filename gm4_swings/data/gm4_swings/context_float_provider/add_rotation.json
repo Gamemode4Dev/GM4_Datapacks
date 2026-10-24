@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:max",
+  "inputs": [
+    {
+      "type": "minecraft:min",
+      "inputs": [
+        {
+          "type": "minecraft:add",
+          "inputs": [
+            {"type":"storage","storage":"gm4_swings:data","path":"rotation"},
+            {"type":"storage","storage":"gm4_swings:data","path":"angular_velocity"}
+          ]
+        },
+        90
+      ]
+    },
+    -90
+  ]
+}

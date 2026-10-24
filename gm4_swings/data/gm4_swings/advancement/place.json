@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "place": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": {
+          "type": "minecraft:match_tool",
+          "predicate": {
+            "predicates": {
+              "minecraft:custom_data": {"gm4_swings":{}}
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_swings:place/main"
+  }
+}
