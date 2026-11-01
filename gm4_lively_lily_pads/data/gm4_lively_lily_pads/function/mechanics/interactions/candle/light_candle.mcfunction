@@ -3,7 +3,7 @@
 # at @s
 # run from mechanics/interactions/candle/process_display
 
-execute store success score $ignited gm4_llp.data run data modify entity @s block_state.Properties.lit set value "true"
+execute store success score $ignited gm4_llp.data run data modify entity @s block_state.properties.lit set value "true"
 
 # return if not ignited
 execute if score $ignited gm4_llp.data matches 0 run return fail

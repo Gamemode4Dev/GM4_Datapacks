@@ -11,19 +11,69 @@
 data modify storage gm4_reeling_rods:temp item_data.Item set from storage gm4_reeling_rods:temp entity_data.Items[0]
 
 # randomize motion slightly....
-execute store result score $motionX gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp motion_vector[0] 100
-execute store result score $motionY gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp motion_vector[1] 100
-execute store result score $motionZ gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp motion_vector[2] 100
-execute store result score $randomX gm4_reeling_rods.math run random value -10..10
-execute store result score $randomY gm4_reeling_rods.math run random value 0..10
-execute store result score $randomZ gm4_reeling_rods.math run random value -10..10
-execute store result storage gm4_reeling_rods:temp item_data.Motion[0] double 0.006 run \
-  scoreboard players operation $motionX gm4_reeling_rods.math += $randomX gm4_reeling_rods.math
-execute store result storage gm4_reeling_rods:temp item_data.Motion[1] double 0.006 run \
-  scoreboard players operation $motionY gm4_reeling_rods.math += $randomY gm4_reeling_rods.math
-execute store result storage gm4_reeling_rods:temp item_data.Motion[2] double 0.006 run \
-  scoreboard players operation $motionZ gm4_reeling_rods.math += $randomZ gm4_reeling_rods.math
-# scale 0.01 for same magnitude as main item, currently 0.006 to be slower
+data modify storage gm4_reeling_rods:temp item_data.Motion[0] set compute default float { \
+  "type": "minecraft:mul", \
+  "inputs": [ \
+    0.6, \
+    { \
+      "type": "minecraft:add", \
+      "inputs": [ \
+        { \
+          "type": "minecraft:storage", \
+          "storage": "gm4_reeling_rods:temp", \
+          "path": "motion_vector[0]" \
+        }, \
+        { \
+          "type": "minecraft:uniform", \
+          "min": -0.1, \
+          "max": 0.1 \
+        } \
+      ] \
+    } \
+  ] \
+}
+data modify storage gm4_reeling_rods:temp item_data.Motion[1] set compute default float { \
+  "type": "minecraft:mul", \
+  "inputs": [ \
+    0.6, \
+    { \
+      "type": "minecraft:add", \
+      "inputs": [ \
+        { \
+          "type": "minecraft:storage", \
+          "storage": "gm4_reeling_rods:temp", \
+          "path": "motion_vector[1]" \
+        }, \
+        { \
+          "type": "minecraft:uniform", \
+          "min": 0, \
+          "max": 0.1 \
+        } \
+      ] \
+    } \
+  ] \
+}
+data modify storage gm4_reeling_rods:temp item_data.Motion[2] set compute default float { \
+  "type": "minecraft:mul", \
+  "inputs": [ \
+    0.6, \
+    { \
+      "type": "minecraft:add", \
+      "inputs": [ \
+        { \
+          "type": "minecraft:storage", \
+          "storage": "gm4_reeling_rods:temp", \
+          "path": "motion_vector[2]" \
+        }, \
+        { \
+          "type": "minecraft:uniform", \
+          "min": -0.1, \
+          "max": 0.1 \
+        } \
+      ] \
+    } \
+  ] \
+}
 
 # summon item with data
 function gm4_reeling_rods:summon_item with storage gm4_reeling_rods:temp

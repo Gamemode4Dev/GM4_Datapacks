@@ -20,7 +20,7 @@ data remove storage gm4_horsemanship:temp item_id
 
 # playsound and remove the fed item
 execute on vehicle at @s run playsound entity.horse.eat neutral @a ~ ~ ~ 1 1
-item modify entity @s[gamemode=!creative] weapon.mainhand {"function": "minecraft:set_count","count":-1,"add":true}
+item modify entity @s[gamemode=!creative] weapon.mainhand {type: "minecraft:set_count", count: -1, add: true}
 
 # restore player location
 function gm4_horsemanship:restore_location/prep

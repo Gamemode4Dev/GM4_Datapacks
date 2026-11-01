@@ -1,10 +1,10 @@
 id: gm4_potion_tracking
 name: Gamemode 4 Potion Tracking
-version: 1.4.X
+version: 1.5.X
 description: Allows other datapacks to track thrown splash or lingering potions.
 
 data_pack:
-  load: 
+  load:
     data: data
 
 pipeline:
@@ -14,9 +14,9 @@ pipeline:
 meta:
   gm4:
     versioning:
-      required: 
-        lib_forceload: 1.6.0
-      extra_version_injections: 
+      required:
+        lib_forceload: 1.7.0
+      extra_version_injections:
         functions: [resolve_tick]
     smithed:
       pack_id: gm4_lib_potion_tracking

@@ -12,57 +12,55 @@
     "find_falling_star": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:any_of",
-            "terms": [
-              {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "minecraft:entity_type": "minecraft:splash_potion",
-                  "minecraft:entity_tags": {
-                    "all_of": [
-                      "gm4_falling_star"
-                    ]
-                  }
+        "player": {
+          "type": "minecraft:any_of",
+          "terms": [
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:entity_type": "minecraft:splash_potion",
+                "minecraft:entity_tags": {
+                  "all_of": [
+                    "gm4_falling_star"
+                  ]
                 }
-              },
-              {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "minecraft:type_specific/player": {
-                    "looking_at": {
-                      "minecraft:entity_type": "minecraft:area_effect_cloud",
-                      "minecraft:entity_tags": {
-                        "all_of": [
-                          "gm4_falling_star"
-                        ]
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "minecraft:type_specific/player": {
-                    "looking_at": {
-                      "minecraft:entity_type": "minecraft:shulker_bullet",
-                      "minecraft:entity_tags": {
-                        "all_of": [
-                          "gm4_falling_star"
-                        ]
-                      }
+              }
+            },
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:type_specific/player": {
+                  "looking_at": {
+                    "minecraft:entity_type": "minecraft:area_effect_cloud",
+                    "minecraft:entity_tags": {
+                      "all_of": [
+                        "gm4_falling_star"
+                      ]
                     }
                   }
                 }
               }
-            ]
-          }
-        ]
+            },
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:type_specific/player": {
+                  "looking_at": {
+                    "minecraft:entity_type": "minecraft:shulker_bullet",
+                    "minecraft:entity_tags": {
+                      "all_of": [
+                        "gm4_falling_star"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     }
   },

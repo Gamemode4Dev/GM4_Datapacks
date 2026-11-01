@@ -20,7 +20,7 @@
                     "block": "minecraft:smooth_sandstone",
                     "probability": 0.25
                   },
-                  "output_state": { "Name": "minecraft:sandstone" }
+                  "output_state": { "id": "minecraft:sandstone" }
                 },
                 {
                   "location_predicate": { "predicate_type": "minecraft:always_true" },
@@ -29,7 +29,7 @@
                     "block": "minecraft:smooth_sandstone",
                     "probability": 0.10
                   },
-                  "output_state": { "Name": "minecraft:cut_sandstone" }
+                  "output_state": { "id": "minecraft:cut_sandstone" }
                 },
                 {
                   "location_predicate": { "predicate_type": "minecraft:always_true" },
@@ -38,7 +38,7 @@
                     "block": "minecraft:smooth_sandstone",
                     "probability": 0.10
                   },
-                  "output_state": { "Name": "minecraft:chiseled_sandstone" }
+                  "output_state": { "id": "minecraft:chiseled_sandstone" }
                 }
               ]
             }
@@ -73,7 +73,7 @@
                     "block": "minecraft:cut_sandstone",
                     "probability": 0.2
                   },
-                  "output_state": { "Name": "minecraft:smooth_sandstone" }
+                  "output_state": { "id": "minecraft:smooth_sandstone" }
                 },
                 {
                   "location_predicate": { "predicate_type": "minecraft:always_true" },
@@ -82,7 +82,7 @@
                     "block": "minecraft:cut_sandstone",
                     "probability": 0.07
                   },
-                  "output_state": { "Name": "minecraft:chiseled_sandstone" }
+                  "output_state": { "id": "minecraft:chiseled_sandstone" }
                 },
                 {
                   "location_predicate": { "predicate_type": "minecraft:always_true" },
@@ -91,7 +91,7 @@
                     "block": "minecraft:cut_sandstone",
                     "probability": 0.8
                   },
-                  "output_state": { "Name": "minecraft:sandstone" }
+                  "output_state": { "id": "minecraft:sandstone" }
                 }
               ]
             }

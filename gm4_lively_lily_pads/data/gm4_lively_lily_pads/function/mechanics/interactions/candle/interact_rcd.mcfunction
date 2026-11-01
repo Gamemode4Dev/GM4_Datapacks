@@ -25,9 +25,9 @@ execute if score $extinguished gm4_llp.data matches 1 run swing @s mainhand
 
 execute if score $ignited gm4_llp.data matches 1 run function gm4_lively_lily_pads:mechanics/interactions/candle/find_igniter
 
-execute if score $placement_success gm4_llp.data matches 1 if score $mainhand gm4_llp.data matches 1 run item modify entity @s[gamemode=!creative] weapon.mainhand {function:"minecraft:set_count",count:-1,add:1b}
+execute if score $placement_success gm4_llp.data matches 1 if score $mainhand gm4_llp.data matches 1 run item modify entity @s[gamemode=!creative] weapon.mainhand {type: "minecraft:set_count", count: -1 ,add: 1b}
 execute if score $placement_success gm4_llp.data matches 1 if score $mainhand gm4_llp.data matches 1 run swing @s mainhand
-execute if score $placement_success gm4_llp.data matches 1 if score $offhand gm4_llp.data matches 1 run item modify entity @s[gamemode=!creative] weapon.offhand {function:"minecraft:set_count",count:-1,add:1b}
+execute if score $placement_success gm4_llp.data matches 1 if score $offhand gm4_llp.data matches 1 run item modify entity @s[gamemode=!creative] weapon.offhand {type: "minecraft:set_count", count: -1, add: 1b}
 execute if score $placement_success gm4_llp.data matches 1 if score $offhand gm4_llp.data matches 1 run swing @s offhand
 
 # reset

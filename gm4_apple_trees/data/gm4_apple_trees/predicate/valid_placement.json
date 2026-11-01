@@ -4,7 +4,7 @@ for x in range(-4,5):
         for z in range(-4,5):
             check.append(
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetX": x,
                     "offsetY": y,
                     "offsetZ": z,
@@ -17,6 +17,6 @@ for x in range(-4,5):
             )
 
 {
-    "condition": "minecraft:all_of",
+    "type": "minecraft:all_of",
     "terms": check
 }

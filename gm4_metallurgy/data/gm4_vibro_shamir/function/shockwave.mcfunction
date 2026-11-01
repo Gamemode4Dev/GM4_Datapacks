@@ -19,4 +19,4 @@ execute unless score gm4_desire_lines load.status matches 1.. run return 1
 scoreboard players set $probability gm4_desire_lines 100
 scoreboard players operation $probability gm4_desire_lines -= #sneak_penality gm4_desire_lines
 function #gm4_desire_lines:expansion
-execute if predicate {"condition":"minecraft:random_chance","chance":{"type":"minecraft:score","target":{"type":"minecraft:fixed","name":"$probability"},"score":"gm4_desire_lines","scale":0.01}} run function gm4_vibro_shamir:desire_lines
+execute if predicate {type: "minecraft:random_chance", chance: {type: "minecraft:mul", inputs: [{type: "minecraft:from_int", input: {type: "minecraft:score", target: {type: "minecraft:fixed", name: "$probability"}, score: "gm4_desire_lines"}}, 0.01]}} run function gm4_vibro_shamir:desire_lines

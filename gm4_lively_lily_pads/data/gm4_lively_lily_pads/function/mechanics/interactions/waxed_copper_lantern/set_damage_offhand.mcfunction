@@ -2,4 +2,4 @@
 # at @s
 # run from mechanics/interactions/waxed_copper_lantern/damage_offhand_axe
 
-$item modify entity @s weapon.offhand {function:"minecraft:set_components",components:{"minecraft:damage":$(damage)}}
+$item modify entity @s weapon.offhand {type: "minecraft:set_components", components: {"minecraft:damage": $(damage)}}

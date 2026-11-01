@@ -11,5 +11,5 @@ for animal in ctx.meta['animals']:
         
     execute if score $animal_id gm4_balloon_animals_data matches ctx.meta['enumeration'].index(animal['id']) summon animal['id'] run function f"gm4_balloon_animals:wandering_trader/trade/{animal['function']}"
 
-data modify entity @s Offers.Recipes append from storage gm4_balloon_animals:temp trade
+data modify storage gm4_balloon_animals:temp trades append from storage gm4_balloon_animals:temp trade
 data remove storage gm4_balloon_animals:temp trade

@@ -1,7 +1,7 @@
 # Finds the entity the player hooked
 # @s = player who fished
 # at @s
-# with {bit_0, bit_1, bit_2, bit_3, bit_4, bit_5, bit_6, bit_7, bit_8, bit_9, bit_10, bit_11, bit_12, bit_13, bit_14, bit_15}
+# with $bit_*: score check bit information
 # run from player/received_bit
 
 function #gm4_hooked_entity:pre_hook_on_player

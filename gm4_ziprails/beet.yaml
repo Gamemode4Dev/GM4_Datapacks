@@ -1,6 +1,6 @@
 id: gm4_ziprails
 name: Ziprails
-version: 1.7.X
+version: 1.8.X
 
 data_pack:
   load: .
@@ -25,7 +25,7 @@ meta:
       project_id: EpgLRkLf
     smithed:
       pack_id: gm4_ziprails
-    planetminecraft: 
+    planetminecraft:
       uid: 4298467
     video: https://www.youtube.com/watch?v=QA7a5q2kVcg
     wiki: https://wiki.gm4.co/wiki/Ziprails

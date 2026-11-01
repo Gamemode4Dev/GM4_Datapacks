@@ -1,7 +1,6 @@
 {
     "values": [
-        "minecraft:coarse_dirt",
-        "minecraft:dirt",
-        "minecraft:grass_block"
+        "#minecraft:turns_into_farmland",
+        "minecraft:coarse_dirt"
     ]
 }

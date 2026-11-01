@@ -3,22 +3,20 @@
     "requirement": {
       "trigger": "minecraft:default_block_use",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": [
-                  "minecraft:lectern"
-                ],
-                "nbt": "{Book:{components:{'minecraft:custom_data':{gm4_guidebook:{lectern:0b}}}}}",
-                "state": {
-                  "has_book": "true"
-                }
+        "location": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": [
+                "minecraft:lectern"
+              ],
+              "nbt": "{Book:{components:{'minecraft:custom_data':{gm4_guidebook:{lectern:0b}}}}}",
+              "state": {
+                "has_book": "true"
               }
             }
           }
-        ]
+        }
       }
     }
   },

@@ -26,6 +26,7 @@ minecraft:jungle_chest_boat,TRUE,FALSE,"gm4_reeling_rods:reeling/chest_boat/acti
 minecraft:mangrove_chest_boat,TRUE,FALSE,"gm4_reeling_rods:reeling/chest_boat/action {boat_type:'minecraft:mangrove_boat'}"
 minecraft:oak_chest_boat,TRUE,FALSE,"gm4_reeling_rods:reeling/chest_boat/action {boat_type:'minecraft:oak_boat'}"
 minecraft:pale_oak_chest_boat,TRUE,FALSE,"gm4_reeling_rods:reeling/chest_boat/action {boat_type:'minecraft:pale_oak_boat'}"
+minecraft:poplar_chest_boat,TRUE,FALSE,"gm4_reeling_rods:reeling/chest_boat/action {boat_type:'minecraft:poplar_boat'}"
 minecraft:spruce_chest_boat,TRUE,FALSE,"gm4_reeling_rods:reeling/chest_boat/action {boat_type:'minecraft:spruce_boat'}"
 minecraft:shulker,FALSE,TRUE,"gm4_reeling_rods:hooked_entity/shulker"
 minecraft:end_crystal,FALSE,FALSE,"gm4_reeling_rods:hooked_entity/end_crystal"
@@ -33,3 +34,4 @@ minecraft:glow_item_frame,FALSE,FALSE,"gm4_reeling_rods:hooked_entity/item_frame
 minecraft:item_frame,FALSE,FALSE,"gm4_reeling_rods:hooked_entity/item_frame {type:'minecraft:item_frame'}"
 minecraft:leash_knot,FALSE,FALSE,"gm4_reeling_rods:hooked_entity/leash_knot/action"
 minecraft:painting,FALSE,FALSE,"gm4_reeling_rods:hooked_entity/painting"
+minecraft:cushion,FALSE,FALSE,"gm4_reeling_rods:hooked_entity/cushion with entity @s"

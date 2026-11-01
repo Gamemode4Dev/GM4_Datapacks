@@ -1,5 +1,7 @@
 # Chairs<!--$headerTitle--><!--$pmc:delete-->
 
+**Deprecated**: This data pack will be removed in a future version.
+
 Since the dawn of Minecraft, stairs have been used as chairs in every house you've ever built. With this simple data pack, players can actually sit on stairs by throwing a saddle on them. <!--$pmc:headerSize-->
 
 <img src="images/chairs_creation_example.webp" alt="Chairs Creation Example" width="350"/> <!--$localAssetToURL--> <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->

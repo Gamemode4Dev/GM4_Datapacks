@@ -1,6 +1,6 @@
 id: gm4_note_block_interface
 name: Note Block Interface
-version: 1.6.X
+version: 1.7.X
 
 data_pack:
   load: .
@@ -20,7 +20,7 @@ meta:
       project_id: ikXgoCNB
     smithed:
       pack_id: gm4_note_block_interface
-    planetminecraft: 
+    planetminecraft:
       uid: 4308978
     video: https://www.youtube.com/watch?v=Kqrdy-8-sb8
     wiki: https://wiki.gm4.co/wiki/Note_Block_Interface

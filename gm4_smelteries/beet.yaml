@@ -1,6 +1,6 @@
 id: gm4_smelteries
 name: Smelteries
-version: 1.9.X
+version: 1.10.X
 
 data_pack:
   load: .
@@ -17,9 +17,8 @@ meta:
   gm4:
     versioning:
       required:
-        lib_machines: 1.5.0
+        lib_machines: 1.6.0
       schedule_loops: [main]
-    
     gui_fonts:
       - translation: gui.gm4.smeltery
         container: furnace

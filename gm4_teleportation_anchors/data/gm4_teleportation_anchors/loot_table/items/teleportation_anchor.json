@@ -7,20 +7,24 @@
         {
           "type": "item",
           "name": "minecraft:player_head",
-          "functions": [
+          "modifier": [
             {
-              "function": "set_components",
+              "type": "set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_teleportation_anchors:item/teleportation_anchor"]},
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_teleportation_anchors:item/teleportation_anchor"
+                  ]
+                },
                 "minecraft:profile": "$teleportation_anchor"
               }
             },
             {
-              "function": "set_custom_data",
+              "type": "set_custom_data",
               "tag": "{gm4_machines:{id:'teleportation_anchor'}}"
             },
             {
-              "function": "set_name",
+              "type": "set_name",
               "name": [
                 {
                   "translate": "block.gm4.teleportation_anchor",

@@ -1,6 +1,6 @@
 id: gm4_chairs
 name: Chairs
-version: 1.7.X
+version: 1.8.X
 
 data_pack:
   load: .
@@ -18,7 +18,8 @@ meta:
         - gm4_display_frames
         - gm4_better_armour_stands
         - gm4_holographic_tags
-      notes: []
+      notes:
+        - "Deprecated: This data pack will be removed in a future version" 
     modrinth:
       project_id: KLywOs5L
     smithed:

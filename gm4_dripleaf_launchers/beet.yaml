@@ -1,6 +1,6 @@
 id: gm4_dripleaf_launchers
 name: Dripleaf Launchers
-version: 1.5.X
+version: 1.6.X
 
 data_pack:
   load: .
@@ -11,7 +11,7 @@ pipeline:
 meta:
   gm4:
     versioning:
-      schedule_loops: 
+      schedule_loops:
         - main
         - tick
     website:

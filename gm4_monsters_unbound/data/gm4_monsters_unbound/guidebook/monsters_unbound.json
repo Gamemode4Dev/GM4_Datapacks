@@ -9,266 +9,209 @@
     "enter_underground": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_monsters_unbound:technical/underground"
-          }
-        ]
+        "player": "gm4_monsters_unbound:technical/underground"
       }
     },
     "enter_dripstone_caves": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": "minecraft:dripstone_caves"
-            }
+        "player": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "biomes": "minecraft:dripstone_caves"
           }
-        ]
+        }
       }
     },
     "enter_burned": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_monsters_unbound:biome/burned"
-          }
-        ]
+        "player": "gm4_monsters_unbound:biome/burned"
       }
     },
     "enter_flowering": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_monsters_unbound:biome/flowering"
-          }
-        ]
+        "player": "gm4_monsters_unbound:biome/flowering"
       }
     },
     "enter_growth": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_monsters_unbound:biome/growth"
-          }
-        ]
+        "player": "gm4_monsters_unbound:biome/growth"
       }
     },
     "enter_mountainous": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_monsters_unbound:biome/mountainous"
-          }
-        ]
+        "player": "gm4_monsters_unbound:biome/mountainous"
       }
     },
     "enter_warm_ocean": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "biomes": "minecraft:warm_ocean"
-            }
+        "player": {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "biomes": "minecraft:warm_ocean"
           }
-        ]
+        }
       }
     },
     "enter_snowy": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_monsters_unbound:biome/snowy"
-          }
-        ]
+        "player": "gm4_monsters_unbound:biome/snowy"
       }
     },
     "enter_toxic": {
       "trigger": "minecraft:location",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_monsters_unbound:biome/toxic"
-          }
-        ]
+        "player": "gm4_monsters_unbound:biome/toxic"
       }
     },
     "kill_elite_blazing": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_mu_elite.blazing"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_mu_elite.blazing"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "kill_elite_gargantuan": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_mu_elite.gargantuan"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_mu_elite.gargantuan"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "kill_elite_glacial": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_mu_elite.glacial"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_mu_elite.glacial"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "kill_elite_mending": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_mu_elite.mending"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_mu_elite.mending"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "kill_elite_pearlescent": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_mu_elite.pearlescent"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_mu_elite.pearlescent"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "kill_elite_splitting": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_mu_elite.splitting"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_mu_elite.splitting"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "kill_elite_volatile": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_mu_elite.volatile"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_mu_elite.volatile"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "kill_elite_vorpal": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_mu_elite.vorpal"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_mu_elite.vorpal"
+              ]
             }
           }
-        ]
+        }
       }
     },
     "kill_elite_zephyr": {
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_mu_elite.zephyr"
-                ]
-              }
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_mu_elite.zephyr"
+              ]
             }
           }
-        ]
+        }
       }
     }
   },

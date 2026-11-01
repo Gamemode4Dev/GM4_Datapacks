@@ -7,7 +7,7 @@
 $summon minecraft:block_display ~ ~ ~ {\
   Tags:["gm4_llp_display","gm4_llp_wet_grass_sound","smithed.entity"],\
   block_state:{\
-    Name:"$(DisplayType)"\
+    id:"$(DisplayType)"\
   },\
   transformation:{\
     scale:[0.5f,0.6f,0.5f],\

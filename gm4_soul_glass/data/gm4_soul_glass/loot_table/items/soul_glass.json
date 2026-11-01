@@ -6,20 +6,24 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:brown_stained_glass",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:enchantment_glint_override": true,
-                "minecraft:custom_model_data": {"strings":["gm4_soul_glass:item/soul_glass"]}
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_soul_glass:item/soul_glass"
+                  ]
+                }
               }
             },
             {
-              "function": "minecraft:set_custom_data",
+              "type": "minecraft:set_custom_data",
               "tag": "{gm4_soul_glass:1b}"
             },
             {
-              "function": "minecraft:set_name",
+              "type": "minecraft:set_name",
               "target": "item_name",
               "name": {
                 "translate": "item.gm4.soul_glass",

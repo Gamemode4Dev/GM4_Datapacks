@@ -6,7 +6,7 @@
 # 33% chance to start attack if mob has a target
 scoreboard players set $attack gm4_mu_data 0
 execute if score @s gm4_mu_timer matches 1.. run scoreboard players set $attack gm4_mu_data 1
-execute unless score $attack gm4_mu_data matches 1 on target if entity @s[type=player] if predicate {condition:"minecraft:random_chance",chance:0.33} run scoreboard players set $attack gm4_mu_data 1
+execute unless score $attack gm4_mu_data matches 1 on target if entity @s[type=player] if predicate {type:"minecraft:random_chance",chance:0.33} run scoreboard players set $attack gm4_mu_data 1
 execute if score $attack gm4_mu_data matches 0 run return 0
 
 scoreboard players add @s gm4_mu_timer 1

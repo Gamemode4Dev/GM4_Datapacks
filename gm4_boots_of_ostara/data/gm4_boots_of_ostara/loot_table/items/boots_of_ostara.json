@@ -7,9 +7,9 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:leather_boots",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:dyed_color": 3705899,
                 "minecraft:tooltip_display": {
@@ -25,11 +25,11 @@
               }
             },
             {
-              "function": "minecraft:set_custom_data",
+              "type": "minecraft:set_custom_data",
               "tag": "{gm4_boots_of_ostara:1b}"
             },
             {
-              "function": "minecraft:set_name",
+              "type": "minecraft:set_name",
               "target": "item_name",
               "name": {
                 "translate": "item.gm4.boots_of_ostara",
@@ -38,7 +38,7 @@
               }
             },
             {
-              "function": "minecraft:set_lore",
+              "type": "minecraft:set_lore",
               "mode": "insert",
               "lore": [
                 {

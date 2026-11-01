@@ -3,43 +3,41 @@
     "requirement": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_lively_lily_pads:holding_placeable_item"
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:type_specific/player": {
-                "gamemode": [
-                  "survival",
-                  "creative"
-                ]
-              },
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_llp_holding_item"
-                ]
+        "player": {
+          "type": "minecraft:all_of",
+          "terms": [
+            "gm4_lively_lily_pads:holding_placeable_item",
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:type_specific/player": {
+                  "gamemode": [
+                    "survival",
+                    "creative"
+                  ]
+                },
+                "minecraft:entity_tags": {
+                  "all_of": [
+                    "gm4_llp_holding_item"
+                  ]
+                }
               }
             }
-          }
-        ],
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:interaction",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_llp_placement_rcd"
-                ]
-              }
+          ]
+        },
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:interaction",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_llp_placement_rcd"
+              ]
             }
           }
-        ]
+        }
       }
     }
   },

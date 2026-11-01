@@ -7,9 +7,9 @@
 function gm4_lively_lily_pads:mechanics/interactions/placement/candles with storage gm4_llp:temp
 
 # set additional data from old display
-data modify entity @e[type=minecraft:block_display,tag=gm4_llp_candle,limit=1,distance=..0.1] block_state.Properties.candles \
-  set from entity @s block_state.Properties.candles
-data modify entity @e[type=minecraft:block_display,tag=gm4_llp_candle,limit=1,distance=..0.1] block_state.Properties.lit \
-  set from entity @s block_state.Properties.lit
-execute if data entity @s {block_state:{Properties:{lit:"true"}}} \
+data modify entity @e[type=minecraft:block_display,tag=gm4_llp_candle,limit=1,distance=..0.1] block_state.properties.candles \
+  set from entity @s block_state.properties.candles
+data modify entity @e[type=minecraft:block_display,tag=gm4_llp_candle,limit=1,distance=..0.1] block_state.properties.lit \
+  set from entity @s block_state.properties.lit
+execute if data entity @s {block_state:{properties:{lit:"true"}}} \
   run tag @e[type=minecraft:block_display,tag=gm4_llp_candle,limit=1,distance=..0.1] add gm4_llp_lit_candle

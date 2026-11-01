@@ -13,12 +13,13 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                     "name": "minecraft:stone"
+                    "name": "minecraft:stone"
                 }
             ]
         },
         {
             "rolls": {
+                "type": "minecraft:uniform",
                 "min": 1,
                 "max": {
                     "type": "minecraft:score",
@@ -33,7 +34,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                     "name": "minecraft:stone"
+                    "name": "minecraft:stone"
                 }
             ]
         },
@@ -54,7 +55,7 @@
             "entries": [
                 {
                     "type": "minecraft:item",
-                     "name": "minecraft:stone"
+                    "name": "minecraft:stone"
                 }
             ]
         }

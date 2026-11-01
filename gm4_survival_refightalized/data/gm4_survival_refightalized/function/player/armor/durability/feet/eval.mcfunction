@@ -3,4 +3,4 @@
 # at unspecified
 # run from player/armor/durability/feet/run
 
-$item modify entity @s armor.feet {function:"minecraft:set_components",components:{"minecraft:damage":$(damage)}}
+$item modify entity @s armor.feet {type: "minecraft:set_components", components: {"minecraft:damage": $(damage)}}

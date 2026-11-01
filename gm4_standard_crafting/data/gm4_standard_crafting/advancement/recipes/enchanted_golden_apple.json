@@ -4,7 +4,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_standard_crafting:enchanted_golden_apple"
+        "recipes": "gm4_standard_crafting:enchanted_golden_apple"
       }
     },
     "has_materials": {

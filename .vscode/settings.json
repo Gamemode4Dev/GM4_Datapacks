@@ -1,4 +1,7 @@
 {
 	"files.insertFinalNewline": true,
-	"files.trimFinalNewlines": true
+	"files.trimFinalNewlines": true,
+	"files.associations": {
+		"*.bolt": "mcfunction"
+	}
 }

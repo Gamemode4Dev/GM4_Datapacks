@@ -16,4 +16,6 @@ dispatch minecraft:storage[gm4_balloon_animals:temp] to struct {
 dispatch mcdoc:custom_data[gm4_balloon_animals] to struct BalloonAnimalsData {
   trade?: byte,
   id?: int,
+  /// Recipe list stored on the wandering trader
+  trades?: [Recipe],
 }

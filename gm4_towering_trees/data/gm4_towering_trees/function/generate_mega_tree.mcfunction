@@ -9,6 +9,7 @@ execute if entity @s[tag=gm4_acacia_tree_sapling] run return run function gm4_to
 execute if entity @s[tag=gm4_cherry_tree_sapling] run return run function gm4_towering_trees:generate_tree_type/cherry/pick_variant
 execute if entity @s[tag=gm4_mangrove_tree_sapling] run return run function gm4_towering_trees:generate_tree_type/mangrove/pick_variant
 execute if entity @s[tag=gm4_birch_tree_sapling] run return run function gm4_towering_trees:generate_tree_type/birch/pick_variant
+execute if entity @s[tag=gm4_poplar_tree_sapling] run return run function gm4_towering_trees:generate_tree_type/poplar/pick_variant
 
 # vanilla - needs to remove the saplings first so they can be placed
 execute align xyz as @e[type=marker,tag=gm4_towering_trees_sapling,dx=1,dy=0,dz=1] at @s run function gm4_towering_trees:clear_sapling

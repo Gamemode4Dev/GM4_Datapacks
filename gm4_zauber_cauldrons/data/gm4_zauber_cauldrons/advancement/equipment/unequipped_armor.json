@@ -3,26 +3,26 @@
         "requirement": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
-                "player": [
-                    {
-                        "condition": "minecraft:entity_properties",
-                        "entity": "this",
-                        "predicate": {
-                            "minecraft:type_specific/player": {
-                                "advancements": {
-                                    "gm4_zauber_cauldrons:equipment/has_full_armor": true
+                "player": {
+                    "type": "minecraft:all_of",
+                    "terms": [
+                        {
+                            "type": "minecraft:entity_properties",
+                            "entity": "this",
+                            "predicate": {
+                                "minecraft:type_specific/player": {
+                                    "advancements": {
+                                        "gm4_zauber_cauldrons:equipment/has_full_armor": true
+                                    }
                                 }
                             }
+                        },
+                        {
+                            "type": "minecraft:inverted",
+                            "term": "gm4_zauber_cauldrons:player/equipment/armor/full"
                         }
-                    },
-                    {
-                        "condition": "minecraft:inverted",
-                        "term": {
-                            "condition": "minecraft:reference",
-                            "name": "gm4_zauber_cauldrons:player/equipment/armor/full"
-                        }
-                    }
-                ]
+                    ]
+                }
             }
         }
     },

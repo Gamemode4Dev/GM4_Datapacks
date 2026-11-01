@@ -4,7 +4,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_teleportation_anchors:teleportation_jammer"
+        "recipes": "gm4_teleportation_anchors:teleportation_jammer"
       }
     },
     "has_materials": {

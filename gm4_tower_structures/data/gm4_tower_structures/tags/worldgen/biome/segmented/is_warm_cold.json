@@ -1,7 +1,7 @@
 {
   "values": [
-    "#is_forest",
-    "plains",
-    "sunflower_plains"
+    "#minecraft:is_forest",
+    "minecraft:plains",
+    "minecraft:sunflower_plains"
   ]
 }

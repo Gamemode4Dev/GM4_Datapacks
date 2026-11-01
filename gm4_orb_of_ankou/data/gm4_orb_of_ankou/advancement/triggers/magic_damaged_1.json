@@ -7,7 +7,7 @@
           "type": {
             "tags": [
               {
-                "id": "minecraft:witch_resistant_to",
+                "id": "#minecraft:witch_resistant_to",
                 "expected": true
               }
             ]

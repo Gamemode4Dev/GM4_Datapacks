@@ -4,7 +4,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_boots_of_ostara:boots_of_ostara"
+        "recipes": "gm4_boots_of_ostara:boots_of_ostara"
       }
     },
     "has_materials": {

@@ -6,15 +6,19 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:elytra",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_end_fishing:item/ravaged_wings"]}
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_end_fishing:item/ravaged_wings"
+                  ]
+                }
               }
             },
             {
-              "function": "minecraft:set_name",
+              "type": "minecraft:set_name",
               "target": "item_name",
               "name": {
                 "translate": "item.gm4.end_fishing.ravaged_wings",
@@ -22,7 +26,7 @@
               }
             },
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": 0
             }
           ]

@@ -16,34 +16,33 @@
           "type": "minecraft:item",
           "weight": 50,
           "name": "minecraft:redstone",
-          "functions": [
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": -63,
+                  "max": 16
+                }
+              }
+            }
+          },
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 1,
                 "max": 3
               },
               "add": false
             },
             {
-              "function": "minecraft:apply_bonus",
+              "type": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
               "formula": "minecraft:uniform_bonus_count",
               "parameters": {
                 "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": -63,
-                    "max": 16
-                  }
-                }
               }
             }
           ]
@@ -52,34 +51,33 @@
           "type": "minecraft:item",
           "weight": 20,
           "name": "minecraft:redstone",
-          "functions": [
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": -63,
+                  "max": -40
+                }
+              }
+            }
+          },
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 1,
                 "max": 3
               },
               "add": false
             },
             {
-              "function": "minecraft:apply_bonus",
+              "type": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
               "formula": "minecraft:uniform_bonus_count",
               "parameters": {
                 "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": -63,
-                    "max": -40
-                  }
-                }
               }
             }
           ]
@@ -88,34 +86,33 @@
           "type": "minecraft:item",
           "weight": 10,
           "name": "minecraft:lapis_lazuli",
-          "functions": [
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": -63,
+                  "max": 64
+                }
+              }
+            }
+          },
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 2,
                 "max": 7
               },
               "add": false
             },
             {
-              "function": "minecraft:apply_bonus",
+              "type": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
               "formula": "minecraft:uniform_bonus_count",
               "parameters": {
                 "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": -63,
-                    "max": 64
-                  }
-                }
               }
             }
           ]
@@ -124,34 +121,33 @@
           "type": "minecraft:item",
           "weight": 10,
           "name": "minecraft:lapis_lazuli",
-          "functions": [
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": 15,
+                  "max": 16
+                }
+              }
+            }
+          },
+          "modifier": [
             {
-              "function": "minecraft:set_count",
+              "type": "minecraft:set_count",
               "count": {
+                "type": "minecraft:uniform",
                 "min": 2,
                 "max": 7
               },
               "add": false
             },
             {
-              "function": "minecraft:apply_bonus",
+              "type": "minecraft:apply_bonus",
               "enchantment": "minecraft:fortune",
               "formula": "minecraft:uniform_bonus_count",
               "parameters": {
                 "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": 15,
-                    "max": 16
-                  }
-                }
               }
             }
           ]
@@ -160,338 +156,290 @@
           "type": "minecraft:item",
           "weight": 10,
           "name": "minecraft:amethyst_shard",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": -63,
-                    "max": 64
-                  }
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": -63,
+                  "max": 64
                 }
               }
             }
-          ]
+          },
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:uniform_bonus_count",
+            "parameters": {
+              "bonusMultiplier": 1.25
+            }
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 5,
           "name": "minecraft:emerald",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 1.25
-              }
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": -63,
+                  "max": 64
+                }
+              },
+              "biomes": "minecraft:windswept_hills"
             }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": -63,
-                    "max": 64
-                  }
-                },
-                "biomes": "minecraft:windswept_hills"
-              }
+          },
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:uniform_bonus_count",
+            "parameters": {
+              "bonusMultiplier": 1.25
             }
-          ]
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 1,
           "name": "minecraft:diamond",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": -63,
-                    "max": 16
-                  }
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": -63,
+                  "max": 16
                 }
               }
             }
-          ]
+          },
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:uniform_bonus_count",
+            "parameters": {
+              "bonusMultiplier": 1.25
+            }
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 30,
           "name": "minecraft:raw_gold",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": -63,
-                    "max": 32
-                  }
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": -63,
+                  "max": 32
                 }
               }
             }
-          ]
+          },
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:uniform_bonus_count",
+            "parameters": {
+              "bonusMultiplier": 1.25
+            }
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 20,
           "name": "minecraft:raw_gold",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": -31,
-                    "max": 0
-                  }
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": -31,
+                  "max": 0
                 }
               }
             }
-          ]
+          },
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:uniform_bonus_count",
+            "parameters": {
+              "bonusMultiplier": 1.25
+            }
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 30,
           "name": "minecraft:raw_copper",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": -15,
-                    "max": 112
-                  }
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": -15,
+                  "max": 112
                 }
               }
             }
-          ]
+          },
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:uniform_bonus_count",
+            "parameters": {
+              "bonusMultiplier": 1.25
+            }
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 70,
           "name": "minecraft:raw_copper",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": 17,
-                    "max": 48
-                  }
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": 17,
+                  "max": 48
                 }
               }
             }
-          ]
+          },
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:uniform_bonus_count",
+            "parameters": {
+              "bonusMultiplier": 1.25
+            }
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 30,
           "name": "minecraft:raw_iron",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": -63,
-                    "max": 64
-                  }
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": -63,
+                  "max": 64
                 }
               }
             }
-          ]
+          },
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:uniform_bonus_count",
+            "parameters": {
+              "bonusMultiplier": 1.25
+            }
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 50,
           "name": "minecraft:raw_iron",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": -15,
-                    "max": 31
-                  }
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": -15,
+                  "max": 31
                 }
               }
             }
-          ]
+          },
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:uniform_bonus_count",
+            "parameters": {
+              "bonusMultiplier": 1.25
+            }
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 10,
           "name": "minecraft:coal",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": -7,
-                    "max": 128
-                  }
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": -7,
+                  "max": 128
                 }
               }
             }
-          ]
+          },
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:uniform_bonus_count",
+            "parameters": {
+              "bonusMultiplier": 1.25
+            }
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 60,
           "name": "minecraft:coal",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": 17,
-                    "max": 88
-                  }
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": 17,
+                  "max": 88
                 }
               }
             }
-          ]
+          },
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:uniform_bonus_count",
+            "parameters": {
+              "bonusMultiplier": 1.25
+            }
+          }
         },
         {
           "type": "minecraft:item",
           "weight": 40,
           "name": "minecraft:coal",
-          "functions": [
-            {
-              "function": "minecraft:apply_bonus",
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:uniform_bonus_count",
-              "parameters": {
-                "bonusMultiplier": 1.25
-              }
-            }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:location_check",
-              "predicate": {
-                "position": {
-                  "y": {
-                    "min": 33,
-                    "max": 64
-                  }
+          "condition": {
+            "type": "minecraft:location_check",
+            "predicate": {
+              "position": {
+                "y": {
+                  "min": 33,
+                  "max": 64
                 }
               }
             }
-          ]
+          },
+          "modifier": {
+            "type": "minecraft:apply_bonus",
+            "enchantment": "minecraft:fortune",
+            "formula": "minecraft:uniform_bonus_count",
+            "parameters": {
+              "bonusMultiplier": 1.25
+            }
+          }
         },
         {
           "type": "minecraft:empty",

@@ -1,13 +1,12 @@
 {
-    "condition": "minecraft:entity_properties",
+    "type": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-      "minecraft:entity_type": "minecraft:item",
-      "minecraft:slots": {
-        "contents": {
-          "items": "#gm4_blossoming_pots:potable_plants"
+        "minecraft:entity_type": "minecraft:item",
+        "minecraft:slots": {
+            "contents": {
+                "items": "#gm4_blossoming_pots:potable_plants"
+            }
         }
-      }
     }
-  }
-  
+}

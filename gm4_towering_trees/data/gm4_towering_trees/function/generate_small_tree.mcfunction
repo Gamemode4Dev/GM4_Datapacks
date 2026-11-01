@@ -12,6 +12,7 @@ execute if entity @s[tag=gm4_acacia_tree_sapling] store success score $tree_plac
 execute if entity @s[tag=gm4_cherry_tree_sapling] store success score $tree_placed gm4_towering_trees_data run place feature minecraft:cherry
 execute if entity @s[tag=gm4_mangrove_tree_sapling] store success score $tree_placed gm4_towering_trees_data run place feature minecraft:mangrove
 execute if entity @s[tag=gm4_birch_tree_sapling] store success score $tree_placed gm4_towering_trees_data run place feature minecraft:birch
+execute if entity @s[tag=gm4_poplar_tree_sapling] store success score $tree_placed gm4_towering_trees_data run function gm4_towering_trees:generate_tree_type/poplar/place_small_tree
 
 # towering
 execute if entity @s[tag=gm4_pale_oak_tree_sapling] store success score $tree_placed gm4_towering_trees_data run function gm4_towering_trees:generate_tree_type/pale_oak/pick_variant

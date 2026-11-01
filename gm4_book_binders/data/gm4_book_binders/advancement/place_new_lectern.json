@@ -3,12 +3,10 @@
     "place_lectern": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:block_state_property",
-            "block": "minecraft:lectern"
-          }
-        ]
+        "location": {
+          "type": "minecraft:match_block",
+          "blocks": "minecraft:lectern"
+        }
       }
     }
   },

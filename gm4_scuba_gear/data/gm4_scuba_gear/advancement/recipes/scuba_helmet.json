@@ -3,18 +3,13 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gm4_scuba_gear:scuba_helmet"
+        "recipes": "gm4_scuba_gear:scuba_helmet"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
     "in_deep_water": {
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_scuba_gear:in_deep_water"
-          }
-        ]
+        "player": "gm4_scuba_gear:in_deep_water"
       },
       "trigger": "minecraft:location"
     }

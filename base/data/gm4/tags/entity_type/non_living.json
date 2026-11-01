@@ -1,13 +1,14 @@
 {
     "values": [
+        "#gm4:chest_boats",
+        "#minecraft:boat",
         "minecraft:area_effect_cloud",
         "minecraft:arrow",
         "minecraft:block_display",
-        "#minecraft:boat",
         "minecraft:breeze_wind_charge",
-        "#gm4:chest_boats",
         "minecraft:chest_minecart",
         "minecraft:command_block_minecart",
+        "minecraft:cushion",
         "minecraft:dragon_fireball",
         "minecraft:egg",
         "minecraft:end_crystal",

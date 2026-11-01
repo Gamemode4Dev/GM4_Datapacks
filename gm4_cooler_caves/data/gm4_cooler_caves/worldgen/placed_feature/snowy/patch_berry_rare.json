@@ -1,14 +1,12 @@
 {
   "feature": {
     "type": "minecraft:simple_block",
-    "config": {
-      "to_place": {
-        "type": "minecraft:simple_state_provider",
-        "state": {
-          "Name": "minecraft:sweet_berry_bush",
-          "Properties": {
-            "age": "3"
-          }
+    "to_place": {
+      "type": "minecraft:simple",
+      "state": {
+        "id": "minecraft:sweet_berry_bush",
+        "properties": {
+          "age": "3"
         }
       }
     }
@@ -33,16 +31,21 @@
       "count": 96
     },
     {
-      "type": "minecraft:random_offset",
-      "xz_spread": {
+      "type": "minecraft:offset",
+      "x": {
         "type": "minecraft:uniform",
         "min_inclusive": 0,
         "max_inclusive": 7
       },
-      "y_spread": {
+      "y": {
         "type": "minecraft:uniform",
         "min_inclusive": 0,
         "max_inclusive": 3
+      },
+      "z": {
+        "type": "minecraft:uniform",
+        "min_inclusive": 0,
+        "max_inclusive": 7
       }
     },
     {

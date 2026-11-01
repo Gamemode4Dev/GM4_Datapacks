@@ -32,11 +32,13 @@
       "conditions": {
         "items": [
           {
-            "enchantments": [
-              {
-                "enchantments": "minecraft:mending"
-              }
-            ]
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "minecraft:mending"
+                }
+              ]
+            }
           }
         ]
       }

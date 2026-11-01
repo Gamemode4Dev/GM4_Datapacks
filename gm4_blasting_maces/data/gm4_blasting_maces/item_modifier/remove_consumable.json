@@ -1,8 +1,6 @@
-[
-  {
-    "function": "minecraft:set_components",
-    "components": {
-      "!minecraft:consumable": {}
-    }
+{
+  "type": "minecraft:set_components",
+  "components": {
+    "!minecraft:consumable": {}
   }
-]
+}

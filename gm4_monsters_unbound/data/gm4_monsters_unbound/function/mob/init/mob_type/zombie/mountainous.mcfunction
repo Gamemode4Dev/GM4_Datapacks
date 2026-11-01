@@ -8,4 +8,4 @@ execute if score $spawn_phantoms gm4_mu_config matches 1 if score $phantom_count
 attribute @s minecraft:attack_knockback modifier add gm4_monsters_unbound:stat_change.mountainous 1 add_value
 attribute @s minecraft:attack_damage modifier add gm4_monsters_unbound:stat_change.mountainous 1 add_value
 
-execute if predicate {condition:"minecraft:random_chance",chance:0.15} run function gm4_monsters_unbound:mob/init/mob_type/zombie/equip_shield
+execute if predicate {type:"minecraft:random_chance",chance:0.15} run function gm4_monsters_unbound:mob/init/mob_type/zombie/equip_shield

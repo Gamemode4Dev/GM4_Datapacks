@@ -11,19 +11,19 @@ for enchantment in enchantments:
         {
           "type": "minecraft:item",
           "name": "minecraft:paper",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:custom_model_data": {"strings":["gm4_book_binders:item/enchanted_page"]}
               }
             },
             {
-              "function": "minecraft:set_custom_data",
+              "type": "minecraft:set_custom_data",
               "tag": "{gm4_book_binders:{item:\"enchanted_page\"}}"
             },
             {
-              "function": "minecraft:set_name",
+              "type": "minecraft:set_name",
               "entity": "this",
               "target": "item_name",
               "name": {
@@ -32,7 +32,7 @@ for enchantment in enchantments:
               }
             },
             {
-              "function": "minecraft:set_enchantments",
+              "type": "minecraft:set_enchantments",
               "enchantments": {
                 f"{enchantment}": {
                   "type": "minecraft:storage",
@@ -44,20 +44,18 @@ for enchantment in enchantments:
           ]
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:value_check",
-          "value": {
-            "type": "minecraft:storage",
-            "storage": "gm4_book_binders:temp",
-            "path": f"stored_enchantments.\"{enchantment}\""
-          },
-          "range": {
-            "min": 1,
-            "max": 255
-          }
+      "condition": {
+        "type": "minecraft:int_value_check",
+        "value": {
+          "type": "minecraft:storage",
+          "storage": "gm4_book_binders:temp",
+          "path": f"stored_enchantments.\"{enchantment}\""
+        },
+        "test": {
+          "min": 1,
+          "max": 255
         }
-      ]
+      }
     }
   )
 

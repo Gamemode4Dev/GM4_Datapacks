@@ -1,0 +1,5 @@
+type,variant,size_x,size_y,size_z,base_x_offset,base_z_offset,branch_start_height,feature,is_mega
+cherry,a,24,15,17,12,7,5,place feature gm4_towering_trees:pink_petals ~ ~1 ~,true
+cherry,b,27,17,17,14,8,5,place feature gm4_towering_trees:pink_petals ~ ~1 ~,true
+cherry,c,24,17,16,15,7,5,place feature gm4_towering_trees:pink_petals ~ ~1 ~,true
+cherry,d,29,19,17,12,8,4,place feature gm4_towering_trees:pink_petals ~ ~1 ~,true

@@ -1,12 +1,31 @@
-[
-  {
-    "condition": "minecraft:inverted",
-    "term": {
-      "condition": "minecraft:entity_properties",
+{
+  "type": "minecraft:all_of",
+  "terms": [
+    {
+      "type": "minecraft:inverted",
+      "term": {
+        "type": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:written_book"
+              ],
+              "predicates": {
+                "minecraft:custom_data": "{gm4_guidebook:{}}"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
         "equipment": {
-          "mainhand": {
+          "offhand": {
             "items": [
               "minecraft:written_book"
             ],
@@ -17,21 +36,5 @@
         }
       }
     }
-  },
-  {
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-      "equipment": {
-        "offhand": {
-          "items": [
-            "minecraft:written_book"
-          ],
-          "predicates": {
-            "minecraft:custom_data": "{gm4_guidebook:{}}"
-          }
-        }
-      }
-    }
-  }
-]
+  ]
+}

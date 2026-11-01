@@ -3,7 +3,11 @@
     "icon": {
       "id": "gunpowder",
       "components": {
-        "minecraft:custom_model_data": {"strings":["gm4_bat_grenades:gui/advancement/bat_grenades"]}
+        "minecraft:custom_model_data": {
+          "strings": [
+            "gm4_bat_grenades:gui/advancement/bat_grenades"
+          ]
+        }
       }
     },
     "title": {
@@ -22,11 +26,15 @@
       "trigger": "minecraft:entity_killed_player",
       "conditions": {
         "entity": {
-          "minecraft:entity_type": "creeper",
-          "minecraft:entity_tags": {
-            "all_of": [
-              "gm4_bat_grenade"
-            ]
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "creeper",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_bat_grenade"
+              ]
+            }
           }
         }
       }

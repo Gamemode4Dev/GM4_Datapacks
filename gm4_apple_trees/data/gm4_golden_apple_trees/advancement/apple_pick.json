@@ -3,20 +3,18 @@
     "apple": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": {
-                "type": "minecraft:fixed",
-                "name": "gm4_apple_trees"
-              },
-              "score": "load.status"
+        "player": {
+          "type": "minecraft:int_value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "gm4_apple_trees"
             },
-            "range": {
-              "min": 1
-            }
+            "score": "load.status"
+          },
+          "test": {
+            "min": 1
           }
         ],
         "entity": [
@@ -32,7 +30,7 @@
               }
             }
           }
-        ]
+        }
       }
     }
   },

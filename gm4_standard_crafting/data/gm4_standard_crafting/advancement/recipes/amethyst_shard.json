@@ -4,7 +4,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_standard_crafting:amethyst_shard"
+        "recipes": "gm4_standard_crafting:amethyst_shard"
       }
     },
     "has_materials": {

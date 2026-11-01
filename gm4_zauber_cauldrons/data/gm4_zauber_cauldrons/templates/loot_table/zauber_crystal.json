@@ -6,9 +6,9 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:poisonous_potato",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_components",
+                            "type": "minecraft:set_components",
                             "components": {
                                 "!minecraft:consumable": {},
                                 "minecraft:custom_model_data": {"strings":["gm4_zauber_cauldrons:item/crystal/{{effect}}"]},
@@ -19,11 +19,11 @@
                             }
                         },
                         {
-                            "function": "minecraft:set_custom_data",
+                            "type": "minecraft:set_custom_data",
                             "tag": "{gm4_zauber_cauldrons:{item:\"crystal\",type:\"{{effect}}\"}}"
                         },
                         {
-                            "function": "minecraft:set_name",
+                            "type": "minecraft:set_name",
                             "target": "item_name",
                             "name": {
                                 "translate": "item.gm4.zauber_cauldrons.crystal.{{effect}}",
@@ -31,7 +31,7 @@
                             }
                         },
                         {
-                            "function": "minecraft:set_lore",
+                            "type": "minecraft:set_lore",
                             "mode": "append",
                             "lore": {{lore}}
                         }

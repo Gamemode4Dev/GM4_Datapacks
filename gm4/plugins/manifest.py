@@ -21,16 +21,21 @@ from gm4.utils import Version, run
 
 parent_logger = logging.getLogger("gm4.manifest")
 
-SUPPORTED_GAME_VERSIONS = ["26.2"]
+SUPPORTED_GAME_VERSIONS = ["26.3"]
 
 # config models for beet.yaml metas
 CreditsModel = dict[str, list[str]]
+
+class ModuleSponsor(PluginOptions):
+	name: str
+	game_profile: str
 
 class WebsiteConfig(PluginOptions):
 	description: str
 	recommended: list[str] = []
 	notes: list[str] = []
 	search_keywords: list[str] = []
+	sponsor: ModuleSponsor | None = None
 
 class ModrinthConfig(PluginOptions):
 	project_id: str
@@ -67,6 +72,7 @@ class ManifestModuleModel(BaseModel):
 	requires: list[str] = []
 	description: str
 	recommends: list[str] = []
+	sponsor: ModuleSponsor | None = None
 	minecraft: list[str] = []
 	hidden: bool = False
 	important_note: Optional[str]
@@ -116,6 +122,7 @@ def create(ctx: Context):
 					description = gm4_meta.website.description if gm4_meta.website else "",
 					recommends = gm4_meta.website.recommended if gm4_meta.website else [],
 					important_note = gm4_meta.website.notes[0] if gm4_meta.website and len(gm4_meta.website.notes) > 0 else None,
+					sponsor = gm4_meta.website.sponsor if gm4_meta.website else None,
 					minecraft = gm4_meta.minecraft,
 					hidden = len(gm4_meta.minecraft) == 0 or gm4_meta.website is None,
 					publish_date = None,
@@ -145,7 +152,7 @@ def create(ctx: Context):
 	ctx.cache["gm4_manifest"].json = manifest.model_dump()
 
 	# Read in the previous manifest, if found
-	version = os.getenv("VERSION", "26.2")
+	version = os.getenv("VERSION", "26.3")
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
 
@@ -219,7 +226,7 @@ def update_patch(ctx: Context):
 
 def write_meta(ctx: Context):
 	"""Write the updated meta.json file."""
-	version = os.getenv("VERSION", "26.2")
+	version = os.getenv("VERSION", "26.3")
 	release_dir = Path('release') / version
 	os.makedirs(release_dir, exist_ok=True)
 

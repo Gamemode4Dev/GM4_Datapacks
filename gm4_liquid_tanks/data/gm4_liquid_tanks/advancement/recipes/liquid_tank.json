@@ -4,7 +4,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_liquid_tanks:liquid_tank"
+        "recipes": "gm4_liquid_tanks:liquid_tank"
       }
     },
     "has_materials": {

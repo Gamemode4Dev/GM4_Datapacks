@@ -7,9 +7,9 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:flint",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_lore",
+              "type": "minecraft:set_lore",
               "mode": "append",
               "lore": [
                 {
@@ -21,17 +21,21 @@
               ]
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:enchantment_glint_override": true,
-                "minecraft:custom_model_data": {"strings":["gm4_orb_of_ankou:pneuma/blasting"]},
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_orb_of_ankou:pneuma/blasting"
+                  ]
+                },
                 "minecraft:item_name": {
                   "translate": "item.gm4.soul_shard",
                   "fallback": "Soul Shard"
                 },
                 "minecraft:rarity": "common",
                 "minecraft:damage_resistant": {
-                    "types": "#minecraft:is_fire"
+                  "types": "#minecraft:is_fire"
                 },
                 "minecraft:equippable": {
                   "slot": "offhand"
@@ -40,7 +44,7 @@
               }
             },
             {
-              "function": "minecraft:set_attributes",
+              "type": "minecraft:set_attributes",
               "modifiers": [
                 {
                   "attribute": "minecraft:attack_damage",
@@ -52,7 +56,7 @@
               ]
             },
             {
-              "function": "minecraft:set_custom_data",
+              "type": "minecraft:set_custom_data",
               "tag": "{gm4_orb_of_ankou:{item:'soul_shard',pneumas:[{id:'blasting'}],stored_color:[16761136],smithed:{ignore:{functionality:1b,crafting:1b}}}}"
             }
           ]

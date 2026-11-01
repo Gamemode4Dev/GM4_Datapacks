@@ -9,19 +9,17 @@
     "summon_undead_player": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:type_specific/player": {
-                "advancements": {
-                  "gm4:undead_players": true
-                }
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:type_specific/player": {
+              "advancements": {
+                "gm4:undead_players": true
               }
             }
           }
-        ]
+        }
       }
     }
   },

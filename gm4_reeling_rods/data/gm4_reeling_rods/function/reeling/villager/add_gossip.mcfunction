@@ -1,7 +1,7 @@
 # adds a "major_negaive" gossip of the player to the villager
 # @s = villager
 # at bobber in @s
-# with {Target}
+# with $Target: player UUID array
 # run from reeling/villager/action
 
 $execute store success score $success gm4_reeling_rods.math run \

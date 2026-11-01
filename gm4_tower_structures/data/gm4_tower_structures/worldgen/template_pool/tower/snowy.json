@@ -20,7 +20,7 @@
                     "block": "minecraft:ice",
                     "probability": 0.2
                   },
-                  "output_state": { "Name": "minecraft:packed_ice" }
+                  "output_state": { "id": "minecraft:packed_ice" }
                 },
                 {
                   "location_predicate": { "predicate_type": "always_true" },
@@ -29,7 +29,7 @@
                     "block": "minecraft:ice",
                     "probability": 0.8
                   },
-                  "output_state": { "Name": "minecraft:snow_block" }
+                  "output_state": { "id": "minecraft:snow_block" }
                 }
               ]
             }

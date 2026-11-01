@@ -1,6 +1,6 @@
 id: gm4_liquid_tanks
 name: Liquid Tanks
-version: 3.1.X
+version: 3.2.X
 
 data_pack:
   load: .
@@ -23,7 +23,7 @@ meta:
   gm4:
     versioning:
       required:
-        lib_machines: 1.5.0
+        lib_machines: 1.6.0
       schedule_loops: [main]
     model_data:
       - item: player_head
@@ -37,9 +37,9 @@ meta:
             model: block/liquid_tank
         transforms:
           - name: item_display
-            origin: [0.5,0.9,0.5]
-            scale: [0.438,0.438,0.438]
-            translation: [0,0,0]
+            origin: [0.5, 0.9, 0.5]
+            scale: [0.438, 0.438, 0.438]
+            translation: [0, 0, 0]
             display: head
       - item: honey_block
         reference: block/cast_honey_block
@@ -51,7 +51,7 @@ meta:
           - reference: gm4_standard_liquids:item/glow_ink_bottle
       - item: hopper
         reference: gui/advancement/liquid_tanks_create
-        template: 
+        template:
           name: advancement
           forward: item/liquid_tank_full
       - item: experience_bottle

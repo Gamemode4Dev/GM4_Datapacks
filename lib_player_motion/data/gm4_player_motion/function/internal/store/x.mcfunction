@@ -1,0 +1,41 @@
+execute \
+store result score #x.0 gm4_player_motion.internal.store store result score #x.1 gm4_player_motion.internal.store store result score #x.2 gm4_player_motion.internal.store store result score #x.3 gm4_player_motion.internal.store store result score #x.4 gm4_player_motion.internal.store \
+store result score #x.5 gm4_player_motion.internal.store store result score #x.6 gm4_player_motion.internal.store store result score #x.7 gm4_player_motion.internal.store store result score #x.8 gm4_player_motion.internal.store store result score #x.9 gm4_player_motion.internal.store \
+store result score #x.10 gm4_player_motion.internal.store store result score #x.11 gm4_player_motion.internal.store store result score #x.12 gm4_player_motion.internal.store store result score #x.13 gm4_player_motion.internal.store store result score #x.14 gm4_player_motion.internal.store \
+store result score #x.15 gm4_player_motion.internal.store store result score #x.16 gm4_player_motion.internal.store store result score #x.17 gm4_player_motion.internal.store store result score #x.18 gm4_player_motion.internal.store store result score #x.19 gm4_player_motion.internal.store \
+store result score #x.20 gm4_player_motion.internal.store store result score #x.21 gm4_player_motion.internal.store store result score #x.22 gm4_player_motion.internal.store store result score #x.23 gm4_player_motion.internal.store store result score #x.24 gm4_player_motion.internal.store \
+store result score #x.25 gm4_player_motion.internal.store store result score #x.26 gm4_player_motion.internal.store store result score #x.27 gm4_player_motion.internal.store store result score #x.28 gm4_player_motion.internal.store store result score #x.29 gm4_player_motion.internal.store \
+store result score #x.30 gm4_player_motion.internal.store run scoreboard players set #x.31 gm4_player_motion.internal.store 0
+execute if score #x gm4_player_motion.internal.dummy matches 0 run return 1
+execute store success score #x.31 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches ..-1 run scoreboard players add #x gm4_player_motion.internal.dummy 2147483647
+execute store success score #x.30 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 1073741824.. run scoreboard players remove #x gm4_player_motion.internal.dummy 1073741824
+execute store success score #x.29 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 536870912.. run scoreboard players remove #x gm4_player_motion.internal.dummy 536870912
+execute store success score #x.28 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 268435456.. run scoreboard players remove #x gm4_player_motion.internal.dummy 268435456
+execute store success score #x.27 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 134217728.. run scoreboard players remove #x gm4_player_motion.internal.dummy 134217728
+execute store success score #x.26 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 67108864.. run scoreboard players remove #x gm4_player_motion.internal.dummy 67108864
+execute store success score #x.25 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 33554432.. run scoreboard players remove #x gm4_player_motion.internal.dummy 33554432
+execute store success score #x.24 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 16777216.. run scoreboard players remove #x gm4_player_motion.internal.dummy 16777216
+execute store success score #x.23 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 8388608.. run scoreboard players remove #x gm4_player_motion.internal.dummy 8388608
+execute store success score #x.22 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 4194304.. run scoreboard players remove #x gm4_player_motion.internal.dummy 4194304
+execute store success score #x.21 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 2097152.. run scoreboard players remove #x gm4_player_motion.internal.dummy 2097152
+execute store success score #x.20 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 1048576.. run scoreboard players remove #x gm4_player_motion.internal.dummy 1048576
+execute store success score #x.19 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 524288.. run scoreboard players remove #x gm4_player_motion.internal.dummy 524288
+execute store success score #x.18 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 262144.. run scoreboard players remove #x gm4_player_motion.internal.dummy 262144
+execute store success score #x.17 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 131072.. run scoreboard players remove #x gm4_player_motion.internal.dummy 131072
+execute store success score #x.16 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 65536.. run scoreboard players remove #x gm4_player_motion.internal.dummy 65536
+execute store success score #x.15 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 32768.. run scoreboard players remove #x gm4_player_motion.internal.dummy 32768
+execute store success score #x.14 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 16384.. run scoreboard players remove #x gm4_player_motion.internal.dummy 16384
+execute store success score #x.13 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 8192.. run scoreboard players remove #x gm4_player_motion.internal.dummy 8192
+execute store success score #x.12 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 4096.. run scoreboard players remove #x gm4_player_motion.internal.dummy 4096
+execute store success score #x.11 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 2048.. run scoreboard players remove #x gm4_player_motion.internal.dummy 2048
+execute store success score #x.10 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 1024.. run scoreboard players remove #x gm4_player_motion.internal.dummy 1024
+execute store success score #x.9 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 512.. run scoreboard players remove #x gm4_player_motion.internal.dummy 512
+execute store success score #x.8 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 256.. run scoreboard players remove #x gm4_player_motion.internal.dummy 256
+execute store success score #x.7 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 128.. run scoreboard players remove #x gm4_player_motion.internal.dummy 128
+execute store success score #x.6 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 64.. run scoreboard players remove #x gm4_player_motion.internal.dummy 64
+execute store success score #x.5 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 32.. run scoreboard players remove #x gm4_player_motion.internal.dummy 32
+execute store success score #x.4 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 16.. run scoreboard players remove #x gm4_player_motion.internal.dummy 16
+execute store success score #x.3 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 8.. run scoreboard players remove #x gm4_player_motion.internal.dummy 8
+execute store success score #x.2 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 4.. run scoreboard players remove #x gm4_player_motion.internal.dummy 4
+execute store success score #x.1 gm4_player_motion.internal.store if score #x gm4_player_motion.internal.dummy matches 2.. run scoreboard players remove #x gm4_player_motion.internal.dummy 2
+execute if score #x gm4_player_motion.internal.dummy matches 1.. run scoreboard players set #x.0 gm4_player_motion.internal.store 1

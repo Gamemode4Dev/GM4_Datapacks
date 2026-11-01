@@ -1,12 +1,12 @@
 {
-  "condition": "minecraft:inverted",
+  "type": "minecraft:inverted",
   "term": {
-    "condition": "minecraft:any_of",
+    "type": "minecraft:any_of",
     "terms": [
       {
-        "condition": "minecraft:inverted",
+        "type": "minecraft:inverted",
         "term": {
-          "condition": "minecraft:location_check",
+          "type": "minecraft:location_check",
           "offsetX": 1,
           "offsetY": 0,
           "offsetZ": 0,
@@ -20,9 +20,9 @@
         }
       },
       {
-        "condition": "minecraft:inverted",
+        "type": "minecraft:inverted",
         "term": {
-          "condition": "minecraft:location_check",
+          "type": "minecraft:location_check",
           "offsetX": -1,
           "offsetY": 0,
           "offsetZ": 0,
@@ -36,9 +36,9 @@
         }
       },
       {
-        "condition": "minecraft:inverted",
+        "type": "minecraft:inverted",
         "term": {
-          "condition": "minecraft:location_check",
+          "type": "minecraft:location_check",
           "offsetX": 0,
           "offsetY": 0,
           "offsetZ": 1,
@@ -52,9 +52,9 @@
         }
       },
       {
-        "condition": "minecraft:inverted",
+        "type": "minecraft:inverted",
         "term": {
-          "condition": "minecraft:location_check",
+          "type": "minecraft:location_check",
           "offsetX": 0,
           "offsetY": 0,
           "offsetZ": -1,
@@ -68,9 +68,9 @@
         }
       },
       {
-        "condition": "minecraft:inverted",
+        "type": "minecraft:inverted",
         "term": {
-          "condition": "minecraft:location_check",
+          "type": "minecraft:location_check",
           "offsetX": 1,
           "offsetY": 0,
           "offsetZ": 1,
@@ -84,9 +84,9 @@
         }
       },
       {
-        "condition": "minecraft:inverted",
+        "type": "minecraft:inverted",
         "term": {
-          "condition": "minecraft:location_check",
+          "type": "minecraft:location_check",
           "offsetX": 1,
           "offsetY": 0,
           "offsetZ": -1,
@@ -100,9 +100,9 @@
         }
       },
       {
-        "condition": "minecraft:inverted",
+        "type": "minecraft:inverted",
         "term": {
-          "condition": "minecraft:location_check",
+          "type": "minecraft:location_check",
           "offsetX": -1,
           "offsetY": 0,
           "offsetZ": 1,
@@ -116,9 +116,9 @@
         }
       },
       {
-        "condition": "minecraft:inverted",
+        "type": "minecraft:inverted",
         "term": {
-          "condition": "minecraft:location_check",
+          "type": "minecraft:location_check",
           "offsetX": -1,
           "offsetY": 0,
           "offsetZ": -1,
@@ -132,9 +132,9 @@
         }
       },
       {
-        "condition": "minecraft:inverted",
+        "type": "minecraft:inverted",
         "term": {
-          "condition": "minecraft:location_check",
+          "type": "minecraft:location_check",
           "offsetX": 0,
           "offsetY": -1,
           "offsetZ": 0,

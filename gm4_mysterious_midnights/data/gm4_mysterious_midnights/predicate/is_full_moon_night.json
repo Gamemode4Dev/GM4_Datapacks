@@ -1,5 +1,5 @@
 {
-  "condition": "minecraft:time_check",
+  "type": "minecraft:time_check",
   "clock": "minecraft:overworld",
   "value": {
     "min": 13000,

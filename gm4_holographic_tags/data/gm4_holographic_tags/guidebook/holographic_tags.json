@@ -21,19 +21,17 @@
     "create_holographic_tag": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:type_specific/player": {
-                "advancements": {
-                  "gm4:holographic_tags": true
-                }
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:type_specific/player": {
+              "advancements": {
+                "gm4:holographic_tags": true
               }
             }
           }
-        ]
+        }
       }
     }
   },

@@ -12,6 +12,3 @@ execute if predicate gm4_reeling_rods:holding_barbed_rod/level_3 run data modify
 execute if predicate gm4_reeling_rods:holding_barbed_rod/level_4 run data modify storage gm4_reeling_rods:temp enchanted.barbed set value {period: 16,damage:12}
 execute if predicate gm4_reeling_rods:holding_barbed_rod/level_5 run data modify storage gm4_reeling_rods:temp enchanted.barbed set value {period: 11,damage:15}
 data modify storage gm4_reeling_rods:temp player_data.Pos set from entity @s Pos
-execute store result score $motionX gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp player_data.Pos[0] 1
-execute store result score $motionY gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp player_data.Pos[1] 1
-execute store result score $motionZ gm4_reeling_rods.math run data get storage gm4_reeling_rods:temp player_data.Pos[2] 1

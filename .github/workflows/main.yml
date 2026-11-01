@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  VERSION: '26.2'
+  VERSION: '26.3'
   COMMIT_MSG: ${{ github.event.head_commit.message }}
 
 jobs:
@@ -16,11 +16,11 @@ jobs:
     concurrency:
       group: ${{ github.event_name != 'pull_request' && 'release' || format('pr-{0}', github.event.number) }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Checkout release branch
         if: github.event_name != 'pull_request'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: release
           path: release
@@ -56,7 +56,7 @@ jobs:
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: 'Modules for pull request #${{ github.event.number }}'
           path: ${{ github.workspace }}/release/${{ env.VERSION }}/
@@ -72,7 +72,7 @@ jobs:
 
       - name: Push release
         if: github.event_name != 'pull_request'
-        uses: ad-m/github-push-action@v0.8.0
+        uses: ad-m/github-push-action@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           directory: release
@@ -86,15 +86,15 @@ jobs:
           # https://fabricmc.net/use/server/
           # https://modrinth.com/mod/fabric-api/versions
           # https://modrinth.com/mod/packtest/versions
-          - version: '26.2'
-            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/26.2-rc-2/0.19.3/1.1.1/server/jar
-            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/Fsy077WD/fabric-api-0.152.0%2B26.2.jar
-            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/qT2wdJhc/packtest-2.6.0-beta1.jar
+          - version: '26.3'
+            fabric_server_url: https://meta.fabricmc.net/v2/versions/loader/26.3/0.19.5/1.1.2/server/jar
+            fabric_api_url: https://cdn.modrinth.com/data/P7dR8mSH/versions/bq3SsNGk/fabric-api-0.163.0%2B26.3.jar
+            packtest_url: https://cdn.modrinth.com/data/XsKUhp45/versions/Mbso179m/packtest-2.8.0.jar
             command_limit_tracer_url: https://cdn.modrinth.com/data/Ao12dSbt/versions/zKvlVzlN/commandlimittracer-0.3.0.jar
     name: 'test-${{ matrix.version }}'
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up uv
         uses: astral-sh/setup-uv@v7
@@ -105,7 +105,7 @@ jobs:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
       - name: Setup Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v6
         with:
           distribution: 'temurin'
           java-version: '25'
@@ -131,7 +131,7 @@ jobs:
 
       - name: Upload test world
         if: ${{ failure() && steps.run-tests.conclusion == 'failure' }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: 'Test world in ${{ matrix.version }} for ${{ github.sha }}'
           path: ${{ github.workspace }}/world/

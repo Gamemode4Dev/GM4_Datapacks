@@ -1,9 +1,9 @@
 id: gm4_player_death
 name: Gamemode 4 Player Death
-version: 1.4.X
+version: 1.5.X
 
 data_pack:
-  load: 
+  load:
     data: data
 
 pipeline:

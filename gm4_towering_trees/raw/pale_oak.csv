@@ -1,0 +1,11 @@
+type,variant,size_x,size_y,size_z,base_x_offset,base_z_offset,branch_start_height,feature,is_mega
+pale_oak,a,7,6,7,3,4,4,#,false
+pale_oak,b,7,7,7,3,3,5,#,false
+pale_oak,c,8,8,7,4,4,5,#,false
+pale_oak,d,8,9,7,4,3,7,#,false
+pale_oak,e,8,10,7,4,3,7,#,false
+pale_oak,f,7,7,7,4,3,5,#,false
+pale_oak,g,7,7,7,4,3,5,#,false
+pale_oak,h,7,8,8,4,4,6,#,false
+pale_oak,i,8,9,8,4,4,7,#,false
+pale_oak,j,7,10,8,3,3,8,#,false

@@ -59,7 +59,7 @@ with open("gm4_potion_liquids/potion_definitions.csv", "r") as csvfile:
                 effects = row["effect_id"].split("+")
                 amplifiers = map(int, row["effect_amplifier"].split("+"))
                 inline_predicate = {
-                    "condition":"minecraft:entity_properties",
+                    "type":"minecraft:entity_properties",
                     "entity":"this",
                     "predicate":{
                         "effects":{}
@@ -118,7 +118,7 @@ class FloatingPotion:
         execute as @e[type=!#gm4:non_living,type=!armor_stand,tag=!smithed.strict,limit=1,dx=0]
             unless entity @s[gamemode=spectator]
             unless predicate {
-                    "condition":"minecraft:entity_properties",
+                    "type":"minecraft:entity_properties",
                     "entity":"this",
                     "predicate":{"effects":{"levitation":{}}}
                 }

@@ -1,0 +1,2718 @@
+{
+    "description": "",
+    "supported_items": [
+        "minecraft:saddle"
+    ],
+    "weight": 1,
+    "max_level": 1,
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "max_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "anvil_cost": 0,
+    "slots": [
+        "saddle"
+    ],
+    "effects": {
+        "minecraft:location_changed": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "gm4_player_motion:internal/launch/reset"
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.31"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": -214748.3648
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.30"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 107374.1824
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.29"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 53687.0912
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.28"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 26843.5456
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.27"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 13421.7728
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.26"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 6710.8864
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.25"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 3355.4432
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.24"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 1677.7216
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.23"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 838.8608
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.22"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 419.4304
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.21"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 209.7152
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.20"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 104.8576
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.19"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 52.4288
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.18"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 26.2144
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.17"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 13.1072
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.16"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 6.5536
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.15"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 3.2768
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.14"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 1.6384
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.13"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.8192
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.12"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.4096
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.11"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.2048
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.10"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.1024
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.9"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0512
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.8"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0256
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.7"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0128
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.6"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0064
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.5"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0032
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.4"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0016
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.3"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0008
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.2"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0004
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.1"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0002
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#x.0"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0001
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.31"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": -214748.3648
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.30"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 107374.1824
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.29"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 53687.0912
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.28"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 26843.5456
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.27"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 13421.7728
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.26"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 6710.8864
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.25"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 3355.4432
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.24"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 1677.7216
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.23"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 838.8608
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.22"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 419.4304
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.21"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 209.7152
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.20"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 104.8576
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.19"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 52.4288
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.18"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 26.2144
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.17"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 13.1072
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.16"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 6.5536
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.15"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 3.2768
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.14"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 1.6384
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.13"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.8192
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.12"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.4096
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.11"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.2048
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.10"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.1024
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.9"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0512
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.8"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0256
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.7"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0128
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.6"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0064
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.5"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0032
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.4"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0016
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.3"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0008
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.2"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0004
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.1"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0002
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#y.0"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0001
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.31"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": -214748.3648
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.30"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 107374.1824
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.29"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 53687.0912
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.28"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 26843.5456
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.27"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 13421.7728
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.26"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 6710.8864
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.25"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 3355.4432
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.24"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 1677.7216
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.23"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 838.8608
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.22"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 419.4304
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.21"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 209.7152
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.20"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 104.8576
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.19"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 52.4288
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.18"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 26.2144
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.17"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 13.1072
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.16"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 6.5536
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.15"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 3.2768
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.14"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 1.6384
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.13"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.8192
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.12"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.4096
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.11"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.2048
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.10"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.1024
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.9"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0512
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.8"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0256
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.7"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0128
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.6"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0064
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.5"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0032
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.4"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0016
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.3"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0008
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.2"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0004
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.1"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0002
+                }
+            },
+            {
+                "requirements": {
+                    "type": "minecraft:int_value_check",
+                    "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                            "type": "minecraft:fixed",
+                            "name": "#z.0"
+                        },
+                        "score": "gm4_player_motion.internal.store"
+                    },
+                    "test": 1
+                },
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "magnitude": 0.0001
+                }
+            }
+        ]
+    }
+}

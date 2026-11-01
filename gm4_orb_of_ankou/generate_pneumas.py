@@ -25,29 +25,33 @@ def generate_corripio(ctx: Context):
         "requirement": {
           "trigger": "minecraft:player_killed_entity",
           "conditions": {
-            "entity": [
-              {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                  "minecraft:entity_type": f"minecraft:{entity}"
-                }
-              },
-              *[{
-                "condition": "minecraft:inverted",
-                "term": {
-                  "condition": "minecraft:entity_properties",
+            "entity": {
+              "type": "minecraft:all_of",
+              "terms": [
+                {
+                  "type": "minecraft:entity_properties",
                   "entity": "this",
                   "predicate": {
-                    "minecraft:entity_tags": {
-                      "all_of": [
-                        tag
-                      ]
+                    "minecraft:entity_type": f"minecraft:{entity}"
+                  }
+                },
+                {
+                  "type": "minecraft:inverted",
+                  "term": {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                      "minecraft:entity_tags": {
+                        "all_of": [
+                          "gm4_oa_ignore",
+                          "smithed.entity"
+                        ]
+                      }
                     }
                   }
                 }
-              } for tag in ["gm4_oa_ignore", "smithed.entity"]],
-            ],
+              ]
+            },
             "killing_blow": { "source_entity": { "equipment": { "mainhand": {
               "predicates": {
                 "minecraft:custom_data": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'corripio'}}"
@@ -81,14 +85,14 @@ def generate_corripio(ctx: Context):
           "value": f"gm4_orb_of_ankou:items/soul_essence/{essence}"
         }]
       }
-      pool["conditions"] = [{
-        "condition": "minecraft:table_bonus",
+      pool["condition"] = {
+        "type": "minecraft:table_bonus",
         "enchantment": "minecraft:looting",
         "chances": []
-      }]
+      }
       base_chance: Any = entities[entity][essence]
       for i in range(SUPPORTED_LOOTING+1):
-        pool["conditions"][0]["chances"].append(looting_chance(base_chance,i))
+        pool["condition"]["chances"].append(looting_chance(base_chance,i))
       pools.append(pool)
 
     ctx.data[f"gm4_corripio_shamir:entities/{entity}"] = LootTable({
@@ -104,7 +108,7 @@ def generate_pneuma_predicates(ctx: Context):
     # Predicate to check if a player has a certain pneuma equipped
     custom_data = "{gm4_orb_of_ankou:{pneumas:[{id:'"+ pneuma + "'}]}}"
     ctx.data[f"gm4_orb_of_ankou:pneuma_equipped/{pneuma}"] = Predicate({
-      "condition": "minecraft:entity_properties",
+      "type": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
         "equipment": {
@@ -135,9 +139,9 @@ def generate_soul_essence_loot_tables(ctx: Context):
             {
               "type": "minecraft:item",
               "name": "minecraft:black_dye",
-              "functions": [
+              "modifier": [
                 {
-                  "function": "minecraft:set_lore",
+                  "type": "minecraft:set_lore",
                   "mode": "append",
                   "lore": [
                     {
@@ -149,7 +153,7 @@ def generate_soul_essence_loot_tables(ctx: Context):
                   ]
                 },
                 {
-                  "function": "minecraft:set_name",
+                  "type": "minecraft:set_name",
                   "target": "item_name",
                   "name": {
                     "translate": "item.gm4.soul_essence",
@@ -157,7 +161,7 @@ def generate_soul_essence_loot_tables(ctx: Context):
                   }
                 },
                 {
-                  "function": "minecraft:set_components",
+                  "type": "minecraft:set_components",
                   "components": {
                     "minecraft:enchantment_glint_override": True,
                     "minecraft:custom_model_data": {
@@ -169,7 +173,7 @@ def generate_soul_essence_loot_tables(ctx: Context):
                   }
                 },
                 {
-                  "function": "minecraft:set_custom_data",
+                  "type": "minecraft:set_custom_data",
                   "tag": custom_data
                 }
               ]

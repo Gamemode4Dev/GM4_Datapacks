@@ -6,7 +6,7 @@
 summon minecraft:block_display ~ ~ ~ {\
   Tags:["gm4_llp_display","gm4_llp_light","gm4_llp_light.9","gm4_llp_lantern_sound","smithed.entity"],\
   block_state:{\
-    Name:"minecraft:soul_lantern"\
+    id:"minecraft:soul_lantern"\
   },\
   transformation:{\
     scale:[0.8f,0.8f,0.8f],\

@@ -1,0 +1,7 @@
+type,variant,size_x,size_y,size_z,base_x_offset,base_z_offset,branch_start_height,feature,is_mega
+birch,a,10,30,10,4,4,12,#,true
+birch,b,10,28,10,4,4,8,#,true
+birch,c,10,33,10,4,4,13,#,true
+birch,d,10,32,10,4,4,12,#,true
+birch,e,10,30,10,4,4,10,#,true
+birch,f,10,28,10,4,4,10,#,true

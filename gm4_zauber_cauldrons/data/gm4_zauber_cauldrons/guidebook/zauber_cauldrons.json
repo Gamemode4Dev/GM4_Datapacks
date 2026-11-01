@@ -21,19 +21,17 @@
     "create_zauber_cauldron": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:type_specific/player": {
-                "advancements": {
-                  "gm4:zauber_cauldrons_create": true
-                }
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:type_specific/player": {
+              "advancements": {
+                "gm4:zauber_cauldrons_create": true
               }
             }
           }
-        ]
+        }
       }
     },
     "obtain_potion": {

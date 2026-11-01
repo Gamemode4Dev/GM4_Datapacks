@@ -6,7 +6,7 @@
 summon minecraft:block_display ~ ~ ~ {\
   Tags:["gm4_llp_display","gm4_llp_cactus_flower_sound","smithed.entity"],\
   block_state:{\
-    Name:"minecraft:cactus_flower"\
+    id:"minecraft:cactus_flower"\
   },\
   transformation:{\
     scale:[0.8f,0.8f,0.8f],\

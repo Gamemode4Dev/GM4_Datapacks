@@ -4,7 +4,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "gm4_standard_crafting:iron_horse_armor"
+        "recipes": "gm4_standard_crafting:iron_horse_armor"
       }
     },
     "has_materials": {

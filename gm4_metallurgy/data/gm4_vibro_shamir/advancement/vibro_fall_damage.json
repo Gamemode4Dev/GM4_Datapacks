@@ -3,36 +3,39 @@
     "requirement": {
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": "this",
-              "score": "gm4_vibro_fall"
-            },
-            "range": {
-              "min": 300
-            }
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "flags": {
-                "is_sneaking": true
+        "player": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:int_value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": "this",
+                "score": "gm4_vibro_fall"
               },
-              "equipment": {
-                "feet": {
-                  "items": "#minecraft:foot_armor",
-                  "predicates": {
-                    "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:'vibro'}}"
+              "test": {
+                "min": 300
+              }
+            },
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "flags": {
+                  "is_sneaking": true
+                },
+                "equipment": {
+                  "feet": {
+                    "items": "#minecraft:foot_armor",
+                    "predicates": {
+                      "minecraft:custom_data": "{gm4_metallurgy:{active_shamir:'vibro'}}"
+                    }
                   }
                 }
               }
             }
-          }
-        ]
+          ]
+        }
       }
     }
   },

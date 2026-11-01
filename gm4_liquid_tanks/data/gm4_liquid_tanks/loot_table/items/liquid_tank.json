@@ -7,20 +7,24 @@
         {
           "type": "item",
           "name": "minecraft:player_head",
-          "functions": [
+          "modifier": [
             {
-              "function": "set_components",
+              "type": "set_components",
               "components": {
-                "minecraft:custom_model_data": {"strings":["gm4_liquid_tanks:item/liquid_tank"]},
+                "minecraft:custom_model_data": {
+                  "strings": [
+                    "gm4_liquid_tanks:item/liquid_tank"
+                  ]
+                },
                 "minecraft:profile": "$liquid_tank"
               }
             },
             {
-              "function": "set_custom_data",
+              "type": "set_custom_data",
               "tag": "{gm4_machines:{id:'liquid_tank'}}"
             },
             {
-              "function": "set_name",
+              "type": "set_name",
               "name": [
                 {
                   "translate": "block.gm4.liquid_tank",

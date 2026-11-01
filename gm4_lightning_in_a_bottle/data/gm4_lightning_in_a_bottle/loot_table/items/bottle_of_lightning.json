@@ -6,12 +6,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:potion",
-          "functions": [
-            {
-              "function": "minecraft:reference",
-              "name": "gm4_lightning_in_a_bottle:bottle_of_lightning"
-            }
-          ]
+          "modifier": "gm4_lightning_in_a_bottle:bottle_of_lightning"
         }
       ]
     }

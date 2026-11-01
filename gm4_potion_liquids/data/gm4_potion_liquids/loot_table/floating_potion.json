@@ -7,9 +7,9 @@
                 {
                     "type": "item",
                     "name": "potion",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "set_components",
+                            "type": "set_components",
                             "components": {
                                 "minecraft:potion_contents": {
                                     "custom_color": 13631487,
@@ -24,11 +24,11 @@
                             }
                         },
                         {
-                            "function": "set_custom_data",
+                            "type": "set_custom_data",
                             "tag": "{gm4_potion_liquids:{potion:'floating'}}"
                         },
                         {
-                            "function": "set_name",
+                            "type": "set_name",
                             "target": "custom_name",
                             "name": {
                                 "translate": "item.gm4.floating_potion",

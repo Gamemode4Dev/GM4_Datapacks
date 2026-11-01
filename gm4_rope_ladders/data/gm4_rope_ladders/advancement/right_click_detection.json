@@ -3,40 +3,43 @@
     "requirement": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:reference",
-            "name": "gm4_rope_ladders:holding_ladder"
-          },
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:type_specific/player": {
-                "gamemode": [
-                  "survival",
-                  "creative"
-                ]
+        "player": {
+          "type": "minecraft:all_of",
+          "terms": [
+            "gm4_rope_ladders:holding_ladder",
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:type_specific/player": {
+                  "gamemode": [
+                    "survival",
+                    "creative"
+                  ]
+                }
               }
             }
-          }
-        ],
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:interaction"
+          ]
+        },
+        "entity": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "type": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "minecraft:entity_type": "minecraft:interaction"
+              }
+            },
+            {
+              "type": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "gm4_rol_id": {}
+              }
             }
-          },
-          {
-            "condition": "minecraft:entity_scores",
-            "entity": "this",
-            "scores": {
-              "gm4_rol_id": {}
-            }
-          }
-        ]
+          ]
+        }
       }
     }
   },

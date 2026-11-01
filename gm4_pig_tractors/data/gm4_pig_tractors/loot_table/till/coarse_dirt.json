@@ -12,13 +12,13 @@
                     "type": "minecraft:item",
                     "weight": 200,
                     "name": "minecraft:clay_ball",
-                    "functions": [
+                    "modifier": [
                         {
-                            "function": "minecraft:set_count",
+                            "type": "minecraft:set_count",
                             "count": 1
                         },
                         {
-                            "function": "minecraft:set_count",
+                            "type": "minecraft:set_count",
                             "count": {
                                 "type": "minecraft:binomial",
                                 "n": 3,

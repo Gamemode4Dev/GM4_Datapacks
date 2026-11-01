@@ -9,37 +9,33 @@
     "wear_armor": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": "this",
-              "score": "gm4_armor"
-            },
-            "range": {
-              "min": 8
-            }
+        "player": {
+          "type": "minecraft:int_value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": "this",
+            "score": "gm4_armor"
+          },
+          "test": {
+            "min": 8
           }
-        ]
+        }
       }
     },
     "wear_heavy_armor": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": "this",
-              "score": "gm4_armor"
-            },
-            "range": {
-              "min": 16
-            }
+        "player": {
+          "type": "minecraft:int_value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": "this",
+            "score": "gm4_armor"
+          },
+          "test": {
+            "min": 16
           }
-        ]
+        }
       }
     }
   },

@@ -7,8 +7,8 @@
 $summon minecraft:block_display ~ ~ ~ {\
   Tags:["gm4_llp_display","gm4_llp_candle","gm4_llp_light","smithed.entity"],\
   block_state:{\
-    Name:"$(DisplayType)",\
-    Properties:{\
+    id:"$(DisplayType)",\
+    properties:{\
       candles:"1"\
     }\
   },\

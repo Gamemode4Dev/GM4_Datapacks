@@ -1,0 +1,46 @@
+{
+    "type": "minecraft:random_selector",
+    "features": [],
+    "default": {
+        "feature": {
+            "type": "minecraft:simple_block",
+            "to_place": {
+                "type": "minecraft:simple",
+                "state": {
+                    "id": "minecraft:short_grass"
+                }
+            }
+        },
+        "placement": [
+            {
+                "type": "minecraft:count",
+                "count": 8
+            },
+            {
+                "type": "minecraft:offset",
+                "x": {
+                    "type": "minecraft:uniform",
+                    "min_inclusive": 0,
+                    "max_inclusive": 5
+                },
+                "y": {
+                    "type": "minecraft:uniform",
+                    "min_inclusive": 0,
+                    "max_inclusive": 1
+                },
+                "z": {
+                    "type": "minecraft:uniform",
+                    "min_inclusive": 0,
+                    "max_inclusive": 5
+                }
+            },
+            {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:air"
+                }
+            }
+        ]
+    }
+}

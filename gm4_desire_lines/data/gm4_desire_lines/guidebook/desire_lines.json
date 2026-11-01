@@ -9,19 +9,17 @@
     "eroded_land": {
       "trigger": "minecraft:tick",
       "conditions": {
-        "player": [
-          {
-            "condition": "minecraft:value_check",
-            "value": {
-              "type": "minecraft:score",
-              "target": "this",
-              "score": "gm4_dl_affcoarse"
-            },
-            "range": {
-              "min": 1
-            }
+        "player": {
+          "type": "minecraft:int_value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": "this",
+            "score": "gm4_dl_affcoarse"
+          },
+          "test": {
+            "min": 1
           }
-        ]
+        }
       }
     }
   },

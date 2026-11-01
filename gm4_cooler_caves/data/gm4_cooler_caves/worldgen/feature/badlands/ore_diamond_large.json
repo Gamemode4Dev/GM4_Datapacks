@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:ore",
+  "discard_chance_on_air_exposure": 0.7,
+  "size": 12,
+  "targets": [
+    {
+      "state": {
+        "id": "minecraft:diamond_ore"
+      },
+      "target": {
+        "predicate_type": "minecraft:tag_match",
+        "tag": "gm4_cooler_caves:badlands_ore_replaceables"
+      }
+    }
+  ]
+}

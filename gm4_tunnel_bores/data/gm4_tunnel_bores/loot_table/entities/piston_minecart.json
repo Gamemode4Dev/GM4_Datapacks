@@ -16,29 +16,25 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:rail",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:score",
-                "target": "this",
-                "score": "gm4_bore_rail"
-              }
+          "condition": {
+            "type": "minecraft:int_value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "gm4_bore_rail"
+            },
+            "test": {
+              "min": 1
             }
-          ],
-          "conditions": [
-            {
-              "condition": "minecraft:value_check",
-              "value": {
-                "type": "minecraft:score",
-                "target": "this",
-                "score": "gm4_bore_rail"
-              },
-              "range": {
-                "min": 1
-              }
+          },
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "gm4_bore_rail"
             }
-          ]
+          }
         }
       ]
     }
