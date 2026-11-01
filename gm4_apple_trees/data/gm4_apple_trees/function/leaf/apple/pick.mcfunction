@@ -21,7 +21,7 @@ execute as @e[type=item_display,tag=gm4_apple_taken,distance=..10] at @s run fun
 kill @e[type=interaction,tag=gm4_apple_taken,distance=..10]
 
 # give apple to player directly if possible
-execute if items entity @s weapon.mainhand minecraft:apple[count={min:1,max:63}] unless data entity @s SelectedItem.components run item modify entity @s weapon.mainhand {function:"minecraft:set_count",count:1,add:1}
+execute if items entity @s weapon.mainhand minecraft:apple[count={min:1,max:63}] unless data entity @s SelectedItem.components run item modify entity @s weapon.mainhand {type:"minecraft:set_count",count:1,add:true}
 execute if predicate gm4_apple_trees:empty_mainhand run item replace entity @s weapon.mainhand with minecraft:apple 1
 
 tag @s remove gm4_apple_take

@@ -16,18 +16,16 @@
           "test": {
             "min": 1
           }
-        ],
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "minecraft:entity_type": "minecraft:interaction",
-              "minecraft:entity_tags": {
-                "all_of": [
-                  "gm4_apple_interaction"
-                ]
-              }
+        },
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:interaction",
+            "minecraft:entity_tags": {
+              "all_of": [
+                "gm4_apple_interaction"
+              ]
             }
           }
         }
