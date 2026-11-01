@@ -9,6 +9,7 @@ scoreboard players operation @s gm4_fruit_stage = #gapple_stage_0_start gm4_appl
 # visuals
 playsound minecraft:block.beehive.drip block @a[distance=..8] ~ ~ ~ 0.3 1.4
 item replace entity @s contents with minecraft:golden_apple 1
+data modify entity @s transformation set value {right_rotation:{angle:1.57,axis:[0f,1f,0f]},scale:[0.55f,0.55f,0.55f],left_rotation:{axis:[0,0,0],angle:0},translation:[0.25,-0.71,-0.06]}
 tag @s add gm4_ripe_apple
 
 # summon interaction

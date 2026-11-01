@@ -15,6 +15,3 @@ item replace entity @s contents with minecraft:air
 tag @s remove gm4_ripe_apple
 tag @s remove gm4_skip_item_drop
 tag @s remove gm4_apple_taken
-
-#apple transformation data for reference
-# transformation:{right_rotation:{angle:1.57,axis:[0f,1f,0f]},scale:[0.55f,0.55f,0.55f],left_rotation:{axis:[0,0,0],angle:0},translation:[0.25,-0.71,-0.06]}}

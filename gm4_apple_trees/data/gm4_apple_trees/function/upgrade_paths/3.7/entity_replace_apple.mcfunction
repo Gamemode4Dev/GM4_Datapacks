@@ -3,7 +3,7 @@
 # located at center of leaf above their head
 
 # summon item display
-summon minecraft:item_display ~ ~ ~ {CustomName:"gm4_apple",item:{id:"minecraft:apple",count:1},Tags:['gm4_apple','smithed.entity','smithed.strict','gm4_new_upgrade_apple'],transformation:{right_rotation:{angle:1.57,axis:[0.0,1.0,0.0]},scale:[0.55f,0.55f,0.55f],left_rotation:{axis:[0,0,0],angle:0},translation:[0.25,-0.71,-0.06]}}
+summon minecraft:item_display ~ ~ ~ {CustomName:"gm4_apple",item:{id:"minecraft:apple",count:1},Tags:['gm4_apple','smithed.entity','smithed.strict','gm4_new_upgrade_apple'],item_display:"fixed",transformation:{right_rotation:{angle:1.57,axis:[0.0,1.0,0.0]},scale:[0.55f,0.55f,0.55f],left_rotation:{axis:[0,0,0],angle:0},translation:[0.25,-0.71,-0.06]}}
 
 # fix facing direction
 execute positioned as @e[type=item_display,tag=gm4_new_upgrade_apple,distance=..10] run teleport @e[type=item_display,tag=gm4_new_upgrade_apple,distance=..10] ~ ~ ~ ~ ~
@@ -19,6 +19,7 @@ execute if entity @s[tag=gm4_ripe_apple] run summon minecraft:interaction ^0.25 
 
 # if unripe, give alternate texture
 execute if entity @s[tag=!gm4_ripe_apple] if items entity @s weapon.offhand minecraft:apple run item replace entity @e[type=item_display,tag=gm4_new_upgrade_apple,distance=..10] contents with minecraft:apple[custom_model_data={strings:["gm4_apple_trees:block/apple_unripe"]}] 1
+execute if entity @s[tag=!gm4_ripe_apple] if items entity @s weapon.offhand minecraft:apple run data modify entity @e[type=item_display,tag=gm4_new_upgrade_apple,distance=..10,limit=1] transformation set value {right_rotation:{angle:1.57,axis:[0f,1f,0f]},scale:[0.32f,0.32f,0.32f],left_rotation:{axis:[0,0,0],angle:0},translation:[0.25,-0.63,-0.06]}
 
 # if not grown, remove item
 execute if entity @s[tag=!gm4_ripe_apple] unless items entity @s weapon.offhand minecraft:apple run item replace entity @e[type=item_display,tag=gm4_new_upgrade_apple,distance=..10] contents with minecraft:air 1
