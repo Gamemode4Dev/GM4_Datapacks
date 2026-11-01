@@ -9,6 +9,7 @@ scoreboard objectives add gm4_fruit_stage dummy
 scoreboard objectives add gm4_apple_data dummy
 scoreboard objectives add gm4_ga_root dummy
 scoreboard objectives add gm4_ga_root_count dummy
+scoreboard objectives add gm4_global_age dummy
 
 scoreboard players set #stage_1_start gm4_apple_data 20
 scoreboard players set #stage_2_start gm4_apple_data 40

@@ -5,9 +5,13 @@
 
 # drop sapling
 loot spawn ~ ~ ~ loot gm4_apple_trees:blocks/apple_tree_leaf
-# kill apple armor stands
-execute as @e[type=armor_stand,distance=..3,tag=gm4_apple,tag=!gm4_ripe_apple] at @s unless block ~ ~1 ~ minecraft:oak_leaves run kill @s
-execute as @e[type=armor_stand,distance=..3,tag=gm4_apple,tag=gm4_ripe_apple] at @s align xyz unless block ~ ~2 ~ minecraft:oak_leaves run function gm4_apple_trees:leaf/apple/destroy
+
+# kill apple item displays
+execute as @e[type=item_display,distance=..3,tag=gm4_apple,tag=!gm4_ripe_apple] at @s unless block ~ ~ ~ minecraft:oak_leaves run kill @s
+execute as @e[type=item_display,distance=..3,tag=gm4_apple,tag=gm4_ripe_apple] at @s unless block ~ ~ ~ minecraft:oak_leaves run function gm4_apple_trees:leaf/apple/destroy
+
+# kill interaction entities
+execute as @e[type=interaction,distance=..3,tag=gm4_apple_interaction] at @s align xyz unless block ~ ~1 ~ minecraft:oak_leaves run kill @s
 
 # kill
 kill @s
