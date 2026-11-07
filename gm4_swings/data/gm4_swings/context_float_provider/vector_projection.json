@@ -7,7 +7,7 @@
         {
           "type": "minecraft:storage",
           "storage": "gm4_swings:data",
-          "path": "player_motion[0]"
+          "path": "motion[0]"
         },
         {
           "type": "minecraft:sin",
@@ -31,7 +31,7 @@
         {
           "type": "minecraft:storage",
           "storage": "gm4_swings:data",
-          "path": "player_motion[2]"
+          "path": "motion[2]"
         },
         {
           "type": "minecraft:cos",
