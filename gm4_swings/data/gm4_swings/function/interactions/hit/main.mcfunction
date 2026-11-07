@@ -1,3 +1,8 @@
+# Find the interaction the player just hit
+# @s = Player, who hit a swing interaction
+# at @s
+# run from gm4_swings:interactions/hit advancement
+
 advancement revoke @s only gm4_swings:interactions/hit
 
 tag @s add gm4_swings.attacker

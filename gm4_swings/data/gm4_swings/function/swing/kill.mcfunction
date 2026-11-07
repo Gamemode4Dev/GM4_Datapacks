@@ -1,3 +1,8 @@
+# Kills a swing and its constituent parts, ran when a swing is broken by a player
+# @s = Item display, swing main body
+# at @s
+# run from gm4_swings:break/main
+
 # break interaction
 execute on passengers run kill @s
 

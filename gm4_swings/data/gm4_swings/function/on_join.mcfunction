@@ -1,3 +1,9 @@
+# Tidy up seats of rejoining players
+# @s = Player joining the world/server
+# at @s
+# run from gm4:load
+# scheduled from gm4_swings:tick
+
 scoreboard players set @s gm4_swings.on_join 0
 
 # if not on seat, fail

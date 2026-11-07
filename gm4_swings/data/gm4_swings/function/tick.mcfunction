@@ -1,3 +1,8 @@
+# Ticks active swings and handles wind charge detection, ran every tick
+# @s = none
+# at world spawn
+# run from gm4_swings:init
+
 schedule function gm4_swings:tick 1t
 
 execute as @e[type=minecraft:item_display,tag=gm4_swings.ticking_swing] at @s run function gm4_swings:swing/tick

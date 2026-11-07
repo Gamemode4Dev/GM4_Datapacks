@@ -1,3 +1,8 @@
+# Seat a player on the swing
+# @s = Item display, swing seat
+# at @s
+# run from gm4_swings:interact/on_interaction
+
 execute if entity @s[tag=gm4_swings.has_player] run return fail
 
 # get id

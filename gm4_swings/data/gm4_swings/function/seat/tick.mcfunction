@@ -1,3 +1,8 @@
+# Handles seat logic, player inputs (if any) and seating mobs
+# @s = Item display, swing seat
+# at @s rotated as @s
+# run from gm4_swings:swing/tick
+
 scoreboard players set $found_seat gm4_swings.dummy 1
 
 # check if in block

@@ -1,3 +1,8 @@
+# Create a new swing seat
+# @s = Item display, unsetup swing seat
+# at @s rotated as swing main body
+# run from gm4_swings:swing/setup
+
 # create seat
 summon minecraft:item_display ~ ~ ~ {teleport_duration:2,interpolation_duration:2,Tags:["gm4_swings.swing_seat"],Passengers: \
     [ \

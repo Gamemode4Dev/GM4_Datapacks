@@ -1,3 +1,8 @@
+# Handles active swing logic and mathematics to make the seat swing, only ran when a swing is swinging
+# @s = Item display, swing main body
+# at @s
+# run from gm4_swings:tick
+
 execute store result storage gm4_swings:data length int 1 run scoreboard players get @s gm4_swings.length
 
 # get data from seat

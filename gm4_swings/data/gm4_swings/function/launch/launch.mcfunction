@@ -1,3 +1,8 @@
+# Launch a player, calculating velocity from the swing's angular motion
+# @s = Player, that dismounted a swing in the last tick
+# at swing sweat rotated as swing seat
+# run from gm4_swings:launch/main
+
 tag @s remove gm4_swings.swing_sitter
 execute if data storage gm4_swings:data {angular_velocity:0} run return fail
 

@@ -1,10 +1,15 @@
+# Apply motion to a swing from a wind charge
+# @s = Item display, swing seat
+# at @s
+# run from gm4_swings:wind_charge/explode
+
 # get id
 scoreboard players operation $id gm4_swings.id = @s gm4_swings.id
 
 # get rotation facing seat from wind charge
 execute summon minecraft:marker run function gm4_swings:wind_charge/get_rotation
 
-# add player velocity
+# add wind charge velocity
 data modify storage gm4_swings:data seat_pos set from entity @s Pos
 data modify storage gm4_swings:data seat_rotation set from entity @s Rotation[0]
 data modify storage gm4_swings:data motion set from entity @p[tag=gm4_swings.interacter,distance=..10] Motion

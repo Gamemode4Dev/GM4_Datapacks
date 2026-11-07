@@ -1,3 +1,8 @@
+# Handles destruction of swings from blocks
+# @s = Item display, swing main body
+# at @s
+# run from gm4_swings:tick_5s
+
 execute unless block ~ ~1 ~ #minecraft:blocks_motion run return run function gm4_swings:break/main
 execute if block ~ ~ ~ #minecraft:blocks_motion run return run function gm4_swings:break/main
 

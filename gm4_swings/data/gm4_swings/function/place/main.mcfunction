@@ -1,3 +1,8 @@
+# Find a player head, used for placing a swing
+# @s = Player, placing a swing
+# at @s
+# run from gm4_swings:place advancement
+
 advancement revoke @s only gm4_swings:place
 
 execute store result score $reach gm4_swings.dummy run attribute @s minecraft:block_interaction_range get 2

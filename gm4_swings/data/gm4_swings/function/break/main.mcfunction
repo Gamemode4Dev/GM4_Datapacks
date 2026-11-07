@@ -1,3 +1,8 @@
+# Break a swing, killing the entity structure and handling effects and drops
+# @s = Item display, swing main body
+# at @s
+# run from gm4_swings:interactions/hit/on_interaction
+
 # particle
 data modify storage gm4_swings:temp item_model set from entity @s item.components."minecraft:item_model"
 function gm4_swings:break/particle with storage gm4_swings:temp

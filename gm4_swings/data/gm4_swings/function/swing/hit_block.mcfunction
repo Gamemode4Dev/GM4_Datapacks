@@ -1,3 +1,8 @@
+# Marks a swing as having hit a block, makes it swing backwards
+# @s = Item display, swing main body
+# at @s
+# run from gm4_swings:swing/tick
+
 tag @s add gm4_swings.hit_block
 
 # invert and damp velocity and set player torque to 0

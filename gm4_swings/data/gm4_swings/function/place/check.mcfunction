@@ -1,3 +1,8 @@
+# Swing placement checks, drops the swing item if placement fails
+# @s = Player, placing a swing
+# at swing placement player head
+# run from gm4_swings:place/ray
+
 # if no solid block above, fail
 execute unless block ~ ~1 ~ #minecraft:blocks_motion run return run function gm4_swings:place/fail with block ~ ~ ~
 
@@ -8,7 +13,7 @@ execute store result score $max_length gm4_swings.dummy run data get storage gm4
 scoreboard players set $length gm4_swings.dummy 0
 
 # calculate max possible length
-execute positioned ~ ~-1 ~ run function gm4_swings:place/length/loop
+execute positioned ~ ~-1 ~ run function gm4_swings:place/length_loop
 
 # sooound
 playsound minecraft:item.lead.tied block @a ~ ~ ~ 0.5 1.5
