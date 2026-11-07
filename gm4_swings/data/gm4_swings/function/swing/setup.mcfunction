@@ -12,7 +12,7 @@ scoreboard players operation @s gm4_swings.id = $global gm4_swings.id
 execute summon minecraft:interaction run function gm4_swings:swing/break_interaction
 
 # create seat
-$execute positioned ^ ^-$(length) ^ positioned ^ ^-0.5 ^ run function gm4_swings:seat/create with storage gm4_swings:temp swings
+$execute positioned ^ ^-$(length) ^ positioned ^ ^-0.5 ^ run function gm4_swings:seat/create
 
 # set initial velocity
 scoreboard players set @s gm4_swings.angular_velocity 0
