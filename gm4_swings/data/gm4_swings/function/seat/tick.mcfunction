@@ -13,6 +13,9 @@ scoreboard players operation $push_torque gm4_swings.dummy = @s gm4_swings.push_
 scoreboard players reset @s gm4_swings.push_torque
 execute unless score $push_torque gm4_swings.dummy matches 0 store result storage gm4_swings:data player_torque double 0.000001 run return run scoreboard players get $push_torque gm4_swings.dummy
 
+# check for water
+execute store result score $in_water gm4_swings.dummy if predicate gm4_swings:in_water
+
 # check for player
 scoreboard players set $has_player gm4_swings.dummy 0
 data modify storage gm4_swings:data player_torque set value 0

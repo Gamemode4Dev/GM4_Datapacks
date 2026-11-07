@@ -12,7 +12,29 @@
               "type": "minecraft:mul",
               "inputs": [
                 {"type":"storage","storage":"gm4_swings:data","path":"angular_velocity"},
-                {"type":"storage","storage":"gm4_swings:constants","path":"damping"},
+                {
+                  "type": "minecraft:mul",
+                  "inputs": [
+                    {"type":"storage","storage":"gm4_swings:constants","path":"damping"},
+                    {
+                      "type": "minecraft:conditional",
+                      "condition": {
+                        "type": "minecraft:int_value_check",
+                        "value": {
+                          "type": "minecraft:score",
+                          "score": "gm4_swings.dummy",
+                          "target": {
+                            "type": "minecraft:fixed",
+                            "name": "$in_water"
+                          }
+                        },
+                        "test": 1
+                      },
+                      "on_true": 2,
+                      "on_false": 1
+                    }
+                  ]
+                },
                 -1
               ]
             }
