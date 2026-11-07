@@ -6,7 +6,7 @@ scoreboard players operation $id gm4_swings.id = @s gm4_swings.id
 execute rotated as @s as @e[tag=gm4_swings.swing_seat,predicate=gm4_swings:id_match,distance=..10,limit=1,type=minecraft:item_display] at @s run function gm4_swings:seat/tick
 
 # if no seat found, spawn a new one and skip a tick
-execute if score $found_seat gm4_swings.dummy matches 0 rotated as @s run return run function gm4_swings:swing/respawn_seat
+execute if score $found_seat gm4_swings.dummy matches 0 rotated as @s run return run function gm4_swings:swing/respawn_seat with storage gm4_swings:data
 
 # store data
 data modify storage gm4_swings:data rotation set from entity @s Rotation[1]
