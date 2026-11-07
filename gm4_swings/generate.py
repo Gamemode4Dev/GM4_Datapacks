@@ -12,11 +12,28 @@ def beet_default(ctx: Context):
             "resource_pack": {
                 "load": [
                     {
-                        f"assets/gm4_swings/items/{color}_swing.json": "assets/gm4_swings/templates/items/swing.json"
+                        f"assets/gm4_swings/items/swings/{color}.json": "assets/gm4_swings/templates/items/swing.json",
+                        f"assets/gm4_swings/models/item/swings/{color}.json": "assets/gm4_swings/templates/models/item/swing.json",
+                        f"assets/gm4_swings/models/block/swings/{color}.json": "assets/gm4_swings/templates/models/block/swing.json"
                     }
                 ],
                 "render": {
-                    "items": "*"
+                    "item_model": "*",
+                    "model": "*"
+                }
+            },
+            "data_pack": {
+                "load": [
+                    {
+                        f"data/gm4_swings/loot_table/swings/{color}.json": "data/gm4_swings/templates/loot_table/swing.json",
+                        f"data/gm4_swings/recipe/swings/{color}.json": "data/gm4_swings/templates/recipe/swing.json",
+                        f"data/gm4_swings/advancement/recipes/swings/{color}.json": "data/gm4_swings/templates/advancement/recipes/swing.json"
+                    }
+                ],
+                "render": {
+                    "loot_table": "*",
+                    "recipe": "*",
+                    "advancement": "*"
                 }
             },
             "meta": {
