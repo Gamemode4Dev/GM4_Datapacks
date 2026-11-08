@@ -3,8 +3,11 @@
 # at swing seat
 # run from gm4_swings:seat/sit/main
 
-# only tag if player
+# tag if player
 tag @s[type=minecraft:player] add gm4_swings.swing_sitter
+
+# swing if player
+swing @s[type=minecraft:player] mainhand
 
 # grab motion
 data modify storage gm4_swings:data motion set from entity @s Motion
