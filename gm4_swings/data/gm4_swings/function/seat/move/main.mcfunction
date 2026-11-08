@@ -4,4 +4,4 @@
 # run from gm4_swings:swing/tick
 # with $length = Length of the swing being placed
 
-$execute positioned ^ ^-$(length).5 ^ positioned ^ ^-0.5 ^ run function gm4_swings:seat/move/tp
+$execute positioned ^ ^-$(length) ^ positioned ^ ^-0.5 ^ run function gm4_swings:seat/move/tp

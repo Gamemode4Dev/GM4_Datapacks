@@ -42,4 +42,4 @@ execute store success entity @s OnGround byte 1 store success score @s gm4_swing
 data modify entity @s Rotation[1] set from storage gm4_swings:data new_rotation
 
 # move seat
-execute rotated as @s positioned ^ ^-0.5 ^ as @e[tag=gm4_swings.swing_seat,predicate=gm4_swings:id_match,distance=..10,limit=1,type=minecraft:item_display] run function gm4_swings:seat/move/main with storage gm4_swings:data
+execute rotated as @s as @e[tag=gm4_swings.swing_seat,predicate=gm4_swings:id_match,distance=..10,limit=1,type=minecraft:item_display] run function gm4_swings:seat/move/main with storage gm4_swings:data

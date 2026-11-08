@@ -21,14 +21,17 @@ execute unless score $push_torque gm4_swings.dummy matches 0 store result storag
 # check for water
 execute store result score $in_water gm4_swings.dummy if predicate gm4_swings:in_water
 
-# check for player
+# get player input
 scoreboard players set $has_player gm4_swings.dummy 0
 data modify storage gm4_swings:data player_torque set value 0
 data modify storage gm4_swings:temp seat_rotation set from entity @s Rotation[0]
 execute on passengers if entity @s[type=minecraft:player] run return run function gm4_swings:seat/input/main
 
-# player has dismounted
-execute if entity @s[tag=gm4_swings.has_player] if score $has_player gm4_swings.dummy matches 0 run function gm4_swings:swing/no_player
+# if had player previously, then player has dismounted, try to launch
+execute if entity @s[tag=gm4_swings.has_player] run return run function gm4_swings:swing/no_player
 
-# if no player, check for an entity to mount
-execute if score $has_player gm4_swings.dummy matches 0 as @n[type=!#gm4:non_living,type=!minecraft:player,distance=..1] at @s run function gm4_swings:seat/seat_entity
+# check for seated mob
+execute on passengers if entity @s[type=!#gm4:non_living] run return fail
+
+# no player, no mob, check for a mob to mount
+execute as @n[type=!#gm4:non_living,type=!minecraft:player,distance=..1] at @s run function gm4_swings:seat/seat_entity
