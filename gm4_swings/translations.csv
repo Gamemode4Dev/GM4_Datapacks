@@ -1,6 +1,6 @@
 key,en_us
 text.gm4.guidebook.module_desc.swings,"Decorate your world with functional swings!"
-text.gm4.guidebook.swings.description,"Swings can be placed on the underside of blocks. They will extend down to the next nearest block beneath them."
+text.gm4.guidebook.swings.description,"Swings can be placed on the underside of blocks. Any cushion color can be used in the recipe."
 
 item.gm4_swings.swings.black,"Black Swing",
 item.gm4_swings.swings.blue,"Blue Swing",

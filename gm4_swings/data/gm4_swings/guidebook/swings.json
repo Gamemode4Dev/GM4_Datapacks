@@ -38,30 +38,16 @@
             "text":"\n"
           },
           {
-            "translate": "text.gm4.guidebook.lavish_livestock.description",
-            "fallback": "Breeding livestock may result in offspring that is abnormally large.\n\nLarger livestock drops more loot."
-          }
-        ],
-        [
-          {
-            "translate":"text.gm4.guidebook.lavish_livestock.list_header",
-            "fallback":"Livestock",
-            "underlined":true
+            "translate": "text.gm4.guidebook.swings.description",
+            "fallback": "Swings can be placed on the underside of blocks. Any cushion color can be used in the recipe."
           },
-          {"text":"\n\n"},
-          {"translate":"entity.minecraft.chicken", "underlined":false},
-          {"text":"\n"},
-          {"translate":"entity.minecraft.cow", "underlined":false},
-          {"text":"\n"},
-          {"translate":"entity.minecraft.hoglin", "underlined":false},
-          {"text":"\n"},
-          {"translate":"entity.minecraft.mooshroom", "underlined":false},
-          {"text":"\n"},
-          {"translate":"entity.minecraft.pig", "underlined":false},
-          {"text":"\n"},
-          {"translate":"entity.minecraft.rabbit", "underlined":false},
-          {"text":"\n"},
-          {"translate":"entity.minecraft.sheep", "underlined":false}
+          {
+            "text":"\n"
+          },
+          {
+            "insert": "recipe",
+            "recipe": "gm4_swings:swings/blue"
+          }
         ]
       ]
     }
