@@ -1,0 +1,26 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "gm4_swings:technical/swing_base",
+          "modifier": [
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {"translate":"item.gm4_swings.swings.{{ swing_color }}"},
+                "minecraft:item_model": "gm4_swings:swings/{{ swing_color }}"
+              }
+            },
+            {
+              "type": "minecraft:set_custom_data",
+              "tag": {"gm4_swings":{"type":"{{ swing_color }}"}}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

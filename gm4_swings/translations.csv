@@ -1,0 +1,20 @@
+key,en_us
+text.gm4.guidebook.module_desc.swings,"Decorate your world with functional swings!"
+text.gm4.guidebook.swings.description,"Swings can be placed on the underside of blocks. Any cushion color can be used in the recipe."
+
+item.gm4_swings.swings.black,"Black Swing",
+item.gm4_swings.swings.blue,"Blue Swing",
+item.gm4_swings.swings.brown,"Brown Swing",
+item.gm4_swings.swings.cyan,"Cyan Swing",
+item.gm4_swings.swings.gray,"Gray Swing",
+item.gm4_swings.swings.green,"Green Swing",
+item.gm4_swings.swings.light_blue,"Light Blue Swing",
+item.gm4_swings.swings.light_gray,"Light Gray Swing",
+item.gm4_swings.swings.lime,"Lime Swing",
+item.gm4_swings.swings.magenta,"Magenta Swing",
+item.gm4_swings.swings.orange,"Orange Swing",
+item.gm4_swings.swings.pink,"Pink Swing",
+item.gm4_swings.swings.purple,"Purple Swing",
+item.gm4_swings.swings.red,"Red Swing",
+item.gm4_swings.swings.white,"White Swing",
+item.gm4_swings.swings.yellow,"Yellow Swing"

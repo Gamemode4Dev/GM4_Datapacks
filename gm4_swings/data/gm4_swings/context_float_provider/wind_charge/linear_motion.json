@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:mul",
+  "inputs": [
+    "gm4_swings:wind_charge/max_motion",
+    {
+        "type": "minecraft:sub",
+        "left": 1,
+        "right": {
+            "type": "minecraft:div",
+            "left": "gm4_swings:wind_charge/distance_to_swing",
+            "right": "gm4_swings:wind_charge/max_distance"
+        }
+    }
+  ]
+}

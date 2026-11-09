@@ -1,0 +1,55 @@
+{
+  "id": "swings",
+  "name": "Swings",
+  "module_type": "module",
+  "icon": {
+    "id": "minecraft:poisonous_potato",
+    "components": {
+      "minecraft:item_model": "gm4_swings:blue_swing"
+    }
+  },
+  "criteria": {
+    "has_materials": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:cushions"
+          }
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "name": "display",
+      "enable": [],
+      "requirements": [
+        [
+          "has_materials"
+        ]
+      ],
+      "pages": [
+        [
+          {
+            "insert": "title"
+          },
+          {
+            "text":"\n"
+          },
+          {
+            "translate": "text.gm4.guidebook.swings.description",
+            "fallback": "Swings can be placed on the underside of blocks. Any cushion color can be used in the recipe."
+          },
+          {
+            "text":"\n"
+          },
+          {
+            "insert": "recipe",
+            "recipe": "gm4_swings:swings/blue"
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+	"textures": {
+		"0": "gm4_swings:block/swing_rope",
+		"particle": "gm4_swings:block/swing_rope"
+	},
+	"elements": [
+		{
+			"from": [1, -7, 4],
+			"to": [1, 9, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-14, -7, 4]},
+			"faces": {
+				"east": {"uv": [4, 0, 12, 16], "texture": "#0"},
+				"west": {"uv": [4, 0, 12, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [15, -7, 4],
+			"to": [15, 9, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, -7, 4]},
+			"faces": {
+				"east": {"uv": [4, 0, 12, 16], "texture": "#0"},
+				"west": {"uv": [4, 0, 12, 16], "texture": "#0"}
+			}
+		}
+	]
+}

@@ -1,0 +1,56 @@
+{
+    "type": "minecraft:max",
+    "inputs": [
+        {
+            "type": "minecraft:min",
+            "inputs": [
+                {
+                    "type": "minecraft:length",
+                    "inputs": [
+                        {
+                            "type": "minecraft:sub",
+                            "left": {
+                                "type": "minecraft:storage",
+                                "storage": "gm4_swings:data",
+                                "path": "wind_charge_pos[0]"
+                            },
+                            "right": {
+                                "type": "minecraft:storage",
+                                "storage": "gm4_swings:data",
+                                "path": "seat_pos[0]"
+                            }
+                        },
+                        {
+                            "type": "minecraft:sub",
+                            "left": {
+                                "type": "minecraft:storage",
+                                "storage": "gm4_swings:data",
+                                "path": "wind_charge_pos[1]"
+                            },
+                            "right": {
+                                "type": "minecraft:storage",
+                                "storage": "gm4_swings:data",
+                                "path": "seat_pos[1]"
+                            }
+                        },
+                        {
+                            "type": "minecraft:sub",
+                            "left": {
+                                "type": "minecraft:storage",
+                                "storage": "gm4_swings:data",
+                                "path": "wind_charge_pos[2]"
+                            },
+                            "right": {
+                                "type": "minecraft:storage",
+                                "storage": "gm4_swings:data",
+                                "path": "seat_pos[2]"
+                            }
+                        }
+                    ]
+                },
+                "gm4_swings:wind_charge/max_distance"
+            ]
+        },
+        0
+    ]
+}

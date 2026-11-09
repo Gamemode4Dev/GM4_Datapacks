@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:mul",
+  "inputs": [
+    {
+      "type": "minecraft:storage",
+      "storage": "gm4_swings:constants",
+      "path": "player_torque"
+    },
+    {
+      "type": "minecraft:storage",
+      "storage": "gm4_swings:data",
+      "path": "length"
+    },
+    "gm4_swings:push_torque/knockback_modifier",
+    10
+  ]
+}

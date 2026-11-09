@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:mul",
+  "inputs": [
+    "gm4_swings:push_torque/normal",
+    -1
+  ]
+}

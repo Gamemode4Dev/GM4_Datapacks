@@ -1,0 +1,26 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:player_head",
+          "modifier": [
+            {
+              "type": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_data": {"smithed":{"ignore":{"functionality":true,"crafting":true}}},
+                "minecraft:profile": {"texture":"gm4_swings:block/transparent_head"},
+                "tooltip_display": {"hidden_components":["minecraft:profile"]},
+                "minecraft:max_stack_size": 16,
+                "minecraft:rarity":"common",
+                "!minecraft:equippable": {}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

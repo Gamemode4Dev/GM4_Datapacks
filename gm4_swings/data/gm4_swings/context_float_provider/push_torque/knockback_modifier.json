@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:add",
+  "inputs": [
+    {
+      "type": "minecraft:mul",
+      "inputs": [
+        {
+          "type": "minecraft:storage",
+          "storage": "gm4_swings:temp",
+          "path": "knockback"
+        },
+        0.7
+      ]
+    },
+    1
+  ]
+}

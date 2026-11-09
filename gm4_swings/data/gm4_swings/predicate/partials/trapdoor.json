@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:location_check",
+  "predicate": {
+    "block": {
+      "blocks": "#minecraft:trapdoors",
+      "state": {
+        "half": "top",
+        "open": "false"
+      }
+    }
+  }
+}
