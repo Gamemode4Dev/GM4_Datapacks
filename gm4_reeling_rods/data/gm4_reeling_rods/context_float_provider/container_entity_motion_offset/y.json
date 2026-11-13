@@ -1,0 +1,21 @@
+{ 
+  "type": "minecraft:mul", 
+  "inputs": [ 
+    0.6, 
+    { 
+      "type": "minecraft:add", 
+      "inputs": [ 
+        { 
+          "type": "minecraft:storage", 
+          "storage": "gm4_reeling_rods:temp", 
+          "path": "motion_vector[1]" 
+        }, 
+        { 
+          "type": "minecraft:uniform", 
+          "min": 0, 
+          "max": 0.1 
+        } 
+      ] 
+    } 
+  ] 
+}
