@@ -5,8 +5,14 @@
 
 execute store result score $mainhand_first gm4_reeling_rods.math run random value 0..1
 
-execute if score $mainhand_first gm4_reeling_rods.math matches 1 if items entity @s weapon.mainhand * run return run function gm4_reeling_rods:reeling/stealable/steal_slot/mainhand
-execute if items entity @s weapon.offhand * run return run function gm4_reeling_rods:reeling/stealable/steal_slot/offhand
-execute if score $mainhand_first gm4_reeling_rods.math matches 0 if items entity @s weapon.mainhand * run return run function gm4_reeling_rods:reeling/stealable/steal_slot/mainhand
+execute if score $mainhand_first gm4_reeling_rods.math matches 1 \
+  if items entity @s weapon.mainhand * if predicate {'type': 'minecraft:all_of', 'terms': '#gm4_reeling_rods:reeling/steal_slot/mainhand'} \
+  run return run function gm4_reeling_rods:reeling/stealable/steal_slot/mainhand
+execute \
+  if items entity @s weapon.offhand * if predicate {'type': 'minecraft:all_of', 'terms': '#gm4_reeling_rods:reeling/steal_slot/offhand'} \
+  run return run function gm4_reeling_rods:reeling/stealable/steal_slot/offhand
+execute if score $mainhand_first gm4_reeling_rods.math matches 0 \
+  if items entity @s weapon.mainhand * if predicate {'type': 'minecraft:all_of', 'terms': '#gm4_reeling_rods:reeling/steal_slot/mainhand'} \
+  run return run function gm4_reeling_rods:reeling/stealable/steal_slot/mainhand
 
 return fail
