@@ -10,13 +10,19 @@
             {
               "type": "minecraft:set_components",
               "components": {
-                "minecraft:item_name": {"translate":"item.gm4_swings.swings.{{ swing_color }}"},
+                "minecraft:item_name": {
+                  "translate":"item.gm4_swings.swings.{{ swing_color }}"
+                },
                 "minecraft:item_model": "gm4_swings:swings/{{ swing_color }}"
               }
             },
             {
               "type": "minecraft:set_custom_data",
-              "tag": {"gm4_swings":{"type":"{{ swing_color }}"}}
+              "tag": {
+                "gm4_swings": {
+                  "type": "{{ swing_color }}"
+                  }
+                }
             }
           ]
         }
