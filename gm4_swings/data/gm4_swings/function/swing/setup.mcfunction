@@ -9,7 +9,7 @@
 tp @s ~ ~ ~
 
 # add data
-$data merge entity @s {width:$(length).5,height:-$(length).5,teleport_duration:2,interpolation_duration:2,item:{id:"minecraft:diamond",components:{"minecraft:item_model":"$(item_model)","minecraft:custom_data":$(custom_data),"minecraft:custom_model_data":{floats:[$(length)]}}},transformation:{left_rotation:[0.0f,0.0,0.0f,1.0f],translation:[0.0f,0.0625f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[1.0f,1.0f,1.0f]}}
+$data merge entity @s {width:$(length).5,teleport_duration:2,interpolation_duration:2,item:{id:"minecraft:diamond",components:{"minecraft:item_model":"$(item_model)","minecraft:custom_data":$(custom_data),"minecraft:custom_model_data":{floats:[$(length)]}}},transformation:{left_rotation:[0.0f,0.0,0.0f,1.0f],translation:[0.0f,0.0625f,0.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[1.0f,1.0f,1.0f]}}
 
 # tag
 tag @s add gm4_swings.swing
