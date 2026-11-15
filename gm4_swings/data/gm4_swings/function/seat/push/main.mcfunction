@@ -16,3 +16,7 @@ execute as @p[tag=gm4_swings.attacker,distance=..20] run function gm4_swings:sea
 
 # apply the motion
 scoreboard players operation @s gm4_swings.push_torque = $push_torque gm4_swings.dummy
+
+# make a sound
+playsound minecraft:entity.cushion.break block @a ~ ~ ~ 0.5 1
+playsound minecraft:block.bamboo_wood.hit block @a ~ ~ ~ 1 1.5

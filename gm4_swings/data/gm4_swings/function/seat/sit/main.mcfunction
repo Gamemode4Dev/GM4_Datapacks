@@ -26,3 +26,7 @@ scoreboard players operation @n[type=minecraft:item_display,tag=gm4_swings.swing
 
 # make swing tick
 tag @n[type=minecraft:item_display,tag=gm4_swings.swing,predicate=gm4_swings:id_match] add gm4_swings.ticking_swing
+
+# make a sound
+playsound minecraft:entity.cushion.sit block @a ~ ~ ~ 0.75 1
+playsound minecraft:block.bamboo_wood.step block @a ~ ~ ~ 0.75 1.5
