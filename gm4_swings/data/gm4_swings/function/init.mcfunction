@@ -1,3 +1,7 @@
+execute unless score swings gm4_modules matches 1 run data modify storage gm4:log queue append value {type:"install",module:"Swings"}
+execute unless score swings gm4_earliest_version < swings gm4_modules run scoreboard players operation swings gm4_earliest_version = swings gm4_modules
+scoreboard players set swings gm4_modules 1
+
 scoreboard objectives add gm4_swings.id dummy
 scoreboard objectives add gm4_swings.angular_velocity dummy
 scoreboard objectives add gm4_swings.push_torque dummy

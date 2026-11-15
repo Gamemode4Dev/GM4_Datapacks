@@ -3,7 +3,7 @@
   "name": "Swings",
   "module_type": "module",
   "icon": {
-    "id": "minecraft:poisonous_potato",
+    "id": "minecraft:blue_cushion",
     "components": {
       "minecraft:item_model": "gm4_swings:blue_swing"
     }
