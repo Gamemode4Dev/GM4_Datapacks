@@ -27,7 +27,7 @@ tag @e[type=marker,tag=gm4_bas_new,distance=..2,limit=2] remove gm4_bas_new
 
 # optional checks
 execute if data storage gm4_better_armour_stands:temp {pages:[{raw:"pose mirror"}]} run tag @s add gm4_bas_mirror
-execute if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4_better_armour_stands:sneaking] run tag @s add gm4_bas_alt
+execute if entity @a[tag=gm4_bas_active,limit=1,predicate=gm4:sneaking] run tag @s add gm4_bas_alt
 
 # start tracking clock
 schedule function gm4_better_armour_stands:pose/track/tick 1t

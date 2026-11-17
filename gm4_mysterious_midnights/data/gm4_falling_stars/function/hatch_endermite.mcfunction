@@ -1,4 +1,4 @@
-#@s = @e[type=item,tag=gm4_endermite_star,nbt={OnGround:1b}]
+#@s = @e[type=item,tag=gm4_endermite_star,predicate=gm4:on_ground]
 #at @s
 #called by event
 

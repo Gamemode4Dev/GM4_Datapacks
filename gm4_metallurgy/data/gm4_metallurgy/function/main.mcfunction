@@ -7,11 +7,11 @@ effect give @a[gamemode=!spectator,gamemode=!creative,predicate=gm4_metallurgy:c
 execute as @e[type=armor_stand,tag=gm4_sand_ring] at @s positioned ~ ~1.23 ~ run function gm4_metallurgy:casting/sustain_mould
 
 # check for moulds waiting to be created
-execute as @e[type=item,predicate=gm4_metallurgy:is_obsidian,predicate=gm4_metallurgy:on_ground] at @s if block ~ ~-0.1 ~ #minecraft:sand align xyz unless entity @e[type=armor_stand,tag=gm4_sand_ring,dx=0,dy=-1,dz=0,limit=1] if entity @e[type=item,dx=0,dy=0,dz=0,predicate=gm4_metallurgy:is_clay_ball,predicate=gm4_metallurgy:on_ground,limit=1] run function gm4_metallurgy:casting/create_mould
+execute as @e[type=item,predicate=gm4_metallurgy:is_obsidian,predicate=gm4:on_ground] at @s if block ~ ~-0.1 ~ #minecraft:sand align xyz unless entity @e[type=armor_stand,tag=gm4_sand_ring,dx=0,dy=-1,dz=0,limit=1] if entity @e[type=item,dx=0,dy=0,dz=0,predicate=gm4_metallurgy:is_clay_ball,predicate=gm4:on_ground,limit=1] run function gm4_metallurgy:casting/create_mould
 
 # check for shamir on anvil
 scoreboard players reset found_item_on_anvil gm4_ml_data
-execute as @e[type=item,tag=!gm4_ml_smooshed,predicate=gm4_metallurgy:on_ground,predicate=gm4_metallurgy:smooshing/has_shamir] at @s if block ~ ~-1 ~ #minecraft:anvil run function gm4_metallurgy:smooshing/item_on_anvil
+execute as @e[type=item,tag=!gm4_ml_smooshed,predicate=gm4:on_ground,predicate=gm4_metallurgy:smooshing/has_shamir] at @s if block ~ ~-1 ~ #minecraft:anvil run function gm4_metallurgy:smooshing/item_on_anvil
 
 #============================== SHAMIR CLOCKING ================================
 #             (for shamirs that are included with the base module)

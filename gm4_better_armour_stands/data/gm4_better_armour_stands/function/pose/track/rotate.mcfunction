@@ -6,4 +6,4 @@
 execute at @s run tp @s ~ ~ ~ facing entity @e[type=marker,tag=gm4_bas_player_offset,sort=nearest,limit=1]
 
 # round up rotation to multiples of 15 degrees
-execute if entity @p[tag=gm4_bas_track,predicate=gm4_better_armour_stands:sneaking] run function gm4_better_armour_stands:pose/snap/rotation
+execute if entity @p[tag=gm4_bas_track,predicate=gm4:sneaking] run function gm4_better_armour_stands:pose/snap/rotation

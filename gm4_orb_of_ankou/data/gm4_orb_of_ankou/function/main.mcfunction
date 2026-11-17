@@ -13,7 +13,7 @@ effect give @a[gamemode=!spectator,tag=gm4_pneuma_gliding,scores={gm4_oa_swim=1.
 scoreboard players reset @a gm4_oa_swim
 
 # soaring
-execute as @a[tag=gm4_oa_soaring_off_ground,nbt={OnGround:1b}] run function gm4_orb_of_ankou:pneumas/soaring/remove_fall_protection
+execute as @a[tag=gm4_oa_soaring_off_ground,predicate=gm4:on_ground] run function gm4_orb_of_ankou:pneumas/soaring/remove_fall_protection
 
 # sniffing
 scoreboard players remove @a[scores={gm4_oa_sniff=1..}] gm4_oa_sniff 1
