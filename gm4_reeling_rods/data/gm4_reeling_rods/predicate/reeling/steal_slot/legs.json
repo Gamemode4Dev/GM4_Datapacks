@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:inverted",
+  "term": {
+    "type": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "minecraft:equipment": {
+        "legs": {
+          "predicates": {
+            "minecraft:enchantments": [
+              {
+                "enchantments": "minecraft:binding_curse"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
