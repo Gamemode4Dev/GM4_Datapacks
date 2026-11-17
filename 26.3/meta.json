@@ -1,5 +1,5 @@
 {
-  "last_commit": "15739a00598ef1db591ef3ff89b36621b8ca5b55",
+  "last_commit": "84270a527c6c3d77643c109fb84fc9b78a320ce9",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -2438,8 +2438,8 @@
     {
       "id": "gm4_towering_trees",
       "name": "Towering Trees",
-      "version": "1.2.1",
-      "hash": "7a9bb00e9b4f470587488fafb381dcc3385147bc",
+      "version": "1.2.2",
+      "hash": "471965e1224517ee2f9f46a2c301b79da668944c",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Towering_Trees",
       "credits": {
