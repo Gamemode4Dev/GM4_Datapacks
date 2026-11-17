@@ -1,6 +1,6 @@
 # advances the stage of the fruit
-# @s = apple_fruiting_leaf armor stand
-# located at @s align xyz
+# @s = gm4_apple item_display
+# located at @s
 # run from gm4_apple_trees:leaf/age
 
 # set the visual stage of the fruit depending the score

@@ -1,6 +1,8 @@
 # converts a jigsaw structure to an function-emulated jigsaw structure for use post-worldgen
     # written for convertting apple trees structure files with marker entities.
 
+# 8/30/2026 : Getting amulet_nbt to install and run was tricky. I found using python 3.12.10 and `pip install amulet-nbt~=2.0` to work
+
 import amulet_nbt
 import numpy as np
 from structure_normalize_palette import normalize_palette
@@ -79,15 +81,15 @@ def jigsaw_convert(structure_file):
 if __name__ == '__main__':
     # processed desired files into entity-based structures
     input_files = [
-        "data\gm4_apple_trees\structures\worldgen\\apple_tree_short_1.nbt",
-        "data\gm4_apple_trees\structures\worldgen\\apple_tree_short_2.nbt",
-        "data\gm4_apple_trees\structures\worldgen\\apple_tree_short_3.nbt",
-        "data\gm4_apple_trees\structures\worldgen\\apple_tree_short_4.nbt",
-        "data\gm4_apple_trees\structures\worldgen\\apple_tree_tall_1.nbt",
-        "data\gm4_apple_trees\structures\worldgen\\apple_tree_tall_2.nbt",
-        "data\gm4_apple_trees\structures\worldgen\\apple_tree_tall_3.nbt",
-        "data\gm4_apple_trees\structures\worldgen\\apple_tree_tall_4.nbt",
-        "data\gm4_apple_trees\structures\worldgen\\apple_leaf.nbt"
+        "data\\gm4_apple_trees\\structure\\worldgen\\apple_tree_short_1.nbt",
+        "data\\gm4_apple_trees\\structure\\worldgen\\apple_tree_short_2.nbt",
+        "data\\gm4_apple_trees\\structure\\worldgen\\apple_tree_short_3.nbt",
+        "data\\gm4_apple_trees\\structure\\worldgen\\apple_tree_short_4.nbt",
+        "data\\gm4_apple_trees\\structure\\worldgen\\apple_tree_tall_1.nbt",
+        "data\\gm4_apple_trees\\structure\\worldgen\\apple_tree_tall_2.nbt",
+        "data\\gm4_apple_trees\\structure\\worldgen\\apple_tree_tall_3.nbt",
+        "data\\gm4_apple_trees\\structure\\worldgen\\apple_tree_tall_4.nbt",
+        "data\\gm4_apple_trees\\structure\\worldgen\\apple_leaf.nbt"
     ]
     output_dir_map = ('worldgen', 'sapling_growth')
 

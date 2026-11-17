@@ -1,0 +1,31 @@
+{
+    "type": "minecraft:any_of",
+    "terms": [
+        {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "weapon.mainhand": {
+                        "count": 0
+                    }
+                }
+            }
+        },
+        {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+                "slots": {
+                    "weapon.mainhand": {
+                        "items": "minecraft:golden_apple",
+                        "count": {
+                            "min": 1,
+                            "max": 63
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
