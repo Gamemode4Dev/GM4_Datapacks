@@ -1,6 +1,7 @@
 {
   "parent": "gm4_swings:block/swing_template",
   "textures": {
-    "texture": "gm4_swings:block/swings/{{ swing_color }}"
+    "0": "gm4_swings:block/swings/{{ swing_color }}",
+    "particle": "gm4_swings:block/swings/{{ swing_color }}"
   }
 }
