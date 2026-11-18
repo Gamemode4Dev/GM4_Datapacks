@@ -1,4 +1,4 @@
-# Test the interaction and figure out what kind it is
+# Test the interaction to make sure it's the one being interacted with
 # @s = Interaction, part of a swing 
 # at @s
 # run from gm4_swings:interactions/hit/main
