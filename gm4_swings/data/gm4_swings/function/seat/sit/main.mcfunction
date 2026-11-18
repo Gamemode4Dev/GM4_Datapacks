@@ -10,10 +10,10 @@ execute on passengers if entity @s[type=!#gm4:non_living] run return fail
 scoreboard players operation $id gm4_swings.id = @s gm4_swings.id
 
 # setup sitter
-execute as @n[type=minecraft:player,tag=gm4_swings.interacter,distance=..10] run function gm4_swings:seat/sit/on_sitter
+execute as @n[type=minecraft:player,tag=gm4_swings.interacter,distance=..20] run function gm4_swings:seat/sit/on_sitter
 
 # mount the entity
-ride @n[type=!#gm4:non_living,tag=gm4_swings.interacter,distance=..10] mount @s
+ride @n[type=!#gm4:non_living,tag=gm4_swings.interacter,distance=..20] mount @s
 
 # tag appropriately
 execute if score $is_player gm4_swings.dummy matches 1 run tag @s add gm4_swings.has_player

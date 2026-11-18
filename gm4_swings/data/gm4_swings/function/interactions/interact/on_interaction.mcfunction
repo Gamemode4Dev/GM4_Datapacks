@@ -3,11 +3,10 @@
 # at @s
 # run from gm4_swings:interactions/interact/main
 
-execute on target unless entity @s[tag=gm4_swings.interacter] run return fail
+execute store result score $timestamp gm4_swings.dummy run data get entity @s interaction.timestamp
+execute unless score $timestamp gm4_swings.dummy = $gametime gm4_swings.dummy run return run data remove entity @s interaction
 
 # switch
-execute if entity @s[tag=gm4_swings.interaction.seat] on vehicle run function gm4_swings:seat/sit/main
-execute if entity @s[tag=gm4_swings.interaction.break] if score $is_sneaking gm4_swings.dummy matches 0 on vehicle run function gm4_swings:swing/shorten
-execute if entity @s[tag=gm4_swings.interaction.break] if score $is_sneaking gm4_swings.dummy matches 1 on vehicle run function gm4_swings:swing/extend
+function gm4_swings:interactions/interact/switch
 
 data remove entity @s interaction

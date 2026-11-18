@@ -10,7 +10,7 @@ execute if score @s gm4_swings.length matches ..1 run return fail
 execute if entity @s[tag=gm4_swings.ticking_swing] run return fail
 
 # swing arm
-swing @n[type=minecraft:player,tag=gm4_swings.interacter,distance=..10] mainhand
+swing @n[type=minecraft:player,tag=gm4_swings.interacter,distance=..20] mainhand
 
 execute store result storage gm4_swings:data length int 1 run scoreboard players remove @s gm4_swings.length 1
 function gm4_swings:swing/update_length with storage gm4_swings:data
