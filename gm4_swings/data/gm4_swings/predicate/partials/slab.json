@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:location_check",
+  "predicate": {
+    "block": {
+      "blocks": "#minecraft:slabs",
+      "state": {
+        "type": "top"
+      }
+    }
+  }
+}

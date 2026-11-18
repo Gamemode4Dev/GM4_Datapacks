@@ -1,0 +1,37 @@
+# Handles seat logic, player inputs (if any) and seating mobs
+# @s = Item display, swing seat
+# at @s rotated as @s
+# run from gm4_swings:swing/tick
+
+scoreboard players set $found_seat gm4_swings.dummy 1
+
+# check if in block
+scoreboard players set $hit_block gm4_swings.dummy 0
+execute if block ^ ^ ^0.25 #minecraft:blocks_motion run scoreboard players set $hit_block gm4_swings.dummy 1
+execute if block ^ ^ ^-0.25 #minecraft:blocks_motion run scoreboard players set $hit_block gm4_swings.dummy 1
+
+# store position
+data modify storage gm4_swings:data seat_pos set from entity @s Pos
+
+# store push torque and clear
+scoreboard players operation $push_torque gm4_swings.dummy = @s gm4_swings.push_torque
+scoreboard players reset @s gm4_swings.push_torque
+execute unless score $push_torque gm4_swings.dummy matches 0 store result storage gm4_swings:data player_torque double 0.000001 run return run scoreboard players get $push_torque gm4_swings.dummy
+
+# check for water
+execute store result score $in_water gm4_swings.dummy if predicate gm4_swings:in_water
+
+# get player input
+scoreboard players set $has_player gm4_swings.dummy 0
+data modify storage gm4_swings:data player_torque set value 0
+data modify storage gm4_swings:temp seat_rotation set from entity @s Rotation[0]
+execute on passengers if entity @s[type=minecraft:player] run return run function gm4_swings:seat/input/main
+
+# if had player previously, then player has dismounted, try to launch
+execute if entity @s[tag=gm4_swings.has_player] run return run function gm4_swings:swing/no_player
+
+# check for seated mob
+execute on passengers if entity @s[type=!#gm4:non_living] run return fail
+
+# no player, no mob, check for a mob to mount
+execute as @n[type=!#gm4:non_living,type=!minecraft:player,distance=..1] at @s run function gm4_swings:seat/seat_entity

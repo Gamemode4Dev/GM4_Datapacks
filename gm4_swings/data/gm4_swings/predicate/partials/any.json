@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    "gm4_swings:partials/slab",
+    "gm4_swings:partials/trapdoor"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:all_of",
+  "terms": [
+    {
+      "type": "minecraft:float_value_check",
+      "value": {"type":"storage","storage":"gm4_swings:data","path":"new_rotation"},
+      "test": {
+        "min": {
+          "type": "minecraft:mul",
+          "inputs": [
+            {"type":"storage","storage":"gm4_swings:constants","path":"minimum_oscillation"},
+            -1
+          ]
+        },
+        "max": {"type":"storage","storage":"gm4_swings:constants","path":"minimum_oscillation"}
+      }
+    },
+    {
+      "type": "minecraft:float_value_check",
+      "value": {"type":"storage","storage":"gm4_swings:data","path":"angular_velocity"},
+      "test": {
+        "min": {
+          "type": "minecraft:mul",
+          "inputs": [
+            {"type":"storage","storage":"gm4_swings:constants","path":"minimum_oscillation"},
+            -1
+          ]
+        },
+        "max": {"type":"storage","storage":"gm4_swings:constants","path":"minimum_oscillation"}
+      }
+    }
+  ]
+}

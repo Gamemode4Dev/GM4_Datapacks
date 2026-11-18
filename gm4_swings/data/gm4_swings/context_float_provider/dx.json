@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:length",
+  "inputs": [
+    {
+      "type": "minecraft:sub",
+      "left": {"type":"storage","storage":"gm4_swings:data","path":"origin_pos[0]"},
+      "right": {"type":"storage","storage":"gm4_swings:data","path":"seat_pos[0]"}
+    },
+    {
+      "type": "minecraft:sub",
+      "left": {"type":"storage","storage":"gm4_swings:data","path":"origin_pos[2]"},
+      "right": {"type":"storage","storage":"gm4_swings:data","path":"seat_pos[2]"}
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+    "type": "minecraft:mul",
+    "inputs": [
+        "gm4_swings:wind_charge/linear_motion",
+        {
+            "type": "minecraft:cos",
+            "input": {
+                "type": "minecraft:mul",
+                "inputs": [
+                {
+                    "type": "minecraft:storage",
+                    "storage": "gm4_swings:data",
+                    "path": "facing_seat[1]"
+                },
+                "gm4_swings:conversions/to_radians"
+                ]
+            }
+        },
+        {
+            "type": "minecraft:cos",
+            "input": {
+                "type": "minecraft:mul",
+                "inputs": [
+                {
+                    "type": "minecraft:sub",
+                    "left": {
+                        "type": "minecraft:storage",
+                        "storage": "gm4_swings:data",
+                        "path": "facing_seat[0]"
+                    },
+                    "right": {
+                        "type": "minecraft:storage",
+                        "storage": "gm4_swings:data",
+                        "path": "seat_rotation"
+                    }
+                },
+                "gm4_swings:conversions/to_radians"
+                ]
+            }
+        }
+    ]
+}
