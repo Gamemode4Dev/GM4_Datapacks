@@ -6,4 +6,5 @@ forceload add 29999999 7134
 fill 29999998 0 7135 29999997 2 7130 minecraft:bedrock
 setblock 29999998 1 7134 minecraft:yellow_shulker_box
 setblock 29999998 1 7133 minecraft:birch_wall_sign[facing=north]
+data modify block 29999998 1 7133 allow_op_features set value true
 setblock 29999998 1 7132 minecraft:jukebox{RecordItem:{id:"minecraft:stick",count:1}}
