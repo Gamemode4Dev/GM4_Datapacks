@@ -2,13 +2,14 @@
   "type": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
+    "minecraft:type_specific/player": {
+      "gamemode": [
+        "creative",
+        "survival"
+      ]
+    },
     "minecraft:vehicle": {
-      "minecraft:entity_type": "minecraft:pig",
-      "minecraft:location": {
-        "block": {
-          "blocks": "#gm4_pig_tractors:replaceable"
-        }
-      }
+      "minecraft:entity_type": "minecraft:pig"
     },
     "minecraft:entity_tags": {
       "none_of": [

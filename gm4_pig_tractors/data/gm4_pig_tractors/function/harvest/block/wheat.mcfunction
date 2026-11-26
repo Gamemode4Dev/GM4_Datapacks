@@ -10,8 +10,7 @@ setblock ~ ~ ~ air destroy
 function gm4_pig_tractors:utility/item_magnet
 
 # try to replant wheat seeds if the player isn't holding a seed
-scoreboard players set $planted_successfully gm4_pig_tractors 0
-execute unless predicate gm4_pig_tractors:player/equipment/holding_seeds run function gm4_pig_tractors:plant/item/wheat_seeds
+execute if items entity @s gm4_pig_tractors:player_inventory minecraft:wheat_seeds run return run function gm4_pig_tractors:plant/block/wheat_seeds
 
-# plant other crop if wheat seed planting failed
-execute if score $planted_successfully gm4_pig_tractors matches 0 run function gm4_pig_tractors:plant/select_type
+# plant other crop if wheat planting failed
+function gm4_pig_tractors:plant/plant_seed

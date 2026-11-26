@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "riding_pig": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {
+          "type": "minecraft:all_of",
+          "terms": [
+            "gm4_pig_tractors:on_pig",
+            "gm4_pig_tractors:holding_hoe",
+            {
+              "type": "minecraft:location_check",
+              "offsetY": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "#gm4_pig_tractors:tillable"
+                }
+              }
+            },
+            {
+              "type": "minecraft:location_check",
+              "predicate": {
+                "block": {
+                  "blocks": "#gm4_pig_tractors:replaceable"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_pig_tractors:till/till_block"
+  }
+}

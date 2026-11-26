@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "minecraft:slots": {
+          "container.*": {
+            "items": "#gm4_pig_tractors:seeds"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "minecraft:slots": {
+          "weapon.offhand": {
+            "items": "#gm4_pig_tractors:seeds"
+          }
+        }
+      }
+    }
+  ]
+}

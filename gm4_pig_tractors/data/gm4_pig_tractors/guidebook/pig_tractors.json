@@ -71,7 +71,7 @@
           },
           {
             "translate": "text.gm4.guidebook.pig_tractors.tilling",
-            "fallback": "Riding a pig while holding a hoe will till grass, dirt, or coarse dirt below the pig, with a chance to drop some loot."
+            "fallback": "Riding a pig while holding a hoe will till grass, dirt, dirt path, or coarse dirt below the pig, with a chance to drop some loot."
           }
         ]
       ]

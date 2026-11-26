@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "minecraft:slots": {
+      "weapon.*": {
+        "items": "#minecraft:hoes"
+      }
+    }
+  }
+}
