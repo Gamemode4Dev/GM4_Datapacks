@@ -4,7 +4,7 @@
 advancement revoke @s only gm4_forceload:change_dimension
 
 # exit if the dimension is already initialized
-execute if block 29999998 1 7133 birch_wall_sign run return 0
+execute if block 29999998 1 7133 birch_wall_sign run return run data modify block 29999998 1 7133 allow_op_features set value true
 
 function gm4_forceload:init_chunk
 
